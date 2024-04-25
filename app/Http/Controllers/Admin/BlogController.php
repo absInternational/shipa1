@@ -69,6 +69,7 @@ class BlogController extends Controller
             'meta_keyword' => 'nullable|string|max:255',
             'meta_description' => 'nullable|string',
             'image' => 'nullable|image|max:2048',
+            'status' => 'required',
         ]);
 
         if ($request->hasFile('image')) {

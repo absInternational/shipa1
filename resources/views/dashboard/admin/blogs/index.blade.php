@@ -32,7 +32,13 @@
                                 <img src="{{ asset($blog->post_image) }}" alt="{{ $blog->post_name }}"
                                     style="max-width: 150px; max-height: 100px;">
                             </td>
-                            <td>{{ $blog->status }}</td>
+                            <td>
+                                @if ($blog->status == 1)
+                                    Active
+                                @else
+                                    Inactive
+                                @endif
+                            </td>
                             <td>
                                 <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                 <form action="{{ route('blogs.destroy', $blog->id) }}" method="POST" style="display: inline;">
