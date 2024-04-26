@@ -71,7 +71,7 @@
                             <!-- Mainmenu Item End -->
 
                             <div class="header-menu-select d-flex align-items-center justify-content-end">
-                                <div class="header-language">
+                               {{--  <div class="header-language">
                                     <ul class="languages dropdown">
                                         <li class="activated"></li>
                                         <li>
@@ -92,7 +92,7 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
                                 <div class="tj-header-button d-none d-lg-block">
                                     <a class="tj-header-btn" href="contact.html">
                                         Track Order <i class="flaticon-right-1"></i>
