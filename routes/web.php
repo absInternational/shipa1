@@ -42,10 +42,10 @@ Route::get('/services', [FrontendController::class, 'services'])->name('services
 // Auto Auction
 Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('autoAuction');
 
-// Admin
+// Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {
 
-    // Admin Dashboard
+    // Admin dashboard
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 
     // Blog routes

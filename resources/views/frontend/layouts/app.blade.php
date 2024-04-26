@@ -148,15 +148,14 @@
         </div>
         <!-- Offcanvas Area End-->
 
-        <!--========== Header Section Start ==============-->
+        {{-- Header Section Start --}}
         @include('frontend.includes.header')
-        <!--========== Header Section End ==============-->
 
+        {{-- page content --}}
         @yield('content')
 
-        <!--=========== Footer Section Start =========-->
+        {{-- Footer Section Start --}}
         @include('frontend.includes.footer')
-        <!--=========== Footer Section End =========-->
 
         <!-- start scrollUp  -->
         <div class="logiland-scroll-top progress-done">
