@@ -9,33 +9,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" href="assets/images/fav.svg" />
-        <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.svg" />
+        <link rel="apple-touch-icon" href="{{ asset('frontend/images/fav.svg') }}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/fav.svg') }}" />
 
         <!-- Bootstrap  v5.1.3 css -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
         <!-- Meanmenu  css -->
-        <link rel="stylesheet" href="assets/css/meanmenu.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/meanmenu.css') }}" />
         <!-- Sal css -->
-        <link rel="stylesheet" href="assets/css/sal.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/sal.css') }}" />
         <!-- Magnific css -->
-        <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}" />
         <!-- Swiper Slider css -->
-        <link rel="stylesheet" href="assets/css/swiper.min.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/swiper.min.css') }}" />
         <!-- Carousel css file -->
-        <link rel="stylesheet" href="assets/css/owl.carousel.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css') }}" />
         <!-- Icons css -->
-        <link rel="stylesheet" href="assets/css/icons.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/icons.css') }}" />
         <!-- Odometer css -->
-        <link rel="stylesheet" href="assets/css/odometer.min.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/odometer.min.css') }}" />
         <!-- Select css -->
-        <link rel="stylesheet" href="assets/css/nice-select.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/nice-select.css') }}" />
         <!-- Animate css -->
-        <link rel="stylesheet" href="assets/css/animate.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}" />
         <!-- Style css -->
-        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
         <!-- Responsive css -->
-        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
     </head>
 
     <body>
@@ -44,7 +44,7 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="assets/images/logo/loder.png" alt="Corporate Business HTML Template" />
+                        <img src="{{ asset('frontend/images/logo/loder.png') }}" alt="Corporate Business HTML Template" />
                     </div>
                 </div>
                 <div class="txt-loading">
@@ -67,7 +67,7 @@
         <div class="tj-offcanvas-area">
             <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
                 <div class="logo-area text-center">
-                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" /></a>
+                    <a href="index.html"><img src="{{ asset('frontend/images/logo/logo.png') }}" alt="Logo" /></a>
                 </div>
                 <div class="offcanvas-icon">
                     <a id="canva_close" href="#">
@@ -157,7 +157,7 @@
                             <!-- Logo Area Start -->
                             <div class="logo-area">
                                 <div class="logo-box">
-                                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" /></a>
+                                    <a href="index.html"><img src="{{ asset('frontend/images/logo/logo.png') }}" alt="Logo" /></a>
                                 </div>
                             </div>
                             <!-- Logo Area End -->
@@ -196,7 +196,7 @@
                                 <!-- Header menu Start -->
                                 <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
                                     <div class="mobile-logo-area d-lg-none">
-                                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" /></a>
+                                        <a href="index.html"><img src="{{ asset('frontend/images/logo/logo.png')}}" alt="Logo" /></a>
                                     </div>
                                     <!-- Mainmenu Item Start -->
                                     <div class="tj-main-menu d-lg-block d-none text-end" id="main-menu">
@@ -253,16 +253,16 @@
                                                     <ul class="lang_lists">
                                                         <li>
                                                             <a
-                                                                ><img src="assets/images/icon/flag-1.png" alt="Icon"
+                                                                ><img src="{{ asset('frontend/images/icon/flag-1.png')}}" alt="Icon"
                                                             /></a>
                                                         </li>
                                                         <li>
                                                             <a
-                                                                ><img src="assets/images/icon/flag-2.png" alt="Icon"
+                                                                ><img src="{{ asset('frontend/images/icon/flag-2.png')}}" alt="Icon"
                                                             /></a>
                                                         </li>
                                                         <li class="active">
-                                                            <a><img src="assets/images/icon/flag4.png" alt="Icon" /></a>
+                                                            <a><img src="{{ asset('frontend/images/icon/flag4.png')}}" alt="Icon" /></a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -325,7 +325,7 @@
                             <div class="tj-blog-item-three">
                                 <div class="tj-blog-image">
                                     <a href="blog-details.html">
-                                        <img src="assets/images/blog/blog-14.jpg" alt="Blog"
+                                        <img src="{{ asset('frontend/images/blog/blog-14.jpg')}}" alt="Blog"
                                     /></a>
                                 </div>
                                 <div class="active-text">
@@ -369,7 +369,7 @@
                             <div class="tj-blog-item-three">
                                 <div class="tj-blog-image">
                                     <a href="blog-details.html">
-                                        <img src="assets/images/blog/blog-15.jpg" alt="Blog"
+                                        <img src="{{ asset('frontend/images/blog/blog-15.jpg')}}" alt="Blog"
                                     /></a>
                                 </div>
                                 <div class="active-text">
@@ -412,7 +412,7 @@
                             </div>
                             <div class="details-quote-content">
                                 <div class="details-quote-box">
-                                    <img src="assets/images/icon/quote.svg" alt="Icon" />
+                                    <img src="{{ asset('frontend/images/icon/quote.svg ')}}" alt="Icon" />
                                     <p>
                                         Tosser argy-bargy mush loo at public school Elizabeth up the duff buggered
                                         chinwag on your bike mate don’t get shirty with me super, Jeffrey bobby Richard
@@ -426,7 +426,7 @@
                             <div class="tj-blog-item-three">
                                 <div class="tj-blog-image">
                                     <a href="blog-details.html">
-                                        <img src="assets/images/blog/blog-16.jpg" alt="Blog"
+                                        <img src="{{ asset('frontend/images/blog/blog-16.jpg ')}}" alt="Blog"
                                     /></a>
                                 </div>
                                 <div class="active-text">
@@ -497,7 +497,7 @@
                                 <div class="tj-post-content">
                                     <div class="tj-auother-img">
                                         <a href="blog-details.html">
-                                            <img src="assets/images/blog/blog-13.png" alt="Blog"
+                                            <img src="{{ asset('frontend/images/blog/blog-13.png')}}" alt="Blog"
                                         /></a>
                                     </div>
                                     <div class="tj-details-text">
@@ -517,7 +517,7 @@
                                 <div class="tj-post-content">
                                     <div class="tj-auother-img">
                                         <a href="blog-details.html">
-                                            <img src="assets/images/blog/blog-14.png" alt="Blog"
+                                            <img src="{{ asset('frontend/images/blog/blog-14.png')}}" alt="Blog"
                                         /></a>
                                     </div>
                                     <div class="tj-details-text">
@@ -537,7 +537,7 @@
                                 <div class="tj-post-content">
                                     <div class="tj-auother-img">
                                         <a href="blog-details.html">
-                                            <img src="assets/images/blog/blog-15.png" alt="Blog"
+                                            <img src="{{ asset('frontend/images/blog/blog-15.png')}}" alt="Blog"
                                         /></a>
                                     </div>
                                     <div class="tj-details-text">
@@ -628,7 +628,7 @@
                         >
                             <div class="subscribe-content d-flex align-items-center">
                                 <div class="mail-icon">
-                                    <img src="assets/images/icon/email.svg" alt="Icon" />
+                                    <img src="{{ asset('frontend/images/icon/email.svg')}}" alt="Icon" />
                                 </div>
                                 <div class="subscribe-title">
                                     <h3 class="title">Subscribe Our Newslatter</h3>
@@ -666,7 +666,7 @@
                             class="footer-widget footer1_col_1 footer-content-info"
                             data-bg-image="assets/images/banner/footer-shape.png"
                         >
-                            <a href="index.html"> <img src="assets/images/logo/footer-logo.png" alt="Logo" /></a>
+                            <a href="index.html"> <img src="{{ asset('frontend/images/logo/footer-logo.png')}}" alt="Logo" /></a>
                             <p>
                                 A farm is a plot of land that is used to grow crops and raise livestock, as in our farm,
                                 we raise sheep and sell their wool the word farm is also.
@@ -830,32 +830,32 @@
         <!-- End scrollUp  -->
 
         <!-- Modernizr.JS -->
-        <script src="assets/js/modernizr-2.8.3.min.js"></script>
+        <script src="{{ asset('frontend/js/modernizr-2.8.3.min.js') }}"></script>
         <!-- jQuery.min JS -->
-        <script src="assets/js/jquery.min.js"></script>
+        <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
         <!-- Bootstrap.min JS -->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
         <!-- Meanmenu JS -->
-        <script src="assets/js/meanmenu.js"></script>
+        <script src="{{ asset('frontend/js/meanmenu.js') }}"></script>
         <!-- Imagesloaded JS -->
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="{{ asset('frontend/js/imagesloaded.pkgd.min.js') }}"></script>
         <!-- Isotope JS -->
-        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="{{ asset('frontend/js/isotope.pkgd.min.js') }}"></script>
         <!-- Magnific JS -->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}"></script>
         <!-- Swiper.min JS -->
-        <script src="assets/js/swiper.min.js"></script>
+        <script src="{{ asset('frontend/js/swiper.min.js') }}"></script>
         <!-- Owl.min JS -->
-        <script src="assets/js/owl.carousel.js"></script>
+        <script src="{{ asset('frontend/js/owl.carousel.js') }}"></script>
         <!-- Appear JS -->
-        <script src="assets/js/jquery.appear.min.js"></script>
+        <script src="{{ asset('frontend/js/jquery.appear.min.js') }}"></script>
         <!-- Odometer JS -->
-        <script src="assets/js/odometer.min.js"></script>
+        <script src="{{ asset('frontend/js/odometer.min.js') }}"></script>
         <!-- Sal JS -->
-        <script src="assets/js/sal.js"></script>
+        <script src="{{ asset('frontend/js/sal.js') }}"></script>
         <!-- Nice JS -->
-        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="{{ asset('frontend/js/jquery.nice-select.min.js') }}"></script>
         <!-- Main JS -->
-        <script src="assets/js/main.js"></script>
+        <script src="{{ asset('frontend/js/main.js') }}"></script>
     </body>
 </html>
