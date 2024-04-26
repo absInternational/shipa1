@@ -44,7 +44,7 @@
             <div class="animation-preloader">
                 <div class="spinner">
                     <div class="loader-icon">
-                        <img src="{{ asset('frontend/images/logo/loder.png') }}" alt="Corporate Business HTML Template" />
+                        <img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}" alt="Corporate Business HTML Template" />
                     </div>
                 </div>
                 <div class="txt-loading">
