@@ -9,10 +9,10 @@
                     <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/slider-1.jpg') }}">
                         <div class="container">
                             <div class="slider-content p-z-idex">
-                                <h1 class="slider-title">Flexible Transport And Logistics Services</h1>
+                                <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
                                 <div class="slider-desc">
-                                    Explain to you how all this mistaken denouncing pleasure and praising pain was born
-                                    and we will give you
+                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                customers and seeks your trust in return of our services.
                                 </div>
                                 <div class="tj-theme-button">
                                     <a class="tj-transparent-btn" href="contact.html">
@@ -26,10 +26,10 @@
                     <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/slider-2.jpg') }}">
                         <div class="container">
                             <div class="slider-content p-z-idex">
-                                <h1 class="slider-title">Flexible Transport And Logistics Services</h1>
+                                <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
                                 <div class="slider-desc">
-                                    Explain to you how all this mistaken denouncing pleasure and praising pain was born
-                                    and we will give you
+                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                customers and seeks your trust in return of our services.
                                 </div>
                                 <div class="tj-theme-button">
                                     <a class="tj-transparent-btn" href="contact.html">
@@ -43,10 +43,10 @@
                     <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/slider-6.jpg') }}">
                         <div class="container">
                             <div class="slider-content p-z-idex">
-                                <h1 class="slider-title">Flexible Transport And Logistics Services</h1>
+                                <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
                                 <div class="slider-desc">
-                                    Explain to you how all this mistaken denouncing pleasure and praising pain was born
-                                    and we will give you
+                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                customers and seeks your trust in return of our services.
                                 </div>
                                 <div class="tj-theme-button">
                                     <a class="tj-transparent-btn" href="contact.html">
@@ -176,8 +176,8 @@
                                     <i class="flaticon flaticon-freight"></i>
                                 </div>
                                 <div class="cta-text">
-                                    <h3 class="title">Would you Like to get The Best Transport Services?</h3>
-                                    <p class="desc">Dapibus interdum senectus malesuada est nec morbi cursus.</p>
+                                    <h3 class="title">SHIP A CAR DIRECT FROM AUTO Auction</h3>
+                                    <p class="desc">We deliver quality, with prosperity. Because your Shipping needs, our solution.</p>
                                 </div>
                             </div>
                         </div>
@@ -203,12 +203,10 @@
                     <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                         <div class="about-content-one">
                             <div class="tj-section-heading">
-                                <span class="sub-title active-shape"> Transportation Company</span>
-                                <h2 class="title">We Provide Full Range Global Logistics</h2>
+                                <span class="sub-title active-shape"> A1 Transportation Company</span>
+                                <h2 class="title">What Makes Us Dependable?</h2>
                                 <p class="desc">
-                                    Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla a lobortis lectus,
-                                    id volutpat magna. Morbi consequat porttitor fermentum. Nulla vestibulum tincidunt
-                                    viverra. Vestibulum accumsan
+                                Among all the shipping companies out there, factors that make us stand out from therest are:
                                 </p>
                             </div>
                             <div class="tj-icon-box">
@@ -217,12 +215,12 @@
                                         <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" />
                                     </div>
                                     <div class="ab-title">
-                                        <h5 class="title">Worldwide Service</h5>
+                                        <h5 class="title">Our Values</h5>
                                     </div>
                                 </div>
                                 <p class="desc">
-                                    Lorem ipsum is simply velit anod<br />
-                                    ipas aliquet enean quis.
+                                We are a licensed Transportation company with high moral values and have attained customer satisfaction through their remarks on esteemed platforms.
+                                  
                                 </p>
                             </div>
                             <div class="tj-icon-box">
@@ -231,15 +229,42 @@
                                         <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
                                     </div>
                                     <div class="ab-title">
-                                        <h5 class="title">Certified & Awward Winner</h5>
+                                        <h5 class="title">Scope of Services</h5>
                                     </div>
                                 </div>
                                 <p class="desc">
-                                    Lorem ipsum is simply velit anod<br />
-                                    ipas aliquet enean quis.
+                                Range of vehicles, we ship, is not limited to just conventional cars and motorbikes.
                                 </p>
                             </div>
-                            <div class="ab-button-box d-flex align-items-center">
+                            <div class="tj-icon-box">
+                                <div class="ab-text d-flex align-items-center">
+                                    <div class="ab-icon">
+                                        <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                    </div>
+                                    <div class="ab-title">
+                                        <h5 class="title">Safety Is Our Priority</h5>
+                                    </div>
+                                </div>
+                                <p class="desc">
+                                No matter which mode of transportation you use, ShipA1 assures its customers, utmostsecurity to their assets.
+
+
+                                </p>
+                            </div>
+                            <div class="tj-icon-box">
+                                <div class="ab-text d-flex align-items-center">
+                                    <div class="ab-icon">
+                                        <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                    </div>
+                                    <div class="ab-title">
+                                        <h5 class="title">Skilful & Devoted Staff</h5>
+                                    </div>
+                                </div>
+                                <p class="desc">
+                                Our team is loaded with highly experienced professionals of both customer dealing andvehicle handling.
+                                </p>
+                            </div>
+                            <!-- <div class="ab-button-box d-flex align-items-center">
                                 <div class="tj-theme-btn">
                                     <a class="tj-primary-btn" href="contact.html">
                                         Read More <i class="flaticon-right-1"></i>
@@ -248,7 +273,7 @@
                                 <div class="right-text">
                                     <img src="{{ asset('frontend/images/icon/auother.svg') }}" alt="Image" />
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
@@ -403,12 +428,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="tj-section-heading text-center">
-                            <span class="sub-title active-shape"> Our Workers</span>
-                            <h2 class="title">Our Delivery Team</h2>
+                            <span class="sub-title active-shape"> Our Services</span>
+                            <h2 class="title">Pick Your Transport Type</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+              {{--  <div class="row">
                     <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                         <div class="tj-team-item">
                             <div class="image-box">
@@ -490,7 +515,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--}}
             </div>
         </section>
         <!--=========== Team Section End =========-->
@@ -514,8 +539,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title">CAR</span>
+                        <h4><a href="project-details.html" class="title-link"> Sedan, SUV, Pickup etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -524,8 +549,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title"> MOTORCYCLE</span>
+                        <h4><a href="project-details.html" class="title-link"> Mopeds, ATV, Power Sports etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -534,8 +559,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title"> HEAVY EQUIP.</span>
+                        <h4><a href="project-details.html" class="title-link"> Trucks, Bulldozers, Mixer etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -544,8 +569,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title">RORO</span>
+                        <h4><a href="project-details.html" class="title-link">Cars, Trucks, trailers etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -554,8 +579,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title"> ATV/UTV</span>
+                        <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -564,8 +589,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title"> CONSTRUCTION</span>
+                        <h4><a href="project-details.html" class="title-link"> Cranes, Drills, Grinders etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -574,8 +599,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title"> FARM</span>
+                        <h4><a href="project-details.html" class="title-link">Tractor, Planter, Baler etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -584,8 +609,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title"> EXCAVATOR</span>
+                        <h4><a href="project-details.html" class="title-link"> Digger, Driller, Miners etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -594,8 +619,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title"> TRUCKS</span>
+                        <h4><a href="project-details.html" class="title-link">Commercial, Dump Trucks etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -604,8 +629,8 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title"> Reefer</span>
+                        <h4><a href="project-details.html" class="title-link"> frozen , refrigerated etc.</a></h4>
                     </div>
                 </div>
                 <div class="tj-project-item">
@@ -614,8 +639,18 @@
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
                     <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
+                        <span class="sub-title"> Hazmat</span>
+                        <h4><a href="project-details.html" class="title-link"> Explosive, Flammable, etc.</a></h4>
+                    </div>
+                </div>
+                <div class="tj-project-item">
+                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title"> Dry van</span>
+                        <h4><a href="project-details.html" class="title-link">palletized, boxed, freight etc.</a></h4>
                     </div>
                 </div>
             </div>
