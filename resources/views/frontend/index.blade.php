@@ -674,7 +674,7 @@
                                     <div class="tj-testimonial-item">
                                         <div class="testimonial-rating d-flex justify-content-between">
                                             <div class="testimoniasl-image">
-                                                <img src="{{ asset('frontend/images/testimonial/test.png') }}" alt="Image" />
+                                            <img src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />                                     
                                             </div>
                                             <div class="rating-icon">
                                                 <ul class="list-gap">
@@ -688,17 +688,17 @@
                                         </div>
                                         <div class="content-area">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco
+                                            I have used Sean Auto Transport (Ship A1) for over 10 years, and 
+                                            of course given referred them to several people. These guys are
+                                             reliable and competitively priced. Sean is really a nice guy to work wi...
                                             </p>
                                             <div class="testimonial-content d-flex justify-content-between">
                                                 <div class="testimonial-auother">
-                                                    <h5 class="title">Kimberly Hansen</h5>
-                                                    <span class="sub-title"> Manager</span>
+                                                    <h5 class="title">Peter A </h5>
+                                                    <span class="sub-title"> Sep,22 2022</span>
                                                 </div>
                                                 <div class="testimonial-comment">
-                                                    <img src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />
+                                                <img src="{{ asset('frontend/images/testimonial/bbb.png') }}" alt="Image" />
                                                 </div>
                                             </div>
                                         </div>
@@ -708,7 +708,8 @@
                                     <div class="tj-testimonial-item">
                                         <div class="testimonial-rating d-flex justify-content-between">
                                             <div class="testimoniasl-image">
-                                                <img src="{{ asset('frontend/images/testimonial/test1.png') }}" alt="Image" />
+                                                
+                                                <img src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />
                                             </div>
                                             <div class="rating-icon">
                                                 <ul class="list-gap">
@@ -722,17 +723,17 @@
                                         </div>
                                         <div class="content-area">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco
+                                            Very reliable, professional and trustworthy auto transporter.
+                                             John and Allen have arranged over 50 shipments for us the past
+                                              year and they have never let us down. 
                                             </p>
                                             <div class="testimonial-content d-flex justify-content-between">
                                                 <div class="testimonial-auother">
-                                                    <h5 class="title">Miah Robbani</h5>
-                                                    <span class="sub-title"> Manager</span>
+                                                    <h5 class="title">Midtown C.</h5>
+                                                    <span class="sub-title"> May,05 2023</span>
                                                 </div>
                                                 <div class="testimonial-comment">
-                                                    <img src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />
+                                                <img src="{{ asset('frontend/images/testimonial/google.png') }}" alt="Image" />
                                                 </div>
                                             </div>
                                         </div>
@@ -742,7 +743,8 @@
                                     <div class="tj-testimonial-item">
                                         <div class="testimonial-rating d-flex justify-content-between">
                                             <div class="testimoniasl-image">
-                                                <img src="{{ asset('frontend/images/testimonial/test.png') }}" alt="Image" />
+                                            <img src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />
+                                                
                                             </div>
                                             <div class="rating-icon">
                                                 <ul class="list-gap">
@@ -756,17 +758,18 @@
                                         </div>
                                         <div class="content-area">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco
+                                            Very reliable and trustworthy with respect to delivery to any address.
+                                             I have changed my old Trucking company because I was tired of paying 
+                                             storage fees all the time. I have referred Ship A1 LLC to my...
                                             </p>
                                             <div class="testimonial-content d-flex justify-content-between">
                                                 <div class="testimonial-auother">
-                                                    <h5 class="title">Kimberly Hansen</h5>
-                                                    <span class="sub-title"> Manager</span>
+                                                    <h5 class="title">Humphrey E.</h5>
+                                                    <span class="sub-title"> May,09 2023</span>
                                                 </div>
                                                 <div class="testimonial-comment">
-                                                    <img src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />
+                                                
+                                                <img src="{{ asset('frontend/images/testimonial/bbb.png') }}" alt="Image" />
                                                 </div>
                                             </div>
                                         </div>
@@ -776,7 +779,7 @@
                                     <div class="tj-testimonial-item">
                                         <div class="testimonial-rating d-flex justify-content-between">
                                             <div class="testimoniasl-image">
-                                                <img src="{{ asset('frontend/images/testimonial/test1.png') }}" alt="Image" />
+                                            <img src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />
                                             </div>
                                             <div class="rating-icon">
                                                 <ul class="list-gap">
@@ -790,17 +793,18 @@
                                         </div>
                                         <div class="content-area">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco
+                                            Have been dealt with many brokers but as for now they are the best.
+                                             Appreciate their professionalism and courtesy. Their shipping is 
+                                             fast and they are always keeping touch with me Hope will have more ...
                                             </p>
                                             <div class="testimonial-content d-flex justify-content-between">
                                                 <div class="testimonial-auother">
-                                                    <h5 class="title">Miah Robbani</h5>
-                                                    <span class="sub-title"> Manager</span>
+                                                    <h5 class="title">Abou Mbaye</h5>
+                                                    <span class="sub-title"> Jan,22 2022 </span>
                                                 </div>
                                                 <div class="testimonial-comment">
-                                                    <img src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />
+                                                <img src="{{ asset('frontend/images/testimonial/transport.png') }}" alt="Image" />
+                                                    
                                                 </div>
                                             </div>
                                         </div>
