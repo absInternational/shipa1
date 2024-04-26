@@ -27,6 +27,21 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Blogs
 Route::get('/blogs', [FrontendController::class, 'blogs'])->name('blogs');
 
+// Blog details
+Route::get('/blogs/details', [FrontendController::class, 'blogDetails'])->name('blog.details');
+
+// About us
+Route::get('/about_us', [FrontendController::class, 'aboutUs'])->name('aboutUs');
+
+// Contact us
+Route::get('/contact_us', [FrontendController::class, 'contactUs'])->name('contactUs');
+
+// Service
+Route::get('/services', [FrontendController::class, 'services'])->name('services');
+
+// Auto Auction
+Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('autoAuction');
+
 // Admin
 Route::middleware('admin')->prefix('admin')->group(function () {
 

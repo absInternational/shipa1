@@ -50,46 +50,22 @@
                             <!-- Mainmenu Item Start -->
                             <div class="tj-main-menu d-lg-block d-none text-end" id="main-menu">
                                 <ul class="main-menu">
-                                    <li class="menu-item-has-children">
-                                        <a href="index.html"> Home</a>
-                                        <ul class="list-gap sub-menu-list">
-                                            <li><a href="index.html">Home One</a></li>
-                                            <li><a href="index2.html">Home Two</a></li>
-                                            <li><a href="index3.html">Home Three</a></li>
-                                        </ul>
+                                    <li class="ab-gap">
+                                        <a href="{{ url('/') }}"> Home</a>
                                     </li>
                                     <li class="ab-gap">
-                                        <a href="about.html"> About Us</a>
+                                        <a href="{{ route('aboutUs') }}"> About Us</a>
                                     </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#"> Service</a>
-                                        <ul class="list-gap sub-menu-list">
-                                            <li><a href="service.html">Service</a></li>
-                                            <li><a href="service-details.html">Service Details</a></li>
-                                        </ul>
+                                    <li class="ab-gap">
+                                        <a href="{{ route('services') }}"> Service</a>
                                     </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#"> Pages</a>
-                                        <ul class="list-gap sub-menu-list">
-                                            <li><a href="project.html">Project</a></li>
-                                            <li><a href="project-details.html">Project Details</a></li>
-                                            <li><a href="team.html"> Team</a></li>
-                                            <li><a href="team-details.html"> Team Details</a></li>
-                                            <li><a href="faq.html"> Faq</a></li>
-                                        </ul>
+                                    <li class="ab-gap">
+                                        <a href="{{ route('autoAuction') }}"> auto Auction</a>
                                     </li>
-
-                                    <li class="current-menu-item menu-item-has-children">
-                                        <a class="active" href="#"> Blog</a>
-                                        <ul class="list-gap sub-menu-list">
-                                            <li><a href="blog.html">Blog Grid</a></li>
-                                            <li>
-                                                <a class="active" href="blog-standard.html">Blog Standard</a>
-                                            </li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
+                                    <li class="ab-gap">
+                                        <a class="active" href="{{ route('blogs') }}"> Blog</a>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{{ route('contactUs') }}">Contact</a></li>
                                 </ul>
                             </div>
                             <!-- Mainmenu Item End -->

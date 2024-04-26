@@ -15,4 +15,24 @@ class FrontendController extends Controller
     {
         return view('frontend.blogs.detail');
     }
+    
+    public function aboutUs()
+    {
+        return view('frontend.pages.aboutUs');
+    }
+    
+    public function contactUs()
+    {
+        return view('frontend.pages.contactUs');
+    }
+    
+    public function services()
+    {
+        return view('frontend.pages.services.index');
+    }
+    
+    public function autoAuction()
+    {
+        return view('frontend.pages.services.index');
+    }
 }
