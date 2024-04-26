@@ -14,16 +14,16 @@
                     <div class="footer-social-icon">
                         <ul class="list-gap">
                             <li>
-                                <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.facebook.com/ShipA1/"> <i class="fa-brands fa-facebook-f"></i></a>
                             </li>
                             <li>
-                                <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/shipa1_transport/"> <i class="fa-brands fa-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://twitter.com/ShipA1Transport"> <i class="fa-brands fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#"> <i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://www.linkedin.com/in/shipa1-transport/"> <i class="fa-brands fa-linkedin-in"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -95,14 +95,14 @@
                     <div class="widget-contact">
                         <div class="contact-list">
                             <ul class="list-gap">
-                                <li><i class="flaticon-placeholder"></i> 244, First Floor, Angeles</li>
+                                <li><i class="flaticon-placeholder"></i> 201 International Cir STE 230, Hunt Valley, MD 21030-1344</li>
                                 <li>
                                     <i class="flaticon-phone-call"></i>
-                                    <a href="tel:(880)1247536548"> (880)1247536548</a>
+                                    <a href="tel: 1 (844) 474-4721">  1 (844) 474-4721</a>
                                 </li>
                                 <li>
                                     <i class="flaticon-email-2"></i>
-                                    <a href="mailto:info@example.com"> info@example.com</a>
+                                    <a href="mailto:info@shipa1.com"> shawntransport@shipa1.com</a>
                                 </li>
                             </ul>
                         </div>
