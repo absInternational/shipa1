@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +18,14 @@ use App\Http\Controllers\Admin\BlogController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
+    // return view('welcome');
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+// Blogs
+Route::get('/blogs', [FrontendController::class, 'blogs'])->name('blogs');
 
 // Admin
 Route::middleware('admin')->prefix('admin')->group(function () {
