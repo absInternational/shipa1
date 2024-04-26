@@ -49,10 +49,17 @@
                                         <span class="text-danger">{{ $errors->first('post_short_description') }}</span>
                                     @endif
                                 </div>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label>Blog Long Description</label>
                                     <!--<textarea class="ckeditorTn2 form-control" name="post_description" maxlength="10"></textarea>-->
                                     <textarea class="ckeditorzee2 form-control" name="post_description" maxlength="10"></textarea>
+                                    @if ($errors->has('post_description'))
+                                        <span class="text-danger">{{ $errors->first('post_description') }}</span>
+                                    @endif
+                                </div> --}}
+                                <div class="form-group">
+                                    <label>Blog Long Description</label>
+                                    <textarea class="summernote form-control" name="post_description" maxlength="10"></textarea>
                                     @if ($errors->has('post_description'))
                                         <span class="text-danger">{{ $errors->first('post_description') }}</span>
                                     @endif

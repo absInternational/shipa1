@@ -32,8 +32,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="post_description">Description</label>
-                    <textarea class="form-control" id="post_description" name="post_description" rows="5">{{ $blog->post_description }}</textarea>
+                    <label for="post_description">Blog Long Description</label>
+                    <textarea class="summernote form-control" id="post_description" name="post_description" rows="5">{{ $blog->post_description }}</textarea>
                 </div>
 
                 <div class="form-group">
