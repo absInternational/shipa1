@@ -41,6 +41,9 @@ Route::get('/contact_us', [FrontendController::class, 'contactUs'])->name('conta
 // Service
 Route::get('/services', [FrontendController::class, 'services'])->name('services');
 
+// Service detail
+Route::get('/services/details', [FrontendController::class, 'serviceDetails'])->name('service.details');
+
 // Auto Auction
 Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('autoAuction');
 

@@ -31,6 +31,11 @@ class FrontendController extends Controller
         return view('frontend.pages.services.index');
     }
     
+    public function serviceDetails()
+    {
+        return view('frontend.pages.services.detail');
+    }
+    
     public function autoAuction()
     {
         return view('frontend.pages.services.index');

@@ -12,16 +12,12 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Edit Service Category</h1>
                             </div>
-                            <form action="{{ route('admin.service-categories.update', $serviceCategory->id) }}" method="POST">
+                            <form action="{{ route('service_categories.update', $serviceCategory->id) }}" method="POST">
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
                                     <label>Name</label>
                                     <input class="form-control" type="text" name="name" value="{{ $serviceCategory->name }}" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Slug</label>
-                                    <input class="form-control" type="text" name="slug" value="{{ $serviceCategory->slug }}" required />
                                 </div>
                                 <div class="form-group">
                                     <label>Status</label>

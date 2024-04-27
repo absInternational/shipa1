@@ -96,9 +96,9 @@
             <span>Blogs</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('blogs.create') }}">
+        <a class="nav-link" href="{{ route('service_categories.index') }}">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Add New Blogs</span></a>
+            <span>Service Categories</span></a>
     </li>
 
     {{-- <!-- Nav Item - Tables -->

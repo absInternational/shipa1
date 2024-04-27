@@ -12,15 +12,11 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Add New Service Category</h1>
                             </div>
-                            <form action="{{ route('admin.service-categories.store') }}" method="POST">
+                            <form action="{{ route('service_categories.store') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label>Name</label>
                                     <input class="form-control" type="text" name="name" placeholder="Service Category Name" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Slug</label>
-                                    <input class="form-control" type="text" name="slug" placeholder="Slug Name" required />
                                 </div>
                                 <div class="form-group">
                                     <label>Status</label>
