@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\Admin\ServiceCategoryController;
 use App\Http\Controllers\FrontendController;
 
 /*
@@ -58,6 +60,17 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::delete('/destroy/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
     });
 
+    // Review routes
+    Route::prefix('reviews')->group(function () {
+        Route::get('/', [ReviewController::class, 'index'])->name('reviews.index');
+        Route::get('/add', [ReviewController::class, 'create'])->name('reviews.create');
+        Route::post('/store', [ReviewController::class, 'store'])->name('reviews.store');
+        Route::get('/edit/{id}', [ReviewController::class, 'edit'])->name('reviews.edit');
+        Route::put('/update/{id}', [ReviewController::class, 'update'])->name('reviews.update');
+        Route::delete('/destroy/{review}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
+    });
+
+    Route::resource('service_categories', ServiceCategoryController::class);
 
 });
 
