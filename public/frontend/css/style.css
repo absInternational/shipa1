@@ -1062,7 +1062,7 @@ body [class*=" icon-"]::before {
 .tj-main-menu > ul > li > a {
     padding-top: 16px;
     padding-bottom: 14px;
-    padding-right: 25px;
+    /* padding-right: 25px; */
 }
 
 .tj-main-menu > ul > li.current-menu-item .active {
@@ -1073,7 +1073,7 @@ body [class*=" icon-"]::before {
     color: var(--tj-primary-color);
 }
 
-.tj-main-menu > ul > li.menu-item-has-children > a::before {
+/* .tj-main-menu > ul > li.menu-item-has-children > a::before {
     content: "\2b";
     font-family: "Font Awesome 6 Pro";
     font-weight: 500;
@@ -1086,7 +1086,7 @@ body [class*=" icon-"]::before {
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
-}
+} */
 
 .tj-main-menu > ul > li.menu-item-has-children > a:hover::before {
     color: var(--tj-primary-color);

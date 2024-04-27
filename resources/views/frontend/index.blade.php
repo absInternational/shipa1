@@ -69,7 +69,7 @@
                                     <i class="flaticon-delivery-van"></i>
                                 </div>
                                 <div class="sub-title">
-                                    <span>Road Freight </span>
+                                    <span>VEHICLE <br>TRANSPORTATION</span>
                                 </div>
                             </div>
                             <div class="service-arrow">
@@ -84,7 +84,7 @@
                                     <i class="flaticon-air-freight"></i>
                                 </div>
                                 <div class="sub-title">
-                                    <span>Air Freight </span>
+                                    <span>HEAVY <br>TRANSPORTATION </span>
                                 </div>
                             </div>
                             <div class="service-arrow">
@@ -99,7 +99,7 @@
                                     <i class="flaticon flaticon-ship"></i>
                                 </div>
                                 <div class="sub-title">
-                                    <span>Ocean Freight </span>
+                                    <span>FREIGHT <br>TRANSPORTATION</span>
                                 </div>
                             </div>
                             <div class="service-arrow">
