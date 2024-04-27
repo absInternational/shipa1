@@ -100,6 +100,11 @@
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Service Categories</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('reviews.index') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Reviews</span></a>
+    </li>
 
     {{-- <!-- Nav Item - Tables -->
     <li class="nav-item">

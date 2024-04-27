@@ -19,10 +19,13 @@ use App\Http\Controllers\FrontendController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-    // return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+//     // return view('welcome');
+// });
+
+// home
+Route::get('/', [FrontendController::class, 'index'])->name('/');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -64,15 +67,9 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     });
 
     // Review routes
-    Route::prefix('reviews')->group(function () {
-        Route::get('/', [ReviewController::class, 'index'])->name('reviews.index');
-        Route::get('/add', [ReviewController::class, 'create'])->name('reviews.create');
-        Route::post('/store', [ReviewController::class, 'store'])->name('reviews.store');
-        Route::get('/edit/{id}', [ReviewController::class, 'edit'])->name('reviews.edit');
-        Route::put('/update/{id}', [ReviewController::class, 'update'])->name('reviews.update');
-        Route::delete('/destroy/{review}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
-    });
+    Route::resource('reviews', ReviewController::class);
 
+    // Service categories routes
     Route::resource('service_categories', ServiceCategoryController::class);
 
 });

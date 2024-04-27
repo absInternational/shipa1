@@ -10,8 +10,8 @@ class ReviewController extends Controller
 {
     public function index()
     {
-        $review = Review::all();
-        return view('dashboard.admin.reviews.index', compact('review'));
+        $reviews = Review::all();
+        return view('dashboard.admin.reviews.index', compact('reviews'));
     }
 
     public function create()
@@ -21,28 +21,53 @@ class ReviewController extends Controller
 
     public function store(Request $request)
     {
-        $review = new Review;
+        $request->validate([
+            'site_name' => 'required|string',
+            'profile_url' => 'nullable|string',
+            'rating' => 'required|numeric',
+            'number_of_reviews' => 'nullable|integer',
+            'review_date' => 'nullable|date',
+            'person_name' => 'nullable|string',
+            'rating_url' => 'nullable|string',
+            'description' => 'nullable|string',
+            'type' => 'required|string',
+        ]);
+
+        Review::create($request->all());
 
         return redirect()->route('reviews.index')->with('success', 'Review created successfully.');
     }
 
     public function edit($id)
     {
-        $review = Review::find($id);
+        $review = Review::findOrFail($id);
         return view('dashboard.admin.reviews.edit', compact('review'));
     }
 
     public function update(Request $request, $id)
     {
-        $review = Review::find($id);
+        $request->validate([
+            'site_name' => 'required|string',
+            'profile_url' => 'nullable|string',
+            'rating' => 'required|numeric',
+            'number_of_reviews' => 'nullable|integer',
+            'review_date' => 'nullable|date',
+            'person_name' => 'nullable|string',
+            'rating_url' => 'nullable|string',
+            'description' => 'nullable|string',
+            'type' => 'required|string',
+        ]);
+
+        $review = Review::findOrFail($id);
+        $review->update($request->all());
 
         return redirect()->route('reviews.index')->with('success', 'Review updated successfully.');
     }
 
     public function destroy($id)
     {
-        $blog = Review::findOrFail($id);
-        $blog->delete();
+        $review = Review::findOrFail($id);
+        $review->delete();
 
         return redirect()->route('reviews.index')->with('success', 'Review deleted successfully.');
     }
