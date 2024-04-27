@@ -36,7 +36,7 @@
                             <div class="tj-blog-item-three">
                                 <div class="tj-blog-image">
                                     <a href="service-details.html">
-                                        <img src="assets/images/service/service-11.jpg" alt="Blog"
+                                        <img src="{{ asset('frontend/images/service/service-11.jpg ')}}" alt="Blog"
                                     /></a>
                                 </div>
                                 <div class="blog-content-area">
@@ -58,7 +58,7 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-5 col-md-6">
                                     <div class="check-image">
-                                        <img src="assets/images/blog/blog-12.jpg" alt="Blog" />
+                                        <img src="{{ asset('frontend/images/blog/blog-12.jpg' )}}" alt="Blog" />
                                     </div>
                                 </div>
                                 <div class="col-lg-7 col-md-6">
@@ -94,12 +94,12 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="sevice-image">
-                                            <img src="assets/images/service/service-13.jpg" alt="Image" />
+                                            <img src="{{ asset('frontend/images/service/service-13.jpg' ) }}" alt="Image" />
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <div class="sevice-image">
-                                            <img src="assets/images/service/service-14.jpg" alt="Image" />
+                                            <img src="{{ asset('frontend/images/service/service-14.jpg' ) }}" alt="Image" />
                                         </div>
                                     </div>
                                 </div>

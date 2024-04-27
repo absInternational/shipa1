@@ -18,7 +18,7 @@
                             <div
                                 class="topbar-content-area d-flex flex-wrap align-items-center justify-content-between">
                                 <div class="header-content-left">
-                                    <span> Mon - Sat: 8 am - 5 pm, Sunday: Closed</span>
+                                    <span> Mon - Sat: 8 AM - 7 PM, Sunday: Closed</span>
                                 </div>
                                 <div class="header-content-right">
                                     <div class="header-social-icon">
