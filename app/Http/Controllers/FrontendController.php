@@ -25,7 +25,8 @@ class FrontendController extends Controller
 
     public function aboutUs()
     {
-        return view('frontend.pages.aboutUs');
+        $reviews = Review::all();
+        return view('frontend.pages.aboutUs', compact('reviews'));
     }
 
     public function contactUs()
