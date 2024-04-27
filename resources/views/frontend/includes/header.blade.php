@@ -68,7 +68,7 @@
                                         <a class="active" href="{{ route('services') }}"> Service</a>
                                         <ul class="list-gap sub-menu-list">
                                             <!-- <li><a class="active" href="service.html">Service</a></li> -->
-                                            <li><a href="{{ route('services-detail') }}">Service Details</a></li>
+                                            <li><a href="{{ route('service.details') }}">Service Details</a></li>
                                         </ul>
                                     </li>
                                     <li class="ab-gap">
