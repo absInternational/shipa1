@@ -60,9 +60,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="container">
+                            <p>
                                 {!! $blog->post_description !!}
-                            </div>
+                            </p>
                         </div>
                         {{-- <div class="row align-items-center">
                             <div class="col-lg-5 col-md-6">
