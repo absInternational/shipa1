@@ -166,7 +166,7 @@
 
     <!--=========== Cta Section Start =========-->
      <section class="tj-cta-section icon-animate">
-        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-1.jpg') }}"></div>
+        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-auto-aucation.webp') }}"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
