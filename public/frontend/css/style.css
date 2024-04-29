@@ -2374,7 +2374,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 30%;
+    width: 25%;
     background-size: cover;
     height: 100%;
     background-position: center;
@@ -6982,7 +6982,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 ------------------------------------ */
 .tj-footer-area {
     background-color: var(--tj-secondary-color);
-    background-image: url(../images/banner/footer-bg.jpg);
+    background-image: url(../images/banner/footer.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -118,7 +118,7 @@
                     <div class="footer-copyright-area">
                         <div class="copyright-target">
                             <p>
-                                Copyright © 2023 <a href="#" target="_blank"> ThemeJunction. </a> All Rights
+                                Copyright © 2023 <a href="#" target="_blank"> Shipa1. </a> All Rights
                                 Reserved.
                             </p>
                         </div>
