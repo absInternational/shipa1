@@ -3,169 +3,169 @@
 @section('content')
     <!--=========== Slider Section Start =========-->
     <section class="tj-slider-section">
-        <div class="slider_shape"><img src="{{ asset('frontend/images/banner/shape-1.png') }}" alt="Image" /></div>
-        <div class="swiper sc-slider-1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/slider-1.jpg') }}">
-                    <div class="container">
-                        <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
-                            <div class="slider-desc">
+            <div class="slider_shape"><img src="{{ asset('frontend/images/banner/shape-1.png') }}" alt="Image" /></div>
+            <div class="swiper sc-slider-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
+                        <div class="container">
+                            <div class="slider-content p-z-idex">
+                                <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
+                                <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                                 customers and seeks your trust in return of our services.
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
+                                </div>
+                                <div class="tj-theme-button">
+                                    <a class="tj-transparent-btn" href="contact.html">
+                                        Read More <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                        <div class="banner-shape"></div>
                     </div>
-                    <div class="banner-shape"></div>
-                </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/slider-2.jpg') }}">
-                    <div class="container">
-                        <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
-                            <div class="slider-desc">
+                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
+                        <div class="container">
+                            <div class="slider-content p-z-idex">
+                                <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
+                                <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                                 customers and seeks your trust in return of our services.
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
+                                </div>
+                                <div class="tj-theme-button">
+                                    <a class="tj-transparent-btn" href="contact.html">
+                                        Read More <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                        <div class="banner-shape"></div>
                     </div>
-                    <div class="banner-shape"></div>
-                </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/slider-6.jpg') }}">
-                    <div class="container">
-                        <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
-                            <div class="slider-desc">
+                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
+                        <div class="container">
+                            <div class="slider-content p-z-idex">
+                                <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
+                                <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                                 customers and seeks your trust in return of our services.
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
+                                </div>
+                                <div class="tj-theme-button">
+                                    <a class="tj-transparent-btn" href="contact.html">
+                                        Read More <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                        <div class="banner-shape"></div>
                     </div>
-                    <div class="banner-shape"></div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="tj-service-icon-box">
-            <ul class="list-gap">
-                <li>
-                    <div class="service-item">
-                        <div class="tj-service-icon">
-                            <div class="service-icon">
-                                <i class="flaticon-delivery-van"></i>
+            <div class="tj-service-icon-box">
+                <ul class="list-gap">
+                    <li>
+                        <div class="service-item">
+                            <div class="tj-service-icon">
+                                <div class="service-icon">
+                                    <i class="flaticon-delivery-van"></i>
+                                </div>
+                                <div class="sub-title">
+                                    <span>VEHICLE <br>TRANSPORTATION</span>
+                                </div>
                             </div>
-                            <div class="sub-title">
-                                <span>VEHICLE <br>TRANSPORTATION</span>
+                            <div class="service-arrow">
+                                <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="service-arrow">
-                            <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </li>
+                    <li>
+                        <div class="service-item">
+                            <div class="tj-service-icon">
+                                <div class="service-icon">
+                                    <i class="flaticon-air-freight"></i>
+                                </div>
+                                <div class="sub-title">
+                                    <span>HEAVY <br>TRANSPORTATION </span>
+                                </div>
+                            </div>
+                            <div class="service-arrow">
+                                <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-item">
+                            <div class="tj-service-icon">
+                                <div class="service-icon">
+                                    <i class="flaticon flaticon-ship"></i>
+                                </div>
+                                <div class="sub-title">
+                                    <span>FREIGHT <br>TRANSPORTATION</span>
+                                </div>
+                            </div>
+                            <div class="service-arrow">
+                                <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--=========== Slider Section End =========-->
+
+        <!--=========== Service Section Start =========-->
+        <section class="tj-service-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tj-section-heading text-center">
+                            <span class="sub-title active-shape"> What We Do</span>
+                            <h2 class="title">Logistic & Transport</h2>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <div class="service-item">
-                        <div class="tj-service-icon">
-                            <div class="service-icon">
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
+                            <div class="icon-box">
                                 <i class="flaticon-air-freight"></i>
                             </div>
-                            <div class="sub-title">
-                                <span>HEAVY <br>TRANSPORTATION </span>
+                            <div class="service-content">
+                                <h4><a class="title-link" href="service-details.html"> VEHICLE TRANSPORTATION</a></h4>
+                                <p>Long established fact that reader will be distracted by the</p>
                             </div>
                         </div>
-                        <div class="service-arrow">
-                            <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                        </div>
                     </div>
-                </li>
-                <li>
-                    <div class="service-item">
-                        <div class="tj-service-icon">
-                            <div class="service-icon">
-                                <i class="flaticon flaticon-ship"></i>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
+                            <div class="icon-box">
+                                <i class="flaticon-cargo-ship-1"></i>
                             </div>
-                            <div class="sub-title">
-                                <span>FREIGHT <br>TRANSPORTATION</span>
+                            <div class="service-content">
+                                <h4>
+                                    <a class="title-link" href="service-details.html"> HEAVY TRANSPORTATION</a>
+                                </h4>
+                                <p>Long established fact that reader will be distracted by the</p>
                             </div>
                         </div>
-                        <div class="service-arrow">
-                            <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                        </div>
                     </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--=========== Slider Section End =========-->
-
-    <!--=========== Service Section Start =========-->
-    <section class="tj-service-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape"> What We Do</span>
-                        <h2 class="title">Logistic & Transport</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-                    <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/service-1.jpg') }}">
-                        <div class="icon-box">
-                            <i class="flaticon-air-freight"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4><a class="title-link" href="service-details.html"> Air Freight Service</a></h4>
-                            <p>Long established fact that reader will be distracted by the</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-                    <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/service-2.jpg') }}">
-                        <div class="icon-box">
-                            <i class="flaticon-cargo-ship-1"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4>
-                                <a class="title-link" href="service-details.html"> Ship Transport</a>
-                            </h4>
-                            <p>Long established fact that reader will be distracted by the</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                    <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/service-3.jpg') }}">
-                        <div class="icon-box">
-                            <i class="flaticon-delivery-van"></i>
-                        </div>
-                        <div class="service-content">
-                            <h4><a class="title-link" href="service-details.html"> Road Transport</a></h4>
-                            <p>Long established fact that reader will be distracted by the</p>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
+                            <div class="icon-box">
+                                <i class="flaticon-delivery-van"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title-link" href="service-details.html"> FREIGHT TRANSPORTATION</a></h4>
+                                <p>Long established fact that reader will be distracted by the</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!--=========== Service Section End =========-->
+        </section>
+        <!--=========== Service Section End =========-->
 
     <!--=========== Cta Section Start =========-->
-    <section class="tj-cta-section icon-animate">
+     <section class="tj-cta-section icon-animate">
         <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-1.jpg') }}"></div>
         <div class="container">
             <div class="row">
@@ -194,7 +194,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
     <!--=========== Cta Section End =========-->
 
     <!--=========== About Section Start =========-->
@@ -748,7 +748,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <!-- <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -770,8 +770,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
+                </div> -->
+                <!-- <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -792,8 +792,8 @@
                                 </li>
                             </ul>
                         </div>
-                    </div> -->
-                </div>
+                    </div> 
+                </div> -->
             </div>
         </div>
     </section>
