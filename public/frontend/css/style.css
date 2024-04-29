@@ -44,7 +44,7 @@
 }
 :root {
     --tj-primary-color: #8fc445;
-    --tj-primary-color2: #ffd1c3;
+    --tj-primary-color2: #189bda;
     --tj-primary-color3: #8f3c23;
     --tj-secondary-color: #062e39;
     --tj-body-color: #7c858c;
@@ -61,6 +61,7 @@
     --tj-gray-color8: #ffc107;
     --tj-gray-color10: #d3d3d3;
     --tj-gray-color11: #f4f4f4;
+    --tj-gray-color12: #f9f9f9;
 }
 
 html,
@@ -8696,7 +8697,7 @@ PAGE LOAD ANIMATION
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background: var(--tj-primary-color2);
+    background: var( --tj-gray-color12);
 }
 
 .preloader .tj-primary-btn {
