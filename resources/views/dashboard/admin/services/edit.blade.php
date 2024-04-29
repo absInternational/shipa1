@@ -16,6 +16,11 @@
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
+                                    <label for="name">Service Name</label>
+                                    <input id="name" class="form-control" type="text" name="name"
+                                        value="{{ $service->name }}" required />
+                                </div>
+                                <div class="form-group">
                                     <label for="banner_image">Banner Image</label>
                                     <input id="banner_image" class="form-control" type="file" name="banner_image" />
                                 </div>

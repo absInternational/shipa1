@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class ServiceController extends Controller
 {
@@ -40,7 +41,10 @@ class ServiceController extends Controller
             'extra' => 'nullable|string',
             'status' => 'required|boolean',
             'category_id' => 'required',
+            'name' => 'required',
         ]);
+
+        $slug = Str::slug($request->heading_one, '-');
 
         // Check if validation fails
         if ($validator->fails()) {
@@ -75,6 +79,8 @@ class ServiceController extends Controller
         $service->extra = $request->extra;
         $service->category_id = $request->category_id;
         $service->status = $request->status;
+        $service->name = $request->name;
+        $service->slug = $slug;
         $service->banner_image = '/uploads/' . $bannerImage->getClientOriginalName();
         if ($image2) {
             $service->image2 = '/uploads/' . $image2->getClientOriginalName();
@@ -116,7 +122,10 @@ class ServiceController extends Controller
             'extra' => 'nullable|string',
             'status' => 'required|boolean',
             'category_id' => 'required',
+            'name' => 'required',
         ]);
+
+        $slug = Str::slug($request->heading_one, '-');
 
         // Check if validation fails
         if ($validator->fails()) {
@@ -139,6 +148,8 @@ class ServiceController extends Controller
         $service->extra = $request->extra;
         $service->category_id = $request->category_id;
         $service->status = $request->status;
+        $service->slug = $slug;
+        $service->name = $request->name;
 
         // Handle banner image update if provided
         if ($request->hasFile('banner_image')) {

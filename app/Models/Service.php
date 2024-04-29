@@ -26,6 +26,8 @@ class Service extends Model
         'extra',
         'category_id',
         'status',
+        'name',
+        'slug',
     ];
 
     protected $dates = ['deleted_at'];

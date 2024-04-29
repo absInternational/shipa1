@@ -18,6 +18,8 @@ class CreateServicesTable extends Migration
             $table->string('banner_image');
             $table->string('image2')->nullable();
             $table->string('image3')->nullable();
+            $table->string('name')->nullable();
+            $table->string('slug')->nullable();
             $table->string('heading_one');
             $table->text('desc_one');
             $table->string('heading_two');
@@ -29,6 +31,7 @@ class CreateServicesTable extends Migration
             $table->text('desc_two_six');
             $table->text('extra')->nullable();
             $table->integer('status')->default(1);
+            $table->bigInteger('category_id');
             $table->softDeletes();
             $table->timestamps();
         });

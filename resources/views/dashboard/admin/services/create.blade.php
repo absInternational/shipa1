@@ -14,6 +14,10 @@
                             <form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
+                                    <label for="name">Service Name</label>
+                                    <input id="name" class="form-control" type="text" name="name" required />
+                                </div>
+                                <div class="form-group">
                                     <label>Banner Image</label>
                                     <input class="form-control" type="file" name="banner_image"
                                         placeholder="Banner Image" required />
@@ -64,7 +68,7 @@
                                     <select name="category_id" class="form-control" required>
                                         <option value="" selected disabled>Select</option>
                                         @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
