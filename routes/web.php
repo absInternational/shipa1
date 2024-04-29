@@ -19,10 +19,13 @@ use App\Http\Controllers\FrontendController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-    // return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+//     // return view('welcome');
+// });
+
+// home
+Route::get('/', [FrontendController::class, 'index'])->name('/');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -30,7 +33,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/blogs', [FrontendController::class, 'blogs'])->name('blogs');
 
 // Blog details
-Route::get('/blogs/details', [FrontendController::class, 'blogDetails'])->name('blog.details');
+Route::get('/blogs/{slug}', [FrontendController::class, 'blogDetails'])->name('blog.details');
 
 // About us
 Route::get('/about_us', [FrontendController::class, 'aboutUs'])->name('aboutUs');
@@ -46,6 +49,9 @@ Route::get('/services/details', [FrontendController::class, 'serviceDetails'])->
 
 // Auto Auction
 Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('autoAuction');
+
+// news letter add
+Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('newsletter.subscribe');
 
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {
@@ -64,15 +70,9 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     });
 
     // Review routes
-    Route::prefix('reviews')->group(function () {
-        Route::get('/', [ReviewController::class, 'index'])->name('reviews.index');
-        Route::get('/add', [ReviewController::class, 'create'])->name('reviews.create');
-        Route::post('/store', [ReviewController::class, 'store'])->name('reviews.store');
-        Route::get('/edit/{id}', [ReviewController::class, 'edit'])->name('reviews.edit');
-        Route::put('/update/{id}', [ReviewController::class, 'update'])->name('reviews.update');
-        Route::delete('/destroy/{review}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
-    });
+    Route::resource('reviews', ReviewController::class);
 
+    // Service categories routes
     Route::resource('service_categories', ServiceCategoryController::class);
 
 });
