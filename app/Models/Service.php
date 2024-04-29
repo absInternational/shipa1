@@ -24,8 +24,16 @@ class Service extends Model
         'desc_two_five',
         'desc_two_six',
         'extra',
+        'category_id',
         'status',
+        'name',
+        'slug',
     ];
 
     protected $dates = ['deleted_at'];
+    
+    public function category()
+    {
+        return $this->belongsTo(ServiceCategory::class, 'category_id');
+    }
 }
