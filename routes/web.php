@@ -33,7 +33,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/blogs', [FrontendController::class, 'blogs'])->name('blogs');
 
 // Blog details
-Route::get('/blogs/details', [FrontendController::class, 'blogDetails'])->name('blog.details');
+Route::get('/blogs/{slug}', [FrontendController::class, 'blogDetails'])->name('blog.details');
 
 // About us
 Route::get('/about_us', [FrontendController::class, 'aboutUs'])->name('aboutUs');
@@ -49,6 +49,9 @@ Route::get('/services/details', [FrontendController::class, 'serviceDetails'])->
 
 // Auto Auction
 Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('autoAuction');
+
+// news letter add
+Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('newsletter.subscribe');
 
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {

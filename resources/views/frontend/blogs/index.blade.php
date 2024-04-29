@@ -32,48 +32,50 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="page-details-wrapper">
-                        <div class="tj-blog-item-three">
-                            <div class="tj-blog-image">
-                                <a href="blog-details.html">
-                                    <img src="{{ asset('frontend/images/blog/blog-14.jpg') }}" alt="Blog" /></a>
-                            </div>
-                            <div class="active-text">
-                                <a href="blog-details.html"> Logistics</a>
-                            </div>
-                            <div class="tj-content-box">
-                                <div class="blog-content-area">
-                                    <div class="blog-header">
-                                        <h3>
-                                            <a class="title-link" href="blog-details.html">
-                                                Varying Complexity, Provide Long-Term</a>
-                                        </h3>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <div class="meta-list">
-                                            <ul class="list-gap">
-                                                <li><i class="fa-light fa-user"></i> <a href="#"> Admin</a></li>
-                                                <li>
-                                                    <i class="flaticon-calendar"></i> <span> Nov 29, 2023</span>
-                                                </li>
-                                                <li>
-                                                    <i class="fa-light fa-comment"></i> <span> Comment (5)</span>
-                                                </li>
-                                            </ul>
+                        @foreach ($blogs as $blog)
+                            <div class="tj-blog-item-three">
+                                <div class="tj-blog-image">
+                                    <a href="{{ route('blog.details', $blog->slug_name) }}">
+                                        {{-- <img src="{{ asset('frontend/images/blog/blog-14.jpg') }}" alt="Blog" /></a> --}}
+                                        <img src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
+                                </div>
+                                <div class="active-text">
+                                    <a href="{{ route('blog.details', $blog->slug_name) }}"> {{ $blog->meta_title }}</a>
+                                </div>
+                                <div class="tj-content-box">
+                                    <div class="blog-content-area">
+                                        <div class="blog-header">
+                                            <h3>
+                                                <a class="title-link" href="{{ route('blog.details', $blog->slug_name) }}">
+                                                    {{ $blog->post_name }}
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="blog-meta">
+                                            <div class="meta-list">
+                                                <ul class="list-gap">
+                                                    <li><i class="fa-light fa-user"></i> <a href="#"> {{ $blog->user->name }}</a></li>
+                                                    <li>
+                                                        <i class="flaticon-calendar"></i> <span> {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</span>
+                                                    </li>
+                                                    {{-- <li>
+                                                        <i class="fa-light fa-comment"></i> <span> Comment (5)</span>
+                                                    </li> --}}
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, atomorum ds sosidon ium est as Id vim rrem princi
-                                    pes suas molesti interpretarisLorem ipsum dolor sit amet, atomorum ds sosidon
-                                    ium est as Id vim rrem princi pes suas molesti interpretaris
-                                </p>
-                                <div class="read-more">
-                                    <a href="blog-details.html">
-                                        Read More <i class="fa-light fa-arrow-right"></i></a>
+                                    <p>
+                                        {{ $blog->post_description }}
+                                    </p>
+                                    <div class="read-more">
+                                        <a href="{{ route('blog.details', $blog->slug_name) }}">
+                                            Read More <i class="fa-light fa-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="tj-blog-item-three">
+                        @endforeach
+                        {{-- <div class="tj-blog-item-three">
                             <div class="tj-blog-image">
                                 <a href="blog-details.html">
                                     <img src="{{ asset('frontend/images/blog/blog-15.jpg') }}" alt="Blog" /></a>
@@ -167,7 +169,7 @@
                                         Read More <i class="fa-light fa-arrow-right"></i></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="tj-sidebar-pagination text-center">
                             <ul class="list-gap">
                                 <li><a class="active-color" href="#">1</a></li>
@@ -305,35 +307,6 @@
     <!--========== blog details End ==============-->
 
     <!--=========== Newsletter Section Start =========-->
-    <section class="tj-subscribe-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="subscribe-content-box d-flex align-items-center justify-content-between"
-                        data-bg-image="assets/images/banner/subscribe.png">
-                        <div class="subscribe-content d-flex align-items-center">
-                            <div class="mail-icon">
-                                <img src="{{ asset('frontend/images/icon/email.svg') }}" alt="Icon" />
-                            </div>
-                            <div class="subscribe-title">
-                                <h3 class="title">Subscribe Our Newslatter</h3>
-                            </div>
-                        </div>
-                        <div class="subscribe-form d-flex align-items-center">
-                            <div class="subscribe-input">
-                                <input type="text" id="email" name="emailAddress" placeholder="Email Address"
-                                    required="" />
-                            </div>
-                            <div class="tj-theme-button">
-                                <button class="tj-submit-btn" type="submit" value="submit">
-                                    Submit Now <i class="fa-light fa-arrow-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('partials.newsletter')
     <!--=========== Newsletter Section End =========-->
 @endsection

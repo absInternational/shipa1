@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Review;
+use App\Models\Blog;
+use App\Models\NewsletterSubscribers;
 
 class FrontendController extends Controller
 {
@@ -15,12 +17,15 @@ class FrontendController extends Controller
 
     public function blogs()
     {
-        return view('frontend.blogs.index');
+        $blogs = Blog::latest()->get();
+        return view('frontend.blogs.index', compact('blogs'));
     }
 
-    public function blogDetails()
+    public function blogDetails($slug)
     {
-        return view('frontend.blogs.detail');
+        $blogs = Blog::latest()->get();
+        $blog = Blog::where('slug_name', $slug)->first();
+        return view('frontend.blogs.detail', compact('blog', 'blogs'));
     }
 
     public function aboutUs()
@@ -47,5 +52,18 @@ class FrontendController extends Controller
     public function autoAuction()
     {
         return view('frontend.pages.services.index');
+    }
+
+    public function subscribe(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|unique:newsletter_subscribers,email',
+        ], [
+            'email.unique' => 'You have already subscribed to our newsletter.',
+        ]);
+
+        NewsletterSubscribers::create($request->only('email'));
+
+        return response()->json(['message' => 'Subscription successful']);
     }
 }
