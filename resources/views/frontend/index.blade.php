@@ -820,8 +820,8 @@
                                 <div class="blog-meta">
                                     <div class="meta-date">
                                         <ul class="list-gap">
+                                            <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</li>
                                             <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('M') }}</li>
-                                            <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('d, Y') }}</li>
                                         </ul>
                                     </div>
                                     <div class="meta-list">
