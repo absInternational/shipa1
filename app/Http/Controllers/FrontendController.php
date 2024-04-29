@@ -25,7 +25,7 @@ class FrontendController extends Controller
 
     public function blogDetails($slug)
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::where('slug_name', '!=', $slug)->latest()->get();
         $blog = Blog::where('slug_name', $slug)->first();
         return view('frontend.blogs.detail', compact('blog', 'blogs'));
     }
@@ -50,7 +50,6 @@ class FrontendController extends Controller
     public function serviceDetails($slug)
     {
         $service = Service::where('slug', $slug)->first();
-        // dd($service->toArray());
         return view('frontend.pages.services.detail', compact('service'));
     }
 
