@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Review;
 use App\Models\Blog;
+use App\Models\Service;
 use App\Models\NewsletterSubscribers;
 
 class FrontendController extends Controller
@@ -24,7 +25,7 @@ class FrontendController extends Controller
 
     public function blogDetails($slug)
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::where('slug_name', '!=', $slug)->latest()->get();
         $blog = Blog::where('slug_name', $slug)->first();
         return view('frontend.blogs.detail', compact('blog', 'blogs'));
     }
@@ -42,12 +43,14 @@ class FrontendController extends Controller
 
     public function services()
     {
-        return view('frontend.pages.services.index');
+        $services = Service::latest()->get();
+        return view('frontend.pages.services.index', compact('services'));
     }
 
-    public function serviceDetails()
+    public function serviceDetails($slug)
     {
-        return view('frontend.pages.services.detail');
+        $service = Service::where('slug', $slug)->first();
+        return view('frontend.pages.services.detail', compact('service'));
     }
 
     public function autoAuction()

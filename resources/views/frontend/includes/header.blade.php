@@ -49,7 +49,7 @@
                         <!-- Header menu Start -->
                         <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
                             <div class="mobile-logo-area d-lg-none">
-                                <a href="index.html"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp')}}"
+                                <a href="index.html"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
                                         alt="Logo" /></a>
                             </div>
                             <!-- Mainmenu Item Start -->
@@ -64,11 +64,15 @@
                                     {{-- <li class="ab-gap">
                                         <a href="{{ route('services') }}"> Service</a>
                                     </li> --}}
+                                    @php
+                                        $services = \App\Models\Service::latest()->get();
+                                    @endphp
                                     <li class="current-menu-item menu-item-has-children">
-                                        <a class="active" href="{{ route('services') }}"> Service</a>
+                                        <a class="active" href="{{ route('services') }}"> Services</a>
                                         <ul class="list-gap sub-menu-list">
-                                            <!-- <li><a class="active" href="service.html">Service</a></li> -->
-                                            <li><a href="{{ route('service.details') }}">Service Details</a></li>
+                                            @foreach ($services as $service)
+                                            <li><a href="{{ route('service.details', $service->slug) }}">{{ $service->heading_one }}</a></li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li class="ab-gap">
@@ -104,24 +108,24 @@
                                 </li>
                                 </ul>
                             </div> --}}
-                            <div class="tj-header-button d-none d-lg-block">
-                                <a class="tj-header-btn" href="contact.html">
-                                    Track Order <i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                            <div class="tj-hambagur-icon d-lg-none">
-                                <a class="canva_expander nav-menu-link menu-button" href="#">
-                                    <span class="dot1"></span>
-                                    <span class="dot2"></span>
-                                    <span class="dot3"></span>
-                                </a>
+                                <div class="tj-header-button d-none d-lg-block">
+                                    <a class="tj-header-btn" href="contact.html">
+                                        Track Order <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                <div class="tj-hambagur-icon d-lg-none">
+                                    <a class="canva_expander nav-menu-link menu-button" href="#">
+                                        <span class="dot1"></span>
+                                        <span class="dot2"></span>
+                                        <span class="dot3"></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                        <!-- Header end End -->
                     </div>
-                    <!-- Header end End -->
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </header>
