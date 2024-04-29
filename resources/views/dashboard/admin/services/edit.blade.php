@@ -9,14 +9,15 @@
                     <div class="col-lg-12">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Add New Service</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Edit Service</h1>
                             </div>
-                            <form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('services.update', $service->id) }}" method="POST"
+                                enctype="multipart/form-data">
                                 @csrf
+                                @method('PUT')
                                 <div class="form-group">
                                     <label for="banner_image">Banner Image</label>
-                                    <input id="banner_image" class="form-control" type="file" name="banner_image"
-                                        required />
+                                    <input id="banner_image" class="form-control" type="file" name="banner_image" />
                                 </div>
                                 <div class="form-group">
                                     <label for="image2">Image 2</label>
@@ -29,40 +30,67 @@
                                 <div class="form-group">
                                     <label for="heading_one">Heading One</label>
                                     <input id="heading_one" class="form-control" type="text" name="heading_one"
-                                        required />
+                                        value="{{ $service->heading_one }}" required />
                                 </div>
                                 <div class="form-group">
                                     <label for="desc_one">Description One</label>
-                                    <textarea id="desc_one" class="form-control" name="desc_one" rows="4" required></textarea>
+                                    <textarea id="desc_one" class="form-control" name="desc_one" rows="4" required>{{ $service->desc_one }}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="heading_two">Heading Two</label>
                                     <input id="heading_two" class="form-control" type="text" name="heading_two"
-                                        required />
+                                        value="{{ $service->heading_two }}" required />
                                 </div>
                                 <div class="form-group">
                                     <label for="desc_two_one">Descriptions of Heading Two</label>
                                     <input id="desc_two_one" class="form-control" type="text" name="desc_two_one"
-                                        required /><br>
-                                    <input class="form-control" type="text" name="desc_two_two" required /><br>
-                                    <input class="form-control" type="text" name="desc_two_three" required /><br>
-                                    <input class="form-control" type="text" name="desc_two_four" required /><br>
-                                    <input class="form-control" type="text" name="desc_two_five" required /><br>
-                                    <input class="form-control" type="text" name="desc_two_six" required /><br>
+                                        value="{{ $service->desc_two_one }}" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_two"
+                                        value="{{ $service->desc_two_two }}" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_three"
+                                        value="{{ $service->desc_two_three }}" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_four"
+                                        value="{{ $service->desc_two_four }}" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_five"
+                                        value="{{ $service->desc_two_five }}" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_six"
+                                        value="{{ $service->desc_two_six }}" required /><br>
                                 </div>
                                 <div class="form-group">
                                     <label for="extra">Extra</label>
-                                    <textarea id="extra" class="form-control summernote" name="extra" rows="4"></textarea>
+                                    <textarea id="extra" class="form-control summernote" name="extra" rows="4">{{ $service->extra }}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Category</label>
+                                    <select name="category_id" class="form-control" required>
+                                        <option value="" selected disabled>Select</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}"
+                                                {{ $service->category_id == $category->id ? 'selected' : '' }}>
+                                                {{ $category->name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="status">Status</label>
                                     <select id="status" name="status" class="form-control" required>
-                                        <option value="1">Active</option>
-                                        <option value="0">Inactive</option>
+                                        <option value="1" {{ $service->status == 1 ? 'selected' : '' }}>Active
+                                        </option>
+                                        <option value="0" {{ $service->status == 0 ? 'selected' : '' }}>Inactive
+                                        </option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Add Service</button>
+                                <button type="submit" class="btn btn-primary">Update Service</button>
                             </form>
+                            @if ($errors->any())
+                                <div class="alert alert-danger mt-3">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>

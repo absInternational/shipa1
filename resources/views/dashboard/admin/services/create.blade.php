@@ -15,7 +15,8 @@
                                 @csrf
                                 <div class="form-group">
                                     <label>Banner Image</label>
-                                    <input class="form-control" type="file" name="banner_image" placeholder="Banner Image" required />
+                                    <input class="form-control" type="file" name="banner_image"
+                                        placeholder="Banner Image" required />
                                 </div>
                                 <div class="form-group">
                                     <label>Image 2</label>
@@ -27,7 +28,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Heading One</label>
-                                    <input class="form-control" type="text" name="heading_one" placeholder="Heading One" required />
+                                    <input class="form-control" type="text" name="heading_one" placeholder="Heading One"
+                                        required />
                                 </div>
                                 <div class="form-group">
                                     <label>Description One</label>
@@ -35,20 +37,36 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Heading Two</label>
-                                    <input class="form-control" type="text" name="heading_two" placeholder="Heading Two" required />
+                                    <input class="form-control" type="text" name="heading_two" placeholder="Heading Two"
+                                        required />
                                 </div>
                                 <div class="form-group">
                                     <label>Descriptions of Heading Two</label>
-                                    <input class="form-control" type="text" name="desc_two_one" placeholder="Desc Two One" required /><br>
-                                    <input class="form-control" type="text" name="desc_two_two" placeholder="Desc Two Two" required /><br>
-                                    <input class="form-control" type="text" name="desc_two_three" placeholder="Desc Two Three" required /><br>
-                                    <input class="form-control" type="text" name="desc_two_four" placeholder="Desc Two Four" required /><br>
-                                    <input class="form-control" type="text" name="desc_two_five" placeholder="Desc Two Five" required /><br>
-                                    <input class="form-control" type="text" name="desc_two_six" placeholder="Desc Two Six" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_one"
+                                        placeholder="Desc Two One" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_two"
+                                        placeholder="Desc Two Two" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_three"
+                                        placeholder="Desc Two Three" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_four"
+                                        placeholder="Desc Two Four" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_five"
+                                        placeholder="Desc Two Five" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_six"
+                                        placeholder="Desc Two Six" required /><br>
                                 </div>
                                 <div class="form-group">
                                     <label>Extra</label>
                                     <textarea class="form-control summernote" name="extra" rows="4" placeholder=""></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Category</label>
+                                    <select name="category_id" class="form-control" required>
+                                        <option value="" selected disabled>Select</option>
+                                        @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Status</label>
