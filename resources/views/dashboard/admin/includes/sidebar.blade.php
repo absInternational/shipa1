@@ -96,6 +96,11 @@
             <span>Blogs</span></a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('services.index') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Services</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('service_categories.index') }}">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Service Categories</span></a>

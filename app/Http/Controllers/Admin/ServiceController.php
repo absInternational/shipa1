@@ -10,8 +10,8 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        $service = Service::all();
-        return view('dashboard.admin.services.index', compact('service'));
+        $services = Service::all();
+        return view('dashboard.admin.services.index', compact('services'));
     }
 
     public function create()

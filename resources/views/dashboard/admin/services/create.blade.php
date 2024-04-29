@@ -12,102 +12,53 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Add New Service</h1>
                             </div>
-                            <form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('services.store') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
-                                    <label>Service Title</label>
-                                    <input class="form-control" type="text" name="post_name" placeholder="Service Title" required />
-                                    @if ($errors->has('post_name'))
-                                        <span class="text-danger">{{ $errors->first('post_name') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group">
-                                    <label>Slug Name</label>
-                                    <input class="form-control" type="text" name="slug_name" placeholder="Use Slug-Name"
-                                        required />
-                                    @if ($errors->has('slug_name'))
-                                        <span class="text-danger">{{ $errors->first('slug_name') }}</span>
-                                    @endif
-                                </div>
-                                {{-- <div class="form-group">
-                                    <label>Category</label>
-                                    <select name="category" class="form-control" required>
-                                        <option value="">Select Category</option>
-                                        <option value="marketing">Marketing</option>
-                                        <option value="Services">Services</option>
-                                    </select>
-                                    @if ($errors->has('category'))
-                                        <span class="text-danger">{{ $errors->first('category') }}</span>
-                                    @endif
-                                </div> --}}
-                                <div class="form-group">
-                                    <label>Service Short Description</label>
-                                    <input class="form-control" type="text" name="post_short_description"
-                                        placeholder="Short Description" required />
-                                    @if ($errors->has('post_short_description'))
-                                        <span class="text-danger">{{ $errors->first('post_short_description') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group">
-                                    <label>Service Long Description</label>
-                                    <textarea class="summernote form-control" name="post_description" maxlength="10"></textarea>
-                                    @if ($errors->has('post_description'))
-                                        <span class="text-danger">{{ $errors->first('post_description') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group">
-                                    <label>Meta Title</label>
-                                    <input class="form-control" type="text" name="meta_title" placeholder="Meta Title"
-                                        required />
-                                    @if ($errors->has('meta_title'))
-                                        <span class="text-danger">{{ $errors->first('meta_title') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group">
-                                    <label>Canonical Url</label>
-                                    <input class="form-control" type="text" name="canonical_url" placeholder="Canonical Url"
-                                        required />
-                                    @if ($errors->has('canonical_url'))
-                                        <span class="text-danger">{{ $errors->first('canonical_url') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group">
-                                    <label>Meta Keyword</label>
-                                    <input class="form-control" type="text" name="meta_keyword" placeholder="Meta Keyword"
-                                        required />
-                                    @if ($errors->has('meta_keyword'))
-                                        <span class="text-danger">{{ $errors->first('meta_keyword') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group">
-                                    <label>Meta Description</label>
-                                    <input class="form-control" type="text" name="meta_description"
-                                        placeholder="Meta Description" required />
-                                    @if ($errors->has('meta_description'))
-                                        <span class="text-danger">{{ $errors->first('meta_description') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group">
-                                    <label>Upload Service Image</label>
-                                    <input type="file" name="image" class="form-control-file form-control height-auto"
-                                        required />
-                                </div>
-                                <div class="form-group">
                                     <label>Banner Image</label>
-                                    <input type="file" name="image" class="form-control-file form-control height-auto"
-                                        required />
+                                    <input class="form-control" type="file" name="banner_image" placeholder="Banner Image" required />
                                 </div>
                                 <div class="form-group">
                                     <label>Image 2</label>
-                                    <input type="file" name="image" class="form-control-file form-control height-auto"
-                                        required />
+                                    <input class="form-control" type="file" name="image2" placeholder="Image 2" />
                                 </div>
                                 <div class="form-group">
                                     <label>Image 3</label>
-                                    <input type="file" name="image" class="form-control-file form-control height-auto"
-                                        required />
+                                    <input class="form-control" type="file" name="image3" placeholder="Image 3" />
                                 </div>
-                                <input class="btn btn-outline-primary" type="submit" name="submit">
+                                <div class="form-group">
+                                    <label>Heading One</label>
+                                    <input class="form-control" type="text" name="heading_one" placeholder="Heading One" required />
+                                </div>
+                                <div class="form-group">
+                                    <label>Description One</label>
+                                    <textarea class="form-control" name="desc_one" rows="4" placeholder="Description One" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Heading Two</label>
+                                    <input class="form-control" type="text" name="heading_two" placeholder="Heading Two" required />
+                                </div>
+                                <div class="form-group">
+                                    <label>Descriptions of Heading Two</label>
+                                    <input class="form-control" type="text" name="desc_two_one" placeholder="Desc Two One" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_two" placeholder="Desc Two Two" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_three" placeholder="Desc Two Three" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_four" placeholder="Desc Two Four" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_five" placeholder="Desc Two Five" required /><br>
+                                    <input class="form-control" type="text" name="desc_two_six" placeholder="Desc Two Six" required /><br>
+                                </div>
+                                <div class="form-group">
+                                    <label>Extra</label>
+                                    <textarea class="form-control summernote" name="extra" rows="4" placeholder=""></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <select name="status" class="form-control" required>
+                                        <option value="1">Active</option>
+                                        <option value="0">Inactive</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add Service</button>
                             </form>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\ServiceCategoryController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\Admin\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,6 +75,9 @@ Route::middleware('admin')->prefix('admin')->group(function () {
 
     // Service categories routes
     Route::resource('service_categories', ServiceCategoryController::class);
+
+    // Service routes
+    Route::resource('services', ServiceController::class);
 
 });
 
