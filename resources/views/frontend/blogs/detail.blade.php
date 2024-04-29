@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                             <p>
-                                {{ $blog->post_description }}
+                                {!! $blog->post_description !!}
                             </p>
                         </div>
                         {{-- <div class="row align-items-center">
