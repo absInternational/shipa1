@@ -37,7 +37,7 @@
                             </div>
                             <div class="contact-header">
                                 <span> Any Questions? Call us</span>
-                                <a href="tel:+1(246)3330079"> +1 (246) 333 0079</a>
+                                <a href="tel: 1 (844) 474-4721">  1 (844) 474-4721</a>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             </div>
                             <div class="contact-header">
                                 <span> Any Questions? Email us</span>
-                                <a href="mailto:example@gmail.com"> example@gmail.com</a>
+                                <a href="mailto:info@shipa1.com"> shawntransport@shipa1.com</a>
                             </div>
                         </div>
                     </div>
@@ -58,8 +58,8 @@
                                 <i class="flaticon-map"></i>
                             </div>
                             <div class="contact-header">
-                                <span> 51 Somestreet Cambridge</span>
-                                <a href="#"> CB4, United Kingdom</a>
+                                <span>201 International Cir STE 230,</span>
+                                <a href="#"> Hunt Valley, MD 21030-1344</a>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                     <div class="col-lg-5">
                         <div class="google-map">
                             <iframe
-                                src="https://maps.google.com/maps?width=100%25&amp;height=750&amp;hl=en&amp;q=New%20york+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s"
                             >
                             </iframe>
                         </div>

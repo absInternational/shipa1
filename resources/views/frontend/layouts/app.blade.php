@@ -3,7 +3,7 @@
     <head>
         <!-- Meta Tag -->
         <meta charset="utf-8" />
-        <title>LogiLand - Transport & Logistics Service HTML Template</title>
+        <title>SHIPA1 - Transport & Logistics Service </title>
         <meta name="description" content="" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -96,7 +96,7 @@
                     </div>
                     <div class="contact-link">
                         <span class="d-block"> Location:</span>
-                        <p>14A/ Pure Street City</p>
+                        <p>201 International Cir STE 230, Hunt Valley, MD 21030-1344</p>
                     </div>
                 </div>
                 <div class="contact-box contact-box1">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="contact-link">
                         <span class="d-block"> Email us:</span>
-                        <a href="mailto:info@example.com"> info@example.com</a>
+                        <a href="mailto:info@shipa1.com">shawntransport@shipa1.com</a>
                     </div>
                 </div>
                 <div class="contact-box">
@@ -114,7 +114,7 @@
                     </div>
                     <div class="contact-link">
                         <span class="d-block"> Call us:</span>
-                        <a href="tel:+1800-456-7890"> +1800-456-7890</a>
+                        <a href="tel:1 (844) 474-4721"> 1 (844) 474-4721</a>
                     </div>
                 </div>
             </div>
@@ -122,16 +122,16 @@
                 <h4 class="offcanvas-title">Social Item</h4>
                 <ul>
                     <li>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/ShipA1/"><i class="fa-brands fa-facebook-f"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/@shipA1392"><i class="fa-brands fa-youtube"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/shipa1-transport/"><i class="fa-brands fa-linkedin-in"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://twitter.com/ShipA1Transport"><i class="fa-brands fa-twitter"></i></a>
                     </li>
                 </ul>
             </div>

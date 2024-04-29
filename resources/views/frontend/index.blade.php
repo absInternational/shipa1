@@ -6,7 +6,7 @@
             <div class="slider_shape"><img src="{{ asset('frontend/images/banner/shape-1.png') }}" alt="Image" /></div>
             <div class="swiper sc-slider-1">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/slider-1.jpg') }}">
+                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
                         <div class="container">
                             <div class="slider-content p-z-idex">
                                 <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
@@ -23,7 +23,7 @@
                         </div>
                         <div class="banner-shape"></div>
                     </div>
-                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/slider-2.jpg') }}">
+                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
                         <div class="container">
                             <div class="slider-content p-z-idex">
                                 <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="banner-shape"></div>
                     </div>
-                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/slider-6.jpg') }}">
+                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
                         <div class="container">
                             <div class="slider-content p-z-idex">
                                 <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
@@ -125,36 +125,36 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/service-1.jpg') }}">
+                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
                             <div class="icon-box">
                                 <i class="flaticon-air-freight"></i>
                             </div>
                             <div class="service-content">
-                                <h4><a class="title-link" href="service-details.html"> Air Freight Service</a></h4>
+                                <h4><a class="title-link" href="service-details.html"> VEHICLE TRANSPORTATION</a></h4>
                                 <p>Long established fact that reader will be distracted by the</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/service-2.jpg') }}">
+                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
                             <div class="icon-box">
                                 <i class="flaticon-cargo-ship-1"></i>
                             </div>
                             <div class="service-content">
                                 <h4>
-                                    <a class="title-link" href="service-details.html"> Ship Transport</a>
+                                    <a class="title-link" href="service-details.html"> HEAVY TRANSPORTATION</a>
                                 </h4>
                                 <p>Long established fact that reader will be distracted by the</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/service-3.jpg') }}">
+                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
                             <div class="icon-box">
                                 <i class="flaticon-delivery-van"></i>
                             </div>
                             <div class="service-content">
-                                <h4><a class="title-link" href="service-details.html"> Road Transport</a></h4>
+                                <h4><a class="title-link" href="service-details.html"> FREIGHT TRANSPORTATION</a></h4>
                                 <p>Long established fact that reader will be distracted by the</p>
                             </div>
                         </div>
@@ -604,7 +604,7 @@
                     </div>
                 </div>
                 <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
+                    <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
                     <div class="arrow-icon">
                         <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                     </div>
@@ -822,7 +822,7 @@
         <section class="tj-map-section">
             <div class="google-map">
                 <iframe
-                    src="https://maps.google.com/maps?width=100%25&amp;height=750&amp;hl=en&amp;q=New%20york+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s"
                 >
                 </iframe>
             </div>
@@ -838,7 +838,7 @@
                                 aria-expanded="true"
                                 aria-controls="collapseOne"
                             >
-                                London Office
+                               Contact us
                             </button>
                         </h4>
                         <div
@@ -850,20 +850,20 @@
                         >
                             <div class="accordion-body">
                                 <ul class="list-gap">
-                                    <li><i class="flaticon-placeholder"></i><span> Commercial Road, London</span></li>
+                                    <li><i class="flaticon-placeholder"></i><span>201 International Cir STE 230,Hunt Valley, MD 21030-1344</span></li>
                                     <li>
                                         <i class="flaticon-mail"></i
-                                        ><a href="mailto:subai2025@gmail.com"> subai2025@gmail.com</a>
+                                        ><a href="mailto:info@shipa1.com">shawntransport@shipa1.com</a>
                                     </li>
                                     <li>
                                         <i class="flaticon-call"></i
-                                        ><a href="tel:+92(8800)-987025"> +92 (8800) - 9870 25</a>
+                                        ><a href="tel:1 (844) 474-4721"> 1 (844) 474-4721</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <!-- <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button
                                 class="accordion-button collapsed"
@@ -896,8 +896,8 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
+                    </div> -->
+                    <!-- <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button
                                 class="accordion-button collapsed"
@@ -930,7 +930,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
