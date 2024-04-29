@@ -16,7 +16,7 @@
                         action="{{ route('newsletter.subscribe') }}" method="POST">
                         @csrf
                         <div class="subscribe-input">
-                            <input type="email" id="email" name="email" placeholder="Email Address" required />
+                            <input type="email" id="email_newsletter" name="email" placeholder="Email Address" required />
                         </div>
                         <div class="tj-theme-button">
                             <button class="tj-submit-btn" type="submit">Submit Now <i

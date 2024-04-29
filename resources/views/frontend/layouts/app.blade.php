@@ -214,7 +214,8 @@
         $(document).ready(function() {
             $('#newsletter-form').submit(function(event) {
                 event.preventDefault();
-                var email = $('#email').val();
+                var email = $('#email_newsletter').val();
+                console.log(email);
 
                 $.ajax({
                     type: 'POST',
@@ -229,7 +230,7 @@
                             title: 'Subscription Successful',
                             text: response.message
                         }).then(function() {
-                            $('#email').val('');
+                            $('#email_newsletter').val('');
                         });
                     },
                     error: function(xhr, status, error) {
@@ -239,7 +240,7 @@
                             title: 'Subscription Failed',
                             text: response.message
                         }).then(function() {
-                            $('#email').val('');
+                            $('#email_newsletter').val('');
                         });
                     }
                 });
