@@ -269,15 +269,15 @@
                             </p>
                         </div>
                         <!-- <div class="ab-button-box d-flex align-items-center">
-                                                                <div class="tj-theme-btn">
-                                                                    <a class="tj-primary-btn" href="contact.html">
-                                                                        Read More <i class="flaticon-right-1"></i>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="right-text">
-                                                                    <img src="{{ asset('frontend/images/icon/auother.svg') }}" alt="Image" />
-                                                                </div>
-                                                            </div> -->
+                                                                        <div class="tj-theme-btn">
+                                                                            <a class="tj-primary-btn" href="contact.html">
+                                                                                Read More <i class="flaticon-right-1"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="right-text">
+                                                                            <img src="{{ asset('frontend/images/icon/auother.svg') }}" alt="Image" />
+                                                                        </div>
+                                                                    </div> -->
                     </div>
                 </div>
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
@@ -809,138 +809,52 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                    <div class="tj-blog-item">
-                        <div class="tj-blog-image">
-                            <a href="blog-details.html"> <img src="{{ asset('frontend/images/blog/blog-1.jpg') }}"
-                                    alt="Blog" /></a>
-                        </div>
-                        <div class="blog-content-area">
-                            <div class="blog-meta">
-                                <div class="meta-date">
-                                    <ul class="list-gap">
-                                        <li>30</li>
-                                        <li>May</li>
-                                    </ul>
-                                </div>
-                                <div class="meta-list">
-                                    <ul class="list-gap">
-                                        <li><i class="fa-light fa-user"></i><a href="#"> Admin</a></li>
-                                        <li><i class="fa-light fa-comment"></i> <span> Comment (5)</span></li>
-                                    </ul>
-                                </div>
+                @foreach ($blogs as $blog)
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="tj-blog-item">
+                            <div class="tj-blog-image">
+                                <a href="{{ route('blog.details', $blog->slug_name) }}"> <img
+                                        src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
                             </div>
-                            <div class="blog-text-box">
-                                <div class="blog-header">
-                                    <h4>
-                                        <a class="title-link" href="blog-details.html">
-                                            Guarantees varying Complexity, Long-Term</a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, atomorum ds sosidon ium est as Id vim rrem
-                                        princi pes suas molesti interpretaris
-                                    </p>
+                            <div class="blog-content-area">
+                                <div class="blog-meta">
+                                    <div class="meta-date">
+                                        <ul class="list-gap">
+                                            <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('M') }}</li>
+                                            <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('d, Y') }}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="meta-list">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-light fa-user"></i><a href="#">
+                                                    {{ $blog->user->name }}</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="blog-button">
-                                    <ul class="list-gap">
-                                        <li>
-                                            <a href="blog-details.html">
-                                                Read More <i class="fa-regular fa-arrow-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
-                    <div class="tj-blog-item">
-                        <div class="tj-blog-image">
-                            <a href="blog-details.html"> <img src="{{ asset('frontend/images/blog/blog-2.jpg') }}"
-                                    alt="Blog" /></a>
-                        </div>
-                        <div class="blog-content-area">
-                            <div class="blog-meta">
-                                <div class="meta-date">
-                                    <ul class="list-gap">
-                                        <li>12</li>
-                                        <li>Feb</li>
-                                    </ul>
-                                </div>
-                                <div class="meta-list">
-                                    <ul class="list-gap">
-                                        <li><i class="fa-light fa-user"></i><a href="#"> Admin</a></li>
-                                        <li><i class="fa-light fa-comment"></i> <span> Comment (5)</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog-text-box">
-                                <div class="blog-header">
-                                    <h4>
-                                        <a class="title-link" href="blog-details.html">
-                                            Introduce new suas boat service in this spring</a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, atomorum ds sosidon ium est as Id vim rrem
-                                        princi pes suas molesti interpretaris
-                                    </p>
-                                </div>
-                                <div class="blog-button">
-                                    <ul class="list-gap">
-                                        <li>
-                                            <a href="blog-details.html">
-                                                Read More <i class="fa-regular fa-arrow-right"></i></a>
-                                        </li>
-                                    </ul>
+                                <div class="blog-text-box">
+                                    <div class="blog-header">
+                                        <h4>
+                                            <a class="title-link" href="{{ route('blog.details', $blog->slug_name) }}">
+                                                {{ $blog->post_name }}
+                                            </a>
+                                        </h4>
+                                        <p>
+                                            {{ $blog->post_description }}
+                                        </p>
+                                    </div>
+                                    <div class="blog-button">
+                                        <ul class="list-gap">
+                                            <li>
+                                                <a href="{{ route('blog.details', $blog->slug_name) }}">
+                                                    Read More <i class="fa-regular fa-arrow-right"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
-                    <div class="tj-blog-item">
-                        <div class="tj-blog-image">
-                            <a href="blog-details.html"> <img src="{{ asset('frontend/images/blog/blog-3.jpg') }}"
-                                    alt="Blog" /></a>
-                        </div>
-                        <div class="blog-content-area">
-                            <div class="blog-meta">
-                                <div class="meta-date">
-                                    <ul class="list-gap">
-                                        <li>18</li>
-                                        <li>Nov</li>
-                                    </ul>
-                                </div>
-                                <div class="meta-list">
-                                    <ul class="list-gap">
-                                        <li><i class="fa-light fa-user"></i> <a href="#"> Admin</a></li>
-                                        <li><i class="fa-light fa-comment"></i> <span> Comment (5)</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog-text-box">
-                                <div class="blog-header">
-                                    <h4>
-                                        <a class="title-link" href="blog-details.html">
-                                            We very careful handling the valuable goods</a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, atomorum ds sosidon ium est as Id vim rrem
-                                        princi pes suas molesti interpretaris
-                                    </p>
-                                </div>
-                                <div class="blog-button">
-                                    <ul class="list-gap">
-                                        <li>
-                                            <a href="blog-details.html">
-                                                Read More <i class="fa-regular fa-arrow-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
