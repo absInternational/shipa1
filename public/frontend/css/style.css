@@ -43,7 +43,7 @@
     --tj-ff-body: "Poppins", sans-serif;
 }
 :root {
-    --tj-primary-color: #fd5523;
+    --tj-primary-color: #8fc445;
     --tj-primary-color2: #ffd1c3;
     --tj-primary-color3: #8f3c23;
     --tj-secondary-color: #062e39;
@@ -1065,9 +1065,9 @@ body [class*=" icon-"]::before {
     /* padding-right: 25px; */
 }
 
-.tj-main-menu > ul > li.current-menu-item .active {
+/* .tj-main-menu > ul > li.current-menu-item .active {
     color: var(--tj-primary-color);
-}
+} */
 
 .tj-main-menu > ul > li.current-menu-item .active::before {
     color: var(--tj-primary-color);
@@ -4487,6 +4487,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: relative;
     border-radius: 3px;
     margin-bottom: 120px;
+    overflow: hidden;
+}
+.tj-project-item img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
 }
 
 .tj-project-item img {
@@ -4560,9 +4565,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     bottom: 0;
     transform: translateY(-0px);
     left: 20px;
+    margin-bottom: 10px;
     transition: 0.4s;
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0;
+    visibility: hidden; */
 }
 
 .tj-project-item .tj-project-content .sub-title {
@@ -5061,7 +5067,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-map-section .google-map iframe {
-    height: 650px;
+    height: 430px;
     width: 100%;
 }
 
@@ -7615,7 +7621,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 8px;
     bottom: 6px;
     border-right: 27px solid transparent;
-    border-bottom: 27px solid #f9724a;
+    border-bottom: 27px solid #6e9933;
     content: "";
     z-index: 2;
 }
@@ -7771,7 +7777,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 8px;
     bottom: 8px;
     border-right: 25px solid transparent;
-    border-bottom: 25px solid #f9724a;
+    border-bottom: 25px solid #6e9933;
     content: "";
     z-index: 2;
 }
