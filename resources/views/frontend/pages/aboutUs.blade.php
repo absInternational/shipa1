@@ -345,84 +345,26 @@
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
                     <div class="tj-faq-area">
                         <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Is My Technology Allowed on Tech?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>There are many variations of passages of available but the Ut elit
-                                            tellus luctus nec ullamcorper at mattis</strong>
+                            @foreach ($faqs as $key => $faq)
+                                <div class="accordion-item {{ $key === 0 ? 'show' : '' }}">
+                                    <h2 class="accordion-header" id="heading{{ $faq->id }}">
+                                        <button class="accordion-button {{ $key === 0 ? '' : 'collapsed' }}"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne{{ $faq->id }}"
+                                            aria-expanded="{{ $key === 0 ? 'true' : 'false' }}"
+                                            aria-controls="collapseOne{{ $faq->id }}">
+                                            {{ $faq->heading }}
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne{{ $faq->id }}"
+                                        class="accordion-collapse collapse {{ $key === 0 ? 'show' : '' }}"
+                                        aria-labelledby="heading{{ $faq->id }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>{{ $faq->description }}</strong>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How Long Does air Freight Take?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>There are many variations of passages of available but the Ut elit
-                                            tellus luctus nec ullamcorper at mattis</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        What Payment Methods are Supported?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>There are many variations of passages of available but the Ut elit
-                                            tellus luctus nec ullamcorper at mattis</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
-                                        Methods are Supported What Payment?
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>There are many variations of passages of available but the Ut elit
-                                            tellus luctus nec ullamcorper at mattis</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
-                                        Methods are Supported What Payment?
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>There are many variations of passages of available but the Ut elit
-                                            tellus luctus nec ullamcorper at mattis</strong>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

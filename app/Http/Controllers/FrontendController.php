@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FAQs;
 use Illuminate\Http\Request;
 use App\Models\Review;
 use App\Models\Blog;
@@ -13,28 +14,29 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::latest()->take(3)->get();
+        $blogs = Blog::take(3)->get();
         $reviews = Review::all();
         return view('frontend.index', compact('reviews', 'blogs'));
     }
 
     public function blogs()
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::get();
         return view('frontend.blogs.index', compact('blogs'));
     }
 
     public function blogDetails($slug)
     {
-        $blogs = Blog::where('slug_name', '!=', $slug)->latest()->get();
+        $blogs = Blog::where('slug_name', '!=', $slug)->get();
         $blog = Blog::where('slug_name', $slug)->first();
         return view('frontend.blogs.detail', compact('blog', 'blogs'));
     }
 
     public function aboutUs()
     {
+        $faqs = FAQs::where('status', 1)->get();
         $reviews = Review::all();
-        return view('frontend.pages.aboutUs', compact('reviews'));
+        return view('frontend.pages.aboutUs', compact('reviews', 'faqs'));
     }
 
     public function contactUs()
@@ -46,9 +48,9 @@ class FrontendController extends Controller
     {
         if ($request->has('category')) {
             $category = ServiceCategory::whereSlug($request->category)->first();
-            $services = Service::where('category_id', $category->id)->latest()->get();
+            $services = Service::where('category_id', $category->id)->get();
         } else {
-            $services = Service::latest()->get();
+            $services = Service::get();
         }
 
         return view('frontend.pages.services.index', compact('services'));
@@ -56,14 +58,15 @@ class FrontendController extends Controller
 
     public function serviceDetails(Request $request, $slug)
     {
+        $faqs = FAQs::where('status', 1)->get();
         $service = Service::where('slug', $slug)->first();
         $related = Service::where('id', '!=', $service->id)->where('category_id', $service->category_id)->get();
-        return view('frontend.pages.services.detail', compact('service', 'related'));
+        return view('frontend.pages.services.detail', compact('service', 'related', 'faqs'));
     }
 
     public function autoAuction(Request $request)
     {
-        $services = Service::latest()->get();
+        $services = Service::get();
         return view('frontend.pages.services.index', compact('services'));
     }
 
