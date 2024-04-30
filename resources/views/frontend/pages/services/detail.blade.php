@@ -93,7 +93,7 @@
                                 sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit
                                 amet finibus eros. Lorem Ipsum
                             </p> --}}
-                            {{ !is_null($service->extra) ? $service->extra : '' }}
+                            {!! !is_null($service->extra) ? $service->extra : '' !!}
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="sevice-image">
