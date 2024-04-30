@@ -282,7 +282,7 @@
                             </div>
                         </div>
                         <div class="image-box">
-                            <img class="p-z-idex" src="{{ asset('frontend/images/about/ab-1.jpg') }}" alt="Image" />
+                            <img class="p-z-idex" src="{{ asset('frontend/images/about/resize 410-630.jpg') }}" alt="Image" />
                         </div>
                         <img class="group-1 p-z-idex" src="{{ asset('frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}"
                             alt="Image" />
