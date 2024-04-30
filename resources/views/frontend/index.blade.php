@@ -676,7 +676,7 @@
                             <div class="tj-blog-image">
                                 <a href="{{ route('blog.details', $blog->slug_name) }}"> <img
                                         {{-- src="{{ asset($blog->post_image) }}" alt="Blog" /></a> --}}
-                                        src="{{ !is_null($blog->post_image) ? $review->post_image : '' }}" alt="Blog" /></a>
+                                        src="{{ !is_null($blog->post_image) ? $blog->post_image : '' }}" alt="Blog" /></a>
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-meta">
@@ -690,7 +690,8 @@
                                         <ul class="list-gap">
                                             <li><i class="fa-light fa-user"></i><a href="#">
                                                     {{-- {{ $blog->user->name }}</a></li> --}}
-                                                    {{ !is_null($blog->user->name) ? $review->user->name : '' }}</a></li>
+                                                    {{ !is_null($blog->user->name) ? $blog->user->name : '' }}</a></li>
+                                                    
                                         </ul>
                                     </div>
                                 </div>
