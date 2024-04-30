@@ -839,7 +839,7 @@
                                             </a>
                                         </h4>
                                         <p>
-                                            {{ $blog->post_description }}
+                                            {!! Illuminate\Support\Str::limit($blog->post_description, 200, '...') !!}
                                         </p>
                                     </div>
                                     <div class="blog-button">
