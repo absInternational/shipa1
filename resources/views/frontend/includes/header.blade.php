@@ -1,3 +1,9 @@
+<style>
+    .active {
+        color: #8fc445 !important;
+    }
+</style>
+
 <header class="tj-header-section" id="header-sticky">
     <div class="container">
         <div class="row">
@@ -68,10 +74,10 @@
                             <div class="tj-main-menu d-lg-block d-none text-end" id="main-menu">
                                 <ul class="main-menu">
                                     <li class="ab-gap">
-                                        <a href="{{ url('/') }}"> Home</a>
+                                        <a href="{{ url('/') }}" class="{{ Request::is('/') ? ' active' : '' }}"> Home</a>
                                     </li>
                                     <li class="ab-gap">
-                                        <a href="{{ route('aboutUs') }}"> About Us</a>
+                                        <a href="{{ route('aboutUs') }}" class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> About Us</a>
                                     </li>
                                     {{-- <li class="ab-gap">
                                         <a href="{{ route('services') }}"> Service</a>
@@ -79,11 +85,11 @@
                                     @php
                                         $categories = \App\Models\ServiceCategory::get();
                                     @endphp
-                                    <li class="current-menu-item menu-item-has-children">
-                                        <a class="active" href="{{ route('services') }}"> Services</a>
+                                    <li
+                                        class="current-menu-item menu-item-has-children">
+                                        <a href="{{ route('services') }}" class="{{ Request::routeIs('services*') ? ' active' : '' }}"> Services</a>
                                         <ul class="list-gap sub-menu-list">
                                             @foreach ($categories as $category)
-                                                {{-- <li><a href="{{ route('service.details', $category->slug) }}">{{ $category->name }}</a></li> --}}
                                                 <li><a
                                                         href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a>
                                                 </li>
@@ -91,12 +97,14 @@
                                         </ul>
                                     </li>
                                     <li class="ab-gap">
-                                        <a href="{{ route('autoAuction') }}"> auto Auction</a>
+                                        <a href="{{ route('autoAuction') }}" class="{{ Request::routeIs('autoAuction') ? ' active' : '' }}"> auto Auction</a>
                                     </li>
                                     <li class="ab-gap">
-                                        <a class="active" href="{{ route('blogs') }}"> Blog</a>
+                                        <a href="{{ route('blogs') }}" class="{{ Request::routeIs('blogs') ? ' active' : '' }}"> Blog</a>
                                     </li>
-                                    <li><a href="{{ route('contactUs') }}">Contact</a></li>
+                                    <li>
+                                        <a href="{{ route('contactUs') }}" class="{{ Request::routeIs('contactUs') ? ' active' : '' }}">Contact</a>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Mainmenu Item End -->
@@ -108,21 +116,18 @@
                                         <li>
                                             <ul class="lang_lists">
                                                 <li>
-                                                    <a
-                                                        ><img src="{{ asset('frontend/images/icon/flag-1.png')}}"
-                                alt="Icon"
-                                /></a>
-                                </li>
-                                <li>
-                                    <a><img src="{{ asset('frontend/images/icon/flag-2.png')}}" alt="Icon" /></a>
-                                </li>
-                                <li class="active">
-                                    <a><img src="{{ asset('frontend/images/icon/flag4.png')}}" alt="Icon" /></a>
-                                </li>
-                                </ul>
-                                </li>
-                                </ul>
-                            </div> --}}
+                                                    <a><img src="{{ asset('frontend/images/icon/flag-1.png')}}" alt="Icon" /></a>
+                                                </li>
+                                                <li>
+                                                    <a><img src="{{ asset('frontend/images/icon/flag-2.png')}}" alt="Icon" /></a>
+                                                </li>
+                                                <li class="active">
+                                                    <a><img src="{{ asset('frontend/images/icon/flag4.png')}}" alt="Icon" /></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div> --}}
                                 <div class="tj-header-button d-none d-lg-block">
                                     <a class="tj-header-btn" href="contact.html">
                                         Track Order <i class="flaticon-right-1"></i>
