@@ -20,10 +20,13 @@
                                 <a href="https://www.instagram.com/shipa1_transport/"> <i class="fa-brands fa-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/ShipA1Transport"> <i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/shipa1-transport/"> <i class="fa-brands fa-linkedin-in"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/in/shipa1-transport/"> <i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://www.youtube.com/@shipA1392"> <i class="fa-brands fa-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/+14107184031"> <i class="fa-brands fa-whatsapp"></i></a>
                             </li>
                         </ul>
                     </div>
