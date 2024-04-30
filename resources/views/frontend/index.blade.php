@@ -838,9 +838,9 @@
                                                 {{ $blog->post_name }}
                                             </a>
                                         </h4>
-                                        <p>
+                                        {{-- <p>
                                             {!! Illuminate\Support\Str::limit($blog->post_description, 200, '...') !!}
-                                        </p>
+                                        </p> --}}
                                     </div>
                                     <div class="blog-button">
                                         <ul class="list-gap">
