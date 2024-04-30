@@ -205,36 +205,13 @@
                         <div class="tj-sidebar-widget sidebar-service">
                             <h5 class="details_title">Logistics Services</h5>
                             <ul class="list-gap">
-                                <li>
-                                    <a href="#">Land Transport
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Ocean Transport
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Road Transport
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Train Transportation
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Vegetative Roofing
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Air Freight Service
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
+                                @foreach ($related as $row)
+                                    <li>
+                                        <a href="{{ route('service.details', $row->slug) }}">{{ $row->heading_one }}
+                                            <i class="flaticon-right-chevron"></i>
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="tj-sidebar-widget sidebar-documents">

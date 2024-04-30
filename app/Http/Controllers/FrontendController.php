@@ -57,7 +57,8 @@ class FrontendController extends Controller
     public function serviceDetails(Request $request, $slug)
     {
         $service = Service::where('slug', $slug)->first();
-        return view('frontend.pages.services.detail', compact('service'));
+        $related = Service::where('id', '!=', $service->id)->where('category_id', $service->category_id)->get();
+        return view('frontend.pages.services.detail', compact('service', 'related'));
     }
 
     public function autoAuction(Request $request)

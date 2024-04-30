@@ -46,9 +46,6 @@
                                 {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                             </div>
                             <div class="service-content">
-                                <div class="service-icon">
-                                    <i class="flaticon-air-freight"></i>
-                                </div>
                                 <h4><a class="title" href="{{ route('service.details', $service->slug) }}"> {{ $service->heading_one }}</a></h4>
                                 <p>{!! Illuminate\Support\Str::limit($service->desc_one, 200, '...') !!}</p>
                             </div>
