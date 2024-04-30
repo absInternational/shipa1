@@ -14,14 +14,14 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::take(3)->get();
-        $reviews = Review::all();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        $reviews = Review::where('status', 1)->get();
         return view('frontend.index', compact('reviews', 'blogs'));
     }
 
     public function blogs()
     {
-        $blogs = Blog::get();
+        $blogs = Blog::where('status', 1)->get();
         return view('frontend.blogs.index', compact('blogs'));
     }
 
@@ -35,7 +35,7 @@ class FrontendController extends Controller
     public function aboutUs()
     {
         $faqs = FAQs::where('status', 1)->get();
-        $reviews = Review::all();
+        $reviews = Review::where('status', 1)->get();
         return view('frontend.pages.aboutUs', compact('reviews', 'faqs'));
     }
 
