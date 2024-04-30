@@ -31,13 +31,13 @@ class ServiceController extends Controller
             'image3' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'heading_one' => 'required|string|max:255',
             'desc_one' => 'required|string',
-            'heading_two' => 'required|string|max:255',
-            'desc_two_one' => 'required|string',
-            'desc_two_two' => 'required|string',
-            'desc_two_three' => 'required|string',
-            'desc_two_four' => 'required|string',
-            'desc_two_five' => 'required|string',
-            'desc_two_six' => 'required|string',
+            'heading_two' => 'nullable|string|max:255',
+            'desc_two_one' => 'nullable|string',
+            'desc_two_two' => 'nullable|string',
+            'desc_two_three' => 'nullable|string',
+            'desc_two_four' => 'nullable|string',
+            'desc_two_five' => 'nullable|string',
+            'desc_two_six' => 'nullable|string',
             'extra' => 'nullable|string',
             'status' => 'required|boolean',
             'category_id' => 'required',
@@ -67,20 +67,36 @@ class ServiceController extends Controller
 
         // Create a new Service instance
         $service = new Service;
-        $service->heading_one = $request->heading_one;
-        $service->desc_one = $request->desc_one;
-        $service->heading_two = $request->heading_two;
-        $service->desc_two_one = $request->desc_two_one;
-        $service->desc_two_two = $request->desc_two_two;
-        $service->desc_two_three = $request->desc_two_three;
-        $service->desc_two_four = $request->desc_two_four;
-        $service->desc_two_five = $request->desc_two_five;
-        $service->desc_two_six = $request->desc_two_six;
-        $service->extra = $request->extra;
-        $service->category_id = $request->category_id;
-        $service->status = $request->status;
-        $service->name = $request->name;
+        // $service->heading_one = $request->heading_one;
+        // $service->desc_one = $request->desc_one;
+        // $service->heading_two = $request->heading_two;
+        // $service->desc_two_one = $request->desc_two_one;
+        // $service->desc_two_two = $request->desc_two_two;
+        // $service->desc_two_three = $request->desc_two_three;
+        // $service->desc_two_four = $request->desc_two_four;
+        // $service->desc_two_five = $request->desc_two_five;
+        // $service->desc_two_six = $request->desc_two_six;
+        // $service->extra = $request->extra;
+        // $service->category_id = $request->category_id;
+        // $service->status = $request->status;
+        // $service->name = $request->name;
+        // $service->slug = $slug;
+        
+        $service->heading_one = $request->filled('heading_one') ? $request->heading_one : null;
+        $service->desc_one = $request->filled('desc_one') ? $request->desc_one : null;
+        $service->heading_two = $request->filled('heading_two') ? $request->heading_two : null;
+        $service->desc_two_one = $request->filled('desc_two_one') ? $request->desc_two_one : null;
+        $service->desc_two_two = $request->filled('desc_two_two') ? $request->desc_two_two : null;
+        $service->desc_two_three = $request->filled('desc_two_three') ? $request->desc_two_three : null;
+        $service->desc_two_four = $request->filled('desc_two_four') ? $request->desc_two_four : null;
+        $service->desc_two_five = $request->filled('desc_two_five') ? $request->desc_two_five : null;
+        $service->desc_two_six = $request->filled('desc_two_six') ? $request->desc_two_six : null;
+        $service->extra = $request->filled('extra') ? $request->extra : null;
+        $service->category_id = $request->filled('category_id') ? $request->category_id : null;
+        $service->status = $request->filled('status') ? $request->status : null;
         $service->slug = $slug;
+        $service->name = $request->filled('name') ? $request->name : null;
+
         $service->banner_image = '/uploads/' . $bannerImage->getClientOriginalName();
         if ($image2) {
             $service->image2 = '/uploads/' . $image2->getClientOriginalName();
@@ -112,13 +128,13 @@ class ServiceController extends Controller
             'image3' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'heading_one' => 'required|string|max:255',
             'desc_one' => 'required|string',
-            'heading_two' => 'required|string|max:255',
-            'desc_two_one' => 'required|string',
-            'desc_two_two' => 'required|string',
-            'desc_two_three' => 'required|string',
-            'desc_two_four' => 'required|string',
-            'desc_two_five' => 'required|string',
-            'desc_two_six' => 'required|string',
+            'heading_two' => 'nullable|string|max:255',
+            'desc_two_one' => 'nullable|string',
+            'desc_two_two' => 'nullable|string',
+            'desc_two_three' => 'nullable|string',
+            'desc_two_four' => 'nullable|string',
+            'desc_two_five' => 'nullable|string',
+            'desc_two_six' => 'nullable|string',
             'extra' => 'nullable|string',
             'status' => 'required|boolean',
             'category_id' => 'required',
@@ -136,20 +152,20 @@ class ServiceController extends Controller
         $service = Service::findOrFail($id);
 
         // Update the service attributes
-        $service->heading_one = $request->heading_one;
-        $service->desc_one = $request->desc_one;
-        $service->heading_two = $request->heading_two;
-        $service->desc_two_one = $request->desc_two_one;
-        $service->desc_two_two = $request->desc_two_two;
-        $service->desc_two_three = $request->desc_two_three;
-        $service->desc_two_four = $request->desc_two_four;
-        $service->desc_two_five = $request->desc_two_five;
-        $service->desc_two_six = $request->desc_two_six;
-        $service->extra = $request->extra;
-        $service->category_id = $request->category_id;
-        $service->status = $request->status;
+        $service->heading_one = $request->filled('heading_one') ? $request->heading_one : null;
+        $service->desc_one = $request->filled('desc_one') ? $request->desc_one : null;
+        $service->heading_two = $request->filled('heading_two') ? $request->heading_two : null;
+        $service->desc_two_one = $request->filled('desc_two_one') ? $request->desc_two_one : null;
+        $service->desc_two_two = $request->filled('desc_two_two') ? $request->desc_two_two : null;
+        $service->desc_two_three = $request->filled('desc_two_three') ? $request->desc_two_three : null;
+        $service->desc_two_four = $request->filled('desc_two_four') ? $request->desc_two_four : null;
+        $service->desc_two_five = $request->filled('desc_two_five') ? $request->desc_two_five : null;
+        $service->desc_two_six = $request->filled('desc_two_six') ? $request->desc_two_six : null;
+        $service->extra = $request->filled('extra') ? $request->extra : null;
+        $service->category_id = $request->filled('category_id') ? $request->category_id : null;
+        $service->status = $request->filled('status') ? $request->status : null;
         $service->slug = $slug;
-        $service->name = $request->name;
+        $service->name = $request->filled('name') ? $request->name : null;
 
         // Handle banner image update if provided
         if ($request->hasFile('banner_image')) {

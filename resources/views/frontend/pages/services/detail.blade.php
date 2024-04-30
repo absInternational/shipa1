@@ -42,7 +42,8 @@
                                 <div class="blog-header">
                                     <h3>
                                         <a class="title-link" href="service-details.html">
-                                            {{ !is_null($service->heading_one) ? $service->heading_one : '' }}</a>
+                                            {{ !is_null($service->heading_one) ? $service->heading_one : '' }}
+                                        </a>
                                     </h3>
                                 </div>
                             </div>
