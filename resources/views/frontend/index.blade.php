@@ -3,7 +3,7 @@
 @section('content')
     <!--=========== Slider Section Start =========-->
     <section class="tj-slider-section">
-            <div class="slider_shape"><img src="{{ asset('frontend/images/banner/shape-1.png') }}" alt="Image" /></div>
+            <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" /></div>
             <div class="swiper sc-slider-1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
