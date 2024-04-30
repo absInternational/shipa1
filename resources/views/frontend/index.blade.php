@@ -835,7 +835,8 @@
                                     <div class="blog-header">
                                         <h4>
                                             <a class="title-link" href="{{ route('blog.details', $blog->slug_name) }}">
-                                                {{ $blog->post_name }}
+                                                {{-- {{ $blog->post_name }} --}}
+                                                {{ Illuminate\Support\Str::limit($blog->post_name, 20, '...') }}
                                             </a>
                                         </h4>
                                         {{-- <p>
