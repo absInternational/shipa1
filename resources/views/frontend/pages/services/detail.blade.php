@@ -41,7 +41,8 @@
                             <div class="blog-content-area">
                                 <div class="blog-header">
                                     <h3>
-                                        <a class="title-link" href="service-details.html"> {{ !is_null($service->heading_one) ? $service->heading_one : '' }}</a>
+                                        <a class="title-link" href="service-details.html">
+                                            {{ !is_null($service->heading_one) ? $service->heading_one : '' }}</a>
                                     </h3>
                                 </div>
                             </div>
@@ -52,19 +53,33 @@
                         <div class="row align-items-center">
                             <div class="col-lg-5 col-md-6">
                                 <div class="check-image">
-                                    <img src="{{ !is_null($service->image2) ? asset($service->image2) : '' }}" alt="Blog" />
+                                    <img src="{{ !is_null($service->image2) ? asset($service->image2) : '' }}"
+                                        alt="Blog" />
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-6">
                                 <div class="check-list">
-                                    <h5 class="title">{{ !is_null($service->heading_two) ? $service->heading_two : '' }}</h5>
+                                    <h5 class="title">{{ !is_null($service->heading_two) ? $service->heading_two : '' }}
+                                    </h5>
                                     <ul class="list-gap">
-                                        <li><i class="fa-light fa-check"></i>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}</li>
-                                        <li><i class="fa-light fa-check"></i>{{ !is_null($service->desc_two_two) ? $service->desc_two_two : '' }}</li>
-                                        <li><i class="fa-light fa-check"></i>{{ !is_null($service->desc_two_three) ? $service->desc_two_three : '' }}</li>
-                                        <li><i class="fa-light fa-check"></i>{{ !is_null($service->desc_two_four) ? $service->desc_two_four : '' }}</li>
-                                        <li><i class="fa-light fa-check"></i>{{ !is_null($service->desc_two_five) ? $service->desc_two_five : '' }}</li>
-                                        <li><i class="fa-light fa-check"></i>{{ !is_null($service->desc_two_six) ? $service->desc_two_six : '' }}</li>
+                                        <li><i
+                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}
+                                        </li>
+                                        <li><i
+                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_two) ? $service->desc_two_two : '' }}
+                                        </li>
+                                        <li><i
+                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_three) ? $service->desc_two_three : '' }}
+                                        </li>
+                                        <li><i
+                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_four) ? $service->desc_two_four : '' }}
+                                        </li>
+                                        <li><i
+                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_five) ? $service->desc_two_five : '' }}
+                                        </li>
+                                        <li><i
+                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_six) ? $service->desc_two_six : '' }}
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -81,7 +96,8 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="sevice-image">
-                                        <img src="{{ !is_null($service->image3) ? asset($service->image3) : '' }}" alt="Image" />
+                                        <img src="{{ !is_null($service->image3) ? asset($service->image3) : '' }}"
+                                            alt="Image" />
                                     </div>
                                 </div>
                             </div>
