@@ -64,9 +64,9 @@
                                     </h5>
                                     <p>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}</p>
                                     <ul class="list-gap">
-                                        <li><i
+                                        {{-- <li><i
                                                 class="fa-light fa-check"></i>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}
-                                        </li>
+                                        </li> --}}
                                         <li><i
                                                 class="fa-light fa-check"></i>{{ !is_null($service->desc_two_two) ? $service->desc_two_two : '' }}
                                         </li>
