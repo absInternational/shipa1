@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ServiceCategoryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\FAQsController;
+use App\Http\Controllers\ContactMessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,9 @@ Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('a
 
 // news letter add
 Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('newsletter.subscribe');
+
+// news letter add
+Route::resource('contact_messages', ContactMessageController::class);
 
 
 // Admin routes
