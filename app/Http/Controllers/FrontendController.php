@@ -7,6 +7,7 @@ use App\Models\Review;
 use App\Models\Blog;
 use App\Models\Service;
 use App\Models\NewsletterSubscribers;
+use App\Models\ServiceCategory;
 
 class FrontendController extends Controller
 {
@@ -44,7 +45,8 @@ class FrontendController extends Controller
     public function services(Request $request)
     {
         if ($request->has('category')) {
-            $services = Service::where('category_id', $request->category)->latest()->get();
+            $category = ServiceCategory::whereSlug($request->category)->first();
+            $services = Service::where('category_id', $category->id)->latest()->get();
         } else {
             $services = Service::latest()->get();
         }

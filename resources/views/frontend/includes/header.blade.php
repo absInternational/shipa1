@@ -73,7 +73,7 @@
                                             @foreach ($categories as $category)
                                                 {{-- <li><a href="{{ route('service.details', $category->slug) }}">{{ $category->name }}</a></li> --}}
                                                 <li><a
-                                                        href="{{ route('services', ['category' => $category->id]) }}">{{ $category->name }}</a>
+                                                        href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a>
                                                 </li>
                                             @endforeach
                                         </ul>
