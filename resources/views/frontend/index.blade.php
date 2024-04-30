@@ -268,16 +268,6 @@
                                 handling.
                             </p>
                         </div>
-                        <!-- <div class="ab-button-box d-flex align-items-center">
-                                                                        <div class="tj-theme-btn">
-                                                                            <a class="tj-primary-btn" href="contact.html">
-                                                                                Read More <i class="flaticon-right-1"></i>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="right-text">
-                                                                            <img src="{{ asset('frontend/images/icon/auother.svg') }}" alt="Image" />
-                                                                        </div>
-                                                                    </div> -->
                     </div>
                 </div>
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
@@ -430,89 +420,6 @@
                     </div>
                 </div>
             </div>
-            {{--  <div class="row">
-                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="tj-team-item">
-                            <div class="image-box">
-                                <img src="{{ asset('frontend/images/team/team-1.jpg') }}" alt="Image" />
-                                <div class="social-icon-box">
-                                    <ul class="social-icon">
-                                        <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-content text-center">
-                                <h4><a class="title-link" href="team-details.html">Kevin Martin</a></h4>
-                                <span class="sub-title"> Co Founder</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
-                        <div class="tj-team-item">
-                            <div class="image-box">
-                                <img src="{{ asset('frontend/images/team/team-2.jpg') }}" alt="Image" />
-                                <div class="social-icon-box">
-                                    <ul class="social-icon">
-                                        <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-content text-center">
-                                <h4><a class="title-link" href="team-details.html">David Cooper</a></h4>
-                                <span class="sub-title"> Consultant</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
-                        <div class="tj-team-item">
-                            <div class="image-box">
-                                <img src="{{ asset('frontend/images/team/team-3') }}.jpg" alt="Image" />
-                                <div class="social-icon-box">
-                                    <ul class="social-icon">
-                                        <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-content text-center">
-                                <h4><a class="title-link" href="team-details.html">Kevin Martin</a></h4>
-                                <span class="sub-title"> Co Founder</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
         </div>
     </section>
     <!--=========== Team Section End =========-->
@@ -748,52 +655,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Australia Office
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <ul class="list-gap">
-                                <li><i class="flaticon-placeholder"></i><span> Commercial Road ,London</span></li>
-                                <li>
-                                    <i class="flaticon-mail"></i><a href="mailto:subai2025@gmail.com">
-                                        subai2025@gmail.com</a>
-                                </li>
-                                <li>
-                                    <i class="flaticon-call"></i><a href="tel:+92(8800)-987025"> +92 (8800) - 9870 25</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Canada office
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <ul class="list-gap">
-                                <li><i class="flaticon-placeholder"></i><span> Commercial Road ,London</span></li>
-                                <li>
-                                    <i class="flaticon-mail"></i><a href="mailto:subai2025@gmail.com">
-                                        subai2025@gmail.com</a>
-                                </li>
-                                <li>
-                                    <i class="flaticon-call"></i><a href="tel:+92(8800)-987025"> +92 (8800) - 9870 25</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> 
-                </div> -->
             </div>
         </div>
     </section>
