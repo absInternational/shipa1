@@ -39,6 +39,18 @@
                                                 <a href="https://twitter.com/ShipA1Transport"> <i
                                                         class="fa-brands fa-twitter"></i></a>
                                             </li>
+                                            <li>
+                                                <a href="https://www.yelp.com/biz/ship-a1-hunt-valley"> <i
+                                                        class="fa-brands fa-yelp"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://wa.me/+14107184031"> <i
+                                                        class="fa-brands fa-whatsapp"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/@shipA1392"> <i
+                                                        class="fa-brands fa-youtube"></i></a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
