@@ -49,7 +49,7 @@
                                     <i class="flaticon-air-freight"></i>
                                 </div>
                                 <h4><a class="title" href="{{ route('service.details', $service->slug) }}"> {{ $service->heading_one }}</a></h4>
-                                <p>{{ Illuminate\Support\Str::limit($service->desc_one, 200, '...') }}</p>
+                                <p>{!! Illuminate\Support\Str::limit($service->desc_one, 200, '...') !!}</p>
                             </div>
                         </div>
                     </div>

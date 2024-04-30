@@ -66,7 +66,7 @@
                                         </div>
                                     </div>
                                     <p>
-                                        {{ $blog->post_description }}
+                                        {!! Illuminate\Support\Str::limit($blog->post_description, 200, '...') !!}
                                     </p>
                                     <div class="read-more">
                                         <a href="{{ route('blog.details', $blog->slug_name) }}">
