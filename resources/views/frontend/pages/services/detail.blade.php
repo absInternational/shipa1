@@ -62,6 +62,7 @@
                                 <div class="check-list">
                                     <h5 class="title">{{ !is_null($service->heading_two) ? $service->heading_two : '' }}
                                     </h5>
+                                    <p>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}</p>
                                     <ul class="list-gap">
                                         <li><i
                                                 class="fa-light fa-check"></i>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}
