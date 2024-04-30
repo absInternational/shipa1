@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\ServiceCategoryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\FAQsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,7 @@ Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('a
 // news letter add
 Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('newsletter.subscribe');
 
+
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {
 
@@ -79,6 +81,8 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     // Service routes
     Route::resource('services', ServiceController::class);
 
+    // faqs
+    Route::resource('faqs', FAQsController::class);
 });
 
 Auth::routes();

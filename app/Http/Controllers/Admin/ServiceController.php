@@ -19,7 +19,7 @@ class ServiceController extends Controller
 
     public function create()
     {
-        $categories = ServiceCategory::latest()->get();
+        $categories = ServiceCategory::get();
         return view('dashboard.admin.services.create', compact('categories'));
     }
 
@@ -81,7 +81,7 @@ class ServiceController extends Controller
         // $service->status = $request->status;
         // $service->name = $request->name;
         // $service->slug = $slug;
-        
+
         $service->heading_one = $request->filled('heading_one') ? $request->heading_one : null;
         $service->desc_one = $request->filled('desc_one') ? $request->desc_one : null;
         $service->heading_two = $request->filled('heading_two') ? $request->heading_two : null;
@@ -114,7 +114,7 @@ class ServiceController extends Controller
 
     public function edit($id)
     {
-        $categories = ServiceCategory::latest()->get();
+        $categories = ServiceCategory::get();
         $service = Service::find($id);
         return view('dashboard.admin.services.edit', compact('service', 'categories'));
     }

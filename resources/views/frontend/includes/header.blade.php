@@ -65,7 +65,7 @@
                                         <a href="{{ route('services') }}"> Service</a>
                                     </li> --}}
                                     @php
-                                        $categories = \App\Models\ServiceCategory::latest()->get();
+                                        $categories = \App\Models\ServiceCategory::get();
                                     @endphp
                                     <li class="current-menu-item menu-item-has-children">
                                         <a class="active" href="{{ route('services') }}"> Services</a>
