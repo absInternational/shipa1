@@ -2,7 +2,7 @@
 
 @section('content')
     <!--========== breadcrumb Start ==============-->
-    <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/breadcrumb.jpg') }}">
+    <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
