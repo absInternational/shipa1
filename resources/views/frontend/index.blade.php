@@ -729,20 +729,20 @@
                     <h4 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            London Office
+                            Contact us
                         </button>
                     </h4>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample" style="">
                         <div class="accordion-body">
                             <ul class="list-gap">
-                                <li><i class="flaticon-placeholder"></i><span> Commercial Road, London</span></li>
+                                <li><i class="flaticon-placeholder"></i><span> 201 International Cir STE 230, Hunt Valley, MD 21030-1344</span></li>
                                 <li>
-                                    <i class="flaticon-mail"></i><a href="mailto:subai2025@gmail.com">
-                                        subai2025@gmail.com</a>
+                                    <i class="flaticon-mail"></i><a href="mailto:info@shipa1.com">
+                                    shawntransport@shipa1.com</a>
                                 </li>
                                 <li>
-                                    <i class="flaticon-call"></i><a href="tel:+92(8800)-987025"> +92 (8800) - 9870 25</a>
+                                    <i class="flaticon-call"></i><a href="tel:1 (844) 474-4721"> 1 (844) 474-4721</a>
                                 </li>
                             </ul>
                         </div>
