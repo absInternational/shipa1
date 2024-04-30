@@ -58,9 +58,10 @@ class FrontendController extends Controller
         return view('frontend.pages.services.detail', compact('service'));
     }
 
-    public function autoAuction()
+    public function autoAuction(Request $request)
     {
-        return view('frontend.pages.services.index');
+        $services = Service::latest()->get();
+        return view('frontend.pages.services.index', compact('services'));
     }
 
     public function subscribe(Request $request)
