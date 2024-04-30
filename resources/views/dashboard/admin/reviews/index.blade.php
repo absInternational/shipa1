@@ -19,7 +19,6 @@
                             <tr>
                                 <th>Site Name</th>
                                 <th>Rating</th>
-                                <th>Status</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -28,13 +27,6 @@
                                 <tr>
                                     <td>{{ $review->site_name }}</td>
                                     <td>{{ $review->rating }}</td>
-                                    <td>
-                                        @if ($review->status == 'active')
-                                            Active
-                                        @else
-                                            Inactive
-                                        @endif
-                                    </td>
                                     <td>
                                         <a href="{{ route('reviews.edit', $review->id) }}"
                                             class="btn btn-primary btn-sm">Edit</a>
