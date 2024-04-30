@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
+
+    {{-- jquery --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -156,6 +159,9 @@
 
     {{-- Footer Section Start --}}
     @include('frontend.includes.footer')
+
+    {{-- page content --}}
+    @yield('extraScript')
 
     <!-- start scrollUp  -->
     <div class="logiland-scroll-top progress-done">
