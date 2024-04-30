@@ -41,13 +41,18 @@ class FrontendController extends Controller
         return view('frontend.pages.contactUs');
     }
 
-    public function services()
+    public function services(Request $request)
     {
-        $services = Service::latest()->get();
+        if ($request->has('category')) {
+            $services = Service::where('category_id', $request->category)->latest()->get();
+        } else {
+            $services = Service::latest()->get();
+        }
+
         return view('frontend.pages.services.index', compact('services'));
     }
 
-    public function serviceDetails($slug)
+    public function serviceDetails(Request $request, $slug)
     {
         $service = Service::where('slug', $slug)->first();
         return view('frontend.pages.services.detail', compact('service'));

@@ -65,13 +65,16 @@
                                         <a href="{{ route('services') }}"> Service</a>
                                     </li> --}}
                                     @php
-                                        $services = \App\Models\Service::latest()->get();
+                                        $categories = \App\Models\ServiceCategory::latest()->get();
                                     @endphp
                                     <li class="current-menu-item menu-item-has-children">
                                         <a class="active" href="{{ route('services') }}"> Services</a>
                                         <ul class="list-gap sub-menu-list">
-                                            @foreach ($services as $service)
-                                            <li><a href="{{ route('service.details', $service->slug) }}">{{ $service->heading_one }}</a></li>
+                                            @foreach ($categories as $category)
+                                                {{-- <li><a href="{{ route('service.details', $category->slug) }}">{{ $category->name }}</a></li> --}}
+                                                <li><a
+                                                        href="{{ route('services', ['category' => $category->id]) }}">{{ $category->name }}</a>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </li>
