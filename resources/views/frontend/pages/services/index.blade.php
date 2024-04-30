@@ -42,7 +42,8 @@
                     <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                         <div class="service-item-three">
                             <div class="service-image">
-                                <img src="{{ asset($service->banner_image) }}" alt="Image" />
+                                <img src="{{ asset({{ !is_null($service->banner_image) ? $service->banner_image : '' }}) }}" alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                             </div>
                             <div class="service-content">
                                 <div class="service-icon">

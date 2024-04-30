@@ -596,7 +596,7 @@
                                                 <div class="testimonial-auother">
                                                     <h5 class="title">{{ $review->person_name }} </h5>
                                                     <span
-                                                        class="sub-title">{{ \Carbon\Carbon::parse($review->created_at)->format('M d, Y') }}</span>
+                                                        class="sub-title">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
                                                 </div>
                                                 <div class="testimonial-comment">
                                                     @if ($review->site_name == 'BBB')
@@ -675,7 +675,8 @@
                         <div class="tj-blog-item">
                             <div class="tj-blog-image">
                                 <a href="{{ route('blog.details', $blog->slug_name) }}"> <img
-                                        src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
+                                        {{-- src="{{ asset($blog->post_image) }}" alt="Blog" /></a> --}}
+                                        src="{{ !is_null($blog->post_image) ? $review->post_image : '' }}" alt="Blog" /></a>
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-meta">
@@ -688,7 +689,8 @@
                                     <div class="meta-list">
                                         <ul class="list-gap">
                                             <li><i class="fa-light fa-user"></i><a href="#">
-                                                    {{ $blog->user->name }}</a></li>
+                                                    {{-- {{ $blog->user->name }}</a></li> --}}
+                                                    {{ !is_null($blog->user->name) ? $review->user->name : '' }}</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -697,7 +699,8 @@
                                         <h4>
                                             <a class="title-link" href="{{ route('blog.details', $blog->slug_name) }}">
                                                 {{-- {{ $blog->post_name }} --}}
-                                                {{ Illuminate\Support\Str::limit($blog->post_name, 20, '...') }}
+                                                {{-- {{ Illuminate\Support\Str::limit($blog->post_name, 20, '...') }} --}}
+                                                {{ !is_null($blog->post_name) ? Illuminate\Support\Str::limit($blog->post_name, 20, '...') : '' }}
                                             </a>
                                         </h4>
                                         {{-- <p>

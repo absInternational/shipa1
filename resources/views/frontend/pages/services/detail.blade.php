@@ -10,11 +10,10 @@
                         <h1 class="breadcrumb-title text-center">Service Details</h1>
                         <div class="breadcrumb-link">
                             <span>
-                                <a href="#">
+                                <a href="{{ route('/') }}">
                                     <span>Home</span>
                                 </a>
                             </span>
-                            >
                             <span>
                                 <span> Service</span>
                             </span>
