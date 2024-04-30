@@ -9,13 +9,22 @@ use App\Models\Blog;
 use App\Models\Service;
 use App\Models\NewsletterSubscribers;
 use App\Models\ServiceCategory;
+use Illuminate\Support\Facades\Http;
 
 class FrontendController extends Controller
 {
     public function index()
     {
+
+        // $apiUrl = 'https://washington.shawntransport.com/api/tracking-order';
+
+        // $response = Http::post($apiUrl, [
+        //     'id' => '903914',
+        // ]);
+        // $responseData = $response->json();
+        //  dd($responseData);
         $blogs = Blog::where('status', 1)->take(3)->get();
-        $reviews = Review::where('status', 1)->get();
+        $reviews = Review::get();
         return view('frontend.index', compact('reviews', 'blogs'));
     }
 
@@ -35,7 +44,7 @@ class FrontendController extends Controller
     public function aboutUs()
     {
         $faqs = FAQs::where('status', 1)->get();
-        $reviews = Review::where('status', 1)->get();
+        $reviews = Review::get();
         return view('frontend.pages.aboutUs', compact('reviews', 'faqs'));
     }
 
