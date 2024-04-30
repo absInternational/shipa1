@@ -42,7 +42,8 @@
                                 <div class="blog-header">
                                     <h3>
                                         <a class="title-link" href="service-details.html">
-                                            {{ !is_null($service->heading_one) ? $service->heading_one : '' }}</a>
+                                            {{ !is_null($service->heading_one) ? $service->heading_one : '' }}
+                                        </a>
                                     </h3>
                                 </div>
                             </div>
@@ -61,10 +62,11 @@
                                 <div class="check-list">
                                     <h5 class="title">{{ !is_null($service->heading_two) ? $service->heading_two : '' }}
                                     </h5>
+                                    <p>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}</p>
                                     <ul class="list-gap">
-                                        <li><i
+                                        {{-- <li><i
                                                 class="fa-light fa-check"></i>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}
-                                        </li>
+                                        </li> --}}
                                         <li><i
                                                 class="fa-light fa-check"></i>{{ !is_null($service->desc_two_two) ? $service->desc_two_two : '' }}
                                         </li>
@@ -92,7 +94,7 @@
                                 sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit
                                 amet finibus eros. Lorem Ipsum
                             </p> --}}
-                            {{ !is_null($service->extra) ? $service->extra : '' }}
+                            {!! !is_null($service->extra) ? $service->extra : '' !!}
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="sevice-image">
@@ -204,36 +206,13 @@
                         <div class="tj-sidebar-widget sidebar-service">
                             <h5 class="details_title">Logistics Services</h5>
                             <ul class="list-gap">
-                                <li>
-                                    <a href="#">Land Transport
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Ocean Transport
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Road Transport
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Train Transportation
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Vegetative Roofing
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Air Freight Service
-                                        <i class="flaticon-right-chevron"></i>
-                                    </a>
-                                </li>
+                                @foreach ($related as $row)
+                                    <li>
+                                        <a href="{{ route('service.details', $row->slug) }}">{{ $row->heading_one }}
+                                            <i class="flaticon-right-chevron"></i>
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="tj-sidebar-widget sidebar-documents">

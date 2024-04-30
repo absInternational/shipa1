@@ -41,23 +41,22 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Heading Two</label>
-                                    <input class="form-control" type="text" name="heading_two" placeholder="Heading Two"
-                                        required />
+                                    <input class="form-control" type="text" name="heading_two" placeholder="Heading Two" />
                                 </div>
                                 <div class="form-group">
                                     <label>Descriptions of Heading Two</label>
                                     <input class="form-control" type="text" name="desc_two_one"
-                                        placeholder="Desc Two One" required /><br>
+                                        placeholder="Desc Two One" /><br>
                                     <input class="form-control" type="text" name="desc_two_two"
-                                        placeholder="Desc Two Two" required /><br>
+                                        placeholder="Desc Two Two" /><br>
                                     <input class="form-control" type="text" name="desc_two_three"
-                                        placeholder="Desc Two Three" required /><br>
+                                        placeholder="Desc Two Three" /><br>
                                     <input class="form-control" type="text" name="desc_two_four"
-                                        placeholder="Desc Two Four" required /><br>
+                                        placeholder="Desc Two Four" /><br>
                                     <input class="form-control" type="text" name="desc_two_five"
-                                        placeholder="Desc Two Five" required /><br>
+                                        placeholder="Desc Two Five" /><br>
                                     <input class="form-control" type="text" name="desc_two_six"
-                                        placeholder="Desc Two Six" required /><br>
+                                        placeholder="Desc Two Six" /><br>
                                 </div>
                                 <div class="form-group">
                                     <label>Extra</label>

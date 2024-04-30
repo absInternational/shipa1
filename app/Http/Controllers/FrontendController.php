@@ -7,6 +7,7 @@ use App\Models\Review;
 use App\Models\Blog;
 use App\Models\Service;
 use App\Models\NewsletterSubscribers;
+use App\Models\ServiceCategory;
 
 class FrontendController extends Controller
 {
@@ -41,21 +42,29 @@ class FrontendController extends Controller
         return view('frontend.pages.contactUs');
     }
 
-    public function services()
+    public function services(Request $request)
     {
-        $services = Service::latest()->get();
+        if ($request->has('category')) {
+            $category = ServiceCategory::whereSlug($request->category)->first();
+            $services = Service::where('category_id', $category->id)->latest()->get();
+        } else {
+            $services = Service::latest()->get();
+        }
+
         return view('frontend.pages.services.index', compact('services'));
     }
 
-    public function serviceDetails($slug)
+    public function serviceDetails(Request $request, $slug)
     {
         $service = Service::where('slug', $slug)->first();
-        return view('frontend.pages.services.detail', compact('service'));
+        $related = Service::where('id', '!=', $service->id)->where('category_id', $service->category_id)->get();
+        return view('frontend.pages.services.detail', compact('service', 'related'));
     }
 
-    public function autoAuction()
+    public function autoAuction(Request $request)
     {
-        return view('frontend.pages.services.index');
+        $services = Service::latest()->get();
+        return view('frontend.pages.services.index', compact('services'));
     }
 
     public function subscribe(Request $request)
