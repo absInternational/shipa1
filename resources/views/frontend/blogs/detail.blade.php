@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Blog Details</h1>
+                        <h1 class="breadcrumb-title text-center">{{ $blog->post_name }}</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('/') }}">
