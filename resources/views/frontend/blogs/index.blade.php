@@ -171,6 +171,7 @@
                             </div>
                         </div> --}}
                         <div class="tj-sidebar-pagination text-center">
+                            {{ $blogs->links() }}
                             <ul class="list-gap">
                                 <li><a class="active-color" href="#">1</a></li>
                                 <li><a href="#">2</a></li>

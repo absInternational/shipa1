@@ -21,13 +21,13 @@ class FrontendController extends Controller
 
     public function blogs()
     {
-        $blogs = Blog::where('status', 1)->get();
+        $blogs = Blog::where('status', 1)->paginate(10);
         return view('frontend.blogs.index', compact('blogs'));
     }
 
     public function blogDetails($slug)
     {
-        $blogs = Blog::where('slug_name', '!=', $slug)->get();
+        $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
         $blog = Blog::where('slug_name', $slug)->first();
         return view('frontend.blogs.detail', compact('blog', 'blogs'));
     }
@@ -60,7 +60,7 @@ class FrontendController extends Controller
     {
         $faqs = FAQs::where('status', 1)->get();
         $service = Service::where('slug', $slug)->first();
-        $related = Service::where('id', '!=', $service->id)->where('category_id', $service->category_id)->get();
+        $related = Service::where('id', '!=', $service->id)->where('category_id', $service->category_id)->take(5)->get();
         return view('frontend.pages.services.detail', compact('service', 'related', 'faqs'));
     }
 

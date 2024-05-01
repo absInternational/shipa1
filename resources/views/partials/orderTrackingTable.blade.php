@@ -49,7 +49,8 @@
                                     @endif
                                 </td>
                                 <td>
-                                    {{ $row['created_at'] }}
+                                    {{ \Carbon\Carbon::parse($row['created_at'])->format('M d, Y D') }}
+                                    <i class="far fa-check-circle mr-2 text-success"></i>
                                 </td>
                             </tr>
                         @endforeach
