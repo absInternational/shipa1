@@ -74,7 +74,7 @@
                             <div class="tj-main-menu d-lg-block d-none text-end" id="main-menu">
                                 <ul class="main-menu">
                                     <li class="ab-gap">
-                                        <a href="{{ route('welcome') }}" class="{{ Request::is('/') ? ' active' : '' }}"> Home</a>
+                                        <a href="{{ route('welcome') }}" class="{{ Request::routeIs('welcome') ? ' active' : '' }}"> Home</a>
                                     </li>
                                     <li class="ab-gap">
                                         <a href="{{ route('aboutUs') }}" class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> About Us</a>
