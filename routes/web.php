@@ -10,6 +10,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\FAQsController;
 use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,12 @@ Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('newsl
 
 // news letter add
 Route::resource('contact_messages', ContactMessageController::class);
+
+// order tracking page
+Route::get('order_tracking', [FrontendController::class, 'orderTracking'])->name('order.tracking');
+
+// order tracking
+Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('track.order');
 
 
 // Admin routes

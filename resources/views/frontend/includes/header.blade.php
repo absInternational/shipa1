@@ -12,7 +12,7 @@
                     <!-- Logo Area Start -->
                     <div class="logo-area">
                         <div class="logo-box">
-                            <a href="index.html"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
+                            <a href="{{ route('/') }}"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
                                     alt="Logo" /></a>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         <!-- Header menu Start -->
                         <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
                             <div class="mobile-logo-area d-lg-none">
-                                <a href="index.html"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
+                                <a href="{{ route('/') }}"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
                                         alt="Logo" /></a>
                             </div>
                             <!-- Mainmenu Item Start -->
@@ -129,7 +129,7 @@
                                     </ul>
                                 </div> --}}
                                 <div class="tj-header-button d-none d-lg-block">
-                                    <a class="tj-header-btn" href="contact.html">
+                                    <a class="tj-header-btn" href="{{ route('order.tracking') }}">
                                         Track Order <i class="flaticon-right-1"></i>
                                     </a>
                                 </div>
