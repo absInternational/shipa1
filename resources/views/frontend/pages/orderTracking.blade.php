@@ -76,8 +76,6 @@
                     url: '{{ route('track.order') }}',
                     data: formData,
                     success: function(response) {
-                        console.log(response);
-
                         if (response['status_code'] == 400) {
                             Swal.fire({
                                 icon: 'error',
@@ -91,8 +89,6 @@
                     },
                     error: function(xhr, status, error) {
                         var response = xhr.responseJSON;
-                        // console.log('rsrs', response);
-                        console.log('rsrs222', response.message);
                         Swal.fire({
                             icon: 'error',
                             title: 'Error',
