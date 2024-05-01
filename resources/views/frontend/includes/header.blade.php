@@ -12,7 +12,7 @@
                     <!-- Logo Area Start -->
                     <div class="logo-area">
                         <div class="logo-box">
-                            <a href="{{ route('/') }}"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
+                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
                                     alt="Logo" /></a>
                         </div>
                     </div>
@@ -67,14 +67,14 @@
                         <!-- Header menu Start -->
                         <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
                             <div class="mobile-logo-area d-lg-none">
-                                <a href="{{ route('/') }}"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
+                                <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
                                         alt="Logo" /></a>
                             </div>
                             <!-- Mainmenu Item Start -->
                             <div class="tj-main-menu d-lg-block d-none text-end" id="main-menu">
                                 <ul class="main-menu">
                                     <li class="ab-gap">
-                                        <a href="{{ url('/') }}" class="{{ Request::is('/') ? ' active' : '' }}"> Home</a>
+                                        <a href="{{ route('welcome') }}" class="{{ Request::is('/') ? ' active' : '' }}"> Home</a>
                                     </li>
                                     <li class="ab-gap">
                                         <a href="{{ route('aboutUs') }}" class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> About Us</a>

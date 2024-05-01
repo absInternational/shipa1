@@ -10,7 +10,7 @@
                         <h1 class="breadcrumb-title text-center">About Us</h1>
                         <div class="breadcrumb-link">
                             <span>
-                                <a href="{{ route('/') }}">
+                                <a href="{{ route('welcome') }}">
                                     <span>Home</span>
                                 </a>
                             </span>

@@ -10,7 +10,7 @@
                         <h1 class="breadcrumb-title text-center">Track Your Shipment!</h1>
                         <div class="breadcrumb-link">
                             <span>
-                                <a href="{{ route('/') }}">
+                                <a href="{{ route('welcome') }}">
                                     <span>Home</span>
                                 </a>
                             </span>

@@ -29,7 +29,7 @@ use App\Http\Controllers\MainController;
 // });
 
 // home
-Route::get('/', [FrontendController::class, 'index'])->name('/');
+Route::get('/', [FrontendController::class, 'index'])->name('welcome');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
