@@ -37,13 +37,13 @@
                         <h3 class="title">Get in Touch With Us</h3>
                     </div>
                     <div class="tj-animate-form d-flex align-items-center">
-                        <form id="orderTrackingForm" class="animate-form" action="{{ route('order.tracking') }}"
-                            method="POST">
+                        <form id="orderTrackingForm" class="animate-form">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form__div">
-                                        <input type="text" class="form__input" name="order_num" id="order_num" placeholder=" " />
+                                        <input type="text" class="form__input" name="order_num" id="order_num"
+                                            placeholder=" " />
                                         <label class="form__label">Order #:</label>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3" id="orderTrackingHtml">
-                
+
             </div>
         </div>
     </section>
@@ -77,10 +77,22 @@
                     data: formData,
                     success: function(response) {
                         console.log(response);
-                        $('#orderTrackingHtml').html(response);
+
+                        if (response['status_code'] == 400) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: response.message
+                            });
+                            $('#orderTrackingHtml').html('');
+                        } else {
+                            $('#orderTrackingHtml').html(response);
+                        }
                     },
                     error: function(xhr, status, error) {
                         var response = xhr.responseJSON;
+                        // console.log('rsrs', response);
+                        console.log('rsrs222', response.message);
                         Swal.fire({
                             icon: 'error',
                             title: 'Error',
@@ -88,6 +100,13 @@
                         });
                     }
                 });
+            });
+
+            $(window).keydown(function(event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                    return false;
+                }
             });
         });
     </script>

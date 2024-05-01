@@ -17,10 +17,15 @@ class MainController extends Controller
         ]);
         $responseData = $response->json();
 
+        // dd($responseData['message']);
         // dd($responseData, $responseData['order']);
+        if ($responseData['status_code'] == 200) {
+            return view('partials.orderTrackingTable', compact('responseData'));
+        }
+        else {
+            return $responseData;
+        }
 
-        return view('partials.orderTrackingTable', compact('responseData'));
 
-        // return $responseData;
     }
 }
