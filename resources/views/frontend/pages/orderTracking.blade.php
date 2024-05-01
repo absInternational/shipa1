@@ -33,8 +33,8 @@
                 {{-- <div class="col-lg-7"> --}}
                 <div class="">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape"> Need Any Help?</span>
-                        <h3 class="title">Get in Touch With Us</h3>
+                        <span class="sub-title active-shape"> Want To Know Your Order Status?</span>
+                        <h3 class="title">Get Status of Your Order</h3>
                     </div>
                     <div class="tj-animate-form d-flex align-items-center">
                         <form id="orderTrackingForm" class="animate-form">
