@@ -6,7 +6,7 @@
                     class="footer-widget footer1_col_1 footer-content-info"
                     data-bg-image="assets/images/banner/footer-shape.png"
                 >
-                    <a href="{{ route('welcome') }}"> <img src="{{ asset('frontend/images/logo/SHIPA1logo.webp')}}" alt="Logo" /></a>
+                    <a href="{{ route('welcome') }}"> <img src="{{ asset('frontend/images/logo/logo.png')}}" alt="Logo" /></a>
                     <p>
                         A farm is a plot of land that is used to grow crops and raise livestock, as in our farm,
                         we raise sheep and sell their wool the word farm is also.

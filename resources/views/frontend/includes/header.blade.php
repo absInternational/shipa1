@@ -12,7 +12,7 @@
                     <!-- Logo Area Start -->
                     <div class="logo-area">
                         <div class="logo-box">
-                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
+                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/logo.png') }}"
                                     alt="Logo" /></a>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         <!-- Header menu Start -->
                         <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
                             <div class="mobile-logo-area d-lg-none">
-                                <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
+                                <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/logo.png') }}"
                                         alt="Logo" /></a>
                             </div>
                             <!-- Mainmenu Item Start -->

@@ -48,7 +48,7 @@
         <div class="animation-preloader">
             <div class="spinner">
                 <div class="loader-icon">
-                    <img src="{{ asset('frontend/images/logo/SHIPA1logo.webp') }}"
+                    <img src="{{ asset('frontend/images/logo/logo.png') }}"
                         alt="Corporate Business HTML Template" />
                 </div>
             </div>
