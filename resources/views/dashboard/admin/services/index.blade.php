@@ -17,7 +17,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Banner Image</th>
+                                <th>Service Name</th>
                                 <th>Heading One</th>
                                 <th>Status</th>
                                 <th>Actions</th>
@@ -26,7 +26,7 @@
                         <tbody>
                             @foreach ($services as $service)
                                 <tr>
-                                    <td>{{ $service->banner_image }}</td>
+                                    <td>{{ $service->name }}</td>
                                     <td>{{ $service->heading_one }}</td>
                                     <td>
                                         @if ($service->status == 1)
