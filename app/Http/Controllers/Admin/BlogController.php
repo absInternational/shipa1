@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -23,7 +24,7 @@ class BlogController extends Controller
     {
         $validatedData = $request->validate([
             'post_name' => 'required|string|max:255',
-            'slug_name' => 'nullable|string|max:255',
+            // 'slug_name' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
             'post_short_description' => 'nullable|string',
             'post_description' => 'nullable|string',
@@ -33,6 +34,9 @@ class BlogController extends Controller
             'meta_description' => 'nullable|string',
             'image' => 'nullable|image|max:2048',
         ]);
+
+        $slug = Str::slug($request->post_name);
+        $validatedData['slug_name'] = $this->generateUniqueSlug($slug);
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -60,7 +64,7 @@ class BlogController extends Controller
 
         $validatedData = $request->validate([
             'post_name' => 'required|string|max:255',
-            'slug_name' => 'nullable|string|max:255',
+            // 'slug_name' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
             'post_short_description' => 'nullable|string',
             'post_description' => 'nullable|string',
@@ -71,6 +75,9 @@ class BlogController extends Controller
             'image' => 'nullable|image|max:2048',
             'status' => 'required',
         ]);
+
+        $slug = Str::slug($request->post_name);
+        $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -90,5 +97,18 @@ class BlogController extends Controller
         $blog->delete();
 
         return redirect()->route('blogs.index')->with('success', 'Blog deleted successfully.');
+    }
+
+    private function generateUniqueSlug($slug, $id = null)
+    {
+        $newSlug = $slug;
+        $counter = 1;
+
+        while (Blog::withTrashed()->where('slug_name', $newSlug)->where('id', '!=', $id)->exists()) {
+            $newSlug = $slug . $counter;
+            $counter++;
+        }
+
+        return $newSlug;
     }
 }

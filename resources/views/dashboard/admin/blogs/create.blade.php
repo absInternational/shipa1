@@ -21,14 +21,14 @@
                                         <span class="text-danger">{{ $errors->first('post_name') }}</span>
                                     @endif
                                 </div>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label>Slug Name</label>
                                     <input class="form-control" type="text" name="slug_name" placeholder="Use Slug-Name"
                                         required />
                                     @if ($errors->has('slug_name'))
                                         <span class="text-danger">{{ $errors->first('slug_name') }}</span>
                                     @endif
-                                </div>
+                                </div> --}}
                                 <div class="form-group">
                                     <label>Category</label>
                                     <select name="category" class="form-control" required>

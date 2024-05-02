@@ -16,10 +16,10 @@
                     <input type="text" class="form-control" id="post_name" name="post_name" value="{{ $blog->post_name }}" required>
                 </div>
 
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="slug_name">Slug Name</label>
                     <input type="text" class="form-control" id="slug_name" name="slug_name" value="{{ $blog->slug_name }}">
-                </div>
+                </div> --}}
 
                 <div class="form-group">
                     <label for="category">Category</label>

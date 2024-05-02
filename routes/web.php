@@ -39,9 +39,6 @@ Route::get('/blogs', [FrontendController::class, 'blogs'])->name('blogs');
 // Blog details
 Route::get('/blogs/{slug}', [FrontendController::class, 'blogDetails'])->name('blog.details');
 
-// Blog details
-Route::get('/{slug}', [FrontendController::class, 'blogDetailsNoSlug'])->name('blog.details.noSlug');
-
 // About us
 Route::get('/about_us', [FrontendController::class, 'aboutUs'])->name('aboutUs');
 
@@ -68,6 +65,11 @@ Route::get('order_tracking', [FrontendController::class, 'orderTracking'])->name
 
 // order tracking
 Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('track.order');
+
+// Blog details
+Route::get('/{slug}', [FrontendController::class, 'blogDetailsNoSlug'])
+    ->name('blog.details.noSlug')
+    ->where('slug', '[^/]+');
 
 
 // Admin routes
