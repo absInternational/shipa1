@@ -904,8 +904,8 @@ body [class*=" icon-"]::before {
 }
 
 .logo-area img {
-    max-width: 150px;
-    width: 100%;
+    max-width: 200px;
+    /* width: 100%; */
 }
 
 .tj-offcanvas-area .tj-search-box form input {
