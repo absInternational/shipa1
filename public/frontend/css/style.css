@@ -108,9 +108,9 @@ h6 {
 }
 
 h1 {
-    font-weight: 700 !important;
-    font-size: 70px !important;
-    line-height: 1.2 !important;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 1.2;
 }
 
 h2 {
@@ -152,13 +152,6 @@ textarea:focus {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-.list-gap-2 {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
 }
 
 .p-z-idex {
@@ -911,8 +904,8 @@ body [class*=" icon-"]::before {
 }
 
 .logo-area img {
-    max-width: 200px;
-    /* width: 100%; */
+    max-width: 150px;
+    width: 100%;
 }
 
 .tj-offcanvas-area .tj-search-box form input {
@@ -3789,7 +3782,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: var(--tj-primary-color);
     border-radius: 3px;
     padding: 50px 55px 60px;
-    width: 100%;
+    max-width: 486px;
     margin-left: auto;
     position: relative;
     z-index: 3;
@@ -5551,7 +5544,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-blog-item-three .tj-blog-image img {
     transition: 0.4s;
     transform: scale(1);
-    width: 100%;
 }
 
 .tj-blog-item-three:hover .tj-blog-image img {
