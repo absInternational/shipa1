@@ -44,22 +44,22 @@
                                 <div class="form-group">
                                     <label for="heading_two">Heading Two</label>
                                     <input id="heading_two" class="form-control" type="text" name="heading_two"
-                                        value="{{ $service->heading_two }}" required />
+                                        value="{{ $service->heading_two }}" />
                                 </div>
                                 <div class="form-group">
                                     <label for="desc_two_one">Descriptions of Heading Two</label>
                                     <input id="desc_two_one" class="form-control" type="text" name="desc_two_one"
-                                        value="{{ $service->desc_two_one }}" required /><br>
+                                        value="{{ $service->desc_two_one }}" /><br>
                                     <input class="form-control" type="text" name="desc_two_two"
-                                        value="{{ $service->desc_two_two }}" required /><br>
+                                        value="{{ $service->desc_two_two }}" /><br>
                                     <input class="form-control" type="text" name="desc_two_three"
-                                        value="{{ $service->desc_two_three }}" required /><br>
+                                        value="{{ $service->desc_two_three }}" /><br>
                                     <input class="form-control" type="text" name="desc_two_four"
-                                        value="{{ $service->desc_two_four }}" required /><br>
+                                        value="{{ $service->desc_two_four }}" /><br>
                                     <input class="form-control" type="text" name="desc_two_five"
-                                        value="{{ $service->desc_two_five }}" required /><br>
+                                        value="{{ $service->desc_two_five }}" /><br>
                                     <input class="form-control" type="text" name="desc_two_six"
-                                        value="{{ $service->desc_two_six }}" required /><br>
+                                        value="{{ $service->desc_two_six }}" /><br>
                                 </div>
                                 <div class="form-group">
                                     <label for="extra">Extra</label>
