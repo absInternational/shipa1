@@ -110,6 +110,11 @@
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Reviews</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('faqs.index') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>FAQs</span></a>
+    </li>
 
     {{-- <!-- Nav Item - Tables -->
     <li class="nav-item">

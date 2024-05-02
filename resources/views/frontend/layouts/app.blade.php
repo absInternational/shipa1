@@ -4,14 +4,14 @@
 <head>
     <!-- Meta Tag -->
     <meta charset="utf-8" />
-    <title>LogiLand - Transport & Logistics Service HTML Template</title>
+    <title>ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA</title>
     <meta name="description" content="" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" href="{{ asset('frontend/images/fav.svg') }}" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/fav.svg') }}" />
+    <link rel="apple-touch-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
 
     <!-- Bootstrap  v5.1.3 css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
