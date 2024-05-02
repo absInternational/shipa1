@@ -3789,7 +3789,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: var(--tj-primary-color);
     border-radius: 3px;
     padding: 50px 55px 60px;
-    max-width: 486px;
+    width: 100%;
     margin-left: auto;
     position: relative;
     z-index: 3;
