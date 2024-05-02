@@ -96,9 +96,10 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::resource('faqs', FAQsController::class);
 });
 
+Auth::routes();
+
 // Blog details
 Route::get('/{slug}', [FrontendController::class, 'blogDetailsNoSlug'])
     ->name('blog.details.noSlug')
     ->where('slug', '[^/]+');
 
-Auth::routes();
