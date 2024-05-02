@@ -149,7 +149,7 @@
                             <ul class="list-gap">
                                 @foreach ($related as $row)
                                     <li>
-                                        <a href="{{ route('service.details', $row->slug) }}">{{ $row->heading_one }}
+                                        <a href="{{ route('service.details', $row->slug) }}">{{ $row->name }}
                                             <i class="flaticon-right-chevron"></i>
                                         </a>
                                     </li>
