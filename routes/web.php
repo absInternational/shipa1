@@ -66,11 +66,6 @@ Route::get('order_tracking', [FrontendController::class, 'orderTracking'])->name
 // order tracking
 Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('track.order');
 
-// Blog details
-Route::get('/{slug}', [FrontendController::class, 'blogDetailsNoSlug'])
-    ->name('blog.details.noSlug')
-    ->where('slug', '[^/]+');
-
 
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {
@@ -100,5 +95,10 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     // faqs
     Route::resource('faqs', FAQsController::class);
 });
+
+// Blog details
+Route::get('/{slug}', [FrontendController::class, 'blogDetailsNoSlug'])
+    ->name('blog.details.noSlug')
+    ->where('slug', '[^/]+');
 
 Auth::routes();
