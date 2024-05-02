@@ -108,9 +108,9 @@ h6 {
 }
 
 h1 {
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 1.2;
+    font-weight: 700 !important;
+    font-size: 70px !important;
+    line-height: 1.2 !important;
 }
 
 h2 {
