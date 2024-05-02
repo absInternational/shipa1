@@ -32,6 +32,13 @@ class FrontendController extends Controller
         return view('frontend.blogs.detail', compact('blog', 'blogs'));
     }
 
+    public function blogDetailsNoSlug($slug)
+    {
+        $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
+        $blog = Blog::where('slug_name', $slug)->first();
+        return view('frontend.blogs.detail', compact('blog', 'blogs'));
+    }
+
     public function aboutUs()
     {
         $faqs = FAQs::where('status', 1)->get();

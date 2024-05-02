@@ -3,169 +3,172 @@
 @section('content')
     <!--=========== Slider Section Start =========-->
     <section class="tj-slider-section">
-            <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" /></div>
-            <div class="swiper sc-slider-1">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
-                        <div class="container">
-                            <div class="slider-content p-z-idex">
-                                <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
-                                <div class="slider-desc">
+        <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" /></div>
+        <div class="swiper sc-slider-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
+                    <div class="container">
+                        <div class="slider-content p-z-idex">
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
+                            <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                                 customers and seeks your trust in return of our services.
-                                </div>
-                                <div class="tj-theme-button">
-                                    <a class="tj-transparent-btn" href="contact.html">
-                                        Read More <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="banner-shape"></div>
                     </div>
-                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
-                        <div class="container">
-                            <div class="slider-content p-z-idex">
-                                <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
-                                <div class="slider-desc">
-                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
-                                customers and seeks your trust in return of our services.
-                                </div>
-                                <div class="tj-theme-button">
-                                    <a class="tj-transparent-btn" href="contact.html">
-                                        Read More <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="banner-shape"></div>
-                    </div>
-                    <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
-                        <div class="container">
-                            <div class="slider-content p-z-idex">
-                                <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
-                                <div class="slider-desc">
-                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
-                                customers and seeks your trust in return of our services.
-                                </div>
-                                <div class="tj-theme-button">
-                                    <a class="tj-transparent-btn" href="contact.html">
-                                        Read More <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="banner-shape"></div>
-                    </div>
+                    <div class="banner-shape"></div>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="tj-service-icon-box">
-                <ul class="list-gap">
-                    <li>
-                        <div class="service-item">
-                            <div class="tj-service-icon">
-                                <div class="service-icon">
-                                    <i class="flaticon-delivery-van"></i>
-                                </div>
-                                <div class="sub-title">
-                                    <span>VEHICLE <br>TRANSPORTATION</span>
-                                </div>
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
+                    <div class="container">
+                        <div class="slider-content p-z-idex">
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
+                            <div class="slider-desc">
+                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                customers and seeks your trust in return of our services.
                             </div>
-                            <div class="service-arrow">
-                                <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="service-item">
-                            <div class="tj-service-icon">
-                                <div class="service-icon">
-                                    <i class="flaticon-air-freight"></i>
-                                </div>
-                                <div class="sub-title">
-                                    <span>HEAVY <br>TRANSPORTATION </span>
-                                </div>
-                            </div>
-                            <div class="service-arrow">
-                                <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="service-item">
-                            <div class="tj-service-icon">
-                                <div class="service-icon">
-                                    <i class="flaticon flaticon-ship"></i>
-                                </div>
-                                <div class="sub-title">
-                                    <span>FREIGHT <br>TRANSPORTATION</span>
-                                </div>
-                            </div>
-                            <div class="service-arrow">
-                                <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!--=========== Slider Section End =========-->
-
-        <!--=========== Service Section Start =========-->
-        <section class="tj-service-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="tj-section-heading text-center">
-                            <span class="sub-title active-shape"> What We Do</span>
-                            <h2 class="title">Logistic & Transport</h2>
                         </div>
                     </div>
+                    <div class="banner-shape"></div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
-                            <div class="icon-box">
-                                <i class="flaticon-air-freight"></i>
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
+                    <div class="container">
+                        <div class="slider-content p-z-idex">
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
+                            <div class="slider-desc">
+                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                customers and seeks your trust in return of our services.
                             </div>
-                            <div class="service-content">
-                                <h4><a class="title-link" href="service-details.html"> VEHICLE TRANSPORTATION</a></h4>
-                                <p>Long established fact that reader will be distracted by the</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
-                            <div class="icon-box">
-                                <i class="flaticon-cargo-ship-1"></i>
-                            </div>
-                            <div class="service-content">
-                                <h4>
-                                    <a class="title-link" href="service-details.html"> HEAVY TRANSPORTATION</a>
-                                </h4>
-                                <p>Long established fact that reader will be distracted by the</p>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
-                            <div class="icon-box">
+                    <div class="banner-shape"></div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="tj-service-icon-box">
+            <ul class="list-gap">
+                <li>
+                    <div class="service-item">
+                        <div class="tj-service-icon">
+                            <div class="service-icon">
                                 <i class="flaticon-delivery-van"></i>
                             </div>
-                            <div class="service-content">
-                                <h4><a class="title-link" href="service-details.html"> FREIGHT TRANSPORTATION</a></h4>
-                                <p>Long established fact that reader will be distracted by the</p>
+                            <div class="sub-title">
+                                <span>VEHICLE <br>TRANSPORTATION</span>
                             </div>
+                        </div>
+                        <div class="service-arrow">
+                            <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-item">
+                        <div class="tj-service-icon">
+                            <div class="service-icon">
+                                <i class="flaticon-air-freight"></i>
+                            </div>
+                            <div class="sub-title">
+                                <span>HEAVY <br>TRANSPORTATION </span>
+                            </div>
+                        </div>
+                        <div class="service-arrow">
+                            <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-item">
+                        <div class="tj-service-icon">
+                            <div class="service-icon">
+                                <i class="flaticon flaticon-ship"></i>
+                            </div>
+                            <div class="sub-title">
+                                <span>FREIGHT <br>TRANSPORTATION</span>
+                            </div>
+                        </div>
+                        <div class="service-arrow">
+                            <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--=========== Slider Section End =========-->
+
+    <!--=========== Service Section Start =========-->
+    <section class="tj-service-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape"> What We Do</span>
+                        <h2 class="title">Logistic & Transport</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
+                        <div class="icon-box">
+                            <i class="flaticon-air-freight"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4><a class="title-link" href="service-details.html"> VEHICLE TRANSPORTATION</a></h4>
+                            <p>Long established fact that reader will be distracted by the</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
+                        <div class="icon-box">
+                            <i class="flaticon-cargo-ship-1"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4>
+                                <a class="title-link" href="service-details.html"> HEAVY TRANSPORTATION</a>
+                            </h4>
+                            <p>Long established fact that reader will be distracted by the</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
+                        <div class="icon-box">
+                            <i class="flaticon-delivery-van"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4><a class="title-link" href="service-details.html"> FREIGHT TRANSPORTATION</a></h4>
+                            <p>Long established fact that reader will be distracted by the</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--=========== Service Section End =========-->
+        </div>
+    </section>
+    <!--=========== Service Section End =========-->
 
     <!--=========== Cta Section Start =========-->
-     <section class="tj-cta-section icon-animate">
+    <section class="tj-cta-section icon-animate">
         <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-auto-aucation.webp') }}"></div>
         <div class="container">
             <div class="row">
@@ -194,7 +197,7 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
     <!--=========== Cta Section End =========-->
 
     <!--=========== About Section Start =========-->
@@ -282,10 +285,11 @@
                             </div>
                         </div>
                         <div class="image-box">
-                            <img class="p-z-idex" src="{{ asset('frontend/images/about/resize 410-630.jpg') }}" alt="Image" />
+                            <img class="p-z-idex" src="{{ asset('frontend/images/about/resize 410-630.jpg') }}"
+                                alt="Image" />
                         </div>
-                        <img class="group-1 p-z-idex" src="{{ asset('frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}"
-                            alt="Image" />
+                        <img class="group-1 p-z-idex"
+                            src="{{ asset('frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}" alt="Image" />
                         <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"
                             alt="Image" />
                     </div>
@@ -643,10 +647,11 @@
                         data-bs-parent="#accordionExample" style="">
                         <div class="accordion-body">
                             <ul class="list-gap">
-                                <li><i class="flaticon-placeholder"></i><span> 201 International Cir STE 230, Hunt Valley, MD 21030-1344</span></li>
+                                <li><i class="flaticon-placeholder"></i><span> 201 International Cir STE 230, Hunt Valley,
+                                        MD 21030-1344</span></li>
                                 <li>
                                     <i class="flaticon-mail"></i><a href="mailto:info@shipa1.com">
-                                    shawntransport@shipa1.com</a>
+                                        shawntransport@shipa1.com</a>
                                 </li>
                                 <li>
                                     <i class="flaticon-call"></i><a href="tel:1 (844) 474-4721"> 1 (844) 474-4721</a>
@@ -674,9 +679,10 @@
                     <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                         <div class="tj-blog-item">
                             <div class="tj-blog-image">
-                                <a href="{{ route('blog.details', $blog->slug_name) }}"> <img
-                                        {{-- src="{{ asset($blog->post_image) }}" alt="Blog" /></a> --}}
-                                        src="{{ !is_null($blog->post_image) ? $blog->post_image : '' }}" alt="Blog" /></a>
+                                <a
+                                    @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
+                                    <img src="{{ !is_null($blog->post_image) ? $blog->post_image : '' }}"
+                                        alt="Blog" /></a>
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-meta">
@@ -691,7 +697,7 @@
                                             <li><i class="fa-light fa-user"></i><a href="#">
                                                     {{-- {{ $blog->user->name }}</a></li> --}}
                                                     {{ !is_null($blog->user->name) ? $blog->user->name : '' }}</a></li>
-                                                    
+
                                         </ul>
                                     </div>
                                 </div>
