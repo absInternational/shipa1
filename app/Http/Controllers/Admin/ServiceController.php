@@ -26,9 +26,9 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image3' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'image3' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'heading_one' => 'required|string|max:255',
             'desc_one' => 'required|string',
             'heading_two' => 'nullable|string|max:255',
@@ -123,9 +123,9 @@ class ServiceController extends Controller
     {
         // Validate the request data
         $validator = Validator::make($request->all(), [
-            'banner_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image3' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'image3' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'heading_one' => 'required|string|max:255',
             'desc_one' => 'required|string',
             'heading_two' => 'nullable|string|max:255',
