@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Service Details</h1>
+                        <h1 class="breadcrumb-title text-center">{{ $service->name }}</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
