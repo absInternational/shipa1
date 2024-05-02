@@ -44,7 +44,8 @@ class ServiceController extends Controller
             'name' => 'required',
         ]);
 
-        $slug = Str::slug($request->heading_one, '-');
+        $slug = Str::slug($request->heading_one);
+        $slug = $this->generateUniqueSlug($slug);
 
         // Check if validation fails
         if ($validator->fails()) {
@@ -141,8 +142,6 @@ class ServiceController extends Controller
             'name' => 'required',
         ]);
 
-        $slug = Str::slug($request->heading_one, '-');
-
         // Check if validation fails
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
@@ -150,6 +149,9 @@ class ServiceController extends Controller
 
         // Find the service by id
         $service = Service::findOrFail($id);
+
+        $slug = Str::slug($request->heading_one);
+        $slug = $this->generateUniqueSlug($slug, $service->id);
 
         // Update the service attributes
         $service->heading_one = $request->filled('heading_one') ? $request->heading_one : null;
@@ -201,5 +203,18 @@ class ServiceController extends Controller
         $blog->delete();
 
         return redirect()->route('services.index')->with('success', 'Service deleted successfully.');
+    }
+
+    private function generateUniqueSlug($slug, $id = null)
+    {
+        $newSlug = $slug;
+        $counter = 1;
+
+        while (Service::withTrashed()->where('slug', $newSlug)->where('id', '!=', $id)->exists()) {
+            $newSlug = $slug . $counter;
+            $counter++;
+        }
+
+        return $newSlug;
     }
 }
