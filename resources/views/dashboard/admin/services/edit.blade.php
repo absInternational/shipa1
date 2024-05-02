@@ -35,11 +35,11 @@
                                 <div class="form-group">
                                     <label for="heading_one">Heading One</label>
                                     <input id="heading_one" class="form-control" type="text" name="heading_one"
-                                        value="{{ $service->heading_one }}" required />
+                                        value="{{ $service->heading_one }}" />
                                 </div>
                                 <div class="form-group">
                                     <label for="desc_one">Description One</label>
-                                    <textarea id="desc_one" class="form-control" name="desc_one" rows="4" required>{{ $service->desc_one }}</textarea>
+                                    <textarea id="desc_one" class="form-control" name="desc_one" rows="4">{{ $service->desc_one }}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="heading_two">Heading Two</label>

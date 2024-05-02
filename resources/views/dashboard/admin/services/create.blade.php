@@ -32,12 +32,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Heading One</label>
-                                    <input class="form-control" type="text" name="heading_one" placeholder="Heading One"
-                                        required />
+                                    <input class="form-control" type="text" name="heading_one" placeholder="Heading One" />
                                 </div>
                                 <div class="form-group">
                                     <label>Description One</label>
-                                    <textarea class="form-control" name="desc_one" rows="4" placeholder="Description One" required></textarea>
+                                    <textarea class="form-control" name="desc_one" rows="4" placeholder="Description One" ></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Heading Two</label>
