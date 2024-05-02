@@ -1,5 +1,5 @@
 <div class="tj-sidebar-pagination text-center">
-    <ul class="list-gap">
+    <ul class="list-gap-2">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
             <li class="disabled"><span>&laquo;</span></li>
