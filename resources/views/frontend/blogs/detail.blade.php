@@ -78,26 +78,29 @@
                         <div class="tj-sidebar-widget sidebar-post">
                             <h5 class="details_title">Recent Blogs</h5>
                             @foreach ($blogs as $blog)
-                            <div class="tj-post-content">
-                                <div class="tj-auother-img">
-                                    <a href="{{ route('blog.details', $blog->slug_name) }}">
-                                        <img src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
-                                </div>
-                                <div class="tj-details-text">
-                                    <div class="details-meta">
-                                        <ul class="list-gap">
-                                            <li><i class="flaticon-calendar"></i> {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</li>
-                                        </ul>
+                                <div class="tj-post-content">
+                                    <div class="tj-auother-img">
+                                        <a
+                                            @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
+                                            <img src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
                                     </div>
-                                    <div class="tj-details-header">
-                                        <h6>
-                                            <a href="{{ route('blog.details', $blog->slug_name) }}">
-                                                {{ $blog->post_name }}
-                                            </a>
-                                        </h6>
+                                    <div class="tj-details-text">
+                                        <div class="details-meta">
+                                            <ul class="list-gap">
+                                                <li><i class="flaticon-calendar"></i>
+                                                    {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tj-details-header">
+                                            <h6>
+                                                <a
+                                                    @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
+                                                    {{ $blog->post_name }}
+                                                </a>
+                                            </h6>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             @endforeach
                         </div>
                         {{-- <div class="tj-sidebar-widget sidebar-catagory">

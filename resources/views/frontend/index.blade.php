@@ -704,7 +704,8 @@
                                 <div class="blog-text-box">
                                     <div class="blog-header">
                                         <h4>
-                                            <a class="title-link" href="{{ route('blog.details', $blog->slug_name) }}">
+                                            <a class="title-link"
+                                                @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                                 {{-- {{ $blog->post_name }} --}}
                                                 {{-- {{ Illuminate\Support\Str::limit($blog->post_name, 20, '...') }} --}}
                                                 {{ !is_null($blog->post_name) ? Illuminate\Support\Str::limit($blog->post_name, 20, '...') : '' }}
@@ -717,7 +718,8 @@
                                     <div class="blog-button">
                                         <ul class="list-gap">
                                             <li>
-                                                <a href="{{ route('blog.details', $blog->slug_name) }}">
+                                                <a
+                                                    @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                                     Read More <i class="fa-regular fa-arrow-right"></i></a>
                                             </li>
                                         </ul>

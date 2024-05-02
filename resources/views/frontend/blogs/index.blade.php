@@ -35,18 +35,22 @@
                         @foreach ($blogs as $blog)
                             <div class="tj-blog-item-three">
                                 <div class="tj-blog-image">
-                                    <a href="{{ route('blog.details', $blog->slug_name) }}">
+                                    <a
+                                        @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                         {{-- <img src="{{ asset('frontend/images/blog/blog-14.jpg') }}" alt="Blog" /></a> --}}
                                         <img src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
                                 </div>
                                 <div class="active-text">
-                                    <a href="{{ route('blog.details', $blog->slug_name) }}"> {{ $blog->meta_title }}</a>
+                                    <a
+                                        @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
+                                        {{ $blog->meta_title }}</a>
                                 </div>
                                 <div class="tj-content-box">
                                     <div class="blog-content-area">
                                         <div class="blog-header">
                                             <h3>
-                                                <a class="title-link" href="{{ route('blog.details', $blog->slug_name) }}">
+                                                <a class="title-link"
+                                                    @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                                     {{ $blog->post_name }}
                                                 </a>
                                             </h3>
@@ -54,9 +58,11 @@
                                         <div class="blog-meta">
                                             <div class="meta-list">
                                                 <ul class="list-gap">
-                                                    <li><i class="fa-light fa-user"></i> <a href="#"> {{ $blog->user->name }}</a></li>
+                                                    <li><i class="fa-light fa-user"></i> <a href="#">
+                                                            {{ $blog->user->name }}</a></li>
                                                     <li>
-                                                        <i class="flaticon-calendar"></i> <span> {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</span>
+                                                        <i class="flaticon-calendar"></i> <span>
+                                                            {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</span>
                                                     </li>
                                                     {{-- <li>
                                                         <i class="fa-light fa-comment"></i> <span> Comment (5)</span>
@@ -69,7 +75,8 @@
                                         {!! Illuminate\Support\Str::limit($blog->post_description, 200, '...') !!}
                                     </p> --}}
                                     <div class="read-more">
-                                        <a href="{{ route('blog.details', $blog->slug_name) }}">
+                                        <a
+                                            @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                             Read More <i class="fa-light fa-arrow-right"></i></a>
                                     </div>
                                 </div>
