@@ -153,6 +153,13 @@ textarea:focus {
     padding: 0;
     list-style: none;
 }
+.list-gap-2 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
 
 .p-z-idex {
     position: relative;
@@ -517,7 +524,11 @@ textarea:focus {
     transition: 0.4s;
 }
 
-.header-section-two .tj-header-menu-bottom .menu-search-box .hambugar-icon i:hover {
+.header-section-two
+    .tj-header-menu-bottom
+    .menu-search-box
+    .hambugar-icon
+    i:hover {
     color: var(--tj-secondary-color);
 }
 
@@ -596,11 +607,19 @@ textarea:focus {
     color: var(--tj-white-color);
 }
 
-.header-section-three .tj-main-menu > ul > li.menu-item-has-children > a::before {
+.header-section-three
+    .tj-main-menu
+    > ul
+    > li.menu-item-has-children
+    > a::before {
     color: var(--tj-white-color);
 }
 
-.header-section-three .tj-main-menu > ul > li.menu-item-has-children > a.active::before {
+.header-section-three
+    .tj-main-menu
+    > ul
+    > li.menu-item-has-children
+    > a.active::before {
     color: var(--tj-primary-color);
 }
 
@@ -608,11 +627,18 @@ textarea:focus {
     color: var(--tj-white-color);
 }
 
-.header-section-three .tj-header-menu-bottom .menu-search-box .modal-icon i:hover {
+.header-section-three
+    .tj-header-menu-bottom
+    .menu-search-box
+    .modal-icon
+    i:hover {
     color: var(--tj-primary-color);
 }
 
-.header-section-three .tj-header-menu-bottom .menu-search-box .hambugar-icon::before {
+.header-section-three
+    .tj-header-menu-bottom
+    .menu-search-box
+    .hambugar-icon::before {
     position: absolute;
     content: "";
     top: 45%;
@@ -836,7 +862,11 @@ body [class*=" icon-"]::before {
     top: 4px;
 }
 
-.tj-offcanvas-area .contact-info-list .contact-box .contact-icon .fa-light.fa-location-dot {
+.tj-offcanvas-area
+    .contact-info-list
+    .contact-box
+    .contact-icon
+    .fa-light.fa-location-dot {
     position: relative;
     top: -3px;
 }
@@ -904,8 +934,8 @@ body [class*=" icon-"]::before {
 }
 
 .logo-area img {
-    max-width: 150px;
-    width: 100%;
+    max-width: 200px;
+    /* width: 100%; */
 }
 
 .tj-offcanvas-area .tj-search-box form input {
@@ -1615,7 +1645,8 @@ body [class*=" icon-"]::before {
     -webkit-transition: opacity 1700ms ease-in, -webkit-transform 8000ms ease;
     transition: opacity 1700ms ease-in, -webkit-transform 8000ms ease;
     transition: transform 8000ms ease, opacity 1700ms ease-in;
-    transition: transform 8000ms ease, opacity 1700ms ease-in, -webkit-transform 8000ms ease;
+    transition: transform 8000ms ease, opacity 1700ms ease-in,
+        -webkit-transform 8000ms ease;
     background-position: center !important;
     background-repeat: no-repeat;
     background-size: cover !important;
@@ -1633,7 +1664,8 @@ body [class*=" icon-"]::before {
     -webkit-transition: opacity 2000ms ease, -webkit-transform 2000ms ease;
     transition: opacity 2000ms ease, -webkit-transform 2000ms ease;
     transition: transform 2000ms ease, opacity 2000ms ease;
-    transition: transform 2000ms ease, opacity 2000ms ease, -webkit-transform 2000ms ease;
+    transition: transform 2000ms ease, opacity 2000ms ease,
+        -webkit-transform 2000ms ease;
 }
 
 .tj-slider-section-three .swiper-slide .slider-content .tj-theme-button,
@@ -1645,7 +1677,8 @@ body [class*=" icon-"]::before {
     -webkit-transition: opacity 1500ms ease, -webkit-transform 1500ms ease;
     transition: opacity 1500ms ease, -webkit-transform 1500ms ease;
     transition: transform 1500ms ease, opacity 1500ms ease;
-    transition: transform 1500ms ease, opacity 1500ms ease, -webkit-transform 1500ms ease;
+    transition: transform 1500ms ease, opacity 1500ms ease,
+        -webkit-transform 1500ms ease;
 }
 
 .tj-slider-section-three .swiper-slide .slider-client,
@@ -1673,7 +1706,10 @@ body [class*=" icon-"]::before {
     transform: translateY(0) translateX(0);
 }
 
-.tj-slider-section-three .swiper-slide.swiper-slide-active .slider-content .tj-theme-button,
+.tj-slider-section-three
+    .swiper-slide.swiper-slide-active
+    .slider-content
+    .tj-theme-button,
 .tj-slider-section .swiper-slide.swiper-slide-active .tj-theme-button {
     visibility: visible;
     opacity: 1;
@@ -2848,7 +2884,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     font-weight: 500;
 }
 
-.tj-faq-area .accordion .accordion-item .accordion-header .accordion-button:before {
+.tj-faq-area
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:before {
     content: "\f137";
     transform: rotate(-90deg);
     font-size: 25px;
@@ -2862,7 +2902,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     color: var(--tj-primary-color) !important;
 }
 
-.tj-faq-area .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::before {
+.tj-faq-area
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:not(.collapsed)::before {
     transform: rotate(90deg);
     content: "\f137";
     font-family: flaticon_logistics !important;
@@ -3782,7 +3826,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: var(--tj-primary-color);
     border-radius: 3px;
     padding: 50px 55px 60px;
-    max-width: 486px;
+    width: 100%;
     margin-left: auto;
     position: relative;
     z-index: 3;
@@ -4052,7 +4096,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: -webkit-transform 0.2s ease-in-out 0.1s;
     transition: -webkit-transform 0.2s ease-in-out 0.1s;
     transition: transform 0.2s ease-in-out 0.1s;
-    transition: transform 0.2s ease-in-out 0.1s, -webkit-transform 0.2s ease-in-out 0.1s;
+    transition: transform 0.2s ease-in-out 0.1s,
+        -webkit-transform 0.2s ease-in-out 0.1s;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -4064,7 +4109,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: -webkit-transform 0.2s ease-in-out 0.2s;
     transition: -webkit-transform 0.2s ease-in-out 0.2s;
     transition: transform 0.2s ease-in-out 0.2s;
-    transition: transform 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out 0.2s;
+    transition: transform 0.2s ease-in-out 0.2s,
+        -webkit-transform 0.2s ease-in-out 0.2s;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -4076,7 +4122,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: -webkit-transform 0.2s ease-in-out 0.3s;
     transition: -webkit-transform 0.2s ease-in-out 0.3s;
     transition: transform 0.2s ease-in-out 0.3s;
-    transition: transform 0.2s ease-in-out 0.3s, -webkit-transform 0.2s ease-in-out 0.3s;
+    transition: transform 0.2s ease-in-out 0.3s,
+        -webkit-transform 0.2s ease-in-out 0.3s;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -4088,7 +4135,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: -webkit-transform 0.2s ease-in-out 0.4s;
     transition: -webkit-transform 0.2s ease-in-out 0.4s;
     transition: transform 0.2s ease-in-out 0.4s;
-    transition: transform 0.2s ease-in-out 0.4s, -webkit-transform 0.2s ease-in-out 0.4s;
+    transition: transform 0.2s ease-in-out 0.4s,
+        -webkit-transform 0.2s ease-in-out 0.4s;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -4226,7 +4274,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: -webkit-transform 0.2s ease-in-out 0.1s;
     transition: -webkit-transform 0.2s ease-in-out 0.1s;
     transition: transform 0.2s ease-in-out 0.1s;
-    transition: transform 0.2s ease-in-out 0.1s, -webkit-transform 0.2s ease-in-out 0.1s;
+    transition: transform 0.2s ease-in-out 0.1s,
+        -webkit-transform 0.2s ease-in-out 0.1s;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -4238,7 +4287,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: -webkit-transform 0.2s ease-in-out 0.2s;
     transition: -webkit-transform 0.2s ease-in-out 0.2s;
     transition: transform 0.2s ease-in-out 0.2s;
-    transition: transform 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out 0.2s;
+    transition: transform 0.2s ease-in-out 0.2s,
+        -webkit-transform 0.2s ease-in-out 0.2s;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -4250,7 +4300,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: -webkit-transform 0.2s ease-in-out 0.3s;
     transition: -webkit-transform 0.2s ease-in-out 0.3s;
     transition: transform 0.2s ease-in-out 0.3s;
-    transition: transform 0.2s ease-in-out 0.3s, -webkit-transform 0.2s ease-in-out 0.3s;
+    transition: transform 0.2s ease-in-out 0.3s,
+        -webkit-transform 0.2s ease-in-out 0.3s;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -4262,7 +4313,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: -webkit-transform 0.2s ease-in-out 0.4s;
     transition: -webkit-transform 0.2s ease-in-out 0.4s;
     transition: transform 0.2s ease-in-out 0.4s;
-    transition: transform 0.2s ease-in-out 0.4s, -webkit-transform 0.2s ease-in-out 0.4s;
+    transition: transform 0.2s ease-in-out 0.4s,
+        -webkit-transform 0.2s ease-in-out 0.4s;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -4315,7 +4367,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-testimonial-section-two .swiper-pagination .swiper-pagination-bullet {
     display: inline-block;
 }
-.tj-testimonial-section-two .swiper-pagination .swiper-pagination-bullet:last-child {
+.tj-testimonial-section-two
+    .swiper-pagination
+    .swiper-pagination-bullet:last-child {
     margin-bottom: 0;
 }
 
@@ -4426,7 +4480,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.4s;
 }
 
-.team-item-three .arrow-icon .team-social:hover .social-active .team-social-dropdown {
+.team-item-three
+    .arrow-icon
+    .team-social:hover
+    .social-active
+    .team-social-dropdown {
     opacity: 1;
     visibility: visible;
 }
@@ -4457,7 +4515,14 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     color: var(--tj-white-color);
 }
 
-.team-item-three .arrow-icon .team-social .social-active .team-social-dropdown li a i {
+.team-item-three
+    .arrow-icon
+    .team-social
+    .social-active
+    .team-social-dropdown
+    li
+    a
+    i {
     background: var(--tj-white-color);
     color: var(--tj-primary-color);
     width: 50px;
@@ -4472,7 +4537,14 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.4s;
 }
 
-.team-item-three .arrow-icon .team-social .social-active .team-social-dropdown li a i:hover {
+.team-item-three
+    .arrow-icon
+    .team-social
+    .social-active
+    .team-social-dropdown
+    li
+    a
+    i:hover {
     background-color: var(--tj-primary-color);
     color: var(--tj-white-color);
 }
@@ -4731,7 +4803,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: 500ms all ease;
     border-radius: 3px;
     transition: 500ms all ease;
-    background: linear-gradient(180deg, #062e39 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+        180deg,
+        #062e39 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
 }
 
 .project-item-three .project-text {
@@ -5134,7 +5210,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -moz-transition: 0.4s;
 }
 
-.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::before {
+.accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:not(.collapsed)::before {
     content: "\f114";
     background-image: none;
     color: var(--tj-primary-color);
@@ -5142,7 +5221,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transform: rotate(0deg);
 }
 
-.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+.accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:not(.collapsed)::after {
     background-image: none;
 }
 
@@ -5544,6 +5626,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-blog-item-three .tj-blog-image img {
     transition: 0.4s;
     transform: scale(1);
+    width: 100%;
 }
 
 .tj-blog-item-three:hover .tj-blog-image img {
@@ -5881,15 +5964,26 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     display: flex;
 }
 
-.page-details-wrapper .details-comment-content .comment-auother-box .auother-image {
+.page-details-wrapper
+    .details-comment-content
+    .comment-auother-box
+    .auother-image {
     margin-right: 25px;
 }
 
-.page-details-wrapper .details-comment-content .comment-auother-box .auother-image img {
+.page-details-wrapper
+    .details-comment-content
+    .comment-auother-box
+    .auother-image
+    img {
     max-width: 120px;
 }
 
-.page-details-wrapper .details-comment-content .comment-auother-box .auother-content .title-link {
+.page-details-wrapper
+    .details-comment-content
+    .comment-auother-box
+    .auother-content
+    .title-link {
     font-size: 20px;
     font-weight: 500;
     color: var(--tj-secondary-color);
@@ -5898,20 +5992,35 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     margin-bottom: 0;
 }
 
-.page-details-wrapper .details-comment-content .comment-auother-box .auother-content .title-link:hover {
+.page-details-wrapper
+    .details-comment-content
+    .comment-auother-box
+    .auother-content
+    .title-link:hover {
     color: var(--tj-primary-color);
 }
 
-.page-details-wrapper .details-comment-content .comment-auother-box .auother-content span {
+.page-details-wrapper
+    .details-comment-content
+    .comment-auother-box
+    .auother-content
+    span {
     margin-bottom: 10px;
     display: block;
 }
 
-.page-details-wrapper .details-comment-content .comment-auother-box .detils-reply {
+.page-details-wrapper
+    .details-comment-content
+    .comment-auother-box
+    .detils-reply {
     margin-top: 30px;
 }
 
-.page-details-wrapper .details-comment-content .comment-auother-box .detils-reply a {
+.page-details-wrapper
+    .details-comment-content
+    .comment-auother-box
+    .detils-reply
+    a {
     border: 1px solid var(--tj-primary-color);
     color: var(--tj-primary-color);
     border-radius: 2px;
@@ -5920,13 +6029,19 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: transparent;
 }
 
-.page-details-wrapper .details-comment-content .comment-auother-box .detils-reply a:hover {
+.page-details-wrapper
+    .details-comment-content
+    .comment-auother-box
+    .detils-reply
+    a:hover {
     background-color: var(--tj-primary-color);
     border-color: transparent;
     color: var(--tj-white-color);
 }
 
-.page-details-wrapper .details-comment-content .comment-auother-box:nth-child(3) {
+.page-details-wrapper
+    .details-comment-content
+    .comment-auother-box:nth-child(3) {
     padding-left: 50px;
     border-top: 1px solid rgba(221, 221, 221, 0.2);
     margin-top: 35px;
@@ -6304,7 +6419,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     margin-bottom: 15px;
 }
 
-.details-sidebar-inner .tj-appointment-box .appointment-content .tel-link:hover {
+.details-sidebar-inner
+    .tj-appointment-box
+    .appointment-content
+    .tel-link:hover {
     color: var(--tj-primary-color);
 }
 
@@ -6313,7 +6431,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     margin-bottom: 30px;
 }
 
-.details-sidebar-inner .tj-appointment-box .appointment-content .tj-transparent-btn.submit-btn2 {
+.details-sidebar-inner
+    .tj-appointment-box
+    .appointment-content
+    .tj-transparent-btn.submit-btn2 {
     margin-bottom: 60px;
 }
 
@@ -6344,30 +6465,57 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
 }
 
-.project-details-wrapper .tj-project-image .active-introduction .project-client ul li {
+.project-details-wrapper
+    .tj-project-image
+    .active-introduction
+    .project-client
+    ul
+    li {
     border-bottom: 1px solid var(--tj-gray-color6);
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
-.project-details-wrapper .tj-project-image .active-introduction .project-client ul li:last-child {
+.project-details-wrapper
+    .tj-project-image
+    .active-introduction
+    .project-client
+    ul
+    li:last-child {
     border-bottom: none;
     padding-bottom: 0;
     margin-bottom: 0;
 }
 
-.project-details-wrapper .tj-project-image .active-introduction .project-client ul li span {
+.project-details-wrapper
+    .tj-project-image
+    .active-introduction
+    .project-client
+    ul
+    li
+    span {
     font-weight: 500;
     display: block;
     color: var(--tj-body-color);
 }
 
-.project-details-wrapper .tj-project-image .active-introduction .project-client ul li:nth-child(1) {
+.project-details-wrapper
+    .tj-project-image
+    .active-introduction
+    .project-client
+    ul
+    li:nth-child(1) {
     color: var(--tj-primary-color);
     font-weight: 500;
 }
 
-.project-details-wrapper .tj-project-image .active-introduction .project-client ul li:nth-child(2) a {
+.project-details-wrapper
+    .tj-project-image
+    .active-introduction
+    .project-client
+    ul
+    li:nth-child(2)
+    a {
     color: var(--tj-secondary-color);
     font-family: var(--tj-ff-title);
     font-size: 20px;
@@ -6375,11 +6523,22 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.4s;
 }
 
-.project-details-wrapper .tj-project-image .active-introduction .project-client ul li:nth-child(2) a:hover {
+.project-details-wrapper
+    .tj-project-image
+    .active-introduction
+    .project-client
+    ul
+    li:nth-child(2)
+    a:hover {
     color: var(--tj-primary-color);
 }
 
-.project-details-wrapper .tj-project-image .active-introduction .project-client ul li:nth-child(3) {
+.project-details-wrapper
+    .tj-project-image
+    .active-introduction
+    .project-client
+    ul
+    li:nth-child(3) {
     color: var(--tj-secondary-color);
     font-family: var(--tj-ff-title);
     font-size: 20px;
@@ -6394,7 +6553,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     font-weight: 700;
 }
 
-.project-details-wrapper .tj-project-image .active-introduction .project_title::before {
+.project-details-wrapper
+    .tj-project-image
+    .active-introduction
+    .project_title::before {
     position: absolute;
     content: "";
     height: 2px;
@@ -6797,7 +6959,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     z-index: 10;
 }
 
-.tj-animate-form .form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+.tj-animate-form
+    .form__input:not(:placeholder-shown).form__input:not(:focus)
+    + .form__label {
     top: -0.5rem;
     left: 0.8rem;
     font-size: 15px;
@@ -7253,7 +7417,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     font-size: 18px;
 }
 
-.tj-footer-v2 .widget_recent_post .widget-post .post-calender .post-title:hover {
+.tj-footer-v2
+    .widget_recent_post
+    .widget-post
+    .post-calender
+    .post-title:hover {
     color: var(--tj-primary-color);
 }
 
@@ -8008,10 +8176,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transform: translateY(calc(-100% - 80px));
     -ms-transform: translateY(calc(-100% - 80px));
     transform: translateY(calc(-100% - 80px));
-    -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out,
+        -webkit-transform 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+        -webkit-transform 0.3s ease-in-out;
     -webkit-transition-delay: 0.5s;
     transition-delay: 0.5s;
 }
@@ -8225,7 +8395,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     .search_wrapper .search_form .search_input input {
         font-size: 20px;
     }
-    .search_wrapper .search_form .search_input input::-webkit-input-placeholder {
+    .search_wrapper
+        .search_form
+        .search_input
+        input::-webkit-input-placeholder {
         font-size: 20px;
     }
     .search_wrapper .search_form .search_input input::-moz-placeholder {
@@ -8246,7 +8419,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     .search_wrapper .search_form .search_input input {
         font-size: 18px;
     }
-    .search_wrapper .search_form .search_input input::-webkit-input-placeholder {
+    .search_wrapper
+        .search_form
+        .search_input
+        input::-webkit-input-placeholder {
         font-size: 18px;
     }
     .search_wrapper .search_form .search_input input::-moz-placeholder {
@@ -8304,21 +8480,25 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 @keyframes circle-ripple {
     0% {
-        box-shadow: 0 0 0 0 rgba(255, 84, 33, 0.3), 0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3),
+        box-shadow: 0 0 0 0 rgba(255, 84, 33, 0.3),
+            0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3),
             0 0 0 5em rgba(255, 84, 33, 0.3);
     }
     100% {
-        box-shadow: 0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3), 0 0 0 5em rgba(255, 84, 33, 0.3),
+        box-shadow: 0 0 0 1em rgba(255, 84, 33, 0.3),
+            0 0 0 3em rgba(255, 84, 33, 0.3), 0 0 0 5em rgba(255, 84, 33, 0.3),
             0 0 0 8em rgba(255, 84, 33, 0);
     }
 }
 @-webkit-keyframes circle-ripple {
     0% {
-        box-shadow: 0 0 0 0 rgba(255, 84, 33, 0.3), 0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3),
+        box-shadow: 0 0 0 0 rgba(255, 84, 33, 0.3),
+            0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3),
             0 0 0 5em rgba(255, 84, 33, 0.3);
     }
     100% {
-        box-shadow: 0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3), 0 0 0 5em rgba(255, 84, 33, 0.3),
+        box-shadow: 0 0 0 1em rgba(255, 84, 33, 0.3),
+            0 0 0 3em rgba(255, 84, 33, 0.3), 0 0 0 5em rgba(255, 84, 33, 0.3),
             0 0 0 8em rgba(255, 84, 33, 0);
     }
 }
@@ -8362,12 +8542,14 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 .left-right {
     animation: left-right 5s cubic-bezier(0.41, 0.04, 0.03, 1.1) infinite;
-    -webkit-animation: left-right 5s cubic-bezier(0.41, 0.04, 0.03, 1.1) infinite;
+    -webkit-animation: left-right 5s cubic-bezier(0.41, 0.04, 0.03, 1.1)
+        infinite;
 }
 
 .left-right-new {
     animation: left-right 8s cubic-bezier(0.41, 0.04, 0.03, 1.1) infinite;
-    -webkit-animation: left-right 8s cubic-bezier(0.41, 0.04, 0.03, 1.1) infinite;
+    -webkit-animation: left-right 8s cubic-bezier(0.41, 0.04, 0.03, 1.1)
+        infinite;
 }
 
 @keyframes left-right {
@@ -8697,7 +8879,7 @@ PAGE LOAD ANIMATION
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background: var( --tj-gray-color12);
+    background: var(--tj-gray-color12);
 }
 
 .preloader .tj-primary-btn {
@@ -8796,37 +8978,58 @@ PAGE LOAD ANIMATION
     position: relative;
 }
 
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+.preloader
+    .animation-preloader
+    .txt-loading
+    .letters-loading:nth-child(2):before {
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
 }
 
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+.preloader
+    .animation-preloader
+    .txt-loading
+    .letters-loading:nth-child(3):before {
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
 }
 
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+.preloader
+    .animation-preloader
+    .txt-loading
+    .letters-loading:nth-child(4):before {
     -webkit-animation-delay: 0.6s;
     animation-delay: 0.6s;
 }
 
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+.preloader
+    .animation-preloader
+    .txt-loading
+    .letters-loading:nth-child(5):before {
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
 }
 
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+.preloader
+    .animation-preloader
+    .txt-loading
+    .letters-loading:nth-child(6):before {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
 
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+.preloader
+    .animation-preloader
+    .txt-loading
+    .letters-loading:nth-child(7):before {
     -webkit-animation-delay: 1.2s;
     animation-delay: 1.2s;
 }
 
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+.preloader
+    .animation-preloader
+    .txt-loading
+    .letters-loading:nth-child(8):before {
     -webkit-animation-delay: 1.4s;
     animation-delay: 1.4s;
 }
@@ -9004,7 +9207,8 @@ PAGE LOAD ANIMATION
         transform: skewX(-10deg) skewY(-15deg) rotateY(-40deg) rotate(0);
     }
     100% {
-        -webkit-transform: skewX(-10deg) skewY(-15deg) rotateY(-40deg) rotate(360deg);
+        -webkit-transform: skewX(-10deg) skewY(-15deg) rotateY(-40deg)
+            rotate(360deg);
         transform: skewX(-10deg) skewY(-15deg) rotateY(-40deg) rotate(360deg);
     }
 }
@@ -9014,7 +9218,8 @@ PAGE LOAD ANIMATION
         transform: skewX(-10deg) skewY(-15deg) rotateY(-40deg) rotate(0);
     }
     100% {
-        -webkit-transform: skewX(-10deg) skewY(-15deg) rotateY(-40deg) rotate(360deg);
+        -webkit-transform: skewX(-10deg) skewY(-15deg) rotateY(-40deg)
+            rotate(360deg);
         transform: skewX(-10deg) skewY(-15deg) rotateY(-40deg) rotate(360deg);
     }
 }
