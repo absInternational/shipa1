@@ -124,7 +124,7 @@ class ServiceController extends Controller
     {
         // Validate the request data
         $validator = Validator::make($request->all(), [
-            'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            // 'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'image3' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'heading_one' => 'required|string|max:255',
