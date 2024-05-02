@@ -44,7 +44,7 @@ class ServiceController extends Controller
             'name' => 'required',
         ]);
 
-        $slug = Str::slug($request->heading_one);
+        $slug = Str::slug($request->name);
         $slug = $this->generateUniqueSlug($slug);
 
         // Check if validation fails
@@ -150,7 +150,7 @@ class ServiceController extends Controller
         // Find the service by id
         $service = Service::findOrFail($id);
 
-        $slug = Str::slug($request->heading_one);
+        $slug = Str::slug($request->name);
         $slug = $this->generateUniqueSlug($slug, $service->id);
 
         // Update the service attributes
