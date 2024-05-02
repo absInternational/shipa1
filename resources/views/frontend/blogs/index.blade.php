@@ -177,8 +177,9 @@
                                 </div>
                             </div>
                         </div> --}}
-                        <div class="tj-sidebar-pagination text-center">
-                            {{ $blogs->links() }}
+                        {{ $blogs->links('partials.custom_pagination') }}
+
+                        <!-- <div class="tj-sidebar-pagination text-center">
                             <ul class="list-gap">
                                 <li><a class="active-color" href="#">1</a></li>
                                 <li><a href="#">2</a></li>
@@ -186,7 +187,7 @@
                                     <a href="#"><i class="flaticon-right-chevron"></i></a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-4">
