@@ -36,4 +36,9 @@ class Service extends Model
     {
         return $this->belongsTo(ServiceCategory::class, 'category_id');
     }
+
+    public function getNameAttribute($value)
+    {
+        return ucwords($value);
+    }
 }
