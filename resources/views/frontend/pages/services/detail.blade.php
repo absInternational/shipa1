@@ -54,8 +54,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-5 col-md-6">
                                 <div class="check-image">
-                                    <img src="{{ !is_null($service->image2) ? asset($service->image2) : '' }}"
-                                        alt="Blog" />
+                                    @if ($service->image2 != null)
+                                        <img src="{{ !is_null($service->image2) ? asset($service->image2) : '' }}"
+                                            alt="Blog" />
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-6">
@@ -98,8 +100,10 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="sevice-image">
-                                        <img src="{{ !is_null($service->image3) ? asset($service->image3) : '' }}"
-                                            alt="Image" />
+                                        @if ($service->image3 != null)
+                                            <img src="{{ !is_null($service->image3) ? asset($service->image3) : '' }}"
+                                                alt="Image" />
+                                        @endif
                                     </div>
                                 </div>
                             </div>
