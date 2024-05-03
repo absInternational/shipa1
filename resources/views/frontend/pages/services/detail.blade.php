@@ -47,9 +47,12 @@
                                     </h3>
                                 </div>
                             </div>
-                            <p>
-                                {{ !is_null($service->desc_one) ? $service->desc_one : '' }}
-                            </p>
+
+                            @if ($service->desc_one != null)
+                                <p>
+                                    {{ !is_null($service->desc_one) ? $service->desc_one : '' }}
+                                </p>
+                            @endif
                         </div>
                         <div class="row align-items-center">
                             @if ($service->image2 != null)
@@ -60,33 +63,36 @@
                                     </div>
                                 </div>
                             @endif
-                            <div class="col-lg-7 col-md-6">
-                                <div class="check-list">
-                                    <h5 class="title">{{ !is_null($service->heading_two) ? $service->heading_two : '' }}
-                                    </h5>
-                                    <p>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}</p>
-                                    <ul class="list-gap">
-                                        {{-- <li><i
+                            @if ($service->heading_two != null)
+                                <div class="col-lg-7 col-md-6">
+                                    <div class="check-list">
+                                        <h5 class="title">
+                                            {{ !is_null($service->heading_two) ? $service->heading_two : '' }}
+                                        </h5>
+                                        <p>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}</p>
+                                        <ul class="list-gap">
+                                            {{-- <li><i
                                                 class="fa-light fa-check"></i>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}
                                         </li> --}}
-                                        <li><i
-                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_two) ? $service->desc_two_two : '' }}
-                                        </li>
-                                        <li><i
-                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_three) ? $service->desc_two_three : '' }}
-                                        </li>
-                                        <li><i
-                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_four) ? $service->desc_two_four : '' }}
-                                        </li>
-                                        <li><i
-                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_five) ? $service->desc_two_five : '' }}
-                                        </li>
-                                        <li><i
-                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_six) ? $service->desc_two_six : '' }}
-                                        </li>
-                                    </ul>
+                                            <li><i
+                                                    class="fa-light fa-check"></i>{{ !is_null($service->desc_two_two) ? $service->desc_two_two : '' }}
+                                            </li>
+                                            <li><i
+                                                    class="fa-light fa-check"></i>{{ !is_null($service->desc_two_three) ? $service->desc_two_three : '' }}
+                                            </li>
+                                            <li><i
+                                                    class="fa-light fa-check"></i>{{ !is_null($service->desc_two_four) ? $service->desc_two_four : '' }}
+                                            </li>
+                                            <li><i
+                                                    class="fa-light fa-check"></i>{{ !is_null($service->desc_two_five) ? $service->desc_two_five : '' }}
+                                            </li>
+                                            <li><i
+                                                    class="fa-light fa-check"></i>{{ !is_null($service->desc_two_six) ? $service->desc_two_six : '' }}
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                         </div>
                         <div class="details-video-content">
                             {{-- <h4 class="title">Communicate With Us</h4>
