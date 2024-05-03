@@ -52,14 +52,14 @@
                             </p>
                         </div>
                         <div class="row align-items-center">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="check-image">
-                                    @if ($service->image2 != null)
+                            @if ($service->image2 != null)
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="check-image">
                                         <img src="{{ !is_null($service->image2) ? asset($service->image2) : '' }}"
                                             alt="Blog" />
-                                    @endif
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                             <div class="col-lg-7 col-md-6">
                                 <div class="check-list">
                                     <h5 class="title">{{ !is_null($service->heading_two) ? $service->heading_two : '' }}
@@ -97,16 +97,16 @@
                                 amet finibus eros. Lorem Ipsum
                             </p> --}}
                             {!! !is_null($service->extra) ? $service->extra : '' !!}
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="sevice-image">
-                                        @if ($service->image3 != null)
+                            @if ($service->image3 != null)
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="sevice-image">
                                             <img src="{{ !is_null($service->image3) ? asset($service->image3) : '' }}"
                                                 alt="Image" />
-                                        @endif
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endif
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
