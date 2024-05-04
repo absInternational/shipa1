@@ -42,6 +42,7 @@ class ServiceController extends Controller
             'status' => 'required|boolean',
             'category_id' => 'required',
             'name' => 'required',
+            'text_to_show' => 'nullable',
         ]);
 
         $slug = Str::slug($request->name);
@@ -97,6 +98,7 @@ class ServiceController extends Controller
         $service->status = $request->filled('status') ? $request->status : null;
         $service->slug = $slug;
         $service->name = $request->filled('name') ? $request->name : null;
+        $service->text_to_show = $request->filled('text_to_show') ? $request->text_to_show : null;
 
         $service->banner_image = '/uploads/' . $bannerImage->getClientOriginalName();
         if ($image2) {
@@ -168,6 +170,7 @@ class ServiceController extends Controller
         $service->status = $request->filled('status') ? $request->status : null;
         $service->slug = $slug;
         $service->name = $request->filled('name') ? $request->name : null;
+        $service->text_to_show = $request->filled('text_to_show') ? $request->text_to_show : null;
 
         // Handle banner image update if provided
         if ($request->hasFile('banner_image')) {

@@ -35,6 +35,10 @@
                                     <input class="form-control" type="text" name="heading_one" placeholder="Heading One" />
                                 </div>
                                 <div class="form-group">
+                                    <label>Text To Show</label>
+                                    <textarea class="form-control" name="text_to_show" rows="4" placeholder="Text To Show" ></textarea>
+                                </div>
+                                <div class="form-group">
                                     <label>Description One</label>
                                     <textarea class="form-control" name="desc_one" rows="4" placeholder="Description One" ></textarea>
                                 </div>
