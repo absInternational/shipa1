@@ -47,7 +47,7 @@
                             </div>
                             <div class="service-content">
                                 <h4><a class="title" href="{{ route('service.details', $service->slug) }}"> {{ $service->name }}</a></h4>
-                                <p>{!! Illuminate\Support\Str::limit($service->desc_one, 200, '...') !!}</p>
+                                <p>{!! Illuminate\Support\Str::limit($service->text_to_show, 200, '...') !!}</p>
                             </div>
                         </div>
                     </div>
