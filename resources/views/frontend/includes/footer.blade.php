@@ -69,13 +69,13 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> News & Media </a>
+                                <a href="{{ route('blogs') }}"> <i class="flaticon-plus"></i> News & Media </a>
                             </li>
                             <li>
                                 <a href="#"> <i class="flaticon-plus"></i> Sustainability</a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> About Expertise </a>
+                                <a href="{{ route('aboutUs') }}"> <i class="flaticon-plus"></i> About Expertise </a>
                             </li>
                             <li>
                                 <a href="#"> <i class="flaticon-plus"></i> Case Studies</a>
@@ -84,7 +84,13 @@
                                 <a href="#"> <i class="flaticon-plus"></i> Our Team </a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> Contacts</a>
+                                <a href="{{ route('contactUs') }}"> <i class="flaticon-plus"></i> Contacts</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('termsAndConditions') }}"> <i class="flaticon-plus"></i> Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('privacyPolicy') }}"> <i class="flaticon-plus"></i> Privacy Policy</a>
                             </li>
                         </ul>
                     </div>

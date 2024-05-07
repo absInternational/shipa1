@@ -63,6 +63,12 @@ Route::resource('contact_messages', ContactMessageController::class);
 // order tracking page
 Route::get('order_tracking', [FrontendController::class, 'orderTracking'])->name('order.tracking');
 
+// terms & conditions
+Route::get('/terms_and_conditions', [FrontendController::class, 'termsAndConditions'])->name('termsAndConditions');
+
+// privacy policy
+Route::get('/privacy_policy', [FrontendController::class, 'privacyPolicy'])->name('privacyPolicy');
+
 // order tracking
 Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('track.order');
 

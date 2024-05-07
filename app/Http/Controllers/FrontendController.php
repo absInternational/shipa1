@@ -94,4 +94,14 @@ class FrontendController extends Controller
     {
         return view('frontend.pages.orderTracking');
     }
+
+    public function termsAndConditions()
+    {
+        return view('frontend.pages.termsAndConditions');
+    }
+
+    public function privacyPolicy()
+    {
+        return view('frontend.pages.privacyPolicy');
+    }
 }

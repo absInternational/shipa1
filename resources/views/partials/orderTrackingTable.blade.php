@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                         @else
-                            <span>Vehicle Name : </span><br>
+                            <span>Vehicle Name : {{ $responseData['data']['ymk'] }}</span><br>
                             <div class="d-flex justify-content-center">
                                 <span
                                     class="badge bg-warning mx-2">{{ isset($condition[0]) ? ($condition[0] == 1 ? 'Open' : 'Enclosed') : 'Enclosed' }}</span>
