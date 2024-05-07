@@ -5,10 +5,10 @@
     <div class="card-body">
         <div class="container mt-4">
 
-            <h2>Tracking Id of {{ $responseData['data']['id'] }}</h2>
+            <h4 class="text-center">Tracking Id of {{ $responseData['data']['id'] }}</h4>
             <div class="d-flex justify-content-center">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-left text-center">Vehicle Info</h2>
+                    <h5 class="text-left text-center">Vehicle Info</h5>
                     @php
                         $ymk = explode('*^-', $responseData['data']['ymk']);
                         $transport = explode('*^-', $responseData['data']['transport']);
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                         @else
-                            <span>Vehicle Name : {{ $responseData['data']['ymk'] }}</span><br>
+                            <span class="fw-bold">Vehicle Name: {{ $responseData['data']['ymk'] }}</span><br>
                             <div class="d-flex justify-content-center">
                                 <span
                                     class="badge bg-warning mx-2">{{ isset($condition[0]) ? ($condition[0] == 1 ? 'Open' : 'Enclosed') : 'Enclosed' }}</span>
@@ -46,24 +46,22 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3">
-                    <p>Pickup:</p>
+                <div class="col-md-6">
+                    <div class="float-md-start">
+                        <p class="fw-bold">Pickup:</p>
+                        <p><i class="fas fa-location-dot text-primary"></i> {{ $responseData['data']['originzsc'] }}</p>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <p>{{ $responseData['data']['originzsc'] }}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <p>Delivery:</p>
-                </div>
-                <div class="col-md-3">
-                    <p>{{ $responseData['data']['destinationzsc'] }}</p>
+                <div class="col-md-6">
+                    <div class="float-md-end">
+                        <p class="fw-bold">Delivery:</p>
+                        <p><i class="fas fa-location-dot text-danger"></i> {{ $responseData['data']['destinationzsc'] }}</p>
+                    </div>
                 </div>
             </div>
             <?php
             if ($responseData['data']['pstatus'] >= 10 && $responseData['data']['pstatus'] <= 14) { ?>
-            <div class="cards">
+            <div class="cards text-center">
                 <table class="table caption-top m-0">
                     <thead>
                         <tr>
