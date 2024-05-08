@@ -34,10 +34,10 @@ Route::get('/', [FrontendController::class, 'index'])->name('welcome');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // Blogs
-Route::get('/blogs', [FrontendController::class, 'blogs'])->name('blogs');
+Route::get('/blog', [FrontendController::class, 'blogs'])->name('blogs');
 
 // Blog details
-Route::get('/blogs/{slug}', [FrontendController::class, 'blogDetails'])->name('blog.details');
+Route::get('/blog/{slug}', [FrontendController::class, 'blogDetails'])->name('blog.details');
 
 // About us
 Route::get('/about_us', [FrontendController::class, 'aboutUs'])->name('aboutUs');
@@ -57,8 +57,9 @@ Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('a
 // news letter add
 Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('newsletter.subscribe');
 
-// news letter add
-Route::resource('contact_messages', ContactMessageController::class);
+// contact msgs add
+// Route::resource('contact_messages', ContactMessageController::class);
+Route::post('contact_messages', [ContactMessageController::class, 'store'])->name('contact_messages.store');
 
 // order tracking page
 Route::get('order_tracking', [FrontendController::class, 'orderTracking'])->name('order.tracking');
@@ -71,7 +72,6 @@ Route::get('/privacy_policy', [FrontendController::class, 'privacyPolicy'])->nam
 
 // order tracking
 Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('track.order');
-
 
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {
@@ -100,6 +100,20 @@ Route::middleware('admin')->prefix('admin')->group(function () {
 
     // faqs
     Route::resource('faqs', FAQsController::class);
+
+    // contact msgs add
+    Route::prefix('contact_messages')->group(function () {
+        Route::get('/', [ContactMessageController::class, 'index'])->name('contact_messages.index');
+        Route::get('/show/{contactMessage}', [ContactMessageController::class, 'show'])->name('contact_messages.show');
+        Route::delete('/destroy/{contactMessage}', [ContactMessageController::class, 'destroy'])->name('contact_messages.destroy');
+    });
+
+    // mewsletter
+    Route::prefix('mews_letter')->group(function () {
+        Route::get('/', [AdminController::class, 'indexNewsLetter'])->name('newsLetter.index');
+        // Route::get('/show/{newsLetter}', [AdminController::class, 'showNewsLetter'])->name('newsLetter.show');
+        Route::delete('/destroy/{newsLetter}', [AdminController::class, 'destroyNewsLetter'])->name('newsLetter.destroy');
+    });
 });
 
 Auth::routes();

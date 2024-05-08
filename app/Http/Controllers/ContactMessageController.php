@@ -8,11 +8,11 @@ use App\Models\ContactMessage;
 
 class ContactMessageController extends Controller
 {
-    // public function index()
-    // {
-    //     $contactMessages = ContactMessage::latest()->get();
-    //     return view('dashboard.admin.contact_messages.index', compact('contactMessages'));
-    // }
+    public function index()
+    {
+        $contactMessages = ContactMessage::latest()->get();
+        return view('dashboard.admin.contact_messages.index', compact('contactMessages'));
+    }
 
     // public function create()
     // {
@@ -36,10 +36,10 @@ class ContactMessageController extends Controller
         return back()->with('success', 'Contact message created successfully.');
     }
 
-    // public function edit(ContactMessage $contactMessage)
-    // {
-    //     return view('dashboard.admin.contact_messages.edit', compact('contactMessage'));
-    // }
+    public function show(ContactMessage $contactMessage)
+    {
+        return view('dashboard.admin.contact_messages.show', compact('contactMessage'));
+    }
 
     // public function update(Request $request, ContactMessage $contactMessage)
     // {
@@ -55,15 +55,15 @@ class ContactMessageController extends Controller
 
     //     $contactMessage->update($request->all());
 
-    //     return redirect()->route('admin.contact_messages.index')
+    //     return redirect()->route('contact_messages.index')
     //         ->with('success', 'Contact message updated successfully.');
     // }
 
-    // public function destroy(ContactMessage $contactMessage)
-    // {
-    //     $contactMessage->delete();
+    public function destroy(ContactMessage $contactMessage)
+    {
+        $contactMessage->delete();
 
-    //     return redirect()->route('admin.contact_messages.index')
-    //         ->with('success', 'Contact message deleted successfully.');
-    // }
+        return redirect()->route('contact_messages.index')
+            ->with('success', 'Contact message deleted successfully.');
+    }
 }

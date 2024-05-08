@@ -115,6 +115,16 @@
             <i class="fas fa-fw fa-chart-area"></i>
             <span>FAQs</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('contact_messages.index') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Contact Messages</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('newsLetter.index') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Newsletter Emails</span></a>
+    </li>
 
     {{-- <!-- Nav Item - Tables -->
     <li class="nav-item">
