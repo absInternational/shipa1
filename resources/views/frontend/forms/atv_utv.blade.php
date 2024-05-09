@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
-                        <h4 class="title">Instant Car Shipping Quote!</h4>
+                        <h4 class="title">Instant ATV/UTV Shipping Quote!</h4>
                         <form action="#" method="post" class="rd-mailform" id="calculatePriceFrom"
                             data-parsley-validate data-parsley-errors-messages-disabled>
                             @csrf
@@ -74,17 +74,17 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="open_enclose">Open/Enclose</label>
-                                        <select class="form-control" id="open_enclose" name="open_enclose" multiple>
+                                        <label for="trailer_type">Select Trailer Type</label>
+                                        <select class="form-control" id="trailer_type" name="trailer_type">
                                             <option value="Open" selected>Open</option>
-                                            <option value="Enclose">Enclose</option>
+                                            <option value="Enclosed">Enclosed</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="running">Running</label>
-                                        <select class="form-control" id="running" name="running" multiple>
+                                        <label for="condition">Condition</label>
+                                        <select class="form-control" id="condition" name="condition">
                                             <option value="Running" selected>Running</option>
                                             <option value="Non Running">Non Running</option>
                                         </select>
@@ -146,20 +146,15 @@
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label>Make</label>
-                                        <select class="nice-select vehicle-make" name="make[]" id="make">
-                                            <option value="" disabled selected>Select Make</option>
-                                            @foreach ($makes as $make)
-                                                <option value="{{ $make->make }}">{{ $make->make }}</option>
-                                            @endforeach
-                                        </select>
+                                        <input type="text" id="make" name="make[]" placeholder="Enter Make"
+                                            required="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select vehicle-model-div">
                                         <label>Model</label>
-                                        <select class="nice-select vehicle-model" name="model[]" id="model">
-                                            <option value="">Select Model</option>
-                                        </select>
+                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                            required="" />
                                     </div>
                                 </div>
                             </div>
@@ -208,23 +203,15 @@
                             <div class="col-md-4">
                 <div class="input-form tj-select">
                     <label>Make</label>
-                    <select class="nice-select make" name="make[]" id="make"> <option value="" disabled selected>Select Make</option>`;
-
-                // Iterate over the PHP array to generate options
-                @foreach ($makes as $make)
-                    newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-                @endforeach
-
-                newVehicleHtml += `
-                                </select>
+                    <input type="text" id="make" name="make[]"
+                                            placeholder="Enter Make" required="" />
                             </div>
                         </div>
                             <div class="col-md-4">
                                 <div class="input-form tj-select model-div">
                                     <label>Model</label>
-                                    <select class="nice-select model" name="model[]" id="model">
-                                        <!-- Options filled by JavaScript -->
-                                    </select>
+                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                        required="" />
                                     <!-- Bin icon for deleting vehicle -->
                                     <span class="delete-vehicle"><i class="fa fa-trash"></i></span>
                                 </div>
@@ -247,80 +234,80 @@
                 $(this).closest('.vehicle-info').remove();
             });
 
-            $(document).on('change', '.year, .make', function() {
-                var year = $(this).closest('.vehicle-info').find('.year').val();
-                var makeId = $(this).closest('.vehicle-info').find('.make').val();
-                var vehicleInfo = $(this).closest('.vehicle-info');
-                if (year && makeId) {
-                    getModel(year, makeId, vehicleInfo);
-                }
-            });
+            // $(document).on('change', '.year, .make', function() {
+            //     var year = $(this).closest('.vehicle-info').find('.year').val();
+            //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            //     var vehicleInfo = $(this).closest('.vehicle-info');
+            //     if (year && makeId) {
+            //         getModel(year, makeId, vehicleInfo);
+            //     }
+            // });
 
-            function getModel(year, makeId, vehicleInfo) {
-                console.log('yes inn');
-                $.ajax({
-                    url: "{{ route('get.models') }}",
-                    method: 'GET',
-                    data: {
-                        year: year,
-                        make: makeId
-                    },
-                    success: function(response) {
-                        var modelsDropdown = vehicleInfo.find('.model');
-                        modelsDropdown.empty();
-                        var selectOptions = '<option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' + model +
-                                '</option>';
-                        });
-                        modelsDropdown.html(selectOptions);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            }
+            // function getModel(year, makeId, vehicleInfo) {
+            //     console.log('yes inn');
+            //     $.ajax({
+            //         url: "{{ route('get.models') }}",
+            //         method: 'GET',
+            //         data: {
+            //             year: year,
+            //             make: makeId
+            //         },
+            //         success: function(response) {
+            //             var modelsDropdown = vehicleInfo.find('.model');
+            //             modelsDropdown.empty();
+            //             var selectOptions = '<option value="">Select Model</option>';
+            //             $.each(response, function(index, model) {
+            //                 selectOptions += '<option value="' + model + '">' + model +
+            //                     '</option>';
+            //             });
+            //             modelsDropdown.html(selectOptions);
+            //         },
+            //         error: function(xhr) {
+            //             console.log(xhr.responseText);
+            //         }
+            //     });
+            // }
         });
     </script>
 
     <script>
         $(document).ready(function() {
-            $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                var year = $('.vehicle-year').val();
-                var makeId = $('.vehicle-make').val();
-                if (year && makeId) {
-                    getModel(year, makeId);
-                }
-            });
+            // $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+            //     var year = $('.vehicle-year').val();
+            //     var makeId = $('.vehicle-make').val();
+            //     if (year && makeId) {
+            //         getModel(year, makeId);
+            //     }
+            // });
 
-            function getModel(year, makeId) {
-                console.log('yes inn');
-                $.ajax({
-                    url: "{{ route('get.models') }}",
-                    method: 'GET',
-                    data: {
-                        year: year,
-                        make: makeId
-                    },
-                    success: function(response) {
-                        var modelsDropdown = $('.vehicle-model-div');
-                        modelsDropdown.empty();
-                        var selectOptions =
-                            '<label>Model</label> <select class="nice-select model" name="model" id="model"> <option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' + model +
-                                '</option>';
-                        });
-                        selectOptions += '</select>';
-                        modelsDropdown.html(selectOptions);
+            // function getModel(year, makeId) {
+            //     console.log('yes inn');
+            //     $.ajax({
+            //         url: "{{ route('get.models') }}",
+            //         method: 'GET',
+            //         data: {
+            //             year: year,
+            //             make: makeId
+            //         },
+            //         success: function(response) {
+            //             var modelsDropdown = $('.vehicle-model-div');
+            //             modelsDropdown.empty();
+            //             var selectOptions =
+            //                 '<label>Model</label> <select class="nice-select model" name="model" id="model"> <option value="">Select Model</option>';
+            //             $.each(response, function(index, model) {
+            //                 selectOptions += '<option value="' + model + '">' + model +
+            //                     '</option>';
+            //             });
+            //             selectOptions += '</select>';
+            //             modelsDropdown.html(selectOptions);
 
-                        console.log('yesssss', response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            }
+            //             console.log('yesssss', response);
+            //         },
+            //         error: function(xhr) {
+            //             console.log(xhr.responseText);
+            //         }
+            //     });
+            // }
 
             $('#available_at_auction').change(function() {
                 if ($(this).is(':checked')) {

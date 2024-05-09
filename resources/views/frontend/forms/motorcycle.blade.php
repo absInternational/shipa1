@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
-                        <h4 class="title">Instant Car Shipping Quote!</h4>
+                        <h4 class="title">Instant Motorcycle Shipping Quote!</h4>
                         <form action="#" method="post" class="rd-mailform" id="calculatePriceFrom"
                             data-parsley-validate data-parsley-errors-messages-disabled>
                             @csrf
@@ -74,17 +74,17 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="open_enclose">Open/Enclose</label>
-                                        <select class="form-control" id="open_enclose" name="open_enclose" multiple>
+                                        <label for="trailer_type">Select Trailer Type</label>
+                                        <select class="form-control" id="trailer_type" name="trailer_type">
                                             <option value="Open" selected>Open</option>
-                                            <option value="Enclose">Enclose</option>
+                                            <option value="Enclosed">Enclosed</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="running">Running</label>
-                                        <select class="form-control" id="running" name="running" multiple>
+                                        <label for="condition">Condition</label>
+                                        <select class="form-control" id="condition" name="condition">
                                             <option value="Running" selected>Running</option>
                                             <option value="Non Running">Non Running</option>
                                         </select>

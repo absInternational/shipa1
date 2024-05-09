@@ -74,12 +74,12 @@ Route::get('/privacy_policy', [FrontendController::class, 'privacyPolicy'])->nam
 // order tracking
 Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('track.order');
 
-Route::prefix('vehicle')->group(function () {
+// Route::prefix('vehicle')->group(function () {
     Route::get('/car', [FormVehicleController::class, 'car'])->name('form.vehicle.car');
     Route::get('/motorcycle', [FormVehicleController::class, 'motorcycle'])->name('form.vehicle.form.vehicle.car');
     Route::get('/golf_cart', [FormVehicleController::class, 'golf_cart'])->name('form.vehicle.golf_cart');
     Route::get('/atv_utv', [FormVehicleController::class, 'atv_utv'])->name('form.vehicle.atv_utv');
-});
+// });
 
 // get models on basis of year n make
 Route::get('/get-models', [MainController::class, 'getmodel'])->name('get.models');

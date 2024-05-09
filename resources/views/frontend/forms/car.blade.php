@@ -74,17 +74,17 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="open_enclose">Open/Enclose</label>
-                                        <select class="form-control" id="open_enclose" name="open_enclose" multiple>
+                                        <label for="trailer_type">Select Trailer Type</label>
+                                        <select class="form-control" id="trailer_type" name="trailer_type">
                                             <option value="Open" selected>Open</option>
-                                            <option value="Enclose">Enclose</option>
+                                            <option value="Enclosed">Enclosed</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="running">Running</label>
-                                        <select class="form-control" id="running" name="running" multiple>
+                                        <label for="condition">Condition</label>
+                                        <select class="form-control" id="condition" name="condition">
                                             <option value="Running" selected>Running</option>
                                             <option value="Non Running">Non Running</option>
                                         </select>
