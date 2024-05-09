@@ -35,6 +35,16 @@
                         <form action="#" method="post" class="rd-mailform" id="calculatePriceFrom"
                             data-parsley-validate data-parsley-errors-messages-disabled>
                             @csrf
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                    name="available_at_auction" />
+                                <label class="form-check-label" for="available_at_auction"> Available at Auction?</label>
+                            </div>
+                            <div class="input-form div-link" style="display: none;">
+                                <label class="d-block"> Enter Link:</label>
+                                <input class="form-control" type="text" id="link" name="link"
+                                    placeholder="Enter Link" />
+                            </div>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -60,6 +70,39 @@
                                         <small id="errEmail" class="err-style"></small>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="open_enclose"
+                                            name="open_enclose" />
+                                        <label class="form-check-label" for="open_enclose"> Open/Enclose</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="running"
+                                            name="running" />
+                                        <label class="form-check-label" for="running"> Running/Non Runnung</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="modification"
+                                            name="modification" />
+                                        <label class="form-check-label" for="modification"> Modification</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-form div-modify_info" style="display: none;">
+                                <label class="d-block"> Modification Information:</label>
+                                <input class="" type="text" id="c" name="modify_info"
+                                    placeholder="Enter Modification Information" />
+                            </div>
+                            <div class="form-group">
+                                <label class="d-block"> Image:</label>
+                                <input class="form-control" type="file" id="image" name="image"
+                                    placeholder="Upload File" />
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -277,6 +320,26 @@
                     }
                 });
             }
+
+            $('#available_at_auction').change(function() {
+                if ($(this).is(':checked')) {
+                    // $('#link').show();
+                    $('.div-link').show();
+                } else {
+                    // $('#link').hide();
+                    $('.div-link').hide();
+                }
+            });
+
+            $('#modification').change(function() {
+                if ($(this).is(':checked')) {
+                    // $('#link').show();
+                    $('.div-modify_info').show();
+                } else {
+                    // $('#link').hide();
+                    $('.div-modify_info').hide();
+                }
+            });
         });
     </script>
 
