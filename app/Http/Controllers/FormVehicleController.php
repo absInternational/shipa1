@@ -21,16 +21,37 @@ class FormVehicleController extends Controller
 
     public function motorcycle()
     {
-        return view('frontend.forms.motorcycle');
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+            
+        return view('frontend.forms.motorcycle', compact('makes'));
     }
 
     public function golf_cart()
     {
-        return view('frontend.forms.golf_cart');
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+            
+        return view('frontend.forms.golf_cart', compact('makes'));
     }
 
     public function atv_utv()
     {
-        return view('frontend.forms.atv_utv');
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+            
+        return view('frontend.forms.atv_utv', compact('makes'));
     }
 }
