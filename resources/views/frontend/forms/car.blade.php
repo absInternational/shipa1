@@ -71,28 +71,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="open_enclose"
-                                            name="open_enclose" />
-                                        <label class="form-check-label" for="open_enclose"> Open/Enclose</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="running"
-                                            name="running" />
-                                        <label class="form-check-label" for="running"> Non Runnung</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="modification"
-                                            name="modification" />
-                                        <label class="form-check-label" for="modification"> Modification</label>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <label for="open_enclose">Open/Enclose</label>
+                                <select class="form-control" id="open_enclose" name="open_enclose" multiple>
+                                    <option value="Open" selected>Open</option>
+                                    <option value="Enclose">Enclose</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="running">Running</label>
+                                <select class="form-control" id="running" name="running" multiple>
+                                    <option value="Running" selected>Running</option>
+                                    <option value="Non Running">Non Running</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-check-input" type="checkbox" id="modification" name="modification" />
+                                <label class="form-check-label" for="modification"> Modification</label>
                             </div>
                             <div class="input-form div-modify_info" style="display: none;">
                                 <label class="d-block"> Modification Information:</label>
