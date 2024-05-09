@@ -36,11 +36,11 @@
                             data-parsley-validate data-parsley-errors-messages-disabled>
                             @csrf
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                     name="available_at_auction" />
                                 <label class="form-check-label" for="available_at_auction"> Available at Auction?</label>
                             </div>
-                            <div class="input-form div-link" style="display: none;">
+                            <div class="input-form div-link">
                                 <label class="d-block"> Enter Link:</label>
                                 <input class="form-control" type="text" id="link" name="link"
                                     placeholder="Enter Link" />
@@ -83,7 +83,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="running"
                                             name="running" />
-                                        <label class="form-check-label" for="running"> Running/Non Runnung</label>
+                                        <label class="form-check-label" for="running"> Non Runnung</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
