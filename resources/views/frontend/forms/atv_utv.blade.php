@@ -32,12 +32,13 @@
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
                         <h4 class="title">Instant ATV/UTV Shipping Quote!</h4>
-                        <form action="#" method="post" class="rd-mailform" id="calculatePriceFrom"
-                            data-parsley-validate data-parsley-errors-messages-disabled>
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                            enctype="multipart/form-data">
                             @csrf
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" />
+                                    name="available_at_auction" value="1" />
                                 <label class="form-check-label" for="available_at_auction"> Available at Auction?</label>
                             </div>
                             <div class="input-form div-link">
@@ -92,7 +93,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input class="form-check-input" type="checkbox" id="modification" name="modification" />
+                                <input class="form-check-input" type="checkbox" id="modification" name="modification"
+                                    value="1" />
                                 <label class="form-check-label" for="modification"> Modification</label>
                             </div>
                             <div class="input-form div-modify_info" style="display: none;">
