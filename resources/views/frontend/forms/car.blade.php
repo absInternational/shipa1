@@ -29,15 +29,29 @@
     <section class="tj-choose-us-section">
         <div class="container">
             <div class="row">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
                         <h4 class="title">Instant Car Shipping Quote!</h4>
-                        <form action="#" method="post" class="rd-mailform" id="calculatePriceFrom"
-                            data-parsley-validate data-parsley-errors-messages-disabled>
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
                             @csrf
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" />
+                                    name="available_at_auction" value="1" />
                                 <label class="form-check-label" for="available_at_auction"> Available at Auction?</label>
                             </div>
                             <div class="input-form div-link">
@@ -92,7 +106,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input class="form-check-input" type="checkbox" id="modification" name="modification" />
+                                <input class="form-check-input" type="checkbox" id="modification" name="modification" value="1" />
                                 <label class="form-check-label" for="modification"> Modification</label>
                             </div>
                             <div class="input-form div-modify_info" style="display: none;">
@@ -132,7 +146,7 @@
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label> Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year">
+                                        <select class="nice-select vehicle-year" name="year[]" id="year" required>
                                             <option value="" disabled selected>Select Year</option>
                                             @php
                                                 $currentYear = date('Y');
@@ -146,7 +160,7 @@
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label>Make</label>
-                                        <select class="nice-select vehicle-make" name="make[]" id="make">
+                                        <select class="nice-select vehicle-make" name="make[]" id="make" required>
                                             <option value="" disabled selected>Select Make</option>
                                             @foreach ($makes as $make)
                                                 <option value="{{ $make->make }}">{{ $make->make }}</option>
@@ -157,7 +171,7 @@
                                 <div class="col-md-4">
                                     <div class="input-form tj-select vehicle-model-div">
                                         <label>Model</label>
-                                        <select class="nice-select vehicle-model" name="model[]" id="model">
+                                        <select class="nice-select vehicle-model" name="model[]" id="model" required>
                                             <option value="">Select Model</option>
                                         </select>
                                     </div>
@@ -194,7 +208,7 @@
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
                                     <label> Year</label>
-                                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                                    <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
                 var currentYear = <?php echo date('Y'); ?>;
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
@@ -208,7 +222,7 @@
                             <div class="col-md-4">
                 <div class="input-form tj-select">
                     <label>Make</label>
-                    <select class="nice-select make" name="make[]" id="make"> <option value="" disabled selected>Select Make</option>`;
+                    <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
 
                 // Iterate over the PHP array to generate options
                 @foreach ($makes as $make)
@@ -222,7 +236,7 @@
                             <div class="col-md-4">
                                 <div class="input-form tj-select model-div">
                                     <label>Model</label>
-                                    <select class="nice-select model" name="model[]" id="model">
+                                    <select class="nice-select model" name="model[]" id="model" required>
                                         <!-- Options filled by JavaScript -->
                                     </select>
                                     <!-- Bin icon for deleting vehicle -->
@@ -306,7 +320,7 @@
                         var modelsDropdown = $('.vehicle-model-div');
                         modelsDropdown.empty();
                         var selectOptions =
-                            '<label>Model</label> <select class="nice-select model" name="model" id="model"> <option value="">Select Model</option>';
+                            '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
                         $.each(response, function(index, model) {
                             selectOptions += '<option value="' + model + '">' + model +
                                 '</option>';

@@ -37,10 +37,10 @@ class FrontendController extends Controller
         $blog = Blog::where('slug_name', $slug)->first();
 
         if ($blog) {
-            $relatedBlogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
+            $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
 
             if ($blog->post_name) {
-                return view('frontend.blogs.detail', compact('blog', 'relatedBlogs'));
+                return view('frontend.blogs.detail', compact('blog', 'blogs'));
             } else {
             }
         } else {
