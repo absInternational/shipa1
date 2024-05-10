@@ -78,8 +78,8 @@ Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('trac
 // Route::prefix('vehicle')->group(function () {
 Route::get('/car', [FormVehicleController::class, 'car'])->name('form.vehicle.car');
 Route::get('/motorcycle', [FormVehicleController::class, 'motorcycle'])->name('form.vehicle.form.vehicle.car');
-Route::get('/golf_cart', [FormVehicleController::class, 'golf_cart'])->name('form.vehicle.golf_cart');
-Route::get('/atv_utv', [FormVehicleController::class, 'atv_utv'])->name('form.vehicle.atv_utv');
+Route::get('/golf-cart', [FormVehicleController::class, 'golf_cart'])->name('form.vehicle.golf_cart');
+Route::get('/atv-utv', [FormVehicleController::class, 'atv_utv'])->name('form.vehicle.atv_utv');
 // });
 
 Route::post('/submit/quote', [QuoteController::class, 'store'])->name('submit.quote');
