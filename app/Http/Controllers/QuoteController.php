@@ -68,16 +68,10 @@ class QuoteController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        // dd($request->toArray());
-        // dd(count($data['year']));
-        // if (isset($data['count'])) {
         $heading = $this->generateHeading($data);
         $name = $request->input('name', null);
         $email = $request->input('email', null);
         $phone = $request->input('phone', null);
-        // $year = $this->generateStringFromArray($data['year']);
-        // $make = $this->generateStringFromArray($data['make']);
-        // $model = $this->generateStringFromArray($data['model']);
         $year = $data['year'];
         $make = $data['make'];
         $model = $data['model'];
@@ -93,7 +87,6 @@ class QuoteController extends Controller
         $modify_info = $request->input('modify_info', null);
         $image = $request->input('image', null);
         $ip = $request->ip();
-        dd($ip);
         $ip_details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
         $ipcity = $ip_details ? $ip_details->city : null;
         $ipregion = $ip_details ? $ip_details->region : null;
@@ -144,14 +137,7 @@ class QuoteController extends Controller
 
         $result = $this->sendRequest($post_array);
 
-        // return response()->json($result);
         return back()->with('success', 'Quote created successfully');
-        // } else {
-        //     return response()->json([
-        //         'response' => 'error',
-        //         'message' => 'POST is required to use this function'
-        //     ]);
-        // }
     }
 
     private function generateHeading($data)
