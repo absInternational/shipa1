@@ -90,7 +90,7 @@ class QuoteController extends Controller
             $shippingdate = $request->input('dates', null);
             $ip = $request->ip();
             $ip_details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-            dd($ip_details, $ip);
+            // dd($ip_details, $ip);
             $ipcity = $ip_details ? $ip_details->city : null;
             $ipregion = $ip_details ? $ip_details->region : null;
             $ipcountry = $ip_details ? $ip_details->country : null;
