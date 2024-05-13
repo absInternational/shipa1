@@ -71,72 +71,73 @@ class QuoteController extends Controller
         // dd($request->toArray());
         // dd(count($data['year']));
         // if (isset($data['count'])) {
-            $heading = $this->generateHeading($data);
-            $name = $request->input('name', null);
-            $email = $request->input('email', null);
-            $phone = $request->input('phone', null);
-            // $year = $this->generateStringFromArray($data['year']);
-            // $make = $this->generateStringFromArray($data['make']);
-            // $model = $this->generateStringFromArray($data['model']);
-            $year = $data['year'];
-            $make = $data['make'];
-            $model = $data['model'];
-            $condition = $data['condition'];
-            $originData = $request->input('origin', null);
-            $destinationData = $request->input('destination', null);
-            $additional = $request->input('add_info', null);
-            // $transport = $this->generateStringFromArray($request->input('carrier-type', [2]));
-            $transport = $request->input('trailer_type', [2]);
-            $shippingdate = $request->input('dates', null);
-            $ip = $request->ip();
-            $ip_details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-            // dd($ip_details, $ip);
-            $ipcity = $ip_details ? $ip_details->city : null;
-            $ipregion = $ip_details ? $ip_details->region : null;
-            $ipcountry = $ip_details ? $ip_details->country : null;
-            $iploc = $ip_details ? $ip_details->loc : null;
-            $ippostal = $ip_details ? $ip_details->postal : null;
+        $heading = $this->generateHeading($data);
+        $name = $request->input('name', null);
+        $email = $request->input('email', null);
+        $phone = $request->input('phone', null);
+        // $year = $this->generateStringFromArray($data['year']);
+        // $make = $this->generateStringFromArray($data['make']);
+        // $model = $this->generateStringFromArray($data['model']);
+        $year = $data['year'];
+        $make = $data['make'];
+        $model = $data['model'];
+        $condition = $data['condition'];
+        $originData = $request->input('origin', null);
+        $destinationData = $request->input('destination', null);
+        $additional = $request->input('add_info', null);
+        // $transport = $this->generateStringFromArray($request->input('carrier-type', [2]));
+        $transport = $request->input('trailer_type', [2]);
+        $shippingdate = $request->input('dates', null);
+        $ip = $request->ip();
+        $ip_details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+        // dd($ip_details, $ip);
+        $ipcity = $ip_details ? $ip_details->city : null;
+        $ipregion = $ip_details ? $ip_details->region : null;
+        $ipcountry = $ip_details ? $ip_details->country : null;
+        $iploc = $ip_details ? $ip_details->loc : null;
+        $ippostal = $ip_details ? $ip_details->postal : null;
 
-            $vehicles = [];
-            foreach ($data['year'] as $index => $count) {
-                $vehicles[] = [
-                    'year' => $data['year'][$index],
-                    'make' => $data['make'][$index],
-                    'model' => $data['model'][$index]
-                ];
-            }
-
-            $post_array = [
-                'appkey' => '0EO9KCH9NNI46HH60WOL5OW4TE0GCD6Y',
-                'domain' => 'https://shawntransport.com',
-                'product_url' => 'https://shipa1.com',
-                'oname' => $name,
-                'oemail' => $email,
-                'ophone' => $phone,
-                'ymk' => $heading,
-                'vehicles' => $vehicles,
-                'condition' => $condition,
-                'originzsc' => $originData,
-                'destinationzsc' => $destinationData,
-                'add_info' => $additional,
-                'transport' => $transport,
-                'shippingdate' => $shippingdate,
-                'car_type' => 1,
-                'paneltype' => 2,
-                'cname' => $name,
-                'cemail' => $email,
-                'main_ph' => $phone,
-                'ip' => $ip,
-                'ipcity' => $ipcity,
-                'ipregion' => $ipregion,
-                'ipcountry' => $ipcountry,
-                'iploc' => $iploc,
-                'ippostal' => $ippostal,
+        $vehicles = [];
+        foreach ($data['year'] as $index => $count) {
+            $vehicles[] = [
+                'year' => $data['year'][$index],
+                'make' => $data['make'][$index],
+                'model' => $data['model'][$index]
             ];
+        }
 
-            $result = $this->sendRequest($post_array);
+        $post_array = [
+            'appkey' => '0EO9KCH9NNI46HH60WOL5OW4TE0GCD6Y',
+            'domain' => 'https://shawntransport.com',
+            'product_url' => 'https://shipa1.com',
+            'oname' => $name,
+            'oemail' => $email,
+            'ophone' => $phone,
+            'ymk' => $heading,
+            'vehicles' => $vehicles,
+            'condition' => $condition,
+            'originzsc' => $originData,
+            'destinationzsc' => $destinationData,
+            'add_info' => $additional,
+            'transport' => $transport,
+            'shippingdate' => $shippingdate,
+            'car_type' => 1,
+            'paneltype' => 2,
+            'cname' => $name,
+            'cemail' => $email,
+            'main_ph' => $phone,
+            'ip' => $ip,
+            'ipcity' => $ipcity,
+            'ipregion' => $ipregion,
+            'ipcountry' => $ipcountry,
+            'iploc' => $iploc,
+            'ippostal' => $ippostal,
+        ];
 
-            return response()->json($result);
+        $result = $this->sendRequest($post_array);
+
+        // return response()->json($result);
+        return back()->with('success', 'Quote created successfully');
         // } else {
         //     return response()->json([
         //         'response' => 'error',
@@ -158,7 +159,6 @@ class QuoteController extends Controller
 
     private function generateStringFromArray($array)
     {
-        dd($array);
         return count($array) > 1 ? implode('*^', $array) : $array[0];
     }
 
