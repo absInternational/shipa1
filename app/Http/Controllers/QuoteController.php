@@ -7,6 +7,7 @@ use App\Models\Quote;
 use App\Models\QuoteVehicleInfo;
 use App\Traits\ImageUploadTrait;
 use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
 
 class QuoteController extends Controller
 {
@@ -79,7 +80,6 @@ class QuoteController extends Controller
         $originData = $request->input('origin', null);
         $destinationData = $request->input('destination', null);
         $additional = $request->input('add_info', null);
-        // $transport = $this->generateStringFromArray($request->input('carrier-type', [2]));
         $transport = $request->input('trailer_type', [2]);
         $shippingdate = $request->input('dates', null);
         $link = $request->input('link', null);
@@ -87,12 +87,25 @@ class QuoteController extends Controller
         $modify_info = $request->input('modify_info', null);
         $image = $request->input('image', null);
         $ip = $request->ip();
-        $ip_details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-        $ipcity = $ip_details ? $ip_details->city : null;
-        $ipregion = $ip_details ? $ip_details->region : null;
-        $ipcountry = $ip_details ? $ip_details->country : null;
-        $iploc = $ip_details ? $ip_details->loc : null;
-        $ippostal = $ip_details ? $ip_details->postal : null;
+
+        // Fetching IP details using Guzzle HTTP client
+        $client = new Client();
+        try {
+            $response = $client->get("http://ipinfo.io/{$ip}/json");
+            $ip_details = json_decode($response->getBody());
+            $ipcity = $ip_details ? $ip_details->city : null;
+            $ipregion = $ip_details ? $ip_details->region : null;
+            $ipcountry = $ip_details ? $ip_details->country : null;
+            $iploc = $ip_details ? $ip_details->loc : null;
+            $ippostal = $ip_details ? $ip_details->postal : null;
+        } catch (\Exception $e) {
+            // Handle the exception gracefully
+            $ipcity = null;
+            $ipregion = null;
+            $ipcountry = null;
+            $iploc = null;
+            $ippostal = null;
+        }
 
         $vehicles = [];
         foreach ($data['year'] as $index => $count) {
