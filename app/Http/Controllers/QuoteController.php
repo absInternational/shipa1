@@ -82,10 +82,10 @@ class QuoteController extends Controller
         $additional = $request->input('add_info', null);
         $transport = $request->input('trailer_type', [2]);
         $shippingdate = $request->input('dates', null);
-        $link = $request->input('link', null);
-        $modification = $request->input('modification', null);
-        $modify_info = $request->input('modify_info', null);
-        $image = $request->input('image', null);
+        $link = $request->link ? $request->link : null;
+        $modification = $request->modification ? $request->modification : null;
+        $modify_info = $request->modify_info ? $request->modify_info : null;
+        $image = $request->image ? $request->image : null;
         $ip = $request->ip();
 
         // Fetching IP details using Guzzle HTTP client

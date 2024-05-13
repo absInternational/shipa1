@@ -43,7 +43,7 @@
                             </div>
                             <div class="input-form div-link">
                                 <label class="d-block"> Enter Link:</label>
-                                <input class="form-control" type="text" id="link" name="link"
+                                <input class="form-control" type="url" id="link" name="link"
                                     placeholder="Enter Link" />
                             </div>
                             <div class="row">
