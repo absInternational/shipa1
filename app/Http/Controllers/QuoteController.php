@@ -88,9 +88,12 @@ class QuoteController extends Controller
         // $transport = $this->generateStringFromArray($request->input('carrier-type', [2]));
         $transport = $request->input('trailer_type', [2]);
         $shippingdate = $request->input('dates', null);
+        $link = $request->input('link', null);
+        $modification = $request->input('modification', null);
+        $modify_info = $request->input('modify_info', null);
+        $image = $request->input('image', null);
         $ip = $request->ip();
         $ip_details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-        // dd($ip_details, $ip);
         $ipcity = $ip_details ? $ip_details->city : null;
         $ipregion = $ip_details ? $ip_details->region : null;
         $ipcountry = $ip_details ? $ip_details->country : null;
@@ -132,6 +135,10 @@ class QuoteController extends Controller
             'ipcountry' => $ipcountry,
             'iploc' => $iploc,
             'ippostal' => $ippostal,
+            'link' => $link,
+            'modification' => $modification,
+            'modify_info' => $modify_info,
+            'image' => $image,
         ];
 
         $result = $this->sendRequest($post_array);
