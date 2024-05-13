@@ -85,6 +85,15 @@ class QuoteController extends Controller
         $link = $request->input('link', null);
         $modification = $request->input('modification', null);
         $modify_info = $request->input('modify_info', null);
+        $category = $request->input('category', null);
+        $boat_on_trailer = $request->input('boat_on_trailer', null);
+        $length_ft = $request->input('length_ft', null);
+        $length_in = $request->input('length_in', null);
+        $width_ft = $request->input('width_ft', null);
+        $width_in = $request->input('width_in', null);
+        $height_ft = $request->input('height_ft', null);
+        $height_in = $request->input('height_in', null);
+        $weight = $request->input('weight', null);
         $image = $request->file('image');
         $ip = $request->ip();
 
@@ -148,6 +157,15 @@ class QuoteController extends Controller
             'link' => $link,
             'modification' => $modification,
             'modify_info' => $modify_info,
+            'category' => $category,
+            'boat_on_trailer' => $boat_on_trailer,
+            'length_ft' => $length_ft,
+            'length_in' => $length_in,
+            'width_ft' => $width_ft,
+            'width_in' => $width_in,
+            'height_ft' => $height_ft,
+            'height_in' => $height_in,
+            'weight' => $weight,
         ];
 
         // Add image to post data if it exists
