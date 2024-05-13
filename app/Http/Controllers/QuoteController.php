@@ -93,6 +93,7 @@ class QuoteController extends Controller
         $modify_info = $request->input('modify_info', null);
         $image = $request->input('image', null);
         $ip = $request->ip();
+        dd($ip);
         $ip_details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
         $ipcity = $ip_details ? $ip_details->city : null;
         $ipregion = $ip_details ? $ip_details->region : null;
