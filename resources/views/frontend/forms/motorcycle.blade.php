@@ -29,6 +29,16 @@
     <section class="tj-choose-us-section">
         <div class="container">
             <div class="row">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if (session('error'))
+                    <div class="alert alert-error">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
                         <h4 class="title">Instant Motorcycle Shipping Quote!</h4>
@@ -36,6 +46,15 @@
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />

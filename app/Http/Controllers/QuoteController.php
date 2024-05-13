@@ -82,13 +82,12 @@ class QuoteController extends Controller
         $additional = $request->input('add_info', null);
         $transport = $request->input('trailer_type', [2]);
         $shippingdate = $request->input('dates', null);
-        $link = $request->link ? $request->link : null;
-        $modification = $request->modification ? $request->modification : null;
-        $modify_info = $request->modify_info ? $request->modify_info : null;
-        $image = $request->image ? $request->image : null;
+        $link = $request->input('link', null);
+        $modification = $request->input('modification', null);
+        $modify_info = $request->input('modify_info', null);
+        $image = $request->file('image');
         $ip = $request->ip();
 
-        // Fetching IP details using Guzzle HTTP client
         $client = new Client();
         try {
             $response = $client->get("http://ipinfo.io/{$ip}/json");
@@ -99,7 +98,6 @@ class QuoteController extends Controller
             $iploc = $ip_details ? $ip_details->loc : null;
             $ippostal = $ip_details ? $ip_details->postal : null;
         } catch (\Exception $e) {
-            // Handle the exception gracefully
             $ipcity = null;
             $ipregion = null;
             $ipcountry = null;
@@ -114,6 +112,11 @@ class QuoteController extends Controller
                 'make' => $data['make'][$index],
                 'model' => $data['model'][$index]
             ];
+        }
+
+        $imagePath = null;
+        if ($image) {
+            $imagePath = $image->store('images', 'public');
         }
 
         $post_array = [
@@ -145,8 +148,12 @@ class QuoteController extends Controller
             'link' => $link,
             'modification' => $modification,
             'modify_info' => $modify_info,
-            'image' => $image,
         ];
+
+        // Add image to post data if it exists
+        if ($imagePath) {
+            $post_array['image'] = $imagePath;
+        }
 
         $result = $this->sendRequest($post_array);
 

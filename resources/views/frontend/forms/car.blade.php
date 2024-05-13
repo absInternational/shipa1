@@ -34,6 +34,11 @@
                         {{ session('success') }}
                     </div>
                 @endif
+                @if (session('error'))
+                    <div class="alert alert-error">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
                         <h4 class="title">Instant Car Shipping Quote!</h4>
