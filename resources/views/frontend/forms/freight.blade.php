@@ -1,6 +1,24 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+<style>
+    .suggestionsTwo{
+        background: #fff;
+        font-size: 14px;
+        margin-top: -2px;
+        padding-bottom: 20px;
+        list-style: none;
+        line-height: 28px;
+        padding-left: 14px;
+        display: none;
+    }
+    .suggestionsTwo li{
+        cursor: pointer;
+    }
+    .suggestionsTwo li:hover{
+        color: #8fc445;
+    }
+</style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -67,6 +85,7 @@
                                 </select>
                             </div>
                             <br>
+                            <br>
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />
@@ -81,10 +100,10 @@
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
                                     name="boat_on_trailer" value="1" />
-                                <label class="form-check-label" for="boat_on_trailer"> Is your freight already on a
+                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your freight already on a
                                     trailer?</label>
                             </div>
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Your Name:</label>
@@ -221,17 +240,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" checked type="checkbox" id="hazardous" name="hazardous"
+                            <div class="form-check mt-3">
+                                <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
                                     value="1" />
-                                <label class="form-check-label" for="hazardous"> Hazardous</label>
+                                <label class="form-check-label text-white" for="hazardous"> Hazardous</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" checked type="checkbox" id="stackable" name="stackable"
+                                <input class="form-check-input" type="checkbox" id="stackable" name="stackable"
                                     value="1" />
-                                <label class="form-check-label" for="stackable"> Stackable</label>
+                                <label class="form-check-label text-white" for="stackable"> Stackable</label>
                             </div>
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="pick_up_services" class="text-white">Pickup Services</label>
@@ -274,26 +293,26 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3">
+                            <div class="row mt-3">
+                                <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Date:</label>
                                         <input type="date" id="ex_pickup_date" name="ex_pickup_date" required="" />
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Time:</label>
                                         <input type="date" id="ex_pickup_time" name="ex_pickup_time" required="" />
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Delivery Date:</label>
                                         <input type="date" id="ex_delivery_date" name="ex_delivery_date" required="" />
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Delivery Time:</label>
                                         <input type="date" id="ex_delivery_time" name="ex_delivery_time" required="" />
@@ -312,7 +331,7 @@
                                         <input type="text" id="pickup-location" name="origin"
                                             placeholder="Ex: 90005 Or Los Angeles" required="" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -321,7 +340,7 @@
                                         <input type="text" id="delivery-location" name="destination"
                                             placeholder="Ex: 90005 Or Los Angeles" required="" />
                                         <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
                                 </div>
                             </div>
@@ -391,26 +410,26 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <h4>Additional Services</h4>
+                                <h4 class="text-white">Additional Services</h4>
                                 <div class="col-md-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" checked type="checkbox" id="protect_from_freezing"
+                                        <input class="form-check-input" type="checkbox" id="protect_from_freezing"
                                             name="protect_from_freezing" value="1" />
-                                        <label class="form-check-label" for="protect_from_freezing"> Protect from freezing</label>
+                                        <label class="form-check-label text-white" for="protect_from_freezing" style="font-size: 14px;"> Protect from freezing</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" checked type="checkbox" id="sort_segregate"
+                                        <input class="form-check-input" type="checkbox" id="sort_segregate"
                                             name="sort_segregate" value="1" />
-                                        <label class="form-check-label" for="sort_segregate"> Sort & Segregate</label>
+                                        <label class="form-check-label text-white" for="sort_segregate" style="font-size: 14px;"> Sort & Segregate</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" checked type="checkbox" id="blind_shipment"
+                                        <input class="form-check-input" type="checkbox" id="blind_shipment"
                                             name="blind_shipment" value="1" />
-                                        <label class="form-check-label" for="blind_shipment"> Blind Shipment</label>
+                                        <label class="form-check-label text-white" for="blind_shipment" style="font-size: 14px;"> Blind Shipment</label>
                                     </div>
                                 </div>
                             </div>
@@ -462,7 +481,7 @@
                         var listItem = $("<li>").text(suggestion).click(function() {
                             // Autofill input field with clicked suggestion
                             inputField.val(suggestion);
-                            suggestionsList.empty(); // Clear suggestions after selection
+                            suggestionsList.css("display", "none");
                         });
                         suggestionsList.append(listItem);
                     });
@@ -473,12 +492,15 @@
             });
         }
 
-        // Keyup event handler for input fields
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestions");
-
-            updateSuggestions(inputField, suggestionsList);
-        });
+// Keyup event handler for input fields
+$("#pickup-location, #delivery-location").keyup(function() {
+var inputField = $(this);
+var suggestionsList = inputField.siblings(".suggestionsTwo");
+suggestionsList.css("display", "block");
+if (inputField.val() === "") {
+    suggestionsList.css("display", "none");
+  }
+updateSuggestions(inputField, suggestionsList);
+});
     </script>
 @endsection
