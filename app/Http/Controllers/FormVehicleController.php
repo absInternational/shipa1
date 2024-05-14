@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\VehicleName;
+use App\Models\Category;
 
 class FormVehicleController extends Controller
 {
@@ -37,5 +38,11 @@ class FormVehicleController extends Controller
     public function boat()
     {
         return view('frontend.forms.boat');
+    }
+
+    public function heavyEquipment()
+    {
+        $categories = Category::all();
+        return view('frontend.forms.heavyEquipment', compact('categories'));
     }
 }

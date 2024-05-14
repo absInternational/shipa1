@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\VehicleName;
 use App\Models\ZipCode;
+use App\Models\Subcategory;
 
 class MainController extends Controller
 {
@@ -95,5 +96,14 @@ class MainController extends Controller
         }
 
         return $origin;
+    }
+
+    public function get_subcategories(Request $request)
+    {
+        $category = $request->category;
+        
+        $subcategories = Subcategory::where('category_id', $category)->get();
+
+        return $subcategories;
     }
 }
