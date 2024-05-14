@@ -40,22 +40,22 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> Warehouse Air</a>
+                                <a href="#">Warehouse Air</a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> Freight Ocean</a>
+                                <a href="#">Freight Ocean</a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> freight Road </a>
+                                <a href="#">freight Road </a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> Freight Freight</a>
+                                <a href="#">Freight Freight</a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> Supply Chain </a>
+                                <a href="#">Supply Chain </a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> Packaginga</a>
+                                <a href="#">Packaginga</a>
                             </li>
                         </ul>
                     </div>
@@ -69,28 +69,28 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="{{ route('blogs') }}"> <i class="flaticon-plus"></i> News & Media </a>
+                                <a href="{{ route('blogs') }}">News & Media </a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> Sustainability</a>
+                                <a href="#">Sustainability</a>
                             </li>
                             <li>
-                                <a href="{{ route('aboutUs') }}"> <i class="flaticon-plus"></i> About Expertise </a>
+                                <a href="{{ route('aboutUs') }}">About Expertise </a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> Case Studies</a>
+                                <a href="#">Case Studies</a>
                             </li>
                             <li>
-                                <a href="#"> <i class="flaticon-plus"></i> Our Team </a>
+                                <a href="#">Our Team </a>
                             </li>
                             <li>
-                                <a href="{{ route('contactUs') }}"> <i class="flaticon-plus"></i> Contacts</a>
+                                <a href="{{ route('contactUs') }}">Contacts</a>
                             </li>
                             <li>
-                                <a href="{{ route('termsAndConditions') }}"> <i class="flaticon-plus"></i> Terms & Conditions</a>
+                                <a href="{{ route('termsAndConditions') }}">Terms & Conditions</a>
                             </li>
                             <li>
-                                <a href="{{ route('privacyPolicy') }}"> <i class="flaticon-plus"></i> Privacy Policy</a>
+                                <a href="{{ route('privacyPolicy') }}">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>

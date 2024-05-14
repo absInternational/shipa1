@@ -7273,7 +7273,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-footer-area .widget_nav_menu .widget-menu ul li {
     margin-bottom: 15px;
     position: relative;
-    padding-left: 25px;
+    padding-left: 3px;
 }
 
 .tj-footer-area .widget_nav_menu .widget-menu ul li:last-child {
