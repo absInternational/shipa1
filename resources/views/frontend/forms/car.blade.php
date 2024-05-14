@@ -61,7 +61,7 @@
 {{ session('error') }}
 </div>
 @endif
-<div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
+<div class="col-lg-8" data-sal="slide-down" data-sal-duration="800">
 <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
 <h4 class="title">Instant Car Shipping Quote!</h4>
 <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
@@ -268,7 +268,7 @@ newVehicleHtml += `
 <!-- Options filled by JavaScript -->
 </select>
 <!-- Bin icon for deleting vehicle -->
-<span class="delete-vehicle"><i class="fa fa-trash"></i></span>
+<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red;"></i></span>
 </div>
 </div>
 </div>
