@@ -156,8 +156,8 @@
                                         <label for="load_type">Load Type</label>
                                         <select class="form-control" id="load_type" name="load_type">
                                             <option value="" disabled selected>Select</option>
-                                            <option value="LTL (LESS THEN TRUCK LOAD)" selected>LTL (LESS THEN TRUCK LOAD)</option>
-                                            <option value="FTL (FULL TRUCK LOAD)" selected>FTL (FULL TRUCK LOAD)</option>
+                                            <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
+                                            <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
                                         </select>
                                     </div>
                                 </div>
@@ -166,10 +166,10 @@
                                         <label for="load_method">Load Method</label>
                                         <select class="form-control" id="load_method" name="load_method">
                                             <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK" selected>LOADING DOCK</option>
-                                            <option value="CRANE" selected>CRANE</option>
-                                            <option value="FORKLIFT" selected>FORKLIFT</option>
-                                            <option value="DRIVE ROLL" selected>DRIVE ROLL</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
                                         </select>
                                     </div>
                                 </div>
@@ -178,10 +178,10 @@
                                         <label for="unload_method">Unload Method</label>
                                         <select class="form-control" id="unload_method" name="unload_method">
                                             <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK" selected>LOADING DOCK</option>
-                                            <option value="CRANE" selected>CRANE</option>
-                                            <option value="FORKLIFT" selected>FORKLIFT</option>
-                                            <option value="DRIVE ROLL" selected>DRIVE ROLL</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
                                         </select>
                                     </div>
                                 </div>
