@@ -18,6 +18,10 @@
     .suggestionsTwo li:hover{
         color: #8fc445;
     }
+    .image_input{
+        padding: 0px !important;
+        padding-left: 10px !important;
+    }
 </style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -206,8 +210,7 @@ required="" />
 </div>
 <div class="input-form mt-3">
 <label class="d-block" class="text-white"> Image:</label>
-<input class="form-control" type="file" id="image" name="image"
-style="height: 80px;" placeholder="Upload File" />
+<input class="form-control image_input" type="file" id="image" name="image" placeholder="Upload File" />
 </div>
 <div class="row">
 <div class="col-md-6">
