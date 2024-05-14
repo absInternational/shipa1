@@ -78,6 +78,12 @@
                                 <input class="form-control" type="url" id="link" name="link"
                                     placeholder="Enter Link" />
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
+                                    name="boat_on_trailer" value="1" />
+                                <label class="form-check-label" for="boat_on_trailer"> Is your freight already on a
+                                    trailer?</label>
+                            </div>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -105,24 +111,108 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-md-4">
+                                    <div class="input-form">
+                                        <label class="d-block"> Commodity Detail:</label>
+                                        <input type="text" id="commodity_detail" name="commodity_detail"
+                                            placeholder="Commodity Detail" required="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form">
+                                        <label class="d-block"> Select Handling Unit:</label>
+                                        <select class="form-control" id="handling_unit" name="handling_unit">
+                                            <option value="" selected disabled>Select</option>
+                                            <option value="Pallet">Pallet</option>
+                                            <option value="Crate">Crate</option>
+                                            <option value="Box">Box</option>
+                                            <option value="Bag">Bag</option>
+                                            <option value="Bale">Bale</option>
+                                            <option value="Bundle">Bundle</option>
+                                            <option value="Can">Can</option>
+                                            <option value="Carton">Carton</option>
+                                            <option value="Case">Case</option>
+                                            <option value="Coil">Coil</option>
+                                            <option value="Cylinder">Cylinder</option>
+                                            <option value="Drum">Drum</option>
+                                            <option value="Loose">Loose</option>
+                                            <option value="Pail">Pail</option>
+                                            <option value="Reel">Reel</option>
+                                            <option value="Roll">Roll</option>
+                                            <option value="Pipe">Pipe</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form">
+                                        <label class="d-block"> Commodity Unit:</label>
+                                        <input type="number" id="commodity_unit" name="commodity_unit"
+                                            placeholder="Commodity Unit" required="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="RGN" selected>RGN</option>
-                                            <option value="VAN (V)">VAN (V)</option>
-                                            <option value="FLATBED (F)">FLATBED (F)</option>
-                                            <option value="STEP DECK (SD)">STEP DECK (SD)</option>
-                                            <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
-                                            <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                                            <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
-                                            <option value="TRUCK (T)">TRUCK (T)</option>
-                                            <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
-                                            <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
-                                            <option value="LOWBOY (LB)">LOWBOY (LB)</option>
-                                            <option value="ENDUMP (ED)">ENDUMP (ED)</option>
-                                            <option value="LANDOLL (LD)">LANDOLL (LD)</option>
-                                            <option value="PARTIAL (PT)">PARTIAL (PT)</option>
+                                        <label for="trailer_specification" class="text-white">Trailer
+                                            Specification</label>
+                                        <select class="form-control" id="trailer_specification"
+                                            name="trailer_specification">
+                                            <option value="" selected disabled>Select</option>
+                                            <option value="Air Ride(A)">Air Ride(A)</option>
+                                            <option value="Blanket Wrap (B)">Blanket Wrap (B)</option>
+                                            <option value="B-Train (BT)">B-Train (BT)</option>
+                                            <option value="Chain(CH)">Chain(CH)</option>
+                                            <option value="Chassis (CS)">Chassis (CS)</option>
+                                            <option value="Conestoga(CO)">Conestoga(CO)</option>
+                                            <option value="Curtain(C)">Curtain(C)</option>
+                                            <option value="Double(2)">Double(2)</option>
+                                            <option value="Extendable (E)">Extendable (E)</option>
+                                            <option value="E-Track (ET)">E-Track (ET)</option>
+                                            <option value="Hazmat (Z)">Hazmat (Z)</option>
+                                            <option value="Hot Shot (HS)">Hot Shot (HS)</option>
+                                            <option value="Insulated (N)">Insulated (N)</option>
+                                            <option value="Lift Gate (LG)">Lift Gate (LG)</option>
+                                            <option value="Load Out (LO)">Load Out (LO)</option>
+                                            <option value="Load Ramp (LR)">Load Ramp (LR)</option>
+                                            <option value="Moving (MV)">Moving (MV)</option>
+                                            <option value="Open Top (OT)">Open Top (OT)</option>
+                                            <option value="Oversized (O)">Oversized (O)</option>
+                                            <option value="Pallet Exchange (X)">Pallet Exchange (X)</option>
+                                            <option value="Side Kit (S)">Side Kit (S)</option>
+                                            <option value="Tarp(T)">Tarp(T)</option>
+                                            <option
+                                                value="Team Driver(M)\">Team Driver(M)\</option>
+                                            <option value="Temp
+                                                Control (TC)">Temp Control (TC)</option>
+                                            <option value="Triple (3)">Triple (3)</option>
+                                            <option value="Vented (V)">Vented (V)</option>
+                                            <option value="Walking Floor (WF)">Walking Floor (WF)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="equipment_type" class="text-white">Equipment Type</label>
+                                        <select class="form-control" id="equipment_type" name="equipment_type">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="VAN (V)">VAN (V)</option>
+                                            <option value="REEFER (RE)">REEFER (RE)</option>
+                                            <option value="FLATBED (F)">FLATBED (F)</option>
+                                            <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                            <option value="REMOVABLE GOOSENECK (RGN) ">REMOVABLE GOOSENECK (RGN) </option>
+                                            <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
+                                            <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                            <option value="TRUCK (T)">TRUCK (T)</option>
+                                            <option value="HAZMAT (hazardous materials)">HAZMAT (hazardous materials)
+                                            </option>
+                                            <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
+                                            <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                            <option value="LOWBOY (LB)">LOWBOY (LB)</option>
+                                            <option value="ENDUMP (ED)">ENDUMP (ED)</option>
+                                            <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                                            <option value="PARTIAL (PT)">PARTIAL (PT)</option>
                                             <option value="20ft container">20ft container</option>
                                             <option value="40ft container">40ft container</option>
                                             <option value="48ft container">48ft container</option>
@@ -130,49 +220,83 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" checked type="checkbox" id="hazardous" name="hazardous"
+                                    value="1" />
+                                <label class="form-check-label" for="hazardous"> Hazardous</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" checked type="checkbox" id="stackable" name="stackable"
+                                    value="1" />
+                                <label class="form-check-label" for="stackable"> Stackable</label>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
+                                        <label for="pick_up_services" class="text-white">Pickup Services</label>
+                                        <select class="form-control" id="pick_up_services" name="pick_up_services">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="Construction / Utility">Construction / Utility</option>
+                                            <option value="Container Station">Container Station</option>
+                                            <option value="Exhibition">Exhibition</option>
+                                            <option value="Inside Pickup">Inside Pickup</option>
+                                            <option value="Lift Gate Service">Lift Gate Service</option>
+                                            <option value="Residential">Residential</option>
+                                            <option value="Single Shipment">Single Shipment</option>
+                                            <option value="Sorting / Segregation">Sorting / Segregation</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="deliver_services" class="text-white">Deliver Services</label>
+                                        <select class="form-control" id="deliver_services" name="deliver_services">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="After Business Hours Delivery">After Business Hours Delivery
+                                            </option>
+                                            <option value="Construction / Utility">Construction / Utility</option>
+                                            <option value="Appointment">Appointment</option>
+                                            <option value="Container Station">Container Station</option>
+                                            <option value="Exhibition">Exhibition</option>
+                                            <option value="In Bond Freight">In Bond Freight</option>
+                                            <option value="In Bond TIR Caret">In Bond TIR Caret</option>
+                                            <option value="Inside - Same Level as Delivery Vehicle">Inside - Same Level as
+                                                Delivery Vehicle</option>
+                                            <option value="Lift Gate Service">Lift Gate Service</option>
+                                            <option value="Residential">Residential</option>
+                                            <option value="Mine / Govt / Airport">Mine / Govt / Airport</option>
+                                            <option value="Notification Prior Delivery">Notification Prior Delivery
+                                            </option>
+                                            <option value="Delivery appointment required">Delivery appointment required
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-3">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="load_type" class="text-white">Load Type</label>
-                                        <select class="form-control" id="load_type" name="load_type">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
-                                            <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
-                                        </select>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="input-form">
+                                        <label class="d-block"> Pickup Date:</label>
+                                        <input type="date" id="ex_pickup_date" name="ex_pickup_date" required="" />
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="load_method" class="text-white">Load Method</label>
-                                        <select class="form-control" id="load_method" name="load_method">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK">LOADING DOCK</option>
-                                            <option value="CRANE">CRANE</option>
-                                            <option value="FORKLIFT">FORKLIFT</option>
-                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                        </select>
+                                <div class="col-md-3">
+                                    <div class="input-form">
+                                        <label class="d-block"> Pickup Time:</label>
+                                        <input type="date" id="ex_pickup_time" name="ex_pickup_time" required="" />
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="unload_method" class="text-white">Unload Method</label>
-                                        <select class="form-control" id="unload_method" name="unload_method">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK">LOADING DOCK</option>
-                                            <option value="CRANE">CRANE</option>
-                                            <option value="FORKLIFT">FORKLIFT</option>
-                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                        </select>
+                                <div class="col-md-3">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Date:</label>
+                                        <input type="date" id="ex_delivery_date" name="ex_delivery_date" required="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Time:</label>
+                                        <input type="date" id="ex_delivery_time" name="ex_delivery_time" required="" />
                                     </div>
                                 </div>
                             </div>
@@ -266,45 +390,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row select-bm">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="text-white">Vehicle Information</h4>
-                                </div>
+                            <div class="row">
+                                <h4>Additional Services</h4>
                                 <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label> Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year">
-                                            <option value="" disabled selected>Select Year</option>
-                                            @php
-                                                $currentYear = date('Y');
-                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                    echo "<option value='$year'>$year</option>";
-                                                }
-                                            @endphp
-                                        </select>
+                                    <div class="form-check">
+                                        <input class="form-check-input" checked type="checkbox" id="protect_from_freezing"
+                                            name="protect_from_freezing" value="1" />
+                                        <label class="form-check-label" for="protect_from_freezing"> Protect from freezing</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <input type="text" id="make" name="make[]" placeholder="Enter Make"
-                                            required="" />
+                                    <div class="form-check">
+                                        <input class="form-check-input" checked type="checkbox" id="sort_segregate"
+                                            name="sort_segregate" value="1" />
+                                        <label class="form-check-label" for="sort_segregate"> Sort & Segregate</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="input-form tj-select vehicle-model-div">
-                                        <label>Model</label>
-                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                            required="" />
+                                    <div class="form-check">
+                                        <input class="form-check-input" checked type="checkbox" id="blind_shipment"
+                                            name="blind_shipment" value="1" />
+                                        <label class="form-check-label" for="blind_shipment"> Blind Shipment</label>
                                     </div>
                                 </div>
-                            </div>
-
-                            <a class="text-primary" id="addVehicleBtn"
-                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                Vehicle</a>
-
-                            <div id="vehicles-container">
                             </div>
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
@@ -321,63 +429,6 @@
 
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label> Year</label>
-                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = <?php echo date('Y'); ?>;
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                // Continue with the rest of the HTML
-                newVehicleHtml +=
-                    `</select>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label>Make</label>
-                    <input type="text" id="make" name="make[]"
-                    placeholder="Enter Make" required="" />
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select model-div">
-                    <label>Model</label>
-                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                    required="" />
-                    <!-- Bin icon for deleting vehicle -->
-                    <span class="delete-vehicle"><i class="fa fa-trash"></i></span>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    `;
-
-                // Append new vehicle to vehicles container
-                $('#vehicles-container').append(newVehicleHtml);
-            }
-
-            // Add vehicle button click event
-            $('#addVehicleBtn').click(function() {
-                addNewVehicle();
-            });
-
-            // Delete vehicle click event
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
-        });
-    </script>
-
     <script>
         $(document).ready(function() {
             $('#available_at_auction').change(function() {
