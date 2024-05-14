@@ -1,7 +1,24 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-
+<style>
+    .suggestionsTwo{
+        background: #fff;
+        font-size: 14px;
+        margin-top: -2px;
+        padding-bottom: 20px;
+        list-style: none;
+        line-height: 28px;
+        padding-left: 14px;
+        display: none;
+    }
+    .suggestionsTwo li{
+        cursor: pointer;
+    }
+    .suggestionsTwo li:hover{
+        color: #8fc445;
+    }
+</style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
 <div class="container">
@@ -199,7 +216,7 @@ style="height: 80px;" placeholder="Upload File" />
 <input type="text" id="pickup-location" name="origin"
 placeholder="Ex: 90005 Or Los Angeles" required="" />
 <small id="errOLoc" class="err-loc"></small>
-<ul class="suggestions"></ul>
+<ul class="suggestions suggestionsTwo"></ul>
 </div>
 </div>
 <div class="col-md-6">
@@ -208,7 +225,7 @@ placeholder="Ex: 90005 Or Los Angeles" required="" />
 <input type="text" id="delivery-location" name="destination"
 placeholder="Ex: 90005 Or Los Angeles" required="" />
 <small id="errDLoc" class="err-loc"></small>
-<ul class="suggestions"></ul>
+<ul class="suggestions suggestionsTwo"></ul>
 </div>
 </div>
 </div>
@@ -219,7 +236,7 @@ placeholder="Ex: 90005 Or Los Angeles" required="" />
 <input type="number" id="" name="length_ft" placeholder=""
 required="" value="0" />
 <small id="errOLoc" class="err-loc"></small>
-<ul class="suggestions"></ul>
+
 </div>
 </div>
 <div class="col-md-3">
@@ -228,7 +245,7 @@ required="" value="0" />
 <input type="number" id="" name="length_in" placeholder=""
 required="" value="0" />
 <small id="errOLoc" class="err-loc"></small>
-<ul class="suggestions"></ul>
+
 </div>
 </div>
 <div class="col-md-3">
@@ -237,7 +254,7 @@ required="" value="0" />
 <input type="number" id="" name="width_ft" placeholder=""
 required="" value="0" />
 <small id="errOLoc" class="err-loc"></small>
-<ul class="suggestions"></ul>
+
 </div>
 </div>
 <div class="col-md-3">
@@ -246,7 +263,7 @@ required="" value="0" />
 <input type="number" id="" name="width_in" placeholder=""
 required="" value="0" />
 <small id="errOLoc" class="err-loc"></small>
-<ul class="suggestions"></ul>
+
 </div>
 </div>
 <div class="col-md-3">
@@ -255,7 +272,7 @@ required="" value="0" />
 <input type="number" id="" name="height_ft" placeholder=""
 required="" value="0" />
 <small id="errOLoc" class="err-loc"></small>
-<ul class="suggestions"></ul>
+
 </div>
 </div>
 <div class="col-md-3">
@@ -264,7 +281,7 @@ required="" value="0" />
 <input type="number" id="" name="height_in" placeholder=""
 required="" value="0" />
 <small id="errOLoc" class="err-loc"></small>
-<ul class="suggestions"></ul>
+
 </div>
 </div>
 <div class="col-md-3">
@@ -273,7 +290,7 @@ required="" value="0" />
 <input type="number" id="" name="weight" placeholder=""
 required="" value="0" />
 <small id="errOLoc" class="err-loc"></small>
-<ul class="suggestions"></ul>
+
 </div>
 </div>
 </div>
@@ -459,7 +476,7 @@ $.each(response, function(index, suggestion) {
 var listItem = $("<li>").text(suggestion).click(function() {
 // Autofill input field with clicked suggestion
 inputField.val(suggestion);
-suggestionsList.empty(); // Clear suggestions after selection
+suggestionsList.css("display", "none");
 });
 suggestionsList.append(listItem);
 });
@@ -473,8 +490,11 @@ console.error("Error:", error);
 // Keyup event handler for input fields
 $("#pickup-location, #delivery-location").keyup(function() {
 var inputField = $(this);
-var suggestionsList = inputField.siblings(".suggestions");
-
+var suggestionsList = inputField.siblings(".suggestionsTwo");
+suggestionsList.css("display", "block");
+if (inputField.val() === "") {
+    suggestionsList.css("display", "none");
+  }
 updateSuggestions(inputField, suggestionsList);
 });
 </script>

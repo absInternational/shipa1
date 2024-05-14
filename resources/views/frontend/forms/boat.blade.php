@@ -1,6 +1,24 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+<style>
+    .suggestionsTwo{
+        background: #fff;
+        font-size: 14px;
+        margin-top: -2px;
+        padding-bottom: 20px;
+        list-style: none;
+        line-height: 28px;
+        padding-left: 14px;
+        display: none;
+    }
+    .suggestionsTwo li{
+        cursor: pointer;
+    }
+    .suggestionsTwo li:hover{
+        color: #8fc445;
+    }
+</style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -72,9 +90,9 @@
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />
-                                <label class="form-check-label" for="available_at_auction"> Available at Auction?</label>
+                                <label class="form-check-label text-white" for="available_at_auction"> Available at Auction?</label>
                             </div>
-                            <div class="input-form div-link">
+                            <div class="input-form div-link mt-3">
                                 <label class="d-block"> Enter Link:</label>
                                 <input class="form-control" type="url" id="link" name="link"
                                     placeholder="Enter Link" />
@@ -82,9 +100,9 @@
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
                                     name="boat_on_trailer" value="1" />
-                                <label class="form-check-label" for="boat_on_trailer"> Is your boat on trailer?</label>
+                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your boat on trailer?</label>
                             </div>
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Your Name:</label>
@@ -113,7 +131,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="trailer_type">Select Trailer Type</label>
+                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class="form-control" id="trailer_type" name="trailer_type">
                                             <option value="RGN" selected>RGN</option>
                                             <option value="Stepdeck">Stepdeck</option>
@@ -125,7 +143,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="condition">Condition</label>
+                                        <label for="condition" class="text-white">Condition</label>
                                         <select class="form-control" id="condition" name="condition">
                                             <option value="Running" selected>Running</option>
                                             <option value="Non Running">Non Running</option>
@@ -136,17 +154,17 @@
                             <div class="form-group">
                                 <input class="form-check-input" type="checkbox" id="modification" name="modification"
                                     value="1" />
-                                <label class="form-check-label" for="modification"> Modification</label>
+                                <label class="form-check-label text-white" for="modification"> Modification</label>
                             </div>
                             <div class="input-form div-modify_info" style="display: none;">
                                 <label class="d-block"> Modification Information:</label>
                                 <input class="" type="text" id="c" name="modify_info"
                                     placeholder="Enter Modification Information" />
                             </div>
-                            <div class="form-group">
-                                <label class="d-block"> Image:</label>
+                            <div class="input-form mt-3">
+                                <label class="d-block text-white"> Image:</label>
                                 <input class="form-control" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
+                                  style="height: 80px;"  placeholder="Upload File" />
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -155,7 +173,7 @@
                                         <input type="text" id="pickup-location" name="origin"
                                             placeholder="Ex: 90005 Or Los Angeles" required="" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -164,63 +182,63 @@
                                         <input type="text" id="delivery-location" name="destination"
                                             placeholder="Ex: 90005 Or Los Angeles" required="" />
                                         <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Length (Ft.)</label>
                                         <input type="number" id="" name="length_ft"
                                             placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Length (In.)</label>
                                         <input type="number" id="" name="length_in"
                                             placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Width (Ft.)</label>
                                         <input type="number" id="" name="width_ft"
                                             placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Width (In.)</label>
                                         <input type="number" id="" name="width_in"
                                             placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Height (Ft.)</label>
                                         <input type="number" id="" name="height_ft"
                                             placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Height (In.)</label>
                                         <input type="number" id="" name="height_in"
                                             placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -229,7 +247,7 @@
                                         <input type="number" id="" name="weight"
                                             placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -267,11 +285,11 @@
                                 </div>
                             </div>
 
-                            <a class="text-primary" id="addVehicleBtn">Add Vehicle</a>
+                            <a class="text-primary" id="addVehicleBtn" style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add Vehicle</a>
 
                             <div id="vehicles-container">
                             </div>
-                            <div class="tj-theme-button">
+                            <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                 </button>
@@ -471,7 +489,7 @@
                         var listItem = $("<li>").text(suggestion).click(function() {
                             // Autofill input field with clicked suggestion
                             inputField.val(suggestion);
-                            suggestionsList.empty(); // Clear suggestions after selection
+                            suggestionsList.css("display", "none");
                         });
                         suggestionsList.append(listItem);
                     });
@@ -482,12 +500,15 @@
             });
         }
 
-        // Keyup event handler for input fields
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestions");
-
-            updateSuggestions(inputField, suggestionsList);
-        });
+// Keyup event handler for input fields
+$("#pickup-location, #delivery-location").keyup(function() {
+var inputField = $(this);
+var suggestionsList = inputField.siblings(".suggestionsTwo");
+suggestionsList.css("display", "block");
+if (inputField.val() === "") {
+    suggestionsList.css("display", "none");
+  }
+updateSuggestions(inputField, suggestionsList);
+});
     </script>
 @endsection
