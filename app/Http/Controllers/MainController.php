@@ -20,8 +20,6 @@ class MainController extends Controller
         ]);
         $responseData = $response->json();
 
-        // dd($responseData);
-        // dd($responseData['order'][1]);
         if ($responseData['status_code'] == 200) {
             return view('partials.orderTrackingTable', compact('responseData'));
         } else {
@@ -74,7 +72,6 @@ class MainController extends Controller
                 $model[] = $val->model;
             }
         }
-        // dd($model);
         return $model;
     }
 

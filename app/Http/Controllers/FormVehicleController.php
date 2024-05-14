@@ -16,7 +16,7 @@ class FormVehicleController extends Controller
             ->groupBy('make')
             ->orderBy('make', 'ASC')
             ->get();
-            
+
         return view('frontend.forms.car', compact('makes'));
     }
 
@@ -44,5 +44,10 @@ class FormVehicleController extends Controller
     {
         $categories = Category::all();
         return view('frontend.forms.heavyEquipment', compact('categories'));
+    }
+
+    public function freight()
+    {
+        return view('frontend.forms.freight');
     }
 }

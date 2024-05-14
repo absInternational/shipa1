@@ -82,6 +82,7 @@ Route::get('/golf-cart', [FormVehicleController::class, 'golf_cart'])->name('for
 Route::get('/atv-utv', [FormVehicleController::class, 'atv_utv'])->name('form.vehicle.atv_utv');
 Route::get('/boat', [FormVehicleController::class, 'boat'])->name('form.vehicle.boat');
 Route::get('/heavy-equipment', [FormVehicleController::class, 'heavyEquipment'])->name('form.vehicle.heavyEquipment');
+Route::get('/freight', [FormVehicleController::class, 'freight'])->name('form.vehicle.freight');
 // });
 
 Route::post('/get-subcategories', [MainController::class, 'get_subcategories'])->name('get.subcategories');
