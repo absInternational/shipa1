@@ -58,7 +58,7 @@ enctype="multipart/form-data">
 <div class="form-check">
 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
 name="available_at_auction" value="1" />
-<label class="form-check-label" for="available_at_auction"> Available at Auction?</label>
+<label class="form-check-label text-white" for="available_at_auction"> Available at Auction?</label>
 </div>
 <div class="input-form div-link">
 <label class="d-block"> Enter Link:</label>
@@ -94,7 +94,7 @@ required="" />
 <div class="row">
 <div class="col-md-6">
 <div class="form-group">
-<label for="trailer_type">Select Trailer Type</label>
+<label for="trailer_type" class="text-white">Select Trailer Type</label>
 <select class="form-control" id="trailer_type" name="trailer_type">
 <option value="Open" selected>Open</option>
 <option value="Enclosed">Enclosed</option>
@@ -103,7 +103,7 @@ required="" />
 </div>
 <div class="col-md-6">
 <div class="form-group">
-<label for="condition">Condition</label>
+<label for="condition" class="text-white">Condition</label>
 <select class="form-control" id="condition" name="condition">
 <option value="Running" selected>Running</option>
 <option value="Non Running">Non Running</option>
@@ -114,19 +114,19 @@ required="" />
 <div class="form-group">
 <input class="form-check-input" type="checkbox" id="modification" name="modification"
 value="1" />
-<label class="form-check-label" for="modification"> Modification</label>
+<label class="form-check-label text-white" for="modification"> Modification</label>
 </div>
 <div class="input-form div-modify_info" style="display: none;">
 <label class="d-block"> Modification Information:</label>
 <input class="" type="text" id="c" name="modify_info"
 placeholder="Enter Modification Information" />
 </div>
-<div class="form-group">
-<label class="d-block"> Image:</label>
+<div class="input-form mt-3">
+<label class="d-block text-white"> Image:</label>
 <input class="form-control" type="file" id="image" name="image"
-placeholder="Upload File" />
+style="height: 80px" placeholder="Upload File"/>
 </div>
-<div class="row">
+<div class="row mt-3">
 <div class="col-md-6">
 <div class="input-form">
 <label class="d-block"> Pickup Location:</label>
@@ -185,11 +185,11 @@ echo "<option value='$year'>$year</option>";
 </div>
 </div>
 
-<a class="text-primary" id="addVehicleBtn">Add Vehicle</a>
+<a class="text-primary" id="addVehicleBtn" style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add Vehicle</a>
 
-<div id="vehicles-container">
+<div id="vehicles-container">   
 </div>
-<div class="tj-theme-button">
+<div class="tj-theme-button mt-3">
 <button class="tj-submit-btn" type="submit" value="submit">
 Calculate Price <i class="fa-light fa-arrow-right"></i>
 </button>
