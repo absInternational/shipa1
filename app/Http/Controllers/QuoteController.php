@@ -68,6 +68,7 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->toArray());
         $data = $request->all();
         $heading = $this->generateHeading($data);
         $name = $request->input('name', null);
@@ -94,6 +95,10 @@ class QuoteController extends Controller
         $height_ft = $request->input('height_ft', null);
         $height_in = $request->input('height_in', null);
         $weight = $request->input('weight', null);
+        $subcategory = $request->input('subcategory', null);
+        $load_type = $request->input('load_type', null);
+        $load_method = $request->input('load_method', null);
+        $unload_method = $request->input('unload_method', null);
         $image = $request->file('image');
         $ip = $request->ip();
 
@@ -166,6 +171,10 @@ class QuoteController extends Controller
             'height_ft' => $height_ft,
             'height_in' => $height_in,
             'weight' => $weight,
+            'subcategory' => $subcategory,
+            'load_type' => $load_type,
+            'load_method' => $load_method,
+            'unload_method' => $unload_method,
         ];
 
         // Add image to post data if it exists
