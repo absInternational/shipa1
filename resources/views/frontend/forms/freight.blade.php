@@ -1,35 +1,38 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<style>
-    .suggestionsTwo{
-        background: #fff;
-        font-size: 14px;
-        margin-top: -2px;
-        padding-bottom: 20px;
-        list-style: none;
-        line-height: 28px;
-        padding-left: 14px;
-        display: none;
-    }
-    .suggestionsTwo li{
-        cursor: pointer;
-    }
-    .suggestionsTwo li:hover{
-        color: #8fc445;
-    }
-    .image_input{
-        padding: 0px !important;
-        padding-left: 10px !important;
-    }
-</style>
+    <style>
+        .suggestionsTwo {
+            background: #fff;
+            font-size: 14px;
+            margin-top: -2px;
+            padding-bottom: 20px;
+            list-style: none;
+            line-height: 28px;
+            padding-left: 14px;
+            display: none;
+        }
+
+        .suggestionsTwo li {
+            cursor: pointer;
+        }
+
+        .suggestionsTwo li:hover {
+            color: #8fc445;
+        }
+
+        .image_input {
+            padding: 0px !important;
+            padding-left: 10px !important;
+        }
+    </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Heavy</h1>
+                        <h1 class="breadcrumb-title text-center">Freight</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
@@ -38,7 +41,7 @@
                             </span>
                             >
                             <span>
-                                <span> Heavy</span>
+                                <span> Freight</span>
                             </span>
                         </div>
                     </div>
@@ -63,7 +66,7 @@
                 @endif
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
-                        <h4 class="title">Instant Heavy Shipping Quote!</h4>
+                        <h4 class="title">Instant Freight Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -104,7 +107,8 @@
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
                                     name="boat_on_trailer" value="1" />
-                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your freight already on a
+                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your freight already on
+                                    a
                                     trailer?</label>
                             </div>
                             <div class="row mt-3">
@@ -301,31 +305,36 @@
                                 <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Date:</label>
-                                        <input type="date" id="ex_pickup_date" name="ex_pickup_date" required="" />
+                                        <input type="date" id="ex_pickup_date" name="ex_pickup_date"
+                                            required="" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Time:</label>
-                                        <input type="date" id="ex_pickup_time" name="ex_pickup_time" required="" />
+                                        <input type="time" id="ex_pickup_time" name="ex_pickup_time"
+                                            required="" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Delivery Date:</label>
-                                        <input type="date" id="ex_delivery_date" name="ex_delivery_date" required="" />
+                                        <input type="date" id="ex_delivery_date" name="ex_delivery_date"
+                                            required="" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Delivery Time:</label>
-                                        <input type="date" id="ex_delivery_time" name="ex_delivery_time" required="" />
+                                        <input type="time" id="ex_delivery_time" name="ex_delivery_time"
+                                            required="" />
                                     </div>
                                 </div>
                             </div>
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image" placeholder="Upload File" />
+                                <input class="form-control image_input" type="file" id="image" name="image"
+                                    placeholder="Upload File" />
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -346,6 +355,13 @@
                                         <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="condition" class="text-white">Condition</label>
+                                <select class="form-control" id="condition" name="condition">
+                                    <option value="Running" selected>Running</option>
+                                    <option value="Non Running">Non Running</option>
+                                </select>
                             </div>
                             <div class="row">
                                 <div class="col-md-3">
@@ -418,23 +434,66 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="protect_from_freezing"
                                             name="protect_from_freezing" value="1" />
-                                        <label class="form-check-label text-white" for="protect_from_freezing" style="font-size: 14px;"> Protect from freezing</label>
+                                        <label class="form-check-label text-white" for="protect_from_freezing"
+                                            style="font-size: 14px;"> Protect from freezing</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="sort_segregate"
                                             name="sort_segregate" value="1" />
-                                        <label class="form-check-label text-white" for="sort_segregate" style="font-size: 14px;"> Sort & Segregate</label>
+                                        <label class="form-check-label text-white" for="sort_segregate"
+                                            style="font-size: 14px;"> Sort & Segregate</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="blind_shipment"
                                             name="blind_shipment" value="1" />
-                                        <label class="form-check-label text-white" for="blind_shipment" style="font-size: 14px;"> Blind Shipment</label>
+                                        <label class="form-check-label text-white" for="blind_shipment"
+                                            style="font-size: 14px;"> Blind Shipment</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row select-bm">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white">Vehicle Information</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label> Year</label>
+                                        <select class="nice-select vehicle-year" name="year[]" id="year">
+                                            <option value="" disabled selected>Select Year</option>
+                                            @php
+                                                $currentYear = date('Y');
+                                                for ($year = $currentYear; $year >= 1936; $year--) {
+                                                    echo "<option value='$year'>$year</option>";
+                                                }
+                                            @endphp
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <input type="text" id="make" name="make[]" placeholder="Enter Make"
+                                            required="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select vehicle-model-div">
+                                        <label>Model</label>
+                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                            required="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="text-primary" id="addVehicleBtn"
+                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                                Vehicle</a>
+
+                            <div id="vehicles-container">
                             </div>
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
@@ -461,6 +520,59 @@
                     // $('#link').hide();
                     $('.div-link').hide();
                 }
+            });
+
+            function addNewVehicle() {
+                var newVehicleHtml =
+                    `
+                    <div class="vehicle-info">
+                        <div class="row select-bm">
+                            <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                    <label> Year</label>
+                                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                var currentYear = <?php echo date('Y'); ?>;
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
+
+                // Continue with the rest of the HTML
+                newVehicleHtml +=
+                    `</select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                <div class="input-form tj-select">
+                    <label>Make</label>
+                    <input type="text" id="make" name="make[]"
+                                            placeholder="Enter Make" required="" />
+                            </div>
+                        </div>
+                            <div class="col-md-4">
+                                <div class="input-form tj-select model-div">
+                                    <label>Model</label>
+                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                        required="" />
+                                    <!-- Bin icon for deleting vehicle -->
+                                    <span class="delete-vehicle"><i class="fa fa-trash"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Append new vehicle to vehicles container
+                $('#vehicles-container').append(newVehicleHtml);
+            }
+
+            // Add vehicle button click event
+            $('#addVehicleBtn').click(function() {
+                addNewVehicle();
+            });
+
+            // Delete vehicle click event
+            $(document).on('click', '.delete-vehicle', function() {
+                $(this).closest('.vehicle-info').remove();
             });
         });
     </script>
@@ -495,15 +607,15 @@
             });
         }
 
-// Keyup event handler for input fields
-$("#pickup-location, #delivery-location").keyup(function() {
-var inputField = $(this);
-var suggestionsList = inputField.siblings(".suggestionsTwo");
-suggestionsList.css("display", "block");
-if (inputField.val() === "") {
-    suggestionsList.css("display", "none");
-  }
-updateSuggestions(inputField, suggestionsList);
-});
+        // Keyup event handler for input fields
+        $("#pickup-location, #delivery-location").keyup(function() {
+            var inputField = $(this);
+            var suggestionsList = inputField.siblings(".suggestionsTwo");
+            suggestionsList.css("display", "block");
+            if (inputField.val() === "") {
+                suggestionsList.css("display", "none");
+            }
+            updateSuggestions(inputField, suggestionsList);
+        });
     </script>
 @endsection

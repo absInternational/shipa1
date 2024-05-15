@@ -77,7 +77,7 @@ class QuoteController extends Controller
         $year = $data['year'];
         $make = $data['make'];
         $model = $data['model'];
-        $condition = $data['condition'];
+        $condition = $request->input('condition', null);
         $originData = $request->input('origin', null);
         $destinationData = $request->input('destination', null);
         $additional = $request->input('add_info', null);
@@ -99,6 +99,23 @@ class QuoteController extends Controller
         $load_type = $request->input('load_type', null);
         $load_method = $request->input('load_method', null);
         $unload_method = $request->input('unload_method', null);
+        $available_at_auction = $request->input('available_at_auction', null);
+        $commodity_detail = $request->input('commodity_detail', null);
+        $handling_unit = $request->input('handling_unit', null);
+        $commodity_unit = $request->input('commodity_unit', null);
+        $trailer_specification = $request->input('trailer_specification', null);
+        $equipment_type = $request->input('equipment_type', null);
+        $stackable = $request->input('stackable', null);
+        $hazardous = $request->input('hazardous', null);
+        $pick_up_services = $request->input('pick_up_services', null);
+        $deliver_services = $request->input('deliver_services', null);
+        $ex_pickup_date = $request->input('ex_pickup_date', null);
+        $ex_pickup_time = $request->input('ex_pickup_time', null);
+        $ex_delivery_date = $request->input('ex_delivery_date', null);
+        $ex_delivery_time = $request->input('ex_delivery_time', null);
+        $protect_from_freezing = $request->input('protect_from_freezing', null);
+        $sort_segregate = $request->input('sort_segregate', null);
+        $blind_shipment = $request->input('blind_shipment', null);
         $image = $request->file('image');
         $ip = $request->ip();
 
@@ -120,6 +137,7 @@ class QuoteController extends Controller
         }
 
         $vehicles = [];
+
         foreach ($data['year'] as $index => $count) {
             $vehicles[] = [
                 'year' => $data['year'][$index],
@@ -175,7 +193,26 @@ class QuoteController extends Controller
             'load_type' => $load_type,
             'load_method' => $load_method,
             'unload_method' => $unload_method,
+            'available_at_auction' => $available_at_auction,
+            'commodity_detail' => $commodity_detail,
+            'handling_unit' => $handling_unit,
+            'commodity_unit' => $commodity_unit,
+            'trailer_specification' => $trailer_specification,
+            'equipment_type' => $equipment_type,
+            'stackable' => $stackable,
+            'hazardous' => $hazardous,
+            'pick_up_services' => $pick_up_services,
+            'deliver_services' => $deliver_services,
+            'ex_pickup_date' => $ex_pickup_date,
+            'ex_pickup_time' => $ex_pickup_time,
+            'ex_delivery_date' => $ex_delivery_date,
+            'ex_delivery_time' => $ex_delivery_time,
+            'protect_from_freezing' => $protect_from_freezing,
+            'sort_segregate' => $sort_segregate,
+            'blind_shipment' => $blind_shipment,
         ];
+
+        // dd($post_array);
 
         // Add image to post data if it exists
         if ($imagePath) {
