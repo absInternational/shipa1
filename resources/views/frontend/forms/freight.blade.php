@@ -137,6 +137,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group" style="display:none;">
+                                <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                <select class="form-control" id="trailer_type" name="trailer_type">
+                                    <option value="RGN" selected>RGN</option>
+                                    <option value="Stepdeck">Stepdeck</option>
+                                    <option value="Flatbed">Flatbed</option>
+                                    <option value="Hotshot">Hotshot</option>
+                                    <option value="Landoll">Landoll</option>
+                                </select>
+                            </div>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
