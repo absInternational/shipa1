@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Heavy</h1>
+                        <h1 class="breadcrumb-title text-center">RV</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
@@ -41,7 +41,7 @@
                             </span>
                             >
                             <span>
-                                <span> Heavy</span>
+                                <span> RV</span>
                             </span>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                 @endif
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
-                        <h4 class="title">Instant Heavy Shipping Quote!</h4>
+                        <h4 class="title">Instant RV Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -80,27 +80,24 @@
                                     </ul>
                                 </div>
                             @endif
-                            <input type="hidden" name="vehicle_opt" value="heavy" hidden>
+                            <input type="hidden" name="vehicle_opt" value="RV" hidden>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="input-form">
-                                        <label for="category">Category</label>
-                                        <select class="form-control" id="category" name="category">
+                                        <label for="rv_type">RV Types</label>
+                                        <select class="form-control" id="rv_type" name="rv_type">
                                             <option value="" disabled selected>Select</option>
-                                            @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                            @endforeach
+                                            <option value="Class A Motorhome">Class A Motorhome</option>
+                                            <option value="Class B Motorhome">Class B Motorhome</option>
+                                            <option value="Class C Motorhome">Class C Motorhome</option>
+                                            <option value="Travel Trailer">Travel Trailer</option>
+                                            <option value="Folding Tent Trailer">Folding Tent Trailer</option>
+                                            <option value="Fifth-Wheel">Fifth-Wheel</option>
+                                            <option value="Truck Camper">Truck Camper</option>
+                                            <option value="Others">Other</option>
                                         </select>
-                                        <input type="text" class="form-control" id="otherCategoryInput" name="category"
-                                            disabled style="display: none;" placeholder="Specify Category">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="input-form" id="subcategory-box">
-                                        <label for="subcategory">Subcategory</label>
-                                        <select class="form-control" id="subcategory" name="subcategory">
-                                            <option value="" disabled selected>Select</option>
-                                        </select>
+                                        <input type="text" class="form-control" id="otherCategoryInput" name="rv_type"
+                                            disabled style="display: none;" placeholder="Specify Please">
                                     </div>
                                 </div>
                             </div><br>
@@ -146,7 +143,7 @@
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="RGN" selected>RGN</option>
+                                            <option value="" selected disabled>Select</option>
                                             <option value="VAN (V)">VAN (V)</option>
                                             <option value="FLATBED (F)">FLATBED (F)</option>
                                             <option value="STEP DECK (SD)">STEP DECK (SD)</option>
@@ -178,7 +175,7 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <div class="col-md-4">
+                                {{-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="load_type" class="text-white">Load Type</label>
                                         <select class="form-control" id="load_type" name="load_type">
@@ -187,7 +184,7 @@
                                             <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="load_method" class="text-white">Load Method</label>
@@ -362,38 +359,13 @@
         $(document).ready(function() {
             $('#category').change(function() {
                 var selectedCategory = $(this).val();
-
-                $.ajax({
-                    url: "{{ route('get.subcategories') }}",
-                    method: "POST",
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        "category": selectedCategory
-                    },
-                    success: function(response) {
-                        console.log(response);
-                        console.log(response.length);
-
-                        var html = '';
-                        $('#subcategory-box').html('');
-
-                        html += "<label for='subcategory'>Subcategory</label>";
-                        html +=
-                            "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
-                        html += "<option value='' disabled selected>Select</option>";
-                        $.each(response, function(index, val) {
-                            html +=
-                                `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
-                        });
-                        html += "</select>";
-                        console.log('html', html);
-
-                        $('#subcategory-box').html(html);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Error:", error);
-                    }
-                });
+                if (selectedCategory === "Others") {
+                    $('#otherCategoryInput').show();
+                    $('#otherCategoryInput').attr('disabled', false);
+                } else {
+                    $('#otherCategoryInput').hide();
+                    $('#otherCategoryInput').attr('disabled', true);
+                }
             });
         });
     </script>
@@ -413,6 +385,7 @@
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
 
+                // Continue with the rest of the HTML
                 newVehicleHtml +=
                     `</select>
                         </div>
@@ -437,13 +410,16 @@
                         </div>
                         `;
 
+                // Append new vehicle to vehicles container
                 $('#vehicles-container').append(newVehicleHtml);
             }
 
+            // Add vehicle button click event
             $('#addVehicleBtn').click(function() {
                 addNewVehicle();
             });
 
+            // Delete vehicle click event
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
             });
@@ -454,8 +430,10 @@
         $(document).ready(function() {
             $('#available_at_auction').change(function() {
                 if ($(this).is(':checked')) {
+                    // $('#link').show();
                     $('.div-link').show();
                 } else {
+                    // $('#link').hide();
                     $('.div-link').hide();
                 }
             });
@@ -477,7 +455,9 @@
                     suggestionsList.empty();
 
                     $.each(response, function(index, suggestion) {
+                        // Append suggestion as list item with click event listener
                         var listItem = $("<li>").text(suggestion).click(function() {
+                            // Autofill input field with clicked suggestion
                             inputField.val(suggestion);
                             suggestionsList.css("display", "none");
                         });
@@ -490,6 +470,7 @@
             });
         }
 
+        // Keyup event handler for input fields
         $("#pickup-location, #delivery-location").keyup(function() {
             var inputField = $(this);
             var suggestionsList = inputField.siblings(".suggestionsTwo");

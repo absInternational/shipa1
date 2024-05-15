@@ -1,28 +1,31 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<style>
-    .suggestionsTwo{
-        background: #fff;
-        font-size: 14px;
-        margin-top: -2px;
-        padding-bottom: 20px;
-        list-style: none;
-        line-height: 28px;
-        padding-left: 14px;
-        display: none;
-    }
-    .suggestionsTwo li{
-        cursor: pointer;
-    }
-    .suggestionsTwo li:hover{
-        color: #8fc445;
-    }
-    .image_input{
-        padding: 0px !important;
-        padding-left: 10px !important;
-    }
-</style>
+    <style>
+        .suggestionsTwo {
+            background: #fff;
+            font-size: 14px;
+            margin-top: -2px;
+            padding-bottom: 20px;
+            list-style: none;
+            line-height: 28px;
+            padding-left: 14px;
+            display: none;
+        }
+
+        .suggestionsTwo li {
+            cursor: pointer;
+        }
+
+        .suggestionsTwo li:hover {
+            color: #8fc445;
+        }
+
+        .image_input {
+            padding: 0px !important;
+            padding-left: 10px !important;
+        }
+    </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -77,6 +80,7 @@
                                     </ul>
                                 </div>
                             @endif
+                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
                             <div class="input-form">
                                 <label for="category">Category</label>
                                 <select class="form-control" id="category" name="category">
@@ -94,7 +98,8 @@
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />
-                                <label class="form-check-label text-white" for="available_at_auction"> Available at Auction?</label>
+                                <label class="form-check-label text-white" for="available_at_auction"> Available at
+                                    Auction?</label>
                             </div>
                             <div class="input-form div-link mt-3">
                                 <label class="d-block"> Enter Link:</label>
@@ -104,7 +109,8 @@
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
                                     name="boat_on_trailer" value="1" />
-                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your boat on trailer?</label>
+                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your boat on
+                                    trailer?</label>
                             </div>
                             <div class="row mt-3">
                                 <div class="col-md-4">
@@ -167,7 +173,8 @@
                             </div>
                             <div class="input-form mt-3">
                                 <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image" placeholder="Upload File" />
+                                <input class="form-control image_input" type="file" id="image" name="image"
+                                    placeholder="Upload File" />
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -193,64 +200,64 @@
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Length (Ft.)</label>
-                                        <input type="number" id="" name="length_ft"
-                                            placeholder="" required="" value="0" />
+                                        <input type="number" id="" name="length_ft" placeholder=""
+                                            required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Length (In.)</label>
-                                        <input type="number" id="" name="length_in"
-                                            placeholder="" required="" value="0" />
+                                        <input type="number" id="" name="length_in" placeholder=""
+                                            required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Width (Ft.)</label>
-                                        <input type="number" id="" name="width_ft"
-                                            placeholder="" required="" value="0" />
+                                        <input type="number" id="" name="width_ft" placeholder=""
+                                            required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Width (In.)</label>
-                                        <input type="number" id="" name="width_in"
-                                            placeholder="" required="" value="0" />
+                                        <input type="number" id="" name="width_in" placeholder=""
+                                            required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Height (Ft.)</label>
-                                        <input type="number" id="" name="height_ft"
-                                            placeholder="" required="" value="0" />
+                                        <input type="number" id="" name="height_ft" placeholder=""
+                                            required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Height (In.)</label>
-                                        <input type="number" id="" name="height_in"
-                                            placeholder="" required="" value="0" />
+                                        <input type="number" id="" name="height_in" placeholder=""
+                                            required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Weight (Lbs.)</label>
-                                        <input type="number" id="" name="weight"
-                                            placeholder="" required="" value="0" />
+                                        <input type="number" id="" name="weight" placeholder=""
+                                            required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -288,7 +295,9 @@
                                 </div>
                             </div>
 
-                            <a class="text-primary" id="addVehicleBtn" style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add Vehicle</a>
+                            <a class="text-primary" id="addVehicleBtn"
+                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                                Vehicle</a>
 
                             <div id="vehicles-container">
                             </div>
@@ -332,12 +341,11 @@
                                 <div class="input-form tj-select">
                                     <label> Year</label>
                                     <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = <?php echo date('Y'); ?>;
+                var currentYear = {{ date('Y') }};
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
 
-                // Continue with the rest of the HTML
                 newVehicleHtml +=
                     `</select>
                                 </div>
@@ -362,111 +370,33 @@
                     </div>
                 `;
 
-                // Append new vehicle to vehicles container
                 $('#vehicles-container').append(newVehicleHtml);
             }
 
-            // Add vehicle button click event
             $('#addVehicleBtn').click(function() {
                 addNewVehicle();
             });
 
-            // Delete vehicle click event
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
             });
-
-            // $(document).on('change', '.year, .make', function() {
-            //     var year = $(this).closest('.vehicle-info').find('.year').val();
-            //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            //     var vehicleInfo = $(this).closest('.vehicle-info');
-            //     if (year && makeId) {
-            //         getModel(year, makeId, vehicleInfo);
-            //     }
-            // });
-
-            // function getModel(year, makeId, vehicleInfo) {
-            //     console.log('yes inn');
-            //     $.ajax({
-            //         url: "{{ route('get.models') }}",
-            //         method: 'GET',
-            //         data: {
-            //             year: year,
-            //             make: makeId
-            //         },
-            //         success: function(response) {
-            //             var modelsDropdown = vehicleInfo.find('.model');
-            //             modelsDropdown.empty();
-            //             var selectOptions = '<option value="">Select Model</option>';
-            //             $.each(response, function(index, model) {
-            //                 selectOptions += '<option value="' + model + '">' + model +
-            //                     '</option>';
-            //             });
-            //             modelsDropdown.html(selectOptions);
-            //         },
-            //         error: function(xhr) {
-            //             console.log(xhr.responseText);
-            //         }
-            //     });
-            // }
         });
     </script>
 
     <script>
         $(document).ready(function() {
-            // $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            //     var year = $('.vehicle-year').val();
-            //     var makeId = $('.vehicle-make').val();
-            //     if (year && makeId) {
-            //         getModel(year, makeId);
-            //     }
-            // });
-
-            // function getModel(year, makeId) {
-            //     console.log('yes inn');
-            //     $.ajax({
-            //         url: "{{ route('get.models') }}",
-            //         method: 'GET',
-            //         data: {
-            //             year: year,
-            //             make: makeId
-            //         },
-            //         success: function(response) {
-            //             var modelsDropdown = $('.vehicle-model-div');
-            //             modelsDropdown.empty();
-            //             var selectOptions =
-            //                 '<label>Model</label> <select class="nice-select model" name="model" id="model"> <option value="">Select Model</option>';
-            //             $.each(response, function(index, model) {
-            //                 selectOptions += '<option value="' + model + '">' + model +
-            //                     '</option>';
-            //             });
-            //             selectOptions += '</select>';
-            //             modelsDropdown.html(selectOptions);
-
-            //             console.log('yesssss', response);
-            //         },
-            //         error: function(xhr) {
-            //             console.log(xhr.responseText);
-            //         }
-            //     });
-            // }
-
             $('#available_at_auction').change(function() {
                 if ($(this).is(':checked')) {
-                    // $('#link').show();
                     $('.div-link').show();
                 } else {
-                    // $('#link').hide();
                     $('.div-link').hide();
                 }
             });
 
             $('#modification').change(function() {
                 if ($(this).is(':checked')) {
-                    // $('#link').show();
                     $('.div-modify_info').show();
                 } else {
-                    // $('#link').hide();
                     $('.div-modify_info').hide();
                 }
             });
@@ -488,9 +418,7 @@
                     suggestionsList.empty();
 
                     $.each(response, function(index, suggestion) {
-                        // Append suggestion as list item with click event listener
                         var listItem = $("<li>").text(suggestion).click(function() {
-                            // Autofill input field with clicked suggestion
                             inputField.val(suggestion);
                             suggestionsList.css("display", "none");
                         });
@@ -503,15 +431,14 @@
             });
         }
 
-// Keyup event handler for input fields
-$("#pickup-location, #delivery-location").keyup(function() {
-var inputField = $(this);
-var suggestionsList = inputField.siblings(".suggestionsTwo");
-suggestionsList.css("display", "block");
-if (inputField.val() === "") {
-    suggestionsList.css("display", "none");
-  }
-updateSuggestions(inputField, suggestionsList);
-});
+        $("#pickup-location, #delivery-location").keyup(function() {
+            var inputField = $(this);
+            var suggestionsList = inputField.siblings(".suggestionsTwo");
+            suggestionsList.css("display", "block");
+            if (inputField.val() === "") {
+                suggestionsList.css("display", "none");
+            }
+            updateSuggestions(inputField, suggestionsList);
+        });
     </script>
 @endsection

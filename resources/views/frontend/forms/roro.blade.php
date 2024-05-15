@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Vehicle - ATV/UTV</h1>
+                        <h1 class="breadcrumb-title text-center">RORO</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
@@ -41,7 +41,7 @@
                             </span>
                             >
                             <span>
-                                <span> Vehicle - ATV/UTV</span>
+                                <span> RORO</span>
                             </span>
                         </div>
                     </div>
@@ -49,7 +49,6 @@
             </div>
         </div>
     </section>
-    <!--========== breadcrumb End ==============-->
 
     <section class="tj-choose-us-section">
         <div class="container">
@@ -66,7 +65,7 @@
                 @endif
                 <div class="col-lg-8" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
-                        <h4 class="title">Instant ATV/UTV Shipping Quote!</h4>
+                        <h4 class="title">Get Car Roro International Quote</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -81,6 +80,7 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                            <input type="hidden" name="roro" hidden value="RORO SHIPMENT">
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />
@@ -149,27 +149,35 @@
                                     placeholder="Enter Modification Information" />
                             </div>
                             <div class="input-form mt-3">
-                                <label class="d-block" class="text-white"> Image:</label>
+                                <label class="d-block text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" />
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
+                                        <input type="text" id="pickup-location" name="origin" autocomplete="off"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" aria-required="true" />
+                                        <span class="focus-border">
+                                            <i></i>
+                                        </span>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
+                                        <label class="d-block"> City:</label>
+                                        <input type="text" id="city" name="city" placeholder="Enter City"
+                                            required="" />
+                                        <small id="errName" class="err-style"></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form">
+                                        <label class="d-block"> Zipcode:</label>
+                                        <input type="text" id="zipcode" name="zipcode" placeholder="Enter Zipcode"
+                                            required="" />
+                                        <small id="errName" class="err-style"></small>
                                     </div>
                                 </div>
                             </div>
@@ -227,46 +235,71 @@
 @endsection
 
 @section('extraScript')
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
+    </script>
+
+    <script type="text/javascript">
+        function initialize() {
+            var input = $('#pickup-location')[0];
+            var input2 = $('#delivery-location')[0];
+
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            var autocomplete2 = new google.maps.places.Autocomplete(input2);
+
+            autocomplete.addListener('place_changed', function() {
+                var place = autocomplete.getPlace();
+            });
+
+            autocomplete2.addListener('place_changed', function() {
+                var place = autocomplete2.getPlace();
+            });
+        }
+
+        $(window).on('load', initialize);
+    </script>
+
     <script>
         $(document).ready(function() {
             function addNewVehicle() {
-                var newVehicleHtml =
-                    `
+                // HTML structure for new vehicle
+                var newVehicleHtml = `
                     <div class="vehicle-info">
                         <div class="row select-bm">
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
-                                    <label> Year</label>
-                                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                                    <label>Year</label>
+                                    <select class="nice-select year" name="year[]" id="year">
+                                        <option value="" disabled selected>Select Year</option>`;
                 var currentYear = {{ date('Y') }};
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
 
-                newVehicleHtml +=
-                    `</select>
+                newVehicleHtml += `
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                <div class="input-form tj-select">
-                    <label>Make</label>
-                    <input type="text" id="make" name="make[]"
-                                            placeholder="Enter Make" required="" />
+                                <div class="input-form tj-select">
+                                    <label>Make</label>
+                                    <input type="text" id="make" name="make[]" placeholder="Enter Make" required />
+                                </div>
                             </div>
-                        </div>
                             <div class="col-md-4">
                                 <div class="input-form tj-select model-div">
                                     <label>Model</label>
-                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                        required="" />
+                                    <input type="text" id="model" name="model[]" placeholder="Enter Model" required />
                                     <!-- Bin icon for deleting vehicle -->
-                                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                                    <span class="delete-vehicle">
+                                        <i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                `;
+                    </div>`;
 
+                // Append new vehicle to vehicles container
                 $('#vehicles-container').append(newVehicleHtml);
             }
 
@@ -282,7 +315,6 @@
 
     <script>
         $(document).ready(function() {
-
             $('#available_at_auction').change(function() {
                 if ($(this).is(':checked')) {
                     $('.div-link').show();
@@ -298,45 +330,6 @@
                     $('.div-modify_info').hide();
                 }
             });
-        });
-    </script>
-
-    <script>
-        function updateSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
-
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
-
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList);
         });
     </script>
 @endsection

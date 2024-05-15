@@ -83,6 +83,8 @@ Route::get('/atv-utv', [FormVehicleController::class, 'atv_utv'])->name('form.ve
 Route::get('/boat', [FormVehicleController::class, 'boat'])->name('form.vehicle.boat');
 Route::get('/heavy-equipment', [FormVehicleController::class, 'heavyEquipment'])->name('form.vehicle.heavyEquipment');
 Route::get('/freight', [FormVehicleController::class, 'freight'])->name('form.vehicle.freight');
+Route::get('/roro-shipping-international', [FormVehicleController::class, 'roro'])->name('form.vehicle.roro');
+Route::get('/recreational-vehicle', [FormVehicleController::class, 'recreationalVehicle'])->name('form.recreational-vehicle');
 // });
 
 Route::post('/get-subcategories', [MainController::class, 'get_subcategories'])->name('get.subcategories');

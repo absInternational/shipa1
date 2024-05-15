@@ -74,10 +74,12 @@
                             <div class="tj-main-menu d-lg-block d-none text-end" id="main-menu">
                                 <ul class="main-menu">
                                     <li class="ab-gap">
-                                        <a href="{{ route('welcome') }}" class="{{ Request::routeIs('welcome') ? ' active' : '' }}"> Home</a>
+                                        <a href="{{ route('welcome') }}"
+                                            class="{{ Request::routeIs('welcome') ? ' active' : '' }}"> Home</a>
                                     </li>
                                     <li class="ab-gap">
-                                        <a href="{{ route('aboutUs') }}" class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> About Us</a>
+                                        <a href="{{ route('aboutUs') }}"
+                                            class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> About Us</a>
                                     </li>
                                     {{-- <li class="ab-gap">
                                         <a href="{{ route('services') }}"> Service</a>
@@ -85,9 +87,9 @@
                                     @php
                                         $categories = \App\Models\ServiceCategory::get();
                                     @endphp
-                                    <li
-                                        class="current-menu-item menu-item-has-children">
-                                        <a href="{{ route('services') }}" class="{{ Request::routeIs('services*') ? ' active' : '' }}"> Services</a>
+                                    <li class="current-menu-item menu-item-has-children">
+                                        <a href="{{ route('services') }}"
+                                            class="{{ Request::routeIs('services*') ? ' active' : '' }}"> Services</a>
                                         <ul class="list-gap sub-menu-list">
                                             @foreach ($categories as $category)
                                                 <li><a
@@ -97,13 +99,17 @@
                                         </ul>
                                     </li>
                                     <li class="ab-gap">
-                                        <a href="{{ route('autoAuction') }}" class="{{ Request::routeIs('autoAuction') ? ' active' : '' }}"> auto Auction</a>
+                                        <a href="{{ route('autoAuction') }}"
+                                            class="{{ Request::routeIs('autoAuction') ? ' active' : '' }}"> Auto
+                                            Auction</a>
                                     </li>
                                     <li class="ab-gap">
-                                        <a href="{{ route('blogs') }}" class="{{ Request::routeIs('blogs') ? ' active' : '' }}"> Blog</a>
+                                        <a href="{{ route('blogs') }}"
+                                            class="{{ Request::routeIs('blogs') ? ' active' : '' }}"> Blog</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('contactUs') }}" class="{{ Request::routeIs('contactUs') ? ' active' : '' }}">Contact</a>
+                                        <a href="{{ route('contactUs') }}"
+                                            class="{{ Request::routeIs('contactUs') ? ' active' : '' }}">Contact</a>
                                     </li>
                                 </ul>
                             </div>

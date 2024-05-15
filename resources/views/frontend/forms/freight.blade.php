@@ -465,7 +465,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row select-bm">
+                            <div class="row select-bm" style="display:none;">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white">Vehicle Information</h4>
                                 </div>
@@ -473,7 +473,7 @@
                                     <div class="input-form tj-select">
                                         <label> Year</label>
                                         <select class="nice-select vehicle-year" name="year[]" id="year">
-                                            <option value="" disabled selected>Select Year</option>
+                                            <option value="2010" selected>Select Year</option>
                                             @php
                                                 $currentYear = date('Y');
                                                 for ($year = $currentYear; $year >= 1936; $year--) {
@@ -486,24 +486,24 @@
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label>Make</label>
-                                        <input type="text" id="make" name="make[]" placeholder="Enter Make"
-                                            required="" />
+                                        <input type="text" value="null" id="make" name="make[]"
+                                            placeholder="Enter Make" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select vehicle-model-div">
                                         <label>Model</label>
-                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                            required="" />
+                                        <input type="text" id="model" value="null" name="model[]"
+                                            placeholder="Enter Model" />
                                     </div>
                                 </div>
                             </div>
 
-                            <a class="text-primary" id="addVehicleBtn"
+                            <a class="text-primary" style="display:none;" id="addVehicleBtn"
                                 style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
-                            <div id="vehicles-container">
+                            <div id="vehicles-container" style="display:none;">
                             </div>
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
@@ -524,10 +524,8 @@
         $(document).ready(function() {
             $('#available_at_auction').change(function() {
                 if ($(this).is(':checked')) {
-                    // $('#link').show();
                     $('.div-link').show();
                 } else {
-                    // $('#link').hide();
                     $('.div-link').hide();
                 }
             });
@@ -541,12 +539,11 @@
                                 <div class="input-form tj-select">
                                     <label> Year</label>
                                     <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = <?php echo date('Y'); ?>;
+                var currentYear = {{ date('Y') }};
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
 
-                // Continue with the rest of the HTML
                 newVehicleHtml +=
                     `</select>
                                 </div>
@@ -571,16 +568,13 @@
                     </div>
                 `;
 
-                // Append new vehicle to vehicles container
                 $('#vehicles-container').append(newVehicleHtml);
             }
 
-            // Add vehicle button click event
             $('#addVehicleBtn').click(function() {
                 addNewVehicle();
             });
 
-            // Delete vehicle click event
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
             });
@@ -602,9 +596,7 @@
                     suggestionsList.empty();
 
                     $.each(response, function(index, suggestion) {
-                        // Append suggestion as list item with click event listener
                         var listItem = $("<li>").text(suggestion).click(function() {
-                            // Autofill input field with clicked suggestion
                             inputField.val(suggestion);
                             suggestionsList.css("display", "none");
                         });
@@ -617,7 +609,6 @@
             });
         }
 
-        // Keyup event handler for input fields
         $("#pickup-location, #delivery-location").keyup(function() {
             var inputField = $(this);
             var suggestionsList = inputField.siblings(".suggestionsTwo");

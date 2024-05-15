@@ -116,6 +116,7 @@ class QuoteController extends Controller
         $protect_from_freezing = $request->input('protect_from_freezing', null);
         $sort_segregate = $request->input('sort_segregate', null);
         $blind_shipment = $request->input('blind_shipment', null);
+        $vehicle_opt = $request->input('vehicle_opt', null);
         $image = $request->file('image');
         $ip = $request->ip();
 
@@ -210,6 +211,7 @@ class QuoteController extends Controller
             'protect_from_freezing' => $protect_from_freezing,
             'sort_segregate' => $sort_segregate,
             'blind_shipment' => $blind_shipment,
+            'vehicle_opt' => $vehicle_opt,
         ];
 
         // dd($post_array);
