@@ -120,6 +120,16 @@ class QuoteController extends Controller
         $image = $request->file('image');
         $ip = $request->ip();
 
+        $originValues = explode(',', $originData);
+        $origin_zip = isset($originValues[2]) ? trim($originValues[2]) : null;
+        $origin_city = isset($originValues[0]) ? trim($originValues[0]) : null;
+        $origin_state = isset($originValues[1]) ? trim($originValues[1]) : null;
+
+        $destinationValues = explode(',', $destinationData);
+        $destination_zip = isset($destinationValues[2]) ? trim($destinationValues[2]) : null;
+        $destination_city = isset($destinationValues[0]) ? trim($destinationValues[0]) : null;
+        $destination_state = isset($destinationValues[1]) ? trim($destinationValues[1]) : null;
+
         $client = new Client();
         try {
             $response = $client->get("http://ipinfo.io/{$ip}/json");
@@ -212,6 +222,12 @@ class QuoteController extends Controller
             'sort_segregate' => $sort_segregate,
             'blind_shipment' => $blind_shipment,
             'vehicle_opt' => $vehicle_opt,
+            'originzip' => $origin_zip,
+            'originstate' => $origin_state,
+            'origincity' => $origin_city,
+            'destinationzip' => $destination_zip,
+            'destinationstate' => $destination_state,
+            'destinationcity' => $destination_city,
         ];
 
         // dd($post_array);
