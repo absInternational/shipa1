@@ -2828,6 +2828,20 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     color: var(--tj-white-color);
 }
 
+.tj-faq-left-content .faq-content .faq-icon .pp-list {
+    width: 25px;
+    font-size: 20px;
+    height: 25px;
+    line-height: 25px;
+    background: var(--tj-secondary-color);
+    text-align: center;
+    transition: 0.4s;
+    display: inline-block;
+    border-radius: 50%;
+    color: var(--tj-white-color);
+}
+
+
 .tj-faq-left-content .faq-content:hover .faq-icon i {
     background-color: var(--tj-primary-color);
     color: var(--tj-white-color);
