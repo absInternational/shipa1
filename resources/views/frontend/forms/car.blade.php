@@ -62,7 +62,7 @@
                             <div class="col-md-4">
                                 <div class="input-form">
                                     <label class="d-block"> Your Name:</label>
-                                    <input type="text" id="name" name="name" placeholder="Full Name" required="" />
+                                    <input  type="text" id="name" name="name" placeholder="Full Name" required="" />
                                     <small id="errName" class="err-style"></small>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group" style="line-height:23px;">
                                     <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                     <select class="form-control" id="trailer_type" name="trailer_type">
                                         <option value="Open" selected>Open</option>
@@ -266,7 +266,7 @@ $(document).ready(function() {
                 <!-- Options filled by JavaScript -->
                 </select>
                 <!-- Bin icon for deleting vehicle -->
-                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red;"></i></span>
+                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
                 </div>
                 </div>
                 </div>

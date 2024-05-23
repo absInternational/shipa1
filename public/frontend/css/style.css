@@ -3869,12 +3869,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-input-form .input-form input {
-    background: var(--tj-white-color);
+    background: #f0f2f7;
     width: 100%;
     font-size: 14px;
     font-weight: 500;
-    height: 48px;
-    line-height: 48px;
+    height: 38px;
+    line-height: 38px;
     padding: 15px 15px;
     border-radius: 3px;
 }
@@ -3891,8 +3891,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     width: 100%;
     border: none;
     font-size: 14px;
-    /* line-height: 48px; */
-    height: 48px;
+    line-height: 34px;
+    height: 35px;
     border-radius: 3px;
 }
 

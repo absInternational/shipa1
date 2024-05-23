@@ -51,7 +51,7 @@
     </section>
 
     <section class="tj-choose-us-section">
-        <div class="container">
+        <div class="container-flude">
             <div class="row">
                 @if (session('success'))
                     <div class="alert alert-success">
@@ -63,7 +63,7 @@
                         {{ session('error') }}
                     </div>
                 @endif
-                <div class="col-lg-8" data-sal="slide-down" data-sal-duration="800">
+                <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
                         <h4 class="title">Get Car Roro International Quote</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"

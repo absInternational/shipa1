@@ -1,31 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <style>
-        .suggestionsTwo {
-            background: #fff;
-            font-size: 14px;
-            margin-top: -2px;
-            padding-bottom: 20px;
-            list-style: none;
-            line-height: 28px;
-            padding-left: 14px;
-            display: none;
-        }
-
-        .suggestionsTwo li {
-            cursor: pointer;
-        }
-
-        .suggestionsTwo li:hover {
-            color: #8fc445;
-        }
-
-        .image_input {
-            padding: 0px !important;
-            padding-left: 10px !important;
-        }
-    </style>
+ 
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -52,7 +28,7 @@
     <!--========== breadcrumb End ==============-->
 
     <section class="tj-choose-us-section">
-        <div class="container">
+        <div class="container-flude">
             <div class="row">
                 @if (session('success'))
                     <div class="alert alert-success">
@@ -64,7 +40,7 @@
                         {{ session('error') }}
                     </div>
                 @endif
-                <div class="col-lg-8" data-sal="slide-down" data-sal-duration="800">
+                <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
                         <h4 class="title">Instant Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
