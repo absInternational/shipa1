@@ -33,12 +33,10 @@
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Transportation Company</span>
-                            <h2 class="title">We Provide Full Range Global Logistics</h2>
+                            <span class="sub-title active-shape"> A1 Transportation Company</span>
+                            <h2 class="title">What Makes Us Dependable?</h2>
                             <p class="desc">
-                                Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla a lobortis lectus,
-                                id volutpat magna. Morbi consequat porttitor fermentum. Nulla vestibulum tincidunt
-                                viverra. Vestibulum accumsan
+                                Among all the shipping companies out there, factors that make us stand out from therest are:
                             </p>
                         </div>
                         <div class="tj-icon-box">
@@ -47,12 +45,13 @@
                                     <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" />
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Worldwide Service</h5>
+                                    <h5 class="title">Our Values</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                                Lorem ipsum is simply velit anod<br />
-                                ipas aliquet enean quis.
+                                We are a licensed Transportation company with high moral values and have attained customer
+                                satisfaction through their remarks on esteemed platforms.
+
                             </p>
                         </div>
                         <div class="tj-icon-box">
@@ -61,23 +60,42 @@
                                     <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Certified & Awward Winner</h5>
+                                    <h5 class="title">Scope of Services</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                                Lorem ipsum is simply velit anod<br />
-                                ipas aliquet enean quis.
+                                Range of vehicles, we ship, is not limited to just conventional cars and motorbikes.
                             </p>
                         </div>
-                        <div class="ab-button-box d-flex align-items-center">
-                            <div class="tj-theme-btn">
-                                <a class="tj-primary-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
+                        <div class="tj-icon-box">
+                            <div class="ab-text d-flex align-items-center">
+                                <div class="ab-icon">
+                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                </div>
+                                <div class="ab-title">
+                                    <h5 class="title">Safety Is Our Priority</h5>
+                                </div>
                             </div>
-                            <div class="right-text">
-                                <img src="{{ asset('frontend/images/icon/auother.svg') }}" alt="Image" />
+                            <p class="desc">
+                                No matter which mode of transportation you use, ShipA1 assures its customers, utmostsecurity
+                                to their assets.
+
+
+                            </p>
+                        </div>
+                        <div class="tj-icon-box">
+                            <div class="ab-text d-flex align-items-center">
+                                <div class="ab-icon">
+                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                </div>
+                                <div class="ab-title">
+                                    <h5 class="title">Skilful & Devoted Staff</h5>
+                                </div>
                             </div>
+                            <p class="desc">
+                                Our team is loaded with highly experienced professionals of both customer dealing andvehicle
+                                handling.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -93,9 +111,11 @@
                             </div>
                         </div>
                         <div class="image-box">
-                            <img class="p-z-idex" src="{{ asset('frontend/images/about/ab-1.jpg') }}" alt="Image" />
+                            <img class="p-z-idex" src="{{ asset('frontend/images/about/resize 410-630.jpg') }}"
+                                alt="Image" />
                         </div>
-                        <img class="group-1 p-z-idex" src="{{ asset('frontend/images/about/ab-2.jpg') }}" alt="Image" />
+                        <img class="group-1 p-z-idex"
+                            src="{{ asset('frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}" alt="Image" />
                         <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}" alt="Image" />
                     </div>
                 </div>
