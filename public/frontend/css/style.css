@@ -43,10 +43,10 @@
     --tj-ff-body: "Poppins", sans-serif;
 }
 :root {
-    --tj-primary-color: #8fc445;
+    --tj-primary-color:   #8fc445;
     --tj-primary-color2: #189bda;
     --tj-primary-color3: #8f3c23;
-    --tj-secondary-color: #062e39;
+    --tj-secondary-color:   #062e39;
     --tj-body-color: #7c858c;
     --tj-white-color: #ffffff;
     --tj-dark-color: #181818;
@@ -2829,10 +2829,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-faq-left-content .faq-content .faq-icon .pp-list {
-    width: 25px;
-    font-size: 20px;
+    width: 27px;
+    font-size: 15px;
     height: 25px;
-    line-height: 25px;
+    line-height: 27px;
     background: var(--tj-secondary-color);
     text-align: center;
     transition: 0.4s;
@@ -2840,7 +2840,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     border-radius: 50%;
     color: var(--tj-white-color);
 }
-
 
 .tj-faq-left-content .faq-content:hover .faq-icon i {
     background-color: var(--tj-primary-color);
@@ -3704,13 +3703,15 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     14. Feature CSS
 ------------------------------------ */
 .tj-choose-us-section {
-    background-image: url(../images/banner/quote-form-bg.png);
+    background-color: #ffffff;
+    background-image: url(/frontend/images/slider/home-slider-1.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 120px;
     padding-top: 110px;
     position: relative;
+    /* opacity: 1; */
 }
 
 .tj-choose-us-section::before {
@@ -3721,7 +3722,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    background: rgba(6, 46, 57, 0.7);
+    /* background: rgba(6, 46, 57, 0.7); */
 }
 
 .tj-choose-us-section .tj-section-heading .title {
@@ -3837,14 +3838,17 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-input-form {
-    background: var(--tj-primary-color);
-    border-radius: 3px;
+    box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
+    background: #062e39d4;
+    border-radius: 5%;
     padding: 30px;
-    width: 100%;
-    margin-left: auto;
+    width: 50%;
+    margin-left: 7%;
+    /* margin-left: auto; */
     position: relative;
     z-index: 3;
 }
+
 
 .tj-input-form .title {
     color: var(--tj-white-color);
@@ -7550,6 +7554,18 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .footer-copyright-area .copyright-target a:hover {
     color: var(--tj-primary-color);
 }
+.pp-link {
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--tj-secondary-color);
+    transition: 0.4s;
+}
+
+.pp-link:hover {
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--tj-primary-color);
+}
 
 .footer-copyright-area .copyright-menu ul li {
     display: inline-block;
@@ -8080,12 +8096,16 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     font-size: 18px;
     font-weight: 500;
     transition: all 0.3s;
-    background-color: var(--tj-secondary-color);
+    background-color: #8fc445;
     position: relative;
     overflow: hidden;
     z-index: 1;
     line-height: 1;
     border: none;
+}
+
+.tj-submit-btn:hover{
+    background-color: #181818;
 }
 
 .tj-submit-btn::after {
@@ -9253,9 +9273,50 @@ PAGE LOAD ANIMATION
 /* Webkit (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 10px; /* Scrollbar ki width */
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background-color: #8fc445; /* Scrollbar ka color */
     border-radius: 5px; /* Scrollbar ka border radius */
-  }
+}
+
+/*car page start*/
+.suggestionsTwo {
+    background: #fff;
+    font-size: 14px;
+    margin-top: -2px;
+    padding-bottom: 20px;
+    list-style: none;
+    line-height: 28px;
+    padding-left: 14px;
+    display: none;
+}
+
+.suggestionsTwo li {
+    cursor: pointer;
+}
+
+.suggestionsTwo li:hover {
+    color: #8fc445;
+}
+
+.image_input {
+    padding: 0px !important;
+    padding-left: 10px !important;
+}
+
+.add-car {
+    color: white;
+    display: flex;
+    cursor: pointer;
+    /* text-decoration: underline; */
+    justify-content: end;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+.add-car:hover{
+    color: var(--tj-primary-color);
+}
+/*car page end*/
