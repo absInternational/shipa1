@@ -33,12 +33,10 @@
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Transportation Company</span>
-                            <h2 class="title">We Provide Full Range Global Logistics</h2>
+                            <span class="sub-title active-shape"> A1 Transportation Company</span>
+                            <h2 class="title">What Makes Us Dependable?</h2>
                             <p class="desc">
-                                Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla a lobortis lectus,
-                                id volutpat magna. Morbi consequat porttitor fermentum. Nulla vestibulum tincidunt
-                                viverra. Vestibulum accumsan
+                                Among all the shipping companies out there, factors that make us stand out from therest are:
                             </p>
                         </div>
                         <div class="tj-icon-box">
@@ -47,12 +45,13 @@
                                     <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" />
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Worldwide Service</h5>
+                                    <h5 class="title">Our Values</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                                Lorem ipsum is simply velit anod<br />
-                                ipas aliquet enean quis.
+                                We are a licensed Transportation company with high moral values and have attained customer
+                                satisfaction through their remarks on esteemed platforms.
+
                             </p>
                         </div>
                         <div class="tj-icon-box">
@@ -61,23 +60,42 @@
                                     <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Certified & Awward Winner</h5>
+                                    <h5 class="title">Scope of Services</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                                Lorem ipsum is simply velit anod<br />
-                                ipas aliquet enean quis.
+                                Range of vehicles, we ship, is not limited to just conventional cars and motorbikes.
                             </p>
                         </div>
-                        <div class="ab-button-box d-flex align-items-center">
-                            <div class="tj-theme-btn">
-                                <a class="tj-primary-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
+                        <div class="tj-icon-box">
+                            <div class="ab-text d-flex align-items-center">
+                                <div class="ab-icon">
+                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                </div>
+                                <div class="ab-title">
+                                    <h5 class="title">Safety Is Our Priority</h5>
+                                </div>
                             </div>
-                            <div class="right-text">
-                                <img src="{{ asset('frontend/images/icon/auother.svg') }}" alt="Image" />
+                            <p class="desc">
+                                No matter which mode of transportation you use, ShipA1 assures its customers, utmostsecurity
+                                to their assets.
+
+
+                            </p>
+                        </div>
+                        <div class="tj-icon-box">
+                            <div class="ab-text d-flex align-items-center">
+                                <div class="ab-icon">
+                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                </div>
+                                <div class="ab-title">
+                                    <h5 class="title">Skilful & Devoted Staff</h5>
+                                </div>
                             </div>
+                            <p class="desc">
+                                Our team is loaded with highly experienced professionals of both customer dealing andvehicle
+                                handling.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -93,9 +111,11 @@
                             </div>
                         </div>
                         <div class="image-box">
-                            <img class="p-z-idex" src="{{ asset('frontend/images/about/ab-1.jpg') }}" alt="Image" />
+                            <img class="p-z-idex" src="{{ asset('frontend/images/about/resize 410-630.jpg') }}"
+                                alt="Image" />
                         </div>
-                        <img class="group-1 p-z-idex" src="{{ asset('frontend/images/about/ab-2.jpg') }}" alt="Image" />
+                        <img class="group-1 p-z-idex"
+                            src="{{ asset('frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}" alt="Image" />
                         <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}" alt="Image" />
                     </div>
                 </div>
@@ -136,8 +156,7 @@
     </section>
     <!--=========== Cta Section End =========-->
 
-    <!--========== Team Section Start ==============-->
-    <section class="tj-team-section-three">
+    {{-- <section class="tj-team-section-three">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -240,8 +259,61 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+    <!--=========== Service Section Start =========-->
+    <section class="tj-service-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape"> What We Do</span>
+                        <h2 class="title">Logistic & Transport</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
+                        <div class="icon-box">
+                            <i class="flaticon-air-freight"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4><a class="title-link" href="service-details.html"> VEHICLE TRANSPORTATION</a></h4>
+                            <p>Long established fact that reader will be distracted by the</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
+                        <div class="icon-box">
+                            <i class="flaticon-cargo-ship-1"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4>
+                                <a class="title-link" href="service-details.html"> HEAVY TRANSPORTATION</a>
+                            </h4>
+                            <p>Long established fact that reader will be distracted by the</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
+                        <div class="icon-box">
+                            <i class="flaticon-delivery-van"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4><a class="title-link" href="service-details.html"> FREIGHT TRANSPORTATION</a></h4>
+                            <p>Long established fact that reader will be distracted by the</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!--========== Team Section End ==============-->
+    <!--=========== Service Section End =========-->
 
     <!--=========== Testimonial Section Start =========-->
     <section class="tj-testimonial-section tj-testimonial-page">
@@ -372,6 +444,75 @@
         </div>
     </section>
     <!--========== Faq Section End ==============-->
+
+    <!--=========== Blog Section Start =========-->
+    <section class="tj-blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="tj-section-heading text-center">
+                    <span class="sub-title active-shape"> Latest News</span>
+                    <h2 class="title">Latest News & Blog</h2>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ($blogs as $blog)
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="tj-blog-item">
+                            <div class="tj-blog-image">
+                                <a
+                                    @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
+                                    <img src="{{ !is_null($blog->post_image) ? $blog->post_image : '' }}"
+                                        alt="Blog" /></a>
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-meta">
+                                    <div class="meta-date">
+                                        <ul class="list-gap">
+                                            <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</li>
+                                            <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('M') }}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="meta-list">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-light fa-user"></i><a href="#">
+                                                    {{-- {{ $blog->user->name }}</a></li> --}}
+                                                    {{ !is_null($blog->user->name) ? $blog->user->name : '' }}</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="blog-text-box">
+                                    <div class="blog-header">
+                                        <h4>
+                                            <a class="title-link"
+                                                @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
+                                                {{-- {{ $blog->post_name }} --}}
+                                                {{-- {{ Illuminate\Support\Str::limit($blog->post_name, 20, '...') }} --}}
+                                                {{ !is_null($blog->post_name) ? Illuminate\Support\Str::limit($blog->post_name, 20, '...') : '' }}
+                                            </a>
+                                        </h4>
+                                        {{-- <p>
+                                        {!! Illuminate\Support\Str::limit($blog->post_description, 200, '...') !!}
+                                        </p> --}}
+                                    </div>
+                                    <div class="blog-button">
+                                        <ul class="list-gap">
+                                            <li>
+                                                <a
+                                                    @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
+                                                    Read More <i class="fa-regular fa-arrow-right"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <!--=========== Blog Section End =========-->
 
     <!--=========== Newsletter Section Start =========-->
     @include('partials.newsletter')
