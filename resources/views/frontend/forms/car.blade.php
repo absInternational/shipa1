@@ -1,31 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <style>
-        .suggestionsTwo {
-            background: #fff;
-            font-size: 14px;
-            margin-top: -2px;
-            padding-bottom: 20px;
-            list-style: none;
-            line-height: 28px;
-            padding-left: 14px;
-            display: none;
-        }
 
-        .suggestionsTwo li {
-            cursor: pointer;
-        }
-
-        .suggestionsTwo li:hover {
-            color: #8fc445;
-        }
-
-        .image_input {
-            padding: 0px !important;
-            padding-left: 10px !important;
-        }
-    </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -52,7 +28,7 @@
     <!--========== breadcrumb End ==============-->
 
     <section class="tj-choose-us-section">
-        <div class="container">
+        <div class="container-flude">
             <div class="row">
                 @if (session('success'))
                     <div class="alert alert-success">
@@ -64,8 +40,8 @@
                         {{ session('error') }}
                     </div>
                 @endif
-                <div class="col-lg-8" data-sal="slide-down" data-sal-duration="800">
-                    <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
+                <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
+                    <div class="tj-input-form" data-bg-image="">
                         <h4 class="title">Instant Car Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
@@ -81,17 +57,8 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-                            <div class="form-check">
-                                <input class="form-check-input" checked type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" value="1" />
-                                <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                    Auction?</label>
-                            </div>
-                            <div class="input-form div-link">
-                                <label class="d-block"> Enter Link:</label>
-                                <input class="form-control" type="url" id="link" name="link"
-                                    placeholder="Enter Link" />
-                            </div>
+
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -118,64 +85,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open</option>
-                                            <option value="Enclosed">Enclosed</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-check-input" type="checkbox" id="modification" name="modification"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="modification"> Modification</label>
-                            </div>
-                            <div class="input-form div-modify_info" style="display: none;">
-                                <label class="d-block"> Modification Information:</label>
-                                <input class="" type="text" id="c" name="modify_info"
-                                    placeholder="Enter Modification Information" />
-                            </div>
-                            <div class="input-form mt-3">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
-                                    <h4 class="text-white">Vehicle Information</h4>
+                                    <h4 class="text-white mb-0">Vehicle Information</h4>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
@@ -212,12 +125,98 @@
                                 </div>
                             </div>
 
-                            <a class="text-primary" id="addVehicleBtn"
-                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                Vehicle</a>
+                            <a class="add-car" id="addVehicleBtn">
+                                <i class="fa fa-plus"> Add
+                                    Vehicle </i>
+                            </a>
 
                             <div id="vehicles-container">
                             </div>
+
+
+
+                            <div class="row mt-0">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" style="line-height:23px;">
+                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                        <select class="form-control" id="trailer_type" name="trailer_type">
+                                            <option value="Open" selected>Open</option>
+                                            <option value="Enclosed">Enclosed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="form-control" id="condition" name="condition">
+                                            <option value="Running" selected>Running</option>
+                                            <option value="Non Running">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-form mt-3">
+                                <label class="d-block text-white"> Image:</label>
+                                <input class="form-control image_input" type="file" id="image" name="image"
+                                    placeholder="Upload File" />
+                            </div>
+
+                            <div class="row">
+                                <di class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-check-input " type="checkbox" id="modification"
+                                            name="modification" value="1" />
+                                        <label class="form-check-label text-white" for="modification">
+                                            Modification</label>
+                                    </div>
+
+                                    <div class="input-form div-modify_info" style="display: none;">
+                                        <label class="d-block"> Modification Information:</label>
+                                        <input class="" type="text" id="c" name="modify_info"
+                                            placeholder="Enter Modification Information" />
+                                    </div>
+                                </di>
+                                <di class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                            name="available_at_auction" value="1" />
+                                        <label class="form-check-label text-white" for="available_at_auction"> Available
+                                            at
+                                            Auction?</label>
+                                    </div>
+
+                                    <div class="input-form div-link" style="display: none;">
+                                        <label class="d-block"> Enter Link:</label>
+                                        <input class="" type="url" id="link" name="link"
+                                            placeholder="Enter Link" />
+                                    </div>
+                                </di>
+                            </div>
+
+
+
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -272,7 +271,7 @@
                 <!-- Options filled by JavaScript -->
                 </select>
                 <!-- Bin icon for deleting vehicle -->
-                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red;"></i></span>
+                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
                 </div>
                 </div>
                 </div>
@@ -325,6 +324,8 @@
             }
         });
     </script>
+
+
 
     <script>
         $(document).ready(function() {
