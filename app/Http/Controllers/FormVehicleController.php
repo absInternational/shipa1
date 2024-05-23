@@ -60,4 +60,16 @@ class FormVehicleController extends Controller
     {
         return view('frontend.forms.rv');
     }
+
+    public function quoteForm()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+
+        return view('frontend.forms.quote_form', compact('makes'));
+    }
 }
