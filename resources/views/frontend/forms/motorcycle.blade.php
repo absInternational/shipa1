@@ -2,29 +2,121 @@
 
 @section('content')
     <style>
-        .suggestionsTwo {
-            background: #fff;
+        .lab-cos{
+        font-size: 15px;
+    font-weight: 500;
+    color: var(--tj-white-color);
+    margin-bottom: 10px;
+    }
+
+
+    .input-container {
+    height: 34px;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 8px 0px 8px 0px;
+    width: fit-content;
+
+        }
+
+        .input-container1 {
+    height: 34px;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 8px 0px 8px 0px;
+    width: fit-content;
+
+        }
+
+        .input-field {
+            width: 50px;
+            padding: 5px;
             font-size: 14px;
-            margin-top: -2px;
-            padding-bottom: 20px;
-            list-style: none;
-            line-height: 28px;
-            padding-left: 14px;
-            display: none;
+            border: none;
+            outline: none;
+        }
+        .input-field-1 {
+            width: 65px;
+            padding: 0px 0px 0px 10px;
+            font-size: 14px;
+            border: none;
+            outline: none;
         }
 
-        .suggestionsTwo li {
-            cursor: pointer;
+        .separator {
+            margin: 0px 0px 0px 0px;
+            font-size: 14px;
         }
 
-        .suggestionsTwo li:hover {
-            color: #8fc445;
+        .separators {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
         }
 
-        .image_input {
-            padding: 0px !important;
-            padding-left: 10px !important;
+        .separators-w {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
         }
+
+        .input-container input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .input-container input[type="number"]::-webkit-outer-spin-button,
+        .input-container input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+      .form-wrap {
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .form-label-outside {
+        color: white;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+      }
+      .input-container input {
+        border: none;
+        /* border-bottom: 1px solid #ccc; */
+        padding: 5px 0px 5px 0px ;
+        font-size: 14px;
+        width: 38px;
+        text-align: center;
+        /* margin-right: 5px; */
+      }
+      .input-container .placeholders {
+        /* color:white; */
+        position: relative;
+    right: 72px;
+        color: black;
+        display: inline-block;
+        width: auto;
+        
+        padding: 0px 8px;
+        /* background: white; */
+      }
+      
+      .err-style {
+        color: red;
+      }
+      .tj-input-form .input-form label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--tj-white-color);
+    margin-bottom: 10px;
+}
     </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -81,17 +173,7 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-                            <div class="form-check">
-                                <input class="form-check-input" checked type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" value="1" />
-                                <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                    Auction?</label>
-                            </div>
-                            <div class="input-form div-link mt-3">
-                                <label class="d-block"> Enter Link:</label>
-                                <input class="form-control" type="url" id="link" name="link"
-                                    placeholder="Enter Link" />
-                            </div>
+                           
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -118,61 +200,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open</option>
-                                            <option value="Enclosed">Enclosed</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-check-input" type="checkbox" id="modification" name="modification"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="modification"> Modification</label>
-                            </div>
-                            <div class="input-form div-modify_info" style="display: none;">
-                                <label class="d-block"> Modification Information:</label>
-                                <input class="" type="text" id="c" name="modify_info"
-                                    placeholder="Enter Modification Information" />
-                            </div>
-                            <div class="input-form mt-3">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white">Vehicle Information</h4>
@@ -207,12 +235,106 @@
                                 </div>
                             </div>
 
-                            <a class="text-primary" id="addVehicleBtn"
-                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                            <a class="add-car" id="addVehicleBtn"
+                                ><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
                             <div id="vehicles-container">
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                        <select class=" " id="trailer_type" name="trailer_type">
+                                            <option value="Open" selected>Open</option>
+                                            <option value="Enclosed">Enclosed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class=" " id="condition" name="condition">
+                                            <option value="Running" selected>Running</option>
+                                            <option value="Non Running">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input class="form-check-input" type="checkbox" id="modification" name="modification"
+                                    value="1" />
+                                <label class="form-check-label text-white" for="modification"> Modification</label>
+                            </div>
+                            <div class="input-form div-modify_info" style="display: none;">
+                                <label class="d-block"> Modification Information:</label>
+                                <input class="" type="text" id="c" name="modify_info"
+                                    placeholder="Enter Modification Information" />
+                            </div>
+                            <div class="input-form mt-3">
+                                <label class="d-block text-white"> Image:</label>
+                                <input class="  image_input" type="file" id="image" name="image"
+                                    placeholder="Upload File" />
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+
+                            <div class="row">
+                                <di class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-check-input " type="checkbox" id="modification"
+                                            name="modification" value="1" />
+                                        <label class="form-check-label text-white" for="modification">
+                                            Modification</label>
+                                    </div>
+
+                                    <div class="input-form div-modify_info" style="display: none;">
+                                        <label class="d-block"> Modification Information:</label>
+                                        <input class="" type="text" id="c" name="modify_info"
+                                            placeholder="Enter Modification Information" />
+                                    </div>
+                                </di>
+                                <di class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                            name="available_at_auction" value="1" />
+                                        <label class="form-check-label text-white" for="available_at_auction"> Available
+                                            at
+                                            Auction?</label>
+                                    </div>
+
+                                    <div class="input-form div-link" style="display: none;">
+                                        <label class="d-block"> Enter Link:</label>
+                                        <input class="" type="url" id="link" name="link"
+                                            placeholder="Enter Link" />
+                                    </div>
+                                </di>
+                            </div>
+
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>

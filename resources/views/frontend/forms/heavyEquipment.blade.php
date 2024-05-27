@@ -1,7 +1,125 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+
     <style>
+
+.lab-cos{
+        font-size: 15px;
+    font-weight: 500;
+    color: var(--tj-white-color);
+    margin-bottom: 10px;
+    }
+
+
+    .input-container {
+    height: 34px;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 8px 0px 8px 0px;
+    width: fit-content;
+
+        }
+
+        .input-container1 {
+    height: 34px;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 8px 0px 8px 0px;
+    width: fit-content;
+
+        }
+
+        .input-field {
+            width: 50px;
+            padding: 5px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+        }
+        .input-field-1 {
+            width: 65px;
+            padding: 0px 0px 0px 10px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+        }
+
+        .separator {
+            margin: 0px 0px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators-w {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
+        }
+
+        .input-container input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .input-container input[type="number"]::-webkit-outer-spin-button,
+        .input-container input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+      .form-wrap {
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .form-label-outside {
+        color: white;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+      }
+      .input-container input {
+        border: none;
+        /* border-bottom: 1px solid #ccc; */
+        padding: 5px 0px 5px 0px ;
+        font-size: 14px;
+        width: 38px;
+        text-align: center;
+        /* margin-right: 5px; */
+      }
+      .input-container .placeholders {
+        /* color:white; */
+        position: relative;
+    right: 72px;
+        color: black;
+        display: inline-block;
+        width: auto;
+        
+        padding: 0px 8px;
+        /* background: white; */
+      }
+      
+      .err-style {
+        color: red;
+      }
+      .tj-input-form .input-form label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--tj-white-color);
+    margin-bottom: 10px;
+}
+
         .suggestionsTwo {
             background: #fff;
             font-size: 14px;
@@ -65,8 +183,8 @@
                     </div>
                 @endif
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
-                    <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
-                        <h4 class="title">Instant Heavy Shipping Quote!</h4>
+                    <div class="tj-input-form" data-bg-image="">
+                        <h4 class="title text-center">Instant Heavy Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -81,43 +199,6 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="heavy" hidden>
-
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="input-form">
-                                        <label for="category">Category</label>
-                                        <select class="form-control" id="category" name="category">
-                                            <option value="" disabled selected>Select</option>
-                                            @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                            @endforeach
-                                        </select>
-                                        <input type="text" class="form-control" id="otherCategoryInput" name="category"
-                                            disabled style="display: none;" placeholder="Specify Category">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="input-form" id="subcategory-box">
-                                        <label for="subcategory">Subcategory</label>
-                                        <select class="form-control" id="subcategory" name="subcategory">
-                                            <option value="" disabled selected>Select</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div><br>
-
-                            <div class="form-check">
-                                <input class="form-check-input" checked type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" value="1" />
-                                <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                    Auction?</label>
-                            </div>
-
-                            <div class="input-form div-link mt-3">
-                                <label class="d-block"> Enter Link:</label>
-                                <input class="form-control" type="url" id="link" name="link"
-                                    placeholder="Enter Link" />
-                            </div>
 
                             <div class="row">
                                 <div class="col-md-4">
@@ -142,173 +223,6 @@
                                         <input type="email" id="email" name="email" placeholder="Your Email Address"
                                             required="" />
                                         <small id="errEmail" class="err-style"></small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="RGN" selected>RGN</option>
-                                            <option value="VAN (V)">VAN (V)</option>
-                                            <option value="FLATBED (F)">FLATBED (F)</option>
-                                            <option value="STEP DECK (SD)">STEP DECK (SD)</option>
-                                            <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
-                                            <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                                            <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
-                                            <option value="TRUCK (T)">TRUCK (T)</option>
-                                            <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
-                                            <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
-                                            <option value="LOWBOY (LB)">LOWBOY (LB)</option>
-                                            <option value="ENDUMP (ED)">ENDUMP (ED)</option>
-                                            <option value="LANDOLL (LD)">LANDOLL (LD)</option>
-                                            <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                            <option value="20ft container">20ft container</option>
-                                            <option value="40ft container">40ft container</option>
-                                            <option value="48ft container">48ft container</option>
-                                            <option value="53ft container">53ft container</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mt-3">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="load_type" class="text-white">Load Type</label>
-                                        <select class="form-control" id="load_type" name="load_type">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
-                                            <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="load_method" class="text-white">Load Method</label>
-                                        <select class="form-control" id="load_method" name="load_method">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK">LOADING DOCK</option>
-                                            <option value="CRANE">CRANE</option>
-                                            <option value="FORKLIFT">FORKLIFT</option>
-                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="unload_method" class="text-white">Unload Method</label>
-                                        <select class="form-control" id="unload_method" name="unload_method">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK">LOADING DOCK</option>
-                                            <option value="CRANE">CRANE</option>
-                                            <option value="FORKLIFT">FORKLIFT</option>
-                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="input-form mt-3">
-                                <label class="d-block" class="text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Length (Ft.)</label>
-                                        <input type="number" id="" name="length_ft" placeholder=""
-                                            required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Length (In.)</label>
-                                        <input type="number" id="" name="length_in" placeholder=""
-                                            required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Width (Ft.)</label>
-                                        <input type="number" id="" name="width_ft" placeholder=""
-                                            required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Width (In.)</label>
-                                        <input type="number" id="" name="width_in" placeholder=""
-                                            required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Height (Ft.)</label>
-                                        <input type="number" id="" name="height_ft" placeholder=""
-                                            required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Height (In.)</label>
-                                        <input type="number" id="" name="height_in" placeholder=""
-                                            required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Weight (Lbs.)</label>
-                                        <input type="number" id="" name="weight" placeholder=""
-                                            required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-
                                     </div>
                                 </div>
                             </div>
@@ -347,11 +261,217 @@
                                 </div>
                             </div>
 
-                            <a class="text-primary" id="addVehicleBtn"
-                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
                             <div id="vehicles-container">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-form">
+                                        <label for="category">Category</label>
+                                        <select class="" id="category" name="category">
+                                            <option value="" disabled selected>Select</option>
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            @endforeach
+                                        </select>
+                                        <input type="text" class="form-control" id="otherCategoryInput" name="category"
+                                            disabled style="display: none;" placeholder="Specify Category">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-form" id="subcategory-box">
+                                        <label for="subcategory">Subcategory</label>
+                                        <select class="" id="subcategory" name="subcategory">
+                                            <option value="" disabled selected>Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><br>
+
+                            
+
+                            
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                        <select class="" id="trailer_type" name="trailer_type">
+                                            <option value="RGN" selected>RGN</option>
+                                            <option value="VAN (V)">VAN (V)</option>
+                                            <option value="FLATBED (F)">FLATBED (F)</option>
+                                            <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                            <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
+                                            <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
+                                            <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                            <option value="TRUCK (T)">TRUCK (T)</option>
+                                            <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
+                                            <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                            <option value="LOWBOY (LB)">LOWBOY (LB)</option>
+                                            <option value="ENDUMP (ED)">ENDUMP (ED)</option>
+                                            <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                                            <option value="PARTIAL (PT)">PARTIAL (PT)</option>
+                                            <option value="20ft container">20ft container</option>
+                                            <option value="40ft container">40ft container</option>
+                                            <option value="48ft container">48ft container</option>
+                                            <option value="53ft container">53ft container</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="" id="condition" name="condition">
+                                            <option value="Running" selected>Running</option>
+                                            <option value="Non Running">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="load_type" class="text-white">Load Type</label>
+                                        <select class="" id="load_type" name="load_type">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
+                                            <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="load_method" class="text-white">Load Method</label>
+                                        <select class="" id="load_method" name="load_method">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="unload_method" class="text-white">Unload Method</label>
+                                        <select class="" id="unload_method" name="unload_method">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            
+
+                            
+
+                            <div class="row mb-3">
+
+
+                        
+
+                        <div class="col-md-3">
+
+                            <label class="lab-cos">Length</label>
+                            <div class="input-container">
+                                <input type="number" id="feet-input" class="input-field" placeholder=""
+                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                <span class="separator">(Ft.)</span>
+                                <input type="number" id="inches-input" class="input-field" placeholder=""
+                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                <span class="separators">(In.)</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+
+                           <label class="lab-cos">Width</label>
+                           <div class="input-container">
+                               <input type="number" id="feet-input1" class="input-field" placeholder=""
+                                   min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                               <span class="separator">(Ft.)</span>
+                               <input type="number" id="inches-input1" class="input-field" placeholder=""
+                                   min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                               <span class="separators">(In.)</span>
+                           </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+
+                           <label class="lab-cos">Height</label>
+                           <div class="input-container">
+                               <input type="number" id="feet-input2" class="input-field" placeholder=""
+                                   min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                               <span class="separator">(Ft.)</span>
+                               <input type="number" id="inches-input2" class="input-field" placeholder=""
+                                   min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                               <span class="separators">(In.)</span>
+                           </div>
+                        </div>
+
+                        <div class="col-md-3">
+
+                           <label class="lab-cos">Weight</label>
+                           <div class="input-container1">
+                               <input type="" id="feet-input" class="input-field-1" placeholder=""
+                                   min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                               <span class="separators-w">(Lbs.)</span>
+                               
+                           </div>
+                        </div>
+                            </div>
+
+                            <div class="input-form mt-3">
+                                <label class="d-block" class="text-white"> Image:</label>
+                                <input class="form-control image_input" type="file" id="image" name="image"
+                                    placeholder="Upload File" />
+                            </div>
+
+
+                           
+
+                            <div class="form-check">
+                                <input class="form-check-input" checked type="checkbox" id="available_at_auction"
+                                    name="available_at_auction" value="1" />
+                                <label class="form-check-label text-white" for="available_at_auction"> Available at
+                                    Auction?</label>
+                            </div>
+
+                            <div class="input-form div-link mt-3">
+                                <label class="d-block"> Enter Link:</label>
+                                <input class="" type="url" id="link" name="link"
+                                    placeholder="Enter Link" />
                             </div>
 
                             <div class="tj-theme-button mt-3">
@@ -359,7 +479,7 @@
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                 </button>
                             </div>
-                            
+
                         </form>
                     </div>
                 </div>
