@@ -3703,8 +3703,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     14. Feature CSS
 ------------------------------------ */
 .tj-choose-us-section {
-    background-color: #ffffff;
-    background-image: url(/frontend/images/slider/home-slider-1.webp);
+    background-color: #000000;
+    background-image: url(https://blog.shipa1.daydispatch.com/public/frontend/images/slider/home-slider-1.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
