@@ -462,8 +462,8 @@
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <div class="price__cta-btn text-center">
-                                                <button class="tj-submit-btn" type="" id="step1_next"
-                                                    value="submit">
+                                                <button class="tj-submit-btn" type="button" id="step1_next"
+                                                    >
                                                     Next <i class="fa-light fa-arrow-right"></i>
                                                 </button>
                                             </div>
@@ -503,7 +503,7 @@
 
                                         <div class="col-xl-6 col-lg-6">
                                             <div class="price__cta-btn float-end">
-                                                <button class="tj-submit-btn" id="step2_next" value="">
+                                                <button class="tj-submit-btn" type="button" id="step2_next">
                                                     Next <i class="fa-light fa-arrow-right"></i>
                                                 </button>
                                             </div>
@@ -551,18 +551,18 @@
                                                 <button class="tj-submit-btn previous" id="step3_previous">
                                                     Previous <i class="fa-light fa-arrow-right"></i>
                                                 </button>
-                                                <!-- <button class="btn btn-secondary" id="step3_previous">Previous</button> -->
+                                               
                                             </div>
                                         </div>
 
 
                                         <div class="col-xl-6 col-lg-6">
                                             <div class="price__cta-btn float-end">
-                                                <button class="tj-submit-btn" id="submit_instant_code" type="submit"
+                                                <button class="tj-submit-btn" type="submit" id="submit_instant_code" 
                                                     value="submit">
                                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                                 </button>
-                                                <!-- <button type="submit" id="submit_instant_code" class="btn btn-primary">Submit Now</button> -->
+                                               
                                             </div>
                                         </div>
                                     </div>
