@@ -430,144 +430,145 @@
 
 
 
-                        <div class="container mt-2">
-                            <!-- Step 1: Moving From/To -->
-                            <div class="route_quote_info" id="step1">
-                                <div class="row">
-                                    <h4 class="title text-center">Quote Request!</h4>
-                                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
-                                    <div class="col-xl-12 col-lg-12 mb-4">
-                                        <h6 class="text-white">Moving From</h6>
-                                        <label class="text-white mb-2">Where Are You Moving From?</label>
-                                        <div class="single-input-field">
-                                            <input class="form-control" type="text" id="pickup-location"
-                                                placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                            <ul class="suggestions suggestionsTwo"></ul>
+                            <div class="container mt-2">
+                                <!-- Step 1: Moving From/To -->
+                                <div class="route_quote_info" id="step1">
+                                    <div class="row">
+                                        <h4 class="title text-center">Quote Request!</h4>
+                                        <div class="col-xl-12 col-lg-12 mb-4">
+                                            <h6 class="text-white">Moving From</h6>
+                                            <label class="text-white mb-2">Where Are You Moving From?</label>
+                                            <div class="single-input-field">
+                                                <input class="form-control" type="text" id="pickup-location"
+                                                    placeholder="Enter City or ZipCode" name="From_ZipCode" required>
+                                                <ul class="suggestions suggestionsTwo"></ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-12 col-lg-12 mb-4">
+                                            <h6 class="text-white">Moving To</h6>
+                                            <label class="text-white mb-2">Where Are You Moving To?</label>
+                                            <div class="single-input-field">
+                                                <input class="form-control" type="text" id="delivery-location"
+                                                    placeholder="Enter City or ZipCode" name="To_ZipCode" required>
+                                                <ul class="suggestions suggestionsTwo"></ul>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <div class="col-xl-12 col-lg-12 mb-4">
-                                        <h6 class="text-white">Moving To</h6>
-                                        <label class="text-white mb-2">Where Are You Moving To?</label>
-                                        <div class="single-input-field">
-                                            <input class="form-control" type="text" id="delivery-location"
-                                                placeholder="Enter City or ZipCode" name="To_ZipCode" required>
-                                            <ul class="suggestions suggestionsTwo"></ul>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="price__cta-btn text-center">
+                                                <button class="tj-submit-btn" type="" id="step1_next"
+                                                    value="submit">
+                                                    Next <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="price__cta-btn text-center">
-                                            <button class="tj-submit-btn" type="" id="step1_next" value="submit">
-                                                Next <i class="fa-light fa-arrow-right"></i>
-                                            </button>
+                                <!-- Step 2: Vehicle Information -->
+                                <div class="vehicle_quote_info" id="step2" style="display: none;">
+                                    <div class="row">
+                                        <h4 class="title text-center">VEHICLE INFORMATION</h4>
+
+                                        <div class="col-xl-12 col-lg-12 mb-3">
+                                            <label class="text-white mb-2">Select Vehicle</label>
+                                            <div class="single-input-field">
+                                                <select class="form-control" id="select_vehicle" required>
+                                                    <option selected value="">Select Type</option>
+                                                    <option value="Car">Car</option>
+                                                    <option value="MotorCycle">MotorCycle</option>
+                                                    <option value="Heavy Equipment">Heavy Equipment</option>
+                                                    <option value="Dryvan">Freight shipping</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div id="vehicle_specific_fields"></div>
+                                    </div>
+                                    <div class="row mt-2">
+
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn">
+                                                <button class="tj-submit-btn previous" id="step2_previous">
+                                                    Previous <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn float-end">
+                                                <button class="tj-submit-btn" id="step2_next" value="">
+                                                    Next <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Step 3: Customer Information -->
+                                <div class="basic_quote_info" id="step3" style="display: none;">
+                                    <div class="row mb-3">
+                                        <h4 class="text-center text-white">Customer Information</h4>
+
+
+
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> Your Name:</label>
+                                                <input class="form-control" name="Custo_Name" type="text"
+                                                    placeholder="Customer Name">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> Phone:</label>
+                                                <input class="form-control" name="Custo_Phone" type="tel"
+                                                    placeholder="Customer Phone">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> Email Address:</label>
+                                                <input class="form-control" name="Custo_Email" type="email"
+                                                    placeholder="Email address">
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="row">
 
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn">
+                                                <button class="tj-submit-btn previous" id="step3_previous">
+                                                    Previous <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                                <!-- <button class="btn btn-secondary" id="step3_previous">Previous</button> -->
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn float-end">
+                                                <button class="tj-submit-btn" id="submit_instant_code" type="submit"
+                                                    value="submit">
+                                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                                <!-- <button type="submit" id="submit_instant_code" class="btn btn-primary">Submit Now</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Step 2: Vehicle Information -->
-                            <div class="vehicle_quote_info" id="step2" style="display: none;">
-                                <div class="row">
-                                    <h4 class="title text-center">VEHICLE INFORMATION</h4>
-
-                                    <div class="col-xl-12 col-lg-12 mb-3">
-                                        <label class="text-white mb-2">Select Vehicle</label>
-                                        <div class="single-input-field">
-                                            <select class="form-control" id="select_vehicle" required>
-                                                <option selected value="">Select Type</option>
-                                                <option value="Car">Car</option>
-                                                <option value="MotorCycle">MotorCycle</option>
-                                                <option value="Heavy Equipment">Heavy Equipment</option>
-                                                <option value="Dryvan">Freight shipping</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div id="vehicle_specific_fields"></div>
-                                </div>
-                                <div class="row mt-2">
-
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step2_previous">
-                                                Previous <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn float-end">
-                                            <button class="tj-submit-btn"  id="step2_next" value="submit">
-                                                Next <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!-- Step 3: Customer Information -->
-                            <div class="basic_quote_info" id="step3" style="display: none;">
-                                <div class="row mb-3">
-                                    <h4 class="text-center text-white">Customer Information</h4>
-
-
-
-                                    <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white"> Your Name:</label>
-                                            <input class="form-control" name="Custo_Name" type="text"
-                                                placeholder="Customer Name">
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white"> Phone:</label>
-                                            <input class="form-control" name="Custo_Phone" type="tel"
-                                                placeholder="Customer Phone">
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white"> Email Address:</label>
-                                            <input class="form-control" name="Custo_Email" type="email"
-                                                placeholder="Email address">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step3_previous">
-                                                Previous <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                            <!-- <button class="btn btn-secondary" id="step3_previous">Previous</button> -->
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn float-end">
-                                            <button class="tj-submit-btn" id="submit_instant_code" type="submit"
-                                                value="submit">
-                                                Calculate Price <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                            <!-- <button type="submit" id="submit_instant_code" class="btn btn-primary">Submit Now</button> -->
-                                        </div>
-                                </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1333,7 +1334,7 @@
                             </div>`;
                         }
                         // below code end
-                        
+
                         $('#vehicle_specific_fields').append(specificFields);
                     },
                     error: function(xhr) {
