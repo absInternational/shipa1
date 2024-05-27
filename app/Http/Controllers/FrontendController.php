@@ -9,14 +9,21 @@ use App\Models\Blog;
 use App\Models\Service;
 use App\Models\NewsletterSubscribers;
 use App\Models\ServiceCategory;
+use App\Models\VehicleName;
 
 class FrontendController extends Controller
 {
     public function index()
     {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $blogs = Blog::where('status', 1)->take(3)->get();
         $reviews = Review::get();
-        return view('frontend.index', compact('reviews', 'blogs'));
+        return view('frontend.index', compact('reviews', 'blogs', 'makes'));
     }
 
     public function blogs()

@@ -103,4 +103,21 @@ class MainController extends Controller
 
         return $subcategories;
     }
+
+    public function partialForm(Request $request)
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        // dd($request->toArray());
+
+        $vehicleType = $request->vehicleType;
+
+        // if ($request->vehicleType == 'Car') {
+            return view('partials.forms.car', compact('makes', 'vehicleType'));
+        // }
+    }
 }

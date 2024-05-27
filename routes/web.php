@@ -98,6 +98,9 @@ Route::get('/get-models', [MainController::class, 'getmodel'])->name('get.models
 // get models on basis of year n make
 Route::post('/get-zipcodes', [MainController::class, 'get_zip'])->name('get.zipcodes');
 
+// get partial forms for index
+Route::get('/get-partial-form', [MainController::class, 'partialForm'])->name('get.partial.form');
+
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {
 
