@@ -91,10 +91,10 @@
                                     <li class="current-menu-item menu-item-has-children">
                                         <a href="{{ route('services') }}"
                                             class="{{ Request::routeIs('services*') ? ' active' : '' }}"> Services</a>
-                                        <ul class="list-gap sub-menu-list" style="width: 30rem">
+                                        <ul class="list-gap sub-menu-list" style="width: 50rem">
                                             <div class="row">
                                                 @foreach ($categories as $category)
-                                                    <div class="col-sm-4">
+                                                    <div class="col-sm-3">
                                                         <a class=" mb-3"
                                                             href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a>
                                                         @foreach ($category->services as $service)
