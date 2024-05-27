@@ -17,4 +17,9 @@ class ServiceCategory extends Model
     ];
 
     protected $dates = ['deleted_at'];
+    
+    public function services()
+    {
+        return $this->hasMany(Service::class, 'category_id');
+    }
 }

@@ -85,17 +85,26 @@
                                         <a href="{{ route('services') }}"> Service</a>
                                     </li> --}}
                                     @php
-                                        $categories = \App\Models\ServiceCategory::get();
+                                        $categories = \App\Models\ServiceCategory::has('services')->get();
+                                        // dd($categories->toArray());
                                     @endphp
                                     <li class="current-menu-item menu-item-has-children">
                                         <a href="{{ route('services') }}"
                                             class="{{ Request::routeIs('services*') ? ' active' : '' }}"> Services</a>
-                                        <ul class="list-gap sub-menu-list">
-                                            @foreach ($categories as $category)
-                                                <li><a
-                                                        href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a>
-                                                </li>
-                                            @endforeach
+                                        <ul class="list-gap sub-menu-list" style="width: 30rem">
+                                            <div class="row">
+                                                @foreach ($categories as $category)
+                                                    <div class="col-sm-4">
+                                                        <a class=" mb-3"
+                                                            href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a>
+                                                        @foreach ($category->services as $service)
+                                                            <li>
+                                                                <a href="#">{{ $service->name }}</a>
+                                                            </li>
+                                                        @endforeach
+                                                    </div>
+                                                @endforeach
+                                            </div>
                                         </ul>
                                     </li>
                                     <li class="ab-gap">
@@ -105,7 +114,8 @@
                                     </li>
                                     <li class="ab-gap">
                                         <a href="{{ route('blogs') }}"
-                                            class="{{ Request::routeIs('blogs') ? ' active' : '' }}"> Blog</a>
+                                            class="{{ Request::routeIs('blogs') ? ' active' : '' }}">
+                                            Blog</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('contactUs') }}"
