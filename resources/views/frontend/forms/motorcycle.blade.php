@@ -157,7 +157,7 @@
                     </div>
                 @endif
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
-                    <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
+                    <div class="tj-input-form" data-bg-image="">
                         <h4 class="title">Instant Motorcycle Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
@@ -242,7 +242,7 @@
                             <div id="vehicles-container">
                             </div>
 
-                            <div class="row">
+                            <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
@@ -264,25 +264,12 @@
                             </div>
 
 
-                            <div class="form-group">
-                                <input class="form-check-input" type="checkbox" id="modification" name="modification"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="modification"> Modification</label>
-                            </div>
-                            <div class="input-form div-modify_info" style="display: none;">
-                                <label class="d-block"> Modification Information:</label>
-                                <input class="" type="text" id="c" name="modify_info"
-                                    placeholder="Enter Modification Information" />
-                            </div>
-                            <div class="input-form mt-3">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="  image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div>
+                           
+                            
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
-                                        <label class="d-block"> Pickup Location:</label>
+                                        <label class="d-block mb-0"> Pickup Location:</label>
                                         <input type="text" id="pickup-location" name="origin"
                                             placeholder="Ex: 90005 Or Los Angeles" required="" />
                                         <small id="errOLoc" class="err-loc"></small>
@@ -291,7 +278,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
+                                        <label class="d-block  mb-0"> Delivery Location:</label>
                                         <input type="text" id="delivery-location" name="destination"
                                             placeholder="Ex: 90005 Or Los Angeles" required="" />
                                         <small id="errDLoc" class="err-loc"></small>
@@ -300,7 +287,11 @@
                                 </div>
                             </div>
 
-
+                            <div class="input-form">
+                                <label class="d-block text-white"> Image:</label>
+                                <input class="form-control  image_input" type="file" id="image" name="image"
+                                    placeholder="Upload File" />
+                            </div>
                             
 
                             <div class="row">

@@ -435,7 +435,10 @@
                             <div class="route_quote_info" id="step1">
                                 <div class="row">
                                     <h4 class="title text-center">Quote Request!</h4>
-
+                                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                            enctype="multipart/form-data">
+                            @csrf
                                     <div class="col-xl-12 col-lg-12 mb-4">
                                         <h6 class="text-white">Moving From</h6>
                                         <label class="text-white mb-2">Where Are You Moving From?</label>
@@ -459,7 +462,7 @@
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="price__cta-btn text-center">
-                                            <button class="tj-submit-btn" type="submit" id="step1_next" value="submit">
+                                            <button class="tj-submit-btn" type="" id="step1_next" value="submit">
                                                 Next <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
@@ -499,7 +502,7 @@
 
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn float-end">
-                                            <button class="tj-submit-btn" type="submit" id="step2_next" value="submit">
+                                            <button class="tj-submit-btn"  id="step2_next" value="submit">
                                                 Next <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
@@ -560,6 +563,7 @@
                                             </button>
                                             <!-- <button type="submit" id="submit_instant_code" class="btn btn-primary">Submit Now</button> -->
                                         </div>
+                                </form>
                                     </div>
                                 </div>
                             </div>
