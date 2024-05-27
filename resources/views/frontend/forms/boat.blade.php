@@ -2,6 +2,128 @@
 
 @section('content')
 
+
+<style>
+
+
+
+    .lab-cos{
+        font-size: 15px;
+    font-weight: 500;
+    color: var(--tj-white-color);
+    margin-bottom: 10px;
+    }
+
+
+    .input-container {
+    height: 34px;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 8px 0px 8px 0px;
+    width: fit-content;
+
+        }
+
+        .input-container1 {
+    height: 34px;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 8px 0px 8px 0px;
+    width: fit-content;
+
+        }
+
+        .input-field {
+            width: 50px;
+            padding: 5px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+        }
+        .input-field-1 {
+            width: 65px;
+            padding: 0px 0px 0px 10px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+        }
+
+        .separator {
+            margin: 0px 0px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators-w {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
+        }
+
+        .input-container input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .input-container input[type="number"]::-webkit-outer-spin-button,
+        .input-container input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+      .form-wrap {
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .form-label-outside {
+        color: white;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+      }
+      .input-container input {
+        border: none;
+        /* border-bottom: 1px solid #ccc; */
+        padding: 5px 0px 5px 0px ;
+        font-size: 14px;
+        width: 38px;
+        text-align: center;
+        /* margin-right: 5px; */
+      }
+      .input-container .placeholders {
+        /* color:white; */
+        position: relative;
+    right: 72px;
+        color: black;
+        display: inline-block;
+        width: auto;
+        
+        padding: 0px 8px;
+        /* background: white; */
+      }
+      
+      .err-style {
+        color: red;
+      }
+      .tj-input-form .input-form label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--tj-white-color);
+    margin-bottom: 10px;
+}
+      
+    </style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
@@ -41,7 +163,7 @@
             </div>
             @endif
             <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
-                <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
+                <div class="tj-input-form" data-bg-image="">
                     <h4 class="title">Instant Boat Shipping Quote!</h4>
                     <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom"
                         data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
@@ -65,7 +187,7 @@
 
                         <div class="input-form">
                             <label for="category">Category</label>
-                            <select class="form-control" id="category" name="category">
+                            <select class="" id="category" name="category">
                                 <option value="" disabled selected>Select</option>
                                 <option value="Power Boat">Power Boat</option>
                                 <option value="Sail Boat">Sail Boat</option>
@@ -172,7 +294,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                    <select class="form-control" id="trailer_type" name="trailer_type">
+                                    <select class="" id="trailer_type" name="trailer_type">
                                         <option value="RGN" selected>RGN</option>
                                         <option value="Stepdeck">Stepdeck</option>
                                         <option value="Flatbed">Flatbed</option>
@@ -184,7 +306,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="condition" class="text-white">Condition</label>
-                                    <select class="form-control" id="condition" name="condition">
+                                    <select class="" id="condition" name="condition">
                                         <option value="Running" selected>Running</option>
                                         <option value="Non Running">Non Running</option>
                                     </select>
@@ -192,8 +314,65 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-3">
+                        <div class="row mb-3">
+
+
+                        
+
+                        <div class="col-md-3">
+
+                            <label class="lab-cos">Length</label>
+                            <div class="input-container">
+                                <input type="number" id="feet-input" class="input-field" placeholder=""
+                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                <span class="separator">(Ft.)</span>
+                                <input type="number" id="inches-input" class="input-field" placeholder=""
+                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                <span class="separators">(In.)</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+
+                           <label class="lab-cos">Width</label>
+                           <div class="input-container">
+                               <input type="number" id="feet-input1" class="input-field" placeholder=""
+                                   min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                               <span class="separator">(Ft.)</span>
+                               <input type="number" id="inches-input1" class="input-field" placeholder=""
+                                   min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                               <span class="separators">(In.)</span>
+                           </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+
+                           <label class="lab-cos">Height</label>
+                           <div class="input-container">
+                               <input type="number" id="feet-input2" class="input-field" placeholder=""
+                                   min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                               <span class="separator">(Ft.)</span>
+                               <input type="number" id="inches-input2" class="input-field" placeholder=""
+                                   min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                               <span class="separators">(In.)</span>
+                           </div>
+                        </div>
+
+                        <div class="col-md-3">
+
+                           <label class="lab-cos">Weight</label>
+                           <div class="input-container1">
+                               <input type="" id="feet-input" class="input-field-1" placeholder=""
+                                   min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                               <span class="separators-w">(Lbs.)</span>
+                               
+                           </div>
+                        </div>
+                        
+
+                        
+
+                            <!-- <div class="col-md-3">
 
                                 <div class="input-form">
                                     <label class="d-block"> Length (Ft.)</label>
@@ -203,6 +382,7 @@
 
                                 </div>
                             </div>
+
                             <div class="col-md-3">
                                 <div class="input-form">
                                     <label class="d-block"> Length (In.)</label>
@@ -211,6 +391,7 @@
 
                                 </div>
                             </div>
+
                             <div class="col-md-3">
                                 <div class="input-form">
                                     <label class="d-block"> Width (Ft.)</label>
@@ -219,6 +400,7 @@
 
                                 </div>
                             </div>
+
                             <div class="col-md-3">
                                 <div class="input-form">
                                     <label class="d-block"> Width (In.)</label>
@@ -227,6 +409,7 @@
 
                                 </div>
                             </div>
+
                             <div class="col-md-3">
                                 <div class="input-form">
                                     <label class="d-block"> Height (Ft.)</label>
@@ -235,6 +418,7 @@
 
                                 </div>
                             </div>
+
                             <div class="col-md-3">
                                 <div class="input-form">
                                     <label class="d-block"> Height (In.)</label>
@@ -243,6 +427,7 @@
 
                                 </div>
                             </div>
+
                             <div class="col-md-3">
                                 <div class="input-form">
                                     <label class="d-block"> Weight (Lbs.)</label>
@@ -250,7 +435,8 @@
                                     <small id="errOLoc" class="err-loc"></small>
 
                                 </div>
-                            </div>
+                            </div> -->
+
                         </div>
 
 
@@ -314,6 +500,74 @@
 
 @section('extraScript')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
+        }
+
+        $(document).ready(function() {
+            $('#inches-input').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input1').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input1, #inches-input1').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input2').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input2').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script>
+
+<script>
+      function moveToNext(current, nextId) {
+        if (current.value.length >= current.maxLength) {
+          document.getElementById(nextId).focus();
+        }
+      }
+
+      
+      document.querySelectorAll('input[type="text"]').forEach((input) => {
+        input.addEventListener("input", function () {
+          this.value = this.value.replace(/[^0-9]/g, "");
+        });
+      });
+    </script>
 
 <script>
 $(document).ready(function() {

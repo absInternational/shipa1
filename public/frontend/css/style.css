@@ -3873,7 +3873,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     width: 100%;
     font-size: 14px;
     font-weight: 500;
-    height: 38px;
+    height: 35px;
     line-height: 38px;
     padding: 15px 15px;
     border-radius: 3px;
@@ -8083,6 +8083,83 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transform: rotate(0deg);
     color: var(--tj-white-color);
 }
+
+/* previous button */
+
+.tj-submit-btn.previous {
+    display: inline-block;
+    padding: 17px 26px;
+    text-align: center;
+    border-radius: 3px;
+    font-family: var(--tj-ff-title);
+    color: var(--tj-white-color);
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s;
+    background-color: #181818;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    line-height: 1;
+    border: none;
+}
+
+.tj-submit-btn.previous:hover {
+    background-color: #8fc445;
+}
+
+.tj-submit-btn.previous::after {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    border-right: 25px solid transparent;
+    border-bottom: 27px solid rgba(255, 255, 255, 0.05);
+    content: "";
+    z-index: 2;
+}
+
+.tj-submit-btn.previous:hover:after {
+    border-bottom: 27px solid var(--tj-gray-color5);
+}
+
+.tj-submit-btn.previous:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--tj-white-color);
+    transition: all 0.3s;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+.tj-submit-btn.previous:hover {
+    color: var(--tj-secondary-color);
+}
+
+.tj-submit-btn.previous:hover:before {
+    width: 100%;
+}
+
+.tj-submit-btn.previous i {
+    font-size: 17px;
+    color: var(--tj-white-color);
+    font-weight: 500;
+    display: inline-block;
+    transform: rotate(135deg); /* Rotate arrow to point left */
+    margin-left: 5px;
+    transition: 0.4s;
+    position: relative;
+    top: 3px;
+}
+
+.tj-submit-btn.previous:hover i {
+    transform: rotate(180deg); /* Adjust rotation for hover state */
+    color: var(--tj-secondary-color);
+}
+
 
 /* submit button */
 

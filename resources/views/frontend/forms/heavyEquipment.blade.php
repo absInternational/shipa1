@@ -81,6 +81,7 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="heavy" hidden>
+
                             <div class="row">
                                 <div class="col-6">
                                     <div class="input-form">
@@ -104,17 +105,20 @@
                                     </div>
                                 </div>
                             </div><br>
+
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />
                                 <label class="form-check-label text-white" for="available_at_auction"> Available at
                                     Auction?</label>
                             </div>
+
                             <div class="input-form div-link mt-3">
                                 <label class="d-block"> Enter Link:</label>
                                 <input class="form-control" type="url" id="link" name="link"
                                     placeholder="Enter Link" />
                             </div>
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -141,6 +145,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -177,6 +182,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row mt-3">
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -213,11 +219,13 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" />
                             </div>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -238,6 +246,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="input-form">
@@ -303,6 +312,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white">Vehicle Information</h4>
@@ -343,11 +353,13 @@
 
                             <div id="vehicles-container">
                             </div>
+
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                 </button>
                             </div>
+                            
                         </form>
                     </div>
                 </div>
