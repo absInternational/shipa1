@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<!--========== breadcrumb Start ==============-->
+    <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -27,7 +27,7 @@
     <!--========== breadcrumb End ==============-->
 
     <!--========== Service Section Start ==============-->
-    <section class="tj-service-section-four tj-service-page">
+    {{-- <section class="tj-service-section-four tj-service-page">
         <div class="container-flude">
     
             <div class="row">
@@ -44,7 +44,6 @@
                         <div class="service-item-three">
                             <div class="service-image">
                                 <img src="{{ asset(!is_null($service->banner_image) ? $service->banner_image : '') }}" alt="Image" />
-                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                             </div>
                             <div class="service-content">
                                 <h4><a class="title" href="{{ route('service.details', $service->slug) }}"> {{ $service->name }}</a></h4>
@@ -56,6 +55,24 @@
             </div>
 
 
+        </div>
+    </section> --}}
+    <section class="tj-project-section">
+    </section>
+    <section class="tj-project-section">
+        <div class="tj-project-slider owl-carousel">
+            @foreach ($services as $service)
+            <div class="tj-project-item">
+                <img src="{{ asset(!is_null($service->banner_image) ? $service->banner_image : '') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title">{{ $service->name }}</span>
+                    <h4><a href="project-details.html" class="title-link"> {{ $service->name }}</a></h4>
+                </div>
+            </div>
+            @endforeach
         </div>
     </section>
     <!--========== Service Section End ==============-->
@@ -131,8 +148,8 @@
                                         <label> Distance (miles):</label>
                                         <output class="output"></output>
                                     </div>
-                                    <input class="tj-range-1" type="range" min="400" max="7000" step="10"
-                                        value="800" />
+                                    <input class="tj-range-1" type="range" min="400" max="7000"
+                                        step="10" value="800" />
                                 </div>
                             </div>
                         </div>
@@ -187,7 +204,8 @@
                 <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                     <div class="tj-team-item-two">
                         <div class="image-box">
-                            <img class="circule-1" src="{{ asset('frontend/images/team/team-1.png') }}" alt="Image" />
+                            <img class="circule-1" src="{{ asset('frontend/images/team/team-1.png') }}"
+                                alt="Image" />
                         </div>
                         <div class="team-content text-center">
                             <h4><a class="title-link" href="team-details.html">Mike Hardson</a></h4>
@@ -214,7 +232,8 @@
                 <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
                     <div class="tj-team-item-two">
                         <div class="image-box">
-                            <img class="circule-1" src="{{ asset('frontend/images/team/team-2.png') }}" alt="Image" />
+                            <img class="circule-1" src="{{ asset('frontend/images/team/team-2.png') }}"
+                                alt="Image" />
                         </div>
                         <div class="team-content text-center">
                             <h4><a class="title-link" href="team-details.html">David Cooper</a></h4>
