@@ -301,6 +301,7 @@
                     </p>
                 </div>
             </div>
+        </div>
     </section>
     <!--========== Privacy Policy end ==============-->
 @endsection
