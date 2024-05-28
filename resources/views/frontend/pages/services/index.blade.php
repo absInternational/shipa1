@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Service Page</h1>
+                        <h1 class="breadcrumb-title text-center">Our Services</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
@@ -28,7 +28,8 @@
 
     <!--========== Service Section Start ==============-->
     <section class="tj-service-section-four tj-service-page">
-        <div class="container">
+        <div class="container-flude">
+    
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tj-section-heading text-center">
@@ -37,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row px-5">
                 @foreach ($services as $service)
                     <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                         <div class="service-item-three">
@@ -53,6 +54,8 @@
                     </div>
                 @endforeach
             </div>
+
+
         </div>
     </section>
     <!--========== Service Section End ==============-->
@@ -64,7 +67,7 @@
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                     <div class="choose-us-content-1">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape2"> Why Choose Us</span>
+                            <span class="sub-title active-shape2">Why Choose Us</span>
                             <h2 class="title">We are the Future of Cargo & Logistics</h2>
                             <p class="desc">
                                 Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla a lobortis lectus,
@@ -94,7 +97,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
-                    <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
+                    <div class="tj-input-form w-100" data-bg-image="">
                         <h4 class="title">Request a Quote</h4>
                         <div class="row">
                             <div class="col-md-12">

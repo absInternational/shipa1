@@ -242,7 +242,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape"> What We Do</span>
+                        <span class="sub-title active-shape">What We Do</span>
                         <h2 class="title">Logistic & Transport</h2>
                     </div>
                 </div>
@@ -569,6 +569,8 @@
                                 </div>
                             </div>
                         </form>
+
+
                     </div>
                 </div>
             </div>
@@ -987,6 +989,9 @@
                 event.preventDefault();
                 var vehicleType = $(this).val();
                 var specificFields = '';
+
+               
+            
 
                 $.ajax({
                     url: "{{ route('get.partial.form') }}",

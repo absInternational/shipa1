@@ -29,7 +29,7 @@
     <section class="tj-service-details">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="page-details-wrapper service-details-wrapper">
                         <div class="tj-blog-item-three">
                             <div class="tj-blog-image">
@@ -145,7 +145,8 @@
                         </div> --}}
                     </div>
                 </div>
-                <div class="col-lg-4">
+
+                <div class="col-lg-12">
                     <div class="details-sidebar-inner">
                         <div class="tj-sidebar-widget sidebar-search">
                             <form action="#">
@@ -202,6 +203,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>

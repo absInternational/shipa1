@@ -2023,15 +2023,15 @@ body [class*=" icon-"]::before {
 }
 
 .service-item-three .service-content {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     right: 100px;
     background: var(--tj-white-color);
     box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
-    padding: 25px 20px 20px 25px;
+    padding: 20px 20px 20px 25px;
 }
 
-.service-item-three .service-content::before {
+/* .service-item-three .service-content::before {
     z-index: 1;
     top: -1px;
     right: -68px;
@@ -2046,14 +2046,16 @@ body [class*=" icon-"]::before {
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     transition: 0.4s;
-}
+} */
 
 .service-item-three .service-content .title {
+    font-size: smaller;
     color: var(--tj-secondary-color);
     transition: 0.4s;
 }
 
 .service-item-three .service-content .title:hover {
+    font-size: smaller;
     color: var(--tj-primary-color);
 }
 

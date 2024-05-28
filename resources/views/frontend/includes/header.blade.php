@@ -78,8 +78,8 @@
                                             class="{{ Request::routeIs('welcome') ? ' active' : '' }}"> Home</a>
                                     </li>
                                     <li class="ab-gap">
-                                        <a href="{{ route('aboutUs') }}"
-                                            class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> About Us</a>
+                                        <a href="{{ route('quote.form.combine') }}"
+                                            class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> Get Quote</a>
                                     </li>
                                     {{-- <li class="ab-gap">
                                         <a href="{{ route('services') }}"> Service</a>

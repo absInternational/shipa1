@@ -33,7 +33,7 @@
 @if ($vehicleType == 'Car')
     <div class="row select-bm">
         <div class="col-md-12 text-center">
-            <h4 class="text-white mb-0">Vehicle Information</h4>
+            <h4 class="text-white mb-0"></h4>
         </div>
         {{-- <div class="col-md-4">
             <div class="input-form tj-select">
