@@ -39,23 +39,14 @@
             </div>
             <div class="row">
                 @foreach ($services as $service)
-                    {{-- <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                         <div class="service-item-three">
                             <div class="service-image">
                                 <img src="{{ asset(!is_null($service->banner_image) ? $service->banner_image : '') }}" alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                             </div>
                             <div class="service-content">
                                 <h4><a class="title" href="{{ route('service.details', $service->slug) }}"> {{ $service->name }}</a></h4>
-                                <p>{!! Illuminate\Support\Str::limit($service->text_to_show, 200, '...') !!}</p>
-                            </div>
-                        </div>
-                    </div> --}}
-                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="tj-service-item"
-                            data-bg-image="{{ asset(!is_null($service->banner_image) ? $service->banner_image : '') }}">
-                            
-                            <div class="service-content">
-                                <h4><a class="title-link" href="{{ route('service.details', $service->slug) }}"> {{ $service->name }}</a></h4>
                                 <p>{!! Illuminate\Support\Str::limit($service->text_to_show, 200, '...') !!}</p>
                             </div>
                         </div>
