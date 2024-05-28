@@ -33,15 +33,13 @@
                     <div class="page-details-wrapper service-details-wrapper">
                         <div class="tj-blog-item-three">
                             <div class="tj-blog-image">
-                                <a href="service-details.html">
-                                    <img src="{{ !is_null($service->banner_image) ? asset($service->banner_image) : '' }}"
-                                        alt="Blog" />
-                                </a>
+                                <img src="{{ !is_null($service->banner_image) ? asset($service->banner_image) : '' }}"
+                                    alt="Blog" />
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-header">
                                     <h3>
-                                        <a class="title-link" href="service-details.html">
+                                        <a class="title-link">
                                             {{ !is_null($service->heading_one) ? $service->heading_one : '' }}
                                         </a>
                                     </h3>
@@ -203,7 +201,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
