@@ -14,7 +14,6 @@
                                     <span>Home</span>
                                 </a>
                             </span>
-
                             <span>
                                 <span> Privacy Policy</span>
                             </span>
