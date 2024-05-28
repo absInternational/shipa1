@@ -65,11 +65,11 @@
             <div class="tj-project-item">
                 <img src="{{ asset(!is_null($service->banner_image) ? $service->banner_image : '') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('service.details', $service->slug) }}"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title">{{ $service->name }}</span>
-                    <h4><a href="project-details.html" class="title-link"> {{ $service->name }}</a></h4>
+                    <span class="sub-title">Service</span>
+                    <h4><a href="{{ route('service.details', $service->slug) }}" class="title-link"> {{ $service->name }}</a></h4>
                 </div>
             </div>
             @endforeach
