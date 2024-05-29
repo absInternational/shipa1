@@ -72,4 +72,9 @@ class FormVehicleController extends Controller
 
         return view('frontend.forms.quote_form', compact('makes'));
     }
+
+    public function commercialTruck()
+    {
+        return view('frontend.forms.commercial_truck');
+    }
 }
