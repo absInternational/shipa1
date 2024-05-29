@@ -3,13 +3,10 @@
 @section('content')
     <div class="container-fluid">
 
-        <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Services</h1>
 
-        <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                {{-- <h6 class="m-0 font-weight-bold text-primary">All Services</h6> --}}
                 <a href="{{ route('services.create') }}" class="m-0 btn btn-primary">Add New Service</a>
             </div>
             <div class="card-body">
@@ -18,6 +15,7 @@
                         <thead>
                             <tr>
                                 <th>Service Name</th>
+                                <th>Display Name</th>
                                 <th>Heading One</th>
                                 <th>Status</th>
                                 <th>Actions</th>
@@ -27,6 +25,7 @@
                             @foreach ($services as $service)
                                 <tr>
                                     <td>{{ $service->name }}</td>
+                                    <td>{{ $service->display_name }}</td>
                                     <td>{{ $service->heading_one }}</td>
                                     <td>
                                         @if ($service->status == 1)

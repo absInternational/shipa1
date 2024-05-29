@@ -27,6 +27,7 @@ class Service extends Model
         'category_id',
         'status',
         'name',
+        'display_name',
         'slug',
     ];
 

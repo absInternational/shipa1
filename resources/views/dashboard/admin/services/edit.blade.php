@@ -21,6 +21,11 @@
                                         value="{{ $service->name }}" required />
                                 </div>
                                 <div class="form-group">
+                                    <label for="display_name">Service Display Name</label>
+                                    <input id="display_name" class="form-control" type="text" name="display_name"
+                                        value="{{ $service->display_name }}" required />
+                                </div>
+                                <div class="form-group">
                                     <label for="banner_image">Banner Image</label>
                                     <input id="banner_image" class="form-control" type="file" name="banner_image" />
                                 </div>
