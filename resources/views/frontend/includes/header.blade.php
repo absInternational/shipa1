@@ -1,7 +1,7 @@
 <style>
-    .active {
-        color: #8fc445 !important;
-    }
+.active {
+    color: #8fc445 !important;
+}
 </style>
 
 <header class="tj-header-section" id="header-sticky">
@@ -80,13 +80,111 @@
                                     <li class="ab-gap">
                                         <a href="{{ route('quote.form.combine') }}"
                                             class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> Get Quote</a>
+                                        <ul class="list-gap sub-menu-list" style="width: 60rem">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <a class=" mb-3" style="
+                                                             letter-spacing: 1px;
+                                                             font-size: medium;
+                                                             text-decoration: underline;
+                                                             font-weight: bold;
+                                                         " href="">Vehicle Transportation</a>
+                                                         <li>
+                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.atv_utv') }}"> Atv Utv Transport</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.car') }}"> Car </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.golf_cart') }}"> Golf Cart</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.form.vehicle.car') }}"> Motorcycle </a>
+                                                    </li>
+                                                    
+                                                    
+                                                </div>
+                                               
+                                                <div class="col-sm-4">
+                                                    <a class=" mb-3" style="
+                                                          letter-spacing: 1px;
+                                                          font-size: medium;
+                                                          text-decoration: underline;
+                                                          font-weight: bold;
+                                                      " href="#">Heavy Equipment</a>
+                                                    <!-- <li>
+                                                        <a class="title" target="_blank" href=""> Heavy    </a>
+                                                    </li> -->
+
+                                                    <li>
+                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.boat') }}"> Boat Transport</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" target="_blank" href=""> Commercial Truck Transport</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" target="_blank" href=""> Construction Transport</a>
+                                                    </li>
+                                                    
+                                                    <li>
+                                                        <a class="title" target="_blank" href=""> Excavator </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" target="_blank" href=""> Farm Transport</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" target="_blank" href=""> RV Transport</a>
+                                                    </li>
+                                                    
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <a class=" mb-3" style="
+                                                             letter-spacing: 1px;
+                                                             font-size: medium;
+                                                             text-decoration: underline;
+                                                             font-weight: bold;
+                                                         " href="">Freight Transportation</a>
+                                                    
+                                                    <li>
+                                                        <a class="title" target="_blank" href=""> Hazmat Transport</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" target="_blank" href=""> Dry Van Transportation</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" target="_blank" href=""> Reefer Trucking</a>
+                                                    </li>
+                                                    <a class=" mb-3" style="
+                                                             letter-spacing: 1px;
+                                                             font-size: medium;
+                                                             text-decoration: underline;
+                                                             font-weight: bold;
+                                                         " href="">RORO</a>
+                                                    <li>
+                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.roro') }}" > Roro Transportation</a>
+                                                    </li>
+                                                </div>
+                                                <!-- <div class="col-sm-3">
+                                                    <a class=" mb-3" style="
+                                                             letter-spacing: 1px;
+                                                             font-size: medium;
+                                                             text-decoration: underline;
+                                                             font-weight: bold;
+                                                         " href="">RORO</a>
+                                                    <li>
+                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.roro') }}" > Roro Transportation</a>
+                                                    </li>
+                                                </div> -->
+                                            </div>
+                                        </ul>
+
                                     </li>
                                     {{-- <li class="ab-gap">
                                         <a href="{{ route('services') }}"> Service</a>
                                     </li> --}}
                                     @php
-                                        $categories = \App\Models\ServiceCategory::has('services')->get();
-                                        // dd($categories->toArray());
+                                    $categories = \App\Models\ServiceCategory::has('services')->get();
+                                    // dd($categories->toArray());
                                     @endphp
                                     <li class="current-menu-item menu-item-has-children">
                                         <a href="{{ route('services') }}"
@@ -94,15 +192,17 @@
                                         <ul class="list-gap sub-menu-list" style="width: 50rem">
                                             <div class="row">
                                                 @foreach ($categories as $category)
-                                                    <div class="col-sm-3">
-                                                        <a class=" mb-3"
-                                                            href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a>
-                                                        @foreach ($category->services as $service)
-                                                            <li>
-                                                                <a class="title" href="{{ route('service.details', $service->slug) }}"> {{ $service->name }}</a>
-                                                            </li>
-                                                        @endforeach
-                                                    </div>
+                                                <div class="col-sm-3">
+                                                    <a class=" mb-3"
+                                                        href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a>
+                                                    @foreach ($category->services as $service)
+                                                    <li>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('service.details', $service->slug) }}">
+                                                            {{ $service->name }}</a>
+                                                    </li>
+                                                    @endforeach
+                                                </div>
                                                 @endforeach
                                             </div>
                                         </ul>
@@ -132,36 +232,37 @@
                                         <li>
                                             <ul class="lang_lists">
                                                 <li>
-                                                    <a><img src="{{ asset('frontend/images/icon/flag-1.png')}}" alt="Icon" /></a>
-                                                </li>
-                                                <li>
-                                                    <a><img src="{{ asset('frontend/images/icon/flag-2.png')}}" alt="Icon" /></a>
-                                                </li>
-                                                <li class="active">
-                                                    <a><img src="{{ asset('frontend/images/icon/flag4.png')}}" alt="Icon" /></a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div> --}}
-                                <div class="tj-header-button d-none d-lg-block">
-                                    <a class="tj-header-btn" href="{{ route('order.tracking') }}">
-                                        Track Order <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                <div class="tj-hambagur-icon d-lg-none">
-                                    <a class="canva_expander nav-menu-link menu-button" href="#">
-                                        <span class="dot1"></span>
-                                        <span class="dot2"></span>
-                                        <span class="dot3"></span>
-                                    </a>
-                                </div>
+                                                    <a><img src="{{ asset('frontend/images/icon/flag-1.png')}}"
+                                alt="Icon" /></a>
+                                </li>
+                                <li>
+                                    <a><img src="{{ asset('frontend/images/icon/flag-2.png')}}" alt="Icon" /></a>
+                                </li>
+                                <li class="active">
+                                    <a><img src="{{ asset('frontend/images/icon/flag4.png')}}" alt="Icon" /></a>
+                                </li>
+                                </ul>
+                                </li>
+                                </ul>
+                            </div> --}}
+                            <div class="tj-header-button d-none d-lg-block">
+                                <a class="tj-header-btn" href="{{ route('order.tracking') }}">
+                                    Track Order <i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                            <div class="tj-hambagur-icon d-lg-none">
+                                <a class="canva_expander nav-menu-link menu-button" href="#">
+                                    <span class="dot1"></span>
+                                    <span class="dot2"></span>
+                                    <span class="dot3"></span>
+                                </a>
                             </div>
                         </div>
-                        <!-- Header end End -->
                     </div>
+                    <!-- Header end End -->
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </header>
