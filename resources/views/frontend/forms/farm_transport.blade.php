@@ -130,7 +130,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title text-center">Commercial Truck</h1>
+                    <h1 class="breadcrumb-title text-center">Farm Transport</h1>
                     <div class="breadcrumb-link">
                         <span>
                             <a href="{{ route('welcome') }}">
@@ -139,7 +139,7 @@
                         </span>
                         >
                         <span>
-                            <span> Commercial Truck</span>
+                            <span>Farm Transport</span>
                         </span>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
             @endif
             <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                 <div class="tj-input-form" data-bg-image="">
-                    <h4 class="title text-center">Instant Commercial Truck Quote!</h4>
+                    <h4 class="title text-center">Instant Farm Transport Quote!</h4>
                     <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom"
                         data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
                         @csrf

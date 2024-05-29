@@ -82,86 +82,106 @@
                                             class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> Get Quote</a>
                                         <ul class="list-gap sub-menu-list" style="width: 60rem">
                                             <div class="row">
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-4 bd-l bd-r">
                                                     <a class=" mb-3" style="
                                                              letter-spacing: 1px;
-                                                             font-size: medium;
-                                                             text-decoration: underline;
-                                                             font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
                                                          " href="">Vehicle Transportation</a>
-                                                         <li>
-                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.atv_utv') }}"> Atv Utv Transport</a>
+                                                    <li>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('form.vehicle.atv_utv') }}"> Atv Utv
+                                                            Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.car') }}"> Car </a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('form.vehicle.car') }}"> Car </a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.golf_cart') }}"> Golf Cart</a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('form.vehicle.golf_cart') }}"> Golf Cart</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.form.vehicle.car') }}"> Motorcycle </a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('form.vehicle.form.vehicle.car') }}">
+                                                            Motorcycle </a>
                                                     </li>
-                                                    
-                                                    
+
+
                                                 </div>
-                                               
-                                                <div class="col-sm-4">
+
+                                                <div class="col-sm-4 bd-r">
                                                     <a class=" mb-3" style="
                                                           letter-spacing: 1px;
-                                                          font-size: medium;
-                                                          text-decoration: underline;
-                                                          font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
                                                       " href="#">Heavy Equipment</a>
                                                     <!-- <li>
                                                         <a class="title" target="_blank" href=""> Heavy    </a>
                                                     </li> -->
 
                                                     <li>
-                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.boat') }}"> Boat Transport</a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('form.vehicle.boat') }}"> Boat Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href=""> Commercial Truck Transport</a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('commercial.truck.transport') }}"> Commercial
+                                                            Truck Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href=""> Construction Transport</a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('frontend.forms.construction_transport') }}">
+                                                            Construction Transport</a>
                                                     </li>
-                                                    
+
                                                     <li>
-                                                        <a class="title" target="_blank" href=""> Excavator </a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('frontend.forms.excavator') }}"> Excavator
+                                                        </a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href=""> Farm Transport</a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('frontend.forms.farm_transport') }}"> Farm
+                                                            Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href=""> RV Transport</a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('frontend.forms.rv_transport') }}"> RV
+                                                            Transport</a>
                                                     </li>
-                                                    
+
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <a class=" mb-3" style="
                                                              letter-spacing: 1px;
-                                                             font-size: medium;
-                                                             text-decoration: underline;
-                                                             font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
                                                          " href="">Freight Transportation</a>
-                                                    
+
                                                     <li>
                                                         <a class="title" target="_blank" href=""> Hazmat Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href=""> Dry Van Transportation</a>
+                                                        <a class="title" target="_blank" href=""> Dry Van
+                                                            Transportation</a>
                                                     </li>
                                                     <li>
                                                         <a class="title" target="_blank" href=""> Reefer Trucking</a>
                                                     </li>
                                                     <a class=" mb-3" style="
                                                              letter-spacing: 1px;
-                                                             font-size: medium;
-                                                             text-decoration: underline;
-                                                             font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
                                                          " href="">RORO</a>
                                                     <li>
-                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.roro') }}" > Roro Transportation</a>
+                                                        <a class="title" target="_blank"
+                                                            href="{{ route('form.vehicle.roro') }}"> Roro
+                                                            Transportation</a>
                                                     </li>
                                                 </div>
                                                 <!-- <div class="col-sm-3">
@@ -179,6 +199,7 @@
                                         </ul>
 
                                     </li>
+
                                     {{-- <li class="ab-gap">
                                         <a href="{{ route('services') }}"> Service</a>
                                     </li> --}}

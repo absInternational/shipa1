@@ -9400,3 +9400,12 @@ PAGE LOAD ANIMATION
     color: var(--tj-primary-color);
 }
 /*car page end*/
+
+.bd-r{
+    border-right: 1px solid;
+    color: var(--tj-primary-color);
+}
+.bd-l{
+    border-left: 1px solid;
+    color: var(--tj-primary-color);
+}

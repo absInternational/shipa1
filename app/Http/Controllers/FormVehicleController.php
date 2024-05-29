@@ -77,4 +77,24 @@ class FormVehicleController extends Controller
     {
         return view('frontend.forms.commercial_truck');
     }
+
+    public function constructionTransport()
+    {
+        return view('frontend.forms.construction_transport');
+    }
+
+    public function excavator()
+    {
+        return view('frontend.forms.excavator');
+    }
+
+    public function farmTransport()
+    {
+        return view('frontend.forms.farm_transport');
+    }
+
+    public function rvTransport()
+    {
+        return view('frontend.forms.rv_transport');
+    }
 }
