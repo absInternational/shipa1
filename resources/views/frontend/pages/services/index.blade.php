@@ -92,12 +92,45 @@ alt="Image" />
                             id volutpat magna. Morbi consequat porttitor
                         </p>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 col-6">
-                            <div class="tj-icon-box3 text-center">
-                                <i class="flaticon flaticon-courier"></i>
-                                <h6 class="title">Optimized Cost</h6>
-                            </div>
+                @endforeach
+            </div>
+
+
+        </div>
+    </section> --}}
+    <section class="tj-project-section">
+    </section>
+    <section class="tj-project-section">
+        <div class="tj-project-slider owl-carousel">
+            @foreach ($services as $service)
+            <div class="tj-project-item">
+                <img src="{{ asset(!is_null($service->banner_image) ? $service->banner_image : '') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="{{ route('service.details', $service->slug) }}"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title">Service</span>
+                    <h4><a href="{{ route('service.details', $service->slug) }}" class="title-link"> {{ $service->name }}</a></h4>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </section>
+    <!--========== Service Section End ==============-->
+
+    <!--=========== Feature Section Start =========-->
+    <section class="tj-choose-us-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
+                    <div class="choose-us-content-1">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape2">Why Choose Us</span>
+                            <h2 class="title">We are the Future of Cargo & Logistics</h2>
+                            <p class="desc">
+                                Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla a lobortis lectus,
+                                id volutpat magna. Morbi consequat porttitor
+                            </p>
                         </div>
                         <div class="col-md-4 col-sm-4 col-6">
                             <div class="tj-icon-box3 text-center">
