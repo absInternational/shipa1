@@ -198,7 +198,7 @@
                                             placeholder="Enter Modification Information" />
                                     </div>
                                 </di>
-                                <di class="col-md-6">
+                                <div class="col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="available_at_auction"
                                             name="available_at_auction" value="1" />
@@ -212,7 +212,7 @@
                                         <input class="" type="url" id="link" name="link"
                                             placeholder="Enter Link" />
                                     </div>
-                                </di>
+                                </div>
                             </div>
 
 
