@@ -314,7 +314,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                <div class="row mb-3">
 
 
                         
@@ -372,72 +372,9 @@
 
                         
 
-                            <!-- <div class="col-md-3">
+                            
 
-                                <div class="input-form">
-                                    <label class="d-block"> Length (Ft.)</label>
-
-                                    <input type="number" id="" name="length_ft" placeholder="" required="" value="0" />
-                                    <small id="errOLoc" class="err-loc"></small>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="input-form">
-                                    <label class="d-block"> Length (In.)</label>
-                                    <input type="number" id="" name="length_in" placeholder="" required="" value="0" />
-                                    <small id="errOLoc" class="err-loc"></small>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="input-form">
-                                    <label class="d-block"> Width (Ft.)</label>
-                                    <input type="number" id="" name="width_ft" placeholder="" required="" value="0" />
-                                    <small id="errOLoc" class="err-loc"></small>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="input-form">
-                                    <label class="d-block"> Width (In.)</label>
-                                    <input type="number" id="" name="width_in" placeholder="" required="" value="0" />
-                                    <small id="errOLoc" class="err-loc"></small>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="input-form">
-                                    <label class="d-block"> Height (Ft.)</label>
-                                    <input type="number" id="" name="height_ft" placeholder="" required="" value="0" />
-                                    <small id="errOLoc" class="err-loc"></small>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="input-form">
-                                    <label class="d-block"> Height (In.)</label>
-                                    <input type="number" id="" name="height_in" placeholder="" required="" value="0" />
-                                    <small id="errOLoc" class="err-loc"></small>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="input-form">
-                                    <label class="d-block"> Weight (Lbs.)</label>
-                                    <input type="number" id="" name="weight" placeholder="" required="" value="0" />
-                                    <small id="errOLoc" class="err-loc"></small>
-
-                                </div>
-                            </div> -->
-
-                        </div>
+                </div>
 
 
                         <div class="row">

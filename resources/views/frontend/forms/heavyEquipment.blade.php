@@ -389,14 +389,9 @@
                                     </div>
                                 </div>
                             </div>
+          
 
-                            
-
-                            
-
-                            
-
-                            <div class="row mb-3">
+                <div class="row mb-3">
 
 
                         
@@ -450,7 +445,7 @@
                                
                            </div>
                         </div>
-                            </div>
+                </div>
 
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
