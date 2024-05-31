@@ -1,7 +1,127 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+
 <style>
+    .tj-testimonial-section {
+    padding: 50px 0;
+    background: #f9f9f9;
+}
+
+.carousel-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card .col-6 {
+    width: 50%;
+}
+
+.star {
+    margin-top: 10px;
+}
+
+.fa-star {
+    color: #f39c12;
+}
+
+.rates {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.owl-nav button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.owl-dot.active {
+    background: #333;
+}
+
+
+@keyframes custom-slides {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-80%);
+    }
+}
+
+.custom-logos {
+    overflow: hidden;
+    padding: 30px 0px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.custom-logos:before,
+.custom-logos:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+}
+
+.custom-logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+.custom-logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+.custom-logo-items {
+    display: inline-block;
+    animation: 35s custom-slides infinite linear;
+}
+
+.custom-logos:hover .custom-logo-items {
+    animation-play-state: paused;
+}
+
+.custom-logo-items img {
+    height: 100px;
+}
+
+
 .lab-cos {
     font-size: 15px;
     font-weight: 500;
@@ -472,24 +592,367 @@
                             <div class="vehicle_quote_info" id="step2" style="display: none;">
                                 <div class="row">
                                     <h4 class="title text-center">VEHICLE INFORMATION</h4>
+                                    <select id="tabSelector" class="form-select" aria-label="Tab selector">
+                                        <option value="" selected disabled>Select a Vehicle</option>
+                                        <option value="Atv">Atv Utv Transport</option>
+                                        <option value="Boat-Transport">Boat Transport</option>
+                                        <option value="Car">Car</option>
+                                        <option value="Freight-Transportation">Freight Transportation</option>
+                                        <option value="Golf-Cart">Golf Cart</option>
+                                        <option value="Heavy-Equipment">Heavy Equipment</option>
+                                        <option value="Motorcycle">Motorcycle</option>
+                                        <option value="RV-Transport">RV Transport</option>
+                                    </select>
 
-                                    <div class="col-xl-12 col-lg-12 mb-3">
-                                        <label class="text-white mb-2">Select Vehicle</label>
-                                        <div class="single-input-field">
-                                            <select class="form-control" id="select_vehicle" required>
-                                                <option selected value="">Select Type</option>
-                                                <option value="Car">Car</option>
-                                                <option value="MotorCycle">MotorCycle</option>
-                                                <option value="Heavy Equipment">Heavy Equipment</option>
-                                                <option value="Dryvan">Freight shipping</option>
-                                            </select>
+                                    <div class="tab-content mt-3" id="myTabContent">
+
+                                        <div class="tab-pane fade " id="Atv" role="tabpanel" aria-labelledby="home-tab">
+
+                                            <div class="row select-bm">
+
+                                                <div class="col-md-4">
+                                                    <div class="input-form tj-select">
+                                                        <label> Year</label>
+                                                        <select class="nice-select vehicle-year" name="year[]"
+                                                            id="year">
+                                                            <option value="" disabled selected>Select Year</option>
+                                                            @php
+                                                            $currentYear = date('Y');
+                                                            for ($year = $currentYear; $year >= 1936; $year--) {
+                                                            echo "<option value='$year'>$year</option>";
+                                                            }
+                                                            @endphp
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-form tj-select">
+                                                        <label>Make</label>
+                                                        <input type="text" id="make" name="make[]"
+                                                            placeholder="Enter Make" required="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-form tj-select vehicle-model-div">
+                                                        <label>Model</label>
+                                                        <input type="text" id="model" name="model[]"
+                                                            placeholder="Enter Model" required="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="text-primary" id="addVehicleBtn"
+                                                style="cursor: pointer; text-decoration: underline;"><i
+                                                    class="fa fa-plus"></i> Add
+                                                Vehicle</a>
+
+                                            <div id="vehicles-container">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="trailer_type" class="text-white">Select Trailer
+                                                            Type</label>
+                                                        <select class="form-control" id="trailer_type"
+                                                            name="trailer_type">
+                                                            <option value="Open" selected>Open</option>
+                                                            <option value="Enclosed">Enclosed</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="condition" class="text-white">Condition</label>
+                                                        <select class="form-control" id="condition" name="condition">
+                                                            <option value="Running" selected>Running</option>
+                                                            <option value="Non Running">Non Running</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="modification" name="modification" value="1" />
+                                                        <label class="form-check-label text-white" for="modification">
+                                                            Modification</label>
+                                                    </div>
+                                                    <div class="input-form div-modify_info" style="display: none;">
+                                                        <label class="d-block"> Modification Information:</label>
+                                                        <input class="" type="text" id="c" name="modify_info"
+                                                            placeholder="Enter Modification Information" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-form mt-3">
+                                                <label class="d-block" class="text-white"> Image:</label>
+                                                <input class="form-control image_input" type="file" id="image"
+                                                    name="image" placeholder="Upload File" />
+                                            </div>
                                         </div>
+
+                                        <div class="tab-pane fade" id="Car" role="tabpanel"
+                                            aria-labelledby="profile-tab">
+
+                                            <div class="row select-bm">
+
+                                                <div class="col-md-4">
+                                                    <div class="input-form tj-select">
+                                                        <label> Year</label>
+                                                        <select class="nice-select vehicle-year" name="year[]" id="year"
+                                                            required>
+                                                            <option value="" disabled selected>Select Year</option>
+                                                            @php
+                                                            $currentYear = date('Y');
+                                                            for ($year = $currentYear; $year >= 1936; $year--) {
+                                                            echo "<option value='$year'>$year</option>";
+                                                            }
+                                                            @endphp
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-form tj-select">
+                                                        <label>Make</label>
+                                                        <select class="nice-select vehicle-make" name="make[]" id="make"
+                                                            required>
+                                                            <option value="" disabled selected>Select Make</option>
+                                                            @foreach ($makes as $make)
+                                                            <option value="{{ $make->make }}">{{ $make->make }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-form tj-select vehicle-model-div">
+                                                        <label>Model</label>
+                                                        <select class="nice-select vehicle-model" name="model[]"
+                                                            id="model" required>
+                                                            <option value="">Select Model</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="add-car" id="addVehicleBtn">
+                                                <i class="fa fa-plus"> Add
+                                                    Vehicle </i>
+                                            </a>
+
+                                            <div id="vehicles-container">
+                                            </div>
+
+                                            <div class="row mb-3 ">
+                                                <div class="col-md-6">
+                                                    <div class="form-group" style="line-height:23px;">
+                                                        <label for="trailer_type" class="text-white">Select Trailer
+                                                            Type</label>
+                                                        <select class="form-control" id="trailer_type"
+                                                            name="trailer_type">
+                                                            <option value="Open" selected>Open</option>
+                                                            <option value="Enclosed">Enclosed</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="condition" class="text-white">Condition</label>
+                                                        <select class="form-control" id="condition" name="condition">
+                                                            <option value="Running" selected>Running</option>
+                                                            <option value="Non Running">Non Running</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <di class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input class="form-check-input " type="checkbox"
+                                                            id="modification" name="modification" value="1" />
+                                                        <label class="form-check-label text-white" for="modification">
+                                                            Modification</label>
+                                                    </div>
+
+                                                    <div class="input-form div-modify_info" style="display: none;">
+                                                        <label class="d-block"> Modification Information:</label>
+                                                        <input class="" type="text" id="c" name="modify_info"
+                                                            placeholder="Enter Modification Information" />
+                                                    </div>
+                                                </di>
+                                                <div class="col-md-6">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="available_at_auction" name="available_at_auction"
+                                                            value="1" />
+                                                        <label class="form-check-label text-white"
+                                                            for="available_at_auction"> Available
+                                                            at
+                                                            Auction?</label>
+                                                    </div>
+
+                                                    <div class="input-form div-link" style="display: none;">
+                                                        <label class="d-block"> Enter Link:</label>
+                                                        <input class="" type="url" id="link" name="link"
+                                                            placeholder="Enter Link" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-form">
+                                                <label class="d-block text-white"> Image:</label>
+                                                <input class="form-control image_input" type="file" id="image"
+                                                    name="image" placeholder="Upload File" />
+                                            </div>
+
+                                        </div>
+
+                                        <div class="tab-pane fade" id="Golf-Cart" role="tabpanel"
+                                            aria-labelledby="contact-tab">
+
+                                            <div class="row select-bm">
+
+                                                <div class="col-md-4">
+                                                    <div class="input-form tj-select">
+                                                        <label> Year</label>
+                                                        <select class="nice-select vehicle-year" name="year[]"
+                                                            id="year">
+                                                            <option value="" disabled selected>Select Year</option>
+                                                            @php
+                                                            $currentYear = date('Y');
+                                                            for ($year = $currentYear; $year >= 1936; $year--) {
+                                                            echo "<option value='$year'>$year</option>";
+                                                            }
+                                                            @endphp
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-form tj-select">
+                                                        <label>Make</label>
+                                                        <input type="text" id="make" name="make[]"
+                                                            placeholder="Enter Make" required="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-form tj-select vehicle-model-div">
+                                                        <label>Model</label>
+                                                        <input type="text" id="model" name="model[]"
+                                                            placeholder="Enter Model" required="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <a class="text-primary" id="addVehicleBtn"
+                                                style="cursor: pointer; text-decoration: underline;"><i
+                                                    class="fa fa-plus"></i> Add
+                                                Vehicle</a>
+
+                                            <div id="vehicles-container">
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="trailer_type" class="text-white">Select Trailer
+                                                            Type</label>
+                                                        <select class="form-control" id="trailer_type"
+                                                            name="trailer_type">
+                                                            <option value="Open" selected>Open</option>
+                                                            <option value="Enclosed">Enclosed</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="condition" class="text-white">Condition</label>
+                                                        <select class="form-control" id="condition" name="condition">
+                                                            <option value="Running" selected>Running</option>
+                                                            <option value="Non Running">Non Running</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" checked type="checkbox"
+                                                            id="available_at_auction" name="available_at_auction"
+                                                            value="1" />
+                                                        <label class="form-check-label text-white"
+                                                            for="available_at_auction"> Available at
+                                                            Auction?</label>
+                                                    </div>
+                                                    <div class="input-form div-link mt-3">
+                                                        <label class="d-block"> Enter Link:</label>
+                                                        <input class="form-control" type="url" id="link" name="link"
+                                                            placeholder="Enter Link" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="modification" name="modification" value="1" />
+                                                        <label class="form-check-label text-white" for="modification">
+                                                            Modification</label>
+                                                    </div>
+                                                    <div class="input-form div-modify_info" style="display: none;">
+                                                        <label class="d-block"> Modification Information:</label>
+                                                        <input class="" type="text" id="c" name="modify_info"
+                                                            placeholder="Enter Modification Information" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-form mt-3">
+                                                <label class="d-block"> Image:</label>
+                                                <input class="form-control image_input" type="file" id="image"
+                                                    name="image" placeholder="Upload File" />
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="tab-pane fade" id="Motorcycle" role="tabpanel"
+                                            aria-labelledby="contact-tab">
+
+                                            Motorcycle Content...
+                                        </div>
+
+                                        <div class="tab-pane fade" id="Heavy-Equipment" role="tabpanel"
+                                            aria-labelledby="contact-tab">
+
+                                            Heavy Equipment Content...
+                                        </div>
+
+                                        <div class="tab-pane fade" id="Freight-Transportation" role="tabpanel"
+                                            aria-labelledby="contact-tab">
+
+                                            Freight Transportation Content...
+                                        </div>
+
+                                        <div class="tab-pane fade" id="Boat-Transport" role="tabpanel"
+                                            aria-labelledby="contact-tab">
+
+                                            Boat Transport Content...
+                                        </div>
+
+                                        <div class="tab-pane fade" id="RV-Transport" role="tabpanel"
+                                            aria-labelledby="contact-tab">
+
+                                            RV Transport Content...
+                                        </div>
+
                                     </div>
 
-                                    <div id="vehicle_specific_fields"></div>
+
                                 </div>
                                 <div class="row mt-2">
-
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn">
                                             <button class="tj-submit-btn previous" id="step2_previous">
@@ -505,9 +968,9 @@
                                             </button>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
+
                             <!-- Step 3: Customer Information -->
                             <div class="basic_quote_info" id="step3" style="display: none;">
                                 <div class="row mb-3">
@@ -570,7 +1033,9 @@
 
                 </div>
             </div>
+
         </div>
+
     </div>
 </section>
 <!--=========== Feature Section End =========-->
@@ -787,6 +1252,27 @@
 </section>
 <!--=========== Testimonial Section End =========-->
 
+<!-- <section class="custom-testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="swiper custom-testimonial-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                    <div class="swiper-wrapper" id="custom-swiper-wrapper" aria-live="off"
+                        style="transform: translate3d(-2562px, 0px, 0px); transition-duration: 0ms;">
+                       
+                        
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+
+
 <!--=========== Map Section Start =========-->
 <section class="tj-map-section">
     <div class="google-map">
@@ -894,12 +1380,337 @@
     </div>
 </section>
 <!--=========== Blog Section End =========-->
-
+<!--=========== Testimonial Section Start =========-->
+<section class="tj-testimonial-section">
+    <div class="carousel-wrapper">
+        <div class="owl-carousel owl-theme" id="owl-caro">
+            @foreach ($reviews as $review)
+            <div class="item">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-6 col-6">
+                            <div>
+                                <img loading="lazy" src="/img/samireviews/google.png" width="100%" height="100%" alt="Google">
+                            </div>
+                            <div class="star">
+                                @for ($i = 0; $i < (int) floor($review->rating); $i++)
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                @endfor
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-6">
+                            <div class="rates">
+                                {{ $review->rating }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<!--=========== Testimonial Section End =========-->
+<!-- <section class="tj-testimonial-section">
+    <div class="container-flude">
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <div
+                    class="swiper tj-testimonial-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                    <div class="swiper-wrapper" id="swiper-wrapper-ebf47cefed3aa127" aria-live="off"
+                        style="transform: translate3d(-2562px, 0px, 0px); transition-duration: 0ms;">
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                            data-swiper-slide-index="2" role="group" aria-label="3 / 4"
+                            style="width: 610.5px; margin-right: 30px;">
+                            <div class="tj-testimonial-item">
+                                <div class="testimonial-rating d-flex justify-content-between">
+                                   
+                                    <div class="rating-icon">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                      
+                                    <div class="testimonial-content d-flex justify-content-between">
+                                        <div class="testimonial-auother">
+                                            <h5 class="title">Kimberly Hansen</h5>
+                                            <span class="sub-title"> Manager</span>
+                                        </div>
+                                        <div class="testimonial-comment">
+                                            <img src="assets/images/icon/comment.svg" alt="Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                            data-swiper-slide-index="3" role="group" aria-label="4 / 4"
+                            style="width: 610.5px; margin-right: 30px;">
+                            <div class="tj-testimonial-item">
+                                <div class="testimonial-rating d-flex justify-content-between">
+                                    
+                                    <div class="rating-icon">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                      
+                                    <div class="testimonial-content d-flex justify-content-between">
+                                        <div class="testimonial-auother">
+                                            <h5 class="title">Miah Robbani</h5>
+                                            <span class="sub-title"> Manager</span>
+                                        </div>
+                                        <div class="testimonial-comment">
+                                            <img src="assets/images/icon/comment.svg" alt="Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 4"
+                            style="width: 610.5px; margin-right: 30px;">
+                            <div class="tj-testimonial-item">
+                                <div class="testimonial-rating d-flex justify-content-between">
+                                    
+                                    <div class="rating-icon">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                      
+                                    <div class="testimonial-content d-flex justify-content-between">
+                                        <div class="testimonial-auother">
+                                            <h5 class="title">Kimberly Hansen</h5>
+                                            <span class="sub-title"> Manager</span>
+                                        </div>
+                                        <div class="testimonial-comment">
+                                            <img src="assets/images/icon/comment.svg" alt="Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" role="group"
+                            aria-label="2 / 4" style="width: 610.5px; margin-right: 30px;">
+                            <div class="tj-testimonial-item">
+                                <div class="testimonial-rating d-flex justify-content-between">
+                                   
+                                    <div class="rating-icon">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                      
+                                    <div class="testimonial-content d-flex justify-content-between">
+                                        <div class="testimonial-auother">
+                                            <h5 class="title">Miah Robbani</h5>
+                                            <span class="sub-title"> Manager</span>
+                                        </div>
+                                        <div class="testimonial-comment">
+                                            <img src="assets/images/icon/comment.svg" alt="Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" role="group"
+                            aria-label="3 / 4" style="width: 610.5px; margin-right: 30px;">
+                            <div class="tj-testimonial-item">
+                                <div class="testimonial-rating d-flex justify-content-between">
+                                   
+                                    <div class="rating-icon">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                      
+                                    <div class="testimonial-content d-flex justify-content-between">
+                                        <div class="testimonial-auother">
+                                            <h5 class="title">Kimberly Hansen</h5>
+                                            <span class="sub-title"> Manager</span>
+                                        </div>
+                                        <div class="testimonial-comment">
+                                            <img src="assets/images/icon/comment.svg" alt="Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="3" role="group"
+                            aria-label="4 / 4" style="width: 610.5px; margin-right: 30px;">
+                            <div class="tj-testimonial-item">
+                                <div class="testimonial-rating d-flex justify-content-between">
+                                    
+                                    <div class="rating-icon">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                      
+                                    <div class="testimonial-content d-flex justify-content-between">
+                                        <div class="testimonial-auother">
+                                            <h5 class="title">Miah Robbani</h5>
+                                            <span class="sub-title"> Manager</span>
+                                        </div>
+                                        <div class="testimonial-comment">
+                                            <img src="assets/images/icon/comment.svg" alt="Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group"
+                            aria-label="1 / 4" style="width: 610.5px; margin-right: 30px;">
+                            <div class="tj-testimonial-item">
+                                <div class="testimonial-rating d-flex justify-content-between">
+                                    
+                                    <div class="rating-icon">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                      
+                                    <div class="testimonial-content d-flex justify-content-between">
+                                        <div class="testimonial-auother">
+                                            <h5 class="title">Kimberly Hansen</h5>
+                                            <span class="sub-title"> Manager</span>
+                                        </div>
+                                        <div class="testimonial-comment">
+                                            <img src="assets/images/icon/comment.svg" alt="Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                            data-swiper-slide-index="1" role="group" aria-label="2 / 4"
+                            style="width: 610.5px; margin-right: 30px;">
+                            <div class="tj-testimonial-item">
+                                <div class="testimonial-rating d-flex justify-content-between">
+                                    
+                                    <div class="rating-icon">
+                                        <ul class="list-gap">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                      
+                                    <div class="testimonial-content d-flex justify-content-between">
+                                        <div class="testimonial-auother">
+                                            <h5 class="title">Miah Robbani</h5>
+                                            <span class="sub-title"> Manager</span>
+                                        </div>
+                                        <div class="testimonial-comment">
+                                            <img src="assets/images/icon/comment.svg" alt="Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section> -->
 <!--=========== Newsletter Section Start =========-->
 @include('partials.newsletter')
 <!--=========== Newsletter Section End =========-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="path/to/jquery.min.js"></script>
+<script src="path/to/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#owl-caro').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    });
+</script>
+<script>
+$(document).ready(function() {
+    $('#tabSelector').change(function() {
+        var selectedTab = $(this).val();
+        $('.tab-pane').removeClass('show active');
+        $('#' + selectedTab).addClass('show active');
+    });
+});
+</script>
+
+<script>
+document.querySelectorAll('input[type="text"]').forEach((input) => {
+    input.addEventListener("input", function() {
+        this.value = this.value.replace(/[^0-9]/g, "");
+    });
+});
+</script>
 
 <script>
 function limitDigits(element, maxDigits) {
@@ -980,373 +1791,11 @@ $(document).ready(function() {
         $('#step2').show();
     });
 
-    // Show vehicle specific fields based on selection
-    $('#select_vehicle').change(function() {
-        event.preventDefault();
-        var vehicleType = $(this).val();
-        var specificFields = '';
-
-
-
-
-        $.ajax({
-            url: "{{ route('get.partial.form') }}",
-            method: 'GET',
-            data: {
-                vehicleType: vehicleType,
-            },
-            success: function(response) {
-                console.log('response', response);
-                // modelsDropdown.html(selectOptions);
-                $('#vehicle_specific_fields').append(response);
-
-                // below code
-                if (vehicleType === 'Car') {
-                    specificFields = `
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group" style="line-height:23px;">
-                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open</option>
-                                            <option value="Enclosed">Enclosed</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="input-form mt-3">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div>
-    
-                            <div class="row">
-                                <di class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-check-input " type="checkbox" id="modification"
-                                            name="modification" value="1" />
-                                        <label class="form-check-label text-white" for="modification"> Modification</label>
-                                    </div>
-    
-                                    <div class="input-form div-modify_info" style="display: none;">
-                                        <label class="d-block"> Modification Information:</label>
-                                        <input class="" type="text" id="c" name="modify_info"
-                                            placeholder="Enter Modification Information" />
-                                    </div>
-                                </di>
-                                <di class="col-md-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                            name="available_at_auction" value="1" />
-                                        <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                            Auction?</label>
-                                    </div>
-    
-                                    <div class="input-form div-link" style="display: none;">
-                                        <label class="d-block"> Enter Link:</label>
-                                        <input class="" type="url" id="link" name="link" placeholder="Enter Link" />
-                                    </div>
-                                </di>
-                            </div>`;
-                } else if (vehicleType === 'MotorCycle') {
-                    specificFields = `
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group" style="line-height:23px;">
-                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open</option>
-                                            <option value="Enclosed">Enclosed</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="input-form mt-3">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div>
-    
-                            <div class="row">
-                                <di class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-check-input " type="checkbox" id="modification"
-                                            name="modification" value="1" />
-                                        <label class="form-check-label text-white" for="modification"> Modification</label>
-                                    </div>
-    
-                                    <div class="input-form div-modify_info" style="display: none;">
-                                        <label class="d-block"> Modification Information:</label>
-                                        <input class="" type="text" id="c" name="modify_info"
-                                            placeholder="Enter Modification Information" />
-                                    </div>
-                                </di>
-                                <di class="col-md-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                            name="available_at_auction" value="1" />
-                                        <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                            Auction?</label>
-                                    </div>
-    
-                                    <div class="input-form div-link" style="display: none;">
-                                        <label class="d-block"> Enter Link:</label>
-                                        <input class="" type="url" id="link" name="link" placeholder="Enter Link" />
-                                    </div>
-                                </di>
-                            </div>
-                        
-                        `
-                } else if (vehicleType === 'Heavy Equipment') {
-                    specificFields = `
-    
-                            <div class="row select-bm">
-                            </div>
-    
-                            <div class="row">
-                                    <div class="col-6">
-                                        <div class="input-form">
-                                            <label for="category">Category</label>
-                                            <select class="form-control" id="category" name="category">
-                                                <option value="" disabled selected>Select</option>
-                                               
-                                                    <option value=""></option>
-                                               
-                                            </select>
-                                            <input type="text" class="form-control" id="otherCategoryInput" name="category"
-                                                disabled style="display: none;" placeholder="Specify Category">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="input-form" id="subcategory-box">
-                                            <label for="subcategory">Subcategory</label>
-                                            <select class="form-control" id="subcategory" name="subcategory">
-                                                <option value="" disabled selected>Select</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                               
-    
-                                
-    
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                            <select class="form-control" id="trailer_type" name="trailer_type">
-                                                <option value="RGN" selected>RGN</option>
-                                                <option value="VAN (V)">VAN (V)</option>
-                                                <option value="FLATBED (F)">FLATBED (F)</option>
-                                                <option value="STEP DECK (SD)">STEP DECK (SD)</option>
-                                                <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
-                                                <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                                                <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
-                                                <option value="TRUCK (T)">TRUCK (T)</option>
-                                                <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
-                                                <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
-                                                <option value="LOWBOY (LB)">LOWBOY (LB)</option>
-                                                <option value="ENDUMP (ED)">ENDUMP (ED)</option>
-                                                <option value="LANDOLL (LD)">LANDOLL (LD)</option>
-                                                <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                                <option value="20ft container">20ft container</option>
-                                                <option value="40ft container">40ft container</option>
-                                                <option value="48ft container">48ft container</option>
-                                                <option value="53ft container">53ft container</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="condition" class="text-white">Condition</label>
-                                            <select class="form-control" id="condition" name="condition">
-                                                <option value="Running" selected>Running</option>
-                                                <option value="Non Running">Non Running</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="row mt-3">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="load_type" class="text-white">Load Type</label>
-                                            <select class="form-control" id="load_type" name="load_type">
-                                                <option value="" disabled selected>Select</option>
-                                                <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
-                                                <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="load_method" class="text-white">Load Method</label>
-                                            <select class="form-control" id="load_method" name="load_method">
-                                                <option value="" disabled selected>Select</option>
-                                                <option value="LOADING DOCK">LOADING DOCK</option>
-                                                <option value="CRANE">CRANE</option>
-                                                <option value="FORKLIFT">FORKLIFT</option>
-                                                <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="unload_method" class="text-white">Unload Method</label>
-                                            <select class="form-control" id="unload_method" name="unload_method">
-                                                <option value="" disabled selected>Select</option>
-                                                <option value="LOADING DOCK">LOADING DOCK</option>
-                                                <option value="CRANE">CRANE</option>
-                                                <option value="FORKLIFT">FORKLIFT</option>
-                                                <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                
-    
-                                <div class="row mt-3">
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block"> Pickup Location:</label>
-                                            <input type="text" id="pickup-location" name="origin"
-                                                placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                            <small id="errOLoc" class="err-loc"></small>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block"> Delivery Location:</label>
-                                            <input type="text" id="delivery-location" name="destination"
-                                                placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                            <small id="errDLoc" class="err-loc"></small>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                        </div>
-                                    </div>
-                                </div>
-    
-    
-                                                            <div class="row mb-3">
-                                    <div class="col-md-3">
-    
-                                    <label class="lab-cos">Length</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                    </div>
-    
-                                    <div class="col-md-3">
-    
-                                        <label class="lab-cos">Width</label>
-                                        <div class="input-container">
-                                    <input type="number" id="feet-input1" class="input-field" placeholder=""
-                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input1" class="input-field" placeholder=""
-                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
-                                        </div>
-                                        </div>
-    
-                                    <div class="col-md-3">
-    
-                                <label class="lab-cos">Height</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input2" class="input-field" placeholder=""
-                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input2" class="input-field" placeholder=""
-                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
-                                </div>
-                                    </div>
-    
-                                    <div class="col-md-3">
-    
-                                <label class="lab-cos">Weight</label>
-                                <div class="input-container1">
-                                    <input type="" id="feet-input" class="input-field-1" placeholder=""
-                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                    <span class="separators-w">(Lbs.)</span>
-                                    
-                                </div>
-                                    </div>
-                                   </div>
-    
-    
-    
-                              
-    
-                                <div class="input-form mt-3">
-                                    <label class="d-block" class="text-white"> Image:</label>
-                                    <input class="form-control image_input" type="file" id="image" name="image"
-                                        placeholder="Upload File" />
-                                </div>
-    
-                                <div class="form-check">
-                                    <input class="form-check-input" checked type="checkbox" id="available_at_auction"
-                                        name="available_at_auction" value="1" />
-                                    <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                        Auction?</label>
-                                </div>
-    
-                                <div class="input-form div-link mt-3">
-                                    <label class="d-block"> Enter Link:</label>
-                                    <input class="form-control" type="url" id="link" name="link"
-                                        placeholder="Enter Link" />
-                                </div>
-    
-                               
-    
-                        
-                        `
-                } else if (vehicleType === 'Dryvan') {
-                    specificFields = `
-                            <div class="col-xl-12 col-lg-12">
-                                
-                            </div>`;
-                }
-                // below code end
-
-                $('#vehicle_specific_fields').append(specificFields);
-            },
-            error: function(xhr) {
-                console.log(xhr.responseText);
-            }
-        });
-
-    });
 
 });
 </script>
+
+
 
 <script>
 $(document).ready(function() {
@@ -1406,4 +1855,163 @@ $("#pickup-location, #delivery-location").keyup(function() {
     updateSuggestions(inputField, suggestionsList);
 });
 </script>
+
+<script>
+$(document).ready(function() {
+    function addNewVehicle() {
+        var newVehicleHtml =
+            `
+                    <div class="vehicle-info">
+                    <div class="row select-bm">
+                    <div class="col-md-4">
+                    <div class="input-form tj-select">
+                    <label> Year</label>
+                    <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+        var currentYear = {
+            {
+                date('Y')
+            }
+        };
+        for (var year = currentYear; year >= 1936; year--) {
+            newVehicleHtml += `<option value="${year}">${year}</option>`;
+        }
+
+        newVehicleHtml +=
+            `</select>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="input-form tj-select">
+                    <label>Make</label>
+                    <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
+
+        @foreach($makes as $make)
+        newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
+        @endforeach
+
+        newVehicleHtml += `
+                </select>
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="input-form tj-select model-div">
+                <label>Model</label>
+                <select class="nice-select model" name="model[]" id="model" required>
+                <!-- Options filled by JavaScript -->
+                </select>
+                <!-- Bin icon for deleting vehicle -->
+                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
+                </div>
+                </div>
+                </div>
+                </div>
+                `;
+
+        $('#vehicles-container').append(newVehicleHtml);
+    }
+
+    $('#addVehicleBtn').click(function() {
+        addNewVehicle();
+    });
+
+    $(document).on('click', '.delete-vehicle', function() {
+        $(this).closest('.vehicle-info').remove();
+    });
+
+    $(document).on('change', '.year, .make', function() {
+        var year = $(this).closest('.vehicle-info').find('.year').val();
+        var makeId = $(this).closest('.vehicle-info').find('.make').val();
+        var vehicleInfo = $(this).closest('.vehicle-info');
+        if (year && makeId) {
+            getModel(year, makeId, vehicleInfo);
+        }
+    });
+
+    function getModel(year, makeId, vehicleInfo) {
+        console.log('yes inn');
+        $.ajax({
+            url: "{{ route('get.models') }}",
+            method: 'GET',
+            data: {
+                year: year,
+                make: makeId
+            },
+            success: function(response) {
+                var modelsDropdown = vehicleInfo.find('.model');
+                modelsDropdown.empty();
+                var selectOptions = '<option value="">Select Model</option>';
+                $.each(response, function(index, model) {
+                    selectOptions += '<option value="' + model + '">' + model +
+                        '</option>';
+                });
+                modelsDropdown.html(selectOptions);
+            },
+            error: function(xhr) {
+                console.log(xhr.responseText);
+            }
+        });
+    }
+});
+</script>
+
+
+
+<script>
+$(document).ready(function() {
+    $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+        var year = $('.vehicle-year').val();
+        var makeId = $('.vehicle-make').val();
+        if (year && makeId) {
+            getModel(year, makeId);
+        }
+    });
+
+    function getModel(year, makeId) {
+        console.log('yes inn');
+        $.ajax({
+            url: "{{ route('get.models') }}",
+            method: 'GET',
+            data: {
+                year: year,
+                make: makeId
+            },
+            success: function(response) {
+                var modelsDropdown = $('.vehicle-model-div');
+                modelsDropdown.empty();
+                var selectOptions =
+                    '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                $.each(response, function(index, model) {
+                    selectOptions += '<option value="' + model + '">' + model +
+                        '</option>';
+                });
+                selectOptions += '</select>';
+                modelsDropdown.html(selectOptions);
+
+                console.log('yesssss', response);
+            },
+            error: function(xhr) {
+                console.log(xhr.responseText);
+            }
+        });
+    }
+
+    $('#available_at_auction').change(function() {
+        if ($(this).is(':checked')) {
+            $('.div-link').show();
+        } else {
+            $('.div-link').hide();
+        }
+    });
+
+    $('#modification').change(function() {
+        if ($(this).is(':checked')) {
+            $('.div-modify_info').show();
+        } else {
+            $('.div-modify_info').hide();
+        }
+    });
+});
+</script>
+
+
 @endsection

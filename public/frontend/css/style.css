@@ -9409,3 +9409,90 @@ PAGE LOAD ANIMATION
     border-left: 1px solid;
     color: var(--tj-primary-color);
 }
+
+.custom-testimonial-section {
+    padding-bottom: 90px;
+}
+
+.custom-testimonial-section .custom-testimonial-slider {
+    padding: 0 20px;
+}
+
+.custom-testimonial-section.custom-testimonial-page {
+    background: url(../images/banner/test-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 110px;
+}
+
+.custom-testimonial-item {
+    border-radius: 2px;
+    background: var(--custom-white-color);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    padding: 0 0 50px 35px;
+    transition: 0.6s;
+}
+
+.custom-testimonial-item .custom-testimonial-image {
+    position: relative;
+    margin-top: -30px;
+}
+
+.custom-testimonial-item .testimonial-comment img {
+    transition: 0.6s;
+    transform: translateY(0);
+}
+
+.custom-testimonial-item:hover .testimonial-comment img {
+    transform: translateY(-10px);
+}
+
+.custom-testimonial-item .content-area {
+    padding-right: 35px;
+}
+
+.custom-testimonial-item .testimonial-rating {
+    margin-bottom: 50px;
+}
+
+.custom-testimonial-item .testimonial-rating .rating-icon {
+    background: var(--custom-primary-color);
+    padding: 0 45px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 0px 3px;
+}
+
+.custom-testimonial-item .testimonial-rating .rating-icon ul li {
+    color: var(--custom-white-color);
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.custom-testimonial-item p {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.custom-testimonial-item .testimonial-content .custom-testimonial-author .title {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.custom-testimonial-item .testimonial-content .custom-testimonial-author .sub-title {
+    color: var(--custom-primary-color);
+}
+
+.swiper-slide {
+    width: calc(100% / 4);
+    margin-right: 30px;
+}
+
+.swiper-slide:last-child {
+    margin-right: 0;
+}
