@@ -1,7 +1,6 @@
-@php
-    $categories = Category::all();
-    @endphp
+@extends('partials.forms.form_layouts.app')
 
+@section('forms_content')
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
@@ -47,10 +46,10 @@
                 <option value="" disabled selected>Select Year
                 </option>
                 @php
-                $currentYear = date('Y');
-                for ($year = $currentYear; $year >= 1936; $year--) {
-                echo "<option value='$year'>$year</option>";
-                }
+                    $currentYear = date('Y');
+                    for ($year = $currentYear; $year >= 1936; $year--) {
+                        echo "<option value='$year'>$year</option>";
+                    }
                 @endphp
             </select>
         </div>
@@ -126,8 +125,8 @@
             <input type="number" id="feet-input" class="input-field" placeholder="" min="0" maxlength="3"
                 oninput="limitDigits(this, 3)">
             <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input" class="input-field" placeholder="" min="0" max="11" maxlength="2"
-                oninput="limitDigits(this, 2)">
+            <input type="number" id="inches-input" class="input-field" placeholder="" min="0"
+                max="11" maxlength="2" oninput="limitDigits(this, 2)">
             <span class="separators">(In.)</span>
         </div>
     </div>
@@ -136,11 +135,11 @@
 
         <label class="lab-cos">Width</label>
         <div class="input-container">
-            <input type="number" id="feet-input1" class="input-field" placeholder="" min="0" maxlength="3"
-                oninput="limitDigits(this, 3)">
+            <input type="number" id="feet-input1" class="input-field" placeholder="" min="0"
+                maxlength="3" oninput="limitDigits(this, 3)">
             <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input1" class="input-field" placeholder="" min="0" max="11" maxlength="2"
-                oninput="limitDigits(this, 2)">
+            <input type="number" id="inches-input1" class="input-field" placeholder="" min="0"
+                max="11" maxlength="2" oninput="limitDigits(this, 2)">
             <span class="separators">(In.)</span>
         </div>
     </div>
@@ -149,11 +148,11 @@
 
         <label class="lab-cos">Height</label>
         <div class="input-container">
-            <input type="number" id="feet-input2" class="input-field" placeholder="" min="0" maxlength="3"
-                oninput="limitDigits(this, 3)">
+            <input type="number" id="feet-input2" class="input-field" placeholder="" min="0"
+                maxlength="3" oninput="limitDigits(this, 3)">
             <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input2" class="input-field" placeholder="" min="0" max="11" maxlength="2"
-                oninput="limitDigits(this, 2)">
+            <input type="number" id="inches-input2" class="input-field" placeholder="" min="0"
+                max="11" maxlength="2" oninput="limitDigits(this, 2)">
             <span class="separators">(In.)</span>
         </div>
     </div>
@@ -162,22 +161,22 @@
 
         <label class="lab-cos">Weight</label>
         <div class="input-container1">
-            <input type="" id="feet-input" class="input-field-1" placeholder="" min="0" maxlength="6"
-                oninput="limitDigits(this, 6)">
+            <input type="" id="feet-input" class="input-field-1" placeholder="" min="0"
+                maxlength="6" oninput="limitDigits(this, 6)">
             <span class="separators-w">(Lbs.)</span>
 
         </div>
     </div>
 </div>
 <div class="row">
-   
+
     <div class="col-6">
         <div class="input-form">
             <label for="category">Category</label>
             <select class="" id="category" name="category">
                 <option value="" disabled selected>Select</option>
                 @foreach ($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
             </select>
             <input type="text" class="form-control" id="otherCategoryInput" name="category" disabled
@@ -193,3 +192,4 @@
         </div>
     </div>
 </div>
+@endsection

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Http;
 use App\Models\VehicleName;
 use App\Models\ZipCode;
 use App\Models\Subcategory;
+use App\Models\Category;
 
 class MainController extends Controller
 {
@@ -112,7 +113,8 @@ class MainController extends Controller
             ->groupBy('make')
             ->orderBy('make', 'ASC')
             ->get();
-        // dd($request->toArray());
+
+        $categories = Category::all();
 
         $vehicleType = $request->vehicleType;
 
@@ -132,7 +134,7 @@ class MainController extends Controller
             return view('partials.forms.freight', compact('makes', 'vehicleType'));
         }
         elseif ($request->vehicleType == 'Heavy-Equipment') {
-            return view('partials.forms.heavy', compact('makes', 'vehicleType'));
+            return view('partials.forms.heavy', compact('makes', 'vehicleType', 'categories'));
         }
         elseif ($request->vehicleType == 'Motorcycle') {
             return view('partials.forms.motorcycle', compact('makes', 'vehicleType'));
