@@ -32,8 +32,8 @@
     </div>
 </div>
 
-<a class="text-primary addVehicleBtn" id="addVehicleBtn"
-    style="cursor: pointer; text-decoration: underline;"><i
+<a class="add-car addVehicleBtn" id="addVehicleBtn"
+    ><i
         class="fa fa-plus"></i> Add
     Vehicle</a>
 
@@ -63,7 +63,21 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row ms-3">
+<div class="col-md-6">
+        <div class="form-group">
+            <input class="form-check-input" type="checkbox"
+                id="modification" name="modification" value="1" />
+            <label class="form-check-label text-white" for="modification">
+                Modification</label>
+        </div>
+        <div class="input-form div-modify_info" style="display: none;">
+            <label class="d-block"> Modification Information:</label>
+            <input class="" type="text" id="c"
+                name="modify_info"
+                placeholder="Enter Modification Information" />
+        </div>
+    </div>
     <div class="col-md-6">
         <div class="form-check">
             <input class="form-check-input" checked type="checkbox"
@@ -79,20 +93,7 @@
                 name="link" placeholder="Enter Link" />
         </div>
     </div>
-    <div class="col-md-6">
-        <div class="form-group">
-            <input class="form-check-input" type="checkbox"
-                id="modification" name="modification" value="1" />
-            <label class="form-check-label text-white" for="modification">
-                Modification</label>
-        </div>
-        <div class="input-form div-modify_info" style="display: none;">
-            <label class="d-block"> Modification Information:</label>
-            <input class="" type="text" id="c"
-                name="modify_info"
-                placeholder="Enter Modification Information" />
-        </div>
-    </div>
+    
 </div>
 
 <div class="input-form mt-3">

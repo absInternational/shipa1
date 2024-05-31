@@ -276,7 +276,7 @@
                                 <div class="col-6">
                                     <div class="input-form">
                                         <label for="category">Category</label>
-                                        <select class="" id="category" name="category">
+                                        <select class=" " id="category" name="category">
                                             <option value="" disabled selected>Select</option>
                                             @foreach ($categories as $category)
                                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -326,7 +326,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="" id="trailer_type" name="trailer_type">
+                                        <select class=" " id="trailer_type" name="trailer_type">
                                             <option value="RGN" selected>RGN</option>
                                             <option value="VAN (V)">VAN (V)</option>
                                             <option value="FLATBED (F)">FLATBED (F)</option>
@@ -351,7 +351,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="condition" class="text-white">Condition</label>
-                                        <select class="" id="condition" name="condition">
+                                        <select class=" " id="condition" name="condition">
                                             <option value="Running" selected>Running</option>
                                             <option value="Non Running">Non Running</option>
                                         </select>
