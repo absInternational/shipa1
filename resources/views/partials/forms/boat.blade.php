@@ -3,7 +3,7 @@
             
 
             <div class="input-form">
-                <label for="category">Category</label>
+                <label for="category">Select Boat Type</label>
                 <select class="" id="category" name="category" style="display: none;">
                     <option value="" disabled="" selected="">Select</option>
                     <option value="Power Boat">Power Boat</option>
@@ -59,7 +59,7 @@
 </div>
 </div>
 
-<a class="text-primary addVehicleBtn" id="addVehicleBtn" style="cursor: pointer; text-decoration: underline;"><i
+<a class="add-car addVehicleBtn" id="addVehicleBtn" ><i
     class="fa fa-plus"></i> Add
 Vehicle</a>
 

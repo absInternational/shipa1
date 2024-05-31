@@ -1,11 +1,9 @@
-@extends('partials.forms.form_layouts.app')
 
-@section('forms_content')
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
             <label for="trailer_type" class="text-white">Select Trailer Type</label>
-            <select class="" id="trailer_type" name="trailer_type">
+            <select class="nice-select " id="trailer_type" name="trailer_type">
                 <option value="RGN" selected>RGN</option>
                 <option value="VAN (V)">VAN (V)</option>
                 <option value="FLATBED (F)">FLATBED (F)</option>
@@ -30,7 +28,7 @@
     <div class="col-md-6">
         <div class="form-group">
             <label for="condition" class="text-white">Condition</label>
-            <select class="" id="condition" name="condition">
+            <select class="nice-select " id="condition" name="condition">
                 <option value="Running" selected>Running</option>
                 <option value="Non Running">Non Running</option>
             </select>
@@ -68,7 +66,7 @@
     </div>
 </div>
 
-<a class="text-primary addVehicleBtn" id="addVehicleBtn" style="cursor: pointer; text-decoration: underline;"><i
+<a class="add-car addVehicleBtn" id="addVehicleBtn" ><i
         class="fa fa-plus"></i> Add
     Vehicle</a>
 
@@ -79,7 +77,7 @@
     <div class="col-md-4">
         <div class="form-group">
             <label for="load_type" class="text-white">Load Type</label>
-            <select class="" id="load_type" name="load_type">
+            <select class="nice-select " id="load_type" name="load_type">
                 <option value="" disabled selected>Select</option>
                 <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
                 <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
@@ -89,7 +87,7 @@
     <div class="col-md-4">
         <div class="form-group">
             <label for="load_method" class="text-white">Load Method</label>
-            <select class="" id="load_method" name="load_method">
+            <select class="nice-select " id="load_method" name="load_method">
                 <option value="" disabled selected>Select</option>
                 <option value="LOADING DOCK">LOADING DOCK</option>
                 <option value="CRANE">CRANE</option>
@@ -101,7 +99,7 @@
     <div class="col-md-4">
         <div class="form-group">
             <label for="unload_method" class="text-white">Unload Method</label>
-            <select class="" id="unload_method" name="unload_method">
+            <select class="nice-select " id="unload_method" name="unload_method">
                 <option value="" disabled selected>Select</option>
                 <option value="LOADING DOCK">LOADING DOCK</option>
                 <option value="CRANE">CRANE</option>
@@ -173,7 +171,7 @@
     <div class="col-6">
         <div class="input-form">
             <label for="category">Category</label>
-            <select class="" id="category" name="category">
+            <select class="nice-select " id="category" name="category">
                 <option value="" disabled selected>Select</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -186,10 +184,9 @@
     <div class="col-6">
         <div class="input-form" id="subcategory-box">
             <label for="subcategory">Subcategory</label>
-            <select class="" id="subcategory" name="subcategory">
+            <select class="nice-select " id="subcategory" name="subcategory">
                 <option value="" disabled selected>Select</option>
             </select>
         </div>
     </div>
 </div>
-@endsection

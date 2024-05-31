@@ -595,7 +595,7 @@
                                 <div class="vehicle_quote_info" id="step2" style="display: none;">
                                     <div class="row">
                                         <h4 class="title text-center">VEHICLE INFORMATION</h4>
-                                        <select id="tabSelector" class="form-select" aria-label="Tab selector">
+                                        <select id="tabSelector" class="" aria-label="Tab selector">
                                             <option value="" selected disabled>Select a Vehicle</option>
                                             <option value="Atv">Atv Utv Transport</option>
                                             <option value="Boat-Transport">Boat Transport</option>
@@ -913,7 +913,7 @@
         </div>
     </section>
     <!--=========== Testimonial Section End =========-->
-    
+
     <!--=========== Map Section Start =========-->
     <section class="tj-map-section">
         <div class="google-map">

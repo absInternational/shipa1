@@ -499,7 +499,7 @@
                                 </div>
                             </div>
 
-                            <a class="text-primary" style="display:none;" id="addVehicleBtn"
+                            <a class="add-car" style="display:none;" id="addVehicleBtn"
                                 style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
