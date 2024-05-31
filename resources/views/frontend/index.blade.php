@@ -3,41 +3,43 @@
 @section('content')
 
 <style>
-    .tj-testimonial-section {
-    padding: 50px 0;
-    background: #f9f9f9;
-}
 
-.carousel-wrapper {
+
+    .tj-testimonial2-section {
+    padding: 50px 0;
+    /* background: #f9f9f9; */
+    }
+
+    .carousel-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-}
+    }
 
-.card {
+    .card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    }
 
-.card .row {
+    .card .row {
     display: flex;
     flex-wrap: wrap;
-}
+     }
 
-.card .col-6 {
+     .card .col-6 {
     width: 50%;
-}
+     }
 
-.star {
+     .star {
     margin-top: 10px;
-}
+     }
 
-.fa-star {
+     .fa-star {
     color: #f39c12;
-}
+     }
 
 .rates {
     font-size: 20px;
@@ -46,6 +48,7 @@
 }
 
 .owl-nav button {
+    display:none;
     background: none;
     border: none;
     font-size: 2rem;
@@ -1058,6 +1061,7 @@
 <!--=========== Project Section Start =========-->
 <section class="tj-project-section">
     <div class="tj-project-slider owl-carousel">
+        
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1068,6 +1072,7 @@
                 <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1078,6 +1083,7 @@
                 <h4><a href="project-details.html" class="title-link"> Sedan, SUV, Pickup etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1088,6 +1094,7 @@
                 <h4><a href="project-details.html" class="title-link"> Mopeds, ATV, Power Sports etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1098,6 +1105,7 @@
                 <h4><a href="project-details.html" class="title-link"> Trucks, Bulldozers, Mixer etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1108,6 +1116,7 @@
                 <h4><a href="project-details.html" class="title-link">Cars, Trucks, trailers etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1118,6 +1127,7 @@
                 <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1128,6 +1138,7 @@
                 <h4><a href="project-details.html" class="title-link"> Cranes, Drills, Grinders etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1138,6 +1149,7 @@
                 <h4><a href="project-details.html" class="title-link">Tractor, Planter, Baler etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1148,6 +1160,7 @@
                 <h4><a href="project-details.html" class="title-link"> Digger, Driller, Miners etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1158,6 +1171,7 @@
                 <h4><a href="project-details.html" class="title-link">Commercial, Dump Trucks etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1168,6 +1182,7 @@
                 <h4><a href="project-details.html" class="title-link"> frozen , refrigerated etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1178,6 +1193,7 @@
                 <h4><a href="project-details.html" class="title-link"> Explosive, Flammable, etc.</a></h4>
             </div>
         </div>
+
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1188,12 +1204,13 @@
                 <h4><a href="project-details.html" class="title-link">palletized, boxed, freight etc.</a></h4>
             </div>
         </div>
+
     </div>
 </section>
 <!--=========== Project Section End =========-->
 
 <!--=========== Testimonial Section Start =========-->
-<section class="tj-testimonial-section">
+<section class="tj-testimonial2-section">
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
@@ -1381,7 +1398,7 @@
 </section>
 <!--=========== Blog Section End =========-->
 <!--=========== Testimonial Section Start =========-->
-<section class="tj-testimonial-section">
+<section class="tj-testimonial-section" id="delayedTestimonialSection">
     <div class="carousel-wrapper">
         <div class="owl-carousel owl-theme" id="owl-caro">
             @foreach ($reviews as $review)
@@ -1411,6 +1428,7 @@
     </div>
 </section>
 <!--=========== Testimonial Section End =========-->
+
 <!-- <section class="tj-testimonial-section">
     <div class="container-flude">
         
@@ -1663,6 +1681,7 @@
         </div>
     </div>
 </section> -->
+
 <!--=========== Newsletter Section Start =========-->
 @include('partials.newsletter')
 <!--=========== Newsletter Section End =========-->
