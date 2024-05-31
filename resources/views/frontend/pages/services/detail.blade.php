@@ -29,17 +29,19 @@
     <section class="tj-service-details">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                     <div class="page-details-wrapper service-details-wrapper">
                         <div class="tj-blog-item-three">
                             <div class="tj-blog-image">
-                                <img src="{{ !is_null($service->banner_image) ? asset($service->banner_image) : '' }}"
-                                    alt="Blog" />
+                                <a href="service-details.html">
+                                    <img src="{{ !is_null($service->banner_image) ? asset($service->banner_image) : '' }}"
+                                        alt="Blog" />
+                                </a>
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-header">
                                     <h3>
-                                        <a class="title-link">
+                                        <a class="title-link" href="service-details.html">
                                             {{ !is_null($service->heading_one) ? $service->heading_one : '' }}
                                         </a>
                                     </h3>
@@ -143,8 +145,7 @@
                         </div> --}}
                     </div>
                 </div>
-
-                <div class="col-lg-12">
+                <div class="col-lg-4">
                     <div class="details-sidebar-inner">
                         <div class="tj-sidebar-widget sidebar-search">
                             <form action="#">
@@ -201,7 +202,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
