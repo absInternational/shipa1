@@ -116,8 +116,29 @@ class MainController extends Controller
 
         $vehicleType = $request->vehicleType;
 
-        // if ($request->vehicleType == 'Car') {
-            return view('partials.forms.car', compact('makes', 'vehicleType'));
-        // }
+        if ($request->vehicleType == 'Car') {
+            return view('partials.forms.car2', compact('makes', 'vehicleType'));
+        }
+        elseif ($request->vehicleType == 'Golf-Cart') {
+            return view('partials.forms.golf-cart', compact('makes', 'vehicleType'));
+        }
+        elseif ($request->vehicleType == 'Atv') {
+            return view('partials.forms.atv', compact('makes', 'vehicleType'));
+        }
+        elseif ($request->vehicleType == 'Boat-Transport') {
+            return view('partials.forms.boat', compact('makes', 'vehicleType'));
+        }
+        elseif ($request->vehicleType == 'Freight-Transportation') {
+            return view('partials.forms.freight', compact('makes', 'vehicleType'));
+        }
+        elseif ($request->vehicleType == 'Heavy-Equipment') {
+            return view('partials.forms.heavy', compact('makes', 'vehicleType'));
+        }
+        elseif ($request->vehicleType == 'Motorcycle') {
+            return view('partials.forms.motorcycle', compact('makes', 'vehicleType'));
+        }
+        elseif ($request->vehicleType == 'RV-Transport') {
+            return view('partials.forms.rv', compact('makes', 'vehicleType'));
+        }
     }
 }

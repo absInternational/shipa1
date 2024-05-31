@@ -268,8 +268,6 @@
             }
         }
 
-        addNewVehicle();
-
         $('#addVehicleBtn').click(function() {
             addNewVehicle();
         });
