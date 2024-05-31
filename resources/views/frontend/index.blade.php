@@ -7,42 +7,44 @@
             background: #f9f9f9;
         }
 
-        .carousel-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+<style>
 
-        .card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
 
-        .card .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
+    .tj-testimonial2-section {
+    padding: 50px 0;
+    /* background: #f9f9f9; */
+    }
 
-        .card .col-6 {
-            width: 50%;
-        }
+    .carousel-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    }
 
-        .star {
-            margin-top: 10px;
-        }
+    .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        .fa-star {
-            color: #f39c12;
-        }
+    .card .row {
+    display: flex;
+    flex-wrap: wrap;
+     }
 
-        .rates {
-            font-size: 20px;
-            font-weight: bold;
-            text-align: right;
-        }
+     .card .col-6 {
+    width: 50%;
+     }
+
+     .star {
+    margin-top: 10px;
+     }
+
+     .fa-star {
+    color: #f39c12;
+     }
 
         .owl-nav button {
             background: none;
@@ -51,10 +53,13 @@
             color: #333;
         }
 
-        .owl-dots {
-            text-align: center;
-            margin-top: 15px;
-        }
+.owl-nav button {
+    display:none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+}
 
         .owl-dot {
             display: inline-block;

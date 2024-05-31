@@ -199,6 +199,7 @@
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
  .owl-theme .owl-dots,.owl-theme .owl-nav {
+  display: none;
   text-align: center;
   -webkit-tap-highlight-color: transparent
 }
