@@ -3,8 +3,7 @@
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label> Year</label>
-            <select class="nice-select vehicle-year" name="year[]"
-                id="year" required>
+            <select class="nice-select vehicle-year" name="year[]" id="year" required>
                 <option value="" disabled selected>Select Year
                 </option>
                 @php
@@ -19,8 +18,7 @@
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label>Make</label>
-            <select class="nice-select vehicle-make" name="make[]"
-                id="make" required>
+            <select class="nice-select vehicle-make" name="make[]" id="make" required>
                 <option value="" disabled selected>Select Make
                 </option>
                 @foreach ($makes as $make)
@@ -33,8 +31,7 @@
     <div class="col-md-4">
         <div class="input-form tj-select vehicle-model-div">
             <label>Model</label>
-            <select class="nice-select vehicle-model" name="model[]"
-                id="model" required>
+            <select class="nice-select vehicle-model" name="model[]" id="model" required>
                 <option value="">Select Model</option>
             </select>
         </div>
@@ -54,8 +51,7 @@
         <div class="form-group" style="line-height:23px;">
             <label for="trailer_type" class="text-white">Select Trailer
                 Type</label>
-            <select class="form-control" id="trailer_type"
-                name="trailer_type">
+            <select class="form-control" id="trailer_type" name="trailer_type">
                 <option value="Open" selected>Open</option>
                 <option value="Enclosed">Enclosed</option>
             </select>
@@ -75,40 +71,34 @@
 <div class="row">
     <di class="col-md-6">
         <div class="form-group">
-            <input class="form-check-input " type="checkbox"
-                id="modification" name="modification" value="1" />
+            <input class="form-check-input " type="checkbox" id="modification" name="modification" value="1" />
             <label class="form-check-label text-white" for="modification">
                 Modification</label>
         </div>
 
         <div class="input-form div-modify_info" style="display: none;">
             <label class="d-block"> Modification Information:</label>
-            <input class="" type="text" id="c"
-                name="modify_info"
+            <input class="" type="text" id="c" name="modify_info"
                 placeholder="Enter Modification Information" />
         </div>
     </di>
     <div class="col-md-6">
         <div class="form-check">
-            <input class="form-check-input" type="checkbox"
-                id="available_at_auction" name="available_at_auction"
+            <input class="form-check-input" type="checkbox" id="available_at_auction" name="available_at_auction"
                 value="1" />
-            <label class="form-check-label text-white"
-                for="available_at_auction"> Available
+            <label class="form-check-label text-white" for="available_at_auction"> Available
                 at
                 Auction?</label>
         </div>
 
         <div class="input-form div-link" style="display: none;">
             <label class="d-block"> Enter Link:</label>
-            <input class="" type="url" id="link"
-                name="link" placeholder="Enter Link" />
+            <input class="" type="url" id="link" name="link" placeholder="Enter Link" />
         </div>
     </div>
 </div>
 
 <div class="input-form">
     <label class="d-block text-white"> Image:</label>
-    <input class="form-control image_input" type="file" id="image"
-        name="image" placeholder="Upload File" />
+    <input class="form-control image_input" type="file" id="image" name="image" placeholder="Upload File" />
 </div>

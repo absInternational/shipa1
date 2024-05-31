@@ -1260,21 +1260,21 @@
     <!--=========== Testimonial Section End =========-->
 
     <!-- <section class="custom-testimonial-section">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="swiper custom-testimonial-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
-                                                                        <div class="swiper-wrapper" id="custom-swiper-wrapper" aria-live="off"
-                                                                            style="transform: translate3d(-2562px, 0px, 0px); transition-duration: 0ms;">
-                                                                           
-                                                                            
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="swiper custom-testimonial-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                                                            <div class="swiper-wrapper" id="custom-swiper-wrapper" aria-live="off"
+                                                                                style="transform: translate3d(-2562px, 0px, 0px); transition-duration: 0ms;">
+                                                                               
+                                                                                
+                                                                            </div>
+                                                                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                                                                         </div>
-                                                                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </section> -->
+                                                        </section> -->
 
 
 
@@ -1713,7 +1713,7 @@
 
     <script>
         $(document).ready(function() {
-            $('#available_at_auction').change(function() {
+            $(document).on('change', '#available_at_auction', function() {
                 if ($(this).is(':checked')) {
                     $('.div-link').show();
                 } else {
@@ -1721,7 +1721,7 @@
                 }
             });
 
-            $('#modification').change(function() {
+            $(document).on('change', '#modification', function() {
                 if ($(this).is(':checked')) {
                     $('.div-modify_info').show();
                 } else {
@@ -1770,65 +1770,6 @@
         });
     </script>
 
-
-
-    <script>
-        $(document).ready(function() {
-            // $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            //     var year = $('.vehicle-year').val();
-            //     var makeId = $('.vehicle-make').val();
-            //     if (year && makeId) {
-            //         getModel(year, makeId);
-            //     }
-            // });
-
-            // function getModel(year, makeId) {
-            //     console.log('yes inn');
-            //     $.ajax({
-            //         url: "{{ route('get.models') }}",
-            //         method: 'GET',
-            //         data: {
-            //             year: year,
-            //             make: makeId
-            //         },
-            //         success: function(response) {
-            //             var modelsDropdown = $('.vehicle-model-div');
-            //             modelsDropdown.empty();
-            //             var selectOptions =
-            //                 '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-            //             $.each(response, function(index, model) {
-            //                 selectOptions += '<option value="' + model + '">' + model +
-            //                     '</option>';
-            //             });
-            //             selectOptions += '</select>';
-            //             modelsDropdown.html(selectOptions);
-
-            //             console.log('yesssss', response);
-            //         },
-            //         error: function(xhr) {
-            //             console.log(xhr.responseText);
-            //         }
-            //     });
-            // }
-
-            $('#available_at_auction').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
-
-            $('#modification').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
-        });
-    </script>
-
     <script>
         $(document).ready(function() {
             $(document).on('change', '.vehicle-year, .vehicle-make', function() {
@@ -1867,22 +1808,6 @@
                     }
                 });
             }
-
-            $('#available_at_auction').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
-
-            $('#modification').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
         });
     </script>
 
