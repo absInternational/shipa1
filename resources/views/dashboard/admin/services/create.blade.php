@@ -18,6 +18,10 @@
                                     <input id="name" class="form-control" type="text" name="name" required />
                                 </div>
                                 <div class="form-group">
+                                    <label for="display_name">Service Display Name</label>
+                                    <input id="display_name" class="form-control" type="text" name="display_name" required />
+                                </div>
+                                <div class="form-group">
                                     <label>Banner Image</label>
                                     <input class="form-control" type="file" name="banner_image"
                                         placeholder="Banner Image" required />
