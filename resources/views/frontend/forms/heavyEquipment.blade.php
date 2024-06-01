@@ -391,12 +391,12 @@
                             </div>
           
 
-                <div class="row mb-3">
+                             <div class="row mb-3">
 
 
                         
 
-                        <div class="col-md-3">
+                             <div class="col-md-3">
 
                             <label class="lab-cos">Length</label>
                             <div class="input-container">
@@ -407,9 +407,9 @@
                                     min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                 <span class="separators">(In.)</span>
                             </div>
-                        </div>
+                             </div>
 
-                        <div class="col-md-3">
+                             <div class="col-md-3">
 
                            <label class="lab-cos">Width</label>
                            <div class="input-container">
@@ -419,51 +419,51 @@
                                <input type="number" id="inches-input1" class="input-field" placeholder=""
                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                <span class="separators">(In.)</span>
-                           </div>
-                        </div>
+                                </div>
+                               </div>
                         
-                        <div class="col-md-3">
+                                 <div class="col-md-3">
 
-                           <label class="lab-cos">Height</label>
-                           <div class="input-container">
+                                    <label class="lab-cos">Height</label>
+                                    <div class="input-container">
                                <input type="number" id="feet-input2" class="input-field" placeholder=""
                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                <span class="separator">(Ft.)</span>
                                <input type="number" id="inches-input2" class="input-field" placeholder=""
                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                               <span class="separators">(In.)</span>
-                           </div>
-                        </div>
+                                        <span class="separators">(In.)</span>
+                                     </div>
+                                 </div>
 
-                        <div class="col-md-3">
+                                 <div class="col-md-3">
 
-                           <label class="lab-cos">Weight</label>
-                           <div class="input-container1">
+                                    <label class="lab-cos">Weight</label>
+                                   <div class="input-container1">
                                <input type="" id="feet-input" class="input-field-1" placeholder=""
                                    min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                <span class="separators-w">(Lbs.)</span>
                                
-                           </div>
-                        </div>
-                </div>
+                                    </div>
+                                  </div>
+                                     </div>
 
-                            <div class="input-form mt-3">
+                                    <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" />
-                            </div>
+                                 </div>
 
 
                            
 
-                            <div class="form-check">
+                                <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />
                                 <label class="form-check-label text-white" for="available_at_auction"> Available at
                                     Auction?</label>
-                            </div>
+                                </div>
 
-                            <div class="input-form div-link mt-3">
+                                <div class="input-form div-link mt-3">
                                 <label class="d-block"> Enter Link:</label>
                                 <input class="" type="url" id="link" name="link"
                                     placeholder="Enter Link" />

@@ -27,14 +27,33 @@
     <!--========== breadcrumb End ==============-->
 
     <!--=========== About Section Start =========-->
-    <section class="tj-about-section">
+
+    <section class="tj-service-details pt-4 pb-0">
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape">Ship A1 Transport</span>
+                        <p>
+                        Ship A1 Transport is one of the top logistic and shipping companies, with a vast variety of shipping methods, quality services, and a well-equipped staff we are proficient in transporting your vehicles like heavy equipment and freight from one place to another with timely delivery all across the US. At Ship A1 Transport we believe that our top priority is providing our customers with top-notch quality as well as catering to their needs from time to time. We ensure our customers' satisfaction and peace of mind and maintain customer loyalty with them. Your trust is our goal. Ship A1 Transport not only believes in safe and secure transportation we also care about what our customers require from us, with our professional, expert, and highly equipped team we can fully meet your needs and expectations without any hassle.
+
+                        </p>
+                        <!-- <h2 class="title">Welcome to the  &amp; privacy policy </h2> -->
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+
+    <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> A1 Transportation Company</span>
-                            <h2 class="title">What Makes Us Dependable?</h2>
+                            <h2 class="title">Why Choose Us?</h2>
                             <p class="desc">
                                 Among all the shipping companies out there, factors that make us stand out from therest are:
                             </p>
@@ -45,13 +64,11 @@
                                     <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" />
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Our Values</h5>
+                                    <h5 class="title">Competitive Pricing</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                                We are a licensed Transportation company with high moral values and have attained customer
-                                satisfaction through their remarks on esteemed platforms.
-
+                            We promise to provide you with the greatest possible deal on shipping without sacrificing dependability, quality, or safety.
                             </p>
                         </div>
                         <div class="tj-icon-box">
@@ -60,12 +77,11 @@
                                     <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Scope of Services</h5>
+                                    <h5 class="title">Insurance Coverage</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                                Range of vehicles, we ship, is not limited to just conventional cars and motorbikes.
-                            </p>
+                            Our shipping services and vehicles are 100% insured, so as our customer you have nothing to worry about.</p>
                         </div>
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
@@ -73,15 +89,11 @@
                                     <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Safety Is Our Priority</h5>
+                                    <h5 class="title">Advanced Tracking Service</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                                No matter which mode of transportation you use, ShipA1 assures its customers, utmostsecurity
-                                to their assets.
-
-
-                            </p>
+                            With our advanced tracking service you can keep a transparent eye on your shipment.</p>
                         </div>
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
@@ -89,13 +101,11 @@
                                     <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Skilful & Devoted Staff</h5>
+                                    <h5 class="title">24/7 Customer Support</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                                Our team is loaded with highly experienced professionals of both customer dealing andvehicle
-                                handling.
-                            </p>
+                            Our committed staff is on hand 24 hours a day to help with any questions or issues you may have.</p>
                         </div>
                     </div>
                 </div>

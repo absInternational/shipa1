@@ -49,7 +49,7 @@
         <div class="animation-preloader">
             <div class="spinner">
                 <div class="loader-icon">
-                    <img src="{{ asset('frontend/images/logo/logo.png') }}"
+                    <img src="{{ asset('frontend/images/logo/favicon.png') }}"
                         alt="Corporate Business HTML Template" />
                 </div>
             </div>

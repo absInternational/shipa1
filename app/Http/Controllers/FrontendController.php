@@ -121,4 +121,10 @@ class FrontendController extends Controller
     {
         return view('frontend.pages.privacyPolicy');
     }
+
+    public function vehicleTransportDetail()
+    {
+       
+        return view('frontend.pages.vehicleTransportDetail');
+    }
 }

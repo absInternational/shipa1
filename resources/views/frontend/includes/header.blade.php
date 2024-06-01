@@ -79,7 +79,7 @@
                                     </li>
                                     <li class="ab-gap">
                                         <a href="{{ route('quote.form.combine') }}"
-                                            class="{{ Request::routeIs('aboutUs') ? ' active' : '' }}"> Get Quote</a>
+                                            class="{{ Request::routeIs('autoAuction') ? ' active' : '' }}"> Get Quote</a>
                                         <ul class="list-gap sub-menu-list" style="width: 60rem">
                                             <div class="row">
                                                 <div class="col-sm-4 bd-l bd-r">
