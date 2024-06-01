@@ -395,12 +395,6 @@
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
-          
-
-                             <div class="row mb-3">
-=======
->>>>>>> a842c6b4a7ba7535355086b6317a4089c1310c2d
 
 
                             <div class="row mb-3">
@@ -416,11 +410,8 @@
                                     </div>
                                 </div>
 
-<<<<<<< HEAD
                              <div class="col-md-3">
-=======
-                                <div class="col-md-3">
->>>>>>> a842c6b4a7ba7535355086b6317a4089c1310c2d
+                                
 
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
@@ -431,7 +422,7 @@
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
-                                </div>
+                            </div>
 
                                 <div class="col-md-3">
 
@@ -456,49 +447,14 @@
 
                                     </div>
                                 </div>
-                            </div>
-<<<<<<< HEAD
+                           
                              </div>
 
-                             <div class="col-md-3">
-
-                           <label class="lab-cos">Width</label>
-                           <div class="input-container">
-                               <input type="number" id="feet-input1" class="input-field" placeholder=""
-                                   min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                               <span class="separator">(Ft.)</span>
-                               <input type="number" id="inches-input1" class="input-field" placeholder=""
-                                   min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                               <span class="separators">(In.)</span>
-                                </div>
-                               </div>
+                             
                         
-                                 <div class="col-md-3">
 
-                                    <label class="lab-cos">Height</label>
-                                    <div class="input-container">
-                               <input type="number" id="feet-input2" class="input-field" placeholder=""
-                                   min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                               <span class="separator">(Ft.)</span>
-                               <input type="number" id="inches-input2" class="input-field" placeholder=""
-                                   min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                     </div>
-                                 </div>
-
-                                 <div class="col-md-3">
-
-                                    <label class="lab-cos">Weight</label>
-                                   <div class="input-container1">
-                               <input type="" id="feet-input" class="input-field-1" placeholder=""
-                                   min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                               <span class="separators-w">(Lbs.)</span>
-                               
-                                    </div>
-                                  </div>
-                                     </div>
-=======
->>>>>>> a842c6b4a7ba7535355086b6317a4089c1310c2d
+                                 
+                                     
 
                                     <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
@@ -520,7 +476,7 @@
                                 <label class="d-block"> Enter Link:</label>
                                 <input class="" type="url" id="link" name="link"
                                     placeholder="Enter Link" />
-                            </div>
+                                </div>
 
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
