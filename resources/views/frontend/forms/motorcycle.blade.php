@@ -310,19 +310,18 @@
                                     </div>
                                 </di>
                                 <di class="col-md-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                            name="available_at_auction" value="1" />
-                                        <label class="form-check-label text-white" for="available_at_auction"> Available
-                                            at
-                                            Auction?</label>
-                                    </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                        name="available_at_auction" value="1" />
+                                    <label class="form-check-label text-white" for="available_at_auction"> Available at
+                                        Auction?</label>
+                                </div>
 
-                                    <div class="input-form div-link" style="display: none;">
-                                        <label class="d-block"> Enter Link:</label>
-                                        <input class="" type="url" id="link" name="link"
-                                            placeholder="Enter Link" />
-                                    </div>
+                                <div class="input-form div-link mt-3" style="display: none;">
+                                    <label class="d-block"> Enter Link:</label>
+                                    <input class="form-control" type="url" id="link" name="link"
+                                        placeholder="Enter Link" />
+                                </div>
                                 </di>
                             </div>
 

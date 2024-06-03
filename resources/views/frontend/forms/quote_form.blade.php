@@ -57,17 +57,7 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-                            <!-- <div class="form-check">
-                                <input class="form-check-input" checked type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" value="1" />
-                                <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                    Auction?</label>
-                            </div>
-                            <div class="input-form div-link">
-                                <label class="d-block"> Enter Link:</label>
-                                <input class="form-control" type="url" id="link" name="link"
-                                    placeholder="Enter Link" />
-                            </div> -->
+                           
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -184,16 +174,7 @@
                             </div>
 
                             
-                            <!-- <div class="form-group">
-                                <input class="form-check-input" type="checkbox" id="modification" name="modification"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="modification"> Modification</label>
-                            </div>
-                            <div class="input-form div-modify_info" style="display: none;">
-                                <label class="d-block"> Modification Information:</label>
-                                <input class="" type="text" id="c" name="modify_info"
-                                    placeholder="Enter Modification Information" />
-                            </div> -->
+                          
                             <div class="input-form mt-3">
                                 <label class="d-block text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" id="image" name="image"

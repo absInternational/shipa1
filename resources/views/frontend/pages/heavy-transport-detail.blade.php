@@ -311,7 +311,16 @@
                         </div>
                     </div>
                 </div>
-
+                @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+            @endif
+            @if (session('error'))
+            <div class="alert alert-error">
+                {{ session('error') }}
+            </div>
+            @endif
                 <div class="col-lg-6 mt-4" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form mt-4 w-100" data-bg-image="">
 
@@ -321,6 +330,15 @@
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
                             <div class="container mt-2">
                                 <!-- Step 1: Moving From/To -->
                                 <div class="route_quote_info" id="step1">
@@ -363,13 +381,13 @@
                                         <h4 class="title text-center">VEHICLE INFORMATION</h4>
                                         <select id="tabSelector" class="" aria-label="Tab selector">
                                             <option value="" selected disabled>Select a Vehicle</option>
-                                            <option value="Atv">Atv Utv Transport</option>
+                                            <!-- <option value="Atv">Atv Utv Transport</option> -->
                                             <option value="Boat-Transport">Boat Transport</option>
-                                            <option value="Car">Car</option>
-                                            <option value="Freight-Transportation">Freight Transportation</option>
+                                            <!-- <option value="Car">Car</option> -->
+                                            <!-- <option value="Freight-Transportation">Freight Transportation</option> -->
                                             <option value="Golf-Cart">Golf Cart</option>
                                             <option value="Heavy-Equipment">Heavy Equipment</option>
-                                            <option value="Motorcycle">Motorcycle</option>
+                                            <!-- <option value="Motorcycle">Motorcycle</option> -->
                                             <option value="RV-Transport">RV Transport</option>
                                         </select>
 
@@ -985,60 +1003,173 @@ function playVideo() {
 </script>
 
 <script>
-    $(document).ready(function() {
-        var selectedTab = '';
-        $('#tabSelector').change(function() {
-            $('.vehicles-container').html('');
-            selectedTab = $(this).val();
-            var vehicleType = $(this).val();
-            $('.tab-pane').removeClass('show active');
-            $('#' + selectedTab).addClass('show active');
+        $(document).ready(function() {
+            var selectedTab = '';
+            $('#tabSelector').change(function() {
+                $('.vehicles-container').html('');
+                selectedTab = $(this).val();
+                var vehicleType = $(this).val();
+                $('.tab-pane').removeClass('show active');
+                $('#' + selectedTab).addClass('show active');
 
-            $.ajax({
-                url: "{{ route('get.partial.form') }}",
-                method: 'GET',
-                data: {
-                    vehicleType: vehicleType,
-                },
-                success: function(response) {
-                    $('#additionalContent').html('');
-                    $('#additionalContent').html(response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
+                $.ajax({
+                    url: "{{ route('get.partial.form') }}",
+                    method: 'GET',
+                    data: {
+                        vehicleType: vehicleType,
+                    },
+                    success: function(response) {
+                        $('#additionalContent').html('');
+                        $('#additionalContent').html(response);
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+
+            function addNewVehicle() {
+                var newVehicleHtml =
+                    `
+                        <div class="vehicle-info">
+                        <div class="row select-bm">
+                        <div class="col-md-4">
+                        <div class="input-form tj-select">
+                        <label> Year</label>
+                        <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+                var currentYear = {{ date('Y') }};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
+
+                newVehicleHtml +=
+                    `</select>
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="input-form tj-select">
+                        <label>Make</label>
+                        <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
+
+                
+
+                newVehicleHtml += `
+                        </select>
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="input-form tj-select model-div">
+                        <label>Model</label>
+                        <select class="nice-select model" name="model[]" id="model" required></select>`;
+
+                newVehicleHtml +=
+                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+
+                newVehicleHtml += `
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            `;
+
+                $('.vehicles-container').append(newVehicleHtml);
+            }
+
+            function addOtherVehicle() {
+                var newVehicleHtml =
+                    `
+                        <div class="vehicle-info">
+                        <div class="row select-bm">
+                        <div class="col-md-4">
+                        <div class="input-form tj-select">
+                        <label> Year</label>
+                        <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                var currentYear = {{ date('Y') }};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
+
+                newVehicleHtml +=
+                    `</select>
+                                </div>
+                                </div>
+                                <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                <label>Make</label>
+                                <input type="text" id="make" name="make[]"
+                                placeholder="Enter Make" required="" />
+                                </div>
+                                </div>
+                                <div class="col-md-4">
+                                <div class="input-form tj-select model-div">
+                                <label>Model</label>
+                                <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                required="" />`
+                newVehicleHtml +=
+                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+
+                newVehicleHtml += `</div>
+                                </div>
+                                </div>
+                                </div>
+                                `;
+
+                $('.vehicles-container').append(newVehicleHtml);
+            }
+
+            $(document).on('click', '.addVehicleBtn', function() {
+                if ($('#tabSelector').val() == 'Car') {
+                    addNewVehicle();
+                } else {
+                    addOtherVehicle();
+                }
+            });
+
+            $(document).on('click', '.delete-vehicle', function() {
+                $(this).closest('.vehicle-info').remove();
+            });
+
+            $(document).ready(function() {
+                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+                    var year = $('.vehicle-year').val();
+                    var makeId = $('.vehicle-make').val();
+                    if (year && makeId) {
+                        getModel(year, makeId);
+                    }
+                });
+
+                function getModel(year, makeId) {
+                    console.log('yes inn');
+                    $.ajax({
+                        url: "{{ route('get.models') }}",
+                        method: 'GET',
+                        data: {
+                            year: year,
+                            make: makeId
+                        },
+                        success: function(response) {
+                            var modelsDropdown = $('.vehicle-model-div');
+                            modelsDropdown.empty();
+                            var selectOptions =
+                                '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                            $.each(response, function(index, model) {
+                                selectOptions += '<option value="' + model + '">' +
+                                    model +
+                                    '</option>';
+                            });
+                            selectOptions += '</select>';
+                            modelsDropdown.html(selectOptions);
+
+                            console.log('yesssss', response);
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
+                    });
                 }
             });
         });
-
-        
-
-        function getModel(year, makeId, vehicleInfo) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' +
-                            model +
-                            '</option>';
-                    });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script>
+    </script>
 
 <script>
     document.querySelectorAll('input[type="text"]').forEach((input) => {

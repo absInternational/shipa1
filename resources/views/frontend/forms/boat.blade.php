@@ -380,18 +380,21 @@
                         <div class="row">
                             <div class="col-md-6">
 
-                                <div class="form-check">
-                                    <input class="form-check-input" checked type="checkbox" id="available_at_auction"
+                            <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
                                         name="available_at_auction" value="1" />
                                     <label class="form-check-label text-white" for="available_at_auction"> Available at
                                         Auction?</label>
                                 </div>
 
-                                <div class="input-form div-link mt-3">
+                                <div class="input-form div-link mt-3" style="display: none;">
                                     <label class="d-block"> Enter Link:</label>
                                     <input class="form-control" type="url" id="link" name="link"
                                         placeholder="Enter Link" />
                                 </div>
+
+
+                                
 
                             </div>
 
@@ -576,6 +579,7 @@ $(document).ready(function() {
 
 <script>
 $(document).ready(function() {
+    
     $('#available_at_auction').change(function() {
         if ($(this).is(':checked')) {
             $('.div-link').show();
@@ -583,7 +587,7 @@ $(document).ready(function() {
             $('.div-link').hide();
         }
     });
-
+    
     $('#modification').change(function() {
         if ($(this).is(':checked')) {
             $('.div-modify_info').show();
