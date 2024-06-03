@@ -8,12 +8,11 @@
                 >
                     <a href="{{ route('welcome') }}"> <img src="{{ asset('frontend/images/logo/logo-white.png')}}" alt="Logo" /></a>
                     <p>
-                        A farm is a plot of land that is used to grow crops and raise livestock, as in our farm,
-                        we raise sheep and sell their wool the word farm is also.
+                    Ship A1 Transport is one of the top logistic and shipping companies, with a vast variety of shipping methods, quality services, and a well-equipped staff.
                     </p>
                     <div class="footer-social-icon">
                         <ul class="list-gap">
-                            <li>
+                            <li class="mb-2">
                                 <a href="https://www.facebook.com/ShipA1/"> <i class="fa-brands fa-facebook-f"></i></a>
                             </li>
                             <li>
@@ -25,9 +24,9 @@
                             <li>
                                 <a href="https://www.youtube.com/@shipA1392"> <i class="fa-brands fa-youtube"></i></a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="https://wa.me/+14107184031"> <i class="fa-brands fa-whatsapp"></i></a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -40,22 +39,22 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="#">Warehouse Air</a>
+                                <a href="#">Car Transport</a>
+                            </li>
+                            <li style="width: 108%;">
+                                <a href="#" >Motorcycle Shipping</a>
                             </li>
                             <li>
-                                <a href="#">Freight Ocean</a>
+                                <a href="#">Heavy Equipment</a>
                             </li>
                             <li>
-                                <a href="#">freight Road </a>
+                                <a href="#">Boat Transport</a>
                             </li>
                             <li>
-                                <a href="#">Freight Freight</a>
+                                <a href="#">Freight Transport</a>
                             </li>
                             <li>
-                                <a href="#">Supply Chain </a>
-                            </li>
-                            <li>
-                                <a href="#">Packaginga</a>
+                                <a href="{{ route('services') }}" target="_blank">View More</a>
                             </li>
                         </ul>
                     </div>
@@ -68,24 +67,27 @@
                     </div>
                     <div class="widget-menu">
                         <ul>
-                            <li>
-                                <a href="{{ route('blogs') }}">News & Media </a>
+                             <li>
+                                <a href="{{ route('aboutUs') }}">About Us </a>
                             </li>
                             <li>
-                                <a href="#">Sustainability</a>
+                                <a href="{{ route('blogs') }}">Blogs</a>
                             </li>
                             <li>
-                                <a href="{{ route('aboutUs') }}">About Expertise </a>
+                                <a href="{{ route('contactUs') }}">Contact Us</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#">Case Studies</a>
+                            </li> -->
+                            <li>
+                                <a href="{{ route('order.tracking') }}">Track Order </a>
                             </li>
+                            
+                            
                             <li>
                                 <a href="#">Our Team </a>
                             </li>
-                            <li>
-                                <a href="{{ route('contactUs') }}">Contacts</a>
-                            </li>
+                            
                             <li>
                                 <a href="{{ route('termsAndConditions') }}">Terms & Conditions</a>
                             </li>
@@ -125,21 +127,21 @@
     <div class="copyright-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 text-center">
                     <div class="footer-copyright-area">
                         <div class="copyright-target">
                             <p>
-                                Copyright © 2023 <a href="#" target="_blank"> Shipa1. </a> All Rights
+                                Copyright © 2024 <a href="#" target="_blank"> Shipa1. </a> All Rights
                                 Reserved.
                             </p>
                         </div>
-                        <div class="copyright-menu">
+                        <!-- <div class="copyright-menu">
                             <ul class="list-gap">
                                 <li><a href="#"> Setting & privacy</a></li>
                                 <li><a href="#"> Faqs</a></li>
                                 <li><a href="#"> Support</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

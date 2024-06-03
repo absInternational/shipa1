@@ -410,7 +410,8 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-3">
+                             <div class="col-md-3">
+                                
 
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
@@ -421,7 +422,7 @@
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
-                                </div>
+                            </div>
 
                                 <div class="col-md-3">
 
@@ -446,29 +447,36 @@
 
                                     </div>
                                 </div>
-                            </div>
+                           
+                             </div>
 
-                            <div class="input-form mt-3">
+                             
+                        
+
+                                 
+                                     
+
+                                    <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" />
-                            </div>
+                                 </div>
 
 
 
 
-                            <div class="form-check">
+                                <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />
                                 <label class="form-check-label text-white" for="available_at_auction"> Available at
                                     Auction?</label>
-                            </div>
+                                </div>
 
-                            <div class="input-form div-link mt-3">
+                                <div class="input-form div-link mt-3">
                                 <label class="d-block"> Enter Link:</label>
                                 <input class="" type="url" id="link" name="link"
                                     placeholder="Enter Link" />
-                            </div>
+                                </div>
 
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
