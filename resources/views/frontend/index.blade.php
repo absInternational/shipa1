@@ -333,7 +333,7 @@
                             </div>
                         </div>
                         <div class="service-arrow">
-                            <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="{{ route('heavy-transport-detail') }}" target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </li>

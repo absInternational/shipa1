@@ -244,6 +244,33 @@
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
+
+        .video-thumbnail {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    opacity: 0.8;
+}
+
+.play-button:hover {
+    opacity: 1;
+}
+
+
     </style>
    
 
@@ -674,6 +701,28 @@
     <!--=========== Project Section End =========-->
 
     <section class="tj-video-section">
+    <div class="container-flude">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="video-wrapper text-center">
+                    <div class="video-thumbnail" onclick="playVideo()">
+                        <img src="{{ asset('frontend/images/banner/tn.jpg') }}" alt="Video Thumbnail" />
+                        <div class="play-button">
+                            <i class="fa fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-iframe" style="display:none;">
+                    <iframe width="80%" height="500" src="https://www.youtube.com/embed/cr4Nya5jVn0?si=RLh4uuppLT63xVBT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- <section class="tj-video-section">
       <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -683,7 +732,7 @@
             </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 <!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page">
@@ -922,6 +971,20 @@
 <script src="path/to/owl.carousel.min.js"></script>
 
 <script>
+
+function playVideo() {
+    document.querySelector('.video-thumbnail').style.display = 'none';
+    document.querySelector('.video-iframe').style.display = 'block';
+    var iframe = document.getElementById('videoFrame');
+    var videoSrc = iframe.src;
+    iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
+}
+
+
+
+</script>
+
+<script>
     $(document).ready(function() {
         var selectedTab = '';
         $('#tabSelector').change(function() {
@@ -1130,135 +1193,6 @@
 </script>
 
 <script>
-$(document).ready(function() {
-            var selectedTab = '';
-            $('#tabSelector').change(function() {
-                $('.vehicles-container').html('');
-                selectedTab = $(this).val();
-                var vehicleType = $(this).val();
-                $('.tab-pane').removeClass('show active');
-                $('#' + selectedTab).addClass('show active');
-
-                $.ajax({
-                    url: "{{ route('get.partial.form') }}",
-                    method: 'GET',
-                    data: {
-                        vehicleType: vehicleType,
-                    },
-                    success: function(response) {
-                        $('#additionalContent').html('');
-                        $('#additionalContent').html(response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            });
-
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label> Year</label>
-                        <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                newVehicleHtml +=
-                    `</select>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label>Make</label>
-                        <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-                @foreach ($makes as $make)
-                    newVehicleHtml +=
-                        `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-                @endforeach
-
-                newVehicleHtml += `
-                        </select>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select model-div">
-                        <label>Model</label>
-                        <select class="nice-select model" name="model[]" id="model" required></select>`;
-
-                newVehicleHtml +=
-                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-                newVehicleHtml += `
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            `;
-
-                $('.vehicles-container').append(newVehicleHtml);
-            }
-
-            function addOtherVehicle() {
-                var newVehicleHtml =
-                    `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label> Year</label>
-                        <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                newVehicleHtml +=
-                    `</select>
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                <label>Make</label>
-                                <input type="text" id="make" name="make[]"
-                                placeholder="Enter Make" required="" />
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                <label>Model</label>
-                                <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                required="" />`
-                newVehicleHtml +=
-                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-                newVehicleHtml += `</div>
-                                </div>
-                                </div>
-                                </div>
-                                `;
-
-                $('.vehicles-container').append(newVehicleHtml);
-            }
-
-            $(document).on('click', '.addVehicleBtn', function() {
-                if ($('#tabSelector').val() == 'Car') {
-                    addNewVehicle();
-                } else {
-                    addOtherVehicle();
-                }
-            });
-
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
-
     $(document).ready(function() {
         $(document).on('change', '.vehicle-year, .vehicle-make', function() {
             var year = $('.vehicle-year').val();

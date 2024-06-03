@@ -75,6 +75,10 @@ Route::get('/privacy_policy', [FrontendController::class, 'privacyPolicy'])->nam
 // vehicleTransportationdetail
 Route::get('/vehicle-transportation-detail', [FrontendController::class, 'vehicleTransportDetail'])->name('vehicleTransportDetail');
 
+// heavy-transport-detail
+Route::get('/heavy-transport-detail', [FrontendController::class, 'heavyTransportDetail'])->name('heavy-transport-detail');
+
+
 // order tracking
 Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('track.order');
 

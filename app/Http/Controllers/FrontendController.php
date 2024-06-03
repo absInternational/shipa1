@@ -127,4 +127,10 @@ class FrontendController extends Controller
        
         return view('frontend.pages.vehicleTransportDetail');
     }
+
+    public function heavyTransportDetail()
+    {
+       
+        return view('frontend.pages.heavy-transport-detail');
+    }
 }
