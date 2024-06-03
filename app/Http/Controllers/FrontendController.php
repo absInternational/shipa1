@@ -124,8 +124,14 @@ class FrontendController extends Controller
 
     public function vehicleTransportDetail()
     {
-       
-        return view('frontend.pages.vehicleTransportDetail');
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+
+        return view('frontend.pages.vehicleTransportDetail', compact('makes'));
     }
 
     public function heavyTransportDetail()

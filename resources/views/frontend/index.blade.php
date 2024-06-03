@@ -1206,8 +1206,10 @@
 
             $(document).on('click', '.addVehicleBtn', function() {
                 if ($('#tabSelector').val() == 'Car') {
+                    console.log('yesss');
                     addNewVehicle();
                 } else {
+                    console.log('nooo');
                     addOtherVehicle();
                 }
             });
