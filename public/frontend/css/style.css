@@ -9399,6 +9399,7 @@ PAGE LOAD ANIMATION
 }
 .add-car:hover{
     color: var(--tj-primary-color);
+    text-decoration: none;
 }
 /*car page end*/
 

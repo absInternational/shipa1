@@ -424,20 +424,6 @@
                                         placeholder="Enter Link" />
                                 </div>
 
-
-                                <!-- <div class="form-check">
-                                    <input class="form-check-input" checked type="checkbox" id="available_at_auction"
-                                        name="available_at_auction" value="1" />
-                                    <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                        Auction?</label>
-                                </div>
-
-                                <div class="input-form div-link mt-3">
-                                    <label class="d-block"> Enter Link:</label>
-                                    <input class="form-control" type="url" id="link" name="link"
-                                        placeholder="Enter Link" />
-                                </div> -->
-
                             </div>
 
 
@@ -563,14 +549,10 @@ $(document).ready(function() {
                                 <div class="input-form tj-select">
                                     <label> Year</label>
                                     <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-        var currentYear = {
-            {
-                date('Y')
-            }
-        };
-        for (var year = currentYear; year >= 1936; year--) {
-            newVehicleHtml += `<option value="${year}">${year}</option>`;
-        }
+                                    var currentYear = {{ date('Y') }};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
 
         newVehicleHtml +=
             `</select>
@@ -618,15 +600,7 @@ $(document).ready(function() {
             $('.div-link').hide();
         }
     });
-    // $(document).ready(function() {
-    //     $('#available_at_auction').change(function() {
-    //         if ($(this).is(':checked')) {
-    //             $('.div-link').show();
-    //         } else {
-    //             $('.div-link').hide();
-    //         }
-    //     });
-
+  
     $('#modification').change(function() {
         if ($(this).is(':checked')) {
             $('.div-modify_info').show();
