@@ -13,6 +13,7 @@ use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\FormVehicleController;
 use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\OrderFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,6 +114,15 @@ Route::post('/get-zipcodes', [MainController::class, 'get_zip'])->name('get.zipc
 
 // get partial forms for index
 Route::get('/get-partial-form', [MainController::class, 'partialForm'])->name('get.partial.form');
+
+// order form
+Route::get('/order-form', [OrderFormController::class, 'index'])->name('order.form');
+
+// verify Email
+Route::post('/verifyEmail', [OrderFormController::class, 'verifyEmail'])->name('verify.email');
+
+// get order details
+Route::post('/order-form/{id}/{userid}', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');
 
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {
