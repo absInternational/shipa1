@@ -1130,7 +1130,7 @@
 </script>
 
 <script>
-$(document).ready(function() {
+       $(document).ready(function() {
             var selectedTab = '';
             $('#tabSelector').change(function() {
                 $('.vehicles-container').html('');
