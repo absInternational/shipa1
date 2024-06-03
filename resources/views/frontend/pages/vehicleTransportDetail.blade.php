@@ -1,47 +1,47 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<style>
+    <style>
         .tj-testimonial-section {
             padding: 50px 0;
             background: #f9f9f9;
         }
 
-    .tj-testimonial2-section {
-    padding: 50px 0;
-    /* background: #f9f9f9; */
-    }
+        .tj-testimonial2-section {
+            padding: 50px 0;
+            /* background: #f9f9f9; */
+        }
 
-    .carousel-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    }
+        .carousel-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-    .card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-    .card .row {
-    display: flex;
-    flex-wrap: wrap;
-     }
+        .card .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-     .card .col-6 {
-    width: 50%;
-     }
+        .card .col-6 {
+            width: 50%;
+        }
 
-     .star {
-    margin-top: 10px;
-     }
+        .star {
+            margin-top: 10px;
+        }
 
-     .fa-star {
-    color: #f39c12;
-     }
+        .fa-star {
+            color: #f39c12;
+        }
 
         .owl-nav button {
             background: none;
@@ -50,13 +50,13 @@
             color: #333;
         }
 
-.owl-nav button {
-    display:none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #333;
-}
+        .owl-nav button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #333;
+        }
 
         .owl-dot {
             display: inline-block;
@@ -245,7 +245,7 @@
             margin-bottom: 10px;
         }
     </style>
-   
+
 
 
     <section class="tj-choose-us-section">
@@ -432,13 +432,13 @@
 
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
-    
+
     <section class="tj-service-details pt-4 pb-0">
-     <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tj-section-heading text-center">
@@ -462,11 +462,11 @@
                     </div>
                 </div>
             </div>
-      </div>
+        </div>
     </section>
 
-      <!--=========== About Section Start =========-->
-      <section class="tj-about-section pt-4">
+    <!--=========== About Section Start =========-->
+    <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
@@ -561,7 +561,7 @@
                 </div>
             </div>
         </div>
-      </section>
+    </section>
     <!--=========== About Section End =========-->
 
     <!--=========== Cta Section Start =========-->
@@ -637,7 +637,7 @@
                     <h4><a href="project-details.html" class="title-link"> Mopeds, ATV, Power Sports etc.</a></h4>
                 </div>
             </div>
-           
+
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
@@ -658,7 +658,7 @@
                     <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
                 </div>
             </div>
-            
+
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
@@ -666,7 +666,8 @@
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Golf Cart</span>
-                    <h4><a href="project-details.html" class="title-link">electric cart, buggy, utility vehicle etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">electric cart, buggy, utility vehicle etc.</a>
+                    </h4>
                 </div>
             </div>
         </div>
@@ -674,463 +675,471 @@
     <!--=========== Project Section End =========-->
 
     <section class="tj-video-section">
-      <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="video-wrapper text-center">
-                <iframe width="80%" height="500" src="https://www.youtube.com/embed/cr4Nya5jVn0?si=RLh4uuppLT63xVBT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="video-wrapper text-center">
+                        <iframe width="80%" height="500"
+                            src="https://www.youtube.com/embed/cr4Nya5jVn0?si=RLh4uuppLT63xVBT"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
     </section>
 
-<!--========== Faq Section Start ==============-->
-<section class="tj-faq-section tj-faq-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="tj-section-heading text-center">
-                    <span class="sub-title active-shape"> How It’s Work</span>
-                    <h2 class="title">Frequently Asked Questions</h2>
+    <!--========== Faq Section Start ==============-->
+    <section class="tj-faq-section tj-faq-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape"> How It’s Work</span>
+                        <h2 class="title">Frequently Asked Questions</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
+                    <div class="tj-faq-left-content">
+                        <div class="faq-image">
+                            <img src="{{ asset('frontend/images/slider/slider-4.jpg') }}" alt="Image" />
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-icon">
+                                <i class="fa-regular fa-check"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h6 class="title">Reliable & Trustworthy</h6>
+                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                            </div>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-icon">
+                                <i class="fa-regular fa-check"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h6 class="title">High Quality Material</h6>
+                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
+                    <div class="tj-faq-area">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        FAQ One
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>FAQ One Content: Trage agile frameworks to provide a robust synopsis for
+                                            high level overviews.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        FAQ Two
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>FAQ Two Content: Trage agile frameworks to provide a robust synopsis for
+                                            high level overviews.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        FAQ Three
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>FAQ Three Content: Trage agile frameworks to provide a robust synopsis for
+                                            high level overviews.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
-                <div class="tj-faq-left-content">
-                    <div class="faq-image">
-                        <img src="{{ asset('frontend/images/slider/slider-4.jpg') }}" alt="Image" />
-                    </div>
-                    <div class="faq-content">
-                        <div class="faq-icon">
-                            <i class="fa-regular fa-check"></i>
-                        </div>
-                        <div class="faq-text">
-                            <h6 class="title">Reliable & Trustworthy</h6>
-                            <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
-                        </div>
-                    </div>
-                    <div class="faq-content">
-                        <div class="faq-icon">
-                            <i class="fa-regular fa-check"></i>
-                        </div>
-                        <div class="faq-text">
-                            <h6 class="title">High Quality Material</h6>
-                            <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
-                <div class="tj-faq-area">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    FAQ One
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>FAQ One Content: Trage agile frameworks to provide a robust synopsis for high level overviews.</strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    FAQ Two
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>FAQ Two Content: Trage agile frameworks to provide a robust synopsis for high level overviews.</strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    FAQ Three
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>FAQ Three Content: Trage agile frameworks to provide a robust synopsis for high level overviews.</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!--========== Faq Section End ==============-->
 
 
 
-<!--=========== Blog Section Start =========-->
-<section class="tj-blog-section">
-    <div class="container">
-        <div class="row">
-            <div class="tj-section-heading text-center">
-                <span class="sub-title active-shape">Latest News</span>
-                <h2 class="title">Latest News & Blog</h2>
+    <!--=========== Blog Section Start =========-->
+    <section class="tj-blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="tj-section-heading text-center">
+                    <span class="sub-title active-shape">Latest News</span>
+                    <h2 class="title">Latest News & Blog</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                    <div class="tj-blog-item">
+                        <div class="tj-blog-image">
+                            <a href="#">
+                                <img src="blog_images/1571406099.png" alt="Blog" />
+                            </a>
+                        </div>
+                        <div class="blog-content-area">
+                            <div class="blog-meta">
+                                <div class="meta-date">
+                                    <ul class="list-gap">
+                                        <li>01</li>
+                                        <li>Jan</li>
+                                    </ul>
+                                </div>
+                                <div class="meta-list">
+                                    <ul class="list-gap">
+                                        <li><i class="fa-light fa-user"></i><a href="#">Ship A1</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blog-text-box">
+                                <div class="blog-header">
+                                    <h4>
+                                        <a class="title-link" href="#">How Effective Auto S.....</a>
+                                    </h4>
+                                </div>
+                                <div class="blog-button">
+                                    <ul class="list-gap">
+                                        <li>
+                                            <a href="#">
+                                                Read More <i class="fa-regular fa-arrow-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                    <div class="tj-blog-item">
+                        <div class="tj-blog-image">
+                            <a href="#">
+                                <img src="blog_images/1571406672.jpg" alt="Blog" />
+                            </a>
+                        </div>
+                        <div class="blog-content-area">
+                            <div class="blog-meta">
+                                <div class="meta-date">
+                                    <ul class="list-gap">
+                                        <li>02</li>
+                                        <li>Feb</li>
+                                    </ul>
+                                </div>
+                                <div class="meta-list">
+                                    <ul class="list-gap">
+                                        <li><i class="fa-light fa-user"></i><a href="#">Ship A1</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blog-text-box">
+                                <div class="blog-header">
+                                    <h4>
+                                        <a class="title-link" href="#">Door to Door Transpo...</a>
+                                    </h4>
+                                </div>
+                                <div class="blog-button">
+                                    <ul class="list-gap">
+                                        <li>
+                                            <a href="#">
+                                                Read More <i class="fa-regular fa-arrow-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                    <div class="tj-blog-item">
+                        <div class="tj-blog-image">
+                            <a href="#">
+                                <img src="blog_images/1571407027.png" alt="Blog" />
+                            </a>
+                        </div>
+                        <div class="blog-content-area">
+                            <div class="blog-meta">
+                                <div class="meta-date">
+                                    <ul class="list-gap">
+                                        <li>03</li>
+                                        <li>Mar</li>
+                                    </ul>
+                                </div>
+                                <div class="meta-list">
+                                    <ul class="list-gap">
+                                        <li><i class="fa-light fa-user"></i><a href="#">Ship A1</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="blog-text-box">
+                                <div class="blog-header">
+                                    <h4>
+                                        <a class="title-link" href="#">How are Oversized Ve...</a>
+                                    </h4>
+                                </div>
+                                <div class="blog-button">
+                                    <ul class="list-gap">
+                                        <li>
+                                            <a href="#">
+                                                Read More <i class="fa-regular fa-arrow-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                <div class="tj-blog-item">
-                    <div class="tj-blog-image">
-                        <a href="#">
-                            <img  src="blog_images/1571406099.png" alt="Blog" />
-                        </a>
-                    </div>
-                    <div class="blog-content-area">
-                        <div class="blog-meta">
-                            <div class="meta-date">
-                                <ul class="list-gap">
-                                    <li>01</li>
-                                    <li>Jan</li>
-                                </ul>
-                            </div>
-                            <div class="meta-list">
-                                <ul class="list-gap">
-                                    <li><i class="fa-light fa-user"></i><a href="#">Ship A1</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="blog-text-box">
-                            <div class="blog-header">
-                                <h4>
-                                    <a class="title-link" href="#">How Effective Auto S.....</a>
-                                </h4>
-                            </div>
-                            <div class="blog-button">
-                                <ul class="list-gap">
-                                    <li>
-                                        <a href="#">
-                                            Read More <i class="fa-regular fa-arrow-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </section>
+    <!--=========== Blog Section End =========-->
 
-            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                <div class="tj-blog-item">
-                    <div class="tj-blog-image">
-                        <a href="#">
-                            <img src="blog_images/1571406672.jpg" alt="Blog" />
-                        </a>
-                    </div>
-                    <div class="blog-content-area">
-                        <div class="blog-meta">
-                            <div class="meta-date">
-                                <ul class="list-gap">
-                                    <li>02</li>
-                                    <li>Feb</li>
-                                </ul>
-                            </div>
-                            <div class="meta-list">
-                                <ul class="list-gap">
-                                    <li><i class="fa-light fa-user"></i><a href="#">Ship A1</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="blog-text-box">
-                            <div class="blog-header">
-                                <h4>
-                                    <a class="title-link" href="#">Door to Door Transpo...</a>
-                                </h4>
-                            </div>
-                            <div class="blog-button">
-                                <ul class="list-gap">
-                                    <li>
-                                        <a href="#">
-                                            Read More <i class="fa-regular fa-arrow-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="path/to/jquery.min.js"></script>
+    <script src="path/to/owl.carousel.min.js"></script>
 
-            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                <div class="tj-blog-item">
-                    <div class="tj-blog-image">
-                        <a href="#">
-                            <img src="blog_images/1571407027.png" alt="Blog" />
-                        </a>
-                    </div>
-                    <div class="blog-content-area">
-                        <div class="blog-meta">
-                            <div class="meta-date">
-                                <ul class="list-gap">
-                                    <li>03</li>
-                                    <li>Mar</li>
-                                </ul>
-                            </div>
-                            <div class="meta-list">
-                                <ul class="list-gap">
-                                    <li><i class="fa-light fa-user"></i><a href="#">Ship A1</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="blog-text-box">
-                            <div class="blog-header">
-                                <h4>
-                                    <a class="title-link" href="#">How are Oversized Ve...</a>
-                                </h4>
-                            </div>
-                            <div class="blog-button">
-                                <ul class="list-gap">
-                                    <li>
-                                        <a href="#">
-                                            Read More <i class="fa-regular fa-arrow-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
- <!--=========== Blog Section End =========-->
+    <script>
+        $(document).ready(function() {
+            var selectedTab = '';
+            $('#tabSelector').change(function() {
+                $('.vehicles-container').html('');
+                selectedTab = $(this).val();
+                var vehicleType = $(this).val();
+                $('.tab-pane').removeClass('show active');
+                $('#' + selectedTab).addClass('show active');
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script src="path/to/jquery.min.js"></script>
-<script src="path/to/owl.carousel.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        var selectedTab = '';
-        $('#tabSelector').change(function() {
-            $('.vehicles-container').html('');
-            selectedTab = $(this).val();
-            var vehicleType = $(this).val();
-            $('.tab-pane').removeClass('show active');
-            $('#' + selectedTab).addClass('show active');
-
-            $.ajax({
-                url: "{{ route('get.partial.form') }}",
-                method: 'GET',
-                data: {
-                    vehicleType: vehicleType,
-                },
-                success: function(response) {
-                    $('#additionalContent').html('');
-                    $('#additionalContent').html(response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        });
-
-        
-
-        function getModel(year, makeId, vehicleInfo) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' +
-                            model +
-                            '</option>';
-                    });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script>
-
-<script>
-    document.querySelectorAll('input[type="text"]').forEach((input) => {
-        input.addEventListener("input", function() {
-            this.value = this.value.replace(/[^0-9]/g, "");
-        });
-    });
-</script>
-
-<script>
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-
-    $(document).ready(function() {
-        $('#inches-input').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input1').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input1, #inches-input1').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input2').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input2').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script>
-
-<script>
-    $(document).ready(function() {
-        // Move to Step 2
-        $('#step1_next').click(function() {
-            $('#step1').hide();
-            $('#step2').show();
-        });
-
-        // Return to Step 1
-        $('#step2_previous').click(function() {
-            $('#step2').hide();
-            $('#step1').show();
-        });
-
-        // Move to Step 3
-        $('#step2_next').click(function() {
-            $('#step2').hide();
-            $('#step3').show();
-        });
-
-        // Return to Step 2
-        $('#step3_previous').click(function() {
-            $('#step3').hide();
-            $('#step2').show();
-        });
-
-
-    });
-</script>
-
-
-
-<script>
-    $(document).ready(function() {
-        $(document).on('change', '#available_at_auction', function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
-
-        $(document).on('change', '#modification', function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script>
-
-<script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
+                $.ajax({
+                    url: "{{ route('get.partial.form') }}",
+                    method: 'GET',
+                    data: {
+                        vehicleType: vehicleType,
+                    },
+                    success: function(response) {
+                        $('#additionalContent').html('');
+                        $('#additionalContent').html(response);
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
                 });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
+            });
+
+
+
+            function getModel(year, makeId, vehicleInfo) {
+                console.log('yes inn');
+                $.ajax({
+                    url: "{{ route('get.models') }}",
+                    method: 'GET',
+                    data: {
+                        year: year,
+                        make: makeId
+                    },
+                    success: function(response) {
+                        var modelsDropdown = vehicleInfo.find('.model');
+                        modelsDropdown.empty();
+                        var selectOptions = '<option value="">Select Model</option>';
+                        $.each(response, function(index, model) {
+                            selectOptions += '<option value="' + model + '">' +
+                                model +
+                                '</option>';
+                        });
+                        modelsDropdown.html(selectOptions);
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
             }
         });
-    }
+    </script>
 
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
+    <script>
+        document.querySelectorAll('input[type="text"]').forEach((input) => {
+            input.addEventListener("input", function() {
+                this.value = this.value.replace(/[^0-9]/g, "");
+            });
+        });
+    </script>
+
+    <script>
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
         }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script>
 
-<script>
-$(document).ready(function() {
+        $(document).ready(function() {
+            $('#inches-input').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input1').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input1, #inches-input1').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input2').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input2').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Move to Step 2
+            $('#step1_next').click(function() {
+                $('#step1').hide();
+                $('#step2').show();
+            });
+
+            // Return to Step 1
+            $('#step2_previous').click(function() {
+                $('#step2').hide();
+                $('#step1').show();
+            });
+
+            // Move to Step 3
+            $('#step2_next').click(function() {
+                $('#step2').hide();
+                $('#step3').show();
+            });
+
+            // Return to Step 2
+            $('#step3_previous').click(function() {
+                $('#step3').hide();
+                $('#step2').show();
+            });
+
+
+        });
+    </script>
+
+
+
+    <script>
+        $(document).ready(function() {
+            $(document).on('change', '#available_at_auction', function() {
+                if ($(this).is(':checked')) {
+                    $('.div-link').show();
+                } else {
+                    $('.div-link').hide();
+                }
+            });
+
+            $(document).on('change', '#modification', function() {
+                if ($(this).is(':checked')) {
+                    $('.div-modify_info').show();
+                } else {
+                    $('.div-modify_info').hide();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function updateSuggestions(inputField, suggestionsList) {
+            var inputValue = inputField.val();
+
+            $.ajax({
+                url: "{{ route('get.zipcodes') }}",
+                method: "POST",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    "input": inputValue
+                },
+                success: function(response) {
+                    suggestionsList.empty();
+
+                    $.each(response, function(index, suggestion) {
+                        var listItem = $("<li>").text(suggestion).click(function() {
+                            inputField.val(suggestion);
+                            suggestionsList.css("display", "none");
+                        });
+                        suggestionsList.append(listItem);
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
+        }
+
+        $("#pickup-location, #delivery-location").keyup(function() {
+            var inputField = $(this);
+            var suggestionsList = inputField.siblings(".suggestionsTwo");
+            suggestionsList.css("display", "block");
+            if (inputField.val() === "") {
+                suggestionsList.css("display", "none");
+            }
+            updateSuggestions(inputField, suggestionsList);
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
             var selectedTab = '';
             $('#tabSelector').change(function() {
                 $('.vehicles-container').html('');
@@ -1259,83 +1268,84 @@ $(document).ready(function() {
                 $(this).closest('.vehicle-info').remove();
             });
 
-    $(document).ready(function() {
-        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            var year = $('.vehicle-year').val();
-            var makeId = $('.vehicle-make').val();
-            if (year && makeId) {
-                getModel(year, makeId);
-            }
-        });
+            $(document).ready(function() {
+                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+                    var year = $('.vehicle-year').val();
+                    var makeId = $('.vehicle-make').val();
+                    if (year && makeId) {
+                        getModel(year, makeId);
+                    }
+                });
 
-        function getModel(year, makeId) {
-            console.log('yes inn');
+                function getModel(year, makeId) {
+                    console.log('yes inn');
+                    $.ajax({
+                        url: "{{ route('get.models') }}",
+                        method: 'GET',
+                        data: {
+                            year: year,
+                            make: makeId
+                        },
+                        success: function(response) {
+                            var modelsDropdown = $('.vehicle-model-div');
+                            modelsDropdown.empty();
+                            var selectOptions =
+                                '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                            $.each(response, function(index, model) {
+                                selectOptions += '<option value="' + model + '">' +
+                                    model +
+                                    '</option>';
+                            });
+                            selectOptions += '</select>';
+                            modelsDropdown.html(selectOptions);
+
+                            console.log('yesssss', response);
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function updateSuggestions(inputField, suggestionsList) {
+            var inputValue = inputField.val();
+
             $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
+                url: "{{ route('get.zipcodes') }}",
+                method: "POST",
                 data: {
-                    year: year,
-                    make: makeId
+                    "_token": "{{ csrf_token() }}",
+                    "input": inputValue
                 },
                 success: function(response) {
-                    var modelsDropdown = $('.vehicle-model-div');
-                    modelsDropdown.empty();
-                    var selectOptions =
-                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
-                    });
-                    selectOptions += '</select>';
-                    modelsDropdown.html(selectOptions);
+                    suggestionsList.empty();
 
-                    console.log('yesssss', response);
+                    $.each(response, function(index, suggestion) {
+                        var listItem = $("<li>").text(suggestion).click(function() {
+                            inputField.val(suggestion);
+                            suggestionsList.css("display", "none");
+                        });
+                        suggestionsList.append(listItem);
+                    });
                 },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
                 }
             });
         }
-    });
-</script>
 
-<script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
+        $("#pickup-location, #delivery-location").keyup(function() {
+            var inputField = $(this);
+            var suggestionsList = inputField.siblings(".suggestionsTwo");
+            suggestionsList.css("display", "block");
+            if (inputField.val() === "") {
+                suggestionsList.css("display", "none");
             }
+            updateSuggestions(inputField, suggestionsList);
         });
-    }
-
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script>
-
+    </script>
 @endsection
