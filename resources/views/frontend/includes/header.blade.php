@@ -224,11 +224,16 @@
                                             class="{{ Request::routeIs('services*') ? ' active' : '' }}"> Services</a>
                                         <ul class="list-gap sub-menu-list" style="width: 60rem">
                                             <div class="row">
+<<<<<<< HEAD
                                                 <div class="col-sm-4 bd-l bd-r">
                                                     {{-- <a class=" mb-3"
                                                         href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3 "style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold;" 
                                                     href="">Vehicle Transportation</a>
+=======
+                                                <div class="col-sm-3">
+                                                    <a class=" mb-3" href="">Vehicle Transportation</a>
+>>>>>>> 6e938a0bf4c03eb20c43516d255874ee36cd2f4b
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Vehicle Transportation')
                                                             <li>
@@ -239,10 +244,15 @@
                                                         @endif
                                                     @endforeach
                                                 </div>
+<<<<<<< HEAD
                                                 <div class="col-sm-4 bd-r">
                                                     {{-- <a class=" mb-3"
                                                         href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3" style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold;" href="">Heavy Equipment</a>
+=======
+                                                <div class="col-sm-3">
+                                                    <a class=" mb-3" href="">Heavy Equipment</a>
+>>>>>>> 6e938a0bf4c03eb20c43516d255874ee36cd2f4b
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Heavy Equipment')
                                                             <li>
@@ -253,10 +263,15 @@
                                                         @endif
                                                     @endforeach
                                                 </div>
+<<<<<<< HEAD
                                                 <div class="col-sm-4 ">
                                                     {{-- <a class=" mb-3"
                                                         href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3" style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold;" href="">Freight Transportation</a>
+=======
+                                                <div class="col-sm-3">
+                                                    <a class=" mb-3" href="">Freight Transportation</a>
+>>>>>>> 6e938a0bf4c03eb20c43516d255874ee36cd2f4b
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Freight Transportation')
                                                             <li>
@@ -267,7 +282,11 @@
                                                         @endif
                                                     @endforeach
 
+<<<<<<< HEAD
                                                     <a class=" mb-3" href="" style=" letter-spacing: 1px; ">RORO</a>
+=======
+                                                    <a class=" mb-3" href="">RORO</a>
+>>>>>>> 6e938a0bf4c03eb20c43516d255874ee36cd2f4b
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'RORO')
                                                             <li>

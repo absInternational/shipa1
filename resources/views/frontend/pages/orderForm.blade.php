@@ -284,8 +284,8 @@
                             @endif
 
                             <div data-mdb-input-init class="form-outline mb-4">
-                                <input type="number" name="order_id" id="form3Example3" class="form-control form-control-lg"
-                                    placeholder="Enter order#" />
+                                <input type="number" name="order_id" id="form3Example3"
+                                    class="form-control form-control-lg" placeholder="Enter order#" />
                                 <label class="form-label" for="form3Example3">Order #.</label>
                             </div>
 
@@ -330,19 +330,24 @@
                 }
             }
 
+
+            var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
             $('#calculatePriceFrom').submit(function(event) {
                 event.preventDefault();
-               
+                
+                var formData = $('#calculatePriceFrom').serialize();
+
                 $.ajax({
-                    url: $(this).attr('action'),
-                    method: $(this).attr('method'),
-                    data: $(this).serialize(),
+                    type: 'POST',
+                    url: '{{ route('get.order.details') }}',
+                    data: formData,
                     success: function(response) {
-                       console.log(response);
+                        console.log(response);
                         $('#all-order-details').html(response);
                     },
                     error: function(xhr, status, error) {
-                       
+
                     }
                 });
             });
