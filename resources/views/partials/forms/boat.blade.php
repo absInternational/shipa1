@@ -37,10 +37,10 @@
             <option value="" disabled selected>Select Year
             </option>
             @php
-                $currentYear = date('Y');
-                for ($year = $currentYear; $year >= 1936; $year--) {
-                    echo "<option value='$year'>$year</option>";
-                }
+            $currentYear = date('Y');
+            for ($year = $currentYear; $year >= 1936; $year--) {
+            echo "<option value='$year'>$year</option>";
+            }
             @endphp
         </select>
     </div>
@@ -48,19 +48,18 @@
 <div class="col-md-4">
     <div class="input-form tj-select">
         <label>Make</label>
-        <input type="text" id="make" name="make[]" placeholder="Enter Make" required="" />
+        <input type="text" id="make" name="make[]" placeholder="Enter Make" required />
     </div>
 </div>
 <div class="col-md-4">
     <div class="input-form tj-select vehicle-model-div">
         <label>Model</label>
-        <input type="text" id="model" name="model[]" placeholder="Enter Model" required="" />
+        <input type="text" id="model" name="model[]" placeholder="Enter Model" required/>
     </div>
 </div>
 </div>
 
-<a class="add-car " id="addVehicleBtn" ><i
-    class="fa fa-plus"></i> Add
+<a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
 Vehicle</a>
 
 <div class="vehicles-container">
@@ -187,14 +186,14 @@ Vehicle</a>
                 </div>
             </div>
 
-
-            <div class="input-form mt-3">
-                <label class="d-block text-white"> Image:</label>
-                <input class="form-control image_input" type="file" id="image" name="image" placeholder="Upload File" />
-            </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="boat_on_trailer" name="boat_on_trailer"
                     value="1" />
                 <label class="form-check-label text-white" for="boat_on_trailer"> Is your boat on
                     trailer?</label>
             </div>
+            <div class="input-form mt-3">
+                <label class="d-block text-white"> Image:</label>
+                <input class="form-control image_input" type="file" id="image" name="image" placeholder="Upload File" />
+            </div>
+            
