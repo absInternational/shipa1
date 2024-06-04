@@ -219,10 +219,10 @@
                                         $categories = \App\Models\ServiceCategory::has('services')->get();
                                         $services = \App\Models\Service::query();
 
-                                        $vehicle = $services->where('name', 1)->get();
-                                        $heavy = $services->where('name', 2)->get();
-                                        $freight = $services->where('name', 12)->get();
-                                        $roro = $services->where('name', 15)->get();
+                                        $vehicle = $services->where('category_id', 1)->get();
+                                        $heavy = $services->where('category_id', 2)->get();
+                                        $freight = $services->where('category_id', 12)->get();
+                                        $roro = $services->where('category_id', 15)->get();
                                         // dd($categories->toArray());
                                     @endphp
                                     <li class="current-menu-item menu-item-has-children">
