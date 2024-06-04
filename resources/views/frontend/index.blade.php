@@ -257,6 +257,8 @@
 </style>
 
     <!--=========== Slider Section Start =========-->
+    
+
     <section class="tj-slider-section">
         <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" /></div>
         <div class="swiper sc-slider-1">
@@ -1092,22 +1094,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="path/to/jquery.min.js"></script>
     <script src="path/to/owl.carousel.min.js"></script>
-
+    
     <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var modal = document.getElementById('myModal');
-    var btn = document.querySelector('.trigger-btn');
-
-    btn.addEventListener('click', function() {
-        modal.style.display = 'block';
-        setTimeout(function() {
-            modal.style.display = 'none';
-        }, 5000); // 5 seconds
-    });
-});
-</script>
-
-    <script>
+      
         $(document).ready(function() {
             $('#owl-caro').owlCarousel({
                 loop: true,

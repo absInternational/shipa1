@@ -9387,19 +9387,19 @@ PAGE LOAD ANIMATION
 }
 
 .add-car {
-    color: white;
-    display: flex;
-    cursor: pointer;
+    color: white !important;
+    display: flex !important;
+    cursor: pointer !important;
     /* text-decoration: underline; */
-    justify-content: end;
-    align-items: center;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 15px;
+    justify-content: end !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    letter-spacing: 3px !important;
+    font-size: 15px !important;
 }
-.add-car:hover{
-    color: var(--tj-primary-color);
-    text-decoration: none;
+.add-car:hover {
+    color: var(--tj-primary-color) !important;
+    text-decoration: none !important;
 }
 /*car page end*/
 
