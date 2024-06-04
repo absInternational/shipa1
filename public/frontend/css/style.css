@@ -7062,6 +7062,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     27. Breadcrumb CSS
 ------------------------------------ */
 .breadcrumb-wrapper {
+    background-image: url(https://blog.shipa1.daydispatch.com/public/frontend/images/slider/home-slider-1.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -7163,6 +7164,115 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .breadcrumb-wrapper .breadcrumb-content .breadcrumb-link > span a:hover {
     color: var(--tj-secondary-color);
 }
+
+/* ----------------------------------
+    27. Breadcrumb-2 CSS
+------------------------------------ */
+.breadcrumb-wrapper-2 {
+    /* background-image: url(https://blog.shipa1.daydispatch.com/public/frontend/images/slider/home-slider-1.webp); */
+     background-color: #062E39;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 225px;
+    position: relative;
+}
+
+.breadcrumb-wrapper-2::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    background: rgba(6, 46, 57, 0.5);
+}
+
+.breadcrumb-wrapper-2 .breadcrumb-content {
+    position: relative;
+    z-index: 3;
+}
+
+.breadcrumb-wrapper-2 .breadcrumb-content .breadcrumb-title {
+    color: var(--tj-white-color);
+    margin-bottom: 95px;
+    font-size: 45px;
+}
+
+.breadcrumb-wrapper-2 .breadcrumb-content .breadcrumb-link ul li {
+    display: inline-block;
+    color: var(--tj-white-color);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--tj-ff-title);
+}
+
+.breadcrumb-wrapper-2 .hero-right-element {
+    line-height: 0;
+}
+
+.breadcrumb-wrapper-2 .breadcrumb-content .breadcrumb-link {
+    background: var(--tj-primary-color);
+    display: inline-block;
+    color: var(--tj-white-color);
+    font-size: 18px;
+    font-family: var(--tj-ff-body);
+    font-weight: 500;
+    position: relative;
+    padding: 23px 70px;
+    right: -35px;
+    top: 1px;
+}
+
+.breadcrumb-wrapper-2 .breadcrumb-content .breadcrumb-link::before {
+    z-index: 1;
+    top: -1px;
+    left: -70px;
+    width: 70px;
+    height: 76px;
+    position: absolute;
+    clear: both;
+    display: block;
+    content: "";
+    background: var(--tj-primary-color);
+    box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(100% 0, 50% 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 0, 50% 100%, 100% 100%);
+    transition: 0.4s;
+}
+
+.breadcrumb-wrapper-2 .breadcrumb-content .breadcrumb-link::after {
+    z-index: 1;
+    top: -1px;
+    right: -70px;
+    width: 71px;
+    height: 76px;
+    position: absolute;
+    clear: both;
+    display: block;
+    content: "";
+    background: var(--tj-primary-color);
+    box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+    -webkit-clip-path: polygon(0 0, 0% 100%, 50% 100%);
+    clip-path: polygon(0 0, 0% 100%, 50% 100%);
+    transition: 0.4s;
+}
+
+.breadcrumb-wrapper-2 .breadcrumb-content .breadcrumb-link > span a {
+    color: var(--tj-white-color);
+    transition: 0.4s;
+}
+
+.breadcrumb-wrapper-2 .breadcrumb-content .breadcrumb-link > span {
+    display: inline-block;
+    position: relative;
+}
+
+.breadcrumb-wrapper-2 .breadcrumb-content .breadcrumb-link > span a:hover {
+    color: var(--tj-secondary-color);
+}
+
 
 /* ----------------------------------
     28. Footer CSS

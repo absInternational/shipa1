@@ -306,7 +306,7 @@
         </div>
     </section>
 
-    <section class="breadcrumb-wrapper" id="all-order-details">
+    <section class="breadcrumb-wrapper-2" id="all-order-details">
     </section>
 @endsection
 
