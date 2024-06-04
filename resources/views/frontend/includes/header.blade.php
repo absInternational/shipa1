@@ -225,8 +225,6 @@
                                         <ul class="list-gap sub-menu-list" style="width: 50rem">
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    {{-- <a class=" mb-3"
-                                                        href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3" href="">Vehicle Transportation</a>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Vehicle Transportation')
@@ -239,8 +237,6 @@
                                                     @endforeach
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    {{-- <a class=" mb-3"
-                                                        href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3" href="">Heavy Equipment</a>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Heavy Equipment')
@@ -253,8 +249,6 @@
                                                     @endforeach
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    {{-- <a class=" mb-3"
-                                                        href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3" href="">Freight Transportation</a>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Freight Transportation')
@@ -265,10 +259,7 @@
                                                             </li>
                                                         @endif
                                                     @endforeach
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    {{-- <a class=" mb-3"
-                                                        href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
+
                                                     <a class=" mb-3" href="">RORO</a>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'RORO')
