@@ -28,26 +28,25 @@ class OrderFormController extends Controller
     // }
 
     // public function getOrderDetails($id, $userid, Request $request)
-    // public function getOrderDetails(Request $request)
-    // {
-    //     $id = $request->order_id;
-    //     $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$id}/{$userid}");
+    public function getOrderDetails(Request $request)
+    {
+        $id = $request->order_id;
+        $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$id}");
 
-    //     if ($response->successful()) {
-    //         $responseData = $response->json();
-    //         $data = $responseData['data'];
-    //         $ip_address = $responseData['ip'];
-    //         $userid = $responseData['userid'];
+        if ($response->successful()) {
+            $responseData = $response->json();
+            $data = $responseData['data'];
+            $ip_address = $responseData['ip'];
 
-    //         $verificationCode = $this->generateVerificationCode();
+            // $verificationCode = $this->generateVerificationCode();
 
-    //         $this->sendVerificationCodeByEmail($request->input('email'), $verificationCode);
+            // $this->sendVerificationCodeByEmail($request->input('email'), $verificationCode);
 
-    //         return view('frontend.pages.orderForm', compact('data', 'ip_address', 'userid', 'verificationCode'));
-    //     } else {
-    //         return response('Failed to fetch data from API', $response->status());
-    //     }
-    // }
+            return view('partials.order_detail', compact('data', 'ip_address'));
+        } else {
+            return response('Failed to fetch data from API', $response->status());
+        }
+    }
 
     private function generateVerificationCode()
     {

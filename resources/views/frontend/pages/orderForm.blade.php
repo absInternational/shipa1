@@ -251,7 +251,7 @@
         }
     </style>
 
-    <section class="breadcrumb-wrapper">
+    <section class="breadcrumb-wrapper" id="breadcrumb-wrapper-hide">
         <div class="container-flude">
             <div class="row">
                 @if (session('success'))
@@ -268,7 +268,7 @@
                     <div class="tj-input-form" data-bg-image="">
                         <h4 class="title">Enter Details</h4>
                         {{-- <form action="{{ route('get.order.details') }}" method="post" class="rd-mailform" --}}
-                        <form action="" method="post" class="rd-mailform"
+                        <form action="{{ route('get.order.details') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
@@ -306,9 +306,6 @@
         </div>
     </section>
 
-    <section id="verification-section" class="breadcrumb-wrapper" style="display: none;">
-    </section>
-
     <section class="breadcrumb-wrapper" id="all-order-details">
     </section>
 @endsection
@@ -340,9 +337,8 @@
                     method: $(this).attr('method'),
                     data: $(this).serialize(),
                     success: function(response) {
-                       
-                        $('#initial-section').hide();
-                        $('#verification-section').show();
+                       console.log(response);
+                        $('#all-order-details').append(response);
                     },
                     error: function(xhr, status, error) {
                        

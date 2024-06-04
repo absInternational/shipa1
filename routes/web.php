@@ -122,7 +122,8 @@ Route::get('/order-form', [OrderFormController::class, 'index'])->name('order.fo
 Route::post('/verifyEmail', [OrderFormController::class, 'verifyEmail'])->name('verify.email');
 
 // get order details
-Route::post('/order-form/{id}/{userid}', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');
+// Route::post('/order-form/{id}/{userid}', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');
+Route::post('/order-form', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');
 
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {

@@ -16,7 +16,6 @@
                     <form action="/order_payment" method="post" autocomplete="off" class="needs-validation">
                         @csrf
                         <input type="hidden" name="id" value="{{ $data['id'] }}">
-                        <input type="hidden" name="userid" value="{{ $userid }}">
                         <input type="hidden" name="ip" value="{{ $ip_address }}">
                         <input type="hidden" name="ipcity" value="">
                         <input type="hidden" name="ipregion" value="">
