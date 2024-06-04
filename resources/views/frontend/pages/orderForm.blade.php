@@ -268,7 +268,6 @@
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
                         <h4 class="title">Enter Details</h4>
-                        {{-- <form action="{{ route('get.order.details') }}" method="post" class="rd-mailform" --}}
                         <form action="{{ route('get.order.details') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -289,11 +288,11 @@
                                 <label class="form-label" for="form3Example3">Order #.</label>
                             </div>
 
-                            {{-- <div data-mdb-input-init class="form-outline mb-4">
+                            <div data-mdb-input-init class="form-outline mb-4">
                                 <input type="email" name="email" id="form3Example3" class="form-control form-control-lg"
-                                    placeholder="Enter a valid email address" />
+                                    placeholder="Enter a valid email address" required />
                                 <label class="form-label" for="form3Example3">Email address</label>
-                            </div> --}}
+                            </div>
 
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
