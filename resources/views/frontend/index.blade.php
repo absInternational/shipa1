@@ -4,6 +4,9 @@
 
 
 <style>
+
+
+
         .tj-testimonial-section {
             padding: 50px 0;
             background: #f9f9f9;
@@ -360,7 +363,7 @@
                             </div>
                         </div>
                         <div class="service-arrow">
-                            <a href="service-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="{{ route('freighttransport-detail') }}" target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </li>
@@ -664,7 +667,8 @@
                 <div class="col-xl-4 col-lg-4">
                     <div class="single-input-field">
                         <label class="d-block text-white"> Your Name:</label>
-                        <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name">
+                        <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Name">
+                        <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
                         <label class="error-message" id="Custo_Name-error">This field is required.</label>
                     </div>
                 </div>
@@ -672,7 +676,8 @@
                 <div class="col-xl-4 col-lg-4">
                     <div class="single-input-field">
                         <label class="d-block text-white"> Phone:</label>
-                        <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Phone">
+                        <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
+                        <!-- <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Phone"> -->
                         <label class="error-message" id="Custo_Phone-error">This field is required.</label>
                     </div>
                 </div>
@@ -684,6 +689,7 @@
                         <label class="error-message" id="Custo_Email-error">This field is required.</label>
                     </div>
                 </div>
+                
             </div>
             <div class="row">
                 <div class="col-xl-6 col-lg-6">
@@ -1094,8 +1100,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="path/to/jquery.min.js"></script>
     <script src="path/to/owl.carousel.min.js"></script>
-    
+   
     <script>
+        
       
         $(document).ready(function() {
             $('#owl-caro').owlCarousel({
