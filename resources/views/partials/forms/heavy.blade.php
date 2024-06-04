@@ -108,14 +108,8 @@
         </div>
     </div>
 </div>
-
-
 <div class="row mb-3">
-
-
-
-
-    <div class="col-md-3">
+<div class="col-md-4">
 
         <label class="lab-cos">Length</label>
         <div class="input-container">
@@ -128,7 +122,7 @@
         </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-4">
 
         <label class="lab-cos">Width</label>
         <div class="input-container">
@@ -140,8 +134,7 @@
             <span class="separators">(In.)</span>
         </div>
     </div>
-
-    <div class="col-md-3">
+    <div class="col-md-4">
 
         <label class="lab-cos">Height</label>
         <div class="input-container">
@@ -153,8 +146,17 @@
             <span class="separators">(In.)</span>
         </div>
     </div>
+</div>
+<div class="row mb-3">
 
-    <div class="col-md-3">
+
+
+
+    
+
+    
+
+    <div class="col-md-6">
 
         <label class="lab-cos">Weight</label>
         <div class="input-container1">
