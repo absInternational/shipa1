@@ -151,234 +151,266 @@
 
 <section class="tj-choose-us-section">
     <div class="container-flude">
-        <div class="row">
-            @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-            @endif
-            @if (session('error'))
-            <div class="alert alert-error">
-                {{ session('error') }}
-            </div>
-            @endif
-            <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
-                <div class="tj-input-form" data-bg-image="">
-                    <h4 class="title text-center">Instant RV Transport Quote!</h4>
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom"
-                        data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
-                        @csrf
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
+    <div class="row">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if (session('error'))
+                    <div class="alert alert-error">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
+                    <div class="tj-input-form" data-bg-image="">
+                        <h4 class="title text-center">Instant RV Shipping Quote!</h4>
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                            enctype="multipart/form-data">
+                            @csrf
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <input type="hidden" name="vehicle_opt" value="RV" hidden>
 
-                        <div class="form-check">
-                            <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
-                                name="boat_on_trailer" value="1" />
-                            <label class="form-check-label text-white" for="boat_on_trailer"> Is your boat on
-                                trailer?</label>
-                        </div>
-
-                        <div class="input-form">
-                            <label for="category">Category</label>
-                            <select class="" id="category" name="category">
-                                <option value="" disabled selected>Select</option>
-                                <option value="Power Boat">Power Boat</option>
-                                <option value="Sail Boat">Sail Boat</option>
-                                <option value="Personal Watercraft">Personal Watercraft</option>
-                                <option value="Boat Parts">Boat Parts</option>
-                                <option value="Motor Boat">Motor Boat</option>
-                                <option value="Others">Others</option>
-                            </select>
-                            <input type="text" class="form-control" id="otherCategoryInput" name="category" disabled
-                                style="display: none;" placeholder="Specify Category">
-                        </div><br>
-
-                        <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
-                        <div class="row mt-3">
-                            <div class="col-md-4">
-                                <div class="input-form">
-                                    <label class="d-block"> Your Name:</label>
-                                    <input type="text" id="name" name="name" placeholder="Full Name" required="" />
-                                    <small id="errName" class="err-style"></small>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="input-form">
+                                        <label class="d-block"> Your Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Full Name"
+                                            required="" />
+                                        <small id="errName" class="err-style"></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form">
+                                        <label class="d-block"> Phone:</label>
+                                        <input type="text" id="phone" name="phone" placeholder="Phone Number"
+                                            required="" />
+                                        <small id="errPhone" class="err-style"></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form">
+                                        <label class="d-block"> Email Address:</label>
+                                        <input type="email" id="email" name="email" placeholder="Your Email Address"
+                                            required="" />
+                                        <small id="errEmail" class="err-style"></small>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="input-form">
-                                    <label class="d-block"> Phone:</label>
-                                    <input type="text" id="phone" name="phone" placeholder="Phone Number" required="" />
-                                    <small id="errPhone" class="err-style"></small>
+
+                            <div class="row select-bm">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white">RV Information</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label> Year</label>
+                                        <select class="nice-select vehicle-year" name="year[]" id="year">
+                                            <option value="" disabled selected>Select Year</option>
+                                            @php
+                                                $currentYear = date('Y');
+                                                for ($year = $currentYear; $year >= 1936; $year--) {
+                                                    echo "<option value='$year'>$year</option>";
+                                                }
+                                            @endphp
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <input type="text" id="make" name="make[]" placeholder="Enter Make"
+                                            required="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select vehicle-model-div">
+                                        <label>Model</label>
+                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                            required="" />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="input-form">
-                                    <label class="d-block"> Email Address:</label>
-                                    <input type="email" id="email" name="email" placeholder="Your Email Address"
-                                        required="" />
-                                    <small id="errEmail" class="err-style"></small>
+
+                            <a class="add-car" id="addVehicleBtn"
+                                ><i class="fa fa-plus"></i> Add
+                                RV</a>
+
+                            <div id="vehicles-container">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-
-
-                        <div class="row select-bm ">
-                            <div class="col-md-12 text-center">
-                                <h4 class="text-white">Vehicle Information</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label> Year</label>
-                                    <select class="nice-select vehicle-year" name="year[]" id="year">
-                                        <option value="" disabled selected>Select Year</option>
-                                        @php
-                                        $currentYear = date('Y');
-                                        for ($year = $currentYear; $year >= 1936; $year--) {
-                                        echo "<option value='$year'>$year</option>";
-                                        }
-                                        @endphp
-                                    </select>
+                            
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="input-form">
+                                        <label for="rv_type">RV Types</label>
+                                        <select class=" " id="rv_type" name="rv_type">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="Class A Motorhome">Class A Motorhome</option>
+                                            <option value="Class B Motorhome">Class B Motorhome</option>
+                                            <option value="Class C Motorhome">Class C Motorhome</option>
+                                            <option value="Travel Trailer">Travel Trailer</option>
+                                            <option value="Folding Tent Trailer">Folding Tent Trailer</option>
+                                            <option value="Fifth-Wheel">Fifth-Wheel</option>
+                                            <option value="Truck Camper">Truck Camper</option>
+                                            <option value="Others">Other</option>
+                                        </select>
+                                        <input type="text" class="form-control" id="otherCategoryInput" name="rv_type"
+                                            disabled style="display: none;" placeholder="Specify Please">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                        <select class=" " id="trailer_type" name="trailer_type">
+                                            <option value="" selected disabled>Select</option>
+                                            <option value="VAN (V)">VAN (V)</option>
+                                            <option value="FLATBED (F)">FLATBED (F)</option>
+                                            <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                            <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
+                                            <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
+                                            <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                            <option value="TRUCK (T)">TRUCK (T)</option>
+                                            <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
+                                            <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                            <option value="LOWBOY (LB)">LOWBOY (LB)</option>
+                                            <option value="ENDUMP (ED)">ENDUMP (ED)</option>
+                                            <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                                            <option value="PARTIAL (PT)">PARTIAL (PT)</option>
+                                            <option value="20ft container">20ft container</option>
+                                            <option value="40ft container">40ft container</option>
+                                            <option value="48ft container">48ft container</option>
+                                            <option value="53ft container">53ft container</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class=" " id="condition" name="condition">
+                                            <option value="Running" selected>Running</option>
+                                            <option value="Non Running">Non Running</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label>Make</label>
-                                    <input type="text" id="make" name="make[]" placeholder="Enter Make" required="" />
+                            <div class="row mb-3 mt-3">
+                <div class="col-md-3">
+
+                    <label class="lab-cos">Length</label>
+                    <div class="input-container">
+                        <input type="number" id="feet-input" class="input-field" placeholder="" min="0" maxlength="3"
+                            oninput="limitDigits(this, 3)">
+                        <span class="separator">(Ft.)</span>
+                        <input type="number" id="inches-input" class="input-field" placeholder="" min="0" max="11"
+                            maxlength="2" oninput="limitDigits(this, 2)">
+                        <span class="separators">(In.)</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+
+                    <label class="lab-cos">Width</label>
+                    <div class="input-container">
+                        <input type="number" id="feet-input1" class="input-field" placeholder="" min="0" maxlength="3"
+                            oninput="limitDigits(this, 3)">
+                        <span class="separator">(Ft.)</span>
+                        <input type="number" id="inches-input1" class="input-field" placeholder="" min="0" max="11"
+                            maxlength="2" oninput="limitDigits(this, 2)">
+                        <span class="separators">(In.)</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+
+                    <label class="lab-cos">Height</label>
+                    <div class="input-container">
+                        <input type="number" id="feet-input2" class="input-field" placeholder="" min="0" maxlength="3"
+                            oninput="limitDigits(this, 3)">
+                        <span class="separator">(Ft.)</span>
+                        <input type="number" id="inches-input2" class="input-field" placeholder="" min="0" max="11"
+                            maxlength="2" oninput="limitDigits(this, 2)">
+                        <span class="separators">(In.)</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+
+                    <label class="lab-cos">Weight</label>
+                    <div class="input-container1">
+                        <input type="" id="feet-input" class="input-field-1" placeholder="" min="0" maxlength="6"
+                            oninput="limitDigits(this, 6)">
+                        <span class="separators-w">(Lbs.)</span>
+
+                    </div>
+                </div>
+
+
+
+
+
+</div>
+
+                            <div class="row mt-3">
+                                 
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="load_method" class="text-white">Load Method</label>
+                                        <select class=" " id="load_method" name="load_method">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="unload_method" class="text-white">Unload Method</label>
+                                        <select class=" " id="unload_method" name="unload_method">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select vehicle-model-div">
-                                    <label>Model</label>
-                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                        required="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
-                         Add Vehicle</a>
-
-                        <div id="vehicles-container">
-                        </div>
-
-
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block"> Pickup Location:</label>
-                                    <input type="text" id="pickup-location" name="origin"
-                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                    <small id="errOLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block"> Delivery Location:</label>
-                                    <input type="text" id="delivery-location" name="destination"
-                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                    <small id="errDLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                    <select class="" id="trailer_type" name="trailer_type">
-                                        <option value="RGN" selected>RGN</option>
-                                        <option value="Stepdeck">Stepdeck</option>
-                                        <option value="Flatbed">Flatbed</option>
-                                        <option value="Hotshot">Hotshot</option>
-                                        <option value="Landoll">Landoll</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="condition" class="text-white">Condition</label>
-                                    <select class="" id="condition" name="condition">
-                                        <option value="Running" selected>Running</option>
-                                        <option value="Non Running">Non Running</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-
-
-                        
-
-                        <div class="col-md-3">
-
-                            <label class="lab-cos">Length</label>
-                            <div class="input-container">
-                                <input type="number" id="feet-input" class="input-field" placeholder=""
-                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                <span class="separator">(Ft.)</span>
-                                <input type="number" id="inches-input" class="input-field" placeholder=""
-                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                <span class="separators">(In.)</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-
-                           <label class="lab-cos">Width</label>
-                           <div class="input-container">
-                               <input type="number" id="feet-input1" class="input-field" placeholder=""
-                                   min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                               <span class="separator">(Ft.)</span>
-                               <input type="number" id="inches-input1" class="input-field" placeholder=""
-                                   min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                               <span class="separators">(In.)</span>
-                           </div>
-                        </div>
-                        
-                        <div class="col-md-3">
-
-                           <label class="lab-cos">Height</label>
-                           <div class="input-container">
-                               <input type="number" id="feet-input2" class="input-field" placeholder=""
-                                   min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                               <span class="separator">(Ft.)</span>
-                               <input type="number" id="inches-input2" class="input-field" placeholder=""
-                                   min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                               <span class="separators">(In.)</span>
-                           </div>
-                        </div>
-
-                        <div class="col-md-3">
-
-                           <label class="lab-cos">Weight</label>
-                           <div class="input-container1">
-                               <input type="" id="feet-input" class="input-field-1" placeholder=""
-                                   min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                               <span class="separators-w">(Lbs.)</span>
-                               
-                           </div>
-                        </div>
-                        
-
-            
-
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-md-6">
-
-                            <div class="form-check">
+                            <div class="row mt-3">
+                            <div class="col-md-12">
+    <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="available_at_auction"
                                         name="available_at_auction" value="1" />
                                     <label class="form-check-label text-white" for="available_at_auction"> Available at
@@ -390,45 +422,36 @@
                                     <input class="form-control" type="url" id="link" name="link"
                                         placeholder="Enter Link" />
                                 </div>
-
+    </div>
                             </div>
 
-
-                            <div class="col-md-6">
-
-
-                                <div class="form-group mb-3">
-                                    <input class="form-check-input" type="checkbox" id="modification"
-                                        name="modification" value="1" />
-                                    <label class="form-check-label text-white" for="modification"> Modification</label>
-                                </div>
-
-                                <div class="input-form div-modify_info" style="display: none;">
-                                    <label class="d-block"> Modification Information:</label>
-                                    <input class="" type="text" id="c" name="modify_info"
-                                        placeholder="Enter Modification Information" />
-                                </div>
+<div class="row">
+    
+    <div class="col-md-12">
+    <div class="input-form mt-3">
+                                <label class="d-block" class="text-white"> Image:</label>
+                                <input class="form-control image_input" type="file" id="image" name="image"
+                                    placeholder="Upload File" />
                             </div>
-                        </div>
+    </div>
+</div>
+                            
 
+                           
 
-                        <div class="input-form mt-3">
-                            <label class="d-block text-white"> Image:</label>
-                            <input class="form-control image_input" type="file" id="image" name="image"
-                                placeholder="Upload File" />
-                        </div>
+                          
 
+                            
 
-                        <div class="tj-theme-button mt-3">
-                            <button class="tj-submit-btn" type="submit" value="submit">
-                                Calculate Price <i class="fa-light fa-arrow-right"></i>
-                            </button>
-                        </div>
-
-                    </form>
+                            <div class="tj-theme-button mt-3">
+                                <button class="tj-submit-btn" type="submit" value="submit">
+                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 </section>
 @endsection

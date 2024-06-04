@@ -73,11 +73,14 @@ Route::get('/terms_and_conditions', [FrontendController::class, 'termsAndConditi
 // privacy policy
 Route::get('/privacy_policy', [FrontendController::class, 'privacyPolicy'])->name('privacyPolicy');
 
-// vehicleTransportationdetail
+// vehicle Transportation detail
 Route::get('/vehicle-transportation-detail', [FrontendController::class, 'vehicleTransportDetail'])->name('vehicleTransportDetail');
 
 // heavy-transport-detail
 Route::get('/heavy-transport-detail', [FrontendController::class, 'heavyTransportDetail'])->name('heavy-transport-detail');
+
+// Freight Transportation Detail
+Route::get('/Freight-Transportation-Detail', [FrontendController::class, 'freightTransportDetail'])->name('freightTransportDetail');
 
 
 // order tracking
