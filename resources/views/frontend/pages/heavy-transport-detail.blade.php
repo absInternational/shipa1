@@ -1,6 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 <style>
         .tj-testimonial-section {
             padding: 50px 0;
@@ -442,17 +443,25 @@
                                             
                                         </div>
 
-
                                         <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white">Phone:</label>
+                                                <input id="phone" class="form-control" required name="Custo_Phone"
+                                                    type="tel" placeholder="Customer Phone">
+                                                <label class="error-message" id="Custo_Phone-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white"> Phone:</label>
                                                 <input class="form-control" name="Custo_Name" type="text"
                                                     placeholder="Customer Phone">
-                                                <!-- <input class="form-control" name="Custo_Phone" type="tel"
-                                                    placeholder="Customer Phone"> -->
+                                                <input class="form-control" name="Custo_Phone" type="tel"
+                                                    placeholder="Customer Phone">
                                                     <label class="error-message" id="tabSelector-error">This field is required.</label>
                                             </div>
-                                        </div>
+                                        </div> -->
 
 
                                         <div class="col-xl-4 col-lg-4">
@@ -1003,7 +1012,27 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="path/to/jquery.min.js"></script>
 <script src="path/to/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                initialCountry: "auto",
+                geoIpLookup: function(callback) {
+                    fetch('https://ipinfo.io/json')
+                        .then(function(response) {
+                            return response.json();
+                        })
+                        .then(function(ipinfo) {
+                            var countryCode = "us";
+                            callback(countryCode);
+                        });
+                },
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+            });
+        });
+    </script>
 <script>
 
 function playVideo() {
