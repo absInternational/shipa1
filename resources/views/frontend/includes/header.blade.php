@@ -217,13 +217,7 @@
                                     </li> --}}
                                     @php
                                         $categories = \App\Models\ServiceCategory::has('services')->get();
-                                        $services = \App\Models\Service::query();
-
-                                        $vehicle = $services->where('category_id', 1)->get();
-                                        $heavy = $services->where('category_id', 2)->get();
-                                        $freight = $services->where('category_id', 12)->get();
-                                        $roro = $services->where('category_id', 15)->get();
-                                        // dd($categories->toArray());
+                                        $services = \App\Models\Service::all();
                                     @endphp
                                     <li class="current-menu-item menu-item-has-children">
                                         <a href="{{ route('services') }}"
@@ -234,48 +228,56 @@
                                                     {{-- <a class=" mb-3"
                                                         href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3" href="">Vehicle Transportation</a>
-                                                    @foreach ($vehicle as $service)
-                                                        <li>
-                                                            <a class="title" target="_blank"
-                                                                href="{{ route('service.details', $service->slug) }}">
-                                                                {{ $service->name }}</a>
-                                                        </li>
+                                                    @foreach ($services as $service)
+                                                        @if ($service->category->name == 'Vehicle Transportation')
+                                                            <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('service.details', $service->slug) }}">
+                                                                    {{ $service->name }}</a>
+                                                            </li>
+                                                        @endif
                                                     @endforeach
                                                 </div>
                                                 <div class="col-sm-3">
                                                     {{-- <a class=" mb-3"
                                                         href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3" href="">Heavy Equipment</a>
-                                                    @foreach ($heavy as $service)
-                                                        <li>
-                                                            <a class="title" target="_blank"
-                                                                href="{{ route('service.details', $service->slug) }}">
-                                                                {{ $service->name }}</a>
-                                                        </li>
+                                                    @foreach ($services as $service)
+                                                        @if ($service->category->name == 'Heavy Equipment')
+                                                            <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('service.details', $service->slug) }}">
+                                                                    {{ $service->name }}</a>
+                                                            </li>
+                                                        @endif
                                                     @endforeach
                                                 </div>
                                                 <div class="col-sm-3">
                                                     {{-- <a class=" mb-3"
                                                         href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3" href="">Freight Transportation</a>
-                                                    @foreach ($freight as $service)
-                                                        <li>
-                                                            <a class="title" target="_blank"
-                                                                href="{{ route('service.details', $service->slug) }}">
-                                                                {{ $service->name }}</a>
-                                                        </li>
+                                                    @foreach ($services as $service)
+                                                        @if ($service->category->name == 'Freight Transportation')
+                                                            <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('service.details', $service->slug) }}">
+                                                                    {{ $service->name }}</a>
+                                                            </li>
+                                                        @endif
                                                     @endforeach
                                                 </div>
                                                 <div class="col-sm-3">
                                                     {{-- <a class=" mb-3"
                                                         href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
                                                     <a class=" mb-3" href="">RORO</a>
-                                                    @foreach ($roro as $service)
-                                                        <li>
-                                                            <a class="title" target="_blank"
-                                                                href="{{ route('service.details', $service->slug) }}">
-                                                                {{ $service->name }}</a>
-                                                        </li>
+                                                    @foreach ($services as $service)
+                                                        @if ($service->category->name == 'RORO')
+                                                            <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('service.details', $service->slug) }}">
+                                                                    {{ $service->name }}</a>
+                                                            </li>
+                                                        @endif
                                                     @endforeach
                                                 </div>
                                             </div>
