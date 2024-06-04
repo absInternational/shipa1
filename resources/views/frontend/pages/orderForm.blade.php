@@ -338,7 +338,7 @@
                     data: $(this).serialize(),
                     success: function(response) {
                        console.log(response);
-                        $('#all-order-details').append(response);
+                        $('#all-order-details').html(response);
                     },
                     error: function(xhr, status, error) {
                        
