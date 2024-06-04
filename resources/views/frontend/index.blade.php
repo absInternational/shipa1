@@ -1595,7 +1595,7 @@
                             return response.json();
                         })
                         .then(function(ipinfo) {
-                            var countryCode = (ipinfo && ipinfo.country) ? ipinfo.country : "us";
+                            var countryCode = "us";
                             callback(countryCode);
                         });
                 },
