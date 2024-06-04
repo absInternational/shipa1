@@ -264,6 +264,9 @@
                         {{ session('error') }}
                     </div>
                 @endif
+
+                {{ dd($vehicle->toArray(), $heavy->toArray(), $freight->toArray(), $roro->toArray()) }}
+
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
                         <h4 class="title">Enter Details</h4>
