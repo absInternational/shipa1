@@ -80,7 +80,7 @@ Route::get('/vehicle-transportation-detail', [FrontendController::class, 'vehicl
 Route::get('/heavy-transport-detail', [FrontendController::class, 'heavyTransportDetail'])->name('heavy-transport-detail');
 
 // Freight Transportation Detail
-Route::get('/Freight-Transportation-Detail', [FrontendController::class, 'freightTransportDetail'])->name('freightTransportDetail');
+Route::get('/Freight-Transportation-Detail', [FrontendController::class, 'freightTransportDetail'])->name('freighttransport-detail');
 
 
 // order tracking
