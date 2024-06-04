@@ -44,10 +44,10 @@
                 <option value="" disabled selected>Select Year
                 </option>
                 @php
-                    $currentYear = date('Y');
-                    for ($year = $currentYear; $year >= 1936; $year--) {
-                        echo "<option value='$year'>$year</option>";
-                    }
+                $currentYear = date('Y');
+                for ($year = $currentYear; $year >= 1936; $year--) {
+                echo "<option value='$year'>$year</option>";
+                }
                 @endphp
             </select>
         </div>
@@ -55,18 +55,18 @@
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label>Make</label>
-            <input type="text" id="make" name="make[]" placeholder="Enter Make" required="" />
+            <input type="text" id="make" name="make[]" placeholder="Enter Make" required />
         </div>
     </div>
     <div class="col-md-4">
         <div class="input-form tj-select vehicle-model-div">
             <label>Model</label>
-            <input type="text" id="model" name="model[]" placeholder="Enter Model" required="" />
+            <input type="text" id="model" name="model[]" placeholder="Enter Model" required/>
         </div>
     </div>
 </div>
 
-<a class="add-car" id="addVehicleBtn" class="addVehicleBtn"><i class="fa fa-plus"></i> Add
+<a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
     Vehicle</a>
 
 <div class="vehicles-container">
