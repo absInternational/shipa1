@@ -558,7 +558,7 @@
         </div>
     </section>
     <!--=========== About Section End =========-->
-    <section class="tj-choose-us-section">
+<section class="tj-choose-us-section">
         <div class="container-flude">
             <div class="row">
             @if (session('success'))
@@ -576,7 +576,7 @@
 
                     
 
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
+    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
                     @csrf
                         @if ($errors->any())
                         <div class="alert alert-danger">
@@ -722,7 +722,7 @@
                 </div>
             </div>
             
-          </form>
+    </form>
 
         
            
@@ -739,7 +739,7 @@
             </div>
 
         </div>
-    </section>
+</section>
     <!--=========== Feature Section End =========-->
 
     <!--=========== Team Section Start =========-->
@@ -1113,6 +1113,27 @@
     <script src="path/to/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
    
+    <script>
+    $$(document).ready(function() {
+    // Function to update the title based on dropdown selection
+    function updateTitle() {
+        var selectedOption = $('#tabSelector option:selected').text();
+        $(".title.text-center").text(selectedOption + " INFORMATION");
+    }
+
+    // Function to handle dropdown change event
+    $("#tabSelector").change(function() {
+        updateTitle();
+    });
+
+    // Initial call to set the title based on the default dropdown selection
+    updateTitle();
+
+    // Existing code...
+    // The rest of your existing JavaScript code goes here...
+});
+</script>
+
     <script>
         
       

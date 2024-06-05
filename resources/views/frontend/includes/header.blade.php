@@ -222,7 +222,7 @@
                                     <li class="current-menu-item menu-item-has-children">
                                         <a href="{{ route('services') }}"
                                             class="{{ Request::routeIs('services*') ? ' active' : '' }}"> Services</a>
-                                        <ul class="list-gap sub-menu-list" style="width: 60rem">
+                                        <ul class="list-gap sub-menu-list" style="width: 53rem">
                                             <div class="row">
                                                 <div class="col-sm-4 bd-l bd-r">
                                                     {{-- <a class=" mb-3"

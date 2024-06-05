@@ -143,7 +143,7 @@
     </section>
     <!--========== breadcrumb End ==============-->
 
-    <section class="tj-choose-us-section">
+    <section class="tj-choose-us-section-bike">
         <div class="container-flude">
             <div class="row">
                 @if (session('success'))

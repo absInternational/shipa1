@@ -1,6 +1,8 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+
+
     <style>
         .tj-testimonial-section {
             padding: 50px 0;
@@ -432,13 +434,13 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="trailer_specification" class="text-white">Trailer
                                             Specification</label>
-                                        <select class="form-control" id="trailer_specification"
-                                            name="trailer_specification">
+                                        <select class=" form-control selectpicker" name="trailer_specification" multiple data-live-search="true">
                                             <option value="" selected disabled>Select</option>
                                             <option value="Air Ride(A)">Air Ride(A)</option>
                                             <option value="Blanket Wrap (B)">Blanket Wrap (B)</option>
@@ -470,6 +472,7 @@
                                             <option value="Vented (V)">Vented (V)</option>
                                             <option value="Walking Floor (WF)">Walking Floor (WF)</option>
                                         </select>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -501,6 +504,9 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
                             <div class="form-check mt-3">
                                 <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
                                     value="1" />
@@ -621,7 +627,7 @@
 
 
 
-<div class="col-md-3">
+    <div class="col-md-3">
 
     <label class="lab-cos">Length</label>
     <div class="input-container">
@@ -632,9 +638,9 @@
             oninput="limitDigits(this, 2)">
         <span class="separators">(In.)</span>
     </div>
-</div>
+    </div>
 
-<div class="col-md-3">
+    <div class="col-md-3">
 
     <label class="lab-cos">Width</label>
     <div class="input-container">
@@ -645,9 +651,9 @@
             oninput="limitDigits(this, 2)">
         <span class="separators">(In.)</span>
     </div>
-</div>
+    </div>
 
-<div class="col-md-3">
+    <div class="col-md-3">
 
     <label class="lab-cos">Height</label>
     <div class="input-container">
@@ -658,9 +664,9 @@
             oninput="limitDigits(this, 2)">
         <span class="separators">(In.)</span>
     </div>
-</div>
+    </div>
 
-<div class="col-md-3">
+    <div class="col-md-3">
 
     <label class="lab-cos">Weight</label>
     <div class="input-container1">
@@ -669,8 +675,8 @@
         <span class="separators-w">(Lbs.)</span>
 
     </div>
-</div>
-</div>
+    </div>
+    </div>
                             <div class="row">
                                 <h4 class="text-white">Additional Services</h4>
                                 <div class="col-md-4">
@@ -1245,6 +1251,17 @@
     <script src="path/to/jquery.min.js"></script>
     <script src="path/to/owl.carousel.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+   
+
+<script>
+    $(document).ready(function() {
+        $('.selectpicker').selectpicker();
+    });
+</script>
     <script>
         $(document).ready(function() {
             var selectedTab = '';
