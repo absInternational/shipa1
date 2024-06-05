@@ -108,7 +108,7 @@
                                                                     <td>Condition</td>
                                                                     <td class="font-weight-bold">
                                                                         @if ($data['condition'] == 1)
-                                                                            return "Running
+                                                                            Running
                                                                         @else
                                                                             Not- Running
                                                                         @endif
@@ -443,7 +443,7 @@
                                     <div class="form-group">
                                         <label for="carrier"><strong>Carrier Type</strong></label>
                                         <input autocomplete="nope" type="text" class="form-control"
-                                            value="@foreach ($transport as $val3){{--  --}} @endforeach"
+                                            value="@foreach ($transport as $val3) @endforeach"
                                             disabled="">
                                     </div>
 
@@ -526,7 +526,6 @@
                                                 maxlength="8" placeholder="Enter Last 8 of Vin#">
 
                                             <div class="form-control-position">
-                                                {{-- <i class="la la-edit"></i> --}}
                                             </div>
                                         </div>
                                     </div>
