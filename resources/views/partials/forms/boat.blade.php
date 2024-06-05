@@ -162,7 +162,7 @@ Vehicle</a>
         </div>
 
         <div class="input-form div-link" style="display: none;">
-            <label class="d-block"> Enter Link:</label>
+            <label class="d-block mb-2"> Enter Link:</label>
             <input class="" type="url" id="link" name="link" placeholder="Enter Link" required />
         </div>
 
@@ -172,7 +172,7 @@ Vehicle</a>
                 <div class="col-md-6">
 
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-0">
                         <input class="form-check-input" type="checkbox" id="modification" name="modification"
                             value="1" />
                         <label class="form-check-label text-white" for="modification"> Modification</label>
