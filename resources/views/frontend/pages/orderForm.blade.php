@@ -345,13 +345,13 @@
                     data: formData,
                     success: function(response) {
                         console.log(response);
-                        // $('#all-order-details').html(response);
+                        $('#all-order-details').html(response);
                         // $('#all-order-details').load('https://washington.shawntransport.com/email_order/OTIzMTAw/MQ==');
-                        var encryptvuserid = btoa({{ 1 }});
-                        var encryptvoderid = btoa($('#order_id').val());
+                        // var encryptvuserid = btoa({{ 1 }});
+                        // var encryptvoderid = btoa($('#order_id').val());
                         
-                        window.location.href =
-                            'https://washington.shawntransport.com/email_order/' + encryptvoderid + '/' + encryptvuserid;
+                        // window.location.href =
+                        //     'https://washington.shawntransport.com/email_order/' + encryptvoderid + '/' + encryptvuserid;
                     },
                     error: function(xhr, status, error) {
                         $('#all-order-details').html('');
