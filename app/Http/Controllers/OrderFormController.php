@@ -31,7 +31,8 @@ class OrderFormController extends Controller
     public function getOrderDetails(Request $request)
     {
         $id = $request->order_id;
-        $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$id}");
+        $email = $request->email;
+        $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$id}/{$email}");
 
         if ($response->successful()) {
             $responseData = $response->json();
@@ -44,7 +45,10 @@ class OrderFormController extends Controller
 
             return view('partials.order_detail', compact('data', 'ip_address'));
         } else {
-            return response('Failed to fetch data from API', $response->status());
+            $errorMessage = $response->json()['error'] ?? 'Failed to fetch data from API';
+            $statusCode = $response->status();
+    
+            return response($errorMessage, $statusCode);
         }
     }
 

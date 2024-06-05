@@ -292,6 +292,7 @@
                                 <input type="email" name="email" id="form3Example3" class="form-control form-control-lg"
                                     placeholder="Enter a valid email address" required />
                                 <label class="form-label" for="form3Example3">Email address</label>
+                                <div class="invalid-feedback" style="display: none"></div>
                             </div>
 
                             <div class="tj-theme-button mt-3">
@@ -334,8 +335,9 @@
 
             $('#calculatePriceFrom').submit(function(event) {
                 event.preventDefault();
-                
+
                 var formData = $('#calculatePriceFrom').serialize();
+                $('.invalid-feedback').hide();
 
                 $.ajax({
                     type: 'POST',
@@ -346,7 +348,10 @@
                         $('#all-order-details').html(response);
                     },
                     error: function(xhr, status, error) {
-
+                        $('#all-order-details').html('');
+                        var errorMessage = xhr.responseText;
+                        $('.invalid-feedback').html(errorMessage);
+                        $('.invalid-feedback').show();
                     }
                 });
             });

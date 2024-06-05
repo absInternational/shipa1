@@ -95,17 +95,17 @@
                             <br>
 
                             <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                        name="available_at_auction" value="1" />
-                                    <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                        Auction?</label>
-                                </div>
+                                <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                    name="available_at_auction" value="1" />
+                                <label class="form-check-label text-white" for="available_at_auction"> Available at
+                                    Auction?</label>
+                            </div>
 
-                                <div class="input-form div-link mt-3" style="display: none;">
-                                    <label class="d-block"> Enter Link:</label>
-                                    <input class="form-control" type="url" id="link" name="link"
-                                        placeholder="Enter Link" />
-                                </div>
+                            <div class="input-form div-link mt-3" style="display: none;">
+                                <label class="d-block"> Enter Link:</label>
+                                <input class="form-control" type="url" id="link" name="link"
+                                    placeholder="Enter Link" />
+                            </div>
 
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
@@ -380,8 +380,8 @@
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Length (Ft.)</label>
-                                        <input type="number" id="" name="length_ft" placeholder=""
-                                            required="" value="0" />
+                                        <input class="calculate_freight" type="number" id="length_ft" name="length_ft"
+                                            placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
                                         <ul class="suggestions"></ul>
                                     </div>
@@ -389,8 +389,8 @@
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Length (In.)</label>
-                                        <input type="number" id="" name="length_in" placeholder=""
-                                            required="" value="0" />
+                                        <input class="" type="number" id="length_in" name="length_in"
+                                            placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
                                         <ul class="suggestions"></ul>
                                     </div>
@@ -398,8 +398,8 @@
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Width (Ft.)</label>
-                                        <input type="number" id="" name="width_ft" placeholder=""
-                                            required="" value="0" />
+                                        <input class="calculate_freight" type="number" id="width_ft" name="width_ft"
+                                            placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
                                         <ul class="suggestions"></ul>
                                     </div>
@@ -407,8 +407,8 @@
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Width (In.)</label>
-                                        <input type="number" id="" name="width_in" placeholder=""
-                                            required="" value="0" />
+                                        <input class="" type="number" id="width_in" name="width_in"
+                                            placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
                                         <ul class="suggestions"></ul>
                                     </div>
@@ -416,8 +416,8 @@
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Height (Ft.)</label>
-                                        <input type="number" id="" name="height_ft" placeholder=""
-                                            required="" value="0" />
+                                        <input class="calculate_freight" type="number" id="height_ft" name="height_ft"
+                                            placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
                                         <ul class="suggestions"></ul>
                                     </div>
@@ -425,8 +425,8 @@
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Height (In.)</label>
-                                        <input type="number" id="" name="height_in" placeholder=""
-                                            required="" value="0" />
+                                        <input class="" type="number" id="height_in" name="height_in"
+                                            placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
                                         <ul class="suggestions"></ul>
                                     </div>
@@ -434,12 +434,13 @@
                                 <div class="col-md-3">
                                     <div class="input-form">
                                         <label class="d-block"> Weight (Lbs.)</label>
-                                        <input type="number" id="" name="weight" placeholder=""
-                                            required="" value="0" />
+                                        <input class="calculate_freight" type="number" id="weight" name="weight"
+                                            placeholder="" required="" value="0" />
                                         <small id="errOLoc" class="err-loc"></small>
                                         <ul class="suggestions"></ul>
                                     </div>
                                 </div>
+                                <input type="hidden" name="frieght_class" id="frieght_class" value="">
                             </div>
                             <div class="row">
                                 <h4 class="text-white">Additional Services</h4>
@@ -620,6 +621,132 @@
                 suggestionsList.css("display", "none");
             }
             updateSuggestions(inputField, suggestionsList);
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            function checkSpecificFieldsFilled() {
+                var allFilled = true;
+                $('.calculate_freight').each(function() {
+                    if ($(this).val() === '' || $(this).val() === '0') {
+                        allFilled = false;
+                        return false;
+                    }
+                });
+                return allFilled;
+            }
+
+            function allSpecificFieldsFilledFunction() {
+                console.log("All specific fields are filled up!");
+                freight_calc();
+            }
+
+            function freight_calc() {
+                // var length_ft = $('#length_ft').val();
+                // var length_in = $('#length_in').val();
+                // var width_ft = $('#width_ft').val();
+                // var width_in = $('#width_in').val();
+                // var height_ft = $('#height_ft').val();
+                // var height_in = $('#height_in').val();
+                // var weight = $('#weight').val();
+
+                // var length = length_ft * 12 + parseFloat(length_in);
+                // var width = width_ft * 12 + parseFloat(width_in);
+                // var height = height_ft * 12 + parseFloat(height_in);
+                var length_ft = parseFloat($('#length_ft').val());
+                var length_in = parseFloat($('#length_in').val());
+                var width_ft = parseFloat($('#width_ft').val());
+                var width_in = parseFloat($('#width_in').val());
+                var height_ft = parseFloat($('#height_ft').val());
+                var height_in = parseFloat($('#height_in').val());
+                var weight = parseFloat($('#weight').val());
+
+                console.log(
+                    length_ft,
+                    length_in,
+                    width_ft,
+                    width_in,
+                    height_ft,
+                    height_in,
+                    weight,
+                );
+
+                var length = length_ft * 12;
+                length = length + length_in;
+
+                var width = width_ft * 12;
+                width = width + width_in;
+
+                var height = height_ft * 12;
+                height = height + height_in;
+
+                console.log(length, width, height, weight);
+
+                length = parseFloat(length);
+                width = parseFloat(width);
+                height = parseFloat(height);
+                weight = parseFloat(weight);
+
+
+                var unit = 'inch';
+                var answer_1 = (length * height * width).toFixed(4);
+                if (unit == 'inch') {
+                    answer_1 = (answer_1 / 1728).toFixed(4);
+                }
+                var fright_class = 0;
+                var answer_1 = (length * height * width).toFixed(4);
+                if (unit == 'inch') {
+                    answer_1 = (answer_1 / 1728).toFixed(4);
+                }
+                var fright_class = 0;
+                answer_1 = (weight / answer_1).toFixed(4);
+                if (answer_1 < 1) {
+                    fright_class = 500;
+                } else if (answer_1 >= 1 && answer_1 < 2) {
+                    fright_class = 400;
+                } else if (answer_1 >= 2 && answer_1 < 3) {
+                    fright_class = 300;
+                } else if (answer_1 >= 3 && answer_1 < 4) {
+                    fright_class = 250;
+                } else if (answer_1 >= 4 && answer_1 < 5) {
+                    fright_class = 200;
+                } else if (answer_1 >= 5 && answer_1 < 6) {
+                    fright_class = 175;
+                } else if (answer_1 >= 6 && answer_1 < 7) {
+                    fright_class = 150;
+                } else if (answer_1 >= 7 && answer_1 < 8) {
+                    fright_class = 125;
+                } else if (answer_1 >= 8 && answer_1 < 9) {
+                    fright_class = 110;
+                } else if (answer_1 >= 9 && answer_1 < 10.5) {
+                    fright_class = 100;
+                } else if (answer_1 >= 10.5 && answer_1 < 12) {
+                    fright_class = 92.5;
+                } else if (answer_1 >= 12 && answer_1 < 13.5) {
+                    fright_class = 85;
+                } else if (answer_1 >= 13.5 && answer_1 < 15) {
+                    fright_class = 77.5;
+                } else if (answer_1 >= 15 && answer_1 < 22.5) {
+                    fright_class = 70;
+                } else if (answer_1 >= 22.5 && answer_1 < 30) {
+                    fright_class = 65;
+                } else if (answer_1 >= 30 && answer_1 < 35) {
+                    fright_class = 60;
+                } else if (answer_1 >= 35 && answer_1 < 50) {
+                    fright_class = 55;
+                } else if (answer_1 >= 50) {
+                    fright_class = 50;
+                }
+                console.log('fright_class', fright_class);
+                $('#frieght_class').val(fright_class).trigger('change');
+            }
+
+            $('.calculate_freight').on('keyup', function() {
+                if (checkSpecificFieldsFilled()) {
+                    allSpecificFieldsFilledFunction();
+                }
+            });
         });
     </script>
 @endsection

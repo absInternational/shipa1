@@ -1,4 +1,3 @@
-
 <div class="container " style=" margin-top: 0px; ">
     <div class="row">
         <div class="col-12">
@@ -7,7 +6,7 @@
                     style="    border-bottom-color:transparent;background-color:#8fc445 !important; color:#fff !important;">
                     <div class=" mb-0 w-100"><strong class="heading">Book Order #{{ $data['id'] }} </strong>
 
-                        <p class="subhead">Your IP address - {{ $ip_address }}</p>
+                        {{-- <p class="subhead">Your IP address - {{ $ip_address }}</p> --}}
 
                     </div>
                 </div>
@@ -57,44 +56,30 @@
                                                         @php
                                                             if ($data['freight']) {
                                                                 # code...
-                                                                $frieght_class =
-                                                                    $data['freight']['frieght_class'];
+                                                                $frieght_class = $data['freight']['frieght_class'];
                                                                 $equipment_type = implode(
                                                                     ', ',
-                                                                    explode(
-                                                                        '^*',
-                                                                        $data['freight']['equipment_type'],
-                                                                    ),
+                                                                    explode('^*', $data['freight']['equipment_type']),
                                                                 );
                                                                 $trailer_specification =
                                                                     $data['freight']['trailer_specification'];
-                                                                $ex_pickup_date =
-                                                                    $data['freight']['ex_pickup_date'];
-                                                                $ex_pickup_time =
-                                                                    $data['freight']['ex_pickup_time'];
+                                                                $ex_pickup_date = $data['freight']['ex_pickup_date'];
+                                                                $ex_pickup_time = $data['freight']['ex_pickup_time'];
                                                                 $ex_delivery_date =
                                                                     $data['freight']['ex_delivery_date'];
                                                                 $ex_delivery_time =
                                                                     $data['freight']['ex_delivery_time'];
                                                                 $commodity_detail =
                                                                     $data['freight']['commodity_detail'];
-                                                                $commodity_unit =
-                                                                    $data['freight']['commodity_unit'];
-                                                                $total_weight_lb =
-                                                                    $data['freight']['total_weight_lbs'];
+                                                                $commodity_unit = $data['freight']['commodity_unit'];
+                                                                $total_weight_lb = $data['freight']['total_weight_lbs'];
                                                                 $pick_up_service = implode(
                                                                     ', ',
-                                                                    explode(
-                                                                        '^*',
-                                                                        $data['freight']['pick_up_services'],
-                                                                    ),
+                                                                    explode('^*', $data['freight']['pick_up_services']),
                                                                 );
                                                                 $deliver_service = implode(
                                                                     ', ',
-                                                                    explode(
-                                                                        '^*',
-                                                                        $data['freight']['deliver_services'],
-                                                                    ),
+                                                                    explode('^*', $data['freight']['deliver_services']),
                                                                 );
                                                                 $shipment_prefences =
                                                                     $data['freight']['shipment_prefences'];
@@ -122,18 +107,22 @@
                                                                 <tr>
                                                                     <td>Condition</td>
                                                                     <td class="font-weight-bold">
-                                                                        @foreach ($condition1 as $val2)
-                                                                            {{--  --}}
-                                                                        @endforeach
+                                                                        @if ($data['condition'] == 1)
+                                                                            return "Running
+                                                                        @else
+                                                                            Not- Running
+                                                                        @endif
                                                                     </td>
                                                                 </tr>
 
                                                                 <tr>
                                                                     <td>Transport</td>
                                                                     <td class="font-weight-bold">
-                                                                        @foreach ($transport as $val3)
-                                                                            {{--  --}}
-                                                                        @endforeach
+                                                                        @if ($data['transport'] == 1)
+                                                                            Open
+                                                                        @else
+                                                                            Enclosed
+                                                                        @endif
                                                                     </td>
                                                                 </tr>
                                                             @else
@@ -356,8 +345,7 @@
 
                         <div class="row">
 
-                            <div
-                                class="@if ($data['car_type'] != 3) col-lg-6 @else col-lg-12 @endif col-sm-12">
+                            <div class="@if ($data['car_type'] != 3) col-lg-6 @else col-lg-12 @endif col-sm-12">
                                 <div class="card-header font-weight-bold"
                                     style="background-color:#8fc445 !important; color:#fff !important;">
                                     Customer Information
@@ -369,8 +357,8 @@
                                         <label for="name"><strong>Full Name</strong><span class="text-danger">
                                                 *</span></label>
                                         <input autocomplete="nope" type="text" class="form-control"
-                                            id="name" name="name" placeholder="Enter Name"
-                                            required="" value="{{ $data['oname'] }}">
+                                            id="name" name="name" placeholder="Enter Name" required=""
+                                            value="{{ $data['oname'] }}">
 
                                         <div class="invalid-feedback">
                                             This field is required.
@@ -379,8 +367,8 @@
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="phone"><strong>Phone #</strong><span
-                                                    class="text-danger"> *</span></label>
+                                            <label for="phone"><strong>Phone #</strong><span class="text-danger">
+                                                    *</span></label>
                                             <input autocomplete="nope" type="text" class="form-control"
                                                 maxlength="15" id="phone" name="phone"
                                                 placeholder="Enter Phone #" required=""
@@ -393,8 +381,8 @@
                                         <div class="form-group col-md-6">
                                             <label for="phone2"><strong>Second Phone #</strong></label>
                                             <input autocomplete="nope" type="text" value=""
-                                                class="form-control" id="phone2" name="phone2"
-                                                maxlength="15" placeholder="Enter Second Phone #">
+                                                class="form-control" id="phone2" name="phone2" maxlength="15"
+                                                placeholder="Enter Second Phone #">
                                         </div>
                                     </div>
 
@@ -403,8 +391,8 @@
                                         <label for="address"><strong>Address</strong><span class="text-danger">
                                                 *</span></label>
                                         <input autocomplete="nope" type="text" class="form-control"
-                                            id="address" name="address" placeholder="Enter Address"
-                                            required="" value="{{ $data['oaddress'] }}">
+                                            id="address" name="address" placeholder="Enter Address" required=""
+                                            value="{{ $data['oaddress'] }}">
 
                                         <div class="invalid-feedback">
                                             This field is required.
@@ -421,8 +409,7 @@
                                             <input type="text" id="o_zip1" class="form-control "
                                                 maxlength="11" name="o_zip1"
                                                 @if ($data['originzsc']) readonly @endif
-                                                value="{{ $data['originzsc'] }}" placeholder="ZIP CODE"
-                                                required />
+                                                value="{{ $data['originzsc'] }}" placeholder="ZIP CODE" required />
                                         </div>
                                     </div>
 
@@ -483,13 +470,12 @@
                                     <div class="form-group">
                                         <label for="auction"><strong>Is it in Auction?</strong><span
                                                 class="text-danger"> *</span></label>
-                                        <select name="auction" id="auction" class="form-control select2"
-                                            required>
+                                        <select name="auction" id="auction" class="form-control select2" required>
                                             <option value="" selected="">Select</option>
-                                            <option @if (!empty($data['oauction'])) selected @endif
-                                                value="yes">Yes</option>
-                                            <option @if (empty($data['oauction'])) selected @endif
-                                                value="no">No</option>
+                                            <option @if (!empty($data['oauction'])) selected @endif value="yes">
+                                                Yes</option>
+                                            <option @if (empty($data['oauction'])) selected @endif value="no">
+                                                No</option>
                                         </select>
 
                                         <div class="invalid-feedback">
@@ -535,10 +521,9 @@
                                             <span class="text-danger"> *</span></label>
 
                                         <div class="controls position-relative has-icon-left">
-                                            <input autocomplete="nope" type="text" name="vin"
-                                                id="vin" value="{{ $data['vin_num'] }}" required
-                                                class="form-control" maxlength="8"
-                                                placeholder="Enter Last 8 of Vin#">
+                                            <input autocomplete="nope" type="text" name="vin" id="vin"
+                                                value="{{ $data['vin_num'] }}" required class="form-control"
+                                                maxlength="8" placeholder="Enter Last 8 of Vin#">
 
                                             <div class="form-control-position">
                                                 {{-- <i class="la la-edit"></i> --}}
@@ -551,12 +536,11 @@
                                         <label for="vkey"><strong>Key</strong>
                                             <span class="text-danger"> *</span>
                                         </label>
-                                        <select name="vkey" id="vkey" class="form-control"
-                                            required="">
-                                            <option @if ($data['key_has'] == 'yes') selected @endif
-                                                value="yes">Yes</option>
-                                            <option @if ($data['key_has'] == 'no') selected @endif
-                                                value="no">No</option>
+                                        <select name="vkey" id="vkey" class="form-control" required="">
+                                            <option @if ($data['key_has'] == 'yes') selected @endif value="yes">
+                                                Yes</option>
+                                            <option @if ($data['key_has'] == 'no') selected @endif value="no">
+                                                No</option>
                                         </select>
                                     </div>
 
@@ -602,8 +586,8 @@
                                 <div class="card-body border">
 
                                     <div class="form-group">
-                                        <label for="oname"><strong>Contact Name</strong><span
-                                                class="text-danger"> *</span></label>
+                                        <label for="oname"><strong>Contact Name</strong><span class="text-danger">
+                                                *</span></label>
                                         <input autocomplete="nope" type="text" class="form-control"
                                             id="oname" name="oname" placeholder="Enter Contact Name"
                                             required="" value="{{ $data['oname'] }}">
@@ -614,8 +598,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="oemail"><strong>Email Address</strong><span
-                                                class="text-danger"> *</span></label>
+                                        <label for="oemail"><strong>Email Address</strong><span class="text-danger">
+                                                *</span></label>
                                         <input autocomplete="nope" type="email" class="form-control"
                                             id="oemail" name="oemail" placeholder="Enter Email Address"
                                             required="" value="{{ $data['oemail'] }}">
@@ -627,8 +611,8 @@
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="ophone"><strong>Phone #</strong><span
-                                                    class="text-danger"> *</span></label>
+                                            <label for="ophone"><strong>Phone #</strong><span class="text-danger">
+                                                    *</span></label>
                                             <input autocomplete="nope" type="text" class="form-control"
                                                 id="ophone" name="ophone" placeholder="Enter Phone #"
                                                 required="" value="{{ $data['main_ph'] }}">
@@ -680,8 +664,8 @@
                                 <div class="card-body border">
 
                                     <div class="form-group">
-                                        <label for="dname"><strong>Contact Name</strong><span
-                                                class="text-danger"> *</span></label>
+                                        <label for="dname"><strong>Contact Name</strong><span class="text-danger">
+                                                *</span></label>
                                         <input autocomplete="nope" type="text" class="form-control"
                                             id="dname" name="dname" placeholder="Enter Contact Name"
                                             required="" value="{{ $data['dname'] }}">
@@ -696,8 +680,8 @@
                                             <span class="text-danger"> *</span>
                                         </label>
                                         <input autocomplete="nope" type="email" class="form-control"
-                                            id="demail" name="demail" required
-                                            placeholder="Enter Email Address" value="{{ $data['demail'] }}">
+                                            id="demail" name="demail" required placeholder="Enter Email Address"
+                                            value="{{ $data['demail'] }}">
                                     </div>
                                     @php
                                         $dphone1 = '';
@@ -712,8 +696,8 @@
                                     @endphp
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="dphone"><strong>Phone #</strong><span
-                                                    class="text-danger"> *</span></label>
+                                            <label for="dphone"><strong>Phone #</strong><span class="text-danger">
+                                                    *</span></label>
                                             <input autocomplete="nope" type="text" class="form-control"
                                                 id="dphone" name="dphone" placeholder="Enter Phone #"
                                                 required="" value="{{ $dphone1 }}">
@@ -793,9 +777,9 @@
                                     <div class="card">
                                         <div class="card-header" id="headingTwo">
                                             <h3 class="mb-0">
-                                                <button type="button" class="btn btn-link"
-                                                    data-toggle="collapse" data-target="#collapseTwo"
-                                                    aria-expanded="true" aria-controls="collapseTwo">
+                                                <button type="button" class="btn btn-link" data-toggle="collapse"
+                                                    data-target="#collapseTwo" aria-expanded="true"
+                                                    aria-controls="collapseTwo">
                                                     [+] Terms &amp; Conditions
                                                 </button>
                                             </h3>
@@ -982,8 +966,8 @@
                                 <div class="form-group">
                                     <label for="yourname"><strong>Your Name</strong><span class="text-danger">
                                             *</span></label>
-                                    <input autocomplete="nope" type="text" class="form-control"
-                                        id="yourname" name="yourname"
+                                    <input autocomplete="nope" type="text" class="form-control" id="yourname"
+                                        name="yourname"
                                         value="{{ isset($data['orderpayment']->your_name) ? $data['orderpayment']->your_name : '' }}"
                                         placeholder="Enter Your Name" required>
 
@@ -994,11 +978,10 @@
                             </div>
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
-                                    <label for="signature"><strong>Your Signature</strong><span
-                                            class="text-danger"> *</span></label>
-                                    <input autocomplete="nope" type="text" class="form-control"
-                                        id="signature" name="signature" placeholder="Enter Your Signature"
-                                        required>
+                                    <label for="signature"><strong>Your Signature</strong><span class="text-danger">
+                                            *</span></label>
+                                    <input autocomplete="nope" type="text" class="form-control" id="signature"
+                                        name="signature" placeholder="Enter Your Signature" required>
 
                                     <div class="invalid-feedback">
                                         This field is required.
