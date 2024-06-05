@@ -12,7 +12,7 @@ use GuzzleHttp\Client;
 class QuoteController extends Controller
 {
     use ImageUploadTrait;
-    
+
     public function store(Request $request)
     {
         $data = $request->all();
@@ -63,6 +63,7 @@ class QuoteController extends Controller
         $sort_segregate = $request->input('sort_segregate', null);
         $blind_shipment = $request->input('blind_shipment', null);
         $vehicle_opt = $request->input('vehicle_opt', null);
+        $frieght_class = $request->input('frieght_class', null);
         $image = $request->file('image');
         $ip = $request->ip();
 
@@ -172,13 +173,14 @@ class QuoteController extends Controller
             'year' => $year,
             'make' => $make,
             'model' => $model,
+            'frieght_class' => $frieght_class,
         ];
 
         if ($request->hasFile('image')) {
             $post_array['image'] = $request->file('image');
         }
 
-        // dd($post_array);
+        // dd($request->toArray(), $post_array);
 
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();

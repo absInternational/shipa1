@@ -283,7 +283,7 @@
                             @endif
 
                             <div data-mdb-input-init class="form-outline mb-4">
-                                <input type="number" name="order_id" id="form3Example3"
+                                <input type="number" name="order_id" id="order_id"
                                     class="form-control form-control-lg" placeholder="Enter order#" />
                                 <label class="form-label" for="form3Example3">Order #.</label>
                             </div>
@@ -292,6 +292,7 @@
                                 <input type="email" name="email" id="form3Example3" class="form-control form-control-lg"
                                     placeholder="Enter a valid email address" required />
                                 <label class="form-label" for="form3Example3">Email address</label>
+                                <div class="invalid-feedback fw-bold fs-5" style="display: none"></div>
                             </div>
 
                             <div class="tj-theme-button mt-3">
@@ -334,8 +335,9 @@
 
             $('#calculatePriceFrom').submit(function(event) {
                 event.preventDefault();
-                
+
                 var formData = $('#calculatePriceFrom').serialize();
+                $('.invalid-feedback').hide();
 
                 $.ajax({
                     type: 'POST',
@@ -344,12 +346,246 @@
                     success: function(response) {
                         console.log(response);
                         $('#all-order-details').html(response);
+                        // $('#all-order-details').load('https://washington.shawntransport.com/email_order/OTIzMTAw/MQ==');
+                        // var encryptvuserid = btoa({{ 1 }});
+                        // var encryptvoderid = btoa($('#order_id').val());
+                        
+                        // window.location.href =
+                        //     'https://washington.shawntransport.com/email_order/' + encryptvoderid + '/' + encryptvuserid;
                     },
                     error: function(xhr, status, error) {
-
+                        $('#all-order-details').html('');
+                        var errorMessage = xhr.responseText;
+                        $('.invalid-feedback').html(errorMessage);
+                        $('.invalid-feedback').show();
                     }
                 });
             });
         });
+    </script>
+    <script>
+        @if (!empty($data->oauction))
+            setTimeout(function() {
+
+                //$('#auction').trigger('change');
+            }, 500);
+        @endif
+    </script>
+
+    <script>
+        $(".app-sidebar").hide();
+        $(".app-header").hide();
+        $(".switcher-wrapper").hide();
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#o_zip1").autocomplete({
+                source: "/get_zip"
+            });
+        });
+
+        $(document).ready(function() {
+            $("#signtures").click(function() {
+                if ($("#signature1").is(":checked")) {
+                    // do something if the checkbox is NOT checked
+                    $("#first_sign").css("background-color", "black");
+                    $("#first_sign").css("color", "white");
+
+
+                }
+                if (!$("#signature1").is(":checked")) {
+                    // do something if the checkbox is NOT checked
+                    $("#first_sign").css("background-color", "white");
+                    $("#first_sign").css("color", "black");
+
+
+                }
+                if ($("#signature2").is(":checked")) {
+                    // do something if the checkbox is NOT checked
+                    $("#second_sign").css("background-color", "black");
+                    $("#second_sign").css("color", "white");
+
+
+                }
+                if (!$("#signature2").is(":checked")) {
+                    // do something if the checkbox is NOT checked
+                    $("#second_sign").css("background-color", "white");
+                    $("#second_sign").css("color", "black");
+
+
+                }
+                if ($("#signature3").is(":checked")) {
+                    // do something if the checkbox is NOT checked
+                    $("#third_sign").css("background-color", "black");
+                    $("#third_sign").css("color", "white");
+
+                }
+                if (!$("#signature3").is(":checked")) {
+                    // do something if the checkbox is NOT checked
+                    $("#third_sign").css("background-color", "white");
+                    $("#third_sign").css("color", "black");
+                }
+
+                if ($("#signature4").is(":checked")) {
+                    // do something if the checkbox is NOT checked
+                    $("#fourth_sign").css("background-color", "black");
+                    $("#fourth_sign").css("color", "white");
+
+                }
+                if (!$("#signature4").is(":checked")) {
+                    // do something if the checkbox is NOT checked
+                    $("#fourth_sign").css("background-color", "white");
+                    $("#fourth_sign").css("color", "black");
+                }
+            });
+
+        });
+
+
+        $("#s1").click(function() {
+            $("#signature1").prop("checked", true);
+            var checked = $(this).is(':checked');
+            if (checked) {
+                alert('checked');
+            } else {
+                alert('unchecked');
+            }
+
+        });
+        $(".sign2").click(function() {
+            $("#signature2").prop("checked", true);
+
+        });
+        $(".sign3").click(function() {
+            $("#signature3").prop("checked", true);
+
+        });
+        $(".sign4").click(function() {
+            $("#signature4").prop("checked", true);
+
+        });
+
+        $('.btn-link').click(function() {
+            $('#collapseTwo').toggle();
+        });
+        $("#phone").mask("(999) 999-9999");
+        $("#phone2").mask("(999) 999-9999");
+        $("#ophone").mask("(999) 999-9999");
+        $("#ophone2").mask("(999) 999-9999");
+        $("#dphone").mask("(999) 999-9999");
+        $("#dphone2").mask("(999) 999-9999");
+
+
+        $("#signature").change(function() {
+            var valueSign = $(this).val();
+            $("#signtures").html('');
+            if (valueSign) {
+                $("#signtures").html(`
+                        <div class="row skin skin-line">
+
+                            <div class="col-md-6 col-sm-12 mt-2 radio_style "  id="s1">
+                                <fieldset class="sign1" id="first_sign">
+                                    <input required type="radio"  name="signatureShw" value="1" id="signature1">
+                                    <label for="signature1"  style="font-weight: bolder;font-style: oblique" id="signShw1">${valueSign}</label>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-2 radio_style" id="s2">
+                                <fieldset class="sign2" id="second_sign">
+                                    <input required type="radio"  name="signatureShw" value="2" id="signature2">
+                                    <label for="signature2" style="font-weight: bolder;font-style: oblique" id="signShw2">${valueSign}</label>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-2 radio_style" id="s3">
+                                <fieldset class="sign3" id="third_sign">
+                                    <input required type="radio"  name="signatureShw" value="3" id="signature3">
+                                    <label for="signature3"  style="font-family:monsieur;font-weight: bolder;font-style: oblique"  id="signShw3">${valueSign}</label>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-2 radio_style" id="s4">
+                                <fieldset class="sign4" id="fourth_sign">
+                                    <input required type="radio" name="signatureShw" value="4" id="signature4">
+                                    <label for="signature4" style="font-family:monospace;font-weight: bolder;font-style: oblique"  id="signShw4">${valueSign}</label>
+                                </fieldset>
+                            </div>
+
+                        </div>`);
+            }
+        });
+
+        $("#auction").change(function() {
+
+            var valueAuction = $(this).val();
+
+            $("#auctionYes").html('');
+
+            if (valueAuction == 'yes') {
+                $("#auctionYes").html(`
+
+              <div class="form-group">
+                <label for="auction_name"><strong>Auction Name</strong>
+                   <span class="text-danger"> *</span></label>
+                </label>
+                <div class="controls position-relative has-icon-left">
+                    <input autocomplete="nope" type="text" name="auction_name"
+                   required id="auction_name" class="form-control" value="" placeholder="Enter Auction Name">
+                    <div class="form-control-position">
+                        <!--<i class="la la-newspaper-o"></i>-->
+                    </div>
+                </div>
+              </div>
+
+                <div class="form-group">
+                    <label for="buyer_num"><strong>Buyer/Lot/Stock
+                        Number</strong>
+                           <span class="text-danger"> *</span></label>
+                        </label>
+                    <div class="controls position-relative has-icon-left">
+                        <input autocomplete="nope" type="text" name="buyer_num" id="buyer_num"
+                          required  class="form-control" value="" placeholder="Enter Buyer/Lot/Stock Number">
+                        <div class="form-control-position">
+                            <!--<i class="la la-phone"></i>-->
+                        </div>
+                    </div>
+                </div>
+                `);
+                $("#auctionYes").show();
+            } else {
+                $("#auctionYes").hide();
+                $("#auctionYes").html('');
+            }
+        });
+    </script>
+    <script>
+        $(".submit").click(function(e) {
+            var allinput = $("input[required]");
+            var i = 0;
+            $(".text-danger").remove();
+            allinput.removeAttr('style');
+            allinput.each(function() {
+                if ($(this).val() == '') {
+                    e.preventDefault();
+                    // console.log($(this));
+                    // $(".container").children('.alert').remove();
+                    $(this).attr("style", "border-color:red!important");
+                    $(this).after(`<div class="text-danger">This field is required!</div>`);
+                    // $(".container").prepend(`
+                //     <div class="alert bg-danger text-white alert-dismissible fade show mt-2" role="alert">
+                //         <strong style="font-size:1.6rem;">Please fill out the required fields!</strong>
+                //         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                //             <span aria-hidden="true">&times;</span>
+                //         </button>
+                //     </div>
+                // `);
+                    // $(".container").animate({ scrollTop: 0 }, 1000);
+                    i++;
+                }
+            })
+            if (i > 0) {
+                // $('#modaldemo05').modal('show');
+                alert('Please fill out the required fields!');
+            }
+
+        })
     </script>
 @endsection
