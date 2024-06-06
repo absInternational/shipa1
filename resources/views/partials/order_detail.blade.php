@@ -1,3 +1,253 @@
+@include('partials.return_function2')
+
+<style>
+    body {
+        scroll-behavior: smooth;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt|Shadows+Into+Light|Cedarville+Cursive');
+
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt|Shadows+Into+Light|Cedarville+Cursive');
+
+    .border {
+        border: 1px solid #000000 !important;
+    }
+
+    .highlight {
+        background: black;
+    }
+
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid black;
+        border-radius: .25rem;
+    }
+
+    .mainTitle {
+        width: 100%;
+        float: left;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .text-justify {
+        text-align: justify !important;
+    }
+
+    ul,
+    ol {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+    }
+
+    .stepContainer span {
+        font-size: 25px;
+        width: 40px;
+        background: #FF9800;
+        padding: 10px;
+        border-radius: 50%;
+        margin-right: 2%;
+        float: left;
+        line-height: 20px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+    }
+
+    .header_cover {
+        width: 100%;
+        height: 250px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .header_heading {
+
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 12pc;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .sign1 {
+        padding: 19px 15px 12px 38px;
+        font-size: 30px;
+        line-height: 30px;
+        color: #000;
+        background: #fff;
+        border: 1px solid #000;
+        font-family: 'Shadows Into Light', cursive;
+        font-weight: bold;
+    }
+
+    .sign2 {
+        padding: 19px 15px 12px 38px;
+        font-size: 30px;
+        line-height: 30px;
+        color: #000;
+        background: #fff;
+        border: 1px solid #000;
+        font-family: 'Rock Salt', cursive;
+        font-weight: bold;
+
+    }
+
+    .sign3 {
+        padding: 19px 15px 12px 38px;
+        font-size: 30px;
+        line-height: 30px;
+        color: #000;
+        background: #fff;
+        border: 1px solid #000;
+        font-family: 'Jazz LET, fantasy';
+        font-weight: bold;
+    }
+
+    .sign4 {
+        padding: 19px 15px 12px 38px;
+        font-size: 30px;
+        line-height: 30px;
+        color: #000;
+        background: #fff;
+        border: 1px solid #000;
+        font-family: 'prestige';
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .sign1:hover,
+    .sign2:hover,
+    .sign3:hover,
+    .sign4:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #signShw1,
+    #signShw2,
+    #signShw3,
+    #signShw4 {
+        width: 95%;
+
+    }
+
+
+    .checkedClass {
+        background-color: black;
+    }
+
+    input[type=radio] {
+        display: none;
+    }
+
+    .heading {
+        line-height: 66px;
+        font-size: 36px;
+        font-family: math;
+        font-weight: 900;
+        float: left;
+    }
+
+    .subhead {
+        float: right;
+        margin-top: 15px;
+        font-size: 23px;
+        font-family: cursive;
+    }
+
+    .bg-secondary {
+        background-color: #080808 !important;
+    }
+
+    .img {
+        background-image: url(https://www.Autotransportgo.com/img/roadtransport.jpg);
+        filter: drop-shadow(10px 10px 10px grey);
+        width: 100%;
+        height: 250px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        filter: blur(2px);
+        -webkit-filter: blur(8px);
+
+
+    }
+
+    strong,
+    h5 {
+        font-family: "Luminari", "fantasy";
+    }
+
+    input,
+    select,
+    textarea {
+        border: 1px solid #b0a6e0 !important;
+    }
+
+    body {
+        /*background-image: linear-gradient(to right, rgb(109, 213, 250), rgb(255, 255, 255), rgb(41, 128, 185)) !important;*/
+        box-shadow: 2px 2px #9E9E9E !important;
+        background-color: white;
+    }
+
+    .card-header {
+        color: black !important;
+        justify-content: center !important;
+        font-weight: 800 !important;
+        font-size: 25px !important;
+        border: 2px solid black !important;
+        background-color: #6c757d47 !important;
+
+    }
+
+    .card-body {
+        border: 2px solid black !important;
+    }
+
+    .stepTitle {
+        position: relative;
+        top: 12px;
+    }
+
+    .app-content .side-app {
+        padding: 0px !important;
+    }
+</style>
+
+<?php
+//whether ip is from share internet
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+}
+//whether ip is from proxy
+elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+}
+//whether ip is from remote address
+else {
+    $ip_address = $_SERVER['REMOTE_ADDR'];
+}
+
+?>
+
 <div class="container " style=" margin-top: 0px; ">
     <div class="row">
         <div class="col-12">
@@ -12,7 +262,8 @@
                 </div>
                 <div class="card-body">
 
-                    <form action="/order_payment" method="post" autocomplete="off" class="needs-validation">
+                    <form id="submitEmailOrder" autocomplete="off"
+                        class="needs-validation">
                         @csrf
                         <input type="hidden" name="id" value="{{ $data['id'] }}">
                         <input type="hidden" name="ip" value="{{ $ip_address }}">
@@ -35,8 +286,8 @@
                                     <div class="card-body">
                                         <div class="col-sm-12 border">
                                             <div style="margin-left: -16px;margin-right: -16px;    
-                                    border-width: 0px 0px 1px 0px !important;
-                                    background-color:#8fc445 !important; color:#fff !important;"
+                                        border-width: 0px 0px 1px 0px !important;
+                                        background-color:#8fc445 !important; color:#fff !important;"
                                                 class="card-header bg-secondary text-white font-weight-bold">
                                                 SUMMARY
                                             </div>
@@ -65,12 +316,9 @@
                                                                     $data['freight']['trailer_specification'];
                                                                 $ex_pickup_date = $data['freight']['ex_pickup_date'];
                                                                 $ex_pickup_time = $data['freight']['ex_pickup_time'];
-                                                                $ex_delivery_date =
-                                                                    $data['freight']['ex_delivery_date'];
-                                                                $ex_delivery_time =
-                                                                    $data['freight']['ex_delivery_time'];
-                                                                $commodity_detail =
-                                                                    $data['freight']['commodity_detail'];
+                                                                $ex_delivery_date = $data['freight']['ex_delivery_date'];
+                                                                $ex_delivery_time = $data['freight']['ex_delivery_time'];
+                                                                $commodity_detail = $data['freight']['commodity_detail'];
                                                                 $commodity_unit = $data['freight']['commodity_unit'];
                                                                 $total_weight_lb = $data['freight']['total_weight_lbs'];
                                                                 $pick_up_service = implode(
@@ -88,8 +336,7 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td>Order#</td>
-                                                                <td class="font-weight-bold">{{ $data['id'] }}
-                                                                </td>
+                                                                <td class="font-weight-bold">{{ $data['id'] }}</td>
                                                             </tr>
                                                             @if ($data['car_type'] != 3)
                                                                 <tr>
@@ -107,22 +354,18 @@
                                                                 <tr>
                                                                     <td>Condition</td>
                                                                     <td class="font-weight-bold">
-                                                                        @if ($data['condition'] == 1)
-                                                                            Running
-                                                                        @else
-                                                                            Not- Running
-                                                                        @endif
+                                                                        @foreach ($condition1 as $val2)
+                                                                            {{ '(' . get_condtion($val2) . '),' }}
+                                                                        @endforeach
                                                                     </td>
                                                                 </tr>
 
                                                                 <tr>
                                                                     <td>Transport</td>
                                                                     <td class="font-weight-bold">
-                                                                        @if ($data['transport'] == 1)
-                                                                            Open
-                                                                        @else
-                                                                            Enclosed
-                                                                        @endif
+                                                                        @foreach ($transport as $val3)
+                                                                            {{ '(' . get_cartype($val3) . '),' }}
+                                                                        @endforeach
                                                                     </td>
                                                                 </tr>
                                                             @else
@@ -146,12 +389,12 @@
                                                                         {{ $trailer_specification }}
                                                                     </td>
                                                                 </tr>
+
                                                             @endif
 
                                                             <tr>
                                                                 <td>Pickup Location</td>
-                                                                <td class="font-weight-bold">
-                                                                    {{ $data['originzsc'] }}
+                                                                <td class="font-weight-bold">{{ $data['originzsc'] }}
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -228,8 +471,8 @@
                                         <div class="card-body">
                                             <div class="col-sm-12 border">
                                                 <div style="margin-left: -16px;margin-right: -16px;
-                                    border-width: 0px 0px 1px 0px !important;
-                                    background-color:#8fc445 !important; color:#fff !important;"
+                                        border-width: 0px 0px 1px 0px !important;
+                                        background-color:#8fc445 !important; color:#fff !important;"
                                                     class="card-header bg-secondary text-white font-weight-bold">
                                                     Freight Detail
                                                 </div>
@@ -243,13 +486,13 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>Freight Class</td>
-                                                                    <td class="font-weight-bold">
-                                                                        {{ $frieght_class }}</td>
+                                                                    <td class="font-weight-bold">{{ $frieght_class }}
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Equipment Type</td>
-                                                                    <td class="font-weight-bold">
-                                                                        {{ $equipment_type }}</td>
+                                                                    <td class="font-weight-bold">{{ $equipment_type }}
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Trailer Specification</td>
@@ -258,13 +501,13 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Expected Pickup Date</td>
-                                                                    <td class="font-weight-bold">
-                                                                        {{ $ex_pickup_date }}</td>
+                                                                    <td class="font-weight-bold">{{ $ex_pickup_date }}
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Expected Pickup Time</td>
-                                                                    <td class="font-weight-bold">
-                                                                        {{ $ex_pickup_time }}</td>
+                                                                    <td class="font-weight-bold">{{ $ex_pickup_time }}
+                                                                    </td>
                                                                 </tr>
 
                                                             </tbody>
@@ -290,13 +533,13 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Commodity Unit</td>
-                                                                    <td class="font-weight-bold">
-                                                                        {{ $commodity_unit }}</td>
+                                                                    <td class="font-weight-bold">{{ $commodity_unit }}
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Total Weight (lbs)</td>
-                                                                    <td class="font-weight-bold">
-                                                                        {{ $total_weight_lb }}</td>
+                                                                    <td class="font-weight-bold">{{ $total_weight_lb }}
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Pickup Services</td>
@@ -328,436 +571,437 @@
                             <strong>Note: </strong>Please fill out all the fields that are required (*).
                         </div>
 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="mainTitle">
-                                    <div class="stepContainer">
-                                        <span>1</span>
-                                    </div>
-                                    <div class="stepTitle">
-                                        <h5>
-                                            Customer information
-                                        </h5>
+                        {{-- <div class="all-none" style="display: none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mainTitle">
+                                        <div class="stepContainer">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="stepTitle">
+                                            <h5>Customer information
+                                                <a href="javascript:void(0);" data-toggle="tooltip"
+                                                    data-placement="right" title=""
+                                                    data-original-title="
+                                                Customer information is the contact information of the person placing the order. This may not necessarily be the same information as the pickup and delivery location.
+                                         ">
+                                                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                                </a>
+                                            </h5>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
+                            <div class="row">
 
-                            <div class="@if ($data['car_type'] != 3) col-lg-6 @else col-lg-12 @endif col-sm-12">
-                                <div class="card-header font-weight-bold"
-                                    style="background-color:#8fc445 !important; color:#fff !important;">
-                                    Customer Information
-                                </div>
-
-                                <div class="card-body border">
-
-                                    <div class="form-group">
-                                        <label for="name"><strong>Full Name</strong><span class="text-danger">
-                                                *</span></label>
-                                        <input autocomplete="nope" type="text" class="form-control"
-                                            id="name" name="name" placeholder="Enter Name" required=""
-                                            value="{{ $data['oname'] }}">
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
+                                <div
+                                    class="@if ($data['car_type'] != 3) col-lg-6 @else col-lg-12 @endif col-sm-12">
+                                    <div class="card-header font-weight-bold"
+                                        style="background-color:#8fc445 !important; color:#fff !important;">
+                                        Customer Information
                                     </div>
 
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="phone"><strong>Phone #</strong><span class="text-danger">
+                                    <div class="card-body border">
+
+                                        <div class="form-group">
+                                            <label for="name"><strong>Full Name</strong><span class="text-danger">
                                                     *</span></label>
                                             <input autocomplete="nope" type="text" class="form-control"
-                                                maxlength="15" id="phone" name="phone"
-                                                placeholder="Enter Phone #" required=""
-                                                value="{{ $data['main_ph'] }}">
+                                                id="name" name="name" placeholder="Enter Name"
+                                                value="{{ $data['oname'] }}">
 
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="phone2"><strong>Second Phone #</strong></label>
-                                            <input autocomplete="nope" type="text" value=""
-                                                class="form-control" id="phone2" name="phone2" maxlength="15"
-                                                placeholder="Enter Second Phone #">
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="phone"><strong>Phone #</strong><span
+                                                        class="text-danger"> *</span></label>
+                                                <input autocomplete="nope" type="text" class="form-control"
+                                                    maxlength="15" id="phone" name="phone"
+                                                    placeholder="Enter Phone #" value="{{ $data['main_ph'] }}">
+
+                                                <div class="invalid-feedback">
+                                                    This field is required.
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="phone2"><strong>Second Phone #</strong></label>
+                                                <input autocomplete="nope" type="text" value=""
+                                                    class="form-control" id="phone2" name="phone2"
+                                                    maxlength="15" placeholder="Enter Second Phone #">
+                                            </div>
                                         </div>
-                                    </div>
 
 
-                                    <div class="form-group">
-                                        <label for="address"><strong>Address</strong><span class="text-danger">
-                                                *</span></label>
-                                        <input autocomplete="nope" type="text" class="form-control"
-                                            id="address" name="address" placeholder="Enter Address" required=""
-                                            value="{{ $data['oaddress'] }}">
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
-                                    </div>
-
-
-
-                                    <div id="zip">
                                         <div class="form-group">
-                                            <label class="form-label">Zip Code
+                                            <label for="address"><strong>Address</strong><span class="text-danger">
+                                                    *</span></label>
+                                            <input autocomplete="nope" type="text" class="form-control"
+                                                id="address" name="address" placeholder="Enter Address"
+                                                value="{{ $data['oaddress'] }}">
+
+                                            <div class="invalid-feedback">
+                                                This field is required.
+                                            </div>
+                                        </div>
+
+
+
+                                        <div id="zip">
+                                            <div class="form-group">
+                                                <label class="form-label">Zip Code
+                                                    <span class="text-danger"> *</span>
+                                                </label>
+                                                <input type="text" id="o_zip1" class="form-control "
+                                                    maxlength="11" name="o_zip1"
+                                                    @if ($data['originzsc']) readonly @endif
+                                                    value="{{ $data['originzsc'] }}" placeholder="ZIP CODE" />
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <label for="email"><strong>Email Address</strong>
                                                 <span class="text-danger"> *</span>
                                             </label>
-                                            <input type="text" id="o_zip1" class="form-control "
-                                                maxlength="11" name="o_zip1"
-                                                @if ($data['originzsc']) readonly @endif
-                                                value="{{ $data['originzsc'] }}" placeholder="ZIP CODE" required />
+                                            <input autocomplete="nope" type="text" class="form-control"
+                                                id="email" name="email" placeholder="Enter Email Address"
+                                                value="{{ $data['oemail'] }}">
+
+                                            <div class="invalid-feedback">
+                                                This field is required.
+                                            </div>
                                         </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-12"
+                                    @if ($data['car_type'] == 3) style="display: none" @endif>
+                                    <div class="card-header  font-weight-bold"
+                                        style="background-color:#8fc445 !important; color:#fff !important;">
+                                        Vehicle Information
                                     </div>
 
+                                    <div class="card-body border">
+
+                                        <div class="form-group">
+                                            <label for="carrier"><strong>Carrier Type</strong></label>
+                                            <input autocomplete="nope" type="text" class="form-control"
+                                                value="@foreach ($transport as $val3){{ '(' . get_cartype($val3) . '),' }} @endforeach"
+                                                disabled="">
+                                        </div>
 
 
-                                    <div class="form-group">
-                                        <label for="email"><strong>Email Address</strong>
-                                            <span class="text-danger"> *</span>
-                                        </label>
-                                        <input autocomplete="nope" type="email" class="form-control"
-                                            id="email" name="email" placeholder="Enter Email Address"
-                                            required="" value="{{ $data['oemail'] }}">
+                                        <div class="form-group">
+                                            <label for="year"><strong>
+                                                    Vehicle Name</strong></label>
+                                            @php
+                                                $vehiclearray2 = explode('*^', $data['ymk']);
+                                                $vehiclearraycondition = explode('*^', $data['condition']);
+                                            @endphp
+                                            <input type="text" class="form-control"
+                                                value="@foreach ($vehiclearray2 as $veh) {{ $veh }} @endforeach"
+                                                disabled="">
+                                        </div>
 
-                                        <div class="invalid-feedback">
-                                            This field is required.
+                                        <div class="form-group">
+                                            <label for="make"><strong>Vehicle Runs</strong></label>
+                                            <input type="text" class="form-control"
+                                                value="@foreach ($vehiclearraycondition as $condition) @if ($condition == 1) Running @else Not Running @endif @endforeach"
+                                                disabled="">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="auction"><strong>Is it in Auction?</strong><span
+                                                    class="text-danger"> *</span></label>
+                                            <select name="auction" id="auction" class="form-control select2">
+                                                <option value="" selected="">Select</option>
+                                                <option @if (!empty($data['oauction'])) selected @endif
+                                                    value="yes">Yes</option>
+                                                <option @if (empty($data['oauction'])) selected @endif
+                                                    value="no">No</option>
+                                            </select>
+
+                                            <div class="invalid-feedback">
+                                                This field is required.
+                                            </div>
+                                        </div>
+
+                                        <div id="auctionYes">
+                                            @if (!empty($data['oauction']))
+                                                <div class="form-group">
+                                                    <label for="auction_name"><strong>Auction Name</strong>
+                                                        <span class="text-danger"> *</span></label>
+                                                    </label>
+                                                    <div class="controls position-relative has-icon-left">
+                                                        <input autocomplete="nope" type="text" name="auction_name"
+                                                            id="auction_name" class="form-control"
+                                                            value="{{ $data['oauction'] }}"
+                                                            placeholder="Enter Auction Name">
+                                                        <div class="form-control-position">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="buyer_num"><strong>Buyer/Lot/StockNumber</strong>
+                                                        <span class="text-danger"> *</span></label>
+                                                    </label>
+                                                    <div class="controls position-relative has-icon-left">
+                                                        <input autocomplete="nope" type="text" name="buyer_num"
+                                                            id="buyer_num" class="form-control"
+                                                            value="{{ $data['obuyer_no'] }}"
+                                                            placeholder="Enter Buyer/Lot/Stock Number">
+                                                        <div class="form-control-position">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endif
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="vkey"><strong>Key</strong>
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <select name="vkey" id="vkey" class="form-control">
+                                                <option @if ($data['key_has'] == 'yes') selected @endif
+                                                    value="yes">Yes</option>
+                                                <option @if ($data['key_has'] == 'no') selected @endif
+                                                    value="no">No</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="vehicleDate"><strong>Vehicle First Available Date</strong><span
+                                                    class="text-danger"> *</span></label>
+                                            <input type="date" autocomplete="nope" data-date-format="dd/mm/yyyy"
+                                                id="datepicker" class="form-control" name="vehicledate"
+                                                placeholder="Vehicle First Available Date"
+                                                value="{{ $data['vehicle_available_date'] }}">
+
+                                            <div class="invalid-feedback">
+                                                This field is required.
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row mt-5">
+                                <div class="col-12">
+                                    <div class="mainTitle">
+                                        <div class="stepContainer">
+                                            <span>2</span>
+                                        </div>
+                                        <div class="stepTitle">
+                                            <h5>Location Details
+                                                <a href="javascript:void(0);" data-toggle="tooltip"
+                                                    data-placement="right" title=""
+                                                    data-original-title="
+                                                Complete the following items. Enter as many contact phone number as possible be sure to select the vehicle condition, available date, and any added service.
+                                                ">
+                                                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                                </a>
+                                            </h5>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 col-sm-12"
-                                @if ($data['car_type'] == 3) style="display: none" @endif>
-                                <div class="card-header  font-weight-bold"
-                                    style="background-color:#8fc445 !important; color:#fff !important;">
-                                    Vehicle Information
-                                </div>
-
-                                <div class="card-body border">
-
-                                    <div class="form-group">
-                                        <label for="carrier"><strong>Carrier Type</strong></label>
-                                        <input autocomplete="nope" type="text" class="form-control"
-                                            value="@foreach ($transport as $val3) @endforeach"
-                                            disabled="">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="card-header  font-weight-bold"
+                                        style="background-color:#8fc445 !important; color:#fff !important;">
+                                        Origin Information
                                     </div>
 
+                                    <div class="card-body border">
 
-                                    <div class="form-group">
-                                        <label for="year"><strong>
-                                                Vehicle Name</strong></label>
+                                        <div class="form-group">
+                                            <label for="oname"><strong>Contact Name</strong><span
+                                                    class="text-danger"> *</span></label>
+                                            <input autocomplete="nope" type="text" class="form-control"
+                                                id="oname" name="oname" placeholder="Enter Contact Name"
+                                                value="{{ $data['oname'] }}">
+
+                                            <div class="invalid-feedback">
+                                                This field is required.
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="oemail"><strong>Email Address</strong><span
+                                                    class="text-danger"> *</span></label>
+                                            <input autocomplete="nope" type="text" class="form-control"
+                                                id="oemail" name="oemail" placeholder="Enter Email Address"
+                                                value="{{ $data['oemail'] }}">
+
+                                            <div class="invalid-feedback">
+                                                This field is required.
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="ophone"><strong>Phone #</strong><span
+                                                        class="text-danger"> *</span></label>
+                                                <input autocomplete="nope" type="text" class="form-control"
+                                                    id="ophone" name="ophone" placeholder="Enter Phone #"
+                                                    value="{{ $data['main_ph'] }}">
+
+                                                <div class="invalid-feedback">
+                                                    This field is required.
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="ophone2"><strong>Second Phone #</strong></label>
+                                                <input autocomplete="nope" type="text" class="form-control"
+                                                    id="ophone2" name="ophone2" placeholder="Enter Second Phone #"
+                                                    value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="oaddress"><strong>Street Address</strong><span
+                                                    class="text-danger"> *</span></label>
+                                            <input autocomplete="nope" type="text" class="form-control"
+                                                id="oaddress" name="oaddress" placeholder="Enter Street Address"
+                                                value="{{ $data['oaddress'] }}">
+
+                                            <div class="invalid-feedback">
+                                                This field is required.
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="state"><strong>City, State, Zip</strong><span
+                                                    class="text-danger"> *</span></label>
+                                            <input type="text" class="form-control"
+                                                value="{{ $data['originzsc'] }}"
+                                                @if ($data['originzsc']) disabled="" @endif>
+
+                                            <div class="invalid-feedback">
+                                                This field is required.
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="card-header  font-weight-bold"
+                                        style="background-color:#8fc445 !important; color:#fff !important;">
+                                        Destination Information
+                                    </div>
+
+                                    <div class="card-body border">
+
+                                        <div class="form-group">
+                                            <label for="dname"><strong>Contact Name</strong><span
+                                                    class="text-danger"> *</span></label>
+                                            <input autocomplete="nope" type="text" class="form-control"
+                                                id="dname" name="dname" placeholder="Enter Contact Name"
+                                                value="{{ $data['dname'] }}">
+
+                                            <div class="invalid-feedback">
+                                                This field is required.
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="demail"><strong>Email Address</strong>
+                                                <span class="text-danger"> *</span>
+                                            </label>
+                                            <input autocomplete="nope" type="text" class="form-control"
+                                                id="demail" name="demail" placeholder="Enter Email Address"
+                                                value="{{ $data['demail'] }}">
+                                        </div>
                                         @php
-                                            $vehiclearray2 = explode('*^', $data['ymk']);
-                                            $vehiclearraycondition = explode('*^', $data['condition']);
+                                            $dphone1 = '';
+                                            $dphone2 = '';
+                                            $vehiclearray = explode('*^', $data['dphone']);
+                                            if (count($vehiclearray) > 0) {
+                                                $dphone1 = $vehiclearray[0];
+                                            }
+                                            if (count($vehiclearray) > 1) {
+                                                $dphone2 = $vehiclearray[1];
+                                            }
                                         @endphp
-                                        <input type="text" class="form-control"
-                                            value="@foreach ($vehiclearray2 as $veh) {{ $veh }} @endforeach"
-                                            disabled="">
-                                    </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="dphone"><strong>Phone #</strong><span
+                                                        class="text-danger"> *</span></label>
+                                                <input autocomplete="nope" type="text" class="form-control"
+                                                    id="dphone" name="dphone" placeholder="Enter Phone #"
+                                                    value="{{ $dphone1 }}">
 
-                                    <div class="form-group">
-                                        <label for="make"><strong>Vehicle Runs</strong></label>
-                                        <input type="text" class="form-control"
-                                            value="@foreach ($vehiclearraycondition as $condition) @if ($condition == 1) Running @else Not Running @endif @endforeach"
-                                            disabled="">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="auction"><strong>Is it in Auction?</strong><span
-                                                class="text-danger"> *</span></label>
-                                        <select name="auction" id="auction" class="form-control select2" required>
-                                            <option value="" selected="">Select</option>
-                                            <option @if (!empty($data['oauction'])) selected @endif value="yes">
-                                                Yes</option>
-                                            <option @if (empty($data['oauction'])) selected @endif value="no">
-                                                No</option>
-                                        </select>
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
-                                    </div>
-
-                                    <div id="auctionYes">
-                                        @if (!empty($data['oauction']))
-                                            <div class="form-group">
-                                                <label for="auction_name"><strong>Auction Name</strong>
-                                                    <span class="text-danger"> *</span></label>
-                                                </label>
-                                                <div class="controls position-relative has-icon-left">
-                                                    <input autocomplete="nope" type="text" name="auction_name"
-                                                        required id="auction_name" class="form-control"
-                                                        value="{{ $data['oauction'] }}"
-                                                        placeholder="Enter Auction Name">
-                                                    <div class="form-control-position">
-                                                    </div>
+                                                <div class="invalid-feedback">
+                                                    This field is required.
                                                 </div>
                                             </div>
-
-                                            <div class="form-group">
-                                                <label for="buyer_num"><strong>Buyer/Lot/StockNumber</strong>
-                                                    <span class="text-danger"> *</span></label>
-                                                </label>
-                                                <div class="controls position-relative has-icon-left">
-                                                    <input autocomplete="nope" type="text" name="buyer_num"
-                                                        id="buyer_num" required class="form-control"
-                                                        value="{{ $data['obuyer_no'] }}"
-                                                        placeholder="Enter Buyer/Lot/Stock Number">
-                                                    <div class="form-control-position">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endif
-
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="vin"><strong>Last 8 of Vin#</strong>
-                                            <span class="text-danger"> *</span></label>
-
-                                        <div class="controls position-relative has-icon-left">
-                                            <input autocomplete="nope" type="text" name="vin" id="vin"
-                                                value="{{ $data['vin_num'] }}" required class="form-control"
-                                                maxlength="8" placeholder="Enter Last 8 of Vin#">
-
-                                            <div class="form-control-position">
+                                            <div class="form-group col-md-6">
+                                                <label for="dphone2"><strong>Second Phone #</strong></label>
+                                                <input autocomplete="nope" type="text" class="form-control"
+                                                    id="dphone2" name="dphone2" placeholder="Enter Second Phone #"
+                                                    value="{{ $dphone2 }}">
                                             </div>
                                         </div>
-                                    </div>
 
-
-                                    <div class="form-group">
-                                        <label for="vkey"><strong>Key</strong>
-                                            <span class="text-danger"> *</span>
-                                        </label>
-                                        <select name="vkey" id="vkey" class="form-control" required="">
-                                            <option @if ($data['key_has'] == 'yes') selected @endif value="yes">
-                                                Yes</option>
-                                            <option @if ($data['key_has'] == 'no') selected @endif value="no">
-                                                No</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="vehicleDate"><strong>Vehicle First Available Date</strong><span
-                                                class="text-danger"> *</span></label>
-                                        <input type="date" autocomplete="nope" required=""
-                                            data-date-format="dd/mm/yyyy" id="datepicker" class="form-control"
-                                            name="vehicledate" placeholder="Vehicle First Available Date"
-                                            value="{{ $data['vehicle_available_date'] }}">
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="row mt-5">
-                            <div class="col-12">
-                                <div class="mainTitle">
-                                    <div class="stepContainer">
-                                        <span>2</span>
-                                    </div>
-                                    <div class="stepTitle">
-                                        <h5>Location Details</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-12">
-                                <div class="card-header  font-weight-bold"
-                                    style="background-color:#8fc445 !important; color:#fff !important;">
-                                    Origin Information
-                                </div>
-
-                                <div class="card-body border">
-
-                                    <div class="form-group">
-                                        <label for="oname"><strong>Contact Name</strong><span class="text-danger">
-                                                *</span></label>
-                                        <input autocomplete="nope" type="text" class="form-control"
-                                            id="oname" name="oname" placeholder="Enter Contact Name"
-                                            required="" value="{{ $data['oname'] }}">
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="oemail"><strong>Email Address</strong><span class="text-danger">
-                                                *</span></label>
-                                        <input autocomplete="nope" type="email" class="form-control"
-                                            id="oemail" name="oemail" placeholder="Enter Email Address"
-                                            required="" value="{{ $data['oemail'] }}">
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="ophone"><strong>Phone #</strong><span class="text-danger">
-                                                    *</span></label>
+                                        <div class="form-group">
+                                            <label for="daddress"><strong>Street Address</strong><span
+                                                    class="text-danger"> *</span></label>
                                             <input autocomplete="nope" type="text" class="form-control"
-                                                id="ophone" name="ophone" placeholder="Enter Phone #"
-                                                required="" value="{{ $data['main_ph'] }}">
+                                                id="daddress" name="daddress" placeholder="Enter Street Address"
+                                                value="{{ $data['daddress'] }}">
 
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="ophone2"><strong>Second Phone #</strong></label>
-                                            <input autocomplete="nope" type="text" class="form-control"
-                                                id="ophone2" name="ophone2" placeholder="Enter Second Phone #"
-                                                value="">
-                                        </div>
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label for="oaddress"><strong>Street Address</strong><span
-                                                class="text-danger"> *</span></label>
-                                        <input autocomplete="nope" type="text" required=""
-                                            class="form-control" id="oaddress" name="oaddress"
-                                            placeholder="Enter Street Address" value="{{ $data['oaddress'] }}">
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="state"><strong>City, State, Zip</strong><span
-                                                class="text-danger"> *</span></label>
-                                        <input type="text" class="form-control" required=""
-                                            value="{{ $data['originzsc'] }}"
-                                            @if ($data['originzsc']) disabled="" @endif>
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                                <div class="card-header  font-weight-bold"
-                                    style="background-color:#8fc445 !important; color:#fff !important;">
-                                    Destination Information
-                                </div>
-
-                                <div class="card-body border">
-
-                                    <div class="form-group">
-                                        <label for="dname"><strong>Contact Name</strong><span class="text-danger">
-                                                *</span></label>
-                                        <input autocomplete="nope" type="text" class="form-control"
-                                            id="dname" name="dname" placeholder="Enter Contact Name"
-                                            required="" value="{{ $data['dname'] }}">
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="demail"><strong>Email Address</strong>
-                                            <span class="text-danger"> *</span>
-                                        </label>
-                                        <input autocomplete="nope" type="email" class="form-control"
-                                            id="demail" name="demail" required placeholder="Enter Email Address"
-                                            value="{{ $data['demail'] }}">
-                                    </div>
-                                    @php
-                                        $dphone1 = '';
-                                        $dphone2 = '';
-                                        $vehiclearray = explode('*^', $data['dphone']);
-                                        if (count($vehiclearray) > 0) {
-                                            $dphone1 = $vehiclearray[0];
-                                        }
-                                        if (count($vehiclearray) > 1) {
-                                            $dphone2 = $vehiclearray[1];
-                                        }
-                                    @endphp
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="dphone"><strong>Phone #</strong><span class="text-danger">
-                                                    *</span></label>
-                                            <input autocomplete="nope" type="text" class="form-control"
-                                                id="dphone" name="dphone" placeholder="Enter Phone #"
-                                                required="" value="{{ $dphone1 }}">
+                                        <div class="form-group">
+                                            <label for="state"><strong>City, State, Zip</strong><span
+                                                    class="text-danger"> *</span></label>
+                                            <input type="text" class="form-control"
+                                                value="{{ $data['destinationzsc'] }}"
+                                                @if ($data['destinationzsc']) disabled="" @endif>
 
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="dphone2"><strong>Second Phone #</strong></label>
-                                            <input autocomplete="nope" type="text" class="form-control"
-                                                id="dphone2" name="dphone2" placeholder="Enter Second Phone #"
-                                                value="{{ $dphone2 }}">
-                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5">
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="card-header  font-weight-bold"
+                                        style="background-color:#8fc445 !important; color:#fff !important;">
+                                        Additional Vehicle Information (Optional)
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="daddress"><strong>Street Address</strong><span
-                                                class="text-danger"> *</span></label>
-                                        <input autocomplete="nope" required="" type="text"
-                                            class="form-control" id="daddress" name="daddress"
-                                            placeholder="Enter Street Address" value="{{ $data['daddress'] }}">
+                                    <div class="card-body border">
 
-                                        <div class="invalid-feedback">
-                                            This field is required.
+                                        <div class="form-group">
+                                            <textarea name="additional_2" id="additional_2" cols="30" rows="5" class="form-control"> {{ $data['additional_2'] }}</textarea>
                                         </div>
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label for="state"><strong>City, State, Zip</strong><span
-                                                class="text-danger"> *</span></label>
-                                        <input type="text" class="form-control" required=""
-                                            value="{{ $data['destinationzsc'] }}"
-                                            @if ($data['destinationzsc']) disabled="" @endif>
-
-                                        <div class="invalid-feedback">
-                                            This field is required.
-                                        </div>
                                     </div>
 
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="row mt-5">
-                            <div class="col-lg-12 col-sm-12">
-                                <div class="card-header  font-weight-bold"
-                                    style="background-color:#8fc445 !important; color:#fff !important;">
-                                    Additional Vehicle Information (Optional)
-                                </div>
-
-                                <div class="card-body border">
-
-                                    <div class="form-group">
-                                        <textarea name="additional_2" id="additional_2" cols="30" rows="5" class="form-control"> {{ $data['additional_2'] }}</textarea>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
+                        </div> --}}
 
                         <div class="row mt-5">
                             <div class="col-12">
@@ -1015,7 +1259,7 @@
 
                         <div class="row mb-3">
                             <div class="col-lg-12 text-right">
-                                <button type="submit" class="btn btn-primary btn-lg submit" name="nextStep">Next
+                                <button type="submit" class="btn btn-primary btn-lg submit">Next
                                     Step >>
                                 </button>
                             </div>
@@ -1041,3 +1285,212 @@
         </div>
     </div>
 </div>
+
+<script>
+    @if (!empty($data['oauction']))
+        setTimeout(function() {
+
+            //$('#auction').trigger('change');
+        }, 500);
+    @endif
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#signtures").click(function() {
+            if ($("#signature1").is(":checked")) {
+                // do something if the checkbox is NOT checked
+                $("#first_sign").css("background-color", "black");
+                $("#first_sign").css("color", "white");
+
+
+            }
+            if (!$("#signature1").is(":checked")) {
+                // do something if the checkbox is NOT checked
+                $("#first_sign").css("background-color", "white");
+                $("#first_sign").css("color", "black");
+
+
+            }
+            if ($("#signature2").is(":checked")) {
+                // do something if the checkbox is NOT checked
+                $("#second_sign").css("background-color", "black");
+                $("#second_sign").css("color", "white");
+
+
+            }
+            if (!$("#signature2").is(":checked")) {
+                // do something if the checkbox is NOT checked
+                $("#second_sign").css("background-color", "white");
+                $("#second_sign").css("color", "black");
+
+
+            }
+            if ($("#signature3").is(":checked")) {
+                // do something if the checkbox is NOT checked
+                $("#third_sign").css("background-color", "black");
+                $("#third_sign").css("color", "white");
+
+            }
+            if (!$("#signature3").is(":checked")) {
+                // do something if the checkbox is NOT checked
+                $("#third_sign").css("background-color", "white");
+                $("#third_sign").css("color", "black");
+            }
+
+            if ($("#signature4").is(":checked")) {
+                // do something if the checkbox is NOT checked
+                $("#fourth_sign").css("background-color", "black");
+                $("#fourth_sign").css("color", "white");
+
+            }
+            if (!$("#signature4").is(":checked")) {
+                // do something if the checkbox is NOT checked
+                $("#fourth_sign").css("background-color", "white");
+                $("#fourth_sign").css("color", "black");
+            }
+        });
+
+    });
+
+
+    $("#s1").click(function() {
+        $("#signature1").prop("checked", true);
+        var checked = $(this).is(':checked');
+        if (checked) {
+            alert('checked');
+        } else {
+            alert('unchecked');
+        }
+
+    });
+    $(".sign2").click(function() {
+        $("#signature2").prop("checked", true);
+
+    });
+    $(".sign3").click(function() {
+        $("#signature3").prop("checked", true);
+
+    });
+    $(".sign4").click(function() {
+        $("#signature4").prop("checked", true);
+
+    });
+
+    $('.btn-link').click(function() {
+        $('#collapseTwo').toggle();
+    });
+
+
+    $("#signature").keyup(function() {
+        console.log('yasdyasd');
+        var valueSign = $(this).val();
+        $("#signtures").html('');
+        if (valueSign) {
+            $("#signtures").html(`
+                    <div class="row skin skin-line">
+
+                        <div class="col-md-6 col-sm-12 mt-2 radio_style "  id="s1">
+                            <fieldset class="sign1" id="first_sign">
+                                <input required type="radio"  name="signatureShw" value="1" id="signature1">
+                                <label for="signature1"  style="font-weight: bolder;font-style: oblique" id="signShw1">${valueSign}</label>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2 radio_style" id="s2">
+                            <fieldset class="sign2" id="second_sign">
+                                <input required type="radio"  name="signatureShw" value="2" id="signature2">
+                                <label for="signature2" style="font-weight: bolder;font-style: oblique" id="signShw2">${valueSign}</label>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2 radio_style" id="s3">
+                            <fieldset class="sign3" id="third_sign">
+                                <input required type="radio"  name="signatureShw" value="3" id="signature3">
+                                <label for="signature3"  style="font-family:monsieur;font-weight: bolder;font-style: oblique"  id="signShw3">${valueSign}</label>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2 radio_style" id="s4">
+                            <fieldset class="sign4" id="fourth_sign">
+                                <input required type="radio" name="signatureShw" value="4" id="signature4">
+                                <label for="signature4" style="font-family:monospace;font-weight: bolder;font-style: oblique"  id="signShw4">${valueSign}</label>
+                            </fieldset>
+                        </div>
+
+                    </div>`);
+        }
+    });
+
+    $("#auction").change(function() {
+
+        var valueAuction = $(this).val();
+
+        $("#auctionYes").html('');
+
+        if (valueAuction == 'yes') {
+            $("#auctionYes").html(`
+
+          <div class="form-group">
+            <label for="auction_name"><strong>Auction Name</strong>
+               <span class="text-danger"> *</span></label>
+            </label>
+            <div class="controls position-relative has-icon-left">
+                <input autocomplete="nope" type="text" name="auction_name"
+               required id="auction_name" class="form-control" value="" placeholder="Enter Auction Name">
+                <div class="form-control-position">
+                    <!--<i class="la la-newspaper-o"></i>-->
+                </div>
+            </div>
+          </div>
+
+            <div class="form-group">
+                <label for="buyer_num"><strong>Buyer/Lot/Stock
+                    Number</strong>
+                       <span class="text-danger"> *</span></label>
+                    </label>
+                <div class="controls position-relative has-icon-left">
+                    <input autocomplete="nope" type="text" name="buyer_num" id="buyer_num"
+                      required  class="form-control" value="" placeholder="Enter Buyer/Lot/Stock Number">
+                    <div class="form-control-position">
+                        <!--<i class="la la-phone"></i>-->
+                    </div>
+                </div>
+            </div>
+            `);
+            $("#auctionYes").show();
+        } else {
+            $("#auctionYes").hide();
+            $("#auctionYes").html('');
+        }
+    });
+</script>
+<script>
+    $(".submit").click(function(e) {
+        var allinput = $("input[required]");
+        var i = 0;
+        $(".text-danger").remove();
+        allinput.removeAttr('style');
+        allinput.each(function() {
+            if ($(this).val() == '') {
+                e.preventDefault();
+                // console.log($(this));
+                // $(".container").children('.alert').remove();
+                $(this).attr("style", "border-color:red!important");
+                $(this).after(`<div class="text-danger">This field is required!</div>`);
+                // $(".container").prepend(`
+                //     <div class="alert bg-danger text-white alert-dismissible fade show mt-2" role="alert">
+                //         <strong style="font-size:1.6rem;">Please fill out the required fields!</strong>
+                //         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                //             <span aria-hidden="true">&times;</span>
+                //         </button>
+                //     </div>
+                // `);
+                // $(".container").animate({ scrollTop: 0 }, 1000);
+                i++;
+            }
+        })
+        if (i > 0) {
+            // $('#modaldemo05').modal('show');
+            alert('Please fill out the required fields!');
+        }
+
+    })
+</script>

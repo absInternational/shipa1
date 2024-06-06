@@ -1,14 +1,20 @@
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- jQuery Mask Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
 <footer class="tj-footer-area">
     <div class="container">
         <div class="row">
             <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
-                <div
-                    class="footer-widget footer1_col_1 footer-content-info"
-                    data-bg-image="assets/images/banner/footer-shape.png"
-                >
-                    <a href="{{ route('welcome') }}"> <img src="{{ asset('frontend/images/logo/logo-white.png')}}" alt="Logo" /></a>
+                <div class="footer-widget footer1_col_1 footer-content-info"
+                    data-bg-image="assets/images/banner/footer-shape.png">
+                    <a href="{{ route('welcome') }}"> <img src="{{ asset('frontend/images/logo/logo-white.png') }}"
+                            alt="Logo" /></a>
                     <p>
-                    Ship A1 Transport is one of the top logistic and shipping companies, with a vast variety of shipping methods, quality services, and a well-equipped staff.
+                        Ship A1 Transport is one of the top logistic and shipping companies, with a vast variety of
+                        shipping methods, quality services, and a well-equipped staff.
                     </p>
                     <div class="footer-social-icon">
                         <ul class="list-gap">
@@ -16,10 +22,12 @@
                                 <a href="https://www.facebook.com/ShipA1/"> <i class="fa-brands fa-facebook-f"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/shipa1_transport/"> <i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/shipa1_transport/"> <i
+                                        class="fa-brands fa-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/in/shipa1-transport/"> <i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://www.linkedin.com/in/shipa1-transport/"> <i
+                                        class="fa-brands fa-linkedin-in"></i></a>
                             </li>
                             <li>
                                 <a href="https://www.youtube.com/@shipA1392"> <i class="fa-brands fa-youtube"></i></a>
@@ -42,7 +50,7 @@
                                 <a href="#">Car Transport</a>
                             </li>
                             <li style="width: 108%;">
-                                <a href="#" >Motorcycle Shipping</a>
+                                <a href="#">Motorcycle Shipping</a>
                             </li>
                             <li>
                                 <a href="#">Heavy Equipment</a>
@@ -67,7 +75,7 @@
                     </div>
                     <div class="widget-menu">
                         <ul>
-                             <li>
+                            <li>
                                 <a href="{{ route('aboutUs') }}">About Us </a>
                             </li>
                             <li>
@@ -82,12 +90,12 @@
                             <li>
                                 <a href="{{ route('order.tracking') }}">Track Order </a>
                             </li>
-                            
-                            
+
+
                             <li>
                                 <a href="#">Our Team </a>
                             </li>
-                            
+
                             <li>
                                 <a href="{{ route('termsAndConditions') }}">Terms & Conditions</a>
                             </li>
@@ -107,11 +115,14 @@
                         <div class="contact-list">
                             <ul class="list-gap">
 
-                                <li><i class="flaticon-placeholder"></i><a href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu" target="_blank"> 201 International Cir STE 230, Hunt Valley, MD 21030-1344</a></li>
-                                
+                                <li><i class="flaticon-placeholder"></i><a
+                                        href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu"
+                                        target="_blank"> 201 International Cir STE 230, Hunt Valley, MD 21030-1344</a>
+                                </li>
+
                                 <li>
                                     <i class="flaticon-phone-call"></i>
-                                    <a href="tel: 1 (844) 474-4721">  1 (844) 474-4721</a>
+                                    <a href="tel: 1 (844) 474-4721"> 1 (844) 474-4721</a>
                                 </li>
                                 <li>
                                     <i class="flaticon-email-2"></i>
