@@ -928,14 +928,14 @@
 
 
 
-    <!--=========== Team Section Start =========-->
-    <section class="tj-team-section">
+      <!--=========== Team Section Start =========-->
+      <section class="tj-team-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tj-section-heading text-center">
                         <span class="sub-title active-shape"> Our Services</span>
-                        <h2 class="title">Pick Your Vehicle Type</h2>
+                        <h2 class="title">Pick Your Transport Type</h2>
                     </div>
                 </div>
             </div>
@@ -947,6 +947,16 @@
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
             <div class="tj-project-item">
+                <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title">logistics</span>
+                    <h4><a href="project-details.html" class="title-link">Freight Solution</a></h4>
+                </div>
+            </div>
+            <!-- <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
@@ -955,8 +965,8 @@
                     <span class="sub-title">CAR</span>
                     <h4><a href="project-details.html" class="title-link"> Sedan, SUV, Pickup etc.</a></h4>
                 </div>
-            </div>
-            <div class="tj-project-item">
+            </div> -->
+            <!-- <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
@@ -965,9 +975,18 @@
                     <span class="sub-title"> MOTORCYCLE</span>
                     <h4><a href="project-details.html" class="title-link"> Mopeds, ATV, Power Sports etc.</a></h4>
                 </div>
-            </div>
-
-            <div class="tj-project-item">
+            </div> -->
+            <!-- <div class="tj-project-item">
+                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title"> HEAVY EQUIP.</span>
+                    <h4><a href="project-details.html" class="title-link"> Trucks, Bulldozers, Mixer etc.</a></h4>
+                </div>
+            </div> -->
+            <!-- <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
@@ -976,8 +995,8 @@
                     <span class="sub-title">RORO</span>
                     <h4><a href="project-details.html" class="title-link">Cars, Trucks, trailers etc.</a></h4>
                 </div>
-            </div>
-            <div class="tj-project-item">
+            </div> -->
+            <!-- <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
@@ -986,17 +1005,75 @@
                     <span class="sub-title"> ATV/UTV</span>
                     <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
                 </div>
+            </div> -->
+            <!-- <div class="tj-project-item">
+                <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title"> CONSTRUCTION</span>
+                    <h4><a href="project-details.html" class="title-link"> Cranes, Drills, Grinders etc.</a></h4>
+                </div>
+            </div> -->
+            <!-- <div class="tj-project-item">
+                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title"> FARM</span>
+                    <h4><a href="project-details.html" class="title-link">Tractor, Planter, Baler etc.</a></h4>
+                </div>
+            </div> -->
+            <!-- <div class="tj-project-item">
+                <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title"> EXCAVATOR</span>
+                    <h4><a href="project-details.html" class="title-link"> Digger, Driller, Miners etc.</a></h4>
+                </div>
+            </div> -->
+            <!-- <div class="tj-project-item">
+                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title"> TRUCKS</span>
+                    <h4><a href="project-details.html" class="title-link">Commercial, Dump Trucks etc.</a></h4>
+                </div>
+            </div> -->
+            <div class="tj-project-item">
+                <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title"> Reefer</span>
+                    <h4><a href="project-details.html" class="title-link"> frozen , refrigerated etc.</a></h4>
+                </div>
             </div>
-
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title">Golf Cart</span>
-                    <h4><a href="project-details.html" class="title-link">electric cart, buggy, utility vehicle etc.</a>
-                    </h4>
+                    <span class="sub-title"> Hazmat</span>
+                    <h4><a href="project-details.html" class="title-link"> Explosive, Flammable, etc.</a></h4>
+                </div>
+            </div>
+            <div class="tj-project-item">
+                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title"> Dry van</span>
+                    <h4><a href="project-details.html" class="title-link">palletized, boxed, freight etc.</a></h4>
                 </div>
             </div>
         </div>
