@@ -3,7 +3,116 @@
 @section('content')
 
     <style>
+.lab-cos {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--tj-white-color);
+            margin-bottom: 10px;
+        }
 
+
+        .input-container {
+            height: 34px;
+            background: white;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid #ccc; */
+            border-radius: 4px;
+            padding: 8px 0px 8px 0px;
+            width: fit-content;
+
+        }
+
+        .input-container1 {
+            height: 34px;
+            background: white;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid #ccc; */
+            border-radius: 4px;
+            padding: 8px 0px 8px 0px;
+            width: fit-content;
+
+        }
+
+        .input-field {
+            width: 50px;
+            padding: 5px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+        }
+
+        .input-field-1 {
+            width: 65px;
+            padding: 0px 0px 0px 10px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+        }
+
+        .separator {
+            margin: 0px 0px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators-w {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
+        }
+
+        .input-container input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .input-container input[type="number"]::-webkit-outer-spin-button,
+        .input-container input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .form-wrap {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .form-label-outside {
+            color: white;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-container input {
+            border: none;
+            /* border-bottom: 1px solid #ccc; */
+            padding: 5px 0px 5px 0px;
+            font-size: 14px;
+            width: 38px;
+            text-align: center;
+            /* margin-right: 5px; */
+        }
+
+        .input-container .placeholders {
+            /* color:white; */
+            position: relative;
+            right: 72px;
+            color: black;
+            display: inline-block;
+            width: auto;
+
+            padding: 0px 8px;
+            /* background: white; */
+        }
         .suggestionsTwo {
             background: #fff;
             font-size: 14px;
@@ -50,7 +159,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Freight</h1>
+                        <h1 class="breadcrumb-title text-center">Hazmat Transport</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
@@ -59,7 +168,7 @@
                             </span>
                             >
                             <span>
-                                <span> Freight</span>
+                                <span> Hazmat Transport</span>
                             </span>
                         </div>
                     </div>
@@ -84,7 +193,7 @@
                 @endif
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
-                        <h4 class="title text-center">Instant Freight Shipping Quote!</h4>
+                        <h4 class="title text-center">Instant Hazmat Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -395,72 +504,61 @@
                                     <option value="Non Running">Non Running</option>
                                 </select>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Length (Ft.)</label>
-                                        <input class="calculate_freight" type="number" id="length_ft" name="length_ft"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Length (In.)</label>
-                                        <input class="" type="number" id="length_in" name="length_in"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Width (Ft.)</label>
-                                        <input class="calculate_freight" type="number" id="width_ft" name="width_ft"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Width (In.)</label>
-                                        <input class="" type="number" id="width_in" name="width_in"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Height (Ft.)</label>
-                                        <input class="calculate_freight" type="number" id="height_ft" name="height_ft"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Height (In.)</label>
-                                        <input class="" type="number" id="height_in" name="height_in"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Weight (Lbs.)</label>
-                                        <input class="calculate_freight" type="number" id="weight" name="weight"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <input type="hidden" name="frieght_class" id="frieght_class" value="">
-                            </div>
+                            <div class="row mb-3">
+
+
+
+
+    <div class="col-md-3">
+
+        <label class="lab-cos">Length</label>
+        <div class="input-container">
+            <input type="number" id="feet-input" class="input-field" placeholder="" min="0" maxlength="3"
+                oninput="limitDigits(this, 3)">
+            <span class="separator">(Ft.)</span>
+            <input type="number" id="inches-input" class="input-field" placeholder="" min="0" max="11" maxlength="2"
+                oninput="limitDigits(this, 2)">
+            <span class="separators">(In.)</span>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+
+        <label class="lab-cos">Width</label>
+        <div class="input-container">
+            <input type="number" id="feet-input1" class="input-field" placeholder="" min="0" maxlength="3"
+                oninput="limitDigits(this, 3)">
+            <span class="separator">(Ft.)</span>
+            <input type="number" id="inches-input1" class="input-field" placeholder="" min="0" max="11" maxlength="2"
+                oninput="limitDigits(this, 2)">
+            <span class="separators">(In.)</span>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+
+        <label class="lab-cos">Height</label>
+        <div class="input-container">
+            <input type="number" id="feet-input2" class="input-field" placeholder="" min="0" maxlength="3"
+                oninput="limitDigits(this, 3)">
+            <span class="separator">(Ft.)</span>
+            <input type="number" id="inches-input2" class="input-field" placeholder="" min="0" max="11" maxlength="2"
+                oninput="limitDigits(this, 2)">
+            <span class="separators">(In.)</span>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+
+        <label class="lab-cos">Weight</label>
+        <div class="input-container1">
+            <input type="" id="feet-input" class="input-field-1" placeholder="" min="0" maxlength="6"
+                oninput="limitDigits(this, 6)">
+            <span class="separators-w">(Lbs.)</span>
+
+        </div>
+    </div>
+</div>
                             <div class="row">
                                 <h4 class="text-white">Additional Services</h4>
                                 <div class="col-md-4">
@@ -522,9 +620,9 @@
                                 </div>
                             </div>
 
-                            <a class="add-car" style="display:none;" id="addVehicleBtn"
+                            <!-- <a class="add-car" style="display:none;" id="addVehicleBtn"
                                 style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                Vehicle</a>
+                                Vehicle</a> -->
 
                             <div id="vehicles-container" style="display:none;">
                             </div>
@@ -654,130 +752,65 @@
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
-
-    <script>
-        $(document).ready(function() {
-            function checkSpecificFieldsFilled() {
-                var allFilled = true;
-                $('.calculate_freight').each(function() {
-                    if ($(this).val() === '' || $(this).val() === '0') {
-                        allFilled = false;
-                        return false;
-                    }
-                });
-                return allFilled;
-            }
-
-            function allSpecificFieldsFilledFunction() {
-                console.log("All specific fields are filled up!");
-                freight_calc();
-            }
-
-            function freight_calc() {
-                // var length_ft = $('#length_ft').val();
-                // var length_in = $('#length_in').val();
-                // var width_ft = $('#width_ft').val();
-                // var width_in = $('#width_in').val();
-                // var height_ft = $('#height_ft').val();
-                // var height_in = $('#height_in').val();
-                // var weight = $('#weight').val();
-
-                // var length = length_ft * 12 + parseFloat(length_in);
-                // var width = width_ft * 12 + parseFloat(width_in);
-                // var height = height_ft * 12 + parseFloat(height_in);
-                var length_ft = parseFloat($('#length_ft').val());
-                var length_in = parseFloat($('#length_in').val());
-                var width_ft = parseFloat($('#width_ft').val());
-                var width_in = parseFloat($('#width_in').val());
-                var height_ft = parseFloat($('#height_ft').val());
-                var height_in = parseFloat($('#height_in').val());
-                var weight = parseFloat($('#weight').val());
-
-                console.log(
-                    length_ft,
-                    length_in,
-                    width_ft,
-                    width_in,
-                    height_ft,
-                    height_in,
-                    weight,
-                );
-
-                var length = length_ft * 12;
-                length = length + length_in;
-
-                var width = width_ft * 12;
-                width = width + width_in;
-
-                var height = height_ft * 12;
-                height = height + height_in;
-
-                console.log(length, width, height, weight);
-
-                length = parseFloat(length);
-                width = parseFloat(width);
-                height = parseFloat(height);
-                weight = parseFloat(weight);
-
-
-                var unit = 'inch';
-                var answer_1 = (length * height * width).toFixed(4);
-                if (unit == 'inch') {
-                    answer_1 = (answer_1 / 1728).toFixed(4);
-                }
-                var fright_class = 0;
-                var answer_1 = (length * height * width).toFixed(4);
-                if (unit == 'inch') {
-                    answer_1 = (answer_1 / 1728).toFixed(4);
-                }
-                var fright_class = 0;
-                answer_1 = (weight / answer_1).toFixed(4);
-                if (answer_1 < 1) {
-                    fright_class = 500;
-                } else if (answer_1 >= 1 && answer_1 < 2) {
-                    fright_class = 400;
-                } else if (answer_1 >= 2 && answer_1 < 3) {
-                    fright_class = 300;
-                } else if (answer_1 >= 3 && answer_1 < 4) {
-                    fright_class = 250;
-                } else if (answer_1 >= 4 && answer_1 < 5) {
-                    fright_class = 200;
-                } else if (answer_1 >= 5 && answer_1 < 6) {
-                    fright_class = 175;
-                } else if (answer_1 >= 6 && answer_1 < 7) {
-                    fright_class = 150;
-                } else if (answer_1 >= 7 && answer_1 < 8) {
-                    fright_class = 125;
-                } else if (answer_1 >= 8 && answer_1 < 9) {
-                    fright_class = 110;
-                } else if (answer_1 >= 9 && answer_1 < 10.5) {
-                    fright_class = 100;
-                } else if (answer_1 >= 10.5 && answer_1 < 12) {
-                    fright_class = 92.5;
-                } else if (answer_1 >= 12 && answer_1 < 13.5) {
-                    fright_class = 85;
-                } else if (answer_1 >= 13.5 && answer_1 < 15) {
-                    fright_class = 77.5;
-                } else if (answer_1 >= 15 && answer_1 < 22.5) {
-                    fright_class = 70;
-                } else if (answer_1 >= 22.5 && answer_1 < 30) {
-                    fright_class = 65;
-                } else if (answer_1 >= 30 && answer_1 < 35) {
-                    fright_class = 60;
-                } else if (answer_1 >= 35 && answer_1 < 50) {
-                    fright_class = 55;
-                } else if (answer_1 >= 50) {
-                    fright_class = 50;
-                }
-                console.log('fright_class', fright_class);
-                $('#frieght_class').val(fright_class).trigger('change');
-            }
-
-            $('.calculate_freight').on('keyup', function() {
-                if (checkSpecificFieldsFilled()) {
-                    allSpecificFieldsFilledFunction();
-                }
+ <script>
+        document.querySelectorAll('input[type="text"]').forEach((input) => {
+            input.addEventListener("input", function() {
+                this.value = this.value.replace(/[^0-9]/g, "");
             });
         });
     </script>
+
+    <script>
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
+        }
+
+        $(document).ready(function() {
+            $('#inches-input').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input1').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input1, #inches-input1').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input2').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input2').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script>
+   
 @endsection

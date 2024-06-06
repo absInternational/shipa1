@@ -143,7 +143,7 @@
     </section>
     <!--========== breadcrumb End ==============-->
 
-    <section class="tj-choose-us-section">
+    <section class="tj-choose-us-section-bike">
         <div class="container-flude">
             <div class="row">
                 @if (session('success'))
@@ -203,7 +203,7 @@
 
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
-                                    <h4 class="text-white">Vehicle Information</h4>
+                                    <h4 class="text-white">Motorcycle Information</h4>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
@@ -247,8 +247,8 @@
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class=" " id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open</option>
-                                            <option value="Enclosed">Enclosed</option>
+                                            <option value="Open" selected>Open Carrier</option>
+                                            <option value="Enclosed">Enclosed Carrier</option>
                                         </select>
                                     </div>
                                 </div>
@@ -325,7 +325,7 @@
                                 </di>
                             </div>
 
-                            <div class="tj-theme-button mt-3">
+                            <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                 </button>

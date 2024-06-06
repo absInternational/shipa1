@@ -183,7 +183,7 @@
                 @endif
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
-                        <h4 class="title">Instant Golf Cart Shipping Quote!</h4>
+                        <h4 class="title text-center">Instant Golf Cart Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -230,13 +230,75 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row select-bm">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white">Golf Cart Information</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label> Year</label>
+                                        <select class="nice-select vehicle-year" name="year[]" id="year">
+                                            <option value="" disabled selected>Select Year</option>
+                                            @php
+                                                $currentYear = date('Y');
+                                                for ($year = $currentYear; $year >= 1936; $year--) {
+                                                    echo "<option value='$year'>$year</option>";
+                                                }
+                                            @endphp
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <input type="text" id="make" name="make[]" placeholder="Enter Make"
+                                            required="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select vehicle-model-div">
+                                        <label>Model</label>
+                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                            required="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="add-car" id="addVehicleBtn"
+                               ><i class="fa fa-plus"></i> Add
+                                Vehicle</a>
+
+                            <div id="vehicles-container">
+                            </div>
+
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class=" " id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open</option>
-                                            <option value="Enclosed">Enclosed</option>
+                                            <option value="Open" selected>Open Carrier</option>
+                                            <option value="Enclosed">Enclosed Carrier</option>
                                         </select>
                                     </div>
                                 </div>
@@ -278,7 +340,7 @@
                                 <div class="form-group mb-3">
                                     <input class="form-check-input" type="checkbox" id="modification"
                                         name="modification" value="1" />
-                                    <label class="form-check-label text-white" for="modification"> Modification</label>
+                                    <label class="form-check-label text-white ms-4" for="modification"> Modified?</label>
                                 </div>
 
                                 <div class="input-form div-modify_info" style="display: none;">
@@ -293,67 +355,8 @@
                                 <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" />
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row select-bm">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="text-white">Vehicle Information</h4>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label> Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year">
-                                            <option value="" disabled selected>Select Year</option>
-                                            @php
-                                                $currentYear = date('Y');
-                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                    echo "<option value='$year'>$year</option>";
-                                                }
-                                            @endphp
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <input type="text" id="make" name="make[]" placeholder="Enter Make"
-                                            required="" />
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select vehicle-model-div">
-                                        <label>Model</label>
-                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                            required="" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a class="add-car" id="addVehicleBtn"
-                               ><i class="fa fa-plus"></i> Add
-                                Vehicle</a>
-
-                            <div id="vehicles-container">
-                            </div>
-                            <div class="tj-theme-button mt-3">
+                           
+                            <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                 </button>

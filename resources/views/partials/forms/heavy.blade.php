@@ -1,5 +1,30 @@
-
 <div class="row">
+
+    <div class="col-6">
+        <div class="input-form">
+            <label for="category">Category</label>
+            <select class="nice-select " id="category" name="category">
+                <option value="" disabled selected>Select</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+            <input type="text" class="form-control" id="otherCategoryInput" name="category" disabled
+                style="display: none;" placeholder="Specify Category">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="input-form" id="subcategory-box">
+            <label for="subcategory">Subcategory</label>
+            <select class="nice-select " id="subcategory" name="subcategory">
+                <option value="" disabled selected>Select</option>
+            </select>
+        </div>
+    </div>
+</div>
+ 
+ 
+ <div class="row">
     <div class="col-md-6">
         <div class="form-group">
             <label for="trailer_type" class="text-white">Select Trailer Type</label>
@@ -167,27 +192,4 @@
         </div>
     </div>
 </div>
-<div class="row">
 
-    <div class="col-6">
-        <div class="input-form">
-            <label for="category">Category</label>
-            <select class="nice-select " id="category" name="category">
-                <option value="" disabled selected>Select</option>
-                @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                @endforeach
-            </select>
-            <input type="text" class="form-control" id="otherCategoryInput" name="category" disabled
-                style="display: none;" placeholder="Specify Category">
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="input-form" id="subcategory-box">
-            <label for="subcategory">Subcategory</label>
-            <select class="nice-select " id="subcategory" name="subcategory">
-                <option value="" disabled selected>Select</option>
-            </select>
-        </div>
-    </div>
-</div>

@@ -82,18 +82,7 @@
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                        name="available_at_auction" value="1" />
-                                    <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                        Auction?</label>
-                                </div>
-
-                                <div class="input-form div-link mt-3" style="display: none;">
-                                    <label class="d-block"> Enter Link:</label>
-                                    <input class="form-control" type="url" id="link" name="link"
-                                        placeholder="Enter Link" />
-                                </div>
+                                
 
                             <div class="row">
                                 <div class="col-md-4">
@@ -121,41 +110,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open</option>
-                                            <option value="Enclosed">Enclosed</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-check-input" type="checkbox" id="modification" name="modification"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="modification"> Modification</label>
-                            </div>
-                            <div class="input-form div-modify_info" style="display: none;">
-                                <label class="d-block"> Modification Information:</label>
-                                <input class="" type="text" id="c" name="modify_info"
-                                    placeholder="Enter Modification Information" />
-                            </div>
-                            <div class="input-form mt-3">
-                                <label class="d-block" class="text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div>
+
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -176,9 +132,10 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
-                                    <h4 class="text-white">Vehicle Information</h4>
+                                    <h4 class="text-white">Atv/Utv Information</h4>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
@@ -210,13 +167,68 @@
                                 </div>
                             </div>
 
-                            <a class="text-primary" id="addVehicleBtn"
-                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                            <a class="add-car" id="addVehicleBtn"
+                               ><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
                             <div id="vehicles-container">
                             </div>
-                            <div class="tj-theme-button mt-3">
+
+                            <div class="row mb-3">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="trailer_type" class="text-white">Select Trailer
+                Type</label>
+            <select class="form-control" id="trailer_type" name="trailer_type">
+                <option value="Open" selected>Open Carrier</option>
+                <option value="Enclosed">Enclosed Carrier</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="condition" class="text-white">Condition</label>
+            <select class="form-control" id="condition" name="condition">
+                <option value="Running" selected>Running</option>
+                <option value="Non Running">Non Running</option>
+            </select>
+        </div>
+    </div>
+</div>
+                            <div class="row">
+                                <di class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-check-input " type="checkbox" id="modification" name="modification" value="1">
+                                        <label class="form-check-label text-white ms-4" for="modification">
+                                            Modified?</label>
+                                    </div>
+
+                                    <div class="input-form div-modify_info" style="display: none;">
+                                        <label class="d-block"> Modification Information:</label>
+                                        <input class="" type="text" id="c" name="modify_info" placeholder="Enter Modification Information">
+                                    </div>
+                                </di>
+                                <di class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="available_at_auction" name="available_at_auction" value="1">
+                                        <label class="form-check-label text-white" for="available_at_auction"> Available
+                                            at
+                                            Auction?</label>
+                                    </div>
+
+                                    <div class="input-form div-link" style="display: none;">
+                                        <label class="d-block"> Enter Link:</label>
+                                        <input class="" type="url" id="link" name="link" placeholder="Enter Link">
+                                    </div>
+                                </di>
+                            </div>
+                            <div class="input-form mt-3">
+                                <label class="d-block" class="text-white"> Image:</label>
+                                <input class="form-control image_input" type="file" id="image" name="image"
+                                    placeholder="Upload File" />
+                            </div>
+                            
+                            <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                 </button>

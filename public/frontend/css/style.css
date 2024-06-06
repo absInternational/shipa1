@@ -3704,6 +3704,30 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 /* ----------------------------------
     14. Feature CSS
 ------------------------------------ */
+.tj-choose-us-section-bike {
+    background-color: #000000;
+    
+    background-image: url(../../img/bike.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 120px;
+    padding-top: 110px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+.tj-choose-us-section-bike::before {
+    background: rgba(6, 46, 57, 0.7);
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+}
+
 .tj-choose-us-section {
     background-color: #000000;
     background-image: url(https://blog.shipa1.daydispatch.com/public/frontend/images/slider/home-slider-1.webp);
@@ -3839,6 +3863,125 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .choose-us-step-item:hover p::before {
     background-color: var(--tj-primary-color);
 }
+.dix-1{
+    background-image: url(../images/disco.png) !important;
+    background-repeat: no-repeat !important;
+}
+.tj-input-form-car {
+    
+    box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
+    background: #062e39d4;
+    border-radius: 5%;
+    padding: 25px;
+    width: 100%;
+    /* margin-left: 7%; */
+    /* margin-left: auto; */
+    position: relative;
+    z-index: 3;
+}
+.tj-input-form-car  .title {
+    color: var(--tj-white-color);
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.tj-input-form-car  .input-form label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--tj-white-color);
+    margin-bottom: 10px;
+}
+
+.tj-input-form-car  .input-form {
+    margin-bottom: 20px;
+}
+
+.tj-input-form-car  .input-form input {
+    background: #f0f2f7;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    height: 35px;
+    line-height: 38px;
+    padding: 15px 15px;
+    border-radius: 3px;
+}
+
+.tj-input-fom .select-bm {
+    margin-top: 50px;
+}
+
+.tj-input-form-car  .select-bm .nice-select {
+    margin-bottom: 35px;
+}
+
+.tj-input-form-car  .nice-select {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    line-height: 34px;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.tj-input-form-car  .nice-select .list {
+    width: 100%;
+    margin-top: 0;
+    height: 280px;
+    overflow: auto;
+}
+
+.tj-input-form-car  .nice-select .list li {
+    font-size: 14px;
+}
+
+.tj-input-form-car  .nice-select .list li:last-child {
+    margin-bottom: 10px;
+}
+
+.tj-input-form-car  .nice-select .option.selected {
+    font-weight: 500;
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected {
+    color: var(--tj-body-color);
+}
+
+.tj-input-form-car  .nice-select .option.disabled {
+    color: var(--tj-body-color);
+}
+
+.tj-input-form-car  .nice-select:after {
+    border-bottom: 1px solid var(--tj-body-color);
+    border-right: 1px solid var(--tj-body-color);
+    margin-top: 0;
+    height: 10px;
+    top: 35%;
+    right: 20px;
+    width: 10px;
+}
+
+.add-car-1 {
+    padding: 5px;
+    border: white 1px solid;
+    color: white !important;
+    display: flex !important;
+    cursor: pointer !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    letter-spacing: 3px !important;
+    font-size: 13px !important;
+}
+.add-car-1:hover {
+    border-color: var(--tj-primary-color) !important;
+    color: var(--tj-primary-color) !important;
+    text-decoration: none !important;
+}
+/* car form end  */
 
 .tj-input-form {
     box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
@@ -3892,6 +4035,28 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-input-form .nice-select {
     width: 100%;
+    /* display: none; */
+    border: none;
+    font-size: 14px;
+    line-height: 34px;
+    height: 35px;
+    border-radius: 3px;
+}
+/* .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid white 1px;
+    outline: 0;
+} */
+.select2 {
+    background-color: white;
+    color: #38413b;
+    opacity: 2;
+    font-size: 18px;
+    border: 1px solid #318eefc9;
+    font-family: inherit;
+}
+.sel-mul {
+    width: 100%;
+    display: none;
     border: none;
     font-size: 14px;
     line-height: 34px;
@@ -9497,7 +9662,11 @@ PAGE LOAD ANIMATION
 }
 
 .add-car {
+    /* left: 77%;
+    position: relative;
+    width: 24%; */
     color: white !important;
+    /* border: #f2f3f9 1px solid; */
     display: flex !important;
     cursor: pointer !important;
     /* text-decoration: underline; */
@@ -9505,9 +9674,10 @@ PAGE LOAD ANIMATION
     align-items: center !important;
     text-decoration: none !important;
     letter-spacing: 3px !important;
-    font-size: 15px !important;
+    font-size: 14px !important;
 }
 .add-car:hover {
+    /* border-color: var(--tj-primary-color) !important; */
     color: var(--tj-primary-color) !important;
     text-decoration: none !important;
 }

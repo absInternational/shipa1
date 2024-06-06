@@ -1015,6 +1015,46 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
 <script>
+        $(document).ready(function() {
+            $('#category').change(function() {
+                var selectedCategory = $(this).val();
+
+                $.ajax({
+                    url: "{{ route('get.subcategories') }}",
+                    method: "POST",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "category": selectedCategory
+                    },
+                    success: function(response) {
+                        console.log(response);
+                        console.log(response.length);
+
+                        var html = '';
+                        $('#subcategory-box').html('');
+
+                        html += "<label for='subcategory'>Subcategory</label>";
+                        html +=
+                            "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
+                        html += "<option value='' disabled selected>Select</option>";
+                        $.each(response, function(index, val) {
+                            html +=
+                                `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
+                        });
+                        html += "</select>";
+                        console.log('html', html);
+
+                        $('#subcategory-box').html(html);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+
+<script>
         document.addEventListener("DOMContentLoaded", function() {
             var input = document.querySelector("#phone");
             window.intlTelInput(input, {

@@ -42,7 +42,7 @@
                 @endif
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
-                        <h4 class="title">Instant Car Shipping Quote!</h4>
+                        <h4 class="title text-center">Instant Car Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -86,9 +86,31 @@
                                 </div>
                             </div>
 
+                            <div class="row mt-0">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
-                                    <h4 class="text-white mb-0">Vehicle Information</h4>
+                                    <h4 class="text-white mb-0">Car Information</h4>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
@@ -135,34 +157,15 @@
 
 
 
-                            <div class="row mt-0">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                            </div>
+                            
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group" style="line-height:23px;">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open</option>
-                                            <option value="Enclosed">Enclosed</option>
+                                            <option value="Open" selected>Open Carrier</option>
+                                            <option value="Enclosed">Enclosed Carrier</option>
                                         </select>
                                     </div>
                                 </div>
@@ -188,8 +191,8 @@
                                     <div class="form-group">
                                         <input class="form-check-input " type="checkbox" id="modification"
                                             name="modification" value="1" />
-                                        <label class="form-check-label text-white" for="modification">
-                                            Modification</label>
+                                        <label class="form-check-label text-white ms-4" for="modification">
+                                            Modified?</label>
                                     </div>
 
                                     <div class="input-form div-modify_info" style="display: none;">
@@ -218,7 +221,7 @@
 
 
 
-                            <div class="tj-theme-button mt-3">
+                            <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                 </button>

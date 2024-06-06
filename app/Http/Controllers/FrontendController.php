@@ -88,10 +88,15 @@ class FrontendController extends Controller
         return view('frontend.pages.services.detail', compact('service', 'related', 'faqs'));
     }
 
-    public function autoAuction(Request $request)
+    public function autoAuction()
     {
-        $services = Service::get();
-        return view('frontend.pages.services.index', compact('services'));
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        return view('frontend.pages.autoAuction', compact('makes'));
     }
 
     public function subscribe(Request $request)
@@ -144,5 +149,19 @@ class FrontendController extends Controller
     {
        
         return view('frontend.pages.freighttransport-detail');
+    }
+    public function hazmatTransport()
+    {
+        return view('frontend.forms.hazmattransport');
+    }
+
+    public function dryVan()
+    {
+        return view('frontend.forms.dryvan');
+    }
+
+    public function reeferTrucking()
+    {
+        return view('frontend.forms.reefertrucking');
     }
 }

@@ -1,7 +1,6 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 
 <style>
 
@@ -256,7 +255,7 @@
         .error-field {
             border: 2px solid red;
         }
-
+       
 </style>
 
     <!--=========== Slider Section Start =========-->
@@ -264,7 +263,7 @@
 
     <section class="tj-slider-section">
         <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" /></div>
-        <div class="swiper sc-slider-1">
+        <div class=" swiper sc-slider-1">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
                     <div class="container">
@@ -558,7 +557,7 @@
         </div>
     </section>
     <!--=========== About Section End =========-->
-    <section class="tj-choose-us-section">
+<section class="tj-choose-us-section">
         <div class="container-flude">
             <div class="row">
             @if (session('success'))
@@ -576,7 +575,7 @@
 
                     
 
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
+    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
                     @csrf
                         @if ($errors->any())
                         <div class="alert alert-danger">
@@ -722,7 +721,7 @@
                 </div>
             </div>
             
-          </form>
+    </form>
 
         
            
@@ -739,7 +738,7 @@
             </div>
 
         </div>
-    </section>
+</section>
     <!--=========== Feature Section End =========-->
 
     <!--=========== Team Section Start =========-->
@@ -1103,7 +1102,7 @@
     @include('partials.newsletter')
     <!--=========== Newsletter Section End =========-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -1112,7 +1111,50 @@
     <script src="path/to/jquery.min.js"></script>
     <script src="path/to/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-   
+    
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('#category').change(function() {
+                var selectedCategory = $(this).val();
+
+                $.ajax({
+                    url: "{{ route('get.subcategories') }}",
+                    method: "POST",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "category": selectedCategory
+                    },
+                    success: function(response) {
+                        console.log(response);
+                        console.log(response.length);
+
+                        var html = '';
+                        $('#subcategory-box').html('');
+
+                        html += "<label for='subcategory'>Subcategory</label>";
+                        html +=
+                            "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
+                        html += "<option value='' disabled selected>Select</option>";
+                        $.each(response, function(index, val) {
+                            html +=
+                                `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
+                        });
+                        html += "</select>";
+                        console.log('html', html);
+
+                        $('#subcategory-box').html(html);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+
     <script>
         
       

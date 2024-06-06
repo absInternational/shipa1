@@ -51,6 +51,9 @@ class FormVehicleController extends Controller
         return view('frontend.forms.freight');
     }
 
+    
+
+
     public function roro()
     {
         return view('frontend.forms.roro');
