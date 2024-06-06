@@ -3863,8 +3863,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .choose-us-step-item:hover p::before {
     background-color: var(--tj-primary-color);
 }
-
+.dix-1{
+    background-image: url(../images/disco.png) !important;
+    background-repeat: no-repeat !important;
+}
 .tj-input-form-car {
+    
     box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
     background: #062e39d4;
     border-radius: 5%;
@@ -4031,6 +4035,28 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-input-form .nice-select {
     width: 100%;
+    /* display: none; */
+    border: none;
+    font-size: 14px;
+    line-height: 34px;
+    height: 35px;
+    border-radius: 3px;
+}
+/* .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid white 1px;
+    outline: 0;
+} */
+.select2 {
+    background-color: white;
+    color: #38413b;
+    opacity: 2;
+    font-size: 18px;
+    border: 1px solid #318eefc9;
+    font-family: inherit;
+}
+.sel-mul {
+    width: 100%;
+    display: none;
     border: none;
     font-size: 14px;
     line-height: 34px;

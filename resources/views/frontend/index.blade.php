@@ -1,7 +1,6 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 
 <style>
 
@@ -256,7 +255,7 @@
         .error-field {
             border: 2px solid red;
         }
-
+       
 </style>
 
     <!--=========== Slider Section Start =========-->
@@ -264,7 +263,7 @@
 
     <section class="tj-slider-section">
         <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" /></div>
-        <div class="swiper sc-slider-1">
+        <div class=" swiper sc-slider-1">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
                     <div class="container">
@@ -1112,27 +1111,11 @@
     <script src="path/to/jquery.min.js"></script>
     <script src="path/to/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-   
-    <script>
-    $$(document).ready(function() {
-    // Function to update the title based on dropdown selection
-    function updateTitle() {
-        var selectedOption = $('#tabSelector option:selected').text();
-        $(".title.text-center").text(selectedOption + " INFORMATION");
-    }
+    
 
-    // Function to handle dropdown change event
-    $("#tabSelector").change(function() {
-        updateTitle();
-    });
 
-    // Initial call to set the title based on the default dropdown selection
-    updateTitle();
 
-    // Existing code...
-    // The rest of your existing JavaScript code goes here...
-});
-</script>
+    
 
     <script>
         

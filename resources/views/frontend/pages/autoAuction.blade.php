@@ -134,7 +134,9 @@
                         
                     </div> 
                 </div>
+                
                 <div class="col-lg-4 p-0">
+                
                 @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
@@ -145,9 +147,11 @@
                         {{ session('error') }}
                     </div>
                 @endif
-                <div class="tj-input-form-car" data-bg-image="">
-                        <h4 class="title">Instant Car Shipping Quote!</h4>
-                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                
+                <span class="dix-1"> </span>
+        <div class="tj-input-form-car" data-bg-image="">
+                <h4 class="title text-center">Instant Car Shipping Quote!</h4>
+                        <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform "
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
@@ -328,7 +332,7 @@
                                 </button>
                             </div>
                         </form>
-                    </div>
+      </div>
                 </div>
             </div>
         </div>
