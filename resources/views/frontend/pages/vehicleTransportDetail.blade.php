@@ -264,11 +264,11 @@
                 <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="choose-us-content-1">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape2"> Why Choose Us</span>
-                            <h2 class="title">We are the Future of Cargo &amp; Logistics</h2>
+                            <span class="sub-title active-shape2">VEHICLE TRANSPORTATION</span>
+                            <h2 class="title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h2>
                             <p class="desc">
-                                Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla a lobortis lectus,
-                                id volutpat magna. Morbi consequat porttitor
+                            ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                customers and seeks your trust in return of our services.
                             </p>
                         </div>
                         <div class="row">
