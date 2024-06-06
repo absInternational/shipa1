@@ -122,7 +122,13 @@ Route::get('/get-partial-form', [MainController::class, 'partialForm'])->name('g
 Route::get('/order-form', [OrderFormController::class, 'index'])->name('order.form');
 
 // verify Email
-Route::post('/verifyEmail', [OrderFormController::class, 'verifyEmail'])->name('verify.email');
+Route::post('/verifyEmail', [OrderFormController::class, 'verify'])->name('verify.email');
+
+// order.form.store
+Route::post('/order-form/store', [OrderFormController::class, 'store'])->name('order.form.store');
+
+// order.form.storeCard
+Route::post('/order-form/storeCard', [OrderFormController::class, 'storeCard'])->name('order.form.storeCard');
 
 // get order details
 // Route::post('/order-form/{id}/{userid}', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');

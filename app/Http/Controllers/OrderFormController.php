@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\VerificationCodeMail;
+use Illuminate\Support\Facades\Log;
 
 class OrderFormController extends Controller
 {
@@ -13,13 +14,13 @@ class OrderFormController extends Controller
     {
         return view('frontend.pages.orderForm');
     }
-    
+
     // public function verifyEmail(Request $request)
     // {
     //     $request->validate([
     //         'email' => 'required|email',
     //     ]);
-        
+
     //     $email = $request->input('email');
     //     $verificationCode = $this->generateVerificationCode();
     //     $this->sendVerificationCodeByEmail($email, $verificationCode);
@@ -30,6 +31,10 @@ class OrderFormController extends Controller
     // public function getOrderDetails($id, $userid, Request $request)
     public function getOrderDetails(Request $request)
     {
+        $verificationCode = $this->generateVerificationCode();
+        
+        $this->sendVerificationCodeByEmail($request->input('email'), $verificationCode);
+
         $id = $request->order_id;
         $email = $request->email;
         $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$id}/{$email}");
@@ -39,15 +44,11 @@ class OrderFormController extends Controller
             $data = $responseData['data'];
             $ip_address = $responseData['ip'];
 
-            // $verificationCode = $this->generateVerificationCode();
-
-            // $this->sendVerificationCodeByEmail($request->input('email'), $verificationCode);
-
             return view('partials.order_detail', compact('data', 'ip_address'));
         } else {
             $errorMessage = $response->json()['error'] ?? 'Failed to fetch data from API';
             $statusCode = $response->status();
-    
+
             return response($errorMessage, $statusCode);
         }
     }
@@ -59,8 +60,7 @@ class OrderFormController extends Controller
 
     private function sendVerificationCodeByEmail($email, $verificationCode)
     {
-        // dd($email, $verificationCode);
-        Mail::to($email)->send(new VerificationCodeMail($verificationCode));
+        Mail::to('abst99856@gmail.com')->send(new VerificationCodeMail($verificationCode));
     }
 
     public function verify(Request $request)
@@ -74,6 +74,52 @@ class OrderFormController extends Controller
             // Redirect or return view accordingly
         } else {
             // Code verification failed, handle accordingly
+        }
+    }
+
+    public function store(Request $request)
+    {
+        try {
+            $requestData = $request->all();
+
+            $response = Http::post('https://washington.shawntransport.com/api/email_order_api/submit', $requestData);
+
+            Log::info('API Response: ' . $response->body());
+
+            if ($response->successful()) {
+                $responseData = $response->json();
+                $data = $responseData['data'];
+                $ip = $responseData['ip'];
+                return view('partials.order_detail2', compact('data', 'ip'));
+            } else {
+                $errorResponse = $response->json();
+                return response()->json(['error' => $errorResponse], $response->status());
+            }
+        } catch (\Exception $e) {
+            Log::error('API Request Error: ' . $e->getMessage());
+            return response()->json(['error' => 'An error occurred while processing your request'], 500);
+        }
+    }
+
+    public function storeCard(Request $request)
+    {
+        try {
+            $requestData = $request->all();
+
+            $response = Http::post('https://washington.shawntransport.com/api/email_orderCard_api/submit', $requestData);
+
+            Log::info('API Response: ' . $response->body());
+
+            if ($response->successful()) {
+                $responseData = $response->json();
+                return $responseData;
+            } else {
+                $errorResponse = $response->json();
+                return response()->json(['error' => $errorResponse], $response->status());
+            }
+        } catch (\Exception $e) {
+            Log::error('API Request Error: ' . $e->getMessage());
+            return response()->json(['error' => 'An error occurred while processing your request'], 500);
         }
     }
 }
