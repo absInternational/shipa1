@@ -331,6 +331,39 @@
               <div class="container mt-2">
         <!-- Step 1: Moving From/To -->
         <div class="route_quote_info" id="step1">
+            <div class="row">
+                <h4 class="title text-center">Quote Request!</h4>
+                <div class="col-xl-12 col-lg-12 mb-4">
+                    <h6 class="text-white">Moving From</h6>
+                    <label class="text-white mb-2">Where Are You Moving From?</label>
+                    <div class="single-input-field">
+                        <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
+                        <ul class="suggestions suggestionsTwo"></ul>
+                        <label class="error-message" id="pickup-location-error">This field is required.</label>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 col-lg-12 mb-4">
+                    <h6 class="text-white">Deliver To</h6>
+                    <label class="text-white mb-2">Where Are You Moving To?</label>
+                    <div class="single-input-field">
+                        <input class="form-control" type="text" id="delivery-location" placeholder="Enter City or ZipCode" name="To_ZipCode" required>
+                        <ul class="suggestions suggestionsTwo"></ul>
+                        <label class="error-message" id="delivery-location-error">This field is required.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="price__cta-btn text-center">
+                        <button class="tj-submit-btn" type="button" id="step1_next">
+                            Next <i class="fa-light fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="route_quote_info" id="step1">
 
             <div class="row">
                 <h4 class="title text-center">Quote Request!</h4>
@@ -370,9 +403,8 @@
                     
                     <label class="text-white mb-2">Zip Code:</label>
                     <div class="single-input-field">
-                        <input class="form-control" type="text" id="delivery-locatio-2" placeholder="Enter ZipCode" name="To_ZipCode" required>
-                        <ul class="suggestions suggestionsTwo"></ul>
-                        <label class="error-message" id="delivery-location-2-error">This field is required.</label>
+                        <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>
+                        
                     </div>
                 </div>
             </div>
@@ -387,7 +419,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Step 2: Vehicle Information -->
         <div class="vehicle_quote_info" id="step2" style="display: none;">
             <div class="row">

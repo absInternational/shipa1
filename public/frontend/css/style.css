@@ -9662,7 +9662,11 @@ PAGE LOAD ANIMATION
 }
 
 .add-car {
+    /* left: 77%;
+    position: relative;
+    width: 24%; */
     color: white !important;
+    /* border: #f2f3f9 1px solid; */
     display: flex !important;
     cursor: pointer !important;
     /* text-decoration: underline; */
@@ -9670,9 +9674,10 @@ PAGE LOAD ANIMATION
     align-items: center !important;
     text-decoration: none !important;
     letter-spacing: 3px !important;
-    font-size: 15px !important;
+    font-size: 14px !important;
 }
 .add-car:hover {
+    /* border-color: var(--tj-primary-color) !important; */
     color: var(--tj-primary-color) !important;
     text-decoration: none !important;
 }

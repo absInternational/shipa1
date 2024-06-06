@@ -4,6 +4,117 @@
 
     <style>
 
+.lab-cos {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--tj-white-color);
+            margin-bottom: 10px;
+        }
+
+
+        .input-container {
+            height: 34px;
+            background: white;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid #ccc; */
+            border-radius: 4px;
+            padding: 8px 0px 8px 0px;
+            width: fit-content;
+
+        }
+
+        .input-container1 {
+            height: 34px;
+            background: white;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid #ccc; */
+            border-radius: 4px;
+            padding: 8px 0px 8px 0px;
+            width: fit-content;
+
+        }
+
+        .input-field {
+            width: 50px;
+            padding: 5px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+        }
+
+        .input-field-1 {
+            width: 65px;
+            padding: 0px 0px 0px 10px;
+            font-size: 14px;
+            border: none;
+            outline: none;
+        }
+
+        .separator {
+            margin: 0px 0px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators-w {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
+        }
+
+        .input-container input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .input-container input[type="number"]::-webkit-outer-spin-button,
+        .input-container input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .form-wrap {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .form-label-outside {
+            color: white;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-container input {
+            border: none;
+            /* border-bottom: 1px solid #ccc; */
+            padding: 5px 0px 5px 0px;
+            font-size: 14px;
+            width: 38px;
+            text-align: center;
+            /* margin-right: 5px; */
+        }
+
+        .input-container .placeholders {
+            /* color:white; */
+            position: relative;
+            right: 72px;
+            color: black;
+            display: inline-block;
+            width: auto;
+
+            padding: 0px 8px;
+            /* background: white; */
+        }
+
         .suggestionsTwo {
             background: #fff;
             font-size: 14px;
@@ -395,72 +506,61 @@
                                     <option value="Non Running">Non Running</option>
                                 </select>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Length (Ft.)</label>
-                                        <input class="calculate_freight" type="number" id="length_ft" name="length_ft"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Length (In.)</label>
-                                        <input class="" type="number" id="length_in" name="length_in"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Width (Ft.)</label>
-                                        <input class="calculate_freight" type="number" id="width_ft" name="width_ft"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Width (In.)</label>
-                                        <input class="" type="number" id="width_in" name="width_in"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Height (Ft.)</label>
-                                        <input class="calculate_freight" type="number" id="height_ft" name="height_ft"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Height (In.)</label>
-                                        <input class="" type="number" id="height_in" name="height_in"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-form">
-                                        <label class="d-block"> Weight (Lbs.)</label>
-                                        <input class="calculate_freight" type="number" id="weight" name="weight"
-                                            placeholder="" required="" value="0" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions"></ul>
-                                    </div>
-                                </div>
-                                <input type="hidden" name="frieght_class" id="frieght_class" value="">
-                            </div>
+                            <div class="row mb-3">
+
+
+
+
+    <div class="col-md-3">
+
+        <label class="lab-cos">Length</label>
+        <div class="input-container">
+            <input type="number" id="feet-input" class="input-field" placeholder="" min="0" maxlength="3"
+                oninput="limitDigits(this, 3)">
+            <span class="separator">(Ft.)</span>
+            <input type="number" id="inches-input" class="input-field" placeholder="" min="0" max="11" maxlength="2"
+                oninput="limitDigits(this, 2)">
+            <span class="separators">(In.)</span>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+
+        <label class="lab-cos">Width</label>
+        <div class="input-container">
+            <input type="number" id="feet-input1" class="input-field" placeholder="" min="0" maxlength="3"
+                oninput="limitDigits(this, 3)">
+            <span class="separator">(Ft.)</span>
+            <input type="number" id="inches-input1" class="input-field" placeholder="" min="0" max="11" maxlength="2"
+                oninput="limitDigits(this, 2)">
+            <span class="separators">(In.)</span>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+
+        <label class="lab-cos">Height</label>
+        <div class="input-container">
+            <input type="number" id="feet-input2" class="input-field" placeholder="" min="0" maxlength="3"
+                oninput="limitDigits(this, 3)">
+            <span class="separator">(Ft.)</span>
+            <input type="number" id="inches-input2" class="input-field" placeholder="" min="0" max="11" maxlength="2"
+                oninput="limitDigits(this, 2)">
+            <span class="separators">(In.)</span>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+
+        <label class="lab-cos">Weight</label>
+        <div class="input-container1">
+            <input type="" id="feet-input" class="input-field-1" placeholder="" min="0" maxlength="6"
+                oninput="limitDigits(this, 6)">
+            <span class="separators-w">(Lbs.)</span>
+
+        </div>
+    </div>
+</div>
                             <div class="row">
                                 <h4 class="text-white">Additional Services</h4>
                                 <div class="col-md-4">
@@ -522,9 +622,9 @@
                                 </div>
                             </div>
 
-                            <a class="add-car" style="display:none;" id="addVehicleBtn"
+                            <!-- <a class="add-car" style="display:none;" id="addVehicleBtn"
                                 style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                Vehicle</a>
+                                Vehicle</a> -->
 
                             <div id="vehicles-container" style="display:none;">
                             </div>
