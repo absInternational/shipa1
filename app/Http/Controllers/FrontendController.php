@@ -150,4 +150,18 @@ class FrontendController extends Controller
        
         return view('frontend.pages.freighttransport-detail');
     }
+    public function hazmatTransport()
+    {
+        return view('frontend.forms.hazmattransport');
+    }
+
+    public function dryVan()
+    {
+        return view('frontend.forms.dryvan');
+    }
+
+    public function reeferTrucking()
+    {
+        return view('frontend.forms.reefertrucking');
+    }
 }

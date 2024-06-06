@@ -171,15 +171,15 @@
                                                         href="">Freight Transportation</a>
 
                                                     <li>
-                                                        <a class="title" target="_blank" href=""> Hazmat
+                                                        <a class="title" target="_blank" href="{{ route('frontend.forms.hazmattransport') }}" target="_blank"> Hazmat
                                                             Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href=""> Dry Van
+                                                        <a class="title" href="{{ route('frontend.forms.dryvan') }}" target="_blank"> Dry Van
                                                             Transportation</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href=""> Reefer
+                                                        <a class="title" target="_blank" href="{{ route('frontend.forms.reefertrucking') }}"> Reefer
                                                             Trucking</a>
                                                     </li>
                                                     <a class=" mb-3"

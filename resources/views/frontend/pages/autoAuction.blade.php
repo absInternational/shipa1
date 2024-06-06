@@ -148,7 +148,7 @@
                     </div>
                 @endif
                 
-                <span class="dix-1"> </span>
+                <span class="dix-1"> <img src="" alt=""> </span>
         <div class="tj-input-form-car" data-bg-image="">
                 <h4 class="title text-center">Instant Car Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform "

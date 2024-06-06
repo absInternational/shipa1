@@ -82,6 +82,11 @@ Route::get('/heavy-transport-detail', [FrontendController::class, 'heavyTranspor
 // Freight Transportation Detail
 Route::get('/Freight-Transportation-Detail', [FrontendController::class, 'freightTransportDetail'])->name('freighttransport-detail');
 
+Route::get('/Hazmat-Transport', [FrontendController::class, 'hazmatTransport'])->name('frontend.forms.hazmattransport');
+
+Route::get('/Dry-Van-Transport', [FrontendController::class, 'dryVan'])->name('frontend.forms.dryvan');
+
+Route::get('/Reefer-Shipping-Transport', [FrontendController::class, 'reeferTrucking'])->name('frontend.forms.reefertrucking');
 
 // order tracking
 Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('track.order');
