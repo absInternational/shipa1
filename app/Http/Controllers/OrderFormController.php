@@ -32,30 +32,32 @@ class OrderFormController extends Controller
     public function getOrderDetails(Request $request)
     {
         $verificationCode = $this->generateVerificationCode();
-        
+
         $this->sendVerificationCodeByEmail($request->input('email'), $verificationCode);
 
-        $id = $request->order_id;
-        $email = $request->email;
-        $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$id}/{$email}");
+        session(['order_id' => $request->order_id]);
+        session(['email' => $request->email]);
+        // $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$id}/{$email}");
 
-        if ($response->successful()) {
-            $responseData = $response->json();
-            $data = $responseData['data'];
-            $ip_address = $responseData['ip'];
+        // if ($response->successful()) {
+        //     $responseData = $response->json();
+        //     $data = $responseData['data'];
+        //     $ip_address = $responseData['ip'];
 
-            return view('partials.order_detail', compact('data', 'ip_address'));
-        } else {
-            $errorMessage = $response->json()['error'] ?? 'Failed to fetch data from API';
-            $statusCode = $response->status();
+        //     return view('partials.order_detail', compact('data', 'ip_address'));
+        // } else {
+        //     $errorMessage = $response->json()['error'] ?? 'Failed to fetch data from API';
+        //     $statusCode = $response->status();
 
-            return response($errorMessage, $statusCode);
-        }
+        //     return response($errorMessage, $statusCode);
+        // }
     }
 
     private function generateVerificationCode()
     {
-        return mt_rand(100000, 999999);
+        $verificationCode = mt_rand(100000, 999999);
+        session(['verification_code' => $verificationCode]);
+        return $verificationCode;
     }
 
     private function sendVerificationCodeByEmail($email, $verificationCode)
@@ -65,15 +67,32 @@ class OrderFormController extends Controller
 
     public function verify(Request $request)
     {
-        $submittedCode = $request->input('verification_code');
+        $submittedCode = $request->input('code');
         $storedCode = $request->session()->get('verification_code');
+        $id = $request->session()->get('order_id');
+        $email = $request->session()->get('email');
 
         if ($submittedCode == $storedCode) {
-            // Code is verified, proceed with your logic
-            // Hide email section and show new section
-            // Redirect or return view accordingly
+            $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$id}/{$email}");
+
+            $request->session()->forget('verification_code');
+            $request->session()->forget('order_id');
+            $request->session()->forget('email');
+
+            if ($response->successful()) {
+                $responseData = $response->json();
+                $data = $responseData['data'];
+                $ip_address = $responseData['ip'];
+
+                return view('partials.order_detail', compact('data', 'ip_address'));
+            } else {
+                $errorMessage = $response->json()['error'] ?? 'Failed to fetch data from API';
+                $statusCode = $response->status();
+
+                return response($errorMessage, $statusCode);
+            }
         } else {
-            // Code verification failed, handle accordingly
+            return response('Invalid verification code', 422);
         }
     }
 

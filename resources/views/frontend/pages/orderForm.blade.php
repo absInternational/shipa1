@@ -339,22 +339,62 @@
 
                 var formData = $('#calculatePriceFrom').serialize();
                 $('.invalid-feedback').hide();
+                $('#all-order-details').html('');
 
                 $.ajax({
                     type: 'POST',
                     url: '{{ route('get.order.details') }}',
                     data: formData,
                     success: function(response) {
-                        $('#all-order-details').html(response);
-                        // $('#all-order-details').load('https://washington.shawntransport.com/email_order/OTIzMTAw/MQ==');
-                        // var encryptvuserid = btoa({{ 1 }});
-                        // var encryptvoderid = btoa($('#order_id').val());
-
-                        // window.location.href =
-                        //     'https://washington.shawntransport.com/email_order/' + encryptvoderid + '/' + encryptvuserid;
+                        // Display SweetAlert input box
+                        Swal.fire({
+                            title: 'Verification Code',
+                            input: 'text',
+                            inputLabel: 'Enter verification code',
+                            showCancelButton: true,
+                            confirmButtonText: 'Verify',
+                            cancelButtonText: 'Close',
+                            preConfirm: (code) => {
+                                if (!code) {
+                                    Swal.showValidationMessage(
+                                        'Verification code cannot be empty');
+                                }
+                                return code;
+                            }
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                var verificationCode = result.value;
+                                // Handle verification code
+                                if (verificationCode !== "") {
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "{{ route('verify.email') }}",
+                                        data: {
+                                            code: verificationCode
+                                        },
+                                        headers: {
+                                            'X-CSRF-TOKEN': csrfToken
+                                        },
+                                        success: function(response) {
+                                            $('#all-order-details').html(
+                                                response);
+                                        },
+                                        error: function(xhr, status, error) {
+                                            console.error(xhr.responseText);
+                                            console.log('das3214');
+                                            $('.invalid-feedback').html(xhr
+                                                .responseText);
+                                            $('.invalid-feedback').show();
+                                        }
+                                    });
+                                } else {
+                                    alert("Please enter the verification code.");
+                                }
+                            }
+                        });
                     },
                     error: function(xhr, status, error) {
-                        $('#all-order-details').html('');
+                        // $('#all-order-details').html('');
                         var errorMessage = xhr.responseText;
                         $('.invalid-feedback').html(errorMessage);
                         $('.invalid-feedback').show();
@@ -373,11 +413,11 @@
                     data: formData,
                     success: function(response) {
                         console.log('response.message', response.message);
-                        $('#all-order-details').html('');
+                        // $('#all-order-details').html('');
                         $('#all-order-details').html(response);
                     },
                     error: function(xhr, status, error) {
-                        $('#all-order-details').html('');
+                        // $('#all-order-details').html('');
                         var errorMessage = xhr.responseText;
                         $('.invalid-feedback').html(errorMessage);
                         $('.invalid-feedback').show();
@@ -406,7 +446,7 @@
                         $('#calculatePriceFrom')[0].reset();
                     },
                     error: function(xhr, status, error) {
-                        $('#all-order-details').html('');
+                        // $('#all-order-details').html('');
                         var errorMessage = xhr.responseText;
                         $('.invalid-feedback').html(errorMessage);
                         $('.invalid-feedback').show();

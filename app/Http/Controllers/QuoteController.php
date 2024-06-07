@@ -64,8 +64,8 @@ class QuoteController extends Controller
         $blind_shipment = $request->input('blind_shipment', null);
         $vehicle_opt = $request->input('vehicle_opt', null);
         $frieght_class = $request->input('frieght_class', null);
-        $image = $request->file('image');
         $ip = $request->ip();
+        $source = 'ShipA1';
 
         $originValues = explode(',', $originData);
         $origin_zip = isset($originValues[2]) ? trim($originValues[2]) : null;
@@ -174,10 +174,15 @@ class QuoteController extends Controller
             'make' => $make,
             'model' => $model,
             'frieght_class' => $frieght_class,
+            'source' => $source,
         ];
 
         if ($request->hasFile('image')) {
-            $post_array['image'] = $request->file('image');
+            $imagePath = $this->uploadImage('quoteForm', $request->file('image'));
+            $image = 'https://blog.shipa1.daydispatch.com/public/' . $imagePath;
+            $post_array['image'] = $image;
+            // dd($image);
+
         }
 
         // dd($request->toArray(), $post_array);
