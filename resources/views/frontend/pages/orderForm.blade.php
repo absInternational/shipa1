@@ -334,84 +334,12 @@
 
             var csrfToken = $('meta[name="csrf-token"]').attr('content');
 
-            // $('#calculatePriceFrom').submit(function(event) {
-            //     event.preventDefault();
-
-            //     var formData = $('#calculatePriceFrom').serialize();
-            //     $('.invalid-feedback').hide();
-
-            //     $.ajax({
-            //         type: 'POST',
-            //         url: '{{ route('get.order.details') }}',
-            //         data: formData,
-            //         success: function(response) {
-            //             // $('#all-order-details').html(response);
-            //     $('#verificationModal').modal('show');
-            //             var verificationCode = prompt("Please enter the verification code:");
-
-            //             if (verificationCode !== null && verificationCode !== "") {
-            //                 $.ajax({
-            //                     type: "POST",
-            //                     url: "{{ route('verify.email') }}",
-            //                     data: {
-            //                         code: verificationCode
-            //                     },
-            //                     headers: {
-            //                         'X-CSRF-TOKEN': csrfToken
-            //                     },
-            //                     success: function(response) {
-            //                         $('#all-order-details').html(response);
-            //                     },
-            //                     error: function(xhr, status, error) {
-            //                         console.error(xhr.responseText);
-            //                         console.log('das3214');
-            //                         $('.invalid-feedback').html(xhr.responseText);
-            //                         $('.invalid-feedback').show();
-            //                     }
-            //                 });
-            //             }
-            //             // $('#all-order-details').load('https://washington.shawntransport.com/email_order/OTIzMTAw/MQ==');
-            //             // var encryptvuserid = btoa({{ 1 }});
-            //             // var encryptvoderid = btoa($('#order_id').val());
-
-            //             // window.location.href =
-            //             //     'https://washington.shawntransport.com/email_order/' + encryptvoderid + '/' + encryptvuserid;
-            //         },
-            //         error: function(xhr, status, error) {
-            //             $('#all-order-details').html('');
-            //             var errorMessage = xhr.responseText;
-            //             $('.invalid-feedback').html(errorMessage);
-            //             $('.invalid-feedback').show();
-            //         }
-            //     });
-            // });
-            // $('#calculatePriceFrom').submit(function(event) {
-            //     event.preventDefault();
-
-            //     var formData = $('#calculatePriceFrom').serialize();
-            //     $('.invalid-feedback').hide();
-
-            //     $.ajax({
-            //         type: 'POST',
-            //         url: '{{ route('get.order.details') }}',
-            //         data: formData,
-            //         success: function(response) {
-            //             $('#verificationModal').modal('show');
-            //         },
-            //         error: function(xhr, status, error) {
-            //             $('#all-order-details').html('');
-            //             var errorMessage = xhr.responseText;
-            //             $('.invalid-feedback').html(errorMessage);
-            //             $('.invalid-feedback').show();
-            //         }
-            //     });
-            // });
-
             $('#calculatePriceFrom').submit(function(event) {
                 event.preventDefault();
 
                 var formData = $('#calculatePriceFrom').serialize();
                 $('.invalid-feedback').hide();
+                $('#all-order-details').html('');
 
                 $.ajax({
                     type: 'POST',
@@ -466,7 +394,7 @@
                         });
                     },
                     error: function(xhr, status, error) {
-                        $('#all-order-details').html('');
+                        // $('#all-order-details').html('');
                         var errorMessage = xhr.responseText;
                         $('.invalid-feedback').html(errorMessage);
                         $('.invalid-feedback').show();
@@ -485,11 +413,11 @@
                     data: formData,
                     success: function(response) {
                         console.log('response.message', response.message);
-                        $('#all-order-details').html('');
+                        // $('#all-order-details').html('');
                         $('#all-order-details').html(response);
                     },
                     error: function(xhr, status, error) {
-                        $('#all-order-details').html('');
+                        // $('#all-order-details').html('');
                         var errorMessage = xhr.responseText;
                         $('.invalid-feedback').html(errorMessage);
                         $('.invalid-feedback').show();
@@ -518,7 +446,7 @@
                         $('#calculatePriceFrom')[0].reset();
                     },
                     error: function(xhr, status, error) {
-                        $('#all-order-details').html('');
+                        // $('#all-order-details').html('');
                         var errorMessage = xhr.responseText;
                         $('.invalid-feedback').html(errorMessage);
                         $('.invalid-feedback').show();
