@@ -75,6 +75,10 @@ class OrderFormController extends Controller
         if ($submittedCode == $storedCode) {
             $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$id}/{$email}");
 
+            $request->session()->forget('verification_code');
+            $request->session()->forget('order_id');
+            $request->session()->forget('email');
+
             if ($response->successful()) {
                 $responseData = $response->json();
                 $data = $responseData['data'];
