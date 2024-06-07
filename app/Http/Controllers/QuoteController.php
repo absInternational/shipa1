@@ -64,10 +64,6 @@ class QuoteController extends Controller
         $blind_shipment = $request->input('blind_shipment', null);
         $vehicle_opt = $request->input('vehicle_opt', null);
         $frieght_class = $request->input('frieght_class', null);
-        if ($request->hasFile('image')) {
-            $imagePath = $this->uploadImage('quoteForm', $request->file('image'));
-            $image = 'https://blog.shipa1.daydispatch.com/public/' . $imagePath;
-        }
         $ip = $request->ip();
         $source = 'ShipA1';
 
@@ -179,8 +175,13 @@ class QuoteController extends Controller
             'model' => $model,
             'frieght_class' => $frieght_class,
             'source' => $source,
-            'image' => $image,
         ];
+
+        if ($request->file('image')) {
+            $imagePath = $this->uploadImage('quoteForm', $request->file('image'));
+            $image = 'https://blog.shipa1.daydispatch.com/public/' . $imagePath;
+            $post_array['image'] = $image;
+        }
 
         // dd($request->toArray(), $post_array);
 
