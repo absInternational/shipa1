@@ -149,7 +149,7 @@
 </section>
 <!--========== breadcrumb End ==============-->
 
-<section class="tj-choose-us-section">
+<section class="tj-choose-us-section-excavator">
     <div class="container-flude">
         <div class="row">
             @if (session('success'))
@@ -453,7 +453,7 @@
                         </div>
 
 
-                        <div class="tj-theme-button mt-3">
+                        <div class="tj-theme-button text-center mt-3">
                             <button class="tj-submit-btn" type="submit" value="submit">
                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
                             </button>

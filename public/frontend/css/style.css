@@ -3782,6 +3782,55 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 /* ----------------------------------
     14. Feature CSS
 ------------------------------------ */
+.tj-choose-us-section-excavator {
+    background-color: #000000;
+    background-image: url(../../img/EXCAVATOR.webp);
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 120px;
+    padding-top: 110px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+.tj-choose-us-section-excavator::before {
+    background: rgba(6, 46, 57, 0.7);
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+}
+
+
+.tj-choose-us-section-golfcart {
+    background-color: #000000;
+    background-image: url(../../img/golf-cart.webp);
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 120px;
+    padding-top: 110px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+.tj-choose-us-section-golfcart::before {
+    background: rgba(6, 46, 57, 0.7);
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+}
+
 
 .tj-choose-us-section-freight {
     background-color: #000000;
@@ -4195,7 +4244,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-input-form .nice-select .list {
     width: 100%;
     margin-top: 0;
-    height: 280px;
+    height: 80px;
     overflow: auto;
 }
 

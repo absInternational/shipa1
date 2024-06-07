@@ -71,8 +71,8 @@
     <di class="col-md-6">
         <div class="form-group">
             <input class="form-check-input " type="checkbox" id="modification" name="modification" value="1" required />
-            <label class="form-check-label text-white" for="modification">
-                Modification</label>
+            <label class="form-check-label text-white ms-4" for="modification">
+                Modified?</label>
         </div>
 
         <div class="input-form div-modify_info" style="display: none;">

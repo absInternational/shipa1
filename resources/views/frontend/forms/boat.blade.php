@@ -178,12 +178,7 @@
                         </div>
                         @endif
 
-                        <div class="form-check">
-                            <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
-                                name="boat_on_trailer" value="1" />
-                            <label class="form-check-label text-white" for="boat_on_trailer"> Is your boat on
-                                trailer?</label>
-                        </div>
+                        
 
                         <div class="input-form">
                             <label for="category">Category</label>
@@ -202,7 +197,7 @@
 
                         <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
 
-                        <div class="row mt-3">
+                        <div class="row">
                             <div class="col-md-4">
                                 <div class="input-form">
                                     <label class="d-block"> Your Name:</label>
@@ -223,6 +218,27 @@
                                     <input type="email" id="email" name="email" placeholder="Your Email Address"
                                         required="" />
                                     <small id="errEmail" class="err-style"></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block"> Pickup Location:</label>
+                                    <input type="text" id="pickup-location" name="origin"
+                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                    <small id="errOLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block"> Delivery Location:</label>
+                                    <input type="text" id="delivery-location" name="destination"
+                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                    <small id="errDLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
                                 </div>
                             </div>
                         </div>
@@ -269,26 +285,7 @@
                         </div>
 
 
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block"> Pickup Location:</label>
-                                    <input type="text" id="pickup-location" name="origin"
-                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                    <small id="errOLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block"> Delivery Location:</label>
-                                    <input type="text" id="delivery-location" name="destination"
-                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                    <small id="errDLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <div class="row mb-3">
                             <div class="col-md-6">
@@ -376,7 +373,12 @@
 
                 </div>
 
-
+                <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="boat_on_trailer"
+                                name="boat_on_trailer" value="1" />
+                            <label class="form-check-label text-white" for="boat_on_trailer"> Is your boat on
+                                trailer?</label>
+                        </div>
                         <div class="row">
                             <div class="col-md-6">
 
@@ -405,7 +407,7 @@
                                 <div class="form-group mb-3">
                                     <input class="form-check-input" type="checkbox" id="modification"
                                         name="modification" value="1" />
-                                    <label class="form-check-label text-white" for="modification"> Modification</label>
+                                    <label class="form-check-label text-white ms-4" for="modification"> Modified?</label>
                                 </div>
 
                                 <div class="input-form div-modify_info" style="display: none;">
@@ -424,7 +426,7 @@
                         </div>
 
 
-                        <div class="tj-theme-button mt-3">
+                        <div class="tj-theme-button text-center mt-3">
                             <button class="tj-submit-btn" type="submit" value="submit">
                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
                             </button>

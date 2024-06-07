@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <style>
+    <!-- <style>
         .suggestionsTwo {
             background: #fff;
             font-size: 14px;
@@ -25,7 +25,7 @@
             padding: 0px !important;
             padding-left: 10px !important;
         }
-    </style>
+    </style> -->
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -174,9 +174,9 @@
                             <div id="vehicles-container">
                             </div>
 
-                            <div class="row mb-3">
+<div class="row mb-3">
     <div class="col-md-6">
-        <div class="form-group">
+        <div class="form-group ">
             <label for="trailer_type" class="text-white">Select Trailer
                 Type</label>
             <select class="form-control" id="trailer_type" name="trailer_type">

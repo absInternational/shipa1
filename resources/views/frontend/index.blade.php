@@ -575,7 +575,7 @@
 
                     
 
-    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
+<form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
                     @csrf
                         @if ($errors->any())
                         <div class="alert alert-danger">
@@ -721,7 +721,7 @@
                 </div>
             </div>
             
-    </form>
+</form>
 
         
            
@@ -1114,6 +1114,15 @@
     
 
 
+
+    <script>
+    $(document).ready(function() {
+        $('#example-multiple').select2();
+    });
+    $(document).ready(function() {
+        $('#example-multiple-2').select2();
+    });
+</script>
 
     <script>
         $(document).ready(function() {
