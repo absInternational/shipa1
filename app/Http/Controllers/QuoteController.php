@@ -181,7 +181,7 @@ class QuoteController extends Controller
             $imagePath = $this->uploadImage('quoteForm', $request->file('image'));
             $image = 'https://blog.shipa1.daydispatch.com/public/' . $imagePath;
             $post_array['image'] = $image;
-            dd($image);
+            // dd($image);
         }
 
         dd($request->toArray(), $post_array);
