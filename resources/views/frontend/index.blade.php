@@ -268,7 +268,7 @@
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h1>
                             <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                                 customers and seeks your trust in return of our services.
@@ -285,9 +285,9 @@
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h1>
                             <div class="slider-desc">
-                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                ShipA1 has pledged to provide all-in-one Heavy Equipment transportation solutions to all its
                                 customers and seeks your trust in return of our services.
                             </div>
                             <div class="tj-theme-button">
@@ -302,9 +302,9 @@
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING & LOGISTICS SERVICES</h1>
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>
                             <div class="slider-desc">
-                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its
                                 customers and seeks your trust in return of our services.
                             </div>
                             <div class="tj-theme-button">
