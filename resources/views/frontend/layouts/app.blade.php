@@ -279,26 +279,83 @@
                 });
             });
         });
+        
 
-        function previewImage(event) {
-            var input = event.target;
-            var imagePreview = document.getElementById('imagePreview');
 
-            if (input.files && input.files[0]) {
+        // function previewImage(event) {
+        //     var input = event.target;
+        //     var imagePreview = document.getElementById('imagePreview');
+
+        //     if (input.files && input.files[0]) {
+        //         var reader = new FileReader();
+
+        //         reader.onload = function(e) {
+        //             imagePreview.src = e.target.result;
+        //             imagePreview.style.display = 'block';
+        //         }
+
+        //         reader.readAsDataURL(input.files[0]);
+        //     } else {
+        //         imagePreview.src = '#';
+        //         imagePreview.style.display = 'none';
+        //     }
+        // }
+    </script>
+
+<script>
+    let selectedFiles = []; // Store selected files
+
+function previewImages(event) {
+    var input = event.target;
+    var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+
+    if (input.files) {
+        Array.from(input.files).forEach(file => {
+            // Check if the file is already in selectedFiles to avoid duplicates
+            if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
+                selectedFiles.push(file);
                 var reader = new FileReader();
 
                 reader.onload = function(e) {
-                    imagePreview.src = e.target.result;
-                    imagePreview.style.display = 'block';
+                    var previewElement = document.createElement('div');
+                    previewElement.classList.add('image-preview');
+                    previewElement.innerHTML = `
+                        <img src="${e.target.result}" alt="Image Preview">
+                        <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
+                    `;
+                    imagePreviewContainer.appendChild(previewElement);
                 }
 
-                reader.readAsDataURL(input.files[0]);
-            } else {
-                imagePreview.src = '#';
-                imagePreview.style.display = 'none';
+                reader.readAsDataURL(file);
             }
+        });
+    }
+}
+
+function removeImage(name, size) {
+    var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+    selectedFiles = selectedFiles.filter(file => !(file.name === name && file.size === size));
+
+    // Clear container and re-render previews
+    imagePreviewContainer.innerHTML = '';
+    selectedFiles.forEach(file => {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            var previewElement = document.createElement('div');
+            previewElement.classList.add('image-preview');
+            previewElement.innerHTML = `
+                <img src="${e.target.result}" alt="Image Preview">
+                <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
+            `;
+            imagePreviewContainer.appendChild(previewElement);
         }
-    </script>
+
+        reader.readAsDataURL(file);
+    });
+}
+</script>
+
 </body>
 
 </html>

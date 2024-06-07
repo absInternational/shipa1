@@ -3,6 +3,31 @@
 @section('content')
 
     <style>
+.image-preview-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-preview {
+            position: relative;
+            display: inline-block;
+        }
+        .image-preview img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .remove-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
 .lab-cos {
             font-size: 15px;
             font-weight: 500;
@@ -498,8 +523,10 @@
                             </div>
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
+                                <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
+    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
+                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
                            
                             <div class="form-group">
