@@ -177,7 +177,7 @@ class QuoteController extends Controller
             'source' => $source,
         ];
 
-        if ($request->file('image')) {
+        if ($request->hasFile('image')) {
             $imagePath = $this->uploadImage('quoteForm', $request->file('image'));
             $image = 'https://blog.shipa1.daydispatch.com/public/' . $imagePath;
             $post_array['image'] = $image;
