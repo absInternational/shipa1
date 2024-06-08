@@ -435,7 +435,7 @@
                         </div>
 
 
-                        <div class="input-form mt-3">
+                        <div class="input-form">
                             <label class="d-block text-white"> Image:</label>
                             <input class="form-control image_input" type="file" id="image" name="image"
                                 placeholder="Upload File" />

@@ -203,7 +203,7 @@
     </section>
     <!--========== breadcrumb End ==============-->
 
-    <section class="tj-choose-us-section">
+    <section class="tj-choose-us-section-hazmat">
         <div class="container-flude">
             <div class="row">
                 @if (session('success'))
@@ -232,7 +232,8 @@
                                     </ul>
                                 </div>
                             @endif
-                            <div class="input-form">
+                            <div class="row">
+                               <div class="input-form">
                                 <label for="category">Category</label>
                                 <select class="form-control" id="category" name="category">
                                     <option value="" disabled selected>Select</option>
@@ -242,30 +243,13 @@
                                     <option value="LTL NEW GOODS">LTL NEW GOODS</option>
                                     <option value="FTL FULL TRUCK LOAD">FTL FULL TRUCK LOAD</option>
                                 </select>
+                               </div>
                             </div>
-                            <br>
-                            <br>
+                            
+                            
+                            
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" value="1" />
-                                <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                    Auction?</label>
-                            </div>
-
-                            <div class="input-form div-link mt-3" style="display: none;">
-                                <label class="d-block"> Enter Link:</label>
-                                <input class="form-control" type="url" id="link" name="link"
-                                    placeholder="Enter Link" />
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
-                                    name="boat_on_trailer" value="1" />
-                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your freight already on
-                                    a
-                                    trailer?</label>
-                            </div>
+                            
                             <div class="row mt-3">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -438,16 +422,56 @@
                                 </div>
                             </div>
 
-                            <div class="form-check mt-3">
-                                <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="hazardous"> Hazardous</label>
-                            </div>
-                            <div class="form-check">
+                        <div class="row">
+                              <div class="col-md-6">   
+                              <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="stackable" name="stackable"
                                     value="1" />
                                 <label class="form-check-label text-white" for="stackable"> Stackable</label>
                             </div>
+                               </div>
+                               
+                               <div class="col-md-6">  
+                               <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="boat_on_trailer"
+                                    name="boat_on_trailer" value="1" />
+                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your freight already on
+                                    a
+                                    trailer?</label>
+                              </div>
+                              
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                              <div class="col-md-6"> 
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
+                                    value="1" />
+                                <label class="form-check-label text-white" for="hazardous"> Hazardous</label>
+                             </div>
+                              </div>
+                              <div class="col-md-6"> 
+
+                              
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                    name="available_at_auction" value="1" />
+                                <label class="form-check-label text-white" for="available_at_auction"> Available at
+                                    Auction?</label>
+                            </div>
+
+                            <div class="input-form div-link mt-3" style="display: none;">
+                                <label class="d-block"> Enter Link:</label>
+                                <input class="form-control" type="url" id="link" name="link"
+                                    placeholder="Enter Link" />
+                            </div>
+                            </div>
+                            </div>
+
+                            
+                            
                             <div class="row mt-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -521,7 +545,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-form mt-3">
+                            <div class="input-form ">
                                 <label class="d-block" class="text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
     <div class="image-preview-container" id="imagePreviewContainer"></div>
