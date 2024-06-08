@@ -820,6 +820,16 @@
                 </div>
             </div>
             <div class="tj-project-item">
+                <img src="{{ asset('frontend/images/project/4.webp') }}" alt="Image" />
+                <div class="arrow-icon">
+                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                </div>
+                <div class="tj-project-content">
+                    <span class="sub-title"> ATV/UTV</span>
+                    <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
+                </div>
+            </div>
+            <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
@@ -850,7 +860,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/3.webp') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
@@ -860,7 +870,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/8.webp') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>

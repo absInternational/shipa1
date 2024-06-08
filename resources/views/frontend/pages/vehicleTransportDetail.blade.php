@@ -639,7 +639,7 @@
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/9.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
@@ -681,7 +681,7 @@
             </div>
 
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/4.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>

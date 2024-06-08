@@ -413,7 +413,7 @@
                             
 
                             
-                            <div class="row mt-3">
+                            <!-- <div class="row mt-3">
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Your Name:</label>
@@ -438,7 +438,7 @@
                                         <small id="errEmail" class="err-style"></small>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- <div class="form-group" style="display:none;">
                                 <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                 <select class="form-control" id="trailer_type" name="trailer_type">
@@ -813,7 +813,7 @@
                             </div> -->
 
 
-                <label class="error-message" id="tabSelector-error">This field is required.</label>
+                <!-- <label class="error-message" id="tabSelector-error">This field is required.</label> -->
 
                 <div class="tab-content mt-3" id="additionalContent"></div>
             </div>
@@ -1041,7 +1041,7 @@
 
     <!--=========== Cta Section Start =========-->
     <section class="tj-cta-section icon-animate">
-        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-auto-aucation.webp') }}"></div>
+        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/Auto-Transport.webp') }}"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -1203,7 +1203,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/7.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
@@ -1213,7 +1213,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/5.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
@@ -1665,12 +1665,12 @@
     $('#step2_next').click(function() {
         var isValid = true;
 
-        if (!$('#tabSelector').val()) {
-            showError('tabSelector', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('tabSelector');
-        }
+        // if (!$('#tabSelector').val()) {
+        //     showError('tabSelector', 'This field is required.');
+        //     isValid = false;
+        // } else {
+        //     hideError('tabSelector');
+        // }
 
         if (isValid) {
             $('#step2').hide();
