@@ -251,6 +251,7 @@
             display: none;
             color: red;
         }
+
         .error-field {
             border: 2px solid red;
         }
@@ -268,7 +269,7 @@
                             <span class="sub-title active-shape2">Freight Shipping</span>
                             <h2 class="title text-white">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h2>
                             <p class="desc text-white">
-                            ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its
+                                ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its
                                 customers and seeks your trust in return of our services.
                             </p>
                         </div>
@@ -295,569 +296,607 @@
                     </div>
                 </div>
                 @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-            @endif
-            @if (session('error'))
-            <div class="alert alert-error">
-                {{ session('error') }}
-            </div>
-            @endif
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if (session('error'))
+                    <div class="alert alert-error">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <div class="col-lg-6 mt-4" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form mt-4 w-100" data-bg-image="">
 
-        
-                    <!-- <h4 class="title text-center">Instant Freight Quote!</h4> -->
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
-                    @csrf
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
+
+                        <!-- <h4 class="title text-center">Instant Freight Quote!</h4> -->
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                            enctype="multipart/form-data">
+                            @csrf
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <div class="container mt-2">
+                                <!-- Step 1: Moving From/To -->
+                                <div class="route_quote_info" id="step1">
+                                    <div class="row">
+                                        <h4 class="title text-center">Quote Request!</h4>
+                                        <div class="col-xl-12 col-lg-12 mb-4">
+                                            <h6 class="text-white">Moving From</h6>
+                                            <label class="text-white mb-2">Where Are You Moving From?</label>
+                                            <div class="single-input-field">
+                                                <input class="form-control" type="text" id="pickup-location"
+                                                    placeholder="Enter City or ZipCode" name="From_ZipCode" required>
+                                                <ul class="suggestions suggestionsTwo"></ul>
+                                                <label class="error-message" id="pickup-location-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-12 col-lg-12 mb-4">
+                                            <h6 class="text-white">Moving To</h6>
+                                            <label class="text-white mb-2">Where Are You Moving To?</label>
+                                            <div class="single-input-field">
+                                                <input class="form-control" type="text" id="delivery-location"
+                                                    placeholder="Enter City or ZipCode" name="To_ZipCode" required>
+                                                <ul class="suggestions suggestionsTwo"></ul>
+                                                <label class="error-message" id="delivery-location-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="price__cta-btn text-center">
+                                                <button class="tj-submit-btn" type="button" id="step1_next">
+                                                    Next <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Step 2: Vehicle Information -->
+                                <div class="vehicle_quote_info" id="step2" style="display: none;">
+                                    <div class="row">
+                                        <h4 class="title text-center">FREIGHT INFORMATION</h4>
+                                        <!-- <select id="tabSelector" class="" aria-label="Tab selector" required>
+                        <option value=""  disabled>Select a Vehicle</option>
+                        <option value="Atv">Atv Utv Transport</option>
+                        <option value="Boat-Transport">Boat Transport</option>
+                        <option value="Car">Car</option>
+                        <option value="Freight-Transportation" selected>Freight Transportation</option>
+                        <option value="Golf-Cart">Golf Cart</option>
+                        <option value="Heavy-Equipment">Heavy Equipment</option>
+                        <option value="Motorcycle">Motorcycle</option>
+                        <option value="RV-Transport">RV Transport</option>
+                    </select> -->
+
+                                        <div class="input-form">
+                                            <label for="category">Category</label>
+                                            <select class="form-control" id="category" name="category">
+                                                <option value="" disabled selected>Select</option>
+                                                <option value="LTL USED COMMERCIAL GOODS">LTL USED COMMERCIAL GOODS
+                                                </option>
+                                                <option value="LTL NEW COMMERCIAL GOODS">LTL NEW COMMERCIAL GOODS</option>
+                                                <option value="LTL USED GOODS">LTL USED GOODS</option>
+                                                <option value="LTL NEW GOODS">LTL NEW GOODS</option>
+                                                <option value="FTL FULL TRUCK LOAD">FTL FULL TRUCK LOAD</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="available_at_auction" name="available_at_auction"
+                                                        value="1" />
+                                                    <label class="form-check-label text-white" for="available_at_auction">
+                                                        Available at
+                                                        Auction?</label>
+                                                </div>
+
+                                                <div class="input-form div-link mt-3" style="display: none;">
+                                                    <label class="d-block"> Enter Link:</label>
+                                                    <input class="form-control" type="url" id="link"
+                                                        name="link" placeholder="Enter Link" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="boat_on_trailer"
+                                                        name="boat_on_trailer" value="1" />
+                                                    <label class="form-check-label text-white" for="boat_on_trailer"> Is
+                                                        your freight already on
+                                                        a
+                                                        trailer?</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <!-- <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <div class="input-form">
+                                            <label class="d-block"> Your Name:</label>
+                                            <input type="text" id="name" name="name" placeholder="Full Name"
+                                                required="" />
+                                            <small id="errName" class="err-style"></small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-form">
+                                            <label class="d-block"> Phone:</label>
+                                            <input type="text" id="phone" name="phone" placeholder="Phone Number"
+                                                required="" />
+                                            <small id="errPhone" class="err-style"></small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-form">
+                                            <label class="d-block"> Email Address:</label>
+                                            <input type="email" id="email" name="email" placeholder="Email Address"
+                                                required="" />
+                                            <small id="errEmail" class="err-style"></small>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                        <!-- <div class="form-group" style="display:none;">
+                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                    <select class="form-control" id="trailer_type" name="trailer_type">
+                                        <option value="RGN" selected>RGN</option>
+                                        <option value="Stepdeck">Stepdeck</option>
+                                        <option value="Flatbed">Flatbed</option>
+                                        <option value="Hotshot">Hotshot</option>
+                                        <option value="Landoll">Landoll</option>
+                                    </select>
+                                </div> -->
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="input-form">
+                                                    <label class="d-block">Commodity Detail:</label>
+                                                    <input type="text" id="commodity_detail" name="commodity_detail"
+                                                        placeholder="Commodity Detail" required="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form">
+                                                    <label class="d-block">Handling Unit:</label>
+                                                    <select class="form-control" id="handling_unit" name="handling_unit">
+                                                        <option value="" selected disabled>Select</option>
+                                                        <option value="Pallet">Pallet</option>
+                                                        <option value="Crate">Crate</option>
+                                                        <option value="Box">Box</option>
+                                                        <option value="Bag">Bag</option>
+                                                        <option value="Bale">Bale</option>
+                                                        <option value="Bundle">Bundle</option>
+                                                        <option value="Can">Can</option>
+                                                        <option value="Carton">Carton</option>
+                                                        <option value="Case">Case</option>
+                                                        <option value="Coil">Coil</option>
+                                                        <option value="Cylinder">Cylinder</option>
+                                                        <option value="Drum">Drum</option>
+                                                        <option value="Loose">Loose</option>
+                                                        <option value="Pail">Pail</option>
+                                                        <option value="Reel">Reel</option>
+                                                        <option value="Roll">Roll</option>
+                                                        <option value="Pipe">Pipe</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form">
+                                                    <label class="d-block">Commodity Unit:</label>
+                                                    <input type="number" id="commodity_unit" name="commodity_unit"
+                                                        placeholder="Unit" required="" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-form">
+                                                    <label class="d-block">Trailer Specification</label>
+                                                    <select id="example-multiple"
+                                                        class="js-example-basic-multiple sel-mul" name="states[]"
+                                                        multiple="multiple" style="width: 100%">
+
+                                                        <option value="8">VAN (V)</option>
+                                                        <option value="9">REEFER (RE)</option>
+                                                        <option value="10">FLATBED (F)</option>
+                                                        <option value="11">STEP DECK (SD)</option>
+                                                        <option value="12">REMOVABLE GOOSENECK (RGN) </option>
+                                                        <option value="13">CONESTOGA (CS)</option>
+                                                        <option value="14">CONTAINER / DRAYAGE (C)</option>
+                                                        <option value="15">TRUCK (T)</option>
+                                                        <option value="16">HAZMAT (hazardous materials)</option>
+                                                        <option value="17">POWER ONLY (PO)</option>
+                                                        <option value="18">HOT SHOT (HS)</option>
+                                                        <option value="19">LOWBOY (LB)</option>
+                                                        <option value="20">ENDUMP (ED)</option>
+                                                        <option value="21">LANDOLL (LD)</option>
+                                                        <option value="22">PARTIAL (PT)</option>
+                                                        <option value="23">20ft container</option>
+                                                        <option value="24">40ft container</option>
+                                                        <option value="25">48ft container</option>
+                                                        <option value="26">53ft container</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-form">
+                                                    <label class="d-block">Equipment Type</label>
+                                                    <select id="example-multiple-2"
+                                                        class="js-example-basic-multiple sel-mul" name="states[]"
+                                                        multiple="multiple" style="width: 100%">
+
+
+                                                        <option value="68">Air Ride(A)</option>
+                                                        <option value="69">Blanket Wrap (B)</option>
+                                                        <option value="70">B-Train (BT)</option>
+                                                        <option value="71">Chain(CH)</option>
+                                                        <option value="72">Chassis (CS)</option>
+                                                        <option value="73">Conestoga(CO)</option>
+                                                        <option value="74">Curtain(C)</option>
+                                                        <option value="75">Double(2)</option>
+                                                        <option value="76">Extendable (E)</option>
+                                                        <option value="77">E-Track (ET)</option>
+                                                        <option value="78">Hazmat (Z)</option>
+                                                        <option value="79">Hot Shot (HS)</option>
+                                                        <option value="80">Insulated (N)</option>
+                                                        <option value="81">Lift Gate (LG)</option>
+                                                        <option value="82">Load Out (LO)</option>
+                                                        <option value="83">Load Ramp (LR)</option>
+                                                        <option value="84">Moving (MV)</option>
+                                                        <option value="85">Open Top (OT)</option>
+                                                        <option value="86">Oversized (O)</option>
+                                                        <option value="87">Pallet Exchange (X)</option>
+                                                        <option value="88">Side Kit (S)</option>
+                                                        <option value="89">Tarp(T)</option>
+                                                        <option value="90">Team Driver(M)</option>
+                                                        <option value="91">Temp Control (TC)</option>
+                                                        <option value="92">Triple (3)</option>
+                                                        <option value="93">Vented (V)</option>
+                                                        <option value="94">Walking Floor (WF)</option>
+
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="hazardous"
+                                                        name="hazardous" value="1" />
+                                                    <label class="form-check-label text-white" for="hazardous">
+                                                        Hazardous</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="stackable"
+                                                        name="stackable" value="1" />
+                                                    <label class="form-check-label text-white" for="stackable">
+                                                        Stackable</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="pick_up_services" class="text-white">Pickup
+                                                        Services</label>
+                                                    <select class="form-control" id="pick_up_services"
+                                                        name="pick_up_services">
+                                                        <option value="" disabled selected>Select</option>
+                                                        <option value="Construction / Utility">Construction / Utility
+                                                        </option>
+                                                        <option value="Container Station">Container Station</option>
+                                                        <option value="Exhibition">Exhibition</option>
+                                                        <option value="Inside Pickup">Inside Pickup</option>
+                                                        <option value="Lift Gate Service">Lift Gate Service</option>
+                                                        <option value="Residential">Residential</option>
+                                                        <option value="Single Shipment">Single Shipment</option>
+                                                        <option value="Sorting / Segregation">Sorting / Segregation
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="deliver_services" class="text-white">Deliver
+                                                        Services</label>
+                                                    <select class="form-control" id="deliver_services"
+                                                        name="deliver_services">
+                                                        <option value="" disabled selected>Select</option>
+                                                        <option value="After Business Hours Delivery">After Business Hours
+                                                            Delivery
+                                                        </option>
+                                                        <option value="Construction / Utility">Construction / Utility
+                                                        </option>
+                                                        <option value="Appointment">Appointment</option>
+                                                        <option value="Container Station">Container Station</option>
+                                                        <option value="Exhibition">Exhibition</option>
+                                                        <option value="In Bond Freight">In Bond Freight</option>
+                                                        <option value="In Bond TIR Caret">In Bond TIR Caret</option>
+                                                        <option value="Inside - Same Level as Delivery Vehicle">Inside -
+                                                            Same Level as
+                                                            Delivery Vehicle</option>
+                                                        <option value="Lift Gate Service">Lift Gate Service</option>
+                                                        <option value="Residential">Residential</option>
+                                                        <option value="Mine / Govt / Airport">Mine / Govt / Airport
+                                                        </option>
+                                                        <option value="Notification Prior Delivery">Notification Prior
+                                                            Delivery
+                                                        </option>
+                                                        <option value="Delivery appointment required">Delivery appointment
+                                                            required
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-6">
+                                                <div class="input-form">
+                                                    <label class="d-block"> Pickup Date:</label>
+                                                    <input type="date" id="ex_pickup_date" name="ex_pickup_date"
+                                                        required="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-form">
+                                                    <label class="d-block"> Pickup Time:</label>
+                                                    <input type="time" id="ex_pickup_time" name="ex_pickup_time"
+                                                        required="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-form">
+                                                    <label class="d-block"> Delivery Date:</label>
+                                                    <input type="date" id="ex_delivery_date" name="ex_delivery_date"
+                                                        required="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-form">
+                                                    <label class="d-block"> Delivery Time:</label>
+                                                    <input type="time" id="ex_delivery_time" name="ex_delivery_time"
+                                                        required="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-form">
+                                            <label class="d-block" class="text-white"> Image:</label>
+                                            <input class="form-control image_input" type="file" id="image"
+                                                name="image" placeholder="Upload File" />
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-form">
+                                                    <label class="d-block"> Pickup Location:</label>
+                                                    <input type="text" id="pickup-location" name="origin"
+                                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                                    <small id="errOLoc" class="err-loc"></small>
+                                                    <ul class="suggestions suggestionsTwo"></ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-form">
+                                                    <label class="d-block"> Delivery Location:</label>
+                                                    <input type="text" id="delivery-location" name="destination"
+                                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                                    <small id="errDLoc" class="err-loc"></small>
+                                                    <ul class="suggestions suggestionsTwo"></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="condition" class="text-white">Condition</label>
+                                            <select class="form-control" id="condition" name="condition">
+                                                <option value="Running" selected>Running</option>
+                                                <option value="Non Running">Non Running</option>
+                                            </select>
+                                        </div>
+                                        <div class="row mb-3 mt-3">
+                                            <div class="col-md-4">
+
+                                                <label class="lab-cos">Length</label>
+                                                <div class="input-container">
+                                                    <input type="number" id="feet-input" class="input-field"
+                                                        placeholder="" min="0" maxlength="3"
+                                                        oninput="limitDigits(this, 3)">
+                                                    <span class="separator">(Ft.)</span>
+                                                    <input type="number" id="inches-input" class="input-field"
+                                                        placeholder="" min="0" max="11" maxlength="2"
+                                                        oninput="limitDigits(this, 2)">
+                                                    <span class="separators">(In.)</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+
+                                                <label class="lab-cos">Width</label>
+                                                <div class="input-container">
+                                                    <input type="number" id="feet-input1" class="input-field"
+                                                        placeholder="" min="0" maxlength="3"
+                                                        oninput="limitDigits(this, 3)">
+                                                    <span class="separator">(Ft.)</span>
+                                                    <input type="number" id="inches-input1" class="input-field"
+                                                        placeholder="" min="0" max="11" maxlength="2"
+                                                        oninput="limitDigits(this, 2)">
+                                                    <span class="separators">(In.)</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+
+                                                <label class="lab-cos">Height</label>
+                                                <div class="input-container">
+                                                    <input type="number" id="feet-input2" class="input-field"
+                                                        placeholder="" min="0" maxlength="3"
+                                                        oninput="limitDigits(this, 3)">
+                                                    <span class="separator">(Ft.)</span>
+                                                    <input type="number" id="inches-input2" class="input-field"
+                                                        placeholder="" min="0" max="11" maxlength="2"
+                                                        oninput="limitDigits(this, 2)">
+                                                    <span class="separators">(In.)</span>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+
+                                                <label class="lab-cos">Weight</label>
+                                                <div class="input-container1">
+                                                    <input type="" id="feet-input" class="input-field-1"
+                                                        placeholder="" min="0" maxlength="6"
+                                                        oninput="limitDigits(this, 6)">
+                                                    <span class="separators-w">(Lbs.)</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <h4 class="text-white">Additional Services</h4>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="protect_from_freezing" name="protect_from_freezing"
+                                                        value="1" />
+                                                    <label class="form-check-label text-white" for="protect_from_freezing"
+                                                        style="font-size: 14px;"> Protect from freezing</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="sort_segregate"
+                                                        name="sort_segregate" value="1" />
+                                                    <label class="form-check-label text-white" for="sort_segregate"
+                                                        style="font-size: 14px;"> Sort & Segregate</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="blind_shipment"
+                                                        name="blind_shipment" value="1" />
+                                                    <label class="form-check-label text-white" for="blind_shipment"
+                                                        style="font-size: 14px;"> Blind Shipment</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row select-bm" style="display:none;">
+                                    <div class="col-md-12 text-center">
+                                        <h4 class="text-white">Vehicle Information</h4>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-form tj-select">
+                                            <label> Year</label>
+                                            <select class="nice-select vehicle-year" name="year[]" id="year">
+                                                <option value="2010" selected>Select Year</option>
+                                                @php
+                                                    $currentYear = date('Y');
+                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                        echo "<option value='$year'>$year</option>";
+                                                    }
+                                                @endphp
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-form tj-select">
+                                            <label>Make</label>
+                                            <input type="text" value="null" id="make" name="make[]"
+                                                placeholder="Enter Make" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-form tj-select vehicle-model-div">
+                                            <label>Model</label>
+                                            <input type="text" id="model" value="null" name="model[]"
+                                                placeholder="Enter Model" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a class="add-car" style="display:none;" id="addVehicleBtn"
+                                    style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                                    Vehicle</a>
+
+                                <div id="vehicles-container" style="display:none;">
+                                </div> -->
+
+
+                                        <!-- <label class="error-message" id="tabSelector-error">This field is required.</label> -->
+
+                                        <div class="tab-content mt-3" id="additionalContent"></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn">
+                                                <button class="tj-submit-btn previous" id="step2_previous">
+                                                    Previous <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn float-end">
+                                                <button class="tj-submit-btn" type="button" id="step2_next">
+                                                    Next <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3: Customer Information -->
+                                <div class="basic_quote_info" id="step3" style="display: none;">
+                                    <div class="row mb-3">
+                                        <h4 class="text-center text-white">Customer Information</h4>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> Your Name:</label>
+                                                <input class="form-control" required name="Custo_Phone" type="tel"
+                                                    placeholder="Customer Name">
+                                                <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
+                                                <label class="error-message" id="Custo_Name-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="col-xl-4 col-lg-4">
+                        <div class="single-input-field">
+                            <label class="d-block text-white"> Phone:</label>
+                            <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
+                            <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Phone">
+                            <label class="error-message" id="Custo_Phone-error">This field is required.</label>
                         </div>
-                        @endif
-<div class="container mt-2">
-        <!-- Step 1: Moving From/To -->
-        <div class="route_quote_info" id="step1">
-            <div class="row">
-                <h4 class="title text-center">Quote Request!</h4>
-                <div class="col-xl-12 col-lg-12 mb-4">
-                    <h6 class="text-white">Moving From</h6>
-                    <label class="text-white mb-2">Where Are You Moving From?</label>
-                    <div class="single-input-field">
-                        <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                        <ul class="suggestions suggestionsTwo"></ul>
-                        <label class="error-message" id="pickup-location-error">This field is required.</label>
-                    </div>
-                </div>
-
-                <div class="col-xl-12 col-lg-12 mb-4">
-                    <h6 class="text-white">Moving To</h6>
-                    <label class="text-white mb-2">Where Are You Moving To?</label>
-                    <div class="single-input-field">
-                        <input class="form-control" type="text" id="delivery-location" placeholder="Enter City or ZipCode" name="To_ZipCode" required>
-                        <ul class="suggestions suggestionsTwo"></ul>
-                        <label class="error-message" id="delivery-location-error">This field is required.</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="price__cta-btn text-center">
-                        <button class="tj-submit-btn" type="button" id="step1_next">
-                            Next <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Step 2: Vehicle Information -->
-        <div class="vehicle_quote_info" id="step2" style="display: none;">
-            <div class="row">
-                <h4 class="title text-center">FREIGHT INFORMATION</h4>
-                <!-- <select id="tabSelector" class="" aria-label="Tab selector" required>
-                    <option value=""  disabled>Select a Vehicle</option>
-                    <option value="Atv">Atv Utv Transport</option>
-                    <option value="Boat-Transport">Boat Transport</option>
-                    <option value="Car">Car</option>
-                    <option value="Freight-Transportation" selected>Freight Transportation</option>
-                    <option value="Golf-Cart">Golf Cart</option>
-                    <option value="Heavy-Equipment">Heavy Equipment</option>
-                    <option value="Motorcycle">Motorcycle</option>
-                    <option value="RV-Transport">RV Transport</option>
-                </select> -->
-
-                <div class="input-form">
-                                <label for="category">Category</label>
-                                <select class="form-control" id="category" name="category">
-                                    <option value="" disabled selected>Select</option>
-                                    <option value="LTL USED COMMERCIAL GOODS">LTL USED COMMERCIAL GOODS</option>
-                                    <option value="LTL NEW COMMERCIAL GOODS">LTL NEW COMMERCIAL GOODS</option>
-                                    <option value="LTL USED GOODS">LTL USED GOODS</option>
-                                    <option value="LTL NEW GOODS">LTL NEW GOODS</option>
-                                    <option value="FTL FULL TRUCK LOAD">FTL FULL TRUCK LOAD</option>
-                                </select>
-                            </div>
-                            
-                            <div class="row">
-                            <div class="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" value="1" />
-                                <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                    Auction?</label>
-                            </div>
-
-                            <div class="input-form div-link mt-3" style="display: none;">
-                                <label class="d-block"> Enter Link:</label>
-                                <input class="form-control" type="url" id="link" name="link"
-                                    placeholder="Enter Link" />
-                            </div>
-                            </div>
-                            <div class="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="boat_on_trailer"
-                                    name="boat_on_trailer" value="1" />
-                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your freight already on
-                                    a
-                                    trailer?</label>
-                            </div>
-
-                            </div>
-                            </div>
-
-                            
-
-                            
-                            <!-- <div class="row mt-3">
-                                <div class="col-md-4">
-                                    <div class="input-form">
-                                        <label class="d-block"> Your Name:</label>
-                                        <input type="text" id="name" name="name" placeholder="Full Name"
-                                            required="" />
-                                        <small id="errName" class="err-style"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form">
-                                        <label class="d-block"> Phone:</label>
-                                        <input type="text" id="phone" name="phone" placeholder="Phone Number"
-                                            required="" />
-                                        <small id="errPhone" class="err-style"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form">
-                                        <label class="d-block"> Email Address:</label>
-                                        <input type="email" id="email" name="email" placeholder="Email Address"
-                                            required="" />
-                                        <small id="errEmail" class="err-style"></small>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <div class="form-group" style="display:none;">
-                                <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                <select class="form-control" id="trailer_type" name="trailer_type">
-                                    <option value="RGN" selected>RGN</option>
-                                    <option value="Stepdeck">Stepdeck</option>
-                                    <option value="Flatbed">Flatbed</option>
-                                    <option value="Hotshot">Hotshot</option>
-                                    <option value="Landoll">Landoll</option>
-                                </select>
-                            </div> -->
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="input-form">
-                                        <label class="d-block">Commodity Detail:</label>
-                                        <input type="text" id="commodity_detail" name="commodity_detail"
-                                            placeholder="Commodity Detail" required="" />
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form">
-                                        <label class="d-block">Handling Unit:</label>
-                                        <select class="form-control" id="handling_unit" name="handling_unit">
-                                            <option value="" selected disabled>Select</option>
-                                            <option value="Pallet">Pallet</option>
-                                            <option value="Crate">Crate</option>
-                                            <option value="Box">Box</option>
-                                            <option value="Bag">Bag</option>
-                                            <option value="Bale">Bale</option>
-                                            <option value="Bundle">Bundle</option>
-                                            <option value="Can">Can</option>
-                                            <option value="Carton">Carton</option>
-                                            <option value="Case">Case</option>
-                                            <option value="Coil">Coil</option>
-                                            <option value="Cylinder">Cylinder</option>
-                                            <option value="Drum">Drum</option>
-                                            <option value="Loose">Loose</option>
-                                            <option value="Pail">Pail</option>
-                                            <option value="Reel">Reel</option>
-                                            <option value="Roll">Roll</option>
-                                            <option value="Pipe">Pipe</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form">
-                                        <label class="d-block">Commodity Unit:</label>
-                                        <input type="number" id="commodity_unit" name="commodity_unit"
-                                            placeholder="Unit" required="" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                <div class="input-form">
-                                <label class="d-block">Trailer Specification</label>
-                                <select id="example-multiple" class="js-example-basic-multiple sel-mul" name="states[]" multiple="multiple" style="width: 100%">
-                                
-                                                <option value="8">VAN (V)</option>
-                                                <option value="9">REEFER (RE)</option>
-                                                <option value="10">FLATBED (F)</option>
-                                                <option value="11">STEP DECK (SD)</option>
-                                                <option value="12">REMOVABLE GOOSENECK (RGN) </option>
-                                                <option value="13">CONESTOGA (CS)</option>
-                                                <option value="14">CONTAINER / DRAYAGE (C)</option>
-                                                <option value="15">TRUCK (T)</option>
-                                                <option value="16">HAZMAT (hazardous materials)</option>
-                                                <option value="17">POWER ONLY (PO)</option>
-                                                <option value="18">HOT SHOT (HS)</option>
-                                                <option value="19">LOWBOY (LB)</option>
-                                                <option value="20">ENDUMP (ED)</option>
-                                                <option value="21">LANDOLL (LD)</option>
-                                                <option value="22">PARTIAL (PT)</option>
-                                                <option value="23">20ft container</option>
-                                                <option value="24">40ft container</option>
-                                                <option value="25">48ft container</option>
-                                                <option value="26">53ft container</option>
-                                      
-                                                  </select>
-                                                  </div>
-                                                  </div>
-                                                  <div class="col-md-6">
-                                                  <div class="input-form">
-                                                  <label class="d-block">Equipment Type</label>
-                                                  <select id="example-multiple-2" class="js-example-basic-multiple sel-mul" name="states[]" multiple="multiple" style="width: 100%">
-                                
-                                
-                                                <option value="68">Air Ride(A)</option>
-                                                <option value="69">Blanket Wrap (B)</option>
-                                                <option value="70">B-Train (BT)</option>
-                                                <option value="71">Chain(CH)</option>
-                                                <option value="72">Chassis (CS)</option>
-                                                <option value="73">Conestoga(CO)</option>
-                                                <option value="74">Curtain(C)</option>
-                                                <option value="75">Double(2)</option>
-                                                <option value="76">Extendable (E)</option>
-                                                <option value="77">E-Track (ET)</option>
-                                                <option value="78">Hazmat (Z)</option>
-                                                <option value="79">Hot Shot (HS)</option>
-                                                <option value="80">Insulated (N)</option>
-                                                <option value="81">Lift Gate (LG)</option>
-                                                <option value="82">Load Out (LO)</option>
-                                                <option value="83">Load Ramp (LR)</option>
-                                                <option value="84">Moving (MV)</option>
-                                                <option value="85">Open Top (OT)</option>
-                                                <option value="86">Oversized (O)</option>
-                                                <option value="87">Pallet Exchange (X)</option>
-                                                <option value="88">Side Kit (S)</option>
-                                                <option value="89">Tarp(T)</option>
-                                                <option value="90">Team Driver(M)</option>
-                                                <option value="91">Temp Control (TC)</option>
-                                                <option value="92">Triple (3)</option>
-                                                <option value="93">Vented (V)</option>
-                                                <option value="94">Walking Floor (WF)</option>
-                                            
-                                      
-                                </select>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="hazardous"> Hazardous</label>
-                            </div>
-                            </div>
-                            <div class="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="stackable" name="stackable"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="stackable"> Stackable</label>
-                            </div>
-                            </div>
-                            </div>
-                            
-                            <div class="row mt-3">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="pick_up_services" class="text-white">Pickup Services</label>
-                                        <select class="form-control" id="pick_up_services" name="pick_up_services">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="Construction / Utility">Construction / Utility</option>
-                                            <option value="Container Station">Container Station</option>
-                                            <option value="Exhibition">Exhibition</option>
-                                            <option value="Inside Pickup">Inside Pickup</option>
-                                            <option value="Lift Gate Service">Lift Gate Service</option>
-                                            <option value="Residential">Residential</option>
-                                            <option value="Single Shipment">Single Shipment</option>
-                                            <option value="Sorting / Segregation">Sorting / Segregation</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="deliver_services" class="text-white">Deliver Services</label>
-                                        <select class="form-control" id="deliver_services" name="deliver_services">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="After Business Hours Delivery">After Business Hours Delivery
-                                            </option>
-                                            <option value="Construction / Utility">Construction / Utility</option>
-                                            <option value="Appointment">Appointment</option>
-                                            <option value="Container Station">Container Station</option>
-                                            <option value="Exhibition">Exhibition</option>
-                                            <option value="In Bond Freight">In Bond Freight</option>
-                                            <option value="In Bond TIR Caret">In Bond TIR Caret</option>
-                                            <option value="Inside - Same Level as Delivery Vehicle">Inside - Same Level as
-                                                Delivery Vehicle</option>
-                                            <option value="Lift Gate Service">Lift Gate Service</option>
-                                            <option value="Residential">Residential</option>
-                                            <option value="Mine / Govt / Airport">Mine / Govt / Airport</option>
-                                            <option value="Notification Prior Delivery">Notification Prior Delivery
-                                            </option>
-                                            <option value="Delivery appointment required">Delivery appointment required
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Pickup Date:</label>
-                                        <input type="date" id="ex_pickup_date" name="ex_pickup_date"
-                                            required="" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Pickup Time:</label>
-                                        <input type="time" id="ex_pickup_time" name="ex_pickup_time"
-                                            required="" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Delivery Date:</label>
-                                        <input type="date" id="ex_delivery_date" name="ex_delivery_date"
-                                            required="" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Delivery Time:</label>
-                                        <input type="time" id="ex_delivery_time" name="ex_delivery_time"
-                                            required="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="input-form">
-                                <label class="d-block" class="text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="condition" class="text-white">Condition</label>
-                                <select class="form-control" id="condition" name="condition">
-                                    <option value="Running" selected>Running</option>
-                                    <option value="Non Running">Non Running</option>
-                                </select>
-                            </div>
-                        <div class="row mb-3 mt-3">
-                            <div class="col-md-4">
-
-                                <label class="lab-cos">Length</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input" class="input-field" placeholder="" min="0"
-                                        maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input" class="input-field" placeholder="" min="0"
-                                        max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-
-                                <label class="lab-cos">Width</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input1" class="input-field" placeholder="" min="0"
-                                        maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input1" class="input-field" placeholder="" min="0"
-                                        max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-
-                                <label class="lab-cos">Height</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input2" class="input-field" placeholder="" min="0"
-                                        maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input2" class="input-field" placeholder="" min="0"
-                                        max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
-                                </div>
-                            </div>
-
-                            
-
-
-
-
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4">
-
-                                <label class="lab-cos">Weight</label>
-                                <div class="input-container1">
-                                  <input type="" id="feet-input" class="input-field-1" placeholder="" min="0"
-                                      maxlength="6" oninput="limitDigits(this, 6)">
-                                  <span class="separators-w">(Lbs.)</span>
-
-                                 </div>
-                            </div>
-                        </div>
-
-                            <div class="row">
-                                <h4 class="text-white">Additional Services</h4>
-                                <div class="col-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="protect_from_freezing"
-                                            name="protect_from_freezing" value="1" />
-                                        <label class="form-check-label text-white" for="protect_from_freezing"
-                                            style="font-size: 14px;"> Protect from freezing</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="sort_segregate"
-                                            name="sort_segregate" value="1" />
-                                        <label class="form-check-label text-white" for="sort_segregate"
-                                            style="font-size: 14px;"> Sort & Segregate</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="blind_shipment"
-                                            name="blind_shipment" value="1" />
-                                        <label class="form-check-label text-white" for="blind_shipment"
-                                            style="font-size: 14px;"> Blind Shipment</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="row select-bm" style="display:none;">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="text-white">Vehicle Information</h4>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label> Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year">
-                                            <option value="2010" selected>Select Year</option>
-                                            @php
-                                                $currentYear = date('Y');
-                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                    echo "<option value='$year'>$year</option>";
-                                                }
-                                            @endphp
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <input type="text" value="null" id="make" name="make[]"
-                                            placeholder="Enter Make" />
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select vehicle-model-div">
-                                        <label>Model</label>
-                                        <input type="text" id="model" value="null" name="model[]"
-                                            placeholder="Enter Model" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                Vehicle</a>
-
-                            <div id="vehicles-container" style="display:none;">
-                            </div> -->
-
-
-                <!-- <label class="error-message" id="tabSelector-error">This field is required.</label> -->
-
-                <div class="tab-content mt-3" id="additionalContent"></div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn">
-                        <button class="tj-submit-btn previous" id="step2_previous">
-                            Previous <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn float-end">
-                        <button class="tj-submit-btn" type="button" id="step2_next">
-                            Next <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Step 3: Customer Information -->
-        <div class="basic_quote_info" id="step3" style="display: none;">
-            <div class="row mb-3">
-                <h4 class="text-center text-white">Customer Information</h4>
-                <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white"> Your Name:</label>
-                        <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Name">
-                        <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-                        <label class="error-message" id="Custo_Name-error">This field is required.</label>
-                    </div>
-                </div>
-
-                <!-- <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white"> Phone:</label>
-                        <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
-                        <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Phone">
-                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                    </div>
-                </div> -->
-                <div class="col-xl-4 col-lg-4">
+                    </div> -->
+                                        <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
                                                 <input id="phone" class="form-control" required name="Custo_Phone"
@@ -867,41 +906,44 @@
                                             </div>
                                         </div>
 
-                <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white"> Email Address:</label>
-                        <input class="form-control" required name="Custo_Email" type="email" placeholder="Email address">
-                        <label class="error-message" id="Custo_Email-error">This field is required.</label>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn">
-                        <button class="tj-submit-btn previous" id="step3_previous">
-                            Previous <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> Email Address:</label>
+                                                <input class="form-control" required name="Custo_Email" type="email"
+                                                    placeholder="Email address">
+                                                <label class="error-message" id="Custo_Email-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
 
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn float-end">
-                       
-                    <button class=" tj-submit-btn " href=""  type="submit" id="submit_instant_code" value="Submit Form">
-                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
-                                </button>
-                          
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn">
+                                                <button class="tj-submit-btn previous" id="step3_previous">
+                                                    Previous <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn float-end">
+
+                                                <button class=" tj-submit-btn " href="" type="submit"
+                                                    id="submit_instant_code" value="Submit Form">
+                                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-</div>
-            
-</form>
 
-                   
-                    
+                        </form>
+
+
+
 
 
 
@@ -1074,8 +1116,8 @@
 
 
 
-      <!--=========== Team Section Start =========-->
-      <section class="tj-team-section">
+    <!--=========== Team Section Start =========-->
+    <section class="tj-team-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -1103,95 +1145,95 @@
                 </div>
             </div>
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title">CAR</span>
-                    <h4><a href="project-details.html" class="title-link"> Sedan, SUV, Pickup etc.</a></h4>
-                </div>
-            </div> -->
+                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title">CAR</span>
+                        <h4><a href="project-details.html" class="title-link"> Sedan, SUV, Pickup etc.</a></h4>
+                    </div>
+                </div> -->
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title"> MOTORCYCLE</span>
-                    <h4><a href="project-details.html" class="title-link"> Mopeds, ATV, Power Sports etc.</a></h4>
-                </div>
-            </div> -->
+                    <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title"> MOTORCYCLE</span>
+                        <h4><a href="project-details.html" class="title-link"> Mopeds, ATV, Power Sports etc.</a></h4>
+                    </div>
+                </div> -->
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title"> HEAVY EQUIP.</span>
-                    <h4><a href="project-details.html" class="title-link"> Trucks, Bulldozers, Mixer etc.</a></h4>
-                </div>
-            </div> -->
+                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title"> HEAVY EQUIP.</span>
+                        <h4><a href="project-details.html" class="title-link"> Trucks, Bulldozers, Mixer etc.</a></h4>
+                    </div>
+                </div> -->
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title">RORO</span>
-                    <h4><a href="project-details.html" class="title-link">Cars, Trucks, trailers etc.</a></h4>
-                </div>
-            </div> -->
+                    <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title">RORO</span>
+                        <h4><a href="project-details.html" class="title-link">Cars, Trucks, trailers etc.</a></h4>
+                    </div>
+                </div> -->
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title"> ATV/UTV</span>
-                    <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
-                </div>
-            </div> -->
+                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title"> ATV/UTV</span>
+                        <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
+                    </div>
+                </div> -->
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title"> CONSTRUCTION</span>
-                    <h4><a href="project-details.html" class="title-link"> Cranes, Drills, Grinders etc.</a></h4>
-                </div>
-            </div> -->
+                    <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title"> CONSTRUCTION</span>
+                        <h4><a href="project-details.html" class="title-link"> Cranes, Drills, Grinders etc.</a></h4>
+                    </div>
+                </div> -->
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title"> FARM</span>
-                    <h4><a href="project-details.html" class="title-link">Tractor, Planter, Baler etc.</a></h4>
-                </div>
-            </div> -->
+                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title"> FARM</span>
+                        <h4><a href="project-details.html" class="title-link">Tractor, Planter, Baler etc.</a></h4>
+                    </div>
+                </div> -->
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title"> EXCAVATOR</span>
-                    <h4><a href="project-details.html" class="title-link"> Digger, Driller, Miners etc.</a></h4>
-                </div>
-            </div> -->
+                    <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title"> EXCAVATOR</span>
+                        <h4><a href="project-details.html" class="title-link"> Digger, Driller, Miners etc.</a></h4>
+                    </div>
+                </div> -->
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title"> TRUCKS</span>
-                    <h4><a href="project-details.html" class="title-link">Commercial, Dump Trucks etc.</a></h4>
-                </div>
-            </div> -->
+                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
+                    <div class="arrow-icon">
+                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tj-project-content">
+                        <span class="sub-title"> TRUCKS</span>
+                        <h4><a href="project-details.html" class="title-link">Commercial, Dump Trucks etc.</a></h4>
+                    </div>
+                </div> -->
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
@@ -1487,21 +1529,21 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-       
-    <script>
-    $(document).ready(function() {
-        $('#example-multiple').select2();
-    });
-    $(document).ready(function() {
-        $('#example-multiple-2').select2();
-    });
-</script>
 
-<script>
-    $(document).ready(function() {
-        $('.your-select-element').select2();
-    });
-</script>
+    <script>
+        $(document).ready(function() {
+            $('#example-multiple').select2();
+        });
+        $(document).ready(function() {
+            $('#example-multiple-2').select2();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.your-select-element').select2();
+        });
+    </script>
     <script>
         $(document).ready(function() {
             var selectedTab = '';
@@ -1559,11 +1601,11 @@
     </script>
 
     <script>
-        document.querySelectorAll('input[type="text"]').forEach((input) => {
-            input.addEventListener("input", function() {
-                this.value = this.value.replace(/[^0-9]/g, "");
-            });
-        });
+        // document.querySelectorAll('input[type="text"]').forEach((input) => {
+        //     input.addEventListener("input", function() {
+        //         this.value = this.value.replace(/[^0-9]/g, "");
+        //     });
+        // });
     </script>
 
     <script>
@@ -1619,72 +1661,72 @@
         });
     </script>
 
-<script>
-  $(document).ready(function() {
-    function showError(field, message) {
-        $('#' + field).addClass('error-field');
-        $('#' + field + '-error').text(message).show();
-    }
+    <script>
+        $(document).ready(function() {
+            function showError(field, message) {
+                $('#' + field).addClass('error-field');
+                $('#' + field + '-error').text(message).show();
+            }
 
-    function hideError(field) {
-        $('#' + field).removeClass('error-field');
-        $('#' + field + '-error').hide();
-    }
+            function hideError(field) {
+                $('#' + field).removeClass('error-field');
+                $('#' + field + '-error').hide();
+            }
 
-    // Move to Step 2
-    $('#step1_next').click(function() {
-        var isValid = true;
+            // Move to Step 2
+            $('#step1_next').click(function() {
+                var isValid = true;
 
-        if (!$('#pickup-location').val()) {
-            showError('pickup-location', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('pickup-location');
-        }
+                if (!$('#pickup-location').val()) {
+                    showError('pickup-location', 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError('pickup-location');
+                }
 
-        if (!$('#delivery-location').val()) {
-            showError('delivery-location', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('delivery-location');
-        }
+                if (!$('#delivery-location').val()) {
+                    showError('delivery-location', 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError('delivery-location');
+                }
 
-        if (isValid) {
-            $('#step1').hide();
-            $('#step2').show();
-        }
-    });
+                if (isValid) {
+                    $('#step1').hide();
+                    $('#step2').show();
+                }
+            });
 
-    // Return to Step 1
-    $('#step2_previous').click(function() {
-        $('#step2').hide();
-        $('#step1').show();
-    });
+            // Return to Step 1
+            $('#step2_previous').click(function() {
+                $('#step2').hide();
+                $('#step1').show();
+            });
 
-    // Move to Step 3
-    $('#step2_next').click(function() {
-        var isValid = true;
+            // Move to Step 3
+            $('#step2_next').click(function() {
+                var isValid = true;
 
-        // if (!$('#tabSelector').val()) {
-        //     showError('tabSelector', 'This field is required.');
-        //     isValid = false;
-        // } else {
-        //     hideError('tabSelector');
-        // }
+                // if (!$('#tabSelector').val()) {
+                //     showError('tabSelector', 'This field is required.');
+                //     isValid = false;
+                // } else {
+                //     hideError('tabSelector');
+                // }
 
-        if (isValid) {
-            $('#step2').hide();
-            $('#step3').show();
-        }
-    });
+                if (isValid) {
+                    $('#step2').hide();
+                    $('#step3').show();
+                }
+            });
 
-    // Return to Step 2
-    $('#step3_previous').click(function() {
-        $('#step3').hide();
-        $('#step2').show();
-    });
-   });
-</script>
+            // Return to Step 2
+            $('#step3_previous').click(function() {
+                $('#step3').hide();
+                $('#step2').show();
+            });
+        });
+    </script>
 
 
 
@@ -1748,7 +1790,6 @@
     </script>
 
     <script>
-       
         $(document).ready(function() {
             var selectedTab = '';
             $('#tabSelector').change(function() {
@@ -1797,7 +1838,7 @@
                         <label>Make</label>
                         <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
 
-                
+
 
                 newVehicleHtml += `
                         </select>
@@ -1956,12 +1997,12 @@
         });
     </script>
 
-<script>
-        document.querySelectorAll('input[type="text"]').forEach((input) => {
-            input.addEventListener("input", function() {
-                this.value = this.value.replace(/[^0-9]/g, "");
-            });
-        });
+    <script>
+        // document.querySelectorAll('input[type="text"]').forEach((input) => {
+        //     input.addEventListener("input", function() {
+        //         this.value = this.value.replace(/[^0-9]/g, "");
+        //     });
+        // });
     </script>
 
     <script>

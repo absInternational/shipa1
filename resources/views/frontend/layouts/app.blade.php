@@ -279,7 +279,7 @@
                 });
             });
         });
-        
+
 
 
         // function previewImage(event) {
@@ -302,59 +302,66 @@
         // }
     </script>
 
-<script>
-    let selectedFiles = []; // Store selected files
+    <script>
+        let selectedFiles = []; // Store selected files
 
-function previewImages(event) {
-    var input = event.target;
-    var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+        function previewImages(event) {
+            var input = event.target;
+            var imagePreviewContainer = document.getElementById('imagePreviewContainer');
 
-    if (input.files) {
-        Array.from(input.files).forEach(file => {
-            // Check if the file is already in selectedFiles to avoid duplicates
-            if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
-                selectedFiles.push(file);
+            if (input.files) {
+                Array.from(input.files).forEach(file => {
+                    // Check if the file is already in selectedFiles to avoid duplicates
+                    if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
+                        selectedFiles.push(file);
+                        var reader = new FileReader();
+
+                        reader.onload = function(e) {
+                            var previewElement = document.createElement('div');
+                            previewElement.classList.add('image-preview');
+                            previewElement.innerHTML = `
+                        <img src="${e.target.result}" alt="Image Preview">
+                        <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
+                    `;
+                            imagePreviewContainer.appendChild(previewElement);
+                        }
+
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+        }
+
+        function removeImage(name, size) {
+            var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+            selectedFiles = selectedFiles.filter(file => !(file.name === name && file.size === size));
+
+            // Clear container and re-render previews
+            imagePreviewContainer.innerHTML = '';
+            selectedFiles.forEach(file => {
                 var reader = new FileReader();
 
                 reader.onload = function(e) {
                     var previewElement = document.createElement('div');
                     previewElement.classList.add('image-preview');
                     previewElement.innerHTML = `
-                        <img src="${e.target.result}" alt="Image Preview">
-                        <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
-                    `;
+                <img src="${e.target.result}" alt="Image Preview">
+                <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
+            `;
                     imagePreviewContainer.appendChild(previewElement);
                 }
 
                 reader.readAsDataURL(file);
-            }
-        });
-    }
-}
-
-function removeImage(name, size) {
-    var imagePreviewContainer = document.getElementById('imagePreviewContainer');
-    selectedFiles = selectedFiles.filter(file => !(file.name === name && file.size === size));
-
-    // Clear container and re-render previews
-    imagePreviewContainer.innerHTML = '';
-    selectedFiles.forEach(file => {
-        var reader = new FileReader();
-
-        reader.onload = function(e) {
-            var previewElement = document.createElement('div');
-            previewElement.classList.add('image-preview');
-            previewElement.innerHTML = `
-                <img src="${e.target.result}" alt="Image Preview">
-                <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
-            `;
-            imagePreviewContainer.appendChild(previewElement);
+            });
         }
-
-        reader.readAsDataURL(file);
-    });
-}
-</script>
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('input[type="number"]').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script>
 
 </body>
 
