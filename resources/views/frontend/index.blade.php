@@ -576,7 +576,6 @@
 
 
 
-<<<<<<< HEAD
                 <div class="col-xl-12 col-lg-12 mb-4">
                     <h6 class="text-white">Moving To</h6>
                     <label class="text-white mb-2">Where Are You Moving To?</label>
@@ -614,37 +613,6 @@
                     <option value="RV-Transport">RV Transport</option>
                 </select>
                 <label class="error-message" id="tabSelector-error">This field is required.</label>
-=======
-                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
-                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
-                            enctype="multipart/form-data">
-                            @csrf
-                            @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-                            <div class="container mt-2">
-                                <!-- Step 1: Moving From/To -->
-                                <div class="route_quote_info" id="step1">
-                                    <div class="row">
-                                        <h4 class="title text-center">Quote Request!</h4>
-                                        <div class="col-xl-12 col-lg-12 mb-4">
-                                            <h6 class="text-white">Moving From</h6>
-                                            <label class="text-white mb-2">Where Are You Moving From?</label>
-                                            <div class="single-input-field">
-                                                <input class="form-control" type="text" id="pickup-location"
-                                                    placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                                <ul class="suggestions suggestionsTwo"></ul>
-                                                <label class="error-message" id="pickup-location-error">This field is
-                                                    required.</label>
-                                            </div>
-                                        </div>
->>>>>>> 6a3e1999ae0a5a5b3e6887bedd819e72b88903ca
 
                                         <div class="col-xl-12 col-lg-12 mb-4">
                                             <h6 class="text-white">Moving To</h6>
