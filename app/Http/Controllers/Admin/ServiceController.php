@@ -25,7 +25,6 @@ class ServiceController extends Controller
 
     public function store(Request $request)
     {
-        // dd($service, $request->toArray());
         $validator = Validator::make($request->all(), [
             'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
@@ -95,7 +94,6 @@ class ServiceController extends Controller
         if ($image3) {
             $service->image3 = '/uploads/' . $image3->getClientOriginalName();
         }
-
 
         // Save the service
         $service->save();
