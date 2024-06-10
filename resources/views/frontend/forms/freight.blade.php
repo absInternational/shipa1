@@ -275,7 +275,7 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Phone:</label>
-                                        <input type="text" id="phone" name="phone" placeholder="Phone Number"
+                                        <input type="number" id="phone" name="phone" placeholder="Phone Number"
                                             required="" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
@@ -618,45 +618,45 @@
                                 </div>
                             </div>
                             <!-- <div class="row select-bm" style="display:none;">
-                                        <div class="col-md-12 text-center">
-                                            <h4 class="text-white">Vehicle Information</h4>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-form tj-select">
-                                                <label> Year</label>
-                                                <select class="nice-select vehicle-year" name="year[]" id="year">
-                                                    <option value="2010" selected>Select Year</option>
-                                                    @php
-                                                        $currentYear = date('Y');
-                                                        for ($year = $currentYear; $year >= 1936; $year--) {
-                                                            echo "<option value='$year'>$year</option>";
-                                                        }
-                                                    @endphp
-                                                </select>
+                                            <div class="col-md-12 text-center">
+                                                <h4 class="text-white">Vehicle Information</h4>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form tj-select">
+                                                    <label> Year</label>
+                                                    <select class="nice-select vehicle-year" name="year[]" id="year">
+                                                        <option value="2010" selected>Select Year</option>
+                                                        @php
+                                                            $currentYear = date('Y');
+                                                            for ($year = $currentYear; $year >= 1936; $year--) {
+                                                                echo "<option value='$year'>$year</option>";
+                                                            }
+                                                        @endphp
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form tj-select">
+                                                    <label>Make</label>
+                                                    <input type="text" value="null" id="make" name="make[]"
+                                                        placeholder="Enter Make" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form tj-select vehicle-model-div">
+                                                    <label>Model</label>
+                                                    <input type="text" id="model" value="null" name="model[]"
+                                                        placeholder="Enter Model" />
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="input-form tj-select">
-                                                <label>Make</label>
-                                                <input type="text" value="null" id="make" name="make[]"
-                                                    placeholder="Enter Make" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-form tj-select vehicle-model-div">
-                                                <label>Model</label>
-                                                <input type="text" id="model" value="null" name="model[]"
-                                                    placeholder="Enter Model" />
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                        style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                        Vehicle</a>
+                                        <a class="add-car" style="display:none;" id="addVehicleBtn"
+                                            style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                                            Vehicle</a>
 
-                                    <div id="vehicles-container" style="display:none;">
-                                    </div> -->
+                                        <div id="vehicles-container" style="display:none;">
+                                        </div> -->
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -909,9 +909,9 @@
     </script>
 
     <script>
-        document.querySelectorAll('input[type="text"]').forEach((input) => {
-            input.addEventListener("input", function() {
-                this.value = this.value.replace(/[^0-9]/g, "");
+        $(document).ready(function() {
+            $('input[type="number"]').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
     </script>
@@ -932,7 +932,6 @@
                 }
             });
 
-            // Optionally, you can also prevent the user from typing non-numeric characters.
             $('#feet-input, #inches-input').on('input', function() {
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
@@ -947,7 +946,6 @@
                 }
             });
 
-            // Optionally, you can also prevent the user from typing non-numeric characters.
             $('#feet-input1, #inches-input1').on('input', function() {
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
