@@ -398,7 +398,12 @@
 
 
                             <div class="row mb-3">
+
+
+
+
                                 <div class="col-md-3">
+
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input" class="input-field" placeholder=""
@@ -410,8 +415,7 @@
                                     </div>
                                 </div>
 
-                             <div class="col-md-3">
-                                
+                                <div class="col-md-3">
 
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
@@ -422,7 +426,7 @@
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
-                            </div>
+                                </div>
 
                                 <div class="col-md-3">
 
@@ -447,8 +451,7 @@
 
                                     </div>
                                 </div>
-                           
-                             </div>
+                            </div>
 
                              
                         
@@ -636,6 +639,66 @@
                 suggestionsList.css("display", "none");
             }
             updateSuggestions(inputField, suggestionsList);
+        });
+    </script>
+    <!-- <script>
+        $(document).ready(function() {
+            $('input[type="number"]').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script> -->
+
+<script>
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
+        }
+
+        $(document).ready(function() {
+            $('#inches-input').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input1').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input1, #inches-input1').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input2').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input2').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
         });
     </script>
 @endsection
