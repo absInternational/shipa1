@@ -25,6 +25,7 @@ class ServiceController extends Controller
 
     public function store(Request $request)
     {
+        // dd($service, $request->toArray());
         $validator = Validator::make($request->all(), [
             'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
@@ -68,22 +69,7 @@ class ServiceController extends Controller
             $image3->move(public_path('uploads'), $image3->getClientOriginalName());
         }
 
-        // Create a new Service instance
         $service = new Service;
-        // $service->heading_one = $request->heading_one;
-        // $service->desc_one = $request->desc_one;
-        // $service->heading_two = $request->heading_two;
-        // $service->desc_two_one = $request->desc_two_one;
-        // $service->desc_two_two = $request->desc_two_two;
-        // $service->desc_two_three = $request->desc_two_three;
-        // $service->desc_two_four = $request->desc_two_four;
-        // $service->desc_two_five = $request->desc_two_five;
-        // $service->desc_two_six = $request->desc_two_six;
-        // $service->extra = $request->extra;
-        // $service->category_id = $request->category_id;
-        // $service->status = $request->status;
-        // $service->name = $request->name;
-        // $service->slug = $slug;
 
         $service->heading_one = $request->filled('heading_one') ? $request->heading_one : null;
         $service->desc_one = $request->filled('desc_one') ? $request->desc_one : null;
@@ -110,6 +96,7 @@ class ServiceController extends Controller
             $service->image3 = '/uploads/' . $image3->getClientOriginalName();
         }
 
+
         // Save the service
         $service->save();
 
@@ -128,7 +115,7 @@ class ServiceController extends Controller
     {
         // Validate the request data
         $validator = Validator::make($request->all(), [
-            // 'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'image3' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'heading_one' => 'nullable|string|max:255',
@@ -175,31 +162,26 @@ class ServiceController extends Controller
         $service->display_name = $request->filled('display_name') ? $request->display_name : null;
         $service->text_to_show = $request->filled('text_to_show') ? $request->text_to_show : null;
 
-        // Handle banner image update if provided
         if ($request->hasFile('banner_image')) {
             $bannerImage = $request->file('banner_image');
             $bannerImage->move(public_path('uploads'), $bannerImage->getClientOriginalName());
             $service->banner_image = '/uploads/' . $bannerImage->getClientOriginalName();
         }
 
-        // Handle image2 update if provided
         if ($request->hasFile('image2')) {
             $image2 = $request->file('image2');
             $image2->move(public_path('uploads'), $image2->getClientOriginalName());
             $service->image2 = '/uploads/' . $image2->getClientOriginalName();
         }
 
-        // Handle image3 update if provided
         if ($request->hasFile('image3')) {
             $image3 = $request->file('image3');
             $image3->move(public_path('uploads'), $image3->getClientOriginalName());
             $service->image3 = '/uploads/' . $image3->getClientOriginalName();
         }
 
-        // Save the updated service
         $service->save();
 
-        // Redirect back with success message
         return redirect()->route('services.index')->with('success', 'Service updated successfully.');
     }
 

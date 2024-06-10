@@ -11,6 +11,15 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Add New Service</h1>
                             </div>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
@@ -19,7 +28,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="display_name">Service Display Name</label>
-                                    <input id="display_name" class="form-control" type="text" name="display_name" required />
+                                    <input id="display_name" class="form-control" type="text" name="display_name"
+                                        required />
                                 </div>
                                 <div class="form-group">
                                     <label>Banner Image</label>
@@ -36,19 +46,21 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Heading One</label>
-                                    <input class="form-control" type="text" name="heading_one" placeholder="Heading One" />
+                                    <input class="form-control" type="text" name="heading_one"
+                                        placeholder="Heading One" />
                                 </div>
                                 <div class="form-group">
                                     <label>Text To Show</label>
-                                    <textarea class="form-control" name="text_to_show" rows="4" placeholder="Text To Show" ></textarea>
+                                    <textarea class="form-control" name="text_to_show" rows="4" placeholder="Text To Show"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Description One</label>
-                                    <textarea class="form-control" name="desc_one" rows="4" placeholder="Description One" ></textarea>
+                                    <textarea class="form-control" name="desc_one" rows="4" placeholder="Description One"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Heading Two</label>
-                                    <input class="form-control" type="text" name="heading_two" placeholder="Heading Two" />
+                                    <input class="form-control" type="text" name="heading_two"
+                                        placeholder="Heading Two" />
                                 </div>
                                 <div class="form-group">
                                     <label>Descriptions of Heading Two</label>
