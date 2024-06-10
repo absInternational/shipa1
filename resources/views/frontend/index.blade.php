@@ -630,6 +630,7 @@
                     <option value="Atv">Atv Utv Transport</option>
                     <option value="Boat-Transport">Boat Transport</option>
                     <option value="Car">Car</option>
+                    <option value="Hazmat">Hazmat</option>
                     <option value="Freight-Transportation">Freight Transportation</option>
                     <option value="Golf-Cart">Golf Cart</option>
                     <option value="Heavy-Equipment">Heavy Equipment</option>
@@ -1112,8 +1113,8 @@
     @include('partials.newsletter')
     <!--=========== Newsletter Section End =========-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
