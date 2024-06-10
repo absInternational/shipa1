@@ -68,12 +68,21 @@
                                         <small id="errName" class="err-style"></small>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                {{-- <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Phone:</label>
                                         <input type="text" id="phone" name="phone" placeholder="Phone Number"
                                             required="" />
                                         <small id="errPhone" class="err-style"></small>
+                                    </div>
+                                </div> --}}
+                                <div class="col-xl-4 col-lg-4">
+                                    <div class="single-input-field">
+                                        <label class="d-block text-white">Phone:</label>
+                                        <input id="phone" class="form-control" required name="Custo_Phone"
+                                            type="tel" placeholder="Customer Phone">
+                                        <label class="error-message" id="Custo_Phone-error">This field is
+                                            required.</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -157,7 +166,7 @@
 
 
 
-                            
+
 
                             <div class="row">
                                 <div class="col-md-6">
@@ -187,10 +196,11 @@
                             </div> --}}
                             <div class="input-form mt-3">
                                 <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
-    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <input class="form-control image_input" type="file" accept="image/*" multiple
+                                    onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
-                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                    <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
 
                             <div class="row">
@@ -210,19 +220,20 @@
                                 </di>
                                 <div class="col-md-6">
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                        name="available_at_auction" value="1" />
-                                    <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                        Auction?</label>
-                                </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                            name="available_at_auction" value="1" />
+                                        <label class="form-check-label text-white" for="available_at_auction"> Available
+                                            at
+                                            Auction?</label>
+                                    </div>
 
-                                <div class="input-form div-link mt-3" style="display: none;">
-                                    <label class="d-block"> Enter Link:</label>
-                                    <input class="form-control" type="url" id="link" name="link"
-                                        placeholder="Enter Link" />
-                                </div>
-                                   
+                                    <div class="input-form div-link mt-3" style="display: none;">
+                                        <label class="d-block"> Enter Link:</label>
+                                        <input class="form-control" type="url" id="link" name="link"
+                                            placeholder="Enter Link" />
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -348,45 +359,46 @@
                 }
             });
         });
-            function getModel(year, makeId) {
-                console.log('yes inn');
-                $.ajax({
-                    url: "{{ route('get.models') }}",
-                    method: 'GET',
-                    data: {
-                        year: year,
-                        make: makeId
-                    },
-                    success: function(response) {
-                        var modelsDropdown = $('.vehicle-model-div');
-                        modelsDropdown.empty();
-                        var selectOptions =
-                            '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' + model +
-                                '</option>';
-                        });
-                        selectOptions += '</select>';
-                        modelsDropdown.html(selectOptions);
 
-                        console.log('yesssss', response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            }
+        function getModel(year, makeId) {
+            console.log('yes inn');
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelsDropdown = $('.vehicle-model-div');
+                    modelsDropdown.empty();
+                    var selectOptions =
+                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' + model +
+                            '</option>';
+                    });
+                    selectOptions += '</select>';
+                    modelsDropdown.html(selectOptions);
 
-        
+                    console.log('yesssss', response);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+
+
 
         $(document).ready(function() {
-          $('#available_at_auction').change(function() {
-           if ($(this).is(':checked')) {
-            $('.div-link').show();
-            } else {
-            $('.div-link').hide();
-            }
-          });
+            $('#available_at_auction').change(function() {
+                if ($(this).is(':checked')) {
+                    $('.div-link').show();
+                } else {
+                    $('.div-link').hide();
+                }
+            });
             $('#modification').change(function() {
                 if ($(this).is(':checked')) {
                     $('.div-modify_info').show();
