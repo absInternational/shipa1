@@ -1,31 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <!-- <style>
-        .suggestionsTwo {
-            background: #fff;
-            font-size: 14px;
-            margin-top: -2px;
-            padding-bottom: 20px;
-            list-style: none;
-            line-height: 28px;
-            padding-left: 14px;
-            display: none;
-        }
 
-        .suggestionsTwo li {
-            cursor: pointer;
-        }
-
-        .suggestionsTwo li:hover {
-            color: #8fc445;
-        }
-
-        .image_input {
-            padding: 0px !important;
-            padding-left: 10px !important;
-        }
-    </style> -->
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
