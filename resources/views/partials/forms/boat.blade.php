@@ -93,7 +93,7 @@ Vehicle</a>
 
 
 
-                <div class="col-md-3">
+                <div class="col-md-4">
 
                     <label class="lab-cos">Length</label>
                     <div class="input-container">
@@ -106,7 +106,7 @@ Vehicle</a>
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
 
                     <label class="lab-cos">Width</label>
                     <div class="input-container">
@@ -119,7 +119,7 @@ Vehicle</a>
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
 
                     <label class="lab-cos">Height</label>
                     <div class="input-container">
@@ -131,8 +131,11 @@ Vehicle</a>
                         <span class="separators">(In.)</span>
                     </div>
                 </div>
+                </div>
+                <div class="row">
 
-                <div class="col-md-3">
+                
+                <div class="col-md-4">
 
                     <label class="lab-cos">Weight</label>
                     <div class="input-container1">
@@ -142,13 +145,13 @@ Vehicle</a>
 
                     </div>
                 </div>
+                </div>
 
 
 
 
 
-
-            </div>
+           
 
             <div class="row">
                 <div class="col-md-6">
@@ -175,7 +178,7 @@ Vehicle</a>
                     <div class="form-group mb-0">
                         <input class="form-check-input" type="checkbox" id="modification" name="modification"
                             value="1" />
-                        <label class="form-check-label text-white" for="modification"> Modification</label>
+                        <label class="form-check-label ms-4 text-white" for="modification"> Modified?</label>
                     </div>
 
                     <div class="input-form div-modify_info" style="display: none;">
@@ -194,6 +197,8 @@ Vehicle</a>
             </div>
             <div class="input-form mt-3">
                 <label class="d-block text-white"> Image:</label>
-                <input class="form-control image_input" type="file" id="image" name="image" placeholder="Upload File" />
+                <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
+    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                <!-- <input class="form-control image_input" type="file" id="image" name="image" placeholder="Upload File" /> -->
             </div>
             
