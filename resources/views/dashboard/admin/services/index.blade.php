@@ -17,6 +17,7 @@
                                 <th>Service Name</th>
                                 <th>Display Name</th>
                                 <th>Heading One</th>
+                                <th>Link</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                             </tr>
@@ -27,6 +28,8 @@
                                     <td>{{ $service->name }}</td>
                                     <td>{{ $service->display_name }}</td>
                                     <td>{{ $service->heading_one }}</td>
+                                    <td><a class="title" href="{{ route('service.details', $service->slug) }}">View</a>
+                                    </td>
                                     <td>
                                         @if ($service->status == 1)
                                             Active
@@ -37,8 +40,8 @@
                                     <td>
                                         <a href="{{ route('services.edit', $service->id) }}"
                                             class="btn btn-primary btn-sm">Edit</a>
-                                        <form action="{{ route('services.destroy', $service->id) }}"
-                                            method="POST" style="display: inline;">
+                                        <form action="{{ route('services.destroy', $service->id) }}" method="POST"
+                                            style="display: inline;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm"
