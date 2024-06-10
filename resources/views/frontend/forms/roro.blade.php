@@ -579,21 +579,6 @@
             hideError('delivery-location');
         }
 
-        if (!$('#delivery-location-1').val()) {
-            showError('delivery-location-1', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('delivery-location-1');
-        }
-
-        // if (!$('#delivery-location-2').val()) {
-        //     showError('delivery-location-2', 'This field is required.');
-        //     isValid = false;
-        // } else {
-        //     hideError('delivery-location-2');
-        // }
-
-
         if (isValid) {
             $('#step1').hide();
             $('#step2').show();
