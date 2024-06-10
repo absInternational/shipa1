@@ -275,7 +275,7 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Phone:</label>
-                                        <input type="number" id="phone" name="phone" placeholder="Phone Number"
+                                        <input type="text" inputmode="numeric" id="phone" name="phone" placeholder="Phone Number"
                                             required="" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>

@@ -3786,7 +3786,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-commercial {
     background-color: #000000;
-    background-image: url(../../img/motocycle.webp);
+    /* background-image: url(../../img/.webp); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10054,4 +10054,31 @@ PAGE LOAD ANIMATION
 
 .swiper-slide:last-child {
     margin-right: 0;
+}
+
+/************ image-preview ******************/
+
+.image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.image-preview {
+    position: relative;
+    display: inline-block;
+}
+.image-preview img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.remove-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
 }
