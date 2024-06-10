@@ -95,8 +95,6 @@ class ServiceController extends Controller
             $service->image3 = '/uploads/' . $image3->getClientOriginalName();
         }
 
-        dd($service, $request->toArray());
-
         // Save the service
         $service->save();
 
