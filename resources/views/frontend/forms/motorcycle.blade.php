@@ -183,14 +183,21 @@
                                         <small id="errName" class="err-style"></small>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-xl-4 col-lg-4">
+                        <div class="single-input-field">
+                            <label class="d-block text-white"> Phone:</label>
+                            <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Phone">
+                            <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                        </div>
+                    </div>
+                                <!-- <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Phone:</label>
                                         <input type="text" id="phone" name="phone" placeholder="Phone Number"
                                             required="" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Email Address:</label>
