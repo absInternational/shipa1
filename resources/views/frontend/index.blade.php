@@ -2,50 +2,47 @@
 
 @section('content')
 
-<style>
-
-
-
+    <style>
         .tj-testimonial-section {
             padding: 50px 0;
             background: #f9f9f9;
         }
 
-    .tj-testimonial2-section {
-    padding: 50px 0;
-    /* background: #f9f9f9; */
-    }
+        .tj-testimonial2-section {
+            padding: 50px 0;
+            /* background: #f9f9f9; */
+        }
 
-    .carousel-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    }
+        .carousel-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-    .card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-    .card .row {
-    display: flex;
-    flex-wrap: wrap;
-     }
+        .card .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-     .card .col-6 {
-    width: 50%;
-     }
+        .card .col-6 {
+            width: 50%;
+        }
 
-     .star {
-    margin-top: 10px;
-     }
+        .star {
+            margin-top: 10px;
+        }
 
-     .fa-star {
-    color: #f39c12;
-     }
+        .fa-star {
+            color: #f39c12;
+        }
 
         .owl-nav button {
             background: none;
@@ -54,13 +51,13 @@
             color: #333;
         }
 
-    .owl-nav button {
-    display:none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #333;
-     }
+        .owl-nav button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #333;
+        }
 
         .owl-dot {
             display: inline-block;
@@ -248,18 +245,19 @@
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
+
         .error-message {
             display: none;
             color: red;
         }
+
         .error-field {
             border: 2px solid red;
         }
-       
-</style>
+    </style>
 
     <!--=========== Slider Section Start =========-->
-    
+
 
     <section class="tj-slider-section">
         <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" /></div>
@@ -332,7 +330,8 @@
                             </div>
                         </div>
                         <div class="service-arrow">
-                            <a href="{{ route('vehicleTransportDetail') }}" target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="{{ route('vehicleTransportDetail') }}" target="_blank"> <i
+                                    class="fa-light fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </li>
@@ -347,7 +346,8 @@
                             </div>
                         </div>
                         <div class="service-arrow">
-                            <a href="{{ route('heavy-transport-detail') }}" target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="{{ route('heavy-transport-detail') }}" target="_blank"> <i
+                                    class="fa-light fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </li>
@@ -362,7 +362,8 @@
                             </div>
                         </div>
                         <div class="service-arrow">
-                            <a href="{{ route('freighttransport-detail') }}" target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="{{ route('freighttransport-detail') }}" target="_blank"> <i
+                                    class="fa-light fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </li>
@@ -557,130 +558,138 @@
         </div>
     </section>
     <!--=========== About Section End =========-->
-<section class="tj-choose-us-section">
+    <section class="tj-choose-us-section">
         <div class="container-flude">
             <div class="row">
-            @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-            @endif
-            @if (session('error'))
-            <div class="alert alert-error">
-                {{ session('error') }}
-            </div>
-            @endif
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if (session('error'))
+                    <div class="alert alert-error">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
 
-                    
 
-<form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
-                    @csrf
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-              <div class="container mt-2">
-        <!-- Step 1: Moving From/To -->
-        <div class="route_quote_info" id="step1">
-            <div class="row">
-                <h4 class="title text-center">Quote Request!</h4>
-                <div class="col-xl-12 col-lg-12 mb-4">
-                    <h6 class="text-white">Moving From</h6>
-                    <label class="text-white mb-2">Where Are You Moving From?</label>
-                    <div class="single-input-field">
-                        <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                        <ul class="suggestions suggestionsTwo"></ul>
-                        <label class="error-message" id="pickup-location-error">This field is required.</label>
-                    </div>
-                </div>
 
-                <div class="col-xl-12 col-lg-12 mb-4">
-                    <h6 class="text-white">Moving To</h6>
-                    <label class="text-white mb-2">Where Are You Moving To?</label>
-                    <div class="single-input-field">
-                        <input class="form-control" type="text" id="delivery-location" placeholder="Enter City or ZipCode" name="To_ZipCode" required>
-                        <ul class="suggestions suggestionsTwo"></ul>
-                        <label class="error-message" id="delivery-location-error">This field is required.</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="price__cta-btn text-center">
-                        <button class="tj-submit-btn" type="button" id="step1_next">
-                            Next <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Step 2: Vehicle Information -->
-        <div class="vehicle_quote_info" id="step2" style="display: none;">
-            <div class="row">
-                <h4 class="title text-center">VEHICLE INFORMATION</h4>
-                <select id="tabSelector" class="" aria-label="Tab selector" required>
-                    <option value="" selected disabled>Select a Vehicle</option>
-                    <option value="Atv">Atv Utv Transport</option>
-                    <option value="Boat-Transport">Boat Transport</option>
-                    <option value="Car">Car</option>
-                    <option value="Freight-Transportation">Freight Transportation</option>
-                    <option value="Golf-Cart">Golf Cart</option>
-                    <option value="Heavy-Equipment">Heavy Equipment</option>
-                    <option value="Motorcycle">Motorcycle</option>
-                    <option value="RV-Transport">RV Transport</option>
-                </select>
-                <label class="error-message" id="tabSelector-error">This field is required.</label>
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                            enctype="multipart/form-data">
+                            @csrf
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <div class="container mt-2">
+                                <!-- Step 1: Moving From/To -->
+                                <div class="route_quote_info" id="step1">
+                                    <div class="row">
+                                        <h4 class="title text-center">Quote Request!</h4>
+                                        <div class="col-xl-12 col-lg-12 mb-4">
+                                            <h6 class="text-white">Moving From</h6>
+                                            <label class="text-white mb-2">Where Are You Moving From?</label>
+                                            <div class="single-input-field">
+                                                <input class="form-control" type="text" id="pickup-location"
+                                                    placeholder="Enter City or ZipCode" name="From_ZipCode" required>
+                                                <ul class="suggestions suggestionsTwo"></ul>
+                                                <label class="error-message" id="pickup-location-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
 
-                <div class="tab-content mt-3" id="additionalContent"></div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn">
-                        <button class="tj-submit-btn previous" id="step2_previous">
-                            Previous <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
+                                        <div class="col-xl-12 col-lg-12 mb-4">
+                                            <h6 class="text-white">Moving To</h6>
+                                            <label class="text-white mb-2">Where Are You Moving To?</label>
+                                            <div class="single-input-field">
+                                                <input class="form-control" type="text" id="delivery-location"
+                                                    placeholder="Enter City or ZipCode" name="To_ZipCode" required>
+                                                <ul class="suggestions suggestionsTwo"></ul>
+                                                <label class="error-message" id="delivery-location-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="price__cta-btn text-center">
+                                                <button class="tj-submit-btn" type="button" id="step1_next">
+                                                    Next <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Step 2: Vehicle Information -->
+                                <div class="vehicle_quote_info" id="step2" style="display: none;">
+                                    <div class="row">
+                                        <h4 class="title text-center">VEHICLE INFORMATION</h4>
+                                        <select id="tabSelector" class="" aria-label="Tab selector" required>
+                                            <option value="" selected disabled>Select a Vehicle</option>
+                                            <option value="Atv">Atv Utv Transport</option>
+                                            <option value="Boat-Transport">Boat Transport</option>
+                                            <option value="Car">Car</option>
+                                            <option value="Freight-Transportation">Freight Transportation</option>
+                                            <option value="Golf-Cart">Golf Cart</option>
+                                            <option value="Heavy-Equipment">Heavy Equipment</option>
+                                            <option value="Motorcycle">Motorcycle</option>
+                                            <option value="RV-Transport">RV Transport</option>
+                                        </select>
+                                        <label class="error-message" id="tabSelector-error">This field is
+                                            required.</label>
 
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn float-end">
-                        <button class="tj-submit-btn" type="button" id="step2_next">
-                            Next <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                        <div class="tab-content mt-3" id="additionalContent"></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn">
+                                                <button class="tj-submit-btn previous" id="step2_previous">
+                                                    Previous <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
 
-        <!-- Step 3: Customer Information -->
-        <div class="basic_quote_info" id="step3" style="display: none;">
-            <div class="row mb-3">
-                <h4 class="text-center text-white">Customer Information</h4>
-                <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white"> Your Name:</label>
-                        <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Name">
-                        <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-                        <label class="error-message" id="Custo_Name-error">This field is required.</label>
-                    </div>
-                </div>
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn float-end">
+                                                <button class="tj-submit-btn" type="button" id="step2_next">
+                                                    Next <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white"> Phone:</label>
-                        <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
-                        <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Phone">
-                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                    </div>
-                </div> -->
-                <div class="col-xl-4 col-lg-4">
+                                <!-- Step 3: Customer Information -->
+                                <div class="basic_quote_info" id="step3" style="display: none;">
+                                    <div class="row mb-3">
+                                        <h4 class="text-center text-white">Customer Information</h4>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> Your Name:</label>
+                                                <input class="form-control" required name="Custo_Name" type="text"
+                                                    placeholder="Customer Name">
+                                                <label class="error-message" id="Custo_Name-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="col-xl-4 col-lg-4">
+                                                    <div class="single-input-field">
+                                                        <label class="d-block text-white"> Phone:</label>
+                                                        <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
+                                                        <input class="form-control" required name="Custo_Phone" type="tel" placeholder="Customer Phone">
+                                                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                                                    </div>
+                                                </div> -->
+                                        <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
                                                 <input id="phone" class="form-control" required name="Custo_Phone"
@@ -690,55 +699,58 @@
                                             </div>
                                         </div>
 
-                <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white"> Email Address:</label>
-                        <input class="form-control" required name="Custo_Email" type="email" placeholder="Email address">
-                        <label class="error-message" id="Custo_Email-error">This field is required.</label>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn">
-                        <button class="tj-submit-btn previous" id="step3_previous">
-                            Previous <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> Email Address:</label>
+                                                <input class="form-control" required name="Custo_Email" type="email"
+                                                    placeholder="Email address">
+                                                <label class="error-message" id="Custo_Email-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
 
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn float-end">
-                       
-                    <button class=" tj-submit-btn " href=""  type="submit" id="submit_instant_code" value="Submit Form">
-                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
-                                </button>
-                          
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn">
+                                                <button class="tj-submit-btn previous" id="step3_previous">
+                                                    Previous <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-lg-6">
+                                            <div class="price__cta-btn float-end">
+
+                                                <button class=" tj-submit-btn " href="" type="submit"
+                                                    id="submit_instant_code" value="Submit Form">
+                                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-</form>
 
-        
-           
-          
-         
-                   </div>
-               </div>
-             </div>
+                        </form>
+
+
+
 
 
                     </div>
                 </div>
-
             </div>
+
 
         </div>
-</section>
+        </div>
+
+        </div>
+
+        </div>
+    </section>
     <!--=========== Feature Section End =========-->
 
     <!--=========== Team Section Start =========-->
@@ -1074,7 +1086,7 @@
         </div>
     </section>
     <!--=========== Blog Section End =========-->
-    
+
     <!--=========== Testimonial Section Start =========-->
     <section class="tj-testimonial-section">
         <div class="carousel-wrapper">
@@ -1107,13 +1119,13 @@
         </div>
     </section>
 
-    
+
     <!--=========== Newsletter Section Start =========-->
     @include('partials.newsletter')
     <!--=========== Newsletter Section End =========-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -1121,18 +1133,18 @@
     <script src="path/to/jquery.min.js"></script>
     <script src="path/to/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    
+
 
 
 
     <script>
-    $(document).ready(function() {
-        $('#example-multiple').select2();
-    });
-    $(document).ready(function() {
-        $('#example-multiple-2').select2();
-    });
-</script>
+        $(document).ready(function() {
+            $('#example-multiple').select2();
+        });
+        $(document).ready(function() {
+            $('#example-multiple-2').select2();
+        });
+    </script>
 
     <script>
         $(document).ready(function() {
@@ -1175,9 +1187,7 @@
     </script>
 
     <script>
-        
-      
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('#owl-caro').owlCarousel({
                 loop: true,
                 margin: 10,
@@ -1200,72 +1210,72 @@
         });
     </script>
 
-<script>
-  $(document).ready(function() {
-    function showError(field, message) {
-        $('#' + field).addClass('error-field');
-        $('#' + field + '-error').text(message).show();
-    }
+    <script>
+        $(document).ready(function() {
+            function showError(field, message) {
+                $('#' + field).addClass('error-field');
+                $('#' + field + '-error').text(message).show();
+            }
 
-    function hideError(field) {
-        $('#' + field).removeClass('error-field');
-        $('#' + field + '-error').hide();
-    }
+            function hideError(field) {
+                $('#' + field).removeClass('error-field');
+                $('#' + field + '-error').hide();
+            }
 
-    // Move to Step 2
-    $('#step1_next').click(function() {
-        var isValid = true;
+            // Move to Step 2
+            $('#step1_next').click(function() {
+                var isValid = true;
 
-        if (!$('#pickup-location').val()) {
-            showError('pickup-location', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('pickup-location');
-        }
+                if (!$('#pickup-location').val()) {
+                    showError('pickup-location', 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError('pickup-location');
+                }
 
-        if (!$('#delivery-location').val()) {
-            showError('delivery-location', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('delivery-location');
-        }
+                if (!$('#delivery-location').val()) {
+                    showError('delivery-location', 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError('delivery-location');
+                }
 
-        if (isValid) {
-            $('#step1').hide();
-            $('#step2').show();
-        }
-    });
+                if (isValid) {
+                    $('#step1').hide();
+                    $('#step2').show();
+                }
+            });
 
-    // Return to Step 1
-    $('#step2_previous').click(function() {
-        $('#step2').hide();
-        $('#step1').show();
-    });
+            // Return to Step 1
+            $('#step2_previous').click(function() {
+                $('#step2').hide();
+                $('#step1').show();
+            });
 
-    // Move to Step 3
-    $('#step2_next').click(function() {
-        var isValid = true;
+            // Move to Step 3
+            $('#step2_next').click(function() {
+                var isValid = true;
 
-        if (!$('#tabSelector').val()) {
-            showError('tabSelector', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('tabSelector');
-        }
+                if (!$('#tabSelector').val()) {
+                    showError('tabSelector', 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError('tabSelector');
+                }
 
-        if (isValid) {
-            $('#step2').hide();
-            $('#step3').show();
-        }
-    });
+                if (isValid) {
+                    $('#step2').hide();
+                    $('#step3').show();
+                }
+            });
 
-    // Return to Step 2
-    $('#step3_previous').click(function() {
-        $('#step3').hide();
-        $('#step2').show();
-    });
-   });
-</script>
+            // Return to Step 2
+            $('#step3_previous').click(function() {
+                $('#step3').hide();
+                $('#step2').show();
+            });
+        });
+    </script>
 
 
 
@@ -1499,7 +1509,7 @@
         });
     </script>
 
-   
+
 
 
 
