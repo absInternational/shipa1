@@ -17,7 +17,7 @@
                                 <th>Service Name</th>
                                 <th>Display Name</th>
                                 <th>Heading One</th>
-                                <th>Link</th>
+                                <th>Preview</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                             </tr>
@@ -29,7 +29,7 @@
                                     <td>{{ $service->display_name }}</td>
                                     <td>{{ $service->heading_one }}</td>
                                     <td><a class="title" target="_blank"
-                                            href="{{ route('service.details', $service->slug) }}">View</a>
+                                            href="{{ route('service.details', $service->slug) }}">Open Link</a>
                                     </td>
                                     <td>
                                         @if ($service->status == 1)
