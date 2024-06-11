@@ -390,16 +390,15 @@
                                 <!-- Step 2: Vehicle Information -->
                                 <div class="vehicle_quote_info" id="step2" style="display: none;">
                                     <div class="row">
-                                        <h4 class="title text-center">VEHICLE INFORMATION</h4>
+                                        <h4 class="title text-center">HEAVY INFORMATION</h4>
                                         <select id="tabSelector" class="" aria-label="Tab selector">
                                             <option value="" selected disabled>Select a Vehicle</option>
-                                            <!-- <option value="Atv">Atv Utv Transport</option> -->
                                             <option value="Boat-Transport">Boat Transport</option>
-                                            <!-- <option value="Car">Car</option> -->
-                                            <!-- <option value="Freight-Transportation">Freight Transportation</option> -->
-                                            <!-- <option value="Golf-Cart">Golf Cart</option> -->
+                                            <option value="Commercial-Truck">Commercial-Truck</option>
+                                            <option value="Consrtuction-Transport">Consrtuction-Transport</option>
+                                            <option value="Excavator-Tr">Excavator</option>
+                                            <option value="Farm-Transport">Farm-Transport</option>
                                             <option value="Heavy-Equipment">Heavy Equipment</option>
-                                            <!-- <option value="Motorcycle">Motorcycle</option> -->
                                             <option value="RV-Transport">RV Transport</option>
 
                                         </select>
@@ -451,7 +450,7 @@
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
                                                 <input id="phone" class="form-control" required name="Custo_Phone"
-                                                    type="tel" placeholder="Customer Phone">
+                                                    type="tel" placeholder="Phone">
                                                 <label class="error-message" id="Custo_Phone-error">This field is
                                                     required.</label>
                                             </div>

@@ -4344,7 +4344,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-input-form .nice-select .list {
     width: 100%;
     margin-top: 0;
-    height: 80px;
+    height: 110px;
     overflow: auto;
 }
 
