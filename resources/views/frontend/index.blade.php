@@ -324,8 +324,8 @@
                         <div class="tj-service-icon">
                             <div class="service-icon">
                             <!-- <img src="{{ asset('frontend/images/project/crane-truck.png') }}" alt="Image" /> -->
-                            <i class="bi bi-truck"></i>
-                            <!-- <i class="flaticon-delivery-van"></i> -->
+                            <!-- <i class="bi bi-truck"></i> -->
+                            <i class="flaticon-delivery-van"></i>
                             </div>
                             <div class="sub-title">
                                 <span>VEHICLE <br>TRANSPORTATION</span>
