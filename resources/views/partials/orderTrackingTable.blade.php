@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card w-75">
     <div class="card-header">
         <h4>Order Details</h4>
     </div>
@@ -375,20 +375,20 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th>{{ $responseData['data']['originzsc'] }} -
+                            <th class="fw-normal">{{ $responseData['data']['originzsc'] }} -
                                 {{ $responseData['data']['destinationzsc'] }}
                             </th>
                             <td>{{ $price1 }}</td>
                             <td>pickup 1 day <a class="badge bg-danger mx-2" href="">guaranteed</a></td>
                         </tr>
                         <tr>
-                            <th>{{ $responseData['data']['originzsc'] }} -
+                            <th class="fw-normal">{{ $responseData['data']['originzsc'] }} -
                                 {{ $responseData['data']['destinationzsc'] }}</th>
                             <td>{{ $price2 }}</td>
                             <td>pickup 2 days <a class="badge bg-warning mx-2" href="">urgent</a></td>
                         </tr>
                         <tr>
-                            <th>{{ $responseData['data']['originzsc'] }} -
+                            <th class="fw-normal">{{ $responseData['data']['originzsc'] }} -
                                 {{ $responseData['data']['destinationzsc'] }}</th>
                             <td>{{ $price3 }}</td>
                             <td>pickup 3 days <a class="badge bg-primary mx-2" href="">regular</a></td>

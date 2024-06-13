@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center mt-3" id="orderTrackingHtml">
+            <div class="row align-items-center justify-content-center mt-3" id="orderTrackingHtml">
 
             </div>
         </div>

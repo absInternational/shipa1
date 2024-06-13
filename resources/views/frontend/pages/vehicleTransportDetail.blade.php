@@ -368,12 +368,12 @@
                                         <select id="tabSelector" class="" aria-label="Tab selector" required>
                                             <option value="" selected disabled>Select a Vehicle</option>
                                             <option value="Atv">Atv Utv Transport</option>
-                                            <!-- <option value="Boat-Transport">Boat Transport</option> -->
                                             <option value="Car">Car</option>
-                                            <!-- <option value="Freight-Transportation">Freight Transportation</option> -->
                                             <option value="Golf-Cart">Golf Cart</option>
-                                            <!-- <option value="Heavy-Equipment">Heavy Equipment</option> -->
                                             <option value="Motorcycle">Motorcycle</option>
+                                            <!-- <option value="Boat-Transport">Boat Transport</option> -->
+                                            <!-- <option value="Freight-Transportation">Freight Transportation</option> -->
+                                            <!-- <option value="Heavy-Equipment">Heavy Equipment</option> -->
                                             <!-- <option value="RV-Transport">RV Transport</option> -->
                                         </select>
                                         <label class="error-message" id="tabSelector-error">This field is required.</label>

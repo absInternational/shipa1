@@ -3,6 +3,27 @@
 @section('content')
 
     <style>
+        .rates {
+    background:#8FC445 ;
+            font-size: 24px; 
+        color: #FFFFFF; 
+        font-weight: bold; 
+        
+    
+    box-shadow: 0 0px 30px 0 #56ff0061;
+    width: 62px;
+    height: 42px;
+    float: right;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
+            -moz-box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
+            box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
+    
+    }
         .tj-testimonial-section {
             padding: 50px 0;
             background: #f9f9f9;
@@ -453,7 +474,7 @@
             <div class="row">
                 <div class="col-lg-12 position-relative">
                     <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="contact.html">
+                        <a class="tj-transparent-btn" href="{{ route('autoAuction') }}">
                             Read More <i class="flaticon-right-1"></i>
                         </a>
                     </div>
@@ -548,11 +569,11 @@
                             </div>
                         </div>
                         <div class="image-box">
-                            <img class="p-z-idex" src="{{ asset('frontend/images/about/resize 410-630.jpg') }}"
+                            <img class="p-z-idex" src="{{ asset('frontend/images/about/about-3.webp') }}"
                                 alt="Image" />
                         </div>
                         <img class="group-1 p-z-idex"
-                            src="{{ asset('frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}" alt="Image" />
+                            src="{{ asset('frontend/images/about/about-5.webp') }}" alt="Image" />
                         <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"
                             alt="Image" />
                     </div>
@@ -1226,7 +1247,7 @@
                         items: 2
                     },
                     1000: {
-                        items: 3
+                        items: 4
                     }
                 }
             });

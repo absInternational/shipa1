@@ -299,7 +299,7 @@
         </div>
     </section>
 
-    <section class="tj-choose-us-section">
+    <section class="tj-choose-us-section-roro">
         <div class="container-flude">
             <div class="row">
             @if (session('success'))
