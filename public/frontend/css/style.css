@@ -4260,10 +4260,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .choose-us-step-item:hover p::before {
     background-color: var(--tj-primary-color);
 }
-.dix-1{
+/* .dix-1{
     background-image: url(../images/disco.png) !important;
     background-repeat: no-repeat !important;
-}
+} */
 .tj-input-form-car {
     
     box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);

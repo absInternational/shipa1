@@ -1,6 +1,16 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+
+<style>
+    .top-left-image {
+        position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 100px;
+    height: 100px; 
+    }
+</style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -148,8 +158,9 @@
                     </div>
                 @endif
                 
-                <span class="dix-1"> <img src="" alt=""> </span>
+                <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
         <div class="tj-input-form-car" data-bg-image="">
+        <img src="{{ asset('img/disco-.png') }}" alt="Your Image" class="top-left-image">
                 <h4 class="title text-center">Instant Car Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform "
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled

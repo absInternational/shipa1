@@ -282,7 +282,8 @@
 
     <section class="tj-slider-section">
         <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" /></div>
-        <div class=" swiper sc-slider-1">
+          
+        <div class="swiper sc-slider-1" data-autoplay="5000" >
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
                     <div class="container">
@@ -318,7 +319,65 @@
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
+                <div class="swiper-slide"  data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
+                    <div class="container">
+                        <div class="slider-content p-z-idex">
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>
+                            <div class="slider-desc">
+                                ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its
+                                customers and seeks your trust in return of our services.
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-shape"></div>
+                </div>
+            </div>
+            <div class=""></div>
+        </div>
+        
+        
+        <!-- <div class="swiper sc-slider-1" data-autoplay="5000" >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
+                    <div class="container">
+                        <div class="slider-content p-z-idex">
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h1>
+                            <div class="slider-desc">
+                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                customers and seeks your trust in return of our services.
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-shape"></div>
+                </div>
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
+                    <div class="container">
+                        <div class="slider-content p-z-idex">
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h1>
+                            <div class="slider-desc">
+                                ShipA1 has pledged to provide all-in-one Heavy Equipment transportation solutions to all its
+                                customers and seeks your trust in return of our services.
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-shape"></div>
+                </div>
+                <div class="swiper-slide"  data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>
@@ -337,7 +396,8 @@
                 </div>
             </div>
             <div class="swiper-pagination"></div>
-        </div>
+        </div> -->
+
         <div class="tj-service-icon-box">
             <ul class="list-gap">
                 <li>
@@ -404,6 +464,7 @@
                     <div class="tj-section-heading text-center">
                         <span class="sub-title active-shape">What We Do</span>
                         <h2 class="title">Logistic & Transport</h2>
+                        
                     </div>
                 </div>
             </div>
@@ -942,7 +1003,7 @@
     <!--=========== Project Section End =========-->
 
     <!--=========== Testimonial Section Start =========-->
-    <section class="tj-testimonial-section">
+    <!-- <section class="tj-testimonial-section">
         <div class="container">
             <div class="row">
                 <div class="tj-section-heading text-center">
@@ -1000,7 +1061,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--=========== Testimonial Section End =========-->
 
     <!--=========== Map Section Start =========-->
@@ -1123,7 +1184,7 @@
                             <div class="row">
                                 <div class="col-md-6 col-6">
                                     <div>
-                                        <img loading="lazy" src="/img/samireviews/google.png" width="100%"
+                                        <img loading="lazy" src="{{ asset('frontend/images/transport.png') }}" width="100%"
                                             height="100%" alt="Google">
                                     </div>
                                     <div class="star">
@@ -1161,7 +1222,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
 
-
+<script>
+    const swiper = new Swiper('.swiper', {
+ autoplay: {
+   delay: 5000,
+ },
+});
+</script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var input = document.querySelector("#phone");

@@ -99,11 +99,15 @@
         speed: 800,
         effect: "fade",
         pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+          el: ".swiper-pagination",
+          clickable: true,
         },
         loop: true,
-    });
+        autoplay: {
+          delay: 5000,  // Set delay to 5000 milliseconds (5 seconds)
+          disableOnInteraction: false,  // Autoplay won't stop after user interactions
+        },
+      });
 
     // Hero Thumb Slider 2
     var slider2 = new Swiper(".thumb-slider", {
