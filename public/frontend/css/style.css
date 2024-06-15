@@ -4380,6 +4380,103 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 /* car form end  */
 
+.tj-input-form-ser {
+    box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
+    background: #062e39d4;
+    border-radius: 5%;
+    padding: 30px;
+    width: 100%;
+    margin-left: 7%;
+    /* margin-left: auto; */
+    position: relative;
+    z-index: 3;
+}
+
+.tj-input-form-ser  .title {
+    color: var(--tj-white-color);
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.tj-input-form-ser  .input-form label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--tj-white-color);
+    margin-bottom: 10px;
+}
+
+.tj-input-form-ser  .input-form {
+    margin-bottom: 20px;
+}
+
+.tj-input-form-ser  .input-form input {
+    background: #f0f2f7;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    height: 35px;
+    line-height: 38px;
+    padding: 15px 15px;
+    border-radius: 3px;
+}
+
+.tj-input-fom .select-bm {
+    margin-top: 50px;
+}
+
+.tj-input-form-ser  .select-bm .nice-select {
+    margin-bottom: 35px;
+}
+
+.tj-input-form-ser  .nice-select {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    line-height: 34px;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.tj-input-form-ser  .nice-select .list {
+    width: 100%;
+    margin-top: 0;
+    height: 280px;
+    overflow: auto;
+}
+
+.tj-input-form-ser  .nice-select .list li {
+    font-size: 14px;
+}
+
+.tj-input-form-ser  .nice-select .list li:last-child {
+    margin-bottom: 10px;
+}
+
+.tj-input-form-ser  .nice-select .option.selected {
+    font-weight: 500;
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected {
+    color: var(--tj-body-color);
+}
+
+.tj-input-form-ser  .nice-select .option.disabled {
+    color: var(--tj-body-color);
+}
+
+.tj-input-form-ser  .nice-select:after {
+    border-bottom: 1px solid var(--tj-body-color);
+    border-right: 1px solid var(--tj-body-color);
+    margin-top: 0;
+    height: 10px;
+    top: 35%;
+    right: 20px;
+    width: 10px;
+}
+
 .tj-input-form {
     box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
     background: #062e39d4;

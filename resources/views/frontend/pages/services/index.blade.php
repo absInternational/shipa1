@@ -96,26 +96,26 @@
                     </div>
                 </div>
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
-                    <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
+                    <div class="tj-input-form-ser" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
                         <h4 class="title">Request a Quote</h4>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-4">
                                 <div class="input-form">
                                     <label class="d-block"> Your Name:</label>
                                     <input type="text" id="yourName" name="name" placeholder="First Name"
                                         required="" />
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
+                        <!-- </div>
+                        <div class="row"> -->
+                            <div class="col-md-4">
                                 <div class="input-form">
                                     <label class="d-block"> Your Email:</label>
                                     <input type="text" id="yourEmail" name="name" placeholder=" Email"
                                         required="" />
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="input-form">
                                     <label class="d-block"> Your Phone:</label>
                                     <input type="text" id="yourPhone" name="name" placeholder="Phone"
@@ -161,7 +161,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tj-theme-button">
+                        <div class="tj-theme-button text-center">
                             <button class="tj-submit-btn" type="submit" value="submit">
                                 Submit Now <i class="fa-light fa-arrow-right"></i>
                             </button>
