@@ -1174,6 +1174,7 @@
     }
     .tj-input-form {
         padding: 40px 35px 50px;
+        width: 100%;
         margin-top: 35px;
         margin-left: auto;
         margin-right: auto;

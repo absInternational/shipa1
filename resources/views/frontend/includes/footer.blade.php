@@ -47,19 +47,19 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="#">Car Transport</a>
+                                <a href="https://blog.shipa1.daydispatch.com/public/services/car-shipping-service" target="_blank">Car Transport</a>
                             </li>
                             <li style="width: 108%;">
-                                <a href="#">Motorcycle Shipping</a>
+                                <a href="#" target="_blank">Motorcycle Shipping</a>
                             </li>
                             <li>
-                                <a href="#">Heavy Equipment</a>
+                                <a href="https://blog.shipa1.daydispatch.com/public/services/heavy-equipment-shipping-services" target="_blank">Heavy Equipment</a>
                             </li>
                             <li>
-                                <a href="#">Boat Transport</a>
+                                <a href="https://blog.shipa1.daydispatch.com/public/services/boat-transport-service" target="_blank">Boat Transport</a>
                             </li>
                             <li>
-                                <a href="#">Freight Transport</a>
+                                <a href="#" target="_blank">Freight Transport</a>
                             </li>
                             <li>
                                 <a href="{{ route('services') }}" target="_blank">View More</a>
