@@ -79,18 +79,9 @@
 
                 </div>
                 <div class="details-video-content">
-                    <h5 class="title">Personal Information: </h5>
-                    <p>
-                        To book a transport Ship A1 Transport diligently collects personal information relevant to
-                        your transportation needs.
+                    
 
-                    </p>
-                    <p>
-                        This could include:
-
-                    </p>
-
-                    <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                    <div class="col-lg-12 sal-animate" data-sal="slide-left" data-sal-duration="800">
                         <div class="tj-faq-left-content">
 
                             <div class="faq-content mb-2">
@@ -108,7 +99,7 @@
                                 </div>
                                 <div class="faq-text">
                                     <!-- <h6 class="title">High Quality Material</h6> -->
-                                    <p class="mb-1">Phone number</p>
+                                    <p class="mb-1">Email Address</p>
                                 </div>
                             </div>
                             <div class="faq-content mb-2">
@@ -117,7 +108,7 @@
                                 </div>
                                 <div class="faq-text">
                                     <!-- <h6 class="title">High Quality Material</h6> -->
-                                    <p class="mb-1">Payment information </p>
+                                    <p class="mb-1">Phone Number</p>
                                 </div>
                             </div>
                             <div class="faq-content mb-2">
@@ -126,7 +117,7 @@
                                 </div>
                                 <div class="faq-text">
                                     <!-- <h6 class="title">High Quality Material</h6> -->
-                                    <p class="mb-1">Car details</p>
+                                    <p class="mb-1">Shipping Address</p>
                                 </div>
                             </div>
                             <div class="faq-content mb-2">
@@ -135,7 +126,7 @@
                                 </div>
                                 <div class="faq-text">
                                     <!-- <h6 class="title">High Quality Material</h6> -->
-                                    <p class="mb-1">Pick-up city, state & zip code</p>
+                                    <p class="mb-1">Shipping Details</p>
                                 </div>
                             </div>
                             <div class="faq-content mb-2">
@@ -144,12 +135,44 @@
                                 </div>
                                 <div class="faq-text">
                                     <!-- <h6 class="title mb-1">High Quality Material</h6> -->
-                                    <p class="mb-1">Delivery city, state & zip code</p>
+                                    <p class="mb-1">Vehicle Information</p>
+                                </div>
+                            </div>
+                            <div class="faq-content mb-2">
+                                <div class="faq-icon">
+                                    <i class="fa-regular fa-check pp-list"></i>
+                                </div>
+                                <div class="faq-text">
+                                    <!-- <h6 class="title mb-1">High Quality Material</h6> -->
+                                    <p class="mb-1">Pick-up City, State & Zip Code</p>
+                                </div>
+                            </div>
+                            <div class="faq-content mb-2">
+                                <div class="faq-icon">
+                                    <i class="fa-regular fa-check pp-list"></i>
+                                </div>
+                                <div class="faq-text">
+                                    <!-- <h6 class="title mb-1">High Quality Material</h6> -->
+                                    <p class="mb-1">Delivery City, State & Zip Code</p>
                                 </div>
                             </div>
 
                         </div>
                     </div>
+                    
+                </div>
+
+            <div class="details-video-content">
+                <h5 class="title">Personal Information: </h5>
+                    <p>
+                        To book a transport Ship A1 Transport diligently collects personal information relevant to
+                        your transportation needs.
+
+                    </p>
+                    <p>
+                        This could include:
+
+                    </p>
 
                     <p>
                         This information is essential to contact you about your transportation scheduling and
@@ -157,16 +180,13 @@
 
 
                     </p>
-                </div>
-
-                <div class="details-video-content">
                     <h5 class="title">Usage Information:</h5>
                     <p>In our commitment to enhancing user experience, we gather usage information to improve our
                         website’s functionality and optimization. To maintain our commitment to improving user
                         experience, it is vital to collect information about how our users and clients utilize our
                         website, such as:</p>
 
-                    <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                    <!-- <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
                         <div class="tj-faq-left-content">
 
                             <div class="faq-content mb-2">
@@ -174,7 +194,7 @@
                                     <i class="fa-regular fa-check pp-list"></i>
                                 </div>
                                 <div class="faq-text">
-                                    <!-- <h6 class="title">Reliable & Trustworthy</h6> -->
+                                    
                                     <p class="mb-1">IP Adress</p>
                                 </div>
                             </div>
@@ -183,7 +203,7 @@
                                     <i class="fa-regular fa-check pp-list"></i>
                                 </div>
                                 <div class="faq-text">
-                                    <!-- <h6 class="title">High Quality Material</h6> -->
+                                    
                                     <p class="mb-1">Browser Type</p>
                                 </div>
                             </div>
@@ -192,7 +212,7 @@
                                     <i class="fa-regular fa-check pp-list"></i>
                                 </div>
                                 <div class="faq-text">
-                                    <!-- <h6 class="title">High Quality Material</h6> -->
+                                  
                                     <p class="mb-1">Operating System </p>
                                 </div>
                             </div>
@@ -201,14 +221,14 @@
                                     <i class="fa-regular fa-check pp-list"></i>
                                 </div>
                                 <div class="faq-text">
-                                    <!-- <h6 class="title">High Quality Material</h6> -->
+                                   
                                     <p class="mb-1">Pages Viewed</p>
                                 </div>
                             </div>
 
 
                         </div>
-                    </div>
+                    </div> -->
                     <p>All of the information collected is only to upgrade the operation of our website <a class="pp-link"
                             href="#"> www.shipa1.com</a>
 
