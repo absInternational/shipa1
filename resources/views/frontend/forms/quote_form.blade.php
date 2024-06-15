@@ -762,7 +762,7 @@
                 $('#step2').show();
             });
         });
-    </script
+    </script>
     <script>
         $(document).ready(function() {
             function addNewVehicle() {

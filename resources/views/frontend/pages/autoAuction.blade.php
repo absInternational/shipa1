@@ -43,7 +43,7 @@
 							<div class="image-container">
                                 <img class="img-fluid" src="https://www.shipa1.com/img/banner-5-800x400-landing.webp" loading="lazy" alt="Auction Car Transport">
                             </div>
-                            <br>
+                             <br>
                     <div class="text-container text-left">
                         <h3>We deliver quality, with prosperity. Because your Shipping needs, our solution.</h3>
                         <p>You can be an auction dealer looking for a car shipping company to ship vehicles to other states to your clients, or a customer looking for an auto mover to transport automobile to your home on another state. Ship-A1 provides auction vehicle shipping services to auction dealers and direct customers to make transportation for vehicles easy and affordable. We ship automobiles for companies like Copart, iaai, manheim, auction direct usa and etc.</p> 
@@ -55,13 +55,13 @@
                         <br>
                         <p>If you work for a vehicle dealership, or if you own one, then you know the importance of reliable auto transportation services to facilitate the shipment of individual automobile shipments from auction to consumers. There are a few things that you need to watch out for when getting the automobile to your customer, which includes.</p>
                         <br>
-                        <h3>Price:</h3>
+                        <h5>Price:</h5>
                         <p>When preparing to ship a vehicle for the customer, do not look for the company with an affordable price point. But look for the company which can get the job done without ultimately bankrupting you. You do not need to break the bank to ship a vehicle, you can get a necessary shipping service fit for an automobile at an affordable price.</p>
                         <br>
                         <h3>Quality Shipping Service:</h3>
                         <p>As previously mentioned, auto movers must get the vehicle to the destination on time, intact, and without any legal incidents every time. This might seem like common sense to you, but some fail at it, and these are not the type of companies you should be hiring. Experienced shipping companies boast about their services because they have the muscle to live up to their words.</p>
                         <br>
-                        <h3>Insurance:</h3>
+                        <h5>Insurance:</h5>
                         <p>According to federal law, all shipping companies should carry a valid insurance certificate. When speaking with an auto shipping representative, make sure that you understand the policy. Find out what damage is not covered, such as that which might occur during loading, offloading, and transit. A professional auto shipper like Ship-A1 will ensure that you are relaxed and comfortable with the process.</p>
                         <br>
                         <p>The best way to find the best car shipping auction services is to fill out our free online quote form and get multiple quotes to deliver your automobile from Ship-A1 because we are a reputable and reliable auto mover that has specialized in auction car shipping services. You can reach numerous free quotes that you can then differentiate against each other so you can find the best price to deliver your automobile. Even if you do not purchase your car at an auction, you can still get a free shipping quote, and this is a great source to help you find the appropriate auto transport company for your specific needs. </p>
@@ -76,32 +76,32 @@
                         <div class="list-wrapper">
                     		    <h4 class="list-title">Benefits</h4>
                     		<div class="list-style">
-                    			<ul>
-                    			    <li>
+                    			<!-- <ul>
+                    			    <li> -->
                     			        <div class="list-content">
                     			            <h6>Safer Form of Transport</h6>
                                             <p>We at Ship-A1 ensure that your automobile arrives in perfect condition, and so does the other shipping companies too. Driving your vehicle across the states will result in the number of miles the car will accumulate, more mileage means wear and tear, which is going to decrease your vehicle market value. With auto transport, you can rest assured that the vehicle will arrive in the condition you bought it in.</p>
                     			        </div>
-                    			    </li>
-                    			    <li>
+                    			    <!-- </li>
+                    			    <li> -->
                     			        <div class="list-content">
                     			            <h6>Customize Delivery</h6>
                                             <p>At Ship-A1, we provide a wide array of services, and you can choose the type of services that best fit your car requirements. We can also ship your inoperable vehicle, and also pick your vehicle directly from auction to your doorstep and save you from spending hours stuck behind the wheel.</p>
                     			        </div>
-                    			    </li>
-                    			    <li>
+                    			    <!-- </li>
+                    			    <li> -->
                     			        <div class="list-content">
                     			            <h6>Attractive Rates and Discounts</h6>
                                             <p>Many transport companies provide special discounts depending on the seasons. This feature is an advantage because it can save you a lot of money and time.</p>
                     			        </div>
-                    			    </li>
-                    			    <li>
+                    			    <!-- </li>
+                    			    <li> -->
                     			        <div class="list-content">
                     			            <h6>Save Money</h6>
                                             <p>Shipping your vehicle is often your least expensive choice once you calculate all the costs. An auto carrier moves several cars at once, not just your vehicle. By Delivering your automobiles, you do not need to pay for any accommodation, food, or gas. By shipping your car, you do not have to take time off from work.</p>
                     			        </div>
-                    			    </li>
-                    			</ul>
+                    			    <!-- </li>
+                    			</ul> -->
                     		</div>	
                         </div>
                         
@@ -110,40 +110,44 @@
                             <h4 class="list-title">Auction Car Shipping Services</h4>
                             <p>Due to many variables during the auto transport process, it is recommended to plan in advance. The type of automobile you are shipping is going to decide which method of shipment is optimal for you. Here are some of the shipping services we provide:</p>
                     		<div class="list-style list-2ndstyle">
-                    			<ul>
-                                    <li><div class="list-content">
-                                        <h3 class="list-h3-m">Open Carrier</h3>
+                    			<!-- <ul>
+                                    <li> -->
+                                        <div class="list-content">
+                                       <h5 class="font-weight-bold">Open Carrier</h5>
                                         <p>Under open carrier transport, cars are shipped in the free trailer with automobiles being exposed to the atmosphere. But do not let these facts distract you from the affordability and cheap services provided by an open container. They are the most popular mode of transportation, mostly because the vehicles are shipped on a two-level trailer with 7 to 10 automobiles shipped at one time. This makes them cheaper and provides faster services due to their efficiency.</p>
                                         </div>
-                                    </li>
+                                    <!-- </li>
                                 </ul>
                                 <ul>
-                                    <li><div class="list-content">
-                                        <h3 class="list-h3-m">Enclosed Carriers</h3>
+                                    <li> -->
+                                        <div class="list-content">
+                                        <h5 class="font-weight-bold">Enclosed Carriers</h5>
                                         <p>Enclosed carriers are covered to protect the vehicle from dust, road debris, rain, and snow. This service is optimal for antique automobiles, which require special care and experienced crew. This is a premium service that comes with added features like extra vehicle insurance, constant surveillance, and updates. This service will cost you more, but it serves to offer more protection to the car.</p>
                                         </div>
-                                    </li>
+                                    <!-- </li>
                                 </ul>
                                 <ul>
-                                    <li><div class="list-content">
-                                        <h3 class="list-h3-m">Door to Door Transport</h3>
+                                    <li> -->
+                                        <div class="list-content">
+                                        <h5 class="font-weight-bold">Door to Door Transport</h5>
                                         <p>Under door to door transport delivery, your automobile will be picked right from your door and will be delivered to your exact location. This is the most popular method of car shipping because it is more convenient for both the auto shipping company and the customer. With door to door delivery, you do not need to drive your vehicle to a terminal. You also do not need to pay to have it spend time in a card terminal.</p>
                                         </div>
-                                    </li>
+                                    <!-- </li>
                                 </ul>
                                 <ul>
-                                    <li><div class="list-content">
-                                        <h3 class="list-h3-m">Expedited Shipping</h3>
+                                    <li> -->
+                                        <div class="list-content">
+                                       <h5 class="font-weight-bold">Expedited Shipping</h5>
                                         <p>The speed of delivery is what matters to the customers the most. I want your vehicle to be delivered within a particular time and can not afford the delay. Under standard shipping, your car would be delivered in more than 4 days, with expedited shipping your automobile would be delivered within four days.</p>
                                         </div>
-                                    </li>
-                                </ul>
+                                    <!-- </li>
+                                </ul> -->
                     		</div>	
                         </div>
                         
                         
-                    </div> 
-                </div>
+                              </div> 
+                    </div>
                 
                 <div class="col-lg-4 p-0">
                 
@@ -159,8 +163,8 @@
                 @endif
                 
                 <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
-        <div class="tj-input-form-car" data-bg-image="">
-        <img src="{{ asset('img/disco-.png') }}" alt="Your Image" class="top-left-image">
+             <div class="tj-input-form-car" data-bg-image="">
+                <img src="{{ asset('img/disco-.png') }}" alt="Your Image" class="top-left-image">
                 <h4 class="title text-center">Instant Car Shipping Quote!</h4>
                         <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform "
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
@@ -343,9 +347,9 @@
                                 </button>
                             </div>
                         </form>
-      </div>
+              </div>
                 </div>
-            </div>
+             </div>
         </div>
     </section>
 
