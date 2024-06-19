@@ -127,8 +127,9 @@
                     <i class="fa-light fa-location-dot"></i>
                 </div>
                 <div class="contact-link">
-                    <span class="d-block"> Location:</span>
-                    <p>14A/ Pure Street City</p>
+                    <span class="d-block">Location:</span>
+                    <p><a href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu"
+                    target="_blank">201 International Cir STE 230,<br>Hunt Valley, MD 21030-1344</a></p>
                 </div>
             </div>
             <div class="contact-box contact-box1">
@@ -136,8 +137,8 @@
                     <i class="flaticon-email-2"></i>
                 </div>
                 <div class="contact-link">
-                    <span class="d-block"> Email us:</span>
-                    <a href="mailto:info@example.com"> info@example.com</a>
+                    <span class="d-block">Email us:</span>
+                    <a href="mailto:info@shipa1.com">shawntransport@shipa1.com</a>
                 </div>
             </div>
             <div class="contact-box">
@@ -146,7 +147,7 @@
                 </div>
                 <div class="contact-link">
                     <span class="d-block"> Call us:</span>
-                    <a href="tel:+1800-456-7890"> +1800-456-7890</a>
+                    <a href="tel: 1 (844) 474-4721">1 (844) 474-4721</a>
                 </div>
             </div>
         </div>
@@ -154,16 +155,16 @@
             <h4 class="offcanvas-title">Social Item</h4>
             <ul>
                 <li>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/ShipA1/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/shipa1_transport/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@shipA1392" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                 </li>
             </ul>
         </div>
@@ -173,7 +174,7 @@
                 style="border: 0" allowfullscreen=""></iframe>
         </div>
         <div class="tj-theme-button tj-btn d-lg-none">
-            <a class="tj-primary-btn" href="#"> Track Order <i class="flaticon-right-1"></i> </a>
+            <a class="tj-primary-btn" href="#">Track Order<i class="flaticon-right-1"></i> </a>
         </div>
     </div>
     <!-- Offcanvas Area End-->

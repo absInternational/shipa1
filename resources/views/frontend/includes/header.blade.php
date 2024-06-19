@@ -81,7 +81,7 @@
                                         <a href="{{ route('quote.form.combine') }}"
                                             class="{{ Request::routeIs('quote.form.combine') ? ' active' : '' }}"> Get
                                             Quote</a>
-                                        <ul class="list-gap sub-menu-list" style="width: 60rem">
+                                        <ul class="list-gap sub-menu-list" >
                                             <div class="row">
                                                 <div class="col-sm-4 bd-l bd-r">
                                                     <a class=" mb-3"
@@ -222,7 +222,7 @@
                                     <li class="current-menu-item menu-item-has-children">
                                         <a href="{{ route('services') }}"
                                             class="{{ Request::routeIs('services*') ? ' active' : '' }}"> Services</a>
-                                        <ul class="list-gap sub-menu-list" style="width: 53rem">
+                                        <ul class="list-gap sub-menu-list sub-menu-list-2" >
                                             <div class="row">
                                                 <div class="col-sm-4 bd-l bd-r">
                                                     {{-- <a class=" mb-3"

@@ -1250,8 +1250,16 @@ body [class*=" icon-"]::before {
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
-    width: 220px;
+    width: 60rem;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+/* .sub-menu-list-2{
+    width: 53rem !important;
+} */
+@media screen and (max-width: 768px) {
+    .tj-main-menu li .sub-menu-list {
+        width: 17rem;
+    }
 }
 
 .tj-main-menu li .sub-menu-list::before {

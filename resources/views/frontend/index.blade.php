@@ -535,7 +535,7 @@
             <div class="row">
                 <div class="col-lg-12 position-relative">
                     <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="{{ route('autoAuction') }}">
+                        <a class="tj-transparent-btn" target="_blank" href="{{ route('autoAuction') }}">
                             Read More <i class="flaticon-right-1"></i>
                         </a>
                     </div>
@@ -1229,6 +1229,7 @@
  },
 });
 </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var input = document.querySelector("#phone");
@@ -1248,6 +1249,7 @@
             });
         });
     </script>
+
     <script>
         $(document).ready(function() {
             $('#example-multiple').select2();
@@ -1387,8 +1389,6 @@
             });
         });
     </script>
-
-
 
     <script>
         $(document).ready(function() {
@@ -1619,10 +1619,6 @@
             });
         });
     </script>
-
-
-
-
 
     <script>
         $(document).ready(function() {
