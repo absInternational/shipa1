@@ -1250,7 +1250,7 @@ body [class*=" icon-"]::before {
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
-    width: 60rem;
+    width: 53rem;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 /* .sub-menu-list-2{
