@@ -87,9 +87,9 @@
                                                     <a class=" mb-3"
                                                         style="
                                                              letter-spacing: 1px;
-    font-size: larger;
-    text-decoration: none;
-    font-weight: bold;
+                                                              font-size: larger;
+                                                              text-decoration: none;
+                                                              font-weight: bold;
                                                          "
                                                         href="">Vehicle Transportation</a>
                                                     <li>
@@ -118,9 +118,9 @@
                                                     <a class=" mb-3"
                                                         style="
                                                           letter-spacing: 1px;
-    font-size: larger;
-    text-decoration: none;
-    font-weight: bold;
+                                                          font-size: larger;
+                                                          text-decoration: none;
+                                                          font-weight: bold;
                                                       "
                                                         href="#">Heavy Equipment</a>
                                                     <!-- <li>
@@ -164,9 +164,9 @@
                                                     <a class=" mb-3"
                                                         style="
                                                              letter-spacing: 1px;
-    font-size: larger;
-    text-decoration: none;
-    font-weight: bold;
+                                                            font-size: larger;
+                                                            text-decoration: none;
+                                                            font-weight: bold;
                                                          "
                                                         href="">Freight Transportation</a>
 
@@ -185,9 +185,9 @@
                                                     <a class=" mb-3"
                                                         style="
                                                              letter-spacing: 1px;
-    font-size: larger;
-    text-decoration: none;
-    font-weight: bold;
+                                                            font-size: larger;
+                                                            text-decoration: none;
+                                                            font-weight: bold;
                                                          "
                                                         href="">RORO</a>
                                                     <li>
