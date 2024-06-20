@@ -75,10 +75,10 @@
                                 <div class="form-group">
                                     <label>Canonical Url</label>
                                     <input class="form-control" type="text" name="canonical_url" placeholder="Canonical Url"
-                                        required />
-                                    @if ($errors->has('canonical_url'))
+                                         />
+                                         {{-- @if ($errors->has('canonical_url'))
                                         <span class="text-danger">{{ $errors->first('canonical_url') }}</span>
-                                    @endif
+                                    @endif --}}
                                 </div>
                                 <div class="form-group">
                                     <label>Meta Keyword</label>

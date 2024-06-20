@@ -3818,7 +3818,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-construction {
     background-color: #000000;
-    background-image: url(../../img/construction-equipment\ \(1\).webp);
+    background-image: url(../../img/construction_1.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3890,7 +3890,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-commercial {
     background-color: #000000;
-    background-image: url(../../img/truck-2707696_1280.webp);
+    background-image: url(../../img/truck-.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4123,6 +4123,30 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     /* opacity: 1; */
 }
 .tj-choose-us-section-bike::before {
+    background: rgba(6, 46, 57, 0.7);
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+}
+
+.tj-choose-us-section-home {
+    background-color: #000000;
+    
+    background-image: url(../../img/home-.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 120px;
+    padding-top: 110px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+.tj-choose-us-section-home::before {
     background: rgba(6, 46, 57, 0.7);
     width: 100%;
     position: absolute;
@@ -4388,7 +4412,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 /* car form end  */
 
-.tj-input-form-ser {
+.tj-input-form-ser{
     box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
     background: #062e39d4;
     border-radius: 5%;
@@ -4449,7 +4473,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-input-form-ser  .nice-select .list {
     width: 100%;
     margin-top: 0;
-    height: 280px;
+    height: 120px;
     overflow: auto;
 }
 
@@ -10321,4 +10345,67 @@ PAGE LOAD ANIMATION
 
 .error-field {
     border: 2px solid red;
+}
+
+.lab-cos {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--tj-white-color);
+    margin-bottom: 10px;
+}
+
+
+.input-container {
+    height: 34px;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 8px 0px 8px 0px;
+    width: fit-content;
+
+}
+
+.input-container1 {
+    height: 34px;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 8px 0px 8px 0px;
+    width: fit-content;
+
+}
+
+.input-field {
+    width: 50px;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+
+.input-field-1 {
+    width: 65px;
+    padding: 0px 0px 0px 10px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+
+.separator {
+    margin: 0px 0px 0px 0px;
+    font-size: 14px;
+}
+
+.separators {
+    margin: 0px 5px 0px 0px;
+    font-size: 14px;
+}
+
+.separators-w {
+    margin: 0px 5px 0px 0px;
+    font-size: 14px;
 }

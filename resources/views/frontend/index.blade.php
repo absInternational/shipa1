@@ -643,7 +643,7 @@
         </div>
     </section>
     <!--=========== About Section End =========-->
-    <section class="tj-choose-us-section">
+    <section class="tj-choose-us-section-home">
         <div class="container-flude">
             <div class="row">
                 @if (session('success'))
