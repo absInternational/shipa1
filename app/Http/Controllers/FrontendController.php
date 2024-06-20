@@ -25,6 +25,7 @@ class FrontendController extends Controller
         $reviews = Review::get();
         return view('frontend.index', compact('reviews', 'blogs', 'makes'));
     }
+    
 
     public function blogs()
     {

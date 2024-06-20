@@ -190,8 +190,107 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="details-sidebar-inner">
+            <div class="col-lg-4">
+                <div class="details-sidebar-inner">
+                          <div class="tj-sidebar-widget sidebar-search">
+                            <form action="#">
+                                <input type="text" class="form-control" name="search" id="searchOne" placeholder="Search">
+                                <i class="flaticon-loupe"></i>
+                            </form>
+                          </div>
+                          <div class="tj-sidebar-widget sidebar-post">
+                            <h5 class="details_title">Recent Blogs</h5>
+                                                            <div class="tj-post-content">
+                                    <div class="tj-auother-img">
+                                        <a href="http://127.0.0.1:8000/door-to-door-transport-delivery-vs-terminal-to-terminal-pick-up">
+                                            <img src="http://127.0.0.1:8000/blog_images/1571406672.jpg" alt="Blog"></a>
+                                    </div>
+                                    <div class="tj-details-text">
+                                        <div class="details-meta">
+                                            <ul class="list-gap">
+                                                <li><i class="flaticon-calendar"></i>
+                                                    Oct 18, 2019</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tj-details-header">
+                                            <h6>
+                                                <a href="http://127.0.0.1:8000/door-to-door-transport-delivery-vs-terminal-to-terminal-pick-up">
+                                                    Door to Door Transport Delivery vs. Terminal to Terminal Pick-up
+                                                </a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="tj-post-content">
+                                    <div class="tj-auother-img">
+                                        <a href="http://127.0.0.1:8000/how-are-oversized-vehicles-shipped">
+                                            <img src="http://127.0.0.1:8000/blog_images/1571407027.png" alt="Blog"></a>
+                                    </div>
+                                    <div class="tj-details-text">
+                                        <div class="details-meta">
+                                            <ul class="list-gap">
+                                                <li><i class="flaticon-calendar"></i>
+                                                    Oct 18, 2019</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tj-details-header">
+                                            <h6>
+                                                <a href="http://127.0.0.1:8000/how-are-oversized-vehicles-shipped">
+                                                    How are Oversized Vehicles Shipped
+                                                </a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="tj-post-content">
+                                    <div class="tj-auother-img">
+                                        <a href="http://127.0.0.1:8000/ultimate-guide-to-planning-car-shipping">
+                                            <img src="http://127.0.0.1:8000/blog_images/1571407370.png" alt="Blog"></a>
+                                    </div>
+                                    <div class="tj-details-text">
+                                        <div class="details-meta">
+                                            <ul class="list-gap">
+                                                <li><i class="flaticon-calendar"></i>
+                                                    Oct 18, 2019</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tj-details-header">
+                                            <h6>
+                                                <a href="http://127.0.0.1:8000/ultimate-guide-to-planning-car-shipping">
+                                                    Ultimate Guide To planning Car Shipping
+                                                </a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                        
+                </div>
+
+                <div class="tj-appointment-box" data-bg-image="/assets/images/service/service-15.jpg">
+                            <div class="tj-appointment-bg" data-bg-image="/assets/images/banner/service_shape.png"></div>
+                            <div class="tj-appointment-body">
+                                <div class="appointment-percent text-center">
+                                    <span class="text-uppercase">100% <br />Quality
+                                    </span>
+                                </div>
+                                <div class="appointment-content text-center">
+                                    <h4 class="title">Make An Appointment</h4>
+                                    <!-- <a class="tel-link" href="tel:+51-(0)-888-455-369"> +51-(0)-888-455-369</a> -->
+                                    <a class="tel-link" href="tel:+18444744721">1 (844) 474-4721</a>
+                                    <p>Perfectly simple & easy to distinguish free hour when power.</p>
+                                    <div class="tj-theme-button">
+                                        <a href="{{ route('quote.form.combine') }}" target="_blank">
+                                        <button class="tj-transparent-btn submit-btn2" type="submit" value="submit">
+                                            Get a Quote <i class="fa-light fa-arrow-right"></i>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+
+                    <!-- <div class="details-sidebar-inner">
                         <div class="tj-sidebar-widget sidebar-search">
                             <form action="#">
                                 <input type="text" class="form-control" name="search" id="search"
@@ -308,7 +407,7 @@
                                 <a href="#">Maintenance</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -19,6 +19,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Description</th>
+                            <th>Preview</th>
                             <th>Image</th>
                             <th>Status</th>
                             <th>Actions</th>
@@ -29,6 +30,8 @@
                         <tr>
                             <td>{{ $blog->post_name }}</td>
                             <td>{{ $blog->post_short_description }}</td>
+                            <td nowrap> <a class="title" target="_blank" href="{{ route('blog.details', $blog->slug_name) }}">Open Link</a>
+                                    </td>
                             <td>
                                 <img src="{{ asset($blog->post_image) }}" alt="{{ $blog->post_name }}"
                                     style="max-width: 150px; max-height: 100px;">
@@ -40,7 +43,7 @@
                                     Inactive
                                 @endif
                             </td>
-                            <td>
+                            <td nowrap >
                                 <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                 <form action="{{ route('blogs.destroy', $blog->id) }}" method="POST" style="display: inline;">
                                     @csrf
