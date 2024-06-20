@@ -27,7 +27,7 @@ class BlogController extends Controller
             // 'slug_name' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
             'post_short_description' => 'nullable|string',
-            'post_description' => 'nullable|string',
+            'post_description' => 'nullable|string|max:50000000',
             'meta_title' => 'nullable|string|max:255',
             'canonical_url' => 'nullable|string|max:255',
             'meta_keyword' => 'nullable|string|max:255',
