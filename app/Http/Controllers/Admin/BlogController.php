@@ -24,7 +24,7 @@ class BlogController extends Controller
     {
         $validatedData = $request->validate([
             'post_name' => 'required|string|max:255',
-            // 'slug_name' => 'nullable|string|max:255',
+            'slug_name' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
             'post_short_description' => 'nullable|string',
             'post_description' => 'nullable|string|max:50000000',
@@ -35,8 +35,17 @@ class BlogController extends Controller
             'image' => 'nullable|image|max:2048',
         ]);
 
-        $slug = Str::slug($request->post_name);
-        $validatedData['slug_name'] = $this->generateUniqueSlug($slug);
+        // $slug = Str::slug($request->post_name);
+        // $validatedData['slug_name'] = $this->generateUniqueSlug($slug);
+
+        // Replace spaces with hyphens in slug_name if provided
+        if ($request->filled('slug_name')) {
+            $slug = Str::slug($request->slug_name, '-'); // Replace spaces with hyphens
+            $validatedData['slug_name'] = $this->generateUniqueSlug($slug);
+        } else {
+            $slug = Str::slug($request->post_name, '-');
+            $validatedData['slug_name'] = $this->generateUniqueSlug($slug);
+        }
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -64,7 +73,7 @@ class BlogController extends Controller
 
         $validatedData = $request->validate([
             'post_name' => 'required|string|max:255',
-            // 'slug_name' => 'nullable|string|max:255',
+            'slug_name' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
             'post_short_description' => 'nullable|string',
             'post_description' => 'nullable|string',
@@ -76,8 +85,17 @@ class BlogController extends Controller
             'status' => 'required',
         ]);
 
-        $slug = Str::slug($request->post_name);
-        $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
+        // $slug = Str::slug($request->post_name);
+        // $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
+
+       // Replace spaces with hyphens in slug_name if provided
+       if ($request->filled('slug_name')) {
+            $slug = Str::slug($request->slug_name, '-'); // Replace spaces with hyphens
+            $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
+        } else {
+            $slug = Str::slug($request->post_name, '-');
+            $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
+        }
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
