@@ -1,5 +1,9 @@
 @extends('frontend.layouts.app')
 
+@section('title')
+Ship A1 Blog Page
+@endsection
+
 @section('content')
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">

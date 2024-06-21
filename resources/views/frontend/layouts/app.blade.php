@@ -4,7 +4,8 @@
 <head>
     <!-- Meta Tag -->
     <meta charset="utf-8" />
-    <title>ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA</title>
+    {{-- <title>ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA</title> --}}
+    <title>@yield('title')</title>
     <meta name="description" content="" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
