@@ -266,7 +266,7 @@
                                                         @endif
                                                     @endforeach
 
-                                                    <a class=" mb-3" href="" style=" letter-spacing: 1px; ">RORO</a>
+                                                    <a class=" mb-3" href="" style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold; ">RORO</a>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'RORO')
                                                             <li>
@@ -300,7 +300,7 @@
                             <!-- Mainmenu Item End -->
 
                             <div class="header-menu-select d-flex align-items-center justify-content-end">
-                                {{--  <div class="header-language">
+                        {{-- <div class="header-language">
                                     <ul class="languages dropdown">
                                         <li class="activated"></li>
                                         <li>
