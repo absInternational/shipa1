@@ -321,7 +321,7 @@
                             </div> --}}
                                 <div class="tj-header-button d-none d-lg-block">
                                     <a class="tj-header-btn" href="{{ route('order.tracking') }}">
-                                        Track Order <i class="flaticon-right-1"></i>
+                                        TRACK ORDER <i class="flaticon-right-1"></i>
                                     </a>
                                 </div>
                                 <div class="tj-hambagur-icon d-lg-none">

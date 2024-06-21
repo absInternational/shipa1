@@ -479,7 +479,7 @@ Home Page
                             <i class="flaticon-air-freight"></i>
                         </div>
                         <div class="service-content">
-                            <h4><a class="title-link" href="service-details.html"> VEHICLE TRANSPORTATION</a></h4>
+                            <h4><a class="title-link" href="{{ route('vehicleTransportDetail') }}" target="_blank"> VEHICLE TRANSPORTATION</a></h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
                     </div>
@@ -492,7 +492,7 @@ Home Page
                         </div>
                         <div class="service-content">
                             <h4>
-                                <a class="title-link" href="service-details.html"> HEAVY TRANSPORTATION</a>
+                                <a class="title-link" href="{{ route('heavy-transport-detail') }}" target="_blank"> HEAVY TRANSPORTATION</a>
                             </h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
@@ -505,7 +505,7 @@ Home Page
                             <i class="flaticon-delivery-van"></i>
                         </div>
                         <div class="service-content">
-                            <h4><a class="title-link" href="service-details.html"> FREIGHT TRANSPORTATION</a></h4>
+                            <h4><a class="title-link"  href="{{ route('freighttransport-detail') }}" target="_blank"> FREIGHT TRANSPORTATION</a></h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
                     </div>

@@ -76,31 +76,31 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="{{ route('aboutUs') }}">About Us </a>
+                                <a href="{{ route('aboutUs') }}" target="_blank">About Us </a>
                             </li>
                             <li>
-                                <a href="{{ route('blogs') }}">Blogs</a>
+                                <a href="{{ route('blogs') }}" target="_blank">Blogs</a>
                             </li>
                             <li>
-                                <a href="{{ route('contactUs') }}">Contact Us</a>
+                                <a href="{{ route('contactUs') }}" target="_blank">Contact Us</a>
                             </li>
                             <!-- <li>
                                 <a href="#">Case Studies</a>
                             </li> -->
                             <li>
-                                <a href="{{ route('order.tracking') }}">Track Order </a>
+                                <a href="{{ route('order.tracking') }}" target="_blank">Track Order </a>
                             </li>
 
 
                             <li>
-                                <a href="#">Our Team </a>
+                                <a href="#" target="_blank">Our Team </a>
                             </li>
 
                             <li>
-                                <a href="{{ route('termsAndConditions') }}">Terms & Conditions</a>
+                                <a href="{{ route('termsAndConditions') }}" target="_blank">Terms & Conditions</a>
                             </li>
                             <li>
-                                <a href="{{ route('privacyPolicy') }}">Privacy Policy</a>
+                                <a href="{{ route('privacyPolicy') }}" target="_blank">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>

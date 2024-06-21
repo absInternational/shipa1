@@ -1235,7 +1235,7 @@
                     </div>
                 </div> -->
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
@@ -1366,6 +1366,38 @@
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>FAQ Three Content: Trage agile frameworks to provide a robust synopsis for
+                                            high level overviews.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        FAQ Four
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>FAQ Four Content: Trage agile frameworks to provide a robust synopsis for
+                                            high level overviews.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        FAQ Five
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>FAQ Five Content: Trage agile frameworks to provide a robust synopsis for
                                             high level overviews.</strong>
                                     </div>
                                 </div>
