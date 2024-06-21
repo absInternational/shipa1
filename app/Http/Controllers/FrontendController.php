@@ -29,8 +29,10 @@ class FrontendController extends Controller
 
     public function blogs()
     {
+        $blogTitle = Blog::get();
+        // dd($blogTitle);
         $blogs = Blog::where('status', 1)->paginate(10);
-        return view('frontend.blogs.index', compact('blogs'));
+        return view('frontend.blogs.index', compact('blogs', 'blogTitle'));
     }
 
     public function blogDetails($slug)
