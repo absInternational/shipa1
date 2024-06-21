@@ -5,9 +5,9 @@
 </style>
 
 <header class="tj-header-section" id="header-sticky">
-    <div class="container">
+    <div class="container" style=" border-radius: 12px; ">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12" >
                 <div class="bg-color d-flex flex-wrap">
                     <!-- Logo Area Start -->
                     <div class="logo-area">
