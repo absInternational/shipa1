@@ -600,8 +600,8 @@ SHIP A1
             <div class="row">
                 <div class="col-lg-12 position-relative">
                     <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" target="_blank" href="{{ route('autoAuction') }}">
-                            Read More <i class="flaticon-right-1"></i>
+                        <a class="tj-transparent-btn" target="_blank" href="{{ route('quote.form.combine') }}">
+                            GET QUOTE<i class="flaticon-right-1"></i>
                         </a>
                     </div>
                 </div>
