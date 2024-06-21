@@ -5272,7 +5272,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-project-item {
     position: relative;
-    border-radius: 3px;
+    border-radius: 12px;
     margin-bottom: 120px;
     overflow: hidden;
 }
