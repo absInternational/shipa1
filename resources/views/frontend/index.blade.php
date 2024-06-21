@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('title')
-Home Page
+SHIP A1
 @endsection
 @section('content')
 

@@ -1,7 +1,12 @@
 @extends('frontend.layouts.app')
 
 @section('title')
-{{ $blog->meta_title }}
+{{-- {{ $blog->meta_title }} --}}
+{{ $blog->meta_title ? $blog->meta_title : 'Opps Title is Not Availabe' }}
+@endsection
+
+@section('meta_description')
+{{ $blog->meta_description }}
 @endsection
 
 @section('content')
