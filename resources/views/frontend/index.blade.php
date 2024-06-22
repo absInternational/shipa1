@@ -29,7 +29,7 @@ SHIP A1
     }
         .tj-testimonial-section {
             padding: 50px 0;
-            background: #f9f9f9;
+            background: #ffffff;
         }
 
         .tj-testimonial2-section {
@@ -329,7 +329,7 @@ SHIP A1
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}" >
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h1>
@@ -483,102 +483,41 @@ SHIP A1
     </section>
     <!--=========== Slider Section End =========-->
 
- <!--=========== Testimonial Section Start =========-->
- <section class="tj-testimonial-section">
-        <div class="container">
-            <div class="row">
-                <div class="tj-section-heading text-center">
-                    <span class="sub-title active-shape"> Client Feedback</span>
-                    <h2 class="title">Our Client Reviews</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="swiper tj-testimonial-slider">
-                        <div class="swiper-wrapper">
-                            @foreach ($reviews as $review)
-                                <div class="swiper-slide">
-                                    <div class="tj-testimonial-item">
-                                        <div class="testimonial-rating d-flex justify-content-between">
-                                            <div class="testimoniasl-image">
-                                                <img src="{{ asset('frontend/images/icon/comment.svg') }}"
-                                                    alt="Icon" />
-                                            </div>
-                                            <div class="rating-icon">
-                                                <ul class="list-gap">
-                                                    @for ($i = 0; $i < (int) floor($review->rating); $i++)
-                                                        <li><i class="fa fa-star text-warning"></i></li>
-                                                    @endfor
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="content-area">
-                                            <p>{{ $review->description }}</p>
-                                            <div class="testimonial-content d-flex justify-content-between">
-                                                <div class="testimonial-auother">
-                                                    <h5 class="title">{{ $review->person_name }} </h5>
-                                                    <span
-                                                        class="sub-title">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
-                                                </div>
-                                                <div class="testimonial-comment">
-                                                    @if ($review->site_name == 'BBB')
-                                                        <img src="{{ asset('frontend/images/testimonial/bbb.png') }}"
-                                                            alt="Image" />
-                                                    @elseif ($review->site_name == 'Google')
-                                                        <img src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                            alt="Image" />
-                                                    @else
-                                                        <img src="{{ asset('frontend/images/testimonial/transport.png') }}"
-                                                            alt="Image" />
-                                                    @endif
-                                                </div>
-                                            </div>
-                                        </div>
+    <!--=========== Testimonial Section Start =========-->
+    <section class="tj-testimonial-section mt-4">
+        <div class="carousel-wrapper">
+            <div class="owl-carousel owl-theme" id="owl-caro">
+                @foreach ($reviews as $review)
+                    <div class="item">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-6 col-6">
+                                    <div>
+                                        <img loading="lazy" src="{{ asset('frontend/images/transport.png') }}" width="100%"
+                                            height="100%" alt="Google">
+                                    </div>
+                                    <div class="star">
+                                        @for ($i = 0; $i < (int) floor($review->rating); $i++)
+                                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                        @endfor
                                     </div>
                                 </div>
-                            @endforeach
+                                <div class="col-md-6 col-6">
+                                    <div class="rates">
+                                        {{ $review->rating }}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
-    <!--=========== Testimonial Section End =========-->
 
-    <section class="tj-cta-section-two">
-            <div class="tj_cta_image"></div>
-            <div class="tj_cta_image1"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="tj-cta-content">
-                            <div class="tj-section-heading">
-                                <span class="sub-title active-shape2"> Here We Are</span>
-                                <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" target="_blank">
-                                    Get Quote<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="tj-cta-content tj-cta-content2">
-                            <div class="tj-section-heading">
-                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                                <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
-                                    Get Support<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  
+
+    
 
     <!--=========== Service Section Start =========-->
     <section class="tj-service-section">
@@ -768,6 +707,41 @@ SHIP A1
     </section>
     <!--=========== About Section End =========-->
 
+    <section class="tj-cta-section-two">
+            <div class="tj_cta_image"></div>
+            <div class="tj_cta_image1"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tj-cta-content">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape2"> Here We Are</span>
+                                <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                                    Get Quote<i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tj-cta-content tj-cta-content2">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
+                                <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
+                                    Get Support<i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <section class="tj-step-section">
             <div class="container">
                 <div class="row">
@@ -787,7 +761,7 @@ SHIP A1
                                 </div>
                                 <div class="step-content">
                                     <h6 class="title">Online Quote</h6>
-                                    <span> An online quote is an estimate of the cost of a product</span>
+                                    <span> Get an instant online quote from our website or call our agent.</span>
                                 </div>
                             </div>
                             <div class="tj-step-item text-center">
@@ -797,8 +771,8 @@ SHIP A1
                                     <span class="number"> 02.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h6 class="title">Picking Product</h6>
-                                    <span> An online quote is an estimate of the cost of a product</span>
+                                    <h6 class="title">Confirm Order</h6>
+                                    <span> Confirm your order over the phone and fill out the booking form.</span>
                                 </div>
                             </div>
                             <div class="tj-step-item text-center">
@@ -808,8 +782,9 @@ SHIP A1
                                     <span class="number"> 03.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h6 class="title">Product Packaging</h6>
-                                    <span> An online quote is an estimate of the cost of a product</span>
+                                    <h6 class="title">Track Shipment
+                                   </h6>
+                                    <span>  Track your shipment by your unique order id number.</span>
                                 </div>
                             </div>
                             <div class="tj-step-item text-center">
@@ -819,8 +794,9 @@ SHIP A1
                                     <span class="number"> 04.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h6 class="title">Product Transport</h6>
-                                    <span> An online quote is an estimate of the cost of a product</span>
+                                    <h6 class="title">Shipment Delivery
+                                    </h6>
+                                    <span> Your shipment reached to their drop-off location.</span>
                                 </div>
                                 <div class="stp-arrow">
                                     <i class="fa-regular fa-arrow-right"></i>
@@ -832,7 +808,8 @@ SHIP A1
             </div>
         </section>
 
-    <section class="tj-choose-us-section-home">
+    
+        <section class="tj-choose-us-section-home">
         <div class="container-flude">
             <div class="row">
                 @if (session('success'))
@@ -1397,37 +1374,67 @@ SHIP A1
     </section>
     <!--=========== Blog Section End =========-->
 
-    <!--=========== Testimonial Section Start =========-->
-    <section class="tj-testimonial-section">
-        <div class="carousel-wrapper">
-            <div class="owl-carousel owl-theme" id="owl-caro">
-                @foreach ($reviews as $review)
-                    <div class="item">
-                        <div class="card">
-                            <div class="row">
-                                <div class="col-md-6 col-6">
-                                    <div>
-                                        <img loading="lazy" src="{{ asset('frontend/images/transport.png') }}" width="100%"
-                                            height="100%" alt="Google">
-                                    </div>
-                                    <div class="star">
-                                        @for ($i = 0; $i < (int) floor($review->rating); $i++)
-                                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        @endfor
+      <!--=========== Testimonial Section Start =========-->
+      <section class="tj-testimonial-section">
+        <div class="container">
+            <div class="row">
+                <div class="tj-section-heading text-center">
+                    <span class="sub-title active-shape"> Client Feedback</span>
+                    <h2 class="title">Our Client Reviews</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper tj-testimonial-slider">
+                        <div class="swiper-wrapper">
+                            @foreach ($reviews as $review)
+                                <div class="swiper-slide">
+                                    <div class="tj-testimonial-item">
+                                        <div class="testimonial-rating d-flex justify-content-between">
+                                            <div class="testimoniasl-image">
+                                                <img src="{{ asset('frontend/images/icon/comment.svg') }}"
+                                                    alt="Icon" />
+                                            </div>
+                                            <div class="rating-icon">
+                                                <ul class="list-gap">
+                                                    @for ($i = 0; $i < (int) floor($review->rating); $i++)
+                                                        <li><i class="fa fa-star text-warning"></i></li>
+                                                    @endfor
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="content-area">
+                                            <p>{{ $review->description }}</p>
+                                            <div class="testimonial-content d-flex justify-content-between">
+                                                <div class="testimonial-auother">
+                                                    <h5 class="title">{{ $review->person_name }} </h5>
+                                                    <span
+                                                        class="sub-title">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
+                                                </div>
+                                                <div class="testimonial-comment">
+                                                    @if ($review->site_name == 'BBB')
+                                                        <img src="{{ asset('frontend/images/testimonial/bbb.png') }}"
+                                                            alt="Image" />
+                                                    @elseif ($review->site_name == 'Google')
+                                                        <img src="{{ asset('frontend/images/testimonial/google.png') }}"
+                                                            alt="Image" />
+                                                    @else
+                                                        <img src="{{ asset('frontend/images/testimonial/transport.png') }}"
+                                                            alt="Image" />
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="rates">
-                                        {{ $review->rating }}
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                @endforeach
+                </div>
             </div>
         </div>
     </section>
+    <!--=========== Testimonial Section End =========-->
 
 
     <!--=========== Newsletter Section Start =========-->
