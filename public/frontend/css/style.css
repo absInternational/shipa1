@@ -180,6 +180,52 @@ textarea:focus {
     z-index: 3;
 }
 
+.tj-section-heading-1.text-center {
+    padding: 25px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 56%);
+    border-radius: 12px;
+    border: 0px solid;
+    width: 93%;
+    margin-left: 55px;
+    margin-right: auto;
+    position: relative;
+    z-index: 3;
+}
+
+.tj-section-heading-1 .sub-title-1 {
+    color: var(--tj-primary-color);
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 35px;
+    transition: 0.6s;
+}
+
+.tj-section-heading-1 .sub-title-1.active-shape::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    top: 8px;
+    left: 0;
+    border: 2px solid var(--tj-primary-color);
+    height: 16px;
+    z-index: 3;
+    transform: rotate(45deg);
+}
+
+.tj-section-heading-1 .sub-title-1.active-shape::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    top: 8px;
+    left: 10px;
+    border: 2px solid var(--tj-secondary-color);
+    height: 16px;
+    transform: rotate(45deg);
+}
+
+
 .tj-section-heading {
     margin-bottom: 55px;
     max-width: 800px;
@@ -2573,7 +2619,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-cta-section-two .tj_cta_image {
     content: "";
     position: absolute;
-    background: url(../images/cta/cta-2.jpg);
+    background: url(../../frontend/images/banner/1\ \(1\).webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -2596,7 +2642,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-cta-section-two .tj_cta_image1 {
     content: "";
     position: absolute;
-    background: url(../images/cta/cta-3.jpg);
+    background: url(../../frontend/images/banner/2\ \(1\).webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -5814,12 +5860,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-counter-area {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     background: var(--tj-white-color);
     box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
     padding: 60px 85px 55px;
-    margin-top: -120px;
+    margin-top: -46px;
     position: relative;
 }
 
@@ -5839,14 +5885,14 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-counter-area .counter-item .counter-number .tj-count {
-    font-size: 55px;
+    font-size: 40px;
     color: var(--tj-secondary-color);
     font-weight: 700;
 }
 
 .tj-counter-area .counter-item .counter-number .sub-title {
     color: var(--tj-secondary-color);
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
 }
 

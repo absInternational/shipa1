@@ -470,33 +470,86 @@
         </div>
     </section>
 
-    <section class="tj-service-details pt-4 pb-0">
-        <div class="container">
+
+    
+
+    <section class="tj-about-section-three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                        <div class="about_image text-center">
+                            <img src="{{ asset('frontend/images/project/atv,utv-1.webp') }}" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                        <div class="about-content-three">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape ">Ship A1 Transport</span>
+                                <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
+                                <p class="desc">
+                                Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your comfort is our top priority, ship the best vehicles at reasonable rates without compromising quality. Our professional and expert team provides you with 100% insured and secure vehicle transport solutions that are specifically tailored to your needs.
+                         <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even find various suitable services! For shipping your luxurious vehicle, you can opt for enclosed trailers as they are made to protect your vehicle from road debris, scratches, the uncertainty of weather conditions, and potential risks. However, if you are searching for something equally cost-effective and safe, go for open transport! We have expedited options and door-to-door delivery for fast vehicle shipping.
+                         <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
+                                </p>
+                            </div>
+                            <!-- <div class="content-box d-flex align-items-center">
+                                <div class="tj-icon-box">
+                                    <div class="ab-text d-flex align-items-center">
+                                        <div class="ab-icon">
+                                            <img src="assets/images/icon/global.svg" alt="Icon">
+                                        </div>
+                                        <div class="ab-title">
+                                            <h5 class="title">Our Mission</h5>
+                                        </div>
+                                    </div>
+                                    <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
+                                </div>
+                                <div class="tj-icon-box">
+                                    <div class="ab-text d-flex align-items-center">
+                                        <div class="ab-icon">
+                                            <img src="assets/images/icon/winner.svg" alt="Icon">
+                                        </div>
+                                        <div class="ab-title">
+                                            <h5 class="title">Our Vision</h5>
+                                        </div>
+                                    </div>
+                                    <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
+                                </div>
+                            </div> -->
+                            <div class="tj-theme-button">
+                                <a class="tj-primary-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+
+    <!-- <section class="tj-service-details pt-4 pb-0">
+        <div class="container-flude">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape">Ship A1 Transport</span>
+            <div class="col-lg-2">
+            </div>
+                <div class="col-lg-10">
+                    <div class="tj-section-heading-1 text-center">
+                        <span class="sub-title-1 active-shape">Ship A1 Transport</span>
                         <p>
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
+                        Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your comfort is our top priority, ship the best vehicles at reasonable rates without compromising quality. Our professional and expert team provides you with 100% insured and secure vehicle transport solutions that are specifically tailored to your needs.
+                         <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even find various suitable services! For shipping your luxurious vehicle, you can opt for enclosed trailers as they are made to protect your vehicle from road debris, scratches, the uncertainty of weather conditions, and potential risks. However, if you are searching for something equally cost-effective and safe, go for open transport! We have expedited options and door-to-door delivery for fast vehicle shipping.
+                         <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
+
 
                         </p>
-                        <!-- <h2 class="title">Welcome to the  &amp; privacy policy </h2> -->
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!--=========== About Section Start =========-->
     <section class="tj-about-section pt-4">
@@ -762,19 +815,18 @@
                 </div>
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
                     <div class="tj-faq-area">
-                        <div class="accordion" id="accordionExample">
+                    <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        FAQ One
+                                        What should I choose for my luxurious vehicle?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>FAQ One Content: Trage agile frameworks to provide a robust synopsis for
-                                            high level overviews.</strong>
+                                        <strong>If you have a luxurious vehicle, we would suggest you go for the enclosed trailer as it protects your vehicle and offers you peace of mind, or if you are looking for a cheaper option then open transport is the best for you, without compromising the quality experience the best, safe and secure shipping with Ship A1!</strong>
                                     </div>
                                 </div>
                             </div>
@@ -782,14 +834,13 @@
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        FAQ Two
+                                        How do I get a quote?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>FAQ Two Content: Trage agile frameworks to provide a robust synopsis for
-                                            high level overviews.</strong>
+                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
                                     </div>
                                 </div>
                             </div>
@@ -798,19 +849,48 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        FAQ Three
+                                        Can I track my vehicle during transport?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>FAQ Three Content: Trage agile frameworks to provide a robust synopsis for
+                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        How do I prepare my vehicle for transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        FAQ Five
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>FAQ Five Content: Trage agile frameworks to provide a robust synopsis for
                                             high level overviews.</strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
