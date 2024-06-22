@@ -280,6 +280,30 @@ SHIP A1
         }
     </style>
 
+    <!-- Preloader start -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <!-- <div class="spinner">
+                <div class="loader-icon">
+                    <img src="{{ asset('frontend/images/logo/favicon.png') }}"
+                        alt="Corporate Business HTML Template" />
+                </div>
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="S" class="letters-loading"> S </span>
+                <span data-text-preloader="H" class="letters-loading"> H </span>
+                <span data-text-preloader="I" class="letters-loading"> I </span>
+                <span data-text-preloader="P" class="letters-loading"> P </span>
+                <span data-text-preloader="" class="letters-loading"> </span>
+                <span data-text-preloader="A" class="letters-loading"> A </span>
+                <span data-text-preloader="1" class="letters-loading"> 1 </span>
+                <span data-text-preloader="" class="letters-loading"> </span>
+            </div> -->
+        </div>
+        <!-- <button class="tj-primary-btn">Cancel Preloader</button> -->
+    </div>
+    <!-- Preloader end -->
+
     <!--=========== Slider Section Start =========-->
 
 
@@ -521,6 +545,41 @@ SHIP A1
     </section>
     <!--=========== Testimonial Section End =========-->
 
+    <section class="tj-cta-section-two">
+            <div class="tj_cta_image"></div>
+            <div class="tj_cta_image1"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tj-cta-content">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape2"> Support Center 24/7</span>
+                                <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tj-cta-content tj-cta-content2">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape2"> Here We Are</span>
+                                <h4 class="title">Get Anytype Quote From Our LogiLand</h4>
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Get a Quote <i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <!--=========== Service Section Start =========-->
     <section class="tj-service-section">
         <div class="container">
@@ -708,6 +767,71 @@ SHIP A1
         </div>
     </section>
     <!--=========== About Section End =========-->
+
+    <section class="tj-step-section">
+            <div class="container">
+                <div class="row">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape"> Working Process</span>
+                        <h2 class="title">We Follow Great Process</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tj-step-area">
+                            <div class="tj-step-item text-center">
+                                <div class="step-icon-box">
+                                    <div class="step-box"></div>
+                                    <i class="flaticon-economics"></i>
+                                    <span class="number"> 01.</span>
+                                </div>
+                                <div class="step-content">
+                                    <h6 class="title">Online Quote</h6>
+                                    <span> An online quote is an estimate of the cost of a product</span>
+                                </div>
+                            </div>
+                            <div class="tj-step-item text-center">
+                                <div class="step-icon-box">
+                                    <div class="step-box"></div>
+                                    <i class="flaticon-pick"></i>
+                                    <span class="number"> 02.</span>
+                                </div>
+                                <div class="step-content">
+                                    <h6 class="title">Picking Product</h6>
+                                    <span> An online quote is an estimate of the cost of a product</span>
+                                </div>
+                            </div>
+                            <div class="tj-step-item text-center">
+                                <div class="step-icon-box">
+                                    <div class="step-box"></div>
+                                    <i class="flaticon-tracking"></i>
+                                    <span class="number"> 03.</span>
+                                </div>
+                                <div class="step-content">
+                                    <h6 class="title">Product Packaging</h6>
+                                    <span> An online quote is an estimate of the cost of a product</span>
+                                </div>
+                            </div>
+                            <div class="tj-step-item text-center">
+                                <div class="step-icon-box">
+                                    <div class="step-box"></div>
+                                    <i class="flaticon-delivery-van"></i>
+                                    <span class="number"> 04.</span>
+                                </div>
+                                <div class="step-content">
+                                    <h6 class="title">Product Transport</h6>
+                                    <span> An online quote is an estimate of the cost of a product</span>
+                                </div>
+                                <div class="stp-arrow">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <section class="tj-choose-us-section-home">
         <div class="container-flude">
             <div class="row">
@@ -1106,6 +1230,100 @@ SHIP A1
         </div>
     </section>
     <!--=========== Map Section End =========-->
+
+    <section class="tj-counter-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tj-counter-area" data-bg-image="assets/images/banner/counter-shape.png" style="background-image: url(&quot;assets/images/banner/counter-shape.png&quot;);">
+                           
+                            <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
+                                <div class="counter-icon">
+                                    <i class="flaticon-courier"></i>
+                                </div>
+                                <div class="counter-number">
+                                    <div class="tj-count"><span class="odometer odometer-auto-theme" data-count="128000"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">7</span></span></span></span></span></div></span></div>
+                                    <span class="sub-title">Satisfied Clients</span>
+                                </div>
+                            </div>
+                            <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                                <div class="counter-icon">
+                                    <i class="flaticon-box"></i>
+                                </div>
+                                <div class="counter-number">
+                                    <div class="tj-count"><span class="odometer odometer-auto-theme" data-count="129"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span></div></span>k</div>
+                                    <span class="sub-title">Shipment Delivered</span>
+                                </div>
+                            </div>
+                            <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                                <div class="counter-icon">
+                                    <i class="flaticon-box"></i>
+                                </div>
+                                <div class="counter-number">
+                                    <div class="tj-count"><span class="odometer odometer-auto-theme" data-count="38861"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span></div></span>k</div>
+                                    <span class="sub-title">Miles Covered</span>
+                                </div>
+                            </div>
+                            <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
+                                <div class="counter-icon">
+                                    <i class="flaticon-worldwide"></i>
+                                </div>
+                                <div class="counter-number">
+                                    <div class="tj-count">
+                                        <span class="odometer odometer-auto-theme" data-count="8">
+                                            <div class="odometer-inside"><span class="odometer-digit">
+                                                <span class="odometer-digit-spacer">8</span>
+                                                <span class="odometer-digit-inner">
+                                                    <span class="odometer-ribbon">
+                                                        <span class="odometer-ribbon-inner">
+                                                            <span class="odometer-value">2</span>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="odometer-formatting-mark">,</span>
+                                            <span class="odometer-digit">
+                                                <span class="odometer-digit-spacer">8</span>
+                                                <span class="odometer-digit-inner">
+                                                    <span class="odometer-ribbon">
+                                                        <span class="odometer-ribbon-inner">
+                                                            <span class="odometer-value">7</span>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="odometer-digit">
+                                                <span class="odometer-digit-spacer">8</span>
+                                                <span class="odometer-digit-inner">
+                                                    <span class="odometer-ribbon">
+                                                        <span class="odometer-ribbon-inner">
+                                                            <span class="odometer-value">0</span>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="odometer-digit">
+                                                <span class="odometer-digit-spacer">8</span>
+                                                <span class="odometer-digit-inner">
+                                                    <span class="odometer-ribbon">
+                                                        <span class="odometer-ribbon-inner">
+                                                            <span class="odometer-value">9</span>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+                                    <span class="sub-title">Years Of Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     <!--=========== Blog Section Start =========-->
     <section class="tj-blog-section">
