@@ -14,6 +14,9 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\FormVehicleController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\OrderFormController;
+use App\Http\Controllers\Admin\MenuController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -153,6 +156,16 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('blogs.edit');
         Route::put('/update/{id}', [BlogController::class, 'update'])->name('blogs.update');
         Route::delete('/destroy/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+    });
+    
+    // Edit Frontend NavBar
+    Route::prefix('navbar')->group(function () {
+        Route::get('/', [MenuController::class, 'index'])->name('navbar.index');
+        Route::get('/add', [MenuController::class, 'create'])->name('navbar.create');
+        Route::post('/store', [MenuController::class, 'store'])->name('navbar.store');
+        Route::get('/edit/{id}', [MenuController::class, 'edit'])->name('navbar.edit');
+        Route::post('/update/{id}', [MenuController::class, 'update'])->name('navbar.update');
+        Route::delete('/destroy/{id}', [MenuController::class, 'destroy'])->name('navbar.destroy');
     });
 
     // Review routes
