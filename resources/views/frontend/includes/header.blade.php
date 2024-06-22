@@ -5,9 +5,9 @@
 </style>
 
 <header class="tj-header-section" id="header-sticky">
-    <div class="container">
+    <div class="container" style=" border-radius: 12px; ">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12" >
                 <div class="bg-color d-flex flex-wrap">
                     <!-- Logo Area Start -->
                     <div class="logo-area">
@@ -357,7 +357,7 @@
                             </div> --}}
                                 <div class="tj-header-button d-none d-lg-block">
                                     <a class="tj-header-btn" href="{{ route('order.tracking') }}">
-                                        Track Order <i class="flaticon-right-1"></i>
+                                        TRACK ORDER <i class="flaticon-right-1"></i>
                                     </a>
                                 </div>
                                 <div class="tj-hambagur-icon d-lg-none">

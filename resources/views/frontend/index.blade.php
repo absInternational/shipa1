@@ -459,6 +459,68 @@ SHIP A1
     </section>
     <!--=========== Slider Section End =========-->
 
+ <!--=========== Testimonial Section Start =========-->
+ <section class="tj-testimonial-section">
+        <div class="container">
+            <div class="row">
+                <div class="tj-section-heading text-center">
+                    <span class="sub-title active-shape"> Client Feedback</span>
+                    <h2 class="title">Our Client Reviews</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper tj-testimonial-slider">
+                        <div class="swiper-wrapper">
+                            @foreach ($reviews as $review)
+                                <div class="swiper-slide">
+                                    <div class="tj-testimonial-item">
+                                        <div class="testimonial-rating d-flex justify-content-between">
+                                            <div class="testimoniasl-image">
+                                                <img src="{{ asset('frontend/images/icon/comment.svg') }}"
+                                                    alt="Icon" />
+                                            </div>
+                                            <div class="rating-icon">
+                                                <ul class="list-gap">
+                                                    @for ($i = 0; $i < (int) floor($review->rating); $i++)
+                                                        <li><i class="fa fa-star text-warning"></i></li>
+                                                    @endfor
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="content-area">
+                                            <p>{{ $review->description }}</p>
+                                            <div class="testimonial-content d-flex justify-content-between">
+                                                <div class="testimonial-auother">
+                                                    <h5 class="title">{{ $review->person_name }} </h5>
+                                                    <span
+                                                        class="sub-title">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
+                                                </div>
+                                                <div class="testimonial-comment">
+                                                    @if ($review->site_name == 'BBB')
+                                                        <img src="{{ asset('frontend/images/testimonial/bbb.png') }}"
+                                                            alt="Image" />
+                                                    @elseif ($review->site_name == 'Google')
+                                                        <img src="{{ asset('frontend/images/testimonial/google.png') }}"
+                                                            alt="Image" />
+                                                    @else
+                                                        <img src="{{ asset('frontend/images/testimonial/transport.png') }}"
+                                                            alt="Image" />
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=========== Testimonial Section End =========-->
+
     <!--=========== Service Section Start =========-->
     <section class="tj-service-section">
         <div class="container">
@@ -479,7 +541,7 @@ SHIP A1
                             <i class="flaticon-air-freight"></i>
                         </div>
                         <div class="service-content">
-                            <h4><a class="title-link" href="service-details.html"> VEHICLE TRANSPORTATION</a></h4>
+                            <h4><a class="title-link" href="{{ route('vehicleTransportDetail') }}" target="_blank"> VEHICLE TRANSPORTATION</a></h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
                     </div>
@@ -492,7 +554,7 @@ SHIP A1
                         </div>
                         <div class="service-content">
                             <h4>
-                                <a class="title-link" href="service-details.html"> HEAVY TRANSPORTATION</a>
+                                <a class="title-link" href="{{ route('heavy-transport-detail') }}" target="_blank"> HEAVY TRANSPORTATION</a>
                             </h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
@@ -505,7 +567,7 @@ SHIP A1
                             <i class="flaticon-delivery-van"></i>
                         </div>
                         <div class="service-content">
-                            <h4><a class="title-link" href="service-details.html"> FREIGHT TRANSPORTATION</a></h4>
+                            <h4><a class="title-link"  href="{{ route('freighttransport-detail') }}" target="_blank"> FREIGHT TRANSPORTATION</a></h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
                     </div>
@@ -538,8 +600,8 @@ SHIP A1
             <div class="row">
                 <div class="col-lg-12 position-relative">
                     <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" target="_blank" href="{{ route('autoAuction') }}">
-                            Read More <i class="flaticon-right-1"></i>
+                        <a class="tj-transparent-btn" target="_blank" href="{{ route('quote.form.combine') }}">
+                            GET QUOTE<i class="flaticon-right-1"></i>
                         </a>
                     </div>
                 </div>
@@ -1005,67 +1067,7 @@ SHIP A1
     </section>
     <!--=========== Project Section End =========-->
 
-    <!--=========== Testimonial Section Start =========-->
-    <!-- <section class="tj-testimonial-section">
-        <div class="container">
-            <div class="row">
-                <div class="tj-section-heading text-center">
-                    <span class="sub-title active-shape"> Client Feedback</span>
-                    <h2 class="title">Our Client Reviews</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="swiper tj-testimonial-slider">
-                        <div class="swiper-wrapper">
-                            @foreach ($reviews as $review)
-                                <div class="swiper-slide">
-                                    <div class="tj-testimonial-item">
-                                        <div class="testimonial-rating d-flex justify-content-between">
-                                            <div class="testimoniasl-image">
-                                                <img src="{{ asset('frontend/images/icon/comment.svg') }}"
-                                                    alt="Icon" />
-                                            </div>
-                                            <div class="rating-icon">
-                                                <ul class="list-gap">
-                                                    @for ($i = 0; $i < (int) floor($review->rating); $i++)
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                    @endfor
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="content-area">
-                                            <p>{{ $review->description }}</p>
-                                            <div class="testimonial-content d-flex justify-content-between">
-                                                <div class="testimonial-auother">
-                                                    <h5 class="title">{{ $review->person_name }} </h5>
-                                                    <span
-                                                        class="sub-title">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
-                                                </div>
-                                                <div class="testimonial-comment">
-                                                    @if ($review->site_name == 'BBB')
-                                                        <img src="{{ asset('frontend/images/testimonial/bbb.png') }}"
-                                                            alt="Image" />
-                                                    @elseif ($review->site_name == 'Google')
-                                                        <img src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                            alt="Image" />
-                                                    @else
-                                                        <img src="{{ asset('frontend/images/testimonial/transport.png') }}"
-                                                            alt="Image" />
-                                                    @endif
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!--=========== Testimonial Section End =========-->
+   
 
     <!--=========== Map Section Start =========-->
     <section class="tj-map-section">

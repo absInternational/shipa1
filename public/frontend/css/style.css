@@ -338,7 +338,7 @@ textarea:focus {
 
 .tj-header-section .container {
     background: var(--tj-white-color);
-    border-radius: 6px;
+    border-radius: 12px !important;
 }
 
 .tj-header-section .container .col-lg-12 {
@@ -392,7 +392,7 @@ textarea:focus {
 
 .tj-header-section .bg-color {
     background: var(--tj-white-color);
-    border-radius: 6px;
+    border-radius: 12px;
     position: relative;
 }
 
@@ -412,7 +412,7 @@ textarea:focus {
 .header-topbar {
     background: #062e39;
     padding: 9px 20px 9px 45px;
-    border-radius: 0 4px;
+    border-radius: 0px 12px 0px 12px;
     width: 100%;
 }
 
@@ -498,7 +498,7 @@ textarea:focus {
 .header-section-two .header-content-right .nice-select {
     background-color: transparent;
     border: none;
-    border-radius: 0;
+    border-radius: 12px;
     font-size: 15px;
     padding-left: 0;
     padding-right: 25px;
@@ -1882,7 +1882,7 @@ body [class*=" icon-"]::before {
 .tj-service-item {
     position: relative;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 12px;
     min-height: 422px;
     display: flex;
     align-items: end;
@@ -5272,7 +5272,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-project-item {
     position: relative;
-    border-radius: 3px;
+    border-radius: 12px;
     margin-bottom: 120px;
     overflow: hidden;
 }
@@ -8607,6 +8607,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-header-btn {
+    border-radius: 0px 0px 12px 1px;
     display: inline-block;
     height: 60px;
     line-height: 60px;
@@ -8764,7 +8765,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     display: inline-block;
     padding: 17px 26px;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 12px;
     font-family: var(--tj-ff-title);
     color: var(--tj-white-color);
     font-size: 18px;
@@ -8895,7 +8896,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     display: inline-block;
     padding: 17px 26px;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 12px;
     font-family: var(--tj-ff-title);
     color: var(--tj-white-color);
     font-size: 18px;
@@ -8972,7 +8973,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     display: inline-block;
     padding: 17px 26px;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 12px;
     font-family: var(--tj-ff-title);
     color: var(--tj-white-color);
     font-size: 18px;

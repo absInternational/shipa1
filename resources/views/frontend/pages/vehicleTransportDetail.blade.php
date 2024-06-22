@@ -672,7 +672,7 @@
             </div>
 
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>

@@ -69,10 +69,22 @@
     {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6675d43ceaf3bd8d4d1320dc/1i0u4a3i2';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 <body>
     <!-- Preloader start -->
-    <div id="preloader" class="preloader">
+    <!-- <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner">
                 <div class="loader-icon">
@@ -92,7 +104,7 @@
             </div>
         </div>
         <button class="tj-primary-btn">Cancel Preloader</button>
-    </div>
+    </div> -->
     <!-- Preloader end -->
 
     <!-- Offcanvas Area Start-->
