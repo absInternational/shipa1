@@ -96,6 +96,11 @@
             <span>Blogs</span></a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('navbar.index') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Edit Frontend NavBar</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('services.index') }}">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Services</span></a>

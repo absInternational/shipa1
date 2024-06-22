@@ -73,14 +73,34 @@
                             <!-- Mainmenu Item Start -->
                             <div class="tj-main-menu d-lg-block d-none text-end" id="main-menu">
                                 <ul class="main-menu">
+                                    @php
+                                    $navbars = App\Models\Menu::where('status',1)->orderBy('id', 'ASC')->get();
+                                    @endphp
+
+
+                                    @foreach ($navbars as $navbar)
+                                    @if($navbar->id == 1)
+
+                                    
                                     <li class="ab-gap">
                                         <a href="{{ route('welcome') }}"
-                                            class="{{ Request::routeIs('welcome') ? ' active' : '' }}"> Home</a>
+                                            class="{{ Request::routeIs('welcome') ? ' active' : '' }}"> {{ $navbar->menu_name }}</a>
                                     </li>
+                                
+                                @endif
+                                    @endforeach
+
+
+
+                                    {{-- <li class="ab-gap">
+                                        <a href="{{ route('welcome') }}"
+                                            class="{{ Request::routeIs('welcome') ? ' active' : '' }}"> Home</a>
+                                    </li> --}}
+                                    @foreach ($navbars as $navbar)
+                                    @if($navbar->id == 2)
                                     <li class="ab-gap">
                                         <a href="{{ route('quote.form.combine') }}"
-                                            class="{{ Request::routeIs('quote.form.combine') ? ' active' : '' }}"> Get
-                                            Quote</a>
+                                            class="{{ Request::routeIs('quote.form.combine') ? ' active' : '' }}"> {{ $navbar->menu_name }}</a>
                                         <ul class="list-gap sub-menu-list" >
                                             <div class="row">
                                                 <div class="col-sm-4 bd-l bd-r">
@@ -211,6 +231,8 @@
                                         </ul>
 
                                     </li>
+                                    @endif
+                                    @endforeach
 
                                     {{-- <li class="ab-gap">
                                         <a href="{{ route('services') }}"> Service</a>
@@ -219,9 +241,11 @@
                                         $categories = \App\Models\ServiceCategory::has('services')->get();
                                         $services = \App\Models\Service::all();
                                     @endphp
+                                    @foreach ($navbars as $navbar)
+                                    @if($navbar->id == 3)
                                     <li class="current-menu-item menu-item-has-children">
                                         <a href="{{ route('services') }}"
-                                            class="{{ Request::routeIs('services*') ? ' active' : '' }}"> Services</a>
+                                            class="{{ Request::routeIs('services*') ? ' active' : '' }}">{{ $navbar->menu_name }}</a>
                                         <ul class="list-gap sub-menu-list sub-menu-list-2" >
                                             <div class="row">
                                                 <div class="col-sm-4 bd-l bd-r">
@@ -281,20 +305,32 @@
                                             </div>
                                         </ul>
                                     </li>
+                                    @endif
+                                    @endforeach
+                                    @foreach ($navbars as $navbar)
+                                    @if($navbar->id == 4)
                                     <li class="ab-gap">
                                         <a href="{{ route('autoAuction') }}"
-                                            class="{{ Request::routeIs('autoAuction') ? ' active' : '' }}"> Auto
-                                            Auction</a>
+                                            class="{{ Request::routeIs('autoAuction') ? ' active' : '' }}">{{ $navbar->menu_name }}</a>
                                     </li>
+                                    @endif
+                                    @endforeach
+                                    @foreach ($navbars as $navbar)
+                                    @if($navbar->id == 5)
                                     <li class="ab-gap">
                                         <a href="{{ route('blogs') }}"
-                                            class="{{ Request::routeIs('blogs') ? ' active' : '' }}">
-                                            Blog</a>
+                                            class="{{ Request::routeIs('blogs') ? ' active' : '' }}">{{ $navbar->menu_name }}</a>
                                     </li>
+                                    @endif
+                                    @endforeach
+                                    @foreach ($navbars as $navbar)
+                                    @if($navbar->id == 6)
                                     <li>
                                         <a href="{{ route('contactUs') }}"
-                                            class="{{ Request::routeIs('contactUs') ? ' active' : '' }}">Contact</a>
+                                            class="{{ Request::routeIs('contactUs') ? ' active' : '' }}">{{ $navbar->menu_name }}</a>
                                     </li>
+                                    @endif
+                                    @endforeach
                                 </ul>
                             </div>
                             <!-- Mainmenu Item End -->
