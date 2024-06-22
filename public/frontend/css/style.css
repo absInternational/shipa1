@@ -2619,7 +2619,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-cta-section-two .tj_cta_image {
     content: "";
     position: absolute;
-    background: url(../images/cta/cta-2.jpg);
+    background: url(../../frontend/images/banner/1\ \(1\).webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -2642,7 +2642,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-cta-section-two .tj_cta_image1 {
     content: "";
     position: absolute;
-    background: url(../images/cta/cta-3.jpg);
+    background: url(../../frontend/images/banner/2\ \(1\).webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

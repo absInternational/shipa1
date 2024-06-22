@@ -553,12 +553,12 @@ SHIP A1
                     <div class="col-lg-6 col-md-6">
                         <div class="tj-cta-content">
                             <div class="tj-section-heading">
-                                <span class="sub-title active-shape2"> Support Center 24/7</span>
-                                <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
+                                <span class="sub-title active-shape2"> Here We Are</span>
+                                <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
                             </div>
                             <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
+                                <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                                    Get Quote<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
                         </div>
@@ -566,12 +566,12 @@ SHIP A1
                     <div class="col-lg-6 col-md-6">
                         <div class="tj-cta-content tj-cta-content2">
                             <div class="tj-section-heading">
-                                <span class="sub-title active-shape2"> Here We Are</span>
-                                <h4 class="title">Get Anytype Quote From Our LogiLand</h4>
+                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
+                                <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
                             </div>
                             <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Get a Quote <i class="flaticon-right-1"></i>
+                                <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
+                                    Get Support<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
                         </div>
