@@ -116,6 +116,11 @@
             <span>Reviews</span></a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('site_review.index') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Add Site Reviews</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('faqs.index') }}">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>FAQs</span></a>

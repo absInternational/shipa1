@@ -15,6 +15,7 @@ use App\Http\Controllers\FormVehicleController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\OrderFormController;
 use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\ReviewSiteController;
 
 
 
@@ -170,6 +171,20 @@ Route::middleware('admin')->prefix('admin')->group(function () {
 
     // Review routes
     Route::resource('reviews', ReviewController::class);
+
+    // Review Site routes
+    Route::prefix('site_review')->group(function () {
+        Route::get('/', [ReviewSiteController::class, 'index'])->name('site_review.index');
+        Route::get('/add', [ReviewSiteController::class, 'create'])->name('site.review.create');
+        Route::post('/store', [ReviewSiteController::class, 'store'])->name('site.review.store');
+        Route::get('/edit/{id}', [ReviewSiteController::class, 'edit'])->name('site.review.edit');
+        Route::post('/update/{id}', [ReviewSiteController::class, 'update'])->name('site.review.update');
+        Route::delete('/destroy/{id}', [MenuController::class, 'destroy'])->name('site.review.destroy');
+    });
+
+
+
+    
 
     // Service categories routes
     Route::resource('service_categories', ServiceCategoryController::class);

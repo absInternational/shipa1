@@ -1183,30 +1183,88 @@ SHIP A1
     <section class="tj-testimonial-section">
         <div class="carousel-wrapper">
             <div class="owl-carousel owl-theme" id="owl-caro">
-                @foreach ($reviews as $review)
+                
+                @foreach ($site_reviews as $site_review)
                     <div class="item">
                         <div class="card">
-                            <div class="row">
-                                <div class="col-md-6 col-6">
-                                    <div>
-                                        <img loading="lazy" src="{{ asset('frontend/images/transport.png') }}" width="100%"
-                                            height="100%" alt="Google">
+                            <a href="{{ $site_review->rating_url }}" target="_blank" style="text-decoration: none; color: inherit;">
+                                <div class="row">
+                                    <div class="col-md-6 col-6">
+                                        {{-- new for condition --}}
+                                        <div>
+                                            @if ($site_review->profile_name == 'BBB')
+                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}"
+                                                    width="100%" height="100%" alt="BBB" />
+                                            @elseif ($site_review->profile_name == 'Google')
+                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/google.png') }}"
+                                                    width="100%" height="100%" alt="Google" />
+                                            @elseif($site_review->profile_name == 'Transport Reviews')
+                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/transport.png') }}"
+                                                    width="100%" height="100%" alt="Transport Reviews" />
+                                            @elseif($site_review->profile_name == 'Trust Pilot')
+                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/turst.png') }}"
+                                                    width="100%" height="100%" alt="Trust Pilot" />        
+                                            @endif
+                                        </div>
+                                        {{-- end for condition --}}
+                                        <div class="star">
+                                            {{-- @for ($i = 0; $i < (int) floor($site_review->rating); $i++)
+                                                <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                            @endfor --}}
+                                            @for ($i = 1; $i <= 5; $i++)
+                                @if ($site_review->rating >= $i)
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                @elseif ($site_review->rating >= $i - 0.5)
+                                    <i class="fa fa-star-half" aria-hidden="true"></i>
+                                @else
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                @endif
+                            @endfor
+                                        </div>
                                     </div>
-                                    <div class="star">
-                                        @for ($i = 0; $i < (int) floor($review->rating); $i++)
-                                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        @endfor
+                                    <div class="col-md-6 col-6">
+                                        <div class="rates">
+                                            {{ $site_review->rating }}
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="rates">
-                                        {{ $review->rating }}
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 @endforeach
+{{-- <style>
+.star-rating {
+    display: flex;
+    font-size: 1.5em;
+}
+
+.star-rating .fa-star, .star-rating .fa-star-half, .star-rating .fa-star-o {
+    color: #ffcc00; 
+}
+
+.star-rating .fa-star-o {
+    color: #ccc; 
+}
+
+.star-rating .fa-star-half {
+    position: relative;
+}
+
+.star-rating .fa-star-half::before {
+    content: '\f005'; 
+    color: #e0de4a; 
+    position: absolute;
+    clip-path: inset(0 50% 0 0); 
+}
+
+.star-rating .fa-star-half::after {
+    content: '\f005'; 
+    color: #ffcc00; 
+    position: absolute;
+    clip-path: inset(0 0 0 50%); 
+}
+</style>                 --}}
+
             </div>
         </div>
     </section>
@@ -1326,6 +1384,7 @@ SHIP A1
                 }
             });
         });
+        
     </script>
 
     <script>

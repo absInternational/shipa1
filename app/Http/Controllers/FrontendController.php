@@ -10,6 +10,8 @@ use App\Models\Service;
 use App\Models\NewsletterSubscribers;
 use App\Models\ServiceCategory;
 use App\Models\VehicleName;
+use App\Models\ReviewSite;
+
 
 class FrontendController extends Controller
 {
@@ -23,7 +25,8 @@ class FrontendController extends Controller
             ->get();
         $blogs = Blog::where('status', 1)->take(3)->get();
         $reviews = Review::get();
-        return view('frontend.index', compact('reviews', 'blogs', 'makes'));
+        $site_reviews = ReviewSite::get();
+        return view('frontend.index', compact('reviews', 'blogs', 'makes', 'site_reviews'));
     }
     
 
