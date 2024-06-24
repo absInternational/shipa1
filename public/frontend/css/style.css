@@ -5448,7 +5448,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-project-section .owl-carousel .owl-dots.disabled,
 .owl-carousel .owl-nav.disabled {
-    display: block;
+    display: none;
 }
 
 .tj-project-section .owl-carousel .owl-nav.disabled {

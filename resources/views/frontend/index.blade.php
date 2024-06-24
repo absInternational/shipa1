@@ -516,14 +516,14 @@ SHIP A1
                                                 <i class="fa fa-star text-warning" aria-hidden="true"></i>
                                             @endfor --}}
                                             @for ($i = 1; $i <= 5; $i++)
-                                @if ($site_review->rating >= $i)
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                @elseif ($site_review->rating >= $i - 0.5)
-                                    <i class="fa fa-star-half" aria-hidden="true"></i>
-                                @else
-                                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                                @endif
-                            @endfor
+                                                @if ($site_review->rating >= $i)
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                @elseif ($site_review->rating >= $i - 0.5)
+                                                    <i class="fa fa-star-half" aria-hidden="true"></i>
+                                                @else
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                @endif
+                                            @endfor
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-6">

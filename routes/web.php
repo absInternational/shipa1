@@ -179,7 +179,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::post('/store', [ReviewSiteController::class, 'store'])->name('site.review.store');
         Route::get('/edit/{id}', [ReviewSiteController::class, 'edit'])->name('site.review.edit');
         Route::post('/update/{id}', [ReviewSiteController::class, 'update'])->name('site.review.update');
-        Route::delete('/destroy/{id}', [MenuController::class, 'destroy'])->name('site.review.destroy');
+        Route::delete('/destroy/{id}', [ReviewSiteController::class, 'destroy'])->name('site.review.destroy');
     });
 
 
