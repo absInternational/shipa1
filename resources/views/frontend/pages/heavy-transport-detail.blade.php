@@ -1,5 +1,7 @@
 @extends('frontend.layouts.app')
 
+
+
 @section('content')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
     <style>
@@ -513,29 +515,56 @@
 
     <section class="tj-service-details pt-4 pb-0">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape">Ship A1 Transport</span>
-                        <p>
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-
-                        </p>
-                        <!-- <h2 class="title">Welcome to the  &amp; privacy policy </h2> -->
+        <div class="row">
+                    <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                        <div class="about_image text-center">
+                            <img src="{{ asset('frontend/images/project/atv,utv-1.webp') }}" alt="Image">
+                        </div>
                     </div>
+                    <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                        <div class="about-content-three">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape ">Ship A1 Transport</span>
+                                <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
+                                <p class="desc">
+                                Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your comfort is our top priority, ship the best vehicles at reasonable rates without compromising quality. Our professional and expert team provides you with 100% insured and secure vehicle transport solutions that are specifically tailored to your needs.
+                         <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even find various suitable services! For shipping your luxurious vehicle, you can opt for enclosed trailers as they are made to protect your vehicle from road debris, scratches, the uncertainty of weather conditions, and potential risks. However, if you are searching for something equally cost-effective and safe, go for open transport! We have expedited options and door-to-door delivery for fast vehicle shipping.
+                         <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
+                                </p>
+                            </div>
+                            <!-- <div class="content-box d-flex align-items-center">
+                                <div class="tj-icon-box">
+                                    <div class="ab-text d-flex align-items-center">
+                                        <div class="ab-icon">
+                                            <img src="assets/images/icon/global.svg" alt="Icon">
+                                        </div>
+                                        <div class="ab-title">
+                                            <h5 class="title">Our Mission</h5>
+                                        </div>
+                                    </div>
+                                    <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
+                                </div>
+                                <div class="tj-icon-box">
+                                    <div class="ab-text d-flex align-items-center">
+                                        <div class="ab-icon">
+                                            <img src="assets/images/icon/winner.svg" alt="Icon">
+                                        </div>
+                                        <div class="ab-title">
+                                            <h5 class="title">Our Vision</h5>
+                                        </div>
+                                    </div>
+                                    <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
+                                </div>
+                            </div> -->
+                            <div class="tj-theme-button">
+                                <a class="tj-primary-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-            </div>
         </div>
     </section>
 
@@ -878,7 +907,7 @@
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                     <div class="tj-faq-left-content">
                         <div class="faq-image">
-                            <img src="{{ asset('frontend/images/slider/slider-4.jpg') }}" alt="Image" />
+                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                         </div>
                         <div class="faq-content">
                             <div class="faq-icon">

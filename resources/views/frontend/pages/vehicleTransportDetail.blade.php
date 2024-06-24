@@ -791,7 +791,7 @@
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                     <div class="tj-faq-left-content">
                         <div class="faq-image">
-                            <img src="{{ asset('frontend/images/slider/slider-4.jpg') }}" alt="Image" />
+                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                         </div>
                         <div class="faq-content">
                             <div class="faq-icon">

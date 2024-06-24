@@ -28,7 +28,7 @@ SHIP A1
     
     }
         .tj-testimonial-section {
-            padding: 50px 0;
+            padding: 120px 0px 0px 0;
             background: #ffffff;
         }
 
@@ -315,15 +315,16 @@ SHIP A1
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h1>
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES <a class="tj-transparent-btn ms-4 mt-4" href="contact.html">
+                                    Get Quote<i class="flaticon-right-1"></i>
+                                </a></h1>
                             <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                                 customers and seeks your trust in return of our services.
+                                
                             </div>
                             <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
@@ -332,15 +333,15 @@ SHIP A1
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}" >
                     <div class="container">
                         <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h1>
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES<a class="tj-transparent-btn ms-4 mt-4" href="contact.html">
+                            Get Quote<i class="flaticon-right-1"></i>
+                                </a></h1>
                             <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one Heavy Equipment transportation solutions to all its
                                 customers and seeks your trust in return of our services.
                             </div>
                             <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
@@ -349,15 +350,17 @@ SHIP A1
                 <div class="swiper-slide"  data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES<a class="tj-transparent-btn ms-4 mt-4" href="contact.html">
+                            Get Quote<i class="flaticon-right-1"></i>
+                                </a></h1>
                             <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its
                                 customers and seeks your trust in return of our services.
                             </div>
                             <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
+                                <!-- <a class="tj-transparent-btn" href="contact.html">
                                     Read More <i class="flaticon-right-1"></i>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
@@ -541,7 +544,6 @@ SHIP A1
     </section>
     <!--=========== Testimonial Section End =========-->
 
-
     <!--=========== Testimonial Section Start =========-->
 
     <!-- <section class="tj-testimonial-section mt-4">
@@ -575,9 +577,6 @@ SHIP A1
         </div>
     </section> -->
 
-  
-
-    
 
     <!--=========== Service Section Start =========-->
     <section class="tj-service-section">
@@ -767,7 +766,7 @@ SHIP A1
     </section>
     <!--=========== About Section End =========-->
 
-    <section class="tj-cta-section-two">
+         <section class="tj-cta-section-two">
             <div class="tj_cta_image"></div>
             <div class="tj_cta_image1"></div>
             <div class="container">
@@ -800,9 +799,9 @@ SHIP A1
                     </div>
                 </div>
             </div>
-        </section>
+         </section>
 
-    <section class="tj-step-section">
+        <section class="tj-step-section">
             <div class="container">
                 <div class="row">
                     <div class="tj-section-heading text-center">
@@ -1063,7 +1062,7 @@ SHIP A1
         </div>
 
         </div>
-    </section>
+        </section>
     <!--=========== Feature Section End =========-->
 
     <!--=========== Team Section Start =========-->
@@ -1228,7 +1227,6 @@ SHIP A1
     </section>
     <!--=========== Project Section End =========-->
 
-   
 
     <!--=========== Map Section Start =========-->
     <section class="tj-map-section">
