@@ -998,8 +998,8 @@
                                 </div>
                             </div> -->
                             <div class="tj-theme-button">
-                                <a class="tj-primary-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
+                                <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                                Get Quote<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
                         </div>
