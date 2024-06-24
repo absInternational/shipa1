@@ -484,7 +484,67 @@ SHIP A1
     <!--=========== Slider Section End =========-->
 
     <!--=========== Testimonial Section Start =========-->
-    <section class="tj-testimonial-section mt-4">
+    <section class="tj-testimonial-section">
+        <div class="carousel-wrapper">
+            <div class="owl-carousel owl-theme" id="owl-caro">
+                
+                @foreach ($site_reviews as $site_review)
+                    <div class="item">
+                        <div class="card">
+                            <a href="{{ $site_review->rating_url }}" target="_blank" style="text-decoration: none; color: inherit;">
+                                <div class="row">
+                                    <div class="col-md-6 col-6">
+                                        {{-- new for condition --}}
+                                        <div>
+                                            @if ($site_review->profile_name == 'BBB')
+                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}"
+                                                    width="100%" height="100%" alt="BBB" />
+                                            @elseif ($site_review->profile_name == 'Google')
+                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/google.png') }}"
+                                                    width="100%" height="100%" alt="Google" />
+                                            @elseif($site_review->profile_name == 'Transport Reviews')
+                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/transport.png') }}"
+                                                    width="100%" height="100%" alt="Transport Reviews" />
+                                            @elseif($site_review->profile_name == 'Trust Pilot')
+                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/turst.png') }}"
+                                                    width="100%" height="100%" alt="Trust Pilot" />        
+                                            @endif
+                                        </div>
+                                        {{-- end for condition --}}
+                                        <div class="star">
+                                            {{-- @for ($i = 0; $i < (int) floor($site_review->rating); $i++)
+                                                <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                            @endfor --}}
+                                            @for ($i = 1; $i <= 5; $i++)
+                                @if ($site_review->rating >= $i)
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                @elseif ($site_review->rating >= $i - 0.5)
+                                    <i class="fa fa-star-half" aria-hidden="true"></i>
+                                @else
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                @endif
+                            @endfor
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <div class="rates">
+                                            {{ $site_review->rating }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <!--=========== Testimonial Section End =========-->
+
+
+    <!--=========== Testimonial Section Start =========-->
+
+    <!-- <section class="tj-testimonial-section mt-4">
         <div class="carousel-wrapper">
             <div class="owl-carousel owl-theme" id="owl-caro">
                 @foreach ($reviews as $review)
@@ -513,7 +573,7 @@ SHIP A1
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> -->
 
   
 
@@ -1374,97 +1434,67 @@ SHIP A1
     </section>
     <!--=========== Blog Section End =========-->
 
-    <!--=========== Testimonial Section Start =========-->
-    <section class="tj-testimonial-section">
-        <div class="carousel-wrapper">
-            <div class="owl-carousel owl-theme" id="owl-caro">
-                
-                @foreach ($site_reviews as $site_review)
-                    <div class="item">
-                        <div class="card">
-                            <a href="{{ $site_review->rating_url }}" target="_blank" style="text-decoration: none; color: inherit;">
-                                <div class="row">
-                                    <div class="col-md-6 col-6">
-                                        {{-- new for condition --}}
-                                        <div>
-                                            @if ($site_review->profile_name == 'BBB')
-                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}"
-                                                    width="100%" height="100%" alt="BBB" />
-                                            @elseif ($site_review->profile_name == 'Google')
-                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                    width="100%" height="100%" alt="Google" />
-                                            @elseif($site_review->profile_name == 'Transport Reviews')
-                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/transport.png') }}"
-                                                    width="100%" height="100%" alt="Transport Reviews" />
-                                            @elseif($site_review->profile_name == 'Trust Pilot')
-                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/turst.png') }}"
-                                                    width="100%" height="100%" alt="Trust Pilot" />        
-                                            @endif
+     <!--=========== Testimonial Section Start =========-->
+     <section class="tj-testimonial-section">
+        <div class="container">
+            <div class="row">
+                <div class="tj-section-heading text-center">
+                    <span class="sub-title active-shape"> Client Feedback</span>
+                    <h2 class="title">Our Client Reviews</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper tj-testimonial-slider">
+                        <div class="swiper-wrapper">
+                            @foreach ($reviews as $review)
+                                <div class="swiper-slide">
+                                    <div class="tj-testimonial-item">
+                                        <div class="testimonial-rating d-flex justify-content-between">
+                                            <div class="testimoniasl-image">
+                                                <img src="{{ asset('frontend/images/icon/comment.svg') }}"
+                                                    alt="Icon" />
+                                            </div>
+                                            <div class="rating-icon">
+                                                <ul class="list-gap">
+                                                    @for ($i = 0; $i < (int) floor($review->rating); $i++)
+                                                        <li><i class="fa fa-star text-warning"></i></li>
+                                                    @endfor
+                                                </ul>
+                                            </div>
                                         </div>
-                                        {{-- end for condition --}}
-                                        <div class="star">
-                                            {{-- @for ($i = 0; $i < (int) floor($site_review->rating); $i++)
-                                                <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                            @endfor --}}
-                                            @for ($i = 1; $i <= 5; $i++)
-                                @if ($site_review->rating >= $i)
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                @elseif ($site_review->rating >= $i - 0.5)
-                                    <i class="fa fa-star-half" aria-hidden="true"></i>
-                                @else
-                                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                                @endif
-                            @endfor
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-6">
-                                        <div class="rates">
-                                            {{ $site_review->rating }}
+                                        <div class="content-area">
+                                            <p>{{ $review->description }}</p>
+                                            <div class="testimonial-content d-flex justify-content-between">
+                                                <div class="testimonial-auother">
+                                                    <h5 class="title">{{ $review->person_name }} </h5>
+                                                    <span
+                                                        class="sub-title">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
+                                                </div>
+                                                <div class="testimonial-comment">
+                                                    @if ($review->site_name == 'BBB')
+                                                        <img src="{{ asset('frontend/images/testimonial/bbb.png') }}"
+                                                            alt="Image" />
+                                                    @elseif ($review->site_name == 'Google')
+                                                        <img src="{{ asset('frontend/images/testimonial/google.png') }}"
+                                                            alt="Image" />
+                                                    @else
+                                                        <img src="{{ asset('frontend/images/testimonial/transport.png') }}"
+                                                            alt="Image" />
+                                                    @endif
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            @endforeach
                         </div>
                     </div>
-                @endforeach
-{{-- <style>
-.star-rating {
-    display: flex;
-    font-size: 1.5em;
-}
-
-.star-rating .fa-star, .star-rating .fa-star-half, .star-rating .fa-star-o {
-    color: #ffcc00; 
-}
-
-.star-rating .fa-star-o {
-    color: #ccc; 
-}
-
-.star-rating .fa-star-half {
-    position: relative;
-}
-
-.star-rating .fa-star-half::before {
-    content: '\f005'; 
-    color: #e0de4a; 
-    position: absolute;
-    clip-path: inset(0 50% 0 0); 
-}
-
-.star-rating .fa-star-half::after {
-    content: '\f005'; 
-    color: #ffcc00; 
-    position: absolute;
-    clip-path: inset(0 0 0 50%); 
-}
-</style>                 --}}
-
+                </div>
             </div>
         </div>
     </section>
     <!--=========== Testimonial Section End =========-->
-
 
     <!--=========== Newsletter Section Start =========-->
     @include('partials.newsletter')
