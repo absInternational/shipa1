@@ -4560,7 +4560,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: #062e39d4;
     border-radius: 5%;
     padding: 30px;
-    width: 100%;
+    width: 50%;
     margin-left: 7%;
     /* margin-left: auto; */
     position: relative;

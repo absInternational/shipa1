@@ -914,7 +914,7 @@ SHIP A1
                         </div>
                     </div>
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
-                    <div class="tj-input-form" data-bg-image="">
+                    <div class="tj-input-form w-100" data-bg-image="">
 
 
 
