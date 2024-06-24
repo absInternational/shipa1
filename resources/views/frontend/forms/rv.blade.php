@@ -1,5 +1,10 @@
 @extends('frontend.layouts.app')
 
+
+@section('title', 'Get Quote on RV Transport | ShipA1')
+
+@section('meta_description', 'Get an instant RV Transport quote with ease! Trust our reliable service for nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
+
 @section('content')
     <style>
         .suggestionsTwo {

@@ -1,5 +1,10 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Get Quote on Freight | ShipA1')
+
+@section('meta_description', 'Get an instant Freight shipping quote with ease! Trust our reliable service for nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
+
+
 @section('content')
 
     <style>

@@ -527,10 +527,14 @@
                                 <span class="sub-title active-shape ">Ship A1 Transport</span>
                                 <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
                                 <p class="desc">
-                                Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your comfort is our top priority, ship the best vehicles at reasonable rates without compromising quality. Our professional and expert team provides you with 100% insured and secure vehicle transport solutions that are specifically tailored to your needs.
-                         <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even find various suitable services! For shipping your luxurious vehicle, you can opt for enclosed trailers as they are made to protect your vehicle from road debris, scratches, the uncertainty of weather conditions, and potential risks. However, if you are searching for something equally cost-effective and safe, go for open transport! We have expedited options and door-to-door delivery for fast vehicle shipping.
-                         <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
-                                </p>
+                                Need to move your Excavators, Forklift, and any sort of heavy equipment? Ship A1 masters the art of
+                                transporting your heavy equipment across the USA with 100% quality, dedication, and safety.
+                         <br> At ShipA1 we offer a variety of trailers and assistance to ensure your heavy equipment arrives on time
+and within safety regulations. From open-air trailers for cost-effective transport or enclosed trailers for
+maximum protection, choose the best shipping mode for your vehicle! ShipA1 is your one-stop solution
+for safe and efficient heavy equipment transport across the United States. We go beyond standard
+vehicle transport, specializing in the unique requirements of oversized and heavyweight cargo.  <br> ShipA1 is committed to providing exceptional service and exceeding your expectations. Let us handle
+the heavy lifting. Contact us today for a smooth and stress-free heavy equipment transport experience. </p>
                             </div>
                             <!-- <div class="content-box d-flex align-items-center">
                                 <div class="tj-icon-box">
@@ -936,13 +940,15 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What should I choose for my luxurious vehicle?
+                                        Do you transport all kinds of heavy equipment?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>If you have a luxurious vehicle, we would suggest you go for the enclosed trailer as it protects your vehicle and offers you peace of mind, or if you are looking for a cheaper option then open transport is the best for you, without compromising the quality experience the best, safe and secure shipping with Ship A1!</strong>
+                                        <strong>Yes, Ship A1 offers a variety of heavy equipment services specially tailored to your needs, whether it’s a
+forklift, excavator, trailer, crane, etc. we are here to assist you with a 100% guarantee of quality, safety,
+and flexible rates for your route.</strong>
                                     </div>
                                 </div>
                             </div>
@@ -950,13 +956,17 @@
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
+                                        How much time will it take to ship my heavy equipment?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                        <strong>It all depends on the type of equipment you are planning on shipping, other than that our estimated
+delivery time also varies on the distance, weather conditions as well and road conditions. However, if
+you want your heavy equipment to be delivered urgently then we would suggest you opt for expedited
+shipping as it’s the fastest shipping service provided by Ship A1, while it is a bit pricey it would ensure
+your equipment reaches you in your desired timeframe.</strong>
                                     </div>
                                 </div>
                             </div>
@@ -965,13 +975,14 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
+                                        Can you arrange for the loading and unloading of my equipment?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                        <strong>ShipA1 can connect you with qualified heavy equipment loading and unloading service providers in your
+                                        area. We can advise on the best approach based on your specific equipment and needs.</strong>
                                     </div>
                                 </div>
                             </div>
@@ -980,13 +991,13 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFour" aria-expanded="false"
                                         aria-controls="collapseFour">
-                                        How do I prepare my vehicle for transport?
+                                        Are your vehicles insured?
                                     </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse"
                                     aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                        <strong>Yes! Our vehicles are 100% insured.</strong>
                                     </div>
                                 </div>
                             </div>
