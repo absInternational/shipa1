@@ -869,7 +869,7 @@ SHIP A1
 
     
         <section class="tj-choose-us-section-home">
-        <div class="container-flude">
+        <div class="container">
             <div class="row">
                 @if (session('success'))
                     <div class="alert alert-success">
@@ -881,7 +881,39 @@ SHIP A1
                         {{ session('error') }}
                     </div>
                 @endif
-                <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
+                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                        <div class="choose-us-content-1">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape2"> Why Choose Us</span>
+                                <h2 class="title">We are the Future of Cargo &amp; Logistics</h2>
+                                <p class="desc">
+                                    Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla a lobortis lectus,
+                                    id volutpat magna. Morbi consequat porttitor
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="tj-icon-box3 text-center">
+                                        <i class="flaticon flaticon-courier"></i>
+                                        <h6 class="title">Optimized Cost</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="tj-icon-box3 text-center">
+                                        <i class="flaticon flaticon-cargo"></i>
+                                        <h6 class="title">Delivery on Time</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="tj-icon-box3 text-center">
+                                        <i class="flaticon flaticon-agreement"></i>
+                                        <h6 class="title">Safety &amp; Reliability</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
 
 
