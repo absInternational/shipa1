@@ -1138,7 +1138,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">CAR</span>
-                    <h4><a href="project-details.html" class="title-link"> Sedan, SUV, Pickup etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">Car Shipping Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1148,7 +1148,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">MOTORCYCLE</span>
-                    <h4><a href="project-details.html" class="title-link">Mopeds, ATV, Power Sports etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">Motorcycle Shipping Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1158,7 +1158,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title"> HEAVY EQUIP.</span>
-                    <h4><a href="project-details.html" class="title-link"> Trucks, Bulldozers, Mixer etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">Heavy Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1218,7 +1218,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">EXCAVATOR</span>
-                    <h4><a href="project-details.html" class="title-link"> Digger, Driller, Miners etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">Excavator Shipping Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
