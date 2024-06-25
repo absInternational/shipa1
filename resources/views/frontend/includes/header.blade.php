@@ -119,16 +119,16 @@
                                                     </li>
                                                     <li>
                                                         <a class="title" target="_blank"
-                                                            href="{{ route('form.vehicle.car') }}"> Car </a>
+                                                            href="{{ route('form.vehicle.car') }}"> Car Transport</a>
                                                     </li>
                                                     <li>
                                                         <a class="title" target="_blank"
-                                                            href="{{ route('form.vehicle.golf_cart') }}"> Golf Cart</a>
+                                                            href="{{ route('form.vehicle.golf_cart') }}">Golf Cart Transport</a>
                                                     </li>
                                                     <li>
                                                         <a class="title" target="_blank"
                                                             href="{{ route('form.vehicle.form.vehicle.car') }}">
-                                                            Motorcycle </a>
+                                                            Motorcycle Transport</a>
                                                     </li>
 
 
@@ -165,7 +165,7 @@
 
                                                     <li>
                                                         <a class="title" target="_blank"
-                                                            href="{{ route('frontend.forms.excavator') }}"> Excavator
+                                                            href="{{ route('frontend.forms.excavator') }}"> Excavator Transport
                                                         </a>
                                                     </li>
                                                     <li>
@@ -196,7 +196,7 @@
                                                     </li>
                                                     <li>
                                                         <a class="title" href="{{ route('frontend.forms.dryvan') }}" target="_blank"> Dry Van
-                                                            Transportation</a>
+                                                        Transport</a>
                                                     </li>
                                                     <li>
                                                         <a class="title" target="_blank" href="{{ route('frontend.forms.reefertrucking') }}"> Reefer

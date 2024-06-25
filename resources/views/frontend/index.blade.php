@@ -6,27 +6,24 @@ SHIP A1
 @section('content')
 
     <style>
-        .rates {
-    background:#8FC445 ;
-            font-size: 24px; 
-        color: #FFFFFF; 
-        font-weight: bold; 
-        
-    
-    box-shadow: 0 0px 30px 0 #56ff0061;
-    width: 62px;
-    height: 42px;
-    float: right;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    -webkit-box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
-            -moz-box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
-            box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
-    
-    }
+         .rates {
+         background:#8FC445 ;
+         font-size: 24px; 
+         color: #FFFFFF; 
+         font-weight: bold; 
+         box-shadow: 0 0px 30px 0 #56ff0061;
+         width: 62px;
+         height: 42px;
+         float: right;
+         border-radius: 5px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: auto;
+         -webkit-box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
+         -moz-box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
+         box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
+         }
         .tj-testimonial-section {
             padding: 120px 0px 0px 0;
             background: #ffffff;
@@ -887,7 +884,7 @@ SHIP A1
                                 <span class="sub-title active-shape2">Get Instant quote</span>
                                 <h2 class="title">Get an instant quote in few simple steps</h2>
                                 <p class="desc">ShipA1 has pledged to provide all-in-one auto transport solutions to all its
-customers and seeks your trust in return of our services.</p>
+                                customers and seeks your trust in return of our services.</p>
                             </div>
                             <div class="row">
                                 <div class="col-md-4 col-sm-4 col-6">
@@ -910,13 +907,10 @@ customers and seeks your trust in return of our services.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                </div>
 
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form w-100" data-bg-image="">
-
-
-
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -1087,12 +1081,12 @@ customers and seeks your trust in return of our services.</p>
             </div>
 
 
-        </div>
-        </div>
+           </div>
+        <!-- </div>
 
         </div>
 
-        </div>
+        </div> -->
         </section>
     <!--=========== Feature Section End =========-->
 

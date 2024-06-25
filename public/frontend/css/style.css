@@ -7662,9 +7662,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-contact-page .tj-contact-list .contact-header a {
     color: var(--tj-secondary-color);
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     transition: 0.4s;
+    text-wrap: wrap;
 }
 
 .tj-contact-page .tj-contact-list .contact-header a:hover {

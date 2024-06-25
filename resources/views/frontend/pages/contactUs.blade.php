@@ -36,8 +36,8 @@
                             <i class="flaticon-phone-call"></i>
                         </div>
                         <div class="contact-header">
-                            <span> Any Questions? Call us</span>
-                            <a href="tel: 1 (844) 474-4721"> 1 (844) 474-4721</a>
+                            <span>Any Questions? Call us</span>
+                            <a href="tel: 1 (844) 474-4721">1 (844) 474-4721</a>
                         </div>
                     </div>
                 </div>
@@ -47,8 +47,8 @@
                             <i class="flaticon-email-3"></i>
                         </div>
                         <div class="contact-header">
-                            <span> Any Questions? Email us</span>
-                            <a href="mailto:info@shipa1.com"> shawntransport@shipa1.com</a>
+                            <span>Any Questions? Email us</span>
+                            <a href="mailto:info@shipa1.com" class="text-break"> shawntransport@shipa1.com</a>
                         </div>
                     </div>
                 </div>
