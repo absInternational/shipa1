@@ -433,7 +433,8 @@ SHIP A1
                             <div class="service-icon">
                             <!-- <img src="{{ asset('frontend/images/project/crane-truck.png') }}" alt="Image" /> -->
                             <!-- <i class="bi bi-truck"></i> -->
-                            <i class="flaticon-delivery-van"></i>
+                            <!-- <i class="flaticon-delivery-van"></i> -->
+                            <i class="fa-light fa-car-side fa-xs"></i>
                             </div>
                             <div class="sub-title">
                                 <span>VEHICLE <br>TRANSPORTATION</span>
@@ -450,7 +451,8 @@ SHIP A1
                     <div class="service-item">
                         <div class="tj-service-icon">
                             <div class="service-icon">
-                                <i class="flaticon-air-freight"></i>
+                                <!-- <i class="flaticon-air-freight"></i> -->
+                                <i class="fa-light fa-tractor fa-xs"></i>
                             </div>
                             <div class="sub-title">
                                 <span>HEAVY <br>TRANSPORTATION </span>
@@ -466,7 +468,8 @@ SHIP A1
                     <div class="service-item">
                         <div class="tj-service-icon">
                             <div class="service-icon">
-                                <i class="flaticon flaticon-ship"></i>
+                                <!-- <i class="flaticon-delivery-van"></i> -->
+                                <i class="fa-light fa-truck fa-xs"></i>
                             </div>
                             <div class="sub-title">
                                 <span>FREIGHT <br>TRANSPORTATION</span>
@@ -592,7 +595,8 @@ SHIP A1
                     <div class="tj-service-item"
                         data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
                         <div class="icon-box">
-                            <i class="flaticon-air-freight"></i>
+                        <i class="fa-light fa-car-side fa-2xs"></i>
+                            <!-- <i class="flaticon-air-freight"></i> -->
                         </div>
                         <div class="service-content">
                             <h4><a class="title-link" href="{{ route('vehicleTransportDetail') }}" target="_blank"> VEHICLE TRANSPORTATION</a></h4>
@@ -604,7 +608,8 @@ SHIP A1
                     <div class="tj-service-item"
                         data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
                         <div class="icon-box">
-                            <i class="flaticon-cargo-ship-1"></i>
+                        <i class="fa-light fa-tractor fa-2xs"></i>
+                            <!-- <i class="flaticon-cargo-ship-1"></i> -->
                         </div>
                         <div class="service-content">
                             <h4>
@@ -618,7 +623,8 @@ SHIP A1
                     <div class="tj-service-item"
                         data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
                         <div class="icon-box">
-                            <i class="flaticon-delivery-van"></i>
+                        <i class="fa-light fa-truck fa-2xs"></i>
+                            <!-- <i class="flaticon-delivery-van"></i> -->
                         </div>
                         <div class="service-content">
                             <h4><a class="title-link"  href="{{ route('freighttransport-detail') }}" target="_blank"> FREIGHT TRANSPORTATION</a></h4>
@@ -680,7 +686,8 @@ SHIP A1
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" />
+                                <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                    <!-- <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
                                     <h5 class="title">Our Values</h5>
@@ -695,7 +702,8 @@ SHIP A1
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
+                                    <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
                                     <h5 class="title">Scope of Services</h5>
@@ -708,7 +716,8 @@ SHIP A1
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
+                                    <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
                                     <h5 class="title">Safety Is Our Priority</h5>
@@ -724,7 +733,8 @@ SHIP A1
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
+                                    <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
                                     <h5 class="title">Skilful & Devoted Staff</h5>

@@ -22,9 +22,16 @@
                         <!-- Topbar Section Start -->
                         <div class="header-topbar">
                             <div
-                                class="topbar-content-area d-flex flex-wrap align-items-center justify-content-between">
-                                <div class="header-content-left">
-                                    <span> Mon - Sat: 8 AM - 7 PM, Sunday: Closed</span>
+                                class="topbar-content-area d-flex flex-wrap align-items-center justify-content-start">
+                                
+                                <div class="header-content-right mr-4">
+                                    <span><i class="fa-regular fa-mobile-screen fa-bounce fa-lg" style="color: #8fc445;"></i>
+                                    <a href="tel: 1 (844) 474-4721" class="text-white">1 (844) 474-4721</a> 
+                                    </span>
+                                </div>
+                                <div class="header-content-left me-auto ">
+                                    <span><i class="fa-regular fa-envelope fa-bounce fa-lg" style="color: #8fc445;"></i>
+                                        <a href="mailto:info@shipa1.com" class="text-white"> shawntransport@shipa1.com</a></span>
                                 </div>
                                 <div class="header-content-right">
                                     <div class="header-social-icon">

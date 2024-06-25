@@ -5,6 +5,7 @@ Ship A1 Blog Page
 @endsection
 
 @section('content')
+
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -268,9 +269,7 @@ Ship A1 Blog Page
                                     </div>
                                 </div>
                                                     </div>
-                        
-                </div>
-
+                                                    
                 <div class="tj-appointment-box" data-bg-image="/assets/images/service/service-15.jpg">
                             <div class="tj-appointment-bg" data-bg-image="/assets/images/banner/service_shape.png"></div>
                             <div class="tj-appointment-body">
@@ -293,6 +292,9 @@ Ship A1 Blog Page
                                 </div>
                             </div>
                 </div>
+                        
+                </div>
+
 
                     <!-- <div class="details-sidebar-inner">
                         <div class="tj-sidebar-widget sidebar-search">
