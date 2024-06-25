@@ -1746,7 +1746,7 @@ body [class*=" icon-"]::before {
 }
 
 .slider-content {
-    margin-top: 315px;
+    margin-top: 250px;
     margin-bottom: 235px;
     max-width: 825px;
     position: relative;
@@ -1757,7 +1757,7 @@ body [class*=" icon-"]::before {
     color: var(--tj-white-color);
     display: block;
     margin-bottom: 30px;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .slider-content .slider-desc {
@@ -2228,7 +2228,7 @@ body [class*=" icon-"]::before {
     bottom: -35px;
     background: #062e39;
     z-index: 9;
-    border-radius: 4px;
+    border-radius: 12px;
 }
 
 .tj-service-icon-box ul {
@@ -3803,7 +3803,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-icon-box3 {
     background: var(--tj-secondary-color);
     border: 1px solid var(--tj-primary-color);
-    border-radius: 2px;
+    border-radius: 12px;
     padding: 25px 35px;
     margin-right: 20px;
     transition: 0.4s;
@@ -5692,7 +5692,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-testimonial-item {
-    border-radius: 2px;
+    border-radius: 12px;
     background: var(--tj-white-color);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     margin: 30px 0;
@@ -5861,6 +5861,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     18. Counter CSS
 ------------------------------------ */
 .tj-counter-area {
+    border-radius: 12px;
     display: flex;
     align-items: center;
     /* flex-wrap: wrap; */
@@ -5916,6 +5917,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-map-tabs {
+    border-radius: 12px;
     max-width: 415px;
     margin: 0 auto;
     background: var(--tj-secondary-color);
@@ -6069,6 +6071,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-blog-item .blog-content-area {
+    border-radius: 0px 0px 12px 12px;
     position: relative;
     background: var(--tj-white-color);
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
@@ -7761,6 +7764,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .subscribe-content-box {
+    border-radius:  12px;
     background: var(--tj-primary-color);
     padding: 40px 35px 40px 20px;
     position: relative;
@@ -7790,7 +7794,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: var(--tj-white-color);
     height: 60px;
     line-height: 60px;
-    border-radius: 3px;
+    border-radius: 12px;
     padding: 0 20px;
 }
 
@@ -8097,6 +8101,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     max-width: 385px;
     margin-left: -50px;
     width: 100%;
+    border-radius: 12px;
     /* margin-bottom: 0; */
 }
 
@@ -8119,7 +8124,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 42px;
     line-height: 42px;
     text-align: center;
-    border-radius: 2px;
+    border-radius: 12px;
     display: inline-block;
     color: var(--tj-white-color);
     transition: 0.4s;
@@ -10459,4 +10464,7 @@ PAGE LOAD ANIMATION
 .separators-w {
     margin: 0px 5px 0px 0px;
     font-size: 14px;
+}
+.nav-num-hover:hover{
+    color: var(--tj-primary-color);
 }

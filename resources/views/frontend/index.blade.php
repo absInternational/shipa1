@@ -312,16 +312,16 @@ SHIP A1
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES <a class="tj-transparent-btn ms-4 mt-4" href="{{ route('quote.form.combine') }}" target="_blank">
-                                    Get Quote<i class="flaticon-right-1"></i>
-                                </a></h1>
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY TRANSPORTATION SERVICES</h1>
                             <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                                 customers and seeks your trust in return of our services.
                                 
                             </div>
                             <div class="tj-theme-button">
-                                
+                            <a class="tj-transparent-btn ms-4 " href="{{ route('quote.form.combine') }}" target="_blank">
+                                    Get Quote<i class="flaticon-right-1"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -330,15 +330,15 @@ SHIP A1
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}" >
                     <div class="container">
                         <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES<a class="tj-transparent-btn ms-4 mt-4" href="{{ route('quote.form.combine') }}" target="_blank">
-                            Get Quote<i class="flaticon-right-1"></i>
-                                </a></h1>
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY TRANSPORTATION SERVICES</h1>
                             <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one Heavy Equipment transportation solutions to all its
                                 customers and seeks your trust in return of our services.
                             </div>
                             <div class="tj-theme-button">
-                                
+                            <a class="tj-transparent-btn ms-4 " href="{{ route('quote.form.combine') }}" target="_blank">
+                            Get Quote<i class="flaticon-right-1"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -347,14 +347,15 @@ SHIP A1
                 <div class="swiper-slide"  data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES<a class="tj-transparent-btn ms-4 mt-4" href="{{ route('quote.form.combine') }}" target="_blank">
-                            Get Quote<i class="flaticon-right-1"></i>
-                                </a></h1>
+                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>
                             <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its
                                 customers and seeks your trust in return of our services.
                             </div>
                             <div class="tj-theme-button">
+                            <a class="tj-transparent-btn ms-4 mt-4" href="{{ route('quote.form.combine') }}" target="_blank">
+                            Get Quote<i class="flaticon-right-1"></i>
+                                </a>
                                 <!-- <a class="tj-transparent-btn" href="contact.html">
                                     Read More <i class="flaticon-right-1"></i>
                                 </a> -->
@@ -646,7 +647,9 @@ SHIP A1
                     <div class="cta-content-area">
                         <div class="cta-content">
                             <div class="cta-icon">
-                                <i class="flaticon flaticon-freight"></i>
+                            <i class="fa-light fa-car-rear"></i>
+                            <!-- <i class="fa-solid fa-gavel"></i> -->
+                                <!-- <i class="flaticon flaticon-freight"></i> -->
                             </div>
                             <div class="cta-text">
                                 <h3 class="title">SHIP A CAR DIRECT FROM AUTO Auction</h3>

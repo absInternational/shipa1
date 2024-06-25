@@ -33,7 +33,7 @@
                     <div class="page-details-wrapper service-details-wrapper">
                         <div class="tj-blog-item-three">
                             <div class="tj-blog-image">
-                                <a href="service-details.html">
+                                <a href="#">
                                     <img src="{{ !is_null($service->banner_image) ? asset($service->banner_image) : '' }}"
                                         alt="Blog" />
                                 </a>
