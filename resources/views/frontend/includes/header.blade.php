@@ -37,31 +37,31 @@
                                     <div class="header-social-icon">
                                         <ul class="list-gap social-list">
                                             <li>
-                                                <a href="https://www.facebook.com/ShipA1/"> <i
+                                                <a href="https://www.facebook.com/ShipA1/" target="_blank"> <i
                                                         class="fa-brands fa-facebook-f"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://www.youtube.com/@shipA1392"> <i
+                                                <a href="https://www.youtube.com/@shipA1autotransport" target="_blank"> <i
                                                         class="fa-brands fa-youtube"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/shipa1-transport/"> <i
+                                                <a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank"> <i
                                                         class="fa-brands fa-linkedin-in"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://twitter.com/ShipA1Transport"> <i
+                                                <a href="https://twitter.com/ShipA1Transport" target="_blank"> <i
                                                         class="fa-brands fa-twitter"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://www.yelp.com/biz/ship-a1-hunt-valley"> <i
+                                                <a href="https://www.yelp.com/biz/ship-a1-hunt-valley" target="_blank"> <i
                                                         class="fa-brands fa-yelp"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://wa.me/+14107184031"> <i
+                                                <a href="https://wa.me/+14107184031" target="_blank"> <i
                                                         class="fa-brands fa-whatsapp"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://www.youtube.com/@shipA1392"> <i
+                                                <a href="https://www.youtube.com/@shipA1392" target="_blank"> <i
                                                         class="fa-brands fa-youtube"></i></a>
                                             </li>
                                         </ul>
@@ -338,6 +338,10 @@
                                     </li>
                                     @endif
                                     @endforeach
+                                    <li>
+                                        <a href="{{ route('order.tracking') }}" target="_blank"
+                                            class="{{ Request::routeIs('order.tracking') ? ' active' : '' }}">Track Order</a>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Mainmenu Item End -->
@@ -363,8 +367,8 @@
                                 </ul>
                             </div> --}}
                                 <div class="tj-header-button d-none d-lg-block">
-                                    <a class="tj-header-btn" href="{{ route('order.tracking') }}">
-                                        TRACK ORDER <i class="flaticon-right-1"></i>
+                                    <a class="tj-header-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                                        Get Quote<i class="flaticon-right-1"></i>
                                     </a>
                                 </div>
                                 <div class="tj-hambagur-icon d-lg-none">
