@@ -37,10 +37,7 @@
                 </div>
             </div>
             <div class="page-details-wrapper service-details-wrapper">
-
-
-                <div class="details-video-content">
-                    <h5 class="title">Welcome to the privacy policy</h5>
+                            <h5 class="title">Welcome to the privacy policy</h5> 
                     <p>
                         The information that Ship A1 Transport ("we," "us," "our") gathers, uses, and discloses
                         about you when you use our services and website,<a class="pp-link" href="#">

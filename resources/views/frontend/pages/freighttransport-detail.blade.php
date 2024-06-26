@@ -959,7 +959,7 @@
         <div class="row">
                     <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
                         <div class="about_image text-center">
-                            <img src="{{ asset('frontend/images/project/atv,utv-1.webp') }}" alt="Image">
+                            <img src="{{ asset('frontend/images/project/freight-detail-page.webp') }}" alt="Image">
                         </div>
                     </div>
                     <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
@@ -968,9 +968,9 @@
                                 <span class="sub-title active-shape ">Ship A1 Transport</span>
                                 <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
                                 <p class="desc">
-                                Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your comfort is our top priority, ship the best vehicles at reasonable rates without compromising quality. Our professional and expert team provides you with 100% insured and secure vehicle transport solutions that are specifically tailored to your needs.
-                         <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even find various suitable services! For shipping your luxurious vehicle, you can opt for enclosed trailers as they are made to protect your vehicle from road debris, scratches, the uncertainty of weather conditions, and potential risks. However, if you are searching for something equally cost-effective and safe, go for open transport! We have expedited options and door-to-door delivery for fast vehicle shipping.
-                         <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
+                                Looking for a shipping company for your freight transportation? Introducing you to Ship A1, where our delivery matches top-notch quality catered especially according to the needs of our customers, where you want to ship your car, any other type of vehicle or heavy equipment look no further than our freight transportation! At Ship A1, our expert team aspires to ensure customer satisfaction as well as maintain the quality and delivery of our logistics.
+                         <br>Our wide shipping services ensure efficient and cost-effective delivery of your vehicles, LTL (Less Than Truckload), or even full truckload shipments across USA.
+                         <br>So, what are you waiting for? Experience the safest and best shipping all across the United States of America and make haste by grabbing the most splendid deals on our website and get a free quote now! All you need to do is enter your shipment details and desired route and get the most reasonable quotes that fit your needs.  
                                 </p>
                             </div>
                             <div class="tj-theme-button">
@@ -1263,13 +1263,13 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What should I choose for my luxurious vehicle?
+                                        How many types of freight do you transport?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>If you have a luxurious vehicle, we would suggest you go for the enclosed trailer as it protects your vehicle and offers you peace of mind, or if you are looking for a cheaper option then open transport is the best for you, without compromising the quality experience the best, safe and secure shipping with Ship A1!</strong>
+                                        <strong>Ship A1 handles a wide quantity and range of freight including LTL and FTL transporting services, as well as ensuring the safety of your vehicles and peace of mind.</strong>
                                     </div>
                                 </div>
                             </div>
@@ -1277,13 +1277,13 @@
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
+                                        What’s the shipping process of freight in FTL?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                        <strong>The process is quite easy, if your shipment is large enough to take up enough space it will be a full truckload and it shall be transported in a separate truck all by itself, if your shipment does not take the entire space, it will be transported along with other shipments and this mode is called Partial Truckload.</strong>
                                     </div>
                                 </div>
                             </div>
@@ -1292,13 +1292,13 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
+                                        How much time will it take to ship my freight?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                        <strong>It all depends on the potential route planning as well as the distance. However, Ship A1 will provide an estimated timeframe during the quote process and keep you updated throughout the entire journey.</strong>
                                     </div>
                                 </div>
                             </div>
