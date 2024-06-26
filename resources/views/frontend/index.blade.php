@@ -1157,7 +1157,7 @@ SHIP A1
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> HEAVY EQUIP.</span>
+                    <span class="sub-title">HEAVY EQUIP</span>
                     <h4><a href="project-details.html" class="title-link">Heavy Transportation Services</a></h4>
                 </div>
             </div>
@@ -1168,7 +1168,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">RORO</span>
-                    <h4><a href="project-details.html" class="title-link">Cars, Trucks, trailers etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">Roro Test</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
