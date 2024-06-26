@@ -752,7 +752,7 @@ the heavy lifting. Contact us today for a smooth and stress-free heavy equipment
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/commercial-truck.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('services') }}"  target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
                 </div>
