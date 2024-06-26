@@ -115,55 +115,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        {{-- <div class="tj-sidebar-widget sidebar-catagory">
-                            <h5 class="details_title">All Catagory</h5>
-                            <ul class="list-gap">
-                                <li>
-                                    <a href="#">Introductions
-                                        <span> 15</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Engineering
-                                        <span> 14</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Transport
-                                        <span> 07</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Logistics
-                                        <span> 04</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Business
-                                        <span> 06</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Work Permits
-                                        <span> 08</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tj-sidebar-widget sidebar-tags">
-                            <h5 class="details_title">Popular Tags</h5>
-                            <div class="tagcloud">
-                                <a href="#"> Business</a>
-                                <a href="#"> Career</a>
-                                <a href="#"> Logistics</a>
-                                <a href="#"> Delivery</a>
-                                <a href="#"> Consulting</a>
-                                <a href="#"> Travel</a>
-                                <a href="#">Education</a>
-                                <a href="#">America</a>
-                                <a href="#">Maintenance</a>
-                            </div>
-                        </div> --}}
+                        
                     </div>
                 </div>
             </div>

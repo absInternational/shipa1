@@ -1178,7 +1178,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Golf Cart</span>
-                    <h4><a href="project-details.html" class="title-link">electric cart, buggy, utility vehicle etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">Golf Cart Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1188,7 +1188,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">ATV/UTV</span>
-                    <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">ATV/UTV Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1198,7 +1198,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">CONSTRUCTION</span>
-                    <h4><a href="project-details.html" class="title-link"> Cranes, Drills, Grinders etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">CONSTRUCTION Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1208,7 +1208,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">FARM</span>
-                    <h4><a href="project-details.html" class="title-link">Tractor, Planter, Baler etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">FARM Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1228,7 +1228,7 @@ SHIP A1
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">TRUCKS</span>
-                    <h4><a href="project-details.html" class="title-link">Commercial, Dump Trucks etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">TRUCKS Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1237,8 +1237,8 @@ SHIP A1
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> Reefer</span>
-                    <h4><a href="project-details.html" class="title-link"> frozen , refrigerated etc.</a></h4>
+                    <span class="sub-title">Reefer</span>
+                    <h4><a href="project-details.html" class="title-link">Reefer Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1247,8 +1247,8 @@ SHIP A1
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> Hazmat</span>
-                    <h4><a href="project-details.html" class="title-link"> Explosive, Flammable, etc.</a></h4>
+                    <span class="sub-title">Hazmat</span>
+                    <h4><a href="project-details.html" class="title-link">Hazmat Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1257,8 +1257,8 @@ SHIP A1
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> Dry van</span>
-                    <h4><a href="project-details.html" class="title-link">palletized, boxed, freight etc.</a></h4>
+                    <span class="sub-title">Dry van</span>
+                    <h4><a href="project-details.html" class="title-link">Dry van Transportation Services</a></h4>
                 </div>
             </div>
         </div>
