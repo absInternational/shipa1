@@ -973,30 +973,6 @@
                          <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
                                 </p>
                             </div>
-                            <!-- <div class="content-box d-flex align-items-center">
-                                <div class="tj-icon-box">
-                                    <div class="ab-text d-flex align-items-center">
-                                        <div class="ab-icon">
-                                            <img src="assets/images/icon/global.svg" alt="Icon">
-                                        </div>
-                                        <div class="ab-title">
-                                            <h5 class="title">Our Mission</h5>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
-                                </div>
-                                <div class="tj-icon-box">
-                                    <div class="ab-text d-flex align-items-center">
-                                        <div class="ab-icon">
-                                            <img src="assets/images/icon/winner.svg" alt="Icon">
-                                        </div>
-                                        <div class="ab-title">
-                                            <h5 class="title">Our Vision</h5>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
-                                </div>
-                            </div> -->
                             <div class="tj-theme-button">
                                 <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
                                 Get Quote<i class="flaticon-right-1"></i>
@@ -1193,104 +1169,14 @@
                     <h4><a href="project-details.html" class="title-link">Freight Solution</a></h4>
                 </div>
             </div>
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title">CAR</span>
-                        <h4><a href="project-details.html" class="title-link"> Sedan, SUV, Pickup etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> MOTORCYCLE</span>
-                        <h4><a href="project-details.html" class="title-link"> Mopeds, ATV, Power Sports etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> HEAVY EQUIP.</span>
-                        <h4><a href="project-details.html" class="title-link"> Trucks, Bulldozers, Mixer etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title">RORO</span>
-                        <h4><a href="project-details.html" class="title-link">Cars, Trucks, trailers etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> ATV/UTV</span>
-                        <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> CONSTRUCTION</span>
-                        <h4><a href="project-details.html" class="title-link"> Cranes, Drills, Grinders etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> FARM</span>
-                        <h4><a href="project-details.html" class="title-link">Tractor, Planter, Baler etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> EXCAVATOR</span>
-                        <h4><a href="project-details.html" class="title-link"> Digger, Driller, Miners etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> TRUCKS</span>
-                        <h4><a href="project-details.html" class="title-link">Commercial, Dump Trucks etc.</a></h4>
-                    </div>
-                </div> -->
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> Reefer</span>
-                    <h4><a href="project-details.html" class="title-link"> frozen , refrigerated etc.</a></h4>
+                    <span class="sub-title">Reefer</span>
+                    <h4><a href="project-details.html" class="title-link">Reefer Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1299,8 +1185,8 @@
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> Hazmat</span>
-                    <h4><a href="project-details.html" class="title-link"> Explosive, Flammable, etc.</a></h4>
+                    <span class="sub-title">Hazmat</span>
+                    <h4><a href="project-details.html" class="title-link">Hazmat Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1309,8 +1195,8 @@
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> Dry van</span>
-                    <h4><a href="project-details.html" class="title-link">palletized, boxed, freight etc.</a></h4>
+                    <span class="sub-title">Dry van</span>
+                    <h4><a href="project-details.html" class="title-link">Dry van Transportation Services</a></h4>
                 </div>
             </div>
         </div>

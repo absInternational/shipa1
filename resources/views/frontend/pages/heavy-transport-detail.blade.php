@@ -525,7 +525,7 @@
                         <div class="about-content-three">
                             <div class="tj-section-heading">
                                 <span class="sub-title active-shape ">Ship A1 Transport</span>
-                                <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
+                                
                                 <p class="desc">
                                 Need to move your Excavators, Forklift, and any sort of heavy equipment? Ship A1 masters the art of
                                 transporting your heavy equipment across the USA with 100% quality, dedication, and safety.
@@ -536,30 +536,7 @@ for safe and efficient heavy equipment transport across the United States. We go
 vehicle transport, specializing in the unique requirements of oversized and heavyweight cargo.  <br> ShipA1 is committed to providing exceptional service and exceeding your expectations. Let us handle
 the heavy lifting. Contact us today for a smooth and stress-free heavy equipment transport experience. </p>
                             </div>
-                            <!-- <div class="content-box d-flex align-items-center">
-                                <div class="tj-icon-box">
-                                    <div class="ab-text d-flex align-items-center">
-                                        <div class="ab-icon">
-                                            <img src="assets/images/icon/global.svg" alt="Icon">
-                                        </div>
-                                        <div class="ab-title">
-                                            <h5 class="title">Our Mission</h5>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
-                                </div>
-                                <div class="tj-icon-box">
-                                    <div class="ab-text d-flex align-items-center">
-                                        <div class="ab-icon">
-                                            <img src="assets/images/icon/winner.svg" alt="Icon">
-                                        </div>
-                                        <div class="ab-title">
-                                            <h5 class="title">Our Vision</h5>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
-                                </div>
-                            </div> -->
+                            
                             <div class="tj-theme-button">
                                 <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
                                 Get Quote <i class="flaticon-right-1"></i>
@@ -724,44 +701,14 @@ the heavy lifting. Contact us today for a smooth and stress-free heavy equipment
     <!--=========== Project Section Start =========-->
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> logistics</span>
-                        <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title">CAR</span>
-                        <h4><a href="project-details.html" class="title-link"> Sedan, SUV, Pickup etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> MOTORCYCLE</span>
-                        <h4><a href="project-details.html" class="title-link"> Mopeds, ATV, Power Sports etc.</a></h4>
-                    </div>
-                </div> -->
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> HEAVY EQUIP.</span>
-                    <h4><a href="project-details.html" class="title-link"> Trucks, Bulldozers, Mixer etc.</a></h4>
+                    <span class="sub-title">HEAVY EQUIP</span>
+                    <h4><a href="project-details.html" class="title-link">Heavy Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -771,27 +718,17 @@ the heavy lifting. Contact us today for a smooth and stress-free heavy equipment
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">RORO</span>
-                    <h4><a href="project-details.html" class="title-link">Cars, Trucks, trailers etc.</a></h4>
+                    <h4><a href="project-details.html" class="title-link">RORO Transportation Services</a></h4>
                 </div>
             </div>
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> ATV/UTV</span>
-                        <h4><a href="project-details.html" class="title-link">Sport, Quads, Military etc.</a></h4>
-                    </div>
-                </div> -->
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/Commercial--.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> CONSTRUCTION</span>
-                    <h4><a href="project-details.html" class="title-link"> Cranes, Drills, Grinders etc.</a></h4>
+                    <span class="sub-title">CONSTRUCTION</span>
+                    <h4><a href="project-details.html" class="title-link">Construction Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -800,8 +737,8 @@ the heavy lifting. Contact us today for a smooth and stress-free heavy equipment
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> FARM</span>
-                    <h4><a href="project-details.html" class="title-link">Tractor, Planter, Baler etc.</a></h4>
+                    <span class="sub-title">FARM</span>
+                    <h4><a href="project-details.html" class="title-link">FARM Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -810,8 +747,8 @@ the heavy lifting. Contact us today for a smooth and stress-free heavy equipment
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> EXCAVATOR</span>
-                    <h4><a href="project-details.html" class="title-link"> Digger, Driller, Miners etc.</a></h4>
+                    <span class="sub-title">EXCAVATOR</span>
+                    <h4><a href="project-details.html" class="title-link">EXCAVATOR Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -820,40 +757,10 @@ the heavy lifting. Contact us today for a smooth and stress-free heavy equipment
                     <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
-                    <span class="sub-title"> TRUCKS</span>
-                    <h4><a href="project-details.html" class="title-link">Commercial, Dump Trucks etc.</a></h4>
+                    <span class="sub-title">TRUCKS</span>
+                    <h4><a href="project-details.html" class="title-link">Trucks Transportation Services</a></h4>
                 </div>
             </div>
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> Reefer</span>
-                        <h4><a href="project-details.html" class="title-link"> frozen , refrigerated etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> Hazmat</span>
-                        <h4><a href="project-details.html" class="title-link"> Explosive, Flammable, etc.</a></h4>
-                    </div>
-                </div> -->
-            <!-- <div class="tj-project-item">
-                    <img src="{{ asset('frontend/images/project/project1.jpg') }}" alt="Image" />
-                    <div class="arrow-icon">
-                        <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
-                    </div>
-                    <div class="tj-project-content">
-                        <span class="sub-title"> Dry van</span>
-                        <h4><a href="project-details.html" class="title-link">palletized, boxed, freight etc.</a></h4>
-                    </div>
-                </div> -->
         </div>
     </section>
     <!--=========== Project Section End =========-->
