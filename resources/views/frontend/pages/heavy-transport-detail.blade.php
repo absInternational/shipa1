@@ -704,61 +704,61 @@ the heavy lifting. Contact us today for a smooth and stress-free heavy equipment
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('services') }}"  target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">HEAVY EQUIP</span>
-                    <h4><a href="project-details.html" class="title-link">Heavy Transportation Services</a></h4>
+                    <h4><a href="{{ route('services') }}"  target="_blank"  class="title-link">Heavy Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('services') }}"  target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">RORO</span>
-                    <h4><a href="project-details.html" class="title-link">RORO Transportation Services</a></h4>
+                    <h4><a href="{{ route('services') }}"  target="_blank"  class="title-link">RORO Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/Commercial--.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('services') }}"  target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">CONSTRUCTION</span>
-                    <h4><a href="project-details.html" class="title-link">Construction Transportation Services</a></h4>
+                    <h4><a href="{{ route('services') }}"  target="_blank"  class="title-link">Construction Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/10.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('services') }}"  target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">FARM</span>
-                    <h4><a href="project-details.html" class="title-link">FARM Transportation Services</a></h4>
+                    <h4><a href="{{ route('services') }}"  target="_blank"  class="title-link">FARM Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('services') }}"  target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">EXCAVATOR</span>
-                    <h4><a href="project-details.html" class="title-link">EXCAVATOR Transportation Services</a></h4>
+                    <h4><a href="{{ route('services') }}"  target="_blank"  class="title-link">EXCAVATOR Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project2.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="project-details.html"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('services') }}"  target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">TRUCKS</span>
-                    <h4><a href="project-details.html" class="title-link">Trucks Transportation Services</a></h4>
+                    <h4><a href="{{ route('services') }}"  target="_blank"  class="title-link">Trucks Transportation Services</a></h4>
                 </div>
             </div>
         </div>
