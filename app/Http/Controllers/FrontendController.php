@@ -30,30 +30,65 @@ class FrontendController extends Controller
     }
     
 
+    // public function blogs()
+    // {
+    //     $blogTitle = Blog::get();
+    //     // dd($blogTitle);
+    //     $blogs = Blog::where('status', 1)->paginate(10);
+    //     return view('frontend.blogs.index', compact('blogs', 'blogTitle'));
+    // }
+
+    // public function blogDetails($slug)
+    // {
+    //     $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
+    //     $blog = Blog::where('slug_name', $slug)->first();
+    //     return view('frontend.blogs.detail', compact('blog', 'blogs'));
+    // }
+
+    // public function blogDetailsNoSlug($slug)
+    // {
+    //     $blog = Blog::where('slug_name', $slug)->first();
+
+    //     if ($blog) {
+    //         $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
+
+    //         if ($blog->post_name) {
+    //             return view('frontend.blogs.detail', compact('blog', 'blogs'));
+    //         } else {
+    //         }
+    //     } else {
+    //         abort(404);
+    //     }
+    // }
+
     public function blogs()
     {
         $blogTitle = Blog::get();
         // dd($blogTitle);
         $blogs = Blog::where('status', 1)->paginate(10);
-        return view('frontend.blogs.index', compact('blogs', 'blogTitle'));
+        $recent_blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
+        return view('frontend.blogs.index', compact('blogs', 'blogTitle', 'recent_blogs'));
     }
 
     public function blogDetails($slug)
     {
-        $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
+
+        $blogs = Blog::where('slug_name', '!=', $slug)->take(5)->get();
         $blog = Blog::where('slug_name', $slug)->first();
-        return view('frontend.blogs.detail', compact('blog', 'blogs'));
+        $recent_blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
+        return view('frontend.blogs.detail', compact('blog', 'blogs', 'recent_blogs'));
     }
 
     public function blogDetailsNoSlug($slug)
     {
         $blog = Blog::where('slug_name', $slug)->first();
+        $recent_blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
 
         if ($blog) {
             $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
 
             if ($blog->post_name) {
-                return view('frontend.blogs.detail', compact('blog', 'blogs'));
+                return view('frontend.blogs.detail', compact('blog', 'blogs', 'recent_blogs'));
             } else {
             }
         } else {

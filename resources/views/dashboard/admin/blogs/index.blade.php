@@ -29,7 +29,7 @@
                         @foreach ($blogs as $blog)
                         <tr>
                             <td>{{ $blog->post_name }}</td>
-                            <td>{{ $blog->post_short_description }}</td>
+                            <td>{{Illuminate\Support\Str::limit($blog->post_short_description, 50, '...')}}</td>
                             <td nowrap> <a class="title" target="_blank" href="{{ route('blog.details', $blog->slug_name) }}">Open Link</a>
                                     </td>
                             <td>
@@ -55,6 +55,9 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="mt-5">
+                    {{ $blogs->links('pagination.simple-number') }}
+                </div>
             </div>
         </div>
     </div>

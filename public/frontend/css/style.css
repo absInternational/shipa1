@@ -6519,6 +6519,16 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.4s;
 }
 
+.page-details-wrapper .tj-blog-item-three .active-text span {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--tj-ff-title);
+    border-radius: 2px;
+    color: var(--tj-white-color);
+    background: var(--tj-primary-color);
+    transition: 0.4s;
+}
+
 .page-details-wrapper .tj-blog-item-three .tj-content-box {
     border: 1px solid rgba(169, 169, 169, 0.2);
     padding: 0 30px;

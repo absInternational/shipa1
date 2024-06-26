@@ -46,39 +46,41 @@ Ship A1 Blog Page
                                         <img src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
                                 </div>
                                 <div class="active-text">
-                                    <a
-                                        @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
-                                        {{ $blog->meta_title }}</a>
+                                    <span class="p-2">
+                                        <span><i class="fa-light fa-user"></i></span> <span style="margin-right: 10px;">{{ $blog->user->name }}</span>
+                                        <span><i class="flaticon-calendar"></i></span> <span>{{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</span>
+                                    </span>
                                 </div>
                                 <div class="tj-content-box">
                                     <div class="blog-content-area">
                                         <div class="blog-header">
-                                            <h3>
+                                            <h1>
                                                 <a class="title-link"
                                                     @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                                     {{ $blog->post_name }}
                                                 </a>
-                                            </h3>
+                                            </h1>
                                         </div>
                                         <div class="blog-meta">
-                                            <div class="meta-list">
-                                                <ul class="list-gap">
-                                                    <li><i class="fa-light fa-user"></i> <a href="#">
-                                                            {{ $blog->user->name }}</a></li>
-                                                    <li>
-                                                        <i class="flaticon-calendar"></i> <span>
-                                                            {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</span>
-                                                    </li>
-                                                    {{-- <li>
-                                                        <i class="fa-light fa-comment"></i> <span> Comment (5)</span>
-                                                    </li> --}}
-                                                </ul>
-                                            </div>
+                                            {{-- <div class="meta-list">
+                                            <ul class="list-gap">
+                                                <li><i class="fa-light fa-user"></i> <a href="#">
+                                                        {{ $blog->user->name }}</a></li>
+                                                <li>
+                                                    <i class="flaticon-calendar"></i> <span>
+                                                        {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</span>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div> --}}
                                         </div>
                                     </div>
                                     {{-- <p>
                                         {!! Illuminate\Support\Str::limit($blog->post_description, 200, '...') !!}
                                     </p> --}}
+                                    <div>
+                                        {!! Illuminate\Support\Str::limit($blog->post_short_description ?: $blog->post_description, 120, '...') !!}
+                                    </div>
                                     <div class="read-more">
                                         <a
                                             @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
@@ -205,70 +207,36 @@ Ship A1 Blog Page
                           </div>
                           <div class="tj-sidebar-widget sidebar-post">
                             <h5 class="details_title">Recent Blogs</h5>
-                                                            <div class="tj-post-content">
+    
+                            @foreach($recent_blogs as $blog)
+                                <div class="tj-post-content">
                                     <div class="tj-auother-img">
-                                        <a href="http://127.0.0.1:8000/door-to-door-transport-delivery-vs-terminal-to-terminal-pick-up">
-                                            <img src="http://127.0.0.1:8000/blog_images/1571406672.jpg" alt="Blog"></a>
+                                        <a href="">
+                                            <img src="{{ asset($blog->post_image) }}" alt="Blog Image"></a>
                                     </div>
                                     <div class="tj-details-text">
-                                        <div class="details-meta">
+                                        <!-- <div class="details-meta">
                                             <ul class="list-gap">
                                                 <li><i class="flaticon-calendar"></i>
-                                                    Oct 18, 2019</li>
+                                                    {{ $blog->created_at->diffForHumans() }}</li>
                                             </ul>
-                                        </div>
+                                        </div> -->
                                         <div class="tj-details-header">
                                             <h6>
-                                                <a href="http://127.0.0.1:8000/door-to-door-transport-delivery-vs-terminal-to-terminal-pick-up">
-                                                    Door to Door Transport Delivery vs. Terminal to Terminal Pick-up
+                                                <a @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
+    
+                                                    {{$blog->post_name}}
                                                 </a>
                                             </h6>
                                         </div>
                                     </div>
                                 </div>
-                                                            <div class="tj-post-content">
-                                    <div class="tj-auother-img">
-                                        <a href="http://127.0.0.1:8000/how-are-oversized-vehicles-shipped">
-                                            <img src="http://127.0.0.1:8000/blog_images/1571407027.png" alt="Blog"></a>
-                                    </div>
-                                    <div class="tj-details-text">
-                                        <div class="details-meta">
-                                            <ul class="list-gap">
-                                                <li><i class="flaticon-calendar"></i>
-                                                    Oct 18, 2019</li>
-                                            </ul>
-                                        </div>
-                                        <div class="tj-details-header">
-                                            <h6>
-                                                <a href="http://127.0.0.1:8000/how-are-oversized-vehicles-shipped">
-                                                    How are Oversized Vehicles Shipped
-                                                </a>
-                                            </h6>
-                                        </div>
-                                    </div>
+                                @endforeach
+    
+                                       
+                                
+                                
                                 </div>
-                                                            <div class="tj-post-content">
-                                    <div class="tj-auother-img">
-                                        <a href="http://127.0.0.1:8000/ultimate-guide-to-planning-car-shipping">
-                                            <img src="http://127.0.0.1:8000/blog_images/1571407370.png" alt="Blog"></a>
-                                    </div>
-                                    <div class="tj-details-text">
-                                        <div class="details-meta">
-                                            <ul class="list-gap">
-                                                <li><i class="flaticon-calendar"></i>
-                                                    Oct 18, 2019</li>
-                                            </ul>
-                                        </div>
-                                        <div class="tj-details-header">
-                                            <h6>
-                                                <a href="http://127.0.0.1:8000/ultimate-guide-to-planning-car-shipping">
-                                                    Ultimate Guide To planning Car Shipping
-                                                </a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                                    </div>
                                                     
                 <div class="tj-appointment-box" data-bg-image="/assets/images/service/service-15.jpg">
                             <div class="tj-appointment-bg" data-bg-image="/assets/images/banner/service_shape.png"></div>
