@@ -8,6 +8,106 @@
 @section('content')
  
 <style>
+
+        .custom-card {
+            background: #ffffff70;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.8s;
+        }
+        .card-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1; 
+    transition: background 0.8s ease-in-out;
+    opacity: 0; 
+}
+
+/* .custom-card:hover .card-body::before {
+    opacity: 1; 
+} */
+        .custom-card:hover {
+            transform: translateY(-10px);
+        }
+        .card-body {
+             transition: 0.8s;
+            text-align: center;
+            padding: 20px;
+            transition: .8s ease-in-out;
+           
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-title {
+            color: black;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        
+        .card-text {
+            text-wrap: nowrap;
+            color: black;
+            font-size: 1rem;
+            
+        }
+        
+        .btn-primary {
+            background-color: #8FC445;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .custom-card:hover .card-title,
+        .custom-card:hover .card-text
+        {
+          color: white; 
+        }
+        .custom-card :hover .card-icon i {
+        color: #000000; 
+    }
+        
+         .custom-card.car-card:hover .card-body {
+                
+                 background-image: url('https://blog.shipa1.daydispatch.com/public/frontend/images/slider/home-slider-1.webp');
+                 /* transition: background-image 0.8s ease-in-out; */
+                
+             }
+    
+        .custom-card.motorcycle-card:hover .card-body {
+            background-image: url('../../img/bike.webp');
+        }
+        .custom-card.heavy-equip-card:hover .card-body {
+            background-image: url('../../frontend/images/slider/home-slider-2.webp');
+        }
+        .custom-card.atv-utv-card:hover .card-body {
+            background-image: url('../../img/farm-equipment.webp');
+        }
+        .custom-card.excavator-card:hover .card-body {
+            background-image: url('../../img/EXCAVATOR.webp');
+        }
+        .custom-card.construction-card:hover .card-body {
+            background-image: url('../../img/construction_1.webp');
+        }
+        .custom-card.farm-card:hover .card-body {
+            background-image: url('../../img/farm-equipment.webp');
+        }
+        .custom-card.trucks-card:hover .card-body {
+            background-image: url('../../img/truck-.webp');
+        }
+
+
+
+
         .tj-testimonial-section {
             padding: 50px 0;
             background: #f9f9f9;
@@ -259,11 +359,12 @@
         .error-field {
             border: 2px solid red;
         }
+        
     </style>
 
 
     <!--========== breadcrumb Start ==============-->
-    <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
+    <!-- <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -284,11 +385,328 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--========== breadcrumb End ==============-->
 
-    <section class="tj-choose-us-section">
-        <div class="container-flude">
+    <section class="tj-choose-us-section-get-quote pt-200">
+    <div class="container w-75">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="custom-card car-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                       
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                        </div>
+                        <h5 class="card-title">Car</h5>
+                        <p class="card-text">Sedan, SUV, Pickup etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-card motorcycle-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                            <!-- <img src="motorcycle-icon.png" alt="Motorcycle Icon"> -->
+                        </div>
+                        <h5 class="card-title">Motorcycle</h5>
+                        <p class="card-text">Mopeds, ATV, Power Sports etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-card atv-utv-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                        <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i>
+                            <!-- <img src="atv-icon.png" alt="ATV Icon"> -->
+                        </div>
+                        <h5 class="card-title">ATV/UTV</h5>
+                        <p class="card-text">Sport, Quads, Military etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="row">
+           
+            <div class="col-md-3">
+                <div class="custom-card excavator-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="excavator-icon.png" alt="Excavator Icon">
+                        </div>
+                        <h5 class="card-title">Golf Cart</h5>
+                        <p class="card-text">Digger, Driller, Miners etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="custom-card construction-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="construction-icon.png" alt="Construction Icon">
+                        </div>
+                        <h5 class="card-title">Construction</h5>
+                        <p class="card-text">Cranes, Drills, Grinders etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="custom-card heavy-equip-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="heavy-equip-icon.png" alt="Heavy Equip Icon">
+                        </div>
+                        <h5 class="card-title">Heavy Equip</h5>
+                        <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="custom-card heavy-equip-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="heavy-equip-icon.png" alt="Heavy Equip Icon">
+                        </div>
+                        <h5 class="card-title">Excavator</h5>
+                        <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+                <div class="custom-card heavy-equip-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="heavy-equip-icon.png" alt="Heavy Equip Icon">
+                        </div>
+                        <h5 class="card-title">Boat</h5>
+                        <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-card heavy-equip-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="heavy-equip-icon.png" alt="Heavy Equip Icon">
+                        </div>
+                        <h5 class="card-title">RV</h5>
+                        <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="custom-card car-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="car-icon.png" alt="Car Icon">
+                        </div>
+                        <h5 class="card-title">Commercial Truck</h5>
+                        <p class="card-text">Sedan, SUV, Pickup etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-card motorcycle-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="motorcycle-icon.png" alt="Motorcycle Icon">
+                        </div>
+                        <h5 class="card-title">Fram</h5>
+                        <p class="card-text">Mopeds, ATV, Power Sports etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="custom-card farm-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="farm-icon.png" alt="Farm Icon">
+                        </div>
+                        <h5 class="card-title">Reefer</h5>
+                        <p class="card-text">Tractor, Planter, Baler etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-card trucks-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="trucks-icon.png" alt="Trucks Icon">
+                        </div>
+                        <h5 class="card-title">Hazmat</h5>
+                        <p class="card-text">Commercial, Dump Trucks etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-card trucks-card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="trucks-icon.png" alt="Trucks Icon">
+                        </div>
+                        <h5 class="card-title">Dry Van</h5>
+                        <p class="card-text">Commercial, Dump Trucks etc.</p>
+                        <a href="" target="_blank">
+
+                            <button class="tj-submit-btn" type="button">
+                                Get Quote
+                                <!-- <i class="fa-light fa-arrow-right"></i> -->
+                            </button>
+                        </a>
+                        <!-- <a href="#" class="btn btn-primary">Get Quote
+
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- <div class="container-flude">
             <div class="row">
                 @if (session('success'))
                     <div class="alert alert-success">
@@ -302,7 +720,6 @@
                 @endif
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
-                        <!-- <h4 class="title text-center">Instant Quote!</h4> -->
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -317,7 +734,6 @@
                                 </div>
                             @endif
                             <div class="container mt-2">
-                                <!-- Step 1: Moving From/To -->
                                 <div class="route_quote_info" id="step1">
                                     <div class="row">
                                         <h4 class="title text-center">Quote Request!</h4>
@@ -355,7 +771,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Step 2: Vehicle Information -->
                                 <div class="vehicle_quote_info" id="step2" style="display: none;">
                                     <div class="row">
                                         <h4 class="title text-center">VEHICLE INFORMATION</h4>
@@ -400,7 +815,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Step 3: Customer Information -->
                                 <div class="basic_quote_info" id="step3" style="display: none;">
                                     <div class="row mb-3">
                                         <h4 class="text-center text-white">Customer Information</h4>
@@ -409,7 +823,6 @@
                                                 <label class="d-block text-white"> Your Name:</label>
                                                 <input class="form-control" required name="Custo_Phone" type="tel"
                                                     placeholder="Customer Name">
-                                                <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
                                                 <label class="error-message" id="Custo_Name-error">This field is
                                                     required.</label>
                                             </div>
@@ -472,7 +885,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 @endsection
 

@@ -3840,6 +3840,31 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 /* ----------------------------------
     14. Feature CSS
 ------------------------------------ */
+
+.tj-choose-us-section-get-quote {
+    background-color: #000000;
+    background-image: url(../../img/rv-.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 120px;
+    padding-top: 200px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+.tj-choose-us-section-get-quote::before {
+    background: rgba(6, 46, 57, 0.7);
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+}
+
+
 .tj-choose-us-section-rv {
     background-color: #000000;
     background-image: url(../../img/rv-.webp);
@@ -3964,7 +3989,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-choose-us-section-reefer {
     background-color: #000000;
     background-image: url(../../img/ReeferTruck3.webp);
-   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

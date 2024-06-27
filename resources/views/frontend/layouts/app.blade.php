@@ -390,7 +390,7 @@ s0.parentNode.insertBefore(s1,s0);
         });
     </script>
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             var input = document.querySelector("#phone");
             window.intlTelInput(input, {
@@ -408,7 +408,7 @@ s0.parentNode.insertBefore(s1,s0);
                 utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
             });
         });
-    </script>
+    </script> -->
 
 </body>
 
