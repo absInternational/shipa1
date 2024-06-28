@@ -166,21 +166,7 @@
                                 @endforeach
                             </ul>
                         </div>
-                        <!-- <div class="tj-sidebar-widget sidebar-documents">
-                            <h5 class="details_title">Documents</h5>
-                            <ul class="list-gap">
-                                <li>
-                                    <a href="#">
-                                        Our Company Details <br />
-                                        [450KB] <i class="fa-solid fa-cloud-arrow-down"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Our Company Details <br />
-                                        [450KB] <i class="fa-solid fa-cloud-arrow-down"></i></a>
-                                </li>
-                            </ul>
-                        </div> -->
+                        
                         <div class="tj-appointment-box" data-bg-image="assets/images/service/service-15.jpg">
                             <div class="tj-appointment-bg" data-bg-image="assets/images/banner/service_shape.png"></div>
                             <div class="tj-appointment-body">
@@ -190,7 +176,6 @@
                                 </div>
                                 <div class="appointment-content text-center">
                                     <h4 class="title">Make An Appointment</h4>
-                                    <!-- <a class="tel-link" href="tel:+51-(0)-888-455-369"> +51-(0)-888-455-369</a> -->
                                     <a class="tel-link" href="tel:+18444744721">1 (844) 474-4721</a>
                                     <p>Perfectly simple & easy to distinguish free hour when power.</p>
                                     <div class="tj-theme-button">

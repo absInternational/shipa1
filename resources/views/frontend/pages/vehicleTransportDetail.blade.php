@@ -526,10 +526,10 @@
                     
                 </div>
             </div>
-        </section>
+    </section>
 
 
-    <!-- <section class="tj-service-details pt-4 pb-0">
+        <!-- <section class="tj-service-details pt-4 pb-0">
         <div class="container-flude">
             <div class="row">
             <div class="col-lg-2">

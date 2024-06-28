@@ -530,11 +530,11 @@
                                 Need to move your Excavators, Forklift, and any sort of heavy equipment? Ship A1 masters the art of
                                 transporting your heavy equipment across the USA with 100% quality, dedication, and safety.
                          <br> At ShipA1 we offer a variety of trailers and assistance to ensure your heavy equipment arrives on time
-and within safety regulations. From open-air trailers for cost-effective transport or enclosed trailers for
-maximum protection, choose the best shipping mode for your vehicle! ShipA1 is your one-stop solution
-for safe and efficient heavy equipment transport across the United States. We go beyond standard
-vehicle transport, specializing in the unique requirements of oversized and heavyweight cargo.  <br> ShipA1 is committed to providing exceptional service and exceeding your expectations. Let us handle
-the heavy lifting. Contact us today for a smooth and stress-free heavy equipment transport experience. </p>
+                              and within safety regulations. From open-air trailers for cost-effective transport or enclosed trailers for
+                              maximum protection, choose the best shipping mode for your vehicle! ShipA1 is your one-stop solution
+                              for safe and efficient heavy equipment transport across the United States. We go beyond standard
+                              vehicle transport, specializing in the unique requirements of oversized and heavyweight cargo.  <br> ShipA1 is committed to providing exceptional service and exceeding your expectations. Let us handle
+                              the heavy lifting. Contact us today for a smooth and stress-free heavy equipment transport experience. </p>
                             </div>
                             
                             <div class="tj-theme-button">

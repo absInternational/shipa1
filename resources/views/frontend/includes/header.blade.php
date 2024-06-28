@@ -269,6 +269,11 @@
                                                             </li>
                                                         @endif
                                                     @endforeach
+                                                    <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('frontend.pages.services.car-service') }}">
+                                                                    Car Shipping Service-2</a>
+                                                            </li>
                                                 </div>
                                                 <div class="col-sm-4 bd-r">
                                                    

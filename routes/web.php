@@ -55,6 +55,8 @@ Route::get('/contact_us', [FrontendController::class, 'contactUs'])->name('conta
 // Service
 Route::get('/services', [FrontendController::class, 'services'])->name('services');
 
+Route::get('/car-shipping-service', [FrontendController::class, 'carService'])->name('frontend.pages.services.car-service');
+
 // Service detail
 Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');
 

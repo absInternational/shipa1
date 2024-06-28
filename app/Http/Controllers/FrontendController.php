@@ -205,4 +205,10 @@ class FrontendController extends Controller
     {
         return view('frontend.forms.reefertrucking');
     }
+
+    public function carService()
+    {
+        $site_reviews = ReviewSite::get();
+        return view('frontend.pages.services.car-service',compact('site_reviews'));
+    }
 }

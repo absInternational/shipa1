@@ -488,61 +488,7 @@ SHIP A1
     <!--=========== Slider Section End =========-->
 
     <!--=========== Testimonial Section Start =========-->
-    <section class="tj-testimonial-section">
-        <div class="carousel-wrapper">
-            <div class="owl-carousel owl-theme" id="owl-caro">
-                
-                @foreach ($site_reviews as $site_review)
-                    <div class="item">
-                        <div class="card">
-                            <a href="{{ $site_review->rating_url }}" target="_blank" style="text-decoration: none; color: inherit;">
-                                <div class="row">
-                                    <div class="col-md-6 col-6">
-                                        {{-- new for condition --}}
-                                        <div>
-                                            @if ($site_review->profile_name == 'BBB')
-                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}"
-                                                    width="100%" height="100%" alt="BBB" />
-                                            @elseif ($site_review->profile_name == 'Google')
-                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                    width="100%" height="100%" alt="Google" />
-                                            @elseif($site_review->profile_name == 'Transport Reviews')
-                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/transport.png') }}"
-                                                    width="100%" height="100%" alt="Transport Reviews" />
-                                            @elseif($site_review->profile_name == 'Trust Pilot')
-                                                <img loading="lazy" src="{{ asset('frontend/images/testimonial/turst.png') }}"
-                                                    width="100%" height="100%" alt="Trust Pilot" />        
-                                            @endif
-                                        </div>
-                                        {{-- end for condition --}}
-                                        <div class="star">
-                                            {{-- @for ($i = 0; $i < (int) floor($site_review->rating); $i++)
-                                                <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                            @endfor --}}
-                                            @for ($i = 1; $i <= 5; $i++)
-                                                @if ($site_review->rating >= $i)
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                                @elseif ($site_review->rating >= $i - 0.5)
-                                                    <i class="fa a-star-o" aria-hidden="true"></i>
-                                                @else
-                                                    <i class="fa fa-star-o text-light" aria-hidden="true"></i>
-                                                @endif
-                                            @endfor
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-6">
-                                        <div class="rates">
-                                            {{ $site_review->rating }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+    @include('partials.reveiw-site')
     <!--=========== Testimonial Section End =========-->
 
     <!--=========== Testimonial Section Start =========-->
@@ -878,7 +824,7 @@ SHIP A1
         </section>
 
     
-        <section class="tj-choose-us-section-home">
+    <section class="tj-choose-us-section-home">
         <div class="container">
             <div class="row">
                 @if (session('success'))
