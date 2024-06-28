@@ -5,10 +5,10 @@
     .why-box{
         border-radius:12px;
         padding: 40px 0px;
-        background:#183c46;
+        background:#183c46eb;
     }
     .title-2{
-        color:white;
+        color:#8fc445;
     }
     .desc-2{
         color:white;
@@ -454,7 +454,7 @@
             </div>
     </section>
 
-    <section class="tj-choose-us-section-service-car">
+    <section class="tj-choose-us-section-service-car-2">
     <div class="container why-box">
                 <div class="row"> 
                     <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
