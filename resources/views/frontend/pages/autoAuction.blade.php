@@ -185,7 +185,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
-                                        <label class="d-block"> Your Name:</label>
+                                        <label class="d-block"> Name:</label>
                                         <input type="text" id="name" name="name" placeholder=""
                                             required="" />
                                         <small id="errName" class="err-style"></small>
@@ -201,7 +201,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form">
-                                        <label class="d-block"> Email Address:</label>
+                                        <label class="d-block"> Email:</label>
                                         <input type="email" id="email" name="email" placeholder=""
                                             required="" />
                                         <small id="errEmail" class="err-style"></small>
