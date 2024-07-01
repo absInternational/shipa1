@@ -57,6 +57,8 @@ Route::get('/services', [FrontendController::class, 'services'])->name('services
 
 Route::get('/car-shipping-service', [FrontendController::class, 'carService'])->name('frontend.pages.services.car-service');
 
+Route::get('/motorcycle-shipping-service', [FrontendController::class, 'bikeService'])->name('frontend.pages.services.bike-service');
+
 // Service detail
 Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');
 
@@ -152,7 +154,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 
     // Blog routes
-    Route::prefix('blogs')->group(function () {
+        Route::prefix('blogs')->group(function () {
         Route::get('/', [BlogController::class, 'index'])->name('blogs.index');
         Route::get('/add', [BlogController::class, 'create'])->name('blogs.create');
         Route::post('/store', [BlogController::class, 'store'])->name('blogs.store');
@@ -162,7 +164,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     });
     
     // Edit Frontend NavBar
-    Route::prefix('navbar')->group(function () {
+        Route::prefix('navbar')->group(function () {
         Route::get('/', [MenuController::class, 'index'])->name('navbar.index');
         Route::get('/add', [MenuController::class, 'create'])->name('navbar.create');
         Route::post('/store', [MenuController::class, 'store'])->name('navbar.store');
@@ -175,7 +177,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::resource('reviews', ReviewController::class);
 
     // Review Site routes
-    Route::prefix('site_review')->group(function () {
+        Route::prefix('site_review')->group(function () {
         Route::get('/', [ReviewSiteController::class, 'index'])->name('site_review.index');
         Route::get('/add', [ReviewSiteController::class, 'create'])->name('site.review.create');
         Route::post('/store', [ReviewSiteController::class, 'store'])->name('site.review.store');
