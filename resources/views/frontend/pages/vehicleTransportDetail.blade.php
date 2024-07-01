@@ -472,7 +472,7 @@
 
 
     
-
+    @include('partials.reveiw-site')
     <section class="tj-about-section-three">
             <div class="container">
                 <div class="row">
@@ -556,7 +556,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one">
+                   <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> A1 Transportation Company</span>
                             <h2 class="title">What Makes Us Dependable?</h2>
@@ -567,7 +567,8 @@
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" />
+                                <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                    <!-- <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
                                     <h5 class="title">Our Values</h5>
@@ -582,7 +583,8 @@
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
+                                    <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
                                     <h5 class="title">Scope of Services</h5>
@@ -595,7 +597,8 @@
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
+                                    <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
                                     <h5 class="title">Safety Is Our Priority</h5>
@@ -611,7 +614,8 @@
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
+                                    <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
                                     <h5 class="title">Skilful & Devoted Staff</h5>

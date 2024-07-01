@@ -282,8 +282,68 @@
     </section>
     <!--=========== Feature Section End =========-->
 
+    <!--=========== Service Section Start =========-->
+    <section class="tj-service-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape">What We Do</span>
+                        <h2 class="title">Logistic & Transport</h2>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
+                        <div class="icon-box">
+                        <i class="fa-light fa-car-side fa-2xs"></i>
+                            <!-- <i class="flaticon-air-freight"></i> -->
+                        </div>
+                        <div class="service-content">
+                            <h4><a class="title-link" href="{{ route('vehicleTransportDetail') }}" target="_blank"> VEHICLE TRANSPORTATION</a></h4>
+                            <p>Long established fact that reader will be distracted by the</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
+                        <div class="icon-box">
+                        <i class="fa-light fa-tractor fa-2xs"></i>
+                            <!-- <i class="flaticon-cargo-ship-1"></i> -->
+                        </div>
+                        <div class="service-content">
+                            <h4>
+                                <a class="title-link" href="{{ route('heavy-transport-detail') }}" target="_blank"> HEAVY TRANSPORTATION</a>
+                            </h4>
+                            <p>Long established fact that reader will be distracted by the</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
+                        <div class="icon-box">
+                        <i class="fa-light fa-truck fa-2xs"></i>
+                            <!-- <i class="flaticon-delivery-van"></i> -->
+                        </div>
+                        <div class="service-content">
+                            <h4><a class="title-link"  href="{{ route('freighttransport-detail') }}" target="_blank"> FREIGHT TRANSPORTATION</a></h4>
+                            <p>Long established fact that reader will be distracted by the</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=========== Service Section End =========-->
+
+
     <!--=========== Team Section Start =========-->
-    <section class="tj-team-section-two">
+    <!-- <section class="tj-team-section-two">
         <div class="container">
             <div class="row">
                 <div class="tj-section-heading text-center">
@@ -375,7 +435,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--=========== Team Section End =========-->
 
     <!--=========== Newsletter Section Start =========-->

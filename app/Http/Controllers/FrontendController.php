@@ -170,6 +170,7 @@ class FrontendController extends Controller
 
     public function vehicleTransportDetail()
     {
+        $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
         $makes = VehicleName::select('make')
             ->where('UserId', 14)
@@ -178,19 +179,21 @@ class FrontendController extends Controller
             ->orderBy('make', 'ASC')
             ->get();
 
-        return view('frontend.pages.vehicleTransportDetail', compact('makes','blogs'));
+        return view('frontend.pages.vehicleTransportDetail', compact('makes','blogs','site_reviews'));
     }
 
     public function heavyTransportDetail()
     {
+        $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.heavy-transport-detail',compact('blogs'));
+        return view('frontend.pages.heavy-transport-detail',compact('blogs','site_reviews'));
     }
 
     public function freightTransportDetail()
     {
+        $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.freighttransport-detail',compact('blogs'));
+        return view('frontend.pages.freighttransport-detail',compact('blogs','site_reviews'));
     }
     public function hazmatTransport()
     {
