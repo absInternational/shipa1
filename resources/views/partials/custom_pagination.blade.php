@@ -23,7 +23,9 @@
                     @foreach ($element as $page => $url)
                         @if ($page <= 3 || ($page >= $paginator->currentPage() - 1 && $page <= $paginator->currentPage() + 1))
                             @if ($page == $paginator->currentPage())
-                                <li class="active" style="background-color: #8fc445; color: #fff !important; width: 40px; height: 40px; border-radius: 50px; display: flex; justify-content: center; align-items: center;"><span>{{ $page }}</span></li>
+                                <li class="active"
+                                    style="background-color: #8fc445; color: #fff !important; width: 40px; height: 40px; border-radius: 50px; display: flex; justify-content: center; align-items: center;">
+                                    <span>{{ $page }}</span></li>
                             @else
                                 <li><a href="{{ $url }}">{{ $page }}</a></li>
                             @endif
@@ -45,12 +47,12 @@
     </div>
 </div>
 <style>
-.pagination-wrapper {
-    display: flex;
-    justify-content: center;
-}
+    .pagination-wrapper {
+        display: flex;
+        justify-content: center;
+    }
 
-.tj-sidebar-pagination {
-    text-align: center;
-}
+    .tj-sidebar-pagination {
+        text-align: center;
+    }
 </style>

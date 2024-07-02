@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
     <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.2/dist/css/coreui.min.css" rel="stylesheet"
         integrity="sha384-39e9UaGkm/+yp6spIsVfzcs3j7ac7G2cg0hzmDvtG11pT1d7YMnOC26w4wMPhzsL" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/ctas/cta-1/assets/css/cta-1.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/ctas/cta-1/assets/css/cta-1.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
@@ -69,20 +69,28 @@
 
     {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6675d43ceaf3bd8d4d1320dc/1i0u4a3i2';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/6675d43ceaf3bd8d4d1320dc/1i0u4a3i2';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
 </script>
 <!--End of Tawk.to Script-->
+
 <body>
     <!-- Preloader start -->
     <!-- <div id="preloader" class="preloader">
@@ -144,7 +152,7 @@ s0.parentNode.insertBefore(s1,s0);
                 <div class="contact-link">
                     <span class="d-block">Location:</span>
                     <p><a href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu"
-                    target="_blank">201 International Cir STE 230,<br>Hunt Valley, MD 21030-1344</a></p>
+                            target="_blank">201 International Cir STE 230,<br>Hunt Valley, MD 21030-1344</a></p>
                 </div>
             </div>
             <div class="contact-box contact-box1">
@@ -170,16 +178,20 @@ s0.parentNode.insertBefore(s1,s0);
             <h4 class="offcanvas-title">Social Item</h4>
             <ul>
                 <li>
-                    <a href="https://www.facebook.com/ShipA1/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/ShipA1/" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/shipa1_transport/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/shipa1_transport/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/@shipA1392" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/@shipA1392" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
                 </li>
             </ul>
         </div>
@@ -236,7 +248,7 @@ s0.parentNode.insertBefore(s1,s0);
     <!-- <script src="path/to/jquery.min.js"></script> -->
     <!-- <script src="path/to/owl.carousel.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-   
+
 
 
     {{-- sweet alert --}}
@@ -390,26 +402,22 @@ s0.parentNode.insertBefore(s1,s0);
             });
         });
     </script>
-
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
+    <script>
+        $(document).ready(function() {
             var input = document.querySelector("#phone");
             window.intlTelInput(input, {
                 initialCountry: "auto",
                 geoIpLookup: function(callback) {
-                    fetch('https://ipinfo.io/json')
-                        .then(function(response) {
-                            return response.json();
-                        })
-                        .then(function(ipinfo) {
-                            var countryCode = "us";
-                            callback(countryCode);
-                        });
+                    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                        // var countryCode = (resp && resp.country) ? resp.country : "us";
+                        var countryCode = "us";
+                        callback(countryCode);
+                    });
                 },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
             });
         });
-    </script> -->
+    </script>
 
 </body>
 
