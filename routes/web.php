@@ -210,6 +210,11 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         // Route::get('/show/{newsLetter}', [AdminController::class, 'showNewsLetter'])->name('newsLetter.show');
         Route::delete('/destroy/{newsLetter}', [AdminController::class, 'destroyNewsLetter'])->name('newsLetter.destroy');
     });
+
+    // new_layout
+    Route::prefix('service/new_layout')->group(function () {
+        Route::get('/', [ServiceController::class, 'new_layout'])->name('service.new_layout.index');
+    });
 });
 
 Auth::routes();

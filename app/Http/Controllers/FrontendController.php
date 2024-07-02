@@ -123,10 +123,16 @@ class FrontendController extends Controller
 
     public function serviceDetails(Request $request, $slug)
     {
+        $site_reviews = ReviewSite::get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
         $faqs = FAQs::where('status', 1)->get();
         $service = Service::where('slug', $slug)->first();
         $related = Service::where('id', '!=', $service->id)->where('category_id', $service->category_id)->take(5)->get();
-        return view('frontend.pages.services.detail', compact('service', 'related', 'faqs'));
+        if($service->layout_type == 'new')
+        {
+            return view('frontend.pages.services.detail_new_layout', compact('service', 'related', 'faqs', 'site_reviews', 'blogs'));
+        }
+        return view('frontend.pages.services.detail', compact('service', 'related', 'faqs', 'site_reviews', 'blogs'));
     }
 
     public function autoAuction()
