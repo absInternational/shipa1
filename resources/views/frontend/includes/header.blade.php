@@ -311,6 +311,11 @@
                                                             </li>
                                                         @endif
                                                     @endforeach
+                                                             <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('frontend.pages.services.hazmat-service') }}">
+                                                                    Hazmat Transport-2</a>
+                                                            </li>
 
                                                     <a class=" mb-3" href="" style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold; ">RORO</a>
                                                     @foreach ($services as $service)

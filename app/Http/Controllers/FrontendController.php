@@ -248,4 +248,17 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.services.excavator-service',compact('site_reviews','blogs','makes'));
     }
+
+    public function hazmatService()
+    {
+        $makes = VehicleName::select('make')
+        ->where('UserId', 14)
+        ->where('status', 0)
+        ->groupBy('make')
+        ->orderBy('make', 'ASC')
+        ->get();
+        $site_reviews = ReviewSite::get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.services.hazmat-service',compact('site_reviews','blogs','makes'));
+    }
 }
