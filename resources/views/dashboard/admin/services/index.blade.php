@@ -8,6 +8,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <a href="{{ route('services.create') }}" class="m-0 btn btn-primary">Add New Service</a>
+                <a href="{{ route('service.new_layout.index') }}" class="m-0 btn btn-primary">Add Service With New</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
