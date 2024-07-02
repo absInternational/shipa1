@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
                 <div class="footer-widget footer1_col_1 footer-content-info"
-                    data-bg-image="{{ asset('assets/images/banner/footer-shape.png') }}">
+                    >
                     <a href="{{ route('welcome') }}"> <img src="{{ asset('frontend/images/logo/logo-white.png') }}"
                             alt="Logo" /></a>
                     <p>
