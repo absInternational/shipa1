@@ -823,8 +823,9 @@ SHIP A1
             </div>
         </section>
 
-    
-    <section class="tj-choose-us-section-home">
+        @include('partials.multi-form')
+     { -- 
+    <!-- <section class="tj-choose-us-section-home">
         <div class="container">
             <div class="row">
                 @if (session('success'))
@@ -884,7 +885,7 @@ SHIP A1
                                 </div>
                             @endif
                             <div class="container mt-2">
-                                <!-- Step 1: Moving From/To -->
+                                
                                 <div class="route_quote_info" id="step1">
                                     <div class="row">
                                         <h4 class="title text-center">Quote Request!</h4>
@@ -922,7 +923,7 @@ SHIP A1
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Step 2: Vehicle Information -->
+                               
                                 <div class="vehicle_quote_info" id="step2" style="display: none;">
                                     <div class="row">
                                         <h4 class="title text-center">VEHICLE INFORMATION</h4>
@@ -961,7 +962,7 @@ SHIP A1
                                     </div>
                                 </div>
 
-                                <!-- Step 3: Customer Information -->
+                                
                                 <div class="basic_quote_info" id="step3" style="display: none;">
                                     <div class="row mb-3">
                                         <h4 class="text-center text-white">Customer Information</h4>
@@ -970,7 +971,6 @@ SHIP A1
                                                 <label class="d-block text-white"> Your Name:</label>
                                                 <input class="form-control" required name="Custo_Phone" type="tel"
                                                     placeholder="Customer Name">
-                                                <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
                                                 <label class="error-message" id="Custo_Name-error">This field is
                                                     required.</label>
                                             </div>
@@ -1041,12 +1041,8 @@ SHIP A1
 
 
            </div>
-        <!-- </div>
-
-        </div>
-
-        </div> -->
-        </section>
+           
+    </section> --> --}
     <!--=========== Feature Section End =========-->
 
     <!--=========== Team Section Start =========-->
