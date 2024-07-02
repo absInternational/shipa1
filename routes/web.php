@@ -58,6 +58,7 @@ Route::get('/services', [FrontendController::class, 'services'])->name('services
 Route::get('/car-shipping-service', [FrontendController::class, 'carService'])->name('frontend.pages.services.car-service');
 
 Route::get('/motorcycle-shipping-service', [FrontendController::class, 'bikeService'])->name('frontend.pages.services.bike-service');
+Route::get('/excavator-shipping-service', [FrontendController::class, 'excavatorService'])->name('frontend.pages.services.excavator-service');
 
 // Service detail
 Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');

@@ -279,6 +279,11 @@
                                                                     href="{{ route('frontend.pages.services.bike-service') }}">
                                                                     Motorcycle Transport</a>
                                                             </li>
+                                                            <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('frontend.pages.services.excavator-service') }}">
+                                                                    Excavator Service Transport</a>
+                                                            </li>
                                                 </div>
                                                 <div class="col-sm-4 bd-r">
                                                    

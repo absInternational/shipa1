@@ -356,9 +356,7 @@ SHIP A1
                             <a class="tj-transparent-btn ms-4 mt-4" href="{{ route('quote.form.combine') }}" target="_blank">
                             Get Quote<i class="flaticon-right-1"></i>
                                 </a>
-                                <!-- <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a> -->
+                               
                             </div>
                         </div>
                     </div>
@@ -369,62 +367,7 @@ SHIP A1
         </div>
         
         
-        <!-- <div class="swiper sc-slider-1" data-autoplay="5000" >
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
-                    <div class="container">
-                        <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h1>
-                            <div class="slider-desc">
-                                ShipA1 has pledged to provide all-in-one auto transport solutions to all its
-                                customers and seeks your trust in return of our services.
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-shape"></div>
-                </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
-                    <div class="container">
-                        <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY SHIPPING SERVICES</h1>
-                            <div class="slider-desc">
-                                ShipA1 has pledged to provide all-in-one Heavy Equipment transportation solutions to all its
-                                customers and seeks your trust in return of our services.
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-shape"></div>
-                </div>
-                <div class="swiper-slide"  data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
-                    <div class="container">
-                        <div class="slider-content p-z-idex">
-                            <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>
-                            <div class="slider-desc">
-                                ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its
-                                customers and seeks your trust in return of our services.
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-shape"></div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div> -->
+        
 
         <div class="tj-service-icon-box">
             <ul class="list-gap">
@@ -432,10 +375,7 @@ SHIP A1
                     <div class="service-item">
                         <div class="tj-service-icon">
                             <div class="service-icon">
-                            <!-- <img src="{{ asset('frontend/images/project/crane-truck.png') }}" alt="Image" /> -->
-                            <!-- <i class="bi bi-truck"></i> -->
-                            <!-- <i class="flaticon-delivery-van"></i> -->
-                            <i class="fa-light fa-car-side fa-xs"></i>
+                            
                             </div>
                             <div class="sub-title">
                                 <span>VEHICLE <br>TRANSPORTATION</span>
@@ -452,7 +392,7 @@ SHIP A1
                     <div class="service-item">
                         <div class="tj-service-icon">
                             <div class="service-icon">
-                                <!-- <i class="flaticon-air-freight"></i> -->
+                              
                                 <i class="fa-light fa-tractor fa-xs"></i>
                             </div>
                             <div class="sub-title">
@@ -469,7 +409,7 @@ SHIP A1
                     <div class="service-item">
                         <div class="tj-service-icon">
                             <div class="service-icon">
-                                <!-- <i class="flaticon-delivery-van"></i> -->
+                               
                                 <i class="fa-light fa-truck fa-xs"></i>
                             </div>
                             <div class="sub-title">
@@ -492,38 +432,6 @@ SHIP A1
     <!--=========== Testimonial Section End =========-->
 
     <!--=========== Testimonial Section Start =========-->
-
-    <!-- <section class="tj-testimonial-section mt-4">
-        <div class="carousel-wrapper">
-            <div class="owl-carousel owl-theme" id="owl-caro">
-                @foreach ($reviews as $review)
-                    <div class="item">
-                        <div class="card">
-                            <div class="row">
-                                <div class="col-md-6 col-6">
-                                    <div>
-                                        <img loading="lazy" src="{{ asset('frontend/images/transport.png') }}" width="100%"
-                                            height="100%" alt="Google">
-                                    </div>
-                                    <div class="star">
-                                        @for ($i = 0; $i < (int) floor($review->rating); $i++)
-                                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        @endfor
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="rates">
-                                        {{ $review->rating }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section> -->
-
 
     <!--=========== Service Section Start =========-->
     <section class="tj-service-section">
@@ -824,225 +732,7 @@ SHIP A1
         </section>
 
         @include('partials.multi-form')
-     { -- 
-    <!-- <section class="tj-choose-us-section-home">
-        <div class="container">
-            <div class="row">
-                @if (session('success'))
-                    <div class="alert alert-success">
-                        {{ session('success') }}
-                    </div>
-                @endif
-                @if (session('error'))
-                    <div class="alert alert-error">
-                        {{ session('error') }}
-                    </div>
-                @endif
-                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                        <div class="choose-us-content-1">
-                            <div class="tj-section-heading">
-                                <span class="sub-title active-shape2">Get Instant quote</span>
-                                <h2 class="title">Get an instant quote in few simple steps</h2>
-                                <p class="desc">ShipA1 has pledged to provide all-in-one auto transport solutions to all its
-                                customers and seeks your trust in return of our services.</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-sm-4 col-6">
-                                    <div class="tj-icon-box3 text-center">
-                                        <i class="flaticon flaticon-courier"></i>
-                                        <h6 class="title">Optimized Cost</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-6">
-                                    <div class="tj-icon-box3 text-center">
-                                        <i class="flaticon flaticon-cargo"></i>
-                                        <h6 class="title">Delivery on Time</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-6">
-                                    <div class="tj-icon-box3 text-center">
-                                        <i class="flaticon flaticon-agreement"></i>
-                                        <h6 class="title">Safety &amp; Reliability</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-
-                <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
-                    <div class="tj-input-form w-100" data-bg-image="">
-                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
-                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
-                            enctype="multipart/form-data">
-                            @csrf
-                            @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-                            <div class="container mt-2">
-                                
-                                <div class="route_quote_info" id="step1">
-                                    <div class="row">
-                                        <h4 class="title text-center">Quote Request!</h4>
-                                        <div class="col-xl-12 col-lg-12 mb-4">
-                                            <h6 class="text-white">Moving From</h6>
-                                            <label class="text-white mb-2">Where Are You Moving From?</label>
-                                            <div class="single-input-field">
-                                                <input class="form-control" type="text" id="pickup-location"
-                                                    placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                                <ul class="suggestions suggestionsTwo"></ul>
-                                                <label class="error-message" id="pickup-location-error">This field is
-                                                    required.</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-12 col-lg-12 mb-4">
-                                            <h6 class="text-white">Moving To</h6>
-                                            <label class="text-white mb-2">Where Are You Moving To?</label>
-                                            <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-location"
-                                                    placeholder="Enter City or ZipCode" name="To_ZipCode" required>
-                                                <ul class="suggestions suggestionsTwo"></ul>
-                                                <label class="error-message" id="delivery-location-error">This field is
-                                                    required.</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="price__cta-btn text-center">
-                                                <button class="tj-submit-btn" type="button" id="step1_next">
-                                                    Next <i class="fa-light fa-arrow-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                                <div class="vehicle_quote_info" id="step2" style="display: none;">
-                                    <div class="row">
-                                        <h4 class="title text-center">VEHICLE INFORMATION</h4>
-                                        <select id="tabSelector" class="" aria-label="Tab selector" required>
-                                            <option value="" selected disabled>Select a Vehicle</option>
-                                            <option value="Atv">Atv Utv Transport</option>
-                                            <option value="Boat-Transport">Boat Transport</option>
-                                            <option value="Car">Car</option>
-                                            <option value="Freight-Transportation">Freight Transportation</option>
-                                            <option value="Golf-Cart">Golf Cart</option>
-                                            <option value="Heavy-Equipment">Heavy Equipment</option>
-                                            <option value="Motorcycle">Motorcycle</option>
-                                            <option value="RV-Transport">RV Transport</option>
-                                        </select>
-                                        <label class="error-message" id="tabSelector-error">This field is
-                                            required.</label>
-
-                                        <div class="tab-content mt-3" id="additionalContent"></div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="price__cta-btn">
-                                                <button class="tj-submit-btn previous" id="step2_previous">
-                                                    Previous <i class="fa-light fa-arrow-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="price__cta-btn float-end">
-                                                <button class="tj-submit-btn" type="button" id="step2_next">
-                                                    Next <i class="fa-light fa-arrow-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                
-                                <div class="basic_quote_info" id="step3" style="display: none;">
-                                    <div class="row mb-3">
-                                        <h4 class="text-center text-white">Customer Information</h4>
-                                        <div class="col-xl-4 col-lg-4">
-                                            <div class="single-input-field">
-                                                <label class="d-block text-white"> Your Name:</label>
-                                                <input class="form-control" required name="phone" type="tel"
-                                                    placeholder="Customer Name">
-                                                <label class="error-message" id="Custo_Name-error">This field is
-                                                    required.</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-4 col-lg-4">
-                                            <div class="single-input-field">
-                                                <label class="d-block text-white">Phone:</label>
-                                                <input id="phone" class="form-control" required name="phone"
-                                                    type="tel" placeholder="Customer Phone">
-                                                <label class="error-message" id="Custo_Phone-error">This field is
-                                                    required.</label>
-                                            </div>
-                                        </div>
-                                        {{-- <div class="col-xl-4 col-lg-4">
-                                            <div class="single-input-field">
-                                                <label class="d-block text-white">Phone:</label>
-                                                <input id="phone" class="form-control" required name="phone"
-                                                    type="tel" placeholder="Customer Phone">
-                                                <label class="error-message" id="Custo_Phone-error">This field is
-                                                    required.</label>
-                                            </div>
-                                        </div> --}}
-
-                                        <div class="col-xl-4 col-lg-4">
-                                            <div class="single-input-field">
-                                                <label class="d-block text-white"> Email Address:</label>
-                                                <input class="form-control" required name="Custo_Email" type="email"
-                                                    placeholder="Email address">
-                                                <label class="error-message" id="Custo_Email-error">This field is
-                                                    required.</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="price__cta-btn">
-                                                <button class="tj-submit-btn previous" id="step3_previous">
-                                                    Previous <i class="fa-light fa-arrow-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="price__cta-btn float-end">
-
-                                                <button class=" tj-submit-btn " href="" type="submit"
-                                                    id="submit_instant_code" value="Submit Form">
-                                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
-                                                </button>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
-
-
-
-
-
-                    </div>
-                </div>
-            </div>
-
-
-           </div>
-           
-    </section> --> --}
+   
     <!--=========== Feature Section End =========-->
 
     <!--=========== Team Section Start =========-->
@@ -1063,16 +753,7 @@ SHIP A1
     <!--=========== Project Section Start =========-->
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
-            <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="{{ route('services') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title"> logistics</span>
-                    <h4><a href="project-details.html" class="title-link"> Air Freight Solution</a></h4>
-                </div>
-            </div> -->
+            
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/9.webp') }}" alt="Image" />
                 <div class="arrow-icon">
@@ -1247,20 +928,27 @@ SHIP A1
     <!--=========== Map Section End =========-->
 
     <section class="tj-counter-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="tj-counter-area" data-bg-image="assets/images/banner/counter-shape.png" style="background-image: url(&quot;assets/images/banner/counter-shape.png&quot;);">
-                           
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row d-flex">
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="tj-counter-area" data-bg-image="">
                             <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
                                 <div class="counter-icon">
                                     <i class="flaticon-courier"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer odometer-auto-theme" data-count="128000"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">7</span></span></span></span></span></div></span></div>
+                                    <div class="tj-count"><span class="odometer odometer-auto-theme" data-count="128000"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">7</span></span></span></span></span></div></span></div>
                                     <span class="sub-title">Satisfied Clients</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="tj-counter-area" data-bg-image="">
                             <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                                 <div class="counter-icon">
                                     <i class="flaticon-box"></i>
@@ -1270,6 +958,11 @@ SHIP A1
                                     <span class="sub-title">Shipment Delivered</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="tj-counter-area" data-bg-image="">
                             <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                                 <div class="counter-icon">
                                     <i class="flaticon-box"></i>
@@ -1279,6 +972,11 @@ SHIP A1
                                     <span class="sub-title">Miles Covered</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="tj-counter-area" data-bg-image="">
                             <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
                                 <div class="counter-icon">
                                     <i class="flaticon-worldwide"></i>
@@ -1335,9 +1033,12 @@ SHIP A1
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
 
     <!--=========== Blog Section Start =========-->
@@ -1375,7 +1076,6 @@ SHIP A1
                                         </div>
                                         <div class="content-area">
                                             <p style="height: 100px;">{{ $review->description }}</p>
-                            <!-- <h6 style="height: 100px;">{{ \Illuminate\Support\Str::limit($review->description, 200) }}</h6> -->
                             <br><br><br>
                                             <div class="testimonial-content d-flex justify-content-between">
                                                 <div class="testimonial-auother">
@@ -1411,22 +1111,24 @@ SHIP A1
     <!--=========== Newsletter Section Start =========-->
     @include('partials.newsletter')
     <!--=========== Newsletter Section End =========-->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="path/to/jquery.min.js"></script>
     <script src="path/to/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> -->
-    <script>
+    <!-- <script>
        const swiper = new Swiper('.swiper', {
            autoplay: {
            delay: 5000,
           },
           });
-    </script>
+    </script> -->
     <script>
         $(document).ready(function() {
             $('#example-multiple').select2();
@@ -1476,14 +1178,14 @@ SHIP A1
         });
     </script>
 
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             $('#owl-caro').owlCarousel({
                 loop: true,
                 margin: 10,
                 nav: true,
                 autoplay: true,
-                autoplayTimeout: 4000, // 2 seconds
+                autoplayTimeout: 4000, 
                 autoplayHoverPause: true,
                 responsive: {
                     0: {
@@ -1499,7 +1201,7 @@ SHIP A1
             });
         });
         
-    </script>
+    </script> -->
 
     <script>
         $(document).ready(function() {
