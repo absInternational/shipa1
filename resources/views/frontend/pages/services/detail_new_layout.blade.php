@@ -207,7 +207,7 @@
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
-                                                <input id="phone" class="form-control" required name="Custo_Phone"
+                                                <input id="phone" class="form-control" required name="phone"
                                                     type="tel" placeholder="Customer Phone">
                                                 <label class="error-message" id="Custo_Phone-error">This field is
                                                     required.</label>
