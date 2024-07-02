@@ -93,7 +93,13 @@
         $(this).toggleClass("open");
     });
     
-
+   
+    // const swiper = new Swiper('.swiper', {
+    //     autoplay: {
+    //     delay: 5000,
+    //    },
+    //    });
+ 
     // Hero Slider One
     var slider1 = new Swiper(".sc-slider-1", {
         speed: 800,
