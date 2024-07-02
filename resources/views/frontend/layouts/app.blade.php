@@ -69,6 +69,11 @@
 
     {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -390,26 +395,22 @@ s0.parentNode.insertBefore(s1,s0);
             });
         });
     </script>
-
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
+    <script>
+        $(document).ready(function() {
             var input = document.querySelector("#phone");
             window.intlTelInput(input, {
                 initialCountry: "auto",
                 geoIpLookup: function(callback) {
-                    fetch('https://ipinfo.io/json')
-                        .then(function(response) {
-                            return response.json();
-                        })
-                        .then(function(ipinfo) {
-                            var countryCode = "us";
-                            callback(countryCode);
-                        });
+                    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                        // var countryCode = (resp && resp.country) ? resp.country : "us";
+                        var countryCode = "us";
+                        callback(countryCode);
+                    });
                 },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
             });
         });
-    </script> -->
+    </script>
 
 </body>
 

@@ -2,11 +2,12 @@
 
 @section('title', 'Get Car Shipping Quote | ShipA1')
 
-@section('meta_description', 'Experience seamless car shipping with Shipa Car Transport. Get an instant quote, nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
+@section('meta_description',
+    'Experience seamless car shipping with Shipa Car Transport. Get an instant quote,
+    nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
 
 
 @section('content')
-
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -73,23 +74,22 @@
                                         <small id="errName" class="err-style"></small>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                {{-- <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Phone:</label>
-                                        <input type="text" id="phone" name="phone" placeholder="Phone Number"
+                                        <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                                            required="" />
+                                        <small id="errPhone" class="err-style"></small>
+                                    </div>
+                                </div> --}}
+                                <div class="col-md-4">
+                                    <div class="input-form">
+                                        <label class="d-block">Phone:</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="Phone Number"
                                             required="" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
                                 </div>
-                                {{-- <div class="col-xl-4 col-lg-4">
-                                    <div class="single-input-field">
-                                        <label class="d-block text-white">Phone:</label>
-                                        <input id="phone" class="form-control" required name="phone"
-                                            type="tel" placeholder="Customer Phone">
-                                        <label class="error-message" id="Custo_Phone-error">This field is
-                                            required.</label>
-                                    </div>
-                                </div> --}}
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Email Address:</label>
@@ -205,7 +205,7 @@
                                     onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
-                                    <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
 
                             <div class="row">
