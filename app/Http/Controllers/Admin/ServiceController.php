@@ -158,7 +158,12 @@ class ServiceController extends Controller
         if ($service->layout_type == 'new') {
             return view('dashboard.admin.services.new_layout.edit', compact('service', 'categories'));
         }
-        return view('dashboard.admin.services.edit', compact('service', 'categories'));
+        if ($service->layout_type == 'new2') {
+            return view('dashboard.admin.services.new_layout.edit2', compact('service', 'categories'));
+        }
+        else {
+            return view('dashboard.admin.services.edit', compact('service', 'categories'));
+        }
     }
 
     public function update(Request $request, $id)
@@ -304,5 +309,11 @@ class ServiceController extends Controller
     {
         $categories = ServiceCategory::get();
         return view('dashboard.admin.services.new_layout.create', compact('categories'));
+    }
+
+    public function new_layout2()
+    {
+        $categories = ServiceCategory::get();
+        return view('dashboard.admin.services.new_layout.create2', compact('categories'));
     }
 }
