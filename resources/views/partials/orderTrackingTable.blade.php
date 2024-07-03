@@ -55,7 +55,8 @@
                 <div class="col-md-6">
                     <div class="float-md-end">
                         <p class="fw-bold">Delivery:</p>
-                        <p><i class="fas fa-location-dot text-danger"></i> {{ $responseData['data']['destinationzsc'] }}</p>
+                        <p><i class="fas fa-location-dot text-danger"></i> {{ $responseData['data']['destinationzsc'] }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -336,33 +337,34 @@
             ?>
             <br><br>
             <?php
-            if ($responseData['price'] > 0) {
-                if ($responseData['price'] > 0 && $responseData['price'] <= 300) {
-                    $price1 = $responseData['price'] + 150;
-                    $price2 = $responseData['price'] + 100;
-                    $price3 = $responseData['price'];
-                } elseif ($responseData['price'] > 300 && $responseData['price'] <= 700) {
-                    $price1 = $responseData['price'] + 200;
-                    $price2 = $responseData['price'] + 150;
-                    $price3 = $responseData['price'] + 50;
-                } elseif ($responseData['price'] > 700 && $responseData['price'] <= 1000) {
-                    $price1 = $responseData['price'] + 250;
-                    $price2 = $responseData['price'] + 200;
-                    $price3 = $responseData['price'] + 100;
-                } elseif ($responseData['price'] > 1000 && $responseData['price'] <= 1500) {
-                    $price1 = $responseData['price'] + 300;
-                    $price2 = $responseData['price'] + 250;
-                    $price3 = $responseData['price'] + 150;
-                } elseif ($responseData['price'] > 1500 && $responseData['price'] <= 2000) {
-                    $price1 = $responseData['price'] + 400;
-                    $price2 = $responseData['price'] + 350;
-                    $price3 = $responseData['price'] + 250;
-                } else {
-                    $price1 = $responseData['price'] + 500;
-                    $price2 = $responseData['price'] + 450;
-                    $price3 = $responseData['price'] + 350;
+            if ($responseData['price'] != 0) {
+                if ($responseData['price'] > 0) {
+                    if ($responseData['price'] > 0 && $responseData['price'] <= 300) {
+                        $price1 = $responseData['price'] + 150;
+                        $price2 = $responseData['price'] + 100;
+                        $price3 = $responseData['price'];
+                    } elseif ($responseData['price'] > 300 && $responseData['price'] <= 700) {
+                        $price1 = $responseData['price'] + 200;
+                        $price2 = $responseData['price'] + 150;
+                        $price3 = $responseData['price'] + 50;
+                    } elseif ($responseData['price'] > 700 && $responseData['price'] <= 1000) {
+                        $price1 = $responseData['price'] + 250;
+                        $price2 = $responseData['price'] + 200;
+                        $price3 = $responseData['price'] + 100;
+                    } elseif ($responseData['price'] > 1000 && $responseData['price'] <= 1500) {
+                        $price1 = $responseData['price'] + 300;
+                        $price2 = $responseData['price'] + 250;
+                        $price3 = $responseData['price'] + 150;
+                    } elseif ($responseData['price'] > 1500 && $responseData['price'] <= 2000) {
+                        $price1 = $responseData['price'] + 400;
+                        $price2 = $responseData['price'] + 350;
+                        $price3 = $responseData['price'] + 250;
+                    } else {
+                        $price1 = $responseData['price'] + 500;
+                        $price2 = $responseData['price'] + 450;
+                        $price3 = $responseData['price'] + 350;
+                    }
                 }
-            }
             ?>
             <div class="table-responsive">
                 <table class="table">
@@ -396,6 +398,9 @@
                     </tbody>
                 </table>
             </div>
+            <?php
+                }
+            ?>
         </div>
     </div>
 </div>
