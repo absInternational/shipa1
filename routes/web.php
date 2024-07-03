@@ -82,6 +82,9 @@ Route::get('/terms_and_conditions', [FrontendController::class, 'termsAndConditi
 // privacy policy
 Route::get('/privacy_policy', [FrontendController::class, 'privacyPolicy'])->name('privacyPolicy');
 
+// thank-you
+Route::get('/thank-you', [FrontendController::class, 'thankYou'])->name('thankYou');
+
 // vehicle Transportation detail
 Route::get('/vehicle-transportation-detail', [FrontendController::class, 'vehicleTransportDetail'])->name('vehicleTransportDetail');
 

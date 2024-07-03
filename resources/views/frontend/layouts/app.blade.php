@@ -287,7 +287,7 @@
             $('#newsletter-form').submit(function(event) {
                 event.preventDefault();
                 var email = $('#email_newsletter').val();
-                console.log(email);
+                // console.log(email);
 
                 $.ajax({
                     type: 'POST',
@@ -402,21 +402,35 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
-            var input = document.querySelector("#phone");
-            window.intlTelInput(input, {
-                initialCountry: "auto",
-                geoIpLookup: function(callback) {
-                    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
-                        // var countryCode = (resp && resp.country) ? resp.country : "us";
-                        var countryCode = "us";
-                        callback(countryCode);
-                    });
-                },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-            });
+    $(document).ready(function() {
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "us", // Default country code set to "us"
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
         });
-    </script>
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                // IP lookup code commented out
+                // $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                //     var countryCode = (resp && resp.country) ? resp.country : "us";
+                //     callback(countryCode);
+                // });
+
+                // Directly using the default country code
+                var countryCode = "us";
+                callback(countryCode);
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+    });
+</script>
+
 
 </body>
 

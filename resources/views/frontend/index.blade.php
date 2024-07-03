@@ -6,6 +6,7 @@ SHIP A1
 @section('content')
 
     <style>
+        
          .rates {
          background:#8FC445 ;
          font-size: 24px; 
@@ -927,118 +928,76 @@ SHIP A1
     </section>
     <!--=========== Map Section End =========-->
 
-    <section class="tj-counter-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row d-flex">
+<!--=========== Counter Section Start =========-->
+<section class="tj-counter-section">
+            <div class="container-flude">
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="tj-counter-area" >
 
-                    <div class="col-md-6 col-lg-3">
-                        <div class="tj-counter-area" data-bg-image="">
-                            <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
+                            <div
+                                class="counter-item d-flex align-items-center"
+                                data-sal="slide-up"
+                                data-sal-duration="800"
+                                data-sal-delay="300">
+                                <div class="counter-icon">
+                                    <i class="flaticon-box"></i>
+                                </div>
+                                <div class="counter-number">
+                                    <div class="tj-count"><span class="odometer" data-count="31">0</span>k</div>
+                                    <span class="sub-title">Delivery Packages</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="counter-item d-flex align-items-center"
+                                data-sal="slide-up"
+                                data-sal-duration="800"
+                                data-sal-delay="400">
                                 <div class="counter-icon">
                                     <i class="flaticon-courier"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer odometer-auto-theme" data-count="128000"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">7</span></span></span></span></span></div></span></div>
+                                    <div class="tj-count"><span class="odometer" data-count="1217">0</span></div>
                                     <span class="sub-title">Satisfied Clients</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-6 col-lg-3">
-                        <div class="tj-counter-area" data-bg-image="">
-                            <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                                <div class="counter-icon">
-                                    <i class="flaticon-box"></i>
-                                </div>
-                                <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer odometer-auto-theme" data-count="129"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span></div></span>k</div>
-                                    <span class="sub-title">Shipment Delivered</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="tj-counter-area" data-bg-image="">
-                            <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                                <div class="counter-icon">
-                                    <i class="flaticon-box"></i>
-                                </div>
-                                <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer odometer-auto-theme" data-count="38861"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span></div></span>k</div>
-                                    <span class="sub-title">Miles Covered</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="tj-counter-area" data-bg-image="">
-                            <div class="counter-item d-flex align-items-center sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
+                            <div
+                                class="counter-item d-flex align-items-center"
+                                data-sal="slide-up"
+                                data-sal-duration="800"
+                                data-sal-delay="500">
                                 <div class="counter-icon">
                                     <i class="flaticon-worldwide"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <div class="tj-count">
-                                        <span class="odometer odometer-auto-theme" data-count="8">
-                                            <div class="odometer-inside"><span class="odometer-digit">
-                                                <span class="odometer-digit-spacer">8</span>
-                                                <span class="odometer-digit-inner">
-                                                    <span class="odometer-ribbon">
-                                                        <span class="odometer-ribbon-inner">
-                                                            <span class="odometer-value">2</span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                            <span class="odometer-formatting-mark">,</span>
-                                            <span class="odometer-digit">
-                                                <span class="odometer-digit-spacer">8</span>
-                                                <span class="odometer-digit-inner">
-                                                    <span class="odometer-ribbon">
-                                                        <span class="odometer-ribbon-inner">
-                                                            <span class="odometer-value">7</span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                            <span class="odometer-digit">
-                                                <span class="odometer-digit-spacer">8</span>
-                                                <span class="odometer-digit-inner">
-                                                    <span class="odometer-ribbon">
-                                                        <span class="odometer-ribbon-inner">
-                                                            <span class="odometer-value">0</span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                            <span class="odometer-digit">
-                                                <span class="odometer-digit-spacer">8</span>
-                                                <span class="odometer-digit-inner">
-                                                    <span class="odometer-ribbon">
-                                                        <span class="odometer-ribbon-inner">
-                                                            <span class="odometer-value">9</span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </span>
-                                </div>
-                                    <span class="sub-title">Years Of Experience</span>
+                                    <div class="tj-count"><span class="odometer" data-count="2709">0</span></div>
+                                    <span class="sub-title">Worldwide Clients</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
+                            <div
+                                class="counter-item d-flex align-items-center"
+                                data-sal="slide-up"
+                                data-sal-duration="800"
+                                data-sal-delay="500">
+                                <div class="counter-icon">
+                                    <i class="flaticon-worldwide"></i>
+                                </div>
+                                <div class="counter-number">
+                                    <div class="tj-count"><span class="odometer" data-count="2709">0</span></div>
+                                    <span class="sub-title">Worldwide Clients</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 </section>
+<!--=========== Counter Section End ========= -->
 
 
     <!--=========== Blog Section Start =========-->
@@ -1391,10 +1350,10 @@ SHIP A1
 
             $(document).on('click', '.addVehicleBtn', function() {
                 if ($('#tabSelector').val() == 'Car') {
-                    console.log('yesss');
+                    // console.log('yesss');
                     addNewVehicle();
                 } else {
-                    console.log('nooo');
+                    // console.log('nooo');
                     addOtherVehicle();
                 }
             });
@@ -1413,7 +1372,7 @@ SHIP A1
             });
 
             function getModel(year, makeId, vehicleInfo) {
-                console.log('yes inn');
+                // console.log('yes inn');
                 $.ajax({
                     url: "{{ route('get.models') }}",
                     method: 'GET',
@@ -1571,7 +1530,7 @@ SHIP A1
             });
 
             function getModel(year, makeId) {
-                console.log('yes inn');
+                // console.log('yes inn');
                 $.ajax({
                     url: "{{ route('get.models') }}",
                     method: 'GET',
@@ -1591,7 +1550,7 @@ SHIP A1
                         selectOptions += '</select>';
                         modelsDropdown.html(selectOptions);
 
-                        console.log('yesssss', response);
+                        // console.log('yesssss', response);
                     },
                     error: function(xhr) {
                         console.log(xhr.responseText);
