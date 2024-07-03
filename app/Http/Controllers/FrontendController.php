@@ -261,4 +261,10 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.services.hazmat-service',compact('site_reviews','blogs','makes'));
     }
+
+    public function thankYou()
+    {
+        
+        return view('frontend.pages.thank-you');
+    }
 }
