@@ -25,7 +25,7 @@
             }
         });
     }
-    setTimeout(loading, 1000);
+    setTimeout(loading, 100);
 
     $(window).on("load", function () {
         // Animate loader off screen
