@@ -997,10 +997,10 @@ SHIP A1
                 </div>
             </div>
 </section>
-<!--=========== Counter Section End =========-
+<!--=========== Counter Section End ========= -->
 
 
-    <!-=========== Blog Section Start =========-->
+    <!--=========== Blog Section Start =========-->
     @include('partials.blog-slider')
     <!--=========== Blog Section End =========-->
 
@@ -1350,10 +1350,10 @@ SHIP A1
 
             $(document).on('click', '.addVehicleBtn', function() {
                 if ($('#tabSelector').val() == 'Car') {
-                    console.log('yesss');
+                    // console.log('yesss');
                     addNewVehicle();
                 } else {
-                    console.log('nooo');
+                    // console.log('nooo');
                     addOtherVehicle();
                 }
             });
@@ -1372,7 +1372,7 @@ SHIP A1
             });
 
             function getModel(year, makeId, vehicleInfo) {
-                console.log('yes inn');
+                // console.log('yes inn');
                 $.ajax({
                     url: "{{ route('get.models') }}",
                     method: 'GET',
@@ -1530,7 +1530,7 @@ SHIP A1
             });
 
             function getModel(year, makeId) {
-                console.log('yes inn');
+                // console.log('yes inn');
                 $.ajax({
                     url: "{{ route('get.models') }}",
                     method: 'GET',
@@ -1550,7 +1550,7 @@ SHIP A1
                         selectOptions += '</select>';
                         modelsDropdown.html(selectOptions);
 
-                        console.log('yesssss', response);
+                        // console.log('yesssss', response);
                     },
                     error: function(xhr) {
                         console.log(xhr.responseText);
