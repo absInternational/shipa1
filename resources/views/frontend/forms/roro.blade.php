@@ -2,7 +2,8 @@
 
 @section('title', 'Get Quote on RORO | ShipA1')
 
-@section('meta_description', 'Get an instant RORO shipping quote with ease! Trust our reliable service for nationwide
+@section('meta_description',
+    'Get an instant RORO shipping quote with ease! Trust our reliable service for nationwide
     coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
 
 
@@ -380,61 +381,61 @@
                                 </div>
                                 <!-- <div class="route_quote_info" id="step1">
 
-                <div class="row">
-                    <h4 class="title text-center">Quote Request!</h4>
-                    <div class="col-xl-12 col-lg-12 mb-4">
-                        <h6 class="text-white">Moving From</h6>
-                        <label class="text-white mb-2">Where Are You Moving From?</label>
-                        <div class="single-input-field">
-                            <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                            <ul class="suggestions suggestionsTwo"></ul>
-                            <label class="error-message" id="pickup-location-error">This field is required.</label>
-                        </div>
-                    </div>
+                                        <div class="row">
+                                            <h4 class="title text-center">Quote Request!</h4>
+                                            <div class="col-xl-12 col-lg-12 mb-4">
+                                                <h6 class="text-white">Moving From</h6>
+                                                <label class="text-white mb-2">Where Are You Moving From?</label>
+                                                <div class="single-input-field">
+                                                    <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
+                                                    <ul class="suggestions suggestionsTwo"></ul>
+                                                    <label class="error-message" id="pickup-location-error">This field is required.</label>
+                                                </div>
+                                            </div>
 
-                    
-                </div>
+                                            
+                                        </div>
 
-                <div class="row">
-                    <h6 class="text-white">Deliver To</h6>
-                    <div class="col-xl-4 col-lg-4 mb-4">
-                        <label class="text-white mb-2">Country:</label>
-                        <div class="single-input-field">
-                            <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_ZipCode" required>
-                            <ul class="suggestions suggestionsTwo"></ul>
-                            <label class="error-message" id="delivery-location-error">This field is required.</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 mb-4">
-                        
-                        <label class="text-white mb-2">City:</label>
-                        <div class="single-input-field">
-                            <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_ZipCode" required>
-                            <ul class="suggestions suggestionsTwo"></ul>
-                            <label class="error-message" id="delivery-location-1-error">This field is required.</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 mb-4">
-                        
-                        <label class="text-white mb-2">Zip Code:</label>
-                        <div class="single-input-field">
-                            <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>
-                            
-                        </div>
-                    </div>
-                </div>
+                                        <div class="row">
+                                            <h6 class="text-white">Deliver To</h6>
+                                            <div class="col-xl-4 col-lg-4 mb-4">
+                                                <label class="text-white mb-2">Country:</label>
+                                                <div class="single-input-field">
+                                                    <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_ZipCode" required>
+                                                    <ul class="suggestions suggestionsTwo"></ul>
+                                                    <label class="error-message" id="delivery-location-error">This field is required.</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 mb-4">
+                                                
+                                                <label class="text-white mb-2">City:</label>
+                                                <div class="single-input-field">
+                                                    <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_ZipCode" required>
+                                                    <ul class="suggestions suggestionsTwo"></ul>
+                                                    <label class="error-message" id="delivery-location-1-error">This field is required.</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 mb-4">
+                                                
+                                                <label class="text-white mb-2">Zip Code:</label>
+                                                <div class="single-input-field">
+                                                    <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
 
 
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="price__cta-btn text-center">
-                            <button class="tj-submit-btn" type="button" id="step1_next">
-                                Next <i class="fa-light fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="price__cta-btn text-center">
+                                                    <button class="tj-submit-btn" type="button" id="step1_next">
+                                                        Next <i class="fa-light fa-arrow-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
                                 <!-- Step 2: Vehicle Information -->
                                 <div class="vehicle_quote_info" id="step2" style="display: none;">
                                     <div class="row">
@@ -452,7 +453,39 @@
                                         </select>
                                         <label class="error-message" id="tabSelector-error">This field is
                                             required.</label>
-
+                                        <div class="my-4">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="single-input-field" id="country-dropdown">
+                                                    <label class="d-block text-white">Country:</label>
+                                                    <select class="form-control" required
+                                                        name="country1">
+                                                        <option value="">Select a country</option>
+                                                    </select>
+                                                    <label class="error-message" id="country1-error">This field is
+                                                        required.</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="single-input-field">
+                                                    <label class="d-block text-white"> City:</label>
+                                                    <input class="form-control" required name="city1" type="text"
+                                                        placeholder="City">
+                                                    <label class="error-message" id="city1-error">This field is
+                                                        required.</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="single-input-field">
+                                                    <label class="d-block text-white">
+                                                        Postal/Zip(Optional)
+                                                        :</label>
+                                                    <input class="form-control" name="zip1" type="text"
+                                                        placeholder="Postal/Zip">
+                                                    <label class="error-message" id="zip1-error">This field is
+                                                        required.</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="tab-content mt-3" id="additionalContent"></div>
                                     </div>
                                     <div class="row mt-2">
@@ -997,6 +1030,36 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            const apiUrl = 'https://restcountries.com/v3.1/all';
 
+            function populateCountryDropdown(countries) {
+                const dropdown = $('#country-dropdown');
+                countries.forEach(country => {
+                    dropdown.append($('<option>', {
+                        value: country.name.common,
+                        text: country.name.common
+                    }));
+                });
+            }
+
+            $.getJSON(apiUrl, function(data) {
+                console.log('Fetched countries:', data);
+                const sortedCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+                console.log('sortedCountries', sortedCountries);
+                // populateCountryDropdown(sortedCountries);
+                $.each(sortedCountries, function(index, val) {
+                    html = '';
+                    html += '<option value="' + val['name']['common'] + '">' +
+                        val['name']['common'] +
+                        '</option>';
+                });
+                $('#country-dropdown').append(html);
+            }).fail(function(jqXHR, textStatus, errorThrown) {
+                console.error('Failed to fetch the list of countries:', textStatus, errorThrown);
+            });
+        });
+    </script>
 
 @endsection
