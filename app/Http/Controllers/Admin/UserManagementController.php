@@ -29,11 +29,17 @@ class UserManagementController extends Controller
             'role' => ['required', 'string'],
         ]);
 
-        User::create([
+        $total_sidebar_access = "";
+        if ($request->has('sidebar_access')) {
+            $total_sidebar_access = implode(",", $request->sidebar_access);
+        }
+
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'role' => $data['role'],
+            'sidebar_access' => $total_sidebar_access,
         ]);
 
         return redirect()->route('users.index')->with('success', 'User created successfully.');
@@ -67,7 +73,7 @@ class UserManagementController extends Controller
         if ($request->sidebar_access <> null) {
             $total_sidebar_access = implode(",", $sidebar_access);
         }
-        
+
         $user->sidebar_access = $total_sidebar_access;
 
         $user->save();

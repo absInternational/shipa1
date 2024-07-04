@@ -1,6 +1,9 @@
 @extends('dashboard.admin.layouts.app')
 
 @section('content')
+    @php
+        $sidebar_access = explode(',', $user->sidebar_access);
+    @endphp
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
@@ -113,53 +116,52 @@
                                             </div>
                                             <br>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access1" value="1"><label class="ml-2"
-                                                    for="sidebar_access1">Users Management</label>
+                                                <input type="checkbox" @if (in_array('1', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access1"
+                                                    value="1"><label class="ml-2" for="sidebar_access1">Users
+                                                    Management</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access2" value="2"><label class="ml-2"
-                                                    for="sidebar_access2">Blogs</label>
+                                                <input type="checkbox" @if (in_array('2', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access2"
+                                                    value="2"><label class="ml-2" for="sidebar_access2">Blogs</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access3" value="3"><label class="ml-2"
-                                                    for="sidebar_access3">Edit Frontend NavBar</label>
+                                                <input type="checkbox" @if (in_array('3', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access3"
+                                                    value="3"><label class="ml-2" for="sidebar_access3">Edit Frontend
+                                                    NavBar</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access4" value="4"><label class="ml-2"
+                                                <input type="checkbox" @if (in_array('4', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access4"
+                                                    value="4"><label class="ml-2"
                                                     for="sidebar_access4">Services</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access5" value="5"><label class="ml-2"
-                                                    for="sidebar_access5">Service Categories</label>
+                                                <input type="checkbox" @if (in_array('5', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access5"
+                                                    value="5"><label class="ml-2" for="sidebar_access5">Service
+                                                    Categories</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access6" value="6"><label class="ml-2"
+                                                <input type="checkbox" @if (in_array('6', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access6"
+                                                    value="6"><label class="ml-2"
                                                     for="sidebar_access6">Reviews</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access7" value="7"><label class="ml-2"
-                                                    for="sidebar_access7">Add Site Reviews</label>
+                                                <input type="checkbox" @if (in_array('7', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access7"
+                                                    value="7"><label class="ml-2" for="sidebar_access7">Add Site
+                                                    Reviews</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access8" value="8"><label class="ml-2"
+                                                <input type="checkbox" @if (in_array('8', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access8"
+                                                    value="8"><label class="ml-2"
                                                     for="sidebar_access8">FAQs</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access9" value="9"><label class="ml-2"
-                                                    for="sidebar_access9">Contact Messages</label>
+                                                <input type="checkbox" @if (in_array('9', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access9"
+                                                    value="9"><label class="ml-2" for="sidebar_access9">Contact
+                                                    Messages</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="sidebar_access[]"
-                                                    id="sidebar_access10" value="10"><label class="ml-2"
+                                                <input type="checkbox" @if (in_array('10', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access10"
+                                                    value="10"><label class="ml-2"
                                                     for="sidebar_access10">Newsletter Emails</label>
                                             </div>
                                         </div>
@@ -182,18 +184,17 @@
     </div>
 @endsection
 @section('extraScript')
-<script>
-    $(".emp_access_ship_all").on('change', function () {
-        if ($(this).is(":checked")) {
-            $(this).parent('div').siblings('.col-sm-6').each(function () {
-                $(this).children('input').attr('checked', true);
-            })
-        }
-        else {
-            $(this).parent('div').siblings('.col-sm-6').each(function () {
-                $(this).children('input').attr('checked', false);
-            })
-        }
-    })
-</script>
+    <script>
+        $(".emp_access_ship_all").on('change', function() {
+            if ($(this).is(":checked")) {
+                $(this).parent('div').siblings('.col-sm-6').each(function() {
+                    $(this).children('input').attr('checked', true);
+                })
+            } else {
+                $(this).parent('div').siblings('.col-sm-6').each(function() {
+                    $(this).children('input').attr('checked', false);
+                })
+            }
+        })
+    </script>
 @endsection
