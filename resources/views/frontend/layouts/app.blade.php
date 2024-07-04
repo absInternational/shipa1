@@ -402,34 +402,74 @@
         });
     </script>
     <script>
-    $(document).ready(function() {
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "us", // Default country code set to "us"
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        $(document).ready(function() {
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                initialCountry: "us", // Default country code set to "us"
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+            });
         });
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "auto",
-            geoIpLookup: function(callback) {
-                // IP lookup code commented out
-                // $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
-                //     var countryCode = (resp && resp.country) ? resp.country : "us";
-                //     callback(countryCode);
-                // });
+    </script>
+    <script>
+        $(document).ready(function() {
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                initialCountry: "auto",
+                geoIpLookup: function(callback) {
+                    // IP lookup code commented out
+                    // $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                    //     var countryCode = (resp && resp.country) ? resp.country : "us";
+                    //     callback(countryCode);
+                    // });
 
-                // Directly using the default country code
-                var countryCode = "us";
-                callback(countryCode);
-            },
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+                    // Directly using the default country code
+                    var countryCode = "us";
+                    callback(countryCode);
+                },
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+            });
         });
-    });
-</script>
+
+        $(document).ready(function() {
+            $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+                console.log('yahoo');
+                var year = $('.vehicle-year').val();
+                var makeId = $('.vehicle-make').val();
+                if (year && makeId) {
+                    getModel(year, makeId);
+                }
+            });
+        });
+
+        function getModel(year, makeId) {
+            console.log('yes inn');
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelsDropdown = $('.vehicle-model-div');
+                    modelsDropdown.empty();
+                    var selectOptions =
+                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' + model +
+                            '</option>';
+                    });
+                    selectOptions += '</select>';
+                    modelsDropdown.html(selectOptions);
+
+                    console.log('yesssss', response);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+    </script>
 
 
 </body>

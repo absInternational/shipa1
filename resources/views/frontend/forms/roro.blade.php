@@ -381,61 +381,61 @@
                                 </div>
                                 <!-- <div class="route_quote_info" id="step1">
 
-                                        <div class="row">
-                                            <h4 class="title text-center">Quote Request!</h4>
-                                            <div class="col-xl-12 col-lg-12 mb-4">
-                                                <h6 class="text-white">Moving From</h6>
-                                                <label class="text-white mb-2">Where Are You Moving From?</label>
-                                                <div class="single-input-field">
-                                                    <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                                    <ul class="suggestions suggestionsTwo"></ul>
-                                                    <label class="error-message" id="pickup-location-error">This field is required.</label>
-                                                </div>
-                                            </div>
+                                                <div class="row">
+                                                    <h4 class="title text-center">Quote Request!</h4>
+                                                    <div class="col-xl-12 col-lg-12 mb-4">
+                                                        <h6 class="text-white">Moving From</h6>
+                                                        <label class="text-white mb-2">Where Are You Moving From?</label>
+                                                        <div class="single-input-field">
+                                                            <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
+                                                            <ul class="suggestions suggestionsTwo"></ul>
+                                                            <label class="error-message" id="pickup-location-error">This field is required.</label>
+                                                        </div>
+                                                    </div>
 
-                                            
-                                        </div>
-
-                                        <div class="row">
-                                            <h6 class="text-white">Deliver To</h6>
-                                            <div class="col-xl-4 col-lg-4 mb-4">
-                                                <label class="text-white mb-2">Country:</label>
-                                                <div class="single-input-field">
-                                                    <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_ZipCode" required>
-                                                    <ul class="suggestions suggestionsTwo"></ul>
-                                                    <label class="error-message" id="delivery-location-error">This field is required.</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 mb-4">
-                                                
-                                                <label class="text-white mb-2">City:</label>
-                                                <div class="single-input-field">
-                                                    <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_ZipCode" required>
-                                                    <ul class="suggestions suggestionsTwo"></ul>
-                                                    <label class="error-message" id="delivery-location-1-error">This field is required.</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 mb-4">
-                                                
-                                                <label class="text-white mb-2">Zip Code:</label>
-                                                <div class="single-input-field">
-                                                    <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>
                                                     
                                                 </div>
-                                            </div>
-                                        </div>
 
-
-                                        <div class="row">
-                                            <div class="col-xl-12">
-                                                <div class="price__cta-btn text-center">
-                                                    <button class="tj-submit-btn" type="button" id="step1_next">
-                                                        Next <i class="fa-light fa-arrow-right"></i>
-                                                    </button>
+                                                <div class="row">
+                                                    <h6 class="text-white">Deliver To</h6>
+                                                    <div class="col-xl-4 col-lg-4 mb-4">
+                                                        <label class="text-white mb-2">Country:</label>
+                                                        <div class="single-input-field">
+                                                            <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_ZipCode" required>
+                                                            <ul class="suggestions suggestionsTwo"></ul>
+                                                            <label class="error-message" id="delivery-location-error">This field is required.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-4 mb-4">
+                                                        
+                                                        <label class="text-white mb-2">City:</label>
+                                                        <div class="single-input-field">
+                                                            <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_ZipCode" required>
+                                                            <ul class="suggestions suggestionsTwo"></ul>
+                                                            <label class="error-message" id="delivery-location-1-error">This field is required.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-4 mb-4">
+                                                        
+                                                        <label class="text-white mb-2">Zip Code:</label>
+                                                        <div class="single-input-field">
+                                                            <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>
+                                                            
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
+
+
+                                                <div class="row">
+                                                    <div class="col-xl-12">
+                                                        <div class="price__cta-btn text-center">
+                                                            <button class="tj-submit-btn" type="button" id="step1_next">
+                                                                Next <i class="fa-light fa-arrow-right"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
                                 <!-- Step 2: Vehicle Information -->
                                 <div class="vehicle_quote_info" id="step2" style="display: none;">
                                     <div class="row">
@@ -455,9 +455,9 @@
                                             required.</label>
                                         <div class="my-4">
                                             <div class="col-xl-4 col-lg-4">
-                                                <div class="single-input-field" id="country-dropdown">
+                                                <div class="single-input-field">
                                                     <label class="d-block text-white">Country:</label>
-                                                    <select class="form-control" required
+                                                    <select class="form-control" id="country-dropdown" required
                                                         name="country1">
                                                         <option value="">Select a country</option>
                                                     </select>
@@ -523,13 +523,13 @@
                                         </div>
 
                                         <!-- <div class="col-xl-4 col-lg-4">
-                                                <div class="single-input-field">
-                                                    <label class="d-block text-white"> Phone:</label>
-                                                    <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
-                                                    <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
-                                                    <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                                </div>
-                                            </div> -->
+                                                        <div class="single-input-field">
+                                                            <label class="d-block text-white"> Phone:</label>
+                                                            <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
+                                                            <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
+                                                            <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                                                        </div>
+                                                    </div> -->
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
@@ -603,7 +603,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
     </script>
 
-<script>
+    <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
 
