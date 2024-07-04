@@ -61,6 +61,15 @@ class UserManagementController extends Controller
             $user->password = Hash::make($data['password']);
         }
         $user->role = $data['role'];
+
+        $total_sidebar_access = "";
+        $sidebar_access = $request->sidebar_access;
+        if ($request->sidebar_access <> null) {
+            $total_sidebar_access = implode(",", $sidebar_access);
+        }
+        
+        $user->sidebar_access = $total_sidebar_access;
+
         $user->save();
 
         return redirect()->route('users.index')->with('success', 'User updated successfully.');

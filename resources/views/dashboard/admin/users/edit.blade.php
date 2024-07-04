@@ -113,54 +113,54 @@
                                             </div>
                                             <br>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action1" value="1"><label class="ml-2"
-                                                    for="emp_access_action1">Users Management</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access1" value="1"><label class="ml-2"
+                                                    for="sidebar_access1">Users Management</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action2" value="2"><label class="ml-2"
-                                                    for="emp_access_action2">Blogs</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access2" value="2"><label class="ml-2"
+                                                    for="sidebar_access2">Blogs</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action3" value="3"><label class="ml-2"
-                                                    for="emp_access_action3">Edit Frontend NavBar</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access3" value="3"><label class="ml-2"
+                                                    for="sidebar_access3">Edit Frontend NavBar</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action4" value="4"><label class="ml-2"
-                                                    for="emp_access_action4">Services</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access4" value="4"><label class="ml-2"
+                                                    for="sidebar_access4">Services</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action5" value="5"><label class="ml-2"
-                                                    for="emp_access_action5">Service Categories</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access5" value="5"><label class="ml-2"
+                                                    for="sidebar_access5">Service Categories</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action6" value="6"><label class="ml-2"
-                                                    for="emp_access_action6">Reviews</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access6" value="6"><label class="ml-2"
+                                                    for="sidebar_access6">Reviews</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action7" value="7"><label class="ml-2"
-                                                    for="emp_access_action7">Add Site Reviews</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access7" value="7"><label class="ml-2"
+                                                    for="sidebar_access7">Add Site Reviews</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action8" value="8"><label class="ml-2"
-                                                    for="emp_access_action8">FAQs</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access8" value="8"><label class="ml-2"
+                                                    for="sidebar_access8">FAQs</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action9" value="9"><label class="ml-2"
-                                                    for="emp_access_action9">Contact Messages</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access9" value="9"><label class="ml-2"
+                                                    for="sidebar_access9">Contact Messages</label>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="checkbox" name="emp_access_action[]"
-                                                    id="emp_access_action10" value="10"><label class="ml-2"
-                                                    for="emp_access_action10">Newsletter Emails</label>
+                                                <input type="checkbox" name="sidebar_access[]"
+                                                    id="sidebar_access10" value="10"><label class="ml-2"
+                                                    for="sidebar_access10">Newsletter Emails</label>
                                             </div>
                                         </div>
                                     </div>
