@@ -471,6 +471,46 @@
         }
     </script>
 
+    <script>
+        $(document).ready(function() {
+            $(document).on('change', '#category', function() {
+                var selectedCategory = $(this).val();
+
+                $.ajax({
+                    url: "{{ route('get.subcategories') }}",
+                    method: "POST",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "category": selectedCategory
+                    },
+                    success: function(response) {
+                        console.log(response);
+                        console.log(response.length);
+
+                        var html = '';
+                        $('#subcategory-box').html('');
+
+                        html += "<label for='subcategory'>Subcategory</label>";
+                        html +=
+                            "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
+                        html += "<option value='' disabled selected>Select</option>";
+                        $.each(response, function(index, val) {
+                            html +=
+                                `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
+                        });
+                        html += "</select>";
+                        console.log('html', html);
+
+                        $('#subcategory-box').html(html);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+
 
 </body>
 
