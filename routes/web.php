@@ -16,6 +16,7 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\OrderFormController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReviewSiteController;
+use App\Http\Controllers\Admin\UserManagementController;
 
 
 
@@ -158,7 +159,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 
     // Blog routes
-        Route::prefix('blogs')->group(function () {
+    Route::prefix('blogs')->group(function () {
         Route::get('/', [BlogController::class, 'index'])->name('blogs.index');
         Route::get('/add', [BlogController::class, 'create'])->name('blogs.create');
         Route::post('/store', [BlogController::class, 'store'])->name('blogs.store');
@@ -166,9 +167,9 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::put('/update/{id}', [BlogController::class, 'update'])->name('blogs.update');
         Route::delete('/destroy/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
     });
-    
+
     // Edit Frontend NavBar
-        Route::prefix('navbar')->group(function () {
+    Route::prefix('navbar')->group(function () {
         Route::get('/', [MenuController::class, 'index'])->name('navbar.index');
         Route::get('/add', [MenuController::class, 'create'])->name('navbar.create');
         Route::post('/store', [MenuController::class, 'store'])->name('navbar.store');
@@ -180,8 +181,18 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     // Review routes
     Route::resource('reviews', ReviewController::class);
 
+    // User Management routes
+    Route::prefix('users')->group(function () {
+        Route::get('/', [UserManagementController::class, 'index'])->name('users.index');
+        Route::get('/add', [UserManagementController::class, 'create'])->name('users.create');
+        Route::post('/store', [UserManagementController::class, 'store'])->name('users.store');
+        Route::get('/edit/{id}', [UserManagementController::class, 'edit'])->name('users.edit');
+        Route::post('/update/{id}', [UserManagementController::class, 'update'])->name('users.update');
+        Route::delete('/destroy/{id}', [UserManagementController::class, 'destroy'])->name('users.destroy');
+    });
+
     // Review Site routes
-        Route::prefix('site_review')->group(function () {
+    Route::prefix('site_review')->group(function () {
         Route::get('/', [ReviewSiteController::class, 'index'])->name('site_review.index');
         Route::get('/add', [ReviewSiteController::class, 'create'])->name('site.review.create');
         Route::post('/store', [ReviewSiteController::class, 'store'])->name('site.review.store');
@@ -192,7 +203,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
 
 
 
-    
+
 
     // Service categories routes
     Route::resource('service_categories', ServiceCategoryController::class);

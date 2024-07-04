@@ -91,6 +91,11 @@
 
     <!-- Nav Item - Blogs -->
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('users.index') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Users Management</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('blogs.index') }}">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Blogs</span></a>
