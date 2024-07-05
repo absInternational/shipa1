@@ -418,7 +418,7 @@
                     <div class="card-body">
                         <div class="card-icon">
                         <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
-                            <!-- <img src="motorcycle-icon.png" alt="Motorcycle Icon"> -->
+                            
                         </div>
                         <h5 class="card-title">Motorcycle</h5>
                         <p class="card-text">Mopeds, ATV, Power Sports etc.</p>
@@ -440,7 +440,7 @@
                     <div class="card-body">
                         <div class="card-icon">
                         <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i>
-                            <!-- <img src="atv-icon.png" alt="ATV Icon"> -->
+                           
                         </div>
                         <h5 class="card-title">ATV/UTV</h5>
                         <p class="card-text">Sport, Quads, Military etc.</p>
@@ -466,7 +466,8 @@
                 <div class="custom-card excavator-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="excavator-icon.png" alt="Excavator Icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                            <!-- <img src="{{ asset('excavator-icon.png') }}" alt="Excavator Icon"> -->
                         </div>
                         <h5 class="card-title">Golf Cart</h5>
                         <p class="card-text">Digger, Driller, Miners etc.</p>
@@ -487,7 +488,8 @@
                 <div class="custom-card construction-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="construction-icon.png" alt="Construction Icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                            <!-- <img src="{{ asset('construction-icon.png') }}" alt="Construction Icon"> -->
                         </div>
                         <h5 class="card-title">Construction</h5>
                         <p class="card-text">Cranes, Drills, Grinders etc.</p>
@@ -508,7 +510,8 @@
                 <div class="custom-card heavy-equip-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="heavy-equip-icon.png" alt="Heavy Equip Icon">
+                        <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i>
+                            <!-- <img src="{{ asset('heavy-equip-icon.png') }}" alt="Heavy Equip Icon"> -->
                         </div>
                         <h5 class="card-title">Heavy Equip</h5>
                         <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
@@ -529,7 +532,7 @@
                 <div class="custom-card heavy-equip-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="heavy-equip-icon.png" alt="Heavy Equip Icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
                         </div>
                         <h5 class="card-title">Excavator</h5>
                         <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
@@ -553,7 +556,7 @@
                 <div class="custom-card heavy-equip-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="heavy-equip-icon.png" alt="Heavy Equip Icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
                         </div>
                         <h5 class="card-title">Boat</h5>
                         <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
@@ -574,7 +577,8 @@
                 <div class="custom-card heavy-equip-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="heavy-equip-icon.png" alt="Heavy Equip Icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                            <!-- <img src="{{ asset('https://cdn0.iconfinder.com/data/icons/farming-2/444/tractor_farm_agriculture_car_vehicle-512.png') }}" alt="Heavy Equip Icon"> -->
                         </div>
                         <h5 class="card-title">RV</h5>
                         <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
@@ -598,7 +602,8 @@
                 <div class="custom-card car-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="car-icon.png" alt="Car Icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                            <!-- <img src="{{ asset('car-icon.png') }}" alt="Car Icon"> -->
                         </div>
                         <h5 class="card-title">Commercial Truck</h5>
                         <p class="card-text">Sedan, SUV, Pickup etc.</p>
@@ -619,7 +624,8 @@
                 <div class="custom-card motorcycle-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="motorcycle-icon.png" alt="Motorcycle Icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                            <!-- <img src="{{ asset('motorcycle-icon.png') }}" alt="Motorcycle Icon"> -->
                         </div>
                         <h5 class="card-title">Fram</h5>
                         <p class="card-text">Mopeds, ATV, Power Sports etc.</p>
@@ -645,7 +651,8 @@
                 <div class="custom-card farm-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="farm-icon.png" alt="Farm Icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                            <!-- <img src="{{ asset('farm-icon.png') }}" alt="Farm Icon"> -->
                         </div>
                         <h5 class="card-title">Reefer</h5>
                         <p class="card-text">Tractor, Planter, Baler etc.</p>
@@ -666,7 +673,8 @@
                 <div class="custom-card trucks-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="trucks-icon.png" alt="Trucks Icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                            <!-- <img src="{{ asset('trucks-icon.png') }}" alt="Trucks Icon"> -->
                         </div>
                         <h5 class="card-title">Hazmat</h5>
                         <p class="card-text">Commercial, Dump Trucks etc.</p>
@@ -687,7 +695,8 @@
                 <div class="custom-card trucks-card">
                     <div class="card-body">
                         <div class="card-icon">
-                            <img src="trucks-icon.png" alt="Trucks Icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                            <!-- <img src="{{ asset('trucks-icon.png') }}" alt="Trucks Icon"> -->
                         </div>
                         <h5 class="card-title">Dry Van</h5>
                         <p class="card-text">Commercial, Dump Trucks etc.</p>
