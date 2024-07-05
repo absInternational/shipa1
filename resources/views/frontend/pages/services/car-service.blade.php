@@ -2,15 +2,8 @@
 
 @section('content')
 <Style>
-    .card- {
-            background: #29494e;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-.why-box {
-    border-radius: 12px;
+    .why-box {
+        border-radius: 12px;
     padding: 40px 0px;
     background: #183c46eb;
 }
@@ -23,6 +16,13 @@
     color: white;
 }
 
+.card- {
+        background: #29494e;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 .services {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,45 +31,13 @@
     background-color: #9d9e9f14;
 }
 
-.services h1 {
+.services-h1 {
+    text-align:center;
     text-decoration: overline;
     margin-bottom: 50px;
     color: #8FC445;
 }
 
-.service-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.service-box {
-    
-
-
-    max-width: 300px;
-    text-align: left;
-
-    background-color: #29494e;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    
-}
-
-.service-box img {
-    height: 40px;
-    width: 40px;
-}
-
-.service-box h3 {
-    margin: 20px 0 10px;
-    color: #333333;
-}
-
-.service-box p {
-    color: #666666;
-}
 </Style>
 <!--========== blog details Start ==============-->
 
@@ -412,50 +380,36 @@
 
 <section class="tj-about-section-five">
     <div class="container">
-        <div class="row">
-            <div class="services">
-                <h1>Car Hauling Services</h1>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card- h-100 ">
-      
-      <div class="card-body">
-        <h5 class="card-title text-white">Enclosed Carrier</h5>
-        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transport. Enclosed carrier guards
-        your car against the external environment such as weather ailments etc.</p>
-      </div>
-      
-    </div>
-  </div>
-  <div class="col">
-    <div class="card- h-100">
-      
-      <div class="card-body">
-        <h5 class="card-title text-white">Open Trailer</h5>
-        <p class="card-text text-light">It’s the standard method with which we ship cars. It is the best option if you want a cheap
-        car moving service.</p>
-      </div>
-      
-    </div>
-  </div>
-  <div class="col">
-    <div class="card- h-100">
-      
-      <div class="card-body">
-        <h5 class="card-title text-white">Expedited Shipping</h5>
-        <p class="card-text text-light">If you are looking to move quickly to a new place and need your car moved along with you then
-        expedited shipping service must be your first choice.</p>
-      </div>
-      
-    </div>
-  </div>
-    </div>
-               
+        <div class="row services">
+            <h1 class="services-h1">Car Hauling Services</h1>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Enclosed Carrier</h5>
+                        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transported. Enclosed carrier guards your car against the external environment such as weather ailments etc.</p>
+                    </div>
+                </div>
             </div>
-
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Open Trailer</h5>
+                        <p class="card-text text-light">It’s the standard method with which we ship cars. It is the best option if you want a cheap car moving service.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Expedited Shipping</h5>
+                        <p class="card-text text-light">If you are looking to move quickly to a new place and need your car moved along with you then expedited shipping service must be your first choice.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
 
 <section class="tj-choose-us-section-service-car-2">
     <div class="container why-box">
