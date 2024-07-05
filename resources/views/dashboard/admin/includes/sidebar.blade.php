@@ -10,74 +10,81 @@
     @endphp
 
     <!-- Nav Item - Blogs -->
-    @if (in_array('1', $sidebar_access))
+    @if (in_array('1', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('users.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Users Management</span></a>
         </li>
     @endif
-    @if (in_array('2', $sidebar_access))
+    @if (in_array('2', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('blogs.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Blogs</span></a>
         </li>
     @endif
-    @if (in_array('3', $sidebar_access))
+    @if (in_array('3', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('navbar.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Edit Frontend NavBar</span></a>
         </li>
     @endif
-    @if (in_array('4', $sidebar_access))
+    @if (in_array('4', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('services.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Services</span></a>
         </li>
     @endif
-    @if (in_array('5', $sidebar_access))
+    @if (in_array('5', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('service_categories.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Service Categories</span></a>
         </li>
     @endif
-    @if (in_array('6', $sidebar_access))
+    @if (in_array('6', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('reviews.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Reviews</span></a>
         </li>
     @endif
-    @if (in_array('7', $sidebar_access))
+    @if (in_array('7', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('site_review.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Add Site Reviews</span></a>
         </li>
     @endif
-    @if (in_array('8', $sidebar_access))
+    @if (in_array('8', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('faqs.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>FAQs</span></a>
         </li>
     @endif
-    @if (in_array('9', $sidebar_access))
+    @if (in_array('9', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('contact_messages.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Contact Messages</span></a>
         </li>
     @endif
-    @if (in_array('10', $sidebar_access))
+    @if (in_array('10', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" href="{{ route('newsLetter.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Newsletter Emails</span></a>
+        </li>
+    @endif
+    @if (in_array('11', $sidebar_access) || Auth::user()->role == 'admin')
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('port-to-ports.index') }}">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Port To Ports</span></a>
         </li>
     @endif
 

@@ -164,6 +164,11 @@
                                                     value="10"><label class="ml-2"
                                                     for="sidebar_access10">Newsletter Emails</label>
                                             </div>
+                                            <div class="col-sm-6">
+                                                <input type="checkbox" @if (in_array('11', $sidebar_access)) {{ 'checked' }} @endif name="sidebar_access[]" id="sidebar_access11"
+                                                    value="11"><label class="ml-2"
+                                                    for="sidebar_access11">Port To Ports</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
