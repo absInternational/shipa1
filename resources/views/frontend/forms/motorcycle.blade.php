@@ -2,40 +2,41 @@
 
 @section('title', 'Get Quote on Motorcycle | ShipA1')
 
-@section('meta_description', 'Get an instant motorcycle shipping quote with ease! Trust our reliable service for nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
+@section('meta_description', 'Get an instant motorcycle shipping quote with ease! Trust our reliable service for
+    nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
 
 
 @section('content')
     <style>
-        .lab-cos{
-        font-size: 15px;
-    font-weight: 500;
-    color: var(--tj-white-color);
-    margin-bottom: 10px;
-    }
+        .lab-cos {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--tj-white-color);
+            margin-bottom: 10px;
+        }
 
 
-    .input-container {
-    height: 34px;
-    background: white;
-    display: flex;
-    align-items: center;
-    /* border: 1px solid #ccc; */
-    border-radius: 4px;
-    padding: 8px 0px 8px 0px;
-    width: fit-content;
+        .input-container {
+            height: 34px;
+            background: white;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid #ccc; */
+            border-radius: 4px;
+            padding: 8px 0px 8px 0px;
+            width: fit-content;
 
         }
 
         .input-container1 {
-    height: 34px;
-    background: white;
-    display: flex;
-    align-items: center;
-    /* border: 1px solid #ccc; */
-    border-radius: 4px;
-    padding: 8px 0px 8px 0px;
-    width: fit-content;
+            height: 34px;
+            background: white;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid #ccc; */
+            border-radius: 4px;
+            padding: 8px 0px 8px 0px;
+            width: fit-content;
 
         }
 
@@ -46,6 +47,7 @@
             border: none;
             outline: none;
         }
+
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -79,49 +81,54 @@
             margin: 0;
         }
 
-      .form-wrap {
-        margin-bottom: 10px;
-        position: relative;
-      }
-      .form-label-outside {
-        color: white;
-        display: block;
-        margin-bottom: 5px;
-      }
-      .input-container {
-        display: flex;
-        align-items: center;
-      }
-      .input-container input {
-        border: none;
-        /* border-bottom: 1px solid #ccc; */
-        padding: 5px 0px 5px 0px ;
-        font-size: 14px;
-        width: 38px;
-        text-align: center;
-        /* margin-right: 5px; */
-      }
-      .input-container .placeholders {
-        /* color:white; */
-        position: relative;
-    right: 72px;
-        color: black;
-        display: inline-block;
-        width: auto;
-        
-        padding: 0px 8px;
-        /* background: white; */
-      }
-      
-      .err-style {
-        color: red;
-      }
-      .tj-input-form .input-form label {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--tj-white-color);
-    margin-bottom: 10px;
-}
+        .form-wrap {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .form-label-outside {
+            color: white;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-container input {
+            border: none;
+            /* border-bottom: 1px solid #ccc; */
+            padding: 5px 0px 5px 0px;
+            font-size: 14px;
+            width: 38px;
+            text-align: center;
+            /* margin-right: 5px; */
+        }
+
+        .input-container .placeholders {
+            /* color:white; */
+            position: relative;
+            right: 72px;
+            color: black;
+            display: inline-block;
+            width: auto;
+
+            padding: 0px 8px;
+            /* background: white; */
+        }
+
+        .err-style {
+            color: red;
+        }
+
+        .tj-input-form .input-form label {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--tj-white-color);
+            margin-bottom: 10px;
+        }
     </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -178,7 +185,7 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-                           
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -188,21 +195,30 @@
                                         <small id="errName" class="err-style"></small>
                                     </div>
                                 </div>
-                                <div class="col-xl-4 col-lg-4">
-                        <div class="single-input-field">
-                            <label class="d-block text-white"> Phone:</label>
-                            <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
-                            <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                        </div>
-                    </div>
-                                <!-- <div class="col-md-4">
+                                {{-- <div class="col-xl-4 col-lg-4">
+                                    <div class="single-input-field">
+                                        <label class="d-block text-white"> Phone:</label>
+                                        <input class="form-control" required name="phone" type="tel"
+                                            placeholder="Customer Phone">
+                                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                                    </div>
+                                </div> --}}
+                                <div class="col-md-4">
                                     <div class="input-form">
-                                        <label class="d-block"> Phone:</label>
+                                        <label class="d-block">Phone:</label>
                                         <input type="tel" id="phone" name="phone" placeholder="Phone Number"
                                             required="" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
-                                </div> -->
+                                </div>
+                                <!-- <div class="col-md-4">
+                                        <div class="input-form">
+                                            <label class="d-block"> Phone:</label>
+                                            <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                                                required="" />
+                                            <small id="errPhone" class="err-style"></small>
+                                        </div>
+                                    </div> -->
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Email Address:</label>
@@ -247,8 +263,7 @@
                                 </div>
                             </div>
 
-                            <a class="add-car" id="addVehicleBtn"
-                                ><i class="fa fa-plus"></i> Add
+                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
                             <div id="vehicles-container">
@@ -276,8 +291,8 @@
                             </div>
 
 
-                           
-                            
+
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -301,12 +316,13 @@
 
                             <div class="input-form">
                                 <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
-    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <input class="form-control image_input" type="file" accept="image/*" multiple
+                                    onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
                                 <!-- <input class="form-control  image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" /> -->
+                                        placeholder="Upload File" /> -->
                             </div>
-                            
+
 
                             <div class="row">
                                 <di class="col-md-6">
@@ -324,18 +340,19 @@
                                     </div>
                                 </di>
                                 <di class="col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                        name="available_at_auction" value="1" />
-                                    <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                        Auction?</label>
-                                </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                            name="available_at_auction" value="1" />
+                                        <label class="form-check-label text-white" for="available_at_auction"> Available
+                                            at
+                                            Auction?</label>
+                                    </div>
 
-                                <div class="input-form div-link mt-3" style="display: none;">
-                                    <label class="d-block"> Enter Link:</label>
-                                    <input class="form-control" type="url" id="link" name="link"
-                                        placeholder="Enter Link" />
-                                </div>
+                                    <div class="input-form div-link mt-3" style="display: none;">
+                                        <label class="d-block"> Enter Link:</label>
+                                        <input class="form-control" type="url" id="link" name="link"
+                                            placeholder="Enter Link" />
+                                    </div>
                                 </di>
                             </div>
 

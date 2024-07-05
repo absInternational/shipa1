@@ -189,7 +189,7 @@ class QuoteController extends Controller
 
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
-            return back()->with('success', 'Quote created successfully');
+            return redirect()->route('thankYou')->with('success', 'Quote created successfully');
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
 
