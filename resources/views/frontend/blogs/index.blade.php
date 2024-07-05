@@ -7,7 +7,7 @@
 @section('content')
     <style>
         font {
-            display: contents;
+            display: content;
         }
     </style>
 

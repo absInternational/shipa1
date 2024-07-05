@@ -388,7 +388,7 @@
     </section> -->
     <!--========== breadcrumb End ==============-->
 
-    <section class="tj-choose-us-section-get-quote pt-200">
+<section class="tj-choose-us-section-get-quote pt-200">
     <div class="container w-75">
         <div class="row">
             <div class="col-md-4">

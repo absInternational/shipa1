@@ -2,6 +2,7 @@
 
 @section('content')
     <!--========== breadcrumb Start ==============-->
+
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -24,12 +25,13 @@
             </div>
         </div>
     </section>
+    
     <!--========== breadcrumb End ==============-->
 
     <!--=========== About Section Start =========-->
 
     <section class="tj-service-details pt-4 pb-0">
-    <div class="container">
+           <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tj-section-heading text-center">
@@ -42,18 +44,17 @@
                     </div>
                 </div>
             </div>
-    </div>
+           </div>
     </section>
-
 
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one">
+                <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> A1 Transportation Company</span>
-                            <h2 class="title">Why Choose Us?</h2>
+                            <h2 class="title">What Makes Us Dependable?</h2>
                             <p class="desc">
                                 Among all the shipping companies out there, factors that make us stand out from therest are:
                             </p>
@@ -61,51 +62,64 @@
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" />
+                                <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                    <!-- <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Competitive Pricing</h5>
+                                    <h5 class="title">Our Values</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                            We promise to provide you with the greatest possible deal on shipping without sacrificing dependability, quality, or safety.
+                                We are a licensed Transportation company with high moral values and have attained customer
+                                satisfaction through their remarks on esteemed platforms.
+
                             </p>
                         </div>
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
+                                    <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Insurance Coverage</h5>
+                                    <h5 class="title">Scope of Services</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                            Our shipping services and vehicles are 100% insured, so as our customer you have nothing to worry about.</p>
+                                Range of vehicles, we ship, is not limited to just conventional cars and motorbikes.
+                            </p>
                         </div>
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
+                                    <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Advanced Tracking Service</h5>
+                                    <h5 class="title">Safety Is Our Priority</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                            With our advanced tracking service you can keep a transparent eye on your shipment.</p>
+                                No matter which mode of transportation you use, ShipA1 assures its customers, utmostsecurity
+                                to their assets.
+
+
+                            </p>
                         </div>
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
+                                    <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">24/7 Customer Support</h5>
+                                    <h5 class="title">Skilful & Devoted Staff</h5>
                                 </div>
                             </div>
                             <p class="desc">
-                            Our committed staff is on hand 24 hours a day to help with any questions or issues you may have.</p>
+                                Our team is loaded with highly experienced professionals of both customer dealing andvehicle
+                                handling.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -132,22 +146,27 @@
             </div>
         </div>
     </section>
+
     <!--=========== About Section End =========-->
 
     <!--=========== Cta Section Start =========-->
+
     <section class="tj-cta-section icon-animate">
-        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-1.jpg') }}"></div>
+        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-auto-aucation.webp') }}"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="cta-content-area">
                         <div class="cta-content">
                             <div class="cta-icon">
-                                <i class="flaticon flaticon-freight"></i>
+                            <i class="fa-light fa-car-rear"></i>
+                            <!-- <i class="fa-solid fa-gavel"></i> -->
+                                <!-- <i class="flaticon flaticon-freight"></i> -->
                             </div>
                             <div class="cta-text">
-                                <h3 class="title">Would you Like to get The Best Transport Services?</h3>
-                                <p class="desc">Dapibus interdum senectus malesuada est nec morbi cursus.</p>
+                                <h3 class="title">SHIP A CAR DIRECT FROM AUTO Auction</h3>
+                                <p class="desc">We deliver quality, with prosperity. Because your Shipping needs, our
+                                    solution.</p>
                             </div>
                         </div>
                     </div>
@@ -156,121 +175,19 @@
             <div class="row">
                 <div class="col-lg-12 position-relative">
                     <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="contact.html">
-                            Read More <i class="flaticon-right-1"></i>
+                        <a class="tj-transparent-btn" target="_blank" href="{{ route('quote.form.combine') }}">
+                            GET QUOTE<i class="flaticon-right-1"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <!--=========== Cta Section End =========-->
-
-    {{-- <section class="tj-team-section-three">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape"> Our Workers</span>
-                        <h2 class="title">Our Delivery Team</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                    <div class="team-item-three">
-                        <img src="{{ asset('frontend/images/team/team-4.jpg') }}" alt="Image" />
-                        <div class="arrow-icon">
-                            <ul class="team-social list-gap">
-                                <li class="social-active">
-                                    <i class="flaticon-plus"></i>
-                                    <ul class="list-gap team-social-dropdown">
-                                        <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tj-project-content">
-                            <span class="sub-title"> Founder</span>
-                            <h4><a href="team-details.html" class="title-link"> Selina Donald</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
-                    <div class="team-item-three">
-                        <img src="{{ asset('frontend/images/team/team-5.jpg') }}" alt="Image" />
-                        <div class="arrow-icon">
-                            <ul class="team-social list-gap">
-                                <li class="social-active">
-                                    <i class="flaticon-plus"></i>
-                                    <ul class="list-gap team-social-dropdown">
-                                        <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tj-project-content">
-                            <span class="sub-title"> Senior Manager</span>
-                            <h4><a href="team-details.html" class="title-link"> Jessica Brown</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
-                    <div class="team-item-three">
-                        <img src="{{ asset('frontend/images/team/team-6.jpg') }}" alt="Image" />
-                        <div class="arrow-icon">
-                            <ul class="team-social list-gap">
-                                <li class="social-active">
-                                    <i class="flaticon-plus"></i>
-                                    <ul class="list-gap team-social-dropdown">
-                                        <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tj-project-content">
-                            <span class="sub-title"> Senior Manager</span>
-                            <h4><a href="team-details.html" class="title-link"> Kevin Martin</a></h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
+    
     <!--=========== Service Section Start =========-->
+
     <section class="tj-service-section">
         <div class="container">
             <div class="row">
@@ -323,71 +240,50 @@
             </div>
         </div>
     </section>
+   
     <!--=========== Service Section End =========-->
 
     <!--=========== Testimonial Section Start =========-->
-    <section class="tj-testimonial-section tj-testimonial-page">
-        <div class="container">
-            <div class="row">
-                <div class="tj-section-heading text-center">
-                    <span class="sub-title active-shape"> Client Feedback</span>
-                    <h2 class="title">Our Client Reviews</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="swiper tj-testimonial-slider">
-                        <div class="swiper-wrapper">
-                            @foreach ($reviews as $review)
-                                <div class="swiper-slide">
-                                    <div class="tj-testimonial-item">
-                                        <div class="testimonial-rating d-flex justify-content-between">
-                                            <div class="testimoniasl-image">
-                                                <img src="{{ asset('frontend/images/icon/comment.svg') }}"
-                                                    alt="Icon" />
-                                            </div>
-                                            <div class="rating-icon">
-                                                <ul class="list-gap">
-                                                    @for ($i = 0; $i < (int) floor($review->rating); $i++)
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                    @endfor
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="content-area">
-                                            <p>{{ $review->description }}</p>
-                                            <div class="testimonial-content d-flex justify-content-between">
-                                                <div class="testimonial-auother">
-                                                    <h5 class="title">{{ $review->person_name }} </h5>
-                                                    <span
-                                                        class="sub-title">{{ \Carbon\Carbon::parse($review->created_at)->format('M d, Y') }}</span>
-                                                </div>
-                                                <div class="testimonial-comment">
-                                                    @if ($review->site_name == 'BBB')
-                                                        <img src="{{ asset('frontend/images/testimonial/bbb.png') }}"
-                                                            alt="Image" />
-                                                    @elseif ($review->site_name == 'Google')
-                                                        <img src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                            alt="Image" />
-                                                    @else
-                                                        <img src="{{ asset('frontend/images/testimonial/transport.png') }}"
-                                                            alt="Image" />
-                                                    @endif
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
+    @include('partials.reveiw-detail')
+    <!--=========== Testimonial Section End =========-->
+
+    <section class="tj-cta-section-two">
+            <div class="tj_cta_image"></div>
+            <div class="tj_cta_image1"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tj-cta-content">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape2"> Here We Are</span>
+                                <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                                    Get Quote<i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tj-cta-content tj-cta-content2">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
+                                <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
+                                    Get Support<i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
-    <!--=========== Testimonial Section End =========-->
-
+    
     <!--========== Faq Section Start ==============-->
+
     <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
@@ -402,7 +298,7 @@
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                     <div class="tj-faq-left-content">
                         <div class="faq-image">
-                            <img src="{{ asset('frontend/images/slider/slider-4.jpg') }}" alt="Image" />
+                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                         </div>
                         <div class="faq-content">
                             <div class="faq-icon">
@@ -426,36 +322,91 @@
                 </div>
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
                     <div class="tj-faq-area">
-                        <div class="accordion" id="accordionExample">
-                            @foreach ($faqs as $key => $faq)
-                                <div class="accordion-item {{ $key === 0 ? 'show' : '' }}">
-                                    <h2 class="accordion-header" id="heading{{ $faq->id }}">
-                                        <button class="accordion-button {{ $key === 0 ? '' : 'collapsed' }}"
-                                            type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne{{ $faq->id }}"
-                                            aria-expanded="{{ $key === 0 ? 'true' : 'false' }}"
-                                            aria-controls="collapseOne{{ $faq->id }}">
-                                            {{ $faq->heading }}
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne{{ $faq->id }}"
-                                        class="accordion-collapse collapse {{ $key === 0 ? 'show' : '' }}"
-                                        aria-labelledby="heading{{ $faq->id }}" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <strong>{{ $faq->description }}</strong>
-                                        </div>
+                    <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What should I choose for my luxurious vehicle?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>If you have a luxurious vehicle, we would suggest you go for the enclosed trailer as it protects your vehicle and offers you peace of mind, or if you are looking for a cheaper option then open transport is the best for you, without compromising the quality experience the best, safe and secure shipping with Ship A1!</strong>
                                     </div>
                                 </div>
-                            @endforeach
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How do I get a quote?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Can I track my vehicle during transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        How do I prepare my vehicle for transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        FAQ Five
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>FAQ Five Content: Trage agile frameworks to provide a robust synopsis for
+                                            high level overviews.</strong>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <!--========== Faq Section End ==============-->
 
     <!--=========== Blog Section Start =========-->
+
     <section class="tj-blog-section">
         <div class="container">
             <div class="row">
@@ -522,9 +473,13 @@
             </div>
         </div>
     </section>
+   
     <!--=========== Blog Section End =========-->
 
     <!--=========== Newsletter Section Start =========-->
+
     @include('partials.newsletter')
+
     <!--=========== Newsletter Section End =========-->
+
 @endsection
