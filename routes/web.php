@@ -17,6 +17,7 @@ use App\Http\Controllers\OrderFormController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReviewSiteController;
 use App\Http\Controllers\Admin\UserManagementController;
+use App\Http\Controllers\Admin\PortToPortController;
 
 
 
@@ -232,6 +233,9 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::prefix('service/new_layout')->group(function () {
         Route::get('/', [ServiceController::class, 'new_layout'])->name('service.new_layout.index');
     });
+
+    // port to port
+    Route::resource('port-to-ports', PortToPortController::class);
 });
 
 Auth::routes();
