@@ -274,7 +274,7 @@
                                                                     href="{{ route('frontend.pages.services.car-service') }}">
                                                                     Car Shipping Service-2</a>
                                                             </li>
-                                                            <li>
+                                                            <!-- <li>
                                                                 <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.bike-service') }}">
                                                                     Motorcycle Transport</a>
@@ -283,7 +283,7 @@
                                                                 <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.excavator-service') }}">
                                                                     Excavator Service Transport</a>
-                                                            </li>
+                                                            </li> -->
                                                 </div>
                                                 <div class="col-sm-4 bd-r">
                                                    
@@ -297,6 +297,21 @@
                                                             </li>
                                                         @endif
                                                     @endforeach
+                                                    <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('frontend.pages.services.heavy-service') }}">
+                                                                    Heavy Equipment Services-2</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('frontend.pages.services.construction-service') }}">
+                                                                    Construction Equipment Services-2</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('frontend.pages.services.farm-service') }}">
+                                                                    Farm Transport Services-2</a>
+                                                            </li>
                                                 </div>
                                                 <div class="col-sm-4 ">
                                                     {{-- <a class=" mb-3"
@@ -311,11 +326,14 @@
                                                             </li>
                                                         @endif
                                                     @endforeach
-                                                             <li>
+                                                             <!-- <li>
                                                                 <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.hazmat-service') }}">
                                                                     Hazmat Transport-2</a>
-                                                            </li>
+                                                            </li> -->
+
+                                                            
+
 
                                                     <a class=" mb-3" href="" style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold; ">RORO</a>
                                                     @foreach ($services as $service)

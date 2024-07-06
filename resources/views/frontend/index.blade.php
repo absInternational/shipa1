@@ -675,9 +675,59 @@ SHIP A1
                 </div>
             </div>
         </section>
+        <section class="tj-choose-us-section-home">
+        <div class="container">
+            <div class="row">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if (session('error'))
+                    <div class="alert alert-error">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                        <div class="choose-us-content-1">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape2">Get Instant quote</span>
+                                <h2 class="title">Get an instant quote in few simple steps</h2>
+                                <p class="desc">ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                                customers and seeks your trust in return of our services.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="tj-icon-box3 text-center">
+                                        <i class="flaticon flaticon-courier"></i>
+                                        <h6 class="title">Optimized Cost</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="tj-icon-box3 text-center">
+                                        <i class="flaticon flaticon-cargo"></i>
+                                        <h6 class="title">Delivery on Time</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="tj-icon-box3 text-center">
+                                        <i class="flaticon flaticon-agreement"></i>
+                                        <h6 class="title">Safety &amp; Reliability</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
 
+                <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
         @include('partials.multi-form')
-   
+        </div>
+            </div>
+
+
+           </div>
+           
+    </section>
     <!--=========== Feature Section End =========-->
 
     <!--=========== Team Section Start =========-->
