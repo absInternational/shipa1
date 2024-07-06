@@ -389,332 +389,221 @@
     <!--========== breadcrumb End ==============-->
 
 <section class="tj-choose-us-section-get-quote pt-200">
-    <div class="container w-75">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="custom-card car-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                       
+   
+   <div class="container w-75">
+
+   <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="custom-card car-card">
+                <div class="card-body">
+                    <div class="card-icon">
                         <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
-                        </div>
-                        <h5 class="card-title">Car</h5>
-                        <p class="card-text">Sedan, SUV, Pickup etc.</p>
-                        <a href="{{ route('form.vehicle.car') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
                     </div>
+                    <h5 class="card-title">Car</h5>
+                    <p class="card-text">Sedan, SUV, Pickup etc.</p>
+                    <a href="{{ route('form.vehicle.car') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="custom-card motorcycle-card">
-                    <div class="card-body">
-                        <div class="card-icon">
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="custom-card motorcycle-card">
+                <div class="card-body">
+                    <div class="card-icon">
                         <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
-                            
-                        </div>
-                        <h5 class="card-title">Motorcycle</h5>
-                        <p class="card-text">Mopeds, ATV, Power Sports etc.</p>
-                        <a href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
                     </div>
+                    <h5 class="card-title">Motorcycle</h5>
+                    <p class="card-text">Mopeds, ATV, Power Sports etc.</p>
+                    <a href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="custom-card atv-utv-card">
-                    <div class="card-body">
-                        <div class="card-icon">
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="custom-card atv-utv-card">
+                <div class="card-body">
+                    <div class="card-icon">
                         <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i>
-                           
-                        </div>
-                        <h5 class="card-title">ATV/UTV</h5>
-                        <p class="card-text">Sport, Quads, Military etc.</p>
-                        <a href="{{ route('form.vehicle.atv_utv') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
                     </div>
-                </div>
-            </div>
-           
-        </div>
-
-        <div class="row">
-           
-            <div class="col-md-3">
-                <div class="custom-card excavator-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
-                            <!-- <img src="{{ asset('excavator-icon.png') }}" alt="Excavator Icon"> -->
-                        </div>
-                        <h5 class="card-title">Golf Cart</h5>
-                        <p class="card-text">Digger, Driller, Miners etc.</p>
-                        <a href="{{ route('form.vehicle.golf_cart') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="custom-card construction-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
-                            <!-- <img src="{{ asset('construction-icon.png') }}" alt="Construction Icon"> -->
-                        </div>
-                        <h5 class="card-title">Construction</h5>
-                        <p class="card-text">Cranes, Drills, Grinders etc.</p>
-                        <a href="{{ route('frontend.forms.construction_transport') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="custom-card heavy-equip-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i>
-                            <!-- <img src="{{ asset('heavy-equip-icon.png') }}" alt="Heavy Equip Icon"> -->
-                        </div>
-                        <h5 class="card-title">Heavy Equip</h5>
-                        <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
-                        <a href="{{ route('form.vehicle.heavyEquipment') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="custom-card heavy-equip-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
-                        </div>
-                        <h5 class="card-title">Excavator</h5>
-                        <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
-                        <a href="{{ route('frontend.forms.excavator') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-8">
-                <div class="custom-card heavy-equip-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
-                        </div>
-                        <h5 class="card-title">Boat</h5>
-                        <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
-                        <a href="{{ route('form.vehicle.boat') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="custom-card heavy-equip-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
-                            <!-- <img src="{{ asset('https://cdn0.iconfinder.com/data/icons/farming-2/444/tractor_farm_agriculture_car_vehicle-512.png') }}" alt="Heavy Equip Icon"> -->
-                        </div>
-                        <h5 class="card-title">RV</h5>
-                        <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
-                        <a href="{{ route('frontend.forms.rv_transport') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="custom-card car-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
-                            <!-- <img src="{{ asset('car-icon.png') }}" alt="Car Icon"> -->
-                        </div>
-                        <h5 class="card-title">Commercial Truck</h5>
-                        <p class="card-text">Sedan, SUV, Pickup etc.</p>
-                        <a href="{{ route('commercial.truck.transport') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="custom-card motorcycle-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
-                            <!-- <img src="{{ asset('motorcycle-icon.png') }}" alt="Motorcycle Icon"> -->
-                        </div>
-                        <h5 class="card-title">Fram</h5>
-                        <p class="card-text">Mopeds, ATV, Power Sports etc.</p>
-                        <a href="{{ route('frontend.forms.farm_transport') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4">
-                <div class="custom-card farm-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
-                            <!-- <img src="{{ asset('farm-icon.png') }}" alt="Farm Icon"> -->
-                        </div>
-                        <h5 class="card-title">Reefer</h5>
-                        <p class="card-text">Tractor, Planter, Baler etc.</p>
-                        <a href="{{ route('frontend.forms.reefertrucking') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="custom-card trucks-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
-                            <!-- <img src="{{ asset('trucks-icon.png') }}" alt="Trucks Icon"> -->
-                        </div>
-                        <h5 class="card-title">Hazmat</h5>
-                        <p class="card-text">Commercial, Dump Trucks etc.</p>
-                        <a href="{{ route('frontend.forms.hazmattransport') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="custom-card trucks-card">
-                    <div class="card-body">
-                        <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
-                            <!-- <img src="{{ asset('trucks-icon.png') }}" alt="Trucks Icon"> -->
-                        </div>
-                        <h5 class="card-title">Dry Van</h5>
-                        <p class="card-text">Commercial, Dump Trucks etc.</p>
-                        <a href="{{ route('frontend.forms.dryvan') }}" target="_blank">
-
-                            <button class="tj-submit-btn" type="button">
-                                Get Quote
-                                <!-- <i class="fa-light fa-arrow-right"></i> -->
-                            </button>
-                        </a>
-                        <!-- <a href="#" class="btn btn-primary">Get Quote
-
-                        </a> -->
-                    </div>
+                    <h5 class="card-title">ATV/UTV</h5>
+                    <p class="card-text">Sport, Quads, Military etc.</p>
+                    <a href="{{ route('form.vehicle.atv_utv') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="custom-card excavator-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Golf Cart</h5>
+                    <p class="card-text">Digger, Driller, Miners etc.</p>
+                    <a href="{{ route('form.vehicle.golf_cart') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="custom-card construction-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Construction</h5>
+                    <p class="card-text">Cranes, Drills, Grinders etc.</p>
+                    <a href="{{ route('frontend.forms.construction_transport') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="custom-card heavy-equip-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Heavy Equip</h5>
+                    <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
+                    <a href="{{ route('form.vehicle.heavyEquipment') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="custom-card heavy-equip-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Excavator</h5>
+                    <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
+                    <a href="{{ route('frontend.forms.excavator') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 col-md-12 col-sm-12">
+            <div class="custom-card heavy-equip-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Boat</h5>
+                    <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
+                    <a href="{{ route('form.vehicle.boat') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="custom-card heavy-equip-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">RV</h5>
+                    <p class="card-text">Trucks, Bulldozers, Mixer etc.</p>
+                    <a href="{{ route('frontend.forms.rv_transport') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="custom-card car-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Commercial Truck</h5>
+                    <p class="card-text">Sedan, SUV, Pickup etc.</p>
+                    <a href="{{ route('commercial.truck.transport') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="custom-card motorcycle-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Farm</h5>
+                    <p class="card-text">Mopeds, ATV, Power Sports etc.</p>
+                    <a href="{{ route('frontend.forms.farm_transport') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="custom-card farm-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Flatbed</h5>
+                    <p class="card-text">Farm Equip, Rakes, Balers etc.</p>
+                    <a href="{{ route('frontend.forms.reefertrucking') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="custom-card trucks-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Hazmat</h5>
+                    <p class="card-text">Commercial, Dump Trucks etc.</p>
+                    <a href="{{ route('frontend.forms.hazmattransport') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="custom-card trucks-card">
+                <div class="card-body">
+                    <div class="card-icon">
+                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                    </div>
+                    <h5 class="card-title">Dry Van</h5>
+                    <p class="card-text">Commercial, Dump Trucks etc.</p>
+                    <a href="{{ route('frontend.forms.dryvan') }}" target="_blank">
+                        <button class="tj-submit-btn" type="button">Get Quote</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div>
         <!-- <div class="container-flude">
             <div class="row">
                 @if (session('success'))

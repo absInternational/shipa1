@@ -7,24 +7,7 @@ SHIP A1
 
     <style>
         
-         .rates {
-         background:#8FC445 ;
-         font-size: 24px; 
-         color: #FFFFFF; 
-         font-weight: bold; 
-         box-shadow: 0 0px 30px 0 #56ff0061;
-         width: 62px;
-         height: 42px;
-         float: right;
-         border-radius: 5px;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         margin: auto;
-         -webkit-box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
-         -moz-box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
-         box-shadow: 0px 0px 15px 5px rgba(143,196,69,0.7);
-         }
+         
         .tj-testimonial-section {
             padding: 120px 0px 0px 0;
             background: #ffffff;
@@ -105,45 +88,7 @@ SHIP A1
             }
         }
 
-        .custom-logos {
-            overflow: hidden;
-            padding: 30px 0px;
-            white-space: nowrap;
-            position: relative;
-        }
-
-        .custom-logos:before,
-        .custom-logos:after {
-            position: absolute;
-            top: 0;
-            content: '';
-            width: 250px;
-            height: 100%;
-            z-index: 2;
-        }
-
-        .custom-logos:before {
-            left: 0;
-            background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-        }
-
-        .custom-logos:after {
-            right: 0;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-        }
-
-        .custom-logo-items {
-            display: inline-block;
-            animation: 35s custom-slides infinite linear;
-        }
-
-        .custom-logos:hover .custom-logo-items {
-            animation-play-state: paused;
-        }
-
-        .custom-logo-items img {
-            height: 100px;
-        }
+       
 
 
         .lab-cos {
@@ -194,20 +139,7 @@ SHIP A1
             outline: none;
         }
 
-        .separator {
-            margin: 0px 0px 0px 0px;
-            font-size: 14px;
-        }
-
-        .separators {
-            margin: 0px 5px 0px 0px;
-            font-size: 14px;
-        }
-
-        .separators-w {
-            margin: 0px 5px 0px 0px;
-            font-size: 14px;
-        }
+        
 
         .input-container input[type="number"] {
             -moz-appearance: textfield;
@@ -257,17 +189,15 @@ SHIP A1
             /* background: white; */
         }
 
-        .err-style {
-            color: red;
-        }
-
         .tj-input-form .input-form label {
             font-size: 15px;
             font-weight: 500;
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
+        .err-style {
+            color: red;
+        }
         .error-message {
             display: none;
             color: red;
@@ -275,6 +205,20 @@ SHIP A1
 
         .error-field {
             border: 2px solid red;
+        }
+        .separator {
+            margin: 0px 0px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
+        }
+
+        .separators-w {
+            margin: 0px 5px 0px 0px;
+            font-size: 14px;
         }
     </style>
 

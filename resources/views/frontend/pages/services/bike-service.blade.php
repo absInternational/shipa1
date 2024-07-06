@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Auctions Car Transport</h1>
+                        <h1 class="breadcrumb-title text-center">Motorcyle Transport</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
@@ -45,7 +45,7 @@
                             </span>
                             >
                             <span>
-                                <span> Auctions Car</span>
+                                <span> Motorcyle</span>
                             </span>
                         </div>
                     </div>
@@ -55,12 +55,12 @@
     </section>
 
 
-    <section class="tj-blog-standard pb-0">
-        <div class="container">
-            <div class="row">
-               <div class="col-lg-8">
+<section class="tj-blog-standard pb-0">
+   <div class="container">
+           <div class="row">
+                <div class="col-lg-8">
 							<div class="image-container">
-                                <img class="img-fluid" src="https://www.shipa1.com/img/banner-5-800x400-landing.webp" loading="lazy" alt="Auction Car Transport">
+                                <img class="img-fluid" src="{{ asset('frontend/images/about/moto-img.webp') }}" loading="lazy" alt="Motorcyle Transport">
                             </div>
                              <br>
                     <div class="text-container text-left">
@@ -73,22 +73,21 @@
                 </div>
             <div class="col-lg-4 p-0">
                 
-                @if (session('success'))
+                       @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
                     </div>
-                @endif
-                @if (session('error'))
+                       @endif
+                       @if (session('error'))
                     <div class="alert alert-error">
                         {{ session('error') }}
                     </div>
-                @endif
+                       @endif
                 
-                <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
-                 <div class="tj-input-form-car" data-bg-image="">
-                    <img src="{{ asset('img/disco-.png') }}" alt="Your Image" class="top-left-image">
-                   <h4 class="title text-center">Instant Car Shipping Quote!</h4>
-                        <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform "
+                       <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
+                       <div class="tj-input-form w-100" data-bg-image="">
+                        <h4 class="title text-center">Instant Motorcycle Shipping Quote!</h4>
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
@@ -103,28 +102,43 @@
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
 
-
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
-                                        <label class="d-block"> Name:</label>
-                                        <input type="text" id="name" name="name" placeholder=""
+                                        <label class="d-block">Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Name"
                                             required="" />
                                         <small id="errName" class="err-style"></small>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                {{-- <div class="col-xl-4 col-lg-4">
+                                    <div class="single-input-field">
+                                        <label class="d-block text-white">Phone:</label>
+                                        <input class="form-control" required name="phone" type="tel"
+                                            placeholder="Phone">
+                                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                                    </div>
+                                </div> --}}
+                                <!-- <div class="col-md-4">
                                     <div class="input-form">
-                                        <label class="d-block"> Phone:</label>
-                                        <input type="text" id="phone" name="phone" placeholder=" "
+                                        <label class="d-block">Phone:</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="Number"
                                             required="" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
-                                </div>
+                                </div> -->
+                                <div class="col-md-4">
+                                        <div class="input-form">
+                                            <label class="d-block">Phone:</label>
+                                            <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                                                required="" />
+                                            <small id="errPhone" class="err-style"></small>
+                                        </div>
+                                    </div>
                                 <div class="col-md-4">
                                     <div class="input-form">
-                                        <label class="d-block"> Email:</label>
-                                        <input type="email" id="email" name="email" placeholder=""
+                                        <label class="d-block">Email:</label>
+                                        <input type="email" id="email" name="email" placeholder="Email "
                                             required="" />
                                         <small id="errEmail" class="err-style"></small>
                                     </div>
@@ -133,12 +147,12 @@
 
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
-                                    <h4 class="text-white mb-0">Vehicle Information</h4>
+                                    <h4 class="text-white">Motorcycle Information</h4>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label> Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year" required>
+                                        <select class="nice-select vehicle-year" name="year[]" id="year">
                                             <option value="" disabled selected>Select</option>
                                             @php
                                                 $currentYear = date('Y');
@@ -152,38 +166,53 @@
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label>Make</label>
-                                        <select class="nice-select vehicle-make" name="make[]" id="make" required>
-                                            <option value="" disabled selected>Select</option>
-                                            @foreach ($makes as $make)
-                                                <option value="{{ $make->make }}">{{ $make->make }}</option>
-                                            @endforeach
-                                        </select>
+                                        <input type="text" id="make" name="make[]" placeholder="Make"
+                                            required="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select vehicle-model-div">
                                         <label>Model</label>
-                                        <select class="nice-select vehicle-model" name="model[]" id="model" required>
-                                            <option value="">Select</option>
+                                        <input type="text" id="model" name="model[]" placeholder="Model"
+                                            required="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+                                Vehicle</a>
+
+                            <div id="vehicles-container">
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                        <select class=" " id="trailer_type" name="trailer_type">
+                                            <option value="Open" selected>Open Carrier</option>
+                                            <option value="Enclosed">Enclosed Carrier</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class=" " id="condition" name="condition">
+                                            <option value="Running" selected>Running</option>
+                                            <option value="Non Running">Non Running</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
 
-                            <a class="add-car-1 mb-2" id="addVehicleBtn">
-                                <i class="fa fa-plus"> Add
-                                    Vehicle </i>
-                            </a>
-
-                            <div id="vehicles-container">
-                            </div>
 
 
 
-                            <div class="row mt-0">
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
-                                        <label class="d-block">Pickup Location:</label>
+                                        <label class="d-block mb-0"> Pickup Location:</label>
                                         <input type="text" id="pickup-location" name="origin"
                                             placeholder="" required="" />
                                         <small id="errOLoc" class="err-loc"></small>
@@ -192,7 +221,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
+                                        <label class="d-block  mb-0"> Delivery Location:</label>
                                         <input type="text" id="delivery-location" name="destination"
                                             placeholder="" required="" />
                                         <small id="errDLoc" class="err-loc"></small>
@@ -201,32 +230,15 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group" style="line-height:23px;">
-                                        <label for="trailer_type" class="text-white">Select</label>
-                                        <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open</option>
-                                            <option value="Enclosed">Enclosed</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
+                            <div class="input-form">
+                                <label class="d-block text-white"> Image:</label>
+                                <input class="form-control image_input" type="file" accept="image/*" multiple
+                                    onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <!-- <input class="form-control  image_input" type="file" id="image" name="image"
+                                        placeholder="Upload File" /> -->
                             </div>
 
-                            <div class="input-form mt-3">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div>
 
                             <div class="row">
                                 <di class="col-md-6">
@@ -240,28 +252,24 @@
                                     <div class="input-form div-modify_info" style="display: none;">
                                         <label class="d-block"> Modification Information:</label>
                                         <input class="" type="text" id="c" name="modify_info"
-                                            placeholder="Modification Info" />
+                                            placeholder="Modification" />
                                     </div>
                                 </di>
-                                <div class="col-md-6">
+                                <di class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                            name="available_at_auction" value="1" />
+                                        <label class="form-check-label text-white" for="available_at_auction">
+                                            Auction?</label>
+                                    </div>
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                        name="available_at_auction" value="1" />
-                                    <label class="form-check-label text-white" for="available_at_auction">Available at
-                                        Auction?</label>
-                                </div>
-
-                                <div class="input-form div-link mt-3" style="display: none;">
-                                    <label class="d-block"> Enter Link:</label>
-                                    <input class="form-control" type="url" id="link" name="link"
-                                        placeholder="Enter Link" />
-                                </div>
-                                   
-                                </div>
+                                    <div class="input-form div-link mt-3" style="display: none;">
+                                        <label class="d-block"> Enter Link:</label>
+                                        <input class="form-control" type="url" id="link" name="link"
+                                            placeholder="Link" />
+                                    </div>
+                                </di>
                             </div>
-
-
 
                             <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
@@ -269,24 +277,25 @@
                                 </button>
                             </div>
                         </form>
-                  </div>
+                    </div>
             </div>
-             </div>
-             <div class="row full-width">
-    <div class="col-12 custom-style">
-        <h4 class=" text-center">Delivering Motorcycles Promptly Nationwide</h4>
-        <p class=" text-center">Many professionals truckers are a part of ShipA1, and that is the main reason behind the on-time delivery of motorcycles. Another way to look into what services look like in a particular company, you can always look at their feedback section, testimonials, and their rating to know about their services. ShipA1 and its motorcycle shipping are famous around the nation, and that is why you will always find satisfied customers when it comes to ShipA1 motorcycle shipping. Since ShipA1 has its own quality standards, it believes that the customers should be given a proper service across the nation.</p>
-        <div class="tj-theme-button  text-center mt-2">
-                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                    Get Quote
-                                    <i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-    </div>
-</div>
+           </div>
 
-        </div>
-    </section>
+               <div class="row full-width">
+                     <div class="col-12 custom-style">
+                         <h4 class=" text-center">Delivering Motorcycles Promptly Nationwide</h4>
+                         <p class=" text-center">Many professionals truckers are a part of ShipA1, and that is the main reason behind the on-time delivery of motorcycles. Another way to look into what services look like in a particular company, you can always look at their feedback section, testimonials, and their rating to know about their services. ShipA1 and its motorcycle shipping are famous around the nation, and that is why you will always find satisfied customers when it comes to ShipA1 motorcycle shipping. Since ShipA1 has its own quality standards, it believes that the customers should be given a proper service across the nation.</p>
+                         <div class="tj-theme-button  text-center mt-2">
+                                                 <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                                                     Get Quote
+                                                     <i class="flaticon-right-1"></i>
+                                                 </a>
+                                             </div>
+                     </div>
+               </div>
+
+   </div>
+</section>
 
     <section class="tj-about-section pt-0">
         <div class="container">
@@ -316,9 +325,9 @@
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/Untitled design (32).png') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image">
 
                 </div>
             </div>
