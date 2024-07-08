@@ -100,7 +100,7 @@
            <div class="row">
                 <div class="col-lg-8">
 							<div class="image-container">
-                                <img class="img-fluid" src="{{ asset('frontend/images/about/moto-img.webp') }}" loading="lazy" alt="Motorcyle Transport">
+                                <img class="img-fluid" src="{{ asset('frontend/images/about/caR-serVice.jpg') }}" loading="lazy" alt="Motorcyle Transport">
                             </div>
                              <br>
                     <div class="text-container text-left">
@@ -130,7 +130,7 @@
                 
                        <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
                        <div class="tj-input-form w-100" data-bg-image="">
-                        <h4 class="title text-center">  Motorcycle   Quote!</h4>
+                        <h4 class="title text-center">Car Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -472,6 +472,72 @@
         </div>
     </div>
 </section>
+<section class="tj-faq-section tj-faq-page pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape"> How It’s Work</span>
+                        <h2 class="title">Frequently Asked Questions</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                    <div class="tj-faq-left-content">
+                        <div class="faq-image">
+                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                    <div class="tj-faq-area">
+                    <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How do I prepare my vehicle for transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How do I get a quote?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Can I track my vehicle during transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="tj-choose-us-section-service-car-2">
     <div class="container why-box">
         <div class="row">

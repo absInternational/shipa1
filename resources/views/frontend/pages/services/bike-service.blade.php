@@ -6,7 +6,40 @@
     .full-width {
     width: 100%;
 }
+.services {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px 10px 30px 10px;
+    background-color: #9d9e9f14;
+}
 
+.services-h1 {
+    text-align:center;
+    text-decoration: overline;
+    margin-bottom: 50px;
+    color: #8FC445;
+}
+.why-box {
+    border-radius: 12px;
+    padding: 40px 0px;
+    background: #183c46eb;
+}
+.title-2 {
+    color: #8fc445;
+}
+
+.desc-2 {
+    color: white;
+}
+
+.card- {
+        background: #29494e;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 .custom-style {
     padding: 20px;
     background-color: #f9f9f9;
@@ -86,7 +119,7 @@
                 
                        <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
                        <div class="tj-input-form w-100" data-bg-image="">
-                        <h4 class="title text-center">Instant Motorcycle Shipping Quote!</h4>
+                        <h4 class="title text-center">Motorcycle Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -303,21 +336,15 @@
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Car Transportation</span>
+                            <span class="sub-title active-shape">Motorcycles Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your
-                            comfort is our top priority, ship the best vehicles at reasonable rates without compromising
-                            quality. Our professional and expert team provides you with 100% insured and secure vehicle
-                            transport solutions that are specifically tailored to your needs.
-                            <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even
-                            find various suitable services! For shipping your luxurious vehicle, you can opt for
-                            enclosed trailers as they are made to protect your vehicle from road debris, scratches, the
-                            uncertainty of weather conditions, and potential risks. However, if you are searching for
-                            something equally cost-effective and safe, go for open transport! We have expedited options
-                            and door-to-door delivery for fast vehicle shipping.
-                            <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
-                            </p>
+                            If you are worried about the increased rates of the motorcycle shipping, and you don’t want to continue 
+                            the shipment because of that fear, then you don’t have to worry because the shipment is made on the 
+                            basis of stable rates because ShipA1 believes in giving a quality offer to the customers rather than
+                             using the opportunity against them. <br> ShipA1 takes into account everything that can be a potential threat 
+                             to the safety and security of the motorcycle, and that is the reason it has maintained the status of 
+                             shipping the motorcycles with ultimate care and attention.</p>
                         </div>
                         
                     </div>
@@ -333,9 +360,7 @@
             </div>
             </div>
         </div>
-</section>
 
-    <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
                 
@@ -354,18 +379,12 @@
                             <span class="sub-title active-shape"> Car Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your
-                            comfort is our top priority, ship the best vehicles at reasonable rates without compromising
-                            quality. Our professional and expert team provides you with 100% insured and secure vehicle
-                            transport solutions that are specifically tailored to your needs.
-                            <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even
-                            find various suitable services! For shipping your luxurious vehicle, you can opt for
-                            enclosed trailers as they are made to protect your vehicle from road debris, scratches, the
-                            uncertainty of weather conditions, and potential risks. However, if you are searching for
-                            something equally cost-effective and safe, go for open transport! We have expedited options
-                            and door-to-door delivery for fast vehicle shipping.
-                            <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
-                            </p>
+                            You can ride your bike at a particular location, but it involves risk and demands specific information 
+                            about routes and places, but with ShipA1 there is no risk involved because they are well aware of all 
+                            the things that are necessary for the shipment of motorcycles. <br> Huge pressure will be lifted off both 
+                            physically and mentally once you ship your motorcycle with the ShipA1 and you will notice that it was 
+                            not a bad idea trusting ShipA1 with your needs of motorcycle shipping from one state to another of the 
+                            USA.</p>
                         </div>
                         
                     </div>
@@ -380,10 +399,10 @@
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Neoteric Solutions</span>
+                            <span class="sub-title active-shape">Secure Shipment</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            The unravelment provided to the emerging and the existing problems of auto transport by ShipA1 is through the unique neoteric <br> solutions.
+                            The shipment of your vehicle is handled with utmost care and in a completely guarded way with us.
                             </p>
                         </div>
                         
@@ -392,18 +411,181 @@
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Premium Quality</span>
+                            <span class="sub-title active-shape">Affordable Price</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            You must expect nothing less than an optimum level service when talking about ShipA1. You will get the best car transport experience with us.</p>
+                            The combination of affordable price & timely vehicles delivery is what make our services unique and special.</p>
                         </div>
                         
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-   
+
+</section>
+@include('partials.reveiw-site')
+
+<section class="tj-about-section-five">
+    <div class="container">
+        <div class="row services">
+            <h1 class="services-h1">Car Hauling Services</h1>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Enclosed Carrier</h5>
+                        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transported. Enclosed carrier guards your car against the external environment such as weather ailments etc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Open Trailer</h5>
+                        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transport. Enclosed carrier guards your car against the external environment such as weather ailments etc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Expedited Shipping</h5>
+                        <p class="card-text text-light">If you are looking to move quickly to a new place and need your car moved along with you then expedited shipping service must be your first choice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tj-faq-section tj-faq-page pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape"> How It’s Work</span>
+                        <h2 class="title">Frequently Asked Questions</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                    <div class="tj-faq-left-content">
+                        <div class="faq-image">
+                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                    <div class="tj-faq-area">
+                    <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How do I prepare my vehicle for transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How do I get a quote?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Can I track my vehicle during transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="tj-choose-us-section-service-car-2">
+    <div class="container why-box">
+        <div class="row">
+            <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                <div class="about-content-two">
+                    <div class="tj-section-heading">
+
+                        <h2 class="title-2">Why Choose Us?</h2>
+                        <p class="desc-2">
+                            We have a distinct approach when it comes to the philosophy of business.<br>Our belief in
+                            innovation & unique business practices differentiate us & here are the reasons why you must
+                            choose us:
+                        </p>
+                    </div>
+
+                    <div class="content-box d-flex align-items-center border-top">
+
+                        <div class="tj-icon-box">
+                            <div class="ab-text d-flex align-items-center">
+
+                            </div>
+                            <p class="desc-2">★ Professional & responsive customer service available 24/7.</p>
+                        </div>
+
+                        <div class="tj-icon-box">
+
+                            <p class="desc-2">★ A wide range of services such as open, enclosed & expedited.</p>
+                        </div>
+                        <div class="tj-icon-box pb-4">
+
+                            <p class="desc-2">★ Prompt delivery due to efficient use of trailers.</p>
+                        </div>
+                    </div>
+                    <div class="content-box d-flex align-items-center">
+
+                        <div class="tj-icon-box">
+
+                            <p class="desc-2">★ Legion of truckers available with years old network.</p>
+                        </div>
+                        <div class="tj-icon-box">
+
+                            <p class="desc-2">★ Get online car shipping quotes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                    <div class="image-box">
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
+                            alt="Image">
+                    </div>
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
+                        alt="Image">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+    @include('partials.blog-slider')
 @endsection
 
 @section('extraScript')
