@@ -220,6 +220,11 @@
             <div class="col-lg-12 text-center">
                 <i class="fas fa-thumbs-up fa-5x mb-4" style="color: #8fc445; animation: bounce 2s infinite;"></i>
                 <h2 class="thank-you-title">Thank You!</h2>
+                <h2 class="thank-you-title">
+                    @if (isset($price))
+                        {{ $price }}
+                    @endif
+                </h2>
                 <p class="thank-you-message">We appreciate your interest and will get back to you soon.</p>
                 <!-- <a href="{{ route('welcome') }}" class="btn btn-primary mt-3">Go Back to Home</a> -->
             </div>

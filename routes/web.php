@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReviewSiteController;
 use App\Http\Controllers\Admin\UserManagementController;
 use App\Http\Controllers\Admin\PortToPortController;
+use App\Http\Controllers\Admin\PortDetailController;
 
 
 
@@ -205,9 +206,19 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::delete('/destroy/{id}', [ReviewSiteController::class, 'destroy'])->name('site.review.destroy');
     });
 
-
-
-
+    Route::group(['prefix' => 'port'], function () {
+        Route::get('/', [PortDetailController::class, 'index'])->name('admin.port');
+        Route::get('/create', [PortDetailController::class, 'create'])->name('admin.port.create');
+        Route::post('/store', [PortDetailController::class, 'store'])->name('admin.port.store');
+        Route::post('/search', [PortDetailController::class, 'find']);
+        Route::get('/edit/{id}', [PortDetailController::class, 'edit'])->name('admin.port.edit');
+        Route::post('/update/{id}', [PortDetailController::class, 'update'])->name('admin.port.update');
+        Route::post('/destroy', [PortDetailController::class, 'destroy'])->name('admin.port.destroy');
+        Route::get('/show/{id}', [PortDetailController::class, 'show'])->name('admin.port.show');
+        Route::post('/delete', [PortDetailController::class, 'delete'])->name('admin.port.delete');
+        Route::post('/show/search', [PortDetailController::class, 'search']);
+        Route::get('/search/get', [PortDetailController::class, 'get']);
+    });
 
     // Service categories routes
     Route::resource('service_categories', ServiceCategoryController::class);
