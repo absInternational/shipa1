@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Quote;
 use App\Models\QuoteVehicleInfo;
+use App\Models\PortDetail;
 use App\Traits\ImageUploadTrait;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
@@ -185,11 +186,30 @@ class QuoteController extends Controller
 
         }
 
-        // dd($request->toArray(), $post_array);
+        $delivery_latitude = $originData;
+        $delivery_longitude = $destinationData;
+
+        $location1 = $this->getLatLong($delivery_latitude);
+        $location2 = $this->getLatLong($delivery_longitude);
+
+        dd($delivery_latitude, $delivery_longitude, $location1, $location2);
+
+        $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
+            $q->where('delivery_latitude', $delivery_latitude)
+              ->where('delivery_longitude', $delivery_longitude);
+        }])
+        ->where('country', 'United States')
+        ->where('delivery_address', 'Grimaldi Group Shipping Line')
+        ->where('latitude', '28.9541')
+        ->where('longitude', '-95.3597')
+        ->first();
+
+        $price = $data->portToPort[0]->price;
 
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
-            return redirect()->route('thankYou')->with('success', 'Quote created successfully');
+            // return redirect()->route('thankYou')->with('success', 'Quote created successfully');
+            return view('frontend.pages.thank-you', compact('price'))->with('success', 'Quote created successfully');
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
 
@@ -211,5 +231,31 @@ class QuoteController extends Controller
     private function generateStringFromArray($array)
     {
         return count($array) > 1 ? implode('*^', $array) : $array[0];
+    }
+
+    public function getLatLong($address)
+    {
+        $apiKey = 'AIzaSyAsvXyIoaweH4Q6LKe9De1seJtUYfjdFvs';
+        $client = new Client();
+        $response = $client->get('https://maps.googleapis.com/maps/api/geocode/json', [
+            'query' => [
+                'address' => $address,
+                'key' => $apiKey
+            ]
+        ]);
+
+        $body = json_decode($response->getBody(), true);
+
+        if ($body['status'] === 'OK') {
+            $location = $body['results'][0]['geometry']['location'];
+            return [
+                'latitude' => $location['lat'],
+                'longitude' => $location['lng']
+            ];
+        }
+
+        dd($body);
+
+        return null;
     }
 }

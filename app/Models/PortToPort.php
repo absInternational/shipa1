@@ -22,4 +22,9 @@ class PortToPort extends Model
         'delivery_longitude',
         'price',
     ];
+    
+    public function port()
+    {
+        return $this->belongsTo(PortDetail::class,'port_detail_id','id');
+    }
 }
