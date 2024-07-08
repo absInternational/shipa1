@@ -51,7 +51,7 @@
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">SERVICES</span>
-                        <h2 class="title">CAR SHIPPING SERVICES</h2>
+                        <h2 class="title">HEAVY EQUIPMENT SERVICES</h2>
                         <p class="desc-2">
                             ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                             customers and seeks your trust in return of our services.
@@ -72,155 +72,7 @@
             @endif
             <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
               @include('partials.multi-form')
-                <!-- <div class="tj-input-form-car mt-4 w-100" data-bg-image="">
-
-
-
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom"
-                        data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
-                        @csrf
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-                        <div class="container mt-2">
-
-                            <div class="route_quote_info" id="step1">
-                                <div class="row">
-                                    <h4 class="title text-center">Quote Request!</h4>
-                                    <div class="col-xl-12 col-lg-12 mb-4">
-                                        <h6 class="text-white">Moving From</h6>
-                                        <label class="text-white mb-2">Where Are You Moving From?</label>
-                                        <div class="single-input-field">
-                                            <input class="form-control" type="text" id="pickup-location"
-                                                placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                            <label class="error-message" id="pickup-location-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-12 col-lg-12 mb-4">
-                                        <h6 class="text-white">Moving To</h6>
-                                        <label class="text-white mb-2">Where Are You Moving To?</label>
-                                        <div class="single-input-field">
-                                            <input class="form-control" type="text" id="delivery-location"
-                                                placeholder="Enter City or ZipCode" name="To_ZipCode" required>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                            <label class="error-message" id="delivery-location-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="price__cta-btn text-center">
-                                            <button class="tj-submit-btn" type="button" id="step1_next">
-                                                Next <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="vehicle_quote_info" id="step2" style="display: none;">
-                                <div class="row">
-                                    <h4 class="title text-center">VEHICLE INFORMATION</h4>
-                                    <select id="tabSelector" class="" aria-label="Tab selector" required>
-                                        <option value="" selected disabled>Select a Vehicle</option>
-                                        <option value="Atv">Atv Utv Transport</option>
-                                        <option value="Car">Car</option>
-                                        <option value="Golf-Cart">Golf Cart</option>
-                                        <option value="Motorcycle">Motorcycle</option>
-
-                                    </select>
-                                    <label class="error-message" id="tabSelector-error">This field is required.</label>
-
-                                    <div class="tab-content mt-3" id="additionalContent"></div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step2_previous">
-                                                Previous <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn float-end">
-                                            <button class="tj-submit-btn" type="button" id="step2_next">
-                                                Next <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="basic_quote_info" id="step3" style="display: none;">
-                                <div class="row mb-3">
-                                    <h4 class="text-center text-white">Customer Information</h4>
-                                    <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white"> Your Name:</label>
-                                            <input class="form-control" required name="Custo_Name" type="text"
-                                                placeholder="Customer Name">
-                                            <label class="error-message" id="Custo_Name-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white">Phone:</label>
-                                            <input id="phone" class="form-control" required name="phone"
-                                                type="tel" placeholder="Customer Phone">
-                                            <label class="error-message" id="Custo_Phone-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white"> Email Address:</label>
-                                            <input class="form-control" required name="Custo_Email" type="email"
-                                                placeholder="Email address">
-                                            <label class="error-message" id="Custo_Email-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step3_previous">
-                                                Previous <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn float-end">
-                                            <button class="tj-submit-btn" type="submit" id="submit_instant_code"
-                                                value="submit">
-                                                Calculate Price <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-
-                </div> -->
+                
             </div>
 
         </div>
@@ -233,33 +85,30 @@
 <section class="tj-about-section-four">
     <div class="container">
         <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
-            Platform of Car <br>Shipping Services</h2>
+            Platform of Heavy <br>Shipping Services</h2>
 
         
     </div>
 </section>
 
 
-<section class="tj-about-section pt-4">
+<section class="tj-about-section pt-4 pb-0">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 sal-animate pt-4 pb-0 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Car Transportation</span>
+                            <span class="sub-title active-shape"> Heavy Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your
-                            comfort is our top priority, ship the best vehicles at reasonable rates without compromising
-                            quality. Our professional and expert team provides you with 100% insured and secure vehicle
-                            transport solutions that are specifically tailored to your needs.
-                            <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even
-                            find various suitable services! For shipping your luxurious vehicle, you can opt for
-                            enclosed trailers as they are made to protect your vehicle from road debris, scratches, the
-                            uncertainty of weather conditions, and potential risks. However, if you are searching for
-                            something equally cost-effective and safe, go for open transport! We have expedited options
-                            and door-to-door delivery for fast vehicle shipping.
-                            <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
+                            Oversized and heavy equipment can have logistical and managerial challenges if you’re unfamiliar with the 
+                            transportation procedure or the way heavy equipment shipping is done. 
+                            So if you’re considering shipping heavy equipment nationwide, 
+                            ShipA1 is well equipped to manage any form of shipment through all stages of the approach.
+                             Services of ShipA1 are accessible to our clients nationwide. Before the carrier service arrives, you will have to take the essential steps so as 
+                            to make sure your equipment is shielded and secured for any unfavorable and risky conditions it may encounter during its shipment.
+                             Heavy equipment shipping services are available all over the nation to facilitate customers. 
+                           
                             </p>
                         </div>
                         
@@ -279,7 +128,7 @@
 </section>
 
 
-    <section class="tj-about-section pt-4">
+    <section class="tj-about-section pt-0 pb-0">
         <div class="container">
             <div class="row">
                 
@@ -292,23 +141,18 @@
 
                 </div>
             </div>
-            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-8 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Car Transportation</span>
+                            <span class="sub-title active-shape"> Heavy Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your
-                            comfort is our top priority, ship the best vehicles at reasonable rates without compromising
-                            quality. Our professional and expert team provides you with 100% insured and secure vehicle
-                            transport solutions that are specifically tailored to your needs.
-                            <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even
-                            find various suitable services! For shipping your luxurious vehicle, you can opt for
-                            enclosed trailers as they are made to protect your vehicle from road debris, scratches, the
-                            uncertainty of weather conditions, and potential risks. However, if you are searching for
-                            something equally cost-effective and safe, go for open transport! We have expedited options
-                            and door-to-door delivery for fast vehicle shipping.
-                            <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
+                            In the event of any query, you may also contact our customer service representative, they’ll be delighted to help you with your shipment queries, or you could mail us.
+                            If during the shipment, your equipment becomes damaged, the company is going to take care of it and will cover all the damages.ShipA1 always ship heavy equipment with care. As construction equipment is quite a bit heavier and bulkier than even a huge pickup truck, we’ll want to locate a flatbed transporter with a large enough truck to have the ability to move it.
+                             You may discover that it’s more cost-effective to avail the services offered by the ShipA1 as transporting the heavy equipment on your own will cost you a lot more and it will be a big deal because heavy equipment shipping is not something that you should take lightly.
+                             Obviously, you will need to have the correct equipment and trailer required to haul the particular load.
+                            Since certain equipment are loaded on the basis of particular guidelines, therefore you should know about the specification of the equipment. 
+                              
                             </p>
                         </div>
                         
@@ -317,37 +161,69 @@
             </div>
         </div>
 
+    </section>
+    <section class="tj-about-section pt-0 pb-0">
         <div class="container">
             <div class="row">
-                
-            
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                <div class="col-lg-8 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Neoteric Solutions</span>
+                            <span class="sub-title active-shape"> Heavy Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            The unravelment provided to the emerging and the existing problems of auto transport by ShipA1 is through the unique neoteric <br> solutions.
+                            ShipA1 is able to handle every type of heavy equipment therefore one doesn’t need to worry.
+                            Equipment may vary greatly based on the load and its need. Heavy equipment hauling can be a troublesome endeavor and it’s important to pick a business that specializes in heavy equipment shipping. You can get exact shipping quotes for your euipment by entering all the specifice.
+                             Shipping heavy equipment is a dangerous procedure if you’re unfamiliar with the potential trouble spots. Many heavy equipment hauling companies will promise you with limitless offers, but you need to trust the one that is the most reliable. ShipA1 with its heavy equipment shipping promise high-quality at competitive rates.
+                             ShipA1 has experts to handle your heavy equipment and is equipped with all the trailers and tools that are necessary for the heavy equipment shipping; therefore there is no point of not trusting ShipA1.
                             </p>
                         </div>
                         
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Premium Quality</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            You must expect nothing less than an optimum level service when talking about ShipA1. You will get the best car transport experience with us.</p>
-                        </div>
-                        
+                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                    <div class="image-box">
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
                     </div>
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+
+                </div>
+            </div>
+            </div>
+        </div>
+</section>
+
+<section class="tj-about-section pt-0">
+    <div class="container">
+        <div class="row">
+            
+        
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Frequent Delivery</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        Heavy equipment Shipping is often needed to shift it from one site to another that’s is why we have special focus on frequent movement of heavy equipment.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Insurance Coverage</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        One of the most important aspect while shipping heavy equipment is the risk of damage which is protected with complete Insurance coverage.</p>
+                    </div>
+                    
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
 
     <section class="tj-cta-section-two">
             <div class="tj_cta_image-4 w-100 h-50"></div>
@@ -384,31 +260,32 @@
 <section class="tj-about-section-five">
     <div class="container">
         <div class="row services">
-            <h1 class="services-h1">Car Hauling Services</h1>
+            <h1 class="services-h1">Ins & Outs of Heavy Equipment</h1>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Enclosed Carrier</h5>
-                        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transported. Enclosed carrier guards your car against the external environment such as weather ailments etc.</p>
+                        <h5 class="card-title fw-bolder text-white">Type of trailers used in Heavy Equipment</h5>
+                        <p class="card-text text-light">A vast majority of the heavy equipments are being shipped by a hotshot trailer or a lowboy trailer. Our network of skilled truckers know how to pickup & offload equipment.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Open Trailer</h5>
-                        <p class="card-text text-light">It’s the standard method with which we ship cars. It is the best option if you want a cheap car moving service.</p>
+                        <h5 class="card-title fw-bolder text-white">Affordable cost for shipping</h5>
+                        <p class="card-text text-light">The good news is that the price to ship a heavy equipment wouldn’t be as big as the size of your equipment. We have affordable prices with optimum service.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Expedited Shipping</h5>
-                        <p class="card-text text-light">If you are looking to move quickly to a new place and need your car moved along with you then expedited shipping service must be your first choice.</p>
+                        <h5 class="card-title fw-bolder text-white">Kind of equipments that could be shipped</h5>
+                        <p class="card-text text-light">As a matter of fact, There are a plethora of equipment types that could be shipped. Such as semi tractors, tanks, forklifts, and bulldozer. At ShipA1 we have the right match of truckers & trailers.</p>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </section>

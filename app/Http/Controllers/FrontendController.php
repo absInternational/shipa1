@@ -218,9 +218,15 @@ class FrontendController extends Controller
 
     public function carService()
     {
+        $makes = VehicleName::select('make')
+        ->where('UserId', 14)
+        ->where('status', 0)
+        ->groupBy('make')
+        ->orderBy('make', 'ASC')
+        ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.car-service',compact('site_reviews','blogs'));
+        return view('frontend.pages.services.car-service',compact('site_reviews','blogs','makes'));
     }
   
     public function bikeService()
