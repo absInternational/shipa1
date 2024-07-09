@@ -242,6 +242,45 @@ class FrontendController extends Controller
         return view('frontend.pages.services.bike-service',compact('site_reviews','blogs','makes'));
     }
 
+    public function atvutvService()
+    {
+        $makes = VehicleName::select('make')
+        ->where('UserId', 14)
+        ->where('status', 0)
+        ->groupBy('make')
+        ->orderBy('make', 'ASC')
+        ->get();
+        $site_reviews = ReviewSite::get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.services.atv-utv-service',compact('site_reviews','blogs','makes'));
+    }
+
+    public function golfcartService()
+    {
+        $makes = VehicleName::select('make')
+        ->where('UserId', 14)
+        ->where('status', 0)
+        ->groupBy('make')
+        ->orderBy('make', 'ASC')
+        ->get();
+        $site_reviews = ReviewSite::get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.services.golf-cart-service',compact('site_reviews','blogs','makes'));
+    }
+
+    public function boatService()
+    {
+        $makes = VehicleName::select('make')
+        ->where('UserId', 14)
+        ->where('status', 0)
+        ->groupBy('make')
+        ->orderBy('make', 'ASC')
+        ->get();
+        $site_reviews = ReviewSite::get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.services.boat-service',compact('site_reviews','blogs','makes'));
+    }
+
     public function excavatorService()
     {
         $makes = VehicleName::select('make')

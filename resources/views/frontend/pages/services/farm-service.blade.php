@@ -294,7 +294,7 @@ Additional services if there are any.
     </section>
 
 
-    <section class="tj-cta-section-two">
+<section class="tj-cta-section-two">
             <div class="tj_cta_image-4 w-100 h-50"></div>
             
             <div class="container">
