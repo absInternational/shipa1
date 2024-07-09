@@ -356,16 +356,20 @@
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Why is that?</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            We not only focus on providing top-notch services, but we also ensure that our offerings are meticulously 
-                            tailored to meet your unique needs and expectations. With years of accumulated experience and expertise, we can proudly 
-                            state that our services are rooted in complete transparency and unwavering reliability. Our commitment goes beyond just 
-                            fulfilling your requirements; we aim to exceed your expectations by delivering personalized solutions that align perfectly 
-                            with your specific demands. Every aspect of our service is designed with your satisfaction in mind, ensuring that you receive 
-                            the highest level of care and attention throughout the entire process. We take immense pride in our ability to offer services
-                             that are not only of superior quality but also characterized by their dependability and openness. Our dedication to
-                              maintaining the highest standards of service excellence is reflected in our long-standing reputation for trustworthiness 
-                              and integrity in the industry.</p>
+                            <p class="desc">Keeping in mind the daily rising expenses we have customized suitable and affordable
+                                 boat shipping solutions for you without compromising on the service quality or reliability! We
+                                  maintain 100% transparency when it comes to our services and rates so it is convenient for you
+                                   to choose the option that best fits your needs.<br>However, prices might differ depending on
+                                     <ul>
+                                       <li>Distance</li>
+                                       <li>Size & weight of the boat</li>
+                                       <li>Shipping method</li>
+                                       <li>Additional services</li>        
+                                    </ul>
+                                    These factors play a significant role in determining the total cost of your shipping. To find
+                                     out an estimated rate of your shipping go get your free online quotes now!  
+                            </p>
+                            
                         </div>
                         
                     </div>
@@ -397,19 +401,20 @@
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Boat Shipping Methods</span>
+                            <span class="sub-title active-shape">Types of Shipping Methods</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">When it comes to shipping your golf cart from one place to another, there are multiple 
-                                options to look at. Ship A1 provides a comprehensive range of services tailored to accommodate 
-                                types of distances, timelines, and modes of protection for your golf cart.<br>
-                                 Here are the most common modes of shipping used:
-                            <ul>
-                                       <li>Open-air Transport</li>
-                                       <li>Enclosed Auto Transport</li>
-                                       <li>Door-to-Door Delivery</li>
-                                       <li>Terminal-to-Terminal Shipping</li>
+                                <p class="desc">
+                                    Are you an indecisive person? Need help with choosing the perfect mode of shipping for you? Worry no 
+                                    more! Ship A1 has a variety of shipping modes for your convenience, all you have to do is select the 
+                                    type of shipping you think is best for you, and leave the rest to us!
+                                    <ul>
+                                       <li>Open Transport:</li>
+                                       <li>Enclosed Transport:</li>
+                                       <li>Flat Rack Transport:</li>
                                     </ul>
-                            </p>
+                                    Ship A1 offers these shipping modes to ensure your boat is transported and delivered on time with proper
+                                     safety measures!
+                                </p>
                         </div>
                         
                     </div>
@@ -418,20 +423,17 @@
         </div>
 
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 
             
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Open-air Transport</span>
+                            <span class="sub-title active-shape">Open Transport:</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            If you are someone who wants to get their golf cart shipped on a budget, here is the best option for 
-                            you. Open-air transport is another type of transport that supports and delivers your vehicle on a 
-                            trailer or an open truck. <br> While it may seem to you that your vehicle can be prone to damage due to
-                             weather or road conditions, we are here to assure you that our expert staff and services are 
-                             specifically designed to ease your concerns and issues.
+                            This is the type of transport that is both cost-effective and suitable for
+                             shipping. This shipping mode involves your boat being situated onto an open trailer or a flatbed truck.
                             </p>
                         </div>
                         
@@ -440,55 +442,37 @@
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Enclosed Auto Transport</span>
+                            <span class="sub-title active-shape">Enclosed Transport:</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            If you're looking to ship a luxurious golf cart then our best option for you would be enclosed auto 
-                            transport. Why? Because, as opposed to Open-air Transport, enclosed auto transport guarantees maximum 
-                            protection for your golf cart by sheltering your vehicle entirely in an enclosed truck or trailer. 
-                            Although quite costly, this method of shipping is ideal if your golf cart is very valuable or 
-                            custom-made, the distance is quite long, and there is a risk of bad weather conditions.</p>
+                            Enclosed transport may not be the cheapest mode of shipping but it does provide an extra layer
+                            of protection for your luxury yachts and boats that require extra care.</p>
                         </div>
                         
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 
             
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Door-to-Door Delivery</span>
+                            <span class="sub-title active-shape">Flat Rack Transport:</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            We present you with one of the safest options
-                            also known as door-to-door delivery. <br>  Are you unable to pick up or drop off your golf cart? Why choose this?
-                             <ul>
+                            This mode of shipping includes placing and securing your boat on a flat rack, it is only suitable
+                            for irregular-shaped boats or oversized boats which cannot be transported on standard trailers or carriers.
+                             <!-- <ul>
                                        <li>Door-to-door delivery is the easiest type of service, especially if you are someone who would rather let the company control the steering wheel.</li>
                                        <li>It provides you the option of getting your golf cart picked up from your location and dropping it off directly at the designated location without any hassles or issues.</li>
-                                    </ul>
+                                    </ul> -->
                             </p>
                         </div>
                         
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
-                        <div class="tj-section-heading mb-4">
-                            <span class="sub-title active-shape">Terminal-to-Terminal Shipping</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">This is another option if you're looking for cost-effective shipping for your golf cart. Similar to Door-to-Door Delivery 
-                            in terms of being budget-friendly, Terminal-to-Terminal offers an even better shipping method. This involves dropping your 
-                            golf cart at the nearest terminal which can be found near ports and airports and getting it picked up from your friend or
-                             family from the terminal at your designated location. This has proven to be a far cheaper option especially 
-                             if we’re talking about long distances since it requires you to drop off your vehicle halfway to the nearest 
-                             terminal in your city and then get it picked up halfway from the nearest terminal in the designated drop-off
-                              city.</p>
-                        </div>
-                        
-                    </div>
-                </div>
+                
             </div>
         </div>
 
@@ -498,35 +482,37 @@
 <section class="tj-about-section-five">
     <div class="container">
         <div class="row justify-content-center services">
-            <h1 class="services-h1">Types of Shipping Methods</h1>
+            <h1 class="services-h1">Vehicle Preparation and Documentation</h1>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Open Transport:</h5>
-                        <p class="card-text text-light">This is the type of transport that is both cost-effective and suitable for shipping.
-                             This shipping mode involves your boat being situated onto an open trailer or a flatbed truck. </p>
+                        <h5 class="card-title text-white">Prepare Necessary Documentation</h5>
+                        <p class="card-text text-light">Make sure the necessary documents of your boat like registration papers,
+                             insurance certificates, or any permits and licenses required. </p>
                     </div>
                 </div>
             </div>
+            
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Enclosed Transport:</h5>
-                        <p class="card-text text-light">Enclosed transport may not be the cheapest mode of shipping but it does provide an extra
-                             layer of protection for your luxury yachts and boats that require extra care. </p>
+                        <h5 class="card-title text-white">Clean & Inspect Vehicle</h5>
+                        <p class="card-text text-light">Ensure your vehicle is clean inside and out,
+                             and remove any dirt, debris, and personal belongings that have a risk of damaging your vehicle further. </p>
                     </div>
                 </div>
             </div>
+            
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Flat Rack Transport:</h5>
-                        <p class="card-text text-light">This mode of shipping includes placing and securing your boat on a flat rack, it is only 
-                            suitable for irregular-shaped boats or oversized boats which cannot be transported on standard trailers or carriers.</p>
+                        <h5 class="card-title text-white">Track your Ride</h5>
+                        <p class="card-text text-light">If you are someone who constantly has to keep updates on their vehicle, 
+                            worry not! Contact Ship A1 for timely updates, or you can even track your ride online.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4">
+            <!-- <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
                         <h5 class="card-title text-white">Luxury Golf Carts</h5>
@@ -546,7 +532,7 @@
                              low-speed vehicle areas.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
