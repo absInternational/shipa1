@@ -69,7 +69,9 @@ Route::get('/excavator-shipping-service', [FrontendController::class, 'excavator
 Route::get('/farm-service', [FrontendController::class, 'farmService'])->name('frontend.pages.services.farm-service');
 Route::get('/boat-service', [FrontendController::class, 'boatService'])->name('frontend.pages.services.boat-service');
 
-Route::get('/hazmat-shipping-service', [FrontendController::class, 'hazmatService'])->name('frontend.pages.services.hazmat-service');
+Route::get('/hazmat-transportation-service', [FrontendController::class, 'hazmatService'])->name('frontend.pages.services.hazmat-service');
+Route::get('/reefer-transportation-service', [FrontendController::class, 'reeferService'])->name('frontend.pages.services.reefer-service');
+Route::get('/dryvan-transportation-service', [FrontendController::class, 'dryvanService'])->name('frontend.pages.services.dryvan-service');
 
 // Service detail
 Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');
