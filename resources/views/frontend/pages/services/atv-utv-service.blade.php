@@ -6,6 +6,20 @@
     .full-width {
     width: 100%;
 }
+.services {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px 10px 30px 10px;
+    background-color: #9d9e9f14;
+}
+
+.services-h1 {
+    text-align:center;
+    text-decoration: overline;
+    margin-bottom: 50px;
+    color: #8FC445;
+}
 .why-box {
     border-radius: 12px;
     padding: 40px 0px;
@@ -48,27 +62,6 @@
     width: 100px;
     height: 100px; 
     }
-    .services {
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    padding: 10px 10px 30px 10px;
-    background-color: #9d9e9f14;
-}
-
-.services-h1 {
-    text-align:center;
-    text-decoration: overline;
-    margin-bottom: 50px;
-    color: #8FC445;
-}
-.card- {
-        background: #29494e;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
 </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -76,7 +69,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Car Transport</h1>
+                        <h1 class="breadcrumb-title text-center">ATV/UTV Transport</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
@@ -85,7 +78,7 @@
                             </span>
                             >
                             <span>
-                                <span> Car</span>
+                                <span> ATV/UTV</span>
                             </span>
                         </div>
                     </div>
@@ -100,19 +93,27 @@
            <div class="row">
                 <div class="col-lg-8">
 							<div class="image-container">
-                                <img class="img-fluid" src="{{ asset('frontend/images/about/caR-serVice.jpg') }}" loading="lazy" alt="Motorcyle Transport">
+                                <img class="img-fluid" src="{{ asset('frontend/images/about/atv.webp') }}" loading="lazy" alt="Motorcyle Transport">
                             </div>
                              <br>
                     <div class="text-container text-left">
-                        <h3>The First Stop Platform of Car Shipping Services</h3>
-                        <p>ShipA1 is committed to making available the car shipping service that one requires as a fundamental need to deliver his vehicle from one state to another. ShipA1 has worked a lot to get to the point where it now proudly announces that it has reached professionals that are behind the successful auto transport.
-                             If you want to ship your car to a new destination and want to have it delivered in a secure style, then is what you need as your trusted car transporter.
-                            ShipA1 always has secured the vision to give high-quality car transport services to their customers with an aim to provide innovative solutions to unique car transportation needs of the customers.
-                             If you want to transport your vehicle in a very less amount of time, then you can use the service of ShipA1 car transport service as it is known for expedited shipping of vehicles.
-                              With unique shipping styles that are a part of ShipA1, customers can easily transport their cars through open car transport service. 
+                        <h3>ATV/UTV Transport Service</h3>
+                        <p>Are you in search of a trustworthy ATV/UTV transport company for your shipment? Well, then you are on
+                             the right platform. Ship A1 is a dominating vehicle transport company providing top-rated ATV/UTV 
+                             services to its valuable customers at competitive market rates. Choosing the right company will save 
+                             you from trouble, and you will have a remarkable journey. We will share some noteworthy factors that 
+                             come into play whenever you plan to ship an ATV/UTV. The key considerations during the ATV shipment 
+                             that you need to consider are: <br>
+                             <ul>
+                                <li>The Company’s experience. </li>
+                                <li>The References.</li>
+                                <li>Insurance Policy and coverage.</li>
+                                <li>Cost of the shipment</li>
+                             </ul> 
+                        </p> 
+                        
                         <br>
-                   Open car transport is about the shipment of the car in an open-air, and the trucker will be taking care of everything from the beginning till the end. Enclosed carriers are a part of ShipA1, and those carriers transport the cars in an enclosed environment where they are safe from the rough conditions of the environment like dust, wind, heavy rainfall, storms, etc. 
-                    </p>  
+                       
                     </div>
                 </div>
             <div class="col-lg-4 p-0">
@@ -130,7 +131,7 @@
                 
                        <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
                        <div class="tj-input-form w-100" data-bg-image="">
-                        <h4 class="title text-center">Car Quote!</h4>
+                        <h4 class="title text-center">ATV/UTV Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -163,22 +164,22 @@
                                         <label class="error-message" id="Custo_Phone-error">This field is required.</label>
                                     </div>
                                 </div> --}}
-                                <div class="col-md-4">
+                                <!-- <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
                                         <input type="tel" id="phone" name="phone" placeholder="Number"
                                             required="" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
-                                </div>
-                                <!-- <div class="col-md-4">
+                                </div> -->
+                                <div class="col-md-4">
                                         <div class="input-form">
                                             <label class="d-block">Phone:</label>
                                             <input type="tel" id="phone" name="phone" placeholder="Phone Number"
                                                 required="" />
                                             <small id="errPhone" class="err-style"></small>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Email:</label>
@@ -190,9 +191,9 @@
                             </div>
 
                             <div class="row select-bm">
-                                <div class="col-md-12 text-center">
+                                <!-- <div class="col-md-12 text-center">
                                     <h4 class="text-white">Motorcycle Information</h4>
-                                </div>
+                                </div> -->
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label> Year</label>
@@ -223,7 +224,7 @@
                                 </div>
                             </div>
 
-                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+                            <a class="add-car-1 mb-2" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
                             <div id="vehicles-container">
@@ -327,8 +328,17 @@
 
                <div class="row full-width">
                      <div class="col-12 custom-style">
-                         <h4 class=" text-center">Premium Vehicle Transport Services</h4>
-                         <p class=" text-center">ShipA1, with its standard enclosed vehicle shipping, makes it sure that vehicle transport is done in an exquisite and exclusive style. ShipA1 considers that Americans should have the luxury and convenience to indulge in the delight of having their car shipped right at their doors. For that, ShipA1 has devised a plan to provide door to door vehicle transport facility to Americans, and that plan has been executed hundreds of times successfully as well. Through such a facility, ShipA1 believes that it can provide services right at your doorsteps for your comfort. If you do not want to transport it on your doorsteps, then another facility that is provided by the ShipA1 is of the terminals.  </p>
+                         <h4 class=" text-center">Company Performance and Quality</h4>
+                         <p class=" text-center">The first thing that you need to consider when selecting the auto transport company for your ATV shipment is to 
+                            check the overall company’s performance. For that, you can visit the company’s platform and check the section of their feedback
+                             and customer ratings. The reviews of people are always genuine. They will give you a clear idea of where the company stands in 
+                             the shipping industry. You will find everything you need for your All-Terrain Vehicle Transport at our platform as we are a 
+                             one-stop solution for your shipment. Quality is what matters in All-Terrain transportation. A good auto shipping company may 
+                             charge more for the transport journey, but it will not sacrifice for its quality. The company will ship your vehicle by secure
+                              means and will make sure that there is no damage during the overall shipping process. All you need to do is get the instant 
+                              online vehicle shipping quotesthrough the company’s platform and choose your desired shipping service. The two main services 
+                              are open-air and enclosed car transport. You can take the help of the vehicle shipping calculator to get a rough estimate of 
+                              your shipment. </p>
                          <div class="tj-theme-button  text-center mt-2">
                                                  <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
                                                      Get Quote
@@ -347,19 +357,18 @@
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Car Transportation</span>
+                            <span class="sub-title active-shape">ATV/UTVs Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            ShipA1 always has believed in quality over quantity, and that is why at reasonable rates ShipA1 allocates the best resources and human-power for auto transport in order to strengthen the concept of quality over quantity. At reasonable rates, anyone with a need for auto relocation can get their car shipped at the right location and at the price that is affordable.
-                            For those preferring alternatives, ShipA1 provides terminal services. Terminals are temporary storage spaces where vehicles are hauled and shipped. ShipA1 prioritizes quality over quantity, allocating top resources for affordable auto transport.  
-                            <!-- <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even
-                            find various suitable services! For shipping your luxurious vehicle, you can opt for
-                            enclosed trailers as they are made to protect your vehicle from road debris, scratches, the
-                            uncertainty of weather conditions, and potential risks. However, if you are searching for
-                            something equally cost-effective and safe, go for open transport! We have expedited options
-                            and door-to-door delivery for fast vehicle shipping.
-                            <br> So, what are you waiting for? Get a free online quote now and enjoy the ride! -->
-                            </p>
+                            Apart from the company’s experience, ratings, and shipping services, another thing that you need to 
+                            consider when choosing the All-Terrain transport company is the insurance coverage as safety is the
+                             priority for every customer. We all are vulnerable to unexpected incidents, and all we can do is to 
+                             prepare ourselves for it. After all, you do not want any trouble in the long run, and for that, 
+                             insurance coverage is essential. Before making any step towards the shipment process, ask all the 
+                             necessary questions about the insurance policy. Some shipping companies provide the full insurance 
+                             package. However, it is smart to ask beforehand so to free yourself in case there is any mishap during
+                              the shipment. You can also have a conversation with the company’s representative if you are having 
+                              any problem understanding the process. </p>
                         </div>
                         
                     </div>
@@ -375,10 +384,38 @@
             </div>
             </div>
         </div>
-</section>
-@include('partials.reveiw-site')
-    <section class="tj-about-section pt-4">
-       
+
+        <div class="container">
+            <div class="row">
+                
+            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                    <div class="image-box">
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image"> -->
+
+                </div>
+            </div>
+            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape"> ATV/UTV Transportation</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <p class="desc">
+                            At last, you can not regret the price factor from the list when talking about All-Terrain transportation. 
+                            The price for the shipment of an ATV depends on several factors such as weight, size, shape, and the 
+                            distance travelled. Apart from that, other things that can impact the price includes fuel costs, the time 
+                            of the year, and other additional insurance. Weight is the main factor affecting the price of the shipment.
+                             Considering all these factors, Ship A1 is the all in one choice for anyone willing to ship their
+                              All-Terrain vehicle. You can get our services all over the United States with ease. So, get your 
+                              quotes and start your car transport journey with us. .</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="container">
             <div class="row">
@@ -387,10 +424,11 @@
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Neoteric Solutions</span>
+                            <span class="sub-title active-shape">Access To All Locations</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            The unravelment provided to the emerging and the existing problems of auto transport by ShipA1 is through the unique neoteric solutions.
+                            We currently ship all around the contiguous United States and in case of ATV/UTV 
+                            it’s easier to reach locations because the trailers aren’t big in size for atv shipping.
                             </p>
                         </div>
                         
@@ -399,79 +437,56 @@
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Premium Quality</span>
+                            <span class="sub-title active-shape">Types of ATV/UTV</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            You must expect nothing less than an optimum level service when talking about ShipA1. You will get the best car transport experience with us.</p>
+                            A wide range of ATV’s and UTV’s could be shipped with the car hauling method 
+                            of door to door transport such as Quads, Sports ATV etc.</p>
                         </div>
                         
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="tj-cta-section-two">
-            <div class="tj_cta_image-4 w-100 h-50"></div>
-            
-            <div class="container">
-                <div class="row">
-                   
-                    <div class="col-lg-12 col-md-6">
-                       
 
-                        <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-                        
-                            <div class="tj-section-heading ">
-                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                                <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
-                            </div>
-                           
-                         
-                            <div class="tj-theme-button mt-2">
-                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                    Get Support<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                          
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            </div>
 </section>
+@include('partials.reveiw-site')
+
 <section class="tj-about-section-five">
     <div class="container">
         <div class="row services">
-            <h1 class="services-h1">Car Hauling Services</h1>
+            <h1 class="services-h1">Things To Keep In Mind</h1>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Enclosed Carrier</h5>
-                        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transported. Enclosed carrier guards your car against the external environment such as weather ailments etc.</p>
+                        <h5 class="card-title text-white">Transit Insured</h5>
+                        <p class="card-text text-light">One of the things that is a make or break for the customer is whether he 
+                            would get insurance or not?. At ShipA1 you will get a full insurance coverage during transit.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Open Trailer</h5>
-                        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transport. Enclosed carrier guards your car against the external environment such as weather ailments etc.</p>
+                        <h5 class="card-title text-white">Suspension for Safer Transit</h5>
+                        <p class="card-text text-light">The ATV/UTV hauling service becomes even more safer because of the suspensions
+                             our trailers are equipped with. It will nullify the road debris completely.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Expedited Shipping</h5>
-                        <p class="card-text text-light">If you are looking to move quickly to a new place and need your car moved along with you then expedited shipping service must be your first choice.</p>
+                        <h5 class="card-title text-white">Tracking of ATV/UTV</h5>
+                        <p class="card-text text-light">In some of the cases we give you the system to track the activity of the
+                             trucker where he has reached & how long would it take to deliver shipment?</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <section class="tj-faq-section tj-faq-page pt-0">
         <div class="container">
             <div class="row">
@@ -538,6 +553,7 @@
     </div>
 </section>
 
+
 <section class="tj-choose-us-section-service-car-2">
     <div class="container why-box">
         <div class="row">
@@ -599,7 +615,7 @@
     </div>
 
 </section>
-@include('partials.blog-slider')
+    @include('partials.blog-slider')
 @endsection
 
 @section('extraScript')

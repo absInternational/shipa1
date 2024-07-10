@@ -6,6 +6,20 @@
     .full-width {
     width: 100%;
 }
+.services {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px 10px 30px 10px;
+    background-color: #9d9e9f14;
+}
+
+.services-h1 {
+    text-align:center;
+    text-decoration: overline;
+    margin-bottom: 50px;
+    color: #8FC445;
+}
 .why-box {
     border-radius: 12px;
     padding: 40px 0px;
@@ -48,27 +62,6 @@
     width: 100px;
     height: 100px; 
     }
-    .services {
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    padding: 10px 10px 30px 10px;
-    background-color: #9d9e9f14;
-}
-
-.services-h1 {
-    text-align:center;
-    text-decoration: overline;
-    margin-bottom: 50px;
-    color: #8FC445;
-}
-.card- {
-        background: #29494e;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
 </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -76,7 +69,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Car Transport</h1>
+                        <h1 class="breadcrumb-title text-center">Boat Transport</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
@@ -85,7 +78,7 @@
                             </span>
                             >
                             <span>
-                                <span> Car</span>
+                                <span> Boat</span>
                             </span>
                         </div>
                     </div>
@@ -100,19 +93,30 @@
            <div class="row">
                 <div class="col-lg-8">
 							<div class="image-container">
-                                <img class="img-fluid" src="{{ asset('frontend/images/about/caR-serVice.jpg') }}" loading="lazy" alt="Motorcyle Transport">
+                                <img class="img-fluid" src="{{ asset('frontend/images/service/boat2.webp') }}" loading="lazy" alt="Motorcyle Transport">
                             </div>
                              <br>
                     <div class="text-container text-left">
-                        <h3>The First Stop Platform of Car Shipping Services</h3>
-                        <p>ShipA1 is committed to making available the car shipping service that one requires as a fundamental need to deliver his vehicle from one state to another. ShipA1 has worked a lot to get to the point where it now proudly announces that it has reached professionals that are behind the successful auto transport.
-                             If you want to ship your car to a new destination and want to have it delivered in a secure style, then is what you need as your trusted car transporter.
-                            ShipA1 always has secured the vision to give high-quality car transport services to their customers with an aim to provide innovative solutions to unique car transportation needs of the customers.
-                             If you want to transport your vehicle in a very less amount of time, then you can use the service of ShipA1 car transport service as it is known for expedited shipping of vehicles.
-                              With unique shipping styles that are a part of ShipA1, customers can easily transport their cars through open car transport service. 
-                        <br>
-                   Open car transport is about the shipment of the car in an open-air, and the trucker will be taking care of everything from the beginning till the end. Enclosed carriers are a part of ShipA1, and those carriers transport the cars in an enclosed environment where they are safe from the rough conditions of the environment like dust, wind, heavy rainfall, storms, etc. 
-                    </p>  
+                        <h3>The Best Boat Transport Services</h3>
+                        <p>Let's make transportation easy and swift with Ship A1 Auto Transport! If you are shipping your boat for the first time or if you are finding 
+                            a suitable, budget-friendly company to partner with, then you have come to the right place!</p> 
+                            <h3>Why choose Ship A1 Transport?</h3>
+                            <p>Ship A1 is one of the best shipping companies, a well reputable leading auto transport company with years of built experience it has dedicated 
+                                itself to providing quality, reliable, and smooth transportation services catered to your needs! At Ship A1 Transport we understand how essential 
+                                it is to ensure the customer’s vehicle arrives on time which is why we make sure to provide you with our best services with 100% transparency. 
+                                Here, we strive to soar higher day by day by delivering outstanding services and guaranteeing our customers a seamless & hassle-free transportation process. 
+                                    <!-- <h3>Why Choose Ship A1 Transport?</h3> -->    
+                                    <ul>
+                                       <li>Experience</li>
+                                       <li>Cost-Effective Rates</li>
+                                       <li>Reliability</li>
+                                       <li>Good Customer Service</li>
+                                       <li>Scope of Services</li>
+                                       <li>Well Equipped Staff</li>
+                                    </ul>
+                            </p> 
+                        
+                       
                     </div>
                 </div>
             <div class="col-lg-4 p-0">
@@ -130,7 +134,7 @@
                 
                        <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
                        <div class="tj-input-form w-100" data-bg-image="">
-                        <h4 class="title text-center">Car Quote!</h4>
+                        <h4 class="title text-center">Boat Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
@@ -163,22 +167,22 @@
                                         <label class="error-message" id="Custo_Phone-error">This field is required.</label>
                                     </div>
                                 </div> --}}
-                                <div class="col-md-4">
+                                <!-- <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
                                         <input type="tel" id="phone" name="phone" placeholder="Number"
                                             required="" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
-                                </div>
-                                <!-- <div class="col-md-4">
+                                </div> -->
+                                <div class="col-md-4">
                                         <div class="input-form">
                                             <label class="d-block">Phone:</label>
-                                            <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                                            <input type="tel" id="phone" name="phone" placeholder="Number"
                                                 required="" />
                                             <small id="errPhone" class="err-style"></small>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Email:</label>
@@ -190,9 +194,9 @@
                             </div>
 
                             <div class="row select-bm">
-                                <div class="col-md-12 text-center">
+                                <!-- <div class="col-md-12 text-center">
                                     <h4 class="text-white">Motorcycle Information</h4>
-                                </div>
+                                </div> -->
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label> Year</label>
@@ -223,7 +227,7 @@
                                 </div>
                             </div>
 
-                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+                            <a class="add-car-1 mb-2" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
                             <div id="vehicles-container">
@@ -325,10 +329,13 @@
             </div>
            </div>
 
-               <div class="row full-width">
+               <div class="row full-width ps-4">
                      <div class="col-12 custom-style">
-                         <h4 class=" text-center">Premium Vehicle Transport Services</h4>
-                         <p class=" text-center">ShipA1, with its standard enclosed vehicle shipping, makes it sure that vehicle transport is done in an exquisite and exclusive style. ShipA1 considers that Americans should have the luxury and convenience to indulge in the delight of having their car shipped right at their doors. For that, ShipA1 has devised a plan to provide door to door vehicle transport facility to Americans, and that plan has been executed hundreds of times successfully as well. Through such a facility, ShipA1 believes that it can provide services right at your doorsteps for your comfort. If you do not want to transport it on your doorsteps, then another facility that is provided by the ShipA1 is of the terminals.  </p>
+                         <h4 class=" text-center">What is Boat Auto Shipping?</h4>
+                         <p class=" text-center">The process of transporting or shipping boats from one place to another using specialized carriers is called Boat Auto Transport 
+                            or Boat Shipping! Is it safe? Yes! Ship A1 ensures that your boat is delivered or picked up from the designated location safe and sound, with the
+                             help of special and equipped carriers you don’t need to worry at all about the shipping process and completely trust us to ensure timely delivery 
+                             with 100% transparency and 24/7 customer service to tend to your concerns and queries.</p>
                          <div class="tj-theme-button  text-center mt-2">
                                                  <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
                                                      Get Quote
@@ -347,19 +354,22 @@
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Car Transportation</span>
+                            <span class="sub-title active-shape">Why is that?</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            ShipA1 always has believed in quality over quantity, and that is why at reasonable rates ShipA1 allocates the best resources and human-power for auto transport in order to strengthen the concept of quality over quantity. At reasonable rates, anyone with a need for auto relocation can get their car shipped at the right location and at the price that is affordable.
-                            For those preferring alternatives, ShipA1 provides terminal services. Terminals are temporary storage spaces where vehicles are hauled and shipped. ShipA1 prioritizes quality over quantity, allocating top resources for affordable auto transport.  
-                            <!-- <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even
-                            find various suitable services! For shipping your luxurious vehicle, you can opt for
-                            enclosed trailers as they are made to protect your vehicle from road debris, scratches, the
-                            uncertainty of weather conditions, and potential risks. However, if you are searching for
-                            something equally cost-effective and safe, go for open transport! We have expedited options
-                            and door-to-door delivery for fast vehicle shipping.
-                            <br> So, what are you waiting for? Get a free online quote now and enjoy the ride! -->
+                            <p class="desc">Keeping in mind the daily rising expenses we have customized suitable and affordable
+                                 boat shipping solutions for you without compromising on the service quality or reliability! We
+                                  maintain 100% transparency when it comes to our services and rates so it is convenient for you
+                                   to choose the option that best fits your needs.<br>However, prices might differ depending on
+                                     <ul>
+                                       <li>Distance</li>
+                                       <li>Size & weight of the boat</li>
+                                       <li>Shipping method</li>
+                                       <li>Additional services</li>        
+                                    </ul>
+                                    These factors play a significant role in determining the total cost of your shipping. To find
+                                     out an estimated rate of your shipping go get your free online quotes now!  
                             </p>
+                            
                         </div>
                         
                     </div>
@@ -375,22 +385,55 @@
             </div>
             </div>
         </div>
-</section>
-@include('partials.reveiw-site')
-    <section class="tj-about-section pt-4">
-       
 
         <div class="container">
             <div class="row">
+                
+            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                    <div class="image-box">
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image"> -->
+
+                </div>
+            </div>
+            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape">Types of Shipping Methods</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                                <p class="desc">
+                                    Are you an indecisive person? Need help with choosing the perfect mode of shipping for you? Worry no 
+                                    more! Ship A1 has a variety of shipping modes for your convenience, all you have to do is select the 
+                                    type of shipping you think is best for you, and leave the rest to us!
+                                    <ul>
+                                       <li>Open Transport:</li>
+                                       <li>Enclosed Transport:</li>
+                                       <li>Flat Rack Transport:</li>
+                                    </ul>
+                                    Ship A1 offers these shipping modes to ensure your boat is transported and delivered on time with proper
+                                     safety measures!
+                                </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
                 
             
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Neoteric Solutions</span>
+                            <span class="sub-title active-shape">Open Transport:</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            The unravelment provided to the emerging and the existing problems of auto transport by ShipA1 is through the unique neoteric solutions.
+                            This is the type of transport that is both cost-effective and suitable for
+                             shipping. This shipping mode involves your boat being situated onto an open trailer or a flatbed truck.
                             </p>
                         </div>
                         
@@ -399,79 +442,101 @@
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Premium Quality</span>
+                            <span class="sub-title active-shape">Enclosed Transport:</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            You must expect nothing less than an optimum level service when talking about ShipA1. You will get the best car transport experience with us.</p>
+                            Enclosed transport may not be the cheapest mode of shipping but it does provide an extra layer
+                            of protection for your luxury yachts and boats that require extra care.</p>
                         </div>
                         
                     </div>
                 </div>
+            </div>
+            <div class="row justify-content-center">
+                
+            
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one border rounded p-4">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape">Flat Rack Transport:</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <p class="desc">
+                            This mode of shipping includes placing and securing your boat on a flat rack, it is only suitable
+                            for irregular-shaped boats or oversized boats which cannot be transported on standard trailers or carriers.
+                             <!-- <ul>
+                                       <li>Door-to-door delivery is the easiest type of service, especially if you are someone who would rather let the company control the steering wheel.</li>
+                                       <li>It provides you the option of getting your golf cart picked up from your location and dropping it off directly at the designated location without any hassles or issues.</li>
+                                    </ul> -->
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
             </div>
         </div>
-    </section>
-    <section class="tj-cta-section-two">
-            <div class="tj_cta_image-4 w-100 h-50"></div>
-            
-            <div class="container">
-                <div class="row">
-                   
-                    <div class="col-lg-12 col-md-6">
-                       
 
-                        <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-                        
-                            <div class="tj-section-heading ">
-                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                                <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
-                            </div>
-                           
-                         
-                            <div class="tj-theme-button mt-2">
-                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                    Get Support<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                          
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            </div>
 </section>
+@include('partials.reveiw-site')
+
 <section class="tj-about-section-five">
     <div class="container">
-        <div class="row services">
-            <h1 class="services-h1">Car Hauling Services</h1>
+        <div class="row justify-content-center services">
+            <h1 class="services-h1">Vehicle Preparation and Documentation</h1>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Enclosed Carrier</h5>
-                        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transported. Enclosed carrier guards your car against the external environment such as weather ailments etc.</p>
+                        <h5 class="card-title text-white">Prepare Necessary Documentation</h5>
+                        <p class="card-text text-light">Make sure the necessary documents of your boat like registration papers,
+                             insurance certificates, or any permits and licenses required. </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Clean & Inspect Vehicle</h5>
+                        <p class="card-text text-light">Ensure your vehicle is clean inside and out,
+                             and remove any dirt, debris, and personal belongings that have a risk of damaging your vehicle further. </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Track your Ride</h5>
+                        <p class="card-text text-light">If you are someone who constantly has to keep updates on their vehicle, 
+                            worry not! Contact Ship A1 for timely updates, or you can even track your ride online.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Luxury Golf Carts</h5>
+                        <p class="card-text text-light">Want to golf in style? Explore our luxury Golf Carts with premium features for a smooth ride. 
+                            Our carts include posh seating, polished chrome accents, woodgrain trim,
+                             advanced technology like an excellent sound system, and GPS navigation, ensuring an outstanding golfing experience.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Open Trailer</h5>
-                        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transport. Enclosed carrier guards your car against the external environment such as weather ailments etc.</p>
+                        <h5 class="card-title text-white">Street-Legal Golf Carts</h5>
+                        <p class="card-text text-light">Drive with friends through streets in our Street-Legal Golf Cart! It combines car features
+                             with golf cart convenience, meeting legal requirements. Equipped with
+                             headlights, taillights, turn signals, seat belts, mirrors, it's perfect for gated communities and urban 
+                             low-speed vehicle areas.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Expedited Shipping</h5>
-                        <p class="card-text text-light">If you are looking to move quickly to a new place and need your car moved along with you then expedited shipping service must be your first choice.</p>
-                    </div>
-                </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
+
 <section class="tj-faq-section tj-faq-page pt-0">
         <div class="container">
             <div class="row">
@@ -538,6 +603,7 @@
     </div>
 </section>
 
+
 <section class="tj-choose-us-section-service-car-2">
     <div class="container why-box">
         <div class="row">
@@ -599,7 +665,7 @@
     </div>
 
 </section>
-@include('partials.blog-slider')
+    @include('partials.blog-slider')
 @endsection
 
 @section('extraScript')

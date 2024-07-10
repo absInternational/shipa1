@@ -3,31 +3,7 @@
 @section('content')
 
 <Style>
-    .green-star{
-color:#8fc445;;
-    }
-.custom-bullets{
-    list-style:none;
-}
 
-.full-width {
-    width: 100%;
-}
-
-.custom-style {
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-.custom-style h4 {
-    margin-top: 0;
-}
-
-.custom-style p {
-    margin-bottom: 0;
-}
 .why-box {
     border-radius: 12px;
     padding: 40px 0px;
@@ -43,7 +19,7 @@ color:#8fc445;;
 }
 
 .card- {
-        background: #F7F7F8;
+        background: #29494e;
         border: 1px solid #ddd;
         border-radius: 12px;
         padding: 15px;
@@ -54,7 +30,7 @@ color:#8fc445;;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     padding: 10px 10px 30px 10px;
-    background-color: #0f353f;
+    background-color: #9d9e9f14;
 }
 
 .services-h1 {
@@ -75,7 +51,7 @@ color:#8fc445;;
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">SERVICES</span>
-                        <h2 class="title">Farm Transport Services</h2>
+                        <h2 class="title">FARM EQUIPMENT SERVICES</h2>
                         <p class="desc-2">
                             ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                             customers and seeks your trust in return of our services.
@@ -96,155 +72,7 @@ color:#8fc445;;
             @endif
             <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
               @include('partials.multi-form')
-                <!-- <div class="tj-input-form-car mt-4 w-100" data-bg-image="">
-
-
-
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom"
-                        data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
-                        @csrf
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-                        <div class="container mt-2">
-
-                            <div class="route_quote_info" id="step1">
-                                <div class="row">
-                                    <h4 class="title text-center">Quote Request!</h4>
-                                    <div class="col-xl-12 col-lg-12 mb-4">
-                                        <h6 class="text-white">Moving From</h6>
-                                        <label class="text-white mb-2">Where Are You Moving From?</label>
-                                        <div class="single-input-field">
-                                            <input class="form-control" type="text" id="pickup-location"
-                                                placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                            <label class="error-message" id="pickup-location-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-12 col-lg-12 mb-4">
-                                        <h6 class="text-white">Moving To</h6>
-                                        <label class="text-white mb-2">Where Are You Moving To?</label>
-                                        <div class="single-input-field">
-                                            <input class="form-control" type="text" id="delivery-location"
-                                                placeholder="Enter City or ZipCode" name="To_ZipCode" required>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                            <label class="error-message" id="delivery-location-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="price__cta-btn text-center">
-                                            <button class="tj-submit-btn" type="button" id="step1_next">
-                                                Next <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="vehicle_quote_info" id="step2" style="display: none;">
-                                <div class="row">
-                                    <h4 class="title text-center">VEHICLE INFORMATION</h4>
-                                    <select id="tabSelector" class="" aria-label="Tab selector" required>
-                                        <option value="" selected disabled>Select a Vehicle</option>
-                                        <option value="Atv">Atv Utv Transport</option>
-                                        <option value="Car">Car</option>
-                                        <option value="Golf-Cart">Golf Cart</option>
-                                        <option value="Motorcycle">Motorcycle</option>
-
-                                    </select>
-                                    <label class="error-message" id="tabSelector-error">This field is required.</label>
-
-                                    <div class="tab-content mt-3" id="additionalContent"></div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step2_previous">
-                                                Previous <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn float-end">
-                                            <button class="tj-submit-btn" type="button" id="step2_next">
-                                                Next <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="basic_quote_info" id="step3" style="display: none;">
-                                <div class="row mb-3">
-                                    <h4 class="text-center text-white">Customer Information</h4>
-                                    <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white"> Your Name:</label>
-                                            <input class="form-control" required name="Custo_Name" type="text"
-                                                placeholder="Customer Name">
-                                            <label class="error-message" id="Custo_Name-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white">Phone:</label>
-                                            <input id="phone" class="form-control" required name="phone"
-                                                type="tel" placeholder="Customer Phone">
-                                            <label class="error-message" id="Custo_Phone-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white"> Email Address:</label>
-                                            <input class="form-control" required name="Custo_Email" type="email"
-                                                placeholder="Email address">
-                                            <label class="error-message" id="Custo_Email-error">This field is
-                                                required.</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step3_previous">
-                                                Previous <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="price__cta-btn float-end">
-                                            <button class="tj-submit-btn" type="submit" id="submit_instant_code"
-                                                value="submit">
-                                                Calculate Price <i class="fa-light fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-
-                </div> -->
+                
             </div>
 
         </div>
@@ -257,14 +85,14 @@ color:#8fc445;;
 <section class="tj-about-section-four">
     <div class="container">
         <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
-            Platform of Farm<br>Shipping Services</h2>
+            Platform of Farm <br>Shipping Services</h2>
 
         
     </div>
 </section>
 
 
-<section class="tj-about-section pt-4 pb-2">
+<section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -273,13 +101,12 @@ color:#8fc445;;
                             <span class="sub-title active-shape"> Farm Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            Farm transportation or simply farm transport begins and end with properly managed shipment process. It needs adequate tools to perform the task efficiently. Transport has its importance in every industry, whether it be the industrial sector or the business section. Ship A1 is a leading transport company. 
-                            For better production and output, farmers need resourceful input for their crops. The resources can vary such as seeds for the crops, different kinds of pesticides and fertilizers, material for packaging, and the like. <br>
-                            Keeping all these factors into consideration, farmers need to deliver these goods from the field to the storage house or vice versa.
-                            Every industry or business needs some means of transport. This goes to the farm transport industry as well. Whether it comes to harvest the crops or to arrange the goods for the crops, transport is an essential part of this industry. 
-                            
-                           
-                            </p>
+                            Farm transportation or simply farm transport begins and end with properly managed shipment process. It needs adequate 
+                            tools to perform the task efficiently. Transport has its importance in every industry, whether it be the industrial sector
+                             or the business section. Ship A1 is a leading transport company. For better production and output, farmers need resourceful
+                              input for their crops. The resources can vary such as seeds for the crops, different kinds of pesticides and fertilizers, 
+                              material for packaging, and the like. Keeping all these factors into consideration, farmers need to deliver these goods from 
+                              the field to the storage house or vice versa.</p>
                         </div>
                         
                     </div>
@@ -295,10 +122,7 @@ color:#8fc445;;
             </div>
             </div>
         </div>
-</section>
 
-
-    <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
                 
@@ -314,12 +138,19 @@ color:#8fc445;;
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Car Transportation</span>
+                            <span class="sub-title active-shape"> Farm Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            The process of farm transportation is a difficult task. You can not rely on any random company offering services for transportation at affordable rates. There is an old saying, “All that glitters is not gold.” One has to be careful when choosing a reliable company as there are plenty of fraud companies on the internet. They will offer low-priced rates which may attract you in the beginning, but once they get the payment, they vanish.
-                            <br>We will discuss transportation modes and services so that you can have a good idea when choosing a farm transport company. Farmers know the importance of transportation and how it can save their time and money in the long run. The two main categories of farm transport are: manual mode of transport, advanced or mechanized method of transport.
-                            <br>Both services have their pros and cons. The traditional method is the oldest, and farmers have been using it for decades. There is no modern equipment involved in this mode of transportation. Therefore, the manual mode consumes more physical effort and time of the farmers. This method is compatible with short distances, usually from the field to the storage place.
+                            Every industry or business needs some means of transport. This goes to the farm transport industry as well. Whether it comes to
+                             harvest the crops or to arrange the goods for the crops, transport is an essential part of this industry. But the process of 
+                             farm transportation is a difficult task. You can not rely on any random company offering services for transportation at affordable rates. 
+                             There is an old saying, “All that glitters is not gold.” One has to be careful when choosing a reliable company as there are plenty of fraud
+                              companies on the internet. They will offer low-priced rates which may attract you in the beginning, but once they get the payment, they vanish.
+                              We will discuss transportation modes and services so that you can have a good idea when choosing a farm transport company. Farmers know the importance of 
+                              transportation and how it can save their time and money in the long run. 
+
+
+                            
                             </p>
                         </div>
                         
@@ -327,6 +158,110 @@ color:#8fc445;;
                 </div>
             </div>
         </div>
+
+
+        <div class="container">
+            <div class="row">
+               
+            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape"> Farm Transportation</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <p class="desc">
+                            The two main categories of farm transport are:
+
+<ul>
+    <li>
+
+        The manual mode of transport. 
+    </li>
+<li>
+    The advanced or mechanized method of transport. 
+
+</li>
+</ul>
+                            Both services have their pros and cons. The traditional method is the oldest, and farmers have been using it for decades. There is no modern equipment involved in this mode of transportation. Therefore, the manual mode consumes more physical effort and time of the farmers. This method is compatible with short distances, usually from the field to the storage place. 
+
+
+The advanced method of transport is the modern method, and it is best for long-distance transportation.
+                             </p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                    <div class="image-box">
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    </div>
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+               
+
+            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                    <div class="image-box">
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    </div>
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+
+                </div>
+            </div>
+            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape"> Farm Transportation</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <p class="desc">
+                            In advanced farm transportation, modern equipment, and the latest machinery is used for transportation. Therefore, there is less consumption of time and energy in this mode of transport. Ship A1 offers all these services at affordable price rates. 
+
+
+The price of these services depends on certain factors that you should always consider when you plan to ship your farm material. 
+
+
+
+<ul>
+    <li>
+
+    The total distance of your journey. 
+    </li>
+<li>
+Types of goods need to be transported. 
+
+</li>
+<li>
+
+The overall size and quantity of the goods. 
+    </li>
+<li>
+Additional services if there are any.
+
+</li>
+</ul></p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            
+            
+            </div>
+        </div>
+
+</section>
+
+
+    <section class="tj-about-section pt-4">
+        
 
         <div class="container">
             <div class="row">
@@ -338,8 +273,7 @@ color:#8fc445;;
                             <span class="sub-title active-shape">Insurance Coverage</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            All of the professional auto shipping companies such as ShipA1 provide ample insurance coverage during transit and you would reap in benefits if any damage happens.
-                            </p>
+                            All of the professional auto shipping companies such as ShipA1 provide ample insurance coverage during transit and you would reap in benefits if any damage happens.</p>
                         </div>
                         
                     </div>
@@ -360,7 +294,7 @@ color:#8fc445;;
     </section>
 
 
-    <section class="tj-cta-section-two">
+<section class="tj-cta-section-two">
             <div class="tj_cta_image-4 w-100 h-50"></div>
             
             <div class="container">
@@ -399,27 +333,28 @@ color:#8fc445;;
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title ">Tracking Services</h5>
-                        <p class="card-text ">We offer tracking services to the people who want their construction equipment shipped so that they can track the time for the arrival of shipment.</p>
+                        <h5 class="card-title text-white">Experienced Network of Truckers</h5>
+                        <p class="card-text text-light">The vast network of competent truckers enables us to deliver your shipment timely and they are also aware of the areas that they would encounter during transit.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title ">Primacy options for Shipment</h5>
-                        <p class="card-text ">You could choose an option for construction equipment where your shipment will be prioritized but it has a price attached to it.</p>
+                        <h5 class="card-title text-white">Tracking Services</h5>
+                        <p class="card-text text-light">We offer tracking services to the people who want their construction equipment shipped so that they can track the time for the arrival of shipment.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title ">Experienced Network of Truckers</h5>
-                        <p class="card-text ">The vast network of competent truckers enables us to deliver your shipment timely and they are also aware of the areas that they would encounter during transit.</p>
+                        <h5 class="card-title text-white">Trailer Type</h5>
+                        <p class="card-text text-light">You could choose an option for construction equipment where your shipment will be prioritized but it has a price attached to it.</p>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </section>
@@ -486,55 +421,6 @@ color:#8fc445;;
     </div>
 
 </section>
-
-<section class="tj-about-section-five">
-    <div class="container">
-        <div class="row services">
-            <h1 class="services-h1">Farm Equipment</h1>
-            <div class="col-12">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-start ">What type of Farm Equipment do we ship?</h5>
-                        <p class="card-text text-start ">Since it is impossible to move a tractor on a standard trailer, it is commonly moved through a tractor hauling trailer, known as a "low loader trailer". Some of the commonly used equipment that is being shipped for farm-related work are as follows:</p>
-                        <ul class="text-start  custom-bullets">
-                <li><span class="green-star">★ </span> Tractor</li>
-                <li><span class="green-star">★ </span> Commercial Mowers</li>
-                <li><span class="green-star">★ </span> Combine Harvester</li>
-                <li><span class="green-star">★ </span> Threshing Machine</li>
-              </ul>
-              <div class="tj-theme-button text-end  mt-2">
-                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                    Get Quote
-                                    <i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- <div class="container mt-4">
-    <div class="row">
-      <div class="col-12 custom-style">
-        <h4 class=" ">What type of Farm Equipment do we ship?</h4>
-        <p class=" ">Since it is impossible to move a tractor on a standard trailer, it is commonly moved through a tractor hauling trailer, known as a "low loader trailer". Some of the commonly used equipment that is being shipped for farm-related work are as follows:</p>
-             <ul>
-                <li>Tractor</li>
-                <li>Commercial Mowers</li>
-                <li>Combine Harvester</li>
-                <li>Threshing Machine</li>
-              </ul>
-           <div class="tj-theme-button text-center  mt-2">
-                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                    Get Quote
-                                    <i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-       </div>
-    </div>
-</div> -->
 
 <section class="tj-faq-section tj-faq-page">
         <div class="container">
