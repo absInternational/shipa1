@@ -331,11 +331,11 @@
                                                                     href="{{ route('frontend.pages.services.farm-service') }}">
                                                                     Farm Transport Services</a>
                                                             </li>
-                                                            <li>
+                                                            <!-- <li>
                                                                 <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.freight-service') }}">
                                                                     Freight Transportation Services</a>
-                                                            </li>
+                                                            </li> -->
                                                             <li>
                                                                 <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.heavy-service') }}">
