@@ -246,7 +246,7 @@
                                     </li> --}}
                                     @php
                                         $categories = \App\Models\ServiceCategory::has('services')->get();
-                                        $services = \App\Models\Service::all();
+                                        $services = \App\Models\Service::where('status', '=', 1)->get();
                                     @endphp
                                     @foreach ($navbars as $navbar)
                                     @if($navbar->id == 3)
