@@ -336,7 +336,7 @@
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Motorcycles Transportation</span>
+                            <span class="sub-title active-shape">Affordable and Secure Shipping</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             If you are worried about the increased rates of the motorcycle shipping, and you don’t want to continue 
@@ -350,11 +350,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
-                    <!-- <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/Untitled design (32).png') }}" alt="Image">
-                    </div> -->
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/motorcycle-service1.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
@@ -365,18 +365,18 @@
             <div class="row">
                 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/motorcycle-service2.webp') }}" alt="Image">
                     </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image"> -->
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Car Transportation</span>
+                            <span class="sub-title active-shape">Stress-Free Motorcycle Shipping</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             You can ride your bike at a particular location, but it involves risk and demands specific information 

@@ -93,7 +93,7 @@
            <div class="row">
                 <div class="col-lg-8">
 							<div class="image-container">
-                                <img class="img-fluid" src="{{ asset('frontend/images/about/atv.webp') }}" loading="lazy" alt="Motorcyle Transport">
+                                <img class="img-fluid" src="{{ asset('frontend/images/project/atv-urv service.webp') }}" loading="lazy" alt="Motorcyle Transport">
                             </div>
                              <br>
                     <div class="text-container text-left">
