@@ -477,7 +477,7 @@ By understanding the differences between these two methods, you can make an info
             </div>
          </section>
     @include('partials.reveiw-site')
-    <section class="tj-about-section-five">
+<section class="tj-about-section-five">
     <div class="container">
         <div class="row services ">
             <h1 class="services-h1">Common Sizes</h1>

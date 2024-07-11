@@ -341,6 +341,11 @@
                                                                     href="{{ route('frontend.pages.services.heavy-service') }}">
                                                                     Heavy Equipment Services</a>
                                                             </li>
+                                                            <li>
+                                                                <a class="title" target="_blank"
+                                                                    href="{{ route('frontend.pages.services.rv-service') }}">
+                                                                    RV Transport Services</a>
+                                                            </li>
                                                             
                                                            
                                                             

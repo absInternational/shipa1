@@ -588,39 +588,58 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How do I prepare my vehicle for transport?
+                                    How long does it take to deliver a golf cart?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                        This is one of the many factors that depend on miles covered, shipping methods, and the demand at that time. Usually, local shipment within just a few
+                                             hundred miles takes 1-3 days, while cross-country transportation could come in anywhere from 5 to 10 days. 
+                                             You will be given estimated delivery times as you book your transport and can track your shipment throughout.
+
+
                                     </div>
                                 </div>
                             </div>
+                            
+
+
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
+                                    How do I need to prepare my golf cart for shipping?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                    <strong>Here's how you need to help get your golf cart ready for shipping:</strong>
+                                    <ul>
+                                        <li class="m-0 p-0">Empty the Cart: Clean out any dirt or other debris to prevent damage during shipping.</li>
+                                        <li class="m-0 p-0">Remove Personal stuff: Clean up behind any wayward items and personal belongings.</li>
+                                        <li class="m-0 p-0">Secure the Loose Parts: Make sure all parts of the car, including mirrors and other accessories, are either tightly secured or removed.</li>
+                                        <li class="m-0 p-0">Disengage the Battery: Take apart the battery cords for your own safety.</li>
+                                        <li class="m-0 p-0">Check Tire Pressure: This will ensure the proper inflation of tires so as not to encounter any sort of problem while loading and unloading.</li>
+                                    </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
-                                    </div>
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                How much does it cost to transport a golf cart?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                The amount to ship your golf cart varies from a number of different elements involved: the distance,
+                                 shipping method, open versus enclosed transport, and any added services for which you might want 
+                                 to pay. Local transport, on average, will cost anything from $200 to $500, while intercontinental 
+                                 may cost up to $600-$1,200. Please contact us with details of what you need that is, pickup and
+                                  delivery locations, weight, and other specifications and we'll be sure to provide you with an 
+                                  estimate of the cost involved.
                                 </div>
                             </div>
+                        </div>
                             
                         </div>
                 </div>
