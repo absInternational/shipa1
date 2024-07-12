@@ -98,7 +98,7 @@
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Construction Transportation</span>
+                            <span class="sub-title active-shape">Construction Equipment Transport</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             The advancement in the construction business has led to the growth of the heavy construction equipment marketplace. 
@@ -116,11 +116,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/contruction-1.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
@@ -129,20 +129,18 @@
 
         <div class="container">
             <div class="row">
-                
+           
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/construction-2.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
-
                 </div>
             </div>
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Construction Transportation</span>
+                            <span class="sub-title active-shape">Expert Heavy Hauling</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             The<a class="pp-link-2" href="{{ route('frontend.pages.services.heavy-service') }}"> heavy machinery transport </a> business has used technology in the best way possible. There are many types of haulers that are
@@ -167,7 +165,7 @@
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Construction Transportation</span>
+                            <span class="sub-title active-shape">Specialized Equipment Shipping</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             Heavy equipment hauling can be a complicated undertaking and it’s important to select a company that specializes in this work.
@@ -186,13 +184,18 @@
                 </div>
 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/contruction-4.webp') }}" alt="Image">
+                    </div>
+                </div>
+                <!-- <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                     <div class="image-box">
                         <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
                     </div>
                     <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
 
-                </div>
+                </div> -->
             </div>
             
             </div>
@@ -202,12 +205,10 @@
                
 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/contruction-5.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
-
                 </div>
             </div>
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -334,7 +335,7 @@
 </section>
 
 
-<section class="tj-choose-us-section-service-car-2">
+<section class="tj-choose-us-section-service-construction">
     <div class="container why-box">
         <div class="row">
             <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -383,10 +384,10 @@
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/heavy-choose-1.webp') }}"
                             alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/heavy-choose-1.webp') }}"
                         alt="Image">
 
                 </div>
