@@ -43,7 +43,7 @@
 </Style>
 <!--========== blog details Start ==============-->
 
-<section class="tj-choose-us-section-service-car">
+<section class="tj-choose-us-section-service-heavy">
     <div class="container mt-4">
         <div class="row mt-4">
 
@@ -115,12 +115,10 @@
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/heavy-service1.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
-
                 </div>
             </div>
             </div>
@@ -133,12 +131,10 @@
             <div class="row">
                 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/heavy-service2.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
-
                 </div>
             </div>
             <div class="col-lg-8 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
@@ -181,12 +177,10 @@
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/heavy-service3.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
-
                 </div>
             </div>
             </div>
@@ -291,7 +285,7 @@
 </section>
 
 
-<section class="tj-choose-us-section-service-car-2">
+<section class="tj-choose-us-section-service-heavy">
     <div class="container why-box">
         <div class="row">
             <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -340,10 +334,10 @@
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/heavy-choose-1.webp') }}"
                             alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/heavy-choose-1.webp') }}"
                         alt="Image">
 
                 </div>
