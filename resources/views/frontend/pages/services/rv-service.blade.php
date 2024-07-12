@@ -324,11 +324,13 @@
             <div class="row">
                 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/RV-COLLAGE3.webp') }}"
+                            alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/RV-COLLAGE3.webp') }}"
+                        alt="Image">
 
                 </div>
             </div>
@@ -341,8 +343,28 @@
                             All of these factors ensure your vehicle is transported smoothly and efficiently, whether you are 
                             transporting, relocating, removing, or buying/selling an RV, you can trust Ship A1 Transport to 
                             deliver your vehicle safely and securely to its destination.
-                               
-                            <div class="tj-theme-button text-end mt-2">
+                            <div class="container">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <ul class="list-unstyled ps-0">
+                <li>★ Specialization in RV Transport</li>
+                <li>★ Customized Shipping Solutions</li>
+                <li>★ 100% Insured Vehicles</li>
+                <li>★ Quality and Professional Service</li>
+            </ul>
+        </div>
+        <div class="col-md-6 mb-3">
+            <ul class="list-unstyled ps-0">
+                <li>★  Nationwide Coverage</li>
+                <li>★  Affordable Rates</li>
+                <li>★ Customized Shipping Solutions</li>
+                <li>★ Timely Delivery</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                            <div class="tj-theme-button text-start mt-2">
                                 <a class="tj-transparent-btn" href="" target="_blank">
                                     Get Quote<i class="flaticon-right-1"></i>
                                 </a>
@@ -366,7 +388,7 @@
         
 </section>
 
-<section class="tj-about-section-five">
+<!-- <section class="tj-about-section-five">
     <div class="container">
         <div class="row services ">
             <h1 class="services-h1">WHY SHIP A1 TRANSPORT IS YOUR IDEAL SHIPPING PARTNER!</h1>
@@ -398,7 +420,7 @@
             
         </div>
     </div>
-</section>
+</section> -->
 
 
 <section class="tj-choose-us-section-service-car-2">
@@ -450,10 +472,10 @@
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
+                        <img class="p-z-idex" src="{{ asset('frontend/images/project/heavy-choose-1.webp') }}"
                             alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/heavy-choose-1.webp') }}"
                         alt="Image">
 
                 </div>
