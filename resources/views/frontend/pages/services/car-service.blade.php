@@ -100,7 +100,7 @@
            <div class="row">
                 <div class="col-lg-8">
 							<div class="image-container">
-                                <img class="img-fluid" src="{{ asset('frontend/images/about/caR-serVice.jpg') }}" loading="lazy" alt="Motorcyle Transport">
+                                <img class="img-fluid" src="{{ asset('frontend/images/project/CAR-SERVICE-MAIN.webp') }}" loading="lazy" alt="Motorcyle Transport">
                             </div>
                              <br>
                     <div class="text-container text-left">
@@ -328,7 +328,7 @@
                <div class="row full-width">
                      <div class="col-12 custom-style">
                          <h4 class=" text-center">Premium Vehicle Transport Services</h4>
-                         <p class=" text-center">ShipA1, with its standard enclosed vehicle shipping, makes it sure that vehicle transport is done in an exquisite and exclusive style. ShipA1 considers that Americans should have the luxury and convenience to indulge in the delight of having their car shipped right at their doors. For that, ShipA1 has devised a plan to provide door to door vehicle transport facility to Americans, and that plan has been executed hundreds of times successfully as well. Through such a facility, ShipA1 believes that it can provide services right at your doorsteps for your comfort. If you do not want to transport it on your doorsteps, then another facility that is provided by the ShipA1 is of the terminals.  </p>
+                         <p class=" text-center">ShipA1, with its standard <a class="pp-link-2" href="{{ route('form.vehicle.car') }}">enclosed vehicle shipping,</a> makes it sure that vehicle transport is done in an exquisite and exclusive style. ShipA1 considers that Americans should have the luxury and convenience to indulge in the delight of having their car shipped right at their doors. For that, ShipA1 has devised a plan to provide door to door vehicle transport facility to Americans, and that plan has been executed hundreds of times successfully as well. Through such a facility, ShipA1 believes that it can provide services right at your doorsteps for your comfort. If you do not want to transport it on your doorsteps, then another facility that is provided by the ShipA1 is of the terminals.  </p>
                          <div class="tj-theme-button  text-center mt-2">
                                                  <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
                                                      Get Quote
@@ -347,7 +347,7 @@
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Car Transportation</span>
+                            <span class="sub-title active-shape">Quality and Affordability</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             ShipA1 always has believed in quality over quantity, and that is why at reasonable rates ShipA1 allocates the best resources and human-power for auto transport in order to strengthen the concept of quality over quantity. At reasonable rates, anyone with a need for auto relocation can get their car shipped at the right location and at the price that is affordable.
@@ -365,11 +365,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
-                    <!-- <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/Untitled design (32).png') }}" alt="Image">
-                    </div> -->
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/CARS-SERVICE.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
@@ -457,7 +457,7 @@
                 <div class="card- h-100">
                     <div class="card-body">
                         <h5 class="card-title text-white">Open Trailer</h5>
-                        <p class="card-text text-light">Although a bit expensive, it is a safe way to get your car transport. Enclosed carrier guards your car against the external environment such as weather ailments etc.</p>
+                        <p class="card-text text-light">It’s the standard method with which we ship cars. It is the best option if you want a <a class="pp-link-2" href="https://shipa1.com/cheapest-car-shipping-service-cheap-car-transport"> cheap car moving service</a></p>
                     </div>
                 </div>
             </div>
@@ -513,8 +513,9 @@
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                <div class="accordion-body">
+                                At Ship A1, we have the convenience of free quotes that we offer to all our customers online.<br>You can call our direct 
+                                number<a class="pp-link" href="#"> 1 (844) 474-4721</a> for an instant quote.
                                     </div>
                                 </div>
                             </div>
@@ -579,7 +580,7 @@
                         </div>
                         <div class="tj-icon-box">
 
-                            <p class="desc-2">★ Get online car shipping quotes.</p>
+                            <p class="desc-2">★ Get online <a class="pp-link-2" href="{{ route('form.vehicle.car') }}"> car shipping quotes.</a></p>
                         </div>
                     </div>
                 </div>

@@ -102,7 +102,7 @@
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             Oversized and heavy equipment can have logistical and managerial challenges if you’re unfamiliar with the 
-                            transportation procedure or the way heavy equipment shipping is done. 
+                            transportation procedure or the way <a class="pp-link-2" href="https://www.shipa1.com/heavy-equipment-hauling/"> heavy equipment shipping </a> is done. 
                             So if you’re considering shipping heavy equipment nationwide, 
                             ShipA1 is well equipped to manage any form of shipment through all stages of the approach.
                              Services of ShipA1 are accessible to our clients nationwide. Before the carrier service arrives, you will have to take the essential steps so as 
@@ -172,7 +172,7 @@
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             ShipA1 is able to handle every type of heavy equipment therefore one doesn’t need to worry.
-                            Equipment may vary greatly based on the load and its need. Heavy equipment hauling can be a troublesome endeavor and it’s important to pick a business that specializes in heavy equipment shipping. You can get exact shipping quotes for your euipment by entering all the specifice.
+                            Equipment may vary greatly based on the load and its need. Heavy equipment hauling can be a troublesome endeavor and it’s important to pick a business that specializes in heavy equipment shipping. You can get exact <a class="pp-link-2" href="{{ route('welcome') }}"> shipping quotes for your euipment </a> by entering all the specifice.
                              Shipping heavy equipment is a dangerous procedure if you’re unfamiliar with the potential trouble spots. Many heavy equipment hauling companies will promise you with limitless offers, but you need to trust the one that is the most reliable. ShipA1 with its heavy equipment shipping promise high-quality at competitive rates.
                              ShipA1 has experts to handle your heavy equipment and is equipped with all the trailers and tools that are necessary for the heavy equipment shipping; therefore there is no point of not trusting ShipA1.
                             </p>

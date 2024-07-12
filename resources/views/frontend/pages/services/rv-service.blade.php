@@ -46,7 +46,7 @@
 </Style>
 <!--========== blog details Start ==============-->
 
-<section class="tj-choose-us-section-service-car">
+<section class="tj-choose-us-section-service-rv">
     <div class="container mt-4">
         <div class="row mt-4">
 
@@ -105,7 +105,7 @@
                             <p class="desc">
                             If you are someone who loves traveling then this might be the best option for you! RVs are commonly 
                             shipped by people who love spending time in their RVs surrounded by nature If this is what you are 
-                            looking for then there’s no better company than Ship A1 Transport! We not only provide the shipping 
+                            looking for then there’s no better company than<a class="pp-link-2" href="{{ route('welcome') }}"> Ship A1 Transport! </a> We not only provide the shipping 
                             of RVs, but we also ensure you are being offered and provided the best services along with a 
                             cost-effective budget. Ship A1 presents you with the best RV transportation tailored to the needs 
                             and expectations of our customers, with a variety of options, exclusive deals, and discounts as well 
@@ -116,13 +116,19 @@
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/RV-2.webp') }}" alt="Image">
+                    </div>
+
+                </div>
+                <!-- <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                     <div class="image-box">
                         <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
                     </div>
                     <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
 
-                </div>
+                </div> -->
             </div>
             </div>
         </div>
@@ -131,11 +137,10 @@
             <div class="row">
                 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/RV-1.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
 
                 </div>
             </div>
@@ -187,7 +192,7 @@
                             <p class="desc">
                                 When it comes to shipping your RV there are several methods to choose from, especially if you are 
                                 a trusted partner of Ship A1 you will get the privilege of having access to the best, most affordable, 
-                                and most convenient shipping methods Are you ready to check out the rates? Get online quotes now!
+                                and most convenient shipping methods Are you ready to check out the rates? Get <a class="pp-link-2" href="{{ route('frontend.forms.rv_transport') }}"> online quotes now! </a>
                                 <div class="tj-theme-button text-start mt-2">
                                 <a class="tj-transparent-btn" href="" target="_blank">
                                     Get Quote<i class="flaticon-right-1"></i>
@@ -203,11 +208,10 @@
                 </div>
 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/RV-3.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
 
                 </div>
             </div>

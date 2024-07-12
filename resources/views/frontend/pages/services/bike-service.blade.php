@@ -93,12 +93,12 @@
            <div class="row">
                 <div class="col-lg-8">
 							<div class="image-container">
-                                <img class="img-fluid" src="{{ asset('frontend/images/about/moto-img.webp') }}" loading="lazy" alt="Motorcyle Transport">
+                                <img class="img-fluid" src="{{ asset('frontend/images/project/motorcycle-service.webp') }}" loading="lazy" alt="Motorcyle Transport">
                             </div>
                              <br>
                     <div class="text-container text-left">
                         <h3>A Cost-Efficient Way of Motorcycle Shipping</h3>
-                        <p>You can find many motorcycle shipping companies online that are providing the services nationwide, but often it becomes a nightmare for some of the people when they find that their motorcycle has not been shipped at the quoted time and then the company is demanding for hidden charges that one never knew existed. This kind of rip-off can hurt your sentiments related to the shipping service which is why ship A1 provides its customers with accurate shipping quotes. For one to get to know about the reliable motorcycle shipping company, one needs to do a lot of research and after only getting to know what others have to say about the particular company, will you be able to know about the motorcycle shipping company and whether or not you need to trust it with your motorcycle relocation. Well, you can trust the company that has relatively a sound experience in this field, and that is ShipA1. ShipA1 has an extraordinary connection with the service of motorcycle shipping because it excels in the motorcycle shipment across the United States of America. It has managed to ship many hundreds and thousands of motorcycles and all in a very good condition because ShipA1 only provides professional service</p> 
+                        <p>You can find many<a class="pp-link-2" href="{{ route('welcome') }}"> motorcycle shipping companies </a>online that are providing the services nationwide, but often it becomes a nightmare for some of the people when they find that their motorcycle has not been shipped at the quoted time and then the company is demanding for hidden charges that one never knew existed. This kind of rip-off can hurt your sentiments related to the shipping service which is why ship A1 provides its customers with accurate <a class="pp-link-2" href="{{ route('form.vehicle.form.vehicle.car') }}">  shipping quotes.</a> For one to get to know about the reliable motorcycle shipping company, one needs to do a lot of research and after only getting to know what others have to say about the particular company, will you be able to know about the motorcycle shipping company and whether or not you need to trust it with your motorcycle relocation. Well, you can trust the company that has relatively a sound experience in this field, and that is ShipA1. ShipA1 has an extraordinary connection with the service of motorcycle shipping because it excels in the motorcycle shipment across the United States of America. It has managed to ship many hundreds and thousands of motorcycles and all in a very good condition because ShipA1 only provides professional service</p> 
                         
                         <br>
                        
@@ -482,12 +482,16 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How do I prepare my vehicle for transport?
+                                    How much does it cost to ship  Motorcycle?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                    The price to send  Motorcycle will depend on distance, the type of car shipping, open or enclosed,
+                                     and any other services that might be necessary, such as an expedited service.
+                                     Local hauling is usually around $200 to $600, and coast-to-coast shipping would
+                                     run from $600 to $1500. Please feel free to contact us with the details so we can provide you with an exact quote for your shipment.
+
                                     </div>
                                 </div>
                             </div>
@@ -499,24 +503,30 @@
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                At Ship A1, we have the convenience of free quotes that we offer to all our customers online.<br>You can call our direct 
+                                number<a class="pp-link-2" href="#"> 1 (844) 474-4721</a> for an instant quote.
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
+                                    How long does it take for  Motorcycle to be shipped?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                    The time it will take to ship  Motorcycle is dependent on the distance of shipment, method of
+                                    shipment, and demand at the point of shipment. The conveyance of local units,
+                                    which is up to a few hundred miles, may take up to 1-3 days. And you should
+                                    consider that cross-country shipment usually takes 5 to 10 days. you will
+                                    always know where your shipment is.
+
                                     </div>
                                 </div>
                             </div>
                             
-                        </div>
+                </div>
                 </div>
             </div>
         </div>

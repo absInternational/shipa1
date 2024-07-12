@@ -103,7 +103,7 @@
                             <p class="desc">
                             The advancement in the construction business has led to the growth of the heavy construction equipment marketplace. 
                             It is one of the most prominent and most competitive sectors of the U.S. manufacturing economy involved in the making of 
-                            construction equipment. Since this industry is developing in its own way, the need for construction equipment transport is 
+                            construction equipment. Since this industry is developing in its own way, the need for <a class="pp-link-2" href="{{ route('welcome') }}"> construction equipment transport </a> is 
                             increasing with time.
                             There are many companies that are in operation and business for the transportation of construction equipment.
                             Since every work you do depends upon the productivity of heavy equipment and relevant parts, goods, accessories,
@@ -145,7 +145,7 @@
                             <span class="sub-title active-shape"> Construction Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            The heavy machinery transport business has used technology in the best way possible. There are many types of haulers that are
+                            The<a class="pp-link-2" href="{{ route('frontend.pages.services.heavy-service') }}"> heavy machinery transport </a> business has used technology in the best way possible. There are many types of haulers that are
                              identified with ShipA1. Some are constructed to haul a single car, while some are developed to haul things which are 
                              incredibly long and heavy. For the mechanical edition, the truck needs a huge winch. Anything you need to ship,
                              ShipA1 has got trucks that are designed to move it. Flatbed trucks are available in many various shapes and sizes.
@@ -219,7 +219,7 @@
                             Heavy equipment shipping may be a challenging endeavor, and it’s important that you pick a specialized carrier company
                              that’s familiar and experienced with your hauling needs. One more thing that should be considered in regards to construction
                               equipment shipping is choosing the correct construction equipment transport support or company. Before the carrier service 
-                              arrives, you should take the essential actions & check the shipping quotes so as to make sure your equipment is shielded and
+                              arrives, you should take the essential actions & check the <a class="pp-link-2" href="{{ route('frontend.forms.construction_transport') }}"> shipping quotes </a> so as to make sure your equipment is shielded and
                                secured for any unfavorable conditions it may encounter during its shipment.</p>
                         </div>
                         

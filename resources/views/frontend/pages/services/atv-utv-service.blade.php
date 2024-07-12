@@ -98,7 +98,7 @@
                              <br>
                     <div class="text-container text-left">
                         <h3>ATV/UTV Transport Service</h3>
-                        <p>Are you in search of a trustworthy ATV/UTV transport company for your shipment? Well, then you are on
+                        <p>Are you in search of a trustworthy<a class="pp-link-2" href="{{ route('welcome') }}"> ATV/UTV transport company </a> for your shipment? Well, then you are on
                              the right platform. Ship A1 is a dominating vehicle transport company providing top-rated ATV/UTV 
                              services to its valuable customers at competitive market rates. Choosing the right company will save 
                              you from trouble, and you will have a remarkable journey. We will share some noteworthy factors that 
@@ -329,14 +329,14 @@
                <div class="row full-width">
                      <div class="col-12 custom-style">
                          <h4 class=" text-center">Company Performance and Quality</h4>
-                         <p class=" text-center">The first thing that you need to consider when selecting the auto transport company for your ATV shipment is to 
+                         <p class=" text-center">The first thing that you need to consider when selecting the <a class="pp-link-2" href="{{ route('welcome') }}"> auto transport company </a>for your ATV shipment is to 
                             check the overall company’s performance. For that, you can visit the company’s platform and check the section of their feedback
                              and customer ratings. The reviews of people are always genuine. They will give you a clear idea of where the company stands in 
                              the shipping industry. You will find everything you need for your All-Terrain Vehicle Transport at our platform as we are a 
                              one-stop solution for your shipment. Quality is what matters in All-Terrain transportation. A good auto shipping company may 
                              charge more for the transport journey, but it will not sacrifice for its quality. The company will ship your vehicle by secure
                               means and will make sure that there is no damage during the overall shipping process. All you need to do is get the instant 
-                              online vehicle shipping quotesthrough the company’s platform and choose your desired shipping service. The two main services 
+                              <a class="pp-link-2" href="{{ route('form.vehicle.atv_utv') }}"> online vehicle shipping quotes </a> through the company’s platform and choose your desired shipping service. The two main services 
                               are open-air and enclosed car transport. You can take the help of the vehicle shipping calculator to get a rough estimate of 
                               your shipment. </p>
                          <div class="tj-theme-button  text-center mt-2">
@@ -357,7 +357,7 @@
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">ATV/UTVs Transportation</span>
+                            <span class="sub-title active-shape">Insurance and Safety</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             Apart from the company’s experience, ratings, and shipping services, another thing that you need to 
@@ -400,16 +400,17 @@
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> ATV/UTV Transportation</span>
+                            <span class="sub-title active-shape">Pricing Factors Consideration</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
+                        <p class="desc">
                             At last, you can not regret the price factor from the list when talking about All-Terrain transportation. 
                             The price for the shipment of an ATV depends on several factors such as weight, size, shape, and the 
                             distance travelled. Apart from that, other things that can impact the price includes fuel costs, the time 
                             of the year, and other additional insurance. Weight is the main factor affecting the price of the shipment.
-                             Considering all these factors, Ship A1 is the all in one choice for anyone willing to ship their
-                              All-Terrain vehicle. You can get our services all over the United States with ease. So, get your 
-                              quotes and start your car transport journey with us. .</p>
+                            Considering all these factors, Ship A1 is the all in one choice for anyone willing to ship their
+                            All-Terrain vehicle. You can get our services all over the United States with ease. So, get your 
+                            quotes and start your car transport journey with us.
+                        </p>
                         </div>
                         
                     </div>
@@ -508,7 +509,7 @@
                 </div>
                 <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
                     <div class="tj-faq-area">
-                    <div class="accordion" id="accordionExample">
+                <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -532,8 +533,9 @@
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                <div class="accordion-body">
+                                At Ship A1, we have the convenience of free quotes that we offer to all our customers online.<br>You can call our direct 
+                                number<a class="pp-link" href="#"> 1 (844) 474-4721</a> for an instant quote.
                                     </div>
                                 </div>
                             </div>
@@ -555,7 +557,7 @@
                                 </div>
                             </div>
                             
-                        </div>
+                </div>
                 </div>
             </div>
         </div>

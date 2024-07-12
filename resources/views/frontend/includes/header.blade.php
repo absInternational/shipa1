@@ -171,6 +171,12 @@
 
                                                     <li>
                                                         <a class="title" target="_blank"
+                                                            href="{{ route('form.vehicle.heavyEquipment') }}">
+                                                            Heavy Transport</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="title" target="_blank"
                                                             href="{{ route('frontend.forms.excavator') }}"> Excavator Transport
                                                         </a>
                                                     </li>

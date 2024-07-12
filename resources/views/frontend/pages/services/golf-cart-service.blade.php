@@ -115,7 +115,7 @@
                                        <li>Cost of the shipment</li>
                                     </ul>
                                     Choosing the right company for your shipping solutions is extremely crucial as it determines
-                                     the security, timely delivery, and protection of your vehicles. Hence, choosing Ship A1
+                                     the security, timely delivery, and protection of your vehicles. Hence, <a class="pp-link-2" href="{{ route('welcome') }}">choosing Ship A1</a>
                                       Transport for your golf cart shipping has to be the best option for your transportation needs.
 
                             </p> 
@@ -340,7 +340,7 @@
                             cost-effective deals, white glove delivery, door-to-door delivery, and terminal-to-terminal delivery 
                             to enclosed and open-air transport. Whether you’re renting a golf cart, purchasing it for your needs, 
                             want it removed from one location and moved to another, or just need it to be sent for maintenance, we 
-                            have you covered! Choosing Ship A1 Transport for your golf cart shipping means you have entrusted us 
+                            have you covered! Choosing Ship A1 Transport for your<a class="pp-link-2" href="{{ route('form.vehicle.golf_cart') }}"> Golf Cart Shipping </a>means you have entrusted us 
                             as your trusted and reliable partner who shares mutual feelings when it comes to professionalism and 
                             transparency.</p>
                          <div class="tj-theme-button  text-center mt-2">
@@ -378,11 +378,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
-                    <!-- <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/Untitled design (32).png') }}" alt="Image">
-                    </div> -->
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/golf-cart-service-1.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
@@ -393,11 +393,11 @@
             <div class="row">
                 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/golf-cart service-2.webp') }}" alt="Image">
                     </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image"> -->
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
