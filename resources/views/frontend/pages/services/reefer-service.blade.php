@@ -497,7 +497,8 @@ Our services extend beyond port delivery, offering complete cold chain end-to-en
 
 
 
-<section class="tj-faq-section tj-faq-page pt-4">
+<!--========== Faq Section Start ==============-->
+<section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -508,60 +509,101 @@ Our services extend beyond port delivery, offering complete cold chain end-to-en
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                     <div class="tj-faq-left-content">
                         <div class="faq-image">
-                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
+                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                         </div>
-                        
+                        <div class="faq-content">
+                            <div class="faq-icon">
+                                <i class="fa-regular fa-check"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h6 class="title">Reliable & Trustworthy</h6>
+                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                            </div>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-icon">
+                                <i class="fa-regular fa-check"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h6 class="title">High Quality Material</h6>
+                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
                     <div class="tj-faq-area">
                     <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How do I prepare my vehicle for transport?
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        How many types of freight do you transport?
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                        <strong>Ship A1 handles a wide quantity and range of freight including LTL and FTL transporting services, as well as ensuring the safety of your vehicles and peace of mind.</strong>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        What’s the shipping process of freight in FTL?
                                     </button>
                                 </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                        <strong>The process is quite easy, if your shipment is large enough to take up enough space it will be a full truckload and it shall be transported in a separate truck all by itself, if your shipment does not take the entire space, it will be transported along with other shipments and this mode is called Partial Truckload.</strong>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How much time will it take to ship my freight?
                                     </button>
                                 </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                        <strong>It all depends on the potential route planning as well as the distance. However, Ship A1 will provide an estimated timeframe during the quote process and keep you updated throughout the entire journey.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        How do I prepare my vehicle for transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
                                     </div>
                                 </div>
                             </div>
                             
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!--========== Faq Section End ==============-->
 
     <!--========== Chhose Section Start ==============-->
 <section class="tj-choose-us-section-two">
