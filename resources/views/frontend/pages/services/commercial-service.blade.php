@@ -401,8 +401,8 @@
 
 </section>
 
-<section class="tj-faq-section tj-faq-page">
-
+  <!--========== Faq Section Start ==============-->
+  <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -413,50 +413,98 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                     <div class="tj-faq-left-content">
                         <div class="faq-image">
-                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
+                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                         </div>
-                        
+                        <div class="faq-content">
+                            <div class="faq-icon">
+                                <i class="fa-regular fa-check"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h6 class="title">Reliable & Trustworthy</h6>
+                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                            </div>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-icon">
+                                <i class="fa-regular fa-check"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h6 class="title">High Quality Material</h6>
+                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                   <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
-                      <div class="tj-faq-area">
-                         <div class="accordion" id="accordionExample">
+                <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
+                    <div class="tj-faq-area">
+                    <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How do I prepare my vehicle for transport?
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Do you transport all kinds of heavy equipment?
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                        <strong>Yes, Ship A1 offers a variety of heavy equipment services specially tailored to your needs, whether it’s a
+forklift, excavator, trailer, crane, etc. we are here to assist you with a 100% guarantee of quality, safety,
+and flexible rates for your route.</strong>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How much time will it take to ship my heavy equipment?
                                     </button>
                                 </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                        <strong>It all depends on the type of equipment you are planning on shipping, other than that our estimated
+delivery time also varies on the distance, weather conditions as well and road conditions. However, if
+you want your heavy equipment to be delivered urgently then we would suggest you opt for expedited
+shipping as it’s the fastest shipping service provided by Ship A1, while it is a bit pricey it would ensure
+your equipment reaches you in your desired timeframe.</strong>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Can you arrange for the loading and unloading of my equipment?
                                     </button>
                                 </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                        <strong>ShipA1 can connect you with qualified heavy equipment loading and unloading service providers in your
+                                        area. We can advise on the best approach based on your specific equipment and needs.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        Are your vehicles insured?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    Not only you will get the insurance coverage. The carrier company will provide you with insurance up to a whopping upto $1 million. As soon as you get in touch with the driver you will get the documents which are related to your insurance.
+
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -466,8 +514,9 @@
                 </div>
             </div>
         </div>
+    </section>
 
-</section>
+    <!--========== Faq Section End ==============-->
 
 <!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')

@@ -93,7 +93,7 @@
         </div>
     </section>
     @include('partials.reveiw-site')
-    <section class="tj-about-section pt-0 pb-0">
+    <section class="tj-about-section pt-0 pb-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 sal-animate " data-sal="slide-left" data-sal-duration="800">
@@ -276,6 +276,38 @@ Meeting the demands of consumers worldwide for fresh, high-quality goods.
                
            </div> -->
        </div>
+</section>
+
+<section class="tj-cta-section-two">
+            <div class="tj_cta_image-4 w-100 h-50"></div>
+            
+            <div class="container">
+                <div class="row">
+                   
+                    <div class="col-lg-12 col-md-6">
+                       
+
+                        <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
+                        
+                            <div class="tj-section-heading ">
+                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
+                                <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
+                            </div>
+                           
+                         
+                            <div class="tj-theme-button mt-2">
+                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                                    Get Support<i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                          
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
 </section>
 
 <section class="tj-blog-standard pt-0 pb-4">
@@ -461,37 +493,7 @@ Our services extend beyond port delivery, offering complete cold chain end-to-en
             </div>
 </section> -->
 
-<section class="tj-cta-section-two">
-            <div class="tj_cta_image-4 w-100 h-50"></div>
-            
-            <div class="container">
-                <div class="row">
-                   
-                    <div class="col-lg-12 col-md-6">
-                       
 
-                        <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-                        
-                            <div class="tj-section-heading ">
-                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                                <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
-                            </div>
-                           
-                         
-                            <div class="tj-theme-button mt-2">
-                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                    Get Support<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                          
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-</section>
 
 
 

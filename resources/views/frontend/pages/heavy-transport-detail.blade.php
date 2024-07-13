@@ -808,7 +808,7 @@
         </section> -->
 
     <!--========== Faq Section Start ==============-->
-    <section class="tj-faq-section tj-faq-page">
+<section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -908,26 +908,13 @@ your equipment reaches you in your desired timeframe.</strong>
                                 <div id="collapseFour" class="accordion-collapse collapse"
                                     aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Yes! Our vehicles are 100% insured.</strong>
+                                    Not only you will get the insurance coverage. The carrier company will provide you with insurance up to a whopping upto $1 million. As soon as you get in touch with the driver you will get the documents which are related to your insurance.
+
+                                        
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
-                                        FAQ Five
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse"
-                                    aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>FAQ Five Content: Trage agile frameworks to provide a robust synopsis for
-                                            high level overviews.</strong>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

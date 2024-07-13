@@ -2709,7 +2709,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-cta-section-two {
     position: relative;
-    padding: 60px 0;
+    padding: 60px 0px 60px 0px;
 }
 
 .tj_cta_image-4 {
