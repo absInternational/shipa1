@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title text-center">Reefer Shipping Transport</h1>
+                        <h1 class="breadcrumb-title text-center">Reefer  Transport</h1>
                         <div class="breadcrumb-link">
                             <span>
                                 <a href="{{ route('welcome') }}">
@@ -84,7 +84,7 @@
                             </span>
                             >
                             <span>
-                                <span>Reefer</span>
+                                <span> Reefer </span>
                             </span>
                         </div>
                     </div>
@@ -92,282 +92,77 @@
             </div>
         </div>
     </section>
-
-    <section class="tj-choose-us-section-two-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="choose-us-top-content-1">
-                            <div class="tj-section-heading-1">
-                                <!-- <span class="sub-title-1 active-shape2"> Have any ideas in your mind?</span> -->
-                                <h2 class="title-1">The World of Reefer Shipping</h2>
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Get Quote <i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Introduction</h6>
-                                </div>
-                            </div>
-                            <p>
-                            In the vast expanse of global shipping, a term known as "reefer" holds a unique significance. It's not about a
-                             laid-back lifestyle; instead, it's all about ensuring that perishable commodities reach their destinations in 
-                             perfect condition. Reefer, in the realm of shipping, refers to refrigerated ships and shipping containers 
-                             specifically designed to transport goods that are sensitive to temperature fluctuations.From fruits and vegetables
-                              to meat, fish, and dairy products, these vessels and containers play a crucial role in maintaining the quality and
-                               freshness of the cargo they carry.Cold chain logistics plays a crucial role in safeguarding the integrity of 
-                               products like fresh produce, pharmaceuticals, vaccines, and more.</p>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">What is Dry Van Shipping?</h6>
-                                </div>
-                            </div>
-                            <p>
-                            Freight shipping, often referred to as "box trailer" or "dry van transport," is a fundamental and versatile method for moving goods in the freight transportation industry.
-                            Dry van shipping is a widely preferred choice due to its versatility and cost-effectiveness. It is particularly well-suited for transporting goods that do not necessitate specific temperature conditions or specialised handling. Dry van trailers offer the convenience of easy loading and unloading at various locations, including warehouses, distribution centres, and shipping ports.</p>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div class="row ">
-                <h2 class="title-1">Advantages and Key Features of Dry Van Transportation:</h2>
-                <p>
-                This method of shipping involves the use of fully enclosed trailers to protect cargo from external elements such as weather,
-                 dust, and theft. It is well known for its key features, which are:</p>
-                        
-                    
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Versatility</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Convenience</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                   
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Cost-effectiveness</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                   
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Security</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                   
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Additional Dry Van Services</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                   
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Same-Day Shipping</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                   
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Expedited Freight</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                   
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Shipment Pairing</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                   
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">High-Value Cargo Protection Services</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                   
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Drop Trailers</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                   
-                    </div>
-
-            </div>
-</section>
-
-<section class="tj-cta-section-two">
-            <div class="tj_cta_image-4 w-100 h-50"></div>
-            
-            <div class="container">
-                <div class="row">
-                   
-                    <div class="col-lg-12 col-md-6">
-                       
-
-                        <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-                        
-                            <div class="tj-section-heading ">
-                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                                <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
-                            </div>
-                           
-                         
-                            <div class="tj-theme-button mt-2">
-                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                    Get Support<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                          
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-</section>
-
+    @include('partials.reveiw-site')
     <section class="tj-about-section pt-0 pb-0">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 sal-animate " data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">LTL and FTL Frieght Shipping</span>
+                            <span class="sub-title active-shape">The World of Reefer Shipping</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            Shipping can be a daunting task, especially when it comes to choosing between FTL and LTL.
-                             Both methods have their own unique advantages and disadvantages, Which is why it's important to 
-                             understand the differences between them because ate Day Dispatch we empower you to choice with your 
-                             own needs.
-                           
-                             <h3>What is FTL ?</h3>
-                             If you have a large amount of freight that needs to be shipped, FTL is probably the best option for you. With FTL shipping, you'll have access to an entire trailer that's dedicated solely to your freight.
-This means that your shipment won't be mixed with other shipments, and it'll be delivered directly to its destination.
-However, FTL shipping can be more expensive than LTL, especially if you don't have enough freight to fill an entire trailer.
-FTL carriers typically base their rates on industry capacity, transportation type, and fuel costs.
-FTL carriers are often less strict about charging for accessorial,
+                            <p class="desc">In the vast expanse of global shipping, a term known as "reefer" holds a unique significance. It's not about 
+                                a laid-back lifestyle; instead, it's all about ensuring that perishable commodities reach their destinations in perfect 
+                                condition. Reefer, in the realm of shipping, refers to refrigerated ships and shipping containers specifically designed 
+                                to transport goods that are sensitive to temperature fluctuations.
+                            From fruits and vegetables to meat, fish, and dairy products, these vessels and containers play a crucial role in maintaining 
+                            the quality and freshness of the cargo they carry.
+                            Cold chain logistics plays a crucial role in safeguarding the integrity of products like fresh produce, pharmaceuticals, 
+                            vaccines, and more. Advocating for reefer shipping emphasizes the significance of these specialized services like: <br>
+                            Maintaining product quality and safety,
+Reducing waste, and
+Meeting the demands of consumers worldwide for fresh, high-quality goods.
                         </p>
                         </div>
                         
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                  <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
-                    <!-- <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/Untitled design (32).png') }}" alt="Image">
-                    </div> -->
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/RV-3.webp') }}" alt="Image">
+                    </div>
 
-                  </div>
+                </div>
                 </div>
             </div>
             <div class="row">
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                  <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/Untitled design (32).png') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/RV-3.webp') }}" alt="Image">
                     </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
-                  </div>
                 </div>
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                </div>
+                <div class="col-lg-8 sal-animate " data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">LTL and FTL Frieght Shipping</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <span class="sub-title active-shape">Cold Chain Logistics</span>
                             <p class="desc">
-                            <h3>What is LTL ?</h3>
-                            If you have a smaller shipment that doesn't require an entire trailer, LTL might be a better option. With LTL shipping, your shipment will be combined with other shipments from various businesses.
-This means that your shipment might be loaded and unloaded multiple times before reaching its final destination, which can result in longer delivery times.
-However, LTL shipping can be more cost-effective than FTL, especially if you're shipping smaller quantities of freight.
-LTL carriers, use the National Motor Freight Traffic Association's freight classification system to determine rates.
-LTL carriers are more likely to charge extra fees for any disruptions or delays in the flow of freight movement.
-Hence, the choice between FTL and LTL comes down to the size and type of your shipment, as well as your budget and timeline.
-By understanding the differences between these two methods, you can make an informed decision that meets your specific shipping needs.</p>
+                               
+                                Cold chain logistics is a comprehensive process that encompasses temperature-controlled storage, transportation,
+                                 continuous monitoring, quality control, and strict regulatory compliance. It is a highly specialized field dedicated
+                                  to preserving the quality and safety of perishable goods throughout their journey from production to the end consumer,
+                                   making it crucial for industries reliant on maintaining product freshness and integrity.Here is the detail of these
+                                    specialized stages which makes this shipping method different from others:
+                                <!-- <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <ul class="ps-0">
+                                            <li> <strong>General Awareness:</strong>  Employees should have a basic understanding of Reefer  safety and how your facility operates.</li>
+                                            <li> <strong>Security Training:</strong>  Offer basic security awareness training for handling, storing, and transporting hazardous materials securely.</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <ul class=" ps-0">
+                                            <li> <Strong>Safety Training:</Strong>  Teach them how to respond to emergencies and prevent accidents, fostering a safety-conscious workplace culture.</li>
+                                            <li> <strong>Job-Specific Training:</strong>  Provide training that is tailored to their specific roles and responsibilities.</li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div> -->
+                            </p>
                         </div>
                         
                     </div>
@@ -382,71 +177,130 @@ By understanding the differences between these two methods, you can make an info
 
 
               
-    <section class="tj-about-section pt-0">
+    
+    
+  
+<section class="tj-about-section pt-0 ">
        
 
-        <div class="container">
-            <div class="row">
+       <div class="container">
+           <div class="row">
+               
+           <!-- <h2 class="title">Reefer  Rules</h2> -->
+           <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                   <div class="about-content-one border rounded p-4">
+                       <div class="tj-section-heading">
+                           <span class="sub-title active-shape">Monitoring and Tracking</span>
+                           <!-- <h2 class="title">Why Choose Us?</h2> -->
+                           <p class="desc">Advanced technology plays a vital role in cold chain logistics. Continuous monitoring and tracking systems are employed to keep a 
+                            close eye on the environmental conditions inside the storage or transportation units.
+                           </p>
+                       </div>
+                       
+                   </div>
+               </div>
+               <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                   <div class="about-content-one border rounded p-4">
+                       <div class="tj-section-heading">
+                           <span class="sub-title active-shape">Transportation</span>
+                           <!-- <h2 class="title">Why Choose Us?</h2> -->
+                           <p class="desc">Once properly stored, goods must be transported while maintaining the specified temperature range. This can involve refrigerated trucks, 
+                           refrigerated shipping containers, or reefer ships for international transport.</p>
+                       </div>
+                       
+                   </div>
+               </div>
+           </div>
+
+           <div class="row">
+               
+           <!-- <h2 class="title">Reefer  Rules</h2> -->
+           
+               <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                   <div class="about-content-one border rounded p-4">
+                       <div class="tj-section-heading">
+                           <span class="sub-title active-shape">Temperature-Controlled Storage</span>
+                           <!-- <h2 class="title">Why Choose Us?</h2> -->
+                           <p class="desc">This is the foundational stage of the cold chain. Perishable goods, such as fruits, vegetables, dairy products, 
+                            and pharmaceuticals, are stored in specialized refrigerated facilities or containers.
+                           </p>
+                       </div>
+                       
+                   </div>
+               </div>
+               <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                   <div class="about-content-one border rounded p-4">
+                       <div class="tj-section-heading">
+                           <span class="sub-title active-shape">Quality Control</span>
+                           <!-- <h2 class="title">Why Choose Us?</h2> -->
+                           <p class="desc">Proper handling and packaging are crucial components of cold chain logistics. Goods must be handled with care to minimize damage, 
+                            especially during loading and unloading.</p>
+                       </div>
+                       
+                   </div>
+               </div>
+           </div>
+
+           <div class="row justify-content-center">
                 
             
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Materials Used</span>
+                            <span class="sub-title active-shape">Regulatory Compliance</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            Dry van trailers are typically constructed from various materials, including galvanised steel, aluminium, 
-                            hardwood, or iron. The choice of material can impact the trailer's durability, weight, and cost.
+                            <p class="desc">The cold chain industry operates under strict regulations and standards, particularly in sectors like food and pharmaceuticals. Compliance
+                                 with these regulations is essential to ensure the safety and quality of perishable products.
+                             
                             </p>
                         </div>
                         
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Limitations</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            Despite various benefits, the shippers must consider the following limitations and discuss them with the
-                             customer service team of the logistic company while shipping their valuable assets.</p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 
-            
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">No Climate Control</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            Unlike refrigerated containers, often referred to as "reefers," dry vans do not have climate control capabilities. This means they are not equipped to maintain specific temperature conditions within the trailer. Therefore, dry van 
-                            shipping is best suited for goods that do not require temperature-sensitive handling, such as frozen or refrigerated items.
-                            </p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Enclosed Container</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            One of the defining features of dry van shipping is the use of fully enclosed trailers. These trailers have walls, a roof, and a floor, creating a sealed container to protect cargo from external elements. 
-                            This enclosure provides a high level of security against weather conditions, dust, and theft. Dry van shipping involves sealed containers attached to semi-trucks. </p>
-                        </div>
-                        
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
-    <section class="tj-cta-section-two">
+
+           <!-- <div class="row">
+               
+           
+           <div class="col-lg-12 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                   <div class="about-content-one border rounded p-4">
+                       <div class="tj-section-heading">
+                           <span class="sub-title active-shape">Proper Use</span>
+                           <p class="desc">In handling hazardous materials, employees should only use them for their intended purposes.
+                                Avoid using substances for tasks they weren't designed for, ensuring safety and compliance.</p>
+                       </div>
+                       
+                   </div>
+               </div>
+               
+           </div> -->
+       </div>
+</section>
+
+<section class="tj-blog-standard pt-0 pb-4">
+
+       <div class="container">
+     
+                 <div class="row full-width ps-4">
+                       <div class="col-12 custom-style">
+                          <h4 class=" text-center">Specialized Reefer Ships</h4>
+                          <p class=" text-center">Reefer ships, the workhorses of the cold chain industry, are specialized containerships for ferrying refrigerated containers. They differ from conventional counterparts in size, design, and power infrastructure, being smaller and equipped to power each container's cooling system. While essential for transporting delicate goods, refrigerated containers entail high running costs and regular maintenance.
+Despite these challenges, the reefer shipping market is expanding due to the growing demand for temperature-controlled transportation. Ship A1 proudly serves customers across the states, ensuring prompt delivery and safer shipping by trained hands.
+As a promising logistics company, Ship A1 continually enhances services, providing peace of mind to businesses relying on refrigerated transport. We guarantee reefer equipment availability and round-the-clock monitoring, ensuring temperature-sensitive cargo arrives in impeccable condition.
+Our services extend beyond port delivery, offering complete cold chain end-to-end solutions. This allows businesses to delegate logistics to us, focusing on serving their customers and growing operations without cold logistics worries.</p>
+                                         <div class="tj-theme-button  text-center mt-2">
+                                              <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                                                  Get Quote
+                                                  <i class="flaticon-right-1"></i>
+                                              </a>
+                                        </div>
+                    </div>
+                </div>
+
+          </div>
+</section>
+<section class="tj-cta-section-two pt-4">
             <div class="tj_cta_image"></div>
             <div class="tj_cta_image1"></div>
             <div class="container">
@@ -480,79 +334,227 @@ By understanding the differences between these two methods, you can make an info
                 </div>
             </div>
          </section>
-    @include('partials.reveiw-site')
-    <section class="tj-about-section-five">
-    <div class="container">
-        <div class="row services ">
-            <h1 class="services-h1">Common Sizes</h1>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">28' (pup trailer)</h5>
-                        <p class="card-text text-light">
-                            <ul class="list-unstyled ps-0 text-light">
-                                <li>★ Length: 8.5 metres (28 feet)</li>
-                                <li>★ Width: 2.4 metres</li>
-                                <li>★ Height: 2.7 metres</li>
-                                <li>★ Approximate Load Capacity:
-                                Typically, pup trailers can carry up to 14 pallets.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                    <h5 class="card-title text-white">48' Dry Van:</h5>
-                        <p class="card-text text-light">
-                            <ul class="list-unstyled ps-0 text-light">
-                                <li>★ Length: 14.6 metres (48 feet)</li>
-                                <li>★ Width: 2.59 metres</li>
-                                <li>★ Height: 4 metres</li>
-                                <li>★ Approximate Load Capacity:
-                                These trailers can accommodate around 24 pallets of cargo.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                    <h5 class="card-title text-white">53' Dry Van:</h5>
-                        <p class="card-text text-light">
-                            <ul class="list-unstyled ps-0 text-light">
+<!-- <section class="tj-choose-us-section-two-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="choose-us-top-content-1">
+                            <div class="tj-section-heading-1">
                                 
-                                <li>★ Length: 16 metres (53 feet)</li>
-                                <li>★ Width: 2.59 metres</li>
-                                <li>★ Height: 2.59 metres</li>
-                                <li>★ Approximate Load Capacity:
-53-foot dry vans are among the largest and can carry
-approximately 26 pallets.</li>
-                            </ul>
-                        </p>
+                                <h2 class="title-1">Reefer  Shipping Services</h2>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">What is Reefer ?</h6>
+                                </div>
+                            </div>
+                            <p>Reefer , (Hazardous Material), refers to substances that can be really risky for our health, safety, 
+                                and even the things we build and use—if they're not handled and transported carefully. To make sure
+                                 these dangerous materials are moved safely, there are important rules and guidelines to follow.
+                            Some of these rules come from organizations like IATA, ICAO, the United Nations, and others. 
+                            They create regulations like the Dangerous Goods Regulations and the International Maritime Dangerous 
+                            Goods Code. These rules help everyone involved in transporting these materials do it safely.</p>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">What Counts as Reefer ?</h6>
+                                </div>
+                            </div>
+                            <p>Understanding the classification of hazardous materials into different classes is crucial because it
+                                 guides how these materials should be treated to ensure safety during their handling and 
+                                 transportation. Each class has specific rules and precautions associated with it to prevent 
+                                 accidents, spills, fires, or other dangers.
+                            
+                                 <div class="row">
+        <div class="col-md-6 mb-3">
+            <ul class="list-unstyled ps-0">
+                <li>★ Explosives (Class 1): These are things that can explode, like fireworks, bullets, or dynamite.</li>
+                <li>★ Gases (Class 2): These are gases that can catch fire easily, like the gas in lighters or aerosol sprays.</li>
+                <li>★ Flammable Liquids (Class 3): These are liquids that can easily catch fire, like gasoline or paint.</li>
+                <li>★ Flammable Solids (Class 4): These are solid things that can burn, like matches or certain metals.</li>
+            </ul>
+        </div>
+        <div class="col-md-6 mb-3">
+            <ul class="list-unstyled ps-0">
+                <li>★  Oxidizing Substances (Class 5): These substances can make other things catch fire more easily.</li>
+                <li>★  Toxic Substances (Class 6): These are things that can seriously hurt or even kill you if you're exposed to them. Think of strong acids or poisonous chemicals.</li>
+                <li>★ Radioactive Materials (Class 7): These are materials that give off harmful radiation, like some medical stuff or uranium.</li>
+                
+            </ul>
+        </div>
+    </div>
+                                 
+                            </p>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row ">
+                <h2 class="title-1">How to Safely Ship Reefer  ?</h2>
+                <p>Shipping hazardous materials, or Reefer , requires special care to keep everyone safe. 
+                    They are often moved in special tank containers.</p>
+                        
+                    
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Proper Packaging</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Correct Labels</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Safety Data Sheets (SDS)</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Separate Containers</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>           
+
+            </div>
+</section> -->
+
+<section class="tj-cta-section-two">
+            <div class="tj_cta_image-4 w-100 h-50"></div>
+            
+            <div class="container">
+                <div class="row">
+                   
+                    <div class="col-lg-12 col-md-6">
+                       
+
+                        <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
+                        
+                            <div class="tj-section-heading ">
+                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
+                                <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
+                            </div>
+                           
+                         
+                            <div class="tj-theme-button mt-2">
+                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                                    Get Support<i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                          
+
+                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                    <h5 class="card-title text-white">Straight or Box Truck:</h5>
-                        <p class="card-text text-light">
-                            <ul class="list-unstyled ps-0 text-light">
-                                <li>★ Dimensions can vary, but a common size is approximately:</li>
-                                <li>★ Length: 7.3 metres</li>
-                                <li>★ Width: 2.4 metres</li>
-                                <li>★ Height: 2.59 metres</li>
-                                <li>★ Approximate Load Capacity:
-                                       These trucks can typically handle payloads of up to
-                                       4,500 kilogrammes.
-                                </li>
-                            </ul>
-                        </p>
+</section>
+
+
+
+<section class="tj-faq-section tj-faq-page pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape"> How It’s Work</span>
+                        <h2 class="title">Frequently Asked Questions</h2>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                    <div class="tj-faq-left-content">
+                        <div class="faq-image">
+                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                    <div class="tj-faq-area">
+                    <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How do I prepare my vehicle for transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How do I get a quote?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Can I track my vehicle during transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
                 </div>
             </div>
         </div>
@@ -648,71 +650,7 @@ approximately 26 pallets.</li>
 </section>
 <!--========== Chhose Section End ==============-->
 
-<section class="tj-faq-section tj-faq-page pt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape"> How It’s Work</span>
-                        <h2 class="title">Frequently Asked Questions</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                    <div class="tj-faq-left-content">
-                        <div class="faq-image">
-                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
-                    <div class="tj-faq-area">
-                    <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How do I prepare my vehicle for transport?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
    
 
 

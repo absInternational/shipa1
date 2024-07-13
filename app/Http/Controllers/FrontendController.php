@@ -398,6 +398,19 @@ class FrontendController extends Controller
         return view('frontend.pages.services.construction-service',compact('site_reviews','blogs','makes'));
     }
 
+    public function commercialService()
+    {
+        $makes = VehicleName::select('make')
+        ->where('UserId', 14)
+        ->where('status', 0)
+        ->groupBy('make')
+        ->orderBy('make', 'ASC')
+        ->get();
+        $site_reviews = ReviewSite::get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.services.commercial-service',compact('site_reviews','blogs','makes'));
+    }
+
     public function roroService()
     {
         $makes = VehicleName::select('make')

@@ -329,6 +329,11 @@
                                                             </li>
                                                             <li>
                                                                 <a class="title" target="_blank"
+                                                                    href="{{ route('frontend.pages.services.commercial-service') }}">
+                                                                    Commercial Truck Transport</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.excavator-service') }}">
                                                                     Excavator Transport Services</a>
                                                             </li>

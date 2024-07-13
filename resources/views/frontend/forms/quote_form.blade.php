@@ -74,7 +74,7 @@
         }
         .custom-card :hover .card-icon i {
         color: #000000; 
-    }
+        }
         
          .custom-card.car-card:hover .card-body {
                 
@@ -105,9 +105,6 @@
             background-image: url('../../img/truck-.webp');
         }
 
-
-
-
         .tj-testimonial-section {
             padding: 50px 0;
             background: #f9f9f9;
@@ -123,7 +120,6 @@
             margin: 0 auto;
             padding: 0 15px;
         }
-
         .card {
             background: #fff;
             border: 1px solid #ddd;
@@ -131,7 +127,6 @@
             padding: 15px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .card .row {
             display: flex;
             flex-wrap: wrap;

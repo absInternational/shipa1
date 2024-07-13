@@ -3653,8 +3653,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     13. About CSS
 ------------------------------------ */
 .tj-about-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .tj-about-section .tj-section-heading {
@@ -3964,6 +3964,30 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     14. Feature CSS
 ------------------------------------ */
 
+.tj-choose-us-section-service-commercial {
+    background-color: #000000;
+    background-image: url('../../img/COMMERCIAL-TRUCK-BANNER.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    padding-top: 110px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+
+.tj-choose-us-section-service-commercial::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    background: rgba(6, 46, 57, 0.7);
+}
+
 .tj-choose-us-section-service-excavator {
     background-color: #000000;
     background-image: url('../../img/excavator-banner.webp');
@@ -4002,6 +4026,30 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-choose-us-section-service-farm::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    background: rgba(6, 46, 57, 0.7);
+}
+
+.tj-choose-us-section-service-boat {
+    background-color: #000000;
+    background-image: url('../../img/BOAT-BANNER.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    padding-top: 110px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+
+.tj-choose-us-section-service-boat::before {
     width: 100%;
     position: absolute;
     content: "";
@@ -4303,7 +4351,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-choose-us-section-hazmat {
     background-color: #000000;
     background-image: url(../../img/Hazmat-Truck.webp);
-   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4563,7 +4610,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-choose-us-section-two {
-    background: url(../images/banner/cta-bg2.jpg);
+    background: url(../../img/HAZMAT-BANNER.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
