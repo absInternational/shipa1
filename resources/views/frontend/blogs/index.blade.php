@@ -163,8 +163,8 @@
                         </div>
                     </div>
                 </div>
+                {{ $blogs->links('partials.custom_pagination') }}
             </div>
-            {{ $blogs->links('partials.custom_pagination') }}
         </div>
     </section>
     <!--========== blog details End ==============-->
