@@ -644,8 +644,8 @@ approximately 26 pallets.</li>
 </section>
 <!--========== Chhose Section End ==============-->
 
-<!--========== Faq Section Start ==============-->
-<section class="tj-faq-section tj-faq-page">
+ <!--========== Faq Section Start ==============-->
+ <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
