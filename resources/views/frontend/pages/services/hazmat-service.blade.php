@@ -675,6 +675,7 @@
 @endsection
 
 @section('extraScript')
+
     <script>
         $(document).ready(function() {
             function addNewVehicle() {
@@ -768,8 +769,6 @@
             }
         });
     </script>
-
-
 
     <script>
         $(document).ready(function() {
@@ -868,4 +867,5 @@
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
+    
     @endsection

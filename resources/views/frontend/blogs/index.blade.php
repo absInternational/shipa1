@@ -7,7 +7,7 @@
 @section('content')
     <style>
         font {
-            display: content;
+        display: contents;
         }
     </style>
 
@@ -102,7 +102,7 @@
                             </div>
                         @endforeach
 
-                        {{ $blogs->links('partials.custom_pagination') }}
+                        
 
                     </div>
                 </div>
@@ -164,6 +164,7 @@
                     </div>
                 </div>
             </div>
+            {{ $blogs->links('partials.custom_pagination') }}
         </div>
     </section>
     <!--========== blog details End ==============-->
