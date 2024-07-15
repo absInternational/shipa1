@@ -4,7 +4,6 @@
     </div>
     <div class="card-body">
         <div class="container mt-4">
-
             <h4 class="text-center">Tracking Id of {{ $responseData['data']['id'] }}</h4>
             <div class="d-flex justify-content-center">
                 <div class="col-lg-12 text-center">
@@ -32,7 +31,10 @@
                                 </div>
                             </div>
                         @else
-                            <span class="fw-bold">Vehicle Name: {{ $responseData['data']['ymk'] }}</span><br>
+                            @foreach ($ymk as $key => $val)
+                                {{-- <span class="fw-bold">Vehicle Name: {{ $responseData['data']['ymk'] }}</span><br> --}}
+                                <span class="fw-bold">Vehicle Name: {{ $val }}</span><br>
+                            @endforeach
                             <div class="d-flex justify-content-center">
                                 <span
                                     class="badge bg-warning mx-2">{{ isset($condition[0]) ? ($condition[0] == 1 ? 'Open' : 'Enclosed') : 'Enclosed' }}</span>
@@ -55,7 +57,8 @@
                 <div class="col-md-6">
                     <div class="float-md-end">
                         <p class="fw-bold">Delivery:</p>
-                        <p><i class="fas fa-location-dot text-danger"></i> {{ $responseData['data']['destinationzsc'] }}
+                        <p><i class="fas fa-location-dot text-danger"></i>
+                            {{ $responseData['data']['destinationzsc'] }}
                         </p>
                     </div>
                 </div>
@@ -288,8 +291,8 @@
                                     echo date('M, d Y D');
                                 }
                                 ?>
-                                <span class="badge badge-warning mx-2 d-flex align-items-center">est</span>
-                                <span class="badge badge-primary question position-relative">
+                                <span class="badge badge-warning mx-2 d-flex align-items-center p-4">est</span>
+                                <span class="badge badge-primary question position-relative text-wrap">
                                     <i class="fa-solid fa-question"></i>
                                     <div class="newtooltip">
                                         Delivery dates are estimated because there are many components associated
