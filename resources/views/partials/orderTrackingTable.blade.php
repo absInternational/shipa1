@@ -92,7 +92,7 @@
                                     echo date('M, d Y D', strtotime($responseData['data']['created_at']));
                                 }
                                 if ($responseData['data']['pstatus'] > 8 && $responseData['data']['pstatus'] <= 14) {
-                                    echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                    echo ' <i class="far fa-check-circle fa-lg mr-2 " style="color: #8fc445;"></i>';
                                 }
                                 ?>
                             </td>
@@ -131,7 +131,7 @@
                                         echo date('M, d Y D', strtotime($booked));
                                     }
                                     if ($responseData['data']['pstatus'] > 9 && $responseData['data']['pstatus'] <= 14) {
-                                        echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                        echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                     }
                                 } elseif ($val['pstatus'] == 10) {
                                     if (date('Y-m-d', strtotime($listed)) <= date('Y-m-d', strtotime($val['created_at']))) {
@@ -142,7 +142,7 @@
                                         echo date('M, d Y D', strtotime($listed));
                                     }
                                     if ($responseData['data']['pstatus'] > 10 && $responseData['data']['pstatus'] <= 14) {
-                                        echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                        echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                     }
                                 } elseif ($val['pstatus'] == 11) {
                                     if (date('Y-m-d', strtotime($dispatch)) <= date('Y-m-d', strtotime($responseData['data']['pickup_date']))) {
@@ -158,7 +158,7 @@
                                         echo date('M, d Y D', strtotime($dispatch));
                                     }
                                     if ($responseData['data']['pstatus'] > 11 && $responseData['data']['pstatus'] <= 14) {
-                                        echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                        echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                     }
                                 } elseif ($val['pstatus'] == 12) {
                                     if (date('Y-m-d', strtotime($pickup)) <= date('Y-m-d', strtotime($responseData['data']['delivery_date']))) {
@@ -171,11 +171,11 @@
                                         echo date('M, d Y D', strtotime($pickup));
                                     }
                                     if ($responseData['data']['pstatus'] > 12 && $responseData['data']['pstatus'] <= 14) {
-                                        echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                        echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                     }
                                 } elseif ($responseData['data']['pstatus'] == 13) {
                                     echo date('M, d Y D', strtotime($val['created_at']));
-                                    echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                    echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                 } elseif ($responseData['data']['pstatus'] == 14) {
                                     echo date('M, d Y D', strtotime($val['created_at']));
                                     echo ' <i class="fa fa-times-circle-o mr-2 text-danger" aria-hidden="true"></i>';
@@ -197,7 +197,7 @@
                                 ---------
                                 <?php
                                 if ($responseData['data']['pstatus'] > 9 && $responseData['data']['pstatus'] <= 14) {
-                                    echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                    echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                 }
                                 ?>
                             </td>
@@ -214,7 +214,7 @@
                                 ---------
                                 <?php
                                 if ($responseData['data']['pstatus'] > 10 && $responseData['data']['pstatus'] <= 14) {
-                                    echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                    echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                 }
                                 ?>
                             </td>
@@ -248,7 +248,7 @@
                                 ?>
                                 <span class="badge badge-warning mx-2 d-flex align-items-center">est</span>
                                 <span class="badge badge-primary question position-relative">
-                                    <i class="fa-solid fa-question"></i>
+                                    <i class="fa-solid fa-question" ></i>
                                     <div class="newtooltip">
                                         Pickup dates are estimated because there are many components associated with
                                         the
@@ -262,7 +262,7 @@
 
                                 <?php
                                 if ($responseData['data']['pstatus'] > 11 && $responseData['data']['pstatus'] <= 14) {
-                                    echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                    echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                 }
                                 ?>
                             </td>
@@ -275,7 +275,7 @@
                             <th scope="row">
                                 Delivered
                             </th>
-                            <td class="d-flex w-100">
+                            <td class="d-flex w-100 d-flex align-items-center justify-content-center w-100">
                                 <?php
                                 if (isset($responseData['data']['delivery_date'])) {
                                     if (date('Y-m-d', strtotime($pickup)) <= date('Y-m-d', strtotime($responseData['data']['delivery_date']))) {
@@ -291,21 +291,15 @@
                                     echo date('M, d Y D');
                                 }
                                 ?>
-                                <span class="badge badge-warning mx-2 d-flex align-items-center p-4">est</span>
-                                <span class="badge badge-primary question position-relative text-wrap">
-                                    <i class="fa-solid fa-question"></i>
-                                    <div class="newtooltip">
-                                        Delivery dates are estimated because there are many components associated
-                                        with
-                                        the transportation process, like route distance (1 to 9 business days)
-                                        depending
-                                        on miles, Traffic, Harsh Weather conditions, truck breakdowns and some other
-                                        unanticipated occasions included.
-                                    </div>
-                                </span>
+                                <span class="badge badge-warning mx-2 text-white d-flex align-items-center">est</span>
+                                <!-- <span class="badge badge-primary question position-relative text-wrap">
+                                </span> -->
+                                <i class="far fa-question-circle fa-lg  rounded align-items-center"
+                                 style="color: #8fc445;"  data-bs-custom-class="custom-tooltip"
+                                  data-bs-toggle="tooltip" data-bs-placement="top" title="Delivery dates are estimated because there are many components associatedwith the transportation process, like route distance (1 to 9 business days) depending on miles, Traffic, Harsh Weather conditions, truck breakdowns and some other unanticipated occasions included."></i>
                                 <?php
                                 if ($responseData['data']['pstatus'] > 12 && $responseData['data']['pstatus'] <= 14) {
-                                    echo ' <i class="far fa-check-circle mr-2 text-success"></i>';
+                                    echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                 }
                                 ?>
                             </td>
@@ -384,19 +378,19 @@
                                 {{ $responseData['data']['destinationzsc'] }}
                             </th>
                             <td>{{ $price1 }}</td>
-                            <td>pickup 1 day <a class="badge bg-danger mx-2" href="">guaranteed</a></td>
+                            <td>pickup 1 day <a class="badge bg-danger mx-2 text-white" >guaranteed</a></td>
                         </tr>
                         <tr>
                             <th class="fw-normal">{{ $responseData['data']['originzsc'] }} -
                                 {{ $responseData['data']['destinationzsc'] }}</th>
                             <td>{{ $price2 }}</td>
-                            <td>pickup 2 days <a class="badge bg-warning mx-2" href="">urgent</a></td>
+                            <td>pickup 2 days <a class="badge bg-warning mx-2 text-white" >urgent</a></td>
                         </tr>
                         <tr>
                             <th class="fw-normal">{{ $responseData['data']['originzsc'] }} -
                                 {{ $responseData['data']['destinationzsc'] }}</th>
                             <td>{{ $price3 }}</td>
-                            <td>pickup 3 days <a class="badge bg-primary mx-2" href="">regular</a></td>
+                            <td>pickup 3 days <a class="badge bg-primary mx-2 text-white" >regular</a></td>
                         </tr>
                     </tbody>
                 </table>
