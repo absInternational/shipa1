@@ -10,6 +10,7 @@
         justify-content: flex-end;
         margin-top: 10px; /* Adjust margin as needed */
     }
+    
 </style>
 @if ($paginator->hasPages())
     <ul class="pagination">

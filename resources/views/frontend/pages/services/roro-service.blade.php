@@ -43,7 +43,7 @@
 </Style>
 <!--========== blog details Start ==============-->
 
-<section class="tj-choose-us-section-service-car">
+<section class="tj-choose-us-section-service-roro">
     <div class="container mt-4">
         <div class="row mt-4">
 
@@ -51,7 +51,7 @@
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">SERVICES</span>
-                        <h2 class="title">FARM EQUIPMENT SERVICES</h2>
+                        <h2 class="title">RORO SHIPPING SERVICES</h2>
                         <p class="desc-2">
                             ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                             customers and seeks your trust in return of our services.
@@ -85,7 +85,7 @@
 <section class="tj-about-section-four">
     <div class="container">
         <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
-            Platform of Farm <br>Shipping Services</h2>
+            Platform of RORO <br>Shipping Services</h2>
 
         
     </div>
@@ -98,25 +98,28 @@
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Farm Transportation</span>
+                            <span class="sub-title active-shape">RORO Shipping Overview</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            Farm transportation or simply farm transport begins and end with properly managed shipment process. It needs adequate 
-                            tools to perform the task efficiently. Transport has its importance in every industry, whether it be the industrial sector
-                             or the business section. Ship A1 is a leading transport company. For better production and output, farmers need resourceful
-                              input for their crops. The resources can vary such as seeds for the crops, different kinds of pesticides and fertilizers, 
-                              material for packaging, and the like. Keeping all these factors into consideration, farmers need to deliver these goods from 
-                              the field to the storage house or vice versa.</p>
+                            <p class="desc">Ship-A1 is a car shipping company based in the united states. We provide car shipping 
+                                services across all countries in the united states to worldwide destinations. When shipping
+                                 vehicle overseas, the most frequently used shipping option is RORO (Roll-on/Roll-off) Shipping.
+                                  RORO shipping is the simplest and easiest method of transportation for the vehicle. The vehicle 
+                                  is driven directly onto the RORO vessel and secured to the car deck. They are securely inside 
+                                  the boat. Wind-and-watertight .it is essential to note that you cannot ship personal effects
+                                   using this method. Still, spare tire and factory fitted accessories are allowed. RORO overseas
+                                    shipping is a popular way of transporting cargo to other counties. Ship-A1 is connected with 
+                                    different best cargo companies they carried your vehicle to other counties. Our agents taking
+                                     care of clearing documents and other paperwork for you</p>
                         </div>
                         
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/roro-service4.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
@@ -127,27 +130,87 @@
             <div class="row">
                 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/roro-service1.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Farm Transportation</span>
+                            <span class="sub-title active-shape">RORO Shipping Destinations</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            Every industry or business needs some means of transport. This goes to the farm transport industry as well. Whether it comes to
-                             harvest the crops or to arrange the goods for the crops, transport is an essential part of this industry. But the process of 
-                             farm transportation is a difficult task. You can not rely on any random company offering services for transportation at affordable rates. 
-                             There is an old saying, “All that glitters is not gold.” One has to be careful when choosing a reliable company as there are plenty of fraud
-                              companies on the internet. They will offer low-priced rates which may attract you in the beginning, but once they get the payment, they vanish.
-                              We will discuss transportation modes and services so that you can have a good idea when choosing a farm transport company. Farmers know the importance of 
-                              transportation and how it can save their time and money in the long run. 
+                            <p class="desc">We are providing Facilities in roro shipping service our experts are here to help 
+                                you in your roro shipping from us to their following ports. Ship-A1 is providing RORO Shipping 
+                                service from U.S to in these Following:
+                            <div class="row">
+    <div class="col-sm-4">
+        <strong>Nigeria:</strong> Lagos
+    </div>
+    <div class="col-sm-4">
+        <strong>Ghana:</strong> Takoradi, Tema
+    </div>
+    <div class="col-sm-4">
+        <strong>Togo:</strong> Lome
+    </div>
+    
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-4">
+        <strong>Ivory Coast:</strong> Abidjan
+    </div>
+    <div class="col-sm-4">
+        <strong>The Gambia:</strong> Banjul
+    </div>
+    <div class="col-sm-4">
+        <strong>Guinea:</strong> Conakry
+    </div>
+   
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-4">
+        <strong>Cameroon:</strong> Douala
+    </div>
+    <div class="col-sm-4">
+        <strong>Sierra Leone:</strong> Freetown
+    </div>
+    <div class="col-sm-4">
+        <strong>Gabon:</strong> Libreville
+    </div>
+    
+</div>
+<hr>
+<div class="row">
+<div class="col-sm-4">
+        <strong>Angola:</strong> Luanda, Monrovia
+    </div>
+    <div class="col-sm-4">
+        <strong>Benin:</strong> Cotonou
+    </div>
+    <div class="col-sm-4">
+        <strong>Senegal:</strong> Dakar
+    </div>
+</div>
+<hr>
+<div class="row">
+<div class="col-sm-6">
+        <strong>Republic of the Congo:</strong> 
+        Pointe-Noire 
+    </div>
+    <div class="col-sm-4">
+    
+    </div>
+    
+</div>
+<hr>
+ 
+
+
 
 
                             
@@ -166,37 +229,34 @@
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Farm Transportation</span>
+                            <span class="sub-title active-shape">Comparing RORO and Container Shipping</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            The two main categories of farm transport are:
+                            When it comes to the international transportation of vehicles, importers usually prefer one of two
+                             primary shipping methods: Container shipping and RORO shipping. Either one of these is quite 
+                             practical and secure when it comes to the safe transportation of your vehicle. However, there is
+                              some consideration to be made in terms of whether or not RORO is the better of the two options.
+                               So, today we discuss the benefits and flaws of the RORO shipping methods, as well as the difference
+                                it has in comparison with container shipping. The auto car shipping companies provide exceptional
+                                 service for the transportation of the car from one place to another place. The best thing about 
+                                 the car shipping with a trusted and popular company is that the company will make the car 
+                                 shipping service to another level.However, if you are thinking of shipping the car internationally, 
+                                 then nothing can beat the (Roll-on/Roll-off) services. It involves the movers to rolling the automobile up 
+                                 a ramp into the cargo deck of a commercial ship. Thousands of vehicles are now shipping with the help of the 
+                                 (Roll-on/roll-off) car shipping.
 
-<ul>
-    <li>
-
-        The manual mode of transport. 
-    </li>
-<li>
-    The advanced or mechanized method of transport. 
-
-</li>
-</ul>
-                            Both services have their pros and cons. The traditional method is the oldest, and farmers have been using it for decades. There is no modern equipment involved in this mode of transportation. Therefore, the manual mode consumes more physical effort and time of the farmers. This method is compatible with short distances, usually from the field to the storage place. 
-
-
-The advanced method of transport is the modern method, and it is best for long-distance transportation.
-                             </p>
+</p>
                         </div>
                         
                     </div>
                 </div>
 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/roro-service5.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
@@ -208,45 +268,30 @@ The advanced method of transport is the modern method, and it is best for long-d
                
 
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+            <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/roro-service2.webp') }}" alt="Image">
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape"> Farm Transportation</span>
+                            <span class="sub-title active-shape">Benefits of RORO Shipping Service</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            In advanced farm transportation, modern equipment, and the latest machinery is used for transportation. Therefore, there is less consumption of time and energy in this mode of transport. Ship A1 offers all these services at affordable price rates. 
-
-
-The price of these services depends on certain factors that you should always consider when you plan to ship your farm material. 
-
-
-
-<ul>
-    <li>
-
-    The total distance of your journey. 
-    </li>
-<li>
-Types of goods need to be transported. 
-
-</li>
-<li>
-
-The overall size and quantity of the goods. 
-    </li>
-<li>
-Additional services if there are any.
-
-</li>
-</ul></p>
+                            Some of the advantages are as follows: For the shipper, the interest is speed. Since cars and lorries
+                             can drive straight on to the ship at one port and then drive off at the other port within a few 
+                             minutes of the ship docking, it saves much time of the shipper. It can also integrate well with
+                              additional transport development, such as containers. The use of Customs-sealed units has enabled 
+                              frontiers to be crossed with the minimum of delay. Therefore, it increases the speed and efficiency
+                               of the shipper. The ship has also proved extremely popular with holidaymakers and private car
+                                owners. It has significantly contributed to the growth of tourism. A person can take his car 
+                                from one country to another by the sea with the help of a RORO vessel.
+                                
+                            </p>
                         </div>
                         
                     </div>
@@ -263,34 +308,127 @@ Additional services if there are any.
     <section class="tj-about-section pt-4">
         
 
-        <div class="container">
-            <div class="row">
-                
-            
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Insurance Coverage</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            All of the professional auto shipping companies such as ShipA1 provide ample insurance coverage during transit and you would reap in benefits if any damage happens.</p>
-                        </div>
-                        
-                    </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Affordability</span>
                 </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Competent Shipping Team</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            Our assigned shipping team focuses on the safety of the shipment and to properly attach the equipment with straps. We will make sure that you are completely sattisfied with our service.</p>
-                        </div>
-                        
-                    </div>
-                </div>
+                <p class="desc">
+                    RORO is the most preferred shipping method to ship vehicles from one port to the other. It is also the fastest method of transportation that will free you of any additional expenses. If your country uses CIF to calculate duties and taxes, then you can save double, and as long as you keep on shipping, you indeed save on tax duties too! Now that's a good deal.
+                </p>
             </div>
         </div>
+
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Convenient</span>
+                </div>
+                <p class="desc">
+                    The outstanding and useful fact about RORO shipping is that it can apply to any vehicle. So long as you or the professional moving company you hire provide a trailer with wheels for boats and caravans, you do not need to pull them apart to fit inside a container. You may even be able to drive your car right from the destination port if you have enough gas left in the tank.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Safe</span>
+                </div>
+                <p class="desc">
+                    You might have read some articles concerned about the safety of the stuff they ship. As long as you have chosen RORO car shipping, you will not have to worry about the security of your vehicles.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Fast</span>
+                </div>
+                <p class="desc">
+                    This mode of shipping is used when you want to transport your vehicle on urgent or when time is essential. The standard vehicle shipping services take more days for shipping overseas, but RORO car shipping is more efficient than its alternatives.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Insurance</span>
+                </div>
+                <p class="desc">
+                    The various companies which offer the RORO service are now providing car insurance. Therefore, international car shipping is pretty safe now after incorporating coverage. The company covers not only the safety of the car but also, they verify the damages. In addition to that, the company scrutinizes the condition of the vehicle as they are liable for the damages.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Attractive Rates and Discounts</span>
+                </div>
+                <p class="desc">
+                    The service not only delivers car internationally at a very affordable price rate but also, they provide various attractive discounts. This can be an added advantage. Many companies offer discounts to maintain healthy competition in the market.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Shipping Process</span>
+                </div>
+                <p class="desc">
+                    The shipping process is convenient, and it takes the least time when it comes to processing international shipping. Therefore, many people trust the RORO shipping. Therefore, if you are planning international car shipping, then you can rely on RORO services.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Safety</span>
+                </div>
+                <p class="desc">
+                    Although RORO shipping is considered more affordable and convenient, it is also more high-risk in terms of vehicle safety. The main reasons for this are the loading/unloading stage, during which accidents can occur, and the extensive exposure to diverse climate changes.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Speed</span>
+                </div>
+                <p class="desc">
+                    The lack of RORO availability at specific ports can cause delays in transportation. If this does occur, importers have to find a port that offers this option in their close vicinity.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Saves Times and Money</span>
+                </div>
+                <p class="desc">
+                    Another advantage is the affordability. It is one of the cheapest international shipping services which deliver the automobiles on time. Therefore, it also saves time. The air shipping and another way of international shipping are pretty expensive when it compares with the RORO shipping.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
     </section>
 
 
@@ -329,28 +467,28 @@ Additional services if there are any.
 <section class="tj-about-section-five">
     <div class="container">
         <div class="row services">
-            <h1 class="services-h1">Additional Services Provided</h1>
+            <h1 class="services-h1">Our RORO Shipping Process Explained</h1>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Experienced Network of Truckers</h5>
-                        <p class="card-text text-light">The vast network of competent truckers enables us to deliver your shipment timely and they are also aware of the areas that they would encounter during transit.</p>
+                        <h5 class="card-title text-white">Step 1</h5>
+                        <p class="card-text text-light">The client contacts about shipping his vehicle overseas and provides us with necessary documents relating to its automobile.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Tracking Services</h5>
-                        <p class="card-text text-light">We offer tracking services to the people who want their construction equipment shipped so that they can track the time for the arrival of shipment.</p>
+                        <h5 class="card-title text-white">Step 2</h5>
+                        <p class="card-text text-light">Ship-A1 starts preparing your documents for secure shipping, and you receive the bill detailing the cost of taxes.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Trailer Type</h5>
-                        <p class="card-text text-light">You could choose an option for construction equipment where your shipment will be prioritized but it has a price attached to it.</p>
+                        <h5 class="card-title text-white">Step 3</h5>
+                        <p class="card-text text-light">Ship-A1 offers seamless RORO shipping from the U.S., handling customs, loading, and providing manual tracking. Trust us for safe, reliable, and affordable car shipping with special discounts available.</p>
                     </div>
                 </div>
             </div>
@@ -360,7 +498,7 @@ Additional services if there are any.
 </section>
 
 
-<section class="tj-choose-us-section-service-car-2">
+<section class="tj-choose-us-section-service-roro">
     <div class="container why-box">
         <div class="row">
             <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -504,7 +642,174 @@ Additional services if there are any.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script src="path/to/jquery.min.js"></script>
 <script src="path/to/owl.carousel.min.js"></script>
+<script>
+        $(document).ready(function() {
+            var selectedTab = '';
+            $('#tabSelector').change(function() {
+                $('.vehicles-container').html('');
+                selectedTab = $(this).val();
+                var vehicleType = $(this).val();
+                $('.tab-pane').removeClass('show active');
+                $('#' + selectedTab).addClass('show active');
 
+                $.ajax({
+                    url: "{{ route('get.partial.form') }}",
+                    method: 'GET',
+                    data: {
+                        vehicleType: vehicleType,
+                    },
+                    success: function(response) {
+                        $('#additionalContent').html('');
+                        $('#additionalContent').html(response);
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+
+            function addNewVehicle() {
+                var newVehicleHtml =
+                    `
+                        <div class="vehicle-info">
+                        <div class="row select-bm">
+                        <div class="col-md-4">
+                        <div class="input-form tj-select">
+                        <label> Year</label>
+                        <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+                var currentYear = {{ date('Y') }};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
+
+                newVehicleHtml +=
+                    `</select>
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="input-form tj-select">
+                        <label>Make</label>
+                        <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
+
+                @foreach ($makes as $make)
+                    newVehicleHtml +=
+                        `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
+                @endforeach
+
+                newVehicleHtml += `
+                        </select>
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="input-form tj-select model-div">
+                        <label>Model</label>
+                        <select class="nice-select model" name="model[]" id="model" required></select>`;
+
+                newVehicleHtml +=
+                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+
+                newVehicleHtml += `
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            `;
+
+                $('.vehicles-container').append(newVehicleHtml);
+            }
+
+            function addOtherVehicle() {
+                var newVehicleHtml =
+                    `
+                        <div class="vehicle-info">
+                        <div class="row select-bm">
+                        <div class="col-md-4">
+                        <div class="input-form tj-select">
+                        <label> Year</label>
+                        <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                var currentYear = {{ date('Y') }};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
+
+                newVehicleHtml +=
+                    `</select>
+                                </div>
+                                </div>
+                                <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                <label>Make</label>
+                                <input type="text" id="make" name="make[]"
+                                placeholder="Enter Make" required="" />
+                                </div>
+                                </div>
+                                <div class="col-md-4">
+                                <div class="input-form tj-select model-div">
+                                <label>Model</label>
+                                <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                required="" />`
+                newVehicleHtml +=
+                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+
+                newVehicleHtml += `</div>
+                                </div>
+                                </div>
+                                </div>
+                                `;
+
+                $('.vehicles-container').append(newVehicleHtml);
+            }
+
+            $(document).on('click', '.addVehicleBtn', function() {
+                if ($('#tabSelector').val() == 'Car') {
+                    // console.log('yesss');
+                    addNewVehicle();
+                } else {
+                    // console.log('nooo');
+                    addOtherVehicle();
+                }
+            });
+
+            $(document).on('click', '.delete-vehicle', function() {
+                $(this).closest('.vehicle-info').remove();
+            });
+
+            $(document).on('change', '.year, .make', function() {
+                var year = $(this).closest('.vehicle-info').find('.year').val();
+                var makeId = $(this).closest('.vehicle-info').find('.make').val();
+                var vehicleInfo = $(this).closest('.vehicle-info');
+                if (year && makeId) {
+                    getModel(year, makeId, vehicleInfo);
+                }
+            });
+
+            function getModel(year, makeId, vehicleInfo) {
+                // console.log('yes inn');
+                $.ajax({
+                    url: "{{ route('get.models') }}",
+                    method: 'GET',
+                    data: {
+                        year: year,
+                        make: makeId
+                    },
+                    success: function(response) {
+                        var modelsDropdown = vehicleInfo.find('.model');
+                        modelsDropdown.empty();
+                        var selectOptions = '<option value="">Select Model</option>';
+                        $.each(response, function(index, model) {
+                            selectOptions += '<option value="' + model + '">' +
+                                model +
+                                '</option>';
+                        });
+                        modelsDropdown.html(selectOptions);
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            }
+        });
+    </script>
 <script>
     $(document).ready(function() {
     $('#category').change(function() {

@@ -61,7 +61,7 @@ Vehicle</a>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                    <label for="trailer_type" class="text-white">Trailer Type</label>
                                     <select class="nice-select " id="trailer_type" name="trailer_type">
                                         <option value="" selected disabled>Select</option>
                                         <option value="VAN (V)">VAN (V)</option>
@@ -95,7 +95,7 @@ Vehicle</a>
                             </div>
                         </div>
                         <div class="row mb-3 mt-3">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
 
                                 <label class="lab-cos">Length</label>
                                 <div class="input-container">
@@ -108,7 +108,7 @@ Vehicle</a>
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-4">
 
                                 <label class="lab-cos">Width</label>
                                 <div class="input-container">
@@ -121,7 +121,7 @@ Vehicle</a>
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-4">
 
                                 <label class="lab-cos">Height</label>
                                 <div class="input-container">
@@ -134,7 +134,13 @@ Vehicle</a>
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                        </div>
+
+                        
+                        <div class="row mt-3">
+                            
+
+                            <div class="col-md-6">
 
                                 <label class="lab-cos">Weight</label>
                                 <div class="input-container1">
@@ -144,11 +150,6 @@ Vehicle</a>
 
                                 </div>
                             </div>
-
-
-
-
-
                         </div>
 
                         <div class="row mt-3">
@@ -206,4 +207,4 @@ Vehicle</a>
                                         placeholder="Upload File" /> -->
                                 </div>
                             </div>
-                        </div>
+                        </div>      

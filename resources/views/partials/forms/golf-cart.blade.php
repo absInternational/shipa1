@@ -63,21 +63,8 @@
     </div>
 </div>
 
-<div class="row ms-3">
-<div class="col-md-6">
-        <div class="form-group">
-            <input class="form-check-input" type="checkbox"
-                id="modification" name="modification" value="1" />
-            <label class="form-check-label ms-4 text-white" for="modification">
-                Modified?</label>
-        </div>
-        <div class="input-form div-modify_info" style="display: none;">
-            <label class="d-block"> Modification Information:</label>
-            <input class="" type="text" id="c"
-                name="modify_info"
-                placeholder="Enter Modification Information" />
-        </div>
-    </div>
+<div class="row ">
+
     <div class="col-md-6">
     <div class="form-check">
             <input class="form-check-input" type="checkbox" id="available_at_auction" name="available_at_auction"
@@ -90,6 +77,20 @@
         <div class="input-form div-link" style="display: none;">
             <label class="d-block"> Enter Link:</label>
             <input class="" type="url" id="link" name="link" placeholder="Enter Link" required />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group m-0">
+            <input class="form-check-input" type="checkbox"
+                id="modification" name="modification" value="1" />
+            <label class="form-check-label ms-4 text-white" for="modification">
+                Modified?</label>
+        </div>
+        <div class="input-form div-modify_info" style="display: none;">
+            <label class="d-block"> Modification Information:</label>
+            <input class="" type="text" id="c"
+                name="modify_info"
+                placeholder="Enter Modification Information" />
         </div>
     </div>
     

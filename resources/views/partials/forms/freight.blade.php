@@ -96,14 +96,14 @@
 <div class="row">
     <div class="col-md-4">
         <div class="input-form">
-            <label class="d-block"> Commodity Detail:</label>
+            <label class="d-block">Commodity Detail:</label>
             <input type="text" id="commodity_detail" name="commodity_detail" placeholder="Commodity Detail"
                 required="" />
         </div>
     </div>
     <div class="col-md-4">
         <div class="input-form">
-            <label class="d-block"> Select Handling Unit:</label>
+            <label class="d-block">Handling Unit:</label>
             <select class="form-control" id="handling_unit" name="handling_unit">
                 <option value="" selected disabled>Select</option>
                 <option value="Pallet">Pallet</option>
@@ -129,7 +129,7 @@
     </div>
     <div class="col-md-4">
         <div class="input-form">
-            <label class="d-block"> Commodity Unit:</label>
+            <label class="d-block">Commodity Unit:</label>
             <input type="number" id="commodity_unit" name="commodity_unit" placeholder="Commodity Unit" required="" />
         </div>
     </div>
@@ -203,28 +203,28 @@
 </div>
 <div class="form-check">
     <input class="form-check-input" type="checkbox" id="boat_on_trailer" name="boat_on_trailer" value="1" />
-    <label class="form-check-label text-white" for="boat_on_trailer"> Is your freight already on
+    <label class="form-check-label text-white" for="boat_on_trailer">Is your freight already on
         a
         trailer?</label>
 </div>
 <div class="form-check mt-0">
     <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous" value="1" />
-    <label class="form-check-label text-white" for="hazardous"> Hazardous</label>
+    <label class="form-check-label text-white" for="hazardous">Hazardous</label>
 </div>
 <div class="form-check">
     <input class="form-check-input" type="checkbox" id="stackable" name="stackable" value="1" />
-    <label class="form-check-label text-white" for="stackable"> Stackable</label>
+    <label class="form-check-label text-white" for="stackable">Stackable</label>
 </div>
 <div class="form-check">
     <input class="form-check-input" type="checkbox" id="available_at_auction" name="available_at_auction" value="1"
         required />
-    <label class="form-check-label text-white" for="available_at_auction"> Available
+    <label class="form-check-label text-white" for="available_at_auction">Available
         at
         Auction?</label>
 </div>
 
 <div class="input-form div-link" style="display: none;">
-    <label class="d-block"> Enter Link:</label>
+    <label class="d-block">Enter Link:</label>
     <input class="" type="url" id="link" name="link" placeholder="Enter Link" required />
 </div>
 <div class="row mt-3">
