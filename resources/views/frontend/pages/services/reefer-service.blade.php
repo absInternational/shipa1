@@ -498,6 +498,7 @@ Our services extend beyond port delivery, offering complete cold chain end-to-en
 
 
 <!--========== Faq Section Start ==============-->
+
 <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
@@ -536,7 +537,7 @@ Our services extend beyond port delivery, offering complete cold chain end-to-en
                 </div>
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
                     <div class="tj-faq-area">
-                    <div class="accordion" id="accordionExample">
+                       <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -601,11 +602,12 @@ Our services extend beyond port delivery, offering complete cold chain end-to-en
                 </div>
             </div>
         </div>
-    </section>
+</section>
 
-    <!--========== Faq Section End ==============-->
+<!--========== Faq Section End ==============-->
 
-    <!--========== Chhose Section Start ==============-->
+<!--========== Chhose Section Start ==============-->
+
 <section class="tj-choose-us-section-two">
             <div class="container">
                 <div class="row">
@@ -692,17 +694,15 @@ Our services extend beyond port delivery, offering complete cold chain end-to-en
                 </div>
             </div>
 </section>
+
 <!--========== Chhose Section End ==============-->
 
-
-   
-
-
-
 @include('partials.blog-slider')
+
 @endsection
 
-@section('extraScript')
+    @section('extraScript')
+
     <script>
         $(document).ready(function() {
             function addNewVehicle() {
@@ -796,8 +796,6 @@ Our services extend beyond port delivery, offering complete cold chain end-to-en
             }
         });
     </script>
-
-
 
     <script>
         $(document).ready(function() {
@@ -896,4 +894,5 @@ Our services extend beyond port delivery, offering complete cold chain end-to-en
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
+
     @endsection

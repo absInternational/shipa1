@@ -759,6 +759,7 @@ approximately 26 pallets.</li>
 @endsection
 
 @section('extraScript')
+
     <script>
         $(document).ready(function() {
             function addNewVehicle() {
@@ -852,8 +853,6 @@ approximately 26 pallets.</li>
             }
         });
     </script>
-
-
 
     <script>
         $(document).ready(function() {
@@ -952,4 +951,5 @@ approximately 26 pallets.</li>
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
+
     @endsection

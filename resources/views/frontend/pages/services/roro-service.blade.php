@@ -506,7 +506,7 @@ Additional services if there are any.
 <script src="path/to/owl.carousel.min.js"></script>
 
 <script>
-$(document).ready(function() {
+    $(document).ready(function() {
     $('#category').change(function() {
         var selectedCategory = $(this).val();
 
@@ -542,11 +542,11 @@ $(document).ready(function() {
             }
         });
     });
-});
+    });
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
     var input = document.querySelector("#phone");
     window.intlTelInput(input, {
         initialCountry: "auto",
@@ -562,16 +562,17 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
     });
-});
+    });
 </script>
+
 <script>
-function playVideo() {
+   function playVideo() {
     document.querySelector('.video-thumbnail').style.display = 'none';
     document.querySelector('.video-iframe').style.display = 'block';
     var iframe = document.getElementById('videoFrame');
     var videoSrc = iframe.src;
     iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
-}
+   }
 </script>
 
 <script>
@@ -981,43 +982,5 @@ $(document).ready(function() {
 });
 </script>
 
-<script>
-function updateSuggestions(inputField, suggestionsList) {
-    var inputValue = inputField.val();
-
-    $.ajax({
-        url: "{{ route('get.zipcodes') }}",
-        method: "POST",
-        data: {
-            "_token": "{{ csrf_token() }}",
-            "input": inputValue
-        },
-        success: function(response) {
-            suggestionsList.empty();
-
-            $.each(response, function(index, suggestion) {
-                var listItem = $("<li>").text(suggestion).click(function() {
-                    inputField.val(suggestion);
-                    suggestionsList.css("display", "none");
-                });
-                suggestionsList.append(listItem);
-            });
-        },
-        error: function(xhr, status, error) {
-            console.error("Error:", error);
-        }
-    });
-}
-
-$("#pickup-location, #delivery-location").keyup(function() {
-    var inputField = $(this);
-    var suggestionsList = inputField.siblings(".suggestionsTwo");
-    suggestionsList.css("display", "block");
-    if (inputField.val() === "") {
-        suggestionsList.css("display", "none");
-    }
-    updateSuggestions(inputField, suggestionsList);
-});
-</script>
 
 @endsection

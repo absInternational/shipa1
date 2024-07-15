@@ -1,3 +1,16 @@
+<style>
+    ul.pagination {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px; /* Adjust margin as needed */
+    }
+
+    .right {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px; /* Adjust margin as needed */
+    }
+</style>
 @if ($paginator->hasPages())
     <ul class="pagination">
         {{-- Previous Page Link --}}
@@ -52,16 +65,4 @@
     </div>
 @endif
 
-<style type="text/css">
-    ul.pagination {
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 10px; /* Adjust margin as needed */
-    }
 
-    .right {
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 10px; /* Adjust margin as needed */
-    }
-</style>
