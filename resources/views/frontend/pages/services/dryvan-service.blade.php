@@ -579,11 +579,11 @@ approximately 26 pallets.</li>
                             <div class="choose-step-box">
                                 <div class="choose-box"></div>
                                 <div class="step-content">
-                                    <h6 class="title">Customer Service</h6>
+                                    <h6 class="title">Shipping Methods:</h6>
                                 </div>
                             </div>
                             <p>
-                            Professional & responsive customer service available 24/7.
+                            Offering wide range of shipping methods tailored to various needs, including vehicles, heavy equipment, and freight across the US.
                             </p>
                         </div>
                     </div>
@@ -592,11 +592,11 @@ approximately 26 pallets.</li>
                             <div class="choose-step-box">
                                 <div class="choose-box"></div>
                                 <div class="step-content">
-                                    <h6 class="title">Range Services</h6>
+                                    <h6 class="title">Quality Service:</h6>
                                 </div>
                             </div>
                             <p>
-                            A wide range of services such as open, enclosed & expedited.
+                            Providing top-notch quality service with a well-equipped and professional team dedicated to meeting customer expectations.
                             </p>
                         </div>
                     </div>
@@ -605,11 +605,11 @@ approximately 26 pallets.</li>
                             <div class="choose-step-box">
                                 <div class="choose-box"></div>
                                 <div class="step-content">
-                                    <h6 class="title">Prompt Delivery</h6>
+                                    <h6 class="title">Timely Delivery: </h6>
                                 </div>
                             </div>
                             <p>
-                            Prompt delivery due to efficient use of trailers.
+                            Ensuring timely delivery of shipments, emphasizing reliability and efficiency in logistics.
                             </p>
                         </div>
                     </div>
@@ -618,11 +618,11 @@ approximately 26 pallets.</li>
                             <div class="choose-step-box">
                                 <div class="choose-box"></div>
                                 <div class="step-content">
-                                    <h6 class="title">Experienced Truckers</h6>
+                                    <h6 class="title">Customer focused Approach: </h6>
                                 </div>
                             </div>
                             <p>
-                            Legion of truckers available with years old network.
+                            Focusing on customer satisfaction by catering to their needs and maintaining loyalty through personalized service.
                             </p>
                         </div>
                     </div>
@@ -631,11 +631,11 @@ approximately 26 pallets.</li>
                             <div class="choose-step-box">
                                 <div class="choose-box"></div>
                                 <div class="step-content">
-                                    <h6 class="title">Shipping Quotes</h6>
+                                    <h6 class="title">Trustworthiness & Security:</h6>
                                 </div>
                             </div>
                             <p>
-                            Get online shipping quotes.
+                            Prioritizing safe and secure transportation, with a commitment to maintaining customer trust and peace of mind.
                             </p>
                         </div>
                     </div>

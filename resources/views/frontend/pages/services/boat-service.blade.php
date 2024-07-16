@@ -410,36 +410,36 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How do I prepare my vehicle for transport?
+                                    How do I need to prepare my boat for transport?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                        <strong>Take out personal items; tie up loose parts, drain tanks, disconnect batteries, and document any pre-existing damage.</strong>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
+                                    How is my boat protected while in your care during a move?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                        <strong>Specialized trailers with the feature requirements of your boat's safe fastening and skilled handlers, frequent inspections along the route, and adherence to all safety regulations for all involved.</strong>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
+                                    How is the cost for boat transportation calculated?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                        <strong>The factors that determine the price of boat transport include the size and weight of your vessel, how far it must travel, special handling requirements, and what additional services are needed. Give us a call for an accurate quote 1 (844) 474-4721.</strong>
                                     </div>
                                 </div>
                             </div>
@@ -455,7 +455,7 @@
 <section class="tj-choose-us-section-service-car-2">
     <div class="container why-box">
         <div class="row">
-            <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
+        <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
                 <div class="about-content-two">
                     <div class="tj-section-heading">
 
@@ -473,27 +473,27 @@
                             <div class="ab-text d-flex align-items-center">
 
                             </div>
-                            <p class="desc-2">★ Professional & responsive customer service available 24/7.</p>
+                            <p class="desc-2">★ Offering wide range of shipping methods tailored to various needs, including vehicles, heavy equipment, and freight across the US.</p>
                         </div>
 
                         <div class="tj-icon-box">
 
-                            <p class="desc-2">★ A wide range of services such as open, enclosed & expedited.</p>
+                            <p class="desc-2">★ Providing top-notch quality service with a well-equipped and professional team dedicated to meeting customer expectations.</p>
                         </div>
                         <div class="tj-icon-box pb-4">
 
-                            <p class="desc-2">★ Prompt delivery due to efficient use of trailers.</p>
+                            <p class="desc-2">★ Ensuring timely delivery of shipments, emphasizing reliability and efficiency in logistics.</p>
                         </div>
                     </div>
                     <div class="content-box d-flex align-items-center">
 
-                        <div class="tj-icon-box">
+                        <div class="tj-icon-box mr-3">
 
-                            <p class="desc-2">★ Legion of truckers available with years old network.</p>
+                            <p class="desc-2">★ Focusing on customer satisfaction by catering to their needs and maintaining loyalty through personalized service.</p>
                         </div>
                         <div class="tj-icon-box">
 
-                            <p class="desc-2">★ Get online car shipping quotes.</p>
+                            <p class="desc-2">★ Prioritizing safe and secure transportation, with a commitment to maintaining customer trust and peace of mind.</p>
                         </div>
                     </div>
                 </div>

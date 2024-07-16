@@ -560,27 +560,27 @@
                             <div class="ab-text d-flex align-items-center">
 
                             </div>
-                            <p class="desc-2">★ Professional & responsive customer service available 24/7.</p>
+                            <p class="desc-2">★ Offering wide range of shipping methods tailored to various needs, including vehicles, heavy equipment, and freight across the US.</p>
                         </div>
 
                         <div class="tj-icon-box">
 
-                            <p class="desc-2">★ A wide range of services such as open, enclosed & expedited.</p>
+                            <p class="desc-2">★ Providing top-notch quality service with a well-equipped and professional team dedicated to meeting customer expectations.</p>
                         </div>
                         <div class="tj-icon-box pb-4">
 
-                            <p class="desc-2">★ Prompt delivery due to efficient use of trailers.</p>
+                            <p class="desc-2">★ Ensuring timely delivery of shipments, emphasizing reliability and efficiency in logistics.</p>
                         </div>
                     </div>
                     <div class="content-box d-flex align-items-center">
 
-                        <div class="tj-icon-box">
+                        <div class="tj-icon-box mr-3">
 
-                            <p class="desc-2">★ Legion of truckers available with years old network.</p>
+                            <p class="desc-2">★ Focusing on customer satisfaction by catering to their needs and maintaining loyalty through personalized service.</p>
                         </div>
                         <div class="tj-icon-box">
 
-                            <p class="desc-2">★ Get online <a class="pp-link-2" href="{{ route('form.vehicle.car') }}"> car shipping quotes.</a></p>
+                            <p class="desc-2">★ Prioritizing safe and secure transportation, with a commitment to maintaining customer trust and peace of mind.</p>
                         </div>
                     </div>
                 </div>

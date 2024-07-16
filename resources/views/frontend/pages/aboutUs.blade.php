@@ -306,7 +306,7 @@
                             </div>
                             <div class="faq-text">
                                 <h6 class="title">Reliable & Trustworthy</h6>
-                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                                <p>Safe, trustworthy, and reliable for all of your shipping and transportation needs.</p>
                             </div>
                         </div>
                         <div class="faq-content">
@@ -314,8 +314,8 @@
                                 <i class="fa-regular fa-check"></i>
                             </div>
                             <div class="faq-text">
-                                <h6 class="title">High Quality Material</h6>
-                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                                <h6 class="title">High Quality service</h6>
+                                <p>Attention to detail and customer satisfaction are incorporated in delivering quality service consistently.</p>
                             </div>
                         </div>
                     </div>
@@ -404,6 +404,95 @@
     </section>
     
     <!--========== Faq Section End ==============-->
+
+    <!--========== Chhose Section Start ==============-->
+    <section class="tj-choose-us-section-two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="choose-us-top-content">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape2">Have any ideas in your mind?</span>
+                                <h2 class="title">Reasons Why You Choose Us.</h2>
+                            </div>
+                            <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Read More <i class="flaticon-right-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item">
+                            <div class="choose-step-box">
+                                <div class="choose-box"></div>
+                                <div class="step-content">
+                                    <h6 class="title">Shipping Methods:</h6>
+                                </div>
+                            </div>
+                            <p>
+                            Offering wide range of shipping methods tailored to various needs, including vehicles, heavy equipment, and freight across the US.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
+                        <div class="choose-us-step-item">
+                            <div class="choose-step-box">
+                                <div class="choose-box"></div>
+                                <div class="step-content">
+                                    <h6 class="title">Quality Service:</h6>
+                                </div>
+                            </div>
+                            <p>
+                            Providing top-notch quality service with a well-equipped and professional team dedicated to meeting customer expectations.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
+                        <div class="choose-us-step-item">
+                            <div class="choose-step-box">
+                                <div class="choose-box"></div>
+                                <div class="step-content">
+                                    <h6 class="title">Timely Delivery: </h6>
+                                </div>
+                            </div>
+                            <p>
+                            Ensuring timely delivery of shipments, emphasizing reliability and efficiency in logistics.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
+                        <div class="choose-us-step-item">
+                            <div class="choose-step-box">
+                                <div class="choose-box"></div>
+                                <div class="step-content">
+                                    <h6 class="title">Customer focused Approach: </h6>
+                                </div>
+                            </div>
+                            <p>
+                            Focusing on customer satisfaction by catering to their needs and maintaining loyalty through personalized service.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="500">
+                        <div class="choose-us-step-item">
+                            <div class="choose-step-box">
+                                <div class="choose-box"></div>
+                                <div class="step-content">
+                                    <h6 class="title">Trustworthiness & Security:</h6>
+                                </div>
+                            </div>
+                            <p>
+                            Prioritizing safe and secure transportation, with a commitment to maintaining customer trust and peace of mind.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+<!--========== Chhose Section End ==============-->
 
     <!--=========== Blog Section Start =========-->
     @include('partials.blog-slider')

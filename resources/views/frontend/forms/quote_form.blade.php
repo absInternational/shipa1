@@ -388,6 +388,7 @@
    <div class="container w-75">
 
    <div class="row">
+
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="custom-card car-card">
                 <div class="card-body">
@@ -402,6 +403,7 @@
                 </div>
             </div>
         </div>
+
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="custom-card motorcycle-card">
                 <div class="card-body">
@@ -416,6 +418,7 @@
                 </div>
             </div>
         </div>
+
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="custom-card atv-utv-card">
                 <div class="card-body">
@@ -430,6 +433,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 
     <div class="row">
@@ -779,7 +783,7 @@
                 </div>
             </div>
         </div> -->
-    </section>
+</section>
 @endsection
 
 @section('extraScript')
@@ -835,8 +839,7 @@
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
-    </script>
-
+</script>
 
 <script>
         $(document).ready(function() {
@@ -1005,8 +1008,7 @@
                 });
             }
         });
-    </script>
-
+</script>
 
 <script>
         $(document).ready(function() {
@@ -1073,8 +1075,9 @@
                 $('#step2').show();
             });
         });
-    </script>
-    <script>
+</script>
+
+<script>
         $(document).ready(function() {
             function addNewVehicle() {
                 var newVehicleHtml =
@@ -1166,9 +1169,9 @@
                 });
             }
         });
-    </script>
+</script>
 
-    <script>
+<script>
         $(document).ready(function() {
             $(document).on('change', '.vehicle-year, .vehicle-make', function() {
                 var year = $('.vehicle-year').val();
@@ -1223,9 +1226,9 @@
                 }
             });
         });
-    </script>
+</script>
 
-    <script>
+<script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
 
@@ -1262,8 +1265,9 @@
             }
             updateSuggestions(inputField, suggestionsList);
         });
-    </script>
-    <script>
+</script>
+
+<script>
         $(document).ready(function() {
             $(document).on('change', '#available_at_auction', function() {
                 if ($(this).is(':checked')) {
@@ -1281,5 +1285,6 @@
                 }
             });
         });
-    </script>
+</script>
+
 @endsection

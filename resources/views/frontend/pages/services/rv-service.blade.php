@@ -444,27 +444,27 @@
                             <div class="ab-text d-flex align-items-center">
 
                             </div>
-                            <p class="desc-2">★ Professional & responsive customer service available 24/7.</p>
+                            <p class="desc-2">★ Offering wide range of shipping methods tailored to various needs, including vehicles, heavy equipment, and freight across the US.</p>
                         </div>
 
                         <div class="tj-icon-box">
 
-                            <p class="desc-2">★ A wide range of services such as open, enclosed & expedited.</p>
+                            <p class="desc-2">★ Providing top-notch quality service with a well-equipped and professional team dedicated to meeting customer expectations.</p>
                         </div>
                         <div class="tj-icon-box pb-4">
 
-                            <p class="desc-2">★ Prompt delivery due to efficient use of trailers.</p>
+                            <p class="desc-2">★ Ensuring timely delivery of shipments, emphasizing reliability and efficiency in logistics.</p>
                         </div>
                     </div>
                     <div class="content-box d-flex align-items-center">
 
-                        <div class="tj-icon-box">
+                        <div class="tj-icon-box mr-3">
 
-                            <p class="desc-2">★ Legion of truckers available with years old network.</p>
+                            <p class="desc-2">★ Focusing on customer satisfaction by catering to their needs and maintaining loyalty through personalized service.</p>
                         </div>
                         <div class="tj-icon-box">
 
-                            <p class="desc-2">★ Get online car shipping quotes.</p>
+                            <p class="desc-2">★ Prioritizing safe and secure transportation, with a commitment to maintaining customer trust and peace of mind.</p>
                         </div>
                     </div>
                 </div>
@@ -510,36 +510,38 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How do I prepare my vehicle for transport?
+                                    What sorts of RVs can be transported?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                        <strong> From motor homes to travel trailers, fifth-wheel trailers, and camper vans and many more.</strong>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
+                                    How do I prepare my RV for shipping?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
+                                        <strong>Secure loose components, turn off propane tanks, remove all personal items, ensure the tire pressure is okay, and keep the RV clean and locked up.
+                                        </strong>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
+                                    How is the cost of RV transport determined?
+
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
+                                        <strong>The actual fee will depend on the size and weight of the RV, the distance of transportation, and any special needs. For an accurate quote, call 1(844) 474-4721.</strong>
                                     </div>
                                 </div>
                             </div>
