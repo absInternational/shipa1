@@ -225,7 +225,7 @@
                     <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                         <div class="service-item-three">
                             <div class="service-image">
-                                <img src="{{ asset('img/rv-.webp') }}"
+                                <img src="{{ asset('img/rv-banner.webp') }}"
                                     alt="Image" />
                                 {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                             </div>
@@ -271,7 +271,7 @@
                     <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                         <div class="service-item-three">
                             <div class="service-image">
-                                <img src="{{ asset('img/reefer-banner.webp') }}"
+                                <img src="{{ asset('img/ReeferTruck3.webp') }}"
                                     alt="Image" />
                                 {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                             </div>
