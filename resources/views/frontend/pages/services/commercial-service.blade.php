@@ -338,7 +338,7 @@
 
 </section>
 
-<section class="tj-choose-us-section-service-construction">
+<section class="tj-choose-us-section-service-commercial">
 
     <div class="container why-box">
         <div class="row">

@@ -556,7 +556,7 @@ approximately 26 pallets.</li>
 </section>
 
     <!--========== Chhose Section Start ==============-->
-<section class="tj-choose-us-section-two">
+<section class="tj-choose-us-section-dryvan">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

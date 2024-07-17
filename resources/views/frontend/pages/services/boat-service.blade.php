@@ -452,7 +452,7 @@
 </section>
 
 
-<section class="tj-choose-us-section-service-car-2">
+<section class="tj-choose-us-section-service-boat-">
     <div class="container why-box">
         <div class="row">
         <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">

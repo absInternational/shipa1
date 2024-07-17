@@ -27,7 +27,7 @@
     <!--========== breadcrumb End ==============-->
 
     <!--========== Service Section Start ==============-->
-    <section class="tj-service-section-four tj-service-page">
+    <!-- <section class="tj-service-section-four tj-service-page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -56,7 +56,251 @@
                 @endforeach
             </div>
         </div>
+    </section> -->
+
+    <section class="tj-service-section-four tj-service-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape"> What We Do</span>
+                        <h2 class="title">Logistic & Transport</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('frontend/images/slider/home-slider-1.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title" href="{{ route('frontend.pages.services.car-service') }}">
+                                Car Shipping Service  </a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('frontend/images/project/motorcycle-service.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title" href="{{ route('frontend.pages.services.bike-service') }}">
+                                Motorcycle Shipping Service    </a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('frontend/images/project/atv-urv service.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title" href="{{ route('frontend.pages.services.atv-utv-service') }}">
+                                ATV/UTV Shipping Service  </a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+            <div class="row">
+                
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('frontend/images/project/golf-cart-service.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4> <a class="title" href="{{ route('frontend.pages.services.golf-cart-service') }}">
+                                Golf Cart Shipping Service  </a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/BOAT-BANNER.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title" href="{{ route('frontend.pages.services.boat-service') }}">
+                                Boat Transport Services</a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/construction-banner.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4> <a class="title" href="{{ route('frontend.pages.services.construction-service') }}">
+                                Construction Equipment Services</a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+            <div class="row">
+                
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/COMMERCIAL-TRUCK-BANNER.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4> <a class="title" href="{{ route('frontend.pages.services.commercial-service') }}">
+                                Commercial Truck Transport</a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/excavator-banner.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title" href="{{ route('frontend.pages.services.excavator-service') }}">
+                                Excavator Transport Services</a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/farm-service-1.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4> <a class="title" href="{{ route('frontend.pages.services.farm-service') }}">
+                                Farm Transport Services</a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+            <div class="row">
+                
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/heavy-equipment-service.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title" href="{{ route('frontend.pages.services.heavy-service') }}">
+                                Heavy Equipment Services  </a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/rv-.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4> <a class="title" href="{{ route('frontend.pages.services.rv-service') }}">
+                                RV Transport Services  </a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/dry-van.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title" href="{{ route('frontend.pages.services.dryvan-service') }}">
+                                Dry Van Transport  </a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+            <div class="row">
+                
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/HAZMAT-BANNER.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title" href="{{ route('frontend.pages.services.hazmat-service') }}">
+                                Hazmat Transport</a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/reefer-banner.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4> <a class="title" href="{{ route('frontend.pages.services.reefer-service') }}">
+                                Reefer Transport</a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="service-item-three">
+                            <div class="service-image">
+                                <img src="{{ asset('img/roro-banner.webp') }}"
+                                    alt="Image" />
+                                {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                            </div>
+                            <div class="service-content">
+                                <h4><a class="title" href="{{ route('frontend.pages.services.roro-service') }}">
+                                Roro Shipping International</a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
     </section>
+
     <!--========== Service Section End ==============-->
 
     <!--=========== Feature Section Start =========-->
@@ -721,7 +965,6 @@
         });
     </script>
 
-
     <script>
         $(document).ready(function() {
             $('#category').change(function() {
@@ -761,9 +1004,5 @@
             });
         });
     </script>
-
-    
-
-
 
 @endsection
