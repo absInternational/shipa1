@@ -65,5 +65,3 @@
         Showing {{ $paginator->firstItem() }} to {{ $paginator->lastItem() }} of {{ $paginator->total() }} entries
     </div>
 @endif
-
-

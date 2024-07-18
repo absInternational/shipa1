@@ -1,3 +1,13 @@
+<style>
+    .pagination-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tj-sidebar-pagination {
+        text-align: center;
+    }
+</style>
 <div class="pagination-wrapper">
     <div class="tj-sidebar-pagination text-center">
         <ul class="list-gap-2">
@@ -46,13 +56,4 @@
         </ul>
     </div>
 </div>
-<style>
-    .pagination-wrapper {
-        display: flex;
-        justify-content: center;
-    }
 
-    .tj-sidebar-pagination {
-        text-align: center;
-    }
-</style>

@@ -12,7 +12,7 @@
 @section('content')
 <style>
         font {
-            display: content;
+            display: contents;
         }
     </style>
     <!--========== breadcrumb Start ==============-->
