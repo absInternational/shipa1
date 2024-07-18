@@ -830,7 +830,7 @@
                             </div>
                             <div class="faq-text">
                                 <h6 class="title">Reliable & Trustworthy</h6>
-                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                                <p>Safe, trustworthy, and reliable for all of your shipping and transportation needs.</p>
                             </div>
                         </div>
                         <div class="faq-content">
@@ -838,8 +838,8 @@
                                 <i class="fa-regular fa-check"></i>
                             </div>
                             <div class="faq-text">
-                                <h6 class="title">High Quality Material</h6>
-                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
+                                <h6 class="title">High Quality service</h6>
+                                <p>Attention to detail and customer satisfaction are incorporated in delivering quality service consistently.</p>
                             </div>
                         </div>
                     </div>
