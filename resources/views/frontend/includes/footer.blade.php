@@ -47,19 +47,22 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="https://blog.shipa1.daydispatch.com/public/services/car-shipping-service" target="_blank">Car Transport</a>
+                                <a href="{{ route('frontend.pages.services.boat-service') }}" target="_blank">Boat Transport</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('frontend.pages.services.car-service') }}" target="_blank">Car Transport</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('frontend.pages.services.dryvan-service') }}" target="_blank">Dry Van Transport</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank">Heavy Equipment</a>
                             </li>
                             <li style="width: 108%;">
-                                <a href="#" target="_blank">Motorcycle Shipping</a>
+                                <a href="{{ route('frontend.pages.services.bike-service') }}" target="_blank">Motorcycle Shipping</a>
                             </li>
                             <li>
-                                <a href="https://blog.shipa1.daydispatch.com/public/services/heavy-equipment-shipping-services" target="_blank">Heavy Equipment</a>
-                            </li>
-                            <li>
-                                <a href="https://blog.shipa1.daydispatch.com/public/services/boat-transport-service" target="_blank">Boat Transport</a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">Freight Transport</a>
+                                <a href="{{ route('frontend.pages.services.rv-service') }}" target="_blank">RV Transport</a>
                             </li>
                             <li>
                                 <a href="{{ route('services') }}" target="_blank">View More</a>
