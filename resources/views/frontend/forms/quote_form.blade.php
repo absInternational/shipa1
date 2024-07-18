@@ -127,6 +127,9 @@
         }
 
 
+        
+
+
         .tj-testimonial-section {
             padding: 50px 0;
             background: #f9f9f9;

@@ -243,9 +243,7 @@
                                  shipping service to another level.However, if you are thinking of shipping the car internationally, 
                                  then nothing can beat the (Roll-on/Roll-off) services. It involves the movers to rolling the automobile up 
                                  a ramp into the cargo deck of a commercial ship. Thousands of vehicles are now shipping with the help of the 
-                                 (Roll-on/roll-off) car shipping.
-
-</p>
+                                 (Roll-on/roll-off) car shipping.</p>
                         </div>
                         
                     </div>
@@ -281,19 +279,15 @@
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Benefits of RORO Shipping Service</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            Some of the advantages are as follows: For the shipper, the interest is speed. Since cars and lorries
+                            <p class="desc">Some of the advantages are as follows: For the shipper, the interest is speed. Since cars and lorries
                              can drive straight on to the ship at one port and then drive off at the other port within a few 
                              minutes of the ship docking, it saves much time of the shipper. It can also integrate well with
                               additional transport development, such as containers. The use of Customs-sealed units has enabled 
                               frontiers to be crossed with the minimum of delay. Therefore, it increases the speed and efficiency
                                of the shipper. The ship has also proved extremely popular with holidaymakers and private car
                                 owners. It has significantly contributed to the growth of tourism. A person can take his car 
-                                from one country to another by the sea with the help of a RORO vessel.
-                                
-                            </p>
+                                from one country to another by the sea with the help of a RORO vessel.</p>
                         </div>
-                        
                     </div>
                 </div>
 
@@ -315,9 +309,10 @@
                 <div class="tj-section-heading">
                     <span class="sub-title active-shape">Affordability</span>
                 </div>
-                <p class="desc">
-                    RORO is the most preferred shipping method to ship vehicles from one port to the other. It is also the fastest method of transportation that will free you of any additional expenses. If your country uses CIF to calculate duties and taxes, then you can save double, and as long as you keep on shipping, you indeed save on tax duties too! Now that's a good deal.
-                </p>
+                <p class="desc">RORO is the most preferred shipping method to ship vehicles from one port to the other. It is also
+                     the fastest method of transportation that will free you of any additional expenses. If your country uses CIF
+                      to calculate duties and taxes, then you can save double, and as long as you keep on shipping, you indeed 
+                      save on tax duties too! Now that's a good deal.</p>
             </div>
         </div>
 
@@ -326,9 +321,10 @@
                 <div class="tj-section-heading">
                     <span class="sub-title active-shape">Convenient</span>
                 </div>
-                <p class="desc">
-                    The outstanding and useful fact about RORO shipping is that it can apply to any vehicle. So long as you or the professional moving company you hire provide a trailer with wheels for boats and caravans, you do not need to pull them apart to fit inside a container. You may even be able to drive your car right from the destination port if you have enough gas left in the tank.
-                </p>
+                <p class="desc">The outstanding and useful fact about RORO shipping is that it can apply to any vehicle. So long
+                     as you or the professional moving company you hire provide a trailer with wheels for boats and caravans, you
+                      do not need to pull them apart to fit inside a container. You may even be able to drive your car right from
+                       the destination port if you have enough gas left in the tank.</p>
             </div>
         </div>
     </div>
@@ -339,94 +335,96 @@
                 <div class="tj-section-heading">
                     <span class="sub-title active-shape">Safe</span>
                 </div>
-                <p class="desc">
-                    You might have read some articles concerned about the safety of the stuff they ship. As long as you have chosen RORO car shipping, you will not have to worry about the security of your vehicles.
-                </p>
+                <p class="desc">You might have read some articles concerned about the safety of the stuff they ship. As long as 
+                    you have chosen RORO car shipping, you will not have to worry about the security of your vehicles.</p>
             </div>
         </div>
-
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Fast</span>
-                </div>
-                <p class="desc">
-                    This mode of shipping is used when you want to transport your vehicle on urgent or when time is essential. The standard vehicle shipping services take more days for shipping overseas, but RORO car shipping is more efficient than its alternatives.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Insurance</span>
-                </div>
-                <p class="desc">
-                    The various companies which offer the RORO service are now providing car insurance. Therefore, international car shipping is pretty safe now after incorporating coverage. The company covers not only the safety of the car but also, they verify the damages. In addition to that, the company scrutinizes the condition of the vehicle as they are liable for the damages.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Attractive Rates and Discounts</span>
-                </div>
-                <p class="desc">
-                    The service not only delivers car internationally at a very affordable price rate but also, they provide various attractive discounts. This can be an added advantage. Many companies offer discounts to maintain healthy competition in the market.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Shipping Process</span>
-                </div>
-                <p class="desc">
-                    The shipping process is convenient, and it takes the least time when it comes to processing international shipping. Therefore, many people trust the RORO shipping. Therefore, if you are planning international car shipping, then you can rely on RORO services.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Safety</span>
-                </div>
-                <p class="desc">
-                    Although RORO shipping is considered more affordable and convenient, it is also more high-risk in terms of vehicle safety. The main reasons for this are the loading/unloading stage, during which accidents can occur, and the extensive exposure to diverse climate changes.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
         <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
             <div class="about-content-one border rounded p-4">
                 <div class="tj-section-heading">
                     <span class="sub-title active-shape">Speed</span>
                 </div>
-                <p class="desc">
-                    The lack of RORO availability at specific ports can cause delays in transportation. If this does occur, importers have to find a port that offers this option in their close vicinity.
-                </p>
+                <p class="desc">The lack of RORO availability at specific ports can cause delays in transportation. If this does
+                     occur, importers have to find a port that offers this option in their close vicinity.</p>
             </div>
         </div>
+        
+        
+    </div>
 
+    <div class="row">
+        
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Shipping Process</span>
+                </div>
+                <p class="desc">The shipping process is convenient, and it takes the least time when it comes to processing 
+                    international shipping. Therefore, many people trust the RORO shipping. Therefore, if you are planning 
+                    international car shipping, then you can rely on RORO services.</p>
+            </div>
+        </div>
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Fast</span>
+                </div>
+                <p class="desc">This mode of shipping is used when you want to transport your vehicle on urgent or when time is
+                     essential. The standard vehicle shipping services take more days for shipping overseas, but RORO car shipping
+                      is more efficient than its alternatives.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+   
         <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
             <div class="about-content-one border rounded p-4">
                 <div class="tj-section-heading">
                     <span class="sub-title active-shape">Saves Times and Money</span>
                 </div>
-                <p class="desc">
-                    Another advantage is the affordability. It is one of the cheapest international shipping services which deliver the automobiles on time. Therefore, it also saves time. The air shipping and another way of international shipping are pretty expensive when it compares with the RORO shipping.
-                </p>
+                <p class="desc">Another advantage is the affordability. It is one of the cheapest international shipping 
+                    services which deliver the automobiles on time. Therefore, it also saves time. The air shipping and 
+                    another way of international shipping are pretty expensive when it compares with the RORO shipping.</p>
             </div>
         </div>
+        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Safety</span>
+                </div>
+                <p class="desc">Although RORO shipping is considered more affordable and convenient, it is also more
+                     high-risk in terms of vehicle safety. The main reasons for this are the loading/unloading stage,
+                      during which accidents can occur, and the extensive exposure to diverse climate changes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Insurance</span>
+                </div>
+                <p class="desc">The various companies which offer the RORO service are now providing car insurance. 
+                    Therefore, international car shipping is pretty safe now after incorporating coverage. The company covers not
+                     only the safety of the car but also, they verify the damages. In addition to that, the company scrutinizes 
+                     the condition of the vehicle as they are liable for the damages.</p>
+            </div>
+        </div>
+    <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="about-content-one border rounded p-4">
+                <div class="tj-section-heading">
+                    <span class="sub-title active-shape">Attractive Rates and Discounts</span>
+                </div>
+                <p class="desc">The service not only delivers car internationally at a very affordable price rate but also,
+                     they provide various attractive discounts. This can be an added advantage. Many companies offer discounts
+                      to maintain healthy competition in the market.</p>
+            </div>
+        </div>
+        
+        
     </div>
 </div>
     </section>
