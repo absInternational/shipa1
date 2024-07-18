@@ -342,7 +342,7 @@
                             @endif
                             <div class="container mt-2">
                                 <!-- Step 1: Moving From/To -->
-                                <div class="route_quote_info" id="step1">
+                                <!-- <div class="route_quote_info" id="step1">
                                     <div class="row">
                                         <h4 class="title text-center">Quote Request!</h4>
                                         <div class="col-xl-12 col-lg-12 mb-4">
@@ -355,9 +355,9 @@
                                                 <label class="error-message" id="pickup-location-error">This field is
                                                     required.</label>
                                             </div>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="col-xl-12 col-lg-12 mb-4">
+                                        <!-- <div class="col-xl-12 col-lg-12 mb-4">
                                             <h6 class="text-white">Deliver To</h6>
                                             <label class="text-white mb-2">Where Are You Moving To?</label>
                                             <div class="single-input-field">
@@ -367,7 +367,40 @@
                                                 <label class="error-message" id="delivery-location-error">This field is
                                                     required.</label>
                                             </div>
-                                        </div>
+                                        </div> -->
+                                            <!-- <div class="col-xl-4 col-lg-4 mb-4">
+                                                <div class="single-input-field">
+                                                    <label class="d-block text-white">Country:</label>
+                                                    <select class="form-control" id="country-dropdown" 
+                                                        name="country1">
+                                                        <option value="">Select a country</option>
+                                                        
+                                                    </select>
+                                                    <label class="error-message" id="country1-error">This field is
+                                                        required.</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="single-input-field">
+                                                    <label class="d-block text-white"> City:</label>
+                                                    <input class="form-control" required name="city1" type="text"
+                                                        placeholder="City">
+                                                    <label class="error-message" id="city1-error">This field is
+                                                        required.</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="single-input-field">
+                                                    <label class="d-block text-white">
+                                                        Postal/Zip(Optional)
+                                                        :</label>
+                                                    <input class="form-control" name="zip1" type="text"
+                                                        placeholder="Postal/Zip">
+                                                    <label class="error-message" id="zip1-error">This field is
+                                                        required.</label>
+                                                </div>
+                                            </div>
+                                        
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-12">
@@ -378,8 +411,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- <div class="route_quote_info" id="step1">
+                                </div> -->
+                                <div class="route_quote_info" id="step1">
 
                                                 <div class="row">
                                                     <h4 class="title text-center">Quote Request!</h4>
@@ -435,7 +468,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div> -->
+                                            </div>
                                 <!-- Step 2: Vehicle Information -->
                                 <div class="vehicle_quote_info" id="step2" style="display: none;">
                                     <div class="row">
@@ -454,7 +487,7 @@
                                         <label class="error-message" id="tabSelector-error">This field is
                                             required.</label>
                                         <div class="my-4">
-                                            <div class="col-xl-4 col-lg-4">
+                                            <!-- <div class="col-xl-4 col-lg-4">
                                                 <div class="single-input-field">
                                                     <label class="d-block text-white">Country:</label>
                                                     <select class="form-control" id="country-dropdown" required
@@ -484,7 +517,7 @@
                                                     <label class="error-message" id="zip1-error">This field is
                                                         required.</label>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="tab-content mt-3" id="additionalContent"></div>
                                     </div>
