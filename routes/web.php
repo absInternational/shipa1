@@ -76,12 +76,13 @@ Route::prefix('services')->group(function () {
     Route::get('/hazmat-transportation-service', [FrontendController::class, 'hazmatService'])->name('frontend.pages.services.hazmat-service');
     Route::get('/reefer-transportation-service', [FrontendController::class, 'reeferService'])->name('frontend.pages.services.reefer-service');
     Route::get('/dryvan-transportation-service', [FrontendController::class, 'dryvanService'])->name('frontend.pages.services.dryvan-service');
+    Route::get('/roro-service', [FrontendController::class, 'roroService'])->name('frontend.pages.services.roro-service');
+    
+    // Service detail
+    Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');
 });
 
-Route::get('/roro-service', [FrontendController::class, 'roroService'])->name('frontend.pages.services.roro-service');
 
-// Service detail
-Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');
 
 // Auto Auction
 Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('autoAuction');

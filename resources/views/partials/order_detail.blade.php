@@ -571,7 +571,7 @@ else {
                             <strong>Note: </strong>Please fill out all the fields that are required (*).
                         </div>
 
-                        {{-- <div class="all-none" style="display: none">
+                        <div class="all-none">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="mainTitle">
@@ -1001,7 +1001,7 @@ else {
 
                                 </div>
                             </div>
-                        </div> --}}
+                        </div>
 
                         <div class="row mt-5">
                             <div class="col-12">
