@@ -277,22 +277,22 @@
                                                     <li>
                                                                 <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.car-service') }}">
-                                                                    Car Shipping Service</a>
+                                                                    Car Transport Service</a>
                                                             </li>
                                                             <li>
                                                                 <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.bike-service') }}">
-                                                                    Motorcycle Shipping Service</a>
+                                                                    Motorcycle Transport Service</a>
                                                             </li>
                                                             <li>
                                                                 <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.atv-utv-service') }}">
-                                                                    ATV/UTV Shipping Service</a>
+                                                                    ATV/UTV Transport Service</a>
                                                             </li>
                                                             <li>
                                                                 <a class="title" target="_blank"
                                                                     href="{{ route('frontend.pages.services.golf-cart-service') }}">
-                                                                    Golf Cart Shipping Service</a>
+                                                                    Golf Cart Transport Service</a>
                                                             </li>
                                                             <!-- <li>
                                                                 <a class="title" target="_blank"

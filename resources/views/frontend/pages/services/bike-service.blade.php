@@ -1,5 +1,8 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Motorcycle Shipping Service - Free Shipping Quotes and Calculator | ShipA1')
+@section('meta_description', 'Best Motorcycle shipping services in the USA, ship your vehicle countrywide or international in reasonable prices, Get Free shipping quotes - ShipA1.')
+
 @section('content')
 
 <style>

@@ -418,7 +418,7 @@
             <div class="custom-card car-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                        <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Car</h5>
                     <p class="card-text">Sedan, SUV, Pickup etc.</p>
@@ -433,7 +433,7 @@
             <div class="custom-card motorcycle-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                        <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Motorcycle</h5>
                     <p class="card-text">Mopeds, Power Sports etc.</p>
@@ -448,7 +448,7 @@
             <div class="custom-card atv-utv-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i>
+                        <!-- <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">ATV/UTV</h5>
                     <p class="card-text">Sport, Quads, Military etc.</p>
@@ -466,7 +466,7 @@
             <div class="custom-card golf-cart-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                        <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Golf Cart</h5>
                     <p class="card-text">Digger, Driller, Miners etc.</p>
@@ -480,7 +480,7 @@
             <div class="custom-card construction-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                        <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Construction</h5>
                     <p class="card-text">Cranes, Drills, Grinders etc.</p>
@@ -494,7 +494,7 @@
             <div class="custom-card heavy-equip-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i>
+                        <!-- <i class="fa-light fa-truck-monster fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Heavy Equip</h5>
                     <p class="card-text">Trucks, Bulldozers etc.</p>
@@ -508,7 +508,7 @@
             <div class="custom-card excavator-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                        <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Excavator</h5>
                     <p class="card-text">Trucks, Bulldozers etc.</p>
@@ -525,7 +525,7 @@
             <div class="custom-card boat-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                        <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Boat</h5>
                     <p class="card-text">Trucks, Bulldozers etc.</p>
@@ -539,7 +539,7 @@
             <div class="custom-card rv-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                        <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">RV</h5>
                     <p class="card-text">Trucks, Bulldozers etc.</p>
@@ -556,7 +556,7 @@
             <div class="custom-card commercial-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                        <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Commercial Truck</h5>
                     <p class="card-text">Sedan, SUV, Pickup etc.</p>
@@ -571,7 +571,7 @@
                 <div class="card-body">
                     <div class="card-icon">
                         <!-- <img src="../../img/farm-80.png" alt=""> -->
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                        <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Farm</h5>
                     <p class="card-text">Mopeds, Power Sports etc.</p>
@@ -588,7 +588,7 @@
             <div class="custom-card Reefer-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                        <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Reefer</h5>
                     <p class="card-text">Farm Equip, Rakes etc.</p>
@@ -602,7 +602,7 @@
             <div class="custom-card hazmat-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i>
+                        <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Hazmat</h5>
                     <p class="card-text">Commercial etc.</p>
@@ -616,7 +616,7 @@
             <div class="custom-card dry-van-card">
                 <div class="card-body">
                     <div class="card-icon">
-                        <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i>
+                        <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Dry Van</h5>
                     <p class="card-text">Dump Trucks etc.</p>

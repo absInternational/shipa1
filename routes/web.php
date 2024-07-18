@@ -61,27 +61,27 @@ Route::get('/services', [FrontendController::class, 'services'])->name('services
 Route::prefix('services')->group(function () {
     Route::get('/car-shipping-service', [FrontendController::class, 'carService'])->name('frontend.pages.services.car-service');
     Route::get('/motorcycle-shipping-service', [FrontendController::class, 'bikeService'])->name('frontend.pages.services.bike-service');
-    Route::get('/atv-utv-shipping-service', [FrontendController::class, 'atvutvService'])->name('frontend.pages.services.atv-utv-service');
+    Route::get('/atv-utv-transport', [FrontendController::class, 'atvutvService'])->name('frontend.pages.services.atv-utv-service');
     Route::get('/golf-cart-shipping-service', [FrontendController::class, 'golfcartService'])->name('frontend.pages.services.golf-cart-service');
 
     Route::get('/boat-service', [FrontendController::class, 'boatService'])->name('frontend.pages.services.boat-service');
-    Route::get('/commercial-service', [FrontendController::class, 'commercialService'])->name('frontend.pages.services.commercial-service');
-    Route::get('/construction-service', [FrontendController::class, 'constructionService'])->name('frontend.pages.services.construction-service');
+    Route::get('/commercial-truck-transport', [FrontendController::class, 'commercialService'])->name('frontend.pages.services.commercial-service');
+    Route::get('/construction-equipment-transport-shipping', [FrontendController::class, 'constructionService'])->name('frontend.pages.services.construction-service');
     Route::get('/excavator-shipping-service', [FrontendController::class, 'excavatorService'])->name('frontend.pages.services.excavator-service');
-    Route::get('/farm-service', [FrontendController::class, 'farmService'])->name('frontend.pages.services.farm-service');
+    Route::get('/farm-transport-service', [FrontendController::class, 'farmService'])->name('frontend.pages.services.farm-service');
     Route::get('/freight-service', [FrontendController::class, 'freightService'])->name('frontend.pages.services.freight-service');
-    Route::get('/heavy-service', [FrontendController::class, 'heavyService'])->name('frontend.pages.services.heavy-service');
+    Route::get('/heavy-equipment-shipping-services', [FrontendController::class, 'heavyService'])->name('frontend.pages.services.heavy-service');
     Route::get('/rv-service', [FrontendController::class, 'rvService'])->name('frontend.pages.services.rv-service');
 
-    Route::get('/hazmat-transportation-service', [FrontendController::class, 'hazmatService'])->name('frontend.pages.services.hazmat-service');
-    Route::get('/reefer-transportation-service', [FrontendController::class, 'reeferService'])->name('frontend.pages.services.reefer-service');
-    Route::get('/dryvan-transportation-service', [FrontendController::class, 'dryvanService'])->name('frontend.pages.services.dryvan-service');
-    Route::get('/roro-service', [FrontendController::class, 'roroService'])->name('frontend.pages.services.roro-service');
+    Route::get('/hazmat-transport', [FrontendController::class, 'hazmatService'])->name('frontend.pages.services.hazmat-service');
+    Route::get('/reefer-trucking', [FrontendController::class, 'reeferService'])->name('frontend.pages.services.reefer-service');
+    Route::get('/dry-van-transportation', [FrontendController::class, 'dryvanService'])->name('frontend.pages.services.dryvan-service');
     
     // Service detail
     Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');
 });
 
+Route::get('/roro-shipping-international-service', [FrontendController::class, 'roroService'])->name('frontend.pages.services.roro-service');
 
 
 // Auto Auction

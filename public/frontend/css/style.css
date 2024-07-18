@@ -4276,7 +4276,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-get-quote {
     background-color: #000000;
-    background-image: url(../../img/rv-.webp);
+    background-image: url('../../img/get-quote-detail.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

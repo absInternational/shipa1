@@ -1,5 +1,9 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Reefer Shipping Service - Freight Delivery | Ship A1')
+@section('meta_description', 'Reefer transport services in all over the USA, ship your vehicle easiest way with one-click solution, Reefer shipping from one state to another.')
+
+
 @section('content')
 
 <style>

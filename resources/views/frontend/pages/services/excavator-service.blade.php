@@ -1,5 +1,8 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Excavator Shipping Services - Ship Your Heavy Machinery Securely | ShipA1')
+@section('meta_description', 'Get excavator shipping services all over the USA, Get vehicle transport with secure and safe along with insurance facility at nationwide - Shipa1.')
+
 @section('content')
 
 <Style>

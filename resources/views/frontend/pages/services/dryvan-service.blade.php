@@ -1,5 +1,8 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Dry Van Shipping Service - Freight Delivery | Ship A1')
+@section('meta_description', 'Dry van transport services in all over the USA, ship your vehicle easiest way with one-click solution, Dry van shipping from one state to another.')
+
 @section('content')
 
 <style>

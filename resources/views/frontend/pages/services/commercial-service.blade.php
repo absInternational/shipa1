@@ -1,5 +1,8 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Commercial Truck Transport Service - Truck Delivery | ShipA1')
+@section('meta_description', 'Commercial truck transport services in all over the USA, ship your vehicle easiest way with one-click solution, Truck shipping from one state to another.')
+
 @section('content')
 
 <Style>
@@ -418,24 +421,7 @@
                         <div class="faq-image">
                             <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                         </div>
-                        <div class="faq-content">
-                            <div class="faq-icon">
-                                <i class="fa-regular fa-check"></i>
-                            </div>
-                            <div class="faq-text">
-                                <h6 class="title">Reliable & Trustworthy</h6>
-                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
-                            </div>
-                        </div>
-                        <div class="faq-content">
-                            <div class="faq-icon">
-                                <i class="fa-regular fa-check"></i>
-                            </div>
-                            <div class="faq-text">
-                                <h6 class="title">High Quality Material</h6>
-                                <p>Trage agile frameworks to provide a robust synopsis for high level overviews.</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">

@@ -1,5 +1,8 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Heavy Equipment Shipping Services - Shipping Quotes and Calculator | ShipA1')
+@section('meta_description', 'Get Heavy Equipment Shipping Services with insurance get vehicle transport with safety in the easiest way nationwide, Get free shipping quotes now - Shipa1.')
+
 @section('content')
 
 <Style>

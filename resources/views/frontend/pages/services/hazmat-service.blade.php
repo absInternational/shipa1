@@ -1,5 +1,9 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Hazmat Shipping Service - Freight Delivery | Ship A1')
+@section('meta_description', 'Hazmat transport services in all over the USA, ship your vehicle easiest way with one-click solution, Hazmat shipping from one state to another.')
+
+
 @section('content')
 
 <style>
@@ -552,21 +556,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
-                                        How do I prepare my vehicle for transport?
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse"
-                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             
                         </div>
                     </div>

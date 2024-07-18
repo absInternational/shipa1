@@ -1,5 +1,8 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Farm Transport Services - Heavy Haul Trucking Shipping Service | ShipA1')
+@section('meta_description', 'Farm Transport Services, Ship your farming vehicle at your desired place in the USA with insurance services and securely without any scratch - Shipa1.')
+
 @section('content')
 
 <Style>

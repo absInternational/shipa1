@@ -1,5 +1,8 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Car Shipping Service - Vehicle Delivery With Professionals | ShipA1')
+@section('meta_description', 'Get car shipping service in the USA, scratchless vehicle transport services along with huge discount offers and free shipping quotes nationwide.')
+
 @section('content')
 
 <style>
