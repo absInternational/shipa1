@@ -96,7 +96,7 @@
 
 
                             <li>
-                                <a href="#" target="_blank">Our Team </a>
+                                <a href="{{ route('faq') }}" target="_blank">FAQ!</a>
                             </li>
 
                             <li>

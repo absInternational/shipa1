@@ -1888,14 +1888,14 @@ body [class*=" icon-"]::before {
 }
 
 .slider-tabs.slider-tabs-two {
-    background: var(--tj-primary-color);
+    background: #e3e3e3;
     border-radius: 3px;
     padding: 35px 35px 35px;
-    max-width: 550px;
-    margin-left: auto;
-    margin-top: -95px;
-    position: relative;
-    z-index: 9;
+    /* max-width: 550px; */
+    /* margin-left: auto; */
+    /* margin-top: -95px; */
+    /* position: relative; */
+    /* z-index: 9; */
 }
 
 .slider-tabs.slider-tabs-two .select-form-box {
@@ -1903,11 +1903,11 @@ body [class*=" icon-"]::before {
     border-radius: 0;
     padding: 0;
     max-width: 100%;
-    margin-left: auto;
+    /* margin-left: auto; */
 }
 
 .slider-tabs.slider-tabs-two .nav-link {
-    color: var(--tj-white-color);
+    color: black;
     font-size: 17px;
     font-weight: 500;
     padding: 8px 17px 10px;
@@ -1915,8 +1915,8 @@ body [class*=" icon-"]::before {
 
 .slider-tabs.slider-tabs-two .nav-link i {
     font-size: 20px;
-    position: relative;
-    top: 5px;
+    /* position: relative; */
+    /* top: 5px; */
     margin-right: 5px;
 }
 

@@ -169,6 +169,11 @@ class FrontendController extends Controller
         return view('frontend.pages.termsAndConditions');
     }
 
+    public function faq()
+    {
+        return view('frontend.pages.faq');
+    }
+
     public function privacyPolicy()
     {
         return view('frontend.pages.privacyPolicy');

@@ -100,6 +100,9 @@ Route::get('order_tracking', [FrontendController::class, 'orderTracking'])->name
 // terms & conditions
 Route::get('/terms_and_conditions', [FrontendController::class, 'termsAndConditions'])->name('termsAndConditions');
 
+// faq
+Route::get('/frequently-asked-questions', [FrontendController::class, 'faq'])->name('faq');
+
 // privacy policy
 Route::get('/privacy_policy', [FrontendController::class, 'privacyPolicy'])->name('privacyPolicy');
 
