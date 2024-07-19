@@ -778,11 +778,11 @@ textarea:focus {
 }
 
 .section-shape {
-    background: url(../images/bg/section-bg.jpg);
+    background: url('../images/bg/section-bg.jpg');
 }
 
 .section-shape2 {
-    background: url(../images/bg/section-shape.png);
+    background: url('../images/bg/section-shape.png');
 }
 
 .section-shape,
@@ -809,7 +809,7 @@ textarea:focus {
 .tj-hero-section .hero-bg-1 {
     content: "";
     position: absolute;
-    background: url(../images/banner/hero-1.jpg);
+    background: url('../images/banner/hero-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -840,7 +840,7 @@ textarea:focus {
 .tj-hero-section .hero-bg-2 {
     content: "";
     position: absolute;
-    background: url(../images/banner/hero-2.jpg);
+    background: url('../images/banner/hero-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1559,7 +1559,7 @@ body [class*=" icon-"]::before {
     height: 155%;
     top: -30%;
     left: 0;
-    background: url(../images/banner/banner-shape.png);
+    background: url('../images/banner/banner-shape.png');
     background-position: center left;
     background-repeat: no-repeat;
     z-index: 2;
@@ -1854,7 +1854,7 @@ body [class*=" icon-"]::before {
 }
 
 .slider-bg-image3 {
-    background: url(../images/slider/slider-bg-image3.jpg);
+    background: url('../images/slider/slider-bg-image3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -2537,7 +2537,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 100%;
     left: 0;
     top: 0;
-    background-image: url(../images/banner/cta-shape.png);
+    background-image: url('../images/banner/cta-shape.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2629,7 +2629,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 100%;
     left: 0;
     top: 0;
-    background-image: url(../images/banner/cta-shape.png);
+    background-image: url('../images/banner/cta-shape.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2715,7 +2715,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj_cta_image-4 {
     content: "";
     position: absolute;
-    background: url(../../frontend/images/banner/1\ \(1\).webp);
+    background: url('../../frontend/images/banner/1\ \(1\).webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -2738,7 +2738,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-cta-section-two .tj_cta_image {
     content: "";
     position: absolute;
-    background: url(../../frontend/images/banner/1\ \(1\).webp);
+    background: url('../../frontend/images/banner/1\ \(1\).webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -2761,7 +2761,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-cta-section-two .tj_cta_image1 {
     content: "";
     position: absolute;
-    background: url(../../frontend/images/banner/2\ \(1\).webp);
+    background: url('../../frontend/images/banner/2\ \(1\).webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -2807,7 +2807,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-cta-section-three {
-    background: url(../images/banner/cta-bg.jpg);
+    background: url('../images/banner/cta-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -2915,7 +2915,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     08. Price CSS
 ------------------------------------ */
 .tj-price-section {
-    background: url(../images/banner/price-bg.jpg);
+    background: url('../images/banner/price-bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3184,7 +3184,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 ------------------------------------ */
 .tj-video-section {
     position: relative;
-    background-image: url(../images/banner/v-img.jpg);
+    background-image: url('../images/banner/v-img.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3435,7 +3435,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     12. Step CSS
 ------------------------------------ */
 .tj-step-section {
-    background-image: url(../images/banner/step-1.jpg);
+    background-image: url('../images/banner/step-1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3555,7 +3555,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     visibility: hidden;
     transition: 0.4s;
     height: 100%;
-    background: url(../images/banner/doted-shape1.png);
+    background: url('../images/banner/doted-shape1.png');
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -4300,7 +4300,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-rv {
     background-color: #000000;
-    background-image: url(../../img/rv-.webp);
+    background-image: url('../../img/rv-.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4325,7 +4325,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-construction {
     background-color: #000000;
-    background-image: url(../../img/construction_1.webp);
+    background-image: url('../../img/construction_1.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4349,7 +4349,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-farm {
     background-color: #000000;
-    background-image: url(../../img/farm-equipment.webp);
+    background-image: url('../../img/farm-equipment.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4373,7 +4373,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-boat {
     background-color: #000000;
-    background-image: url(../../img/boat2.webp);
+    background-image: url('../../img/boat2.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4397,7 +4397,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-commercial {
     background-color: #000000;
-    background-image: url(../../img/truck-.webp);
+    background-image: url('../../img/truck-.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4421,7 +4421,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-reefer {
     background-color: #000000;
-    background-image: url(../../img/ReeferTruck3.webp);
+    background-image: url('../../img/ReeferTruck3.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4444,7 +4444,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-hazmat {
     background-color: #000000;
-    background-image: url(../../img/Hazmat-Truck.webp);
+    background-image: url('../../img/Hazmat-Truck.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4468,7 +4468,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-dryvan {
     background-color: #000000;
-    background-image: url(../../img/dry-van.webp);
+    background-image: url('../../img/dry-van.webp');
    
     background-position: center;
     background-repeat: no-repeat;
@@ -4493,7 +4493,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-excavator {
     background-color: #000000;
-    background-image: url(../../img/EXCAVATOR.webp);
+    background-image: url('../../img/EXCAVATOR.webp');
    
     background-position: center;
     background-repeat: no-repeat;
@@ -4518,7 +4518,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-golfcart {
     background-color: #000000;
-    background-image: url(../../img/golf-cart.webp);
+    background-image: url('../../img/golf-cart.webp');
    
     background-position: center;
     background-repeat: no-repeat;
@@ -4543,7 +4543,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-choose-us-section-roro {
     background-color: #000000;
     
-    background-image: url(../../frontend/images/project/roro.webp);
+    background-image: url('../../frontend/images/project/roro.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4568,7 +4568,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-choose-us-section-freight {
     background-color: #000000;
     
-    background-image: url(../../frontend/images/slider/home-slider-3.webp);
+    background-image: url('../../frontend/images/slider/home-slider-3.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4592,7 +4592,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-choose-us-section-heavy {
     background-color: #000000;
     
-    background-image: url(../../frontend/images/slider/home-slider-2.webp);
+    background-image: url('../../frontend/images/slider/home-slider-2.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4617,7 +4617,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-choose-us-section-bike {
     background-color: #000000;
     
-    background-image: url(../../img/bike.webp);
+    background-image: url('../../img/bike.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4641,7 +4641,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-choose-us-section-home {
     background-color: #000000;
     
-    background-image: url(../../img/home-.webp);
+    background-image: url('../../img/home-.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4704,7 +4704,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-choose-us-section-two {
-    background: url(../../img/HAZMAT-BANNER.webp);
+    background: url('../../img/HAZMAT-BANNER.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -6237,7 +6237,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-testimonial-section.tj-testimonial-page {
-    background: url(../images/banner/test-2.jpg);
+    background: url('../images/banner/test-2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -6308,7 +6308,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-testimonial-section-two {
     padding-bottom: 175px;
-    background: url(../images/banner/testimonial-bg.jpg);
+    background: url('../images/banner/testimonial-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8589,7 +8589,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 ------------------------------------ */
 .tj-footer-area {
     background-color: var(--tj-secondary-color);
-    background-image: url(../images/banner/footer.webp);
+    background-image: url('../images/banner/footer.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8626,7 +8626,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 100%;
     bottom: -40px;
     left: 0;
-    background: url(../images/icon/icon-shape.svg);
+    background: url('../images/icon/icon-shape.svg');
     background-repeat: no-repeat;
 }
 
@@ -8899,7 +8899,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 100%;
     bottom: -40px;
     left: 0;
-    background: url(../images/icon/icon-shape.svg);
+    background: url('../images/icon/icon-shape.svg');
     background-repeat: no-repeat;
 }
 
@@ -9058,7 +9058,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-footer-v3 {
-    background: url(../images/banner/footer-bg2.jpg);
+    background: url('../images/banner/footer-bg2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10859,7 +10859,7 @@ PAGE LOAD ANIMATION
 }
 
 .custom-testimonial-section.custom-testimonial-page {
-    background: url(../images/banner/test-2.jpg);
+    background: url('../images/banner/test-2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
