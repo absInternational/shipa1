@@ -606,28 +606,15 @@
                                     </div>
                                 </div>
                             </div>
-
                         </form>
-
-
-
-
-
-
                     </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-
-        </div>
-
-        </div>
-    </section>
-
-
+                 </div>
+              </div>
+          </div>
+       </div>
+     </div>
+   </div>
+</section>
 
 @endsection
 
@@ -637,6 +624,7 @@
     </script>
 
     <script>
+        
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
 

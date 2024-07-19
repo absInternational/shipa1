@@ -83,49 +83,48 @@
                 
              }
     
-        .custom-card.motorcycle-card:hover .card-body {
-            background-image: url('../../img/bike.webp');
-        }
-        .custom-card.heavy-equip-card:hover .card-body {
-            background-image: url('../../frontend/images/slider/home-slider-2.webp');
-        }
-        .custom-card.atv-utv-card:hover .card-body {
-            background-image: url('../../img/atv.webp');
-        }
-        .custom-card.excavator-card:hover .card-body {
-            background-image: url('../../img/EXCAVATOR.webp');
-        }
-        .custom-card.construction-card:hover .card-body {
-            background-image: url('../../img/construction_1.webp');
-        }
-        .custom-card.farm-card:hover .card-body {
-            background-image: url('../../img/farm-equipment.webp');
-        }
-        .custom-card.trucks-card:hover .card-body {
-            background-image: url('../../img/truck-.webp');
-        }
-        .custom-card.boat-card:hover .card-body {
-            background-image: url('../../img/boat2.webp');
-        }
-        .custom-card.dry-van-card:hover .card-body {
-            background-image: url('../../img/dry-van.webp');
-        }
-        .custom-card.golf-cart-card:hover .card-body {
-            background-image: url('../../img/golf-cart.webp');
-        }
-        .custom-card.rv-card:hover .card-body {
-            background-image: url('../../img/rv-.webp');
-        }
-        .custom-card.commercial-card:hover .card-body {
-            background-image: url('../../img/truck-.webp');
-        }
-        .custom-card.Reefer-card:hover .card-body {
-            background-image: url('../../img/ReeferTruck3.webp');
-        }
-        .custom-card.hazmat-card:hover .card-body {
-            background-image: url('../../img/HAZMAT-BANNER.webp');
-        }
-
+             .custom-card.motorcycle-card:hover .card-body {
+        background-image: url('{{ asset('img/bike.webp') }}');
+    }
+    .custom-card.heavy-equip-card:hover .card-body {
+        background-image: url('{{ asset('frontend/images/slider/home-slider-2.webp') }}');
+    }
+    .custom-card.atv-utv-card:hover .card-body {
+        background-image: url('{{ asset('img/atv.webp') }}');
+    }
+    .custom-card.excavator-card:hover .card-body {
+        background-image: url('{{ asset('img/EXCAVATOR.webp') }}');
+    }
+    .custom-card.construction-card:hover .card-body {
+        background-image: url('{{ asset('img/construction_1.webp') }}');
+    }
+    .custom-card.farm-card:hover .card-body {
+        background-image: url('{{ asset('img/farm-equipment.webp') }}');
+    }
+    .custom-card.trucks-card:hover .card-body {
+        background-image: url('{{ asset('img/truck-.webp') }}');
+    }
+    .custom-card.boat-card:hover .card-body {
+        background-image: url('{{ asset('img/boat2.webp') }}');
+    }
+    .custom-card.dry-van-card:hover .card-body {
+        background-image: url('{{ asset('img/dry-van.webp') }}');
+    }
+    .custom-card.golf-cart-card:hover .card-body {
+        background-image: url('{{ asset('img/golf-cart.webp') }}');
+    }
+    .custom-card.rv-card:hover .card-body {
+        background-image: url('{{ asset('img/rv-.webp') }}');
+    }
+    .custom-card.commercial-card:hover .card-body {
+        background-image: url('{{ asset('img/truck-.webp') }}');
+    }
+    .custom-card.Reefer-card:hover .card-body {
+        background-image: url('{{ asset('img/ReeferTruck3.webp') }}');
+    }
+    .custom-card.hazmat-card:hover .card-body {
+        background-image: url('{{ asset('img/HAZMAT-BANNER.webp') }}');
+    }
 
         
 
