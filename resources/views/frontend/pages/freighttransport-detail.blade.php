@@ -1176,21 +1176,21 @@
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('services') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Reefer</span>
-                    <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Reefer Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"  class="title-link">Reefer Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/7.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('services') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Hazmat</span>
-                    <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Hazmat Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"  class="title-link">Hazmat Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
