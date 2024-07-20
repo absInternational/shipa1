@@ -1888,7 +1888,7 @@ body [class*=" icon-"]::before {
 }
 
 .slider-tabs.slider-tabs-two {
-    background: #e3e3e3;
+    background: #ffffff;
     border-radius: 3px;
     padding: 35px 35px 35px;
     /* max-width: 550px; */

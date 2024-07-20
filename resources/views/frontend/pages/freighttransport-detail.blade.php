@@ -1163,7 +1163,7 @@
     <!--=========== Project Section Start =========-->
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
-            <div class="tj-project-item">
+            <!-- <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('services') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
@@ -1172,7 +1172,7 @@
                     <span class="sub-title">logistics</span>
                     <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Freight Solution</a></h4>
                 </div>
-            </div>
+            </div> -->
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
@@ -1337,7 +1337,7 @@
     @include('partials.blog-slider')
     <!--=========== Blog Section End =========-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="path/to/jquery.min.js"></script>
@@ -1347,7 +1347,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
 
     <script>
         $(document).ready(function() {
