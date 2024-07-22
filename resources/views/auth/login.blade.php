@@ -172,8 +172,8 @@
                 </div>
             </form>
 
-            <div class="signup">
-                <a href="{{ route('register') }}">Don't have an account? Signup!</a>
+            <div class="signup"><br>
+                <!-- <a href="{{ route('register') }}">Don't have an account? Signup!</a> -->
             </div>
         </div>
         <div class="right">
