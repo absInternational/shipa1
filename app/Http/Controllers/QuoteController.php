@@ -192,19 +192,21 @@ class QuoteController extends Controller
         $location1 = $this->getLatLong($delivery_latitude);
         $location2 = $this->getLatLong($delivery_longitude);
 
-        dd($delivery_latitude, $delivery_longitude, $location1, $location2);
+        // dd($delivery_latitude, $delivery_longitude, $location1, $location2);
 
-        $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
-            $q->where('delivery_latitude', $delivery_latitude)
-              ->where('delivery_longitude', $delivery_longitude);
-        }])
-        ->where('country', 'United States')
-        ->where('delivery_address', 'Grimaldi Group Shipping Line')
-        ->where('latitude', '28.9541')
-        ->where('longitude', '-95.3597')
-        ->first();
+        // $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
+        //     $q->where('delivery_latitude', $delivery_latitude)
+        //       ->where('delivery_longitude', $delivery_longitude);
+        // }])
+        // ->where('country', 'United States')
+        // ->where('delivery_address', 'Grimaldi Group Shipping Line')
+        // ->where('latitude', '28.9541')
+        // ->where('longitude', '-95.3597')
+        // ->first();
 
-        $price = $data->portToPort[0]->price;
+        // dd($data->toArray());
+
+        // $price = $data->portToPort[0]->price;
 
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
@@ -254,7 +256,7 @@ class QuoteController extends Controller
             ];
         }
 
-        dd($body);
+        // dd($body);
 
         return null;
     }
