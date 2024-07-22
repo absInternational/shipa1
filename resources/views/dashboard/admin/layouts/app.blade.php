@@ -24,7 +24,7 @@
 
     {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     {{-- Summernote CDN --}}
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
@@ -49,6 +49,16 @@
                 @include('dashboard.admin.includes.header')
                 <!-- End of Topbar -->
 
+                @if (session('errors'))
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach (session('errors')->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <!-- Begin Page Content -->
                 @yield('content')
                 <!-- /.container-fluid -->
@@ -61,7 +71,7 @@
             <!-- End of Footer -->
 
             @yield('extraScript')
-            
+
         </div>
         <!-- End of Content Wrapper -->
 
