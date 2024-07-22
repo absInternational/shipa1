@@ -46,6 +46,9 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Blogs
 Route::get('/blog', [FrontendController::class, 'blogs'])->name('blogs');
 
+// Blogs
+Route::get('/blogs-TrailerTruck', [FrontendController::class, 'blogsTrailerTruck'])->name('blogs.trailer.truck');
+
 // Blog details
 Route::get('/blog/{slug}', [FrontendController::class, 'blogDetails'])->name('blog.details');
 
