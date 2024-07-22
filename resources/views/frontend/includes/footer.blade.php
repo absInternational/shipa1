@@ -56,10 +56,17 @@
                                 <a href="{{ route('frontend.pages.services.dryvan-service') }}" target="_blank">Dry Van Transport</a>
                             </li>
                             <li>
+                                <a href="{{ route('frontend.pages.services.golf-cart-service') }}" target="_blank">Golf Cart Transport</a>
+                            </li>
+                            
+                            <li>
                                 <a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank">Heavy Equipment</a>
                             </li>
                             <li style="width: 108%;">
                                 <a href="{{ route('frontend.pages.services.bike-service') }}" target="_blank">Motorcycle Shipping</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank">Reefer Transport</a>
                             </li>
                             <li>
                                 <a href="{{ route('frontend.pages.services.rv-service') }}" target="_blank">RV Transport</a>
@@ -90,12 +97,19 @@
                             <!-- <li>
                                 <a href="#">Case Studies</a>
                             </li> -->
-                            <li>
-                                <a href="{{ route('order.tracking') }}" target="_blank">Track Order </a>
-                            </li>
+                            
 
                             <li>
                                 <a href="{{ route('faq') }}" target="_blank">FAQ!</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('order.form') }}" target="_blank">Order Form</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('blogs.trailer.truck') }}" target="_blank">Trailers & Trucks</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('order.tracking') }}" target="_blank">Track Order </a>
                             </li>
 
                             <li>

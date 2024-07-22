@@ -77,8 +77,7 @@
                                             </div>
                                             <div class="faq-text">
                                                 <h6 class="text-dark title">Reliable & Trustworthy</h6>
-                                                <p class="text-dark">Trage agile frameworks to provide a robust synopsis
-                                                    for high level overviews.</p>
+                                                <p class="text-dark">Safe, trustworthy, and reliable for all of your shipping and transportation needs.</p>
                                             </div>
                                         </div>
                                         <div class="faq-content">
@@ -87,8 +86,8 @@
                                             </div>
                                             <div class="faq-text">
                                                 <h6 class="text-dark title">High Quality Material</h6>
-                                                <p class="text-dark">Trage agile frameworks to provide a robust synopsis
-                                                    for high level overviews.</p>
+                                                <p class="text-dark">Attention to detail and customer satisfaction are incorporated 
+                                                    in delivering quality service consistently.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -114,7 +113,7 @@
                                                 </div>
                                             </div>
                                             <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingTwo">
+                                                <h2 class="accordion-header" id="headingTwo-1">
                                                     <button class="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                         aria-expanded="false" aria-controls="collapseTwo">
@@ -122,7 +121,7 @@
                                                     </button>
                                                 </h2>
                                                 <div id="collapseTwo" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                    aria-labelledby="headingTwo-1" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body">
                                                         <strong>You can get a quote by visiting our website and filling
                                                             up the online quote
@@ -312,8 +311,7 @@
                                             </div>
                                             <div class="faq-text">
                                                 <h6 class="text-dark title">Reliable & Trustworthy</h6>
-                                                <p class="text-dark">Trage agile frameworks to provide a robust synopsis
-                                                    for high level overviews.</p>
+                                                <p class="text-dark">Safe, trustworthy, and reliable for all of your shipping and transportation needs.</p>
                                             </div>
                                         </div>
                                         <div class="faq-content">
@@ -322,8 +320,8 @@
                                             </div>
                                             <div class="faq-text">
                                                 <h6 class="text-dark title">High Quality Material</h6>
-                                                <p class="text-dark">Trage agile frameworks to provide a robust synopsis
-                                                    for high level overviews.</p>
+                                                <p class="text-dark">Attention to detail and customer satisfaction are incorporated in delivering
+                                                     quality service consistently.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -334,12 +332,12 @@
                                             <div class="accordion-item">
                                                 <h2 class="accordion-header" id="headingOne">
                                                     <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne-1"
+                                                        aria-expanded="true" aria-controls="collapseOne-1">
                                                         What equipment do you transport?
                                                     </button>
                                                 </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                                <div id="collapseOne-1" class="accordion-collapse collapse show"
                                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body">
                                                         <strong>We ship a variety of heavy equipment from construction
@@ -530,8 +528,7 @@
                                             </div>
                                             <div class="faq-text">
                                                 <h6 class="text-dark title">Reliable & Trustworthy</h6>
-                                                <p class="text-dark">Trage agile frameworks to provide a robust synopsis
-                                                    for high level overviews.</p>
+                                                <p class="text-dark">Safe, trustworthy, and reliable for all of your shipping and transportation needs.</p>
                                             </div>
                                         </div>
                                         <div class="faq-content">
@@ -540,8 +537,8 @@
                                             </div>
                                             <div class="faq-text">
                                                 <h6 class="text-dark title">High Quality Material</h6>
-                                                <p class="text-dark">Trage agile frameworks to provide a robust synopsis
-                                                    for high level overviews.</p>
+                                                <p class="text-dark">Attention to detail and customer satisfaction are 
+                                                    incorporated in delivering quality service consistently.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -552,12 +549,12 @@
                                             <div class="accordion-item">
                                                 <h2 class="accordion-header" id="headingOne">
                                                     <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne-2"
+                                                        aria-expanded="true" aria-controls="collapseOne-2">
                                                         What type of freight do you move?
                                                     </button>
                                                 </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                                <div id="collapseOne-2" class="accordion-collapse collapse show"
                                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body">
                                                         <strong>We transport general cargo, hazmat, reefer shipments,
