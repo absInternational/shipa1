@@ -94,7 +94,6 @@
                                 <a href="{{ route('order.tracking') }}" target="_blank">Track Order </a>
                             </li>
 
-
                             <li>
                                 <a href="{{ route('faq') }}" target="_blank">FAQ!</a>
                             </li>
