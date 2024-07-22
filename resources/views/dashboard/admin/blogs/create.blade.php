@@ -35,6 +35,7 @@
                                         <option value="">Select Category</option>
                                         <option value="marketing">Marketing</option>
                                         <option value="Blogs">Blogs</option>
+                                        <option value="Trailer & Trucks">Trailer & Trucks</option>
                                     </select>
                                     @if ($errors->has('category'))
                                         <span class="text-danger">{{ $errors->first('category') }}</span>

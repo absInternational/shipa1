@@ -63,10 +63,19 @@ class FrontendController extends Controller
 
     public function blogs()
     {
-        $blogTitle = Blog::get();
+        $blogTitle = Blog::where('category', '!=', 'Trailer & Trucks')->get();
         // dd($blogTitle);
-        $blogs = Blog::where('status', 1)->paginate(10);
-        $recent_blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
+        $blogs = Blog::where('category', '!=', 'Trailer & Trucks')->where('status', 1)->paginate(10);
+        $recent_blogs = Blog::where('category', '!=', 'Trailer & Trucks')->where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
+        return view('frontend.blogs.index', compact('blogs', 'blogTitle', 'recent_blogs'));
+    }
+
+    public function blogsTrailerTruck()
+    {
+        $blogTitle = Blog::where('category', 'Trailer & Trucks')->get();
+        // dd($blogTitle);
+        $blogs = Blog::where('category', 'Trailer & Trucks')->where('status', 1)->paginate(10);
+        $recent_blogs = Blog::where('category', 'Trailer & Trucks')->where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
         return view('frontend.blogs.index', compact('blogs', 'blogTitle', 'recent_blogs'));
     }
 
