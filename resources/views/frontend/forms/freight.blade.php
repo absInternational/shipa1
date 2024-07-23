@@ -2,7 +2,8 @@
 
 @section('title', 'Get Quote on Freight | ShipA1')
 
-@section('meta_description', 'Get an instant Freight shipping quote with ease! Trust our reliable service for nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
+@section('meta_description', 'Get an instant Freight shipping quote with ease! Trust our reliable service for nationwide
+    coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
 
 
 @section('content')
@@ -280,8 +281,8 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Phone:</label>
-                                        <input type="text" inputmode="numeric" id="phone" name="phone" placeholder="Phone Number"
-                                            required="" />
+                                        <input type="text" inputmode="numeric" id="phone" name="phone"
+                                            placeholder="Phone Number" required="" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
                                 </div>
@@ -504,9 +505,10 @@
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" /> -->
-                                    <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
-    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                        placeholder="Upload File" /> -->
+                                <input class="form-control image_input" type="file" accept="image/*" multiple
+                                    onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -624,49 +626,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" value="2010" name="year[]" >
-                            <input type="hidden" value="freight" name="model[]" >
-                            <input type="hidden" value="freight" name="make[]" >
-                            <!-- <div class="row select-bm" style="display:none;">
-                                            <div class="col-md-12 text-center">
-                                                <h4 class="text-white">Vehicle Information</h4>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-form tj-select">
-                                                    <label> Year</label>
-                                                    <select class="nice-select vehicle-year" name="year[]" id="year">
-                                                        <option value="2010" selected>Select Year</option>
-                                                        @php
-                                                            $currentYear = date('Y');
-                                                            for ($year = $currentYear; $year >= 1936; $year--) {
-                                                                echo "<option value='$year'>$year</option>";
-                                                            }
-                                                        @endphp
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-form tj-select">
-                                                    <label>Make</label>
-                                                    <input type="text" value="null" id="make" name="make[]"
-                                                        placeholder="Enter Make" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-form tj-select vehicle-model-div">
-                                                    <label>Model</label>
-                                                    <input type="text" id="model" value="null" name="model[]"
-                                                        placeholder="Enter Model" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                            style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                            Vehicle</a>
-
-                                        <div id="vehicles-container" style="display:none;">
-                                        </div> -->
+                            <input type="hidden" value="2010" name="year[]">
+                            <input type="hidden" value="freight" name="model[]">
+                            <input type="hidden" value="freight" name="make[]">
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>

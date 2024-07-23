@@ -505,7 +505,7 @@ your equipment reaches you in your desired timeframe.</strong>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script src="path/to/jquery.min.js"></script>
-<script src="path/to/owl.carousel.min.js"></script>
+{{-- <script src="path/to/owl.carousel.min.js"></script> --}}
 
 <script>
 $(document).ready(function() {
