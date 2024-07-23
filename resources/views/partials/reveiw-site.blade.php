@@ -156,7 +156,7 @@
     </section>
     <!--=========== Testimonial Section End =========-->
 
-    <script src="path/to/owl.carousel.min.js"></script>
+    {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
     <script>
         $(document).ready(function() {
             $('#owl-caro').owlCarousel({
