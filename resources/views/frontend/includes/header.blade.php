@@ -35,36 +35,30 @@
                                 </div>
                                 <div class="header-content-right">
                                     <div class="header-social-icon">
-                                        <ul class="list-gap social-list">
-                                            <li>
-                                                <a href="https://www.facebook.com/ShipA1/" target="_blank"> <i
-                                                        class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/@shipA1autotransport" target="_blank"> <i
-                                                        class="fa-brands fa-youtube"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank"> <i
-                                                        class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="https://twitter.com/ShipA1Transport" target="_blank"> <i
-                                                        class="fa-brands fa-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.yelp.com/biz/ship-a1-hunt-valley" target="_blank"> <i
-                                                        class="fa-brands fa-yelp"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="https://wa.me/+14107184031" target="_blank"> <i
-                                                        class="fa-brands fa-whatsapp"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/@shipA1392" target="_blank"> <i
-                                                        class="fa-brands fa-youtube"></i></a>
-                                            </li>
-                                        </ul>
+                                    <ul class="list-gap social-list">
+  <li>
+    <a href="https://www.facebook.com/ShipA1/" target="_blank"> <i class="fa-brands fa-facebook-f"></i></a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/@shipA1autotransport" target="_blank"> <i class="fa-brands fa-youtube"></i></a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank"> <i class="fa-brands fa-linkedin-in"></i></a>
+  </li>
+  <li>
+    <a href="https://twitter.com/ShipA1Transport" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+  </li>
+  <li>
+    <a href="https://www.yelp.com/biz/ship-a1-hunt-valley" target="_blank"> <i class="fa-brands fa-yelp"></i></a>
+  </li>
+  <li>
+    <a href="https://wa.me/+14107184031" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/shipa1_transport/" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+  </li>
+</ul>
+
                                     </div>
                                 </div>
                             </div>
