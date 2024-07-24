@@ -14,13 +14,16 @@ class CreatePortToPortsTable extends Migration
     public function up()
     {
         Schema::create('port_to_ports', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('port_detail_id');
-            $table->string('delivery_port_name', 255);
-            $table->string('delivery_country', 255);
-            $table->string('delivery_latitude', 255)->nullable();
-            $table->string('delivery_longitude', 255)->nullable();
-            $table->double('price', 15, 2)->default(0.00);
+            $table->id();
+            $table->string('pickup_country')->nullable();
+            $table->string('pickup_zipcode');
+            $table->string('pickup_latitude')->nullable();
+            $table->string('pickup_longitude')->nullable();
+            $table->string('delivery_country')->nullable();
+            $table->string('delivery_zipcode');
+            $table->string('delivery_latitude')->nullable();
+            $table->string('delivery_longitude')->nullable();
+            $table->string('price');
             $table->timestamps();
         });
     }

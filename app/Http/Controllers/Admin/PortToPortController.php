@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\PortToPort;
+use App\Models\ZipCode;
 
 class PortToPortController extends Controller
 {
@@ -22,11 +23,14 @@ class PortToPortController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'port_detail_id' => 'required|integer',
-            'delivery_port_name' => 'required|string|max:255',
-            'delivery_country' => 'required|string|max:255',
-            'delivery_latitude' => 'nullable|string|max:255',
-            'delivery_longitude' => 'nullable|string|max:255',
+            'pickup_country' => 'nullable|string|max:255',
+            'pickup_zipcode' => 'required|string|max:255',
+            'pickup_latitude' => 'nullable|numeric',
+            'pickup_longitude' => 'nullable|numeric',
+            'delivery_country' => 'nullable|string|max:255',
+            'delivery_zipcode' => 'required|string|max:255',
+            'delivery_latitude' => 'nullable|numeric',
+            'delivery_longitude' => 'nullable|numeric',
             'price' => 'required|numeric',
         ]);
 
@@ -49,11 +53,14 @@ class PortToPortController extends Controller
     public function update(Request $request, PortToPort $portToPort)
     {
         $request->validate([
-            'port_detail_id' => 'required|integer',
-            'delivery_port_name' => 'required|string|max:255',
-            'delivery_country' => 'required|string|max:255',
-            'delivery_latitude' => 'nullable|string|max:255',
-            'delivery_longitude' => 'nullable|string|max:255',
+            'pickup_country' => 'nullable|string|max:255',
+            'pickup_zipcode' => 'required|string|max:255',
+            'pickup_latitude' => 'nullable|numeric',
+            'pickup_longitude' => 'nullable|numeric',
+            'delivery_country' => 'nullable|string|max:255',
+            'delivery_zipcode' => 'required|string|max:255',
+            'delivery_latitude' => 'nullable|numeric',
+            'delivery_longitude' => 'nullable|numeric',
             'price' => 'required|numeric',
         ]);
 
@@ -69,5 +76,24 @@ class PortToPortController extends Controller
 
         return redirect()->route('port-to-ports.index')
             ->with('success', 'Port to Port deleted successfully.');
+    }
+
+    public function zipcode(Request $request)
+    {
+        $data = $request->input;
+
+        $selectOri = ZipCode::select('zipcode')
+            ->where('zipcode', 'LIKE', $data . '%')
+            ->limit(10)
+            ->get();
+
+        $zipcodes = [];
+        if ($selectOri->isNotEmpty()) {
+            foreach ($selectOri as $val) {
+                $zipcodes[] = $val->zipcode;
+            }
+        }
+
+        return response()->json($zipcodes);
     }
 }

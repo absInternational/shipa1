@@ -17,11 +17,14 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Port Detail ID</th>
-                                <th>Delivery Port Name</th>
+                                <th>Pickup Country</th>
+                                <th>Pickup Zipcode</th>
+                                <th>Pickup Latitude</th>
+                                <th>Pickup Longitude</th>
                                 <th>Delivery Country</th>
-                                <th>Latitude</th>
-                                <th>Longitude</th>
+                                <th>Delivery Zipcode</th>
+                                <th>Delivery Latitude</th>
+                                <th>Delivery Longitude</th>
                                 <th>Price</th>
                                 <th>Actions</th>
                             </tr>
@@ -30,9 +33,12 @@
                             @foreach ($portToPorts as $portToPort)
                                 <tr>
                                     <td>{{ $portToPort->id }}</td>
-                                    <td>{{ $portToPort->port_detail_id }}</td>
-                                    <td>{{ $portToPort->delivery_port_name }}</td>
+                                    <td>{{ $portToPort->pickup_country }}</td>
+                                    <td>{{ $portToPort->pickup_zipcode }}</td>
+                                    <td>{{ $portToPort->pickup_latitude }}</td>
+                                    <td>{{ $portToPort->pickup_longitude }}</td>
                                     <td>{{ $portToPort->delivery_country }}</td>
+                                    <td>{{ $portToPort->delivery_zipcode }}</td>
                                     <td>{{ $portToPort->delivery_latitude }}</td>
                                     <td>{{ $portToPort->delivery_longitude }}</td>
                                     <td>{{ $portToPort->price }}</td>

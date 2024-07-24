@@ -9,22 +9,15 @@ class PortToPort extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
-        'port_detail_id',
-        'delivery_port_name',
+        'pickup_country',
+        'pickup_zipcode',
+        'pickup_latitude',
+        'pickup_longitude',
         'delivery_country',
+        'delivery_zipcode',
         'delivery_latitude',
         'delivery_longitude',
         'price',
     ];
-    
-    public function port()
-    {
-        return $this->belongsTo(PortDetail::class,'port_detail_id','id');
-    }
 }
