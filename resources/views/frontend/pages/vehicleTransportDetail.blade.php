@@ -663,7 +663,7 @@
                     <div class="cta-content-area">
                         <div class="cta-content">
                             <div class="cta-icon">
-                                <i class="flaticon flaticon-freight"></i>
+                                <i class="fa-light fa-car-side fa-2xs"></i>
                             </div>
                             <div class="cta-text">
                                 <h3 class="title">SHIP A CAR DIRECT FROM AUTO Auction</h3>

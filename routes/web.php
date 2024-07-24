@@ -86,6 +86,7 @@ Route::prefix('services')->group(function () {
 
 Route::get('/roro-shipping-international-service', [FrontendController::class, 'roroService'])->name('frontend.pages.services.roro-service');
 
+Route::get('/nationwide-autotransport', [FrontendController::class, 'nationwideAutotransport'])->name('frontend.pages.nationwide-autotransport');
 
 // Auto Auction
 Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('autoAuction');
