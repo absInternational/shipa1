@@ -179,7 +179,7 @@
     </section>
     <!--========== breadcrumb End ==============-->
 
-    <section class="tj-choose-us-section">
+    <section class="tj-choose-us-section-service-heavy">
         <div class="container-flude">
             <div class="row">
                 @if (session('success'))
@@ -576,7 +576,7 @@
                         <input type="text" id="model" name="model[]" placeholder="Enter Model"
                         required="" />
                         <!-- Bin icon for deleting vehicle -->
-                        <span class="delete-vehicle"><i class="fa fa-trash"></i></span>
+                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
                         </div>
                         </div>
                         </div>
