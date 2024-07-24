@@ -1,5 +1,10 @@
 @extends('frontend.layouts.app')
 
+@section('title', 'Ship Car From Auction Auto Transport Services | ShipA1')
+
+@section('meta_description', 'Transport your car from directly auction auto transport, Shipa1 provides door to door auto transport services with scratchless and insured auto shipping.')
+
+
 @section('content')
 
 <style>
