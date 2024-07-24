@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Quote;
 use App\Models\QuoteVehicleInfo;
 use App\Models\PortDetail;
+use App\Models\ZipCode;
 use App\Traits\ImageUploadTrait;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
@@ -184,15 +185,12 @@ class QuoteController extends Controller
             $post_array['image'] = $image;
         }
 
-        // dd($post_array, $post_array['image'], $request->toArray());
-
         $delivery_latitude = $originData;
         $delivery_longitude = $destinationData;
 
-        $location1 = $this->getLatLong($delivery_latitude);
-        $location2 = $this->getLatLong($delivery_longitude);
+        $distance = $this->getDistance($origin_zip, $destination_zip);
 
-        // dd($delivery_latitude, $delivery_longitude, $location1, $location2);
+        // dd($distance);
 
         // $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
         //     $q->where('delivery_latitude', $delivery_latitude)
@@ -204,14 +202,12 @@ class QuoteController extends Controller
         // ->where('longitude', '-95.3597')
         // ->first();
 
-        // dd($post_array, $location1, $location2);
+        // $price = isset($data->portToPort[0]->price) ? $data->portToPort[0]->price : 0;
 
-        // $price = $data->portToPort[0]->price;
+        // dd($data->toArray(), $price);
 
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
-            // return redirect()->route('thankYou')->with('success', 'Quote created successfully');
-            // return view('frontend.pages.thank-you', compact('price'))->with('success', 'Quote created successfully');
             return view('frontend.pages.thank-you');
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
@@ -236,31 +232,36 @@ class QuoteController extends Controller
         return count($array) > 1 ? implode('*^', $array) : $array[0];
     }
 
-    public function getLatLong($address)
+    public static function getDistance($OriginZipCode, $DestinationZipCode): float
     {
-        $apiKey = 'AIzaSyAsvXyIoaweH4Q6LKe9De1seJtUYfjdFvs';
-        $client = new Client();
-        $response = $client->get('https://maps.googleapis.com/maps/api/geocode/json', [
-            'query' => [
-                'address' => $address,
-                'key' => $apiKey
-            ]
-        ]);
+        $From = ZipCode::where('zipcode', $OriginZipCode)
+        ->whereNotNull('latitude')
+        ->first();
+        
+        $To = ZipCode::where('zipcode', $DestinationZipCode)
+        ->whereNotNull('latitude')
+        ->first();
 
-        $body = json_decode($response->getBody(), true);
+        $latitudeFrom = $From->latitude;
+        $longitudeFrom = $From->longitude;
+        $latitudeTo = $To->latitude;
+        $longitudeTo = $To->longitude;
 
-        // dd($body);
+        $long1 = deg2rad($longitudeFrom);
+        $long2 = deg2rad($longitudeTo);
+        $lat1 = deg2rad($latitudeFrom);
+        $lat2 = deg2rad($latitudeTo);
 
-        if ($body['status'] === 'OK') {
-            $location = $body['results'][0]['geometry']['location'];
-            return [
-                'latitude' => $location['lat'],
-                'longitude' => $location['lng']
-            ];
-        }
+        $dlong = $long2 - $long1;
+        $dlati = $lat2 - $lat1;
 
-        // dd($body);
+        $val =
+            (sin($dlati / 2) ** 2) +
+            cos($lat1) * cos($lat2) * (sin($dlong / 2) ** 2);
 
-        return null;
+        $res = 2 * asin(sqrt($val));
+
+        $radius = 3958.756;
+        return $res * $radius;
     }
 }
