@@ -416,8 +416,8 @@
                                 <h2 class="title">Reasons Why You Choose Us.</h2>
                             </div>
                             <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
-                                    Read More <i class="flaticon-right-1"></i>
+                                <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}">
+                                Get Quote<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
                         </div>

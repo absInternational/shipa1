@@ -2575,7 +2575,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: var(--tj-primary-color);
     min-width: 120px;
     height: 120px;
-    line-height: 136px;
+    line-height: 155px;
     text-align: center;
     display: inline-block;
     border-radius: 50%;

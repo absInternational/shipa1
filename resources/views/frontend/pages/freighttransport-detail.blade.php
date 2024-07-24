@@ -1112,17 +1112,17 @@
 
     <!--=========== Cta Section Start =========-->
     <section class="tj-cta-section icon-animate">
-        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/Auto-Transport.webp') }}"></div>
+        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/freight-cta.webp') }}"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="cta-content-area">
                         <div class="cta-content">
                             <div class="cta-icon">
-                                <i class="flaticon flaticon-freight"></i>
+                                <i class="fa-light fa-truck fa-xs"></i>
                             </div>
                             <div class="cta-text">
-                                <h3 class="title">SHIP A CAR DIRECT FROM AUTO Auction</h3>
+                                <h3 class="title">Simplify your freight shipment.</h3>
                                 <p class="desc">We deliver quality, with prosperity. Because your Shipping needs, our
                                     solution.</p>
                             </div>
@@ -1133,8 +1133,8 @@
             <div class="row">
                 <div class="col-lg-12 position-relative">
                     <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="contact.html">
-                            Read More <i class="flaticon-right-1"></i>
+                        <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}">
+                        Get Quote<i class="flaticon-right-1"></i>
                         </a>
                     </div>
                 </div>
