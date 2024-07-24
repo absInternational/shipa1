@@ -66,7 +66,7 @@
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                             <div class="row">
-                                <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
+                                <!-- <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                                     <div class="tj-faq-left-content">
                                         <div class="faq-image">
                                             <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
@@ -85,14 +85,14 @@
                                                 <i class="fa-regular fa-check"></i>
                                             </div>
                                             <div class="faq-text">
-                                                <h6 class="text-dark title">High Quality Material</h6>
+                                                <h6 class="text-dark title">High Quality Service</h6>
                                                 <p class="text-dark">Attention to detail and customer satisfaction are incorporated 
                                                     in delivering quality service consistently.</p>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
+                                </div> -->
+                                <div class="col-lg-12" data-sal="slide-right" data-sal-duration="800">
                                     <div class="tj-faq-area">
                                         <div class="accordion" id="accordionExample">
                                             <div class="accordion-item">
@@ -300,7 +300,7 @@
                         <div class="tab-pane fade active show" id="pills-profile" role="tabpanel"
                             aria-labelledby="pills-profile-tab">
                             <div class="row">
-                                <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
+                                <!-- <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                                     <div class="tj-faq-left-content">
                                         <div class="faq-image">
                                             <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
@@ -325,8 +325,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
+                                </div> -->
+                                <div class="col-lg-12" data-sal="slide-right" data-sal-duration="800">
                                     <div class="tj-faq-area">
                                         <div class="accordion" id="accordionExample">
                                             <div class="accordion-item">
@@ -517,7 +517,7 @@
                         <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                             aria-labelledby="pills-contact-tab">
                             <div class="row">
-                                <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
+                                <!-- <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
                                     <div class="tj-faq-left-content">
                                         <div class="faq-image">
                                             <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
@@ -542,8 +542,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
+                                </div> -->
+                                <div class="col-lg-12" data-sal="slide-right" data-sal-duration="800">
                                     <div class="tj-faq-area">
                                         <div class="accordion" id="accordionExample">
                                             <div class="accordion-item">
