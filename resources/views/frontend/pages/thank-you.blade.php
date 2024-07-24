@@ -225,7 +225,7 @@
                         {{ $price }}
                     @endif
                 </h2>
-                <p class="thank-you-message">We appreciate your interest and will get back to you soon.</p>
+                <p class="thank-you-message">We have acknowledged confirmation of your request and will provide your quotation to you shortly on email. In a matter of minutes, a transport specialist will get in touch with you to further explore your requirements.</p>
                 <!-- <a href="{{ route('welcome') }}" class="btn btn-primary mt-3">Go Back to Home</a> -->
             </div>
         </div>
