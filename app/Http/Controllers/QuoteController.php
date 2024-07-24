@@ -204,14 +204,15 @@ class QuoteController extends Controller
         // ->where('longitude', '-95.3597')
         // ->first();
 
-        // dd($data->toArray());
+        // dd($post_array, $location1, $location2);
 
         // $price = $data->portToPort[0]->price;
 
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
             // return redirect()->route('thankYou')->with('success', 'Quote created successfully');
-            return view('frontend.pages.thank-you', compact('price'))->with('success', 'Quote created successfully');
+            // return view('frontend.pages.thank-you', compact('price'))->with('success', 'Quote created successfully');
+            return view('frontend.pages.thank-you');
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
 
@@ -247,6 +248,8 @@ class QuoteController extends Controller
         ]);
 
         $body = json_decode($response->getBody(), true);
+
+        // dd($body);
 
         if ($body['status'] === 'OK') {
             $location = $body['results'][0]['geometry']['location'];
