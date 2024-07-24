@@ -204,7 +204,7 @@ class QuoteController extends Controller
         // ->where('longitude', '-95.3597')
         // ->first();
 
-        // dd($data->toArray());
+        dd($post_array, $location1, $location2);
 
         // $price = $data->portToPort[0]->price;
 
@@ -247,6 +247,8 @@ class QuoteController extends Controller
         ]);
 
         $body = json_decode($response->getBody(), true);
+
+        dd($body);
 
         if ($body['status'] === 'OK') {
             $location = $body['results'][0]['geometry']['location'];
