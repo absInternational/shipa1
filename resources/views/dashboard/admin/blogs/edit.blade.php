@@ -22,8 +22,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="category">Category</label>
-                    <input type="text" class="form-control" id="category" name="category" value="{{ $blog->category }}">
+                    <label>Category</label>
+                    <select name="category" class="form-control" required>
+                        <option value="">Select Category</option>
+                        <option value="Marketing" {{ $blog->category == 'Marketing' ? 'selected' : '' }}>Marketing</option>
+                        <option value="Blogs" {{ $blog->category == 'Blogs' ? 'selected' : '' }}>Blogs</option>
+                        <option value="Trailer & Trucks" {{ $blog->category == 'Trailer & Trucks' ? 'selected' : '' }}>Trailer & Trucks</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
