@@ -402,14 +402,8 @@
                                 </div>
                             </div>
 
-
                             <div class="row mb-3">
-
-
-
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input" class="input-field" placeholder=""
@@ -459,12 +453,6 @@
                                 </div>
                             </div>
 
-
-
-
-
-
-
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" name="image" accept="image/*"
@@ -473,9 +461,6 @@
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image"
                                             placeholder="Upload File" /> -->
                             </div>
-
-
-
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="available_at_auction"
@@ -495,7 +480,6 @@
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                 </button>
                             </div>
-
                         </form>
                     </div>
                 </div>
