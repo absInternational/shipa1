@@ -126,8 +126,13 @@ class FrontendController extends Controller
         } else {
             $services = Service::get();
         }
-
-        return view('frontend.pages.services.index', compact('services'));
+        $makes = VehicleName::select('make')
+        ->where('UserId', 14)
+        ->where('status', 0)
+        ->groupBy('make')
+        ->orderBy('make', 'ASC')
+        ->get();
+        return view('frontend.pages.services.index', compact('services','makes'));
     }
 
     public function serviceDetails(Request $request, $slug)
