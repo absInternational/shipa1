@@ -284,7 +284,7 @@
                                         <select class=" " id="category" name="category">
                                             <option value="" disabled selected>Select</option>
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                <option value="{{ $category->name }}">{{ $category->name }}</option>
                                             @endforeach
                                         </select>
                                         <input type="text" class="form-control" id="otherCategoryInput"
@@ -529,7 +529,7 @@
                         html += "<option value='' disabled selected>Select</option>";
                         $.each(response, function(index, val) {
                             html +=
-                                `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
+                                `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
                         });
                         html += "</select>";
                         console.log('html', html);
