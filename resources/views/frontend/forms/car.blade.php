@@ -63,7 +63,7 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
+                            <input type="hidden" name="car_type" value="1" hidden>
 
                             <div class="row">
                                 <div class="col-md-4">

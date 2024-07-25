@@ -235,6 +235,7 @@
                                     </ul>
                                 </div>
                             @endif
+                            <input type="hidden" name="car_type" value="3" hidden>
                             <div class="input-form">
                                 <label for="category">Category</label>
                                 <select class="form-control" id="category" name="category">

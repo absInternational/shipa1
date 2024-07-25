@@ -66,6 +66,7 @@ class QuoteController extends Controller
         $blind_shipment = $request->input('blind_shipment', null);
         $vehicle_opt = $request->input('vehicle_opt', null);
         $frieght_class = $request->input('frieght_class', null);
+        $car_type = $request->input('car_type', 1);
         $ip = $request->ip();
         $source = 'ShipA1';
 
@@ -121,7 +122,7 @@ class QuoteController extends Controller
             'add_info' => $additional,
             'transport' => $transport,
             'shippingdate' => $shippingdate,
-            'car_type' => 1,
+            'car_type' => $car_type,
             'paneltype' => 2,
             'cname' => $name,
             'cemail' => $email,
