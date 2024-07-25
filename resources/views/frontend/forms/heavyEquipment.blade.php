@@ -2,7 +2,10 @@
 
 @section('title', 'Get Quote on Heavy Equipment | ShipA1')
 
-@section('meta_description', 'Need to transport heavy equipment? Get an instant shipping quote now! Our reliable service provides nationwide coverage, transparent pricing, and secure transportation for your heavy machinery. Plan your shipment efficiently with our instant quote tool.')
+@section('meta_description',
+    'Need to transport heavy equipment? Get an instant shipping quote now! Our reliable service
+    provides nationwide coverage, transparent pricing, and secure transportation for your heavy machinery. Plan your
+    shipment efficiently with our instant quote tool.')
 
 
 @section('content')
@@ -284,7 +287,8 @@
                                         <select class=" " id="category" name="category">
                                             <option value="" disabled selected>Select</option>
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                <option value="{{ $category->name }}" data-id="{{ $category->id }}">
+                                                    {{ $category->name }}</option>
                                             @endforeach
                                         </select>
                                         <input type="text" class="form-control" id="otherCategoryInput"
@@ -301,10 +305,6 @@
                                     </div>
                                 </div>
                             </div><br>
-
-
-
-
 
                             <div class="row">
                                 <div class="col-md-6">
@@ -458,35 +458,36 @@
                                 </div>
                             </div>
 
-                             
-                        
 
-                                 
-                                     
 
-                                    <div class="input-form mt-3">
+
+
+
+
+                            <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" name="image" accept="image/*" multiple onchange="previewImages(event)">
-    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <input class="form-control image_input" type="file" name="image" accept="image/*"
+                                    multiple onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" /> -->
-                                 </div>
+                                            placeholder="Upload File" /> -->
+                            </div>
 
 
 
 
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                        name="available_at_auction" value="1" />
-                                    <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                        Auction?</label>
-                                </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                    name="available_at_auction" value="1" />
+                                <label class="form-check-label text-white" for="available_at_auction"> Available at
+                                    Auction?</label>
+                            </div>
 
-                                <div class="input-form div-link mt-3" style="display: none;">
-                                    <label class="d-block"> Enter Link:</label>
-                                    <input class="form-control" type="url" id="link" name="link"
-                                        placeholder="Enter Link" />
-                                </div>
+                            <div class="input-form div-link mt-3" style="display: none;">
+                                <label class="d-block"> Enter Link:</label>
+                                <input class="form-control" type="url" id="link" name="link"
+                                    placeholder="Enter Link" />
+                            </div>
 
                             <div class="tj-theme-button mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
@@ -504,45 +505,6 @@
 
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#category').change(function() {
-                var selectedCategory = $(this).val();
-
-                $.ajax({
-                    url: "{{ route('get.subcategories') }}",
-                    method: "POST",
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        "category": selectedCategory
-                    },
-                    success: function(response) {
-                        console.log(response);
-                        console.log(response.length);
-
-                        var html = '';
-                        $('#subcategory-box').html('');
-
-                        html += "<label for='subcategory'>Subcategory</label>";
-                        html +=
-                            "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
-                        html += "<option value='' disabled selected>Select</option>";
-                        $.each(response, function(index, val) {
-                            html +=
-                                `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
-                        });
-                        html += "</select>";
-                        console.log('html', html);
-
-                        $('#subcategory-box').html(html);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Error:", error);
-                    }
-                });
-            });
-        });
-    </script>
     <script>
         $(document).ready(function() {
             function addNewVehicle() {
@@ -654,7 +616,7 @@
         });
     </script> -->
 
-<script>
+    <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
                 element.value = element.value.slice(0, maxDigits);

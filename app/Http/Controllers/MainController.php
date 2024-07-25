@@ -98,11 +98,10 @@ class MainController extends Controller
 
     public function get_subcategories(Request $request)
     {
-        $category = $request->category;
+        $categoryId = $request->category;
         
-        $subcategories = Subcategory::where('category_id', $category)->get();
-
-        return $subcategories;
+        $subcategories = Subcategory::where('category_id', $categoryId)->get();
+        return response()->json($subcategories);
     }
 
     public function partialForm(Request $request)

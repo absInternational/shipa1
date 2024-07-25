@@ -286,7 +286,6 @@
             $('#newsletter-form').submit(function(event) {
                 event.preventDefault();
                 var email = $('#email_newsletter').val();
-                // console.log(email);
 
                 $.ajax({
                     type: 'POST',
@@ -431,7 +430,6 @@
 
         $(document).ready(function() {
             $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                console.log('yahoo');
                 var year = $('.vehicle-year').val();
                 var makeId = $('.vehicle-make').val();
                 if (year && makeId) {
@@ -441,7 +439,6 @@
         });
 
         function getModel(year, makeId) {
-            console.log('yes inn');
             $.ajax({
                 url: "{{ route('get.models') }}",
                 method: 'GET',
@@ -461,7 +458,6 @@
                     selectOptions += '</select>';
                     modelsDropdown.html(selectOptions);
 
-                    console.log('yesssss', response);
                 },
                 error: function(xhr) {
                     console.log(xhr.responseText);
@@ -472,8 +468,8 @@
 
     <script>
         $(document).ready(function() {
-            $(document).on('change', '#category', function() {
-                var selectedCategory = $(this).val();
+            $('#category').change(function() {
+                var selectedCategory = $(this).find('option:selected').data('id');
 
                 $.ajax({
                     url: "{{ route('get.subcategories') }}",
@@ -483,8 +479,6 @@
                         "category": selectedCategory
                     },
                     success: function(response) {
-                        console.log(response);
-                        console.log(response.length);
 
                         var html = '';
                         $('#subcategory-box').html('');
@@ -494,13 +488,14 @@
                             "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
                         html += "<option value='' disabled selected>Select</option>";
                         $.each(response, function(index, val) {
+                            console.log('val', val);
                             html +=
-                                `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
+                                `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
                         });
                         html += "</select>";
-                        console.log('html', html);
 
                         $('#subcategory-box').html(html);
+
                     },
                     error: function(xhr, status, error) {
                         console.error("Error:", error);
