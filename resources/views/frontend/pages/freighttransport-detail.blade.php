@@ -1180,7 +1180,7 @@
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Reefer</span>
-                    <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"  class="title-link">Reefer Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"  class="title-link">Reefer Transportation Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1190,7 +1190,7 @@
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Hazmat</span>
-                    <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"  class="title-link">Hazmat Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"  class="title-link">Hazmat Transportation Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
@@ -1200,7 +1200,7 @@
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Dry van</span>
-                    <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Dry van Transportation Services</a></h4>
+                    <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Dry van Transportation Service</a></h4>
                 </div>
             </div>
         </div>
