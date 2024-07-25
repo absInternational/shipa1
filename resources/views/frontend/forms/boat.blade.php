@@ -172,6 +172,7 @@
                     <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom"
                         data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
                         @csrf
+                        <input type="hidden" name="car_type" value="2" hidden>
                         @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
