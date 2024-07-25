@@ -677,8 +677,8 @@
             <div class="row">
                 <div class="col-lg-12 position-relative">
                     <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="contact.html">
-                            Read More <i class="flaticon-right-1"></i>
+                    <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}">
+                        Get Quote<i class="flaticon-right-1"></i>
                         </a>
                     </div>
                 </div>
@@ -878,22 +878,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
-                                        FAQ Five
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse"
-                                    aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>FAQ Five Content: Trage agile frameworks to provide a robust synopsis for
-                                            high level overviews.</strong>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                 </div>
             </div>

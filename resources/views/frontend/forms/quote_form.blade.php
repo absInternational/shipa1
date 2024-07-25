@@ -468,7 +468,7 @@
                         <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Golf Cart</h5>
-                    <p class="card-text">Digger, Driller, Miners etc.</p>
+                    <p class="card-text">Utility cart, electric cart etc.</p>
                     <a href="{{ route('form.vehicle.golf_cart') }}" target="_blank">
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
@@ -510,7 +510,7 @@
                         <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Excavator</h5>
-                    <p class="card-text">Trucks, Bulldozers etc.</p>
+                    <p class="card-text">Digger, Driller, Miners etc.</p>
                     <a href="{{ route('frontend.forms.excavator') }}" target="_blank">
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
@@ -527,7 +527,7 @@
                         <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Boat</h5>
-                    <p class="card-text">Trucks, Bulldozers etc.</p>
+                    <p class="card-text">Speedboats, yard, jet skis etc.</p>
                     <a href="{{ route('form.vehicle.boat') }}" target="_blank">
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
@@ -541,7 +541,7 @@
                         <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">RV</h5>
-                    <p class="card-text">Trucks, Bulldozers etc.</p>
+                    <p class="card-text">Motorhome, camper van etc.</p>
                     <a href="{{ route('frontend.forms.rv_transport') }}" target="_blank">
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
@@ -558,7 +558,7 @@
                         <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Commercial Truck</h5>
-                    <p class="card-text">Sedan, SUV, Pickup etc.</p>
+                    <p class="card-text">Commercial, Dump Trucks etc.</p>
                     <a href="{{ route('commercial.truck.transport') }}" target="_blank">
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
@@ -573,7 +573,7 @@
                         <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Farm</h5>
-                    <p class="card-text">Mopeds, Power Sports etc.</p>
+                    <p class="card-text">Tractor, Planter, Baler etc.</p>
                     <a href="{{ route('frontend.forms.farm_transport') }}" target="_blank">
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
@@ -590,7 +590,7 @@
                         <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Reefer</h5>
-                    <p class="card-text">Farm Equip, Rakes etc.</p>
+                    <p class="card-text">frozen , refrigerated etc.</p>
                     <a href="{{ route('frontend.forms.reefertrucking') }}" target="_blank">
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
@@ -604,7 +604,7 @@
                         <!-- <i class="fa-duotone fa-motorcycle fa-2xl" style="--fa-primary-color: #ffffff; --fa-secondary-color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Hazmat</h5>
-                    <p class="card-text">Commercial etc.</p>
+                    <p class="card-text">Explosive, Flammable, etc.</p>
                     <a href="{{ route('frontend.forms.hazmattransport') }}" target="_blank">
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
@@ -618,7 +618,7 @@
                         <!-- <i class="fa-light fa-car-side fa-2xl" style="color: #ffffff;"></i> -->
                     </div>
                     <h5 class="card-title">Dry Van</h5>
-                    <p class="card-text">Dump Trucks etc.</p>
+                    <p class="card-text">palletized, boxed, freight etc.</p>
                     <a href="{{ route('frontend.forms.dryvan') }}" target="_blank">
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>

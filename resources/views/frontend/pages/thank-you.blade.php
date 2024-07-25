@@ -226,13 +226,30 @@
                     @endif
                 </h2>
                 <p class="thank-you-message">We have acknowledged confirmation of your request and will provide your quotation to you shortly on email. In a matter of minutes, a transport specialist will get in touch with you to further explore your requirements.</p>
+               <div class="d-flex justify-content-evenly">
+                <div class="price__cta-btn">
+                <a href="{{ route('welcome') }}">
+                   <button class="tj-submit-btn previous">
+                       Back Home<i class="fa-light fa-arrow-right"></i>
+                   </button>
+                   </a>
+                </div>
+                <div class="price__cta-btn">
+                    <a href="{{ route('quote.form.combine') }}">
+                  <button class="tj-submit-btn" type="button">
+                      Get New Quote<i class="fa-light fa-arrow-right"></i>
+                  </button>
+                  </a>
+              </div>
+              </div>
                 <!-- <a href="{{ route('welcome') }}" class="btn btn-primary mt-3">Go Back to Home</a> -->
             </div>
-             
-        </div>
+        </div> 
     </div>
 </section>
 <!--========== Thank You Section End ==============-->
+
+
 <!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page">
     <div class="container">
