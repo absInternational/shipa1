@@ -284,7 +284,7 @@
                                         <select class=" " id="category" name="category">
                                             <option value="" disabled selected>Select</option>
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->name }}">{{ $category->name }}</option>
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
                                             @endforeach
                                         </select>
                                         <input type="text" class="form-control" id="otherCategoryInput"
