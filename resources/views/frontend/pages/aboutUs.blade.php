@@ -282,128 +282,265 @@
             </div>
     </section>
     
-    <!--========== Faq Section Start ==============-->
-
-    <section class="tj-faq-section tj-faq-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape"> How It’s Work</span>
-                        <h2 class="title">Frequently Asked Questions</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
-                    <div class="tj-faq-left-content">
-                        <div class="faq-image">
-                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
-                        </div>
-                        <div class="faq-content">
-                            <div class="faq-icon">
-                                <i class="fa-regular fa-check"></i>
+    <section class="tj-choose-us-section-two-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="choose-us-top-content-1">
+                            <div class="tj-section-heading-1">
+                                <!-- <span class="sub-title-1 active-shape2"> Have any ideas in your mind?</span> -->
+                                <h2 class="title-1">Customer Commitment at Ship A1 Transport </h2>
                             </div>
-                            <div class="faq-text">
-                                <h6 class="title">Reliable & Trustworthy</h6>
-                                <p>Safe, trustworthy, and reliable for all of your shipping and transportation needs.</p>
-                            </div>
-                        </div>
-                        <div class="faq-content">
-                            <div class="faq-icon">
-                                <i class="fa-regular fa-check"></i>
-                            </div>
-                            <div class="faq-text">
-                                <h6 class="title">High Quality service</h6>
-                                <p>Attention to detail and customer satisfaction are incorporated in delivering quality service consistently.</p>
-                            </div>
+                            <!-- <div class="tj-theme-button">
+                                <a class="tj-transparent-btn" href="contact.html">
+                                    Get Quote <i class="flaticon-right-1"></i>
+                                </a>
+                            </div> -->
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
-                    <div class="tj-faq-area">
-                    <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What should I choose for my luxurious vehicle?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>If you have a luxurious vehicle, we would suggest you go for the enclosed trailer as it protects your vehicle and offers you peace of mind, or if you are looking for a cheaper option then open transport is the best for you, without compromising the quality experience the best, safe and secure shipping with Ship A1!</strong>
-                                    </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <!-- <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1"></h6>
                                 </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>At Ship A1 we have the convenience of providing free online quotes to our customers, you can check them out at www.shipa1.com</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Can I track my vehicle during transport?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>Yes!  ShipA1 provides a user-friendly tracking system for real-time updates on your vehicle's location throughout the journey.</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
-                                        How do I prepare my vehicle for transport?
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse"
-                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
-                                        FAQ Five
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse"
-                                    aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>FAQ Five Content: Trage agile frameworks to provide a robust synopsis for
-                                            high level overviews.</strong>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
+                            <p>
+                            At ShipA1 transport, We think it's important to build long-term relationships with our clients. We focus on getting to know what you need and providing custom solutions that go above and beyond. Here's how we show our dedication to you:</p>
                         </div>
+                    </div>
+                   
+                </div>
+                <div class="row justify-content-center">
+    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+        <div class="choose-us-step-item-1">
+            <div class="choose-step-box-1">
+                <div class="choose-box-1"></div>
+                <div class="step-content-1">
+                    <h6 class="title-1">Personalized Service:</h6>
                 </div>
             </div>
+            <p>We make sure to hear your specific needs offering transport solutions tailored just for you. Whether you need to move one car or a big shipment of goods, we adapt our services to make sure you're happy.</p>
         </div>
-    </section>
-    
-    <!--========== Faq Section End ==============-->
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+        <div class="choose-us-step-item-1">
+            <div class="choose-step-box-1">
+                <div class="choose-box-1"></div>
+                <div class="step-content-1">
+                    <h6 class="title-1">Clear Communication:</h6>
+                </div>
+            </div>
+            <p>We keep the lines of communication open during the whole transport process. From our first talk to the final drop-off, we keep you in the loop at all times. Our customer service team is always ready to answer your questions and help with any issues you might have.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+        <div class="choose-us-step-item-1">
+            <div class="choose-step-box-1">
+                <div class="choose-box-1"></div>
+                <div class="step-content-1">
+                    <h6 class="title-1">Reliability and Trust:</h6>
+                </div>
+            </div>
+            <p>We've earned our reputation as a trusted partner in the logistics and shipping world by being reliable and trustworthy. We always keep our word making sure your packages get to their destination and on schedule. You can rely on us to provide dependable service every single time.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+        <div class="choose-us-step-item-1">
+            <div class="choose-step-box-1">
+                <div class="choose-box-1"></div>
+                <div class="step-content-1">
+                    <h6 class="title-1">New Ideas:</h6>
+                </div>
+            </div>
+            <p>We keep putting money into the newest tech and industry methods to offer cutting-edge transport answers. By staying committed to keeping up with what's new in the industry, we make sure we give you the most productive and useful services we can.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+        <div class="choose-us-step-item-1">
+            <div class="choose-step-box-1">
+                <div class="choose-box-1"></div>
+                <div class="step-content-1">
+                    <h6 class="title-1">Safety and Compliance:</h6>
+                </div>
+            </div>
+            <p>Ship A1 Transport takes good care of your goods. We follow the strictest safety rules and laws to make sure your shipments. Our transportation professional knows how to handle even the toughest shipping jobs with skill and attention.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+        <div class="choose-us-step-item-1">
+            <div class="choose-step-box-1">
+                <div class="choose-box-1"></div>
+                <div class="step-content-1">
+                    <h6 class="title-1">Solving Problems:</h6>
+                </div>
+            </div>
+            <p>The shipping business can have its share of bumps, but we stay ahead of them. We look out for possible issues and fix them fast so your shipment doesn't get held up.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+        <div class="choose-us-step-item-1">
+            <div class="choose-step-box-1">
+                <div class="choose-box-1"></div>
+                <div class="step-content-1">
+                    <h6 class="title-1">Listening and Getting Better:</h6>
+                </div>
+            </div>
+            <p>We want to hear what you think, and we use your thoughts to make our service better. What you tell us helps us improve how we work and stay your top choice for shipping. ShipA1 always try to do better and give you great service.</p>
+        </div>
+    </div>
+</div>
+        
+     <!-- <div class="row ">
+                <h2 class="title-1">Advantages and Key Features of Dry Van Transportation:</h2>
+                <p>
+                This method of shipping involves the use of fully enclosed trailers to protect cargo from external elements such as weather,
+                 dust, and theft. It is well known for its key features, which are:</p>
+                        
+                    
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Versatility</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Convenience</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Cost-effectiveness</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Security</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Additional Dry Van Services</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Same-Day Shipping</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Expedited Freight</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Shipment Pairing</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">High-Value Cargo Protection Services</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                        <div class="choose-us-step-item-1">
+                            <div class="choose-step-box-1">
+                                <div class="choose-box-1"></div>
+                                <div class="step-content-1">
+                                    <h6 class="title-1">Drop Trailers</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   
+                    </div>
+
+    </div> -->
+</section>
 
     <!--========== Chhose Section Start ==============-->
     <section class="tj-choose-us-section-two">

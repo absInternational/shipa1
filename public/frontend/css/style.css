@@ -3988,6 +3988,30 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: rgba(6, 46, 57, 0.7);
 }
 
+.tj-choose-us-section-service-atv-utv {
+    background-color: #000000;
+    background-image: url('../../img/ATVUTV-QUOTE.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    padding-top: 110px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+
+.tj-choose-us-section-service-atv-utv::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    background: rgba(6, 46, 57, 0.7);
+}
+
 .tj-choose-us-section-service-atv {
     background-color: #000000;
     background-image: url('../../img/atv-urv service.webp');

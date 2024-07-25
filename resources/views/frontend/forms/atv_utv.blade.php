@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 @section('title', 'Get Quote on ATV/UTV | ShipA1')
 
-@section('meta_description', 'Get an instant motorcycle shipping quote with ease! Trust our reliable service for nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
+@section('meta_description', 'Get an instant atv-utv shipping quote with ease! Trust our reliable service for nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
 
 @section('content')
 
@@ -30,7 +30,7 @@
     </section>
     <!--========== breadcrumb End ==============-->
 
-    <section class="tj-choose-us-section">
+    <section class="tj-choose-us-section-service-atv-utv">
         <div class="container-flude">
             <div class="row">
                 @if (session('success'))
@@ -153,27 +153,27 @@
                             <div id="vehicles-container">
                             </div>
 
-<div class="row mb-3">
-    <div class="col-md-6">
-        <div class="form-group ">
-            <label for="trailer_type" class="text-white">Select Trailer
-                Type</label>
-            <select class="form-control" id="trailer_type" name="trailer_type">
-                <option value="Open" selected>Open Carrier</option>
-                <option value="Enclosed">Enclosed Carrier</option>
-            </select>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group">
-            <label for="condition" class="text-white">Condition</label>
-            <select class="form-control" id="condition" name="condition">
-                <option value="Running" selected>Running</option>
-                <option value="Non Running">Non Running</option>
-            </select>
-        </div>
-    </div>
-</div>
+                              <div class="row mb-3">
+                                 <div class="col-md-6">
+                                     <div class="form-group ">
+                                         <label for="trailer_type" class="text-white">Select Trailer
+                                             Type</label>
+                                         <select class="form-control" id="trailer_type" name="trailer_type">
+                                             <option value="Open" selected>Open Carrier</option>
+                                             <option value="Enclosed">Enclosed Carrier</option>
+                                         </select>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                     <div class="form-group">
+                                         <label for="condition" class="text-white">Condition</label>
+                                         <select class="form-control" id="condition" name="condition">
+                                             <option value="Running" selected>Running</option>
+                                             <option value="Non Running">Non Running</option>
+                                         </select>
+                                     </div>
+                                 </div>
+                              </div>
                             <div class="row">
                                 <di class="col-md-6">
                                     <div class="form-group">
@@ -206,7 +206,7 @@
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" /> -->
                                     <input class="form-control image_input" type="file" name="image" accept="image/*" multiple onchange="previewImages(event)">
-    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                         <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
                             
                             <div class="tj-theme-button text-center mt-3">
@@ -220,6 +220,8 @@
             </div>
         </div>
     </section>
+
+
 @endsection
 
 @section('extraScript')
