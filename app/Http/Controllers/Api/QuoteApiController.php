@@ -78,15 +78,4 @@ class QuoteApiController extends Controller
         $subcategories = Subcategory::where('category_id', $categoryId)->get();
         return response()->json($subcategories);
     }
-
-    public function getSubcategoriesByName($categoryName)
-    {
-        $category = Category::where('name', $categoryName)->first();
-        if ($category) {
-            $subcategories = Subcategory::where('category_id', $category->id)->get();
-            return response()->json($subcategories);
-        } else {
-            return response()->json([]);
-        }
-    }
 }
