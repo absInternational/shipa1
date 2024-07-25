@@ -23,3 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/submit/quote', [QuoteApiController::class, 'store']);
 
 Route::get('/get=models', [MainController::class, 'getmodel']);
+
+Route::get('/categories', [QuoteApiController::class, 'index']);
+
+Route::get('/categories/{category}/subcategories', [QuoteApiController::class, 'getSubcategories']);

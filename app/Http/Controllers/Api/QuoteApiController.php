@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Quote;
+use App\Models\Category;
+use App\Models\Subcategory;
 use App\Models\QuoteVehicleInfo;
 use App\Traits\ImageUploadTrait;
 
@@ -63,5 +65,17 @@ class QuoteApiController extends Controller
         }
 
         return response()->json(['message' => 'Quote created successfully', 'quote' => $quote], 201);
+    }
+
+    public function index()
+    {
+        $categories = Category::all();
+        return response()->json($categories);
+    }
+
+    public function getSubcategories($categoryId)
+    {
+        $subcategories = Subcategory::where('category_id', $categoryId)->get();
+        return response()->json($subcategories);
     }
 }
