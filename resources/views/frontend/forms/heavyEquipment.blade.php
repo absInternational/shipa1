@@ -357,8 +357,8 @@
                                     <div class="form-group">
                                         <label for="condition" class="text-white">Condition</label>
                                         <select class=" " id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
                                         </select>
                                     </div>
                                 </div>

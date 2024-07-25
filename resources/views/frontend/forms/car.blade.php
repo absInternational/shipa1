@@ -178,8 +178,8 @@
                                     <div class="form-group" style="line-height:23px;">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="Open" selected>Open Carrier</option>
-                                            <option value="Enclosed">Enclosed Carrier</option>
+                                            <option value="1" selected>Open Carrier</option>
+                                            <option value="2">Enclosed Carrier</option>
                                         </select>
                                     </div>
                                 </div>
@@ -187,8 +187,8 @@
                                     <div class="form-group">
                                         <label for="condition" class="text-white">Condition</label>
                                         <select class="form-control" id="condition" name="condition">
-                                            <option value="Running" selected>Running</option>
-                                            <option value="Non Running">Non Running</option>
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
                                         </select>
                                     </div>
                                 </div>
