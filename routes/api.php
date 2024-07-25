@@ -26,4 +26,6 @@ Route::get('/get=models', [MainController::class, 'getmodel']);
 
 Route::get('/categories', [QuoteApiController::class, 'index']);
 
-Route::get('/categories/{category}/subcategories', [QuoteApiController::class, 'getSubcategories']);
+// Route::get('/categories/{category}/subcategories', [QuoteApiController::class, 'getSubcategories']);
+
+Route::get('/categories/{category}/subcategories', [QuoteApiController::class, 'getSubcategoriesByName']);
