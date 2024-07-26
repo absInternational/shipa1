@@ -5,87 +5,176 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="ShipA1 Admin Dashboard">
+    <meta name="author" content="ShipA1">
+
     <title>ShipA1 Admin - Dashboard</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
 
-    <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template -->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this template -->
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
-    {{-- jquery --}}
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    {{-- Summernote CDN --}}
+    <!-- Summernote CSS -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
+    <style>
+        body, html {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #032000b0, #8fc44536), url(https://www.transparenttextures.com/patterns/cubes.png) !important;
+        }
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar, .footer, .header, .content-wrapper {
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            margin-right: 0;
+        }
+        .content-wrapper {
+            flex: 5;
+            overflow: auto;
+        }
+        .footer {
+            text-align: center;
+        }
+        .scroll-to-top {
+            background-color: #8FC445;
+        }
+        .scroll-to-top:hover {
+            background-color: #7DBF39;
+        }
+        .modal-header, .btn-primary {
+            background-color: #8FC445;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #7DBF39;
+        }
+        .navbar-nav .nav-item.active .nav-link {
+            border-radius: 50px;
+            background-color: #8FC445;
+            color: #ffffff;
+        }
+        .navbar-nav .nav-item .nav-link {
+            color: #ffffff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar-nav .nav-item .nav-link:hover {
+            border-radius: 50px;
+            background-color: #8FC445;
+            color: #ffffff;
+        }
+        .fadeOut {
+            animation: fadeOut 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Custom Scrollbar Styling */
+        /* Webkit Browsers */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8FC445;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7DBF39;
+        }
+
+        /* Firefox */
+        body {
+            scrollbar-width: thin;
+            scrollbar-color: #8FC445 #f1f1f1;
+        }
+    </style>
 </head>
 
 <body id="page-top">
-
     <!-- Page Wrapper -->
-    <div id="wrapper">
+    <div id="wrapper" class="page-wrapper">
+        <div class="row m-0">
+            <!-- Sidebar -->
+            @include('dashboard.admin.includes.sidebar')
+            <!-- End of Sidebar -->
 
-        <!-- Sidebar -->
-        @include('dashboard.admin.includes.sidebar')
-        <!-- End of Sidebar -->
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="content-wrapper">
+                <!-- Main Content -->
+                <div class="col-12">
+                    <div id="content">
+                        <!-- Topbar -->
+                        @include('dashboard.admin.includes.header')
+                        <!-- End of Topbar -->
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+                        @if (session('errors'))
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach (session('errors')->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
 
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                @include('dashboard.admin.includes.header')
-                <!-- End of Topbar -->
-
-                @if (session('errors'))
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach (session('errors')->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
+                        <!-- Begin Page Content -->
+                        @yield('content')
+                        <!-- /.container-fluid -->
                     </div>
-                @endif
-
-                <!-- Begin Page Content -->
-                @yield('content')
-                <!-- /.container-fluid -->
-
+                </div>
             </div>
             <!-- End of Main Content -->
-
-            <!-- Footer -->
-            @include('dashboard.admin.includes.footer')
-            <!-- End of Footer -->
-
-            @yield('extraScript')
-
         </div>
         <!-- End of Content Wrapper -->
-
     </div>
     <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
+    <!-- Footer -->
+    <div class="row m-0">
+        <div class="col-12">
+            @include('dashboard.admin.includes.footer')
+        </div>
+    </div>
+    <!-- End of Footer -->
+
+    <!-- Scroll to Top Button -->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -103,17 +192,17 @@
         </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript -->
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <!-- Core plugin JavaScript-->
+    <!-- Core plugin JavaScript -->
     <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
-    <!-- Custom scripts for all pages-->
+    <!-- Custom scripts for all pages -->
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
 
-    {{-- Summernote CDN --}}
+    <!-- Summernote JS -->
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <!-- Initialize Summernote -->
@@ -122,9 +211,22 @@
             $('.summernote').summernote({
                 height: 250,
             });
+
+            // Smooth scroll for sidebar links
+            const sidebarLinks = document.querySelectorAll('.sidebar .nav-link');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    const targetUrl = this.href;
+
+                    document.querySelector('.content-wrapper').classList.add('fadeOut'); // Add fadeOut class
+                    setTimeout(() => {
+                        window.location.href = targetUrl; // Navigate to the target URL after the animation
+                    }, 500); // Match the animation duration
+                });
+            });
         });
     </script>
-
 </body>
 
 </html>

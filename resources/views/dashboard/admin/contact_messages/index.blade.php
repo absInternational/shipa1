@@ -30,7 +30,7 @@
                                     <td>{{ $row->email }}</td>
                                     <td>{{ $row->subject }}</td>
                                     <td>{{ $row->message }}</td>
-                                    <td>
+                                    <td nowrap="nowrap">
                                         <a href="{{ route('contact_messages.show', $row->id) }}"
                                             class="btn btn-primary btn-sm">View</a>
                                         {{-- <a href="{{ route('contact_messages.destroy', $row->id) }}"

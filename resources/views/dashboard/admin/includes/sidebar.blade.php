@@ -1,8 +1,31 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<style>
+    .navbar-nav .nav-item {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .navbar-nav .nav-item.active .nav-link {
+        border-radius: 50px;
+        background-color: #8FC445;
+        color: #ffffff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .navbar-nav .nav-item .nav-link {
+        border-radius: 50px;
+        color: #ffffff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .navbar-nav .nav-item .nav-link:hover {
+        border-radius: 50px;
+        background-color: #8FC445;
+        color: #ffffff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+</style>
+
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #062e39;">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('blogs.index') }}">
-        <div class="sidebar-brand-text mx-3">ShipA1 <sup></sup></div>
+        <div class="sidebar-brand-text mx-3"><img src="{{ asset('frontend/images/logo/logo-white.png') }}" style="width:100%;" alt=""> <sup></sup></div>
     </a>
 
     @php
@@ -11,104 +34,92 @@
 
     <!-- Nav Item - Blogs -->
     @if (in_array('1', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('users.index') }}">
+        <li class="nav-item {{ request()->routeIs('users.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('users.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Users Management</span></a>
+                <span>Users Management</span>
+            </a>
         </li>
     @endif
     @if (in_array('2', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('blogs.index') }}">
+        <li class="nav-item {{ request()->routeIs('blogs.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('blogs.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Blogs</span></a>
+                <span>Blogs</span>
+            </a>
         </li>
     @endif
     @if (in_array('3', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('navbar.index') }}">
+        <li class="nav-item {{ request()->routeIs('navbar.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('navbar.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Edit Frontend NavBar</span></a>
+                <span>Edit Frontend NavBar</span>
+            </a>
         </li>
     @endif
     @if (in_array('4', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('services.index') }}">
+        <li class="nav-item {{ request()->routeIs('services.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('services.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Services</span></a>
+                <span>Services</span>
+            </a>
         </li>
     @endif
     @if (in_array('5', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('service_categories.index') }}">
+        <li class="nav-item {{ request()->routeIs('service_categories.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('service_categories.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Service Categories</span></a>
+                <span>Service Categories</span>
+            </a>
         </li>
     @endif
     @if (in_array('6', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('reviews.index') }}">
+        <li class="nav-item {{ request()->routeIs('reviews.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('reviews.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Reviews</span></a>
+                <span>Reviews</span>
+            </a>
         </li>
     @endif
     @if (in_array('7', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('site_review.index') }}">
+        <li class="nav-item {{ request()->routeIs('site_review.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('site_review.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Add Site Reviews</span></a>
+                <span>Add Site Reviews</span>
+            </a>
         </li>
     @endif
     @if (in_array('8', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('faqs.index') }}">
+        <li class="nav-item {{ request()->routeIs('faqs.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('faqs.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>FAQs</span></a>
+                <span>FAQs</span>
+            </a>
         </li>
     @endif
     @if (in_array('9', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('contact_messages.index') }}">
+        <li class="nav-item {{ request()->routeIs('contact_messages.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('contact_messages.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Contact Messages</span></a>
+                <span>Contact Messages</span>
+            </a>
         </li>
     @endif
     @if (in_array('10', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('newsLetter.index') }}">
+        <li class="nav-item {{ request()->routeIs('newsLetter.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('newsLetter.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Newsletter Emails</span></a>
+                <span>Newsletter Emails</span>
+            </a>
         </li>
     @endif
     @if (in_array('11', $sidebar_access) || Auth::user()->role == 'admin')
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('port-to-ports.index') }}">
+        <li class="nav-item {{ request()->routeIs('port-to-ports.index') ? 'active' : '' }}">
+            <a class="nav-link  py-2 mb-2" href="{{ route('port-to-ports.index') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Port To Ports</span></a>
+                <span>Port To Ports</span>
+            </a>
         </li>
     @endif
-
-    {{-- <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
-    </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
-
-    <!-- Sidebar Toggler (Sidebar) -->
-    <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-    </div>
-
-    <!-- Sidebar Message -->
-    <div class="sidebar-card d-none d-lg-flex">
-        <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-        <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!
-        </p>
-        <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-    </div> --}}
 
 </ul>
