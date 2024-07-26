@@ -19,6 +19,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Description</th>
+                            <th>Category</th>
                             <th>Preview</th>
                             <th>Image</th>
                             <th>Status</th>
@@ -30,6 +31,7 @@
                         <tr>
                             <td>{{ $blog->post_name }}</td>
                             <td>{{Illuminate\Support\Str::limit($blog->post_short_description, 50, '...')}}</td>
+                            <td>{{ $blog->category }}</td>
                             <td nowrap> <a class="title" target="_blank" href="{{ route('blog.details', $blog->slug_name) }}">Open Link</a>
                                     </td>
                             <td>
