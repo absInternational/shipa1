@@ -103,14 +103,9 @@
             </a>
         </div>
         <div class="col-6 text-left">
-            <a class="nav-link logout-link" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
+            <a class="nav-link logout-link" href="#" data-toggle="modal" data-target="#logoutModal">
                 {{ __('Logout') }}
             </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
         </div>
     </div>
 </li>

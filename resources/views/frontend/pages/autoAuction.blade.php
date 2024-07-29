@@ -71,7 +71,7 @@
                         <br>
                         <p>The best way to find the best car shipping auction services is to fill out our free online quote form and get multiple quotes to deliver your automobile from Ship-A1 because we are a reputable and reliable auto mover that has specialized in auction car shipping services. You can reach numerous free quotes that you can then differentiate against each other so you can find the best price to deliver your automobile. Even if you do not purchase your car at an auction, you can still get a free shipping quote, and this is a great source to help you find the appropriate auto transport company for your specific needs. </p>
                         <br>
-                        <a href="#get-quote"><img src="https://www.shipa1.com/img/banner-1-1600-x200-landing.webp" width="100%" loading="lazy" alt="Auction Car Transport"></a>
+                        <a href="{{ route('quote.form.combine') }}"><img src="https://www.shipa1.com/img/banner-1-1600-x200-landing.webp" width="100%" loading="lazy" alt="Auction Car Transport"></a>
                         <br>
                         <br>
                         <p>Many customers tend to score great deals on auto auctions, but moving the automobiles to the consumers can be a challenge. In my cases, vehicles need to be removed from the auction premises right away. If clients wish to deliver their car to their home on another state, you can contact Ship-A1 for auction to consumer car shipping.</p>

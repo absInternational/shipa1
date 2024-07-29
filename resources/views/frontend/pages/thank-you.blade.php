@@ -216,8 +216,8 @@
         <div class="confetti-piece"></div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
+        <div class="row" style="olid #ebe8e8;box-shadow: 0px 0px 51px -5px rgba(0,0,0,1) inset;-webkit-box-shadow: 0px 0px 51px -5px rgb(233 236 239) inset;-moz-box-shadow: 0px 0px 51px -5px rgba(0,0,0,1) inset;border-radius: 25px;padding: 35px;">
+            <div class="col-lg-12 text-center ps-4 pr-4 mx-4">
                 <i class="fas fa-thumbs-up fa-5x mb-4" style="color: #8fc445; animation: bounce 2s infinite;"></i>
                 <h2 class="thank-you-title">Thank You!</h2>
                 <h2 class="thank-you-title">
@@ -225,8 +225,9 @@
                         {{ $price }}
                     @endif
                 </h2>
-                <p class="thank-you-message">We have acknowledged confirmation of your request and will provide your quotation to you shortly on email. In a matter of minutes, a transport specialist will get in touch with you to further explore your requirements.</p>
-               <div class="d-flex justify-content-evenly">
+                <p class="thank-you-message" style="padding: 0px 100px 0px 100px;">We have acknowledged confirmation of your request and will provide your quotation to you shortly on email. In a matter of minutes, a transport specialist will get in touch with you to further explore your requirements.</p>
+               <br>
+                <div class="d-flex justify-content-evenly" style="padding: 0px 100px;">
                 <div class="price__cta-btn">
                 <a href="{{ route('welcome') }}">
                    <button class="tj-submit-btn previous">
