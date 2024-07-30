@@ -134,14 +134,17 @@
 <div class="container container-2">
     <h1>Car Transport to or from 49 Other States</h1>
     <div class="row">
-        <div class="col-md-4">
-            <div class="state-card">
-                <i class="bi bi-geo-alt-fill state-icon"></i>
-                <div class="state-text">Alabama Car Shipping</div>
-                <a href="#" class="state-link state-link-a"><i class="bi bi-arrow-right"></i></a>
+        @foreach ($transports as $row)
+            <div class="col-md-4">
+                <div class="state-card">
+                    <i class="bi bi-geo-alt-fill state-icon"></i>
+                    <div class="state-text">{{ $row->name }}</div>
+                    <a href="#" class="state-link" data-slug="{{ $row->slug }}"><i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
+        @endforeach
+        {{-- <div class="col-md-4">
             <div class="state-card">
                 <i class="bi bi-geo-alt-fill state-icon"></i>
                 <div class="state-text">Arizona Car Transport</div>
@@ -154,10 +157,9 @@
                 <div class="state-text">California Car Shipping</div>
                 <a href="#" class="state-link state-link-a"><i class="bi bi-arrow-right"></i></a>
             </div>
-        </div>
-
+        </div> --}}
     </div>
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-4">
             <div class="state-card">
                 <i class="bi bi-geo-alt-fill state-icon"></i>
@@ -513,8 +515,7 @@
                 <a href="#" class="state-link state-link-a"><i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
-    </div>
-
+    </div> --}}
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

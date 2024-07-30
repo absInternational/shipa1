@@ -79,7 +79,11 @@
 
     @include('partials.reveiw-site')
 
-    <section class="tj-about-section-four">
+    <div class="detail_data">
+        {{-- @include('partials.transport-by-state-detail') --}}
+    </div>
+
+    {{-- <section class="tj-about-section-four">
         <div class="container">
             <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
                 Platform of RORO <br>Shipping Services</h2>
@@ -317,12 +321,9 @@
             </div>
         </div>
 
-    </section>
-
+    </section> --}}
 
     <section class="tj-about-section pt-4">
-
-
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -378,8 +379,6 @@
                             occur, importers have to find a port that offers this option in their close vicinity.</p>
                     </div>
                 </div>
-
-
             </div>
 
             <div class="row">
@@ -408,11 +407,9 @@
                             is more efficient than its alternatives.</p>
                     </div>
                 </div>
-
             </div>
 
             <div class="row">
-
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
@@ -466,12 +463,9 @@
                             to maintain healthy competition in the market.</p>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
-
 
     <section class="tj-cta-section-two">
         <div class="tj_cta_image-4 w-100 h-50"></div>
@@ -480,8 +474,6 @@
             <div class="row">
 
                 <div class="col-lg-12 col-md-6">
-
-
                     <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
 
                         <div class="tj-section-heading ">
@@ -495,11 +487,7 @@
                                 Get Support<i class="flaticon-right-1"></i>
                             </a>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -541,7 +529,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="tj-choose-us-section-service-roro">
         <div class="container why-box">
@@ -602,7 +589,6 @@
                 </div>
             </div>
         </div>
-
     </section>
     @include('partials.transport-by-state')
     <section class="tj-faq-section tj-faq-page">
@@ -693,5 +679,27 @@
     <script src="path/to/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
+    </script>
+
+    <script>
+        $(document).on('click', '.state-link', function(event) {
+            event.preventDefault();
+
+            var slug = $(this).data('slug');
+
+            console.log('slugslug', slug);
+
+            $.ajax({
+                url: "{{ url('/nationwide-autotransport') }}/" + slug,
+                method: 'GET',
+                success: function(response) {
+                    $('.detail_data').html('');
+                    $('.detail_data').html(response);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        });
     </script>
 @endsection

@@ -89,6 +89,8 @@ Route::get('/roro-shipping-international-service', [FrontendController::class, '
 
 Route::get('/nationwide-autotransport', [FrontendController::class, 'nationwideAutotransport'])->name('frontend.pages.nationwide-autotransport');
 
+Route::get('/nationwide-autotransport/{slug}', [FrontendController::class, 'getNationWideData'])->name('get.nation.data');
+
 // Auto Auction
 Route::get('/auto_auction', [FrontendController::class, 'autoAuction'])->name('autoAuction');
 

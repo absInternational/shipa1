@@ -11,6 +11,7 @@ use App\Models\NewsletterSubscribers;
 use App\Models\ServiceCategory;
 use App\Models\VehicleName;
 use App\Models\ReviewSite;
+use App\Models\NationWideTransport;
 
 
 class FrontendController extends Controller
@@ -28,7 +29,7 @@ class FrontendController extends Controller
         $site_reviews = ReviewSite::get();
         return view('frontend.index', compact('reviews', 'blogs', 'makes', 'site_reviews'));
     }
-    
+
 
     // public function blogs()
     // {
@@ -127,12 +128,12 @@ class FrontendController extends Controller
             $services = Service::get();
         }
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
-        return view('frontend.pages.services.index', compact('services','makes'));
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        return view('frontend.pages.services.index', compact('services', 'makes'));
     }
 
     public function serviceDetails(Request $request, $slug)
@@ -142,8 +143,7 @@ class FrontendController extends Controller
         $faqs = FAQs::where('status', 1)->get();
         $service = Service::where('slug', $slug)->first();
         $related = Service::where('id', '!=', $service->id)->where('category_id', $service->category_id)->take(5)->get();
-        if($service->layout_type == 'new')
-        {
+        if ($service->layout_type == 'new') {
             return view('frontend.pages.services.detail_new_layout', compact('service', 'related', 'faqs', 'site_reviews', 'blogs'));
         }
         return view('frontend.pages.services.detail', compact('service', 'related', 'faqs', 'site_reviews', 'blogs'));
@@ -204,21 +204,21 @@ class FrontendController extends Controller
             ->orderBy('make', 'ASC')
             ->get();
 
-        return view('frontend.pages.vehicleTransportDetail', compact('makes','blogs','site_reviews'));
+        return view('frontend.pages.vehicleTransportDetail', compact('makes', 'blogs', 'site_reviews'));
     }
 
     public function heavyTransportDetail()
     {
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.heavy-transport-detail',compact('blogs','site_reviews'));
+        return view('frontend.pages.heavy-transport-detail', compact('blogs', 'site_reviews'));
     }
 
     public function freightTransportDetail()
     {
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.freighttransport-detail',compact('blogs','site_reviews'));
+        return view('frontend.pages.freighttransport-detail', compact('blogs', 'site_reviews'));
     }
     public function hazmatTransport()
     {
@@ -238,227 +238,234 @@ class FrontendController extends Controller
     public function carService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.car-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.car-service', compact('site_reviews', 'blogs', 'makes'));
     }
-  
+
     public function bikeService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.bike-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.bike-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function atvutvService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.atv-utv-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.atv-utv-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function golfcartService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.golf-cart-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.golf-cart-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function boatService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.boat-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.boat-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function excavatorService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.excavator-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.excavator-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function hazmatService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.hazmat-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.hazmat-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function dryvanService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.dryvan-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.dryvan-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function reeferService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.reefer-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.reefer-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function freightService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.freight-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.freight-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function farmService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.farm-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.farm-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function rvService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.rv-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.rv-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function heavyService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.heavy-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.heavy-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function constructionService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.construction-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.construction-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function commercialService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.commercial-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.commercial-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function roroService()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.services.roro-service',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.services.roro-service', compact('site_reviews', 'blogs', 'makes'));
     }
 
     public function nationwideAutotransport()
     {
         $makes = VehicleName::select('make')
-        ->where('UserId', 14)
-        ->where('status', 0)
-        ->groupBy('make')
-        ->orderBy('make', 'ASC')
-        ->get();
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $transports = NationWideTransport::with('details')->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.nationwide-autotransport',compact('site_reviews','blogs','makes'));
+        return view('frontend.pages.nationwide-autotransport', compact('site_reviews', 'blogs', 'makes', 'transports'));
     }
 
     public function thankYou()
     {
-        
         return view('frontend.pages.thank-you');
+    }
+
+    public function getNationWideData($slug)
+    {
+        $transport = NationWideTransport::with('details')->where('slug', $slug)->first();
+        // dd($transport->toArray());
+        return view('partials.transport-by-state-detail', compact('transport'));
     }
 }
