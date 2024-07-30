@@ -370,7 +370,7 @@
                                     <div class="input-form">
                                         <label class="d-block">Trailer Specification</label>
                                         <select id="example-multiple" class="js-example-basic-multiple sel-mul"
-                                            name="states[]" multiple="multiple" style="width: 100%">
+                                            name="trailer_specification[]" multiple="multiple" style="width: 100%">
 
                                             <option value="8">VAN (V)</option>
                                             <option value="9">REEFER (RE)</option>
@@ -399,7 +399,7 @@
                                     <div class="input-form">
                                         <label class="d-block">Equipment Type</label>
                                         <select id="example-multiple-2" class="js-example-basic-multiple sel-mul"
-                                            name="states[]" multiple="multiple" style="width: 100%">
+                                            name="equipment_type[]" multiple="multiple" style="width: 100%">
 
 
                                             <option value="68">Air Ride(A)</option>

@@ -367,16 +367,16 @@
                                     <div class="row">
                                         <h4 class="title text-center">FREIGHT INFORMATION</h4>
                                         <!-- <select id="tabSelector" class="" aria-label="Tab selector" required>
-                        <option value=""  disabled>Select a Vehicle</option>
-                        <option value="Atv">Atv Utv Transport</option>
-                        <option value="Boat-Transport">Boat Transport</option>
-                        <option value="Car">Car</option>
-                        <option value="Freight-Transportation" selected>Freight Transportation</option>
-                        <option value="Golf-Cart">Golf Cart</option>
-                        <option value="Heavy-Equipment">Heavy Equipment</option>
-                        <option value="Motorcycle">Motorcycle</option>
-                        <option value="RV-Transport">RV Transport</option>
-                    </select> -->
+                                <option value=""  disabled>Select a Vehicle</option>
+                                <option value="Atv">Atv Utv Transport</option>
+                                <option value="Boat-Transport">Boat Transport</option>
+                                <option value="Car">Car</option>
+                                <option value="Freight-Transportation" selected>Freight Transportation</option>
+                                <option value="Golf-Cart">Golf Cart</option>
+                                <option value="Heavy-Equipment">Heavy Equipment</option>
+                                <option value="Motorcycle">Motorcycle</option>
+                                <option value="RV-Transport">RV Transport</option>
+                            </select> -->
 
                                         <div class="input-form">
                                             <label for="category">Category</label>
@@ -425,41 +425,41 @@
 
 
                                         <!-- <div class="row mt-3">
-                                    <div class="col-md-4">
-                                        <div class="input-form">
-                                            <label class="d-block"> Your Name:</label>
-                                            <input type="text" id="name" name="name" placeholder="Full Name"
-                                                required="" />
-                                            <small id="errName" class="err-style"></small>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form">
-                                            <label class="d-block"> Phone:</label>
-                                            <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                                required="" />
-                                            <small id="errPhone" class="err-style"></small>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form">
-                                            <label class="d-block"> Email Address:</label>
-                                            <input type="email" id="email" name="email" placeholder="Email Address"
-                                                required="" />
-                                            <small id="errEmail" class="err-style"></small>
-                                        </div>
-                                    </div>
-                                </div> -->
+                                            <div class="col-md-4">
+                                                <div class="input-form">
+                                                    <label class="d-block"> Your Name:</label>
+                                                    <input type="text" id="name" name="name" placeholder="Full Name"
+                                                        required="" />
+                                                    <small id="errName" class="err-style"></small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form">
+                                                    <label class="d-block"> Phone:</label>
+                                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                                                        required="" />
+                                                    <small id="errPhone" class="err-style"></small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form">
+                                                    <label class="d-block"> Email Address:</label>
+                                                    <input type="email" id="email" name="email" placeholder="Email Address"
+                                                        required="" />
+                                                    <small id="errEmail" class="err-style"></small>
+                                                </div>
+                                            </div>
+                                        </div> -->
                                         <!-- <div class="form-group" style="display:none;">
-                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                    <select class="form-control" id="trailer_type" name="trailer_type">
-                                        <option value="RGN" selected>RGN</option>
-                                        <option value="Stepdeck">Stepdeck</option>
-                                        <option value="Flatbed">Flatbed</option>
-                                        <option value="Hotshot">Hotshot</option>
-                                        <option value="Landoll">Landoll</option>
-                                    </select>
-                                </div> -->
+                                            <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                            <select class="form-control" id="trailer_type" name="trailer_type">
+                                                <option value="RGN" selected>RGN</option>
+                                                <option value="Stepdeck">Stepdeck</option>
+                                                <option value="Flatbed">Flatbed</option>
+                                                <option value="Hotshot">Hotshot</option>
+                                                <option value="Landoll">Landoll</option>
+                                            </select>
+                                        </div> -->
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="input-form">
@@ -508,8 +508,9 @@
                                                 <div class="input-form">
                                                     <label class="d-block">Trailer Specification</label>
                                                     <select id="example-multiple"
-                                                        class="js-example-basic-multiple sel-mul" name="states[]"
-                                                        multiple="multiple" style="width: 100%">
+                                                        class="js-example-basic-multiple sel-mul"
+                                                        name="trailer_specification[]" multiple="multiple"
+                                                        style="width: 100%">
 
                                                         <option value="8">VAN (V)</option>
                                                         <option value="9">REEFER (RE)</option>
@@ -538,7 +539,7 @@
                                                 <div class="input-form">
                                                     <label class="d-block">Equipment Type</label>
                                                     <select id="example-multiple-2"
-                                                        class="js-example-basic-multiple sel-mul" name="states[]"
+                                                        class="js-example-basic-multiple sel-mul" name="equipment_type[]"
                                                         multiple="multiple" style="width: 100%">
 
 
@@ -809,45 +810,45 @@
                                             </div>
                                         </div>
                                         <!-- <div class="row select-bm" style="display:none;">
-                                    <div class="col-md-12 text-center">
-                                        <h4 class="text-white">Vehicle Information</h4>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form tj-select">
-                                            <label> Year</label>
-                                            <select class="nice-select vehicle-year" name="year[]" id="year">
-                                                <option value="2010" selected>Select Year</option>
-                                                @php
-                                                    $currentYear = date('Y');
-                                                    for ($year = $currentYear; $year >= 1936; $year--) {
-                                                        echo "<option value='$year'>$year</option>";
-                                                    }
-                                                @endphp
-                                            </select>
+                                            <div class="col-md-12 text-center">
+                                                <h4 class="text-white">Vehicle Information</h4>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form tj-select">
+                                                    <label> Year</label>
+                                                    <select class="nice-select vehicle-year" name="year[]" id="year">
+                                                        <option value="2010" selected>Select Year</option>
+                                                        @php
+                                                            $currentYear = date('Y');
+                                                            for ($year = $currentYear; $year >= 1936; $year--) {
+                                                                echo "<option value='$year'>$year</option>";
+                                                            }
+                                                        @endphp
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form tj-select">
+                                                    <label>Make</label>
+                                                    <input type="text" value="null" id="make" name="make[]"
+                                                        placeholder="Enter Make" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-form tj-select vehicle-model-div">
+                                                    <label>Model</label>
+                                                    <input type="text" id="model" value="null" name="model[]"
+                                                        placeholder="Enter Model" />
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form tj-select">
-                                            <label>Make</label>
-                                            <input type="text" value="null" id="make" name="make[]"
-                                                placeholder="Enter Make" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form tj-select vehicle-model-div">
-                                            <label>Model</label>
-                                            <input type="text" id="model" value="null" name="model[]"
-                                                placeholder="Enter Model" />
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                    style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                    Vehicle</a>
+                                        <a class="add-car" style="display:none;" id="addVehicleBtn"
+                                            style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                                            Vehicle</a>
 
-                                <div id="vehicles-container" style="display:none;">
-                                </div> -->
+                                        <div id="vehicles-container" style="display:none;">
+                                        </div> -->
 
 
                                         <!-- <label class="error-message" id="tabSelector-error">This field is required.</label> -->
@@ -889,13 +890,13 @@
                                         </div>
 
                                         <!-- <div class="col-xl-4 col-lg-4">
-                        <div class="single-input-field">
-                            <label class="d-block text-white"> Phone:</label>
-                            <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
-                            <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
-                            <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                        </div>
-                    </div> -->
+                                <div class="single-input-field">
+                                    <label class="d-block text-white"> Phone:</label>
+                                    <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
+                                    <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
+                                    <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                                </div>
+                            </div> -->
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
@@ -956,54 +957,62 @@
     @include('partials.reveiw-site')
     <section class="tj-service-details pt-4 pb-0">
         <div class="container">
-        <div class="row">
-                    <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
-                        <div class="about_image text-center">
-                            <img src="{{ asset('frontend/images/project/freight-detail-page.webp') }}" alt="Image">
+            <div class="row">
+                <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                    <div class="about_image text-center">
+                        <img src="{{ asset('frontend/images/project/freight-detail-page.webp') }}" alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-three">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape ">Ship A1 Transport</span>
+                            <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
+                            <p class="desc">
+                                Looking for a shipping company for your freight transportation? Introducing you to Ship A1,
+                                where our delivery matches top-notch quality catered especially according to the needs of
+                                our customers, where you want to ship your car, any other type of vehicle or heavy equipment
+                                look no further than our freight transportation! At Ship A1, our expert team aspires to
+                                ensure customer satisfaction as well as maintain the quality and delivery of our logistics.
+                                <br>Our wide shipping services ensure efficient and cost-effective delivery of your
+                                vehicles, LTL (Less Than Truckload), or even full truckload shipments across USA.
+                                <br>So, what are you waiting for? Experience the safest and best shipping all across the
+                                United States of America and make haste by grabbing the most splendid deals on our website
+                                and get a free quote now! All you need to do is enter your shipment details and desired
+                                route and get the most reasonable quotes that fit your needs.
+                            </p>
+                        </div>
+                        <div class="tj-theme-button">
+                            <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                                Get Quote<i class="flaticon-right-1"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                        <div class="about-content-three">
-                            <div class="tj-section-heading">
-                                <span class="sub-title active-shape ">Ship A1 Transport</span>
-                                <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
-                                <p class="desc">
-                                Looking for a shipping company for your freight transportation? Introducing you to Ship A1, where our delivery matches top-notch quality catered especially according to the needs of our customers, where you want to ship your car, any other type of vehicle or heavy equipment look no further than our freight transportation! At Ship A1, our expert team aspires to ensure customer satisfaction as well as maintain the quality and delivery of our logistics.
-                         <br>Our wide shipping services ensure efficient and cost-effective delivery of your vehicles, LTL (Less Than Truckload), or even full truckload shipments across USA.
-                         <br>So, what are you waiting for? Experience the safest and best shipping all across the United States of America and make haste by grabbing the most splendid deals on our website and get a free quote now! All you need to do is enter your shipment details and desired route and get the most reasonable quotes that fit your needs.  
+                </div>
+
+            </div>
+            <!-- <div class="row">
+                        <div class="col-lg-12">
+                            <div class="tj-section-heading text-center">
+                                <span class="sub-title active-shape">Ship A1 Transport</span>
+                                <p>
+                                    Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
+                                    choosing Ship A1 Transport for your shipping solutions. Review the following terms and
+                                    conditions carefully before proceeding with our services.
+                                    Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
+                                    choosing Ship A1 Transport for your shipping solutions. Review the following terms and
+                                    conditions carefully before proceeding with our services.
+                                    Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
+                                    choosing Ship A1 Transport for your shipping solutions. Review the following terms and
+                                    conditions carefully before proceeding with our services.
+                                    Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
+                                    choosing Ship A1 Transport for your shipping solutions. Review the following terms and
+                                    conditions carefully before proceeding with our services.
+
                                 </p>
                             </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
-                                Get Quote<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
                         </div>
-                    </div>
-                    
-                </div>
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape">Ship A1 Transport</span>
-                        <p>
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                            conditions carefully before proceeding with our services.
-
-                        </p>
-                    </div>
-                </div>
-            </div> -->
+                    </div> -->
         </div>
     </section>
 
@@ -1023,7 +1032,7 @@
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
                                     <!-- <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
@@ -1039,7 +1048,7 @@
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
+                                    <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
                                     <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
@@ -1053,7 +1062,7 @@
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
+                                    <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
                                     <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
@@ -1070,7 +1079,7 @@
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
+                                    <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
                                     <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
@@ -1134,7 +1143,7 @@
                 <div class="col-lg-12 position-relative">
                     <div class="tj-theme-button">
                         <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}">
-                        Get Quote<i class="flaticon-right-1"></i>
+                            Get Quote<i class="flaticon-right-1"></i>
                         </a>
                     </div>
                 </div>
@@ -1164,43 +1173,48 @@
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
             <!-- <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
-                <div class="arrow-icon">
-                    <a href="{{ route('services') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
-                </div>
-                <div class="tj-project-content">
-                    <span class="sub-title">logistics</span>
-                    <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Freight Solution</a></h4>
-                </div>
-            </div> -->
+                        <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
+                        <div class="arrow-icon">
+                            <a href="{{ route('services') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
+                        </div>
+                        <div class="tj-project-content">
+                            <span class="sub-title">logistics</span>
+                            <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Freight Solution</a></h4>
+                        </div>
+                    </div> -->
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Reefer</span>
-                    <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"  class="title-link">Reefer Transportation Service</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"
+                            class="title-link">Reefer Transportation Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/7.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Hazmat</span>
-                    <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"  class="title-link">Hazmat Transportation Service</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"
+                            class="title-link">Hazmat Transportation Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/5.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('services') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('services') }}" target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Dry van</span>
-                    <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Dry van Transportation Service</a></h4>
+                    <h4><a href="{{ route('services') }}" target="_blank" class="title-link">Dry van Transportation
+                            Service</a></h4>
                 </div>
             </div>
         </div>
@@ -1257,14 +1271,15 @@
                             </div>
                             <div class="faq-text">
                                 <h6 class="title">High Quality service</h6>
-                                <p>Attention to detail and customer satisfaction are incorporated in delivering quality service consistently.</p>
+                                <p>Attention to detail and customer satisfaction are incorporated in delivering quality
+                                    service consistently.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
                     <div class="tj-faq-area">
-                    <div class="accordion" id="accordionExample">
+                        <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -1275,7 +1290,9 @@
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>Ship A1 handles a wide quantity and range of freight including LTL and FTL transporting services, as well as ensuring the safety of your vehicles and peace of mind.</strong>
+                                        <strong>Ship A1 handles a wide quantity and range of freight including LTL and FTL
+                                            transporting services, as well as ensuring the safety of your vehicles and peace
+                                            of mind.</strong>
                                     </div>
                                 </div>
                             </div>
@@ -1289,7 +1306,11 @@
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>The process is quite easy, if your shipment is large enough to take up enough space it will be a full truckload and it shall be transported in a separate truck all by itself, if your shipment does not take the entire space, it will be transported along with other shipments and this mode is called Partial Truckload.</strong>
+                                        <strong>The process is quite easy, if your shipment is large enough to take up
+                                            enough space it will be a full truckload and it shall be transported in a
+                                            separate truck all by itself, if your shipment does not take the entire space,
+                                            it will be transported along with other shipments and this mode is called
+                                            Partial Truckload.</strong>
                                     </div>
                                 </div>
                             </div>
@@ -1304,7 +1325,9 @@
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>It all depends on the potential route planning as well as the distance. However, Ship A1 will provide an estimated timeframe during the quote process and keep you updated throughout the entire journey.</strong>
+                                        <strong>It all depends on the potential route planning as well as the distance.
+                                            However, Ship A1 will provide an estimated timeframe during the quote process
+                                            and keep you updated throughout the entire journey.</strong>
                                     </div>
                                 </div>
                             </div>
@@ -1316,14 +1339,16 @@
                                         How do I prepare my vehicle for transport?
                                     </button>
                                 </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse"
-                                    aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>We'll provide detailed instructions, but you'll need to remove personal belongings, as well as make sure to follow guidelines or instructions based on the chosen transport method.</strong>
+                                        <strong>We'll provide detailed instructions, but you'll need to remove personal
+                                            belongings, as well as make sure to follow guidelines or instructions based on
+                                            the chosen transport method.</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -1340,16 +1365,16 @@
     <!--=========== Blog Section End =========-->
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="path/to/jquery.min.js"></script>
-    {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+            <script src="path/to/jquery.min.js"></script>
+            {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
 
     <script>
         $(document).ready(function() {

@@ -2,15 +2,13 @@
 
 @section('title', 'Get Quote on Freight Class | ShipA1')
 
-@section('meta_description', 'Need to ship temperature-sensitive goods? Get an instant reefer shipping quote now! Our reliable service provides nationwide coverage, transparent pricing, and secure transportation for your perishable cargo. Plan your shipment efficiently with our instant quote tool. Trust us for seamless and timely reefer shipping.')
-
-
-
+@section('meta_description', 'Need to ship temperature-sensitive goods? Get an instant reefer shipping quote now! Our
+    reliable service provides nationwide coverage, transparent pricing, and secure transportation for your perishable cargo.
+    Plan your shipment efficiently with our instant quote tool. Trust us for seamless and timely reefer shipping.')
 @section('content')
 
     <style>
-
-.lab-cos {
+        .lab-cos {
             font-size: 15px;
             font-weight: 500;
             color: var(--tj-white-color);
@@ -144,22 +142,24 @@
             padding: 0px !important;
             padding-left: 10px !important;
         }
-        .select2{
-        color: #38413b;
-        opacity: 2;
-        font-size: 18px;
-        border: 1px solid #318eefc9;
-        font-family: inherit;
-    }
-    select {
-  width: 100%;
-  min-height: 100px;
-  border-radius: 3px;
-  border: 1px solid #444;
-  padding: 10px;
-  color: #444444;
-  font-size: 14px;
-}
+
+        .select2 {
+            color: #38413b;
+            opacity: 2;
+            font-size: 18px;
+            border: 1px solid #318eefc9;
+            font-family: inherit;
+        }
+
+        select {
+            width: 100%;
+            min-height: 100px;
+            border-radius: 3px;
+            border: 1px solid #444;
+            padding: 10px;
+            color: #444444;
+            font-size: 14px;
+        }
     </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -176,7 +176,7 @@
                             </span>
                             >
                             <span>
-                                <span>Dry Van  Transport</span>
+                                <span>Dry Van Transport</span>
                             </span>
                         </div>
                     </div>
@@ -355,70 +355,69 @@
 
                             <div class="row">
                                 <div class="col-md-6">
-                                <div class="input-form">
-                                <label class="d-block">Trailer Specification</label>
-                                <select id="example-multiple" class="js-example-basic-multiple sel-mul" name="states[]" multiple="multiple" style="width: 100%">
-                                
-                                                <option value="8">VAN (V)</option>
-                                                <option value="9">REEFER (RE)</option>
-                                                <option value="10">FLATBED (F)</option>
-                                                <option value="11">STEP DECK (SD)</option>
-                                                <option value="12">REMOVABLE GOOSENECK (RGN) </option>
-                                                <option value="13">CONESTOGA (CS)</option>
-                                                <option value="14">CONTAINER / DRAYAGE (C)</option>
-                                                <option value="15">TRUCK (T)</option>
-                                                <option value="16">HAZMAT (hazardous materials)</option>
-                                                <option value="17">POWER ONLY (PO)</option>
-                                                <option value="18">HOT SHOT (HS)</option>
-                                                <option value="19">LOWBOY (LB)</option>
-                                                <option value="20">ENDUMP (ED)</option>
-                                                <option value="21">LANDOLL (LD)</option>
-                                                <option value="22">PARTIAL (PT)</option>
-                                                <option value="23">20ft container</option>
-                                                <option value="24">40ft container</option>
-                                                <option value="25">48ft container</option>
-                                                <option value="26">53ft container</option>
-                                      
-                                </select>
-                                </div>
+                                    <div class="input-form">
+                                        <label class="d-block">Trailer Specification</label>
+                                        <select id="example-multiple" class="js-example-basic-multiple sel-mul"
+                                            name="trailer_specification[]" multiple="multiple" style="width: 100%">
+                                            <option value="8">VAN (V)</option>
+                                            <option value="9">REEFER (RE)</option>
+                                            <option value="10">FLATBED (F)</option>
+                                            <option value="11">STEP DECK (SD)</option>
+                                            <option value="12">REMOVABLE GOOSENECK (RGN) </option>
+                                            <option value="13">CONESTOGA (CS)</option>
+                                            <option value="14">CONTAINER / DRAYAGE (C)</option>
+                                            <option value="15">TRUCK (T)</option>
+                                            <option value="16">HAZMAT (hazardous materials)</option>
+                                            <option value="17">POWER ONLY (PO)</option>
+                                            <option value="18">HOT SHOT (HS)</option>
+                                            <option value="19">LOWBOY (LB)</option>
+                                            <option value="20">ENDUMP (ED)</option>
+                                            <option value="21">LANDOLL (LD)</option>
+                                            <option value="22">PARTIAL (PT)</option>
+                                            <option value="23">20ft container</option>
+                                            <option value="24">40ft container</option>
+                                            <option value="25">48ft container</option>
+                                            <option value="26">53ft container</option>
+
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                <div class="input-form">
-                                <label class="d-block">Equipment Type</label>
-                                <select id="example-multiple-2" class="js-example-basic-multiple sel-mul" name="states[]" multiple="multiple" style="width: 100%">
-                                
-                                
-                                                <option value="68">Air Ride(A)</option>
-                                                <option value="69">Blanket Wrap (B)</option>
-                                                <option value="70">B-Train (BT)</option>
-                                                <option value="71">Chain(CH)</option>
-                                                <option value="72">Chassis (CS)</option>
-                                                <option value="73">Conestoga(CO)</option>
-                                                <option value="74">Curtain(C)</option>
-                                                <option value="75">Double(2)</option>
-                                                <option value="76">Extendable (E)</option>
-                                                <option value="77">E-Track (ET)</option>
-                                                <option value="78">Hazmat (Z)</option>
-                                                <option value="79">Hot Shot (HS)</option>
-                                                <option value="80">Insulated (N)</option>
-                                                <option value="81">Lift Gate (LG)</option>
-                                                <option value="82">Load Out (LO)</option>
-                                                <option value="83">Load Ramp (LR)</option>
-                                                <option value="84">Moving (MV)</option>
-                                                <option value="85">Open Top (OT)</option>
-                                                <option value="86">Oversized (O)</option>
-                                                <option value="87">Pallet Exchange (X)</option>
-                                                <option value="88">Side Kit (S)</option>
-                                                <option value="89">Tarp(T)</option>
-                                                <option value="90">Team Driver(M)</option>
-                                                <option value="91">Temp Control (TC)</option>
-                                                <option value="92">Triple (3)</option>
-                                                <option value="93">Vented (V)</option>
-                                                <option value="94">Walking Floor (WF)</option>
-                                            
-                                      
-                                </select>
-                                </div>
+                                    <div class="input-form">
+                                        <label class="d-block">Equipment Type</label>
+                                        <select id="example-multiple-2" class="js-example-basic-multiple sel-mul"
+                                            name="equipment_type[]" multiple="multiple" style="width: 100%">
+                                            <option value="68">Air Ride(A)</option>
+                                            <option value="69">Blanket Wrap (B)</option>
+                                            <option value="70">B-Train (BT)</option>
+                                            <option value="71">Chain(CH)</option>
+                                            <option value="72">Chassis (CS)</option>
+                                            <option value="73">Conestoga(CO)</option>
+                                            <option value="74">Curtain(C)</option>
+                                            <option value="75">Double(2)</option>
+                                            <option value="76">Extendable (E)</option>
+                                            <option value="77">E-Track (ET)</option>
+                                            <option value="78">Hazmat (Z)</option>
+                                            <option value="79">Hot Shot (HS)</option>
+                                            <option value="80">Insulated (N)</option>
+                                            <option value="81">Lift Gate (LG)</option>
+                                            <option value="82">Load Out (LO)</option>
+                                            <option value="83">Load Ramp (LR)</option>
+                                            <option value="84">Moving (MV)</option>
+                                            <option value="85">Open Top (OT)</option>
+                                            <option value="86">Oversized (O)</option>
+                                            <option value="87">Pallet Exchange (X)</option>
+                                            <option value="88">Side Kit (S)</option>
+                                            <option value="89">Tarp(T)</option>
+                                            <option value="90">Team Driver(M)</option>
+                                            <option value="91">Temp Control (TC)</option>
+                                            <option value="92">Triple (3)</option>
+                                            <option value="93">Vented (V)</option>
+                                            <option value="94">Walking Floor (WF)</option>
+
+
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
@@ -508,11 +507,12 @@
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" /> -->
-                                    <input class="form-control image_input" type="file" name="image" accept="image/*" multiple onchange="previewImages(event)">
-    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                        placeholder="Upload File" /> -->
+                                <input class="form-control image_input" type="file" name="image" accept="image/*"
+                                    multiple onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
-                           
+
                             <div class="form-group">
                                 <label for="condition" class="text-white">Condition</label>
                                 <select class="form-control" id="condition" name="condition">
@@ -525,56 +525,56 @@
 
 
 
-    <div class="col-md-3">
+                                <div class="col-md-3">
 
-        <label class="lab-cos">Length</label>
-        <div class="input-container">
-            <input type="number" id="feet-input" class="input-field" placeholder="" min="0" maxlength="3"
-                oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input" class="input-field" placeholder="" min="0" max="11" maxlength="2"
-                oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div>
+                                    <label class="lab-cos">Length</label>
+                                    <div class="input-container">
+                                        <input type="number" id="feet-input" class="input-field" placeholder=""
+                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                        <span class="separator">(Ft.)</span>
+                                        <input type="number" id="inches-input" class="input-field" placeholder=""
+                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                        <span class="separators">(In.)</span>
+                                    </div>
+                                </div>
 
-    <div class="col-md-3">
+                                <div class="col-md-3">
 
-        <label class="lab-cos">Width</label>
-        <div class="input-container">
-            <input type="number" id="feet-input1" class="input-field" placeholder="" min="0" maxlength="3"
-                oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input1" class="input-field" placeholder="" min="0" max="11" maxlength="2"
-                oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div>
+                                    <label class="lab-cos">Width</label>
+                                    <div class="input-container">
+                                        <input type="number" id="feet-input1" class="input-field" placeholder=""
+                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                        <span class="separator">(Ft.)</span>
+                                        <input type="number" id="inches-input1" class="input-field" placeholder=""
+                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                        <span class="separators">(In.)</span>
+                                    </div>
+                                </div>
 
-    <div class="col-md-3">
+                                <div class="col-md-3">
 
-        <label class="lab-cos">Height</label>
-        <div class="input-container">
-            <input type="number" id="feet-input2" class="input-field" placeholder="" min="0" maxlength="3"
-                oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input2" class="input-field" placeholder="" min="0" max="11" maxlength="2"
-                oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div>
+                                    <label class="lab-cos">Height</label>
+                                    <div class="input-container">
+                                        <input type="number" id="feet-input2" class="input-field" placeholder=""
+                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                        <span class="separator">(Ft.)</span>
+                                        <input type="number" id="inches-input2" class="input-field" placeholder=""
+                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                        <span class="separators">(In.)</span>
+                                    </div>
+                                </div>
 
-    <div class="col-md-3">
+                                <div class="col-md-3">
 
-        <label class="lab-cos">Weight</label>
-        <div class="input-container1">
-            <input type="" id="feet-input" class="input-field-1" placeholder="" min="0" maxlength="6"
-                oninput="limitDigits(this, 6)">
-            <span class="separators-w">(Lbs.)</span>
+                                    <label class="lab-cos">Weight</label>
+                                    <div class="input-container1">
+                                        <input type="" id="feet-input" class="input-field-1" placeholder=""
+                                            min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                                        <span class="separators-w">(Lbs.)</span>
 
-        </div>
-    </div>
-</div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <h4 class="text-white">Additional Services</h4>
                                 <div class="col-md-4">
@@ -637,8 +637,8 @@
                             </div>
 
                             <!-- <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                Vehicle</a> -->
+                                    style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                                    Vehicle</a> -->
 
                             <div id="vehicles-container" style="display:none;">
                             </div>
@@ -657,18 +657,18 @@
 
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-   
-    
+
+
+
     <script>
-    $(document).ready(function() {
-        $('#example-multiple').select2();
-    });
-    $(document).ready(function() {
-        $('#example-multiple-2').select2();
-    });
-</script>
-    
+        $(document).ready(function() {
+            $('#example-multiple').select2();
+        });
+        $(document).ready(function() {
+            $('#example-multiple-2').select2();
+        });
+    </script>
+
     <script>
         $(document).ready(function() {
             $('#available_at_auction').change(function() {
