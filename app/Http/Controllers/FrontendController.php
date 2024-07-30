@@ -465,7 +465,15 @@ class FrontendController extends Controller
     public function getNationWideData($slug)
     {
         $transport = NationWideTransport::with('details')->where('slug', $slug)->first();
-        // dd($transport->toArray());
-        return view('partials.transport-by-state-detail', compact('transport'));
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $transports = NationWideTransport::with('details')->get();
+        $site_reviews = ReviewSite::get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.nationwide-autotransport', compact('site_reviews', 'blogs', 'makes', 'transports', 'transport'));
     }
 }

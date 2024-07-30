@@ -139,7 +139,7 @@
                 <div class="state-card">
                     <i class="bi bi-geo-alt-fill state-icon"></i>
                     <div class="state-text">{{ $row->name }}</div>
-                    <a href="#" class="state-link" data-slug="{{ $row->slug }}"><i
+                    <a href="{{ route('get.nation.data', $row->slug) }}" class="state-link" data-slug="{{ $row->slug }}"><i
                             class="bi bi-arrow-right"></i></a>
                 </div>
             </div>

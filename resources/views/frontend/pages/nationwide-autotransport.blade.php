@@ -79,9 +79,11 @@
 
     @include('partials.reveiw-site')
 
-    <div class="detail_data">
-        {{-- @include('partials.transport-by-state-detail') --}}
-    </div>
+    @if (isset($transport) && $transport != null)
+        <div class="detail_data">
+            @include('partials.transport-by-state-detail')
+        </div>
+    @endif
 
     {{-- <section class="tj-about-section-four">
         <div class="container">
@@ -682,24 +684,24 @@
     </script>
 
     <script>
-        $(document).on('click', '.state-link', function(event) {
-            event.preventDefault();
+        // $(document).on('click', '.state-link', function(event) {
+        //     event.preventDefault();
 
-            var slug = $(this).data('slug');
+        //     var slug = $(this).data('slug');
 
-            console.log('slugslug', slug);
+        //     console.log('slugslug', slug);
 
-            $.ajax({
-                url: "{{ url('/nationwide-autotransport') }}/" + slug,
-                method: 'GET',
-                success: function(response) {
-                    $('.detail_data').html('');
-                    $('.detail_data').html(response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        });
+        //     $.ajax({
+        //         url: "{{ url('/nationwide-autotransport') }}/" + slug,
+        //         method: 'GET',
+        //         success: function(response) {
+        //             $('.detail_data').html('');
+        //             $('.detail_data').html(response);
+        //         },
+        //         error: function(xhr) {
+        //             console.log(xhr.responseText);
+        //         }
+        //     });
+        // });
     </script>
 @endsection
