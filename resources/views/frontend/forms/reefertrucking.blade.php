@@ -403,53 +403,9 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-6">
+                            
 
-                                <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="hazardous"> Hazardous</label>
-                            </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="stackable" name="stackable"
-                                    value="1" />
-                                <label class="form-check-label text-white" for="stackable"> Stackable</label>
-                            </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" value="1" />
-                                <label class="form-check-label text-white" for="available_at_auction"> Available at
-                                    Auction?</label>
-                            </div>
-
-                            <div class="input-form div-link mt-3" style="display: none;">
-                                <label class="d-block"> Enter Link:</label>
-                                <input class="form-control" type="url" id="link" name="link"
-                                    placeholder="Enter Link" />
-                            </div>
-                                </div>
-                                <div class="col-md-6">
-                                <div class="form-check">
-                                <input class="form-check-input"  type="checkbox" id="boat_on_trailer"
-                                    name="boat_on_trailer" value="1" />
-                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your freight already on
-                                    a
-                                    trailer?</label>
-                            </div>
-                                </div>
-
-                                
-
-                            </div>
+                            
 
                             
 
@@ -459,7 +415,8 @@
                             
                             
                             <div class="row mt-3">
-                                <div class="col-md-3">
+
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="pick_up_services" class="text-white">Pickup Services</label>
                                         <select class="form-control" id="pick_up_services" name="pick_up_services">
@@ -475,7 +432,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="deliver_services" class="text-white">Deliver Services</label>
                                         <select class="form-control" id="deliver_services" name="deliver_services">
@@ -500,20 +457,29 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+
+                                
+
+                            </div>
+
+                            <div class="row mt-3">
+
+                            <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Date:</label>
                                         <input type="date" id="ex_pickup_date" name="ex_pickup_date"
                                             required="" />
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Time:</label>
                                         <input type="time" id="ex_pickup_time" name="ex_pickup_time"
                                             required="" />
                                     </div>
                                 </div>
+
+
                             </div>
                             <!-- <div class="row mt-3">
                                 
@@ -559,7 +525,7 @@
                             </div>
                            
                             
-                            <div class="row mb-3">
+<div class="row mb-3">
 
 
 
@@ -614,6 +580,53 @@
         </div>
     </div>
 </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
+                                    value="1" />
+                                <label class="form-check-label text-white" for="hazardous"> Hazardous</label>
+                            </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="stackable" name="stackable"
+                                    value="1" />
+                                <label class="form-check-label text-white" for="stackable"> Stackable</label>
+                            </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                    name="available_at_auction" value="1" />
+                                <label class="form-check-label text-white" for="available_at_auction"> Available at
+                                    Auction?</label>
+                            </div>
+
+                            <div class="input-form div-link mt-3" style="display: none;">
+                                <label class="d-block"> Enter Link:</label>
+                                <input class="form-control" type="url" id="link" name="link"
+                                    placeholder="Enter Link" />
+                            </div>
+                                </div>
+                                <div class="col-md-6">
+                                <div class="form-check">
+                                <input class="form-check-input"  type="checkbox" id="boat_on_trailer"
+                                    name="boat_on_trailer" value="1" />
+                                <label class="form-check-label text-white" for="boat_on_trailer"> Is your freight already on
+                                    a
+                                    trailer?</label>
+                            </div>
+                                </div>
+
+                                
+
+                            </div>
                             <div class="row">
                                 <h4 class="text-white">Additional Services</h4>
                                 <div class="col-md-4">
