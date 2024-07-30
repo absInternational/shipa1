@@ -17,6 +17,7 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
+        dd('$request->all()');
         $data = $request->all();
         $heading = $this->generateHeading($data);
         $name = $request->input('name', null);
@@ -51,7 +52,18 @@ class QuoteController extends Controller
         $commodity_detail = $request->input('commodity_detail', null);
         $handling_unit = $request->input('handling_unit', null);
         $commodity_unit = $request->input('commodity_unit', null);
-        $trailer_specification = $request->input('trailer_specification', null);
+        if ($request->has('trailer_specification') && is_array($request->trailer_specification)) {
+            $trailer_specification = implode(',', $request->trailer_specification);
+        }
+        else {
+            $trailer_specification = $request->input('trailer_specification', null);
+        }
+        if ($request->has('equipment_type') && is_array($request->equipment_type)) {
+            $equipment_type = implode(',', $request->equipment_type);
+        }
+        else {
+            $equipment_type = $request->input('equipment_type', null);
+        }
         $equipment_type = $request->input('equipment_type', null);
         $stackable = $request->input('stackable', null);
         $hazardous = $request->input('hazardous', null);
