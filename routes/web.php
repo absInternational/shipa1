@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\ReviewSiteController;
 use App\Http\Controllers\Admin\UserManagementController;
 use App\Http\Controllers\Admin\PortToPortController;
 use App\Http\Controllers\Admin\PortDetailController;
+use App\Http\Controllers\Admin\NationWideTransportController;
 
 
 
@@ -275,6 +276,10 @@ Route::middleware('admin')->prefix('admin')->group(function () {
 
     // port to port
     Route::resource('port-to-ports', PortToPortController::class);
+
+    // nation-wide-transport
+    Route::resource('nationwide-transports', NationWideTransportController::class);
+
 });
 
 Auth::routes();
