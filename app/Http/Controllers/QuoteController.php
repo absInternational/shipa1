@@ -17,7 +17,7 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
-        dd('$request->all()');
+        // dd('$request->all()');
         $data = $request->all();
         $heading = $this->generateHeading($data);
         $name = $request->input('name', null);
@@ -64,7 +64,6 @@ class QuoteController extends Controller
         else {
             $equipment_type = $request->input('equipment_type', null);
         }
-        $equipment_type = $request->input('equipment_type', null);
         $stackable = $request->input('stackable', null);
         $hazardous = $request->input('hazardous', null);
         $pick_up_services = $request->input('pick_up_services', null);
@@ -198,6 +197,8 @@ class QuoteController extends Controller
             $post_array['image'] = $image;
         }
 
+        // dd($post_array);
+
         $delivery_latitude = $originData;
         $delivery_longitude = $destinationData;
 
@@ -221,6 +222,7 @@ class QuoteController extends Controller
 
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
+            // dd($response);
             return view('frontend.pages.thank-you');
         } catch (\Exception $e) {
             \Log::error($e->getMessage());

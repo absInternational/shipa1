@@ -367,16 +367,16 @@
                                     <div class="row">
                                         <h4 class="title text-center">FREIGHT INFORMATION</h4>
                                         <!-- <select id="tabSelector" class="" aria-label="Tab selector" required>
-                                <option value=""  disabled>Select a Vehicle</option>
-                                <option value="Atv">Atv Utv Transport</option>
-                                <option value="Boat-Transport">Boat Transport</option>
-                                <option value="Car">Car</option>
-                                <option value="Freight-Transportation" selected>Freight Transportation</option>
-                                <option value="Golf-Cart">Golf Cart</option>
-                                <option value="Heavy-Equipment">Heavy Equipment</option>
-                                <option value="Motorcycle">Motorcycle</option>
-                                <option value="RV-Transport">RV Transport</option>
-                            </select> -->
+                                        <option value=""  disabled>Select a Vehicle</option>
+                                        <option value="Atv">Atv Utv Transport</option>
+                                        <option value="Boat-Transport">Boat Transport</option>
+                                        <option value="Car">Car</option>
+                                        <option value="Freight-Transportation" selected>Freight Transportation</option>
+                                        <option value="Golf-Cart">Golf Cart</option>
+                                        <option value="Heavy-Equipment">Heavy Equipment</option>
+                                        <option value="Motorcycle">Motorcycle</option>
+                                        <option value="RV-Transport">RV Transport</option>
+                                    </select> -->
 
                                         <div class="input-form">
                                             <label for="category">Category</label>
@@ -425,41 +425,41 @@
 
 
                                         <!-- <div class="row mt-3">
-                                            <div class="col-md-4">
-                                                <div class="input-form">
-                                                    <label class="d-block"> Your Name:</label>
-                                                    <input type="text" id="name" name="name" placeholder="Full Name"
-                                                        required="" />
-                                                    <small id="errName" class="err-style"></small>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-form">
-                                                    <label class="d-block"> Phone:</label>
-                                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                                        required="" />
-                                                    <small id="errPhone" class="err-style"></small>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-form">
-                                                    <label class="d-block"> Email Address:</label>
-                                                    <input type="email" id="email" name="email" placeholder="Email Address"
-                                                        required="" />
-                                                    <small id="errEmail" class="err-style"></small>
-                                                </div>
-                                            </div>
-                                        </div> -->
+                                                    <div class="col-md-4">
+                                                        <div class="input-form">
+                                                            <label class="d-block"> Your Name:</label>
+                                                            <input type="text" id="name" name="name" placeholder="Full Name"
+                                                                required="" />
+                                                            <small id="errName" class="err-style"></small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-form">
+                                                            <label class="d-block"> Phone:</label>
+                                                            <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                                                                required="" />
+                                                            <small id="errPhone" class="err-style"></small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-form">
+                                                            <label class="d-block"> Email Address:</label>
+                                                            <input type="email" id="email" name="email" placeholder="Email Address"
+                                                                required="" />
+                                                            <small id="errEmail" class="err-style"></small>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
                                         <!-- <div class="form-group" style="display:none;">
-                                            <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                            <select class="form-control" id="trailer_type" name="trailer_type">
-                                                <option value="RGN" selected>RGN</option>
-                                                <option value="Stepdeck">Stepdeck</option>
-                                                <option value="Flatbed">Flatbed</option>
-                                                <option value="Hotshot">Hotshot</option>
-                                                <option value="Landoll">Landoll</option>
-                                            </select>
-                                        </div> -->
+                                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                                    <select class="form-control" id="trailer_type" name="trailer_type">
+                                                        <option value="RGN" selected>RGN</option>
+                                                        <option value="Stepdeck">Stepdeck</option>
+                                                        <option value="Flatbed">Flatbed</option>
+                                                        <option value="Hotshot">Hotshot</option>
+                                                        <option value="Landoll">Landoll</option>
+                                                    </select>
+                                                </div> -->
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="input-form">
@@ -511,27 +511,33 @@
                                                         class="js-example-basic-multiple sel-mul"
                                                         name="trailer_specification[]" multiple="multiple"
                                                         style="width: 100%">
-
-                                                        <option value="8">VAN (V)</option>
-                                                        <option value="9">REEFER (RE)</option>
-                                                        <option value="10">FLATBED (F)</option>
-                                                        <option value="11">STEP DECK (SD)</option>
-                                                        <option value="12">REMOVABLE GOOSENECK (RGN) </option>
-                                                        <option value="13">CONESTOGA (CS)</option>
-                                                        <option value="14">CONTAINER / DRAYAGE (C)</option>
-                                                        <option value="15">TRUCK (T)</option>
-                                                        <option value="16">HAZMAT (hazardous materials)</option>
-                                                        <option value="17">POWER ONLY (PO)</option>
-                                                        <option value="18">HOT SHOT (HS)</option>
-                                                        <option value="19">LOWBOY (LB)</option>
-                                                        <option value="20">ENDUMP (ED)</option>
-                                                        <option value="21">LANDOLL (LD)</option>
-                                                        <option value="22">PARTIAL (PT)</option>
-                                                        <option value="23">20ft container</option>
-                                                        <option value="24">40ft container</option>
-                                                        <option value="25">48ft container</option>
-                                                        <option value="26">53ft container</option>
-
+                                                        <option value="Air Ride(A)">Air Ride(A)</option>
+                                                        <option value="Blanket Wrap (B)">Blanket Wrap (B)</option>
+                                                        <option value="B-Train (BT)">B-Train (BT)</option>
+                                                        <option value="Chain(CH)">Chain(CH)</option>
+                                                        <option value="Chassis (CS)">Chassis (CS)</option>
+                                                        <option value="Conestoga(CO)">Conestoga(CO)</option>
+                                                        <option value="Curtain(C)">Curtain(C)</option>
+                                                        <option value="Double(2)">Double(2)</option>
+                                                        <option value="Extendable (E)">Extendable (E)</option>
+                                                        <option value="E-Track (ET)">E-Track (ET)</option>
+                                                        <option value="Hazmat (Z)">Hazmat (Z)</option>
+                                                        <option value="Hot Shot (HS)">Hot Shot (HS)</option>
+                                                        <option value="Insulated (N)">Insulated (N)</option>
+                                                        <option value="Lift Gate (LG)">Lift Gate (LG)</option>
+                                                        <option value="Load Out (LO)">Load Out (LO)</option>
+                                                        <option value="Load Ramp (LR)">Load Ramp (LR)</option>
+                                                        <option value="Moving (MV)">Moving (MV)</option>
+                                                        <option value="Open Top (OT)">Open Top (OT)</option>
+                                                        <option value="Oversized (O)">Oversized (O)</option>
+                                                        <option value="Pallet Exchange (X)">Pallet Exchange (X)</option>
+                                                        <option value="Side Kit (S)">Side Kit (S)</option>
+                                                        <option value="Tarp(T)">Tarp(T)</option>
+                                                        <option value="Team Driver(M)">Team Driver(M)</option>
+                                                        <option value="Temp Control (TC)">Temp Control (TC)</option>
+                                                        <option value="Triple (3)">Triple (3)</option>
+                                                        <option value="Vented (V)">Vented (V)</option>
+                                                        <option value="Walking Floor (WF)">Walking Floor (WF)</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -541,37 +547,28 @@
                                                     <select id="example-multiple-2"
                                                         class="js-example-basic-multiple sel-mul" name="equipment_type[]"
                                                         multiple="multiple" style="width: 100%">
-
-
-                                                        <option value="68">Air Ride(A)</option>
-                                                        <option value="69">Blanket Wrap (B)</option>
-                                                        <option value="70">B-Train (BT)</option>
-                                                        <option value="71">Chain(CH)</option>
-                                                        <option value="72">Chassis (CS)</option>
-                                                        <option value="73">Conestoga(CO)</option>
-                                                        <option value="74">Curtain(C)</option>
-                                                        <option value="75">Double(2)</option>
-                                                        <option value="76">Extendable (E)</option>
-                                                        <option value="77">E-Track (ET)</option>
-                                                        <option value="78">Hazmat (Z)</option>
-                                                        <option value="79">Hot Shot (HS)</option>
-                                                        <option value="80">Insulated (N)</option>
-                                                        <option value="81">Lift Gate (LG)</option>
-                                                        <option value="82">Load Out (LO)</option>
-                                                        <option value="83">Load Ramp (LR)</option>
-                                                        <option value="84">Moving (MV)</option>
-                                                        <option value="85">Open Top (OT)</option>
-                                                        <option value="86">Oversized (O)</option>
-                                                        <option value="87">Pallet Exchange (X)</option>
-                                                        <option value="88">Side Kit (S)</option>
-                                                        <option value="89">Tarp(T)</option>
-                                                        <option value="90">Team Driver(M)</option>
-                                                        <option value="91">Temp Control (TC)</option>
-                                                        <option value="92">Triple (3)</option>
-                                                        <option value="93">Vented (V)</option>
-                                                        <option value="94">Walking Floor (WF)</option>
-
-
+                                                        <option value="VAN (V)">VAN (V)</option>
+                                                        <option value="REEFER (RE)">REEFER (RE)</option>
+                                                        <option value="FLATBED (F)">FLATBED (F)</option>
+                                                        <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                                        <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)
+                                                        </option>
+                                                        <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
+                                                        <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)
+                                                        </option>
+                                                        <option value="TRUCK (T)">TRUCK (T)</option>
+                                                        <option value="HAZMAT (hazardous materials)">HAZMAT (hazardous
+                                                            materials)</option>
+                                                        <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
+                                                        <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                                        <option value="LOWBOY (LB)">LOWBOY (LB)</option>
+                                                        <option value="ENDUMP (ED)">ENDUMP (ED)</option>
+                                                        <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                                                        <option value="PARTIAL (PT)">PARTIAL (PT)</option>
+                                                        <option value="20ft container">20ft container</option>
+                                                        <option value="40ft container">40ft container</option>
+                                                        <option value="48ft container">48ft container</option>
+                                                        <option value="53ft container">53ft container</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -810,45 +807,45 @@
                                             </div>
                                         </div>
                                         <!-- <div class="row select-bm" style="display:none;">
-                                            <div class="col-md-12 text-center">
-                                                <h4 class="text-white">Vehicle Information</h4>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-form tj-select">
-                                                    <label> Year</label>
-                                                    <select class="nice-select vehicle-year" name="year[]" id="year">
-                                                        <option value="2010" selected>Select Year</option>
-                                                        @php
-                                                            $currentYear = date('Y');
-                                                            for ($year = $currentYear; $year >= 1936; $year--) {
-                                                                echo "<option value='$year'>$year</option>";
-                                                            }
-                                                        @endphp
-                                                    </select>
+                                                    <div class="col-md-12 text-center">
+                                                        <h4 class="text-white">Vehicle Information</h4>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-form tj-select">
+                                                            <label> Year</label>
+                                                            <select class="nice-select vehicle-year" name="year[]" id="year">
+                                                                <option value="2010" selected>Select Year</option>
+                                                                @php
+                                                                    $currentYear = date('Y');
+                                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                                        echo "<option value='$year'>$year</option>";
+                                                                    }
+                                                                @endphp
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-form tj-select">
+                                                            <label>Make</label>
+                                                            <input type="text" value="null" id="make" name="make[]"
+                                                                placeholder="Enter Make" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-form tj-select vehicle-model-div">
+                                                            <label>Model</label>
+                                                            <input type="text" id="model" value="null" name="model[]"
+                                                                placeholder="Enter Model" />
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-form tj-select">
-                                                    <label>Make</label>
-                                                    <input type="text" value="null" id="make" name="make[]"
-                                                        placeholder="Enter Make" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="input-form tj-select vehicle-model-div">
-                                                    <label>Model</label>
-                                                    <input type="text" id="model" value="null" name="model[]"
-                                                        placeholder="Enter Model" />
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                            style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                            Vehicle</a>
+                                                <a class="add-car" style="display:none;" id="addVehicleBtn"
+                                                    style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                                                    Vehicle</a>
 
-                                        <div id="vehicles-container" style="display:none;">
-                                        </div> -->
+                                                <div id="vehicles-container" style="display:none;">
+                                                </div> -->
 
 
                                         <!-- <label class="error-message" id="tabSelector-error">This field is required.</label> -->
@@ -890,13 +887,13 @@
                                         </div>
 
                                         <!-- <div class="col-xl-4 col-lg-4">
-                                <div class="single-input-field">
-                                    <label class="d-block text-white"> Phone:</label>
-                                    <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
-                                    <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
-                                    <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                </div>
-                            </div> -->
+                                        <div class="single-input-field">
+                                            <label class="d-block text-white"> Phone:</label>
+                                            <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
+                                            <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
+                                            <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                                        </div>
+                                    </div> -->
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
@@ -992,27 +989,27 @@
 
             </div>
             <!-- <div class="row">
-                        <div class="col-lg-12">
-                            <div class="tj-section-heading text-center">
-                                <span class="sub-title active-shape">Ship A1 Transport</span>
-                                <p>
-                                    Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                                    choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                                    conditions carefully before proceeding with our services.
-                                    Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                                    choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                                    conditions carefully before proceeding with our services.
-                                    Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                                    choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                                    conditions carefully before proceeding with our services.
-                                    Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                                    choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                                    conditions carefully before proceeding with our services.
+                                <div class="col-lg-12">
+                                    <div class="tj-section-heading text-center">
+                                        <span class="sub-title active-shape">Ship A1 Transport</span>
+                                        <p>
+                                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
+                                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
+                                            conditions carefully before proceeding with our services.
+                                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
+                                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
+                                            conditions carefully before proceeding with our services.
+                                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
+                                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
+                                            conditions carefully before proceeding with our services.
+                                            Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
+                                            choosing Ship A1 Transport for your shipping solutions. Review the following terms and
+                                            conditions carefully before proceeding with our services.
 
-                                </p>
-                            </div>
-                        </div>
-                    </div> -->
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> -->
         </div>
     </section>
 
@@ -1173,15 +1170,15 @@
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
             <!-- <div class="tj-project-item">
-                        <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
-                        <div class="arrow-icon">
-                            <a href="{{ route('services') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
-                        </div>
-                        <div class="tj-project-content">
-                            <span class="sub-title">logistics</span>
-                            <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Freight Solution</a></h4>
-                        </div>
-                    </div> -->
+                                <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
+                                <div class="arrow-icon">
+                                    <a href="{{ route('services') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
+                                </div>
+                                <div class="tj-project-content">
+                                    <span class="sub-title">logistics</span>
+                                    <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Freight Solution</a></h4>
+                                </div>
+                            </div> -->
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
@@ -1365,16 +1362,16 @@
     <!--=========== Blog Section End =========-->
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-            <script src="path/to/jquery.min.js"></script>
-            {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+                    <script src="path/to/jquery.min.js"></script>
+                    {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
 
     <script>
         $(document).ready(function() {

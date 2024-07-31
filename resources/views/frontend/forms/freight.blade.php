@@ -2,7 +2,8 @@
 
 @section('title', 'Get Quote on Freight | ShipA1')
 
-@section('meta_description', 'Get an instant Freight shipping quote with ease! Trust our reliable service for nationwide
+@section('meta_description',
+    'Get an instant Freight shipping quote with ease! Trust our reliable service for nationwide
     coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
 
 
@@ -355,26 +356,33 @@
                                         <label class="d-block">Trailer Specification</label>
                                         <select id="example-multiple" class="js-example-basic-multiple sel-mul"
                                             name="trailer_specification[]" multiple="multiple" style="width: 100%">
-
-                                            <option value="8">VAN (V)</option>
-                                            <option value="9">REEFER (RE)</option>
-                                            <option value="10">FLATBED (F)</option>
-                                            <option value="11">STEP DECK (SD)</option>
-                                            <option value="12">REMOVABLE GOOSENECK (RGN) </option>
-                                            <option value="13">CONESTOGA (CS)</option>
-                                            <option value="14">CONTAINER / DRAYAGE (C)</option>
-                                            <option value="15">TRUCK (T)</option>
-                                            <option value="16">HAZMAT (hazardous materials)</option>
-                                            <option value="17">POWER ONLY (PO)</option>
-                                            <option value="18">HOT SHOT (HS)</option>
-                                            <option value="19">LOWBOY (LB)</option>
-                                            <option value="20">ENDUMP (ED)</option>
-                                            <option value="21">LANDOLL (LD)</option>
-                                            <option value="22">PARTIAL (PT)</option>
-                                            <option value="23">20ft container</option>
-                                            <option value="24">40ft container</option>
-                                            <option value="25">48ft container</option>
-                                            <option value="26">53ft container</option>
+                                            <option value="Air Ride(A)">Air Ride(A)</option>
+                                            <option value="Blanket Wrap (B)">Blanket Wrap (B)</option>
+                                            <option value="B-Train (BT)">B-Train (BT)</option>
+                                            <option value="Chain(CH)">Chain(CH)</option>
+                                            <option value="Chassis (CS)">Chassis (CS)</option>
+                                            <option value="Conestoga(CO)">Conestoga(CO)</option>
+                                            <option value="Curtain(C)">Curtain(C)</option>
+                                            <option value="Double(2)">Double(2)</option>
+                                            <option value="Extendable (E)">Extendable (E)</option>
+                                            <option value="E-Track (ET)">E-Track (ET)</option>
+                                            <option value="Hazmat (Z)">Hazmat (Z)</option>
+                                            <option value="Hot Shot (HS)">Hot Shot (HS)</option>
+                                            <option value="Insulated (N)">Insulated (N)</option>
+                                            <option value="Lift Gate (LG)">Lift Gate (LG)</option>
+                                            <option value="Load Out (LO)">Load Out (LO)</option>
+                                            <option value="Load Ramp (LR)">Load Ramp (LR)</option>
+                                            <option value="Moving (MV)">Moving (MV)</option>
+                                            <option value="Open Top (OT)">Open Top (OT)</option>
+                                            <option value="Oversized (O)">Oversized (O)</option>
+                                            <option value="Pallet Exchange (X)">Pallet Exchange (X)</option>
+                                            <option value="Side Kit (S)">Side Kit (S)</option>
+                                            <option value="Tarp(T)">Tarp(T)</option>
+                                            <option value="Team Driver(M)">Team Driver(M)</option>
+                                            <option value="Temp Control (TC)">Temp Control (TC)</option>
+                                            <option value="Triple (3)">Triple (3)</option>
+                                            <option value="Vented (V)">Vented (V)</option>
+                                            <option value="Walking Floor (WF)">Walking Floor (WF)</option>
 
                                         </select>
                                     </div>
@@ -384,37 +392,26 @@
                                         <label class="d-block">Equipment Type</label>
                                         <select id="example-multiple-2" class="js-example-basic-multiple sel-mul"
                                             name="equipment_type[]" multiple="multiple" style="width: 100%">
-
-
-                                            <option value="68">Air Ride(A)</option>
-                                            <option value="69">Blanket Wrap (B)</option>
-                                            <option value="70">B-Train (BT)</option>
-                                            <option value="71">Chain(CH)</option>
-                                            <option value="72">Chassis (CS)</option>
-                                            <option value="73">Conestoga(CO)</option>
-                                            <option value="74">Curtain(C)</option>
-                                            <option value="75">Double(2)</option>
-                                            <option value="76">Extendable (E)</option>
-                                            <option value="77">E-Track (ET)</option>
-                                            <option value="78">Hazmat (Z)</option>
-                                            <option value="79">Hot Shot (HS)</option>
-                                            <option value="80">Insulated (N)</option>
-                                            <option value="81">Lift Gate (LG)</option>
-                                            <option value="82">Load Out (LO)</option>
-                                            <option value="83">Load Ramp (LR)</option>
-                                            <option value="84">Moving (MV)</option>
-                                            <option value="85">Open Top (OT)</option>
-                                            <option value="86">Oversized (O)</option>
-                                            <option value="87">Pallet Exchange (X)</option>
-                                            <option value="88">Side Kit (S)</option>
-                                            <option value="89">Tarp(T)</option>
-                                            <option value="90">Team Driver(M)</option>
-                                            <option value="91">Temp Control (TC)</option>
-                                            <option value="92">Triple (3)</option>
-                                            <option value="93">Vented (V)</option>
-                                            <option value="94">Walking Floor (WF)</option>
-
-
+                                            <option value="VAN (V)">VAN (V)</option>
+                                            <option value="REEFER (RE)">REEFER (RE)</option>
+                                            <option value="FLATBED (F)">FLATBED (F)</option>
+                                            <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                            <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
+                                            <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
+                                            <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                            <option value="TRUCK (T)">TRUCK (T)</option>
+                                            <option value="HAZMAT (hazardous materials)">HAZMAT (hazardous materials)
+                                            </option>
+                                            <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
+                                            <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                            <option value="LOWBOY (LB)">LOWBOY (LB)</option>
+                                            <option value="ENDUMP (ED)">ENDUMP (ED)</option>
+                                            <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                                            <option value="PARTIAL (PT)">PARTIAL (PT)</option>
+                                            <option value="20ft container">20ft container</option>
+                                            <option value="40ft container">40ft container</option>
+                                            <option value="48ft container">48ft container</option>
+                                            <option value="53ft container">53ft container</option>
                                         </select>
                                     </div>
                                 </div>
@@ -436,14 +433,14 @@
                                         <label for="pick_up_services" class="text-white">Pickup Services</label>
                                         <select class="form-control" id="pick_up_services" name="pick_up_services">
                                             <option value="" disabled selected>Select</option>
-                                            <option value="Construction / Utility">Construction / Utility</option>
-                                            <option value="Container Station">Container Station</option>
+                                            <option value="Construction_Utility">Construction / Utility</option>
+                                            <option value="Container_Station">Container Station</option>
                                             <option value="Exhibition">Exhibition</option>
-                                            <option value="Inside Pickup">Inside Pickup</option>
-                                            <option value="Lift Gate Service">Lift Gate Service</option>
+                                            <option value="Inside_Pickup">Inside Pickup</option>
+                                            <option value="Lift_Gate_Service">Lift Gate Service</option>
                                             <option value="Residential">Residential</option>
-                                            <option value="Single Shipment">Single Shipment</option>
-                                            <option value="Sorting / Segregation">Sorting / Segregation</option>
+                                            <option value="Single_Shipment">Single Shipment</option>
+                                            <option value="Sorting_Segregation">Sorting / Segregation</option>
                                         </select>
                                     </div>
                                 </div>
@@ -452,22 +449,22 @@
                                         <label for="deliver_services" class="text-white">Deliver Services</label>
                                         <select class="form-control" id="deliver_services" name="deliver_services">
                                             <option value="" disabled selected>Select</option>
-                                            <option value="After Business Hours Delivery">After Business Hours Delivery
+                                            <option value="After_Business_Hours_Delivery">After Business Hours Delivery
                                             </option>
-                                            <option value="Construction / Utility">Construction / Utility</option>
+                                            <option value="Construction_Utility">Construction / Utility</option>
                                             <option value="Appointment">Appointment</option>
-                                            <option value="Container Station">Container Station</option>
+                                            <option value="Container_Station">Container Station</option>
                                             <option value="Exhibition">Exhibition</option>
-                                            <option value="In Bond Freight">In Bond Freight</option>
-                                            <option value="In Bond TIR Caret">In Bond TIR Caret</option>
-                                            <option value="Inside - Same Level as Delivery Vehicle">Inside - Same Level as
+                                            <option value="In_Bond_Freight">In Bond Freight</option>
+                                            <option value="In_Bond_TIR_Caret">In Bond TIR Caret</option>
+                                            <option value="Inside_Same_Level_as_Delivery_Vehicle">Inside - Same Level as
                                                 Delivery Vehicle</option>
-                                            <option value="Lift Gate Service">Lift Gate Service</option>
+                                            <option value="Lift_Gate_Service">Lift Gate Service</option>
                                             <option value="Residential">Residential</option>
-                                            <option value="Mine / Govt / Airport">Mine / Govt / Airport</option>
-                                            <option value="Notification Prior Delivery">Notification Prior Delivery
+                                            <option value="Mine_Govt_Airport">Mine / Govt / Airport</option>
+                                            <option value="Notification_Prior_Delivery">Notification Prior Delivery
                                             </option>
-                                            <option value="Delivery appointment required">Delivery appointment required
+                                            <option value="Delivery_Appointment_Required">Delivery appointment required
                                             </option>
                                         </select>
                                     </div>
@@ -506,9 +503,9 @@
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image"
-                                        placeholder="Upload File" /> -->
-                                <input class="form-control image_input" name="image" type="file" accept="image/*" multiple
-                                    onchange="previewImages(event)">
+                                                placeholder="Upload File" /> -->
+                                <input class="form-control image_input" name="image" type="file" accept="image/*"
+                                    multiple onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
                             <div class="row">
