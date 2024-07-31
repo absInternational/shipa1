@@ -197,7 +197,7 @@ class QuoteController extends Controller
             $post_array['image'] = $image;
         }
 
-        // dd($post_array);
+        dd($post_array);
 
         $delivery_latitude = $originData;
         $delivery_longitude = $destinationData;
