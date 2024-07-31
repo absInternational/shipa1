@@ -42,14 +42,19 @@
                                     <td>{{ $portToPort->delivery_latitude }}</td>
                                     <td>{{ $portToPort->delivery_longitude }}</td>
                                     <td>{{ $portToPort->price }}</td>
-                                    <td>
-                                        <a href="{{ route('port-to-ports.edit', $portToPort->id) }}" class="btn btn-primary btn-sm">Edit</a>
-                                        <form action="{{ route('port-to-ports.destroy', $portToPort->id) }}" method="POST" style="display: inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this port to port?')">Delete</button>
-                                        </form>
-                                    </td>
+                                    <td nowrap>
+    <a href="{{ route('port-to-ports.edit', $portToPort->id) }}" class="btn btn-primary btn-sm">
+        <i class="fas fa-edit"></i> Edit
+    </a>
+    <form action="{{ route('port-to-ports.destroy', $portToPort->id) }}" method="POST" style="display: inline;">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this port to port?')">
+            <i class="fas fa-trash-alt"></i> Delete
+        </button>
+    </form>
+</td>
+
                                 </tr>
                             @endforeach
                         </tbody>
