@@ -56,7 +56,13 @@ class FormVehicleController extends Controller
 
     public function roro()
     {
-        return view('frontend.forms.roro');
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        return view('frontend.forms.roro', compact('makes'));
     }
 
     public function recreationalVehicle()
