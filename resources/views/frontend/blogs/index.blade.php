@@ -86,12 +86,12 @@
                                             </div> --}}
                                         </div>
                                     </div>
-                                    {{-- <p>
-                                        {!! Illuminate\Support\Str::limit($blog->post_description, 200, '...') !!}
-                                    </p> --}}
-                                    <div>
+                                    <p>
+                                        {!! Illuminate\Support\Str::limit($blog->post_short_description, 200, '...') !!}
+                                    </p>
+                                    <!-- <div>
                                         {!! Illuminate\Support\Str::limit($blog->post_short_description ?: $blog->post_description, 120, '...') !!}
-                                    </div>
+                                    </div> -->
                                     <div class="read-more">
                                         <a
                                             @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}"

@@ -92,6 +92,7 @@
     }
 
     .state-link {
+        display: contents;
         color: var(--tj-white-color);
         text-decoration: none;
         font-size: 1.2rem;
@@ -137,10 +138,10 @@
         @foreach ($transports as $row)
             <div class="col-md-4">
                 <div class="state-card">
-                    <i class="bi bi-geo-alt-fill state-icon"></i>
+                <a href="{{ route('get.nation.data', $row->slug) }}" class="state-link" data-slug="{{ $row->slug }}">
+                <i class="bi bi-geo-alt-fill state-icon"></i>
                     <div class="state-text">{{ $row->name }}</div>
-                    <a href="{{ route('get.nation.data', $row->slug) }}" class="state-link" data-slug="{{ $row->slug }}"><i
-                            class="bi bi-arrow-right"></i></a>
+                    <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         @endforeach

@@ -149,7 +149,7 @@
     @if (in_array('11', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item {{ request()->routeIs('nationwide-transports.index') ? 'active' : '' }}">
             <a class="nav-link py-2 mb-2" href="{{ route('nationwide-transports.index') }}">
-                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-truck"></i>
                 <span>Nationwide Transports</span>
             </a>
         </li>

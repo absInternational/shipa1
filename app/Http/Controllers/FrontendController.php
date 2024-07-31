@@ -195,6 +195,7 @@ class FrontendController extends Controller
 
     public function vehicleTransportDetail()
     {
+        $transports = NationWideTransport::with('details')->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
         $makes = VehicleName::select('make')
@@ -204,21 +205,23 @@ class FrontendController extends Controller
             ->orderBy('make', 'ASC')
             ->get();
 
-        return view('frontend.pages.vehicleTransportDetail', compact('makes', 'blogs', 'site_reviews'));
+        return view('frontend.pages.vehicleTransportDetail', compact('makes', 'blogs', 'site_reviews', 'transports'));
     }
 
     public function heavyTransportDetail()
     {
+        $transports = NationWideTransport::with('details')->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.heavy-transport-detail', compact('blogs', 'site_reviews'));
+        return view('frontend.pages.heavy-transport-detail', compact('blogs', 'site_reviews', 'transports'));
     }
 
     public function freightTransportDetail()
     {
+        $transports = NationWideTransport::with('details')->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.freighttransport-detail', compact('blogs', 'site_reviews'));
+        return view('frontend.pages.freighttransport-detail', compact('blogs', 'site_reviews', 'transports'));
     }
     public function hazmatTransport()
     {
@@ -464,13 +467,13 @@ class FrontendController extends Controller
 
     public function getNationWideData($slug)
     {
-        $transport = NationWideTransport::with('details')->where('slug', $slug)->first();
         $makes = VehicleName::select('make')
             ->where('UserId', 14)
             ->where('status', 0)
             ->groupBy('make')
             ->orderBy('make', 'ASC')
             ->get();
+        $transport = NationWideTransport::with('details')->where('slug', $slug)->first();
         $transports = NationWideTransport::with('details')->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();

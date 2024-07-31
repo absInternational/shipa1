@@ -462,7 +462,8 @@
 
 
                             <div class="row mt-3">
-                                <div class="col-md-3">
+
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="pick_up_services" class="text-white">Pickup Services</label>
                                         <select class="form-control" id="pick_up_services" name="pick_up_services">
@@ -478,7 +479,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="deliver_services" class="text-white">Deliver Services</label>
                                         <select class="form-control" id="deliver_services" name="deliver_services">
@@ -503,20 +504,29 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+
+                                
+
+                            </div>
+
+                            <div class="row mt-3">
+
+                            <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Date:</label>
                                         <input type="date" id="ex_pickup_date" name="ex_pickup_date"
                                             required="" />
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Time:</label>
                                         <input type="time" id="ex_pickup_time" name="ex_pickup_time"
                                             required="" />
                                     </div>
                                 </div>
+
+
                             </div>
                             <!-- <div class="row mt-3">
                                             
@@ -561,8 +571,8 @@
                                 </div>
 
                             </div>
-
-
+                           
+                            
                             <div class="row mb-3">
 
 
@@ -615,9 +625,9 @@
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
 
-                                    </div>
-                                </div>
-                            </div>
+        </div>
+    </div>
+</div>
                             <div class="row">
                                 <h4 class="text-white">Additional Services</h4>
                                 <div class="col-md-4">
