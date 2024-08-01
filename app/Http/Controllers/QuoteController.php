@@ -17,7 +17,7 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
-        // dd('$request->all()');
+        dd($request->all());
         $data = $request->all();
         $heading = $this->generateHeading($data);
         $name = $request->input('name', null);
