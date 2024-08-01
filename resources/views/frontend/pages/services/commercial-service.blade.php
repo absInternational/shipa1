@@ -517,7 +517,7 @@ your equipment reaches you in your desired timeframe.</strong>
 
 <script>
 $(document).ready(function() {
-    $('#category').change(function() {
+    $(document).on('change', '.category', function() {
         var selectedCategory = $(this).val();
 
         $.ajax({

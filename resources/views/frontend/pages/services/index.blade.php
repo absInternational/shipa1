@@ -571,7 +571,7 @@
     <!--=========== Newsletter Section End =========-->
     <script>
         $(document).ready(function() {
-            $('#category').change(function() {
+            $(document).on('change', '.category', function() {
                 var selectedCategory = $(this).val();
 
                 $.ajax({

@@ -271,7 +271,7 @@ $(document).ready(function() {
     }
 
     // Category and Subcategory Selection
-    $('#category').change(function() {
+    $(document).on('change', '.category', function() {
         var selectedCategory = $(this).val();
 
         $.ajax({

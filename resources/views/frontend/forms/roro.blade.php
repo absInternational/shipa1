@@ -721,9 +721,9 @@
             }
         });
     </script>
-    <script>
+    {{-- <script>
         $(document).ready(function() {
-            $('#category').change(function() {
+            $(document).on('change', '.category', function() {
                 var selectedCategory = $(this).val();
 
                 $.ajax({
@@ -759,7 +759,7 @@
                 });
             });
         });
-    </script>
+    </script> --}}
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -1146,7 +1146,7 @@
 
     <script>
         $(document).ready(function() {
-            $('#category').change(function() {
+            $(document).on('change', '.category', function() {
                 var selectedCategory = $(this).val();
 
                 $.ajax({

@@ -23,7 +23,6 @@
     </div>
 </div>
  
- 
  <div class="row">
     <div class="col-md-6">
         <div class="form-group">
@@ -173,14 +172,6 @@
     </div>
 </div>
 <div class="row mb-3">
-
-
-
-
-    
-
-    
-
     <div class="col-md-6">
 
         <label class="lab-cos">Weight</label>

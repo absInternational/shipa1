@@ -1034,7 +1034,7 @@ SHIP A1
 
     <script>
         $(document).ready(function() {
-            $('#category').change(function() {
+            $(document).on('change', '.category', function() {
                 var selectedCategory = $(this).val();
 
                 $.ajax({
