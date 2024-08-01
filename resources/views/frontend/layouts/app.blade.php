@@ -468,7 +468,7 @@
 
     <script>
         $(document).ready(function() {
-            $('#category').change(function() {
+            $(document).on('change', '.category', function() {
                 var selectedCategory = $(this).find('option:selected').data('id');
 
                 $.ajax({
