@@ -266,7 +266,7 @@
                             </div>
                             <div class="tj-theme-button">
                                 <a class="tj-transparent-btn ms-4 " href="{{ route('quote.form.combine') }}"
-                                    target="_blank">
+                                    >
                                     Get Quote<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
@@ -284,7 +284,7 @@
                             </div>
                             <div class="tj-theme-button">
                                 <a class="tj-transparent-btn ms-4 " href="{{ route('quote.form.combine') }}"
-                                    target="_blank">
+                                    >
                                     Get Quote<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
@@ -302,7 +302,7 @@
                             </div>
                             <div class="tj-theme-button">
                                 <a class="tj-transparent-btn ms-4 mt-4" href="{{ route('quote.form.combine') }}"
-                                    target="_blank">
+                                    >
                                     Get Quote<i class="flaticon-right-1"></i>
                                 </a>
 
@@ -331,7 +331,7 @@
                             </div>
                         </div>
                         <div class="service-arrow">
-                            <a href="{{ route('vehicleTransportDetail') }}" target="_blank">
+                            <a href="{{ route('vehicleTransportDetail') }}" >
                                 <i class="fa-light fa-arrow-right"></i>
                             </a>
                         </div>
@@ -349,7 +349,7 @@
                             </div>
                         </div>
                         <div class="service-arrow">
-                            <a href="{{ route('heavy-transport-detail') }}" target="_blank"> <i
+                            <a href="{{ route('heavy-transport-detail') }}" > <i
                                     class="fa-light fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -366,7 +366,7 @@
                             </div>
                         </div>
                         <div class="service-arrow">
-                            <a href="{{ route('freighttransport-detail') }}" target="_blank"> <i
+                            <a href="{{ route('freighttransport-detail') }}" > <i
                                     class="fa-light fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -403,7 +403,7 @@
                             <!-- <i class="flaticon-air-freight"></i> -->
                         </div>
                         <div class="service-content">
-                            <h4><a class="title-link" href="{{ route('vehicleTransportDetail') }}" target="_blank">
+                            <h4><a class="title-link" href="{{ route('vehicleTransportDetail') }}" >
                                     VEHICLE TRANSPORTATION</a></h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
@@ -418,7 +418,7 @@
                         </div>
                         <div class="service-content">
                             <h4>
-                                <a class="title-link" href="{{ route('heavy-transport-detail') }}" target="_blank">
+                                <a class="title-link" href="{{ route('heavy-transport-detail') }}" >
                                     HEAVY TRANSPORTATION</a>
                             </h4>
                             <p>Long established fact that reader will be distracted by the</p>
@@ -433,7 +433,7 @@
                             <!-- <i class="flaticon-delivery-van"></i> -->
                         </div>
                         <div class="service-content">
-                            <h4><a class="title-link" href="{{ route('freighttransport-detail') }}" target="_blank">
+                            <h4><a class="title-link" href="{{ route('freighttransport-detail') }}" >
                                     FREIGHT TRANSPORTATION</a></h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
@@ -469,7 +469,7 @@
             <div class="row">
                 <div class="col-lg-12 position-relative">
                     <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" target="_blank" href="{{ route('quote.form.combine') }}">
+                        <a class="tj-transparent-btn"  href="{{ route('quote.form.combine') }}">
                             GET QUOTE<i class="flaticon-right-1"></i>
                         </a>
                     </div>
@@ -594,7 +594,7 @@
                             <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
                         </div>
                         <div class="tj-theme-button">
-                            <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                            <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" >
                                 Get Quote<i class="flaticon-right-1"></i>
                             </a>
                         </div>
@@ -607,7 +607,7 @@
                             <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
                         </div>
                         <div class="tj-theme-button">
-                            <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
+                            <a class="tj-transparent-btn" href="{{ route('contactUs') }}" >
                                 Get Support<i class="flaticon-right-1"></i>
                             </a>
                         </div>
@@ -759,156 +759,158 @@
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/9.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.car-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.car-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">CAR</span>
-                    <h4><a href="{{ route('frontend.pages.services.car-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.car-service') }}" 
                             class="title-link">Car Shipping Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/62.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.bike-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.bike-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">MOTORCYCLE</span>
-                    <h4><a href="{{ route('frontend.pages.services.bike-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.bike-service') }}" 
                             class="title-link">Motorcycle Shipping Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.heavy-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">HEAVY EQUIP</span>
-                    <h4><a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.heavy-service') }}" 
                             class="title-link">Heavy Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.roro-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.roro-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">RORO</span>
-                    <h4><a href="{{ route('frontend.pages.services.roro-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.roro-service') }}" 
                             class="title-link">Roro Test</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/4.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.golf-cart-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.golf-cart-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Golf Cart</span>
-                    <h4><a href="{{ route('frontend.pages.services.golf-cart-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.golf-cart-service') }}" 
                             class="title-link">Golf Cart Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/atv,utv-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.atv-utv-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.atv-utv-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">ATV/UTV</span>
-                    <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}" 
                             class="title-link">ATV/UTV Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/Commercial--.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.construction-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.construction-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">CONSTRUCTION</span>
-                    <h4><a href="{{ route('frontend.pages.services.construction-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.construction-service') }}" 
                             class="title-link">CONSTRUCTION Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/10.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.farm-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.farm-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">FARM</span>
-                    <h4><a href="{{ route('frontend.pages.services.farm-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.farm-service') }}" 
                             class="title-link">FARM Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.excavator-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.excavator-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">EXCAVATOR</span>
-                    <h4><a href="{{ route('frontend.pages.services.excavator-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.excavator-service') }}" 
                             class="title-link">Excavator Shipping Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.commercial-service') }}" >
                 <img src="{{ asset('frontend/images/project/commercial-truck.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.commercial-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.commercial-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">TRUCKS</span>
-                    <h4><a href="{{ route('frontend.pages.services.commercial-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.commercial-service') }}" 
                             class="title-link">TRUCKS Transportation Services</a></h4>
                 </div>
+                </a>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.reefer-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Reefer</span>
-                    <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" 
                             class="title-link">Reefer Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/7.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.hazmat-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Hazmat</span>
-                    <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" 
                             class="title-link">Hazmat Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/5.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.dryvan-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.dryvan-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Dry van</span>
-                    <h4><a href="{{ route('frontend.pages.services.dryvan-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.dryvan-service') }}" 
                             class="title-link">Dry van Transportation Services</a></h4>
                 </div>
             </div>
@@ -927,12 +929,12 @@
         <div class="tj-map-tabs" data-bg-image="{{ asset('frontend/images/banner/form-shape2.png') }}">
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
-                    <h4 class="accordion-header" id="headingOne">
+                    <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Contact us
                         </button>
-                    </h4>
+                    </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample" style="">
                         <div class="accordion-body">
