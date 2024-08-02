@@ -924,7 +924,7 @@ SHIP A1
 
 <!--=========== Counter Section Start =========-->
 <section class="tj-counter-section">
-            <div class="container-flude">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12 ">
                         <div class="tj-counter-area" >
@@ -935,11 +935,11 @@ SHIP A1
                                 data-sal-duration="800"
                                 data-sal-delay="300">
                                 <div class="counter-icon">
-                                    <i class="flaticon-box"></i>
+                                <i class="fa-light fa-car-side mt-4 fa-2xs"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer" data-count="31">0</span>k</div>
-                                    <span class="sub-title">Delivery Packages</span>
+                                    <div class="tj-count"><span class="odometer" data-count="318">0</span>k+</div>
+                                    <span class="sub-title">Succesful Shipment</span>
                                 </div>
                             </div>
 
@@ -952,7 +952,7 @@ SHIP A1
                                     <i class="flaticon-courier"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer" data-count="1217">0</span></div>
+                                    <div class="tj-count"><span class="odometer" data-count="28">0</span>k+</div>
                                     <span class="sub-title">Satisfied Clients</span>
                                 </div>
                             </div>
@@ -966,12 +966,12 @@ SHIP A1
                                     <i class="flaticon-worldwide"></i>
                                 </div>
                                 <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer" data-count="2709">0</span></div>
-                                    <span class="sub-title">Worldwide Clients</span>
+                                    <div class="tj-count"><span class="odometer" data-count="270,092">0</span>k</div>
+                                    <span class="sub-title">Miles Covered</span>
                                 </div>
                             </div>
 
-                            <div
+                            <!-- <div
                                 class="counter-item d-flex align-items-center"
                                 data-sal="slide-up"
                                 data-sal-duration="800"
@@ -983,7 +983,7 @@ SHIP A1
                                     <div class="tj-count"><span class="odometer" data-count="2709">0</span></div>
                                     <span class="sub-title">Worldwide Clients</span>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
 
@@ -1032,10 +1032,10 @@ SHIP A1
         });
     </script>
 
-    <script>
+<script>
         $(document).ready(function() {
-            $(document).on('change', '.category', function() {
-                var selectedCategory = $(this).val();
+            $('#category').change(function() {
+                var selectedCategory = $(this).find('option:selected').data('id');
 
                 $.ajax({
                     url: "{{ route('get.subcategories') }}",
@@ -1045,8 +1045,6 @@ SHIP A1
                         "category": selectedCategory
                     },
                     success: function(response) {
-                        console.log(response);
-                        console.log(response.length);
 
                         var html = '';
                         $('#subcategory-box').html('');
@@ -1056,13 +1054,14 @@ SHIP A1
                             "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
                         html += "<option value='' disabled selected>Select</option>";
                         $.each(response, function(index, val) {
+                            console.log('val', val);
                             html +=
-                                `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
+                                `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
                         });
                         html += "</select>";
-                        console.log('html', html);
 
                         $('#subcategory-box').html(html);
+
                     },
                     error: function(xhr, status, error) {
                         console.error("Error:", error);
