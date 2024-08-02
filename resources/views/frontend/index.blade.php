@@ -628,7 +628,7 @@ SHIP A1
                                     <span class="number"> 01.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h6 class="title">Online Quote</h6>
+                                    <h4 class="title">Online Quote</h4>
                                     <span> Get an instant online quote from our website or call our agent.</span>
                                 </div>
                             </div>
@@ -639,7 +639,7 @@ SHIP A1
                                     <span class="number"> 02.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h6 class="title">Confirm Order</h6>
+                                    <h4 class="title">Confirm Order</h4>
                                     <span> Confirm your order over the phone and fill out the booking form.</span>
                                 </div>
                             </div>
@@ -650,8 +650,8 @@ SHIP A1
                                     <span class="number"> 03.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h6 class="title">Track Shipment
-                                   </h6>
+                                    <h4 class="title">Track Shipment
+                                   </h4>
                                     <span>  Track your shipment by your unique order id number.</span>
                                 </div>
                             </div>
@@ -662,8 +662,8 @@ SHIP A1
                                     <span class="number"> 04.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h6 class="title">Shipment Delivery
-                                    </h6>
+                                    <h4 class="title">Shipment Delivery
+                                    </h4>
                                     <span> Your shipment reached to their drop-off location.</span>
                                 </div>
                                 <div class="stp-arrow">
