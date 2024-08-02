@@ -12,6 +12,7 @@ class NationWideTransport extends Model
     protected $fillable = [
         'name',
         'slug',
+        'category',
         'status',
     ];
 

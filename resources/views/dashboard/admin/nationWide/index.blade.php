@@ -15,6 +15,7 @@
                         <thead>
                             <tr>
                                 <th>Name</th>
+                                <th>Category</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                             </tr>
@@ -23,6 +24,7 @@
                             @foreach ($transports as $transport)
                                 <tr>
                                     <td>{{ $transport->name }}</td>
+                                    <td>{{ $transport->category }}</td>
                                     <td>
                                         @if ($transport->status == 1)
                                             Active

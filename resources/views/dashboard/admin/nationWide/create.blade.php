@@ -28,6 +28,14 @@
                                     <input id="name" class="form-control" type="text" name="name" required />
                                 </div>
                                 <div class="form-group">
+                                    <label>Category</label>
+                                    <select name="category" class="form-control" required>
+                                        <option value="Vehicle">Vehicle</option>
+                                        <option value="Heavy">Heavy</option>
+                                        <option value="Freight">Freight</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label>Status</label>
                                     <select name="status" class="form-control" required>
                                         <option value="1">Active</option>

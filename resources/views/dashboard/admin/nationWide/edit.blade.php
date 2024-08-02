@@ -36,6 +36,15 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+                    
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select name="category" class="form-control" required>
+                            <option value="Vehicle" {{ old('category', $nationWideTransport->category) == 'Vehicle' ? 'selected' : '' }}>Vehicle</option>
+                            <option value="Heavy" {{ old('category', $nationWideTransport->category) == 'Heavy' ? 'selected' : '' }}>Heavy</option>
+                            <option value="Freight" {{ old('category', $nationWideTransport->category) == 'Freight' ? 'selected' : '' }}>Freight</option>
+                        </select>
+                    </div>
 
                     <div class="form-group">
                         <label>Details</label>

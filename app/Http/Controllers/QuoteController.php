@@ -17,7 +17,6 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
         $data = $request->all();
         $heading = $this->generateHeading($data);
         $name = $request->input('name', null);
@@ -77,9 +76,12 @@ class QuoteController extends Controller
         $blind_shipment = $request->input('blind_shipment', null);
         $vehicle_opt = $request->input('vehicle_opt', null);
         $frieght_class = $request->input('frieght_class', null);
+        $rv_type = $request->input('rv_type', null);
         $car_type = $request->input('car_type', 1);
+        $need_permit = $request->input('need_permit', 0);
         $ip = $request->ip();
         $source = 'ShipA1';
+        $price_giver_allow = 1;
 
         $originValues = explode(',', $originData);
         $origin_zip = isset($originValues[2]) ? trim($originValues[2]) : null;
@@ -188,7 +190,10 @@ class QuoteController extends Controller
             'make' => $make,
             'model' => $model,
             'frieght_class' => $frieght_class,
+            'rv_type' => $rv_type,
             'source' => $source,
+            'price_giver_allow' => $price_giver_allow,
+            'need_permit' => $need_permit,
         ];
 
         if ($request->hasFile('image')) {
