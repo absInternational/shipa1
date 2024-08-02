@@ -6541,7 +6541,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .accordion .accordion-item .accordion-header .accordion-button:before {
     position: absolute;
     top: 0;
-    font-size: 20px;
+    font-size: 35px;
     right: 0;
     content: "\f113";
     color: var(--tj-white-color);
@@ -8629,7 +8629,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    background: rgba(6, 46, 57, 0.7);
+    background: rgb(6 46 57 / 90%);
 }
 
 .tj-footer-area .footer1_col_4,
@@ -8747,7 +8747,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-footer-area .widget_nav_menu .widget-menu ul li a {
-    color: var(--tj-gray-color2);
+    color: #ffffff;
     transition: 0.4s;
     font-size: 17px;
     font-weight: 500;
@@ -8779,7 +8779,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-footer-area .footer-contact-info ul li a {
-    color: var(--tj-gray-color2);
+    color: #ffffff;
     font-size: 17px;
     font-weight: 500;
     transition: 0.4s;
@@ -8991,7 +8991,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .footer-copyright-area .copyright-target p {
-    color: var(--tj-gray-color2);
+    color: #ffffff;
     margin-bottom: 0;
 }
 

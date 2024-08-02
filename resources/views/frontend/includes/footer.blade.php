@@ -158,7 +158,7 @@
                     <div class="footer-copyright-area">
                         <div class="copyright-target">
                             <p>
-                                Copyright © 2024 <a href="#" target="_blank"> Shipa1. </a> All Rights
+                                Copyright © 2024 ShipA1. All Rights
                                 Reserved.
                             </p>
                         </div>

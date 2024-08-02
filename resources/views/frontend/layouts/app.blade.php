@@ -142,7 +142,7 @@
             leads thanks to our work.
         </p>
         <!-- Canvas Menu end -->
-        <div class="contact-info-list">
+        <!-- <div class="contact-info-list">
             <h4 class="offcanvas-title">Contact info</h4>
             <div class="contact-box">
                 <div class="contact-icon">
@@ -201,7 +201,7 @@
         </div>
         <div class="tj-theme-button tj-btn d-lg-none">
             <a class="tj-primary-btn" href="#">Track Order<i class="flaticon-right-1"></i> </a>
-        </div>
+        </div> -->
     </div>
     <!-- Offcanvas Area End-->
 
