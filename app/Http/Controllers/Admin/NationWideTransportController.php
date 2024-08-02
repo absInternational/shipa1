@@ -26,6 +26,7 @@ class NationWideTransportController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'status' => 'required|integer',
+            'category' => 'required',
             'details' => 'required|array',
             'details.*.heading' => 'required|string|max:255',
             'details.*.description' => 'required|string',
@@ -38,6 +39,7 @@ class NationWideTransportController extends Controller
             'name' => $request->name,
             'slug' => $slug,
             'status' => $request->status,
+            'category' => $request->category,
         ]);
 
         foreach ($request->details as $detail) {
@@ -80,6 +82,7 @@ class NationWideTransportController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'status' => 'required|integer',
+            'category' => 'required',
             'details' => 'required|array',
             'details.*.heading' => 'required|string|max:255',
             'details.*.description' => 'required|string',
@@ -95,6 +98,7 @@ class NationWideTransportController extends Controller
 
         $nationWideTransport->update([
             'name' => $request->name,
+            'category' => $request->category,
             'status' => $request->status,
         ]);
 

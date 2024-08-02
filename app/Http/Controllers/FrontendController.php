@@ -195,7 +195,7 @@ class FrontendController extends Controller
 
     public function vehicleTransportDetail()
     {
-        $transports = NationWideTransport::with('details')->get();
+        $transports = NationWideTransport::with('details')->where('category', 'Vehicle')->where('status', 1)->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
         $makes = VehicleName::select('make')
@@ -210,7 +210,7 @@ class FrontendController extends Controller
 
     public function heavyTransportDetail()
     {
-        $transports = NationWideTransport::with('details')->get();
+        $transports = NationWideTransport::with('details')->where('category', 'Heavy')->where('status', 1)->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.heavy-transport-detail', compact('blogs', 'site_reviews', 'transports'));
@@ -218,7 +218,7 @@ class FrontendController extends Controller
 
     public function freightTransportDetail()
     {
-        $transports = NationWideTransport::with('details')->get();
+        $transports = NationWideTransport::with('details')->where('category', 'Freight')->where('status', 1)->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.freighttransport-detail', compact('blogs', 'site_reviews', 'transports'));
