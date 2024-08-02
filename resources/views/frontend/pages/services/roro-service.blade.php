@@ -1087,7 +1087,7 @@
             }
         });
     </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
     $(document).on('change', '.category', function() {
         var selectedCategory = $(this).val();
@@ -1125,7 +1125,7 @@
         });
     });
     });
-</script>
+</script> --}}
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
