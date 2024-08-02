@@ -3,12 +3,12 @@
         <div class="input-form">
             <label for="category">Category</label>
             <select class="nice-select " id="category" name="category">
-                                            <option value="" disabled selected>Select</option>
-                                            @foreach ($categories as $category)
-                                                <option value="{{ $category->name }}" data-id="{{ $category->id }}">
-                                                    {{ $category->name }}</option>
-                                            @endforeach
-                                        </select>
+                <option value="" disabled selected>Select</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->name }}" data-id="{{ $category->id }}">
+                        {{ $category->name }}</option>
+                @endforeach
+            </select>
             <input type="text" class="form-control" id="otherCategoryInput" name="category" disabled
                 style="display: none;" placeholder="Specify Category">
         </div>
@@ -22,8 +22,8 @@
         </div>
     </div>
 </div>
- 
- <div class="row">
+
+<div class="row">
     <div class="col-md-6">
         <div class="form-group">
             <label for="trailer_type" class="text-white">Select Trailer Type</label>
@@ -68,10 +68,10 @@
                 <option value="" disabled selected>Select Year
                 </option>
                 @php
-                $currentYear = date('Y');
-                for ($year = $currentYear; $year >= 1936; $year--) {
-                echo "<option value='$year'>$year</option>";
-                }
+                    $currentYear = date('Y');
+                    for ($year = $currentYear; $year >= 1936; $year--) {
+                        echo "<option value='$year'>$year</option>";
+                    }
                 @endphp
             </select>
         </div>
@@ -85,7 +85,7 @@
     <div class="col-md-4">
         <div class="input-form tj-select vehicle-model-div">
             <label>Model</label>
-            <input type="text" id="model" name="model[]" placeholder="Enter Model" required/>
+            <input type="text" id="model" name="model[]" placeholder="Enter Model" required />
         </div>
     </div>
 </div>
@@ -133,7 +133,7 @@
     </div>
 </div>
 <div class="row mb-3">
-<div class="col-md-4">
+    <div class="col-md-4">
 
         <label class="lab-cos">Length</label>
         <div class="input-container">
@@ -183,4 +183,3 @@
         </div>
     </div>
 </div>
-

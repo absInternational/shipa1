@@ -1144,7 +1144,7 @@
         });
     </SCript>
 
-<script>
+    {{-- <script>
         $(document).ready(function() {
             $('#category').change(function() {
                 var selectedCategory = $(this).find('option:selected').data('id');
@@ -1181,6 +1181,6 @@
                 });
             });
         });
-    </script>
+    </script> --}}
 
 @endsection

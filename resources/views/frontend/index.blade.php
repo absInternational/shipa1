@@ -1,13 +1,10 @@
 @extends('frontend.layouts.app')
 
 @section('title')
-SHIP A1
+    SHIP A1
 @endsection
 @section('content')
-
     <style>
-        
-         
         .tj-testimonial-section {
             padding: 120px 0px 0px 0;
             background: #ffffff;
@@ -88,7 +85,7 @@ SHIP A1
             }
         }
 
-       
+
 
 
         .lab-cos {
@@ -139,7 +136,7 @@ SHIP A1
             outline: none;
         }
 
-        
+
 
         .input-container input[type="number"] {
             -moz-appearance: textfield;
@@ -195,9 +192,11 @@ SHIP A1
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
+
         .err-style {
             color: red;
         }
+
         .error-message {
             display: none;
             color: red;
@@ -206,6 +205,7 @@ SHIP A1
         .error-field {
             border: 2px solid red;
         }
+
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
@@ -226,21 +226,21 @@ SHIP A1
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <!-- <div class="spinner">
-                <div class="loader-icon">
-                    <img src="{{ asset('frontend/images/logo/favicon.png') }}"
-                        alt="Corporate Business HTML Template" />
+                    <div class="loader-icon">
+                        <img src="{{ asset('frontend/images/logo/favicon.png') }}"
+                            alt="Corporate Business HTML Template" />
+                    </div>
                 </div>
-            </div>
-            <div class="txt-loading">
-                <span data-text-preloader="S" class="letters-loading"> S </span>
-                <span data-text-preloader="H" class="letters-loading"> H </span>
-                <span data-text-preloader="I" class="letters-loading"> I </span>
-                <span data-text-preloader="P" class="letters-loading"> P </span>
-                <span data-text-preloader="" class="letters-loading"> </span>
-                <span data-text-preloader="A" class="letters-loading"> A </span>
-                <span data-text-preloader="1" class="letters-loading"> 1 </span>
-                <span data-text-preloader="" class="letters-loading"> </span>
-            </div> -->
+                <div class="txt-loading">
+                    <span data-text-preloader="S" class="letters-loading"> S </span>
+                    <span data-text-preloader="H" class="letters-loading"> H </span>
+                    <span data-text-preloader="I" class="letters-loading"> I </span>
+                    <span data-text-preloader="P" class="letters-loading"> P </span>
+                    <span data-text-preloader="" class="letters-loading"> </span>
+                    <span data-text-preloader="A" class="letters-loading"> A </span>
+                    <span data-text-preloader="1" class="letters-loading"> 1 </span>
+                    <span data-text-preloader="" class="letters-loading"> </span>
+                </div> -->
         </div>
         <!-- <button class="tj-primary-btn">Cancel Preloader</button> -->
     </div>
@@ -250,9 +250,10 @@ SHIP A1
 
 
     <section class="tj-slider-section">
-        <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" /></div>
-          
-        <div class="swiper sc-slider-1" data-autoplay="5000" >
+        <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" />
+        </div>
+
+        <div class="swiper sc-slider-1" data-autoplay="5000">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
                     <div class="container">
@@ -261,10 +262,11 @@ SHIP A1
                             <div class="slider-desc">
                                 ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                                 customers and seeks your trust in return of our services.
-                                
+
                             </div>
                             <div class="tj-theme-button">
-                            <a class="tj-transparent-btn ms-4 " href="{{ route('quote.form.combine') }}" target="_blank">
+                                <a class="tj-transparent-btn ms-4 " href="{{ route('quote.form.combine') }}"
+                                    target="_blank">
                                     Get Quote<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
@@ -272,7 +274,7 @@ SHIP A1
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}" >
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY TRANSPORTATION SERVICES</h1>
@@ -281,15 +283,16 @@ SHIP A1
                                 customers and seeks your trust in return of our services.
                             </div>
                             <div class="tj-theme-button">
-                            <a class="tj-transparent-btn ms-4 " href="{{ route('quote.form.combine') }}" target="_blank">
-                            Get Quote<i class="flaticon-right-1"></i>
+                                <a class="tj-transparent-btn ms-4 " href="{{ route('quote.form.combine') }}"
+                                    target="_blank">
+                                    Get Quote<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-                <div class="swiper-slide"  data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>
@@ -298,10 +301,11 @@ SHIP A1
                                 customers and seeks your trust in return of our services.
                             </div>
                             <div class="tj-theme-button">
-                            <a class="tj-transparent-btn ms-4 mt-4" href="{{ route('quote.form.combine') }}" target="_blank">
-                            Get Quote<i class="flaticon-right-1"></i>
+                                <a class="tj-transparent-btn ms-4 mt-4" href="{{ route('quote.form.combine') }}"
+                                    target="_blank">
+                                    Get Quote<i class="flaticon-right-1"></i>
                                 </a>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -310,9 +314,9 @@ SHIP A1
             </div>
             <div class=""></div>
         </div>
-        
-        
-        
+
+
+
 
         <div class="tj-service-icon-box">
             <ul class="list-gap">
@@ -320,14 +324,14 @@ SHIP A1
                     <div class="service-item">
                         <div class="tj-service-icon">
                             <div class="service-icon">
-                            <i class="fa-light fa-car-side fa-2xs"></i>
+                                <i class="fa-light fa-car-side fa-2xs"></i>
                             </div>
                             <div class="sub-title">
                                 <span>VEHICLE <br>TRANSPORTATION</span>
                             </div>
                         </div>
                         <div class="service-arrow">
-                            <a href="{{ route('vehicleTransportDetail') }}" target="_blank"> 
+                            <a href="{{ route('vehicleTransportDetail') }}" target="_blank">
                                 <i class="fa-light fa-arrow-right"></i>
                             </a>
                         </div>
@@ -337,7 +341,7 @@ SHIP A1
                     <div class="service-item">
                         <div class="tj-service-icon">
                             <div class="service-icon">
-                              
+
                                 <i class="fa-light fa-tractor fa-xs"></i>
                             </div>
                             <div class="sub-title">
@@ -354,7 +358,7 @@ SHIP A1
                     <div class="service-item">
                         <div class="tj-service-icon">
                             <div class="service-icon">
-                               
+
                                 <i class="fa-light fa-truck fa-xs"></i>
                             </div>
                             <div class="sub-title">
@@ -386,7 +390,7 @@ SHIP A1
                     <div class="tj-section-heading text-center">
                         <span class="sub-title active-shape">What We Do</span>
                         <h2 class="title">Logistic & Transport</h2>
-                        
+
                     </div>
                 </div>
             </div>
@@ -395,11 +399,12 @@ SHIP A1
                     <div class="tj-service-item"
                         data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
                         <div class="icon-box">
-                        <i class="fa-light fa-car-side fa-2xs"></i>
+                            <i class="fa-light fa-car-side fa-2xs"></i>
                             <!-- <i class="flaticon-air-freight"></i> -->
                         </div>
                         <div class="service-content">
-                            <h4><a class="title-link" href="{{ route('vehicleTransportDetail') }}" target="_blank"> VEHICLE TRANSPORTATION</a></h4>
+                            <h4><a class="title-link" href="{{ route('vehicleTransportDetail') }}" target="_blank">
+                                    VEHICLE TRANSPORTATION</a></h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
                     </div>
@@ -408,12 +413,13 @@ SHIP A1
                     <div class="tj-service-item"
                         data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
                         <div class="icon-box">
-                        <i class="fa-light fa-tractor fa-2xs"></i>
+                            <i class="fa-light fa-tractor fa-2xs"></i>
                             <!-- <i class="flaticon-cargo-ship-1"></i> -->
                         </div>
                         <div class="service-content">
                             <h4>
-                                <a class="title-link" href="{{ route('heavy-transport-detail') }}" target="_blank"> HEAVY TRANSPORTATION</a>
+                                <a class="title-link" href="{{ route('heavy-transport-detail') }}" target="_blank">
+                                    HEAVY TRANSPORTATION</a>
                             </h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
@@ -423,11 +429,12 @@ SHIP A1
                     <div class="tj-service-item"
                         data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
                         <div class="icon-box">
-                        <i class="fa-light fa-truck fa-2xs"></i>
+                            <i class="fa-light fa-truck fa-2xs"></i>
                             <!-- <i class="flaticon-delivery-van"></i> -->
                         </div>
                         <div class="service-content">
-                            <h4><a class="title-link"  href="{{ route('freighttransport-detail') }}" target="_blank"> FREIGHT TRANSPORTATION</a></h4>
+                            <h4><a class="title-link" href="{{ route('freighttransport-detail') }}" target="_blank">
+                                    FREIGHT TRANSPORTATION</a></h4>
                             <p>Long established fact that reader will be distracted by the</p>
                         </div>
                     </div>
@@ -446,8 +453,8 @@ SHIP A1
                     <div class="cta-content-area">
                         <div class="cta-content">
                             <div class="cta-icon">
-                            <i class="fa-light fa-car-rear"></i>
-                            <!-- <i class="fa-solid fa-gavel"></i> -->
+                                <i class="fa-light fa-car-rear"></i>
+                                <!-- <i class="fa-solid fa-gavel"></i> -->
                                 <!-- <i class="flaticon flaticon-freight"></i> -->
                             </div>
                             <div class="cta-text">
@@ -488,7 +495,7 @@ SHIP A1
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                    <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
                                     <!-- <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
@@ -504,7 +511,7 @@ SHIP A1
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
+                                    <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
                                     <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
@@ -518,7 +525,7 @@ SHIP A1
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
+                                    <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
                                     <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
@@ -535,7 +542,7 @@ SHIP A1
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
                                 <div class="ab-icon">
-                                <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
+                                    <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
                                     <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                                 </div>
                                 <div class="ab-title">
@@ -564,8 +571,8 @@ SHIP A1
                             <img class="p-z-idex" src="{{ asset('frontend/images/about/about-3.webp') }}"
                                 alt="Image" />
                         </div>
-                        <img class="group-1 p-z-idex"
-                            src="{{ asset('frontend/images/about/about-5.webp') }}" alt="Image" />
+                        <img class="group-1 p-z-idex" src="{{ asset('frontend/images/about/about-5.webp') }}"
+                            alt="Image" />
                         <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"
                             alt="Image" />
                     </div>
@@ -575,107 +582,107 @@ SHIP A1
     </section>
     <!--=========== About Section End =========-->
 
-         <section class="tj-cta-section-two">
-            <div class="tj_cta_image"></div>
-            <div class="tj_cta_image1"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="tj-cta-content">
-                            <div class="tj-section-heading">
-                                <span class="sub-title active-shape2"> Here We Are</span>
-                                <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" target="_blank">
-                                    Get Quote<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
+    <section class="tj-cta-section-two">
+        <div class="tj_cta_image"></div>
+        <div class="tj_cta_image1"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="tj-cta-content">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape2"> Here We Are</span>
+                            <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
+                        </div>
+                        <div class="tj-theme-button">
+                            <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                                Get Quote<i class="flaticon-right-1"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="tj-cta-content tj-cta-content2">
-                            <div class="tj-section-heading">
-                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                                <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
-                            </div>
-                            <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
-                                    Get Support<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="tj-cta-content tj-cta-content2">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape2"> Support Center 24/7 </span>
+                            <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
+                        </div>
+                        <div class="tj-theme-button">
+                            <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
+                                Get Support<i class="flaticon-right-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-         </section>
+        </div>
+    </section>
 
-        <section class="tj-step-section">
-            <div class="container">
-                <div class="row">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape"> Working Process</span>
-                        <h2 class="title">We Follow Great Process</h2>
-                    </div>
+    <section class="tj-step-section">
+        <div class="container">
+            <div class="row">
+                <div class="tj-section-heading text-center">
+                    <span class="sub-title active-shape"> Working Process</span>
+                    <h2 class="title">We Follow Great Process</h2>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="tj-step-area">
-                            <div class="tj-step-item text-center">
-                                <div class="step-icon-box">
-                                    <div class="step-box"></div>
-                                    <i class="flaticon-economics"></i>
-                                    <span class="number"> 01.</span>
-                                </div>
-                                <div class="step-content">
-                                    <h6 class="title">Online Quote</h6>
-                                    <span> Get an instant online quote from our website or call our agent.</span>
-                                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-step-area">
+                        <div class="tj-step-item text-center">
+                            <div class="step-icon-box">
+                                <div class="step-box"></div>
+                                <i class="flaticon-economics"></i>
+                                <span class="number"> 01.</span>
                             </div>
-                            <div class="tj-step-item text-center">
-                                <div class="step-icon-box">
-                                    <div class="step-box"></div>
-                                    <i class="flaticon-pick"></i>
-                                    <span class="number"> 02.</span>
-                                </div>
-                                <div class="step-content">
-                                    <h6 class="title">Confirm Order</h6>
-                                    <span> Confirm your order over the phone and fill out the booking form.</span>
-                                </div>
+                            <div class="step-content">
+                                <h6 class="title">Online Quote</h6>
+                                <span> Get an instant online quote from our website or call our agent.</span>
                             </div>
-                            <div class="tj-step-item text-center">
-                                <div class="step-icon-box">
-                                    <div class="step-box"></div>
-                                    <i class="flaticon-tracking"></i>
-                                    <span class="number"> 03.</span>
-                                </div>
-                                <div class="step-content">
-                                    <h6 class="title">Track Shipment
-                                   </h6>
-                                    <span>  Track your shipment by your unique order id number.</span>
-                                </div>
+                        </div>
+                        <div class="tj-step-item text-center">
+                            <div class="step-icon-box">
+                                <div class="step-box"></div>
+                                <i class="flaticon-pick"></i>
+                                <span class="number"> 02.</span>
                             </div>
-                            <div class="tj-step-item text-center">
-                                <div class="step-icon-box">
-                                    <div class="step-box"></div>
-                                    <i class="flaticon-delivery-van"></i>
-                                    <span class="number"> 04.</span>
-                                </div>
-                                <div class="step-content">
-                                    <h6 class="title">Shipment Delivery
-                                    </h6>
-                                    <span> Your shipment reached to their drop-off location.</span>
-                                </div>
-                                <div class="stp-arrow">
-                                    <i class="fa-regular fa-arrow-right"></i>
-                                </div>
+                            <div class="step-content">
+                                <h6 class="title">Confirm Order</h6>
+                                <span> Confirm your order over the phone and fill out the booking form.</span>
+                            </div>
+                        </div>
+                        <div class="tj-step-item text-center">
+                            <div class="step-icon-box">
+                                <div class="step-box"></div>
+                                <i class="flaticon-tracking"></i>
+                                <span class="number"> 03.</span>
+                            </div>
+                            <div class="step-content">
+                                <h6 class="title">Track Shipment
+                                </h6>
+                                <span> Track your shipment by your unique order id number.</span>
+                            </div>
+                        </div>
+                        <div class="tj-step-item text-center">
+                            <div class="step-icon-box">
+                                <div class="step-box"></div>
+                                <i class="flaticon-delivery-van"></i>
+                                <span class="number"> 04.</span>
+                            </div>
+                            <div class="step-content">
+                                <h6 class="title">Shipment Delivery
+                                </h6>
+                                <span> Your shipment reached to their drop-off location.</span>
+                            </div>
+                            <div class="stp-arrow">
+                                <i class="fa-regular fa-arrow-right"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="tj-choose-us-section-home">
+        </div>
+    </section>
+    <section class="tj-choose-us-section-home">
         <div class="container">
             <div class="row">
                 @if (session('success'))
@@ -689,44 +696,44 @@ SHIP A1
                     </div>
                 @endif
                 <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                        <div class="choose-us-content-1">
-                            <div class="tj-section-heading">
-                                <span class="sub-title active-shape2">Get Instant quote</span>
-                                <h2 class="title">Get an instant quote in few simple steps</h2>
-                                <p class="desc">ShipA1 has pledged to provide all-in-one auto transport solutions to all its
+                    <div class="choose-us-content-1">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape2">Get Instant quote</span>
+                            <h2 class="title">Get an instant quote in few simple steps</h2>
+                            <p class="desc">ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                                 customers and seeks your trust in return of our services.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-6">
+                                <div class="tj-icon-box3 text-center">
+                                    <i class="flaticon flaticon-courier"></i>
+                                    <h6 class="title">Optimized Cost</h6>
+                                </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-4 col-sm-4 col-6">
-                                    <div class="tj-icon-box3 text-center">
-                                        <i class="flaticon flaticon-courier"></i>
-                                        <h6 class="title">Optimized Cost</h6>
-                                    </div>
+                            <div class="col-md-4 col-sm-4 col-6">
+                                <div class="tj-icon-box3 text-center">
+                                    <i class="flaticon flaticon-cargo"></i>
+                                    <h6 class="title">Delivery on Time</h6>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-6">
-                                    <div class="tj-icon-box3 text-center">
-                                        <i class="flaticon flaticon-cargo"></i>
-                                        <h6 class="title">Delivery on Time</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-6">
-                                    <div class="tj-icon-box3 text-center">
-                                        <i class="flaticon flaticon-agreement"></i>
-                                        <h6 class="title">Safety &amp; Reliability</h6>
-                                    </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-6">
+                                <div class="tj-icon-box3 text-center">
+                                    <i class="flaticon flaticon-agreement"></i>
+                                    <h6 class="title">Safety &amp; Reliability</h6>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
 
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
-        @include('partials.multi-form')
-        </div>
+                    @include('partials.multi-form')
+                </div>
             </div>
 
 
-           </div>
-           
+        </div>
+
     </section>
     <!--=========== Feature Section End =========-->
 
@@ -748,135 +755,161 @@ SHIP A1
     <!--=========== Project Section Start =========-->
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
-            
+
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/9.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.car-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.car-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">CAR</span>
-                    <h4><a href="{{ route('frontend.pages.services.car-service') }}"  target="_blank" class="title-link">Car Shipping Service</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.car-service') }}" target="_blank"
+                            class="title-link">Car Shipping Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/62.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.bike-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.bike-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">MOTORCYCLE</span>
-                    <h4><a href="{{ route('frontend.pages.services.bike-service') }}"  target="_blank" class="title-link">Motorcycle Shipping Service</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.bike-service') }}" target="_blank"
+                            class="title-link">Motorcycle Shipping Service</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.heavy-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">HEAVY EQUIP</span>
-                    <h4><a href="{{ route('frontend.pages.services.heavy-service') }}"  target="_blank" class="title-link">Heavy Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank"
+                            class="title-link">Heavy Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.roro-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.roro-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">RORO</span>
-                    <h4><a href="{{ route('frontend.pages.services.roro-service') }}"  target="_blank" class="title-link">Roro Test</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.roro-service') }}" target="_blank"
+                            class="title-link">Roro Test</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/4.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.golf-cart-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.golf-cart-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Golf Cart</span>
-                    <h4><a href="{{ route('frontend.pages.services.golf-cart-service') }}"  target="_blank" class="title-link">Golf Cart Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.golf-cart-service') }}" target="_blank"
+                            class="title-link">Golf Cart Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/atv,utv-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.atv-utv-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.atv-utv-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">ATV/UTV</span>
-                    <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}"  target="_blank" class="title-link">ATV/UTV Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}" target="_blank"
+                            class="title-link">ATV/UTV Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/Commercial--.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.construction-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.construction-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">CONSTRUCTION</span>
-                    <h4><a href="{{ route('frontend.pages.services.construction-service') }}"  target="_blank" class="title-link">CONSTRUCTION Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.construction-service') }}" target="_blank"
+                            class="title-link">CONSTRUCTION Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/10.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.farm-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.farm-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">FARM</span>
-                    <h4><a href="{{ route('frontend.pages.services.farm-service') }}"  target="_blank" class="title-link">FARM Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.farm-service') }}" target="_blank"
+                            class="title-link">FARM Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.excavator-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.excavator-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">EXCAVATOR</span>
-                    <h4><a href="{{ route('frontend.pages.services.excavator-service') }}"  target="_blank" class="title-link">Excavator Shipping Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.excavator-service') }}" target="_blank"
+                            class="title-link">Excavator Shipping Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/commercial-truck.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.commercial-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.commercial-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">TRUCKS</span>
-                    <h4><a href="{{ route('frontend.pages.services.commercial-service') }}"  target="_blank" class="title-link">TRUCKS Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.commercial-service') }}" target="_blank"
+                            class="title-link">TRUCKS Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.reefer-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Reefer</span>
-                    <h4><a href="{{ route('frontend.pages.services.reefer-service') }}"  target="_blank" class="title-link">Reefer Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"
+                            class="title-link">Reefer Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/7.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.hazmat-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Hazmat</span>
-                    <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}"  target="_blank" class="title-link">Hazmat Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"
+                            class="title-link">Hazmat Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('frontend/images/project/5.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.dryvan-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                    <a href="{{ route('frontend.pages.services.dryvan-service') }}" target="_blank"> <i
+                            class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">Dry van</span>
-                    <h4><a href="{{ route('frontend.pages.services.dryvan-service') }}"  target="_blank" class="title-link">Dry van Transportation Services</a></h4>
+                    <h4><a href="{{ route('frontend.pages.services.dryvan-service') }}" target="_blank"
+                            class="title-link">Dry van Transportation Services</a></h4>
                 </div>
             </div>
         </div>
@@ -922,106 +955,97 @@ SHIP A1
     </section>
     <!--=========== Map Section End =========-->
 
-<!--=========== Counter Section Start =========-->
-<section class="tj-counter-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 ">
-                        <div class="tj-counter-area" >
+    <!--=========== Counter Section Start =========-->
+    <section class="tj-counter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <div class="tj-counter-area">
 
-                            <div
-                                class="counter-item d-flex align-items-center"
-                                data-sal="slide-up"
-                                data-sal-duration="800"
-                                data-sal-delay="300">
-                                <div class="counter-icon">
+                        <div class="counter-item d-flex align-items-center" data-sal="slide-up" data-sal-duration="800"
+                            data-sal-delay="300">
+                            <div class="counter-icon">
                                 <i class="fa-light fa-car-side mt-4 fa-2xs"></i>
-                                </div>
-                                <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer" data-count="318">0</span>k+</div>
-                                    <span class="sub-title">Succesful Shipment</span>
-                                </div>
                             </div>
-
-                            <div
-                                class="counter-item d-flex align-items-center"
-                                data-sal="slide-up"
-                                data-sal-duration="800"
-                                data-sal-delay="400">
-                                <div class="counter-icon">
-                                    <i class="flaticon-courier"></i>
-                                </div>
-                                <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer" data-count="28">0</span>k+</div>
-                                    <span class="sub-title">Satisfied Clients</span>
-                                </div>
+                            <div class="counter-number">
+                                <div class="tj-count"><span class="odometer" data-count="318">0</span>k+</div>
+                                <span class="sub-title">Succesful Shipment</span>
                             </div>
-
-                            <div
-                                class="counter-item d-flex align-items-center"
-                                data-sal="slide-up"
-                                data-sal-duration="800"
-                                data-sal-delay="500">
-                                <div class="counter-icon">
-                                    <i class="flaticon-worldwide"></i>
-                                </div>
-                                <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer" data-count="270,092">0</span>k</div>
-                                    <span class="sub-title">Miles Covered</span>
-                                </div>
-                            </div>
-
-                            <!-- <div
-                                class="counter-item d-flex align-items-center"
-                                data-sal="slide-up"
-                                data-sal-duration="800"
-                                data-sal-delay="500">
-                                <div class="counter-icon">
-                                    <i class="flaticon-worldwide"></i>
-                                </div>
-                                <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer" data-count="2709">0</span></div>
-                                    <span class="sub-title">Worldwide Clients</span>
-                                </div>
-                            </div> -->
-
                         </div>
 
+                        <div class="counter-item d-flex align-items-center" data-sal="slide-up" data-sal-duration="800"
+                            data-sal-delay="400">
+                            <div class="counter-icon">
+                                <i class="flaticon-courier"></i>
+                            </div>
+                            <div class="counter-number">
+                                <div class="tj-count"><span class="odometer" data-count="28">0</span>k+</div>
+                                <span class="sub-title">Satisfied Clients</span>
+                            </div>
+                        </div>
+
+                        <div class="counter-item d-flex align-items-center" data-sal="slide-up" data-sal-duration="800"
+                            data-sal-delay="500">
+                            <div class="counter-icon">
+                                <i class="flaticon-worldwide"></i>
+                            </div>
+                            <div class="counter-number">
+                                <div class="tj-count"><span class="odometer" data-count="270,092">0</span>k</div>
+                                <span class="sub-title">Miles Covered</span>
+                            </div>
+                        </div>
+
+                        <!-- <div
+                                    class="counter-item d-flex align-items-center"
+                                    data-sal="slide-up"
+                                    data-sal-duration="800"
+                                    data-sal-delay="500">
+                                    <div class="counter-icon">
+                                        <i class="flaticon-worldwide"></i>
+                                    </div>
+                                    <div class="counter-number">
+                                        <div class="tj-count"><span class="odometer" data-count="2709">0</span></div>
+                                        <span class="sub-title">Worldwide Clients</span>
+                                    </div>
+                                </div> -->
+
                     </div>
+
                 </div>
             </div>
-</section>
-<!--=========== Counter Section End ========= -->
+        </div>
+    </section>
+    <!--=========== Counter Section End ========= -->
 
 
     <!--=========== Blog Section Start =========-->
     @include('partials.blog-slider')
     <!--=========== Blog Section End =========-->
 
-     <!--=========== Testimonial Section Start =========--> 
-     @include('partials.reveiw-detail')
+    <!--=========== Testimonial Section Start =========-->
+    @include('partials.reveiw-detail')
     <!--=========== Testimonial Section End =========-->
 
     <!--=========== Newsletter Section Start =========-->
     @include('partials.newsletter')
     <!--=========== Newsletter Section End =========-->
-    
+
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="path/to/jquery.min.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> -->
+    <!--
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="path/to/jquery.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> -->
     <!-- <script>
-       const swiper = new Swiper('.swiper', {
-           autoplay: {
-           delay: 5000,
-          },
-          });
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 5000,
+            },
+        });
     </script> -->
     <script>
         $(document).ready(function() {
@@ -1032,7 +1056,7 @@ SHIP A1
         });
     </script>
 
-<script>
+    {{-- <script>
         $(document).ready(function() {
             $('#category').change(function() {
                 var selectedCategory = $(this).find('option:selected').data('id');
@@ -1069,7 +1093,7 @@ SHIP A1
                 });
             });
         });
-    </script>
+    </script> --}}
 
     <script>
         $(document).ready(function() {
@@ -1078,7 +1102,7 @@ SHIP A1
                 margin: 10,
                 nav: true,
                 autoplay: true,
-                autoplayTimeout: 4000, 
+                autoplayTimeout: 4000,
                 autoplayHoverPause: true,
                 responsive: {
                     0: {
@@ -1093,7 +1117,6 @@ SHIP A1
                 }
             });
         });
-        
     </script>
 
     <script>
