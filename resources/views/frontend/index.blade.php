@@ -624,57 +624,57 @@
                     <span class="sub-title active-shape"> Working Process</span>
                     <h2 class="title">We Follow Great Process</h2>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-step-area">
-                        <div class="tj-step-item text-center">
-                            <div class="step-icon-box">
-                                <div class="step-box"></div>
-                                <i class="flaticon-economics"></i>
-                                <span class="number"> 01.</span>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tj-step-area">
+                            <div class="tj-step-item text-center">
+                                <div class="step-icon-box">
+                                    <div class="step-box"></div>
+                                    <i class="flaticon-economics"></i>
+                                    <span class="number"> 01.</span>
+                                </div>
+                                <div class="step-content">
+                                    <h4 class="title">Online Quote</h4>
+                                    <span> Get an instant online quote from our website or call our agent.</span>
+                                </div>
                             </div>
-                            <div class="step-content">
-                                <h6 class="title">Online Quote</h6>
-                                <span> Get an instant online quote from our website or call our agent.</span>
+                            <div class="tj-step-item text-center">
+                                <div class="step-icon-box">
+                                    <div class="step-box"></div>
+                                    <i class="flaticon-pick"></i>
+                                    <span class="number"> 02.</span>
+                                </div>
+                                <div class="step-content">
+                                    <h4 class="title">Confirm Order</h4>
+                                    <span> Confirm your order over the phone and fill out the booking form.</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tj-step-item text-center">
-                            <div class="step-icon-box">
-                                <div class="step-box"></div>
-                                <i class="flaticon-pick"></i>
-                                <span class="number"> 02.</span>
+                            <div class="tj-step-item text-center">
+                                <div class="step-icon-box">
+                                    <div class="step-box"></div>
+                                    <i class="flaticon-tracking"></i>
+                                    <span class="number"> 03.</span>
+                                </div>
+                                <div class="step-content">
+                                    <h4 class="title">Track Shipment
+                                   </h4>
+                                    <span>  Track your shipment by your unique order id number.</span>
+                                </div>
                             </div>
-                            <div class="step-content">
-                                <h6 class="title">Confirm Order</h6>
-                                <span> Confirm your order over the phone and fill out the booking form.</span>
-                            </div>
-                        </div>
-                        <div class="tj-step-item text-center">
-                            <div class="step-icon-box">
-                                <div class="step-box"></div>
-                                <i class="flaticon-tracking"></i>
-                                <span class="number"> 03.</span>
-                            </div>
-                            <div class="step-content">
-                                <h6 class="title">Track Shipment
-                                </h6>
-                                <span> Track your shipment by your unique order id number.</span>
-                            </div>
-                        </div>
-                        <div class="tj-step-item text-center">
-                            <div class="step-icon-box">
-                                <div class="step-box"></div>
-                                <i class="flaticon-delivery-van"></i>
-                                <span class="number"> 04.</span>
-                            </div>
-                            <div class="step-content">
-                                <h6 class="title">Shipment Delivery
-                                </h6>
-                                <span> Your shipment reached to their drop-off location.</span>
-                            </div>
-                            <div class="stp-arrow">
-                                <i class="fa-regular fa-arrow-right"></i>
+                            <div class="tj-step-item text-center">
+                                <div class="step-icon-box">
+                                    <div class="step-box"></div>
+                                    <i class="flaticon-delivery-van"></i>
+                                    <span class="number"> 04.</span>
+                                </div>
+                                <div class="step-content">
+                                    <h4 class="title">Shipment Delivery
+                                    </h4>
+                                    <span> Your shipment reached to their drop-off location.</span>
+                                </div>
+                                <div class="stp-arrow">
+                                    <i class="fa-regular fa-arrow-right"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
