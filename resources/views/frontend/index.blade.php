@@ -225,7 +225,7 @@ SHIP A1
     <!-- Preloader start -->
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
-            <div class="spinner">
+            <!-- <div class="spinner">
                 <div class="loader-icon">
                     <img src="{{ asset('frontend/images/logo/favicon.png') }}"
                         alt="Corporate Business HTML Template" />
@@ -240,7 +240,7 @@ SHIP A1
                 <span data-text-preloader="A" class="letters-loading"> A </span>
                 <span data-text-preloader="1" class="letters-loading"> 1 </span>
                 <span data-text-preloader="" class="letters-loading"> </span>
-            </div>
+            </div> -->
         </div>
         <!-- <button class="tj-primary-btn">Cancel Preloader</button> -->
     </div>
