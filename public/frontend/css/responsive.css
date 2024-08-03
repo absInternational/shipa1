@@ -1097,6 +1097,9 @@
         width: 100%;
         text-align: center;
     }
+    .header-social-icon {
+        display: none;
+    }
     .header-content-left {
         margin-bottom: 5px;
     }

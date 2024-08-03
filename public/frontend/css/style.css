@@ -8228,10 +8228,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-contact-page .tj-contact-list .contact-icon i {
-    width: 75px;
-    height: 75px;
-    line-height: 82px;
-    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    line-height: 65px;
+    font-size: 32px;
     text-align: center;
     display: inline-block;
     border-radius: 50%;
@@ -8256,7 +8256,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-contact-page .tj-contact-list .contact-header a {
     color: var(--tj-secondary-color);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     transition: 0.4s;
     text-wrap: wrap;

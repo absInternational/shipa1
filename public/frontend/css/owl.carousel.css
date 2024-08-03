@@ -56,7 +56,7 @@
 }
 
 .owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled {
-  display: none
+  /* display: ; */
 }
 
 .no-js .owl-carousel,.owl-carousel.owl-loaded {
@@ -199,9 +199,13 @@
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
  .owl-theme .owl-dots,.owl-theme .owl-nav {
-  display: none;
+  /* display: none; */
   text-align: center;
   -webkit-tap-highlight-color: transparent
+}
+
+.owl-theme .owl-dots{
+  display: none;
 }
 
 .owl-theme .owl-nav {

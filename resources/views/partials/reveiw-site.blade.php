@@ -19,7 +19,7 @@
      }
 
      .tj-testimonial-section {
-         padding: 60px 0px 60px 0;
+         padding: 80px 0px 60px 0;
          background: #ffffff;
      }
 
@@ -101,6 +101,13 @@
 
  <!--=========== Testimonial Section Start =========-->
  <section class="tj-testimonial-section">
+ <div class="row">
+            <div class="tj-section-heading text-center">
+                <span class="sub-title active-shape">check our ratings on the top review sites
+                </span>
+                <h2 class="title">Our Client Reviews</h2>
+            </div>
+        </div>
      <div class="carousel-wrapper">
          <div class="owl-carousel owl-theme" id="owl-caro">
 

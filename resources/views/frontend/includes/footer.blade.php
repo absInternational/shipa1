@@ -47,32 +47,32 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="{{ route('frontend.pages.services.boat-service') }}" target="_blank">Boat Transport</a>
+                                <a href="{{ route('frontend.pages.services.boat-service') }}" >Boat Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.car-service') }}" target="_blank">Car Transport</a>
+                                <a href="{{ route('frontend.pages.services.car-service') }}" >Car Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.dryvan-service') }}" target="_blank">Dry Van Transport</a>
+                                <a href="{{ route('frontend.pages.services.dryvan-service') }}" >Dry Van Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.golf-cart-service') }}" target="_blank">Golf Cart Transport</a>
+                                <a href="{{ route('frontend.pages.services.golf-cart-service') }}" >Golf Cart Transport</a>
                             </li>
                             
                             <li>
-                                <a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank">Heavy Equipment</a>
+                                <a href="{{ route('frontend.pages.services.heavy-service') }}" >Heavy Equipment</a>
                             </li>
                             <li style="width: 108%;">
-                                <a href="{{ route('frontend.pages.services.bike-service') }}" target="_blank">Motorcycle Shipping</a>
+                                <a href="{{ route('frontend.pages.services.bike-service') }}" >Motorcycle Shipping</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank">Reefer Transport</a>
+                                <a href="{{ route('frontend.pages.services.reefer-service') }}" >Reefer Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.rv-service') }}" target="_blank">RV Transport</a>
+                                <a href="{{ route('frontend.pages.services.rv-service') }}" >RV Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('services') }}" target="_blank">View More</a>
+                                <a href="{{ route('services') }}" >View More</a>
                             </li>
                         </ul>
                     </div>
@@ -86,13 +86,13 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="{{ route('aboutUs') }}" target="_blank">About Us </a>
+                                <a href="{{ route('aboutUs') }}" >About Us </a>
                             </li>
                             <li>
-                                <a href="{{ route('blogs') }}" target="_blank">Blogs</a>
+                                <a href="{{ route('blogs') }}" >Blogs</a>
                             </li>
                             <li>
-                                <a href="{{ route('contactUs') }}" target="_blank">Contact Us</a>
+                                <a href="{{ route('contactUs') }}" >Contact Us</a>
                             </li>
                             <!-- <li>
                                 <a href="#">Case Studies</a>
@@ -100,23 +100,23 @@
                             
 
                             <li>
-                                <a href="{{ route('faq') }}" target="_blank">FAQ!</a>
+                                <a href="{{ route('faq') }}" >FAQ!</a>
                             </li>
                             <li>
-                                <a href="{{ route('order.form') }}" target="_blank">Order Form</a>
+                                <a href="{{ route('order.form') }}" >Order Form</a>
                             </li>
                             <li>
-                                <a href="{{ route('blogs.trailer.truck') }}" target="_blank">Trailers & Trucks</a>
+                                <a href="{{ route('blogs.trailer.truck') }}" >Trailers & Trucks</a>
                             </li>
                             <li>
-                                <a href="{{ route('order.tracking') }}" target="_blank">Track Order </a>
+                                <a href="{{ route('order.tracking') }}" >Track Order </a>
                             </li>
 
                             <li>
-                                <a href="{{ route('termsAndConditions') }}" target="_blank">Terms & Conditions</a>
+                                <a href="{{ route('termsAndConditions') }}" >Terms & Conditions</a>
                             </li>
                             <li>
-                                <a href="{{ route('privacyPolicy') }}" target="_blank">Privacy Policy</a>
+                                <a href="{{ route('privacyPolicy') }}" >Privacy Policy</a>
                             </li>
                         </ul>
                     </div>
@@ -133,7 +133,7 @@
 
                                 <li><i class="flaticon-placeholder"></i><a
                                         href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu"
-                                        target="_blank"> 201 International Cir STE 230, Hunt Valley, MD 21030-1344</a>
+                                        > 201 International Cir STE 230, Hunt Valley, MD 21030-1344</a>
                                 </li>
 
                                 <li>

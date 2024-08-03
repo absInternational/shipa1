@@ -37,25 +37,25 @@
                                     <div class="header-social-icon">
                                     <ul class="list-gap social-list">
   <li>
-    <a href="https://www.facebook.com/shipa1autotransport" target="_blank"> <i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.facebook.com/shipa1autotransport" > <i class="fa-brands fa-facebook-f"></i></a>
   </li>
   <li>
-    <a href="https://www.youtube.com/@shipA1autotransport" target="_blank"> <i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.youtube.com/@shipA1autotransport" > <i class="fa-brands fa-youtube"></i></a>
   </li>
   <li>
-    <a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank"> <i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://www.linkedin.com/in/shipa1-transport/" > <i class="fa-brands fa-linkedin-in"></i></a>
   </li>
   <li>
-    <a href="https://twitter.com/ShipA1Transport" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+    <a href="https://twitter.com/ShipA1Transport" > <i class="fa-brands fa-twitter"></i></a>
   </li>
   <li>
-    <a href="https://www.yelp.com/biz/ship-a1-hunt-valley" target="_blank"> <i class="fa-brands fa-yelp"></i></a>
+    <a href="https://www.yelp.com/biz/ship-a1-hunt-valley" > <i class="fa-brands fa-yelp"></i></a>
   </li>
   <li>
-    <a href="https://wa.me/+14107184031" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://wa.me/+14107184031" > <i class="fa-brands fa-whatsapp"></i></a>
   </li>
   <li>
-    <a href="https://www.instagram.com/shipa1_transport/" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.instagram.com/shipa1_transport/" > <i class="fa-brands fa-instagram"></i></a>
   </li>
 </ul>
 
@@ -114,20 +114,20 @@
                                                          "
                                                         href="">Vehicle Transportation</a>
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('form.vehicle.atv_utv') }}">Atv Utv
                                                             Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('form.vehicle.car') }}">Car Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('form.vehicle.golf_cart') }}">Golf Cart Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('form.vehicle.form.vehicle.car') }}">Motorcycle Transport</a>
                                                     </li>
 
@@ -144,43 +144,43 @@
                                                       "
                                                         href="#">Heavy Equipment</a>
                                                     <!-- <li>
-                                                        <a class="title" target="_blank" href=""> Heavy    </a>
+                                                        <a class="title"  href=""> Heavy    </a>
                                                     </li> -->
 
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('form.vehicle.boat') }}"> Boat Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('commercial.truck.transport') }}">
                                                             Commercial
                                                             Truck Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('frontend.forms.construction_transport') }}">
                                                             Construction Transport</a>
                                                     </li>
 
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('form.vehicle.heavyEquipment') }}">
                                                             Heavy Transport</a>
                                                     </li>
 
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('frontend.forms.excavator') }}"> Excavator Transport
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('frontend.forms.farm_transport') }}"> Farm
                                                             Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('frontend.forms.rv_transport') }}"> RV
                                                             Transport</a>
                                                     </li>
@@ -197,15 +197,15 @@
                                                         href="">Freight Transportation</a>
 
                                                     <li>
-                                                        <a class="title" target="_blank" href="{{ route('frontend.forms.hazmattransport') }}" target="_blank"> Hazmat
+                                                        <a class="title"  href="{{ route('frontend.forms.hazmattransport') }}" > Hazmat
                                                             Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" href="{{ route('frontend.forms.dryvan') }}" target="_blank"> Dry Van
+                                                        <a class="title" href="{{ route('frontend.forms.dryvan') }}" > Dry Van
                                                         Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" target="_blank" href="{{ route('frontend.forms.reefertrucking') }}"> Reefer
+                                                        <a class="title"  href="{{ route('frontend.forms.reefertrucking') }}"> Reefer
                                                             Trucking</a>
                                                     </li>
                                                     <a class=" mb-3"
@@ -217,7 +217,7 @@
                                                          "
                                                         href="">RORO</a>
                                                     <li>
-                                                        <a class="title" target="_blank"
+                                                        <a class="title" 
                                                             href="{{ route('form.vehicle.roro') }}"> Roro
                                                             Transportation</a>
                                                     </li>
@@ -230,7 +230,7 @@
                                                              font-weight: bold;
                                                          " href="">RORO</a>
                                                     <li>
-                                                        <a class="title" target="_blank" href="{{ route('form.vehicle.roro') }}" > Roro Transportation</a>
+                                                        <a class="title"  href="{{ route('form.vehicle.roro') }}" > Roro Transportation</a>
                                                     </li>
                                                 </div> -->
                                             </div>
@@ -262,39 +262,39 @@
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Vehicle Transportation')
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('service.details', $service->slug) }}">
                                                                     {{ $service->name }}</a>
                                                             </li>
                                                         @endif
                                                     @endforeach
                                                     <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.car-service') }}">
                                                                     Car Transport Service</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.bike-service') }}">
                                                                     Motorcycle Transport Service</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.atv-utv-service') }}">
                                                                     ATV/UTV Transport Service</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.golf-cart-service') }}">
                                                                     Golf Cart Transport Service</a>
                                                             </li>
                                                             <!-- <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.bike-service') }}">
                                                                     Motorcycle Transport</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.excavator-service') }}">
                                                                     Excavator Service Transport</a>
                                                             </li> -->
@@ -305,49 +305,49 @@
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Heavy Equipment')
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('service.details', $service->slug) }}">
                                                                     {{ $service->name }}</a>
                                                             </li>
                                                         @endif
                                                     @endforeach
                                                     <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.boat-service') }}">
                                                                     Boat Transport Services</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.construction-service') }}">
                                                                     Construction Equipment Services</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.commercial-service') }}">
                                                                     Commercial Truck Transport</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.excavator-service') }}">
                                                                     Excavator Transport Services</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.farm-service') }}">
                                                                     Farm Transport Services</a>
                                                             </li>
                                                             <!-- <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.freight-service') }}">
                                                                     Freight Transportation Services</a>
                                                             </li> -->
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.heavy-service') }}">
                                                                     Heavy Equipment Services</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.rv-service') }}">
                                                                     RV Transport Services</a>
                                                             </li>
@@ -363,24 +363,24 @@
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Freight Transportation')
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('service.details', $service->slug) }}">
                                                                     {{ $service->name }}</a>
                                                             </li>
                                                         @endif
                                                     @endforeach
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.dryvan-service') }}">
                                                                     Dry Van Transport</a>
                                                             </li>
                                                              <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.hazmat-service') }}">
                                                                     Hazmat Transport</a>
                                                             </li>
                                                             <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.reefer-service') }}">
                                                                     Reefer Transport</a>
                                                             </li>
@@ -393,14 +393,14 @@
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'RORO')
                                                             <li>
-                                                                <a class="title"  target="_blank"
+                                                                <a class="title"  
                                                                     href="{{ route('service.details', $service->slug) }}">
                                                                     {{ $service->name }}</a>
                                                             </li>
                                                         @endif
                                                     @endforeach 
                                                      <li>
-                                                                <a class="title" target="_blank"
+                                                                <a class="title" 
                                                                     href="{{ route('frontend.pages.services.roro-service') }}">
                                                                     Roro Shipping International</a>
                                                             </li> 
@@ -437,7 +437,7 @@
                                     @endif
                                     @endforeach
                                     <li>
-                                        <a href="{{ route('order.tracking') }}" target="_blank"
+                                        <a href="{{ route('order.tracking') }}" 
                                             class="{{ Request::routeIs('order.tracking') ? ' active' : '' }}">Track Order</a>
                                     </li>
                                 </ul>
@@ -465,7 +465,7 @@
                                 </ul>
                             </div> --}}
                                 <div class="tj-header-button d-none d-lg-block">
-                                    <a class="tj-header-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                                    <a class="tj-header-btn" href="{{ route('quote.form.combine') }}" >
                                         Get Quote<i class="flaticon-right-1"></i>
                                     </a>
                                 </div>

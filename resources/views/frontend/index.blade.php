@@ -366,6 +366,7 @@
             <ul class="list-gap">
                 <li>
                     <div class="service-item">
+                    <a href="{{ route('vehicleTransportDetail') }}" class="service-link">
                         <div class="tj-service-icon">
                             <div class="service-icon">
                                 <i class="fa-light fa-car-side fa-2xs"></i>
@@ -379,10 +380,12 @@
                                 <i class="fa-light fa-arrow-right"></i>
                             </a>
                         </div>
+                        </a>
                     </div>
                 </li>
                 <li>
                     <div class="service-item">
+                    <a href="{{ route('heavy-transport-detail') }}" class="service-link">
                         <div class="tj-service-icon">
                             <div class="service-icon">
 
@@ -396,10 +399,12 @@
                             <a href="{{ route('heavy-transport-detail') }}" > <i
                                     class="fa-light fa-arrow-right"></i></a>
                         </div>
+                        </a>
                     </div>
                 </li>
                 <li>
                     <div class="service-item">
+                    <a href="{{ route('freighttransport-detail') }}" class="service-link">
                         <div class="tj-service-icon">
                             <div class="service-icon">
 
@@ -413,6 +418,7 @@
                             <a href="{{ route('freighttransport-detail') }}" > <i
                                     class="fa-light fa-arrow-right"></i></a>
                         </div>
+                        </a>
                     </div>
                 </li>
             </ul>
@@ -427,7 +433,7 @@
     <!--=========== Testimonial Section Start =========-->
 
     <!--=========== Service Section Start =========-->
-    <section class="tj-service-section">
+    <section class="tj-service-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -844,6 +850,7 @@
                 </a>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.roro-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/roro-slider-image.webp') }}" alt="Roro Shipping" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.roro-service') }}" > <i
@@ -854,8 +861,10 @@
                     <h4><a href="{{ route('frontend.pages.services.roro-service') }}" 
                             class="title-link">Roro Shipping International</a></h4>
                 </div>
+                </a>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.golf-cart-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/4.webp') }}" alt="Golf Cart Transport Service" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.golf-cart-service') }}" > <i
@@ -866,8 +875,10 @@
                     <h4><a href="{{ route('frontend.pages.services.golf-cart-service') }}" 
                             class="title-link">Golf Cart Transportation Service</a></h4>
                 </div>
+                </a>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.atv-utv-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/atv,utv-1.webp') }}" alt="ATV/UTV Transport Service" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.atv-utv-service') }}" > <i
@@ -878,8 +889,10 @@
                     <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}" 
                             class="title-link">ATV/UTV Transportation Service</a></h4>
                 </div>
+                </a>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.construction-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/Commercial--.webp') }}" alt="Construction Transport Service" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.construction-service') }}" > <i
@@ -890,8 +903,10 @@
                     <h4><a href="{{ route('frontend.pages.services.construction-service') }}" 
                             class="title-link">Construction Transportation Service</a></h4>
                 </div>
+                </a>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.farm-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/10.webp') }}" alt="Farm equipment Transport service" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.farm-service') }}" > <i
@@ -902,8 +917,10 @@
                     <h4><a href="{{ route('frontend.pages.services.farm-service') }}" 
                             class="title-link">Farm Transportation Service</a></h4>
                 </div>
+                </a>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.excavator-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="excavator Transport service" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.excavator-service') }}" > <i
@@ -914,9 +931,10 @@
                     <h4><a href="{{ route('frontend.pages.services.excavator-service') }}" 
                             class="title-link">Excavator Shipping Service</a></h4>
                 </div>
+                </a>
             </div>
             <div class="tj-project-item">
-            <a href="{{ route('frontend.pages.services.commercial-service') }}" >
+            <a href="{{ route('frontend.pages.services.commercial-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/commercial-truck.webp') }}" alt="commercial transport service" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.commercial-service') }}" > <i
@@ -930,6 +948,7 @@
                 </a>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.reefer-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Reefer Transport Service" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.reefer-service') }}" > <i
@@ -940,8 +959,10 @@
                     <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" 
                             class="title-link">Reefer Transportation Service</a></h4>
                 </div>
+                </a>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.hazmat-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/7.webp') }}" alt="Hazmat Transportation Services" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.hazmat-service') }}" > <i
@@ -952,8 +973,10 @@
                     <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" 
                             class="title-link">Hazmat Transportation Service</a></h4>
                 </div>
+                </a>
             </div>
             <div class="tj-project-item">
+            <a href="{{ route('frontend.pages.services.dryvan-service') }}" class="project-link">
                 <img src="{{ asset('frontend/images/project/5.webp') }}" alt="Dry van Transportation Services" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.dryvan-service') }}" > <i
@@ -964,6 +987,7 @@
                     <h4><a href="{{ route('frontend.pages.services.dryvan-service') }}" 
                             class="title-link">Dry van Transportation Service</a></h4>
                 </div>
+                </a>
             </div>
         </div>
     </section>

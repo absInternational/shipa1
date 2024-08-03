@@ -41,6 +41,11 @@
     }
     .login-box .right {
         display: none;
+        /* padding: 20px; */
+        background: #8FC445;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     .login-box h1 {
         font-size: 24px;
@@ -84,15 +89,24 @@
         }
         .login-box .right {
             display: flex;
-            flex: 1;
-            background: #8FC445;
-            justify-content: center;
-            align-items: center;
-            animation: slideIn 1s;
+            flex-direction: column;
         }
         .login-box .right img {
             width: 80%;
             animation: float 3s ease-in-out infinite;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+            color: #fff;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #c3c3c3;
         }
     }
     @keyframes slideIn {
@@ -178,12 +192,28 @@
         </div>
         <div class="right">
             <img src="{{ asset('frontend/images/logo/logo-white.png') }}" alt="Delivery illustration">
+            <div class="social-links">
+                <a href="https://www.facebook.com/shipa1autotransport" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/@shipA1autotransport" target="_blank" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/ShipA1Transport" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://wa.me/+14107184031" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting immediately
