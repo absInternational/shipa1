@@ -421,7 +421,7 @@
                     </div>
                     <h5 class="card-title">Car</h5>
                     <p class="card-text">Sedan, SUV, Pickup etc.</p>
-                    <a href="{{ route('form.vehicle.car') }}" target="_blank">
+                    <a href="{{ route('form.vehicle.car') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -436,7 +436,7 @@
                     </div>
                     <h5 class="card-title">Motorcycle</h5>
                     <p class="card-text">Mopeds, Power Sports etc.</p>
-                    <a href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                    <a href="{{ route('form.vehicle.form.vehicle.car') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -451,7 +451,7 @@
                     </div>
                     <h5 class="card-title">ATV/UTV</h5>
                     <p class="card-text">Sport, Quads, Military etc.</p>
-                    <a href="{{ route('form.vehicle.atv_utv') }}" target="_blank">
+                    <a href="{{ route('form.vehicle.atv_utv') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -469,7 +469,7 @@
                     </div>
                     <h5 class="card-title">Golf Cart</h5>
                     <p class="card-text">Utility cart, electric cart etc.</p>
-                    <a href="{{ route('form.vehicle.golf_cart') }}" target="_blank">
+                    <a href="{{ route('form.vehicle.golf_cart') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -483,7 +483,7 @@
                     </div>
                     <h5 class="card-title">Construction</h5>
                     <p class="card-text">Cranes, Drills, Grinders etc.</p>
-                    <a href="{{ route('frontend.forms.construction_transport') }}" target="_blank">
+                    <a href="{{ route('frontend.forms.construction_transport') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -497,7 +497,7 @@
                     </div>
                     <h5 class="card-title">Heavy Equip</h5>
                     <p class="card-text">Trucks, Bulldozers etc.</p>
-                    <a href="{{ route('form.vehicle.heavyEquipment') }}" target="_blank">
+                    <a href="{{ route('form.vehicle.heavyEquipment') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -515,7 +515,7 @@
                     </div>
                     <h5 class="card-title">Excavator</h5>
                     <p class="card-text">Digger, Driller, Miners etc.</p>
-                    <a href="{{ route('frontend.forms.excavator') }}" target="_blank">
+                    <a href="{{ route('frontend.forms.excavator') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -529,7 +529,7 @@
                     </div>
                     <h5 class="card-title">Boat</h5>
                     <p class="card-text">Speedboats, yard, jet skis etc.</p>
-                    <a href="{{ route('form.vehicle.boat') }}" target="_blank">
+                    <a href="{{ route('form.vehicle.boat') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -543,7 +543,7 @@
                     </div>
                     <h5 class="card-title">RV</h5>
                     <p class="card-text">Motorhome, camper van etc.</p>
-                    <a href="{{ route('frontend.forms.rv_transport') }}" target="_blank">
+                    <a href="{{ route('frontend.forms.rv_transport') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -560,7 +560,7 @@
                     </div>
                     <h5 class="card-title">Commercial Truck</h5>
                     <p class="card-text">Commercial, Dump Trucks etc.</p>
-                    <a href="{{ route('commercial.truck.transport') }}" target="_blank">
+                    <a href="{{ route('commercial.truck.transport') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -575,7 +575,7 @@
                     </div>
                     <h5 class="card-title">Farm</h5>
                     <p class="card-text">Tractor, Planter, Baler etc.</p>
-                    <a href="{{ route('frontend.forms.farm_transport') }}" target="_blank">
+                    <a href="{{ route('frontend.forms.farm_transport') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -589,7 +589,7 @@
                     </div>
                     <h5 class="card-title">Reefer</h5>
                     <p class="card-text">frozen , refrigerated etc.</p>
-                    <a href="{{ route('frontend.forms.reefertrucking') }}" target="_blank">
+                    <a href="{{ route('frontend.forms.reefertrucking') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -607,7 +607,7 @@
                     </div>
                     <h5 class="card-title">Hazmat</h5>
                     <p class="card-text">Explosive, Flammable, etc.</p>
-                    <a href="{{ route('frontend.forms.hazmattransport') }}" target="_blank">
+                    <a href="{{ route('frontend.forms.hazmattransport') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>
@@ -621,7 +621,7 @@
                     </div>
                     <h5 class="card-title">Dry Van</h5>
                     <p class="card-text">palletized, boxed, freight etc.</p>
-                    <a href="{{ route('frontend.forms.dryvan') }}" target="_blank">
+                    <a href="{{ route('frontend.forms.dryvan') }}" >
                         <button class="tj-submit-btn" type="button">Get Quote</button>
                     </a>
                 </div>

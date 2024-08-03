@@ -8422,7 +8422,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .breadcrumb-wrapper .breadcrumb-content .breadcrumb-title {
     color: var(--tj-white-color);
-    margin-bottom: 95px;
+    margin-bottom: 5px;
     font-size: 45px;
 }
 

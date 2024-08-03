@@ -110,7 +110,7 @@
         </div>
      <div class="carousel-wrapper">
          <div class="owl-carousel owl-theme" id="owl-caro">
-
+         
              @foreach ($site_reviews as $site_review)
                  <div class="item">
                      <div class="card">
@@ -161,6 +161,10 @@
                  </div>
              @endforeach
          </div>
+         <!-- <div class="owl-nav">
+            <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
+            <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
+        </div> -->
      </div>
  </section>
  <!--=========== Testimonial Section End =========-->
