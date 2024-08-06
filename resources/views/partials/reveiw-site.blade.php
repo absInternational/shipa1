@@ -100,12 +100,12 @@
  </style>
 
  <!--=========== Testimonial Section Start =========-->
- <section class="tj-testimonial-section">
+ <section class="tj-testimonial-section pb-0">
  <div class="row">
             <div class="tj-section-heading text-center">
                 <span class="sub-title active-shape">check our ratings on the top review sites
                 </span>
-                <h2 class="title">Our Client Reviews</h2>
+                <h1 class="title">Our Client Reviews</h1>
             </div>
         </div>
      <div class="carousel-wrapper">
