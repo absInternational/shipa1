@@ -128,7 +128,7 @@
                 <div>
                     <div class="images">
                         <!-- <div class="title">BBB Reviews</div> -->
-                        <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="50%" height="50%" alt="BBB">
+                        <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="40%" height="50%" alt="BBB">
                     </div>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                 <div>
                     <div class="images">
                         <!-- <div class="title">BBB Reviews</div> -->
-                        <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/google.png') }}" width="50%" height="50%" alt="BBB">
+                        <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/google.png') }}" width="40%" height="50%" alt="BBB">
                     </div>
                 </div>
             </div>
