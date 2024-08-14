@@ -211,14 +211,12 @@
 /* button */
 
 .owl-theme .owl-nav {
-  margin-top: 10px;
   position: relative;
-  margin-top: 10px;
-  bottom: 100px;
+  bottom: 103px;
   justify-content: space-between;
   display: flex;
-  width: 112%;
-  right: 70px;
+  width: 113%;
+  right: 72px;
   /* display: none; */
 }
 

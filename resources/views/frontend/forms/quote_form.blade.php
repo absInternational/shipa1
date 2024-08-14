@@ -8,7 +8,22 @@
 @section('content')
  
 <style>
-
+    .text-overline {
+    text-decoration: overline;
+  }
+    .services-h1 {
+    text-align:center;
+    text-decoration: overline;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+.services {
+    text-align: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    border-radius: 12px;
+    padding: 10px 30px 0px 30px;
+    /* background-color: #9d9e9f14;*/
+}
         .custom-card {
             background: #ffffff70;
             border: none;
@@ -409,9 +424,18 @@
 
 <section class="tj-choose-us-section-get-quote pt-200">
    
-   <div class="container w-75">
-
-   <div class="row">
+    <div class="container w-75">
+            <!-- <div class="row ">
+            <div class="custom-card">
+                <div class="card-body">
+                    
+                    <h5 class="card-title">Get instant Quate</h5>
+                    
+                </div>
+            </div>
+            </div> -->
+        <h2 class="text-center text-white mb-5 text-overline  position-relative">Get instant Quate</h2>
+        <div class="row ">
 
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="custom-card car-card">

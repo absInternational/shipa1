@@ -115,11 +115,12 @@
 </section> -->
 <section class="pt-4 mt-4">
     <div class="container">
+    <h3>See what customers say about their experience with ShipA1 Transport.</h3>
 <div class="owl-carousel owl-theme">
 @foreach ($site_reviews as $site_review)
     
     <div class="item">
-        <div class="card">
+        <div class="card" >
             <div class="firstrow px-2 pt-2 d-flex justify-content-between">
                 <div>{{ $site_review->profile_name }}</div>
                 <div class="d-flex">
@@ -143,14 +144,14 @@
                 </div>
             </div>
             <div class="secondrow px-2 ">
-                <p>
+                <p style="font-size:15px;">
                     <a href="#" >
-                        <span class="less">
+                        <span class="text-dark">
                            I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
                         </span>
-                        <span style="display:none;" class="more">
+                        <span style="display:none;" class="text-dark">
                            I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
-                          <span class="text-muted readless">Read Less</span>
+                          <!-- <span class="text-muted readless">Read Less</span> -->
                         </span>
                     </a>
                 </p>
