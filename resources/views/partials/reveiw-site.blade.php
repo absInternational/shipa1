@@ -59,7 +59,7 @@
          color: #f39c12;
      }
 
-     .owl-nav button {
+     /* .owl-nav button {
          background: none;
          border: none;
          font-size: 2rem;
@@ -85,7 +85,7 @@
 
      .owl-dot.active {
          background: #333;
-     }
+     } */
 
 
      @keyframes custom-slides {
@@ -101,13 +101,13 @@
 
  <!--=========== Testimonial Section Start =========-->
  <section class="tj-testimonial-section pb-0">
- <div class="row">
+        <!-- <div class="row">
             <div class="tj-section-heading text-center">
                 <span class="sub-title active-shape">check our ratings on the top review sites
                 </span>
                 <h1 class="title">Our Client Reviews</h1>
             </div>
-        </div>
+        </div> -->
      <div class="carousel-wrapper">
          <div class="owl-carousel owl-theme" id="owl-caro">
          

@@ -30,17 +30,17 @@
     }
 .services {
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     border-radius: 12px;
-    padding: 10px 10px 30px 10px;
-    background-color: #9d9e9f14;
+    padding: 10px 30px 0px 30px;
+    /* background-color: #9d9e9f14;*/
 }
 
 .services-h1 {
     text-align:center;
     text-decoration: overline;
     margin-bottom: 50px;
-    color: #8FC445;
+    color: #ffffff;
 }
 
 </Style>
@@ -82,25 +82,191 @@
     </div>
 </section>
 
-@include('partials.reveiw-site')
 
-<section class="tj-about-section-four pt-0">
+
+<!-- <section class="tj-about-section-four pt-0">
     <div class="container">
         <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">
         How Commercial Truck Transport<br>Works?</h2>
 
         
     </div>
-</section>
+</section> -->
+<section class="pt-4 mt-4">
+    <div class="container">
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <div class="card">
+            <div class="firstrow px-2 pt-2 d-flex justify-content-between">
+                <div>Peter A</div>
+                <div class="d-flex">
+                    <div class="rate">5.0</div>
+                    <div>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="secondrow px-2 ">
+                <p>
+                    <a href="#" >
+                        <span class="less">
+                           I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
+                        </span>
+                        <span style="display:none;" class="more">
+                           I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
+                          <span class="text-muted readless">Read Less</span>
+                        </span>
+                    </a>
+                </p>
+            </div>
+            <div class="thirdrow px-2 py-2 d-flex justify-content-between">
+                <div class="date">Sep,22 2022</div>
+                <div>
+                    <div class="images">
+                        <!-- <div class="title">BBB Reviews</div> -->
+                        <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="50%" height="50%" alt="BBB">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="card">
+            <div class="firstrow px-2 pt-2 d-flex justify-content-between">
+                <div>Peter A</div>
+                <div class="d-flex">
+                    <div class="rate">5.0</div>
+                    <div>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="secondrow px-2 ">
+                <p>
+                    <a href="#" >
+                        <span class="less">
+                           I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
+                        </span>
+                        <span style="display:none;" class="more">
+                           I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
+                          <span class="text-muted readless">Read Less</span>
+                        </span>
+                    </a>
+                </p>
+            </div>
+            <div class="thirdrow px-2 py-2 d-flex justify-content-between">
+                <div class="date">Sep,22 2022</div>
+                <div>
+                    <div class="images">
+                        <!-- <div class="title">BBB Reviews</div> -->
+                        <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/google.png') }}" width="50%" height="50%" alt="BBB">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="card">
+            <div class="firstrow px-2 pt-2 d-flex justify-content-between">
+                <div>Peter A</div>
+                <div class="d-flex">
+                    <div class="rate">5.0</div>
+                    <div>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="secondrow px-2 ">
+                <p>
+                    <a href="#" >
+                        <span class="less">
+                           I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
+                        </span>
+                        <span style="display:none;" class="more">
+                           I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
+                          <span class="text-muted readless">Read Less</span>
+                        </span>
+                    </a>
+                </p>
+            </div>
+            <div class="thirdrow d-flex justify-content-between py-2 px-2">
+                <div class="date">Sep,22 2022</div>
+                <div>
+                    <div class="images">
+                        <!-- <div class="title">BBB Reviews</div> -->
+                        <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/transport.png') }}" width="50%" height="50%" alt="BBB">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="card">
+            <div class="firstrow px-2 pt-2 d-flex justify-content-between">
+                <div>Peter A</div>
+                <div class="d-flex">
+                    <div class="rate">5.0</div>
+                    <div>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="secondrow px-2 ">
+                <p>
+                    <a href="#" >
+                        <span class="less">
+                           I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
+                        </span>
+                        <span style="display:none;" class="more">
+                           I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
+                          <span class="text-muted readless">Read Less</span>
+                        </span>
+                    </a>
+                </p>
+            </div>
+            <div class="thirdrow px-2 py-2 d-flex justify-content-between">
+                <div class="date">Sep,22 2022</div>
+                <div>
+                    <div class="images">
+                        <!-- <div class="title">BBB Reviews</div> -->
+                        <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/turst.png') }}" width="50%" height="50%" alt="BBB">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+</div>
+   
+</div>
 
-<section class="tj-about-section pt-0 pb-0">
+<section class="tj-about-section pt-0 pb-4 mb-2">
     <div class="container">
         <div class="row">
             <!-- First Row -->
             <div class="col-lg-8 col-md-12 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Construction Equipment Transport</span>
+                    <h3 class="sal-animate" 
+                    data-sal="slide-left" data-sal-duration="800">Overview of Commercial Truck Transport</h3>
+                        <!-- <span class="sub-title active-shape">Construction Equipment Transport</span> -->
                         <p class="desc">When talking about commercial truck transport service, you will find many companies 
                             that offer this service. The industry of auto transport is increasing rapidly. Whether it comes
                              to transport standard vehicles or to deliver goods through commercial trucks, all these services
@@ -136,7 +302,9 @@
             <div class="col-lg-8 col-md-12 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Expert Heavy Hauling</span>
+                    <h3 class="sal-animate" 
+                    data-sal="slide-left" data-sal-duration="800">Choosing a Truck Transport Service</h3>
+                        <!-- <span class="sub-title active-shape">Expert Heavy Hauling</span> -->
                         <p class="desc">There are certain terms and conditions that you need to know before you go to search 
                             commercial truck transport service through a reliable shipping company. Although the companies 
                             offering auto transport services are in great numbers, finding a suitable service at a market 
@@ -152,12 +320,13 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <!-- Third Row -->
+    <!-- <div class="container">
+        <div class="row">           
             <div class="col-lg-8 col-md-12 sal-animate d-flex align-items-center justify-content-center" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
+                    <h3 class="sal-animate" 
+                    data-sal="slide-left" data-sal-duration="800">Safe and Affordable Truck Transport</h3>
                         <span class="sub-title active-shape">Specialized Equipment Shipping</span>
                         <p class="desc">
                              It is risky to transport the vehicle on 
@@ -180,11 +349,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
-            <!-- Fourth Row -->
+            
             <div class="col-lg-4 col-md-12 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
@@ -209,17 +378,87 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+</section>
+
+<section class="tj-cta-section-two">
+        <div class="tj_cta_image"></div>
+        <div class="tj_cta_image1"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="tj-cta-content">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape2"> Here We Are</span>
+                            <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
+                        </div>
+                        <div class="tj-theme-button">
+                            <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" >
+                                Get Quote<i class="flaticon-right-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="tj-cta-content tj-cta-content2">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape2"> Support Center 24/7 </span>
+                            <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
+                        </div>
+                        <div class="tj-theme-button">
+                            <a class="tj-transparent-btn" href="{{ route('contactUs') }}" >
+                                Get Support<i class="flaticon-right-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 
 
-<section class="tj-about-section pt-4">
+<section class="tj-about-section pt-4 mt-2 pb-0">
+    <div class="container">
+        <div class="row">           
+            <div class="col-lg-8 col-md-12 sal-animate d-flex align-items-center justify-content-center" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                    <h3 class="sal-animate" 
+                    data-sal="slide-left" data-sal-duration="800">Safe and Affordable Truck Transport</h3>
+                        <!-- <span class="sub-title active-shape">Specialized Equipment Shipping</span> -->
+                        <p class="desc">
+                             It is risky to transport the vehicle on 
+                             your own on certain routeways; that is why ShipA1 offers reliable commercial truck transport 
+                             service at an affordable cost. One does not need to worry again. We have an extensive network of workers 
+                            who are experts in the vehicle shipping industry. They are aware of the routes and pathways that work best 
+                            during the shipment. To add more safety and security, our team tracks your vehicle continuously during the 
+                            shipment. Another factor that is the reason behind the increase and decrease in the prices is the factor of 
+                            the weather and time period. Since the residents of the United States are blessed to experience all kinds of 
+                            weather conditions, there is one special weather when the price reaches its highest level. In winters, commercial 
+                            truck transport becomes difficult, and that is why not many car shipping companies are up for the task.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 sal-animate d-flex align-items-center justify-content-center" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE-2.webp') }}" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+
+<section class="tj-about-section pt-4 mt-4">
         
         <div class="container">
             <div class="row">
-                
-            
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <h2 class="title sal-animate" data-sal="slide-left" data-sal-duration="800">
+            Why Choose Ship A1 Transport for Your Truck Hauling Needs?</h2>
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Affordable Pricing</span>
@@ -231,7 +470,7 @@
                         
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Country-Wide Shipping</span>
@@ -243,11 +482,38 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                
+            
+            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one border rounded p-4">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape">Dependability You Can Count On</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <p class="desc">
+                            You may feel easy knowing that your vehicles are being carried by a team of experts who work together to ensure safety and security throughout the entire procedure.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one border rounded p-4">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape">High-Tech Equipment</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <p class="desc">
+                            In order to minimize the possibility of damage occurring during transit, we load, move, and unload your trucks quickly and efficiently using the newest technology and equipment.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
 
 </section>
 
-<section class="tj-cta-section-two">
+<!-- <section class="tj-cta-section-two">
             <div class="tj_cta_image-4 w-100 h-50"></div>
             
             <div class="container">
@@ -278,13 +544,17 @@
                 </div>
             </div>
 
-</section>
+</section> -->
 
-<section class="tj-about-section-five">
+<section class="tj-choose-us-section-service-commercial">
 
-    <div class="container">
+    <div class="container why-box">
         <div class="row services">
-            <h1 class="services-h1">Factors Affecting the Price</h1>
+            <div class="col-12">
+
+                <h1 class="services-h1">Factors Affecting the Price</h1>
+            </div>
+
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
@@ -317,7 +587,7 @@
 
 </section>
 
-<section class="tj-choose-us-section-service-commercial">
+<!-- <section class="tj-choose-us-section-service-commercial">
 
     <div class="container why-box">
         <div class="row">
@@ -378,10 +648,10 @@
         </div>
     </div>
 
-</section>
+</section> -->
 
   <!--========== Faq Section Start ==============-->
-  <section class="tj-faq-section tj-faq-page">
+<section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -414,8 +684,9 @@
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>Yes, Ship A1 offers a variety of heavy equipment services specially tailored to your needs, whether it’s a
-forklift, excavator, trailer, crane, etc. we are here to assist you with a 100% guarantee of quality, safety,
-and flexible rates for your route.</strong>
+                            forklift, excavator, trailer, crane, etc. we are here to assist you with a 100% guarantee of quality, safety,
+                            and flexible rates for your route.
+                            </strong>
                                     </div>
                                 </div>
                             </div>
@@ -430,10 +701,11 @@ and flexible rates for your route.</strong>
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>It all depends on the type of equipment you are planning on shipping, other than that our estimated
-delivery time also varies on the distance, weather conditions as well and road conditions. However, if
-you want your heavy equipment to be delivered urgently then we would suggest you opt for expedited
-shipping as it’s the fastest shipping service provided by Ship A1, while it is a bit pricey it would ensure
-your equipment reaches you in your desired timeframe.</strong>
+                                            delivery time also varies on the distance, weather conditions as well and road conditions. However, if
+                                            you want your heavy equipment to be delivered urgently then we would suggest you opt for expedited
+                                            shipping as it’s the fastest shipping service provided by Ship A1, while it is a bit pricey it would ensure
+                                            your equipment reaches you in your desired timeframe.
+                                            </strong>
                                     </div>
                                 </div>
                             </div>
@@ -476,10 +748,10 @@ your equipment reaches you in your desired timeframe.</strong>
                 </div>
             </div>
         </div>
-    </section>
+</section>
 
-    <!--========== Faq Section End ==============-->
-
+<!--========== Faq Section End ==============-->
+ 
 <!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
 <!--=========== Blog Section End =========-->
@@ -957,6 +1229,20 @@ $("#pickup-location, #delivery-location").keyup(function() {
         suggestionsList.css("display", "none");
     }
     updateSuggestions(inputField, suggestionsList);
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    items: 3,
+    autoplay: true,
+    autoplayTimeout: 30000,
+    autoplayHoverPause: true
+  });
 });
 </script>
 

@@ -379,7 +379,7 @@
             border: 2px solid red;
         }
         
-    </style>
+</style>
 
 
     <!--========== breadcrumb Start ==============-->

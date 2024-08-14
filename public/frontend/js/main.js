@@ -132,31 +132,38 @@
     });
 
     // Testimonial Slider One
-    var testimonial1 = new Swiper(".tj-testimonial-slider", {
-        slidesPerView: 2,
-        spaceBetween: 30,
-        autoplay: {
-            delay: 8500,
+var testimonial1 = new Swiper(".tj-testimonial-slider", {
+    slidesPerView: 3, // Default number of slides shown
+    spaceBetween: 30,
+    autoplay: {
+        delay: 8500,
+    },
+    loop: true,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
         },
-        loop: true,
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-            },
-            640: {
-                slidesPerView: 1,
-            },
-            991: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 1,
-            },
-            1024: {
-                slidesPerView: 2,
-            },
+        480: {
+            slidesPerView: 2, // Show 2 slides for screens 480px and wider
         },
-    });
+        640: {
+            slidesPerView: 2, // Show 2 slides for screens 640px and wider
+        },
+        768: {
+            slidesPerView: 3, // Show 3 slides for screens 768px and wider
+        },
+        991: {
+            slidesPerView: 3, // Show 3 slides for screens 991px and wider
+        },
+        1024: {
+            slidesPerView: 3, // Show 4 slides for screens 1024px and wider
+        },
+        1280: {
+            slidesPerView: 3, // Show 4 slides for screens 1280px and wider
+        },
+    },
+});
+
 
     // Testimonial Slider Two
     var testimonial2 = new Swiper(".tj-testimonial-slider2", {

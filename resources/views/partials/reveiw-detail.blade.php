@@ -28,25 +28,25 @@
                                     <div class="content-area">
                                         <p style="height: 100px;">
                                             {{-- {{ $review->description }} --}}
-                                            {{ !is_null($review->description) ? Illuminate\Support\Str::limit($review->description, 50, '...') : '' }}
+                                            {{ !is_null($review->description) ? Illuminate\Support\Str::limit($review->description, 170, '...') : '' }}
                                         </p>
                                         <br><br><br>
                                         <div class="testimonial-content d-flex justify-content-between">
                                             <div class="testimonial-auother">
-                                                <h5 style="" class="title pt-5">{{ $review->person_name }} </h5>
+                                                <h5 style="" class="title ">{{ $review->person_name }} </h5>
                                                 <span
-                                                    class="sub-title pt-5">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
+                                                    class="sub-title ">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
                                             </div>
-                                            <div class="testimonial-comment pt-5">
+                                            <div class="testimonial-comment ">
                                                 @if ($review->site_name == 'BBB')
                                                     <img src="{{ asset('frontend/images/testimonial/bbb.png') }}"
-                                                        alt="Image" style="width: 184px; height: 69px;" />
+                                                        alt="Image" style="width: 70px; height: 30px;" />
                                                 @elseif ($review->site_name == 'Google')
                                                     <img src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                        alt="Image" style="width: 184px; height: 69px;" />
+                                                        alt="Image" style="width: 70px; height: 30px;" />
                                                 @else
                                                     <img src="{{ asset('frontend/images/testimonial/transport.png') }}"
-                                                        alt="Image" style="width: 184px; height: 69px;" />
+                                                        alt="Image" style="width: 70px; height: 30px;" />
                                                 @endif
                                             </div>
                                         </div>

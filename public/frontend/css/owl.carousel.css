@@ -208,6 +208,8 @@
   display: none;
 }
 
+/* button */
+
 .owl-theme .owl-nav {
   margin-top: 10px;
   position: relative;
@@ -217,17 +219,22 @@
   display: flex;
   width: 112%;
   right: 70px;
+  /* display: none; */
 }
 
 .owl-theme .owl-nav [class*=owl-] {
+  border: none;
   color: #FFF;
   font-size: 20px;
   margin: 5px;
   padding: 5px 25px;
-  background: #8fc445;
+  /* background: #8fc445;
+  border-radius: 25px; */
   display: inline-block;
   cursor: pointer;
-  border-radius: 25px;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background: radial-gradient(circle at 10% 20%, rgb(191, 254, 149) 0%, rgb(99, 197, 7) 90.1%)  !important;
+  color: white !important;
 }
 
 .owl-theme .owl-nav [class*=owl-]:hover {
