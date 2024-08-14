@@ -58,7 +58,15 @@
      .fa-star {
          color: #f39c12;
      }
+     @keyframes custom-slides {
+         from {
+             transform: translateX(0);
+         }
 
+         to {
+             transform: translateX(-80%);
+         }
+     }
      /* .owl-nav button {
          background: none;
          border: none;
@@ -88,15 +96,7 @@
      } */
 
 
-     @keyframes custom-slides {
-         from {
-             transform: translateX(0);
-         }
-
-         to {
-             transform: translateX(-80%);
-         }
-     }
+     
  </style>
 
  <!--=========== Testimonial Section Start =========-->

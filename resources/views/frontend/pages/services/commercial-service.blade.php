@@ -43,6 +43,27 @@
     color: #ffffff;
 }
 
+     .fa-star {
+         color: #f39c12;
+     }
+     .rates {
+         background: #8FC445;
+         font-size: 16px;
+         color: #FFFFFF;
+         font-weight: bold;
+         box-shadow: 0 0px 30px 0 #56ff0061;
+         width: 42px;
+         height: 28px;
+         float: right;
+         border-radius: 5px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-right: 10px;
+         -webkit-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
+         -moz-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
+         box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
+     }
 </Style>
 <!--========== blog details Start ==============-->
 
@@ -95,18 +116,29 @@
 <section class="pt-4 mt-4">
     <div class="container">
 <div class="owl-carousel owl-theme">
+@foreach ($site_reviews as $site_review)
+    
     <div class="item">
         <div class="card">
             <div class="firstrow px-2 pt-2 d-flex justify-content-between">
-                <div>Peter A</div>
+                <div>{{ $site_review->profile_name }}</div>
                 <div class="d-flex">
-                    <div class="rate">5.0</div>
+                    <div class="rates">{{ $site_review->rating }}</div>
                     <div>
+                    @for ($i = 1; $i <= 5; $i++)
+                        @if ($site_review->rating >= $i)
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        @elseif ($site_review->rating >= $i - 0.5)
+                            <i class="fa a-star-o" aria-hidden="true"></i>
+                        @else
+                            <i class="fa fa-star-o text-light" aria-hidden="true"></i>
+                        @endif
+                    @endfor
+                        <!-- <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
                         <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i> -->
                     </div>
                 </div>
             </div>
@@ -127,14 +159,32 @@
                 <div class="date">Sep,22 2022</div>
                 <div>
                     <div class="images">
+                        @if ($site_review->profile_name == 'BBB')
+                            <img class="float-end" loading="lazy"
+                                src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="60%"
+                                height="100%" alt="BBB" />
+                        @elseif ($site_review->profile_name == 'Google')
+                            <img class="float-end" loading="lazy"
+                                src="{{ asset('frontend/images/testimonial/google.png') }}"
+                                width="50%" height="100%" alt="Google" />
+                        @elseif($site_review->profile_name == 'Transport Reviews')
+                            <img class="float-end" loading="lazy"
+                                src="{{ asset('frontend/images/testimonial/transport.png') }}"
+                                width="90%" height="100%" alt="Transport Reviews" />
+                        @elseif($site_review->profile_name == 'Trust Pilot')
+                            <img class="float-end" loading="lazy"
+                                src="{{ asset('frontend/images/testimonial/turst.png') }}"
+                                width="70%" height="100%" alt="Trust Pilot" />
+                        @endif
                         <!-- <div class="title">BBB Reviews</div> -->
-                        <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="40%" height="50%" alt="BBB">
+                        <!-- <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="40%" height="50%" alt="BBB"> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="item">
+@endforeach
+    {{-- <div class="item">
         <div class="card">
             <div class="firstrow px-2 pt-2 d-flex justify-content-between">
                 <div>Peter A</div>
@@ -250,7 +300,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
    
 </div>
 </div>
@@ -1238,10 +1288,21 @@ $(document).ready(function(){
     loop: true,
     margin: 30,
     nav: true,
-    items: 3,
+    items: 3, // Default number of items
     autoplay: true,
-    autoplayTimeout: 30000,
-    autoplayHoverPause: true
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1 // Show 1 item on screens smaller than 600px
+      },
+      600: {
+        items: 2 // Show 2 items on screens larger than 600px
+      },
+      1000: {
+        items: 3 // Show 3 items on screens larger than 1000px
+      }
+    }
   });
 });
 </script>
