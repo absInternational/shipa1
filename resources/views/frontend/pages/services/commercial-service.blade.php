@@ -507,7 +507,7 @@
             <h2 class="title sal-animate" data-sal="slide-left" data-sal-duration="800">
             Why Choose Ship A1 Transport for Your Truck Hauling Needs?</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                    <div class="about-content-one border rounded p-4 mb-0">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Affordable Pricing</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -519,7 +519,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                    <div class="about-content-one border rounded p-4 mb-0">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Country-Wide Shipping</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -534,7 +534,7 @@
                 
             
             <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                    <div class="about-content-one border rounded p-4 mb-0">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Dependability You Can Count On</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -546,7 +546,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                    <div class="about-content-one border rounded p-4 mb-0">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">High-Tech Equipment</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->

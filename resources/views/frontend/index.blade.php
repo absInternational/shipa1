@@ -456,6 +456,11 @@
                 <div class="service-content">
                     <h4>VEHICLE TRANSPORTATION</h4>
                     <p>Long established fact that reader will be distracted by the</p>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('vehicleTransportDetail') }}" style="background: #8fc445;color: white;">
+                            Read More<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </a>
@@ -471,6 +476,11 @@
                 <div class="service-content">
                     <h4>HEAVY TRANSPORTATION</h4>
                     <p>Long established fact that reader will be distracted by the</p>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('heavy-transport-detail') }}" style="background: #8fc445;color: white;">
+                            Read More<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </a>
@@ -486,6 +496,11 @@
                 <div class="service-content">
                     <h4>FREIGHT TRANSPORTATION</h4>
                     <p>Long established fact that reader will be distracted by the</p>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('freighttransport-detail') }}" style="background: #8fc445;color: white;">
+                            Read More<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </a>
