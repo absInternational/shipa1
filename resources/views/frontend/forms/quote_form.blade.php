@@ -434,7 +434,7 @@
                 </div>
             </div>
             </div> -->
-        <h2 class="text-center text-white mb-5 text-overline  position-relative">Get instant Quate</h2>
+        <h1 class="text-center text-white mb-5 text-overline  position-relative">Get an instant Quote</h1>
         <div class="row ">
 
         <div class="col-lg-4 col-md-6 col-sm-12">

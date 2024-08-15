@@ -312,25 +312,23 @@
     <div class="container">
         <div class="row">
             <!-- First Row -->
-            <div class="col-lg-8 col-md-12 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                    <h3 class="sal-animate" 
-                    data-sal="slide-left" data-sal-duration="800">Overview of Commercial Truck Transport</h3>
-                        <!-- <span class="sub-title active-shape">Construction Equipment Transport</span> -->
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Overview of Commercial Truck Transport</h3>
                         <p class="desc">When talking about commercial truck transport service, you will find many companies 
                             that offer this service. The industry of auto transport is increasing rapidly. Whether it comes
-                             to transport standard vehicles or to deliver goods through commercial trucks, all these services
-                              are accessible on the internet easily. The industry is spread over multiple domains and 
-                              categories, offering a variety of different services. Commercial truck shipping falls in 
-                              one of these categories. The service itself has its pros and cons. Ship A1 is the top-rank 
-                              vehicle transport company offering multiple services to its valuable customers for many years.
-                              As every business and industry has its own set of rules and regulations, similarly, the 
-                              shipping industry is not different from others.</p>
+                            to transport standard vehicles or to deliver goods through commercial trucks, all these services
+                            are accessible on the internet easily. The industry is spread over multiple domains and 
+                            categories, offering a variety of different services. Commercial truck shipping falls in 
+                            one of these categories. The service itself has its pros and cons. Ship A1 is the top-rank 
+                            vehicle transport company offering multiple services to its valuable customers for many years.
+                            As every business and industry has its own set of rules and regulations, similarly, the 
+                            shipping industry is not different from others.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
                         <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
@@ -339,23 +337,21 @@
             </div>
         </div>
     </div>
-
+    
     <div class="container">
         <div class="row">
             <!-- Second Row -->
-            <div class="col-lg-4 col-md-12 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
                         <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE3.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 col-md-12 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-8 col-md-12 order-sm-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                    <h3 class="sal-animate" 
-                    data-sal="slide-left" data-sal-duration="800">Choosing a Truck Transport Service</h3>
-                        <!-- <span class="sub-title active-shape">Expert Heavy Hauling</span> -->
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Choosing a Truck Transport Service</h3>
                         <p class="desc">There are certain terms and conditions that you need to know before you go to search 
                             commercial truck transport service through a reliable shipping company. Although the companies 
                             offering auto transport services are in great numbers, finding a suitable service at a market 
@@ -370,6 +366,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- <div class="container">
         <div class="row">           
