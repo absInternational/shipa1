@@ -26,7 +26,7 @@
         border: 1px solid #ddd;
         border-radius: 12px;
         padding: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
     }
 .services {
     text-align: center;
@@ -48,21 +48,21 @@
      }
      .rates {
          background: #8FC445;
-         font-size: 16px;
+         font-size: 12px;
          color: #FFFFFF;
          font-weight: bold;
-         box-shadow: 0 0px 30px 0 #56ff0061;
-         width: 42px;
-         height: 28px;
+         width: 36px;
+         height: 22px;
          float: right;
          border-radius: 5px;
          display: flex;
          align-items: center;
          justify-content: center;
          margin-right: 10px;
-         -webkit-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
+         /* box-shadow: 0 0px 30px 0 #56ff0061; */
+         /* -webkit-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
          -moz-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
-         box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
+         box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7); */
      }
 </Style>
 <!--========== blog details Start ==============-->
@@ -167,7 +167,7 @@
                         @elseif ($site_review->profile_name == 'Google')
                             <img class="float-end" loading="lazy"
                                 src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                width="50%" height="100%" alt="Google" />
+                                width="40%" height="100%" alt="Google" />
                         @elseif($site_review->profile_name == 'Transport Reviews')
                             <img class="float-end" loading="lazy"
                                 src="{{ asset('frontend/images/testimonial/transport.png') }}"
@@ -597,7 +597,7 @@
 
 </section> -->
 
-<section class="tj-choose-us-section-service-commercial">
+<section class="tj-choose-us-section-service-commercial-2">
 
     <div class="container why-box">
         <div class="row services">
