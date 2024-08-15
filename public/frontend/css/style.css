@@ -4066,8 +4066,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 20px;
-    padding-top: 110px;
+    padding-bottom: 50px;
+    padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
     /* opacity: 1; */

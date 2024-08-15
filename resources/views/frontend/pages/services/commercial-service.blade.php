@@ -9,8 +9,8 @@
 
 .why-box {
     border-radius: 12px;
-    padding: 40px 0px;
-    background: #183c46eb;
+    padding: 20px 0px;
+    background: #f8f9fa;
 }
 
 .title-2 {
@@ -22,7 +22,7 @@
 }
 
 .card- {
-        background: #29494e;
+        /* background: #29494e; */
         border: 1px solid #ddd;
         border-radius: 12px;
         padding: 15px;
@@ -38,9 +38,9 @@
 
 .services-h1 {
     text-align:center;
-    text-decoration: overline;
+    /* text-decoration: overline; */
     margin-bottom: 50px;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
      .fa-star {
@@ -609,8 +609,8 @@
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Dimensions of the Truck</h5>
-                        <p class="card-text text-light">The size and weight of the moving vehicle is the detrimental factor that
+                        <h5 class="card-title text-dark">Dimensions of the Truck</h5>
+                        <p class="card-text text-dark">The size and weight of the moving vehicle is the detrimental factor that
                              brings change to the price. The trailer type also varies as per the dimensions of the truck.</p>
                     </div>
                 </div>
@@ -618,8 +618,8 @@
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Underlying Trailer Type</h5>
-                        <p class="card-text text-light">To ship a truck in a safe manner from one place to another destination,
+                        <h5 class="card-title text-dark">Underlying Trailer Type</h5>
+                        <p class="card-text text-dark">To ship a truck in a safe manner from one place to another destination,
                              you need to have a specific trailer type. For mid-size trucks a flatbed trailer is fine but not for 
                              every truck.</p>
                     </div>
@@ -628,8 +628,8 @@
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Pick-up and drop-off location</h5>
-                        <p class="card-text text-light">Its a no-brainer to calculate the per-mile cost of delivery. Lesser the miles more the cost & vice versa. If the route being travelled is common then also the cost will be down.</p>
+                        <h5 class="card-title text-dark">Pick-up and drop-off location</h5>
+                        <p class="card-text text-dark">Its a no-brainer to calculate the per-mile cost of delivery. Lesser the miles more the cost & vice versa. If the route being travelled is common then also the cost will be down.</p>
                     </div>
                 </div>
             </div>
