@@ -3,7 +3,7 @@
         <div class="logo-area">
             <div class="logo-box">
                 <a href="#"><img
-                        src="https://blog.shipa1.daydispatch.com/public/frontend/images/logo/logo.png"
+                        src="https://washington.shawntransport.com/images/logo.png"
                         alt="Logo" /></a>
             </div>
         </div>
