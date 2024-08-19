@@ -345,6 +345,9 @@
                     type: 'POST',
                     url: '{{ route('get.order.details') }}',
                     data: formData,
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken
+                    },
                     success: function(response) {
                         // Display SweetAlert input box
                         Swal.fire({
