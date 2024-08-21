@@ -36,8 +36,8 @@ huge discount offers and free shipping quotes nationwide.')
 .custom-style {
     padding: 20px;
     background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    box-shadow: 0 5px 30px 0 rgba(35,43,54,.3);
+    border-radius: 15px;
 }
 
 .custom-style h4 {
@@ -99,6 +99,10 @@ huge discount offers and free shipping quotes nationwide.')
          -moz-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
          box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7); */
      }
+     .review-counter {
+        font-size: 2rem;
+        font-weight: bold;
+    }
 </style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -156,6 +160,29 @@ huge discount offers and free shipping quotes nationwide.')
                         from the rough conditions of the environment like dust, wind, heavy rainfall, storms, etc. --}}
                     </p>
                 </div>
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <h4>Succesful Shipment</h4>
+                        <div class="review-counter">
+                            <span id="counter-value" class="ms-3" data-target="318">0</span>k+
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h4>Satisfied Clients</h4>
+                        <div class="review-counter">
+                            <span id="counter-value-2" class="ms-3" data-target="28">0</span>k+
+                        </div>
+                    </div>
+                    {{-- <div class="col-4 text-center">
+                        <h4>Review Counter</h4>
+                        <div class="review-counter">
+                            <span id="counter-value" class="mx-3" data-target="1000">0</span>
+                        </div>
+                    </div> --}}
+
+
+                </div>
+                
             </div>
             <div class="col-lg-5 p-0">
 
@@ -414,7 +441,7 @@ huge discount offers and free shipping quotes nationwide.')
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE3.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/tuxpi.com.1724264978.webp') }}" alt="Image">
                     </div>
                     <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
@@ -425,7 +452,7 @@ huge discount offers and free shipping quotes nationwide.')
             <div class="col-lg-4 col-md-12 order-sm-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE3.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/tuxpi.com.1724265027.webp') }}" alt="Image">
                     </div>
                     <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
@@ -1155,4 +1182,43 @@ $("#pickup-location, #delivery-location").keyup(function() {
       });
     });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const counter = document.getElementById('counter-value');
+            const target = +counter.getAttribute('data-target');
+            let count = 0;
+            const increment = target / 50; // Adjust this value to control the speed
+    
+            const updateCounter = () => {
+                if (count < target) {
+                    count = Math.ceil(count + increment);
+                    counter.textContent = count;
+                    setTimeout(updateCounter, 50); // Adjust this value to control the speed
+                } else {
+                    counter.textContent = target;
+                }
+            };
+    
+            updateCounter();
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const counter = document.getElementById('counter-value-2');
+            const target = +counter.getAttribute('data-target');
+            let count = 0;
+            const increment = target / 50; // Adjust this value to control the speed
+    
+            const updateCounter = () => {
+                if (count < target) {
+                    count = Math.ceil(count + increment);
+                    counter.textContent = count;
+                    setTimeout(updateCounter, 50); // Adjust this value to control the speed
+                } else {
+                    counter.textContent = target;
+                }
+            };
+    
+            updateCounter();
+        });
+    </script>
+    
 @endsection
