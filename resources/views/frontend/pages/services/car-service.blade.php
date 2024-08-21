@@ -78,6 +78,27 @@ huge discount offers and free shipping quotes nationwide.')
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.fa-star {
+         color: #f39c12;
+     }
+     .rates {
+         background: #8FC445;
+         font-size: 12px;
+         color: #FFFFFF;
+         font-weight: bold;
+         width: 36px;
+         height: 22px;
+         float: right;
+         border-radius: 5px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-right: 10px;
+         /* box-shadow: 0 0px 30px 0 #56ff0061; */
+         /* -webkit-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
+         -moz-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
+         box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7); */
+     }
 </style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -107,7 +128,7 @@ huge discount offers and free shipping quotes nationwide.')
 <section class="tj-blog-standard pb-0">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <div class="image-container">
                     <img class="img-fluid" src="{{ asset('frontend/images/project/CAR-SERVICE-MAIN.webp') }}"
                         loading="lazy" alt="Motorcyle Transport">
@@ -124,19 +145,19 @@ huge discount offers and free shipping quotes nationwide.')
                         ShipA1 always has secured the vision to give high-quality car transport services to their
                         customers with an aim to provide innovative solutions to unique car transportation needs of the
                         customers.
-                        If you want to transport your vehicle in a very less amount of time, then you can use the
+                        {{-- If you want to transport your vehicle in a very less amount of time, then you can use the
                         service of ShipA1 car transport service as it is known for expedited shipping of vehicles.
                         With unique shipping styles that are a part of ShipA1, customers can easily transport their cars
-                        through open car transport service.
-                        <br>
+                        through open car transport service. --}}
+                        {{-- <br>
                         Open car transport is about the shipment of the car in an open-air, and the trucker will be
                         taking care of everything from the beginning till the end. Enclosed carriers are a part of
                         ShipA1, and those carriers transport the cars in an enclosed environment where they are safe
-                        from the rough conditions of the environment like dust, wind, heavy rainfall, storms, etc.
+                        from the rough conditions of the environment like dust, wind, heavy rainfall, storms, etc. --}}
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4 p-0">
+            <div class="col-lg-5 p-0">
 
                 @if (session('success'))
                 <div class="alert alert-success">
@@ -337,7 +358,7 @@ huge discount offers and free shipping quotes nationwide.')
             </div>
         </div>
 
-        <div class="row full-width">
+        <div class="row full-width mt-4">
             <div class="col-12 custom-style">
                 <h4 class=" text-center">Premium Vehicle Transport Services</h4>
                 <p class=" text-center">ShipA1, with its standard <a class="pp-link-2"
@@ -364,7 +385,7 @@ huge discount offers and free shipping quotes nationwide.')
 <section class="tj-about-section pt-0">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Quality and Affordability</span>
@@ -390,26 +411,253 @@ huge discount offers and free shipping quotes nationwide.')
 
                 </div>
             </div>
-            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/CARS-SERVICE.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE3.webp') }}" alt="Image">
                     </div>
                     <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE3.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
+
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 order-sm-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Quality and Affordability</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                           
+                             At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even
+                            find various suitable services! For shipping your luxurious vehicle, you can opt for
+                            enclosed trailers as they are made to protect your vehicle from road debris, scratches, the
+                            uncertainty of weather conditions, and potential risks. However, if you are searching for
+                            something equally cost-effective and safe, go for open transport! We have expedited options
+                            and door-to-door delivery for fast vehicle shipping.
+                            <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
     </div>
 </section>
-@include('partials.reveiw-site')
+<section class="pt-4 mt-4 bg-light">
+    <div class="container">
+        <h3 class="text-center">See what customers say about their experience with ShipA1 Transport.</h3>
+           <div class="owl-carousel owl-theme">
+            @foreach ($site_reviews as $site_review)
+                
+                <div class="item">
+                    <div class="card" >
+                        <div class="firstrow px-2 pt-2 d-flex justify-content-between">
+                            <div>{{ $site_review->profile_name }}</div>
+                            <div class="d-flex">
+                                <div class="rates">{{ $site_review->rating }}</div>
+                                <div>
+                                @for ($i = 1; $i <= 5; $i++)
+                                    @if ($site_review->rating >= $i)
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    @elseif ($site_review->rating >= $i - 0.5)
+                                        <i class="fa a-star-o" aria-hidden="true"></i>
+                                    @else
+                                        <i class="fa fa-star-o text-light" aria-hidden="true"></i>
+                                    @endif
+                                @endfor
+                                    <!-- <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secondrow px-2 ">
+                            <p style="font-size:15px;">
+                                <a href="#" >
+                                    <span class="text-dark">
+                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
+                                    </span>
+                                    <span style="display:none;" class="text-dark">
+                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
+                                    <!-- <span class="text-muted readless">Read Less</span> -->
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="thirdrow px-2 py-2 d-flex justify-content-between">
+                            <div class="date">Sep,22 2022</div>
+                            <div>
+                                <div class="images">
+                                    @if ($site_review->profile_name == 'BBB')
+                                        <img class="float-end" loading="lazy"
+                                            src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="60%"
+                                            height="100%" alt="BBB" />
+                                    @elseif ($site_review->profile_name == 'Google')
+                                        <img class="float-end" loading="lazy"
+                                            src="{{ asset('frontend/images/testimonial/google.png') }}"
+                                            width="40%" height="100%" alt="Google" />
+                                    @elseif($site_review->profile_name == 'Transport Reviews')
+                                        <img class="float-end" loading="lazy"
+                                            src="{{ asset('frontend/images/testimonial/transport.png') }}"
+                                            width="90%" height="100%" alt="Transport Reviews" />
+                                    @elseif($site_review->profile_name == 'Trust Pilot')
+                                        <img class="float-end" loading="lazy"
+                                            src="{{ asset('frontend/images/testimonial/turst.png') }}"
+                                            width="70%" height="100%" alt="Trust Pilot" />
+                                    @endif
+                                    <!-- <div class="title">BBB Reviews</div> -->
+                                    <!-- <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="40%" height="50%" alt="BBB"> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+                {{-- <div class="item">
+                    <div class="card">
+                        <div class="firstrow px-2 pt-2 d-flex justify-content-between">
+                            <div>Peter A</div>
+                            <div class="d-flex">
+                                <div class="rate">5.0</div>
+                                <div>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secondrow px-2 ">
+                            <p>
+                                <a href="#" >
+                                    <span class="less">
+                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
+                                    </span>
+                                    <span style="display:none;" class="more">
+                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
+                                    <span class="text-muted readless">Read Less</span>
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="thirdrow px-2 py-2 d-flex justify-content-between">
+                            <div class="date">Sep,22 2022</div>
+                            <div>
+                                <div class="images">
+                                    <!-- <div class="title">BBB Reviews</div> -->
+                                    <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/google.png') }}" width="40%" height="50%" alt="BBB">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="firstrow px-2 pt-2 d-flex justify-content-between">
+                            <div>Peter A</div>
+                            <div class="d-flex">
+                                <div class="rate">5.0</div>
+                                <div>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secondrow px-2 ">
+                            <p>
+                                <a href="#" >
+                                    <span class="less">
+                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
+                                    </span>
+                                    <span style="display:none;" class="more">
+                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
+                                    <span class="text-muted readless">Read Less</span>
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="thirdrow d-flex justify-content-between py-2 px-2">
+                            <div class="date">Sep,22 2022</div>
+                            <div>
+                                <div class="images">
+                                    <!-- <div class="title">BBB Reviews</div> -->
+                                    <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/transport.png') }}" width="50%" height="50%" alt="BBB">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="firstrow px-2 pt-2 d-flex justify-content-between">
+                            <div>Peter A</div>
+                            <div class="d-flex">
+                                <div class="rate">5.0</div>
+                                <div>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secondrow px-2 ">
+                            <p>
+                                <a href="#" >
+                                    <span class="less">
+                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
+                                    </span>
+                                    <span style="display:none;" class="more">
+                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
+                                    <span class="text-muted readless">Read Less</span>
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="thirdrow px-2 py-2 d-flex justify-content-between">
+                            <div class="date">Sep,22 2022</div>
+                            <div>
+                                <div class="images">
+                                    <!-- <div class="title">BBB Reviews</div> -->
+                                    <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/turst.png') }}" width="50%" height="50%" alt="BBB">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+    
+      </div>
+    </div>
+   
+</section>
+
 <section class="tj-about-section pt-4">
 
 
     <div class="container">
         <div class="row">
 
-
+            <h2 class="title sal-animate" data-sal="slide-left" data-sal-duration="800">
+                The Premier Unmatched Excellence in the Auto Transport</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
@@ -435,10 +683,38 @@ huge discount offers and free shipping quotes nationwide.')
 
                 </div>
             </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">A Customer-First Perspective</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Customers are the center of every decision made by ShipA1. We provide 
+                            customized solutions to fulfill specific requirements, guaranteeing a smooth and personalized journey.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Advanced Technologies</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            At ShipA1, we use cutting-edge technology to improve transparency and efficiency.
+                             Our cutting-edge technology make sure you're constantly aware of and in charge of your cargo.</p>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
-<section class="tj-cta-section-two">
+@include('partials.cta-section')
+
+{{-- <section class="tj-cta-section-two">
     <div class="tj_cta_image-4 w-100 h-50"></div>
 
     <div class="container">
@@ -468,8 +744,11 @@ huge discount offers and free shipping quotes nationwide.')
             </div>
         </div>
     </div>
-</section>
-<section class="tj-about-section-five">
+</section> --}}
+
+
+
+{{-- <section class="tj-about-section-five">
     <div class="container">
         <div class="row services">
             <h1 class="services-h1">Car Hauling Services</h1>
@@ -505,8 +784,9 @@ huge discount offers and free shipping quotes nationwide.')
             </div>
         </div>
     </div>
-</section>
-<section class="tj-faq-section tj-faq-page pt-0">
+</section> --}}
+
+<section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -583,7 +863,7 @@ huge discount offers and free shipping quotes nationwide.')
     </div>
 </section>
 
-<section class="tj-choose-us-section-service-car-2">
+{{-- <section class="tj-choose-us-section-service-car-2">
     <div class="container why-box">
         <div class="row">
             <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -648,7 +928,9 @@ huge discount offers and free shipping quotes nationwide.')
         </div>
     </div>
 
-</section>
+</section> --}}
+
+
 
 @include('partials.blog-slider')
 
@@ -849,4 +1131,28 @@ $("#pickup-location, #delivery-location").keyup(function() {
     updateSuggestions(inputField, suggestionsList);
 });
 </script>
+<script>
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        items: 3, // Default number of items
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1 // Show 1 item on screens smaller than 600px
+          },
+          600: {
+            items: 2 // Show 2 items on screens larger than 600px
+          },
+          1000: {
+            items: 3 // Show 3 items on screens larger than 1000px
+          }
+        }
+      });
+    });
+    </script>
 @endsection
