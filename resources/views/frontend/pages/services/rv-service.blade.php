@@ -1,5 +1,4 @@
 @extends('frontend.layouts.app')
-
 @section('content')
     <Style>
         .text-c-1 {
@@ -45,7 +44,6 @@
         }
     </Style>
     <!--========== blog details Start ==============-->
-
     <section class="tj-choose-us-section-service-rv">
         <div class="container mt-4">
             <div class="row mt-4">
@@ -60,7 +58,6 @@
                                 customers and seeks your trust in return of our services.
                             </p>
                         </div>
-
                     </div>
                 </div>
                 @if (session('success'))
@@ -75,26 +72,18 @@
                 @endif
                 <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
                     @include('partials.multi-form')
-
                 </div>
-
             </div>
         </div>
     </section>
-
-
-    @include('partials.reveiw-site')
-
+    {{-- @include('partials.reveiw-site') --}}
+    @include('partials.reveiw-small-detail') 
     <section class="tj-about-section-four">
         <div class="container">
             <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">Shipping Your
-                RV with<br> ShipA1 Transport</h2>
-
-
+                RV with ShipA1 Transport</h2>
         </div>
     </section>
-
-
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
@@ -120,7 +109,6 @@
                                 delve into the details of RV Shipping and what services are provided for RVs by Ship A1
                                 Transport!</p>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
@@ -128,22 +116,18 @@
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/RV-2.webp') }}" alt="Image">
                         </div>
-
                     </div>
                     <!-- <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                         <div class="image-box">
                             <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
                         </div>
                         <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
-
                     </div> -->
                 </div>
             </div>
         </div>
-
-        <div class="container">
+        <div class="container pb-4">
             <div class="row">
-
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
@@ -166,7 +150,6 @@
                                 relocation, going
                                 on trips and vacations, getting their RV removed, or even selling and purchasing. <br>
                                 We have an entire variety of RVs ready to be shipped, ranging from
-
                             <ul class="list-inline">
                                 <li class="list-inline-item">&bull; Motorhomes</li>
                                 <li class="list-inline-item">&bull; Travel Trailers</li>
@@ -179,23 +162,18 @@
                                 <li class="list-inline-item">&bull; Truck Camper</li>
                                 <li class="list-inline-item">&bull; Class A Motorhome</li>
                             </ul>
-
                             <ul class="list-inline">
                                 <li class="list-inline-item">&bull; Folding Tent Trailer</li>
-
                             </ul>
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="container">
+        @include('partials.cta-section')
+        <div class="container pt-4">
             <div class="row">
-
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
@@ -213,15 +191,10 @@
                                     Get Quote<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
-
-
-
                             </p>
                         </div>
-
                     </div>
                 </div>
-
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
@@ -230,19 +203,12 @@
 
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
-
     <section class="tj-about-section pt-4">
-
-
         <div class="container">
             <div class="row">
-
-
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
@@ -278,8 +244,6 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-
-
                 <div class="col-lg-10 sal-animate text-align-center pt-4 mt-4" data-sal="slide-left"
                     data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
@@ -289,67 +253,44 @@
                             <p class="desc">
                                 This method is super convenient especially if you are unable to drive your RV yourself, this
                                 method involves hiring a professional driver to take your RV to its designated location!
-
                                 What’s the process?
-
                                 So basically, your RV will be picked up from its pickup location, It will be inspected for
                                 any damages, and then driven by the driver to its drop-off location.
-
                                 Now that these are covered let's talk about why you should trust Ship A1 to be your reliable
                                 and trusted partner!
-
                                 Whenever you are choosing a shipping company for your vehicle it is extremely essential to
                                 do a background check and proper research beforehand, this goes for all companies, it not
                                 only guarantees a positive experience but also guarantees 200% reliability, transparency,
                                 and quality service.</p>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
-
-    <section class="tj-cta-section-two">
+    {{-- <section class="tj-cta-section-two">
         <div class="tj_cta_image-4 w-100 h-50"></div>
-
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-12 col-md-6">
-
-
                     <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-
                         <div class="tj-section-heading ">
                             <span class="sub-title active-shape2"> Support Center 24/7 </span>
                             <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
                         </div>
-
-
                         <div class="tj-theme-button mt-2">
                             <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
                                 Get Support<i class="flaticon-right-1"></i>
                             </a>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>
-    </section>
-
+    </section> --}}
     <section class="tj-about-section pt-4">
-
-
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                         <div class="image-box">
@@ -358,7 +299,6 @@
                         </div>
                         <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/RV-COLLAGE3.webp') }}"
                             alt="Image">
-
                     </div>
                 </div>
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -393,67 +333,52 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="tj-theme-button text-start mt-2">
                                 <a class="tj-transparent-btn" href="" target="_blank">
                                     Get Quote<i class="flaticon-right-1"></i>
                                 </a>
                             </div>
-
-
-
-
-
-
-
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     </section>
-
     <!-- <section class="tj-about-section-five">
-        <div class="container">
-            <div class="row services ">
-                <h1 class="services-h1">WHY SHIP A1 TRANSPORT IS YOUR IDEAL SHIPPING PARTNER!</h1>
-                <div class="col-12 col-md-12 mb-4">
-                    <div class="card- bg-white  h-100">
-                        <div class="card-body">
-                            <h5 class="card-title text-dark">All of these factors ensure your vehicle is transported smoothly and efficiently</h5>
-                            <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="list-unstyled ps-0">
-                <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Specialization in RV Transport</li></span>
-                <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Online Quotes</li></span>
-                <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ 100% Insured Vehicles</li></span>
-                <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Quality and Professional Service</li></span>
-                <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Nationwide Coverage</li></span>
-                <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Affordable Rates</li></span>
-                <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Customized Shipping Solutions</li></span>
-                <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Timely Delivery</li></span>
-                </ul>
-            </div>
-            
-        </div>
-    </div>
+                <div class="container">
+                    <div class="row services ">
+                        <h1 class="services-h1">WHY SHIP A1 TRANSPORT IS YOUR IDEAL SHIPPING PARTNER!</h1>
+                        <div class="col-12 col-md-12 mb-4">
+                            <div class="card- bg-white  h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">All of these factors ensure your vehicle is transported smoothly and efficiently</h5>
+                                    <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <ul class="list-unstyled ps-0">
+                                            <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Specialization in RV Transport</li></span>
+                                            <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Online Quotes</li></span>
+                                            <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ 100% Insured Vehicles</li></span>
+                                            <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Quality and Professional Service</li></span>
+                                            <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Nationwide Coverage</li></span>
+                                            <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Affordable Rates</li></span>
+                                            <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Customized Shipping Solutions</li></span>
+                                            <span class="badge text-white text-c-1 fs-6 badge-success mb-2 p-2">   <li>★ Timely Delivery</li></span>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
+                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
+                        
                     </div>
                 </div>
-                
-                
-            </div>
-        </div>
     </section> -->
-
-
-    <section class="tj-choose-us-section-service-rv">
+    {{-- <section class="tj-choose-us-section-service-rv">
         <div class="container why-box">
             <div class="row">
                 <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -467,19 +392,14 @@
                                 choose us:
                             </p>
                         </div>
-
                         <div class="content-box d-flex align-items-center border-top">
-
                             <div class="tj-icon-box">
                                 <div class="ab-text d-flex align-items-center">
-
                                 </div>
                                 <p class="desc-2">★ Offering wide range of shipping methods tailored to various needs,
                                     including vehicles, heavy equipment, and freight across the US.</p>
                             </div>
-
                             <div class="tj-icon-box">
-
                                 <p class="desc-2">★ Providing top-notch quality service with a well-equipped and
                                     professional team dedicated to meeting customer expectations.</p>
                             </div>
@@ -490,7 +410,6 @@
                             </div>
                         </div>
                         <div class="content-box d-flex align-items-center">
-
                             <div class="tj-icon-box mr-3">
 
                                 <p class="desc-2">★ Focusing on customer satisfaction by catering to their needs and
@@ -512,14 +431,11 @@
                         </div>
                         <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/heavy-choose-1.webp') }}"
                             alt="Image">
-
                     </div>
                 </div>
             </div>
         </div>
-
-    </section>
-
+    </section> --}}
     <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
@@ -536,7 +452,6 @@
                         <div class="faq-image">
                             <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -579,7 +494,6 @@
                                         data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
                                         How is the cost of RV transport determined?
-
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
@@ -598,24 +512,15 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
     <!--=========== Blog Section Start =========-->
     @include('partials.blog-slider')
     <!--=========== Blog Section End =========-->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="path/to/jquery.min.js"></script>
     {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
-
     {{-- <script>
         $(document).ready(function() {
             $('#category').change(function() {
@@ -654,7 +559,6 @@
             });
         });
     </script> --}}
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var input = document.querySelector("#phone");
@@ -683,7 +587,6 @@
             iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
         }
     </script>
-
     <script>
         $(document).ready(function() {
             var selectedTab = '';
@@ -860,7 +763,6 @@
             });
         });
     </script>
-
     <script>
         // document.querySelectorAll('input[type="text"]').forEach((input) => {
         //     input.addEventListener("input", function() {
@@ -868,7 +770,6 @@
         //     });
         // });
     </script>
-
     <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
@@ -921,7 +822,6 @@
             });
         });
     </script>
-
     <script>
         $(document).ready(function() {
             function showError(field, message) {
@@ -988,9 +888,6 @@
             });
         });
     </script>
-
-
-
     <script>
         $(document).ready(function() {
             $(document).on('change', '#available_at_auction', function() {
@@ -1010,7 +907,6 @@
             });
         });
     </script>
-
     <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
@@ -1049,7 +945,6 @@
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
-
     <script>
         $(document).ready(function() {
             $(document).on('change', '.vehicle-year, .vehicle-make', function() {
@@ -1090,7 +985,6 @@
             }
         });
     </script>
-
     <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();

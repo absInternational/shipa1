@@ -7,11 +7,7 @@
 @section('content')
 
     <Style>
-        .why-box {
-            border-radius: 12px;
-            padding: 40px 0px;
-            background: #183c46eb;
-        }
+        
 
         .title-2 {
             color: #8fc445;
@@ -21,27 +17,31 @@
             color: white;
         }
 
+        .why-box {
+        border-radius: 12px;
+        padding: 20px 0px;
+        background: #f8f9fa;
+        }
         .card- {
-            background: #29494e;
+            /* background: #29494e; */
             border: 1px solid #ddd;
             border-radius: 12px;
             padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
         }
-
         .services {
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
             border-radius: 12px;
-            padding: 10px 10px 30px 10px;
-            background-color: #9d9e9f14;
+            padding: 10px 30px 0px 30px;
+            /* background-color: #9d9e9f14;*/
         }
 
         .services-h1 {
-            text-align: center;
-            text-decoration: overline;
+            text-align:center;
+            /* text-decoration: overline; */
             margin-bottom: 50px;
-            color: #8FC445;
+            /* color: #ffffff; */
         }
     </Style>
     <!--========== blog details Start ==============-->
@@ -82,13 +82,13 @@
         </div>
     </section>
 
-
-    @include('partials.reveiw-site')
+    @include('partials.reveiw-small-detail') 
+    {{-- @include('partials.reveiw-site') --}}
 
     <section class="tj-about-section-four">
         <div class="container">
             <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
-                Platform of Excavator <br>Shipping Services</h2>
+                Platform of Excavator Shipping Services</h2>
 
 
         </div>
@@ -98,7 +98,7 @@
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Excavator Transportation</span>
@@ -123,10 +123,10 @@
 
                     </div>
                 </div>
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/excavator-service-3.webp') }}"
+                            <img class="rounded" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}"
                                 alt="Image">
                         </div>
                     </div>
@@ -134,18 +134,18 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container pb-4">
             <div class="row">
 
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-2 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/excavator-service-2.webp') }}"
+                            <img class="rounded" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}"
                                 alt="Image">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-1 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Excavator Transportation</span>
@@ -178,11 +178,12 @@
             </div>
         </div>
 
+        @include('partials.cta-section')
 
-        <div class="container">
+        <div class="container pt-4">
             <div class="row">
 
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Excavator Transportation</span>
@@ -210,7 +211,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/excavator-service-3.webp') }}"
@@ -268,8 +269,8 @@
         </div>
     </section>
 
-
-    <section class="tj-cta-section-two">
+    
+    {{-- <section class="tj-cta-section-two">
         <div class="tj_cta_image-4 w-100 h-50"></div>
 
         <div class="container">
@@ -299,9 +300,54 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+
+    <section class="tj-choose-us-section-service-commercial-5">
+
+        <div class="container why-box">
+            <div class="row services">
+                <div class="col-12">
+    
+                    <h1 class="services-h1">Things You Should Expect</h1>
+                </div>
+                
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Dimensions of the Excavator</h5>
+                            <p class="card-text text-dark">The first and foremost thing you need to mention is the size,
+                                weight etc and will determine
+                                what trailer should be used for your excavator. It could be a simple flatbed or lowboy etc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">A Higher Price</h5>
+                            <p class="card-text text-dark">You should expect to pay a price slightly higher than other
+                                vehicles in all
+                                the heavy equipments as they are bigger in size and needs utmost care to be delivered
+                                safely.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Ample Time in Delivery</h5>
+                            <p class="card-text text-dark">Because of the vehicle’s dimension it takes proper due
+                                diligence in order to make the delivery.
+                                Due to that it takes ample time for your delivery to get done & you must expect that.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
     </section>
 
-    <section class="tj-about-section-five">
+    {{-- <section class="tj-about-section-five">
         <div class="container">
             <div class="row services">
                 <h1 class="services-h1">Things You Should Expect</h1>
@@ -340,10 +386,10 @@
 
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
-    <section class="tj-choose-us-section-service-excavator">
+    {{-- <section class="tj-choose-us-section-service-excavator">
         <div class="container why-box">
             <div class="row">
                 <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -408,7 +454,7 @@
             </div>
         </div>
 
-    </section>
+    </section> --}}
 
     <!--========== Faq Section Start ==============-->
     <section class="tj-faq-section tj-faq-page">

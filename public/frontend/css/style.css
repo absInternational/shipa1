@@ -4085,6 +4085,149 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     /* background: rgba(6, 46, 57, 0.7); */
 }
 
+.tj-choose-us-section-service-commercial-3 {
+    background-color: #000000;
+    background-image: url('../../img/construction-banner.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+
+.tj-choose-us-section-service-commercial-3::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    /* background: rgba(6, 46, 57, 0.7); */
+}
+
+.tj-choose-us-section-service-commercial-4 {
+    background-color: #000000;
+    background-image: url('../../img/BOAT-BANNER.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+
+.tj-choose-us-section-service-commercial-4::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    /* background: rgba(6, 46, 57, 0.7); */
+}
+
+.tj-choose-us-section-service-commercial-5 {
+    background-color: #000000;
+    background-image: url('../../img/excavator-banner.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+
+.tj-choose-us-section-service-commercial-5::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    /* background: rgba(6, 46, 57, 0.7); */
+}
+
+.tj-choose-us-section-service-commercial-6 {
+    background-color: #000000;
+    background-image: url('../../img/COMMERCIAL-TRUCK-BANNER.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+
+.tj-choose-us-section-service-commercial-6::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    /* background: rgba(6, 46, 57, 0.7); */
+}
+
+.tj-choose-us-section-service-commercial-7 {
+    background-color: #000000;
+    background-image: url('../../img/COMMERCIAL-TRUCK-BANNER.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+
+.tj-choose-us-section-service-commercial-7::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    /* background: rgba(6, 46, 57, 0.7); */
+}
+
+.tj-choose-us-section-service-commercial-8 {
+    background-color: #000000;
+    background-image: url('../../img/COMMERCIAL-TRUCK-BANNER.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    background-attachment: fixed; 
+    /* opacity: 1; */
+}
+
+.tj-choose-us-section-service-commercial-8::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    /* background: rgba(6, 46, 57, 0.7); */
+}
 
 .tj-choose-us-section-service-commercial {
     background-color: #000000;

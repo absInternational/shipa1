@@ -1,51 +1,42 @@
-@extends('frontend.layouts.app')
-
-@section('title', 'Farm Transport Services - Heavy Haul Trucking Shipping Service | ShipA1')
-@section('meta_description', 'Farm Transport Services, Ship your farming vehicle at your desired place in the USA with
-    insurance services and securely without any scratch - Shipa1.')
-
-@section('content')
-
+    @extends('frontend.layouts.app')
+    @section('title', 'Farm Transport Services - Heavy Haul Trucking Shipping Service | ShipA1')
+    @section('meta_description', 'Farm Transport Services, Ship your farming vehicle at your desired place in the USA with
+        insurance services and securely without any scratch - Shipa1.')
+    @section('content')
     <Style>
-        .why-box {
-            border-radius: 12px;
-            padding: 40px 0px;
-            background: #183c46eb;
-        }
-
         .title-2 {
-            color: #8fc445;
+        color: #8fc445;
         }
-
         .desc-2 {
-            color: white;
+        color: white;
         }
-
+        .why-box {
+        border-radius: 12px;
+        padding: 20px 0px;
+        background: #f8f9fa;
+        }
         .card- {
-            background: #29494e;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
+        /* background: #29494e; */
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+            }
         .services {
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            padding: 10px 10px 30px 10px;
-            background-color: #9d9e9f14;
+        text-align: center;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        border-radius: 12px;
+        padding: 10px 30px 0px 30px;
+        /* background-color: #9d9e9f14;*/
         }
-
         .services-h1 {
-            text-align: center;
-            text-decoration: overline;
-            margin-bottom: 50px;
-            color: #8FC445;
+        text-align:center;
+        /* text-decoration: overline; */
+        margin-bottom: 50px;
+        /* color: #ffffff; */
         }
     </Style>
     <!--========== blog details Start ==============-->
-
     <section class="tj-choose-us-section-service-farm">
         <div class="container mt-4">
             <div class="row mt-4">
@@ -60,7 +51,6 @@
                                 customers and seeks your trust in return of our services.
                             </p>
                         </div>
-
                     </div>
                 </div>
                 @if (session('success'))
@@ -75,30 +65,22 @@
                 @endif
                 <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
                     @include('partials.multi-form')
-
                 </div>
-
             </div>
         </div>
     </section>
-
-
-    @include('partials.reveiw-site')
-
+    {{-- @include('partials.reveiw-site') --}}
+    @include('partials.reveiw-small-detail') 
     <section class="tj-about-section-four">
         <div class="container">
             <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
                 Platform of Farm <br>Shipping Services</h2>
-
-
         </div>
     </section>
-
-
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Farm Transportation</span>
@@ -116,36 +98,31 @@
                                 need to deliver these goods from
                                 the field to the storage house or vice versa.</p>
                         </div>
-
                     </div>
                 </div>
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/farm-service3.webp') }}"
                                 alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="container">
+        <div class="container pb-4">
             <div class="row">
-
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/farm-service2.webp') }}"
                                 alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                     </div>
                 </div>
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Farm Transportation</span>
@@ -164,32 +141,24 @@
                                 We will discuss transportation modes and services so that you can have a good idea when
                                 choosing a farm transport company. Farmers know the importance of
                                 transportation and how it can save their time and money in the long run.
-
-
-
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="container">
+        @include('partials.cta-section')
+        <div class="container pt-4">
             <div class="row">
-
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Farm Transportation</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 The two main categories of farm transport are:
-
                             <ul>
                                 <li>
-
                                     The manual mode of transport.
                                 </li>
                                 <li>
@@ -201,44 +170,35 @@
                             been using it for decades. There is no modern equipment involved in this mode of transportation.
                             Therefore, the manual mode consumes more physical effort and time of the farmers. This method is
                             compatible with short distances, usually from the field to the storage place.
-
-
                             The advanced method of transport is the modern method, and it is best for long-distance
                             transportation.
                             </p>
                         </div>
-
                     </div>
                 </div>
-
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/farm-service1.webp') }}"
                                 alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="container">
             <div class="row">
-
-
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/farm-service4.webp') }}"
                                 alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                     </div>
                 </div>
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Farm Transportation</span>
@@ -247,52 +207,32 @@
                                 In advanced farm transportation, modern equipment, and the latest machinery is used for
                                 transportation. Therefore, there is less consumption of time and energy in this mode of
                                 transport. Ship A1 offers all these services at affordable price rates.
-
-
                                 The price of these services depends on certain factors that you should always consider when
                                 you plan to ship your farm material.
-
-
-
                             <ul>
                                 <li>
-
                                     The total distance of your journey.
                                 </li>
                                 <li>
                                     Types of goods need to be transported.
-
                                 </li>
                                 <li>
-
                                     The overall size and quantity of the goods.
                                 </li>
                                 <li>
                                     Additional services if there are any.
-
                                 </li>
                             </ul>
                             </p>
                         </div>
-
                     </div>
                 </div>
-
-
-
             </div>
         </div>
-
     </section>
-
-
     <section class="tj-about-section pt-4">
-
-
         <div class="container">
             <div class="row">
-
-
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
@@ -302,7 +242,6 @@
                                 All of the professional auto shipping companies such as ShipA1 provide ample insurance
                                 coverage during transit and you would reap in benefits if any damage happens.</p>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -315,47 +254,73 @@
                                 equipment with straps. We will make sure that you are completely sattisfied with our
                                 service.</p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-    <section class="tj-cta-section-two">
+    {{-- <section class="tj-cta-section-two">
         <div class="tj_cta_image-4 w-100 h-50"></div>
-
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-12 col-md-6">
-
-
                     <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-
                         <div class="tj-section-heading ">
                             <span class="sub-title active-shape2"> Support Center 24/7 </span>
                             <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
                         </div>
-
-
                         <div class="tj-theme-button mt-2">
                             <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
                                 Get Support<i class="flaticon-right-1"></i>
                             </a>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
+    <section class="tj-choose-us-section-service-commercial-6">
 
-    <section class="tj-about-section-five">
+        <div class="container why-box">
+            <div class="row services">
+                <div class="col-12">
+    
+                    <h1 class="services-h1">Additional Services Provided</h1>
+                </div>
+    
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Experienced Network of Truckers</h5>
+                            <p class="card-text text-dark">The vast network of competent truckers enables us to deliver
+                                your shipment timely and they are also aware of the areas that they would encounter during
+                                transit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Tracking Services</h5>
+                            <p class="card-text text-dark">We offer tracking services to the people who want their
+                                construction equipment shipped so that they can track the time for the arrival of shipment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Trailer Type</h5>
+                            <p class="card-text text-dark">You could choose an option for construction equipment where
+                                your shipment will be prioritized but it has a price attached to it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    {{-- <section class="tj-about-section-five">
         <div class="container">
             <div class="row services">
                 <h1 class="services-h1">Additional Services Provided</h1>
@@ -388,19 +353,15 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </section>
-
-
-    <section class="tj-choose-us-section-service-farm">
+    </section> --}}
+    {{-- <section class="tj-choose-us-section-service-farm">
         <div class="container why-box">
             <div class="row">
                 <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
                     <div class="about-content-two">
                         <div class="tj-section-heading">
-
                             <h2 class="title-2">Why Choose Us?</h2>
                             <p class="desc-2">
                                 We have a distinct approach when it comes to the philosophy of business.<br>Our belief in
@@ -408,17 +369,13 @@
                                 choose us:
                             </p>
                         </div>
-
                         <div class="content-box d-flex align-items-center border-top">
-
                             <div class="tj-icon-box">
                                 <div class="ab-text d-flex align-items-center">
-
                                 </div>
                                 <p class="desc-2">★ Offering wide range of shipping methods tailored to various needs,
                                     including vehicles, heavy equipment, and freight across the US.</p>
                             </div>
-
                             <div class="tj-icon-box">
 
                                 <p class="desc-2">★ Providing top-notch quality service with a well-equipped and
@@ -459,8 +416,7 @@
             </div>
         </div>
 
-    </section>
-
+    </section> --}}
     <!--========== Faq Section Start ==============-->
     <section class="tj-faq-section tj-faq-page">
         <div class="container">
@@ -568,26 +524,16 @@
             </div>
         </div>
     </section>
-
     <!--========== Faq Section End ==============-->
-
-
-
-
-
-
-
     <!--=========== Blog Section Start =========-->
     @include('partials.blog-slider')
     <!--=========== Blog Section End =========-->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="path/to/jquery.min.js"></script>
     {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
-
     {{-- <script>
         $(document).ready(function() {
             $(document).on('change', '.category', function() {
@@ -627,7 +573,6 @@
             });
         });
     </script> --}}
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var input = document.querySelector("#phone");
@@ -656,7 +601,6 @@
             iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
         }
     </script>
-
     <script>
         $(document).ready(function() {
             var selectedTab = '';
@@ -825,7 +769,6 @@
             });
         });
     </script>
-
     <script>
         // document.querySelectorAll('input[type="text"]').forEach((input) => {
         //     input.addEventListener("input", function() {
@@ -833,7 +776,6 @@
         //     });
         // });
     </script>
-
     <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
@@ -886,7 +828,6 @@
             });
         });
     </script>
-
     <script>
         $(document).ready(function() {
             function showError(field, message) {
@@ -953,9 +894,6 @@
             });
         });
     </script>
-
-
-
     <script>
         $(document).ready(function() {
             $(document).on('change', '#available_at_auction', function() {
@@ -975,7 +913,6 @@
             });
         });
     </script>
-
     <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
@@ -1014,7 +951,6 @@
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
-
     <script>
         $(document).ready(function() {
             $(document).on('change', '.vehicle-year, .vehicle-make', function() {
@@ -1055,7 +991,6 @@
             }
         });
     </script>
-
     <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
@@ -1094,5 +1029,4 @@
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
-
-@endsection
+    @endsection

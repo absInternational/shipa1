@@ -1,18 +1,9 @@
-@extends('frontend.layouts.app')
-
-@section('title', 'Heavy Equipment Shipping Services - Shipping Quotes and Calculator | ShipA1')
-@section('meta_description', 'Get Heavy Equipment Shipping Services with insurance get vehicle transport with safety in
-    the easiest way nationwide, Get free shipping quotes now - Shipa1.')
-
-@section('content')
-
+    @extends('frontend.layouts.app')
+    @section('title', 'Heavy Equipment Shipping Services - Shipping Quotes and Calculator | ShipA1')
+    @section('meta_description', 'Get Heavy Equipment Shipping Services with insurance get vehicle transport with safety in
+        the easiest way nationwide, Get free shipping quotes now - Shipa1.')
+    @section('content')
     <Style>
-        .why-box {
-            border-radius: 12px;
-            padding: 40px 0px;
-            background: #183c46eb;
-        }
-
         .title-2 {
             color: #8fc445;
         }
@@ -21,35 +12,36 @@
             color: white;
         }
 
+        .why-box {
+        border-radius: 12px;
+        padding: 20px 0px;
+        background: #f8f9fa;
+        }
         .card- {
-            background: #29494e;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
+        /* background: #29494e; */
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+            }
         .services {
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            padding: 10px 10px 30px 10px;
-            background-color: #9d9e9f14;
+        text-align: center;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        border-radius: 12px;
+        padding: 10px 30px 0px 30px;
+        /* background-color: #9d9e9f14;*/
         }
-
         .services-h1 {
-            text-align: center;
-            text-decoration: overline;
-            margin-bottom: 50px;
-            color: #8FC445;
+        text-align:center;
+        /* text-decoration: overline; */
+        margin-bottom: 50px;
+        /* color: #ffffff; */
         }
     </Style>
     <!--========== blog details Start ==============-->
-
     <section class="tj-choose-us-section-service-heavy">
         <div class="container mt-4">
             <div class="row mt-4">
-
                 <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="choose-us-content-1">
                         <div class="tj-section-heading">
@@ -75,30 +67,22 @@
                 @endif
                 <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
                     @include('partials.multi-form')
-
                 </div>
-
             </div>
         </div>
     </section>
-
-
-    @include('partials.reveiw-site')
-
+    {{-- @include('partials.reveiw-site') --}}
+    @include('partials.reveiw-small-detail') 
     <section class="tj-about-section-four">
         <div class="container">
             <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
-                Platform of Heavy <br>Shipping Services</h2>
-
-
+                Platform of Heavy Shipping Services</h2>
         </div>
     </section>
-
-
     <section class="tj-about-section pt-4 pb-0">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 pb-0 mt-0" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Heavy Transportation</span>
@@ -116,13 +100,11 @@
                                 to make sure your equipment is shielded and secured for any unfavorable and risky conditions
                                 it may encounter during its shipment.
                                 Heavy equipment shipping services are available all over the nation to facilitate customers.
-
                             </p>
                         </div>
-
                     </div>
                 </div>
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/heavy-service1.webp') }}"
@@ -133,13 +115,10 @@
             </div>
         </div>
     </section>
-
-
     <section class="tj-about-section pt-0 pb-0">
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/heavy-service2.webp') }}"
@@ -147,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Heavy Transportation</span>
@@ -175,12 +154,12 @@
                 </div>
             </div>
         </div>
-
     </section>
+    @include('partials.cta-section')
     <section class="tj-about-section pt-0 pb-0">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> Heavy Transportation</span>
@@ -203,7 +182,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/heavy-service3.webp') }}"
@@ -214,12 +193,9 @@
             </div>
         </div>
     </section>
-
     <section class="tj-about-section pt-0">
         <div class="container">
             <div class="row">
-
-
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
@@ -230,7 +206,6 @@
                                 we have special focus on frequent movement of heavy equipment.
                             </p>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -242,46 +217,51 @@
                                 One of the most important aspect while shipping heavy equipment is the risk of damage which
                                 is protected with complete Insurance coverage.</p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="tj-cta-section-two">
-        <div class="tj_cta_image-4 w-100 h-50"></div>
-
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 col-md-6">
-
-
-                    <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-
-                        <div class="tj-section-heading ">
-                            <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                            <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
+    <section class="tj-choose-us-section-service-commercial-6">
+        <div class="container why-box">
+            <div class="row services">
+                <div class="col-12">
+                    <h1 class="services-h1">Ins & Outs of Heavy Equipment</h1>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Affordable cost for shipping</h5>
+                            <p class="card-text text-dark">The good news is that the price to ship a heavy equipment
+                                wouldn’t be as big as the size of your equipment. We have affordable prices with optimum
+                                service.</p>
                         </div>
-
-
-                        <div class="tj-theme-button mt-2">
-                            <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                Get Support<i class="flaticon-right-1"></i>
-                            </a>
-                        </div>
-
-
                     </div>
-
-
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Type of trailers used in Heavy Equipment</h5>
+                                <p class="card-text text-dark">A vast majority of the heavy equipments are being shipped by a
+                                    hotshot trailer or a lowboy trailer. Our network of skilled truckers know how to pickup &
+                                    offload equipment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Kind of equipments that could be shipped</h5>
+                            <p class="card-text text-dark">As a matter of fact, There are a plethora of equipment types
+                                that could be shipped. Such as semi tractors, tanks, forklifts, and bulldozer. At ShipA1 we
+                                have the right match of truckers & trailers.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="tj-about-section-five">
+    {{-- <section class="tj-about-section-five">
         <div class="container">
             <div class="row services">
                 <h1 class="services-h1">Ins & Outs of Heavy Equipment</h1>
@@ -318,10 +298,8 @@
 
             </div>
         </div>
-    </section>
-
-
-    <section class="tj-choose-us-section-service-heavy">
+    </section> --}}
+    {{-- <section class="tj-choose-us-section-service-heavy">
         <div class="container why-box">
             <div class="row">
                 <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -385,9 +363,7 @@
                 </div>
             </div>
         </div>
-
-    </section>
-
+    </section> --}}
     <!--========== Faq Section Start ==============-->
     <section class="tj-faq-section tj-faq-page">
         <div class="container">
@@ -483,38 +459,25 @@
                                         Not only you will get the insurance coverage. The carrier company will provide you
                                         with insurance up to a whopping upto $1 million. As soon as you get in touch with
                                         the driver you will get the documents which are related to your insurance.
-
-
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!--========== Faq Section End ==============-->
-
-
-
-
-
-
-
     <!--=========== Blog Section Start =========-->
     @include('partials.blog-slider')
     <!--=========== Blog Section End =========-->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="path/to/jquery.min.js"></script>
     {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
-
     {{-- <script>
         $(document).ready(function() {
             $(document).on('change', '.category', function() {
@@ -554,7 +517,6 @@
             });
         });
     </script> --}}
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var input = document.querySelector("#phone");
@@ -583,7 +545,6 @@
             iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
         }
     </script>
-
     <script>
         $(document).ready(function() {
             var selectedTab = '';
@@ -760,7 +721,6 @@
             });
         });
     </script>
-
     <script>
         // document.querySelectorAll('input[type="text"]').forEach((input) => {
         //     input.addEventListener("input", function() {
@@ -768,7 +728,6 @@
         //     });
         // });
     </script>
-
     <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
@@ -821,7 +780,6 @@
             });
         });
     </script>
-
     <script>
         $(document).ready(function() {
             function showError(field, message) {
@@ -888,9 +846,6 @@
             });
         });
     </script>
-
-
-
     <script>
         $(document).ready(function() {
             $(document).on('change', '#available_at_auction', function() {
@@ -910,7 +865,6 @@
             });
         });
     </script>
-
     <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
@@ -949,7 +903,6 @@
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
-
     <script>
         $(document).ready(function() {
             $(document).on('change', '.vehicle-year, .vehicle-make', function() {
@@ -990,7 +943,6 @@
             }
         });
     </script>
-
     <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
@@ -1029,5 +981,4 @@
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
-
-@endsection
+    @endsection

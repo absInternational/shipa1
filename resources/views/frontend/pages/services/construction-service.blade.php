@@ -7,42 +7,41 @@
 @section('content')
 
     <Style>
-        .why-box {
-            border-radius: 12px;
-            padding: 40px 0px;
-            background: #183c46eb;
-        }
 
-        .title-2 {
-            color: #8fc445;
-        }
+    .title-2 {
+        color: #8fc445;
+    }
 
-        .desc-2 {
-            color: white;
-        }
+    .desc-2 {
+        color: white;
+    }
 
-        .card- {
-            background: #29494e;
+    .why-box {
+    border-radius: 12px;
+    padding: 20px 0px;
+    background: #f8f9fa;
+    }
+    .card- {
+            /* background: #29494e; */
             border: 1px solid #ddd;
             border-radius: 12px;
             padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
         }
+    .services {
+        text-align: center;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        border-radius: 12px;
+        padding: 10px 30px 0px 30px;
+        /* background-color: #9d9e9f14;*/
+    }
 
-        .services {
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            padding: 10px 10px 30px 10px;
-            background-color: #9d9e9f14;
-        }
-
-        .services-h1 {
-            text-align: center;
-            text-decoration: overline;
-            margin-bottom: 50px;
-            color: #8FC445;
-        }
+    .services-h1 {
+        text-align:center;
+        /* text-decoration: overline; */
+        margin-bottom: 50px;
+        /* color: #ffffff; */
+    }
     </Style>
     <!--========== blog details Start ==============-->
 
@@ -83,7 +82,8 @@
     </section>
 
 
-    @include('partials.reveiw-site')
+    {{-- @include('partials.reveiw-site') --}}
+    @include('partials.reveiw-small-detail') 
 
     <section class="tj-about-section-four">
         <div class="container">
@@ -98,7 +98,7 @@
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Construction Equipment Transport</span>
@@ -126,10 +126,10 @@
 
                     </div>
                 </div>
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/contruction-1.webp') }}"
+                            <img class="rounded" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}"
                                 alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
@@ -139,18 +139,18 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container pb-4">
             <div class="row">
 
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/construction-2.webp') }}"
+                            <img class="rounded" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}"
                                 alt="Image">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Expert Heavy Hauling</span>
@@ -178,11 +178,12 @@
             </div>
         </div>
 
+        @include('partials.cta-section')
 
-        <div class="container">
+        <div class="container pt-4">
             <div class="row">
 
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Specialized Equipment Shipping</span>
@@ -209,7 +210,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/contruction-4.webp') }}"
@@ -307,7 +308,7 @@
     </section>
 
 
-    <section class="tj-cta-section-two">
+    {{-- <section class="tj-cta-section-two">
         <div class="tj_cta_image-4 w-100 h-50"></div>
 
         <div class="container">
@@ -337,9 +338,53 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+
+    <section class="tj-choose-us-section-service-commercial-3">
+
+        <div class="container why-box">
+            <div class="row services">
+                <div class="col-12">
+    
+                    <h1 class="services-h1">Factors That Determine The Price</h1>
+                </div>
+                
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Dimensions of the equipment</h5>
+                            <p class="card-text text-dark">We will need to evaluate the size, length etc. The permits that
+                                needs to be taken and if the equipments are large we have to dismantle it first & all these
+                                factors increases the price of your shipment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Trailer Type</h5>
+                            <p class="card-text text-dark">From a wide range of options you should choose the trailer
+                                which is the most feasible for shipping. You will be guided whether a flatbed trailer is
+                                suitable or not etc and will modify the price you’re paying.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card- h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">International Shipping</h5>
+                            <p class="card-text text-dark">Although we don’t ship internationally, but we believe in
+                                educating our customers and creating awareness. This is also among the detrimental factors
+                                affect your price.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
     </section>
 
-    <section class="tj-about-section-five">
+    {{-- <section class="tj-about-section-five">
         <div class="container">
             <div class="row services">
                 <h1 class="services-h1">Factors That Determine The Price</h1>
@@ -375,10 +420,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
-    <section class="tj-choose-us-section-service-construction">
+    {{-- <section class="tj-choose-us-section-service-construction">
         <div class="container why-box">
             <div class="row">
                 <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -443,7 +488,7 @@
             </div>
         </div>
 
-    </section>
+    </section> --}}
 
     <!--========== Faq Section Start ==============-->
     <section class="tj-faq-section tj-faq-page">
