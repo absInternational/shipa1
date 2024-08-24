@@ -87,7 +87,7 @@
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> RV Transportation</span>
@@ -111,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/RV-2.webp') }}" alt="Image">
@@ -128,7 +128,7 @@
         </div>
         <div class="container pb-4">
             <div class="row">
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/RV-1.webp') }}" alt="Image">
@@ -136,7 +136,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">What is RV Shipping ?</span>
@@ -174,7 +174,7 @@
         @include('partials.cta-section')
         <div class="container pt-4">
             <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Types of Shipping Methods We Use</span>
@@ -195,12 +195,69 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/RV-3.webp') }}" alt="Image">
                         </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tj-about-section pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                        <div class="image-box">
+                            <img class="p-z-idex" src="{{ asset('frontend/images/project/RV-COLLAGE3.webp') }}"
+                                alt="Image">
+                        </div>
+                        <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/RV-COLLAGE3.webp') }}"
+                            alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape">why Ship A1 Transport is your ideal shipping
+                                partner!</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <p class="desc">
+                                All of these factors ensure your vehicle is transported smoothly and efficiently, whether
+                                you are
+                                transporting, relocating, removing, or buying/selling an RV, you can trust Ship A1 Transport
+                                to
+                                deliver your vehicle safely and securely to its destination.
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <ul class="list-unstyled ps-0">
+                                            <li>★ Specialization in RV Transport</li>
+                                            <li>★ Customized Shipping Solutions</li>
+                                            <li>★ 100% Insured Vehicles</li>
+                                            <li>★ Quality and Professional Service</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <ul class="list-unstyled ps-0">
+                                            <li>★ Nationwide Coverage</li>
+                                            <li>★ Affordable Rates</li>
+                                            <li>★ Customized Shipping Solutions</li>
+                                            <li>★ Timely Delivery</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- <div class="tj-theme-button text-start mt-2">
+                                <a class="tj-transparent-btn" href="" target="_blank">
+                                    Get Quote<i class="flaticon-right-1"></i>
+                                </a>
+                            </div> --}}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -288,63 +345,6 @@
             </div>
         </div>
     </section> --}}
-    <section class="tj-about-section pt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
-                        <div class="image-box">
-                            <img class="p-z-idex" src="{{ asset('frontend/images/project/RV-COLLAGE3.webp') }}"
-                                alt="Image">
-                        </div>
-                        <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/RV-COLLAGE3.webp') }}"
-                            alt="Image">
-                    </div>
-                </div>
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">why Ship A1 Transport is your ideal shipping
-                                partner!</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                                All of these factors ensure your vehicle is transported smoothly and efficiently, whether
-                                you are
-                                transporting, relocating, removing, or buying/selling an RV, you can trust Ship A1 Transport
-                                to
-                                deliver your vehicle safely and securely to its destination.
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <ul class="list-unstyled ps-0">
-                                            <li>★ Specialization in RV Transport</li>
-                                            <li>★ Customized Shipping Solutions</li>
-                                            <li>★ 100% Insured Vehicles</li>
-                                            <li>★ Quality and Professional Service</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <ul class="list-unstyled ps-0">
-                                            <li>★ Nationwide Coverage</li>
-                                            <li>★ Affordable Rates</li>
-                                            <li>★ Customized Shipping Solutions</li>
-                                            <li>★ Timely Delivery</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tj-theme-button text-start mt-2">
-                                <a class="tj-transparent-btn" href="" target="_blank">
-                                    Get Quote<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- <section class="tj-about-section-five">
                 <div class="container">
                     <div class="row services ">
@@ -436,6 +436,71 @@
             </div>
         </div>
     </section> --}}
+    <section class="tj-choose-us-section-service-rv">
+        <div class="container why-box">
+            <div class="row">
+                <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                    <div class="about-content-two">
+                        <div class="tj-section-heading">
+
+                            <h2 class="title-2">Why Choose Us?</h2>
+                            <p class="desc-2">
+                                We have a distinct approach when it comes to the philosophy of business.<br>Our belief in
+                                innovation & unique business practices differentiate us & here are the reasons why you must
+                                choose us:
+                            </p>
+                        </div>
+
+                        <div class="content-box d-flex align-items-center border-top">
+
+                            <div class="tj-icon-box">
+                                <div class="ab-text d-flex align-items-center">
+
+                                </div>
+                                <p class="desc-2">★ Offering wide range of shipping methods tailored to various needs,
+                                    including vehicles, heavy equipment, and freight across the US.</p>
+                            </div>
+
+                            <div class="tj-icon-box">
+
+                                <p class="desc-2">★ Providing top-notch quality service with a well-equipped and
+                                    professional team dedicated to meeting customer expectations.</p>
+                            </div>
+                            <div class="tj-icon-box pb-4">
+
+                                <p class="desc-2">★ Ensuring timely delivery of shipments, emphasizing reliability and
+                                    efficiency in logistics.</p>
+                            </div>
+                        </div>
+                        <div class="content-box d-flex align-items-center">
+
+                            <div class="tj-icon-box mr-3">
+
+                                <p class="desc-2">★ Focusing on customer satisfaction by catering to their needs and
+                                    maintaining loyalty through personalized service.</p>
+                            </div>
+                            <div class="tj-icon-box">
+
+                                <p class="desc-2">★ Prioritizing safe and secure transportation, with a commitment to
+                                    maintaining customer trust and peace of mind.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
+                        <div class="image-box">
+                            <img class="p-z-idex" src="{{ asset('frontend/images/project/heavy-choose-1.webp') }}"
+                                alt="Image">
+                        </div>
+                        <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/heavy-choose-1.webp') }}"
+                            alt="Image">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">

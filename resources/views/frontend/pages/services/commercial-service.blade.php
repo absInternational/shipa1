@@ -3,8 +3,6 @@
     @section('meta_description', 'Commercial truck transport services in all over the USA, ship your vehicle easiest way with one-click solution, Truck shipping from one state to another.')
     @section('content')
     <Style>
-
-
         .title-2 {
         color: #8fc445;
         }
