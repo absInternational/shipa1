@@ -10,7 +10,6 @@
         .desc-2 {
             color: white;
         }
-
         .why-box {
             border-radius: 12px;
             padding: 20px 0px;
