@@ -81,7 +81,7 @@ huge discount offers and free shipping quotes nationwide.')
         </div>
     </div>
 </section>
-<section class="tj-blog-standard pb-0">
+<section class="tj-blog-standard pb-0 pt-4">
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
@@ -118,7 +118,7 @@ huge discount offers and free shipping quotes nationwide.')
                     <div class="col-6 text-center">
                         <h4><i class="fas fa-smile" style="color: var(--tj-primary-color);"></i> Satisfied Clients</h4>
                         <div class="review-counter fs-2">
-                            <span id="counter-value-2" class="ms-3 " data-target="28" style="color: var(--tj-secondary-color);">0</span>k+
+                            <span id="counter-value-2" class="ms-3 " data-target="289" style="color: var(--tj-secondary-color);">0</span>k+
                         </div>
                     </div>
                 </div>
@@ -329,11 +329,45 @@ huge discount offers and free shipping quotes nationwide.')
 <section class="tj-about-section pt-0">
     <div class="container">
         <div class="row">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/car-transport.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
+
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        {{-- <span class="sub-title active-shape">Quality and Affordability</span> --}}
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" 
+                        data-sal-duration="800">Quality and Affordability</h3>
+                        <p class="desc">
+                        If you want to transport your vehicle in a very less amount of time, then you can use the
+                        service of ShipA1 car transport service as it is known for expedited shipping of vehicles.
+                        With unique shipping styles that are a part of ShipA1, customers can easily transport their cars
+                        through open car transport service.
+                        Open car transport is about the shipment of the car in an open-air, and the trucker will be
+                        taking care of everything from the beginning till the end. Enclosed carriers are a part of
+                        ShipA1, and those carriers transport the cars in an enclosed environment where they are safe
+                        from the rough conditions of the environment like dust, wind, heavy rainfall, storms, etc.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Quality and Affordability</span>
+                        {{-- <span class="sub-title active-shape">Fast and Secure Vehicle Transport with ShipA1</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" 
+                        data-sal-duration="800">Fast and Secure Vehicle Transport with ShipA1</h3>
                         <p class="desc">
                             ShipA1 always has believed in quality over quantity, and that is why at reasonable rates
                             ShipA1 allocates the best resources and human-power for auto transport in order to
@@ -365,36 +399,6 @@ huge discount offers and free shipping quotes nationwide.')
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded">
-                    <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/car-transport.webp') }}" alt="Image">
-                    </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Quality and Affordability</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <p class="desc">
-                        If you want to transport your vehicle in a very less amount of time, then you can use the
-                        service of ShipA1 car transport service as it is known for expedited shipping of vehicles.
-                        With unique shipping styles that are a part of ShipA1, customers can easily transport their cars
-                        through open car transport service.
-                        Open car transport is about the shipment of the car in an open-air, and the trucker will be
-                        taking care of everything from the beginning till the end. Enclosed carriers are a part of
-                        ShipA1, and those carriers transport the cars in an enclosed environment where they are safe
-                        from the rough conditions of the environment like dust, wind, heavy rainfall, storms, etc.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
         <div class="row full-width mt-4">
             <div class="col-12 custom-style">
                 <h4 class=" text-center">Premium Vehicle Transport Services</h4>
@@ -418,24 +422,17 @@ huge discount offers and free shipping quotes nationwide.')
     </div>
 </section>
 @include('partials.cta-section')
-        <section class="tj-about-section pt-0">
-            <div class="container">
+<section class="tj-about-section pt-0">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-12 order-sm-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded">
-                    <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/tuxpi.com.1724265027.webp') }}" alt="Image">
-                    </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12 order-sm-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Quality and Affordability</span>
+                        {{-- <span class="sub-title active-shape">Find the Ideal Shipping Solution for Your Vehicle</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" 
+                        data-sal-duration="800">Find the Ideal Shipping Solution for Your Vehicle</h3>
                         <p class="desc">
-                           
                              At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even
                             find various suitable services! For shipping your luxurious vehicle, you can opt for
                             enclosed trailers as they are made to protect your vehicle from road debris, scratches, the
@@ -448,11 +445,19 @@ huge discount offers and free shipping quotes nationwide.')
 
                 </div>
             </div>
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/tuxpi.com.1724265027.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
+                </div>
+            </div>
         </div>
     </div>
 </section>
 @include('partials.reveiw-small-detail') 
-<section class="tj-choose-us-section-service-commercial-2">
+<section class="tj-choose-us-section-service-cars-2 pt-4">
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
