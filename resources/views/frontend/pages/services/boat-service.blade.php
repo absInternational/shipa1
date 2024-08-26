@@ -10,7 +10,7 @@
     background: #f8f9fa9c;
     }
     .card- {
-        background: #ffffff;
+        
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 15px;
@@ -329,13 +329,13 @@
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
-                <h1 class="services-h1">Vehicle Preparation and Documentation</h1>
+                <h1 class="services-h1">Boat Preparation and Documentation</h1>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-dark">Clean & Inspect Vehicle</h5>
-                        <p class="card-text text-dark">Ensure your vehicle is clean inside and out,
+                        <h5 class="card-title text-dark">Clean & Inspect Boat</h5>
+                        <p class="card-text text-dark">Ensure your Boat is clean inside and out,
                             and remove any dirt, debris, and personal belongings that have a risk of damaging your vehicle further.</p>
                     </div>
                 </div>
@@ -418,7 +418,7 @@
         </div>
     </div>
 </section> --}}
-<section class="tj-faq-section tj-faq-page pt-4">
+<section class="tj-faq-section tj-faq-page pt-4 pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

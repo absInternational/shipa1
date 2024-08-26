@@ -3,44 +3,37 @@
 <Style>
     .text-c-1 {
         background: #183c46eb;
-
     }
-
-    .why-box {
-        border-radius: 12px;
-        padding: 40px 0px;
-        background: #183c46eb;
-    }
-
     .title-2 {
         color: #8fc445;
     }
-
     .desc-2 {
         color: white;
     }
-
+    .why-box {
+    border-radius: 12px;
+    padding: 20px 0px;
+    background: #f8f9fa9c;
+    }
     .card- {
-        background: #29494e;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+        }
     .services {
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 12px;
-        padding: 10px 10px 30px 10px;
-        background-color: #9d9e9f14;
+    text-align: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    border-radius: 12px;
+    padding: 10px 30px 0px 30px;
+    /* background-color: #9d9e9f14;*/
     }
-
     .services-h1 {
-        text-align: center;
-        text-decoration: overline;
-        margin-bottom: 50px;
-        color: #8FC445;
+    text-align:center;
+    /* text-decoration: overline; */
+    margin-bottom: 50px;
+    /* color: #ffffff; */
     }
 </Style>
 <!--========== blog details Start ==============-->
@@ -330,6 +323,42 @@
         </div>
     </div>
 </section>
+<section class="tj-choose-us-section-service-RV-4">
+    <div class="container why-box">
+        <div class="row services">
+            <div class="col-12">
+                <h1 class="services-h1">RV Preparation and Documentation</h1>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Clean & Inspect RV</h5>
+                        <p class="card-text text-dark">Ensure your RV is clean inside and out,
+                            and remove any dirt, debris, and personal belongings that have a risk of damaging your vehicle further.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Prepare Necessary Documentation</h5>
+                        <p class="card-text text-dark">Make sure the necessary documents of your RV like registration papers,
+                            insurance certificates, or any permits and licenses required.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Track your Ride</h5>
+                        <p class="card-text text-dark">If you are someone who constantly has to keep updates on their vehicle, 
+                            worry not! Contact Ship A1 for timely updates, or you can even track your ride online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {{-- <section class="tj-cta-section-two">
     <div class="tj_cta_image-4 w-100 h-50"></div>
     <div class="container">
@@ -506,7 +535,7 @@
         </div>
     </div>
 </section> --}}
-<section class="tj-faq-section tj-faq-page pt-0">
+<section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

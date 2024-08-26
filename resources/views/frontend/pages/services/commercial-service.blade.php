@@ -232,7 +232,7 @@
 <section class="tj-about-section pt-4 mt-4">   
     <div class="container">
         <div class="row">
-            <h2 class="title sal-animate" data-sal="slide-left" data-sal-duration="800">
+            <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
             Why Choose Ship A1 Transport for Your Truck Hauling Needs?</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4 mb-0">
@@ -407,7 +407,7 @@
 
 </section> -->
 <!--========== Faq Section Start ==============-->
-<section class="tj-faq-section tj-faq-page">
+<section class="tj-faq-section tj-faq-page pt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

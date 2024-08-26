@@ -7,18 +7,16 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
     .title-2 {
         color: #8fc445;
     }
-
     .desc-2 {
         color: white;
     }
-
     .why-box {
     border-radius: 12px;
     padding: 20px 0px;
-    background: #f8f9fa;
+    background: #f8f9fa9c;
     }
     .card- {
-    /* background: #29494e; */
+    background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 15px;
@@ -79,7 +77,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
             Platform of Heavy Shipping Services</h2>
     </div>
 </section> --}}
-<section class="tj-about-section pt-4 pb-0">
+<section class="tj-about-section pt-0 pb-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -158,7 +156,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
     </div>
 </section>
 @include('partials.cta-section')
-<section class="tj-about-section pt-0 pb-0">
+<section class="tj-about-section pt-0 pb-4">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -199,6 +197,8 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
 <section class="tj-about-section pt-0">
     <div class="container">
         <div class="row">
+            <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
+                Comprehensive Heavy Equipment Transportation Services</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="border rounded-5 p-4">
                     <div class="tj-section-heading">
@@ -223,9 +223,34 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Specialized Management</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Specialized handling is necessary to enable the safe and effective transportation of heavy equipment. With the proper tools and methods, 
+                            our staff can safely handle and secure any kind of heavy machinery, preventing damage while in transit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Timely Planning</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            We are aware of how crucial prompt delivery is when sending large pieces of equipment. Our logistics team works directly with you to arrange delivery and pickup times, 
+                            making sure your equipment gets to its new location on time and in working order.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-<section class="tj-choose-us-section-service-commercial-6">
+<section class="tj-choose-us-section-service-heavy-7">
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
@@ -368,7 +393,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
     </div>
 </section> --}}
 <!--========== Faq Section Start ==============-->
-<section class="tj-faq-section tj-faq-page">
+<section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

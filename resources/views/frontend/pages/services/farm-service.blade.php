@@ -77,7 +77,7 @@ insurance services and securely without any scratch - Shipa1.')
             Platform of Farm <br>Shipping Services</h2>
     </div>
 </section> --}}
-<section class="tj-about-section pt-4">
+<section class="tj-about-section pt-0 pb-4">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -239,7 +239,7 @@ insurance services and securely without any scratch - Shipa1.')
         <div class="row">
             <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
                 Key Features of Reliable Farm Equipment Transport</h2>
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Safeguarding From Insurance</span>
@@ -250,7 +250,7 @@ insurance services and securely without any scratch - Shipa1.')
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Professional Shipping Team</span>
@@ -443,7 +443,7 @@ insurance services and securely without any scratch - Shipa1.')
 
 </section> --}}
 <!--========== Faq Section Start ==============-->
-<section class="tj-faq-section tj-faq-page">
+<section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

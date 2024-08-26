@@ -81,7 +81,7 @@ from one state to another state in one click - ShipA1.')
             Platform of Construction <br>Shipping Services</h2>
     </div>
 </section> --}}
-<section class="tj-about-section pt-4 pb-0">
+<section class="tj-about-section pt-2 pb-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -481,7 +481,7 @@ from one state to another state in one click - ShipA1.')
 
 </section> --}}
 <!--========== Faq Section Start ==============-->
-<section class="tj-faq-section tj-faq-page">
+<section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
