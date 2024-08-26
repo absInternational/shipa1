@@ -299,7 +299,7 @@
 
         <div class="swiper sc-slider-1" data-autoplay="5000">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-1.webp') }}">
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/DSF.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY TRANSPORTATION SERVICES</h1>
