@@ -33,17 +33,17 @@ huge discount offers and free shipping quotes nationwide.')
         height: 100px;
     }
     .why-box {
-        border-radius: 12px;
-        padding: 20px 0px;
-        background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px 0px;
+    background: #f8f9fa9c;
     }
     .card- {
-            /* background: #29494e; */
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
-        }
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+    }
     .services {
         text-align: center;
         /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -51,7 +51,6 @@ huge discount offers and free shipping quotes nationwide.')
         padding: 10px 30px 0px 30px;
         /* background-color: #9d9e9f14;*/
     }
-
     .services-h1 {
         text-align:center;
         /* text-decoration: overline; */
@@ -93,15 +92,11 @@ huge discount offers and free shipping quotes nationwide.')
                 <br>
                 <div class="text-container text-left">
                     <h3>The First Stop Platform of Car Shipping Services</h3>
-                    <p>ShipA1 is committed to making available the car shipping service that one requires as a
-                        fundamental need to deliver his vehicle from one state to another. ShipA1 has worked a lot to
-                        get to the point where it now proudly announces that it has reached professionals that are
-                        behind the successful auto transport.
-                        If you want to ship your car to a new destination and want to have it delivered in a secure
-                        style, then is what you need as your trusted car transporter.
-                        ShipA1 always has secured the vision to give high-quality car transport services to their
-                        customers with an aim to provide innovative solutions to unique car transportation needs of the
-                        customers.
+                    <p>ShipA1 is committed to making available the car shipping service that one requires as a fundamental 
+                        need to deliver his vehicle from one state to another. ShipA1 has worked a lot to get to the point 
+                        where it now proudly announces that it has reached professionals that are behind the successful auto
+                         transport. If you want to ship your car to a new destination and want to have it delivered in a
+                          secure style, then is what you need as your trusted car transporter
                         {{-- If you want to transport your vehicle in a very less amount of time, then you can use the
                         service of ShipA1 car transport service as it is known for expedited shipping of vehicles.
                         With unique shipping styles that are a part of ShipA1, customers can easily transport their cars
@@ -113,17 +108,17 @@ huge discount offers and free shipping quotes nationwide.')
                         from the rough conditions of the environment like dust, wind, heavy rainfall, storms, etc. --}}
                     </p>
                 </div>
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-6 text-center">
-                        <h4>Succesful Shipment</h4>
-                        <div class="review-counter">
-                            <span id="counter-value" class="ms-3" data-target="318">0</span>k+
+                        <h4><i class="fas fa-ship" style="color: var(--tj-primary-color);"></i> Successful Shipment</h4>
+                        <div class="review-counter fs-2">
+                            <span id="counter-value" class="ms-3" data-target="318" style="color: var(--tj-secondary-color);">0</span>k+
                         </div>
                     </div>
                     <div class="col-6 text-center">
-                        <h4>Satisfied Clients</h4>
-                        <div class="review-counter">
-                            <span id="counter-value-2" class="ms-3" data-target="28">0</span>k+
+                        <h4><i class="fas fa-smile" style="color: var(--tj-primary-color);"></i> Satisfied Clients</h4>
+                        <div class="review-counter fs-2">
+                            <span id="counter-value-2" class="ms-3 " data-target="28" style="color: var(--tj-secondary-color);">0</span>k+
                         </div>
                     </div>
                 </div>
@@ -329,26 +324,6 @@ huge discount offers and free shipping quotes nationwide.')
                 </div>
             </div>
         </div>
-        <div class="row full-width mt-4">
-            <div class="col-12 custom-style">
-                <h4 class=" text-center">Premium Vehicle Transport Services</h4>
-                <p class=" text-center">ShipA1, with its standard <a class="pp-link-2"
-                        href="{{ route('form.vehicle.car') }}">enclosed vehicle shipping,</a> makes it sure that vehicle
-                    transport is done in an exquisite and exclusive style. ShipA1 considers that Americans should have
-                    the luxury and convenience to indulge in the delight of having their car shipped right at their
-                    doors. For that, ShipA1 has devised a plan to provide door to door vehicle transport facility to
-                    Americans, and that plan has been executed hundreds of times successfully as well. Through such a
-                    facility, ShipA1 believes that it can provide services right at your doorsteps for your comfort. If
-                    you do not want to transport it on your doorsteps, then another facility that is provided by the
-                    ShipA1 is of the terminals. </p>
-                <div class="tj-theme-button  text-center mt-2">
-                    <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                        Get Quote
-                        <i class="flaticon-right-1"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 <section class="tj-about-section pt-0">
@@ -387,6 +362,56 @@ huge discount offers and free shipping quotes nationwide.')
                     </div>
                     <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/car-transport.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
+
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Quality and Affordability</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        If you want to transport your vehicle in a very less amount of time, then you can use the
+                        service of ShipA1 car transport service as it is known for expedited shipping of vehicles.
+                        With unique shipping styles that are a part of ShipA1, customers can easily transport their cars
+                        through open car transport service.
+                        Open car transport is about the shipment of the car in an open-air, and the trucker will be
+                        taking care of everything from the beginning till the end. Enclosed carriers are a part of
+                        ShipA1, and those carriers transport the cars in an enclosed environment where they are safe
+                        from the rough conditions of the environment like dust, wind, heavy rainfall, storms, etc.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row full-width mt-4">
+            <div class="col-12 custom-style">
+                <h4 class=" text-center">Premium Vehicle Transport Services</h4>
+                <p class=" text-center">ShipA1, with its standard <a class="pp-link-2"
+                        href="{{ route('form.vehicle.car') }}">enclosed vehicle shipping,</a> makes it sure that vehicle
+                    transport is done in an exquisite and exclusive style. ShipA1 considers that Americans should have
+                    the luxury and convenience to indulge in the delight of having their car shipped right at their
+                    doors. For that, ShipA1 has devised a plan to provide door to door vehicle transport facility to
+                    Americans, and that plan has been executed hundreds of times successfully as well. Through such a
+                    facility, ShipA1 believes that it can provide services right at your doorsteps for your comfort. If
+                    you do not want to transport it on your doorsteps, then another facility that is provided by the
+                    ShipA1 is of the terminals. </p>
+                <div class="tj-theme-button  text-center mt-2">
+                    <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                        Get Quote
+                        <i class="flaticon-right-1"></i>
+                    </a>
                 </div>
             </div>
         </div>

@@ -85,7 +85,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> Heavy Transportation</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Heavy Transportation</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Nationwide Heavy Equipment Shipping</h3>
                         <p class="desc">
                             Oversized and heavy equipment can have logistical and managerial challenges if you’re
                             unfamiliar with the
@@ -120,7 +120,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/CONSTRUCTION-666.webp') }}"
+                        <img class="rounded" src="{{ asset('frontend/images/project/construction-666.webp') }}"
                             alt="Image">
                     </div>
                 </div>
@@ -130,7 +130,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> Heavy Transportation</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Heavy Transportation</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Expert Care in Heavy Equipment Shipping</h3>
                         <p class="desc">
                             In the event of any query, you may also contact our customer service representative, they’ll
                             be delighted to help you with your shipment queries, or you could mail us.
@@ -142,11 +142,6 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
                             You may discover that it’s more cost-effective to avail the services offered by the ShipA1
                             as transporting the heavy equipment on your own will cost you a lot more and it will be a
                             big deal because heavy equipment shipping is not something that you should take lightly.
-                            Obviously, you will need to have the correct equipment and trailer required to haul the
-                            particular load.
-                            Since certain equipment are loaded on the basis of particular guidelines, therefore you
-                            should know about the specification of the equipment.
-
                         </p>
                     </div>
 
@@ -164,7 +159,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> Heavy Transportation</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Heavy Transportation</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Reliable Service and Competitive Rates</h3>
                         <p class="desc">
                             ShipA1 is able to handle every type of heavy equipment therefore one doesn’t need to worry.
                             Equipment may vary greatly based on the load and its need. Heavy equipment hauling can be a

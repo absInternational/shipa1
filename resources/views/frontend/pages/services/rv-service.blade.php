@@ -604,6 +604,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingfour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsefour" aria-expanded="false"
+                                    aria-controls="collapsefour">
+                                    How do I get a quote for RV transportation with ShipA1?
+                                </button>
+                            </h2>
+                            <div id="collapsefour" class="accordion-collapse collapse"
+                                aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Give ShipA1 the specifics, including the size, weight, and condition of the RV as well as the locations
+                                         for collection and delivery, to receive an estimate for RV transportation. With this data, ShipA1 will
+                                          provide you with an accurate and affordable price.</strong>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
