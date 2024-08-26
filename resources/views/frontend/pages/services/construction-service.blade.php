@@ -567,7 +567,7 @@ from one state to another state in one click - ShipA1.')
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false"
                                     aria-controls="collapseFour">
-                                    Are your vehicles insured?
+                                    Are your equipment insured?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"

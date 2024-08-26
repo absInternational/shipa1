@@ -85,7 +85,7 @@ insurance services and securely without any scratch - Shipa1.')
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> Farm Transportation</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Farm Transportation</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Efficient Farm Transportation</h3>
                         <p class="desc">
                             Farm transportation or simply farm transport begins and end with properly managed shipment
                             process. It needs adequate
@@ -128,21 +128,17 @@ insurance services and securely without any scratch - Shipa1.')
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> Farm Transportation</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Farm Transportation</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Choosing Reliable Farm Transportation service</h3>
                         <p class="desc">
-                            Every industry or business needs some means of transport. This goes to the farm transport
-                            industry as well. Whether it comes to
-                            harvest the crops or to arrange the goods for the crops, transport is an essential part of
-                            this industry. But the process of
-                            farm transportation is a difficult task. You can not rely on any random company offering
-                            services for transportation at affordable rates.
-                            There is an old saying, “All that glitters is not gold.” One has to be careful when choosing
-                            a reliable company as there are plenty of fraud
-                            companies on the internet. They will offer low-priced rates which may attract you in the
-                            beginning, but once they get the payment, they vanish.
-                            We will discuss transportation modes and services so that you can have a good idea when
-                            choosing a farm transport company. Farmers know the importance of
-                            transportation and how it can save their time and money in the long run.
+                            Every industry or business needs some means of transport. This goes to the farm transport 
+                            industry as well. Whether it comes to harvest the crops or to arrange the goods for the crops, 
+                            transport is an essential part of this industry. But the process of farm transportation is a
+                            difficult task. You can not rely on any random company offering services for transportation 
+                            at affordable rates. There is an old saying, “All that glitters is not gold.” One has to be
+                            careful when choosing a reliable company as there are plenty of fraud companies on the internet. 
+                            They will offer low-priced rates which may attract you in the beginning, but once they get the
+                            payment, they vanish. Farmers know the importance of transportation and how it can save their
+                            time and money in the long run.
                         </p>
                     </div>
                 </div>
@@ -157,7 +153,7 @@ insurance services and securely without any scratch - Shipa1.')
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> Farm Transportation</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Farm Transportation</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Method used in Farm Transport</h3>
                         <p class="desc">
                             The two main categories of farm transport are:
                         <ul>
@@ -206,7 +202,7 @@ insurance services and securely without any scratch - Shipa1.')
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> Farm Transportation</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Farm Transportation</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Factors Affecting Cost and Efficiency</h3>
                         <p class="desc">
                             In advanced farm transportation, modern equipment, and the latest machinery is used for
                             transportation. Therefore, there is less consumption of time and energy in this mode of
@@ -528,7 +524,7 @@ insurance services and securely without any scratch - Shipa1.')
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false"
                                     aria-controls="collapseFour">
-                                    Are your vehicles insured?
+                                    Are your equipment insured?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"

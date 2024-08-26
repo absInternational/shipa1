@@ -10,7 +10,7 @@
     background: #f8f9fa9c;
     }
     .card- {
-        
+    background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 15px;
