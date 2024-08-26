@@ -80,7 +80,7 @@ from one state to another state in one click - ShipA1.')
             Platform of Construction <br>Shipping Services</h2>
     </div>
 </section> --}}
-<section class="tj-about-section pt-4">
+<section class="tj-about-section pt-4 pb-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -242,11 +242,11 @@ from one state to another state in one click - ShipA1.')
         </div>
     </div>
 </section>
-<section class="tj-about-section pt-4">
+<section class="tj-about-section pt-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Experienced</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -260,7 +260,7 @@ from one state to another state in one click - ShipA1.')
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Availability of Trailers</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->

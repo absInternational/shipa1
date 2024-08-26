@@ -238,7 +238,7 @@ insurance services and securely without any scratch - Shipa1.')
     <div class="container">
         <div class="row">
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Insurance Coverage</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -249,7 +249,7 @@ insurance services and securely without any scratch - Shipa1.')
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Competent Shipping Team</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -284,14 +284,11 @@ insurance services and securely without any scratch - Shipa1.')
     </div>
 </section> --}}
 <section class="tj-choose-us-section-service-commercial-6">
-
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
-
                 <h1 class="services-h1">Additional Services Provided</h1>
             </div>
-
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
@@ -322,7 +319,6 @@ insurance services and securely without any scratch - Shipa1.')
             </div>
         </div>
     </div>
-
 </section>
 {{-- <section class="tj-about-section-five">
     <div class="container">

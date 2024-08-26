@@ -217,7 +217,7 @@ safe along with insurance facility at nationwide - Shipa1.')
             <h2 class="title sal-animate" data-sal="slide-left" data-sal-duration="800">
                 Ensuring Safe and Efficient Excavator Transport</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Protected Shipment</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -229,7 +229,7 @@ safe along with insurance facility at nationwide - Shipa1.')
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Trailer for Excavator</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -243,7 +243,7 @@ safe along with insurance facility at nationwide - Shipa1.')
         </div>
         <div class="row">
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Expert Loading</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -255,7 +255,7 @@ safe along with insurance facility at nationwide - Shipa1.')
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Custom Transport Solutions</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->

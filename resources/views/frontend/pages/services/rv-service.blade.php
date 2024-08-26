@@ -92,7 +92,7 @@
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> RV Transportation</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">RV Transportation</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Discover Top-Notch RV Shipping with Ship A1</h3>
                         <p class="desc">
                             If you are someone who loves traveling then this might be the best option for you! RVs are
                             commonly
@@ -140,8 +140,9 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">What is RV Shipping ?</span>
+                        {{-- <span class="sub-title active-shape">What is RV Shipping ?</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">What is RV Shipping ?</h3>
                         <p class="desc">
                             Just like any other shipping of vehicles, RV shipping includes transporting your
                             recreational vehicle
@@ -178,20 +179,21 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Types of Shipping Methods We Use</span>
-                        <p class="desc">
-                            When it comes to shipping your RV there are several methods to choose from, especially if
-                            you are
-                            a trusted partner of Ship A1 you will get the privilege of having access to the best, most
-                            affordable,
-                            and most convenient shipping methods Are you ready to check out the rates? Get <a
-                                class="pp-link-2" href="{{ route('frontend.forms.rv_transport') }}"> online quotes now!
-                            </a>
-                        <div class="tj-theme-button text-start mt-2">
+                        {{-- <span class="sub-title active-shape">Types of Shipping Methods We Use</span> --}}
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Seamless RV Shipping with Customized Solutions</h3>
+                        <p class="desc">You will have your RV shipped by means meeting almost any need and desire in terms of
+                             the shipment process. Ship A1 is our partner, a company providing access to a number of the best,
+                              most affordable, and most convenient ways of shipping. These full services allow you the freedom
+                               of taking the way most suitable for your requirements, be it for cost economy, convenience, or 
+                               speed. Want to see rates and shop around to find the right solution for your RV transport?<a
+                               class="pp-link-2" href="{{ route('frontend.forms.rv_transport') }}"> Get 
+                               an online quote</a> now. This makes the first step toward a seamless shipping experience with Ship
+                                A1
+                        {{-- <div class="tj-theme-button text-start mt-2">
                             <a class="tj-transparent-btn" href="" target="_blank">
                                 Get Quote<i class="flaticon-right-1"></i>
                             </a>
-                        </div>
+                        </div> --}}
                         </p>
                     </div>
                 </div>
@@ -221,9 +223,11 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">why Ship A1 Transport is your ideal shipping
-                            partner!</span>
+                        {{-- <span class="sub-title active-shape">why Ship A1 Transport is your ideal shipping
+                            partner!</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">why Ship A1 Transport
+                             is your ideal shipping partner!</h3>
                         <p class="desc">
                             All of these factors ensure your vehicle is transported smoothly and efficiently, whether
                             you are
@@ -502,7 +506,7 @@
         </div>
     </div>
 </section> --}}
-<section class="tj-faq-section tj-faq-page">
+<section class="tj-faq-section tj-faq-page pt-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

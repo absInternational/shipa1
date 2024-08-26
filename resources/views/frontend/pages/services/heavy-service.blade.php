@@ -200,7 +200,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
     <div class="container">
         <div class="row">
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Frequent Delivery</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -212,7 +212,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
+                <div class="border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Insurance Coverage</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->

@@ -3,60 +3,60 @@
 @section('meta_description', 'Best Motorcycle shipping services in the USA, ship your vehicle countrywide or international in reasonable prices, Get Free shipping quotes - ShipA1.')
 @section('content')
 <style>
-.full-width {
-    width: 100%;
-}
-.title-2 {
-    color: #8fc445;
-}
-.desc-2 {
-    color: white;
-}
-.custom-style {
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-.custom-style h4 {
-    margin-top: 0;
-}
-.custom-style p {
-    margin-bottom: 0;
-}
-.top-left-image {
-    position: absolute;
-    top: -25px;
-    left: -25px;
-    width: 100px;
-    height: 100px; 
-}
-.why-box {
-    border-radius: 12px;
-    padding: 20px 0px;
-    background: #f8f9fa;
-}
-.card- {
-        /* background: #29494e; */
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+    .full-width {
+        width: 100%;
     }
-.services {
-    text-align: center;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    border-radius: 12px;
-    padding: 10px 30px 0px 30px;
-    /* background-color: #9d9e9f14;*/
-}
+    .title-2 {
+        color: #8fc445;
+    }
+    .desc-2 {
+        color: white;
+    }
+    .custom-style {
+        padding: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+    .custom-style h4 {
+        margin-top: 0;
+    }
+    .custom-style p {
+        margin-bottom: 0;
+    }
+    .top-left-image {
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        width: 100px;
+        height: 100px; 
+    }
+    .why-box {
+        border-radius: 12px;
+        padding: 20px 0px;
+        background: #f8f9fa;
+    }
+    .card- {
+            /* background: #29494e; */
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+        }
+    .services {
+        text-align: center;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        border-radius: 12px;
+        padding: 10px 30px 0px 30px;
+        /* background-color: #9d9e9f14;*/
+    }
 
-.services-h1 {
-    text-align:center;
-    /* text-decoration: overline; */
-    margin-bottom: 50px;
-    /* color: #ffffff; */
-}
+    .services-h1 {
+        text-align:center;
+        /* text-decoration: overline; */
+        margin-bottom: 50px;
+        /* color: #ffffff; */
+    }
 </style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -320,8 +320,7 @@
                </div>
    </div>
 </section>
-
-    <section class="tj-about-section pt-0">
+<section class="tj-about-section pt-0">
         <div class="container pb-4">
             <div class="row">
                 <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -343,7 +342,7 @@
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/motorcycle-service1.webp') }}" alt="Image">
+                            <img class="rounded" src="{{ asset('frontend/images/project/MOTORCYCLE-1.webp') }}" alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
@@ -357,7 +356,7 @@
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/motorcycle-service2.webp') }}" alt="Image">
+                            <img class="rounded" src="{{ asset('frontend/images/project/MOTORCYCLE-2.webp') }}" alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
                     </div>
@@ -379,11 +378,10 @@
                 </div>
             </div>
         </div>
-        
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                    <div class="about-content-one border rounded-5 p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Secure Shipment</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -394,7 +392,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                    <div class="about-content-one border rounded-5 p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Affordable Price</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->

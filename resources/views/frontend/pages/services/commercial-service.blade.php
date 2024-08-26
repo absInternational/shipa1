@@ -231,59 +231,59 @@
     </div>
     </section>
 <section class="tj-about-section pt-4 mt-4">   
-        <div class="container">
-                <div class="row">
-                <h2 class="title sal-animate" data-sal="slide-left" data-sal-duration="800">
-                Why Choose Ship A1 Transport for Your Truck Hauling Needs?</h2>
-                <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4 mb-0">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Affordable Pricing</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            The reason why we standout as a supreme quality truck hauling company is our stellar quality with pricing. We haul your trucks with utmost care and prompt delivery.
-                            </p>
-                        </div>
-                        
+    <div class="container">
+        <div class="row">
+            <h2 class="title sal-animate" data-sal="slide-left" data-sal-duration="800">
+            Why Choose Ship A1 Transport for Your Truck Hauling Needs?</h2>
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Affordable Pricing</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        The reason why we standout as a supreme quality truck hauling company is our stellar quality with pricing. We haul your trucks with utmost care and prompt delivery.
+                        </p>
                     </div>
-                </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4 mb-0">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Country-Wide Shipping</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            Even if you are looking to move commercial truck to a new state you won’t feel any obstacle in shipping with us. We ship all around the contiguous United States.</p>
-                        </div>
-                        
-                    </div>
+                    
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4 mb-0">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Dependability You Can Count On</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            You may feel easy knowing that your vehicles are being carried by a team of experts who work together to ensure safety and security throughout the entire procedure.
-                            </p>
-                        </div>
-                        
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Country-Wide Shipping</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        Even if you are looking to move commercial truck to a new state you won’t feel any obstacle in shipping with us. We ship all around the contiguous United States.</p>
                     </div>
-                </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4 mb-0">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">High-Tech Equipment</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            In order to minimize the possibility of damage occurring during transit, we load, move, and unload your trucks quickly and efficiently using the newest technology and equipment.</p>
-                        </div>  
-                    </div>
+                    
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Dependability You Can Count On</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        You may feel easy knowing that your vehicles are being carried by a team of experts who work together to ensure safety and security throughout the entire procedure.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">High-Tech Equipment</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        In order to minimize the possibility of damage occurring during transit, we load, move, and unload your trucks quickly and efficiently using the newest technology and equipment.</p>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- <section class="tj-cta-section-two">
             <div class="tj_cta_image-4 w-100 h-50"></div>

@@ -129,7 +129,6 @@
                         <img class="rounded" src="{{ asset('frontend/images/project/TEST.png') }}" alt="Image">
                     </div>
                     <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                     </div>
                 </div>
             </div>
@@ -262,10 +261,8 @@
         </div>
         <div class="container">
             <div class="row justify-content-center">
-                
-            
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                    <div class="about-content-one border rounded-5 p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Open Transport:</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -278,7 +275,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                    <div class="about-content-one border rounded-5 p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Enclosed Transport:</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -291,10 +288,8 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                
-            
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+                    <div class="about-content-one border rounded-5 p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Flat Rack Transport:</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
@@ -307,22 +302,17 @@
                                     </ul> -->
                             </p>
                         </div>
-                        
                     </div>
                 </div>
-                
             </div>
         </div>
 </section>
 <section class="tj-choose-us-section-service-commercial-4">
-
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
-
                 <h1 class="services-h1">Vehicle Preparation and Documentation</h1>
             </div>
-            
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
@@ -352,7 +342,6 @@
             </div>
         </div>
     </div>
-
 </section>
 {{-- <section class="tj-choose-us-section-service-commercial-2">
     <div class="container">
