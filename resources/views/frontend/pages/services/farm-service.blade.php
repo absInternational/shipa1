@@ -13,10 +13,10 @@ insurance services and securely without any scratch - Shipa1.')
     .why-box {
     border-radius: 12px;
     padding: 20px 0px;
-    background: #f8f9fa;
+    background: #f8f9fa9c;
     }
     .card- {
-    /* background: #29494e; */
+    background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 15px;
@@ -234,29 +234,54 @@ insurance services and securely without any scratch - Shipa1.')
         </div>
     </div>
 </section>
-<section class="tj-about-section pt-4">
+<section class="tj-about-section pt-0">
     <div class="container">
         <div class="row">
+            <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
+                Key Features of Reliable Farm Equipment Transport</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Insurance Coverage</span>
+                        <span class="sub-title active-shape">Safeguarding From Insurance</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
-                            All of the professional auto shipping companies such as ShipA1 provide ample insurance
-                            coverage during transit and you would reap in benefits if any damage happens.</p>
+                            Expert shipping firms like Ship A1 offer complete insurance coverage for your farm equipment 
+                            during transportation, making sure you are covered and reimbursed in the event that any damage occurs.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Competent Shipping Team</span>
+                        <span class="sub-title active-shape">Professional Shipping Team</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
-                            Our assigned shipping team focuses on the safety of the shipment and to properly attach the
-                            equipment with straps. We will make sure that you are completely sattisfied with our
-                            service.</p>
+                            Our knowledgeable shipping staff prioritizes your equipment's safety by securely fastening it with straps and following
+                             all required safety measures, guaranteeing your total pleasure with our service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Timely Delivery </span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Ship A1 places a high value on timeliness, ensuring that your farm equipment reaches its destination on schedule. 
+                            This minimizes delays and keeps your farming operations operating efficiently.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Personalized Transportation Options</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Based on the unique requirements of your Farm equipment, we provide customized transport solutions. This includes choosing the
+                             right trailers and organizing the necessary logistics to guarantee a timely and safe delivery.</p>
                     </div>
                 </div>
             </div>
@@ -283,7 +308,7 @@ insurance services and securely without any scratch - Shipa1.')
         </div>
     </div>
 </section> --}}
-<section class="tj-choose-us-section-service-commercial-6">
+<section class="tj-choose-us-section-service-farm-8">
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">

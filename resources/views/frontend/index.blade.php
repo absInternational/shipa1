@@ -336,7 +336,7 @@
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-3.webp') }}">
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/freight-banner.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>

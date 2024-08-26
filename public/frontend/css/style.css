@@ -4170,7 +4170,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     /* opacity: 1; */
 }
 
-.tj-choose-us-section-service-commercial-6::before {
+.tj-choose-us-section-service-bike-6::before {
     width: 100%;
     position: absolute;
     content: "";
@@ -4205,9 +4205,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     /* background: rgba(6, 46, 57, 0.7); */
 }
 
-.tj-choose-us-section-service-commercial-8 {
+.tj-choose-us-section-service-farm-8 {
     background-color: #000000;
-    background-image: url('../../img/COMMERCIAL-TRUCK-BANNER.webp');
+    background-image: url('../../img/farm-service-1.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4218,7 +4218,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     /* opacity: 1; */
 }
 
-.tj-choose-us-section-service-commercial-8::before {
+.tj-choose-us-section-service-farm-8::before {
     width: 100%;
     position: absolute;
     content: "";
