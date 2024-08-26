@@ -120,7 +120,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/CONSTRUCTION-2.webp') }}"
+                        <img class="rounded" src="{{ asset('frontend/images/project/CONSTRUCTION-666.webp') }}"
                             alt="Image">
                     </div>
                 </div>

@@ -224,7 +224,7 @@ from one state to another state in one click - ShipA1.')
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> Construction Transportation</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Construction Transportation</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Key Considerations for Choosing the Right Carrier</h3>
                         <p class="desc">
                             Heavy equipment shipping may be a challenging endeavor, and it’s important that you pick a
                             specialized carrier company
@@ -247,7 +247,7 @@ from one state to another state in one click - ShipA1.')
     <div class="container">
         <div class="row">
             <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
-                Comprehensive Boat Transportation methods</h2>
+                Comprehensive Construction Equipment Transport Service</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">

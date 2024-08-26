@@ -100,11 +100,7 @@ safe along with insurance facility at nationwide - Shipa1.')
                             someplace for the digging work,
                             or you may want to use it for business purposes, etc. No matter what the nature of the need
                             is, your excavator can be
-                            shipped easily by the company that is worthy of trust. Make sure to employ a transport
-                            company with trained and certified
-                            professionals. If there is any shipping company that you can trust, it has to be ShipA1
-                            because of the experience it has
-                            in providing exclusive excavator shipping services. </p>
+                            shipped easily by the company that is worthy of trust.</p>
                     </div>
 
                 </div>
@@ -151,11 +147,7 @@ safe along with insurance facility at nationwide - Shipa1.')
                             hauled or just a small mini-excavator moved, you must be careful of its size. Because of the
                             complexity, weight, and size of an excavator, finding the best excavator shipping service is
                             the only
-                            approach to get it transported ship A1 provides free online quotes through which you can get
-                            the
-                            exact shipping amount by putting in all these details. Hydraulic excavators are among the
-                            most
-                            frequently shipped pieces of heavy equipment.</p>
+                            approach to get it transported ship A1 provides free online quotes.</p>
                     </div>
 
                 </div>

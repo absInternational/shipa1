@@ -4,60 +4,60 @@
 huge discount offers and free shipping quotes nationwide.')
 @section('content')
 <style>
-.full-width {
-    width: 100%;
-}
-.title-2 {
-    color: #8fc445;
-}
-.desc-2 {
-    color: white;
-}
-.custom-style {
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 5px 30px 0 rgba(35,43,54,.3);
-    border-radius: 15px;
-}
-.custom-style h4 {
-    margin-top: 0;
-}
-.custom-style p {
-    margin-bottom: 0;
-}
-.top-left-image {
-    position: absolute;
-    top: -25px;
-    left: -25px;
-    width: 100px;
-    height: 100px;
-}
-.why-box {
-    border-radius: 12px;
-    padding: 20px 0px;
-    background: #f8f9fa;
-}
-.card- {
-        /* background: #29494e; */
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+    .full-width {
+        width: 100%;
     }
-.services {
-    text-align: center;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    border-radius: 12px;
-    padding: 10px 30px 0px 30px;
-    /* background-color: #9d9e9f14;*/
-}
+    .title-2 {
+        color: #8fc445;
+    }
+    .desc-2 {
+        color: white;
+    }
+    .custom-style {
+        padding: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 5px 30px 0 rgba(35,43,54,.3);
+        border-radius: 15px;
+    }
+    .custom-style h4 {
+        margin-top: 0;
+    }
+    .custom-style p {
+        margin-bottom: 0;
+    }
+    .top-left-image {
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        width: 100px;
+        height: 100px;
+    }
+    .why-box {
+        border-radius: 12px;
+        padding: 20px 0px;
+        background: #f8f9fa;
+    }
+    .card- {
+            /* background: #29494e; */
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+        }
+    .services {
+        text-align: center;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        border-radius: 12px;
+        padding: 10px 30px 0px 30px;
+        /* background-color: #9d9e9f14;*/
+    }
 
-.services-h1 {
-    text-align:center;
-    /* text-decoration: overline; */
-    margin-bottom: 50px;
-    /* color: #ffffff; */
-}
+    .services-h1 {
+        text-align:center;
+        /* text-decoration: overline; */
+        margin-bottom: 50px;
+        /* color: #ffffff; */
+    }
 </style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -126,14 +126,6 @@ huge discount offers and free shipping quotes nationwide.')
                             <span id="counter-value-2" class="ms-3" data-target="28">0</span>k+
                         </div>
                     </div>
-                    {{-- <div class="col-4 text-center">
-                        <h4>Review Counter</h4>
-                        <div class="review-counter">
-                            <span id="counter-value" class="mx-3" data-target="1000">0</span>
-                        </div>
-                    </div> --}}
-
-
                 </div>
                 
             </div>
