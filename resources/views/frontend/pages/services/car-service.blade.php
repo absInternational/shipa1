@@ -551,7 +551,6 @@ huge discount offers and free shipping quotes nationwide.')
         </div>
     </div>
 </section> --}}
-
 {{-- <section class="tj-cta-section-two">
     <div class="tj_cta_image-4 w-100 h-50"></div>
 
