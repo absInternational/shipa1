@@ -13,10 +13,10 @@ safe along with insurance facility at nationwide - Shipa1.')
     .why-box {
     border-radius: 12px;
     padding: 20px 0px;
-    background: #f8f9fa;
+    background: #f8f9fa9c;
     }
     .card- {
-        /* background: #29494e; */
+        background: #ffffff;
         border: 1px solid #ddd;
         border-radius: 12px;
         padding: 15px;
@@ -214,7 +214,7 @@ safe along with insurance facility at nationwide - Shipa1.')
 <section class="tj-about-section pt-4">
     <div class="container">
         <div class="row">
-            <h2 class="title sal-animate" data-sal="slide-left" data-sal-duration="800">
+            <h2 class="title text-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 Ensuring Safe and Efficient Excavator Transport</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">

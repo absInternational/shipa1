@@ -13,14 +13,15 @@ from one state to another state in one click - ShipA1.')
     .why-box {
     border-radius: 12px;
     padding: 20px 0px;
-    background: #f8f9fa;
+    background: #f8f9fa9c;
     }
     .card- {
-            /* background: #29494e; */
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+        /* background: #29494e; */
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
         }
     .services {
         text-align: center;
@@ -210,7 +211,7 @@ from one state to another state in one click - ShipA1.')
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/CONSTRUCTION-44.webp') }}"
@@ -218,7 +219,7 @@ from one state to another state in one click - ShipA1.')
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape"> Construction Transportation</span> --}}
@@ -245,6 +246,8 @@ from one state to another state in one click - ShipA1.')
 <section class="tj-about-section pt-0">
     <div class="container">
         <div class="row">
+            <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
+                Comprehensive Boat Transportation methods</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
@@ -265,9 +268,38 @@ from one state to another state in one click - ShipA1.')
                         <span class="sub-title active-shape">Availability of Trailers</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
-                            For construction equipment transport the car hauler must have (RGN) Removable Gooseneck
+                            For construction equipment transport the hauler must have (RGN) Removable Gooseneck
                             Trailer, Flatbeds and Expendable trailers etc. And along with having these trailers and the
-                            dexterous employees we make it possible to ship your cars.</p>
+                            dexterous employees we make it possible to ship your Equipment.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Specialized Handling</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Construction equipment calls for handling with precision and care. Our staff at Ship A1 is
+                             specially trained in the loading and offloading requirements of heavy machinery and securing 
+                             each piece of equipment during transport.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Tailor-Made Solutions</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Every construction project differs. Ship A1 offers personalized transport solutions with a 
+                            customized combination of trailers and logistical expertise in order to meet the specifications 
+                            of the equipment, giving flexibility and reliability.</p>
                     </div>
 
                 </div>

@@ -34,10 +34,12 @@
     .why-box {
         border-radius: 12px;
         padding: 20px 0px;
-        background: #f8f9fa;
+        /* background: #f8f9fa; */
+        background: #f8f9fa9c;
     }
     .card- {
             /* background: #29494e; */
+            background: #ffffff;
             border: 1px solid #ddd;
             border-radius: 12px;
             padding: 15px;
@@ -405,11 +407,11 @@
         </div>
 </section>
 {{-- @include('partials.reveiw-site') --}}
-<section class="tj-choose-us-section-service-commercial-2">
+<section class="tj-choose-us-section-service-bike-6">
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
-                <h1 class="services-h1">Car Hauling Services</h1>
+                <h1 class="services-h1">Motorcyle Hauling Services</h1>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">

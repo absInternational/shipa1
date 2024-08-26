@@ -7,10 +7,10 @@
     .why-box {
     border-radius: 12px;
     padding: 20px 0px;
-    background: #f8f9fa;
+    background: #f8f9fa9c;
     }
     .card- {
-    /* background: #29494e; */
+        background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 15px;
@@ -261,7 +261,9 @@
         </div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
+                    Comprehensive Boat Transportation methods</h2>
+                <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded-5 p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Open Transport:</span>
@@ -274,7 +276,7 @@
                         
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded-5 p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Enclosed Transport:</span>
@@ -296,6 +298,22 @@
                             <p class="desc">
                             This mode of shipping includes placing and securing your boat on a flat rack, it is only suitable
                             for irregular-shaped boats or oversized boats which cannot be transported on standard trailers or carriers.
+                            <!-- <ul>
+                                    <li>Door-to-door delivery is the easiest type of service, especially if you are someone who would rather let the company control the steering wheel.</li>
+                                    <li>It provides you the option of getting your golf cart picked up from your location and dropping it off directly at the designated location without any hassles or issues.</li>
+                                    </ul> -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one border rounded-5 p-4">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape">Tow-Away Transport</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <p class="desc">This is the method used for smaller boats and most of those that can be towed.
+                                 The boat is attached to a towing vehicle and transported to its destination. This is quite 
+                                 a simple and efficient solution.
                             <!-- <ul>
                                     <li>Door-to-door delivery is the easiest type of service, especially if you are someone who would rather let the company control the steering wheel.</li>
                                     <li>It provides you the option of getting your golf cart picked up from your location and dropping it off directly at the designated location without any hassles or issues.</li>

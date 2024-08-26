@@ -6,17 +6,16 @@
     .title-2 {
     color: #8fc445;
     }
-
     .desc-2 {
         color: white;
     }
     .why-box {
         border-radius: 12px;
         padding: 20px 0px;
-        background: #f8f9fa;
+        background: #f8f9fa9c;
     }
     .card- {
-            /* background: #29494e; */
+            background: #ffffff;
             border: 1px solid #ddd;
             border-radius: 12px;
             padding: 15px;
