@@ -457,11 +457,11 @@ huge discount offers and free shipping quotes nationwide.')
     </div>
 </section>
 @include('partials.reveiw-small-detail') 
-<section class="tj-choose-us-section-service-cars-2 pt-4">
+<section class="tj-choose-us-section-service-cars-2 mt-4">
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
-                <h1 class="services-h1">The Premier Unmatched Excellence in the Auto Transport</h1>
+                <h1 class="services-h1">The Premier Unmatched Excellence</h1>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
