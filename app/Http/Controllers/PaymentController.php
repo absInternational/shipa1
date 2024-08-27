@@ -9,13 +9,13 @@ use Stripe\PaymentIntent;
 
 class PaymentController extends Controller
 {
-    public function createCharge(Request $request)
+    public function processPayment(Request $request)
     {
         return response()->json([
             'success' => true,
             'message' => 'Payment successful!'
         ]);
-        
+
         Log::info('Request data:', $request->all());
 
         $amount = $request->amount;
