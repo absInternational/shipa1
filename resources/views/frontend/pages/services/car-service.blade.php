@@ -124,7 +124,7 @@ huge discount offers and free shipping quotes nationwide.')
                 </div>
                 
             </div>
-            <div class="col-lg-5 p-0">
+            <div class="col-lg-5">
 
                 @if (session('success'))
                 <div class="alert alert-success">
@@ -399,7 +399,7 @@ huge discount offers and free shipping quotes nationwide.')
                 </div>
             </div>
         </div>
-        <div class="row full-width mt-4">
+        <div class="row full-width mt-4 ms-1">
             <div class="col-12 custom-style">
                 <h4 class=" text-center">Premium Vehicle Transport Services</h4>
                 <p class=" text-center">ShipA1, with its standard <a class="pp-link-2"

@@ -372,7 +372,7 @@
         <div class="row">
             <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
                 Comprehensive Construction Equipment Transport Service</h2>
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Secure Shipment</span>
@@ -383,7 +383,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Affordable Price</span>
@@ -395,7 +395,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Secure Shipment</span>
@@ -406,7 +406,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Affordable Price</span>

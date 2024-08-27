@@ -432,7 +432,7 @@
                 </div> --}}
             </div>
             <div class="row">  
-                <div class="col-lg-6 sal-animate pt-2 mt-2" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-6 sal-animate pt-2 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Open Auto Transport</span>
@@ -446,7 +446,7 @@
                         
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate pt-2 mt-2" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-6 sal-animate pt-2 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Enclosed Auto Transport</span>
@@ -461,7 +461,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Door-to-Door Delivery</span>
@@ -475,7 +475,7 @@
                         
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading mb-4">
                             <span class="sub-title active-shape">Terminal-to-Terminal Shipping</span>
