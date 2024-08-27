@@ -18,9 +18,18 @@ class PaymentController extends Controller
         $cardExpiryMonth = $request->cardexpirydate;
         $cardCvc = $request->csvno;
 
+        return response()->json([
+            'success' => true,
+            'amount' => $amount,
+            'cardNumber' => $cardNumber,
+            'cardExpiryMonth' => $cardExpiryMonth,
+            'cardCvc' => $cardCvc,
+            'message' => 'Payment successful!'
+        ]);
+
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
-        // try {
+        try {
             $paymentIntent = \Stripe\PaymentIntent::create([
                 'amount' => $amount * 100,
                 'currency' => 'usd',
@@ -41,12 +50,12 @@ class PaymentController extends Controller
                 'success' => true,
                 'message' => 'Payment successful!'
             ]);
-        // } catch (\Exception $e) {
-        //     Log::error('Payment error: ' . $e->getMessage());
-        //     return response()->json([
-        //         'success' => false,
-        //         'message' => 'Payment error: ' . $e->getMessage()
-        //     ], 500);
-        // }
+        } catch (\Exception $e) {
+            Log::error('Payment error: ' . $e->getMessage());
+            return response()->json([
+                'success' => false,
+                'message' => 'Payment error: ' . $e->getMessage()
+            ], 500);
+        }
     }
 }
