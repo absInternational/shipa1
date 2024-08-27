@@ -32,19 +32,17 @@
         height: 100px; 
     }
     .why-box {
-        border-radius: 12px;
-        padding: 20px 0px;
-        /* background: #f8f9fa; */
-        background: #f8f9fa9c;
+    border-radius: 12px;
+    padding: 20px 0px;
+    background: #f8f9fa9c;
     }
     .card- {
-            /* background: #29494e; */
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
-        }
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+    }
     .services {
         text-align: center;
         /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -52,7 +50,6 @@
         padding: 10px 30px 0px 30px;
         /* background-color: #9d9e9f14;*/
     }
-
     .services-h1 {
         text-align:center;
         /* text-decoration: overline; */
@@ -83,7 +80,7 @@
         </div>
     </div>
 </section>
-<section class="tj-blog-standard pb-0">
+<section class="tj-blog-standard pb-0 pt-4">
    <div class="container">
            <div class="row">
                 <div class="col-lg-7">
@@ -307,104 +304,128 @@
                             </form>
                         </div>
                 </div>
-           </div>
-               <div class="row full-width">
-                     <div class="col-12 custom-style">
-                         <h4 class=" text-center">Delivering Motorcycles Promptly Nationwide</h4>
-                         <p class=" text-center">Many professionals truckers are a part of ShipA1, and that is the main reason behind the on-time delivery of motorcycles. Another way to look into what services look like in a particular company, you can always look at their feedback section, testimonials, and their rating to know about their services. ShipA1 and its motorcycle shipping are famous around the nation, and that is why you will always find satisfied customers when it comes to ShipA1 motorcycle shipping. Since ShipA1 has its own quality standards, it believes that the customers should be given a proper service across the nation.</p>
-                         <div class="tj-theme-button  text-center mt-2">
-                                                 <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                                     Get Quote
-                                                     <i class="flaticon-right-1"></i>
-                                                 </a>
-                                             </div>
-                     </div>
-               </div>
+           </div>  
    </div>
 </section>
 <section class="tj-about-section pt-0">
-        <div class="container pb-4">
-            <div class="row">
-                <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Affordable and Secure Shipping</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            If you are worried about the increased rates of the motorcycle shipping, and you don’t want to continue 
-                            the shipment because of that fear, then you don’t have to worry because the shipment is made on the 
-                            basis of stable rates because ShipA1 believes in giving a quality offer to the customers rather than
-                             using the opportunity against them. <br> ShipA1 takes into account everything that can be a potential threat 
-                             to the safety and security of the motorcycle, and that is the reason it has maintained the status of 
-                             shipping the motorcycles with ultimate care and attention.</p>
-                        </div>
-                        
+    <div class="container pb-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/MOTORCYCLE-1.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Affordable and Secure Shipping</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        If you are worried about the increased rates of the motorcycle shipping, and you don’t want to continue 
+                        the shipment because of that fear, then you don’t have to worry because the shipment is made on the 
+                        basis of stable rates because ShipA1 believes in giving a quality offer to the customers rather than
+                            using the opportunity against them. <br> ShipA1 takes into account everything that can be a potential threat 
+                            to the safety and security of the motorcycle, and that is the reason it has maintained the status of 
+                            shipping the motorcycles with ultimate care and attention.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    @include('partials.cta-section')
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Stress-Free Motorcycle Shipping</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        You can ride your bike at a particular location, but it involves risk and demands specific information 
+                        about routes and places, but with ShipA1 there is no risk involved because they are well aware of all 
+                        the things that are necessary for the shipment of motorcycles. <br> Huge pressure will be lifted off both 
+                        physically and mentally once you ship your motorcycle with the ShipA1 and you will notice that it was 
+                        not a bad idea trusting ShipA1 with your needs of motorcycle shipping from one state to another of the 
+                        USA.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                    <div class="mt-4 rounded">
-                        <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/MOTORCYCLE-1.webp') }}" alt="Image">
-                        </div>
-                        <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
+            </div>
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/MOTORCYCLE-2.webp') }}" alt="Image">
+                    </div>
+                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
+                Comprehensive Construction Equipment Transport Service</h2>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Secure Shipment</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        The shipment of your vehicle is handled with utmost care and in a completely guarded way with us.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Affordable Price</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        The combination of affordable price & timely vehicles delivery is what make our services unique and special.</p>
                     </div>
                 </div>
             </div>
         </div>
-        @include('partials.cta-section')
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                    <div class="mt-4 rounded">
-                        <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/MOTORCYCLE-2.webp') }}" alt="Image">
-                        </div>
-                        <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Secure Shipment</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        The shipment of your vehicle is handled with utmost care and in a completely guarded way with us.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Stress-Free Motorcycle Shipping</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            You can ride your bike at a particular location, but it involves risk and demands specific information 
-                            about routes and places, but with ShipA1 there is no risk involved because they are well aware of all 
-                            the things that are necessary for the shipment of motorcycles. <br> Huge pressure will be lifted off both 
-                            physically and mentally once you ship your motorcycle with the ShipA1 and you will notice that it was 
-                            not a bad idea trusting ShipA1 with your needs of motorcycle shipping from one state to another of the 
-                            USA.</p>
-                        </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Affordable Price</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        The combination of affordable price & timely vehicles delivery is what make our services unique and special.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded-5 p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Secure Shipment</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            The shipment of your vehicle is handled with utmost care and in a completely guarded way with us.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded-5 p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Affordable Price</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            The combination of affordable price & timely vehicles delivery is what make our services unique and special.</p>
-                        </div>
-                    </div>
+        <div class="row full-width pt-4">
+            <div class="col-12 custom-style">
+                <h4 class=" text-center">Delivering Motorcycles Promptly Nationwide</h4>
+                <p class=" text-center">Many professionals truckers are a part of ShipA1, and that is the main reason behind the on-time delivery of motorcycles. Another way to look into what services look like in a particular company, you can always look at their feedback section, testimonials, and their rating to know about their services. ShipA1 and its motorcycle shipping are famous around the nation, and that is why you will always find satisfied customers when it comes to ShipA1 motorcycle shipping. Since ShipA1 has its own quality standards, it believes that the customers should be given a proper service across the nation.</p>
+                <div class="tj-theme-button  text-center mt-2">
+                    <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                        Get Quote
+                        <i class="flaticon-right-1"></i>
+                    </a>
                 </div>
             </div>
-        </div>
+      </div>
+    </div>
 </section>
 {{-- @include('partials.reveiw-site') --}}
 <section class="tj-choose-us-section-service-bike-6">
