@@ -1,8 +1,6 @@
 @extends('frontend.layouts.app')
-
 @section('content')
     <!--========== breadcrumb Start ==============-->
-
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -25,11 +23,8 @@
             </div>
         </div>
     </section>
-    
     <!--========== breadcrumb End ==============-->
-
     <!--=========== About Section Start =========-->
-
     <section class="tj-service-details pt-4 pb-0">
            <div class="container">
             <div class="row">
@@ -37,8 +32,15 @@
                     <div class="tj-section-heading text-center">
                         <span class="sub-title active-shape">Ship A1 Transport</span>
                         <p>
-                        Ship A1 Transport is one of the top logistic and shipping companies, with a vast variety of shipping methods, quality services, and a well-equipped staff we are proficient in transporting your vehicles, heavy equipment and freight from one place to another with timely delivery all across the US. At Ship A1 Transport we believe that our top priority is providing our customers with top-notch quality as well as catering to their needs from time to time. We ensure our customers' satisfaction and peace of mind and maintain customer loyalty with them. Your trust is our goal. Ship A1 Transport not only believes in safe and secure transportation we also care about what our customers require from us, with our professional, expert, and highly equipped team we can fully meet your needs and expectations without any hassle.
-
+                        Ship A1 Transport is one of the top logistic and shipping companies, with a vast variety of 
+                        shipping methods, quality services, and a well-equipped staff we are proficient in transporting 
+                        your vehicles, heavy equipment and freight from one place to another with timely delivery all 
+                        across the US. At Ship A1 Transport we believe that our top priority is providing our customers 
+                        with top-notch quality as well as catering to their needs from time to time. We ensure our 
+                        customers' satisfaction and peace of mind and maintain customer loyalty with them. Your trust 
+                        is our goal. Ship A1 Transport not only believes in safe and secure transportation we also care 
+                        about what our customers require from us, with our professional, expert, and highly equipped team 
+                        we can fully meet your needs and expectations without any hassle.
                         </p>
                         <!-- <h2 class="title">Welcome to the  &amp; privacy policy </h2> -->
                     </div>
@@ -46,7 +48,6 @@
             </div>
            </div>
     </section>
-
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
