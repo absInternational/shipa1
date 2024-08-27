@@ -16,7 +16,11 @@ class PaymentController extends Controller
         $cardExpiryMonth = $request->cardexpirydate;
         $cardCvc = $request->csvno;
 
-        Stripe::setApiKey(env('STRIPE_SECRET'));
+        $stripe = Stripe::setApiKey(env('STRIPE_SECRET'));
+
+        return response()->json([
+            '$stripe' => $$stripe,
+        ]);
 
         try {
             $token = Token::create([
@@ -26,12 +30,6 @@ class PaymentController extends Controller
                     'exp_year' => explode('/', $cardExpiryMonth)[1],
                     'cvc' => $cardCvc,
                 ],
-            ]);
-
-            return response()->json([
-                'token' => $token,
-                'success' => true,
-                'message' => 'Payment successful!'
             ]);
 
             $charge = Charge::create([
