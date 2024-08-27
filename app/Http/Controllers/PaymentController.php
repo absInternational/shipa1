@@ -18,7 +18,7 @@ class PaymentController extends Controller
         $cardNumber = $request->card_number;
         $cardExpiryMonth = $request->cardexpirydate;
         $cardCvc = $request->csvno;
-        $cardCvc = env('STRIPE_SECRET');
+        $cardCvc = config('services.stripe.secret');
 
         return response()->json([
             'success' => true,
