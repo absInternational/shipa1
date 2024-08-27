@@ -9,13 +9,8 @@ use Stripe\PaymentIntent;
 
 class PaymentController extends Controller
 {
-    public function processPayment(Request $request)
+    public function createCharge(Request $request)
     {
-        return response()->json([
-            'success' => true,
-            'message' => 'Payment successful!'
-        ]);
-
         Log::info('Request data:', $request->all());
 
         $amount = $request->amount;
@@ -25,7 +20,7 @@ class PaymentController extends Controller
 
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
-        // try {
+        try {
             $paymentIntent = \Stripe\PaymentIntent::create([
                 'amount' => $amount * 100,
                 'currency' => 'usd',
@@ -46,12 +41,12 @@ class PaymentController extends Controller
                 'success' => true,
                 'message' => 'Payment successful!'
             ]);
-        // } catch (\Exception $e) {
-        //     Log::error('Payment error: ' . $e->getMessage());
-        //     return response()->json([
-        //         'success' => false,
-        //         'message' => 'Payment error: ' . $e->getMessage()
-        //     ], 500);
-        // }
+        } catch (\Exception $e) {
+            Log::error('Payment error: ' . $e->getMessage());
+            return response()->json([
+                'success' => false,
+                'message' => 'Payment error: ' . $e->getMessage()
+            ], 500);
+        }
     }
 }
