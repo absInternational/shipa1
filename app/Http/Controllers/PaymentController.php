@@ -9,7 +9,7 @@ use Stripe\PaymentIntent;
 
 class PaymentController extends Controller
 {
-    public function createCharge(Request $request)
+    public function processPayment(Request $request)
     {
         Log::info('Request data:', $request->all());
 
