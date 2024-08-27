@@ -422,7 +422,7 @@ huge discount offers and free shipping quotes nationwide.')
     </div>
 </section>
 @include('partials.cta-section')
-<section class="tj-about-section pt-0">
+<section class="tj-about-section pt-0 pb-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
