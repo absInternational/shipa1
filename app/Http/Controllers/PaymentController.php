@@ -21,7 +21,7 @@ class PaymentController extends Controller
 
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
-        try {
+        // try {
             // Create a token
             $token = Token::create([
                 'card' => [
@@ -50,12 +50,12 @@ class PaymentController extends Controller
                 'success' => true,
                 'message' => 'Payment successful!'
             ]);
-        } catch (\Exception $e) {
-            Log::error('Payment error: ' . $e->getMessage());
-            return response()->json([
-                'success' => false,
-                'message' => 'Payment error: ' . $e->getMessage()
-            ], 500);
-        }
+        // } catch (\Exception $e) {
+        //     Log::error('Payment error: ' . $e->getMessage());
+        //     return response()->json([
+        //         'success' => false,
+        //         'message' => 'Payment error: ' . $e->getMessage()
+        //     ], 500);
+        // }
     }
 }
