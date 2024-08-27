@@ -18,9 +18,16 @@ class PaymentController extends Controller
         $cardNumber = $request->card_number;
         $cardExpiryMonth = $request->cardexpirydate;
         $cardCvc = $request->csvno;
+        $cardCvc = env('STRIPE_SECRET');
 
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
+        return response()->json([
+            'success' => true,
+            'message' => 'Payment successful!',
+            'cardCvc' => $cardCvc
+        ]);
+        
         try {
             // Create a token
             $token = Token::create([
