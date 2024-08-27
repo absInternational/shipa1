@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Stripe\Stripe;
-use Stripe\Token;
-use Stripe\Charge;
+use Stripe\PaymentIntent;
 
 class PaymentController extends Controller
 {
     public function createCharge(Request $request)
     {
+        Log::info('Request data:', $request->all());
+
         $amount = $request->amount;
         $cardNumber = $request->card_number;
         $cardExpiryMonth = $request->cardexpirydate;
@@ -19,19 +21,19 @@ class PaymentController extends Controller
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
         try {
-            $token = Token::create([
-                'card' => [
-                    'number' => $cardNumber,
-                    'exp_month' => explode('/', $cardExpiryMonth)[0],
-                    'exp_year' => explode('/', $cardExpiryMonth)[1],
-                    'cvc' => $cardCvc,
-                ],
-            ]);
-
-            $charge = Charge::create([
+            $paymentIntent = \Stripe\PaymentIntent::create([
                 'amount' => $amount * 100,
                 'currency' => 'usd',
-                'source' => $token->id,
+                'payment_method_data' => [
+                    'type' => 'card',
+                    'card' => [
+                        'number' => $cardNumber,
+                        'exp_month' => explode('/', $cardExpiryMonth)[0],
+                        'exp_year' => explode('/', $cardExpiryMonth)[1],
+                        'cvc' => $cardCvc,
+                    ],
+                ],
+                'confirm' => true,
                 'description' => 'One-time payment',
             ]);
 
@@ -40,10 +42,11 @@ class PaymentController extends Controller
                 'message' => 'Payment successful!'
             ]);
         } catch (\Exception $e) {
+            Log::error('Payment error: ' . $e->getMessage());
             return response()->json([
                 'success' => false,
                 'message' => 'Payment error: ' . $e->getMessage()
-            ]);
+            ], 500);
         }
     }
 }
