@@ -19,7 +19,7 @@ class PaymentController extends Controller
         $stripe = Stripe::setApiKey(env('STRIPE_SECRET'));
 
         return response()->json([
-            '$stripe' => $$stripe,
+            '$stripe' => $stripe,
         ]);
 
         try {
