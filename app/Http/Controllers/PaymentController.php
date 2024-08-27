@@ -20,14 +20,14 @@ class PaymentController extends Controller
         $cardCvc = $request->csvno;
         $cardCvc = env('STRIPE_SECRET');
 
-        Stripe::setApiKey(env('STRIPE_SECRET'));
-
         return response()->json([
             'success' => true,
             'message' => 'Payment successful!',
             'cardCvc' => $cardCvc
         ]);
         
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+
         try {
             // Create a token
             $token = Token::create([
