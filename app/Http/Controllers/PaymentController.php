@@ -28,6 +28,12 @@ class PaymentController extends Controller
                 ],
             ]);
 
+            return response()->json([
+                'token' => $token,
+                'success' => true,
+                'message' => 'Payment successful!'
+            ]);
+
             $charge = Charge::create([
                 'amount' => $amount * 100,
                 'currency' => 'usd',
