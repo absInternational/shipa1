@@ -18,14 +18,8 @@ class PaymentController extends Controller
         $cardNumber = $request->card_number;
         $cardExpiryMonth = $request->cardexpirydate;
         $cardCvc = $request->csvno;
-        $cardCvc = config('services.stripe.secret');
+        $cardCvc = $request->csvno;
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Payment successful!',
-            'cardCvc' => $cardCvc
-        ]);
-        
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
         try {
