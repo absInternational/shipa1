@@ -19,6 +19,8 @@ class PaymentController extends Controller
         $cardExpiryMonth = $request->cardexpirydate;
         $cardCvc = $request->csvno;
 
+        dd($cardCvc);
+
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
         // try {
