@@ -321,8 +321,10 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Affordable and Secure Shipping</span>
+                        {{-- <span class="sub-title active-shape">Affordable and Secure Shipping</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" 
+                        data-sal-duration="800">Affordable and Secure Shipping</h3>
                         <p class="desc">
                         If you are worried about the increased rates of the motorcycle shipping, and you don’t want to continue 
                         the shipment because of that fear, then you don’t have to worry because the shipment is made on the 
@@ -342,8 +344,10 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Stress-Free Motorcycle Shipping</span>
+                        {{-- <span class="sub-title active-shape">Stress-Free Motorcycle Shipping</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" 
+                        data-sal-duration="800">Stress-Free Motorcycle Shipping</h3>
                         <p class="desc">
                         You can ride your bike at a particular location, but it involves risk and demands specific information 
                         about routes and places, but with ShipA1 there is no risk involved because they are well aware of all 

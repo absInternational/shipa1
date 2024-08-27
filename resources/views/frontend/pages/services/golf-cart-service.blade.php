@@ -80,7 +80,7 @@
         </div>
     </div>
 </section>
-<section class="tj-blog-standard pb-0">
+<section class="tj-blog-standard pb-0 pt-4">
    <div class="container">
            <div class="row">
                 <div class="col-lg-7">
@@ -89,9 +89,9 @@
                             </div>
                              <br>
                     <div class="text-container text-left">
-                        <h3>Choosing the best shipping company for your golf cart?</h3>
+                        {{-- <h3>Choosing the best shipping company for your golf cart?</h3>
                         <p>Want to know the secret to choosing the best shipping company 
-                            for your golf cart? We’ve got you. First, let's talk about it.</p> 
+                            for your golf cart? We’ve got you. First, let's talk about it.</p>  --}}
                             <h3>What is golf cart shipping?</h3>
                             <p>Similar to any vehicle shipping, golf carts are also modes of transport that have proven to be 100%
                                  convenient and cost-effective. Just like any other vehicle being shipped, they also require the
@@ -99,20 +99,21 @@
                                    golf course but are also pretty well reputable in other factors.You must be wondering where and 
                                    how else are golf carts used. You will come across multiple golf carts being utilized in places
                                     like communities, hospitals, companies, resorts, etc.
-                                    <h3>Why Choose Ship A1 Transport?</h3>
-                                    <ul>
-                                       <li>The Company’s experience. </li>
-                                       <li>The References.</li>
-                                       <li>Insurance Policy and coverage.</li>
-                                       <li>Cost of the shipment</li>
-                                    </ul>
-                                    Choosing the right company for your shipping solutions is extremely crucial as it determines
-                                     the security, timely delivery, and protection of your vehicles. Hence, <a class="pp-link-2" href="{{ route('welcome') }}">choosing Ship A1</a>
-                                      Transport for your golf cart shipping has to be the best option for your transportation needs.
-
                             </p> 
-                        
-                       
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-6 text-center">
+                            <h4><i class="fas fa-ship" style="color: var(--tj-primary-color);"></i> Successful Shipment</h4>
+                            <div class="review-counter fs-2">
+                                <span id="counter-value" class="ms-3" data-target="318" style="color: var(--tj-secondary-color);">0</span>k+
+                            </div>
+                        </div>
+                        <div class="col-6 text-center">
+                            <h4><i class="fas fa-smile" style="color: var(--tj-primary-color);"></i> Satisfied Clients</h4>
+                            <div class="review-counter fs-2">
+                                <span id="counter-value-2" class="ms-3 " data-target="289" style="color: var(--tj-secondary-color);">0</span>k+
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 p-0">
@@ -324,35 +325,19 @@
                         </div>
                 </div>
            </div>
-               <div class="row full-width ps-4">
-                     <div class="col-12 custom-style">
-                         <h4 class=" text-center">What do we offer?</h4>
-                         <p class=" text-center">Ship A1 Transport masters a range of multiple services to our customers, from 
-                            cost-effective deals, white glove delivery, door-to-door delivery, and terminal-to-terminal delivery 
-                            to enclosed and open-air transport. Whether you’re renting a golf cart, purchasing it for your needs, 
-                            want it removed from one location and moved to another, or just need it to be sent for maintenance, we 
-                            have you covered! Choosing Ship A1 Transport for your<a class="pp-link-2" href="{{ route('form.vehicle.golf_cart') }}"> Golf Cart Shipping </a>means you have entrusted us 
-                            as your trusted and reliable partner who shares mutual feelings when it comes to professionalism and 
-                            transparency.</p>
-                         <div class="tj-theme-button  text-center mt-2">
-                                                 <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                                     Get Quote
-                                                     <i class="flaticon-right-1"></i>
-                                                 </a>
-                                             </div>
-                     </div>
-               </div>
    </div>
 </section>
-@include('partials.cta-section')
+@include('partials.reveiw-small-detail') 
 <section class="tj-about-section pt-0">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Why is that?</span>
+                            {{-- <span class="sub-title active-shape">Why is that?</span> --}}
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <h3 class="sal-animate" data-sal="slide-left" 
+                             data-sal-duration="800">Why is that?</h3>
                             <p class="desc">
                             We not only focus on providing top-notch services, but we also ensure that our offerings are meticulously 
                             tailored to meet your unique needs and expectations. With years of accumulated experience and expertise, we can proudly 
@@ -370,7 +355,7 @@
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/golf-cart-service-1.webp') }}" alt="Image">
+                            <img class="rounded" src="{{ asset('frontend/images/project/GOLFCART-1.webp') }}" alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
@@ -378,12 +363,12 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container pb-4">
             <div class="row">
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/golf-cart service-2.webp') }}" alt="Image">
+                            <img class="rounded" src="{{ asset('frontend/images/project/GOLFCART-2.webp') }}" alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
@@ -392,56 +377,86 @@
                 <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Golf Cart Shipping Methods</span>
+                            {{-- <span class="sub-title active-shape">Why is that?</span> --}}
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">When it comes to shipping your golf cart from one place to another, there are multiple 
-                                options to look at. Ship A1 provides a comprehensive range of services tailored to accommodate 
-                                types of distances, timelines, and modes of protection for your golf cart.<br>
-                                 Here are the most common modes of shipping used:
-                            <ul>
-                                       <li>Open-air Transport</li>
-                                       <li>Enclosed Auto Transport</li>
-                                       <li>Door-to-Door Delivery</li>
-                                       <li>Terminal-to-Terminal Shipping</li>
-                                    </ul>
-                            </p>
+                            <h3 class="sal-animate" data-sal="slide-left" 
+                             data-sal-duration="800">Why Choose Ship A1 Transport?</h3>
+                            <p class="desc">
+                                <ul>
+                                   <li>The Company’s experience. </li>
+                                   <li>The References.</li>
+                                   <li>Insurance Policy and coverage.</li>
+                                   <li>Cost of the shipment</li>
+                                </ul>
+                                Choosing the right company for your shipping solutions is extremely crucial as it determines
+                                 the security, timely delivery, and protection of your vehicles. Hence, <a class="pp-link-2" href="{{ route('welcome') }}">choosing Ship A1</a>
+                                  Transport for your golf cart shipping has to be the best option for your transportation needs.</p>
                         </div>
                         
                     </div>
                 </div>
             </div>
         </div>
+        @include('partials.cta-section')
         <div class="container">
-            <div class="row">  
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Open-air Transport</span>
+                            {{-- <span class="sub-title active-shape">Golf Cart Shipping Methods</span> --}}
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            If you are someone who wants to get their golf cart shipped on a budget, here is the best option for 
-                            you. Open-air transport is another type of transport that supports and delivers your vehicle on a 
-                            trailer or an open truck. <br> While it may seem to you that your vehicle can be prone to damage due to
-                             weather or road conditions, we are here to assure you that our expert staff and services are 
-                             specifically designed to ease your concerns and issues.
+                            <h3 class="sal-animate text-center" data-sal="slide-left" 
+                            data-sal-duration="800">Golf Cart Shipping Methods</h3>
+                            <p class="desc text-center">Ship A1 provides a comprehensive range of services tailored to accommodate 
+                                types of distances, timelines, and modes of protection for your golf cart.
+                                 Here are the most common modes of shipping used:
+                                {{-- <ul>
+                                    <li>Open-air Transport</li>
+                                    <li>Enclosed Auto Transport</li>
+                                    <li>Door-to-Door Delivery</li>
+                                    <li>Terminal-to-Terminal Shipping</li>
+                                </ul> --}}
                             </p>
                         </div>
                         
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                {{-- <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                    <div class="mt-4 rounded">
+                        <div class="image-box">
+                            <img class="rounded" src="{{ asset('frontend/images/project/GOLFCART-1.webp') }}" alt="Image">
+                        </div>
+                        <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
+
+                    </div>
+                </div> --}}
+            </div>
+            <div class="row">  
+                <div class="col-lg-6 sal-animate pt-2 mt-2" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one border rounded p-4">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape">Open Auto Transport</span>
+                            <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <p class="desc">
+                                It's the affordable golf cart transport: It's the cheapest option of open truck or 
+                                trailer transport carrying your vehicle. Your vehicle is exposed to weather, but on-board 
+                                experts ensure your vehicle to be safe throughout the travel.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 sal-animate pt-2 mt-2" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Enclosed Auto Transport</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            If you're looking to ship a luxurious golf cart then our best option for you would be enclosed auto 
-                            transport. Why? Because, as opposed to Open-air Transport, enclosed auto transport guarantees maximum 
-                            protection for your golf cart by sheltering your vehicle entirely in an enclosed truck or trailer. 
-                            Although quite costly, this method of shipping is ideal if your golf cart is very valuable or 
-                            custom-made, the distance is quite long, and there is a risk of bad weather conditions.</p>
+                                This is the maximum protection; the vehicle is completely sheltered in a trailer. 
+                                It's ideal to travel long distances or through bad weather, but it is considerably more 
+                                expensive for high-value or custom golf carts.
+                                </p>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -452,12 +467,9 @@
                             <span class="sub-title active-shape">Door-to-Door Delivery</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            We present you with one of the safest options
-                            also known as door-to-door delivery. <br>  Are you unable to pick up or drop off your golf cart? Why choose this?
-                             <ul>
-                                       <li>Door-to-door delivery is the easiest type of service, especially if you are someone who would rather let the company control the steering wheel.</li>
-                                       <li>It provides you the option of getting your golf cart picked up from your location and dropping it off directly at the designated location without any hassles or issues.</li>
-                                    </ul>
+                                This service will conveniently pick up a golf cart from its location
+                                 and drop it off right at the destination. Great for anyone that enjoys an 
+                                 ordeal-free experience.
                             </p>
                         </div>
                         
@@ -468,23 +480,35 @@
                         <div class="tj-section-heading mb-4">
                             <span class="sub-title active-shape">Terminal-to-Terminal Shipping</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">This is another option if you're looking for cost-effective shipping for your golf cart. Similar to Door-to-Door Delivery 
-                            in terms of being budget-friendly, Terminal-to-Terminal offers an even better shipping method. This involves dropping your 
-                            golf cart at the nearest terminal which can be found near ports and airports and getting it picked up from your friend or
-                             family from the terminal at your designated location. This has proven to be a far cheaper option especially 
-                             if we’re talking about long distances since it requires you to drop off your vehicle halfway to the nearest 
-                             terminal in your city and then get it picked up halfway from the nearest terminal in the designated drop-off
-                              city.</p>
+                            <p class="desc">A cost-effective option is that you drop your golf cart at a 
+                                terminal in proximity and pick up from another at the destination. This is, 
+                                above all, a budget-friendly choice, more so in the long run.</p>
                         </div>
                         
                     </div>
                 </div>
             </div>
+            <div class="row full-width ps-4 pt-4">
+                <div class="col-12 custom-style">
+                    <h4 class=" text-center">What do we offer?</h4>
+                    <p class=" text-center">Ship A1 Transport masters a range of multiple services to our customers, from 
+                       cost-effective deals, white glove delivery, door-to-door delivery, and terminal-to-terminal delivery 
+                       to enclosed and open-air transport. Whether you’re renting a golf cart, purchasing it for your needs, 
+                       want it removed from one location and moved to another, or just need it to be sent for maintenance, we 
+                       have you covered! Choosing Ship A1 Transport for your<a class="pp-link-2" href="{{ route('form.vehicle.golf_cart') }}"> Golf Cart Shipping </a>means you have entrusted us 
+                       as your trusted and reliable partner who shares mutual feelings when it comes to professionalism and 
+                       transparency.</p>
+                    <div class="tj-theme-button  text-center mt-2">
+                        <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                            Get Quote
+                            <i class="flaticon-right-1"></i>
+                        </a>
+                    </div>
+                </div>
+          </div>
         </div>
 </section>
 {{-- @include('partials.reveiw-site') --}}
-@include('partials.reveiw-small-detail') 
-
 {{-- <section class="tj-about-section-five">
     <div class="container">
         <div class="row justify-content-center services">
@@ -882,4 +906,42 @@
         updateSuggestions(inputField, suggestionsList);
     });
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const counter = document.getElementById('counter-value');
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 50; // Adjust this value to control the speed
+
+        const updateCounter = () => {
+            if (count < target) {
+                count = Math.ceil(count + increment);
+                counter.textContent = count;
+                setTimeout(updateCounter, 50); // Adjust this value to control the speed
+            } else {
+                counter.textContent = target;
+            }
+        };
+
+        updateCounter();
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const counter = document.getElementById('counter-value-2');
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 50; // Adjust this value to control the speed
+
+        const updateCounter = () => {
+            if (count < target) {
+                count = Math.ceil(count + increment);
+                counter.textContent = count;
+                setTimeout(updateCounter, 50); // Adjust this value to control the speed
+            } else {
+                counter.textContent = target;
+            }
+        };
+
+        updateCounter();
+    });
+</script> 
 @endsection

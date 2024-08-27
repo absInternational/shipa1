@@ -81,7 +81,7 @@
         </div>
     </div>
 </section>
-<section class="tj-blog-standard pb-0">
+<section class="tj-blog-standard pb-0 pt-4">
    <div class="container">
         <div class="row">
             <div class="col-lg-7">
@@ -321,14 +321,16 @@
    </div>
 </section>
 @include('partials.reveiw-small-detail') 
-    <section class="tj-about-section pt-0">
+<section class="tj-about-section pt-0">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Insurance and Safety</span>
+                            {{-- <span class="sub-title active-shape">Insurance and Safety</span> --}}
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
+                            <h3 class="sal-animate" data-sal="slide-left" 
+                             data-sal-duration="800">Insurance and Safety</h3>
                             <p class="desc">
                             Apart from the company’s experience, ratings, and shipping services, another thing that you need to 
                             consider when choosing the All-Terrain transport company is the insurance coverage as safety is the
@@ -367,8 +369,10 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Pricing Factors Consideration</span>
+                        {{-- <span class="sub-title active-shape">Pricing Factors Consideration</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" 
+                        data-sal-duration="800">Pricing Factors Consideration</h3>
                     <p class="desc">
                         At last, you can not regret the price factor from the list when talking about All-Terrain transportation. 
                         The price for the shipment of an ATV depends on several factors such as weight, size, shape, and the 
