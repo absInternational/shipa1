@@ -167,10 +167,9 @@
         </div>
 </section>
 <section class="tj-blog-standard pt-2 pb-4 mb-4">
-
-<div class="container">
+    <div class="container">
         
-            <div class="row full-width ps-4">
+            <div class="row full-width ps-4 pt-4">
                     <div class="col-12 custom-style">
                         <h4 class=" text-center">What is Boat Auto Shipping?</h4>
                         <p class=" text-center">The process of transporting or shipping boats from one place to another using specialized carriers is called Boat Auto Transport 
@@ -186,7 +185,7 @@
                     </div>
             </div>
 
-</div>
+    </div>
 </section>
 @include('partials.cta-section')
 <section class="tj-about-section pt-4">

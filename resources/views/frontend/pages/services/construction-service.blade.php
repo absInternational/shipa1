@@ -243,7 +243,7 @@ from one state to another state in one click - ShipA1.')
         </div>
     </div>
 </section>
-<section class="tj-about-section pt-0">
+<section class="tj-about-section pt-0 pb-4">
     <div class="container">
         <div class="row">
             <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
