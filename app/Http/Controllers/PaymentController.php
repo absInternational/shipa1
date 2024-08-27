@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Stripe\Stripe;
-use Stripe\PaymentIntent;
+use Stripe\Token;
+use Stripe\Charge;
 
 class PaymentController extends Controller
 {
@@ -20,31 +21,22 @@ class PaymentController extends Controller
 
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
-        // try {
-
-
-        //     return response()->json([
-        //         'success' => true,
-        //         'stripe' => $stripe,
-        //         'amount' => $amount,
-        //         'cardNumber' => $cardNumber,
-        //         'cardExpiryMonth' => $cardExpiryMonth,
-        //         'cardCvc' => $cardCvc,
-        //         'message' => 'Payment successful!'
-        //     ]);
-            $paymentIntent = \Stripe\PaymentIntent::create([
-                'amount' => $amount * 100,
-                'currency' => 'usd',
-                'payment_method_data' => [
-                    'type' => 'card',
-                    'card' => [
-                        'number' => $cardNumber,
-                        'exp_month' => explode('/', $cardExpiryMonth)[0],
-                        'exp_year' => explode('/', $cardExpiryMonth)[1],
-                        'cvc' => $cardCvc,
-                    ],
+        try {
+            // Create a token
+            $token = Token::create([
+                'card' => [
+                    'number' => $cardNumber,
+                    'exp_month' => explode('/', $cardExpiryMonth)[0],
+                    'exp_year' => explode('/', $cardExpiryMonth)[1],
+                    'cvc' => $cardCvc,
                 ],
-                'confirm' => true,
+            ]);
+
+            // Create a charge
+            $charge = Charge::create([
+                'amount' => $amount * 100, // Amount in cents
+                'currency' => 'usd',
+                'source' => $token->id,
                 'description' => 'One-time payment',
             ]);
 
@@ -52,12 +44,12 @@ class PaymentController extends Controller
                 'success' => true,
                 'message' => 'Payment successful!'
             ]);
-        // } catch (\Exception $e) {
-        //     Log::error('Payment error: ' . $e->getMessage());
-        //     return response()->json([
-        //         'success' => false,
-        //         'message' => 'Payment error: ' . $e->getMessage()
-        //     ], 500);
-        // }
+        } catch (\Exception $e) {
+            Log::error('Payment error: ' . $e->getMessage());
+            return response()->json([
+                'success' => false,
+                'message' => 'Payment error: ' . $e->getMessage()
+            ], 500);
+        }
     }
 }
