@@ -1038,7 +1038,7 @@
                                 <i class="flaticon-courier"></i>
                             </div>
                             <div class="counter-number">
-                                <div class="tj-count"><span class="odometer" data-count="28">0</span>k+</div>
+                                <div class="tj-count"><span class="odometer" data-count="289">0</span>k+</div>
                                 <span class="sub-title">Satisfied Clients</span>
                             </div>
                         </div>
