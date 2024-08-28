@@ -3,60 +3,60 @@
 @section('meta_description', 'Reefer transport services in all over the USA, ship your vehicle easiest way with one-click solution, Reefer shipping from one state to another.')
 @section('content')
 <style>
-.full-width {
-    width: 100%;
-}
-.title-2 {
-    color: #8fc445;
-}
-.desc-2 {
-    color: white;
-}
+    .full-width {
+        width: 100%;
+    }
+    .title-2 {
+        color: #8fc445;
+    }
+    .desc-2 {
+        color: white;
+    }
 
-.custom-style {
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-.custom-style h4 {
-    margin-top: 0;
-}
-.custom-style p {
-    margin-bottom: 0;
-}
-.top-left-image {
-    position: absolute;
-    top: -25px;
-    left: -25px;
-    width: 100px;
-    height: 100px; 
-}
-.why-box {
-    border-radius: 12px;
-    padding: 20px 0px;
-    background: #f8f9fa;
-}
-.card- {
-    /* background: #29494e; */
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
-}
-.services {
-    text-align: center;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    border-radius: 12px;
-    padding: 10px 30px 0px 30px;
-    /* background-color: #9d9e9f14;*/
-}
-.services-h1 {
-    text-align:center;
-    /* text-decoration: overline; */
-    margin-bottom: 50px;
-    /* color: #ffffff; */
-}
+    .custom-style {
+        padding: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+    .custom-style h4 {
+        margin-top: 0;
+    }
+    .custom-style p {
+        margin-bottom: 0;
+    }
+    .top-left-image {
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        width: 100px;
+        height: 100px; 
+    }
+    .why-box {
+        border-radius: 12px;
+        padding: 20px 0px;
+        background: #f8f9fa;
+    }
+    .card- {
+        /* background: #29494e; */
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+    }
+    .services {
+        text-align: center;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        border-radius: 12px;
+        padding: 10px 30px 0px 30px;
+        /* background-color: #9d9e9f14;*/
+    }
+    .services-h1 {
+        text-align:center;
+        /* text-decoration: overline; */
+        margin-bottom: 50px;
+        /* color: #ffffff; */
+    }
 </style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -187,99 +187,99 @@
             </div>
         </div>
     </div>
-@include('partials.cta-section')
-<div class="container pt-4">
-    <div class="row">
-        <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">The World of Reefer Shipping</span>
-                    <!-- <h2 class="title">Why Choose Us?</h2> -->
-                    <p class="desc">Ship A1 continually enhances services, providing peace of mind to businesses relying on refrigerated transport.
-                         We guarantee reefer equipment availability and round-the-clock monitoring, ensuring temperature-sensitive cargo arrives in 
-                         impeccable condition.
-                        Our services extend beyond port delivery, offering complete cold chain end-to-end solutions. This allows businesses to 
-                        delegate logistics to us, focusing on serving their customers and growing operations without cold logistics worries.
-                    </p>
+    @include('partials.cta-section')
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">The World of Reefer Shipping</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">Ship A1 continually enhances services, providing peace of mind to businesses relying on refrigerated transport.
+                            We guarantee reefer equipment availability and round-the-clock monitoring, ensuring temperature-sensitive cargo arrives in 
+                            impeccable condition.
+                            Our services extend beyond port delivery, offering complete cold chain end-to-end solutions. This allows businesses to 
+                            delegate logistics to us, focusing on serving their customers and growing operations without cold logistics worries.
+                        </p>
+                    </div>
+                    
                 </div>
-                
             </div>
-        </div>
-        <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-            <div class="mt-4 rounded">
-                <div class="image-box">
-                    <img class="rounded" src="{{ asset('frontend/images/project/reefer-service2.webp') }}" alt="Image">
-                </div>
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded" src="{{ asset('frontend/images/project/reefer-service2.webp') }}" alt="Image">
+                    </div>
 
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="row"> 
-    <!-- <h2 class="title">Reefer  Rules</h2> -->
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Temperature-Controlled Storage</span>
-                    <!-- <h2 class="title">Why Choose Us?</h2> -->
-                    <p class="desc">This is the foundational stage of the cold chain. Perishable goods, such as fruits, vegetables, dairy products, 
-                    and pharmaceuticals, are stored in specialized refrigerated facilities or containers.
-                    </p>
-                </div>     
-            </div>
-        </div>
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Quality Control</span>
-                    <!-- <h2 class="title">Why Choose Us?</h2> -->
-                    <p class="desc">Proper handling and packaging are crucial components of cold chain logistics. Goods must be handled with care to minimize damage, 
-                    especially during loading and unloading.</p>
-                </div>   
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
+    <div class="container">
+        <div class="row"> 
+        <!-- <h2 class="title">Reefer  Rules</h2> -->
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Regulatory Compliance</span>
-                    <!-- <h2 class="title">Why Choose Us?</h2> -->
-                    <p class="desc">The cold chain industry operates under strict regulations and standards, particularly in sectors like food and pharmaceuticals. Compliance
-                            with these regulations is essential to ensure the safety and quality of perishable products.
-                    </p>
-                </div> 
-            </div>
-        </div>
-    </div>
-        <!-- <div class="row">
-        <div class="col-lg-12 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Proper Use</span>
-                        <p class="desc">In handling hazardous materials, employees should only use them for their intended purposes.
-                            Avoid using substances for tasks they weren't designed for, ensuring safety and compliance.</p>
-                    </div>  
+                        <span class="sub-title active-shape">Temperature-Controlled Storage</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">This is the foundational stage of the cold chain. Perishable goods, such as fruits, vegetables, dairy products, 
+                        and pharmaceuticals, are stored in specialized refrigerated facilities or containers.
+                        </p>
+                    </div>     
                 </div>
-            </div>  
-        </div> -->
-</div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Quality Control</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">Proper handling and packaging are crucial components of cold chain logistics. Goods must be handled with care to minimize damage, 
+                        especially during loading and unloading.</p>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Regulatory Compliance</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">The cold chain industry operates under strict regulations and standards, particularly in sectors like food and pharmaceuticals. Compliance
+                                with these regulations is essential to ensure the safety and quality of perishable products.
+                        </p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+            <!-- <div class="row">
+            <div class="col-lg-12 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                    <div class="about-content-one border rounded p-4">
+                        <div class="tj-section-heading">
+                            <span class="sub-title active-shape">Proper Use</span>
+                            <p class="desc">In handling hazardous materials, employees should only use them for their intended purposes.
+                                Avoid using substances for tasks they weren't designed for, ensuring safety and compliance.</p>
+                        </div>  
+                    </div>
+                </div>  
+            </div> -->
+    </div>
 </section>
 <section class="tj-blog-standard pt-0 pb-4">
     <div class="container">
-        <div class="row full-width ps-4">
+        <div class="row full-width ps-4 pt-4">
             <div class="col-12 custom-style">
-                    <h4 class=" text-center">Specialized Reefer Ships</h4>
-                    <p class=" text-center">Reefer ships, the workhorses of the cold chain industry, are specialized containerships for ferrying refrigerated containers. They differ from conventional counterparts in size, design, and power infrastructure, being smaller and equipped to power each container's cooling system. While essential for transporting delicate goods, refrigerated containers entail high running costs and regular maintenance.
-                        Despite these challenges, the reefer shipping market is expanding due to the growing demand for temperature-controlled transportation. Ship A1 proudly serves customers across the states, ensuring prompt delivery and safer shipping by trained hands.
-                        As a promising logistics company.</p>
-                                    <div class="tj-theme-button  text-center mt-2">
-                                        <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                            Get Quote
-                                            <i class="flaticon-right-1"></i>
-                                        </a>
-                                </div>
+                <h4 class=" text-center">Specialized Reefer Ships</h4>
+                <p class=" text-center">Reefer ships, the workhorses of the cold chain industry, are specialized containerships for ferrying refrigerated containers. They differ from conventional counterparts in size, design, and power infrastructure, being smaller and equipped to power each container's cooling system. While essential for transporting delicate goods, refrigerated containers entail high running costs and regular maintenance.
+                    Despite these challenges, the reefer shipping market is expanding due to the growing demand for temperature-controlled transportation. Ship A1 proudly serves customers across the states, ensuring prompt delivery and safer shipping by trained hands.
+                    As a promising logistics company.</p>
+                    <div class="tj-theme-button  text-center mt-2">
+                        <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                            Get Quote
+                            <i class="flaticon-right-1"></i>
+                        </a>
+                    </div>
             </div>
         </div>
     </div>
