@@ -216,7 +216,7 @@
 </section>
 <section class="tj-blog-standard pt-0 pb-4">
        <div class="container">
-            <div class="row full-width ps-4">
+            <div class="row full-width pt-4 ps-4">
                     <div class="col-12 custom-style">
                         <h4 class=" text-center">Safety First with Ship A1</h4>
                         <p class=" text-center">At Ship A1 Transport Service, our commitment to safety extends to the transportation 

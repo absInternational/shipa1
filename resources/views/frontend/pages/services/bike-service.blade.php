@@ -96,7 +96,7 @@
                        
                     </div>
                 </div>
-                <div class="col-lg-5 p-0">
+                <div class="col-lg-5">
                     
                         @if (session('success'))
                         <div class="alert alert-success">

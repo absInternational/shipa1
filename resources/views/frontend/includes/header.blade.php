@@ -12,7 +12,7 @@
                     <!-- Logo Area Start -->
                     <div class="logo-area">
                         <div class="logo-box">
-                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/logo.png') }}"
+                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"
                                     alt="Logo" /></a>
                         </div>
                     </div>

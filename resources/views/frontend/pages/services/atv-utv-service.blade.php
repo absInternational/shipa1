@@ -446,7 +446,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row full-width pt-4">
+            <div class="row full-width ps-4 pt-4">
                 <div class="col-12 custom-style">
                     <h4 class=" text-center">Company Performance and Quality</h4>
                     <p class=" text-center">The first thing that you need to consider when selecting the <a class="pp-link-2" href="{{ route('welcome') }}"> auto transport company </a>for your ATV shipment is to 

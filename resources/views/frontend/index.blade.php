@@ -336,7 +336,7 @@
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/freight-banner.webp') }}">
+                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/freight-banner-home.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>
@@ -445,67 +445,67 @@
                 </div>
             </div>
             <div class="row">
-    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-        <a href="{{ route('vehicleTransportDetail') }}" class="service-link">
-            <div class="tj-service-item"
-                data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
-                <div class="icon-box">
-                    <i class="fa-light fa-car-side fa-2xs"></i>
-                    <!-- <i class="flaticon-air-freight"></i> -->
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+                    <a href="{{ route('vehicleTransportDetail') }}" class="service-link">
+                        <div class="tj-service-item"
+                            data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
+                            <div class="icon-box">
+                                <i class="fa-light fa-car-side fa-2xs"></i>
+                                <!-- <i class="flaticon-air-freight"></i> -->
+                            </div>
+                            <div class="service-content">
+                                <h4>VEHICLE TRANSPORTATION</h4>
+                                <p>Long established fact that reader will be distracted by the</p>
+                                <div class="d-flex justify-content-end">
+                                    <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('vehicleTransportDetail') }}" style="background: #8fc445;color: white;">
+                                        Read More<i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="service-content">
-                    <h4>VEHICLE TRANSPORTATION</h4>
-                    <p>Long established fact that reader will be distracted by the</p>
-                    <div class="d-flex justify-content-end">
-                        <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('vehicleTransportDetail') }}" style="background: #8fc445;color: white;">
-                            Read More<i class="bi bi-chevron-right"></i>
-                        </a>
-                    </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+                    <a href="{{ route('heavy-transport-detail') }}" class="service-link">
+                        <div class="tj-service-item"
+                            data-bg-image="{{ asset('frontend/images/service/HEAVY-CARD.webp') }}">
+                            <div class="icon-box">
+                                <i class="fa-light fa-tractor fa-2xs"></i>
+                                <!-- <i class="flaticon-cargo-ship-1"></i> -->
+                            </div>
+                            <div class="service-content">
+                                <h4>HEAVY TRANSPORTATION</h4>
+                                <p>Long established fact that reader will be distracted by the</p>
+                                <div class="d-flex justify-content-end">
+                                    <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('heavy-transport-detail') }}" style="background: #8fc445;color: white;">
+                                        Read More<i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                    <a href="{{ route('freighttransport-detail') }}" class="service-link">
+                        <div class="tj-service-item"
+                            data-bg-image="{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}">
+                            <div class="icon-box">
+                                <i class="fa-light fa-truck fa-2xs"></i>
+                                <!-- <i class="flaticon-delivery-van"></i> -->
+                            </div>
+                            <div class="service-content">
+                                <h4>FREIGHT TRANSPORTATION</h4>
+                                <p>Long established fact that reader will be distracted by the</p>
+                                <div class="d-flex justify-content-end">
+                                    <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('freighttransport-detail') }}" style="background: #8fc445;color: white;">
+                                        Read More<i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </a>
-    </div>
-    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-        <a href="{{ route('heavy-transport-detail') }}" class="service-link">
-            <div class="tj-service-item"
-                data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
-                <div class="icon-box">
-                    <i class="fa-light fa-tractor fa-2xs"></i>
-                    <!-- <i class="flaticon-cargo-ship-1"></i> -->
-                </div>
-                <div class="service-content">
-                    <h4>HEAVY TRANSPORTATION</h4>
-                    <p>Long established fact that reader will be distracted by the</p>
-                    <div class="d-flex justify-content-end">
-                        <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('heavy-transport-detail') }}" style="background: #8fc445;color: white;">
-                            Read More<i class="bi bi-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-        <a href="{{ route('freighttransport-detail') }}" class="service-link">
-            <div class="tj-service-item"
-                data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
-                <div class="icon-box">
-                    <i class="fa-light fa-truck fa-2xs"></i>
-                    <!-- <i class="flaticon-delivery-van"></i> -->
-                </div>
-                <div class="service-content">
-                    <h4>FREIGHT TRANSPORTATION</h4>
-                    <p>Long established fact that reader will be distracted by the</p>
-                    <div class="d-flex justify-content-end">
-                        <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('freighttransport-detail') }}" style="background: #8fc445;color: white;">
-                            Read More<i class="bi bi-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
 
         </div>
     </section>

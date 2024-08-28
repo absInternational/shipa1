@@ -1,12 +1,8 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Get Car Shipping Quote | ShipA1')
-
 @section('meta_description',
     'Experience seamless car shipping with Shipa Car Transport. Get an instant quote,
     nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
-
-
 @section('content')
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -32,7 +28,6 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <section class="tj-choose-us-section">
         <div class="container-flude">
             <div class="row">
@@ -64,7 +59,6 @@
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
                             <input type="hidden" name="car_type" value="1" hidden>
-
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -99,7 +93,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row mt-0">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -120,8 +113,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white mb-0">Car Information</h4>
@@ -160,19 +151,12 @@
                                     </div>
                                 </div>
                             </div>
-
                             <a class="add-car" id="addVehicleBtn">
                                 <i class="fa fa-plus"> Add
                                     Vehicle </i>
                             </a>
-
                             <div id="vehicles-container">
                             </div>
-
-
-
-
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group" style="line-height:23px;">
@@ -193,7 +177,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             {{-- <div class="input-form mt-3">
                                 <label class="d-block text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" id="image" name="image"
@@ -207,7 +190,6 @@
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
                                                 <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
-
                             <div class="row">
                                 <di class="col-md-6">
                                     <div class="form-group">
@@ -216,7 +198,6 @@
                                         <label class="form-check-label text-white ms-4" for="modification">
                                             Modified?</label>
                                     </div>
-
                                     <div class="input-form div-modify_info" style="display: none;">
                                         <label class="d-block"> Modification Information:</label>
                                         <input class="" type="text" id="c" name="modify_info"
@@ -224,7 +205,6 @@
                                     </div>
                                 </di>
                                 <div class="col-md-6">
-
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="available_at_auction"
                                             name="available_at_auction" value="1" />
@@ -232,18 +212,13 @@
                                             at
                                             Auction?</label>
                                     </div>
-
                                     <div class="input-form div-link mt-3" style="display: none;">
                                         <label class="d-block"> Enter Link:</label>
                                         <input class="form-control" type="url" id="link" name="link"
                                             placeholder="Enter Link" />
                                     </div>
-
                                 </div>
                             </div>
-
-
-
                             <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -256,162 +231,154 @@
         </div>
     </section>
 @endsection
-
 @section('extraScript')
-    <script>
-        $(document).ready(function() {
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label> Year</label>
-                    <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
+<script>
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                <div class="vehicle-info">
+                <div class="row select-bm">
+                <div class="col-md-4">
+                <div class="input-form tj-select">
+                <label> Year</label>
+                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
 
-                newVehicleHtml +=
-                    `</select>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label>Make</label>
-                    <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-                @foreach ($makes as $make)
-                    newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-                @endforeach
-
-                newVehicleHtml += `
-                </select>
+            newVehicleHtml +=
+                `</select>
                 </div>
                 </div>
                 <div class="col-md-4">
-                <div class="input-form tj-select model-div">
-                <label>Model</label>
-                <select class="nice-select model" name="model[]" id="model" required>
-                <!-- Options filled by JavaScript -->
-                </select>
-                <!-- Bin icon for deleting vehicle -->
-                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
-                </div>
-                </div>
-                </div>
-                </div>
-                `;
+                <div class="input-form tj-select">
+                <label>Make</label>
+                <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
 
-                $('#vehicles-container').append(newVehicleHtml);
-            }
+            @foreach ($makes as $make)
+                newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
+            @endforeach
 
-            $('#addVehicleBtn').click(function() {
-                addNewVehicle();
-            });
+            newVehicleHtml += `
+            </select>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="input-form tj-select model-div">
+            <label>Model</label>
+            <select class="nice-select model" name="model[]" id="model" required>
+            <!-- Options filled by JavaScript -->
+            </select>
+            <!-- Bin icon for deleting vehicle -->
+            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
+            </div>
+            </div>
+            </div>
+            </div>
+            `;
 
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
+            $('#vehicles-container').append(newVehicleHtml);
+        }
 
-            $(document).on('change', '.year, .make', function() {
-                var year = $(this).closest('.vehicle-info').find('.year').val();
-                var makeId = $(this).closest('.vehicle-info').find('.make').val();
-                var vehicleInfo = $(this).closest('.vehicle-info');
-                if (year && makeId) {
-                    getModel(year, makeId, vehicleInfo);
-                }
-            });
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
 
-            function getModel(year, makeId, vehicleInfo) {
-                console.log('yes inn');
-                $.ajax({
-                    url: "{{ route('get.models') }}",
-                    method: 'GET',
-                    data: {
-                        year: year,
-                        make: makeId
-                    },
-                    success: function(response) {
-                        var modelsDropdown = vehicleInfo.find('.model');
-                        modelsDropdown.empty();
-                        var selectOptions = '<option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' + model +
-                                '</option>';
-                        });
-                        modelsDropdown.html(selectOptions);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+
+        $(document).on('change', '.year, .make', function() {
+            var year = $(this).closest('.vehicle-info').find('.year').val();
+            var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            if (year && makeId) {
+                getModel(year, makeId, vehicleInfo);
             }
         });
-    </script>
 
-
-
-    <script>
-
-
-
-        $(document).ready(function() {
-            $('#available_at_auction').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
-            $('#modification').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
-        });
-    </script>
-
-    <script>
-        function updateSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
-
+        function getModel(year, makeId, vehicleInfo) {
+            console.log('yes inn');
             $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
+                url: "{{ route('get.models') }}",
+                method: 'GET',
                 data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
+                    year: year,
+                    make: makeId
                 },
                 success: function(response) {
-                    suggestionsList.empty();
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        suggestionsList.append(listItem);
+                    var modelsDropdown = vehicleInfo.find('.model');
+                    modelsDropdown.empty();
+                    var selectOptions = '<option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' + model +
+                            '</option>';
                     });
+                    modelsDropdown.html(selectOptions);
                 },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
+                error: function(xhr) {
+                    console.log(xhr.responseText);
                 }
             });
         }
-
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#available_at_auction').change(function() {
+            if ($(this).is(':checked')) {
+                $('.div-link').show();
+            } else {
+                $('.div-link').hide();
             }
-            updateSuggestions(inputField, suggestionsList);
         });
-    </script>
+        $('#modification').change(function() {
+            if ($(this).is(':checked')) {
+                $('.div-modify_info').show();
+            } else {
+                $('.div-modify_info').hide();
+            }
+        });
+    });
+</script>
+<script>
+    function updateSuggestions(inputField, suggestionsList) {
+        var inputValue = inputField.val();
+
+        $.ajax({
+            url: "{{ route('get.zipcodes') }}",
+            method: "POST",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "input": inputValue
+            },
+            success: function(response) {
+                suggestionsList.empty();
+
+                $.each(response, function(index, suggestion) {
+                    var listItem = $("<li>").text(suggestion).click(function() {
+                        inputField.val(suggestion);
+                        suggestionsList.css("display", "none");
+                    });
+                    suggestionsList.append(listItem);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
+            }
+        });
+    }
+
+    $("#pickup-location, #delivery-location").keyup(function() {
+        var inputField = $(this);
+        var suggestionsList = inputField.siblings(".suggestionsTwo");
+        suggestionsList.css("display", "block");
+        if (inputField.val() === "") {
+            suggestionsList.css("display", "none");
+        }
+        updateSuggestions(inputField, suggestionsList);
+    });
+</script>
 @endsection
