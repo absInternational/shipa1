@@ -27,9 +27,11 @@ class QuoteController extends Controller
         $make = $data['make'][0];
         $model = $data['model'][0];
         $condition = $request->input('condition', null);
-        $originData = $request->input('From_ZipCode', null);
+        $originData = $request->input('From_ZipCode') ?? $request->input('origin');
+        $destinationData = $request->input('To_ZipCode') ?? $request->input('destination');
+        // $originData = $request->input('From_ZipCode', null);
         // $originData = $request->input('origin', null);
-        $destinationData = $request->input('To_ZipCode', null);
+        // $destinationData = $request->input('To_ZipCode', null);
         // $destinationData = $request->input('destination', null);
         $additional = $request->input('add_info', null);
         $transport = $request->input('trailer_type', [2]);
