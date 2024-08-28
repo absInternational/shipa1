@@ -53,14 +53,12 @@ class QuoteController extends Controller
         $commodity_unit = $request->input('commodity_unit', null);
         if ($request->has('trailer_specification') && is_array($request->trailer_specification)) {
             $trailer_specification = implode(',', $request->trailer_specification);
-        }
-        else {
+        } else {
             $trailer_specification = $request->input('trailer_specification', null);
         }
         if ($request->has('equipment_type') && is_array($request->equipment_type)) {
             $equipment_type = implode(',', $request->equipment_type);
-        }
-        else {
+        } else {
             $equipment_type = $request->input('equipment_type', null);
         }
         $stackable = $request->input('stackable', null);
@@ -198,7 +196,7 @@ class QuoteController extends Controller
 
         if ($request->hasFile('image')) {
             $imagePath = $this->uploadImage('quoteForm', $request->file('image'));
-            $image = 'https://blog.shipa1.daydispatch.com/public/' . $imagePath;
+            $image = 'https://liveblog.shipa1.com/' . $imagePath;
             $post_array['image'] = $image;
         }
 
@@ -255,12 +253,12 @@ class QuoteController extends Controller
     public static function getDistance($OriginZipCode, $DestinationZipCode): float
     {
         $From = ZipCode::where('zipcode', $OriginZipCode)
-        ->whereNotNull('latitude')
-        ->first();
-        
+            ->whereNotNull('latitude')
+            ->first();
+
         $To = ZipCode::where('zipcode', $DestinationZipCode)
-        ->whereNotNull('latitude')
-        ->first();
+            ->whereNotNull('latitude')
+            ->first();
 
         $latitudeFrom = $From->latitude;
         $longitudeFrom = $From->longitude;
