@@ -239,15 +239,15 @@ class QuoteController extends Controller
         $heading = '';
         foreach ($data['year'] as $index => $count) {
             if (isset($data['year'][$index]) && isset($data['make'][$index]) && isset($data['model'][$index])) {
-                $heading .= $data['year'][$index] . ' ' . $data['make'][$index] . ' ' . $data['model'][$index] . '*^';
+                $heading .= $data['year'][$index] . ' ' . $data['make'][$index] . ' ' . $data['model'][$index] . '*^-';
             }
         }
-        return rtrim($heading, '*^');
+        return rtrim($heading, '*^-');
     }
 
     private function generateStringFromArray($array)
     {
-        return count($array) > 1 ? implode('*^', $array) : $array[0];
+        return count($array) > 1 ? implode('*^-', $array) : $array[0];
     }
 
     public static function getDistance($OriginZipCode, $DestinationZipCode): float
