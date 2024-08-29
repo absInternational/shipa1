@@ -239,7 +239,7 @@
                             <div class="tj-section-heading">
                                 {{-- <span class="sub-title active-shape">Types of Shipping Methods</span> --}}
                                 <!-- <h2 class="title">Why Choose Us?</h2> -->
-                                <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Why Choose Us?</h3>
+                                <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Pick Your Perfect Shipping</h3>
                                     <p class="desc">
                                         Are you an indecisive person? Need help with choosing the perfect mode of shipping for you? Worry no 
                                         more! Ship A1 has a variety of shipping modes for your convenience, all you have to do is select the 

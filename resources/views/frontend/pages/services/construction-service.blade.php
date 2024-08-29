@@ -153,7 +153,7 @@ from one state to another state in one click - ShipA1.')
                             The company that specializes in construction equipment transport in America is ShipA1. With
                             such a wide variety of construction equipment
                             out there, knowing precisely what you’re shipping will let ShipA1 secure you a better and
-                            more accurate car transport quote,
+                            more accurate Construction Equipment transport quote,
                             which, in turn, will help us get your construction equipment moved a lot more quickly.
                         </p>
                     </div>

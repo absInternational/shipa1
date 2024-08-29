@@ -34,29 +34,6 @@
         /* color: #ffffff; */
     }
 </Style>
-<!-- Preloader start -->
-<div id="preloader" class="preloader">
-    <div class="animation-preloader">
-        <!-- <div class="spinner">
-                <div class="loader-icon">
-                    <img src="{{ asset('frontend/images/logo/favicon.png') }}"
-                        alt="Corporate Business HTML Template" />
-                </div>
-            </div>
-            <div class="txt-loading">
-                <span data-text-preloader="S" class="letters-loading"> S </span>
-                <span data-text-preloader="H" class="letters-loading"> H </span>
-                <span data-text-preloader="I" class="letters-loading"> I </span>
-                <span data-text-preloader="P" class="letters-loading"> P </span>
-                <span data-text-preloader="" class="letters-loading"> </span>
-                <span data-text-preloader="A" class="letters-loading"> A </span>
-                <span data-text-preloader="1" class="letters-loading"> 1 </span>
-                <span data-text-preloader="" class="letters-loading"> </span>
-            </div> -->
-    </div>
-    <!-- <button class="tj-primary-btn">Cancel Preloader</button> -->
-</div>
-<!-- Preloader end -->
 <section class="tj-choose-us-section-service-roro">
     <div class="container mt-4">
         <div class="row mt-4">
@@ -351,20 +328,21 @@
     </div>
 </section>
 @include('partials.reveiw-small-detail') 
-<section class="tj-about-section-four">
+{{-- <section class="tj-about-section-four">
     <div class="container">
         <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
             Platform of RORO <br>Shipping Services</h2>
     </div>
-</section>
+</section> --}}
 <section class="tj-about-section pt-4">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">RORO Shipping Overview</span>
+                        {{-- <span class="sub-title active-shape">RORO Shipping Overview</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">RORO Shipping Overview</h3>
                         <p class="desc">Ship-A1 is a car shipping company based in the united states. We provide car shipping 
                             services across all countries in the united states to worldwide destinations. When shipping
                             vehicle overseas, the most frequently used shipping option is RORO (Roll-on/Roll-off) Shipping.
@@ -382,7 +360,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/roro-1.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -393,15 +371,16 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/roro-2.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">RORO Shipping Destinations</span>
+                        {{-- <span class="sub-title active-shape">RORO Shipping Destinations</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">RORO Shipping Destinations</h3>
                         <p class="desc">We are providing Facilities in roro shipping service our experts are here to help 
                             you in your roro shipping from us to their following ports. Ship-A1 is providing RORO Shipping 
                             service from U.S to in these Following:
@@ -473,8 +452,10 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Comparing RORO and Container Shipping</span>
+                        {{-- <span class="sub-title active-shape">Comparing RORO and Container Shipping</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" 
+                        data-sal-duration="800">Comparing RORO and Container Shipping</h3>
                         <p class="desc">
                         When it comes to the international transportation of vehicles, importers usually prefer one of two
                             primary shipping methods: Container shipping and RORO shipping. Either one of these is quite 
@@ -494,7 +475,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/roro-3.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -505,15 +486,16 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/roro-4.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Benefits of RORO Shipping Service</span>
+                        {{-- <span class="sub-title active-shape">Benefits of RORO Shipping Service</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Benefits of RORO Shipping Service</h3>
                         <p class="desc">Some of the advantages are as follows: For the shipper, the interest is speed. Since cars and lorries
                             can drive straight on to the ship at one port and then drive off at the other port within a few 
                             minutes of the ship docking, it saves much time of the shipper. It can also integrate well with
@@ -1340,3 +1322,4 @@
         });
     });
 </script>
+@endsection
