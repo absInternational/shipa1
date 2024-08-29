@@ -17,23 +17,19 @@
          -moz-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
          box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
      }
-
      .tj-testimonial-section {
          padding: 80px 0px 60px 0;
          background: #ffffff;
      }
-
      .tj-testimonial2-section {
          padding: 50px 0;
          /* background: #f9f9f9; */
      }
-
      .carousel-wrapper {
          max-width: 1200px;
          margin: 0 auto;
          padding: 0 15px;
      }
-
      .card {
          background: #fff;
          border: 1px solid #ddd;
@@ -41,20 +37,16 @@
          padding: 15px;
          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
      }
-
      .card .row {
          display: flex;
          flex-wrap: wrap;
      }
-
      .card .col-6 {
          width: 50%;
      }
-
      .star {
          margin-top: 10px;
      }
-
      .fa-star {
          color: #f39c12;
      }
@@ -62,7 +54,6 @@
          from {
              transform: translateX(0);
          }
-
          to {
              transform: translateX(-80%);
          }
@@ -73,7 +64,6 @@
          font-size: 2rem;
          color: #333;
      }
-
      .owl-nav button {
          display: none;
          background: none;
@@ -81,7 +71,6 @@
          font-size: 2rem;
          color: #333;
      }
-
      .owl-dot {
          display: inline-block;
          width: 12px;
@@ -90,15 +79,10 @@
          border-radius: 50%;
          margin: 0 5px;
      }
-
      .owl-dot.active {
          background: #333;
      } */
-
-
-     
  </style>
-
  <!--=========== Testimonial Section Start =========-->
  <section class="tj-testimonial-section pb-0">
         <!-- <div class="row">
@@ -168,7 +152,6 @@
      </div>
  </section>
  <!--=========== Testimonial Section End =========-->
-
  {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
  <script>
      $(document).ready(function() {

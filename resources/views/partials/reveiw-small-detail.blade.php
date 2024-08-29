@@ -1,35 +1,31 @@
 <style>
     .fa-star {
     color: #f39c12;
-}
-.rates {
-    background: #8FC445;
-    font-size: 12px;
-    color: #FFFFFF;
-    font-weight: bold;
-    width: 36px;
-    height: 22px;
-    float: right;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    /* box-shadow: 0 0px 30px 0 #56ff0061; */
-    /* -webkit-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
-    -moz-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
-    box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7); */
-}
+    }
+    .rates {
+        background: #8FC445;
+        font-size: 12px;
+        color: #FFFFFF;
+        font-weight: bold;
+        width: 36px;
+        height: 22px;
+        float: right;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        /* box-shadow: 0 0px 30px 0 #56ff0061; */
+        /* -webkit-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
+        -moz-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
+        box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7); */
+    }
 </style>
-
 <section class="pt-4 mt-4">
-
     <div class="container">
         <h3 class="text-center">See what customers say about their experience with ShipA1 Transport.</h3>
-
         <div class="owl-carousel owl-theme">
-            @foreach ($site_reviews as $site_review)
-                
+            @foreach ($site_reviews as $site_review)  
                 <div class="item">
                     <div class="card" >
                         <div class="firstrow px-2 pt-2 d-flex justify-content-between">
@@ -95,9 +91,7 @@
                         </div>
                     </div>
                 </div>
-
             @endforeach
-
                 {{-- <div class="item">
                     <div class="card">
                         <div class="firstrow px-2 pt-2 d-flex justify-content-between">
@@ -215,13 +209,9 @@
                         </div>
                     </div>
                 </div> --}}
-    
         </div>
-
     </div>
-   
 </section>
-
 <script>
     $(document).ready(function(){
       $(".owl-carousel").owlCarousel({
@@ -245,4 +235,4 @@
         }
       });
     });
-    </script>
+</script>

@@ -259,9 +259,6 @@
             @endif
             <div class="col-lg-6 mt-4" data-sal="slide-down" data-sal-duration="800">
                 <div class="tj-input-form mt-4 w-100" data-bg-image="">
-
-
-
                     <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                         id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                         enctype="multipart/form-data">
@@ -291,7 +288,6 @@
                                                 required.</label>
                                         </div>
                                     </div>
-
                                     <div class="col-xl-12 col-lg-12 mb-4">
                                         <h6 class="text-white">Moving To</h6>
                                         <label class="text-white mb-2">Where Are You Moving To?</label>
@@ -330,7 +326,6 @@
                                         <!-- <option value="RV-Transport">RV Transport</option> -->
                                     </select>
                                     <label class="error-message" id="tabSelector-error">This field is required.</label>
-
                                     <div class="tab-content mt-3" id="additionalContent"></div>
                                 </div>
                                 <div class="row mt-2">
@@ -341,7 +336,6 @@
                                             </button>
                                         </div>
                                     </div>
-
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn float-end">
                                             <button class="tj-submit-btn" type="button" id="step2_next">
@@ -351,7 +345,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Step 3: Customer Information -->
                             <div class="basic_quote_info" id="step3" style="display: none;">
                                 <div class="row mb-3">
@@ -365,14 +358,13 @@
                                                 required.</label>
                                         </div>
                                     </div>
-
                                     <!-- <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white"> Phone:</label>
-                        <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
-                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                    </div>
-                </div> -->
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> Phone:</label>
+                                                <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
+                                                <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                                            </div>
+                                        </div> -->
                                     <div class="col-xl-4 col-lg-4">
                                         <div class="single-input-field">
                                             <label class="d-block text-white">Phone:</label>
@@ -382,7 +374,6 @@
                                                 required.</label>
                                         </div>
                                     </div>
-
                                     <div class="col-xl-4 col-lg-4">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
@@ -401,7 +392,6 @@
                                             </button>
                                         </div>
                                     </div>
-
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn float-end">
                                             <button class="tj-submit-btn" type="submit" id="submit_instant_code"
@@ -414,8 +404,6 @@
                             </div>
                         </div>
                     </form>
-
-
                 </div>
             </div>
         </div>
@@ -424,58 +412,57 @@
 {{-- @include('partials.reveiw-site') --}}
 @include('partials.reveiw-small-detail') 
 <section class="tj-about-section-three">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
-                    <div class="about_image text-center">
-                        <img src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                <div class="about_image text-center">
+                    <img src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-three">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape ">Ship A1 Transport</span>
+                        <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
+                        <p class="desc">
+                        Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your comfort is our top priority, ship the best vehicles at reasonable rates without compromising quality. Our professional and expert team provides you with 100% insured and secure vehicle transport solutions that are specifically tailored to your needs.
+                    <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even find various suitable services! For shipping your luxurious vehicle, you can opt for enclosed trailers as they are made to protect your vehicle from road debris, scratches, the uncertainty of weather conditions, and potential risks. However, if you are searching for something equally cost-effective and safe, go for open transport! We have expedited options and door-to-door delivery for fast vehicle shipping.
+                    <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
+                        </p>
+                    </div>
+                    <!-- <div class="content-box d-flex align-items-center">
+                        <div class="tj-icon-box">
+                            <div class="ab-text d-flex align-items-center">
+                                <div class="ab-icon">
+                                    <img src="assets/images/icon/global.svg" alt="Icon">
+                                </div>
+                                <div class="ab-title">
+                                    <h5 class="title">Our Mission</h5>
+                                </div>
+                            </div>
+                            <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
+                        </div>
+                        <div class="tj-icon-box">
+                            <div class="ab-text d-flex align-items-center">
+                                <div class="ab-icon">
+                                    <img src="assets/images/icon/winner.svg" alt="Icon">
+                                </div>
+                                <div class="ab-title">
+                                    <h5 class="title">Our Vision</h5>
+                                </div>
+                            </div>
+                            <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
+                        </div>
+                    </div> -->
+                    <div class="tj-theme-button">
+                        <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                        Get Quote<i class="flaticon-right-1"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-three">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape ">Ship A1 Transport</span>
-                            <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
-                            <p class="desc">
-                            Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your comfort is our top priority, ship the best vehicles at reasonable rates without compromising quality. Our professional and expert team provides you with 100% insured and secure vehicle transport solutions that are specifically tailored to your needs.
-                        <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even find various suitable services! For shipping your luxurious vehicle, you can opt for enclosed trailers as they are made to protect your vehicle from road debris, scratches, the uncertainty of weather conditions, and potential risks. However, if you are searching for something equally cost-effective and safe, go for open transport! We have expedited options and door-to-door delivery for fast vehicle shipping.
-                        <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
-                            </p>
-                        </div>
-                        <!-- <div class="content-box d-flex align-items-center">
-                            <div class="tj-icon-box">
-                                <div class="ab-text d-flex align-items-center">
-                                    <div class="ab-icon">
-                                        <img src="assets/images/icon/global.svg" alt="Icon">
-                                    </div>
-                                    <div class="ab-title">
-                                        <h5 class="title">Our Mission</h5>
-                                    </div>
-                                </div>
-                                <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
-                            </div>
-                            <div class="tj-icon-box">
-                                <div class="ab-text d-flex align-items-center">
-                                    <div class="ab-icon">
-                                        <img src="assets/images/icon/winner.svg" alt="Icon">
-                                    </div>
-                                    <div class="ab-title">
-                                        <h5 class="title">Our Vision</h5>
-                                    </div>
-                                </div>
-                                <p class="desc">Lorem ipsum is simply velit anod ipas aliquet enean quis.</p>
-                            </div>
-                        </div> -->
-                        <div class="tj-theme-button">
-                            <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
-                            Get Quote<i class="flaticon-right-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
+    </div>
 </section>
 <!-- <section class="tj-service-details pt-4 pb-0">
     <div class="container-flude">
@@ -489,10 +476,7 @@
                     Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your comfort is our top priority, ship the best vehicles at reasonable rates without compromising quality. Our professional and expert team provides you with 100% insured and secure vehicle transport solutions that are specifically tailored to your needs.
                         <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even find various suitable services! For shipping your luxurious vehicle, you can opt for enclosed trailers as they are made to protect your vehicle from road debris, scratches, the uncertainty of weather conditions, and potential risks. However, if you are searching for something equally cost-effective and safe, go for open transport! We have expedited options and door-to-door delivery for fast vehicle shipping.
                         <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
-
-
                     </p>
-                    
                 </div>
             </div>
         </div>
@@ -524,7 +508,6 @@
                         <p class="desc">
                             We are a licensed Transportation company with high moral values and have attained customer
                             satisfaction through their remarks on esteemed platforms.
-
                         </p>
                     </div>
                     <div class="tj-icon-box">
@@ -554,8 +537,6 @@
                         <p class="desc">
                             No matter which mode of transportation you use, ShipA1 assures its customers, utmostsecurity
                             to their assets.
-
-
                         </p>
                     </div>
                     <div class="tj-icon-box">
@@ -669,7 +650,6 @@
                 <h4><a href="{{ route('frontend.pages.services.bike-service') }}"  target="_blank" class="title-link">MOTORCYCLE Transportation Services</a></h4>
             </div>
         </div>
-
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
             <div class="arrow-icon">
@@ -690,7 +670,6 @@
                 <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}"  target="_blank" class="title-link">ATV/UTV Transportation Services</a></h4>
             </div>
         </div>
-
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/4.webp') }}" alt="Image" />
             <div class="arrow-icon">
@@ -819,7 +798,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
             </div>
         </div>

@@ -5,7 +5,6 @@
         </h2>
     </div>
 </section>
-
 <section class="tj-about-section pt-4">
     @foreach ($transport->details as $index => $detail)
         @if ($index % 2 == 0)
@@ -19,7 +18,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                         <div class="mt-4 rounded">
                             <div class="image-box">

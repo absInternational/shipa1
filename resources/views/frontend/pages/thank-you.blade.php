@@ -1,8 +1,6 @@
 @extends('frontend.layouts.app')
-
 @section('content')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
 <style>
     .icon {
         font-size: 32px;
@@ -10,7 +8,6 @@
         letter-spacing: 32px;
         position: relative;
     }
-
     .confetti {
         display: flex;
         justify-content: center;
@@ -23,7 +20,6 @@
         overflow: hidden;
         pointer-events: none; /* Ensure confetti does not block interaction */
     }
-
     .confetti-piece {
         position: absolute;
         width: 8px;
@@ -31,32 +27,26 @@
         top: 0;
         opacity: 0;
     }
-
     .confetti-piece:nth-child(odd) {
         background: #17d3ff;
     }
-
     .confetti-piece:nth-child(even) {
         z-index: 1;
     }
-
     .confetti-piece:nth-child(4n) {
         width: 5px;
         height: 12px;
         animation-duration: 2000ms;
     }
-
     .confetti-piece:nth-child(3n) {
         width: 3px;
         height: 10px;
         animation-duration: 2500ms;
         animation-delay: 1000ms;
     }
-
     .confetti-piece:nth-child(4n-7) {
         background: #ff4e91;
     }
-
     @keyframes makeItRain {
         from {
             opacity: 0;
@@ -68,7 +58,6 @@
             transform: translateY(200px);
         }
     }
-
     @keyframes bounce {
         0%, 20%, 50%, 80%, 100% {
             transform: translateY(0);
@@ -80,7 +69,6 @@
             transform: translateY(-15px);
         }
     }
-
     .confetti-piece:nth-child(1) {
         left: 7%;
         transform: rotate(-30deg);
@@ -173,7 +161,6 @@
         animation-duration: 1000ms;
     }
 </style>
-
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
@@ -197,7 +184,6 @@
     </div>
 </section>
 <!--========== breadcrumb End ==============-->
-
 <!--========== Thank You Section Start ==============-->
 <section class="thank-you-section py-5 position-relative">
     <div class="confetti">
@@ -249,8 +235,6 @@
     </div>
 </section>
 <!--========== Thank You Section End ==============-->
-
-
 <!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page">
     <div class="container">
@@ -950,7 +934,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -958,10 +941,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 <!--========== Faq Section End ==============-->
-
 @endsection

@@ -1,5 +1,4 @@
 @extends('frontend.layouts.app')
-
 @section('content')
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/slider/FAQ.webp') }}">
@@ -25,7 +24,6 @@
     </div>
 </section>
 <!--========== breadcrumb End ==============-->
-
 <!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page">
     <div class="container">
