@@ -415,9 +415,16 @@
                     url: '{{ route('order.form.store') }}',
                     data: formData,
                     success: function(response) {
-                        console.log('response.message', response.message);
+                        // console.log('response.message', response);
                         // $('#all-order-details').html('');
-                        $('#all-order-details').html(response);
+                        // $('#all-order-details').html(response);
+                        $('#all-order-details').html(`
+                            <div class="alert alert-success">
+                                ${response.message}
+                            </div>
+                            ${response}
+                        `);
+                        $('#calculatePriceFrom')[0].reset();
                     },
                     error: function(xhr, status, error) {
                         // $('#all-order-details').html('');
