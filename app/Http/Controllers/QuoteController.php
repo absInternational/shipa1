@@ -17,6 +17,7 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->toArray());
         $data = $request->all();
         $heading = $this->generateHeading($data);
         $name = $request->input('name', null);
@@ -26,8 +27,12 @@ class QuoteController extends Controller
         $make = $data['make'][0];
         $model = $data['model'][0];
         $condition = $request->input('condition', null);
-        $originData = $request->input('origin', null);
-        $destinationData = $request->input('destination', null);
+        $originData = $request->input('From_ZipCode') ?? $request->input('origin');
+        $destinationData = $request->input('To_ZipCode') ?? $request->input('destination');
+        // $originData = $request->input('From_ZipCode', null);
+        // $originData = $request->input('origin', null);
+        // $destinationData = $request->input('To_ZipCode', null);
+        // $destinationData = $request->input('destination', null);
         $additional = $request->input('add_info', null);
         $transport = $request->input('trailer_type', [2]);
         $shippingdate = $request->input('dates', null);
@@ -239,15 +244,15 @@ class QuoteController extends Controller
         $heading = '';
         foreach ($data['year'] as $index => $count) {
             if (isset($data['year'][$index]) && isset($data['make'][$index]) && isset($data['model'][$index])) {
-                $heading .= $data['year'][$index] . ' ' . $data['make'][$index] . ' ' . $data['model'][$index] . '*^';
+                $heading .= $data['year'][$index] . ' ' . $data['make'][$index] . ' ' . $data['model'][$index] . '*^-';
             }
         }
-        return rtrim($heading, '*^');
+        return rtrim($heading, '*^-');
     }
 
     private function generateStringFromArray($array)
     {
-        return count($array) > 1 ? implode('*^', $array) : $array[0];
+        return count($array) > 1 ? implode('*^-', $array) : $array[0];
     }
 
     public static function getDistance($OriginZipCode, $DestinationZipCode): float
