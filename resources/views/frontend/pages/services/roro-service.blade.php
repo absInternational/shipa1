@@ -1074,11 +1074,7 @@
                             <div class="input-form tj-select">
                             <label> Year</label>
                             <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {
-                {
-                    date('Y')
-                }
-            };
+            var currentYear = {{date('Y')}};
             for (var year = currentYear; year >= 1936; year--) {
                 newVehicleHtml += `<option value="${year}">${year}</option>`;
             }
