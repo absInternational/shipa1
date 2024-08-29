@@ -109,7 +109,9 @@ class OrderFormController extends Controller
                 $responseData = $response->json();
                 $data = $responseData['data'];
                 $ip = $responseData['ip'];
-                return view('partials.order_detail2', compact('data', 'ip'));
+                // return view('partials.order_detail2', compact('data', 'ip'));
+                $responseData = $response->json();
+                return $responseData;
             } else {
                 $errorResponse = $response->json();
                 return response()->json(['error' => $errorResponse], $response->status());
