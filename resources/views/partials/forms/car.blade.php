@@ -1,7 +1,6 @@
 <!-- Favicon -->
 <link rel="apple-touch-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
-
 <!-- Bootstrap  v5.1.3 css -->
 <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
 <!-- Meanmenu  css -->
@@ -26,10 +25,8 @@
 <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
 <!-- Responsive css -->
 <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
-
 {{-- jquery --}}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 @if ($vehicleType == 'Car')
     <div class="row select-bm">
         <div class="col-md-12 text-center">
@@ -69,12 +66,10 @@
             </div>
         </div> --}}
     </div>
-
     {{-- <a class="add-car" id="addVehicleBtn">
         <i class="fa fa-plus"> Add
             Vehicle </i>
     </a> --}}
-
     <div id="vehicles-container">
     </div>
 @else
@@ -109,26 +104,19 @@
             </div>
         </div> --}}
     </div>
-
     {{-- <a class="text-primary" id="addVehicleBtn" style="cursor: pointer; text-decoration: underline;"><i
             class="fa fa-plus"></i> Add
         Vehicle</a> --}}
-
     <div id="vehicles-container">
     </div>
 @endif
-
 <a class="add-car" id="addVehicleBtn">
     <i class="fa fa-plus"> Add
         Vehicle </i>
 </a>
-
 <div id="vehicles-container">
 </div>
-
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 <!-- Modernizr.JS -->
 <script src="{{ asset('frontend/js/modernizr-2.8.3.min.js') }}"></script>
 <!-- jQuery.min JS -->
@@ -157,7 +145,6 @@
 <script src="{{ asset('frontend/js/jquery.nice-select.min.js') }}"></script>
 <!-- Main JS -->
 <script src="{{ asset('frontend/js/main.js') }}"></script>
-
 <script>
     $(document).ready(function() {
         var isFirstVehicleAdded = true;
@@ -176,7 +163,6 @@
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
-
                 newVehicleHtml +=
                     `</select>
                         </div>
@@ -189,7 +175,6 @@
                 @foreach ($makes as $make)
                     newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
                 @endforeach
-
                 newVehicleHtml += `
                     </select>
                     </div>
@@ -197,8 +182,7 @@
                     <div class="col-md-4">
                     <div class="input-form tj-select model-div">
                     <label>Model</label>
-                    <select class="nice-select model" name="model[]" id="model" required></select>`;
-                            
+                    <select class="nice-select model" name="model[]" id="model" required></select>`;      
                     // Check if it's the first vehicle added
                     if (isFirstVehicleAdded) {
                         // Hide the bin icon for the first vehicle
@@ -207,14 +191,12 @@
                         // Show the bin icon for subsequent vehicles
                         newVehicleHtml += `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
                     }
-
                     newVehicleHtml += `
                     </div>
                     </div>
                     </div>
                     </div>
                     `;
-
                 $('#vehicles-container').append(newVehicleHtml);
             }
         } else {
@@ -231,7 +213,6 @@
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
-
                 newVehicleHtml +=
                     `</select>
                         </div>
@@ -248,7 +229,6 @@
                         <label>Model</label>
                         <input type="text" id="model" name="model[]" placeholder="Enter Model"
                         required="" />`
-
                         // Check if it's the first vehicle added
                         if (isFirstVehicleAdded) {
                             // Hide the bin icon for the first vehicle
@@ -257,25 +237,20 @@
                             // Show the bin icon for subsequent vehicles
                             newVehicleHtml += `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
                         }
-
                         newVehicleHtml += `</div>
                         </div>
                         </div>
                         </div>
                         `;
-
                 $('#vehicles-container').append(newVehicleHtml);
             }
         }
-
         $('#addVehicleBtn').click(function() {
             addNewVehicle();
         });
-
         $(document).on('click', '.delete-vehicle', function() {
             $(this).closest('.vehicle-info').remove();
         });
-
         $(document).on('change', '.year, .make', function() {
             var year = $(this).closest('.vehicle-info').find('.year').val();
             var makeId = $(this).closest('.vehicle-info').find('.make').val();
@@ -284,7 +259,6 @@
                 getModel(year, makeId, vehicleInfo);
             }
         });
-
         function getModel(year, makeId, vehicleInfo) {
             console.log('yes inn');
             $.ajax({
@@ -311,9 +285,6 @@
         }
     });
 </script>
-
-
-
 <script>
     $(document).ready(function() {
         $(document).on('change', '.vehicle-year, .vehicle-make', function() {
@@ -370,11 +341,9 @@
         });
     });
 </script>
-
 <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
-
         $.ajax({
             url: "{{ route('get.zipcodes') }}",
             method: "POST",
@@ -398,7 +367,6 @@
             }
         });
     }
-
     $("#pickup-location, #delivery-location").keyup(function() {
         var inputField = $(this);
         var suggestionsList = inputField.siblings(".suggestionsTwo");

@@ -30,7 +30,6 @@
                                         <li><i class="fa-light fa-user"></i><a href="#">
                                                 {{-- {{ $blog->user->name }}</a></li> --}}
                                                 {{ !is_null($blog->user->name) ? $blog->user->name : '' }}</a></li>
-
                                     </ul>
                                 </div>
                             </div>

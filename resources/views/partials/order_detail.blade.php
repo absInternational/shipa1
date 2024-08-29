@@ -1,22 +1,16 @@
 @include('partials.return_function2')
-
 <style>
     body {
         scroll-behavior: smooth;
     }
-
     @import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt|Shadows+Into+Light|Cedarville+Cursive');
-
     @import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt|Shadows+Into+Light|Cedarville+Cursive');
-
     .border {
         border: 1px solid #000000 !important;
     }
-
     .highlight {
         background: black;
     }
-
     .card {
         position: relative;
         display: -ms-flexbox;
@@ -30,25 +24,21 @@
         border: 1px solid black;
         border-radius: .25rem;
     }
-
     .mainTitle {
         width: 100%;
         float: left;
         padding: 10px;
         margin-bottom: 10px;
     }
-
     .text-justify {
         text-align: justify !important;
     }
-
     ul,
     ol {
         margin: 0px;
         padding: 0px;
         list-style-type: none;
     }
-
     .stepContainer span {
         font-size: 25px;
         width: 40px;
@@ -62,7 +52,6 @@
         color: white;
         font-weight: 600;
     }
-
     .header_cover {
         width: 100%;
         height: 250px;
@@ -70,9 +59,7 @@
         background-size: cover;
         background-position: center center;
     }
-
     .header_heading {
-
         background-color: rgba(0, 0, 0, 0.4);
         /* Black w/opacity/see-through */
         color: white;
@@ -86,7 +73,6 @@
         padding: 20px;
         text-align: center;
     }
-
     .sign1 {
         padding: 19px 15px 12px 38px;
         font-size: 30px;
@@ -97,7 +83,6 @@
         font-family: 'Shadows Into Light', cursive;
         font-weight: bold;
     }
-
     .sign2 {
         padding: 19px 15px 12px 38px;
         font-size: 30px;
@@ -107,9 +92,7 @@
         border: 1px solid #000;
         font-family: 'Rock Salt', cursive;
         font-weight: bold;
-
     }
-
     .sign3 {
         padding: 19px 15px 12px 38px;
         font-size: 30px;
@@ -120,7 +103,6 @@
         font-family: 'Jazz LET, fantasy';
         font-weight: bold;
     }
-
     .sign4 {
         padding: 19px 15px 12px 38px;
         font-size: 30px;
@@ -132,7 +114,6 @@
         font-size: 36px;
         font-weight: bold;
     }
-
     .sign1:hover,
     .sign2:hover,
     .sign3:hover,
@@ -140,24 +121,18 @@
         background-color: black;
         color: white;
     }
-
     #signShw1,
     #signShw2,
     #signShw3,
     #signShw4 {
         width: 95%;
-
     }
-
-
     .checkedClass {
         background-color: black;
     }
-
     input[type=radio] {
         display: none;
     }
-
     .heading {
         line-height: 66px;
         font-size: 36px;
@@ -165,18 +140,15 @@
         font-weight: 900;
         float: left;
     }
-
     .subhead {
         float: right;
         margin-top: 15px;
         font-size: 23px;
         font-family: cursive;
     }
-
     .bg-secondary {
         background-color: #080808 !important;
     }
-
     .img {
         background-image: url(https://www.Autotransportgo.com/img/roadtransport.jpg);
         filter: drop-shadow(10px 10px 10px grey);
@@ -187,27 +159,21 @@
         background-position: center center;
         filter: blur(2px);
         -webkit-filter: blur(8px);
-
-
     }
-
     strong,
     h5 {
         font-family: "Luminari", "fantasy";
     }
-
     input,
     select,
     textarea {
         border: 1px solid #b0a6e0 !important;
     }
-
     body {
         /*background-image: linear-gradient(to right, rgb(109, 213, 250), rgb(255, 255, 255), rgb(41, 128, 185)) !important;*/
         box-shadow: 2px 2px #9E9E9E !important;
         background-color: white;
     }
-
     .card-header {
         color: black !important;
         justify-content: center !important;
@@ -215,23 +181,18 @@
         font-size: 25px !important;
         border: 2px solid black !important;
         background-color: #6c757d47 !important;
-
     }
-
     .card-body {
         border: 2px solid black !important;
     }
-
     .stepTitle {
         position: relative;
         top: 12px;
     }
-
     .app-content .side-app {
         padding: 0px !important;
     }
 </style>
-
 <?php
 //whether ip is from share internet
 if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
@@ -247,7 +208,6 @@ else {
 }
 
 ?>
-
 <div class="container " style=" margin-top: 0px; ">
     <div class="row">
         <div class="col-12">
@@ -255,13 +215,10 @@ else {
                 <div class="card-header"
                     style="    border-bottom-color:transparent;background-color:#8fc445 !important; color:#fff !important;">
                     <div class=" mb-0 w-100"><strong class="heading">Book Order #{{ $data['id'] }} </strong>
-
                         {{-- <p class="subhead">Your IP address - {{ $ip_address }}</p> --}}
-
                     </div>
                 </div>
                 <div class="card-body">
-
                     <form id="submitEmailOrder" autocomplete="off"
                         class="needs-validation">
                         @csrf
@@ -274,7 +231,6 @@ else {
                         <input type="hidden" name="ippostal" value="">
                         <input type="hidden" name="browser" value=" ">
                         <input type="hidden" name="platform" value="">
-
                         @if (Auth::check())
                             <input type="hidden" name="pay_by_user" value="1" />
                         @else
@@ -291,8 +247,6 @@ else {
                                                 class="card-header bg-secondary text-white font-weight-bold">
                                                 SUMMARY
                                             </div>
-
-
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <br>
@@ -350,7 +304,6 @@ else {
 
                                                                     </td>
                                                                 </tr>
-
                                                                 <tr>
                                                                     <td>Condition</td>
                                                                     <td class="font-weight-bold">
@@ -359,7 +312,6 @@ else {
                                                                         @endforeach
                                                                     </td>
                                                                 </tr>
-
                                                                 <tr>
                                                                     <td>Transport</td>
                                                                     <td class="font-weight-bold">
@@ -375,23 +327,19 @@ else {
                                                                         {{ $commodity_detail }}
                                                                     </td>
                                                                 </tr>
-
                                                                 <tr>
                                                                     <td>Equipment type</td>
                                                                     <td class="font-weight-bold">
                                                                         {{ $equipment_type }}
                                                                     </td>
                                                                 </tr>
-
                                                                 <tr>
                                                                     <td>Trailer Specifications</td>
                                                                     <td class="font-weight-bold">
                                                                         {{ $trailer_specification }}
                                                                     </td>
                                                                 </tr>
-
                                                             @endif
-
                                                             <tr>
                                                                 <td>Pickup Location</td>
                                                                 <td class="font-weight-bold">{{ $data['originzsc'] }}
@@ -402,17 +350,12 @@ else {
                                                                 <td class="font-weight-bold">
                                                                     {{ $data['destinationzsc'] }}</td>
                                                             </tr>
-
                                                         </tbody>
                                                     </table>
-
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <br>
-
                                                     <strong>Pricing Information</strong>
-
-
                                                     <table class="table customtable">
                                                         <tbody>
                                                             <tr>
@@ -458,7 +401,6 @@ else {
                                                             </tr>
                                                         </tbody>
                                                     </table>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -476,13 +418,10 @@ else {
                                                     class="card-header bg-secondary text-white font-weight-bold">
                                                     Freight Detail
                                                 </div>
-
-
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <strong>Order Information</strong>
                                                         <table class="table customtable">
-
                                                             <tbody>
                                                                 <tr>
                                                                     <td>Freight Class</td>
@@ -509,7 +448,6 @@ else {
                                                                     <td class="font-weight-bold">{{ $ex_pickup_time }}
                                                                     </td>
                                                                 </tr>
-
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -566,11 +504,9 @@ else {
                                 </div>
                             @endif
                         </div>
-
                         <div class="text-muted text-right">
                             <strong>Note: </strong>Please fill out all the fields that are required (*).
                         </div>
-
                         {{-- <div class="all-none" style="display: none">
                             <div class="row">
                                 <div class="col-12">
@@ -592,18 +528,14 @@ else {
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
-
                                 <div
                                     class="@if ($data['car_type'] != 3) col-lg-6 @else col-lg-12 @endif col-sm-12">
                                     <div class="card-header font-weight-bold"
                                         style="background-color:#8fc445 !important; color:#fff !important;">
                                         Customer Information
                                     </div>
-
                                     <div class="card-body border">
-
                                         <div class="form-group">
                                             <label for="name"><strong>Full Name</strong><span class="text-danger">
                                                     *</span></label>
@@ -615,7 +547,6 @@ else {
                                                 This field is required.
                                             </div>
                                         </div>
-
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="phone"><strong>Phone #</strong><span
@@ -635,8 +566,6 @@ else {
                                                     maxlength="15" placeholder="Enter Second Phone #">
                                             </div>
                                         </div>
-
-
                                         <div class="form-group">
                                             <label for="address"><strong>Address</strong><span class="text-danger">
                                                     *</span></label>
@@ -648,9 +577,6 @@ else {
                                                 This field is required.
                                             </div>
                                         </div>
-
-
-
                                         <div id="zip">
                                             <div class="form-group">
                                                 <label class="form-label">Zip Code
@@ -662,9 +588,6 @@ else {
                                                     value="{{ $data['originzsc'] }}" placeholder="ZIP CODE" />
                                             </div>
                                         </div>
-
-
-
                                         <div class="form-group">
                                             <label for="email"><strong>Email Address</strong>
                                                 <span class="text-danger"> *</span>
@@ -677,27 +600,21 @@ else {
                                                 This field is required.
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-sm-12"
                                     @if ($data['car_type'] == 3) style="display: none" @endif>
                                     <div class="card-header  font-weight-bold"
                                         style="background-color:#8fc445 !important; color:#fff !important;">
                                         Vehicle Information
                                     </div>
-
                                     <div class="card-body border">
-
                                         <div class="form-group">
                                             <label for="carrier"><strong>Carrier Type</strong></label>
                                             <input autocomplete="nope" type="text" class="form-control"
                                                 value="@foreach ($transport as $val3){{ '(' . get_cartype($val3) . '),' }} @endforeach"
                                                 disabled="">
                                         </div>
-
-
                                         <div class="form-group">
                                             <label for="year"><strong>
                                                     Vehicle Name</strong></label>
@@ -709,14 +626,12 @@ else {
                                                 value="@foreach ($vehiclearray2 as $veh) {{ $veh }} @endforeach"
                                                 disabled="">
                                         </div>
-
                                         <div class="form-group">
                                             <label for="make"><strong>Vehicle Runs</strong></label>
                                             <input type="text" class="form-control"
                                                 value="@foreach ($vehiclearraycondition as $condition) @if ($condition == 1) Running @else Not Running @endif @endforeach"
                                                 disabled="">
                                         </div>
-
                                         <div class="form-group">
                                             <label for="auction"><strong>Is it in Auction?</strong><span
                                                     class="text-danger"> *</span></label>
@@ -732,7 +647,6 @@ else {
                                                 This field is required.
                                             </div>
                                         </div>
-
                                         <div id="auctionYes">
                                             @if (!empty($data['oauction']))
                                                 <div class="form-group">
@@ -748,7 +662,6 @@ else {
                                                         </div>
                                                     </div>
                                                 </div>
-
                                                 <div class="form-group">
                                                     <label for="buyer_num"><strong>Buyer/Lot/StockNumber</strong>
                                                         <span class="text-danger"> *</span></label>
@@ -763,9 +676,7 @@ else {
                                                     </div>
                                                 </div>
                                             @endif
-
                                         </div>
-
                                         <div class="form-group">
                                             <label for="vkey"><strong>Key</strong>
                                                 <span class="text-danger"> *</span>
@@ -777,7 +688,6 @@ else {
                                                     value="no">No</option>
                                             </select>
                                         </div>
-
                                         <div class="form-group">
                                             <label for="vehicleDate"><strong>Vehicle First Available Date</strong><span
                                                     class="text-danger"> *</span></label>
@@ -785,18 +695,13 @@ else {
                                                 id="datepicker" class="form-control" name="vehicledate"
                                                 placeholder="Vehicle First Available Date"
                                                 value="{{ $data['vehicle_available_date'] }}">
-
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
-
                             </div>
-
                             <div class="row mt-5">
                                 <div class="col-12">
                                     <div class="mainTitle">
@@ -817,16 +722,13 @@ else {
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12">
                                     <div class="card-header  font-weight-bold"
                                         style="background-color:#8fc445 !important; color:#fff !important;">
                                         Origin Information
                                     </div>
-
                                     <div class="card-body border">
-
                                         <div class="form-group">
                                             <label for="oname"><strong>Contact Name</strong><span
                                                     class="text-danger"> *</span></label>
@@ -838,19 +740,16 @@ else {
                                                 This field is required.
                                             </div>
                                         </div>
-
                                         <div class="form-group">
                                             <label for="oemail"><strong>Email Address</strong><span
                                                     class="text-danger"> *</span></label>
                                             <input autocomplete="nope" type="text" class="form-control"
                                                 id="oemail" name="oemail" placeholder="Enter Email Address"
                                                 value="{{ $data['oemail'] }}">
-
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
                                         </div>
-
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="ophone"><strong>Phone #</strong><span
@@ -858,7 +757,6 @@ else {
                                                 <input autocomplete="nope" type="text" class="form-control"
                                                     id="ophone" name="ophone" placeholder="Enter Phone #"
                                                     value="{{ $data['main_ph'] }}">
-
                                                 <div class="invalid-feedback">
                                                     This field is required.
                                                 </div>
@@ -870,7 +768,6 @@ else {
                                                     value="">
                                             </div>
                                         </div>
-
                                         <div class="form-group">
                                             <label for="oaddress"><strong>Street Address</strong><span
                                                     class="text-danger"> *</span></label>
@@ -882,7 +779,6 @@ else {
                                                 This field is required.
                                             </div>
                                         </div>
-
                                         <div class="form-group">
                                             <label for="state"><strong>City, State, Zip</strong><span
                                                     class="text-danger"> *</span></label>
@@ -894,7 +790,6 @@ else {
                                                 This field is required.
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
@@ -902,21 +797,17 @@ else {
                                         style="background-color:#8fc445 !important; color:#fff !important;">
                                         Destination Information
                                     </div>
-
                                     <div class="card-body border">
-
                                         <div class="form-group">
                                             <label for="dname"><strong>Contact Name</strong><span
                                                     class="text-danger"> *</span></label>
                                             <input autocomplete="nope" type="text" class="form-control"
                                                 id="dname" name="dname" placeholder="Enter Contact Name"
                                                 value="{{ $data['dname'] }}">
-
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
                                         </div>
-
                                         <div class="form-group">
                                             <label for="demail"><strong>Email Address</strong>
                                                 <span class="text-danger"> *</span>
@@ -955,19 +846,16 @@ else {
                                                     value="{{ $dphone2 }}">
                                             </div>
                                         </div>
-
                                         <div class="form-group">
                                             <label for="daddress"><strong>Street Address</strong><span
                                                     class="text-danger"> *</span></label>
                                             <input autocomplete="nope" type="text" class="form-control"
                                                 id="daddress" name="daddress" placeholder="Enter Street Address"
                                                 value="{{ $data['daddress'] }}">
-
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
                                         </div>
-
                                         <div class="form-group">
                                             <label for="state"><strong>City, State, Zip</strong><span
                                                     class="text-danger"> *</span></label>
@@ -979,33 +867,25 @@ else {
                                                 This field is required.
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row mt-5">
                                 <div class="col-lg-12 col-sm-12">
                                     <div class="card-header  font-weight-bold"
                                         style="background-color:#8fc445 !important; color:#fff !important;">
                                         Additional Vehicle Information (Optional)
                                     </div>
-
                                     <div class="card-body border">
-
                                         <div class="form-group">
                                             <textarea name="additional_2" id="additional_2" cols="30" rows="5" class="form-control"> {{ $data['additional_2'] }}</textarea>
                                         </div>
-
                                     </div>
-
                                 </div>
                             </div>
                         </div> --}}
-
                         <div class="row mt-5">
                             <div class="col-12">
-
                                 <div class="mainTitle">
                                     <div class="stepContainer">
                                         <span>3</span>
@@ -1014,9 +894,7 @@ else {
                                         <h5>Confirm Order</h5>
                                     </div>
                                 </div>
-
                                 <div id="accordion">
-
                                     <div class="card">
                                         <div class="card-header" id="headingTwo">
                                             <h3 class="mb-0">
@@ -1030,7 +908,6 @@ else {
                                         <div id="collapseTwo" style="display: none" class="collapse "
                                             aria-labelledby="headingTwo" data-parent="#accordion">
                                             <div class="card-body">
-
                                                 <ol>
                                                     <li class="text-justify">
                                                         ShipA1 Transport is licensed and bonded by the FMCSA and
@@ -1194,16 +1071,13 @@ else {
                                                         have actively worked on your order, the remainder of your
                                                         deposit will be refunded.
                                                     </li>
-
                                                 </ol>
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="row mt-2">
                             <div class="col-lg-4 col-sm-12">
                                 <div class="form-group">
@@ -1232,12 +1106,9 @@ else {
                                 </div>
                             </div>
                         </div>
-
                         <div id="signtures"></div>
-
                         <div class="row mt-2">
                             <div class="col-lg-12 col-sm-12">
-
                                 <div class="form-group">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="confirm"
@@ -1246,17 +1117,13 @@ else {
                                             I have read and accept the Terms &amp; Conditions for this transport.
                                             (Click the plus sign above to view.)<span class="text-danger"> *</span>
                                         </label>
-
                                         <div class="invalid-feedback">
                                             This field is required.
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
-
                         <div class="row mb-3">
                             <div class="col-lg-12 text-right">
                                 <button type="submit" class="btn btn-primary btn-lg submit">Next
@@ -1264,15 +1131,12 @@ else {
                                 </button>
                             </div>
                         </div>
-
                     </form>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="modal" id="modaldemo05">
     <div class="modal-dialog modal-dialog-centered text-center" role="document">
         <div class="modal-content tx-size-sm">
@@ -1285,16 +1149,13 @@ else {
         </div>
     </div>
 </div>
-
 <script>
     @if (!empty($data['oauction']))
         setTimeout(function() {
-
             //$('#auction').trigger('change');
         }, 500);
     @endif
 </script>
-
 <script type="text/javascript">
     $(document).ready(function() {
         $("#signtures").click(function() {
@@ -1302,47 +1163,36 @@ else {
                 // do something if the checkbox is NOT checked
                 $("#first_sign").css("background-color", "black");
                 $("#first_sign").css("color", "white");
-
-
             }
             if (!$("#signature1").is(":checked")) {
                 // do something if the checkbox is NOT checked
                 $("#first_sign").css("background-color", "white");
                 $("#first_sign").css("color", "black");
-
-
             }
             if ($("#signature2").is(":checked")) {
                 // do something if the checkbox is NOT checked
                 $("#second_sign").css("background-color", "black");
                 $("#second_sign").css("color", "white");
-
-
             }
             if (!$("#signature2").is(":checked")) {
                 // do something if the checkbox is NOT checked
                 $("#second_sign").css("background-color", "white");
                 $("#second_sign").css("color", "black");
-
-
             }
             if ($("#signature3").is(":checked")) {
                 // do something if the checkbox is NOT checked
                 $("#third_sign").css("background-color", "black");
                 $("#third_sign").css("color", "white");
-
             }
             if (!$("#signature3").is(":checked")) {
                 // do something if the checkbox is NOT checked
                 $("#third_sign").css("background-color", "white");
                 $("#third_sign").css("color", "black");
             }
-
             if ($("#signature4").is(":checked")) {
                 // do something if the checkbox is NOT checked
                 $("#fourth_sign").css("background-color", "black");
                 $("#fourth_sign").css("color", "white");
-
             }
             if (!$("#signature4").is(":checked")) {
                 // do something if the checkbox is NOT checked
@@ -1352,8 +1202,6 @@ else {
         });
 
     });
-
-
     $("#s1").click(function() {
         $("#signature1").prop("checked", true);
         var checked = $(this).is(':checked');
@@ -1362,26 +1210,19 @@ else {
         } else {
             alert('unchecked');
         }
-
     });
     $(".sign2").click(function() {
         $("#signature2").prop("checked", true);
-
     });
     $(".sign3").click(function() {
         $("#signature3").prop("checked", true);
-
     });
     $(".sign4").click(function() {
         $("#signature4").prop("checked", true);
-
     });
-
     $('.btn-link').click(function() {
         $('#collapseTwo').toggle();
     });
-
-
     $("#signature").keyup(function() {
         console.log('yasdyasd');
         var valueSign = $(this).val();
@@ -1418,16 +1259,11 @@ else {
                     </div>`);
         }
     });
-
     $("#auction").change(function() {
-
         var valueAuction = $(this).val();
-
         $("#auctionYes").html('');
-
         if (valueAuction == 'yes') {
             $("#auctionYes").html(`
-
           <div class="form-group">
             <label for="auction_name"><strong>Auction Name</strong>
                <span class="text-danger"> *</span></label>
@@ -1440,7 +1276,6 @@ else {
                 </div>
             </div>
           </div>
-
             <div class="form-group">
                 <label for="buyer_num"><strong>Buyer/Lot/Stock
                     Number</strong>
@@ -1491,6 +1326,5 @@ else {
             // $('#modaldemo05').modal('show');
             alert('Please fill out the required fields!');
         }
-
     })
 </script>

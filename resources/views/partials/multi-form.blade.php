@@ -27,7 +27,6 @@
                                 required.</label>
                         </div>
                     </div>
-
                     <div class="col-xl-12 col-lg-12 mb-4">
                         <h6 class="text-white">Moving To</h6>
                         <label class="text-white mb-2">Where Are You Moving To?</label>
@@ -78,7 +77,6 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn float-end">
                             <button class="tj-submit-btn" type="button" id="step2_next">
@@ -88,7 +86,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Step 3: Customer Information -->
             <div class="basic_quote_info" id="step3" style="display: none;">
                 <div class="row mb-3">
@@ -103,7 +100,6 @@
                                 required.</label>
                         </div>
                     </div>
-
                     <div class="col-xl-4 col-lg-4">
                         <div class="single-input-field">
                             <label class="d-block text-white">Phone:</label>
@@ -114,15 +110,14 @@
                         </div>
                     </div>
                     {{-- <div class="col-xl-4 col-lg-4">
-                                            <div class="single-input-field">
-                                                <label class="d-block text-white">Phone:</label>
-                                                <input id="phone" class="form-control" required name="phone"
-                                                    type="tel" placeholder="Customer Phone">
-                                                <label class="error-message" id="Custo_Phone-error">This field is
-                                                    required.</label>
-                                            </div>
-                                        </div> --}}
-
+                            <div class="single-input-field">
+                                <label class="d-block text-white">Phone:</label>
+                                <input id="phone" class="form-control" required name="phone"
+                                    type="tel" placeholder="Customer Phone">
+                                <label class="error-message" id="Custo_Phone-error">This field is
+                                    required.</label>
+                            </div>
+                        </div> --}}
                     <div class="col-xl-4 col-lg-4">
                         <div class="single-input-field">
                             <label class="d-block text-white"> Email Address:</label>
@@ -132,7 +127,6 @@
                                 required.</label>
                         </div>
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-xl-6 col-lg-6">
@@ -142,29 +136,19 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn float-end">
-
                             <button class=" tj-submit-btn " href="" type="submit" id="submit_instant_code"
                                 value="Submit Form">
                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
                             </button>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </form>
-
-
-
-
-
 </div>
-
 <script>
     $(document).ready(function() {
         // Tab Selection and Content Loading
@@ -187,7 +171,6 @@
                 }
             });
         });
-
         // Add New Vehicle
         // function addNewVehicle() {
         //     var newVehicleHtml = `
@@ -210,7 +193,6 @@
         //     newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select model-div"><label>Model</label><select class="nice-select model" name="model[]" id="model" required></select><span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span></div></div></div></div>`;
         //     $('.vehicles-container').append(newVehicleHtml);
         // }
-
         // function addOtherVehicle() {
         //     var newVehicleHtml = `
         //         <div class="vehicle-info">
@@ -235,11 +217,9 @@
         //         addOtherVehicle();
         //     }
         // });
-
         // $(document).on('click', '.delete-vehicle', function() {
         //     $(this).closest('.vehicle-info').remove();
         // });
-
         // Fetch Models Based on Year and Make
         $(document).on('change', '.year, .make', function() {
             var year = $(this).closest('.vehicle-info').find('.year').val();
@@ -249,7 +229,6 @@
                 getModel(year, makeId, vehicleInfo);
             }
         });
-
         function getModel(year, makeId, vehicleInfo) {
             $.ajax({
                 url: "{{ route('get.models') }}",
@@ -273,8 +252,6 @@
                 }
             });
         }
-
-
         // Phone Number Input with Intl-Tel-Input
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
@@ -291,7 +268,6 @@
             },
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
         });
-
         // Play Video on Click
         function playVideo() {
             document.querySelector('.video-thumbnail').style.display = 'none';
@@ -300,14 +276,12 @@
             var videoSrc = iframe.src;
             iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
         }
-
         // Limit Digits Input
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
                 element.value = element.value.slice(0, maxDigits);
             }
         }
-
         $('#inches-input, #inches-input1, #inches-input2').on('input', function() {
             if (this.value > 11) {
                 this.value = 11;
@@ -315,39 +289,32 @@
                 this.value = 0;
             }
         });
-
         $('#feet-input, #feet-input1, #feet-input2').on('input', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
         });
-
         // Form Validation
         function showError(field, message) {
             $('#' + field).addClass('error-field');
             $('#' + field + '-error').text(message).show();
         }
-
         function hideError(field) {
             $('#' + field).removeClass('error-field');
             $('#' + field + '-error').hide();
         }
-
         $('#step1_next').click(function() {
             var isValid = true;
-
             if (!$('#pickup-location').val()) {
                 showError('pickup-location', 'This field is required.');
                 isValid = false;
             } else {
                 hideError('pickup-location');
             }
-
             if (!$('#delivery-location').val()) {
                 showError('delivery-location', 'This field is required.');
                 isValid = false;
             } else {
                 hideError('delivery-location');
             }
-
             if (isValid) {
                 $('#step1').hide();
                 $('#step2').show();
@@ -355,12 +322,10 @@
         });
     });
 </script>
-
 {{-- <script>
     $(document).ready(function() {
         $('#category').change(function() {
             var selectedCategory = $(this).find('option:selected').data('id');
-
             $.ajax({
                 url: "{{ route('get.subcategories') }}",
                 method: "POST",
@@ -369,10 +334,8 @@
                     "category": selectedCategory
                 },
                 success: function(response) {
-
                     var html = '';
                     $('#subcategory-box').html('');
-
                     html += "<label for='subcategory'>Subcategory</label>";
                     html +=
                         "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
@@ -383,9 +346,7 @@
                             `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
                     });
                     html += "</select>";
-
                     $('#subcategory-box').html(html);
-
                 },
                 error: function(xhr, status, error) {
                     console.error("Error:", error);

@@ -1,18 +1,15 @@
 @include('partials.return_function2')
-
 <style>
     input,
     select,
     textarea {
         border: 1px solid #b0a6e0 !important;
     }
-
     body {
         /*background-image: linear-gradient(to right, rgb(109, 213, 250), rgb(255, 255, 255), rgb(41, 128, 185)) !important;*/
         box-shadow: 2px 2px #9E9E9E !important;
         background-color: white;
     }
-
     .card-header {
         color: black !important;
         justify-content: center !important;
@@ -20,48 +17,37 @@
         font-size: 25px !important;
         border: 2px solid black !important;
         background-color: #6c757d47 !important;
-
     }
-
     .card-body {
         border: 2px solid black !important;
         padding: 4px 16px !important;
     }
-
     .icon-container {
         font-size: 24px;
         text-align: center;
         margin-top: -30px;
         margin-bottom: 3px;
     }
-
     .heading {
         float: left;
     }
-
     .subhead {
         float: right;
     }
-
     .app-content .side-app {
         padding: 0px !important;
     }
-
     .error {
         border: 1px solid red !important;
     }
 </style>
-
 <div class="container " style=" margin-top: 0px; ">
-
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-header" style="    border-bottom: 1px solid;">
                     <div class=" mb-0 w-100"><strong class="heading">Order Online # {{ $data['id'] }} </strong>
-
                         {{-- <p class="subhead">Your IP address - {{ $ip }}</p> --}}
-
                     </div>
                 </div>
                 <div class="card-body">
@@ -76,12 +62,8 @@
                         <input type="hidden" name="ippostal" value="">
                         <input type="hidden" name="browser" value=" ">
                         <input type="hidden" name="platform" value="">
-
-
                         <div class="text-muted text-right">
-
                         </div>
-
                         <div class="row">
                             <div class="col-12">
                                 <div class="mainTitle">
@@ -106,24 +88,18 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
-
                             <div class="col-lg-6 col-sm-12">
                                 <div class="card-header bg-secondary text-white font-weight-bold">
                                     Price Information
                                 </div>
-
                                 <div class="card-body border">
-
                                     <div class="form-group">
                                         <label for="name"><strong>Booking Price</strong><span
                                                 class="text-danger"></span></label>
                                         <input autocomplete="nope" type="text" class="form-control" id="price"
                                             readonly name="price" value="{{ $data['payment'] }}">
-
                                         <div class="invalid-feedback">
-
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -132,9 +108,7 @@
                                         <input autocomplete="nope" type="text" class="form-control" id="deposit"
                                             readonly name="deposit" placeholder=""
                                             value="{{ $data['deposit_amount'] }}">
-
                                         <div class="invalid-feedback">
-
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -142,20 +116,15 @@
                                         <input autocomplete="nope" type="text" class="form-control"
                                             id="balance" readonly name="balance" placeholder=""
                                             value="{{ $data['balance'] }}">
-
                                         <div class="invalid-feedback">
-
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                             <div class="col-lg-6 col-sm-12">
                                 <div class="card-header bg-secondary text-white font-weight-bold">
                                     Credit Card Information
                                 </div>
-
                                 <div class="card-body border">
                                     <label for="fname"><strong>Accepted Cards</strong></label>
                                     <div class="icon-container">
@@ -171,7 +140,6 @@
                                             <input autocomplete="nope" type="text" class="form-control"
                                                 maxlength="100" id="firstname" name="firstname"
                                                 placeholder="Enter First Card Name" required="" value="">
-
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
@@ -182,23 +150,19 @@
                                             <input autocomplete="nope" type="text" value=""
                                                 class="form-control" id="lastname" maxlength="100" name="lastname"
                                                 placeholder="Enter Card Last Name" required>
-
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
                                         </div>
                                     </div>
-
                                     <div id="billingaddress">
                                         <div class="form-group">
                                             <label for="auction_name"><strong>Billing Address</strong><span
                                                     class="text-danger"> </span></label>
-
                                             <div class="controls position-relative has-icon-left">
                                                 <input autocomplete="nope" type="text" name="billing_address"
                                                     id="billing_address" required class="form-control" value=""
                                                     placeholder="Enter Billing Address">
-
                                             </div>
                                         </div>
                                     </div>
@@ -214,7 +178,6 @@
                                         <div class="form-group">
                                             <label for="cardnumber"><strong>Card Type</strong><span
                                                     class="text-danger"> </span></label>
-
                                             <div class="controls position-relative has-icon-left">
                                                 <select name="card_type" id="card_type" required
                                                     class="form-control select2">
@@ -225,11 +188,7 @@
                                                     <option value="mastercard">mastercard</option>
                                                     <option value="MC">MC</option>
                                                 </select>
-
-
-
                                                 </select>
-
                                             </div>
                                         </div>
                                     </div>
@@ -237,15 +196,12 @@
                                         <div class="form-group">
                                             <label for="cardnumber"><strong>Credit Card Number</strong><span
                                                     class="text-danger"> </span></label>
-
                                             <div class="controls position-relative has-icon-left">
                                                 <input autocomplete="nope" type="text" name="card_number"
                                                     id="card_number" required class="form-control" placeholder="">
-
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="cardfirstname"><strong>Card Expiry Date </strong><span
@@ -253,7 +209,6 @@
                                             <input autocomplete="nope" type="text" class="form-control"
                                                 id="cardexpirydate" name="cardexpirydate" placeholder=""
                                                 required="" value="">
-
                                             <div class="invalid-feedback">
                                                 This field is required.
                                             </div>
@@ -271,13 +226,9 @@
                                         </div>
                                         <input type="hidden" name="save_but_value" id="save_but_value">
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
-
-
                         </br>
                         <div class="row mb-3">
                             <div class="col-lg-12 text-center">
@@ -291,19 +242,16 @@
                                 </button>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <script type="text/javascript">
     $(function() {
         $("#success-alert").hide();
     });
-
     function validateForm() {
         var firstname = document.getElementById("firstname").value;
         if (firstname == null || firstname == "") {
@@ -313,10 +261,8 @@
             });
             $('#firstname').focus();
             $('#firstname').addClass("error");
-
             return false;
         }
-
         var lastname = document.getElementById("lastname").value;
         if (lastname == null || lastname == "") {
             $(".error_text").html("Please enter Card Last Name!");
@@ -337,10 +283,7 @@
             $('#billing_address').addClass("error");
             return false;
         }
-
         var type_card = $('#card_type :selected').val();
-
-
         if (type_card == '') {
             $(".error_text").html("Please select Card Type!");
             $("#success-alert").fadeTo(2000, 500).slideUp(500, function() {
@@ -348,10 +291,8 @@
             });
             $('#card_type').focus();
             $('#card_type').addClass("error");
-
             return false;
         }
-
         var cardno = document.getElementById("card_number").value;
         if (cardno == null || cardno == "") {
             $(".error_text").html("Please enter card no !");
@@ -372,7 +313,6 @@
 
             return false;
         }
-
         var cardexpirydate = document.getElementById("cardexpirydate").value;
         var expire = cardexpirydate.replace(/\//g, "");
         var res = expire.split("  ");
@@ -380,21 +320,17 @@
         var card_month1 = res[0];
         var year = "{{ date('Y') }}";
         var month = "{{ date('m') }}";
-
         year = parseInt(year);
         card_month1 = parseInt(card_month1);
         card_year1 = parseInt(card_year1);
         month = parseInt(month);
-
         if (month.toString().length < 2) {
             month = "0" + month;
         }
         if (card_month1.toString().length < 2) {
             card_month1 = "0" + card_month1;
         }
-
         var temp = 0;
-
         if (card_month1 > month) {
             temp++;
         }
@@ -404,10 +340,8 @@
         if (card_month1 < month && card_year1 > year) {
             temp++;
         }
-
         if (temp > 0) {
             //            $('.submit_btn').prop("disabled", false);
-
         }
         if (temp <= 0) {
             //            $('.submit_btn').prop("disabled", true);
@@ -417,10 +351,8 @@
             });
             $('#cardexpirydate').focus();
             $('#cardexpirydate').addClass("error");
-
             return false;
         }
-
         var cardsecurity = document.getElementById("csvno").value;
         if (cardsecurity == null || cardsecurity == "") {
             $(".error_text").html("Please enter card card CVC !");
@@ -429,7 +361,6 @@
             });
             $('#csvno').focus();
             $('#csvno').addClass("error");
-
             return false;
         }
         if (cardsecurity.length < 3) {

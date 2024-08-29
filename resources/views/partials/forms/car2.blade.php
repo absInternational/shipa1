@@ -1,5 +1,4 @@
 <div class="row select-bm">
-
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label> Year</label>
@@ -37,15 +36,12 @@
         </div>
     </div>
 </div>
-
 <a class="add-car addVehicleBtn" id="addVehicleBtn">
     <i class="fa fa-plus"> Add
         Vehicle </i>
 </a>
-
 <div class="vehicles-container">
 </div>
-
 <div class="row mb-3 ">
     <div class="col-md-6">
         <div class="form-group" style="line-height:23px;">
@@ -67,7 +63,6 @@
         </div>
     </div>
 </div>
-
 <div class="row ms-3">
     <di class="col-md-6">
         <div class="form-group">
@@ -75,7 +70,6 @@
             <label class="form-check-label ms-4 text-white" for="modification">
                 Modified?</label>
         </div>
-
         <div class="input-form div-modify_info" style="display: none;">
             <label class="d-block"> Modification Information:</label>
             <input class="" type="text" id="c" name="modify_info"
@@ -90,14 +84,12 @@
                 at
                 Auction?</label>
         </div>
-
         <div class="input-form div-link" style="display: none;">
             <label class="d-block"> Enter Link:</label>
             <input class="" type="url" id="link" name="link" placeholder="Enter Link" required />
         </div>
     </div>
 </div>
-
 <div class="input-form">
     <label class="d-block text-white"> Image:</label>
     <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">

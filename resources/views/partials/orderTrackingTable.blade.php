@@ -44,9 +44,7 @@
                         @endif
                     @endif
                 </div>
-
             </div>
-
             <div class="row">
                 <div class="col-md-6">
                     <div class="float-md-start">
@@ -259,7 +257,6 @@
                                         business days) for pickup
                                     </div>
                                 </span>
-
                                 <?php
                                 if ($responseData['data']['pstatus'] > 11 && $responseData['data']['pstatus'] <= 14) {
                                     echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
@@ -304,16 +301,13 @@
                                 ?>
                             </td>
                         </tr>
-
                         <?php
-
                             }
                             ?>
                     </tbody>
                 </table>
             </div>
             <?php
-
             } else {
                 ?>
             <div class="card" style="box-shadow: 0px 0px 7px 0px #1e78f5;">

@@ -5,8 +5,6 @@ date_default_timezone_set("Asia/Karachi");
 ///  25 feb 2020 > show
 ///
 ///
-
-
 function get_role($id, $column)
 {
     $setting = 	App\general_setting::first();
@@ -17,8 +15,6 @@ function get_role($id, $column)
     }
     return 'No Role';
 }
-
-
 function get_user($id, $column)
 {
     $setting = 	App\general_setting::first();
@@ -28,9 +24,7 @@ function get_user($id, $column)
         return $query->$column;
     }
     return 'No Role';
-
 }
-
 function get_user_name($id)
 {
     $setting = 	App\general_setting::first();
@@ -49,20 +43,16 @@ function get_user_name($id)
         return '';
     }
 }
-
 function get_autoorder($id, $column)
 {
     $setting = 	App\general_setting::first();
     // echo "<pre>";
     // print_r($ptype);exit();
-    
-    
     $p_type = 1;
     $usersetting = App\user_setting::where('user_id', '=', $user->id)->first();
     if (!empty($usersetting)) {
         $p_type = $usersetting['penal_type'];
     }
-    
     $user = \Illuminate\Support\Facades\Auth::user();
     $query = \App\AutoOrder::where('id', $id)->where('created_at','>=',\Carbon\Carbon::today()->subDays($setting->no_days))
             ->where(function ($q) use ($user){
@@ -105,9 +95,7 @@ function get_autoorder($id, $column)
     } else {
         return "NOT FOUND";
     }
-
 }
-
 function count_history($user_id, $order_id)
 {
     $setting = 	App\general_setting::first();
@@ -115,8 +103,6 @@ function count_history($user_id, $order_id)
         ->where('userId', $user_id)->where('created_at','>=',\Carbon\Carbon::today()->subDays($setting->no_days))->count();
     return $query;
 }
-
-
 function get_total_new($id,$ptype)
 {
     $setting = 	App\general_setting::first();
@@ -374,15 +360,12 @@ function get_total_new($id,$ptype)
                 }
             })->count();
     }
-
-
     if (!empty($data_new)) {
         return $data_new;
     } else {
         return 0;
     }
 }
-
 function get_total_pickup_approval($id,$ptype)
 {
     $setting = 	App\general_setting::first();
@@ -545,7 +528,6 @@ function get_total_deliver_schedule($id,$ptype)
 }
 function get_pstatus($id)
 {
-
     $ret = "";
     if ($id == 0) {
         $ret = "NEW";
@@ -591,9 +573,7 @@ function get_pstatus($id)
         $ret = "Approaching";
     }
     return $ret;
-
 }
-
 function get_oterminal_name($id){
     $terminal="";
     if($id==1){
@@ -617,8 +597,6 @@ function get_oterminal_name($id){
     }
     return $terminal;
 }
-
-
 function get_dterminal_name($id){
     $terminal="";
     if($id==1){
@@ -653,9 +631,7 @@ function get_cartype($id)
     } else {
         return "Enclosed";
     }
-
 }
-
 function get_car_or_heavy($id)
 {
     if ($id == 1) {
@@ -665,12 +641,8 @@ function get_car_or_heavy($id)
     }
 
 }
-
-
-
 function get_condtion($id)
 {
-
     if ($id == 1) {
         return "Running";
     } else {
@@ -692,17 +664,12 @@ function get_payment_detail($id,$column)
     }
 
 }
-
-
-
 //faisal
-
 function get_paid($id)
 {
     $setting = 	App\general_setting::first();
     $value = "Unpaid";
     $paid = \App\orderpayment::where('orderId', $id)->where('created_at','>=',\Carbon\Carbon::today()->subDays($setting->no_days))->first();
-
     if(!empty($paid)){
 
         return  ucfirst($paid->payment_status);
@@ -711,7 +678,6 @@ function get_paid($id)
         return $value;
     }
 }
-
 function get_carrier($id,$column)
 {
     $setting =	App\general_setting::first();
@@ -719,9 +685,7 @@ function get_carrier($id,$column)
     if (!empty($query->$column)) {
         return $query->$column;
     }
-
 }
-
 function get_total_invoice($ptype)
 {
     $setting =	App\general_setting::first();
@@ -732,21 +696,18 @@ function get_total_invoice($ptype)
     } else {
         return 0;
     }
-
 }
 function get_total_storage($ptype)
 {
     $setting =	App\general_setting::first();
     // $data = 	App\storage::where('created_at','>=',\Carbon\Carbon::today()->subDays($setting->no_days))
     //     ->orderBy('id', 'DESC')->count();
-    
     $ptype = 1;
     $user = Auth::user();
     $usersetting = App\user_setting::where('user_id', '=', $user->id)->first();
     if (!empty($usersetting)) {
         $ptype = $usersetting['penal_type'];
     }
-    
     $data = \App\AutoOrder::where('pstatus',11)->where('storage_id','>',0)
     ->where('paneltype', '=', $ptype)->where('created_at','>=',\Carbon\Carbon::today()->subDays($setting->no_days))
     ->where(function ($q) use ($user){
@@ -788,9 +749,7 @@ function get_total_storage($ptype)
     } else {
         return 0;
     }
-
 }
-
 function get_total_carrier($ptype)
 {
     $setting =	App\general_setting::first();
@@ -802,7 +761,6 @@ function get_total_carrier($ptype)
         return 0;
     }
 }
-
 function get_total_customer($ptype)
 {
     $setting =	App\general_setting::first();
@@ -853,10 +811,7 @@ function get_total_customer($ptype)
         return 0;
     }
 }
-
-
 function get_user_attendance($date,$user_id,$value){
-
     $data = App\attendance::where('attendance_date','like','%'.$date.'%')
         ->where('user_id','=',$user_id)->first();
     if (!empty($data)) {
@@ -864,23 +819,13 @@ function get_user_attendance($date,$user_id,$value){
     } else {
         return "NOT FOUND";
     }
-
 }
-
 function issue_comments($issue_id,$user_id){
-
     $data = App\issue_chats::where('issueId', $issue_id)->where('userId', $user_id)->first();
     if (!empty($data)) {
         return $data->comments;
     } else {
         return "NOT FOUND";
     }
-
 }
-
-
-
-
-
-
 ?>
