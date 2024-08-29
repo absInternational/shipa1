@@ -134,7 +134,7 @@ Vehicle</a>
         </div>
         <div class="input-form div-link" style="display: none;">
             <label class="d-block mb-2"> Enter Link:</label>
-            <input class="" type="url" id="link" name="link" placeholder="Enter Link" required />
+            <input class="" type="url" id="link" name="link" placeholder="Enter Link"  />
         </div>
     </div>
     <div class="col-md-6">

@@ -1,52 +1,65 @@
 @extends('frontend.layouts.app')
-
 @section('content')
-
 <Style>
-
-.why-box {
-    border-radius: 12px;
-    padding: 40px 0px;
-    background: #183c46eb;
-}
-
-.title-2 {
-    color: #8fc445;
-}
-
-.desc-2 {
-    color: white;
-}
-
-.card- {
-        background: #29494e;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .title-2 {
+        color: #8fc445;
     }
-.services {
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    padding: 10px 10px 30px 10px;
-    background-color: #9d9e9f14;
-}
+    .desc-2 {
+        color: white;
+    }
+    .why-box {
+        border-radius: 12px;
+        padding: 20px 0px;
+        background: #f8f9fa9c;
+    }
+    .card- {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+        }
+    .services {
+        text-align: center;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        border-radius: 12px;
+        padding: 10px 30px 0px 30px;
+        /* background-color: #9d9e9f14;*/
+    }
 
-.services-h1 {
-    text-align:center;
-    text-decoration: overline;
-    margin-bottom: 50px;
-    color: #8FC445;
-}
-
+    .services-h1 {
+        text-align:center;
+        /* text-decoration: overline; */
+        margin-bottom: 50px;
+        /* color: #ffffff; */
+    }
 </Style>
-<!--========== blog details Start ==============-->
-
+<!-- Preloader start -->
+<div id="preloader" class="preloader">
+    <div class="animation-preloader">
+        <!-- <div class="spinner">
+                <div class="loader-icon">
+                    <img src="{{ asset('frontend/images/logo/favicon.png') }}"
+                        alt="Corporate Business HTML Template" />
+                </div>
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="S" class="letters-loading"> S </span>
+                <span data-text-preloader="H" class="letters-loading"> H </span>
+                <span data-text-preloader="I" class="letters-loading"> I </span>
+                <span data-text-preloader="P" class="letters-loading"> P </span>
+                <span data-text-preloader="" class="letters-loading"> </span>
+                <span data-text-preloader="A" class="letters-loading"> A </span>
+                <span data-text-preloader="1" class="letters-loading"> 1 </span>
+                <span data-text-preloader="" class="letters-loading"> </span>
+            </div> -->
+    </div>
+    <!-- <button class="tj-primary-btn">Cancel Preloader</button> -->
+</div>
+<!-- Preloader end -->
 <section class="tj-choose-us-section-service-roro">
     <div class="container mt-4">
         <div class="row mt-4">
-
             <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
@@ -57,7 +70,6 @@
                             customers and seeks your trust in return of our services.
                         </p>
                     </div>
-
                 </div>
             </div>
             @if (session('success'))
@@ -71,676 +83,587 @@
             </div>
             @endif
             <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
-            {{--  @include('partials.multi-form') --}}
-            <div class="tj-input-form  w-100" data-bg-image="">
-
-
-
-<form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
-    id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
-    enctype="multipart/form-data">
-    @csrf
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <div class="container mt-2">
-        <!-- Step 1: Moving From/To -->
-        <!-- <div class="route_quote_info" id="step1">
-            <div class="row">
-                <h4 class="title text-center">Quote Request!</h4>
-                <div class="col-xl-12 col-lg-12 mb-4">
-                    <h6 class="text-white">Moving From</h6>
-                    <label class="text-white mb-2">Where Are You Moving From?</label>
-                    <div class="single-input-field">
-                        <input class="form-control" type="text" id="pickup-location"
-                            placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                        <ul class="suggestions suggestionsTwo"></ul>
-                        <label class="error-message" id="pickup-location-error">This field is
-                            required.</label>
-                    </div>
-                </div> -->
-
-                <!-- <div class="col-xl-12 col-lg-12 mb-4">
-                    <h6 class="text-white">Deliver To</h6>
-                    <label class="text-white mb-2">Where Are You Moving To?</label>
-                    <div class="single-input-field">
-                        <input class="form-control" type="text" id="delivery-location"
-                            placeholder="Enter City or ZipCode" name="To_ZipCode" required>
-                        <ul class="suggestions suggestionsTwo"></ul>
-                        <label class="error-message" id="delivery-location-error">This field is
-                            required.</label>
-                    </div>
-                </div> -->
-                    <!-- <div class="col-xl-4 col-lg-4 mb-4">
-                        <div class="single-input-field">
-                            <label class="d-block text-white">Country:</label>
-                            <select class="form-control" id="country-dropdown" 
-                                name="country1">
-                                <option value="">Select a country</option>
-                                
-                            </select>
-                            <label class="error-message" id="country1-error">This field is
-                                required.</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="single-input-field">
-                            <label class="d-block text-white"> City:</label>
-                            <input class="form-control" required name="city1" type="text"
-                                placeholder="City">
-                            <label class="error-message" id="city1-error">This field is
-                                required.</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="single-input-field">
-                            <label class="d-block text-white">
-                                Postal/Zip(Optional)
-                                :</label>
-                            <input class="form-control" name="zip1" type="text"
-                                placeholder="Postal/Zip">
-                            <label class="error-message" id="zip1-error">This field is
-                                required.</label>
-                        </div>
-                    </div>
-                
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="price__cta-btn text-center">
-                        <button class="tj-submit-btn" type="button" id="step1_next">
-                            Next <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div class="route_quote_info" id="step1">
-
-                        <div class="row">
-                            <h4 class="title text-center">Quote Request!</h4>
-                            <div class="col-xl-12 col-lg-12 mb-4">
-                                <h6 class="text-white">Moving From</h6>
-                                <label class="text-white mb-2">Where Are You Moving From?</label>
-                                <div class="single-input-field">
-                                    <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                    <label class="error-message" id="pickup-location-error">This field is required.</label>
-                                </div>
+                {{--  @include('partials.multi-form') --}}
+                <div class="tj-input-form  w-100" data-bg-image="">
+                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                        id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                        enctype="multipart/form-data">
+                        @csrf
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
                             </div>
-
-                            
-                        </div>
-
-                        <div class="row">
-                            <h6 class="text-white">Deliver To</h6>
-                            <div class="col-xl-4 col-lg-4 mb-4">
-                                <label class="text-white mb-2">Country:</label>
-                                <div class="single-input-field">
-                                    <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_ZipCode" required>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                    <label class="error-message" id="delivery-location-error">This field is required.</label>
+                        @endif
+                        <div class="container mt-2">
+                            <!-- Step 1: Moving From/To -->
+                            <!-- <div class="route_quote_info" id="step1">
+                                <div class="row">
+                                    <h4 class="title text-center">Quote Request!</h4>
+                                    <div class="col-xl-12 col-lg-12 mb-4">
+                                        <h6 class="text-white">Moving From</h6>
+                                        <label class="text-white mb-2">Where Are You Moving From?</label>
+                                        <div class="single-input-field">
+                                            <input class="form-control" type="text" id="pickup-location"
+                                                placeholder="Enter City or ZipCode" name="From_ZipCode" required>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                            <label class="error-message" id="pickup-location-error">This field is
+                                                required.</label>
+                                        </div>
+                                    </div> -->
+                                    <!-- <div class="col-xl-12 col-lg-12 mb-4">
+                                        <h6 class="text-white">Deliver To</h6>
+                                        <label class="text-white mb-2">Where Are You Moving To?</label>
+                                        <div class="single-input-field">
+                                            <input class="form-control" type="text" id="delivery-location"
+                                                placeholder="Enter City or ZipCode" name="To_ZipCode" required>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                            <label class="error-message" id="delivery-location-error">This field is
+                                                required.</label>
+                                        </div>
+                                    </div> -->
+                                        <!-- <div class="col-xl-4 col-lg-4 mb-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white">Country:</label>
+                                                <select class="form-control" id="country-dropdown" 
+                                                    name="country1">
+                                                    <option value="">Select a country</option>    
+                                                </select>
+                                                <label class="error-message" id="country1-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> City:</label>
+                                                <input class="form-control" required name="city1" type="text"
+                                                    placeholder="City">
+                                                <label class="error-message" id="city1-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white">
+                                                    Postal/Zip(Optional)
+                                                    :</label>
+                                                <input class="form-control" name="zip1" type="text"
+                                                    placeholder="Postal/Zip">
+                                                <label class="error-message" id="zip1-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 mb-4">
-                                
-                                <label class="text-white mb-2">City:</label>
-                                <div class="single-input-field">
-                                    <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_ZipCode" required>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                    <label class="error-message" id="delivery-location-1-error">This field is required.</label>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 mb-4">
-                                
-                                <label class="text-white mb-2">Zip Code:</label>
-                                <div class="single-input-field">
-                                    <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>
-                                    
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="price__cta-btn text-center">
-                                    <button class="tj-submit-btn" type="button" id="step1_next">
-                                        Next <i class="fa-light fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        <!-- Step 2: Vehicle Information -->
-        <div class="vehicle_quote_info" id="step2" style="display: none;">
-            <div class="row">
-                <h4 class="title text-center">VEHICLE INFORMATION</h4>
-                <select id="tabSelector" class="" aria-label="Tab selector" required>
-                    <option value="" selected disabled>Select a Vehicle</option>
-                    <option value="Atv">Atv Utv Transport</option>
-                    <option value="Boat-Transport">Boat Transport</option>
-                    <option value="Car">Car</option>
-                    <!-- <option value="Freight-Transportation">Freight Transportation</option> -->
-                    <option value="Golf-Cart">Golf Cart</option>
-                    <option value="Heavy-Equipment">Heavy Equipment</option>
-                    <option value="Motorcycle">Motorcycle</option>
-                    <option value="RV-Transport">RV Transport</option>
-                </select>
-                <label class="error-message" id="tabSelector-error">This field is
-                    required.</label>
-                <div class="my-4">
-                    <!-- <div class="col-xl-4 col-lg-4">
-                        <div class="single-input-field">
-                            <label class="d-block text-white">Country:</label>
-                            <select class="form-control" id="country-dropdown" required
-                                name="country1">
-                                <option value="">Select a country</option>
-                            </select>
-                            <label class="error-message" id="country1-error">This field is
-                                required.</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="single-input-field">
-                            <label class="d-block text-white"> City:</label>
-                            <input class="form-control" required name="city1" type="text"
-                                placeholder="City">
-                            <label class="error-message" id="city1-error">This field is
-                                required.</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="single-input-field">
-                            <label class="d-block text-white">
-                                Postal/Zip(Optional)
-                                :</label>
-                            <input class="form-control" name="zip1" type="text"
-                                placeholder="Postal/Zip">
-                            <label class="error-message" id="zip1-error">This field is
-                                required.</label>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="tab-content mt-3" id="additionalContent"></div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn">
-                        <button class="tj-submit-btn previous" id="step2_previous">
-                            Previous <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn float-end">
-                        <button class="tj-submit-btn" type="button" id="step2_next">
-                            Next <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Step 3: Customer Information -->
-        <div class="basic_quote_info" id="step3" style="display: none;">
-            <div class="row mb-3">
-                <h4 class="text-center text-white">Customer Information</h4>
-                <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white"> Your Name:</label>
-                        <input class="form-control" required name="phone" type="tel"
-                            placeholder="Customer Name">
-                        <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-                        <label class="error-message" id="Custo_Name-error">This field is
-                            required.</label>
-                    </div>
-                </div>
-
-                <!-- <div class="col-xl-4 col-lg-4">
-                                <div class="single-input-field">
-                                    <label class="d-block text-white"> Phone:</label>
-                                    <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
-                                    <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
-                                    <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="price__cta-btn text-center">
+                                            <button class="tj-submit-btn" type="button" id="step1_next">
+                                                Next <i class="fa-light fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div> -->
-                <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white">Phone:</label>
-                        <input id="phone" class="form-control" required name="phone"
-                            type="tel" placeholder="Customer Phone">
-                        <label class="error-message" id="Custo_Phone-error">This field is
-                            required.</label>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4">
-                    <div class="single-input-field">
-                        <label class="d-block text-white"> Email Address:</label>
-                        <input class="form-control" required name="Custo_Email" type="email"
-                            placeholder="Email address">
-                        <label class="error-message" id="Custo_Email-error">This field is
-                            required.</label>
-                    </div>
-                </div>
-
+                            <div class="route_quote_info" id="step1">
+                                <div class="row">
+                                    <h4 class="title text-center">Quote Request!</h4>
+                                    <div class="col-xl-12 col-lg-12 mb-4">
+                                        <h6 class="text-white">Moving From</h6>
+                                        <label class="text-white mb-2">Where Are You Moving From?</label>
+                                        <div class="single-input-field">
+                                            <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                            <label class="error-message" id="pickup-location-error">This field is required.</label>
+                                        </div>
+                                    </div>   
+                                </div>
+                                <div class="row">
+                                    <h6 class="text-white">Deliver To</h6>
+                                    <div class="col-xl-4 col-lg-4 mb-4">
+                                        <label class="text-white mb-2">Country:</label>
+                                        <div class="single-input-field">
+                                            <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_ZipCode" required>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                            <label class="error-message" id="delivery-location-error">This field is required.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 mb-4">    
+                                        <label class="text-white mb-2">City:</label>
+                                        <div class="single-input-field">
+                                            <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_ZipCode" required>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                            <label class="error-message" id="delivery-location-1-error">This field is required.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 mb-4"> 
+                                        <label class="text-white mb-2">Zip Code:</label>
+                                        <div class="single-input-field">
+                                            <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>      
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="price__cta-btn text-center">
+                                            <button class="tj-submit-btn" type="button" id="step1_next">
+                                                Next <i class="fa-light fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Step 2: Vehicle Information -->
+                            <div class="vehicle_quote_info" id="step2" style="display: none;">
+                                <div class="row">
+                                    <h4 class="title text-center">VEHICLE INFORMATION</h4>
+                                    <select id="tabSelector" class="" aria-label="Tab selector" required>
+                                        <option value="" selected disabled>Select a Vehicle</option>
+                                        <option value="Atv">Atv Utv Transport</option>
+                                        <option value="Boat-Transport">Boat Transport</option>
+                                        <option value="Car">Car</option>
+                                        <!-- <option value="Freight-Transportation">Freight Transportation</option> -->
+                                        <option value="Golf-Cart">Golf Cart</option>
+                                        <option value="Heavy-Equipment">Heavy Equipment</option>
+                                        <option value="Motorcycle">Motorcycle</option>
+                                        <option value="RV-Transport">RV Transport</option>
+                                    </select>
+                                    <label class="error-message" id="tabSelector-error">This field is
+                                        required.</label>
+                                    <div class="my-4">
+                                        <!-- <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white">Country:</label>
+                                                <select class="form-control" id="country-dropdown" required
+                                                    name="country1">
+                                                    <option value="">Select a country</option>
+                                                </select>
+                                                <label class="error-message" id="country1-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white"> City:</label>
+                                                <input class="form-control" required name="city1" type="text"
+                                                    placeholder="City">
+                                                <label class="error-message" id="city1-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="single-input-field">
+                                                <label class="d-block text-white">
+                                                    Postal/Zip(Optional)
+                                                    :</label>
+                                                <input class="form-control" name="zip1" type="text"
+                                                    placeholder="Postal/Zip">
+                                                <label class="error-message" id="zip1-error">This field is
+                                                    required.</label>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <div class="tab-content mt-3" id="additionalContent"></div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="price__cta-btn">
+                                            <button class="tj-submit-btn previous" id="step2_previous">
+                                                Previous <i class="fa-light fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="price__cta-btn float-end">
+                                            <button class="tj-submit-btn" type="button" id="step2_next">
+                                                Next <i class="fa-light fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Step 3: Customer Information -->
+                            <div class="basic_quote_info" id="step3" style="display: none;">
+                                <div class="row mb-3">
+                                    <h4 class="text-center text-white">Customer Information</h4>
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="single-input-field">
+                                            <label class="d-block text-white"> Your Name:</label>
+                                            <input class="form-control" required name="phone" type="tel"
+                                                placeholder="Customer Name">
+                                            <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
+                                            <label class="error-message" id="Custo_Name-error">This field is
+                                                required.</label>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-xl-4 col-lg-4">
+                                                    <div class="single-input-field">
+                                                        <label class="d-block text-white"> Phone:</label>
+                                                        <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
+                                                        <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
+                                                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
+                                                    </div>
+                                                </div> -->
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="single-input-field">
+                                            <label class="d-block text-white">Phone:</label>
+                                            <input id="phone" class="form-control" required name="phone"
+                                                type="tel" placeholder="Customer Phone">
+                                            <label class="error-message" id="Custo_Phone-error">This field is
+                                                required.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="single-input-field">
+                                            <label class="d-block text-white"> Email Address:</label>
+                                            <input class="form-control" required name="Custo_Email" type="email"
+                                                placeholder="Email address">
+                                            <label class="error-message" id="Custo_Email-error">This field is
+                                                required.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="price__cta-btn">
+                                            <button class="tj-submit-btn previous" id="step3_previous">
+                                                Previous <i class="fa-light fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="price__cta-btn float-end">
+                                            <button class=" tj-submit-btn " href="" type="submit"
+                                                id="submit_instant_code" value="Submit Form">
+                                                Calculate Price <i class="fa-light fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div> 
             </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn">
-                        <button class="tj-submit-btn previous" id="step3_previous">
-                            Previous <i class="fa-light fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-lg-6">
-                    <div class="price__cta-btn float-end">
-
-                        <button class=" tj-submit-btn " href="" type="submit"
-                            id="submit_instant_code" value="Submit Form">
-                            Calculate Price <i class="fa-light fa-arrow-right"></i>
-                        </button>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-</div> 
-            </div>
-
         </div>
     </div>
 </section>
-
-
-@include('partials.reveiw-site')
-
+@include('partials.reveiw-small-detail') 
 <section class="tj-about-section-four">
     <div class="container">
         <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
             Platform of RORO <br>Shipping Services</h2>
-
-        
     </div>
 </section>
-
-
 <section class="tj-about-section pt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">RORO Shipping Overview</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">Ship-A1 is a car shipping company based in the united states. We provide car shipping 
-                                services across all countries in the united states to worldwide destinations. When shipping
-                                 vehicle overseas, the most frequently used shipping option is RORO (Roll-on/Roll-off) Shipping.
-                                  RORO shipping is the simplest and easiest method of transportation for the vehicle. The vehicle 
-                                  is driven directly onto the RORO vessel and secured to the car deck. They are securely inside 
-                                  the boat. Wind-and-watertight .it is essential to note that you cannot ship personal effects
-                                   using this method. Still, spare tire and factory fitted accessories are allowed. RORO overseas
-                                    shipping is a popular way of transporting cargo to other counties. Ship-A1 is connected with 
-                                    different best cargo companies they carried your vehicle to other counties. Our agents taking
-                                     care of clearing documents and other paperwork for you</p>
-                        </div>
-                        
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">RORO Shipping Overview</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">Ship-A1 is a car shipping company based in the united states. We provide car shipping 
+                            services across all countries in the united states to worldwide destinations. When shipping
+                            vehicle overseas, the most frequently used shipping option is RORO (Roll-on/Roll-off) Shipping.
+                            RORO shipping is the simplest and easiest method of transportation for the vehicle. The vehicle 
+                            is driven directly onto the RORO vessel and secured to the car deck. They are securely inside 
+                            the boat. Wind-and-watertight .it is essential to note that you cannot ship personal effects
+                            using this method. Still, spare tire and factory fitted accessories are allowed. RORO overseas
+                            shipping is a popular way of transporting cargo to other counties. Ship-A1 is connected with 
+                            different best cargo companies they carried your vehicle to other counties. Our agents taking
+                            care of clearing documents and other paperwork for you
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
+            </div>
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/roro-service4.webp') }}" alt="Image">
-                    </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                
-            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-            <div class="mt-4 rounded">
-                    <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/roro-service1.webp') }}" alt="Image">
-                    </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
-                </div>
-            </div>
-            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">RORO Shipping Destinations</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">We are providing Facilities in roro shipping service our experts are here to help 
-                                you in your roro shipping from us to their following ports. Ship-A1 is providing RORO Shipping 
-                                service from U.S to in these Following:
-                            <div class="row">
-    <div class="col-sm-4">
-        <strong>Nigeria:</strong> Lagos
-    </div>
-    <div class="col-sm-4">
-        <strong>Ghana:</strong> Takoradi, Tema
-    </div>
-    <div class="col-sm-4">
-        <strong>Togo:</strong> Lome
-    </div>
-    
-</div>
-<hr>
-<div class="row">
-    <div class="col-sm-4">
-        <strong>Ivory Coast:</strong> Abidjan
-    </div>
-    <div class="col-sm-4">
-        <strong>The Gambia:</strong> Banjul
-    </div>
-    <div class="col-sm-4">
-        <strong>Guinea:</strong> Conakry
-    </div>
-   
-</div>
-<hr>
-<div class="row">
-    <div class="col-sm-4">
-        <strong>Cameroon:</strong> Douala
-    </div>
-    <div class="col-sm-4">
-        <strong>Sierra Leone:</strong> Freetown
-    </div>
-    <div class="col-sm-4">
-        <strong>Gabon:</strong> Libreville
-    </div>
-    
-</div>
-<hr>
-<div class="row">
-<div class="col-sm-4">
-        <strong>Angola:</strong> Luanda, Monrovia
-    </div>
-    <div class="col-sm-4">
-        <strong>Benin:</strong> Cotonou
-    </div>
-    <div class="col-sm-4">
-        <strong>Senegal:</strong> Dakar
-    </div>
-</div>
-<hr>
-<div class="row">
-<div class="col-sm-6">
-        <strong>Republic of the Congo:</strong> 
-        Pointe-Noire 
-    </div>
-    <div class="col-sm-4">
-    
-    </div>
-    
-</div>
-<hr>
-               
-                            </p>
-                        </div>
-                        
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="container">
-            <div class="row">
-               
-            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Comparing RORO and Container Shipping</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">
-                            When it comes to the international transportation of vehicles, importers usually prefer one of two
-                             primary shipping methods: Container shipping and RORO shipping. Either one of these is quite 
-                             practical and secure when it comes to the safe transportation of your vehicle. However, there is
-                              some consideration to be made in terms of whether or not RORO is the better of the two options.
-                               So, today we discuss the benefits and flaws of the RORO shipping methods, as well as the difference
-                                it has in comparison with container shipping. The auto car shipping companies provide exceptional
-                                 service for the transportation of the car from one place to another place. The best thing about 
-                                 the car shipping with a trusted and popular company is that the company will make the car 
-                                 shipping service to another level.However, if you are thinking of shipping the car internationally, 
-                                 then nothing can beat the (Roll-on/Roll-off) services. It involves the movers to rolling the automobile up 
-                                 a ramp into the cargo deck of a commercial ship. Thousands of vehicles are now shipping with the help of the 
-                                 (Roll-on/roll-off) car shipping.</p>
-                        </div>
-                        
-                    </div>
-                </div>
-
-            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-            <div class="mt-4 rounded">
-                    <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/roro-service5.webp') }}" alt="Image">
-                    </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
-                </div>
-            </div>
-            
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-               
-
-            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-            <div class="mt-4 rounded">
-                    <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/roro-service2.webp') }}" alt="Image">
-                    </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
-                </div>
-            </div>
-            <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Benefits of RORO Shipping Service</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
-                            <p class="desc">Some of the advantages are as follows: For the shipper, the interest is speed. Since cars and lorries
-                             can drive straight on to the ship at one port and then drive off at the other port within a few 
-                             minutes of the ship docking, it saves much time of the shipper. It can also integrate well with
-                              additional transport development, such as containers. The use of Customs-sealed units has enabled 
-                              frontiers to be crossed with the minimum of delay. Therefore, it increases the speed and efficiency
-                               of the shipper. The ship has also proved extremely popular with holidaymakers and private car
-                                owners. It has significantly contributed to the growth of tourism. A person can take his car 
-                                from one country to another by the sea with the help of a RORO vessel.</p>
-                        </div>
-                    </div>
-                </div>
-
-            
-            
-            </div>
-        </div>
-
-</section>
-
-
-    <section class="tj-about-section pt-4">
-        
-
+    </div>
     <div class="container">
-    <div class="row">
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Affordability</span>
-                </div>
-                <p class="desc">RORO is the most preferred shipping method to ship vehicles from one port to the other. It is also
-                     the fastest method of transportation that will free you of any additional expenses. If your country uses CIF
-                      to calculate duties and taxes, then you can save double, and as long as you keep on shipping, you indeed 
-                      save on tax duties too! Now that's a good deal.</p>
-            </div>
-        </div>
-
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Convenient</span>
-                </div>
-                <p class="desc">The outstanding and useful fact about RORO shipping is that it can apply to any vehicle. So long
-                     as you or the professional moving company you hire provide a trailer with wheels for boats and caravans, you
-                      do not need to pull them apart to fit inside a container. You may even be able to drive your car right from
-                       the destination port if you have enough gas left in the tank.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Safe</span>
-                </div>
-                <p class="desc">You might have read some articles concerned about the safety of the stuff they ship. As long as 
-                    you have chosen RORO car shipping, you will not have to worry about the security of your vehicles.</p>
-            </div>
-        </div>
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Speed</span>
-                </div>
-                <p class="desc">The lack of RORO availability at specific ports can cause delays in transportation. If this does
-                     occur, importers have to find a port that offers this option in their close vicinity.</p>
-            </div>
-        </div>
-        
-        
-    </div>
-
-    <div class="row">
-        
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Shipping Process</span>
-                </div>
-                <p class="desc">The shipping process is convenient, and it takes the least time when it comes to processing 
-                    international shipping. Therefore, many people trust the RORO shipping. Therefore, if you are planning 
-                    international car shipping, then you can rely on RORO services.</p>
-            </div>
-        </div>
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Fast</span>
-                </div>
-                <p class="desc">This mode of shipping is used when you want to transport your vehicle on urgent or when time is
-                     essential. The standard vehicle shipping services take more days for shipping overseas, but RORO car shipping
-                      is more efficient than its alternatives.</p>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="row">
-   
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Saves Times and Money</span>
-                </div>
-                <p class="desc">Another advantage is the affordability. It is one of the cheapest international shipping 
-                    services which deliver the automobiles on time. Therefore, it also saves time. The air shipping and 
-                    another way of international shipping are pretty expensive when it compares with the RORO shipping.</p>
-            </div>
-        </div>
-        <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Safety</span>
-                </div>
-                <p class="desc">Although RORO shipping is considered more affordable and convenient, it is also more
-                     high-risk in terms of vehicle safety. The main reasons for this are the loading/unloading stage,
-                      during which accidents can occur, and the extensive exposure to diverse climate changes.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-    <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Insurance</span>
-                </div>
-                <p class="desc">The various companies which offer the RORO service are now providing car insurance. 
-                    Therefore, international car shipping is pretty safe now after incorporating coverage. The company covers not
-                     only the safety of the car but also, they verify the damages. In addition to that, the company scrutinizes 
-                     the condition of the vehicle as they are liable for the damages.</p>
-            </div>
-        </div>
-    <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one border rounded p-4">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape">Attractive Rates and Discounts</span>
-                </div>
-                <p class="desc">The service not only delivers car internationally at a very affordable price rate but also,
-                     they provide various attractive discounts. This can be an added advantage. Many companies offer discounts
-                      to maintain healthy competition in the market.</p>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-    </section>
-
-
-<section class="tj-cta-section-two">
-            <div class="tj_cta_image-4 w-100 h-50"></div>
-            
-            <div class="container">
-                <div class="row">
-                   
-                    <div class="col-lg-12 col-md-6">
-                       
-
-                        <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-                        
-                            <div class="tj-section-heading ">
-                                <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                                <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
-                            </div>
-                           
-                         
-                            <div class="tj-theme-button mt-2">
-                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
-                                    Get Support<i class="flaticon-right-1"></i>
-                                </a>
-                            </div>
-                          
-
-                        </div>
-                        
-                        
+        <div class="row">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">RORO Shipping Destinations</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">We are providing Facilities in roro shipping service our experts are here to help 
+                            you in your roro shipping from us to their following ports. Ship-A1 is providing RORO Shipping 
+                            service from U.S to in these Following:
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <strong>Nigeria:</strong> Lagos
+                                </div>
+                                <div class="col-sm-4">
+                                    <strong>Ghana:</strong> Takoradi, Tema
+                                </div>
+                                <div class="col-sm-4">
+                                    <strong>Togo:</strong> Lome
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <strong>Ivory Coast:</strong> Abidjan
+                                </div>
+                                <div class="col-sm-4">
+                                    <strong>The Gambia:</strong> Banjul
+                                </div>
+                                <div class="col-sm-4">
+                                    <strong>Guinea:</strong> Conakry
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <strong>Cameroon:</strong> Douala
+                                </div>
+                                <div class="col-sm-4">
+                                    <strong>Sierra Leone:</strong> Freetown
+                                </div>
+                                <div class="col-sm-4">
+                                    <strong>Gabon:</strong> Libreville
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <strong>Angola:</strong> Luanda, Monrovia
+                                </div>
+                                <div class="col-sm-4">
+                                    <strong>Benin:</strong> Cotonou
+                                </div>
+                                <div class="col-sm-4">
+                                    <strong>Senegal:</strong> Dakar
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <strong>Republic of the Congo:</strong> 
+                                    Pointe-Noire 
+                                </div>
+                                <div class="col-sm-4">
+                                </div>
+                            </div>
+                            <hr>
+                        </p>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Comparing RORO and Container Shipping</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                        When it comes to the international transportation of vehicles, importers usually prefer one of two
+                            primary shipping methods: Container shipping and RORO shipping. Either one of these is quite 
+                            practical and secure when it comes to the safe transportation of your vehicle. However, there is
+                            some consideration to be made in terms of whether or not RORO is the better of the two options.
+                            So, today we discuss the benefits and flaws of the RORO shipping methods, as well as the difference
+                            it has in comparison with container shipping. The auto car shipping companies provide exceptional
+                                service for the transportation of the car from one place to another place. The best thing about 
+                                the car shipping with a trusted and popular company is that the company will make the car 
+                                shipping service to another level.However, if you are thinking of shipping the car internationally, 
+                                then nothing can beat the (Roll-on/Roll-off) services. It involves the movers to rolling the automobile up 
+                                a ramp into the cargo deck of a commercial ship. Thousands of vehicles are now shipping with the help of the 
+                                (Roll-on/roll-off) car shipping.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                    <div class="image-box">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Benefits of RORO Shipping Service</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">Some of the advantages are as follows: For the shipper, the interest is speed. Since cars and lorries
+                            can drive straight on to the ship at one port and then drive off at the other port within a few 
+                            minutes of the ship docking, it saves much time of the shipper. It can also integrate well with
+                            additional transport development, such as containers. The use of Customs-sealed units has enabled 
+                            frontiers to be crossed with the minimum of delay. Therefore, it increases the speed and efficiency
+                            of the shipper. The ship has also proved extremely popular with holidaymakers and private car
+                            owners. It has significantly contributed to the growth of tourism. A person can take his car 
+                            from one country to another by the sea with the help of a RORO vessel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
+<section class="tj-about-section pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Affordability</span>
+                    </div>
+                    <p class="desc">RORO is the most preferred shipping method to ship vehicles from one port to the other. It is also
+                            the fastest method of transportation that will free you of any additional expenses. If your country uses CIF
+                            to calculate duties and taxes, then you can save double, and as long as you keep on shipping, you indeed 
+                            save on tax duties too! Now that's a good deal.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Convenient</span>
+                    </div>
+                    <p class="desc">The outstanding and useful fact about RORO shipping is that it can apply to any vehicle. So long
+                            as you or the professional moving company you hire provide a trailer with wheels for boats and caravans, you
+                            do not need to pull them apart to fit inside a container. You may even be able to drive your car right from
+                            the destination port if you have enough gas left in the tank.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Safe</span>
+                    </div>
+                    <p class="desc">You might have read some articles concerned about the safety of the stuff they ship. As long as 
+                        you have chosen RORO car shipping, you will not have to worry about the security of your vehicles.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Speed</span>
+                    </div>
+                    <p class="desc">The lack of RORO availability at specific ports can cause delays in transportation. If this does
+                            occur, importers have to find a port that offers this option in their close vicinity.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Shipping Process</span>
+                    </div>
+                    <p class="desc">The shipping process is convenient, and it takes the least time when it comes to processing 
+                        international shipping. Therefore, many people trust the RORO shipping. Therefore, if you are planning 
+                        international car shipping, then you can rely on RORO services.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Fast</span>
+                    </div>
+                    <p class="desc">This mode of shipping is used when you want to transport your vehicle on urgent or when time is
+                            essential. The standard vehicle shipping services take more days for shipping overseas, but RORO car shipping
+                            is more efficient than its alternatives.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Saves Times and Money</span>
+                    </div>
+                    <p class="desc">Another advantage is the affordability. It is one of the cheapest international shipping 
+                        services which deliver the automobiles on time. Therefore, it also saves time. The air shipping and 
+                        another way of international shipping are pretty expensive when it compares with the RORO shipping.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Safety</span>
+                    </div>
+                    <p class="desc">Although RORO shipping is considered more affordable and convenient, it is also more
+                            high-risk in terms of vehicle safety. The main reasons for this are the loading/unloading stage,
+                            during which accidents can occur, and the extensive exposure to diverse climate changes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Insurance</span>
+                    </div>
+                    <p class="desc">The various companies which offer the RORO service are now providing car insurance. 
+                        Therefore, international car shipping is pretty safe now after incorporating coverage. The company covers not
+                            only the safety of the car but also, they verify the damages. In addition to that, the company scrutinizes 
+                            the condition of the vehicle as they are liable for the damages.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded p-4">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Attractive Rates and Discounts</span>
+                    </div>
+                    <p class="desc">The service not only delivers car internationally at a very affordable price rate but also,
+                            they provide various attractive discounts. This can be an added advantage. Many companies offer discounts
+                            to maintain healthy competition in the market.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@include('partials.cta-section')
+{{-- <section class="tj-cta-section-two">
+    <div class="tj_cta_image-4 w-100 h-50"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-6">
+                <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
+                    <div class="tj-section-heading ">
+                        <span class="sub-title active-shape2"> Support Center 24/7 </span>
+                        <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
+                    </div>
+                    <div class="tj-theme-button mt-2">
+                        <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                            Get Support<i class="flaticon-right-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> --}}
 <section class="tj-about-section-five">
     <div class="container">
         <div class="row services">
@@ -769,20 +692,15 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 </section>
-
-
 <section class="tj-choose-us-section-service-roro">
-    
     <div class="container why-box">
         <div class="row">
             <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
                 <div class="about-content-two">
                     <div class="tj-section-heading">
-
                         <h2 class="title-2">Why Choose Us?</h2>
                         <p class="desc-2">
                             We have a distinct approach when it comes to the philosophy of business.<br>Our belief in
@@ -790,33 +708,24 @@
                             choose us:
                         </p>
                     </div>
-
                     <div class="content-box d-flex align-items-center border-top">
-
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
-
                             </div>
                             <p class="desc-2">★ Professional & responsive customer service available 24/7.</p>
                         </div>
-
                         <div class="tj-icon-box">
-
                             <p class="desc-2">★ A wide range of services such as open, enclosed & expedited.</p>
                         </div>
                         <div class="tj-icon-box pb-4">
-
                             <p class="desc-2">★ Prompt delivery due to efficient use of trailers.</p>
                         </div>
                     </div>
                     <div class="content-box d-flex align-items-center">
-
                         <div class="tj-icon-box">
-
                             <p class="desc-2">★ Legion of truckers available with years old network.</p>
                         </div>
                         <div class="tj-icon-box">
-
                             <p class="desc-2">★ Get online car shipping quotes.</p>
                         </div>
                     </div>
@@ -830,35 +739,31 @@
                     </div>
                     <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
                         alt="Image">
-
                 </div>
             </div>
         </div>
     </div>
-
 </section>
-
 <section class="tj-faq-section tj-faq-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape"> How It’s Work</span>
-                        <h2 class="title">Frequently Asked Questions</h2>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tj-section-heading text-center">
+                    <span class="sub-title active-shape"> How It’s Work</span>
+                    <h2 class="title">Frequently Asked Questions</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                    <div class="tj-faq-left-content">
-                        <div class="faq-image">
-                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
-                        </div>
-                        
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="tj-faq-left-content">
+                    <div class="faq-image">
+                        <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
+                    </div>  
                 </div>
-                <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
-                    <div class="tj-faq-area">
+            </div>
+            <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                <div class="tj-faq-area">
                     <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
@@ -896,29 +801,24 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
 <!--=========== Blog Section End =========-->
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script src="path/to/jquery.min.js"></script>
-{{-- <script src="path/to/owl.carousel.min.js"></script> --}}
-
+<script src="path/to/owl.carousel.min.js"></script>
 <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
-    </script>
-
+</script>
 <script>
         $(document).ready(function() {
             var selectedTab = '';
@@ -944,7 +844,6 @@
                     }
                 });
             });
-
             function addNewVehicle() {
                 var newVehicleHtml =
                     `
@@ -958,7 +857,6 @@
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
-
                 newVehicleHtml +=
                     `</select>
                         </div>
@@ -967,12 +865,10 @@
                         <div class="input-form tj-select">
                         <label>Make</label>
                         <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
                 @foreach ($makes as $make)
                     newVehicleHtml +=
                         `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
                 @endforeach
-
                 newVehicleHtml += `
                         </select>
                         </div>
@@ -981,20 +877,16 @@
                         <div class="input-form tj-select model-div">
                         <label>Model</label>
                         <select class="nice-select model" name="model[]" id="model" required></select>`;
-
                 newVehicleHtml +=
                     `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
                 newVehicleHtml += `
                             </div>
                             </div>
                             </div>
                             </div>
                             `;
-
                 $('.vehicles-container').append(newVehicleHtml);
             }
-
             function addOtherVehicle() {
                 var newVehicleHtml =
                     `
@@ -1008,7 +900,6 @@
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
-
                 newVehicleHtml +=
                     `</select>
                                 </div>
@@ -1027,16 +918,13 @@
                                 required="" />`
                 newVehicleHtml +=
                     `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
                 newVehicleHtml += `</div>
                                 </div>
                                 </div>
                                 </div>
                                 `;
-
                 $('.vehicles-container').append(newVehicleHtml);
             }
-
             $(document).on('click', '.addVehicleBtn', function() {
                 if ($('#tabSelector').val() == 'Car') {
                     // console.log('yesss');
@@ -1046,11 +934,9 @@
                     addOtherVehicle();
                 }
             });
-
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
             });
-
             $(document).on('change', '.year, .make', function() {
                 var year = $(this).closest('.vehicle-info').find('.year').val();
                 var makeId = $(this).closest('.vehicle-info').find('.make').val();
@@ -1059,7 +945,6 @@
                     getModel(year, makeId, vehicleInfo);
                 }
             });
-
             function getModel(year, makeId, vehicleInfo) {
                 // console.log('yes inn');
                 $.ajax({
@@ -1086,7 +971,7 @@
                 });
             }
         });
-    </script>
+</script>
 {{-- <script>
     $(document).ready(function() {
     $(document).on('change', '.category', function() {
@@ -1126,7 +1011,6 @@
     });
     });
 </script> --}}
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
     var input = document.querySelector("#phone");
@@ -1146,7 +1030,6 @@
     });
     });
 </script>
-
 <script>
    function playVideo() {
     document.querySelector('.video-thumbnail').style.display = 'none';
@@ -1156,200 +1039,196 @@
     iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
    }
 </script>
-
 <script>
-$(document).ready(function() {
-    var selectedTab = '';
-    $('#tabSelector').change(function() {
-        $('.vehicles-container').html('');
-        selectedTab = $(this).val();
-        var vehicleType = $(this).val();
-        $('.tab-pane').removeClass('show active');
-        $('#' + selectedTab).addClass('show active');
-
-        $.ajax({
-            url: "{{ route('get.partial.form') }}",
-            method: 'GET',
-            data: {
-                vehicleType: vehicleType,
-            },
-            success: function(response) {
-                $('#additionalContent').html('');
-                $('#additionalContent').html(response);
-            },
-            error: function(xhr) {
-                console.log(xhr.responseText);
-            }
-        });
-    });
-
-    function addNewVehicle() {
-        var newVehicleHtml =
-            `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label> Year</label>
-                        <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-        var currentYear = {
-            {
-                date('Y')
-            }
-        };
-        for (var year = currentYear; year >= 1936; year--) {
-            newVehicleHtml += `<option value="${year}">${year}</option>`;
-        }
-
-        newVehicleHtml +=
-            `</select>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label>Make</label>
-                        <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-
-
-        newVehicleHtml += `
-                        </select>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select model-div">
-                        <label>Model</label>
-                        <select class="nice-select model" name="model[]" id="model" required></select>`;
-
-        newVehicleHtml +=
-            `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-        newVehicleHtml += `
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            `;
-
-        $('.vehicles-container').append(newVehicleHtml);
-    }
-
-    function addOtherVehicle() {
-        var newVehicleHtml =
-            `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label> Year</label>
-                        <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-        var currentYear = {
-            {
-                date('Y')
-            }
-        };
-        for (var year = currentYear; year >= 1936; year--) {
-            newVehicleHtml += `<option value="${year}">${year}</option>`;
-        }
-
-        newVehicleHtml +=
-            `</select>
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                <label>Make</label>
-                                <input type="text" id="make" name="make[]"
-                                placeholder="Enter Make" required="" />
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                <label>Model</label>
-                                <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                required="" />`
-        newVehicleHtml +=
-            `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-        newVehicleHtml += `</div>
-                                </div>
-                                </div>
-                                </div>
-                                `;
-
-        $('.vehicles-container').append(newVehicleHtml);
-    }
-
-    $(document).on('click', '.addVehicleBtn', function() {
-        if ($('#tabSelector').val() == 'Car') {
-            addNewVehicle();
-        } else {
-            addOtherVehicle();
-        }
-    });
-
-    $(document).on('click', '.delete-vehicle', function() {
-        $(this).closest('.vehicle-info').remove();
-    });
-
     $(document).ready(function() {
-        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            var year = $('.vehicle-year').val();
-            var makeId = $('.vehicle-make').val();
-            if (year && makeId) {
-                getModel(year, makeId);
-            }
-        });
+        var selectedTab = '';
+        $('#tabSelector').change(function() {
+            $('.vehicles-container').html('');
+            selectedTab = $(this).val();
+            var vehicleType = $(this).val();
+            $('.tab-pane').removeClass('show active');
+            $('#' + selectedTab).addClass('show active');
 
-        function getModel(year, makeId) {
-            console.log('yes inn');
             $.ajax({
-                url: "{{ route('get.models') }}",
+                url: "{{ route('get.partial.form') }}",
                 method: 'GET',
                 data: {
-                    year: year,
-                    make: makeId
+                    vehicleType: vehicleType,
                 },
                 success: function(response) {
-                    var modelsDropdown = $('.vehicle-model-div');
-                    modelsDropdown.empty();
-                    var selectOptions =
-                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' +
-                            model +
-                            '</option>';
-                    });
-                    selectOptions += '</select>';
-                    modelsDropdown.html(selectOptions);
-
-                    console.log('yesssss', response);
+                    $('#additionalContent').html('');
+                    $('#additionalContent').html(response);
                 },
                 error: function(xhr) {
                     console.log(xhr.responseText);
                 }
             });
+        });
+
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                            <div class="vehicle-info">
+                            <div class="row select-bm">
+                            <div class="col-md-4">
+                            <div class="input-form tj-select">
+                            <label> Year</label>
+                            <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {
+                {
+                    date('Y')
+                }
+            };
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+
+            newVehicleHtml +=
+                `</select>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="input-form tj-select">
+                            <label>Make</label>
+                            <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
+
+
+
+            newVehicleHtml += `
+                            </select>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="input-form tj-select model-div">
+                            <label>Model</label>
+                            <select class="nice-select model" name="model[]" id="model" required></select>`;
+
+            newVehicleHtml +=
+                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+
+            newVehicleHtml += `
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                `;
+
+            $('.vehicles-container').append(newVehicleHtml);
         }
+
+        function addOtherVehicle() {
+            var newVehicleHtml =
+                `
+                            <div class="vehicle-info">
+                            <div class="row select-bm">
+                            <div class="col-md-4">
+                            <div class="input-form tj-select">
+                            <label> Year</label>
+                            <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {
+                {
+                    date('Y')
+                }
+            };
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+
+            newVehicleHtml +=
+                `</select>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                    <label>Make</label>
+                                    <input type="text" id="make" name="make[]"
+                                    placeholder="Enter Make" required="" />
+                                    </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                    <div class="input-form tj-select model-div">
+                                    <label>Model</label>
+                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                    required="" />`
+            newVehicleHtml +=
+                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+
+            newVehicleHtml += `</div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    `;
+
+            $('.vehicles-container').append(newVehicleHtml);
+        }
+
+        $(document).on('click', '.addVehicleBtn', function() {
+            if ($('#tabSelector').val() == 'Car') {
+                addNewVehicle();
+            } else {
+                addOtherVehicle();
+            }
+        });
+
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+
+        $(document).ready(function() {
+            $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+                var year = $('.vehicle-year').val();
+                var makeId = $('.vehicle-make').val();
+                if (year && makeId) {
+                    getModel(year, makeId);
+                }
+            });
+
+            function getModel(year, makeId) {
+                console.log('yes inn');
+                $.ajax({
+                    url: "{{ route('get.models') }}",
+                    method: 'GET',
+                    data: {
+                        year: year,
+                        make: makeId
+                    },
+                    success: function(response) {
+                        var modelsDropdown = $('.vehicle-model-div');
+                        modelsDropdown.empty();
+                        var selectOptions =
+                            '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                        $.each(response, function(index, model) {
+                            selectOptions += '<option value="' + model + '">' +
+                                model +
+                                '</option>';
+                        });
+                        selectOptions += '</select>';
+                        modelsDropdown.html(selectOptions);
+
+                        console.log('yesssss', response);
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            }
+        });
     });
-});
 </script>
-
 <script>
-// document.querySelectorAll('input[type="text"]').forEach((input) => {
-//     input.addEventListener("input", function() {
-//         this.value = this.value.replace(/[^0-9]/g, "");
-//     });
-// });
+    // document.querySelectorAll('input[type="text"]').forEach((input) => {
+    //     input.addEventListener("input", function() {
+    //         this.value = this.value.replace(/[^0-9]/g, "");
+    //     });
+    // });
 </script>
-
 <script>
-function limitDigits(element, maxDigits) {
-    if (element.value.length > maxDigits) {
-        element.value = element.value.slice(0, maxDigits);
+    function limitDigits(element, maxDigits) {
+        if (element.value.length > maxDigits) {
+            element.value = element.value.slice(0, maxDigits);
+        }
     }
-}
-
-$(document).ready(function() {
+    $(document).ready(function() {
     $('#inches-input').on('input', function() {
         if (this.value > 11) {
             this.value = 11;
@@ -1357,129 +1236,111 @@ $(document).ready(function() {
             this.value = 0;
         }
     });
-
     // Optionally, you can also prevent the user from typing non-numeric characters.
     $('#feet-input, #inches-input').on('input', function() {
         this.value = this.value.replace(/[^0-9]/g, '');
     });
-});
-
-$(document).ready(function() {
-    $('#inches-input1').on('input', function() {
-        if (this.value > 11) {
-            this.value = 11;
-        } else if (this.value < 0) {
-            this.value = 0;
-        }
     });
+    $(document).ready(function() {
+        $('#inches-input1').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
 
-    // Optionally, you can also prevent the user from typing non-numeric characters.
-    $('#feet-input1, #inches-input1').on('input', function() {
-        this.value = this.value.replace(/[^0-9]/g, '');
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input1, #inches-input1').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
     });
-});
-
-$(document).ready(function() {
-    $('#inches-input2').on('input', function() {
-        if (this.value > 11) {
-            this.value = 11;
-        } else if (this.value < 0) {
-            this.value = 0;
-        }
+    $(document).ready(function() {
+        $('#inches-input2').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input, #inches-input2').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
     });
-
-    // Optionally, you can also prevent the user from typing non-numeric characters.
-    $('#feet-input, #inches-input2').on('input', function() {
-        this.value = this.value.replace(/[^0-9]/g, '');
-    });
-});
 </script>
-
 <script>
-$(document).ready(function() {
-    function showError(field, message) {
-        $('#' + field).addClass('error-field');
-        $('#' + field + '-error').text(message).show();
-    }
-
-    function hideError(field) {
-        $('#' + field).removeClass('error-field');
-        $('#' + field + '-error').hide();
-    }
-
-    // Move to Step 2
-    $('#step1_next').click(function() {
-        var isValid = true;
-
-        if (!$('#pickup-location').val()) {
-            showError('pickup-location', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('pickup-location');
+    $(document).ready(function() {
+        function showError(field, message) {
+            $('#' + field).addClass('error-field');
+            $('#' + field + '-error').text(message).show();
         }
-
-        if (!$('#delivery-location').val()) {
-            showError('delivery-location', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('delivery-location');
+        function hideError(field) {
+            $('#' + field).removeClass('error-field');
+            $('#' + field + '-error').hide();
         }
-
-        if (isValid) {
-            $('#step1').hide();
-            $('#step2').show();
-        }
-    });
-
-    // Return to Step 1
-    $('#step2_previous').click(function() {
-        $('#step2').hide();
-        $('#step1').show();
-    });
-
-    // Move to Step 3
-    $('#step2_next').click(function() {
-        var isValid = true;
-
-        if (!$('#tabSelector').val()) {
-            showError('tabSelector', 'This field is required.');
-            isValid = false;
-        } else {
-            hideError('tabSelector');
-        }
-
-        if (isValid) {
+        // Move to Step 2
+        $('#step1_next').click(function() {
+            var isValid = true;
+            if (!$('#pickup-location').val()) {
+                showError('pickup-location', 'This field is required.');
+                isValid = false;
+            } else {
+                hideError('pickup-location');
+            }
+            if (!$('#delivery-location').val()) {
+                showError('delivery-location', 'This field is required.');
+                isValid = false;
+            } else {
+                hideError('delivery-location');
+            }
+            if (isValid) {
+                $('#step1').hide();
+                $('#step2').show();
+            }
+        });
+        // Return to Step 1
+        $('#step2_previous').click(function() {
             $('#step2').hide();
-            $('#step3').show();
-        }
+            $('#step1').show();
+        });
+        // Move to Step 3
+        $('#step2_next').click(function() {
+            var isValid = true;
+            if (!$('#tabSelector').val()) {
+                showError('tabSelector', 'This field is required.');
+                isValid = false;
+            } else {
+                hideError('tabSelector');
+            }
+            if (isValid) {
+                $('#step2').hide();
+                $('#step3').show();
+            }
+        });
+        // Return to Step 2
+        $('#step3_previous').click(function() {
+            $('#step3').hide();
+            $('#step2').show();
+        });
     });
-
-    // Return to Step 2
-    $('#step3_previous').click(function() {
-        $('#step3').hide();
-        $('#step2').show();
-    });
-});
 </script>
-
-
-
 <script>
-$(document).ready(function() {
-    $(document).on('change', '#available_at_auction', function() {
-        if ($(this).is(':checked')) {
-            $('.div-link').show();
-        } else {
-            $('.div-link').hide();
-        }
-    });
+    $(document).ready(function() {
+        $(document).on('change', '#available_at_auction', function() {
+            if ($(this).is(':checked')) {
+                $('.div-link').show();
+            } else {
+                $('.div-link').hide();
+            }
+        });
 
-    $(document).on('change', '#modification', function() {
-        if ($(this).is(':checked')) {
-            $('.div-modify_info').show();
-        } else {
-            $('.div-modify_info').hide();
-        }
+        $(document).on('change', '#modification', function() {
+            if ($(this).is(':checked')) {
+                $('.div-modify_info').show();
+            } else {
+                $('.div-modify_info').hide();
+            }
+        });
     });
-});
 </script>
