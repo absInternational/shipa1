@@ -268,26 +268,22 @@
 @section('extraScript')
 <script>
     $(document).ready(function() {
-        function get_cartype($id) {
-            if ($id == 1) {
-                return "Open";
-            } else {
-                return "Enclosed";
-            }
+        function get_cartype(id) {
+            return id == 1 ? "Open" : "Enclosed";
         }
-        function get_condtion($id) {
-            if ($id == 1) {
-                return "Running";
-            } else {
-                return "Not- Running";
-            }
+
+        function get_condtion(id) {
+            return id == 1 ? "Running" : "Not-Running";
         }
+
         var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
         $('#calculatePriceFrom').submit(function(event) {
             event.preventDefault();
-            var formData = $('#calculatePriceFrom').serialize();
+            var formData = $(this).serialize();
             $('.invalid-feedback').hide();
             $('#all-order-details').html('');
+
             $.ajax({
                 type: 'POST',
                 url: '{{ route('get.order.details') }}',
@@ -296,7 +292,6 @@
                     'X-CSRF-TOKEN': csrfToken
                 },
                 success: function(response) {
-                    // Display SweetAlert input box
                     Swal.fire({
                         title: 'Verification Code',
                         input: 'text',
@@ -307,14 +302,14 @@
                         preConfirm: (code) => {
                             if (!code) {
                                 Swal.showValidationMessage(
-                                    'Verification code cannot be empty');
+                                    'Verification code cannot be empty'
+                                );
                             }
                             return code;
                         }
                     }).then((result) => {
                         if (result.isConfirmed) {
                             var verificationCode = result.value;
-                            // Handle verification code
                             if (verificationCode !== "") {
                                 $.ajax({
                                     type: "POST",
@@ -326,128 +321,37 @@
                                         'X-CSRF-TOKEN': csrfToken
                                     },
                                     success: function(response) {
-                                        $('#all-order-details').html(
-                                            response);
+                                        $('#all-order-details').html(response);
                                     },
                                     error: function(xhr, status, error) {
-                                        console.error(xhr.responseText);
-                                        console.log('das3214');
-                                        $('.invalid-feedback').html(xhr
-                                            .responseText);
+                                        var errorMessage = xhr.responseText;
+                                        $('.invalid-feedback').html(errorMessage);
                                         $('.invalid-feedback').show();
                                     }
                                 });
                             } else {
                                 alert("Please enter the verification code.");
                             }
-                        });
-                    },
-                    error: function(xhr, status, error) {
-                        // $('#all-order-details').html('');
-                        var errorMessage = xhr.responseText;
-                        $('.invalid-feedback').html(errorMessage);
-                        $('.invalid-feedback').show();
-                    }
-                });
-            });
-
-            $(document).on('submit', '#submitEmailOrder', function() {
-                event.preventDefault();
-
-                var formData = $('#submitEmailOrder').serialize();
-
-                $.ajax({
-                    type: 'POST',
-                    url: '{{ route('order.form.store') }}',
-                    data: formData,
-                    success: function(response) {
-                        // console.log('response.message', response);
-                        // $('#all-order-details').html('');
-                        // $('#all-order-details').html(response);
-                        $('#all-order-details').html(`
-                            <div class="alert alert-success">
-                                ${response.message}
-                            </div>
-                            ${response}
-                        `);
-                        $('#calculatePriceFrom')[0].reset();
-                    },
-                    error: function(xhr, status, error) {
-                        // $('#all-order-details').html('');
-                        var errorMessage = xhr.responseText;
-                        $('.invalid-feedback').html(errorMessage);
-                        $('.invalid-feedback').show();
-                    }
-                });
-            });
-
-            $(document).on('submit', '#submitEmailOrderCard', function() {
-                event.preventDefault();
-
-                var formData = $('#submitEmailOrderCard').serialize();
-                formData += '&save_but=' + $('#save_but_value').val();
-
-                $.ajax({
-                    type: 'POST',
-                    url: '{{ route('order.form.storeCard') }}',
-                    data: formData,
-                    success: function(response) {
-                        console.log('response.message', response.message);
-                        $('#all-order-details').html(`
-                            <div class="alert alert-success">
-                                ${response.message}
-                            </div>
-                            ${response}
-                        `);
-                        $('#calculatePriceFrom')[0].reset();
-                    },
-                    error: function(xhr, status, error) {
-                        // $('#all-order-details').html('');
-                        var errorMessage = xhr.responseText;
-                        $('.invalid-feedback').html(errorMessage);
-                        $('.invalid-feedback').show();
-                    }
-                });
-            });
-
-            $(document).on('click', '#submit_with_pay_btn', function() {
-                $('#save_but_value').val('save_with_pay');
-            });
-
-            $(document).on('click', '#cancel_btn', function() {
-                $('#save_but_value').val('save_without_pay');
-            });
-        });
-        $(document).on('submit', '#submitEmailOrder', function() {
-            event.preventDefault();
-            var formData = $('#submitEmailOrder').serialize();
-            $.ajax({
-                type: 'POST',
-                url: '{{ route('order.form.store') }}',
-                data: formData,
-                success: function(response) {
-                    console.log('response.message', response.message);
-                    // $('#all-order-details').html('');
-                    $('#all-order-details').html(response);
+                        }
+                    });
                 },
                 error: function(xhr, status, error) {
-                    // $('#all-order-details').html('');
                     var errorMessage = xhr.responseText;
                     $('.invalid-feedback').html(errorMessage);
                     $('.invalid-feedback').show();
                 }
             });
         });
-        $(document).on('submit', '#submitEmailOrderCard', function() {
+
+        $(document).on('submit', '#submitEmailOrder', function(event) {
             event.preventDefault();
-            var formData = $('#submitEmailOrderCard').serialize();
-            formData += '&save_but=' + $('#save_but_value').val();
+            var formData = $(this).serialize();
+
             $.ajax({
                 type: 'POST',
-                url: '{{ route('order.form.storeCard') }}',
+                url: '{{ route('order.form.store') }}',
                 data: formData,
                 success: function(response) {
-                    console.log('response.message', response.message);
                     $('#all-order-details').html(`
                         <div class="alert alert-success">
                             ${response.message}
@@ -457,19 +361,47 @@
                     $('#calculatePriceFrom')[0].reset();
                 },
                 error: function(xhr, status, error) {
-                    // $('#all-order-details').html('');
                     var errorMessage = xhr.responseText;
                     $('.invalid-feedback').html(errorMessage);
                     $('.invalid-feedback').show();
                 }
             });
         });
+
+        $(document).on('submit', '#submitEmailOrderCard', function(event) {
+            event.preventDefault();
+            var formData = $(this).serialize();
+            formData += '&save_but=' + $('#save_but_value').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('order.form.storeCard') }}',
+                data: formData,
+                success: function(response) {
+                    $('#all-order-details').html(`
+                        <div class="alert alert-success">
+                            ${response.message}
+                        </div>
+                        ${response}
+                    `);
+                    $('#calculatePriceFrom')[0].reset();
+                },
+                error: function(xhr, status, error) {
+                    var errorMessage = xhr.responseText;
+                    $('.invalid-feedback').html(errorMessage);
+                    $('.invalid-feedback').show();
+                }
+            });
+        });
+
         $(document).on('click', '#submit_with_pay_btn', function() {
             $('#save_but_value').val('save_with_pay');
         });
+
         $(document).on('click', '#cancel_btn', function() {
             $('#save_but_value').val('save_without_pay');
         });
     });
 </script>
 @endsection
+
