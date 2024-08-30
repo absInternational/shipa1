@@ -136,6 +136,7 @@ class QuoteController extends Controller
         $vehicle_opt = $vehicle_opt;
         $frieght_class = $request->input('frieght_class', null);
         $rv_type = $request->input('rv_type', null);
+        $roro = $request->input('roro', null);
         $car_type = $request->input('car_type', 1);
         $need_permit = $request->input('need_permit', 0);
         $ip = $request->ip();
@@ -249,7 +250,8 @@ class QuoteController extends Controller
             'model' => $model,
             'frieght_class' => $frieght_class,
             'rv_type' => $rv_type,
-            'source' => $source,
+            'source' => 'ShipA1',
+            'roro' => $roro,
             'price_giver_allow' => $price_giver_allow,
             'need_permit' => $need_permit,
         ];
