@@ -23,9 +23,34 @@ class QuoteController extends Controller
         $name = $request->input('name', null);
         $email = $request->input('email', null);
         $phone = $request->input('phone', null);
-        $year = $data['year'][0];
-        $make = $data['make'][0];
-        $model = $data['model'][0];
+
+        $vehicles = [];
+        $vehicle_opt = '';
+
+        foreach ($data['year'] as $index => $count) {
+            $vehicle_opt = implode('*^', array_fill(0, count($data['year']), $data['vehicle_opt']));
+            $vehicles[] = [
+                'year' => $data['year'][$index],
+                'make' => $data['make'][$index],
+                'model' => $data['model'][$index],
+                'vehicle_opt' => $vehicle_opt
+            ];
+        }
+        $year = $this->generateStringFromArray($data['year']);
+        $make = $this->generateStringFromArray($data['make']);
+        $model = $this->generateStringFromArray($data['model']);
+        dd($vehicle_opt);
+        $condition = $this->generateStringFromArray($data['condition']);
+        $length_ft = $this->generateStringFromArray($data['length_ft']);
+        $length_in = $this->generateStringFromArray($data['length_in']);
+        $width_ft = $this->generateStringFromArray($data['width_ft']);
+        $width_in = $this->generateStringFromArray($data['width_in']);
+        $height_ft = $this->generateStringFromArray($data['height_ft']);
+        $height_in = $this->generateStringFromArray($data['height_in']);
+        $weight = $this->generateStringFromArray($data['weight']);
+        // $year = $data['year'][0];
+        // $make = $data['make'][0];
+        // $model = $data['model'][0];
         $condition = $request->input('condition', null);
         $originData = $request->input('From_ZipCode') ?? $request->input('origin');
         $destinationData = $request->input('To_ZipCode') ?? $request->input('destination');
@@ -113,16 +138,6 @@ class QuoteController extends Controller
             $ippostal = null;
         }
 
-        $vehicles = [];
-
-        foreach ($data['year'] as $index => $count) {
-            $vehicles[] = [
-                'year' => $data['year'][$index],
-                'make' => $data['make'][$index],
-                'model' => $data['model'][$index]
-            ];
-        }
-
         $post_array = [
             'appkey' => '0EO9KCH9NNI46HH60WOL5OW4TE0GCD6Y',
             'domain' => 'https://shawntransport.com',
@@ -205,7 +220,7 @@ class QuoteController extends Controller
             $post_array['image'] = $image;
         }
 
-        // dd($post_array);
+        dd($post_array);
 
         $delivery_latitude = $originData;
         $delivery_longitude = $destinationData;
@@ -244,15 +259,15 @@ class QuoteController extends Controller
         $heading = '';
         foreach ($data['year'] as $index => $count) {
             if (isset($data['year'][$index]) && isset($data['make'][$index]) && isset($data['model'][$index])) {
-                $heading .= $data['year'][$index] . ' ' . $data['make'][$index] . ' ' . $data['model'][$index] . '*^-';
+                $heading .= $data['year'][$index] . ' ' . $data['make'][$index] . ' ' . $data['model'][$index] . '*^';
             }
         }
-        return rtrim($heading, '*^-');
+        return rtrim($heading, '*^');
     }
 
     private function generateStringFromArray($array)
     {
-        return count($array) > 1 ? implode('*^-', $array) : $array[0];
+        return count($array) > 1 ? implode('*^', $array) : $array[0];
     }
 
     public static function getDistance($OriginZipCode, $DestinationZipCode): float
