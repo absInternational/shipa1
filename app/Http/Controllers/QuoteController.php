@@ -36,49 +36,49 @@ class QuoteController extends Controller
                 'vehicle_opt' => $vehicle_opt
             ];
         }
-        // $year = isset($data['year']) && is_array($data['year'])
-        //     ? $this->generateStringFromArray($data['year'])
-        //     : $request->input('year', null);
+        $year = isset($data['year']) && is_array($data['year'])
+            ? $this->generateStringFromArray($data['year'])
+            : $request->input('year', null);
 
-        // $make = isset($data['make']) && is_array($data['make'])
-        //     ? $this->generateStringFromArray($data['make'])
-        //     : $request->input('make', null);
+        $make = isset($data['make']) && is_array($data['make'])
+            ? $this->generateStringFromArray($data['make'])
+            : $request->input('make', null);
 
-        // $model = isset($data['model']) && is_array($data['model'])
-        //     ? $this->generateStringFromArray($data['model'])
-        //     : $request->input('model', null);
+        $model = isset($data['model']) && is_array($data['model'])
+            ? $this->generateStringFromArray($data['model'])
+            : $request->input('model', null);
 
-        // $condition = isset($data['condition']) && is_array($data['condition'])
-        //     ? $this->generateStringFromArray($data['condition'])
-        //     : $request->input('condition', null);
+        $condition = isset($data['condition']) && is_array($data['condition'])
+            ? $this->generateStringFromArray($data['condition'])
+            : $request->input('condition', null);
 
-        // $length_ft = isset($data['length_ft']) && is_array($data['length_ft'])
-        //     ? $this->generateStringFromArray($data['length_ft'])
-        //     : $request->input('length_ft', null);
+        $length_ft = isset($data['length_ft']) && is_array($data['length_ft'])
+            ? $this->generateStringFromArray($data['length_ft'])
+            : $request->input('length_ft', null);
 
-        // $length_in = isset($data['length_in']) && is_array($data['length_in'])
-        //     ? $this->generateStringFromArray($data['length_in'])
-        //     : $request->input('length_in', null);
+        $length_in = isset($data['length_in']) && is_array($data['length_in'])
+            ? $this->generateStringFromArray($data['length_in'])
+            : $request->input('length_in', null);
 
-        // $width_ft = isset($data['width_ft']) && is_array($data['width_ft'])
-        //     ? $this->generateStringFromArray($data['width_ft'])
-        //     : $request->input('width_ft', null);
+        $width_ft = isset($data['width_ft']) && is_array($data['width_ft'])
+            ? $this->generateStringFromArray($data['width_ft'])
+            : $request->input('width_ft', null);
 
-        // $width_in = isset($data['width_in']) && is_array($data['width_in'])
-        //     ? $this->generateStringFromArray($data['width_in'])
-        //     : $request->input('width_in', null);
+        $width_in = isset($data['width_in']) && is_array($data['width_in'])
+            ? $this->generateStringFromArray($data['width_in'])
+            : $request->input('width_in', null);
 
-        // $height_ft = isset($data['height_ft']) && is_array($data['height_ft'])
-        //     ? $this->generateStringFromArray($data['height_ft'])
-        //     : $request->input('height_ft', null);
+        $height_ft = isset($data['height_ft']) && is_array($data['height_ft'])
+            ? $this->generateStringFromArray($data['height_ft'])
+            : $request->input('height_ft', null);
 
-        // $height_in = isset($data['height_in']) && is_array($data['height_in'])
-        //     ? $this->generateStringFromArray($data['height_in'])
-        //     : $request->input('height_in', null);
+        $height_in = isset($data['height_in']) && is_array($data['height_in'])
+            ? $this->generateStringFromArray($data['height_in'])
+            : $request->input('height_in', null);
 
-        // $weight = isset($data['weight']) && is_array($data['weight'])
-        //     ? $this->generateStringFromArray($data['weight'])
-        //     : $request->input('weight', null);
+        $weight = isset($data['weight']) && is_array($data['weight'])
+            ? $this->generateStringFromArray($data['weight'])
+            : $request->input('weight', null);
 
         // $year = $data['year'][0];
         // $make = $data['make'][0];
@@ -97,13 +97,13 @@ class QuoteController extends Controller
         $modify_info = $request->input('modify_info', null);
         $category = $request->input('category', null);
         $boat_on_trailer = $request->input('boat_on_trailer', null);
-        $length_ft = $request->input('length_ft', null);
-        $length_in = $request->input('length_in', null);
-        $width_ft = $request->input('width_ft', null);
-        $width_in = $request->input('width_in', null);
-        $height_ft = $request->input('height_ft', null);
-        $height_in = $request->input('height_in', null);
-        $weight = $request->input('weight', null);
+        // $length_ft = $request->input('length_ft', null);
+        // $length_in = $request->input('length_in', null);
+        // $width_ft = $request->input('width_ft', null);
+        // $width_in = $request->input('width_in', null);
+        // $height_ft = $request->input('height_ft', null);
+        // // $height_in = $request->input('height_in', null);
+        // $weight = $request->input('weight', null);
         $subcategory = $request->input('subcategory', null);
         $load_type = $request->input('load_type', null);
         $load_method = $request->input('load_method', null);
@@ -133,7 +133,7 @@ class QuoteController extends Controller
         $protect_from_freezing = $request->input('protect_from_freezing', null);
         $sort_segregate = $request->input('sort_segregate', null);
         $blind_shipment = $request->input('blind_shipment', null);
-        $vehicle_opt = $request->input('vehicle_opt', null);
+        $vehicle_opt = $vehicle_opt;
         $frieght_class = $request->input('frieght_class', null);
         $rv_type = $request->input('rv_type', null);
         $car_type = $request->input('car_type', 1);
@@ -251,7 +251,7 @@ class QuoteController extends Controller
             $post_array['image'] = $image;
         }
 
-        dd($post_array);
+        // dd($post_array);
 
         $delivery_latitude = $originData;
         $delivery_longitude = $destinationData;
