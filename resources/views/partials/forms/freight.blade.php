@@ -9,10 +9,6 @@
         <option value="FTL FULL TRUCK LOAD">FTL FULL TRUCK LOAD</option>
     </select>
 </div>
-
-
-
-
 <div class="form-group" style="display:none;">
     <label for="trailer_type" class="text-white">Select Trailer Type</label>
     <select class="form-control" id="trailer_type" name="trailer_type">
