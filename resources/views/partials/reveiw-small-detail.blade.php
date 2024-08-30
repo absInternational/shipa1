@@ -52,26 +52,15 @@
                         </div>
                         <div class="secondrow px-2 ">
                             <p style="font-size:15px;">
-                                @if ($key == 0)
                                 <a href="#" >
                                     <span class="text-dark">
-                                        {!! $site_review->description !!}
+                                    {!! \Illuminate\Support\Str::limit($site_review->description, 50) !!}
                                     </span>
                                     <span style="display:none;" class="text-dark">
-                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
+                                    {!! $site_review->description !!}
                                     <!-- <span class="text-muted readless">Read Less</span> -->
                                     </span>
                                 </a>
-                                @elseif($key == 2)
-                                <a href="#" >
-                                    <span class="text-dark">
-                                    </span>
-                                    <span style="display:none;" class="text-dark">
-                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
-                                    <!-- <span class="text-muted readless">Read Less</span> -->
-                                    </span>
-                                </a>
-                                @endif
                             </p>
                         </div>
                         <div class="thirdrow px-2 py-2 d-flex justify-content-between">
