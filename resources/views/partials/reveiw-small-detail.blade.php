@@ -29,7 +29,7 @@
                 <div class="item">
                     <div class="card" >
                         <div class="firstrow px-2 pt-2 d-flex justify-content-between">
-                            <div>{{ $site_review->profile_name }}</div>
+                            <div>{{ $site_review->user }}</div>
                             <div class="d-flex">
                                 <div class="rates">{{ $site_review->rating }}</div>
                                 <div>
