@@ -110,7 +110,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/reefer-service2.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/OLD/reefer-service2.webp') }}" alt="Image">
                     </div>
 
                 </div>
@@ -118,13 +118,13 @@
         </div>
         <div class="row">
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded">
-                    <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/reefer-service1.webp') }}" alt="Image">
-                    </div>
+                    <div class="mt-4 rounded">
+                        <div class="image-box">
+                            <img class="rounded" src="{{ asset('frontend/images/project/OLD/reefer-service1.webp') }}" alt="Image">
+                        </div>
 
+                    </div>
                 </div>
-            </div>
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
@@ -208,7 +208,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/reefer-service2.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/OLD/reefer-service2.webp') }}" alt="Image">
                     </div>
 
                 </div>

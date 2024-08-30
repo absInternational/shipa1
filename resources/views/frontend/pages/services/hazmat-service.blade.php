@@ -114,7 +114,7 @@
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/hazmat-service2.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/OLD/hazmat-service2.webp') }}" alt="Image">
                     </div>
 
                 </div>
@@ -124,7 +124,7 @@
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                 <div class="image-box">
-                    <img class="rounded" src="{{ asset('frontend/images/project/hazmat-service4.webp') }}" alt="Image">
+                    <img class="rounded" src="{{ asset('frontend/images/project/OLD/hazmat-service4.webp') }}" alt="Image">
                 </div>
 
                 </div>
