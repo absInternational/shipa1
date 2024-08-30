@@ -351,6 +351,7 @@
                                     </ul>
                                 </div>
                             @endif
+                            <input type="hidden" name="roro" value="RORO SHIPMENT">
                             <div class="container mt-2">
                                 <div class="route_quote_info" id="step1">
                                     <div class="row">
