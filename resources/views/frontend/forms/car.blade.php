@@ -151,13 +151,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="add-car" id="addVehicleBtn">
-                                <i class="fa fa-plus"> Add
-                                    Vehicle </i>
-                            </a>
-                            <div id="vehicles-container">
-                            </div>
-                            <div class="row">
+                            <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group" style="line-height:23px;">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
@@ -177,12 +171,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <a class="add-car" id="addVehicleBtn">
+                                <i class="fa fa-plus"> Add
+                                    Vehicle </i>
+                            </a>
+                            <div id="vehicles-container">
+                            </div>
                             {{-- <div class="input-form mt-3">
                                 <label class="d-block text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" />
                             </div> --}}
-                            <div class="input-form mt-3">
+                            <div class="input-form mt-1">
                                 <label class="d-block text-white"> Image:</label>
                                 <input class="form-control image_input" name="image" type="file" accept="image/*" multiple
                                     onchange="previewImages(event)">
@@ -237,48 +237,55 @@
         function addNewVehicle() {
             var newVehicleHtml =
                 `
-                <div class="vehicle-info">
+            <div class="vehicle-info">
                 <div class="row select-bm">
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label> Year</label>
-                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
+                        <!-- Bin icon for deleting vehicle -->
+                        <span class="delete-vehicle"><i class="fa fa-trash mt-3" style="float: right; color: red;"></i></span>
+                    <div class="col-md-4">
+                        <div class="input-form tj-select">
+                                <label> Year</label>
+                                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+                                        var currentYear = {{ date('Y') }};
+                                        for (var year = currentYear; year >= 1936; year--) {
+                                            newVehicleHtml += `<option value="${year}">${year}</option>`;
+                                        }
+                                        newVehicleHtml +=
+                                `</select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-form tj-select">
+                            <label>Make</label>
+                            <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
 
-            newVehicleHtml +=
-                `</select>
+                            @foreach ($makes as $make)
+                                newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
+                            @endforeach
+
+                            newVehicleHtml += `
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-form tj-select model-div">
+                            <label>Model</label>
+                            <select class="nice-select model" name="model[]" id="model" required>
+                            <!-- Options filled by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="condition" class="text-white">Condition</label>
+                            <select class="form-control" id="condition" name="condition[]">
+                                <option value="1" selected>Running</option>
+                                <option value="2">Non Running</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label>Make</label>
-                <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-            @foreach ($makes as $make)
-                newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-            @endforeach
-
-            newVehicleHtml += `
-            </select>
-            </div>
-            </div>
-            <div class="col-md-4">
-            <div class="input-form tj-select model-div">
-            <label>Model</label>
-            <select class="nice-select model" name="model[]" id="model" required>
-            <!-- Options filled by JavaScript -->
-            </select>
-            <!-- Bin icon for deleting vehicle -->
-            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
-            </div>
-            </div>
-            </div>
             </div>
             `;
-
             $('#vehicles-container').append(newVehicleHtml);
         }
 

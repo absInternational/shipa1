@@ -308,6 +308,8 @@
 <section class="tj-about-section pt-0">
     <div class="container">
         <div class="row">
+            <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
+                Key Facts About Dry Van Trailers</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">

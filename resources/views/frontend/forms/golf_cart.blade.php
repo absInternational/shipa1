@@ -1,45 +1,34 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Get Quote on Golf Cart | ShipA1')
-
 @section('meta_description', 'Get an instant Golf Cart shipping quote with ease! Trust our reliable service for nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
-
-
 @section('content')
-    <style>
-        .suggestionsTwo {
-            background: #fff;
-            font-size: 14px;
-            margin-top: -2px;
-            padding-bottom: 20px;
-            list-style: none;
-            line-height: 28px;
-            padding-left: 14px;
-            display: none;
-        }
-
-        .suggestionsTwo li {
-            cursor: pointer;
-        }
-
-        .suggestionsTwo li:hover {
-            color: #8fc445;
-        }
-
-        .image_input {
-            padding: 0px !important;
-            padding-left: 10px !important;
-        }
-        
-
+<style>
+    .suggestionsTwo {
+        background: #fff;
+        font-size: 14px;
+        margin-top: -2px;
+        padding-bottom: 20px;
+        list-style: none;
+        line-height: 28px;
+        padding-left: 14px;
+        display: none;
+    }
+    .suggestionsTwo li {
+        cursor: pointer;
+    }
+    .suggestionsTwo li:hover {
+        color: #8fc445;
+    }
+    .image_input {
+        padding: 0px !important;
+        padding-left: 10px !important;
+    }
     .lab-cos{
-        font-size: 15px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--tj-white-color);
     margin-bottom: 10px;
     }
-
-
     .input-container {
     height: 34px;
     background: white;
@@ -49,10 +38,8 @@
     border-radius: 4px;
     padding: 8px 0px 8px 0px;
     width: fit-content;
-
-        }
-
-        .input-container1 {
+    }
+    .input-container1 {
     height: 34px;
     background: white;
     display: flex;
@@ -61,93 +48,85 @@
     border-radius: 4px;
     padding: 8px 0px 8px 0px;
     width: fit-content;
-
-        }
-
-        .input-field {
-            width: 50px;
-            padding: 5px;
-            font-size: 14px;
-            border: none;
-            outline: none;
-        }
-        .input-field-1 {
-            width: 65px;
-            padding: 0px 0px 0px 10px;
-            font-size: 14px;
-            border: none;
-            outline: none;
-        }
-
-        .separator {
-            margin: 0px 0px 0px 0px;
-            font-size: 14px;
-        }
-
-        .separators {
-            margin: 0px 5px 0px 0px;
-            font-size: 14px;
-        }
-
-        .separators-w {
-            margin: 0px 5px 0px 0px;
-            font-size: 14px;
-        }
-
-        .input-container input[type="number"] {
-            -moz-appearance: textfield;
-        }
-
-        .input-container input[type="number"]::-webkit-outer-spin-button,
-        .input-container input[type="number"]::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-      .form-wrap {
-        margin-bottom: 10px;
-        position: relative;
-      }
-      .form-label-outside {
-        color: white;
-        display: block;
-        margin-bottom: 5px;
-      }
-      .input-container {
-        display: flex;
-        align-items: center;
-      }
-      .input-container input {
-        border: none;
-        /* border-bottom: 1px solid #ccc; */
-        padding: 5px 0px 5px 0px ;
+    }
+    .input-field {
+        width: 50px;
+        padding: 5px;
         font-size: 14px;
-        width: 38px;
-        text-align: center;
-        /* margin-right: 5px; */
-      }
-      .input-container .placeholders {
-        /* color:white; */
-        position: relative;
+        border: none;
+        outline: none;
+    }
+    .input-field-1 {
+        width: 65px;
+        padding: 0px 0px 0px 10px;
+        font-size: 14px;
+        border: none;
+        outline: none;
+    }
+    .separator {
+        margin: 0px 0px 0px 0px;
+        font-size: 14px;
+    }
+    .separators {
+        margin: 0px 5px 0px 0px;
+        font-size: 14px;
+    }
+    .separators-w {
+        margin: 0px 5px 0px 0px;
+        font-size: 14px;
+    }
+    .input-container input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    .input-container input[type="number"]::-webkit-outer-spin-button,
+    .input-container input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .form-wrap {
+    margin-bottom: 10px;
+    position: relative;
+    }
+    .form-label-outside {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+    }
+    .input-container {
+    display: flex;
+    align-items: center;
+    }
+    .input-container input {
+    border: none;
+    /* border-bottom: 1px solid #ccc; */
+    padding: 5px 0px 5px 0px ;
+    font-size: 14px;
+    width: 38px;
+    text-align: center;
+    /* margin-right: 5px; */
+    }
+    .input-container .placeholders {
+    /* color:white; */
+    position: relative;
     right: 72px;
-        color: black;
-        display: inline-block;
-        width: auto;
-        
-        padding: 0px 8px;
-        /* background: white; */
-      }
-      
-      .err-style {
-        color: red;
-      }
-      .tj-input-form .input-form label {
+    color: black;
+    display: inline-block;
+    width: auto;
+    
+    padding: 0px 8px;
+    /* background: white; */
+    }
+    
+    .err-style {
+    color: red;
+    }
+    .tj-input-form .input-form label {
     font-size: 15px;
     font-weight: 500;
     color: var(--tj-white-color);
     margin-bottom: 10px;
-}
-    </style>
+    }
+</style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -204,12 +183,6 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
-
-                            
-
-
-                            
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -290,14 +263,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <a class="add-car" id="addVehicleBtn"
-                               ><i class="fa fa-plus"></i> Add
-                                Vehicle</a>
-
-                            <div id="vehicles-container">
-                            </div>
-
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -318,9 +283,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <a class="add-car" id="addVehicleBtn"
+                               ><i class="fa fa-plus"></i> Add
+                                Vehicle</a>
+                            <div id="vehicles-container">
+                            </div>
                             <div class="row">
                             <div class="col-md-6">
-
                             <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="available_at_auction"
                                         name="available_at_auction" value="1" />
@@ -333,22 +302,13 @@
                                     <input class=" " type="url" id="link" name="link"
                                         placeholder="Enter Link" />
                                 </div>
-
-
-                                
-
                             </div>
-
-
                             <div class="col-md-6">
-
-
                                 <div class="form-group mb-3">
                                     <input class="form-check-input" type="checkbox" id="modification"
                                         name="modification" value="1" />
                                     <label class="form-check-label text-white ms-4" for="modification"> Modified?</label>
                                 </div>
-
                                 <div class="input-form div-modify_info" style="display: none;">
                                     <label class="d-block"> Modification Information:</label>
                                     <input class="" type="text" id="c" name="modify_info"
@@ -359,7 +319,7 @@
                             <div class="input-form mt-3">
                                 <label class="d-block"> Image:</label>
                                 <input class="form-control image_input" type="file" name="image" accept="image/*" multiple onchange="previewImages(event)">
-    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" /> -->
                             </div>
@@ -385,6 +345,8 @@
                     `
                     <div class="vehicle-info">
                     <div class="row select-bm">
+                         <!-- Bin icon for deleting vehicle -->
+                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
                     <div class="col-md-4">
                     <div class="input-form tj-select">
                     <label> Year</label>
@@ -410,9 +372,16 @@
                         <label>Model</label>
                         <input type="text" id="model" name="model[]" placeholder="Enter Model"
                         required="" />
-                        <!-- Bin icon for deleting vehicle -->
-                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
                         </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="condition" class="text-white">Condition</label>
+                                <select class="nice-select" id="condition" name="condition[]">
+                                    <option value="1" selected>Running</option>
+                                    <option value="2">Non Running</option>
+                                </select>
+                            </div>
                         </div>
                         </div>
                         </div>

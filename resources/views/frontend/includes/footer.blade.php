@@ -10,7 +10,7 @@
             <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
                 <div class="footer-widget footer1_col_1 footer-content-info"
                     >
-                    <a href="{{ route('welcome') }}"> <img src="{{ asset('frontend/images/logo/logo-white.png') }}"
+                    <a href="{{ route('welcome') }}"> <img src="{{ asset('frontend/images/logo/logo-white-2.png') }}"
                             alt="Logo" /></a>
                     <p>
                         Ship A1 Transport is one of the top logistic and shipping companies, with a vast variety of

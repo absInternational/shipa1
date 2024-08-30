@@ -120,7 +120,7 @@
     <div class="tj-offcanvas-area">
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
             <div class="logo-area text-center">
-                <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/logo.png') }}"
+                <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"
                         alt="Logo" /></a>
             </div>
             <div class="offcanvas-icon">
