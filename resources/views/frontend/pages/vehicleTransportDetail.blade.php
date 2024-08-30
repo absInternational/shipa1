@@ -1189,8 +1189,10 @@
 
         $(document).on('click', '.addVehicleBtn', function() {
             if ($('#tabSelector').val() == 'Car') {
+                // console.log('yesss');
                 addNewVehicle();
             } else {
+                // console.log('nooo');
                 addOtherVehicle();
             }
         });
@@ -1199,45 +1201,40 @@
             $(this).closest('.vehicle-info').remove();
         });
 
-        $(document).ready(function() {
-            $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                var year = $('.vehicle-year').val();
-                var makeId = $('.vehicle-make').val();
-                if (year && makeId) {
-                    getModel(year, makeId);
-                }
-            });
-
-            function getModel(year, makeId) {
-                console.log('yes inn');
-                $.ajax({
-                    url: "{{ route('get.models') }}",
-                    method: 'GET',
-                    data: {
-                        year: year,
-                        make: makeId
-                    },
-                    success: function(response) {
-                        var modelsDropdown = $('.vehicle-model-div');
-                        modelsDropdown.empty();
-                        var selectOptions =
-                            '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' +
-                                model +
-                                '</option>';
-                        });
-                        selectOptions += '</select>';
-                        modelsDropdown.html(selectOptions);
-
-                        console.log('yesssss', response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
+        $(document).on('change', '.year, .make', function() {
+            var year = $(this).closest('.vehicle-info').find('.year').val();
+            var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            if (year && makeId) {
+                getModel(year, makeId, vehicleInfo);
             }
         });
+
+        function getModel(year, makeId, vehicleInfo) {
+            // console.log('yes inn');
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelsDropdown = vehicleInfo.find('.model');
+                    modelsDropdown.empty();
+                    var selectOptions = '<option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' +
+                            model +
+                            '</option>';
+                    });
+                    modelsDropdown.html(selectOptions);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
     });
 </script>
 <script>
