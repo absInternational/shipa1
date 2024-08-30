@@ -456,6 +456,74 @@ huge discount offers and free shipping quotes nationwide.')
         </div>
     </div>
 </section>
+<section class="tj-about-section pt-4 mt-4">   
+    <div class="container">
+        <div class="row">
+            <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
+            Auto Transport Hauling Services</h2>
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">open transport</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            This is the usual method we use while shipping cars. The most affordable choice for car transportation
+                            is an open transport, which makes it perfect for individuals looking for a low-cost option. Due of its
+                            price and effectiveness, this method is very popular even if your car faces exposure to the environment
+                            while in transit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Enclosed transport</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Enclosed transport service is the ideal option for people who want to provide their cars
+                            additional security. Although a little more expensive, guarantees that your vehicle
+                            is completely protected from outside elements including weather, road debris, and other possible
+                            threats.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Expedited Shipping</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Our expedited shipping service provides the quickest route to delivery for the vehicle when
+                            time is of the importance. This service caters to your urgent shipping needs, whether you're
+                            moving on short notice or just need your vehicle delivered as soon as possible. We give your
+                            shipment top priority in order to guarantee the quickest arrival possible, giving you piece 
+                            of mind throughout your shipment.
+                        </p>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Door to Door Transport</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Under door to door transport delivery, your automobile will be picked right from your door and 
+                            will be delivered to your exact location. This is the most popular method of car shipping because 
+                            it is more convenient for both the auto shipping company and the customer. With door to door
+                             delivery, you do not need to drive your vehicle to a terminal. You also do not need to pay to
+                              have it spend time in a card terminal.
+                        </p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @include('partials.reveiw-small-detail') 
 <section class="tj-choose-us-section-service-cars-2 mt-4">
     <div class="container why-box">

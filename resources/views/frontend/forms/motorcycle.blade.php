@@ -1,11 +1,7 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Get Quote on Motorcycle | ShipA1')
-
 @section('meta_description', 'Get an instant motorcycle shipping quote with ease! Trust our reliable service for
     nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
-
-
 @section('content')
     <style>
         .lab-cos {
@@ -14,8 +10,6 @@
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
-
         .input-container {
             height: 34px;
             background: white;
@@ -25,9 +19,7 @@
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-container1 {
             height: 34px;
             background: white;
@@ -37,9 +29,7 @@
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-field {
             width: 50px;
             padding: 5px;
@@ -47,7 +37,6 @@
             border: none;
             outline: none;
         }
-
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -55,22 +44,18 @@
             border: none;
             outline: none;
         }
-
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
         }
-
         .separators {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .separators-w {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .input-container input[type="number"] {
             -moz-appearance: textfield;
         }
@@ -122,7 +107,6 @@
         .err-style {
             color: red;
         }
-
         .tj-input-form .input-form label {
             font-size: 15px;
             font-weight: 500;
@@ -263,13 +247,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-                                Vehicle</a>
-
-                            <div id="vehicles-container">
-                            </div>
-
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -291,9 +268,11 @@
                                 </div>
                             </div>
 
+                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+                                Vehicle</a>
 
-
-
+                            <div id="vehicles-container">
+                            </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -378,6 +357,8 @@
                     `
                     <div class="vehicle-info">
                     <div class="row select-bm">
+                        <!-- Bin icon for deleting vehicle -->
+                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
                     <div class="col-md-4">
                     <div class="input-form tj-select">
                     <label> Year</label>
@@ -403,9 +384,17 @@
                         <label>Model</label>
                         <input type="text" id="model" name="model[]" placeholder="Enter Model"
                         required="" />
-                        <!-- Bin icon for deleting vehicle -->
-                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                        
                         </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="condition" class="text-white">Condition</label>
+                                <select class="nice-select" id="condition" name="condition[]">
+                                    <option value="1" selected>Running</option>
+                                    <option value="2">Non Running</option>
+                                </select>
+                            </div>
                         </div>
                         </div>
                         </div>

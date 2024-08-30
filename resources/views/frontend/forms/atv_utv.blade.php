@@ -146,6 +146,27 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="trailer_type" class="text-white">Select Trailer
+                                            Type</label>
+                                        <select class="form-control" id="trailer_type" name="trailer_type">
+                                            <option value="1" selected>Open Carrier</option>
+                                            <option value="2">Enclosed Carrier</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="form-control" id="condition" name="condition">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
+                             </div>
 
                             <a class="add-car" id="addVehicleBtn"
                                ><i class="fa fa-plus"></i> Add
@@ -154,27 +175,7 @@
                             <div id="vehicles-container">
                             </div>
 
-                              <div class="row mb-3">
-                                 <div class="col-md-6">
-                                     <div class="form-group ">
-                                         <label for="trailer_type" class="text-white">Select Trailer
-                                             Type</label>
-                                         <select class="form-control" id="trailer_type" name="trailer_type">
-                                             <option value="1" selected>Open Carrier</option>
-                                             <option value="2">Enclosed Carrier</option>
-                                         </select>
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6">
-                                     <div class="form-group">
-                                         <label for="condition" class="text-white">Condition</label>
-                                         <select class="form-control" id="condition" name="condition">
-                                             <option value="1" selected>Running</option>
-                                             <option value="2">Non Running</option>
-                                         </select>
-                                     </div>
-                                 </div>
-                              </div>
+                              
                             <div class="row">
                                 <di class="col-md-6">
                                     <div class="form-group">
@@ -233,33 +234,42 @@
                     `
                     <div class="vehicle-info">
                         <div class="row select-bm">
+                            <!-- Bin icon for deleting vehicle -->
+                                    <span class="delete-vehicle"><i class="fa fa-trash mt-3" style="float: right; color: red; cursor: pointer;"></i></span>
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
                                     <label> Year</label>
                                     <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                newVehicleHtml +=
-                    `</select>
+                                        var currentYear = {{ date('Y') }};
+                                        for (var year = currentYear; year >= 1936; year--) {
+                                            newVehicleHtml += `<option value="${year}">${year}</option>`;
+                                        }
+                                        newVehicleHtml +=
+                                    `</select>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                <div class="input-form tj-select">
-                    <label>Make</label>
-                    <input type="text" id="make" name="make[]"
-                                            placeholder="Enter Make" required="" />
+                                 <div class="input-form tj-select">
+                                     <label>Make</label>
+                                     <input type="text" id="make" name="make[]"
+                                                        placeholder="Enter Make" required="" />
+                                </div>
                             </div>
-                        </div>
                             <div class="col-md-4">
                                 <div class="input-form tj-select model-div">
                                     <label>Model</label>
                                     <input type="text" id="model" name="model[]" placeholder="Enter Model"
                                         required="" />
-                                    <!-- Bin icon for deleting vehicle -->
-                                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="condition" class="text-white">Condition</label>
+                                    <select class="form-control" id="condition" name="condition[]">
+                                        <option value="1" selected>Running</option>
+                                        <option value="2">Non Running</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
