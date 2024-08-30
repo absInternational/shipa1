@@ -4,6 +4,12 @@
     'Experience seamless car shipping with Shipa Car Transport. Get an instant quote,
     nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
 @section('content')
+<style>
+    /* Error styling */
+    .error {
+        border: 2px solid red;
+    }
+</style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -333,19 +339,26 @@
     });
 </script>
 <script>
-    $(document).ready(function() {
+   $(document).ready(function() {
         $('#available_at_auction').change(function() {
             if ($(this).is(':checked')) {
                 $('.div-link').show();
+                $('#link').attr('required', true); // Make input required
             } else {
                 $('.div-link').hide();
+                $('#link').val(''); // Clear the input field
+                $('#link').removeAttr('required'); // Remove required attribute
             }
         });
+        
         $('#modification').change(function() {
             if ($(this).is(':checked')) {
                 $('.div-modify_info').show();
+                $('#c').attr('required', true); // Make input required
             } else {
                 $('.div-modify_info').hide();
+                $('#c').val(''); // Clear the input field
+                $('#c').removeAttr('required'); // Remove required attribute
             }
         });
     });
