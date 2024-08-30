@@ -7,6 +7,8 @@
         border: 2px solid red;
     }
 </style>
+<input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+<input type="hidden" name="car_type" value="1" hidden>
 <div class="row select-bm">
     <div class="col-md-4">
         <div class="input-form tj-select">
