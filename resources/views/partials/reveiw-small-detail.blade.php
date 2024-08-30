@@ -54,7 +54,7 @@
                             <p style="font-size:15px;">
                                 <a href="#" >
                                     <span class="text-dark">
-                                    {!! \Illuminate\Support\Str::limit($site_review->description, 50) !!}
+                                    {!! \Illuminate\Support\Str::limit($site_review->description, 100) !!}
                                     </span>
                                     <span style="display:none;" class="text-dark">
                                     {!! $site_review->description !!}
