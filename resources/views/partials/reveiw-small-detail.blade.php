@@ -64,7 +64,7 @@
                             </p>
                         </div>
                         <div class="thirdrow px-2 py-2 d-flex justify-content-between">
-                            <div class="date">Sep,22 2022</div>
+                            <div class="date">{{ $site_review->date }}</div>
                             <div>
                                 <div class="images">
                                     @if ($site_review->profile_name == 'BBB')
