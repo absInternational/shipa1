@@ -373,7 +373,7 @@
                                         <div class="col-xl-4 col-lg-4 mb-4">
                                             <label class="text-white mb-2">Country:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-country"
+                                                <input class="form-control" type="text" id="delivery-country" name="roro_country"
                                                     autocomplete="off" placeholder="Enter Country" required>
                                                 <ul class="suggestions suggestionsCountry"></ul>
                                                 <label class="error-message" id="delivery-location-error">This field is
@@ -383,7 +383,7 @@
                                         <div class="col-xl-4 col-lg-4 mb-4">
                                             <label class="text-white mb-2">City:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-city"
+                                                <input class="form-control" type="text" id="delivery-city" name="roro_city"
                                                     autocomplete="off" placeholder="Enter City" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
                                                 <label class="error-message" id="delivery-city-error">This field is
@@ -393,7 +393,7 @@
                                         <div class="col-xl-4 col-lg-4 mb-4">
                                             <label class="text-white mb-2">Zip Code:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-zipcode"
+                                                <input class="form-control" type="text" id="delivery-zipcode" name="roro_zipcode"
                                                     placeholder="Enter ZipCode" autocomplete="off" required>
                                             </div>
                                         </div>

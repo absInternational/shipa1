@@ -10,6 +10,7 @@ use App\Models\ZipCode;
 use App\Traits\ImageUploadTrait;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
+use Hamcrest\Core\IsNot;
 
 class QuoteController extends Controller
 {
@@ -17,7 +18,7 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->toArray());
+        dd($request->toArray());
         $data = $request->all();
         $heading = $this->generateHeading($data);
         $name = $request->input('name', null);
@@ -79,7 +80,6 @@ class QuoteController extends Controller
         $weight = isset($data['weight']) && is_array($data['weight'])
             ? $this->generateStringFromArray($data['weight'])
             : $request->input('weight', null);
-
         // $year = $data['year'][0];
         // $make = $data['make'][0];
         // $model = $data['model'][0];
@@ -169,6 +169,15 @@ class QuoteController extends Controller
             $ippostal = null;
         }
 
+        if (!is_null($destinationData)) {
+            $delivery_latitude = $originData;
+            $delivery_longitude = $destinationData;
+
+            $distance = $this->getDistance($origin_zip, $destination_zip);
+        } else {
+            $destinationData = $request->roro_country . ',' . $request->roro_city . ',' . $request->roro_zipcode;
+        }
+
         $post_array = [
             'appkey' => '0EO9KCH9NNI46HH60WOL5OW4TE0GCD6Y',
             'domain' => 'https://shawntransport.com',
@@ -253,13 +262,6 @@ class QuoteController extends Controller
 
         // dd($post_array);
 
-        $delivery_latitude = $originData;
-        $delivery_longitude = $destinationData;
-
-        $distance = $this->getDistance($origin_zip, $destination_zip);
-
-        // dd($distance);
-
         // $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
         //     $q->where('delivery_latitude', $delivery_latitude)
         //       ->where('delivery_longitude', $delivery_longitude);
@@ -279,7 +281,7 @@ class QuoteController extends Controller
             // dd($response);
             return view('frontend.pages.thank-you');
         } catch (\Exception $e) {
-            \Log::error($e->getMessage());
+            // \Log::error($e->getMessage());
 
             return back()->with('error', 'An error occurred while creating the quote. Please try again later.');
         }
