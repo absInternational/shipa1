@@ -455,7 +455,7 @@
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white"> Your Name:</label>
-                                                <input class="form-control" required name="phone" type="tel"
+                                                <input class="form-control" required name="name" type="text"
                                                     placeholder="Customer Name">
                                                 <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
                                                 <label class="error-message" id="Custo_Name-error">This field is
