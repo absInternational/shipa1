@@ -1,3 +1,5 @@
+<input type="hidden" name="vehicle_opt" value="heavy" hidden>
+<input type="hidden" name="car_type" value="2" hidden>
 <div class="row select-bm">
 <div class="col-md-4">
     <div class="input-form tj-select">
@@ -31,7 +33,6 @@
 Vehicle</a>
 <div class="vehicles-container">
 </div>                
-<input type="hidden" name="vehicle_opt" value="vehicle" hidden>
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">

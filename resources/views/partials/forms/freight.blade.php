@@ -23,7 +23,8 @@
         <option value="Landoll">Landoll</option>
     </select>
 </div> -->
-
+<input type="hidden" name="vehicle_opt" value="freight" hidden>
+<input type="hidden" name="car_type" value="3" hidden>
 <div class="row">
     <div class="col-md-6">
         <div class="input-form">
