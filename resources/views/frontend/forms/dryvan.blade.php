@@ -1,13 +1,10 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Get Quote on Freight Class | ShipA1')
-
 @section('meta_description',
     'Need to ship temperature-sensitive goods? Get an instant reefer shipping quote now! Our
     reliable service provides nationwide coverage, transparent pricing, and secure transportation for your perishable cargo.
     Plan your shipment efficiently with our instant quote tool. Trust us for seamless and timely reefer shipping.')
 @section('content')
-
     <style>
         .lab-cos {
             font-size: 15px;
@@ -15,8 +12,6 @@
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
-
         .input-container {
             height: 34px;
             background: white;
@@ -26,9 +21,7 @@
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-container1 {
             height: 34px;
             background: white;
@@ -38,9 +31,7 @@
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-field {
             width: 50px;
             padding: 5px;
@@ -48,7 +39,6 @@
             border: none;
             outline: none;
         }
-
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -56,48 +46,39 @@
             border: none;
             outline: none;
         }
-
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
         }
-
         .separators {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .separators-w {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .input-container input[type="number"] {
             -moz-appearance: textfield;
         }
-
         .input-container input[type="number"]::-webkit-outer-spin-button,
         .input-container input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-
         .form-wrap {
             margin-bottom: 10px;
             position: relative;
         }
-
         .form-label-outside {
             color: white;
             display: block;
             margin-bottom: 5px;
         }
-
         .input-container {
             display: flex;
             align-items: center;
         }
-
         .input-container input {
             border: none;
             /* border-bottom: 1px solid #ccc; */
@@ -107,7 +88,6 @@
             text-align: center;
             /* margin-right: 5px; */
         }
-
         .input-container .placeholders {
             /* color:white; */
             position: relative;
@@ -115,11 +95,9 @@
             color: black;
             display: inline-block;
             width: auto;
-
             padding: 0px 8px;
             /* background: white; */
         }
-
         .suggestionsTwo {
             background: #fff;
             font-size: 14px;
@@ -130,20 +108,16 @@
             padding-left: 14px;
             display: none;
         }
-
         .suggestionsTwo li {
             cursor: pointer;
         }
-
         .suggestionsTwo li:hover {
             color: #8fc445;
         }
-
         .image_input {
             padding: 0px !important;
             padding-left: 10px !important;
         }
-
         .select2 {
             color: #38413b;
             opacity: 2;
@@ -151,7 +125,6 @@
             border: 1px solid #318eefc9;
             font-family: inherit;
         }
-
         select {
             width: 100%;
             min-height: 100px;
@@ -186,7 +159,6 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <section class="tj-choose-us-section-dryvan">
         <div class="container-flude">
             <div class="row">
@@ -230,20 +202,17 @@
                             </div>
                             <br>
                             <br>
-
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />
                                 <label class="form-check-label text-white" for="available_at_auction"> Available at
                                     Auction?</label>
                             </div>
-
                             <div class="input-form div-link mt-3" style="display: none;">
                                 <label class="d-block"> Enter Link:</label>
                                 <input class="form-control" type="url" id="link" name="link"
                                     placeholder="Enter Link" />
                             </div>
-
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
                                     name="boat_on_trailer" value="1" />
@@ -277,7 +246,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -298,9 +266,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                             <div class="form-group" style="display:none;">
                                 <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                 <select class="form-control" id="trailer_type" name="trailer_type">
@@ -353,7 +318,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -418,7 +382,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="form-check mt-3">
                                 <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
                                     value="1" />
@@ -510,7 +473,6 @@
                                     multiple onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
-
                             <div class="form-group">
                                 <label for="condition" class="text-white">Condition</label>
                                 <select class="form-control" id="condition" name="condition">
@@ -519,12 +481,7 @@
                                 </select>
                             </div>
                             <div class="row mb-3">
-
-
-
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input" class="input-field" placeholder=""
@@ -535,9 +492,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input1" class="input-field" placeholder=""
@@ -548,9 +503,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input2" class="input-field" placeholder=""
@@ -561,15 +514,12 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
                                         <input type="" id="feet-input" class="input-field-1" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
-
                                     </div>
                                 </div>
                             </div>
@@ -633,11 +583,9 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- <a class="add-car" style="display:none;" id="addVehicleBtn"
                                             style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
                                             Vehicle</a> -->
-
                             <div id="vehicles-container" style="display:none;">
                             </div>
                             <div class="tj-theme-button mt-3">
@@ -652,12 +600,8 @@
         </div>
     </section>
 @endsection
-
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
     <script>
         $(document).ready(function() {
             $('#example-multiple').select2();
@@ -666,7 +610,6 @@
             $('#example-multiple-2').select2();
         });
     </script>
-
     <script>
         $(document).ready(function() {
             $('#available_at_auction').change(function() {
@@ -676,7 +619,6 @@
                     $('.div-link').hide();
                 }
             });
-
             function addNewVehicle() {
                 var newVehicleHtml =
                     `
@@ -690,7 +632,6 @@
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
-
                 newVehicleHtml +=
                     `</select>
                                 </div>
@@ -714,10 +655,8 @@
                         </div>
                     </div>
                 `;
-
                 $('#vehicles-container').append(newVehicleHtml);
             }
-
             $('#addVehicleBtn').click(function() {
                 addNewVehicle();
             });
@@ -727,11 +666,9 @@
             });
         });
     </script>
-
     <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
-
             $.ajax({
                 url: "{{ route('get.zipcodes') }}",
                 method: "POST",
@@ -755,7 +692,6 @@
                 }
             });
         }
-
         $("#pickup-location, #delivery-location").keyup(function() {
             var inputField = $(this);
             var suggestionsList = inputField.siblings(".suggestionsTwo");
@@ -766,7 +702,6 @@
             updateSuggestions(inputField, suggestionsList);
         });
     </script>
-
     <script>
         $(document).ready(function() {
             function checkSpecificFieldsFilled() {
@@ -779,12 +714,10 @@
                 });
                 return allFilled;
             }
-
             function allSpecificFieldsFilledFunction() {
                 console.log("All specific fields are filled up!");
                 freight_calc();
             }
-
             function freight_calc() {
                 // var length_ft = $('#length_ft').val();
                 // var length_in = $('#length_in').val();
@@ -793,7 +726,6 @@
                 // var height_ft = $('#height_ft').val();
                 // var height_in = $('#height_in').val();
                 // var weight = $('#weight').val();
-
                 // var length = length_ft * 12 + parseFloat(length_in);
                 // var width = width_ft * 12 + parseFloat(width_in);
                 // var height = height_ft * 12 + parseFloat(height_in);
@@ -804,7 +736,6 @@
                 var height_ft = parseFloat($('#height_ft').val());
                 var height_in = parseFloat($('#height_in').val());
                 var weight = parseFloat($('#weight').val());
-
                 console.log(
                     length_ft,
                     length_in,
@@ -814,24 +745,17 @@
                     height_in,
                     weight,
                 );
-
                 var length = length_ft * 12;
                 length = length + length_in;
-
                 var width = width_ft * 12;
                 width = width + width_in;
-
                 var height = height_ft * 12;
                 height = height + height_in;
-
                 console.log(length, width, height, weight);
-
                 length = parseFloat(length);
                 width = parseFloat(width);
                 height = parseFloat(height);
                 weight = parseFloat(weight);
-
-
                 var unit = 'inch';
                 var answer_1 = (length * height * width).toFixed(4);
                 if (unit == 'inch') {
@@ -884,7 +808,6 @@
                 console.log('fright_class', fright_class);
                 $('#frieght_class').val(fright_class).trigger('change');
             }
-
             $('.calculate_freight').on('keyup', function() {
                 if (checkSpecificFieldsFilled()) {
                     allSpecificFieldsFilledFunction();
