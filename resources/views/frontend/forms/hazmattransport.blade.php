@@ -1,33 +1,25 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Get Quote on Freight Class | ShipA1')
-
 @section('meta_description',
     'Need to ship temperature-sensitive goods? Get an instant reefer shipping quote now! Our
     reliable service provides nationwide coverage, transparent pricing, and secure transportation for your perishable cargo.
     Plan your shipment efficiently with our instant quote tool. Trust us for seamless and timely reefer shipping.')
-
-
 @section('content')
-
     <style>
         .image-preview-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
-
         .image-preview {
             position: relative;
             display: inline-block;
         }
-
         .image-preview img {
             width: 150px;
             height: 150px;
             object-fit: cover;
         }
-
         .remove-button {
             position: absolute;
             top: 5px;
@@ -38,15 +30,12 @@
             cursor: pointer;
             padding: 5px;
         }
-
         .lab-cos {
             font-size: 15px;
             font-weight: 500;
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
-
         .input-container {
             height: 34px;
             background: white;
@@ -56,9 +45,7 @@
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-container1 {
             height: 34px;
             background: white;
@@ -68,9 +55,7 @@
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-field {
             width: 50px;
             padding: 5px;
@@ -78,7 +63,6 @@
             border: none;
             outline: none;
         }
-
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -86,48 +70,39 @@
             border: none;
             outline: none;
         }
-
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
         }
-
         .separators {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .separators-w {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .input-container input[type="number"] {
             -moz-appearance: textfield;
         }
-
         .input-container input[type="number"]::-webkit-outer-spin-button,
         .input-container input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-
         .form-wrap {
             margin-bottom: 10px;
             position: relative;
         }
-
         .form-label-outside {
             color: white;
             display: block;
             margin-bottom: 5px;
         }
-
         .input-container {
             display: flex;
             align-items: center;
         }
-
         .input-container input {
             border: none;
             /* border-bottom: 1px solid #ccc; */
@@ -137,7 +112,6 @@
             text-align: center;
             /* margin-right: 5px; */
         }
-
         .input-container .placeholders {
             /* color:white; */
             position: relative;
@@ -145,11 +119,9 @@
             color: black;
             display: inline-block;
             width: auto;
-
             padding: 0px 8px;
             /* background: white; */
         }
-
         .suggestionsTwo {
             background: #fff;
             font-size: 14px;
@@ -160,20 +132,16 @@
             padding-left: 14px;
             display: none;
         }
-
         .suggestionsTwo li {
             cursor: pointer;
         }
-
         .suggestionsTwo li:hover {
             color: #8fc445;
         }
-
         .image_input {
             padding: 0px !important;
             padding-left: 10px !important;
         }
-
         .select2 {
             color: #38413b;
             opacity: 2;
@@ -181,7 +149,6 @@
             border: 1px solid #318eefc9;
             font-family: inherit;
         }
-
         select {
             width: 100%;
             min-height: 100px;
@@ -216,7 +183,6 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <section class="tj-choose-us-section-hazmat">
         <div class="container-flude">
             <div class="row">
@@ -260,11 +226,6 @@
                                     </select>
                                 </div>
                             </div>
-
-
-
-
-
                             <div class="row mt-3">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -291,7 +252,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -312,9 +272,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                             <div class="form-group" style="display:none;">
                                 <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                 <select class="form-control" id="trailer_type" name="trailer_type">
@@ -367,7 +324,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -401,7 +357,6 @@
                                             <option value="Triple (3)">Triple (3)</option>
                                             <option value="Vented (V)">Vented (V)</option>
                                             <option value="Walking Floor (WF)">Walking Floor (WF)</option>
-
                                         </select>
                                     </div>
                                 </div>
@@ -434,7 +389,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-check">
@@ -443,7 +397,6 @@
                                         <label class="form-check-label text-white" for="stackable"> Stackable</label>
                                     </div>
                                 </div>
-
                                 <div class="col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="boat_on_trailer"
@@ -453,12 +406,9 @@
                                             a
                                             trailer?</label>
                                     </div>
-
                                 </div>
                             </div>
-
                             <div class="row">
-
                                 <div class="col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
@@ -467,8 +417,6 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-
-
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="available_at_auction"
                                             name="available_at_auction" value="1" />
@@ -476,7 +424,6 @@
                                             at
                                             Auction?</label>
                                     </div>
-
                                     <div class="input-form div-link mt-3" style="display: none;">
                                         <label class="d-block"> Enter Link:</label>
                                         <input class="form-control" type="url" id="link" name="link"
@@ -484,9 +431,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                             <div class="row mt-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -568,7 +512,6 @@
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
                                             <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
-
                             <div class="form-group">
                                 <label for="condition" class="text-white">Condition</label>
                                 <select class="form-control" id="condition" name="condition">
@@ -577,12 +520,7 @@
                                 </select>
                             </div>
                             <div class="row mb-3">
-
-
-
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input" class="input-field" placeholder=""
@@ -593,9 +531,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input1" class="input-field" placeholder=""
@@ -606,9 +542,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input2" class="input-field" placeholder=""
@@ -619,15 +553,12 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
                                         <input type="" id="feet-input" class="input-field-1" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
-
                                     </div>
                                 </div>
                             </div>
@@ -691,11 +622,9 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- <a class="add-car" style="display:none;" id="addVehicleBtn"
                                             style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
                                             Vehicle</a> -->
-
                             <div id="vehicles-container" style="display:none;">
                             </div>
                             <div class="tj-theme-button mt-3">
@@ -710,12 +639,8 @@
         </div>
     </section>
 @endsection
-
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
     <script>
         $(document).ready(function() {
             $('#example-multiple').select2();
@@ -724,7 +649,6 @@
             $('#example-multiple-2').select2();
         });
     </script>
-
     <script>
         $(document).ready(function() {
             $('#available_at_auction').change(function() {
@@ -734,7 +658,6 @@
                     $('.div-link').hide();
                 }
             });
-
             function addNewVehicle() {
                 var newVehicleHtml =
                     `
@@ -748,7 +671,6 @@
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
-
                 newVehicleHtml +=
                     `</select>
                                 </div>
@@ -772,10 +694,8 @@
                         </div>
                     </div>
                 `;
-
                 $('#vehicles-container').append(newVehicleHtml);
             }
-
             $('#addVehicleBtn').click(function() {
                 addNewVehicle();
             });
@@ -785,11 +705,9 @@
             });
         });
     </script>
-
     <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
-
             $.ajax({
                 url: "{{ route('get.zipcodes') }}",
                 method: "POST",
@@ -813,7 +731,6 @@
                 }
             });
         }
-
         $("#pickup-location, #delivery-location").keyup(function() {
             var inputField = $(this);
             var suggestionsList = inputField.siblings(".suggestionsTwo");
@@ -831,14 +748,12 @@
         //     });
         // });
     </script>
-
     <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
                 element.value = element.value.slice(0, maxDigits);
             }
         }
-
         $(document).ready(function() {
             $('#inches-input').on('input', function() {
                 if (this.value > 11) {
@@ -847,13 +762,11 @@
                     this.value = 0;
                 }
             });
-
             // Optionally, you can also prevent the user from typing non-numeric characters.
             $('#feet-input, #inches-input').on('input', function() {
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
-
         $(document).ready(function() {
             $('#inches-input1').on('input', function() {
                 if (this.value > 11) {
@@ -862,13 +775,11 @@
                     this.value = 0;
                 }
             });
-
             // Optionally, you can also prevent the user from typing non-numeric characters.
             $('#feet-input1, #inches-input1').on('input', function() {
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
-
         $(document).ready(function() {
             $('#inches-input2').on('input', function() {
                 if (this.value > 11) {
@@ -877,7 +788,6 @@
                     this.value = 0;
                 }
             });
-
             // Optionally, you can also prevent the user from typing non-numeric characters.
             $('#feet-input, #inches-input2').on('input', function() {
                 this.value = this.value.replace(/[^0-9]/g, '');
