@@ -29,6 +29,16 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label>User</label>
+                                    <input class="form-control" type="text" name="user" placeholder="User Name" value="" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea id="" class="form-control" name="description" cols="30" rows="10"></textarea>
+                                </div>
+
+                                <div class="form-group">
                                     <label>Rating</label>
                                     <input class="form-control" type="number" name="rating" placeholder="Rating" step="0.1" required />
                                 </div>

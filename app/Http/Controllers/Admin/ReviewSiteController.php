@@ -24,6 +24,8 @@ class ReviewSiteController extends Controller
         $request->validate([
             'rating' => 'required|numeric',
             'profile_name' => 'required|string',
+            'description' => 'nullable',
+            'user' => 'nullable',
             // 'rating_url' => 'required|string',
         ]);
 
@@ -44,6 +46,8 @@ class ReviewSiteController extends Controller
             'rating' => 'required|numeric',
             'profile_name' => 'required|string',
             'rating_url' => 'required|string',
+            'description' => 'nullable',
+            'user' => 'nullable',
         ]);
 
         $site_review = ReviewSite::findOrFail($id);

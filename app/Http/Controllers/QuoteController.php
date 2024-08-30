@@ -36,22 +36,53 @@ class QuoteController extends Controller
                 'vehicle_opt' => $vehicle_opt
             ];
         }
-        $year = $this->generateStringFromArray($data['year']);
-        $make = $this->generateStringFromArray($data['make']);
-        $model = $this->generateStringFromArray($data['model']);
-        dd($vehicle_opt);
-        $condition = $this->generateStringFromArray($data['condition']);
-        $length_ft = $this->generateStringFromArray($data['length_ft']);
-        $length_in = $this->generateStringFromArray($data['length_in']);
-        $width_ft = $this->generateStringFromArray($data['width_ft']);
-        $width_in = $this->generateStringFromArray($data['width_in']);
-        $height_ft = $this->generateStringFromArray($data['height_ft']);
-        $height_in = $this->generateStringFromArray($data['height_in']);
-        $weight = $this->generateStringFromArray($data['weight']);
+        // $year = isset($data['year']) && is_array($data['year'])
+        //     ? $this->generateStringFromArray($data['year'])
+        //     : $request->input('year', null);
+
+        // $make = isset($data['make']) && is_array($data['make'])
+        //     ? $this->generateStringFromArray($data['make'])
+        //     : $request->input('make', null);
+
+        // $model = isset($data['model']) && is_array($data['model'])
+        //     ? $this->generateStringFromArray($data['model'])
+        //     : $request->input('model', null);
+
+        // $condition = isset($data['condition']) && is_array($data['condition'])
+        //     ? $this->generateStringFromArray($data['condition'])
+        //     : $request->input('condition', null);
+
+        // $length_ft = isset($data['length_ft']) && is_array($data['length_ft'])
+        //     ? $this->generateStringFromArray($data['length_ft'])
+        //     : $request->input('length_ft', null);
+
+        // $length_in = isset($data['length_in']) && is_array($data['length_in'])
+        //     ? $this->generateStringFromArray($data['length_in'])
+        //     : $request->input('length_in', null);
+
+        // $width_ft = isset($data['width_ft']) && is_array($data['width_ft'])
+        //     ? $this->generateStringFromArray($data['width_ft'])
+        //     : $request->input('width_ft', null);
+
+        // $width_in = isset($data['width_in']) && is_array($data['width_in'])
+        //     ? $this->generateStringFromArray($data['width_in'])
+        //     : $request->input('width_in', null);
+
+        // $height_ft = isset($data['height_ft']) && is_array($data['height_ft'])
+        //     ? $this->generateStringFromArray($data['height_ft'])
+        //     : $request->input('height_ft', null);
+
+        // $height_in = isset($data['height_in']) && is_array($data['height_in'])
+        //     ? $this->generateStringFromArray($data['height_in'])
+        //     : $request->input('height_in', null);
+
+        // $weight = isset($data['weight']) && is_array($data['weight'])
+        //     ? $this->generateStringFromArray($data['weight'])
+        //     : $request->input('weight', null);
+
         // $year = $data['year'][0];
         // $make = $data['make'][0];
         // $model = $data['model'][0];
-        $condition = $request->input('condition', null);
         $originData = $request->input('From_ZipCode') ?? $request->input('origin');
         $destinationData = $request->input('To_ZipCode') ?? $request->input('destination');
         // $originData = $request->input('From_ZipCode', null);

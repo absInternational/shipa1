@@ -55,7 +55,7 @@
                                 @if ($key == 0)
                                 <a href="#" >
                                     <span class="text-dark">
-                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
+                                        {!! $site_review->description !!}
                                     </span>
                                     <span style="display:none;" class="text-dark">
                                     I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
