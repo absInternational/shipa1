@@ -427,8 +427,7 @@
                                         </select>
                                         <label class="error-message" id="tabSelector-error">This field is
                                             required.</label>
-                                        <div class="my-4">
-                                        </div>
+                                       
                                         <div class="tab-content mt-3" id="additionalContent"></div>
                                     </div>
                                     <div class="row mt-2">
