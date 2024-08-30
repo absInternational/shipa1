@@ -52,7 +52,7 @@
                         </div>
                         <div class="secondrow px-2 ">
                             <p style="font-size:15px;">
-                                <a href="#" >
+                                <a href="{{ $site_review->rating_url }}" >
                                     <span class="text-dark">
                                     {!! \Illuminate\Support\Str::limit($site_review->description, 100) !!}
                                     </span>

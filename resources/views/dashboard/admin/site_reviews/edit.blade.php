@@ -43,6 +43,11 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label>Date</label>
+                                    <input class="form-control" type="date" name="date" value="{{ $site_review->date }}" />
+                                </div>
+
+                                <div class="form-group">
                                     <label>Rating URL</label>
                                     <input class="form-control" type="text" name="rating_url" value="{{ $site_review->rating_url }}" placeholder="Rating URL" />
                                 </div>

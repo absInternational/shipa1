@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ReviewSite;
+use Carbon\Carbon;
 
 class ReviewSiteController extends Controller
 {
@@ -26,10 +27,18 @@ class ReviewSiteController extends Controller
             'profile_name' => 'required|string',
             'description' => 'nullable',
             'user' => 'nullable',
-            // 'rating_url' => 'required|string',
+            // 'date' => 'required|date',
         ]);
 
-        ReviewSite::create($request->all());
+        $date = Carbon::parse($request->date)->format('Y-m-d');
+
+        ReviewSite::create([
+            'rating' => $request->input('rating'),
+            'profile_name' => $request->input('profile_name'),
+            'description' => $request->input('description'),
+            'user' => $request->input('user'),
+            'date' => $date,
+        ]);
 
         return redirect()->route('site_review.index')->with('success', 'Site Review created successfully.');
     }
@@ -42,6 +51,8 @@ class ReviewSiteController extends Controller
 
     public function update(Request $request, $id)
     {
+        $date = Carbon::parse($request->date);
+
         $request->validate([
             'rating' => 'required|numeric',
             'profile_name' => 'required|string',
@@ -51,7 +62,15 @@ class ReviewSiteController extends Controller
         ]);
 
         $site_review = ReviewSite::findOrFail($id);
-        $site_review->update($request->all());
+
+        $site_review->update([
+            'rating' => $request->input('rating'),
+            'profile_name' => $request->input('profile_name'),
+            'rating_url' => $request->input('rating_url'),
+            'description' => $request->input('description'),
+            'user' => $request->input('user'),
+            'date' => $date->format('Y-m-d'),
+        ]);
 
         return redirect()->route('site_review.index')->with('success', 'Site Review updated successfully.');
     }

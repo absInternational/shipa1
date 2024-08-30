@@ -44,6 +44,11 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label>Date</label>
+                                    <input class="form-control" type="date" name="date" required />
+                                </div>
+
+                                <div class="form-group">
                                     <label>Rating URL</label>
                                     <input class="form-control" type="text" name="rating_url" placeholder="Rating URL" />
                                 </div>
