@@ -395,7 +395,7 @@
 
                             <div class="input-form">
                                 <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" name="image" accept="image/*"
+                                <input class="form-control image_input" type="file" name="image[]" accept="image/*"
                                     multiple onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>

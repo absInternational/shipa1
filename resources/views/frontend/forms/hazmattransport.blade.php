@@ -506,10 +506,10 @@
                             </div>
                             <div class="input-form ">
                                 <label class="d-block" class="text-white"> Image:</label>
-                                <input class="form-control image_input" name="image" type="file" accept="image/*"
+                                <input class="form-control image_input" name="image[]" type="file" accept="image/*"
                                     multiple onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
+                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]" onchange="previewImage(event)" />
                                             <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
                             <div class="form-group">

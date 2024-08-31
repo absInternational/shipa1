@@ -99,7 +99,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Upload Blog Image</label>
-                                    <input type="file" name="image" class="form-control-file form-control height-auto"
+                                    <input type="file" name="image[]" class="form-control-file form-control height-auto"
                                         required />
                                 </div>
                                 <input class="btn btn-outline-primary" type="submit" name="submit">

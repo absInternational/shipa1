@@ -103,5 +103,5 @@
     <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
     <div class="image-preview-container" id="imagePreviewContainer"></div>
     <!-- <input class="form-control image_input" type="file" id="image"
-        name="image" placeholder="Upload File" /> -->
+        name="image[]" placeholder="Upload File" /> -->
 </div>

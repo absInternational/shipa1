@@ -204,7 +204,7 @@ Vehicle</a>
                                     <label class="d-block" class="text-white"> Image:</label>
                                     <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
     <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                    <!-- <input class="form-control image_input" type="file" id="image" name="image"
+                                    <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
                                         placeholder="Upload File" /> -->
                                 </div>
                             </div>

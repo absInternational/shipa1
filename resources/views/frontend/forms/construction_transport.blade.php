@@ -445,9 +445,9 @@
 
                             <div class="input-form">
                                 <label class="d-block text-white"> Image:</label>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image"
+                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
                                     placeholder="Upload File" /> -->
-                                <input class="form-control image_input" name="image" type="file" accept="image/*" multiple
+                                <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
                                     onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>

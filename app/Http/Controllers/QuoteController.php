@@ -266,10 +266,10 @@ class QuoteController extends Controller
                 $imageUrls[] = $imageUrl;
             }
 
-            $post_array['images'] = implode('*^', $imageUrls);
+            $post_array['image'] = implode('*^', $imageUrls);
         }
 
-        dd($post_array);
+        // dd($post_array);
 
         // $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
         //     $q->where('delivery_latitude', $delivery_latitude)
