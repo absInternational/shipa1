@@ -709,7 +709,7 @@
         </div>
         </div>
     </section> -->
-@include('partials.transport-by-state')
+{{-- @include('partials.transport-by-state') --}}
 <!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page">
     <div class="container">
