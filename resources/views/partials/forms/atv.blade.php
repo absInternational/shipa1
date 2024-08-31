@@ -13,7 +13,7 @@
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label> Year</label>
-            <select class="nice-select vehicle-year" name="year[]" id="year">
+            <select class="nice-select vehicle-year" name="year[]" id="year" required>
                 <option value="" disabled selected>Select Year
                 </option>
                 @php
@@ -23,6 +23,7 @@
                 }
                 @endphp
             </select>
+            <label class="error-message" id="year-error" style="display:none;">This field is required.</label>
         </div>
     </div>
     <div class="col-md-4">
@@ -47,7 +48,7 @@
         <div class="form-group">
             <label for="trailer_type" class="text-white">Select Trailer
                 Type</label>
-            <select class="form-control" id="trailer_type" name="trailer_type">
+            <select class="form-control" id="trailer_type" name="trailer_type" required>
                 <option value="Open" selected>Open</option>
                 <option value="Enclosed">Enclosed</option>
             </select>
@@ -56,7 +57,7 @@
     <div class="col-md-6">
         <div class="form-group">
             <label for="condition" class="text-white">Condition</label>
-            <select class="form-control" id="condition" name="condition[]">
+            <select class="form-control" id="condition" name="condition[]" required>
                 <option value="1" selected>Running</option>
                 <option value="2">Non Running</option>
             </select>
@@ -66,7 +67,7 @@
 <div class="row ms-3">
     <di class="col-md-6">
         <div class="form-group">
-            <input class="form-check-input " type="checkbox" id="modification" name="modification" value="1" required />
+            <input class="form-check-input " type="checkbox" id="modification" name="modification" value="1" />
             <label class="form-check-label text-white ms-4" for="modification">
                 Modified?</label>
         </div>
@@ -78,7 +79,7 @@
     <di class="col-md-6">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" id="available_at_auction" name="available_at_auction"
-                value="1" required />
+                value="1"  />
             <label class="form-check-label text-white" for="available_at_auction"> Available
                 at
                 Auction?</label>

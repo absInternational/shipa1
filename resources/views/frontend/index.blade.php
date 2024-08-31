@@ -1082,72 +1082,7 @@
         });
     });
 </script>
-<script>
-    $(document).ready(function() {
-        function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
 
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
-
-        // Move to Step 2
-        $('#step1_next').click(function() {
-            var isValid = true;
-
-            if (!$('#pickup-location').val()) {
-                showError('pickup-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('pickup-location');
-            }
-
-            if (!$('#delivery-location').val()) {
-                showError('delivery-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('delivery-location');
-            }
-
-            if (isValid) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
-
-        // Return to Step 1
-        $('#step2_previous').click(function() {
-            $('#step2').hide();
-            $('#step1').show();
-        });
-
-        // Move to Step 3
-        $('#step2_next').click(function() {
-            var isValid = true;
-
-            if (!$('#tabSelector').val()) {
-                showError('tabSelector', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('tabSelector');
-            }
-
-            if (isValid) {
-                $('#step2').hide();
-                $('#step3').show();
-            }
-        });
-
-        // Return to Step 2
-        $('#step3_previous').click(function() {
-            $('#step3').hide();
-            $('#step2').show();
-        });
-    });
-</script>
 <script>
     $(document).ready(function() {
         var selectedTab = '';

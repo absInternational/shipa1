@@ -534,7 +534,92 @@
             });
         });
     </script>
+<script>
+    $(document).ready(function() {
+         $('#available_at_auction').change(function() {
+             if ($(this).is(':checked')) {
+                 $('.div-link').show();
+                 $('#link').attr('required', true); // Make input required
+             } else {
+                 $('.div-link').hide();
+                 $('#link').val(''); // Clear the input field
+                 $('#link').removeAttr('required'); // Remove required attribute
+             }
+         });
+         
+         $('#modification').change(function() {
+             if ($(this).is(':checked')) {
+                 $('.div-modify_info').show();
+                 $('#c').attr('required', true); // Make input required
+             } else {
+                 $('.div-modify_info').hide();
+                 $('#c').val(''); // Clear the input field
+                 $('#c').removeAttr('required'); // Remove required attribute
+             }
+         });
+     });
+ </script>
+ <script>
+    $(document).ready(function() {
+    // Function to show error messages
+    function showError(field, message) {
+        $('#' + field).addClass('error-field');
+        $('#' + field + '-error').text(message).show();
+    }
 
+    // Function to hide error messages
+    function hideError(field) {
+        $('#' + field).removeClass('error-field');
+        $('#' + field + '-error').hide();
+    }
+
+    // Function to validate fields in a given step
+    function validateStep(step) {
+        var isValid = true;
+
+        // Iterate over each required field in the specified step
+        $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+            var field = $(this).attr('id');
+            if (!$(this).val()) {
+                showError(field, 'This field is required.');
+                isValid = false;
+            } else {
+                hideError(field);
+            }
+        });
+
+        return isValid;
+    }
+
+    // Move to Step 2
+    $('#step1_next').click(function() {
+        if (validateStep('step1')) {
+            $('#step1').hide();
+            $('#step2').show();
+        }
+    });
+
+    // Return to Step 1
+    $('#step2_previous').click(function() {
+        $('#step2').hide();
+        $('#step1').show();
+    });
+
+    // Move to Step 3
+    $('#step2_next').click(function() {
+        if (validateStep('step2')) {
+            $('#step2').hide();
+            $('#step3').show();
+        }
+    });
+
+    // Return to Step 2
+    $('#step3_previous').click(function() {
+        $('#step3').hide();
+        $('#step2').show();
+    });
+});
+</script>
 
 </body>
 

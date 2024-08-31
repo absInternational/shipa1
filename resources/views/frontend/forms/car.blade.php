@@ -163,7 +163,7 @@
                                     <div class="form-group" style="line-height:23px;">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="1" selected>Open Carrier</option>
+                                            <option value="1" selected>Open Trailer</option>
                                             <option value="2">Enclosed Carrier</option>
                                         </select>
                                     </div>

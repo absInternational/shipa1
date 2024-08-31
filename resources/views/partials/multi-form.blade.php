@@ -93,20 +93,18 @@
                     <div class="col-xl-4 col-lg-4">
                         <div class="single-input-field">
                             <label class="d-block text-white"> Your Name:</label>
-                            <input class="form-control" required name="phone" type="tel"
-                                placeholder="Customer Name">
+                            <input class="form-control" name="phone" type="tel"
+                                placeholder="Customer Name" required>
                             <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-                            <label class="error-message" id="Custo_Name-error">This field is
-                                required.</label>
+                            
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4">
                         <div class="single-input-field">
                             <label class="d-block text-white">Phone:</label>
-                            <input id="phone" class="form-control" required name="phone" type="tel"
-                                placeholder="Customer Phone">
-                            <label class="error-message" id="Custo_Phone-error">This field is
-                                required.</label>
+                            <input id="phone" class="form-control" name="phone" type="tel"
+                                placeholder="Customer Phone" required>
+                            
                         </div>
                     </div>
                     {{-- <div class="col-xl-4 col-lg-4">
@@ -121,10 +119,9 @@
                     <div class="col-xl-4 col-lg-4">
                         <div class="single-input-field">
                             <label class="d-block text-white"> Email Address:</label>
-                            <input class="form-control" required name="Custo_Email" type="email"
-                                placeholder="Email address">
-                            <label class="error-message" id="Custo_Email-error">This field is
-                                required.</label>
+                            <input class="form-control"  name="Custo_Email" type="email"
+                                placeholder="Email address" required>
+                            
                         </div>
                     </div>
                 </div>

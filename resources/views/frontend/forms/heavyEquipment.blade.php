@@ -195,10 +195,10 @@ shipment efficiently with our instant quote tool.')
                             </div>
                             <div class="col-md-4">
                                 <div class="input-form">
-                                    <label class="d-block"> Phone:</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                        required="" />
+                                    <label class="d-block">Phone:</label>
+                                    <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
                                     <small id="errPhone" class="err-style"></small>
+                                    <input type="hidden" name="country_code" id="country_code" />
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -210,10 +210,30 @@ shipment efficiently with our instant quote tool.')
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block"> Pickup Location:</label>
+                                    <input type="text" id="pickup-location" name="origin"
+                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                    <small id="errOLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block"> Delivery Location:</label>
+                                    <input type="text" id="delivery-location" name="destination"
+                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                    <small id="errDLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="row select-bm">
                             <div class="col-md-12 text-center">
-                                <h4 class="text-white">Vehicle Information</h4>
+                                <h4 class="text-white">Equipment Information</h4>
                             </div>
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
@@ -316,26 +336,7 @@ shipment efficiently with our instant quote tool.')
                                 </div>
                             </div>
                         </div><br>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block"> Pickup Location:</label>
-                                    <input type="text" id="pickup-location" name="origin"
-                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                    <small id="errOLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block"> Delivery Location:</label>
-                                    <input type="text" id="delivery-location" name="destination"
-                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                    <small id="errDLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">

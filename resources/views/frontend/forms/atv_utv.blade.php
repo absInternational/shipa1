@@ -76,9 +76,9 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                            required="" />
+                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
                                         <small id="errPhone" class="err-style"></small>
+                                        <input type="hidden" name="country_code" id="country_code" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -152,7 +152,7 @@
                                         <label for="trailer_type" class="text-white">Select Trailer
                                             Type</label>
                                         <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="1" selected>Open Carrier</option>
+                                            <option value="1" selected>Open Trailer</option>
                                             <option value="2">Enclosed Carrier</option>
                                         </select>
                                     </div>

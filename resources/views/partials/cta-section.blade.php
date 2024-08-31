@@ -7,7 +7,7 @@
                 <div class="tj-cta-content">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2"> Here We Are</span>
-                        <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
+                        <h4 class="title">Get Any Type of Quote for Your Shipping Needs</h4>
                     </div>
                     <div class="tj-theme-button">
                         <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" >
