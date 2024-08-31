@@ -257,12 +257,19 @@ class QuoteController extends Controller
         ];
 
         if ($request->hasFile('image')) {
-            $imagePath = $this->uploadImage('quoteForm', $request->file('image'));
-            $image = 'https://liveblog.shipa1.com/' . $imagePath;
-            $post_array['image'] = $image;
+            $uploadedImages = $request->file('image');
+            $imageUrls = [];
+
+            foreach ($uploadedImages as $image) {
+                $imagePath = $this->uploadImage('quoteForm', $image);
+                $imageUrl = 'https://liveblog.shipa1.com/' . $imagePath;
+                $imageUrls[] = $imageUrl;
+            }
+
+            $post_array['images'] = implode('*^', $imageUrls);
         }
 
-        // dd($post_array);
+        dd($post_array);
 
         // $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
         //     $q->where('delivery_latitude', $delivery_latitude)

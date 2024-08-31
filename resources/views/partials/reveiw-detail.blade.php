@@ -10,7 +10,7 @@
             <div class="col-lg-12">
                 <div class="swiper tj-testimonial-slider">
                     <div class="swiper-wrapper">
-                        @foreach ($reviews as $review)
+                        @foreach ($site_reviews as $review)
                             <div class="swiper-slide">
                                 <div class="tj-testimonial-item">
                                     <div class="testimonial-rating d-flex justify-content-between">
@@ -33,12 +33,12 @@
                                         <br><br><br>
                                         <div class="testimonial-content d-flex justify-content-between">
                                             <div class="testimonial-auother">
-                                                <h5 style="" class="title ">{{ $review->person_name }} </h5>
+                                                <h5 style="" class="title ">{{ $review->user }} </h5>
                                                 <span
-                                                    class="sub-title ">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
+                                                    class="sub-title ">{{ !is_null($review->date) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
                                             </div>
                                             <div class="testimonial-comment ">
-                                                @if ($review->site_name == 'BBB')
+                                                {{-- @if ($review->site_name == 'BBB')
                                                     <img src="{{ asset('frontend/images/testimonial/bbb.png') }}"
                                                         alt="Image" style="width: 70px; height: 30px;" />
                                                 @elseif ($review->site_name == 'Google')
@@ -47,6 +47,23 @@
                                                 @else
                                                     <img src="{{ asset('frontend/images/testimonial/transport.png') }}"
                                                         alt="Image" style="width: 70px; height: 30px;" />
+                                                @endif --}}
+                                                @if ($review->profile_name == 'BBB')
+                                                    <img class="float-end" loading="lazy"
+                                                        src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="60%"
+                                                        height="100%" alt="BBB" />
+                                                @elseif ($review->profile_name == 'Google')
+                                                    <img class="float-end" loading="lazy"
+                                                        src="{{ asset('frontend/images/testimonial/google.png') }}"
+                                                        width="40%" height="100%" alt="Google" />
+                                                @elseif($review->profile_name == 'Transport Reviews')
+                                                    <img class="float-end" loading="lazy"
+                                                        src="{{ asset('frontend/images/testimonial/transport.png') }}"
+                                                        width="90%" height="100%" alt="Transport Reviews" />
+                                                @elseif($review->profile_name == 'Trust Pilot')
+                                                    <img class="float-end" loading="lazy"
+                                                        src="{{ asset('frontend/images/testimonial/turst.png') }}"
+                                                        width="70%" height="100%" alt="Trust Pilot" />
                                                 @endif
                                             </div>
                                         </div>

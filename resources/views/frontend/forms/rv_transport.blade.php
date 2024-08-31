@@ -324,7 +324,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="condition" class="text-white">Condition</label>
-                                        <select class="nice-select " id="condition" name="condition">
+                                        <select class="nice-select " id="condition" name="condition[]">
                                             <option value="1" selected>Running</option>
                                             <option value="2">Non Running</option>
                                         </select>
