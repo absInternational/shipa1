@@ -406,13 +406,13 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
-            var input = document.querySelector("#phone");
-            window.intlTelInput(input, {
-                initialCountry: "us", // Default country code set to "us"
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-            });
-        });
+        // $(document).ready(function() {
+        //     var input = document.querySelector("#phone");
+        //     window.intlTelInput(input, {
+        //         initialCountry: "us", // Default country code set to "us"
+        //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        //     });
+        // });
     </script>
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
@@ -455,7 +455,7 @@
         // Initial mask update based on the default country code
         updateMask();
     </script>
-</script>
+
 <script>
 
         $(document).ready(function() {
