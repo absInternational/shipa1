@@ -177,7 +177,7 @@
                                             @endphp
                                             <option value="other">Other</option>
                                         </select>
-                                        <input type="text" class="form-control mt-2 d-none" name="other_year[]" id="other_year" placeholder="Enter Year">
+                                        <input type="text" class="form-control mt-2 d-none" name="year[]" id="other_year" placeholder="Enter Year">
                                     </div>
                                 </div>
                             
@@ -192,7 +192,7 @@
                                             @endforeach
                                             <option value="other">Other</option>
                                         </select>
-                                        <input type="text" class="form-control mt-2 d-none" name="other_make[]" id="other_make" placeholder="Enter Make">
+                                        <input type="text" class="form-control mt-2 d-none" name="make[]" id="other_make" placeholder="Enter Make">
                                     </div>
                                 </div>
                             
@@ -204,7 +204,7 @@
                                             <option value="" disabled selected>Select Model</option>
                                             <option value="other">Other</option>
                                         </select>
-                                        <input type="text" class="form-control mt-2 d-none" name="other_model[]" id="other_model" placeholder="Enter Model">
+                                        <input type="text" class="form-control mt-2 d-none" name="model[]" id="other_model" placeholder="Enter Model">
                                     </div>
                                 </div>
                             </div>
