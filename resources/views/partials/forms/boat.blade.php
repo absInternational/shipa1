@@ -2,7 +2,7 @@
 <input type="hidden" name="car_type" value="2" hidden>
 <div class="input-form">
     <label for="category">Select Boat Type</label>
-    <select class="" id="category" name="category" style="display: none;">
+    <select class="" id="category" name="category" style="display: none;" required>
         <option value="" disabled="" selected="">Select</option>
         <option value="Power Boat">Power Boat</option>
         <option value="Sail Boat">Sail Boat</option>
@@ -29,7 +29,7 @@
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label> Year</label>
-            <select class="nice-select vehicle-year" name="year[]" id="year">
+            <select class="nice-select vehicle-year" name="year[]" id="year" required>
                 <option value="" disabled selected>Select Year
                 </option>
                 @php
@@ -51,6 +51,8 @@
         <div class="input-form tj-select vehicle-model-div">
             <label>Model</label>
             <input type="text" id="model" name="model[]" placeholder="Enter Model" required/>
+            <label class="error-message" >This field is
+                required.</label>
         </div>
     </div>
 </div>
@@ -84,10 +86,10 @@ Vehicle</a>
         <label class="lab-cos">Length</label>
         <div class="input-container">
             <input type="number" id="feet-input" class="input-field" placeholder="" min="0" maxlength="3"
-                oninput="limitDigits(this, 3)">
+                oninput="limitDigits(this, 3)" required>
             <span class="separator">(Ft.)</span>
             <input type="number" id="inches-input" class="input-field" placeholder="" min="0" max="11"
-                maxlength="2" oninput="limitDigits(this, 2)">
+                maxlength="2" oninput="limitDigits(this, 2)" required>
             <span class="separators">(In.)</span>
         </div>
     </div>
@@ -95,10 +97,10 @@ Vehicle</a>
         <label class="lab-cos">Width</label>
         <div class="input-container">
             <input type="number" id="feet-input1" class="input-field" placeholder="" min="0" maxlength="3"
-                oninput="limitDigits(this, 3)">
+                oninput="limitDigits(this, 3)" required>
             <span class="separator">(Ft.)</span>
             <input type="number" id="inches-input1" class="input-field" placeholder="" min="0" max="11"
-                maxlength="2" oninput="limitDigits(this, 2)">
+                maxlength="2" oninput="limitDigits(this, 2)" required>
             <span class="separators">(In.)</span>
         </div>
     </div>
@@ -106,10 +108,10 @@ Vehicle</a>
         <label class="lab-cos">Height</label>
         <div class="input-container">
             <input type="number" id="feet-input2" class="input-field" placeholder="" min="0" maxlength="3"
-                oninput="limitDigits(this, 3)">
+                oninput="limitDigits(this, 3)" required>
             <span class="separator">(Ft.)</span>
             <input type="number" id="inches-input2" class="input-field" placeholder="" min="0" max="11"
-                maxlength="2" oninput="limitDigits(this, 2)">
+                maxlength="2" oninput="limitDigits(this, 2)" required>
             <span class="separators">(In.)</span>
         </div>
     </div>
@@ -119,7 +121,7 @@ Vehicle</a>
         <label class="lab-cos">Weight</label>
         <div class="input-container1">
             <input type="" id="feet-input" class="input-field-1" placeholder="" min="0" maxlength="6"
-                oninput="limitDigits(this, 6)">
+                oninput="limitDigits(this, 6)" required>
             <span class="separators-w">(Lbs.)</span>
 
         </div>
@@ -129,7 +131,7 @@ Vehicle</a>
     <div class="col-md-6">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" id="available_at_auction" name="available_at_auction"
-                value="1" required />
+                value="1"  />
             <label class="form-check-label text-white" for="available_at_auction"> Available
                 at
                 Auction?</label>
