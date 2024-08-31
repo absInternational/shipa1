@@ -457,17 +457,17 @@
     </script>
 
 <script>
-
-        $(document).ready(function() {
-            $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                var year = $('.vehicle-year').val();
-                var makeId = $('.vehicle-make').val();
-                if (year && makeId) {
-                    getModel(year, makeId);
-                }
-            });
+    $(document).ready(function() {
+        // Handle changes in the year and make dropdowns
+        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+            var year = $('.vehicle-year').val();
+            var makeId = $('.vehicle-make').val();
+            if (year && makeId) {
+                getModel(year, makeId);
+            }
         });
 
+        // Function to get and populate models dropdown
         function getModel(year, makeId) {
             $.ajax({
                 url: "{{ route('get.models') }}",
@@ -480,21 +480,43 @@
                     var modelsDropdown = $('.vehicle-model-div');
                     modelsDropdown.empty();
                     var selectOptions =
-                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                        '<label>Model</label><input type="text" class="form-control mt-2 d-none" name="other_model[]" id="other_model" placeholder="Enter Model"> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option> <option value="other">Other</option>';
                     $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
+                        selectOptions += '<option value="' + model + '">' + model + '</option>';
                     });
                     selectOptions += '</select>';
                     modelsDropdown.html(selectOptions);
 
+                    // Reapply the "Other" selection handling
+                    handleOtherSelection();
                 },
                 error: function(xhr) {
                     console.log(xhr.responseText);
                 }
             });
         }
-    </script>
+
+        // Handle "Other" option in the model dropdown
+        function handleOtherSelection() {
+            // Handle the "change" event for the dynamically added model dropdown
+            $(document).on('change', '#model', function() {
+                var modelSelect = $(this);
+                var otherModelInput = $('#other_model');
+
+                if (modelSelect.val() === 'other') {
+                    modelSelect.addClass('d-none'); // Hide the select dropdown
+                    otherModelInput.removeClass('d-none').attr('required', 'required'); // Show the input field
+                } else {
+                    otherModelInput.addClass('d-none').removeAttr('required'); // Hide the input field if not "Other"
+                }
+            });
+        }
+
+        // Initial call to handle any existing "Other" options
+        handleOtherSelection();
+    });
+</script>
+
 
     <script>
         $(document).ready(function() {
@@ -619,6 +641,25 @@
         $('#step2').show();
     });
 });
+</script>
+<script>
+    $(document).ready(function() {
+       function handleOtherSelection(selectId, inputId) {
+           $(selectId).on('change', function() {
+               if ($(this).val() === 'other') {
+                   $(this).addClass('d-none'); // Hide the select dropdown
+                   $(inputId).removeClass('d-none').attr('required', 'required'); // Show the input field
+               } else {
+                   $(inputId).addClass('d-none').removeAttr('required'); // Hide the input field if not "Other"
+               }
+           });
+       }
+
+       // Apply the function to Year, Make, and Model selects
+       handleOtherSelection('#year', '#other_year');
+       handleOtherSelection('#make', '#other_make');
+       handleOtherSelection('#model', '#other_model');
+   });
 </script>
 
 </body>

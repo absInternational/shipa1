@@ -4,7 +4,6 @@
     'Experience seamless car shipping with Shipa Car Transport. Get an instant quote,
     nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
 @section('content')
-<link rel="stylesheet" href="/assets/intl-tel-input/intlTelInput.css">
 <style>
     /* Error styling */
     .error {
@@ -86,9 +85,9 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
+                                        <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                                            required="" />
                                         <small id="errPhone" class="err-style"></small>
-                                        <input type="hidden" name="country_code" id="country_code" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -120,7 +119,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row select-bm">
+                            {{-- <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white mb-0">Car Information</h4>
                                 </div>
@@ -154,7 +153,58 @@
                                         <label>Model</label>
                                         <select class="nice-select vehicle-model" name="model[]" id="model" required>
                                             <option value="">Select Model</option>
+                                            <option value="">Other</option>
                                         </select>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            <div class="row select-bm">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white mb-0">Car Information</h4>
+                                </div>
+                            
+                                <!-- Year -->
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Year</label>
+                                        <select class="nice-select vehicle-year" name="year[]" id="year" required>
+                                            <option value="" disabled selected>Select Year</option>
+                                            @php
+                                                $currentYear = date('Y');
+                                                for ($year = $currentYear; $year >= 1936; $year--) {
+                                                    echo "<option value='$year'>$year</option>";
+                                                }
+                                            @endphp
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <input type="text" class="form-control mt-2 d-none" name="other_year[]" id="other_year" placeholder="Enter Year">
+                                    </div>
+                                </div>
+                            
+                                <!-- Make -->
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <select class="nice-select vehicle-make" name="make[]" id="make" required>
+                                            <option value="" disabled selected>Select Make</option>
+                                            @foreach ($makes as $make)
+                                                <option value="{{ $make->make }}">{{ $make->make }}</option>
+                                            @endforeach
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <input type="text" class="form-control mt-2 d-none" name="other_make[]" id="other_make" placeholder="Enter Make">
+                                    </div>
+                                </div>
+                            
+                                <!-- Model -->
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select vehicle-model-div">
+                                        <label>Model</label>
+                                        <select class="nice-select vehicle-model" name="model[]" id="model" required>
+                                            <option value="" disabled selected>Select Model</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <input type="text" class="form-control mt-2 d-none" name="other_model[]" id="other_model" placeholder="Enter Model">
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +213,7 @@
                                     <div class="form-group" style="line-height:23px;">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="1" selected>Open Trailer</option>
+                                            <option value="1" selected>Open Carrier</option>
                                             <option value="2">Enclosed Carrier</option>
                                         </select>
                                     </div>
@@ -171,7 +221,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition[]">
+                                        <select class="form-control" id="condition" name="condition">
                                             <option value="1" selected>Running</option>
                                             <option value="2">Non Running</option>
                                         </select>
@@ -186,15 +236,15 @@
                             </div>
                             {{-- <div class="input-form mt-3">
                                 <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image[]"
+                                <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" />
                             </div> --}}
                             <div class="input-form mt-1">
                                 <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
+                                <input class="form-control image_input" name="image" type="file" accept="image/*" multiple
                                     onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]" onchange="previewImage(event)" />
+                                <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
                                                 <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
                             <div class="row">
