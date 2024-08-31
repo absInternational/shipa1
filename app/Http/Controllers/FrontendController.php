@@ -108,10 +108,11 @@ class FrontendController extends Controller
 
     public function aboutUs()
     {
+        $site_reviews = ReviewSite::get();
         $faqs = FAQs::where('status', 1)->get();
         $blogs = Blog::where('status', 1)->take(3)->get();
         $reviews = Review::get();
-        return view('frontend.pages.aboutUs', compact('reviews', 'faqs', 'blogs'));
+        return view('frontend.pages.aboutUs', compact('reviews', 'faqs', 'blogs', 'site_reviews'));
     }
 
     public function contactUs()
