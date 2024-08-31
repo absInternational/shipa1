@@ -4,6 +4,7 @@
     'Experience seamless car shipping with Shipa Car Transport. Get an instant quote,
     nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
 @section('content')
+<link rel="stylesheet" href="/assets/intl-tel-input/intlTelInput.css">
 <style>
     /* Error styling */
     .error {
@@ -85,9 +86,9 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                            required="" />
+                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
                                         <small id="errPhone" class="err-style"></small>
+                                        <input type="hidden" name="country_code" id="country_code" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -401,4 +402,6 @@
         updateSuggestions(inputField, suggestionsList);
     });
 </script>
+
+
 @endsection

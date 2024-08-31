@@ -74,6 +74,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
+<style>
+    /* Error styling */
+    .error {
+        border: 2px solid red;
+    }
+</style>
 <!--Start of Tawk.to Script-->
 <!-- <script type="text/javascript">
     var Tawk_API = Tawk_API || {},
@@ -408,25 +414,49 @@
             });
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            var input = document.querySelector("#phone");
-            window.intlTelInput(input, {
-                initialCountry: "auto",
-                geoIpLookup: function(callback) {
-                    // IP lookup code commented out
-                    // $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
-                    //     var countryCode = (resp && resp.country) ? resp.country : "us";
-                    //     callback(countryCode);
-                    // });
-
-                    // Directly using the default country code
-                    var countryCode = "us";
-                    callback(countryCode);
-                },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-            });
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    
+<script src="/assets/intl-tel-input/intlTelInput.js"></script>
+<script>
+    // Initialize intl-tel-input
+    const phoneInput = document.querySelector("#phone");
+        const iti = window.intlTelInput(phoneInput, {
+            separateDialCode: true,
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                // Directly using the default country code
+                var countryCode = "us";
+                callback(countryCode);
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
         });
+
+        // Function to apply or remove mask
+        function updateMask() {
+            const countryData = iti.getSelectedCountryData();
+            const countryCode = countryData.iso2;
+
+            if (countryCode === 'us') {
+                // Apply mask if the country code is US
+                $(".ophone").mask("(999) 999-9999");
+            } else {
+                // Remove mask for other country codes
+                $(".ophone").unmask();
+            }
+
+            // Update hidden field with country dial code
+            document.querySelector('#country_code').value = countryData.dialCode;
+        }
+
+        // Event listener for input change
+        phoneInput.addEventListener('input', updateMask);
+
+        // Initial mask update based on the default country code
+        updateMask();
+    </script>
+</script>
+<script>
 
         $(document).ready(function() {
             $(document).on('change', '.vehicle-year, .vehicle-make', function() {
