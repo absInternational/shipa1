@@ -89,8 +89,21 @@
                             </div>
                              <br>
                     <div class="text-container text-left">
-                        <h3>A Cost-Efficient Way of Motorcycle Shipping</h3>
-                        <p>You can find many<a class="pp-link-2" href="{{ route('welcome') }}"> motorcycle shipping companies </a>online that are providing the services nationwide, but often it becomes a nightmare for some of the people when they find that their motorcycle has not been shipped at the quoted time and then the company is demanding for hidden charges that one never knew existed. This kind of rip-off can hurt your sentiments related to the shipping service which is why ship A1 provides its customers with accurate <a class="pp-link-2" href="{{ route('form.vehicle.form.vehicle.car') }}">  shipping quotes.</a> For one to get to know about the reliable motorcycle shipping company, one needs to do a lot of research and after only getting to know what others have to say about the particular company, will you be able to know about the motorcycle shipping company and whether or not you need to trust it with your motorcycle relocation. Well, you can trust the company that has relatively a sound experience in this field, and that is ShipA1. ShipA1 has an extraordinary connection with the service of motorcycle shipping because it excels in the motorcycle shipment across the United States of America. It has managed to ship many hundreds and thousands of motorcycles and all in a very good condition because ShipA1 only provides professional service</p> 
+                        <h3>A Reliable and Cost-Effective Way of Motorcycle Shipping</h3>
+                        <p>You can find many<a class="pp-link-2" href="{{ route('welcome') }}"> 
+                            motorcycle shipping companies </a>online that are providing the services nationwide, but often it becomes a
+                             nightmare for some of the people when they find that their motorcycle has not been shipped at the quoted 
+                             time and then the company is demanding for hidden charges that one never knew existed. This kind of rip-off 
+                             can hurt your sentiments related to the shipping service which is why ship A1 provides its customers with
+                              accurate <a class="pp-link-2" href="{{ route('form.vehicle.form.vehicle.car') }}">  shipping quotes.</a>
+                               For one to get to know about the reliable motorcycle shipping company, one needs to do a lot of research 
+                               and after only getting to know what others have to say about the particular company, will you be able to 
+                               know about the motorcycle shipping company and whether or not you need to trust it with your motorcycle 
+                               relocation. Well, you can trust the company that has relatively a sound experience in this field, and 
+                               that is ShipA1. ShipA1 has an extraordinary connection with the service of motorcycle shipping because 
+                               it excels in the motorcycle shipment across the United States of America. It has managed to ship many 
+                               hundreds and thousands of motorcycles and all in a very good condition because ShipA1 only provides 
+                               professional service</p> 
                         
                         <br>
                        
@@ -398,10 +411,11 @@
             <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Secure Shipment</span>
+                        <span class="sub-title active-shape">100% Insurance Coverage</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
-                        The shipment of your vehicle is handled with utmost care and in a completely guarded way with us.
+                            We believe in the safety and security of our vehicles as well as our customers which is why we 
+                            have 100% insured vehicles to take care of any risks or unforeseen events.
                         </p>
                     </div>
                 </div>
@@ -409,10 +423,11 @@
             <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Affordable Price</span>
+                        <span class="sub-title active-shape">24/7 Customer Support</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
-                        The combination of affordable price & timely vehicles delivery is what make our services unique and special.</p>
+                            Our customers are our top priority, which is why we offer 24/7 support to our customers to
+                             erase any doubt and offer tailored solutions to their needs and concerns.</p>
                     </div>
                 </div>
             </div>

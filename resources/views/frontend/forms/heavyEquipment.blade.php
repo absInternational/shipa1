@@ -233,7 +233,7 @@ shipment efficiently with our instant quote tool.')
 
                         <div class="row select-bm">
                             <div class="col-md-12 text-center">
-                                <h4 class="text-white">Vehicle Information</h4>
+                                <h4 class="text-white">Equipment Information</h4>
                             </div>
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
