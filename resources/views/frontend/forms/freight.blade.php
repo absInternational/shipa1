@@ -531,7 +531,7 @@
                             <div class="row">
                                 <div class="form-group">
                                     <label for="condition" class="text-white">Condition</label>
-                                    <select class="form-control" id="condition" name="condition">
+                                    <select class="form-control" id="condition" name="condition[]">
                                         <option value="1" selected>Running</option>
                                         <option value="2">Non Running</option>
                                     </select>

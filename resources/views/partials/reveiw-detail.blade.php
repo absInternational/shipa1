@@ -10,7 +10,7 @@
             <div class="col-lg-12">
                 <div class="swiper tj-testimonial-slider">
                     <div class="swiper-wrapper">
-                        @foreach ($reviews as $review)
+                        @foreach ($site_reviews as $review)
                             <div class="swiper-slide">
                                 <div class="tj-testimonial-item">
                                     <div class="testimonial-rating d-flex justify-content-between">
@@ -33,7 +33,7 @@
                                         <br><br><br>
                                         <div class="testimonial-content d-flex justify-content-between">
                                             <div class="testimonial-auother">
-                                                <h5 style="" class="title ">{{ $review->person_name }} </h5>
+                                                <h5 style="" class="title ">{{ $review->user }} </h5>
                                                 <span
                                                     class="sub-title ">{{ !is_null($review->created_at) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
                                             </div>
