@@ -644,22 +644,30 @@
 </script>
 <script>
     $(document).ready(function() {
-       function handleOtherSelection(selectId, inputId) {
-           $(selectId).on('change', function() {
-               if ($(this).val() === 'other') {
-                   $(this).addClass('d-none'); // Hide the select dropdown
-                   $(inputId).removeClass('d-none').attr('required', 'required'); // Show the input field
-               } else {
-                   $(inputId).addClass('d-none').removeAttr('required'); // Hide the input field if not "Other"
-               }
-           });
-       }
+        $('#other_year').attr('disabled', true);
+        $('#other_make').attr('disabled', true);
+        $('#other_model').attr('disabled', true);
 
-       // Apply the function to Year, Make, and Model selects
-       handleOtherSelection('#year', '#other_year');
-       handleOtherSelection('#make', '#other_make');
-       handleOtherSelection('#model', '#other_model');
-   });
+        function handleOtherSelection(selectId, inputId) {
+            $(selectId).on('change', function() {
+                if ($(this).val() === 'other') {
+                    $(this).addClass('d-none');
+                    $(inputId).removeClass('d-none')
+                            .attr('required', 'required')
+                            .removeAttr('disabled');
+                } else {
+                    $(inputId).addClass('d-none')
+                            .removeAttr('required')
+                            .attr('disabled', true);
+                    $(this).removeClass('d-none');
+                }
+            });
+        }
+
+        handleOtherSelection('#year', '#other_year');
+        handleOtherSelection('#make', '#other_make');
+        handleOtherSelection('#model', '#other_model');
+    });
 </script>
 
 </body>
