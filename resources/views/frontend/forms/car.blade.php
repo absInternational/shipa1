@@ -119,7 +119,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="row select-bm">
+                            <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white mb-0">Car Information</h4>
                                 </div>
@@ -157,8 +157,8 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div> --}}
-                            <div class="row select-bm">
+                            </div>
+                            {{-- <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white mb-0">Car Information</h4>
                                 </div>
@@ -207,7 +207,7 @@
                                         <input type="text" class="form-control mt-2 d-none" name="model[]" id="other_model" placeholder="Enter Model">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group" style="line-height:23px;">
@@ -301,13 +301,15 @@
                     <div class="col-md-4">
                         <div class="input-form tj-select">
                                 <label> Year</label>
-                                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+                                <select class="nice-select year" name="year[]" required id="year"> 
+                                    <option value="" disabled selected>Select Year</option>`;
                                         var currentYear = {{ date('Y') }};
                                         for (var year = currentYear; year >= 1936; year--) {
                                             newVehicleHtml += `<option value="${year}">${year}</option>`;
                                         }
                                         newVehicleHtml +=
-                                `</select>
+                                `<option value="other">Other</option></select>
+                                <input type="text" class="form-control mt-2 d-none" name="year[]" id="other_year" placeholder="Enter Year">
                         </div>
                     </div>
                     <div class="col-md-4">

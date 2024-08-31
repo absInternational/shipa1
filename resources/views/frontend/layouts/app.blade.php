@@ -642,7 +642,7 @@
     });
 });
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         $('#other_year').attr('disabled', true);
         $('#other_make').attr('disabled', true);
@@ -668,7 +668,7 @@
         handleOtherSelection('#make', '#other_make');
         handleOtherSelection('#model', '#other_model');
     });
-</script>
+</script> --}}
 
 </body>
 
