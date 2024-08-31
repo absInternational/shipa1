@@ -35,7 +35,7 @@
                                             <div class="testimonial-auother">
                                                 <h5 style="" class="title ">{{ $review->user }} </h5>
                                                 <span
-                                                    class="sub-title ">{{ $review->date }}</span>
+                                                    class="sub-title ">{{ !is_null($review->date) ? \Carbon\Carbon::parse($review->created_at)->format('M d, Y') : '' }}</span>
                                             </div>
                                             <div class="testimonial-comment ">
                                                 {{-- @if ($review->site_name == 'BBB')
