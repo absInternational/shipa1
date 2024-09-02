@@ -306,7 +306,7 @@ from one state to another state in one click - ShipA1.')
 
 
                     <div class="tj-theme-button mt-2">
-                        <a class="tj-transparent-btn" href="href="{{ config('app.url') }}/contact_us" target="_blank">
+                        <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
                             Get Support<i class="flaticon-right-1"></i>
                         </a>
                     </div>

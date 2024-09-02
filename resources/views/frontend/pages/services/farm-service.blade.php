@@ -291,7 +291,7 @@ insurance services and securely without any scratch - Shipa1.')
                         <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
                     </div>
                     <div class="tj-theme-button mt-2">
-                        <a class="tj-transparent-btn" href="href="{{ config('app.url') }}/contact_us" target="_blank">
+                        <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
                             Get Support<i class="flaticon-right-1"></i>
                         </a>
                     </div>

@@ -394,7 +394,7 @@ huge discount offers and free shipping quotes nationwide.')
                     you do not want to transport it on your doorsteps, then another facility that is provided by the
                     ShipA1 is of the terminals. </p>
                 <div class="tj-theme-button  text-center mt-2">
-                    <a class="tj-transparent-btn" href="href="{{ config('app.url') }}/contact_us" target="_blank">
+                    <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
                         Get Quote
                         <i class="flaticon-right-1"></i>
                     </a>
@@ -619,7 +619,7 @@ huge discount offers and free shipping quotes nationwide.')
 
 
                     <div class="tj-theme-button mt-2">
-                        <a class="tj-transparent-btn" href="href="{{ config('app.url') }}/contact_us" target="_blank">
+                        <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
                             Get Support<i class="flaticon-right-1"></i>
                         </a>
                     </div>
