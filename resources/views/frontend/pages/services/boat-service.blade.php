@@ -179,7 +179,7 @@
                             help of special and equipped carriers you don’t need to worry at all about the shipping process and completely trust us to ensure timely delivery 
                             with 100% transparency and 24/7 customer service to tend to your concerns and queries.</p>
                         <div class="tj-theme-button  text-center mt-2">
-                                                <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                                                <a class="tj-transparent-btn" href="href="{{ config('app.url') }}/contact_us" target="_blank">
                                                     Get Quote
                                                     <i class="flaticon-right-1"></i>
                                                 </a>

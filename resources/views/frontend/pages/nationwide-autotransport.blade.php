@@ -428,7 +428,7 @@
                         <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
                     </div>
                     <div class="tj-theme-button mt-2">
-                        <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                        <a class="tj-transparent-btn" href="href="{{ config('app.url') }}/contact_us" target="_blank">
                             Get Support<i class="flaticon-right-1"></i>
                         </a>
                     </div>
