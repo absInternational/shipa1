@@ -236,7 +236,7 @@
                                             <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                             <select class=" " id="trailer_type" name="trailer_type">
                                                 <option value="1" selected>Open Trailer</option>
-                                                <option value="2">Enclosed Carrier</option>
+                                                <option value="2">Enclosed Trailer</option>
                                             </select>
                                         </div>
                                     </div>
