@@ -180,6 +180,7 @@
                             enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="car_type" value="3" hidden>
+                            <input type="hidden" name="vehicle_opt" value="freight" hidden>
                             @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <ul>

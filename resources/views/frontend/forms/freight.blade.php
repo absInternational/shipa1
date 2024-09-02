@@ -237,6 +237,7 @@
                                 </div>
                             @endif
                             <input type="hidden" name="car_type" value="3" hidden>
+                            <input type="hidden" name="vehicle_opt" value="freight" hidden>
                             <div class="input-form">
                                 <label for="category">Category</label>
                                 <select class="form-control" id="category" name="category">
