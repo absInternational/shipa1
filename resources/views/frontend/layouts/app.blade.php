@@ -479,7 +479,7 @@
                     var modelsDropdown = $('.vehicle-model-div');
                     modelsDropdown.empty();
                     var selectOptions =
-                        '<label>Model</label><input type="text" class="form-control mt-2 d-none" name="model[]" id="other_model" placeholder="Enter Model"> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option> <option value="other">Other</option>';
+                        '<label>Model</label><select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
                     $.each(response, function(index, model) {
                         selectOptions += '<option value="' + model + '">' + model + '</option>';
                     });
