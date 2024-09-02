@@ -500,7 +500,7 @@
                        as your trusted and reliable partner who shares mutual feelings when it comes to professionalism and 
                        transparency.</p>
                     <div class="tj-theme-button  text-center mt-2">
-                        <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
+                        <a class="tj-transparent-btn" href="href="{{ config('app.url') }}/contact_us" target="_blank">
                             Get Quote
                             <i class="flaticon-right-1"></i>
                         </a>
