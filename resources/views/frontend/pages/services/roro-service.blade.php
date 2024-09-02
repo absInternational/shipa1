@@ -8,30 +8,30 @@
         color: white;
     }
     .why-box {
-        border-radius: 12px;
-        padding: 20px 0px;
-        background: #f8f9fa9c;
+    border-radius: 12px;
+    padding: 20px 0px;
+    background: #f8f9fa9c;
     }
     .card- {
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
-        }
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
+    }
     .services {
-        text-align: center;
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-        border-radius: 12px;
-        padding: 10px 30px 0px 30px;
-        /* background-color: #9d9e9f14;*/
+    text-align: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    border-radius: 12px;
+    padding: 10px 30px 0px 30px;
+    /* background-color: #9d9e9f14;*/
     }
 
     .services-h1 {
-        text-align:center;
-        /* text-decoration: overline; */
-        margin-bottom: 50px;
-        /* color: #ffffff; */
+    text-align:center;
+    /* text-decoration: overline; */
+    margin-bottom: 50px;
+    /* color: #ffffff; */
     }
 </Style>
 <section class="tj-choose-us-section-service-roro">
@@ -452,18 +452,16 @@
                         <h3 class="sal-animate" data-sal="slide-left" 
                         data-sal-duration="800">Comparing RORO and Container Shipping</h3>
                         <p class="desc">
-                        When it comes to the international transportation of vehicles, importers usually prefer one of two
-                            primary shipping methods: Container shipping and RORO shipping. Either one of these is quite 
-                            practical and secure when it comes to the safe transportation of your vehicle. However, there is
-                            some consideration to be made in terms of whether or not RORO is the better of the two options.
-                            So, today we discuss the benefits and flaws of the RORO shipping methods, as well as the difference
-                            it has in comparison with container shipping. The auto car shipping companies provide exceptional
-                                service for the transportation of the car from one place to another place. The best thing about 
-                                the car shipping with a trusted and popular company is that the company will make the car 
-                                shipping service to another level.However, if you are thinking of shipping the car internationally, 
-                                then nothing can beat the (Roll-on/Roll-off) services. It involves the movers to rolling the automobile up 
-                                a ramp into the cargo deck of a commercial ship. Thousands of vehicles are now shipping with the help of the 
-                                (Roll-on/roll-off) car shipping.</p>
+                            When it comes to the international transportation of vehicles, importers usually prefer one of two primary shipping methods: 
+                            <ul>
+                                <li>Container shipping</li>
+                                <li>RORO shipping</li>
+                            
+                            </ul>
+                            The auto car shipping companies provide exceptional service for the transportation of the car from one place to 
+                            another place. The best thing about working with a trusted and renowned company is that you won't have to worry 
+                            about anything because our expert and well-equipped team will do that for you! 
+                        </p>
                     </div>
                 </div>
             </div>
@@ -491,14 +489,14 @@
                         {{-- <span class="sub-title active-shape">Benefits of RORO Shipping Service</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Benefits of RORO Shipping Service</h3>
-                        <p class="desc">Some of the advantages are as follows: For the shipper, the interest is speed. Since cars and lorries
-                            can drive straight on to the ship at one port and then drive off at the other port within a few 
-                            minutes of the ship docking, it saves much time of the shipper. It can also integrate well with
-                            additional transport development, such as containers. The use of Customs-sealed units has enabled 
-                            frontiers to be crossed with the minimum of delay. Therefore, it increases the speed and efficiency
-                            of the shipper. The ship has also proved extremely popular with holidaymakers and private car
-                            owners. It has significantly contributed to the growth of tourism. A person can take his car 
-                            from one country to another by the sea with the help of a RORO vessel.</p>
+                        <p class="desc">Some of the advantages are as follows: <br> 
+                            Similar to how affordability interests a customer, the same way speed interests a shipper. Since cars and 
+                            lorries can drive straight onto the ship at one port and then drive off at the other port within a few 
+                            minutes of the ship docking, it saves much time for the shipper. <br>
+                            It can also integrate well with additional transport development, such as containers. The use of 
+                            Customs-sealed units has enabled frontiers to be crossed with the minimum of delay. Therefore, it 
+                            increases the speed and efficiency of the shipper. The ship has also worked with extremely popular 
+                            vacation planners and private car owners. Hence significantly contributing to the growth of tourism.</p>
                     </div>
                 </div>
             </div>
@@ -508,6 +506,8 @@
 <section class="tj-about-section pt-4">
     <div class="container">
         <div class="row">
+            <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
+                Key Features of RORO Shipping</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
@@ -641,38 +641,39 @@
         </div>
     </div>
 </section> --}}
-<section class="tj-about-section-five">
-    <div class="container">
+
+<section class="tj-choose-us-section-service-farm-8">
+    <div class="container why-box">
         <div class="row services">
             <h1 class="services-h1">Our RORO Shipping Process Explained</h1>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Step 1</h5>
-                        <p class="card-text text-light">The client contacts about shipping his vehicle overseas and provides us with necessary documents relating to its automobile.</p>
+                        <h5 class="card-title text-dark">Step 1</h5>
+                        <p class="card-text text-dark">The client contacts about shipping his vehicle overseas and provides us with necessary documents relating to its automobile.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Step 2</h5>
-                        <p class="card-text text-light">Ship-A1 starts preparing your documents for secure shipping, and you receive the bill detailing the cost of taxes.</p>
+                        <h5 class="card-title text-dark">Step 2</h5>
+                        <p class="card-text text-dark">Ship-A1 starts preparing your documents for secure shipping, and you receive the bill detailing the cost of taxes.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Step 3</h5>
-                        <p class="card-text text-light">Ship-A1 offers seamless RORO shipping from the U.S., handling customs, loading, and providing manual tracking. Trust us for safe, reliable, and affordable car shipping with special discounts available.</p>
+                        <h5 class="card-title text-dark">Step 3</h5>
+                        <p class="card-text text-dark">Ship-A1 offers seamless RORO shipping from the U.S., handling customs, loading, and providing manual tracking. Trust us for safe, reliable, and affordable car shipping with special discounts available.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="tj-choose-us-section-service-roro">
+{{-- <section class="tj-choose-us-section-service-roro">
     <div class="container why-box">
         <div class="row">
             <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -720,7 +721,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <section class="tj-faq-section tj-faq-page">
     <div class="container">
         <div class="row">

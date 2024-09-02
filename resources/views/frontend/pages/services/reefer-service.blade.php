@@ -91,17 +91,18 @@
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">The World of Reefer Shipping</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <p class="desc">In the vast expanse of global shipping, a term known as "reefer" holds a unique significance. It's not about 
-                            a laid-back lifestyle; instead, it's all about ensuring that perishable commodities reach their destinations in perfect 
-                            condition. Reefer, in the realm of shipping, refers to refrigerated ships and shipping containers specifically designed 
-                            to transport goods that are sensitive to temperature fluctuations.
-                            From fruits and vegetables to meat, fish, and dairy products, these vessels and containers play a crucial role in maintaining 
-                            the quality and freshness of the cargo they carry.
-                            Cold chain logistics plays a crucial role in safeguarding the integrity of products like fresh produce, pharmaceuticals, 
-                            vaccines, and more. Advocating for reefer shipping emphasizes the significance of these specialized services like: <br>
-                            Maintaining product quality and safety,
-                            Reducing waste, and
-                            Meeting the demands of consumers worldwide for fresh, high-quality goods.
+                        <p class="desc">Reefer refers to refrigerated ships and shipping containers specifically designed to
+                             transport goods that are sensitive to temperature fluctuations. From fruits and vegetables to meat,
+                              fish, and dairy products, these vessels and containers play a crucial role in maintaining the quality
+                               and freshness of the cargo they carry. <br>
+                            Additionally, Cold chain logistics plays a crucial role in safeguarding the integrity of products 
+                            like fresh produce, pharmaceuticals, vaccines, and more. Advocating for reefer shipping emphasizes 
+                            the significance of these specialized services like: <br>
+                            <ul>
+                                <li>Maintaining product quality and safety</li>
+                                <li>Reducing waste</li>
+                                <li>Meeting the demands of consumers worldwide for fresh, high-quality goods</li>
+                            </ul>                           
                         </p>
                     </div>
                     
@@ -130,12 +131,11 @@
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Cold Chain Logistics</span>
                         <p class="desc">
-                            
-                            Cold chain logistics is a comprehensive process that encompasses temperature-controlled storage, transportation,
-                                continuous monitoring, quality control, and strict regulatory compliance. It is a highly specialized field dedicated
-                                to preserving the quality and safety of perishable goods throughout their journey from production to the end consumer,
-                                making it crucial for industries reliant on maintaining product freshness and integrity.Here is the detail of these
-                                specialized stages which makes this shipping method different from others:
+                            Cold chain logistics is a comprehensive process that encompasses temperature-controlled storage, 
+                            transportation, continuous monitoring, quality control, and strict regulatory compliance. It is a 
+                            highly specialized field dedicated to preserving the quality and safety of perishable goods throughout
+                            their journey from production to the end consumer, making it crucial for industries reliant on 
+                            maintaining product freshness and integrity. 
                             <!-- <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <ul class="ps-0">
