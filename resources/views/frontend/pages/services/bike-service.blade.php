@@ -90,20 +90,16 @@
                              <br>
                     <div class="text-container text-left">
                         <h3>A Reliable and Cost-Effective Way of Motorcycle Shipping</h3>
-                        <p>You can find many<a class="pp-link-2" href="{{ route('welcome') }}"> 
-                            motorcycle shipping companies </a>online that are providing the services nationwide, but often it becomes a
-                             nightmare for some of the people when they find that their motorcycle has not been shipped at the quoted 
-                             time and then the company is demanding for hidden charges that one never knew existed. This kind of rip-off 
-                             can hurt your sentiments related to the shipping service which is why ship A1 provides its customers with
-                              accurate <a class="pp-link-2" href="{{ route('form.vehicle.form.vehicle.car') }}">  shipping quotes.</a>
-                               For one to get to know about the reliable motorcycle shipping company, one needs to do a lot of research 
-                               and after only getting to know what others have to say about the particular company, will you be able to 
-                               know about the motorcycle shipping company and whether or not you need to trust it with your motorcycle 
-                               relocation. Well, you can trust the company that has relatively a sound experience in this field, and 
-                               that is ShipA1. ShipA1 has an extraordinary connection with the service of motorcycle shipping because 
-                               it excels in the motorcycle shipment across the United States of America. It has managed to ship many 
-                               hundreds and thousands of motorcycles and all in a very good condition because ShipA1 only provides 
-                               professional service</p> 
+                        <p>There are multiple motorcycle shipping companies online that offer services throughout the
+                             nation easily, however finding a reliable company that ships your motorcycle in the quoted 
+                             time can be a daunting task. When transporting with Ship A1 you don’t need to worry about 
+                             any upfront or hidden payments because we provide our customers with accurate <a class="pp-link-2" href="{{ route('form.vehicle.form.vehicle.car') }}"> shipping quotes.</a>
+                            With 16 years of experience in this field,<a class="pp-link-2" href="{{ route('welcome') }}"> Ship A1 </a> can confidently guarantee your smooth 
+                            transportation! Providing services nationwide we excel in motorcycle shipment with plenty 
+                            of benefits that leave the customer wanting to work with us again and again. Not only do we 
+                            provide the best services we also take care of your budget and offer reasonable rates without 
+                            compromising the quality.
+                            </p> 
                         
                         <br>
                        
@@ -339,12 +335,13 @@
                         <h3 class="sal-animate" data-sal="slide-left" 
                         data-sal-duration="800">Affordable and Secure Shipping</h3>
                         <p class="desc">
-                        If you are worried about the increased rates of the motorcycle shipping, and you don’t want to continue 
-                        the shipment because of that fear, then you don’t have to worry because the shipment is made on the 
-                        basis of stable rates because ShipA1 believes in giving a quality offer to the customers rather than
-                            using the opportunity against them. <br> ShipA1 takes into account everything that can be a potential threat 
-                            to the safety and security of the motorcycle, and that is the reason it has maintained the status of 
-                            shipping the motorcycles with ultimate care and attention.</p>
+                            If you are worried about the increased rates of motorcycle shipping, and you don’t want
+                             to continue the shipment because of that fear, worry no more because Ship A1 offers transparency
+                              and affordability in every shipment. <br>
+                            After all, ShipA1 believes in giving a quality offer to the customers rather than using the
+                             opportunity against them. We understand your needs and promise to fulfill your requirements
+                              by offering tailored solutions and taking care of your vehicle.
+                            </p>
                     </div>
                     
                 </div>
@@ -362,12 +359,13 @@
                         <h3 class="sal-animate" data-sal="slide-left" 
                         data-sal-duration="800">Stress-Free Motorcycle Shipping</h3>
                         <p class="desc">
-                        You can ride your bike at a particular location, but it involves risk and demands specific information 
-                        about routes and places, but with ShipA1 there is no risk involved because they are well aware of all 
-                        the things that are necessary for the shipment of motorcycles. <br> Huge pressure will be lifted off both 
-                        physically and mentally once you ship your motorcycle with the ShipA1 and you will notice that it was 
-                        not a bad idea trusting ShipA1 with your needs of motorcycle shipping from one state to another of the 
-                        USA.</p>
+                            Shipping your motorcycle from one place to another looks like an easy job but certain risks and 
+                            demands arise when it comes to choosing different routes and places. However, if you are shipping 
+                            with Ship A1, you have nothing to worry about since there are no risks involved when transporting
+                             your vehicle. Our professional and experienced staff is well aware of everything necessary for the
+                              shipment of motorcycles. <br>
+                            Trusting Ship A1 will offer you peace of mind because that is our customer promise!
+                            </p>
                     </div>
                 </div>
             </div>
@@ -384,7 +382,7 @@
     <div class="container">
         <div class="row">
             <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
-                Comprehensive Construction Equipment Transport Service</h2>
+                Why Choose Us?</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
@@ -467,8 +465,9 @@
                 <div class="card- h-100">
                     <div class="card-body">
                         <h5 class="card-title text-dark">Open Trailer</h5>
-                        <p class="card-text text-dark">Although a bit expensive, it is a safe way to get your car transport. Enclosed carrier guards your car
-                             against the external environment such as weather ailments etc.</p>
+                        <p class="card-text text-dark">A standard and cost-effective way to ship your car from anywhere to your desired destination. Your 
+                            vehicle will be strapped onto an open trailer with utmost care and safety and delivered to your location without any
+                             complications.</p>
                     </div>
                 </div>
             </div>
