@@ -294,6 +294,8 @@
                 `
                 <div class="vehicle-info">
                 <div class="row select-bm">
+                    <!-- Bin icon for deleting vehicle -->
+            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
                 <div class="col-md-4">
                 <div class="input-form tj-select">
                 <label> Year</label>
@@ -323,10 +325,18 @@
             <select class="nice-select model" name="model[]" id="model" required>
             <!-- Options filled by JavaScript -->
             </select>
-            <!-- Bin icon for deleting vehicle -->
-            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
+            
             </div>
             </div>
+            <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="condition" class="text-white">Condition</label>
+                                <select class="nice-select" id="condition" name="condition[]">
+                                    <option value="1" selected>Running</option>
+                                    <option value="2">Non Running</option>
+                                </select>
+                            </div>
+                        </div>
             </div>
             </div>
             `;
