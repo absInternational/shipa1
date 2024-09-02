@@ -642,31 +642,31 @@
 });
 </script>
 <script>
-    $(document).ready(function() {
-        $('#other_year').attr('disabled', true);
-        $('#other_make').attr('disabled', true);
-        $('#other_model').attr('disabled', true);
+    // $(document).ready(function() {
+    //     $('#other_year').attr('disabled', true);
+    //     $('#other_make').attr('disabled', true);
+    //     $('#other_model').attr('disabled', true);
 
-        function handleOtherSelection(selectId, inputId) {
-            $(selectId).on('change', function() {
-                if ($(this).val() === 'other') {
-                    $(this).addClass('d-none');
-                    $(inputId).removeClass('d-none')
-                            .attr('required', 'required')
-                            .removeAttr('disabled');
-                } else {
-                    $(inputId).addClass('d-none')
-                            .removeAttr('required')
-                            .attr('disabled', true);
-                    $(this).removeClass('d-none');
-                }
-            });
-        }
+    //     function handleOtherSelection(selectId, inputId) {
+    //         $(selectId).on('change', function() {
+    //             if ($(this).val() === 'other') {
+    //                 $(this).addClass('d-none');
+    //                 $(inputId).removeClass('d-none')
+    //                         .attr('required', 'required')
+    //                         .removeAttr('disabled');
+    //             } else {
+    //                 $(inputId).addClass('d-none')
+    //                         .removeAttr('required')
+    //                         .attr('disabled', true);
+    //                 $(this).removeClass('d-none');
+    //             }
+    //         });
+    //     }
 
-        handleOtherSelection('#year', '#other_year');
-        handleOtherSelection('#make', '#other_make');
-        handleOtherSelection('#model', '#other_model');
-    });
+    //     handleOtherSelection('#year', '#other_year');
+    //     handleOtherSelection('#make', '#other_make');
+    //     handleOtherSelection('#model', '#other_model');
+    // });
 </script>
 
 </body>
