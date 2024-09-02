@@ -11415,3 +11415,53 @@ PAGE LOAD ANIMATION
     .custom-logo-items img {
         height: 100px;
     }
+    .err-loc {
+        color: #ff0000; /* Red color for error messages */
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 5px;
+        display: block;
+    }
+    
+    .input-form input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+    }
+    
+    .input-form input:focus {
+        border-color: #007bff; /* Blue border on focus */
+        outline: none;
+    }
+    
+    .suggestions {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        max-height: 150px;
+        overflow-y: auto;
+        display: none; /* Hidden by default */
+        position: absolute; /* Positioned relative to input */
+        z-index: 1000;
+    }
+    
+    .suggestions li {
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    .suggestions li:hover {
+        background-color: #f0f0f0;
+    }
+    
+    .input-form {
+        position: relative; /* Needed to position the suggestions dropdown */
+    }

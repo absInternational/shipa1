@@ -454,10 +454,12 @@
         // Initial mask update based on the default country code
         updateMask();
     </script>
-
+<script>
+    
+</script>
 <script>
     $(document).ready(function() {
-        // Handle changes in the year and make dropdowns
+       
         $(document).on('change', '.vehicle-year, .vehicle-make', function() {
             var year = $('.vehicle-year').val();
             var makeId = $('.vehicle-make').val();
@@ -466,7 +468,7 @@
             }
         });
 
-        // Function to get and populate models dropdown
+
         function getModel(year, makeId) {
             $.ajax({
                 url: "{{ route('get.models') }}",

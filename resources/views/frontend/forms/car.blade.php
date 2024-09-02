@@ -286,10 +286,133 @@
     </section>
 @endsection
 @section('extraScript')
+
 <script>
-    
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                <div class="vehicle-info">
+                <div class="row select-bm">
+                <div class="col-md-4">
+                <div class="input-form tj-select">
+                <label> Year</label>
+                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+            newVehicleHtml +=
+                `</select>
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="input-form tj-select">
+                <label>Make</label>
+                <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
+            @foreach ($makes as $make)
+                newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
+            @endforeach
+            newVehicleHtml += `
+            </select>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="input-form tj-select model-div">
+            <label>Model</label>
+            <select class="nice-select model" name="model[]" id="model" required>
+            <!-- Options filled by JavaScript -->
+            </select>
+            <!-- Bin icon for deleting vehicle -->
+            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
+            </div>
+            </div>
+            </div>
+            </div>
+            `;
+            $('#vehicles-container').append(newVehicleHtml);
+        }
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+        $(document).on('change', '.year, .make', function() {
+            var year = $(this).closest('.vehicle-info').find('.year').val();
+            var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            if (year && makeId) {
+                getModel(year, makeId, vehicleInfo);
+            }
+        });
+        function getModel(year, makeId, vehicleInfo) {
+            console.log('yes inn');
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelsDropdown = vehicleInfo.find('.model');
+                    modelsDropdown.empty();
+                    var selectOptions = '<option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' + model +
+                            '</option>';
+                    });
+                    modelsDropdown.html(selectOptions);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+    });
 </script>
 <script>
+    $(document).ready(function() {
+        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+            var year = $('.vehicle-year').val();
+            var makeId = $('.vehicle-make').val();
+            if (year && makeId) {
+                getModel(year, makeId);
+            }
+        });
+    });
+        function getModel(year, makeId) {
+            console.log('yes inn');
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelsDropdown = $('.vehicle-model-div');
+                    modelsDropdown.empty();
+                    var selectOptions =
+                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' + model +
+                            '</option>';
+                    });
+                    selectOptions += '</select>';
+                    modelsDropdown.html(selectOptions);
+                    console.log('yesssss', response);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+    
+</script>
+
+{{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -391,69 +514,104 @@
             });
         }
     });
-</script>
+</script> --}}
 <script>
    $(document).ready(function() {
         $('#available_at_auction').change(function() {
             if ($(this).is(':checked')) {
                 $('.div-link').show();
-                $('#link').attr('required', true); // Make input required
+                $('#link').attr('required', true); 
             } else {
                 $('.div-link').hide();
-                $('#link').val(''); // Clear the input field
-                $('#link').removeAttr('required'); // Remove required attribute
+                $('#link').val(''); ld
+                $('#link').removeAttr('required'); 
             }
         });
         
         $('#modification').change(function() {
             if ($(this).is(':checked')) {
                 $('.div-modify_info').show();
-                $('#c').attr('required', true); // Make input required
+                $('#c').attr('required', true); 
             } else {
                 $('.div-modify_info').hide();
-                $('#c').val(''); // Clear the input field
-                $('#c').removeAttr('required'); // Remove required attribute
+                $('#c').val('');eld
+                $('#c').removeAttr('required'); 
             }
         });
     });
 </script>
 <script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
+    var validPickupSuggestions = [];
+var validDeliverySuggestions = [];
 
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
+function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+    var inputValue = inputField.val();
 
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
+    $.ajax({
+        url: "{{ route('get.zipcodes') }}",
+        method: "POST",
+        data: {
+            "_token": "{{ csrf_token() }}",
+            "input": inputValue
+        },
+        success: function(response) {
+            suggestionsList.empty();
+            validSuggestions.length = 0;  // Clear previous suggestions
+
+            $.each(response, function(index, suggestion) {
+                var listItem = $("<li>").text(suggestion).click(function() {
+                    inputField.val(suggestion);
+                    suggestionsList.css("display", "none");
                 });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
+                validSuggestions.push(suggestion);  // Add to valid suggestions
+                suggestionsList.append(listItem);
+            });
+        },
+        error: function(xhr, status, error) {
+            console.error("Error:", error);
         }
-        updateSuggestions(inputField, suggestionsList);
     });
+}
+
+$("#pickup-location").keyup(function() {
+    var inputField = $(this);
+    var suggestionsList = inputField.siblings(".suggestionsTwo");
+    suggestionsList.css("display", "block");
+    if (inputField.val() === "") {
+        suggestionsList.css("display", "none");
+    }
+    updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+});
+
+$("#delivery-location").keyup(function() {
+    var inputField = $(this);
+    var suggestionsList = inputField.siblings(".suggestionsTwo");
+    suggestionsList.css("display", "block");
+    if (inputField.val() === "") {
+        suggestionsList.css("display", "none");
+    }
+    updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+});
+
+function validateLocationInput(inputField, validSuggestions, errorField) {
+    var inputValue = inputField.val();
+    if (!validSuggestions.includes(inputValue)) {
+        errorField.text("Please select a valid location.");
+        return false;
+    } else {
+        errorField.text("");
+        return true;
+    }
+}
+
+$("form").submit(function(event) {
+    var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+    var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+
+    if (!isPickupValid || !isDeliveryValid) {
+        event.preventDefault();  // Prevent form submission if validation fails
+    }
+});
 </script>
 
 
