@@ -416,7 +416,6 @@
     </script>
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    
 <script src="/assets/intl-tel-input/intlTelInput.js"></script>
 <script>
     // Initialize intl-tel-input
@@ -642,7 +641,7 @@
     });
 });
 </script>
-{{-- <script>
+<script>
     $(document).ready(function() {
         $('#other_year').attr('disabled', true);
         $('#other_make').attr('disabled', true);
@@ -668,7 +667,7 @@
         handleOtherSelection('#make', '#other_make');
         handleOtherSelection('#model', '#other_model');
     });
-</script> --}}
+</script>
 
 </body>
 

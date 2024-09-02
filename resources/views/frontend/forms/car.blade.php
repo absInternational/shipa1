@@ -85,9 +85,9 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                            required="" />
+                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
                                         <small id="errPhone" class="err-style"></small>
+                                        <input type="hidden" name="country_code" id="country_code" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -162,7 +162,6 @@
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white mb-0">Car Information</h4>
                                 </div>
-                            
                                 <!-- Year -->
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
@@ -180,7 +179,6 @@
                                         <input type="text" class="form-control mt-2 d-none" name="year[]" id="other_year" placeholder="Enter Year">
                                     </div>
                                 </div>
-                            
                                 <!-- Make -->
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
@@ -195,7 +193,6 @@
                                         <input type="text" class="form-control mt-2 d-none" name="make[]" id="other_make" placeholder="Enter Make">
                                     </div>
                                 </div>
-                            
                                 <!-- Model -->
                                 <div class="col-md-4">
                                     <div class="input-form tj-select vehicle-model-div">
@@ -289,6 +286,9 @@
     </section>
 @endsection
 @section('extraScript')
+<script>
+    
+</script>
 <script>
     $(document).ready(function() {
         function addNewVehicle() {
