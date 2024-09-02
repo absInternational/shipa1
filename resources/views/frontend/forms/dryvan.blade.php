@@ -485,10 +485,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -496,10 +496,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input1" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -507,10 +507,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input2" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -518,9 +518,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
-                                        <input type="" id="feet-input" class="input-field-1" placeholder=""
+                                        <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
+
                                     </div>
                                 </div>
                             </div>
@@ -720,16 +721,6 @@
                 freight_calc();
             }
             function freight_calc() {
-                // var length_ft = $('#length_ft').val();
-                // var length_in = $('#length_in').val();
-                // var width_ft = $('#width_ft').val();
-                // var width_in = $('#width_in').val();
-                // var height_ft = $('#height_ft').val();
-                // var height_in = $('#height_in').val();
-                // var weight = $('#weight').val();
-                // var length = length_ft * 12 + parseFloat(length_in);
-                // var width = width_ft * 12 + parseFloat(width_in);
-                // var height = height_ft * 12 + parseFloat(height_in);
                 var length_ft = parseFloat($('#length_ft').val());
                 var length_in = parseFloat($('#length_in').val());
                 var width_ft = parseFloat($('#width_ft').val());

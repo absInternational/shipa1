@@ -275,7 +275,6 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
@@ -286,9 +285,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
@@ -299,9 +296,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
@@ -312,9 +307,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
                                         <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
