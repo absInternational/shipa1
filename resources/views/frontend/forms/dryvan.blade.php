@@ -721,16 +721,6 @@
                 freight_calc();
             }
             function freight_calc() {
-                // var length_ft = $('#length_ft').val();
-                // var length_in = $('#length_in').val();
-                // var width_ft = $('#width_ft').val();
-                // var width_in = $('#width_in').val();
-                // var height_ft = $('#height_ft').val();
-                // var height_in = $('#height_in').val();
-                // var weight = $('#weight').val();
-                // var length = length_ft * 12 + parseFloat(length_in);
-                // var width = width_ft * 12 + parseFloat(width_in);
-                // var height = height_ft * 12 + parseFloat(height_in);
                 var length_ft = parseFloat($('#length_ft').val());
                 var length_in = parseFloat($('#length_in').val());
                 var width_ft = parseFloat($('#width_ft').val());
