@@ -238,7 +238,7 @@
                             </div> --}}
                             <div class="input-form mt-1">
                                 <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" name="image" type="file" accept="image/*" multiple
+                                <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
                                     onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
