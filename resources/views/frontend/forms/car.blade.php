@@ -299,23 +299,23 @@
                         <!-- Bin icon for deleting vehicle -->
                         <span class="delete-vehicle"><i class="fa fa-trash mt-3" style="float: right; color: red;"></i></span>
                     <div class="col-md-4">
-                        <div class="input-form tj-select">
-                                <label> Year</label>
-                                <select class="nice-select year" name="year[]" required id="year"> 
-                                    <option value="" disabled selected>Select Year</option>`;
+                                    <div class="input-form tj-select">
+                                        <label> Year</label>
+                                        <select class="nice-select vehicle-year" name="year[]" id="year" required>
+                                            <option value="" disabled selected>Select Year</option>`;
                                         var currentYear = {{ date('Y') }};
                                         for (var year = currentYear; year >= 1936; year--) {
                                             newVehicleHtml += `<option value="${year}">${year}</option>`;
                                         }
                                         newVehicleHtml +=
-                                `<option value="other">Other</option></select>
-                                <input type="text" class="form-control mt-2 d-none" name="year[]" id="other_year" placeholder="Enter Year">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input-form tj-select">
-                            <label>Make</label>
-                            <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
+                                `</select>
+                                    </div>
+                                </div>
+                   <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <select class="nice-select vehicle-make" name="make[]" id="make" required>
+                                            <option value="" disabled selected>Select Make</option>`;
 
                             @foreach ($makes as $make)
                                 newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
@@ -323,16 +323,17 @@
 
                             newVehicleHtml += `
                             </select>
-                        </div>
-                    </div>
+                                    </div>
+                                </div>
                     <div class="col-md-4">
-                        <div class="input-form tj-select model-div">
-                            <label>Model</label>
-                            <select class="nice-select model" name="model[]" id="model" required>
-                            <!-- Options filled by JavaScript -->
-                            </select>
-                        </div>
-                    </div>
+                                    <div class="input-form tj-select vehicle-model-div">
+                                        <label>Model</label>
+                                        <select class="nice-select vehicle-model" name="model[]" id="model" required>
+                                            <option value="">Select Model</option>
+                                            <option value="">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="condition" class="text-white">Condition</label>
