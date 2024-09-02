@@ -153,7 +153,7 @@
                                         <label>Model</label>
                                         <select class="nice-select vehicle-model" name="model[]" id="model" required>
                                             <option value="">Select Model</option>
-                                            <option value="">Other</option>
+                                            
                                         </select>
                                     </div>
                                 </div>
@@ -330,7 +330,7 @@
                                         <label>Model</label>
                                         <select class="nice-select vehicle-model" name="model[]" id="model" required>
                                             <option value="">Select Model</option>
-                                            <option value="">Other</option>
+                                           
                                         </select>
                                     </div>
                                 </div>
