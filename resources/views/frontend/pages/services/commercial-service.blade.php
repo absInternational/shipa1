@@ -89,15 +89,13 @@
                 <div class="about-content-one">
                     <div class="tj-section-heading">
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Overview of Commercial Truck Transport</h3>
-                        <p class="desc">When talking about commercial truck transport service, you will find many companies 
-                            that offer this service. The industry of auto transport is increasing rapidly. Whether it comes
-                            to transport standard vehicles or to deliver goods through commercial trucks, all these services
-                            are accessible on the internet easily. The industry is spread over multiple domains and 
-                            categories, offering a variety of different services. Commercial truck shipping falls in 
-                            one of these categories. The service itself has its pros and cons. Ship A1 is the top-rank 
-                            vehicle transport company offering multiple services to its valuable customers for many years.
-                            As every business and industry has its own set of rules and regulations, similarly, the 
-                            shipping industry is not different from others.</p>
+                        <p class="desc">Whether it comes to transporting standard vehicles or delivering goods through commercial trucks, all these 
+                            services are accessible on the Internet easily. The industry of auto transport is increasing rapidly and has successfully 
+                            spread over multiple domains and categories, offering a variety of different services. <br>
+                            Ship A1 is a leading transportation company that has been in the market for 16 years, we not only offer multiple services
+                             to our valuable customers. We also ensure we have gained their trust by giving our 100% to them. With advanced trailers 
+                             and top-tier quality, Ship A1 has made more than 1000 successful deliveries nationwide. 
+                            </p>
                     </div>
                 </div>
             </div>
@@ -124,76 +122,76 @@
                 <div class="about-content-one">
                     <div class="tj-section-heading">
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Choosing a Truck Transport Service</h3>
-                        <p class="desc">There are certain terms and conditions that you need to know before you go to search 
-                            commercial truck transport service through a reliable shipping company. Although the companies 
-                            offering auto transport services are in great numbers, finding a suitable service at a market 
-                            competitive price that meets your transportation requirements is not an easy job. When you are 
-                            looking for a commercial truck shipping service, some key points that come into play affecting 
-                            the overall price factor and the service quality. You can also get truck shipping quotes at Ship A1. 
-                            The factors that you need to consider will determine your overall shipping journey. The distance is 
-                            a factor that plays a major role in the price and service you are getting. Along with the distance; 
-                            the routeway matters too.</p>
+                        <p class="desc">There are certain terms and conditions that you need to know before you go to search for 
+                            commercial truck transport service through a reliable shipping company. Although the companies offering auto transport 
+                            services are in great numbers, finding a suitable service at a market-competitive price that meets your transportation 
+                            requirements is not an easy job. <br>
+                            When you are looking for a commercial truck shipping service, some key points come into play affecting the overall price
+                             factor and the service quality. The factors that you need to consider will determine your overall shipping journey. When 
+                             transporting your vehicle some scenarios play a major role in the price and service you are getting for example distance,
+                              route, and time.
+                            </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- <div class="container">
-        <div class="row">           
-            <div class="col-lg-8 col-md-12 sal-animate d-flex align-items-center justify-content-center" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one">
-                    <div class="tj-section-heading">
-                    <h3 class="sal-animate" 
-                    data-sal="slide-left" data-sal-duration="800">Safe and Affordable Truck Transport</h3>
-                        <span class="sub-title active-shape">Specialized Equipment Shipping</span>
-                        <p class="desc">
-                            It is risky to transport the vehicle on 
-                            your own on certain routeways; that is why ShipA1 offers reliable commercial truck transport 
-                            service at an affordable cost. One does not need to worry again. We have an extensive network of workers 
-                            who are experts in the vehicle shipping industry. They are aware of the routes and pathways that work best 
-                            during the shipment. To add more safety and security, our team tracks your vehicle continuously during the 
-                            shipment. Another factor that is the reason behind the increase and decrease in the prices is the factor of 
-                            the weather and time period. Since the residents of the United States are blessed to experience all kinds of 
-                            weather conditions, there is one special weather when the price reaches its highest level. In winters, commercial 
-                            truck transport becomes difficult, and that is why not many car shipping companies are up for the task.</p>
+                <div class="row">           
+                    <div class="col-lg-8 col-md-12 sal-animate d-flex align-items-center justify-content-center" data-sal="slide-left" data-sal-duration="800">
+                        <div class="about-content-one">
+                            <div class="tj-section-heading">
+                            <h3 class="sal-animate" 
+                            data-sal="slide-left" data-sal-duration="800">Safe and Affordable Truck Transport</h3>
+                                <span class="sub-title active-shape">Specialized Equipment Shipping</span>
+                                <p class="desc">
+                                    It is risky to transport the vehicle on 
+                                    your own on certain routeways; that is why ShipA1 offers reliable commercial truck transport 
+                                    service at an affordable cost. One does not need to worry again. We have an extensive network of workers 
+                                    who are experts in the vehicle shipping industry. They are aware of the routes and pathways that work best 
+                                    during the shipment. To add more safety and security, our team tracks your vehicle continuously during the 
+                                    shipment. Another factor that is the reason behind the increase and decrease in the prices is the factor of 
+                                    the weather and time period. Since the residents of the United States are blessed to experience all kinds of 
+                                    weather conditions, there is one special weather when the price reaches its highest level. In winters, commercial 
+                                    truck transport becomes difficult, and that is why not many car shipping companies are up for the task.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 sal-animate d-flex align-items-center justify-content-center" data-sal="slide-left" data-sal-duration="800">
+                        <div class="mt-4 rounded">
+                            <div class="image-box">
+                                <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE-2.webp') }}" alt="Image">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-12 sal-animate d-flex align-items-center justify-content-center" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded">
-                    <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE-2.webp') }}" alt="Image">
+                </div> -->
+                <!-- <div class="container">
+                    <div class="row">    
+                        <div class="col-lg-4 col-md-12 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                            <div class="mt-4 rounded">
+                                <div class="image-box">
+                                    <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE4.webp') }}" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-lg-8 col-md-12 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                        <div class="about-content-one">
+                            <div class="tj-section-heading">
+                                <span class="sub-title active-shape"> Construction Transportation</span>
+                                <p class="desc">ShipA1 is one of those generous car shipping companies that give services of 
+                                    commercial truck transport at reasonable rates, no matter what the time and weather of the year.
+                                    ShipA1 has full command over providing well-organized and stable commercial truck transport
+                                    services to people who want such a service. Apart from the pickup and drop off location and the
+                                    dimensions of the truck, another main factor playing a major role in the commercial truck 
+                                    shipping service is the type of trailer or truck you need to ship. The trailers can vary
+                                        depending upon the commercial requirements of your business industry. We deal in all kinds of
+                                        commercial truck transport so that you get a one-stop solution for your shipping journey. 
+                                        Get your online quotes and start your journey today.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- <div class="container">
-        <div class="row">    
-            <div class="col-lg-4 col-md-12 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded">
-                    <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE4.webp') }}" alt="Image">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape"> Construction Transportation</span>
-                        <p class="desc">ShipA1 is one of those generous car shipping companies that give services of 
-                            commercial truck transport at reasonable rates, no matter what the time and weather of the year.
-                            ShipA1 has full command over providing well-organized and stable commercial truck transport
-                            services to people who want such a service. Apart from the pickup and drop off location and the
-                            dimensions of the truck, another main factor playing a major role in the commercial truck 
-                            shipping service is the type of trailer or truck you need to ship. The trailers can vary
-                                depending upon the commercial requirements of your business industry. We deal in all kinds of
-                                commercial truck transport so that you get a one-stop solution for your shipping journey. 
-                                Get your online quotes and start your journey today.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div> -->
 </section>
 @include('partials.cta-section')
@@ -207,15 +205,11 @@
                     data-sal="slide-left" data-sal-duration="800">Safe and Affordable Truck Transport</h3>
                         <!-- <span class="sub-title active-shape">Specialized Equipment Shipping</span> -->
                         <p class="desc">
-                            It is risky to transport the vehicle on 
-                            your own on certain routeways; that is why ShipA1 offers reliable commercial truck transport 
-                            service at an affordable cost. One does not need to worry again. We have an extensive network of workers 
-                            who are experts in the vehicle shipping industry. They are aware of the routes and pathways that work best 
-                            during the shipment. To add more safety and security, our team tracks your vehicle continuously during the 
-                            shipment. Another factor that is the reason behind the increase and decrease in the prices is the factor of 
-                            the weather and time period. Since the residents of the United States are blessed to experience all kinds of 
-                            weather conditions, there is one special weather when the price reaches its highest level. In winters, commercial 
-                            truck transport becomes difficult, and that is why not many car shipping companies are up for the task.</p>
+                            We understand that It is quite risky to transport the vehicle on your own, especially on certain routes. One does not need to
+                             worry again because ShipA1 offers reliable commercial truck transport service at an affordable cost. <br>
+                            Ship A1 has an extensive network of workers who are experts in the vehicle shipping industry as well as aware of the 
+                            routes and pathways that work best during the shipment. To add more safety and security, our team tracks your vehicle
+                             continuously during the shipment. </p>
                     </div>
                 </div>
             </div>

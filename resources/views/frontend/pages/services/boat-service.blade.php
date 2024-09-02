@@ -114,11 +114,13 @@
                             {{-- <span class="sub-title active-shape">Seamless Boat Transport</span> --}}
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Seamless Boat Transport</h3>
-                            <p class="desc">Let's make transportation easy and swift with Ship A1 Auto Transport! If you are shipping your boat for the first time or if you are finding 
-                                a suitable, budget-friendly company to partner with, then you have come to the right place!Ship A1 is one of the best shipping companies, a well reputable leading auto transport company with years of built experience it has dedicated 
-                                itself to providing quality, reliable, and smooth transportation services catered to your needs! At Ship A1 Transport we understand how essential 
-                                it is to ensure the customer’s vehicle arrives on time which is why we make sure to provide you with our best services with 100% transparency. 
-                                Here, we strive to soar higher day by day by delivering outstanding services and guaranteeing our customers a seamless & hassle-free transportation process.</p>
+                            <p class="desc">Let's make transportation easy and swift with Ship A1 Auto Transport! If you are shipping your boat for the
+                                 first time or if you are finding a suitable, budget-friendly company to partner with, then you have come to the right 
+                                 place! Ship A1 is the best and most reputable leading auto transport company, with years of built experience we have 
+                                 dedicated ourselves to providing quality, reliable, and smooth transportation services catered to your needs.  <br>
+                                Here, we strive to soar higher day by day by delivering outstanding services and guaranteeing our customers a seamless 
+                                & hassle-free transportation process.
+                                </p>
                         </div>
                         
                     </div>

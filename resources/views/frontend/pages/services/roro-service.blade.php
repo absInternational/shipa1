@@ -344,16 +344,10 @@
                         {{-- <span class="sub-title active-shape">RORO Shipping Overview</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">RORO Shipping Overview</h3>
-                        <p class="desc">Ship-A1 is a car shipping company based in the united states. We provide car shipping 
-                            services across all countries in the united states to worldwide destinations. When shipping
-                            vehicle overseas, the most frequently used shipping option is RORO (Roll-on/Roll-off) Shipping.
-                            RORO shipping is the simplest and easiest method of transportation for the vehicle. The vehicle 
-                            is driven directly onto the RORO vessel and secured to the car deck. They are securely inside 
-                            the boat. Wind-and-watertight .it is essential to note that you cannot ship personal effects
-                            using this method. Still, spare tire and factory fitted accessories are allowed. RORO overseas
-                            shipping is a popular way of transporting cargo to other counties. Ship-A1 is connected with 
-                            different best cargo companies they carried your vehicle to other counties. Our agents taking
-                            care of clearing documents and other paperwork for you
+                        <p class="desc">Ship-A1 is a US-based auto shipping company providing transportation services worldwide. When shipping vehicles overseas, the most frequently used shipping option is RORO (Roll-on/Roll-off) Shipping. 
+                            What is RORO Shipping? <br>
+                            RORO shipping is the simplest and easiest method of transportation for the vehicle. The vehicle is driven directly onto the RORO vessel and secured to the car deck. They are securely inside the boat. Wind-and-watertight. It is essential to note that you cannot ship personal effects using this method only spare tires and factory-fitted accessories are allowed. 
+                            If you’re looking to ship your vehicle overseas, worry no more because Ship-A1 is connected with the best cargo companies that carry your vehicle to other countries without any complications and at reasonable rates. Rest assured, our agents take care of clearing documents and other paperwork for you.                            
                         </p>
                     </div>
                 </div>

@@ -96,17 +96,17 @@
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Safe Handling and Storage of Hazardous Materials</span>
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <p class="desc">If you have any of the substances mentioned in the category above (hazardous materials
-                                or Hazmat), it's crucial to store them correctly. Storing them improperly can be dangerous, whether
-                                you're at home, in the office, or a storage facility.
-                        In a storage facility, ensure that you have Materials Safety Data Sheets (MSDS) available for your 
-                        employees. These are essential resources that provide guidance on how to handle various materials.
-                        
-                            <!-- <h3>What is FTL ?</h3> -->
-                            You can find these sheets online, but be sure to use the most recent version and print multiple copies. Offering digital copies is a good idea to ensure easy access for your employees.
-                            Additionally, it's essential to label all hazardous materials with the appropriate Hazmat symbols. Different symbols correspond to each category, so ensure correct labeling for proper handling.
-                            Using the right containers for storage is crucial. For example, if you're storing a liquid, invest in a proper drum. Also, consider spill control pallets to prevent extensive clean-up in case of leaks.
-                    </p>
+                        <p class="desc">SAFE HANDLING AND STORAGE OF HAZARDOUS MATERIALS
+                            It's essential to label all hazardous materials with the appropriate
+                            Hazmat symbols. Different symbols correspond to each category, so ensure
+                            correct labeling for proper handling. Using the right containers for
+                            storage is crucial. For example, if you're storing a liquid, invest in a
+                            proper drum. Also, consider spill control pallets to prevent extensive
+                            clean-up in case of leaks.
+                            Ensure that you have Materials Safety Data Sheets (MSDS) available for
+                            your employees. These are essential resources that guide how to handle
+                            various materials. You can find these sheets online, but be sure to use
+                            the most recent version and print multiple copies.</p>
                     </div>
                     
                 </div>

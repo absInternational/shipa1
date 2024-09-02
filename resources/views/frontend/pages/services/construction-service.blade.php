@@ -91,23 +91,23 @@ from one state to another state in one click - ShipA1.')
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Construction Equipment Transport</h3>
                         <p class="desc">
-                            The advancement in the construction business has led to the growth of the heavy construction
-                            equipment marketplace.
-                            It is one of the most prominent and most competitive sectors of the U.S. manufacturing
-                            economy involved in the making of
-                            construction equipment. Since this industry is developing in its own way, the need for <a
-                                class="pp-link-2" href="{{ route('welcome') }}"> construction equipment transport </a>
-                            is
-                            increasing with time.
-                            There are many companies that are in operation and business for the transportation of
-                            construction equipment.
-                            Since every work you do depends upon the productivity of heavy equipment and relevant parts,
-                            goods, accessories,
-                            and services, it is worth it to have a dependable resource to transport the equipment
-                            without harming them in any way.
-                            Over the last few decades, the automobile transportation market has grown tremendously,
-                            and now has become the practical selection for people to transport their vehicles; both
-                            locally and internationally.
+                            Heavy construction equipment is one of the most prominent and most competitive sectors of the U.S. 
+                            manufacturing economy involved in the making of construction equipment. Since this industry is 
+                            developing in its way, the need for construction equipment transport is increasing with time. 
+                            Because of this, many companies are currently in operation and business for the transportation 
+                            of construction equipment, it is extremely crucial to have a dependable resource that can assure 
+                            you peace of mind as well as amazing services. Ship A1, is a top leading auto shipping company that 
+                            offers its services to the customer based on their needs and requirements. <br>
+                            Our renowned services consist of:
+                            <ul>
+                                <li>Affordability</li>
+                                <li>Convenience</li>
+                                <li>Fast and Secure Shipping</li>
+                                <li> 100% Insurance</li>
+                                <li>24/7 Customer Support</li>
+                                <li>Advanced Equipment</li>
+                                <li>Professional and Experience Staff</li>
+                            </ul>
                         </p>
                     </div>
 
@@ -141,20 +141,15 @@ from one state to another state in one click - ShipA1.')
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Expert Heavy Hauling</h3>
                         <p class="desc">
-                            The<a class="pp-link-2" href="{{ route('frontend.pages.services.heavy-service') }}"> heavy
-                                machinery transport </a> business has used technology in the best way possible. There
-                            are many types of haulers that are
-                            identified with ShipA1. Some are constructed to haul a single car, while some are developed
-                            to haul things which are
-                            incredibly long and heavy. For the mechanical edition, the truck needs a huge winch.
-                            Anything you need to ship,
-                            ShipA1 has got trucks that are designed to move it. Flatbed trucks are available in many
-                            various shapes and sizes.
-                            The company that specializes in construction equipment transport in America is ShipA1. With
-                            such a wide variety of construction equipment
-                            out there, knowing precisely what you’re shipping will let ShipA1 secure you a better and
-                            more accurate Construction Equipment transport quote,
-                            which, in turn, will help us get your construction equipment moved a lot more quickly.
+                            The <a class="pp-link-2" href="{{ route('frontend.pages.services.heavy-service') }}">heavy machinery </a> transport business has used technology in the best way possible. Many types of
+                             haulers are identified with ShipA1. Some are constructed to haul a single car, while some are
+                              developed to haul things that are incredibly long and heavy. For the mechanical edition, the 
+                              truck needs a huge winch. <br>
+                            For anything you need to ship, ShipA1 has advanced trucks that are designed to move it. 
+                            With such a wide variety of construction equipment out there, knowing precisely what you’re
+                             shipping will let ShipA1 secure you a better and more accurate Construction Equipment transport
+                              quote, which, in return, will help us get your construction equipment moved a lot more quickly.
+
                         </p>
                     </div>
 
@@ -172,21 +167,13 @@ from one state to another state in one click - ShipA1.')
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Specialized Equipment Shipping</h3>
                         <p class="desc">
-                            Heavy equipment hauling can be a complicated undertaking and it’s important to select a
-                            company that specializes in this work.
-                            One essential factor to think about aside from the professionalism and qualifications of the
-                            auto shipping company is the high
-                            quality and ability of the machines to transport. They should have the ability to haul every
-                            load whatever the size, weight,
-                            quantity, or the kind of equipment. ShipA1, in this case, is quite competitive because of
-                            the experts that are a part of it.
-                            ShipA1 has, at its disposal, a variety of heavy haulers, that it uses for construction
-                            equipment transport. As construction
-                            equipment is a lot heavier and bulkier than even a huge pickup truck, ShipA1 locates a
-                            flatbed transporter with a large enough
-                            truck that has the ability to move your heavy equipment smoothly.
-
-
+                            Heavy equipment hauling can be a complicated undertaking and it’s important to select a company
+                             that specializes in this work. One essential factor to think about aside from the professionalism 
+                             and qualifications of the auto shipping company is the high quality and ability of the machines to 
+                             transport. They should have the ability to haul every load whatever the size, weight, quantity, or
+                              kind of equipment. <br>
+                            ShipA1, in this case, is quite competitive. We are equipped with a variety of heavy haulers used for
+                             construction equipment transport that can move your heavy equipment smoothly.
                         </p>
                     </div>
 
@@ -226,16 +213,10 @@ from one state to another state in one click - ShipA1.')
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Key Considerations for Choosing the Right Carrier</h3>
                         <p class="desc">
-                            Heavy equipment shipping may be a challenging endeavor, and it’s important that you pick a
-                            specialized carrier company
-                            that’s familiar and experienced with your hauling needs. One more thing that should be
-                            considered in regards to construction
-                            equipment shipping is choosing the correct construction equipment transport support or
-                            company. Before the carrier service
-                            arrives, you should take the essential actions & check the <a class="pp-link-2"
-                                href="{{ route('frontend.forms.construction_transport') }}"> shipping quotes </a> so
-                            as to make sure your equipment is shielded and
-                            secured for any unfavorable conditions it may encounter during its shipment.</p>
+                            One more thing that should be considered regarding construction equipment shipping is choosing the
+                             correct construction equipment transport support or company. Before the carrier service arrives, 
+                             you should take the essential actions & check the shipping quotes to make sure your equipment is 
+                             shielded and secured for any unfavorable conditions it may encounter during its shipment.</p>
                     </div>
 
                 </div>
@@ -247,7 +228,7 @@ from one state to another state in one click - ShipA1.')
     <div class="container">
         <div class="row">
             <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
-                Comprehensive Construction Equipment Transport Service</h2>
+                Why Choose Ship A1</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">

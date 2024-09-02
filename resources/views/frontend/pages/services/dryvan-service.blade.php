@@ -108,8 +108,9 @@
                                 </div>
                             </div>
                             <p>
-                            You may have heard of dry van transportation services or freight shipping in your lifetime or when you seek solutions to reallocation.
-                            In this comprehensive guide, we will explain in detail about dry van shipping so that you can make wise decisions while thinking about your reallocation or moving your goods.
+                                Ever heard of dry van transportation services or freight shipping? In this comprehensive guide,
+                                 we will discuss the main features and benefits of dry van shipping which will help you decide what mode 
+                                 to choose or what type of vehicle to ship while thinking about your reallocation or moving your goods.
                             </p>
                         </div>
                     </div>
@@ -292,13 +293,15 @@
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                         <h3>What is LTL ?</h3>
-                        If you have a smaller shipment that doesn't require an entire trailer, LTL might be a better option. With LTL shipping, your shipment will be combined with other shipments from various businesses.
-                        This means that your shipment might be loaded and unloaded multiple times before reaching its final destination, which can result in longer delivery times.
-                        However, LTL shipping can be more cost-effective than FTL, especially if you're shipping smaller quantities of freight.
-                        LTL carriers, use the National Motor Freight Traffic Association's freight classification system to determine rates.
-                        LTL carriers are more likely to charge extra fees for any disruptions or delays in the flow of freight movement.
-                        Hence, the choice between FTL and LTL comes down to the size and type of your shipment, as well as your budget and timeline.
-                        By understanding the differences between these two methods, you can make an informed decision that meets your specific shipping needs.</p>
+                        If you have a smaller shipment that doesn't require an entire trailer, LTL might be a better option. With 
+                        LTL shipping, your shipment will be combined with other shipments from various businesses. This means that
+                         your shipment might be loaded and unloaded multiple times before reaching its final destination, which can
+                          result in longer delivery times. <br>
+                        LTL carriers are more likely to charge extra fees for any disruptions or delays in the flow of freight
+                         movement. Hence, the choice between FTL and LTL comes down to the size and type of your shipment, as 
+                         well as your budget and timeline. By understanding the differences between these two methods, you can
+                          make an informed decision that meets your specific shipping needs.
+                        </p>
                     </div>
                 </div>
             </div>

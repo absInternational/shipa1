@@ -87,18 +87,14 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Nationwide Heavy Equipment Shipping</h3>
                         <p class="desc">
-                            Oversized and heavy equipment can have logistical and managerial challenges if you’re
-                            unfamiliar with the
-                            transportation procedure or the way <a class="pp-link-2"
-                                href="https://www.shipa1.com/heavy-equipment-hauling/"> heavy equipment shipping </a> is
-                            done.
-                            So if you’re considering shipping heavy equipment nationwide,
-                            ShipA1 is well equipped to manage any form of shipment through all stages of the approach.
-                            Services of ShipA1 are accessible to our clients nationwide. Before the carrier service
-                            arrives, you will have to take the essential steps so as
-                            to make sure your equipment is shielded and secured for any unfavorable and risky conditions
-                            it may encounter during its shipment.
-                            Heavy equipment shipping services are available all over the nation to facilitate customers.
+                            Oversized and heavy equipment can have logistical and managerial challenges if you’re unfamiliar 
+                            with the transportation procedure or the way heavy equipment shipping is done. However, if you’re
+                            considering shipping heavy equipment nationwide but don’t know how and where to start, here’s a 
+                            renowned lead also known as Ship A1, a leading transportation company that specializes and has 
+                            transported 1000+ vehicles all across the USA. <br>
+                            From taking care of your heavy equipment to ensuring safety and security throughout the entire
+                             journey while making sure your concerns and queries are attended to, we aim to foster customer 
+                             loyalty and treat you as our top priority. 
                         </p>
                     </div>
                 </div>
@@ -132,16 +128,12 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Expert Care in Heavy Equipment Shipping</h3>
                         <p class="desc">
-                            In the event of any query, you may also contact our customer service representative, they’ll
-                            be delighted to help you with your shipment queries, or you could mail us.
-                            If during the shipment, your equipment becomes damaged, the company is going to take care of
-                            it and will cover all the damages.ShipA1 always ship heavy equipment with care. As
-                            construction equipment is quite a bit heavier and bulkier than even a huge pickup truck,
-                            we’ll want to locate a flatbed transporter with a large enough truck to have the ability to
-                            move it.
-                            You may discover that it’s more cost-effective to avail the services offered by the ShipA1
-                            as transporting the heavy equipment on your own will cost you a lot more and it will be a
-                            big deal because heavy equipment shipping is not something that you should take lightly.
+                            In case of any query, you may also contact our customer service representative, they’ll be delighted 
+                            to help you with your shipment queries, or you could mail us at <a href="mailto:shawntransport@shipa1.com" class="pp-link-2"> shawntransport@shipa1.com </a>. As 
+                            construction equipment is quite a bit heavier and bulkier than a huge pickup truck, we’ll want to 
+                            locate a flatbed transporter with a large enough truck to have the ability to move it. You may discover
+                             that it’s more cost-effective to avail of the services offered by ShipA1 as transporting the heavy 
+                             equipment on your own will cost you a lot more.
                         </p>
                     </div>
 
@@ -161,18 +153,12 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Reliable Service and Competitive Rates</h3>
                         <p class="desc">
-                            ShipA1 is able to handle every type of heavy equipment therefore one doesn’t need to worry.
-                            Equipment may vary greatly based on the load and its need. Heavy equipment hauling can be a
-                            troublesome endeavor and it’s important to pick a business that specializes in heavy
-                            equipment shipping. You can get exact <a class="pp-link-2" href="{{ route('welcome') }}">
-                                shipping quotes for your euipment </a> by entering all the specifice.
-                            Shipping heavy equipment is a dangerous procedure if you’re unfamiliar with the potential
-                            trouble spots. Many heavy equipment hauling companies will promise you with limitless
-                            offers, but you need to trust the one that is the most reliable. ShipA1 with its heavy
-                            equipment shipping promise high-quality at competitive rates.
-                            ShipA1 has experts to handle your heavy equipment and is equipped with all the trailers and
-                            tools that are necessary for the heavy equipment shipping; therefore there is no point of
-                            not trusting ShipA1.
+                            Ship A1 takes care of your vehicle and treats it with utmost care and attention therefore one doesn’t
+                             need to worry because we have experts who handle and look after your heavy equipment. At Ship A1, our 
+                             staff is fully equipped with all the trailers and tools that are necessary for heavy equipment 
+                             shipping. <br>
+                            Equipment may vary greatly based on the load which is why heavy equipment hauling can be a troublesome
+                             endeavor. However, ShipA1 with its heavy equipment shipping promises high quality at competitive rates.
                         </p>
                     </div>
 
@@ -193,7 +179,7 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
     <div class="container">
         <div class="row">
             <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
-                Comprehensive Heavy Equipment Transportation Services</h2>
+                Why Choose Ship A1?</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="border rounded-5 p-4">
                     <div class="tj-section-heading">

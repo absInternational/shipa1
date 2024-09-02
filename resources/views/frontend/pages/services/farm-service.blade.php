@@ -87,17 +87,13 @@ insurance services and securely without any scratch - Shipa1.')
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Efficient Farm Transportation</h3>
                         <p class="desc">
-                            Farm transportation or simply farm transport begins and end with properly managed shipment
-                            process. It needs adequate
-                            tools to perform the task efficiently. Transport has its importance in every industry,
-                            whether it be the industrial sector
-                            or the business section. Ship A1 is a leading transport company. For better production and
-                            output, farmers need resourceful
-                            input for their crops. The resources can vary such as seeds for the crops, different kinds
-                            of pesticides and fertilizers,
-                            material for packaging, and the like. Keeping all these factors into consideration, farmers
-                            need to deliver these goods from
-                            the field to the storage house or vice versa.</p>
+                            Transportation has its importance in every industry, whether it be the industrial sector or
+                             the business sector. If we talk about farming, farmers most importantly need to deliver goods 
+                             from the field to the storage house to ensure smooth cultivation and procedures. Farm transportation 
+                             or simply farm transport begins and ends with a properly managed shipment process. <br>
+                            Farmers need proper equipment to perform their tasks efficiently, this is where Ship A1 plays an 
+                            important role in delivering the best and most efficient farm transportation services.
+                            </p>
                     </div>
                 </div>
             </div>
@@ -130,15 +126,15 @@ insurance services and securely without any scratch - Shipa1.')
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Choosing Reliable Farm Transportation service</h3>
                         <p class="desc">
-                            Every industry or business needs some means of transport. This goes to the farm transport 
-                            industry as well. Whether it comes to harvest the crops or to arrange the goods for the crops, 
-                            transport is an essential part of this industry. But the process of farm transportation is a
-                            difficult task. You can not rely on any random company offering services for transportation 
-                            at affordable rates. There is an old saying, “All that glitters is not gold.” One has to be
-                            careful when choosing a reliable company as there are plenty of fraud companies on the internet. 
-                            They will offer low-priced rates which may attract you in the beginning, but once they get the
-                            payment, they vanish. Farmers know the importance of transportation and how it can save their
-                            time and money in the long run.
+                            Whether it comes to harvesting the crops or arranging the goods for the crops, transport is an
+                             essential part of this industry. However, the process of farm transportation is a difficult task.
+                              You cannot rely on any random company offering services for transportation at affordable rates. 
+                              One has to be careful when choosing a reliable resource as there are plenty of fraudulent companies
+                               and scammers. <br>
+                            Ship A1, a leading transportation company with a proven record of 16 successful years of dealing with
+                             shipments across the USA is fully equipped with advanced vehicles used for farming, along with 
+                             affordable rates, and multiple modes of services we are here to offer what we do best!
+
                         </p>
                     </div>
                 </div>
@@ -234,7 +230,7 @@ insurance services and securely without any scratch - Shipa1.')
     <div class="container">
         <div class="row">
             <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
-                Key Features of Reliable Farm Equipment Transport</h2>
+                Why Choose Ship A1?</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">

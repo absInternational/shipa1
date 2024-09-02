@@ -87,21 +87,17 @@
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Discover Top-Notch RV Shipping with Ship A1</h3>
                         <p class="desc">
-                            If you are someone who loves traveling then this might be the best option for you! RVs are
-                            commonly
-                            shipped by people who love spending time in their RVs surrounded by nature If this is what
-                            you are
-                            looking for then there’s no better company than<a class="pp-link-2"
-                                href="{{ route('welcome') }}"> Ship A1 Transport! </a> We not only provide the shipping
-                            of RVs, but we also ensure you are being offered and provided the best services along with a
-                            cost-effective budget. Ship A1 presents you with the best RV transportation tailored to the
-                            needs
-                            and expectations of our customers, with a variety of options, exclusive deals, and discounts
-                            as well
-                            as different modes of shipping you can choose easily from, we have got what it takes. Here,
-                            we will
-                            delve into the details of RV Shipping and what services are provided for RVs by Ship A1
-                            Transport!</p>
+                            If you are someone who loves traveling then this might be the best option for you! RVs are commonly
+                             shipped by people who love spending time in their RVs surrounded by nature If this is what you are 
+                             looking for then there’s no better company than <a class="pp-link-2"
+                             href="{{ route('welcome') }}"> Ship A1 Transport!  </a> <br>
+                            We not only provide the shipping of RVs, but we also ensure you are being offered and provided the
+                             best services along with a cost-effective budget. Ship A1 presents you with the best RV 
+                             transportation tailored to the needs and expectations of our customers, with a variety of 
+                             options, exclusive deals, and discounts as well as different modes of shipping you can choose 
+                             easily from, we have got what it takes. Here, we will delve into the details of RV Shipping and
+                              what services are provided for RVs by Ship A1 Transport!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -174,20 +170,13 @@
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape">Types of Shipping Methods We Use</span> --}}
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Seamless RV Shipping with Customized Solutions</h3>
-                        <p class="desc">You will have your RV shipped by means meeting almost any need and desire in terms of
-                             the shipment process. Ship A1 is our partner, a company providing access to a number of the best,
-                              most affordable, and most convenient ways of shipping. These full services allow you the freedom
-                               of taking the way most suitable for your requirements, be it for cost economy, convenience, or 
-                               speed. Want to see rates and shop around to find the right solution for your RV transport?<a
-                               class="pp-link-2" href="{{ route('frontend.forms.rv_transport') }}"> Get 
-                               an online quote</a> now. This makes the first step toward a seamless shipping experience with Ship
-                                A1
-                        {{-- <div class="tj-theme-button text-start mt-2">
-                            <a class="tj-transparent-btn" href="" target="_blank">
-                                Get Quote<i class="flaticon-right-1"></i>
-                            </a>
-                        </div> --}}
-                        </p>
+                        <p class="desc">Your go-to company for RV Transportation should be Ship A1! A leading transportation
+                             company providing access to a number of the best, most affordable, and most convenient ways of RV 
+                             shipping. These full services allow you the freedom to choose the method most suitable for your 
+                             requirements, be it for cost economy, convenience, or speed. 
+                            Want to see rates and shop around to find the right solution for your RV transport? <a
+                            class="pp-link-2" href="{{ route('frontend.forms.rv_transport') }}"> Get an online 
+                            quote now.</a> Take the first step toward a seamless shipping experience with Ship A1</p>
                     </div>
                 </div>
             </div>
@@ -263,7 +252,7 @@
     <div class="container">
         <div class="row">
             <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
-                Reliable RV and Equipment Transport Solutions</h2>
+                Why Choose Ship A1?</h2>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
