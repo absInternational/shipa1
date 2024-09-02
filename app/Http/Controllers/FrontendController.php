@@ -81,21 +81,20 @@ class FrontendController extends Controller
     public function blogDetails($slug)
     {
 
+        $blogs = Blog::where('slug_name', '!=', $slug)->take(5)->get();
         $blog = Blog::where('slug_name', $slug)->first();
-        if ($blog->type == 'old') {
-            $blogs = Blog::where('type', 'old')->where('slug_name', '!=', $slug)->take(5)->get();
-            $recent_blogs = Blog::where('type', 'old')->where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
-        } else {
-            $blogs = Blog::where('slug_name', '!=', $slug)->take(5)->get();
-            $recent_blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
-        }
+        $recent_blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
         return view('frontend.blogs.detail', compact('blog', 'blogs', 'recent_blogs'));
     }
 
     public function blogDetailsNoSlug($slug)
     {
         $blog = Blog::where('slug_name', $slug)->first();
-        $recent_blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
+        if ($blog->type == 'old') {
+            $recent_blogs = Blog::where('type', 'old')->where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
+        } else {
+            $recent_blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
+        }
 
         if ($blog) {
             $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
