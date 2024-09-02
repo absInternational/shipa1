@@ -323,11 +323,6 @@
 
                                     </div>
                                 </div>
-
-
-
-
-
                             </div>
 
                             <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
