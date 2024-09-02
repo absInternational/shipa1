@@ -486,7 +486,7 @@
                     selectOptions += '</select>';
                     modelsDropdown.html(selectOptions);
 
-                    // Reapply the "Other" selection handling
+                    
                     // handleOtherSelection();
                 },
                 error: function(xhr) {
@@ -495,25 +495,25 @@
             });
         }
 
-    //     // Handle "Other" option in the model dropdown
-    //     function handleOtherSelection() {
-    //         // Handle the "change" event for the dynamically added model dropdown
-    //         $(document).on('change', '#model', function() {
-    //             var modelSelect = $(this);
-    //             var otherModelInput = $('#other_model');
+      
+        // function handleOtherSelection() {
+         
+        //     $(document).on('change', '#model', function() {
+        //         var modelSelect = $(this);
+        //         var otherModelInput = $('#other_model');
 
-    //             if (modelSelect.val() === 'other') {
-    //                 modelSelect.addClass('d-none'); // Hide the select dropdown
-    //                 otherModelInput.removeClass('d-none').attr('required', 'required'); // Show the input field
-    //             } else {
-    //                 otherModelInput.addClass('d-none').removeAttr('required'); // Hide the input field if not "Other"
-    //             }
-    //         });
-    //     }
+        //         if (modelSelect.val() === 'other') {
+        //             modelSelect.addClass('d-none'); 
+        //             otherModelInput.removeClass('d-none').attr('required', 'required'); 
+        //         } else {
+        //             otherModelInput.addClass('d-none').removeAttr('required'); 
+        //         }
+        //     });
+        // }
 
-    //     // Initial call to handle any existing "Other" options
-    //     handleOtherSelection();
-    // });
+        
+        // handleOtherSelection();
+    });
 </script>
 
 
