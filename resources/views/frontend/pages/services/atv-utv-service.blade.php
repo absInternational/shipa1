@@ -91,17 +91,18 @@
                             <br>
                 <div class="text-container text-left">
                     <h3>ATV/UTV Transport Service</h3>
-                    <p>Are you in search of a trustworthy<a class="pp-link-2" href="{{ route('welcome') }}"> ATV/UTV transport company </a> for your shipment? Well, then you are on
-                            the right platform. Ship A1 is a dominating vehicle transport company providing top-rated ATV/UTV 
-                            services to its valuable customers at competitive market rates. Choosing the right company will save 
-                            you from trouble, and you will have a remarkable journey. We will share some noteworthy factors that 
-                            come into play whenever you plan to ship an ATV/UTV. The key considerations during the ATV shipment 
-                            that you need to consider are: <br>
+                    <p>Are you in search of a trustworthy ATV/UTV transport company for your shipment? Well, then you are on the right platform.
+                         Ship A1 is a dominating vehicle transport company providing top-rated ATV/UTV services to its valuable customers at competitive 
+                         market rates. Choosing the right company will save you from trouble, and you will have a remarkable journey. 
+                        We will share some noteworthy factors that come into play whenever you plan to ship an ATV/UTV. <br> The key considerations
+                         during the ATV shipment that you need to consider are:
+                         <br>
+                         
                             <ul>
-                            <li>The Company’s experience. </li>
-                            <li>The References.</li>
-                            <li>Insurance Policy and coverage.</li>
-                            <li>Cost of the shipment</li>
+                            <li>Convenience</li>
+                            <li>Ratings</li>
+                            <li>Insurance Policy and Coverage</li>
+                            <li>Affordability</li>
                             </ul> 
                     </p> 
                     
@@ -332,15 +333,15 @@
                             <h3 class="sal-animate" data-sal="slide-left" 
                              data-sal-duration="800">Insurance and Safety</h3>
                             <p class="desc">
-                            Apart from the company’s experience, ratings, and shipping services, another thing that you need to 
-                            consider when choosing the All-Terrain transport company is the insurance coverage as safety is the
-                             priority for every customer. We all are vulnerable to unexpected incidents, and all we can do is to 
-                             prepare ourselves for it. After all, you do not want any trouble in the long run, and for that, 
-                             insurance coverage is essential. Before making any step towards the shipment process, ask all the 
-                             necessary questions about the insurance policy. Some shipping companies provide the full insurance 
-                             package. However, it is smart to ask beforehand so to free yourself in case there is any mishap during
-                              the shipment. You can also have a conversation with the company’s representative if you are having 
-                              any problem understanding the process. </p>
+                                Apart from the company’s experience, ratings, and shipping services, another thing that you need to consider
+                                 when choosing an All-Terrain transport company is the insurance coverage. We all are vulnerable to unexpected 
+                                 incidents, and all we can do is prepare ourselves beforehand to avoid any trouble in the long run, and for that,
+                                  insurance coverage is essential. <br>
+                                Before making any step towards the shipment process ask all the necessary questions about the insurance policy. 
+                                Some shipping companies provide the full insurance package. However, it is smart to ask beforehand so to free yourself 
+                                in case there is any mishap during the shipment. You can also have a conversation with the company’s representative 
+                                if you are having any problems understanding the process.
+                                </p>
                         </div>
                         
                     </div>
@@ -374,13 +375,21 @@
                         <h3 class="sal-animate" data-sal="slide-left" 
                         data-sal-duration="800">Pricing Factors Consideration</h3>
                     <p class="desc">
-                        At last, you can not regret the price factor from the list when talking about All-Terrain transportation. 
-                        The price for the shipment of an ATV depends on several factors such as weight, size, shape, and the 
-                        distance travelled. Apart from that, other things that can impact the price includes fuel costs, the time 
-                        of the year, and other additional insurance. Weight is the main factor affecting the price of the shipment.
-                        Considering all these factors, Ship A1 is the all in one choice for anyone willing to ship their
-                        All-Terrain vehicle. You can get our services all over the United States with ease. So, get your 
-                        quotes and start your car transport journey with us.
+                        At last, you cannot erase the price factor from the list when talking about
+                         All-Terrain transportation. The price for the shipment of an ATV depends on several factors such as <br>
+                         <ul>
+      
+                            <li>Weight</li>
+                            <li>Size</li>
+                            <li>Shape</li>
+                            <li>Distance traveled</li>
+                            </ul> 
+                            Apart from that, other things that can impact the price include fuel costs, the time of the year, and other additional
+                             insurance. 
+                            Weight is the main factor affecting the price of the shipment. Considering all these factors, Ship A1 is the all-in-one 
+                            choice for anyone willing to ship their All-Terrain vehicle. You can get our services all over the United States with ease. 
+                            So, get your quotes and start your car transport journey with us.
+
                     </p>
                     </div>
                     
@@ -392,7 +401,7 @@
         <div class="container">
             <div class="row">
                 <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
-                    Comprehensive Construction Equipment Transport Service</h2>
+                    Why Choose Us?</h2>
                 <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
@@ -423,11 +432,12 @@
                 <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Access To All Locations</span>
+                            <span class="sub-title active-shape">Advanced Trailers</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            We currently ship all around the contiguous United States and in case of ATV/UTV 
-                            it’s easier to reach locations because the trailers aren’t big in size for atv shipping.
+                                We offer our customers 2 premium and most convenient modes of trailers that are enclosed and open. Enclosed trailers are expensive 
+                                as they ensure the protection of your vehicle and ship it in a closed trailer whereas an open trailer is the most cost-effective and standard mode of shipping your vehicle,
+                                 in this mode your vehicle will be shipped in an open trailer with utmost care and safety. 
                             </p>
                         </div>
                         
@@ -436,11 +446,11 @@
                 <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Types of ATV/UTV</span>
+                            <span class="sub-title active-shape">Tracking System</span>
                             <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
-                            A wide range of ATV’s and UTV’s could be shipped with the car hauling method 
-                            of door to door transport such as Quads, Sports ATV etc.</p>
+                                When transporting with Ship A1 you will have the benefit of tracking
+                                 your shipment from anywhere and anytime.</p>
                         </div>
                         
                     </div>
@@ -449,16 +459,15 @@
             <div class="row full-width ps-4 pt-4">
                 <div class="col-12 custom-style">
                     <h4 class=" text-center">Company Performance and Quality</h4>
-                    <p class=" text-center">The first thing that you need to consider when selecting the <a class="pp-link-2" href="{{ route('welcome') }}"> auto transport company </a>for your ATV shipment is to 
-                       check the overall company’s performance. For that, you can visit the company’s platform and check the section of their feedback
-                        and customer ratings. The reviews of people are always genuine. They will give you a clear idea of where the company stands in 
-                        the shipping industry. You will find everything you need for your All-Terrain Vehicle Transport at our platform as we are a 
-                        one-stop solution for your shipment. Quality is what matters in All-Terrain transportation. A good auto shipping company may 
-                        charge more for the transport journey, but it will not sacrifice for its quality. The company will ship your vehicle by secure
-                         means and will make sure that there is no damage during the overall shipping process. All you need to do is get the instant 
-                         <a class="pp-link-2" href="{{ route('form.vehicle.atv_utv') }}"> online vehicle shipping quotes </a> through the company’s platform and choose your desired shipping service. The two main services 
-                         are open-air and enclosed car transport. You can take the help of the vehicle shipping calculator to get a rough estimate of 
-                         your shipment. </p>
+                    <p class=" text-center">The first thing that you need to consider when selecting any auto transport company 
+                        for your ATV shipment is to check the overall company’s performance. For that, you can visit the company’s platform
+                         and check customer reviews and ratings. Our customer reviews are 100% original and genuine, they will give you a clear idea 
+                         of where the company stands in the shipping industry. You will find everything you need for your All-Terrain Vehicle Transport
+                          on our platform.
+                        Ship A1 stands tall in the auto transportation business because we ensure the quality of our customer’s
+                         vehicles and keep them as our top priority. So what are you waiting for? Get a free quote from our website 
+                         now and get a rough estimate of your shipment!
+                         </p>
                     <div class="tj-theme-button  text-center mt-2">
                         <a class="tj-transparent-btn" href="http://127.0.0.1:8000/contact_us" target="_blank">
                             Get Quote

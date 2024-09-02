@@ -339,15 +339,15 @@
                             <h3 class="sal-animate" data-sal="slide-left" 
                              data-sal-duration="800">Why is that?</h3>
                             <p class="desc">
-                            We not only focus on providing top-notch services, but we also ensure that our offerings are meticulously 
-                            tailored to meet your unique needs and expectations. With years of accumulated experience and expertise, we can proudly 
-                            state that our services are rooted in complete transparency and unwavering reliability. Our commitment goes beyond just 
-                            fulfilling your requirements; we aim to exceed your expectations by delivering personalized solutions that align perfectly 
-                            with your specific demands. Every aspect of our service is designed with your satisfaction in mind, ensuring that you receive 
-                            the highest level of care and attention throughout the entire process. We take immense pride in our ability to offer services
-                             that are not only of superior quality but also characterized by their dependability and openness. Our dedication to
-                              maintaining the highest standards of service excellence is reflected in our long-standing reputation for trustworthiness 
-                              and integrity in the industry.</p>
+                                We not only focus on providing top-notch services, but we also ensure that our offerings
+                                 are meticulously tailored to meet your unique needs and expectations. With years of accumulated 
+                                 experience and expertise, we can proudly state that our services are rooted in complete transparency 
+                                 and unwavering reliability. <br>
+                                Our commitment goes beyond just fulfilling your requirements, we aim to exceed your expectations by delivering 
+                                personalized solutions that align perfectly with your specific demands. Every aspect of our service is designed
+                                 with your satisfaction in mind, ensuring that you receive the highest level of care and attention throughout 
+                                 the entire process.
+                            </p>
                         </div>
                         
                     </div>
@@ -383,10 +383,11 @@
                              data-sal-duration="800">Why Choose Ship A1 Transport?</h3>
                             <p class="desc">
                                 <ul>
-                                   <li>The Company’s experience. </li>
-                                   <li>The References.</li>
-                                   <li>Insurance Policy and coverage.</li>
-                                   <li>Cost of the shipment</li>
+                                   <li> <b>Proven experience:</b> With over years of experience Ship A1 has managed to deliver hundreds of vehicles throughout USA successfully. </li>
+                                   <li><b>Trusted By Many:</b> You can check our satisfied clients on our website, google as well as on different platforms like BBB 
+                                    (Better Business Bureau) and social media platforms.</li>
+                                   <li><b>100% Insurance:</b> To avoid any risks and damage we have 100% insured vehicles to ensure your vehicle is in safe hands.</li>
+                                   <li><b>Affordability:</b> Get amazing and quality services without emptying your bank! Better rates and top-notch quality are what we promise our customers. </li>
                                 </ul>
                                 Choosing the right company for your shipping solutions is extremely crucial as it determines
                                  the security, timely delivery, and protection of your vehicles. Hence, <a class="pp-link-2" href="{{ route('welcome') }}">choosing Ship A1</a>
