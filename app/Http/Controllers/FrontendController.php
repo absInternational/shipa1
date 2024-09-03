@@ -90,19 +90,21 @@ class FrontendController extends Controller
     public function blogDetailsNoSlug($slug)
     {
         $blog = Blog::where('slug_name', $slug)->first();
+
+        if (!$blog) {
+            abort(404);
+        }
+
         if ($blog->type == 'old') {
             $recent_blogs = Blog::where('type', 'old')->where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
         } else {
             $recent_blogs = Blog::where('status', 1)->orderBy('id', 'DESC')->limit(5)->get();
         }
 
-        if ($blog) {
-            $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
+        $blogs = Blog::where('slug_name', '!=', $slug)->take(3)->get();
 
-            if ($blog->post_name) {
-                return view('frontend.blogs.detail', compact('blog', 'blogs', 'recent_blogs'));
-            } else {
-            }
+        if ($blog->post_name) {
+            return view('frontend.blogs.detail', compact('blog', 'blogs', 'recent_blogs'));
         } else {
             abort(404);
         }
