@@ -838,8 +838,7 @@
 @endsection
 
 @section('extraScript')
-
-<script>
+{{-- <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
                 element.value = element.value.slice(0, maxDigits);
@@ -891,7 +890,6 @@
             });
         });
 </script>
-
 <script>
         $(document).ready(function() {
             var selectedTab = '';
@@ -1060,7 +1058,6 @@
             }
         });
 </script>
-
 <script>
         $(document).ready(function() {
             function showError(field, message) {
@@ -1127,7 +1124,6 @@
             });
         });
 </script>
-
 <script>
         $(document).ready(function() {
             function addNewVehicle() {
@@ -1221,7 +1217,6 @@
             }
         });
 </script>
-
 <script>
         $(document).ready(function() {
             $(document).on('change', '.vehicle-year, .vehicle-make', function() {
@@ -1351,6 +1346,25 @@
         }
     });
 </script>
+<script>
+        $(document).ready(function() {
+            $(document).on('change', '#available_at_auction', function() {
+                if ($(this).is(':checked')) {
+                    $('.div-link').show();
+                } else {
+                    $('.div-link').hide();
+                }
+            });
+
+            $(document).on('change', '#modification', function() {
+                if ($(this).is(':checked')) {
+                    $('.div-modify_info').show();
+                } else {
+                    $('.div-modify_info').hide();
+                }
+            });
+        });
+</script> --}}
 {{-- <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
@@ -1389,25 +1403,4 @@
             updateSuggestions(inputField, suggestionsList);
         });
 </script> --}}
-
-<script>
-        $(document).ready(function() {
-            $(document).on('change', '#available_at_auction', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
-
-            $(document).on('change', '#modification', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
-        });
-</script>
-
 @endsection

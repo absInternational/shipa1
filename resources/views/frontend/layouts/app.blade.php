@@ -287,136 +287,131 @@
     <!-- Main JS -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#newsletter-form').submit(function(event) {
-                event.preventDefault();
-                var email = $('#email_newsletter').val();
-
-                $.ajax({
-                    type: 'POST',
-                    url: '{{ route('newsletter.subscribe') }}',
-                    data: {
-                        email: email,
-                        _token: '{{ csrf_token() }}'
-                    },
-                    success: function(response) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Subscription Successful',
-                            text: response.message
-                        }).then(function() {
-                            $('#email_newsletter').val('');
-                        });
-                    },
-                    error: function(xhr, status, error) {
-                        var response = xhr.responseJSON;
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Subscription Failed',
-                            text: response.message
-                        }).then(function() {
-                            $('#email_newsletter').val('');
-                        });
-                    }
-                });
-            });
-        });
-
-
-
-        // function previewImage(event) {
-        //     var input = event.target;
-        //     var imagePreview = document.getElementById('imagePreview');
-
-        //     if (input.files && input.files[0]) {
-        //         var reader = new FileReader();
-
-        //         reader.onload = function(e) {
-        //             imagePreview.src = e.target.result;
-        //             imagePreview.style.display = 'block';
-        //         }
-
-        //         reader.readAsDataURL(input.files[0]);
-        //     } else {
-        //         imagePreview.src = '#';
-        //         imagePreview.style.display = 'none';
-        //     }
-        // }
-    </script>
-
-    <script>
-        let selectedFiles = []; // Store selected files
-
-        function previewImages(event) {
-            var input = event.target;
-            var imagePreviewContainer = document.getElementById('imagePreviewContainer');
-
-            if (input.files) {
-                Array.from(input.files).forEach(file => {
-                    // Check if the file is already in selectedFiles to avoid duplicates
-                    if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
-                        selectedFiles.push(file);
-                        var reader = new FileReader();
-
-                        reader.onload = function(e) {
-                            var previewElement = document.createElement('div');
-                            previewElement.classList.add('image-preview');
-                            previewElement.innerHTML = `
-                        <img src="${e.target.result}" alt="Image Preview">
-                        <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
-                    `;
-                            imagePreviewContainer.appendChild(previewElement);
-                        }
-
-                        reader.readAsDataURL(file);
-                    }
-                });
-            }
-        }
-
-        function removeImage(name, size) {
-            var imagePreviewContainer = document.getElementById('imagePreviewContainer');
-            selectedFiles = selectedFiles.filter(file => !(file.name === name && file.size === size));
-
-            // Clear container and re-render previews
-            imagePreviewContainer.innerHTML = '';
-            selectedFiles.forEach(file => {
-                var reader = new FileReader();
-
-                reader.onload = function(e) {
-                    var previewElement = document.createElement('div');
-                    previewElement.classList.add('image-preview');
-                    previewElement.innerHTML = `
-                <img src="${e.target.result}" alt="Image Preview">
-                <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
-            `;
-                    imagePreviewContainer.appendChild(previewElement);
-                }
-
-                reader.readAsDataURL(file);
-            });
-        }
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('input[type="number"]').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-    </script>
-    <script>
-        // $(document).ready(function() {
-        //     var input = document.querySelector("#phone");
-        //     window.intlTelInput(input, {
-        //         initialCountry: "us", // Default country code set to "us"
-        //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-        //     });
-        // });
-    </script>
-  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-<script src="/assets/intl-tel-input/intlTelInput.js"></script>
+    <script src="/assets/intl-tel-input/intlTelInput.js"></script>
+    {{-- app js  --}}
+<script>
+    $(document).ready(function() {
+        $('#newsletter-form').submit(function(event) {
+            event.preventDefault();
+            var email = $('#email_newsletter').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('newsletter.subscribe') }}',
+                data: {
+                    email: email,
+                    _token: '{{ csrf_token() }}'
+                },
+                success: function(response) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Subscription Successful',
+                        text: response.message
+                    }).then(function() {
+                        $('#email_newsletter').val('');
+                    });
+                },
+                error: function(xhr, status, error) {
+                    var response = xhr.responseJSON;
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Subscription Failed',
+                        text: response.message
+                    }).then(function() {
+                        $('#email_newsletter').val('');
+                    });
+                }
+            });
+        });
+    });
+    // function previewImage(event) {
+    //     var input = event.target;
+    //     var imagePreview = document.getElementById('imagePreview');
+
+    //     if (input.files && input.files[0]) {
+    //         var reader = new FileReader();
+
+    //         reader.onload = function(e) {
+    //             imagePreview.src = e.target.result;
+    //             imagePreview.style.display = 'block';
+    //         }
+
+    //         reader.readAsDataURL(input.files[0]);
+    //     } else {
+    //         imagePreview.src = '#';
+    //         imagePreview.style.display = 'none';
+    //     }
+    // }
+</script>
+<script>
+    let selectedFiles = []; // Store selected files
+
+    function previewImages(event) {
+        var input = event.target;
+        var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+
+        if (input.files) {
+            Array.from(input.files).forEach(file => {
+                // Check if the file is already in selectedFiles to avoid duplicates
+                if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
+                    selectedFiles.push(file);
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        var previewElement = document.createElement('div');
+                        previewElement.classList.add('image-preview');
+                        previewElement.innerHTML = `
+                    <img src="${e.target.result}" alt="Image Preview">
+                    <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
+                `;
+                        imagePreviewContainer.appendChild(previewElement);
+                    }
+
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    }
+    function removeImage(name, size) {
+        var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+        selectedFiles = selectedFiles.filter(file => !(file.name === name && file.size === size));
+
+        // Clear container and re-render previews
+        imagePreviewContainer.innerHTML = '';
+        selectedFiles.forEach(file => {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var previewElement = document.createElement('div');
+                previewElement.classList.add('image-preview');
+                previewElement.innerHTML = `
+            <img src="${e.target.result}" alt="Image Preview">
+            <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
+        `;
+                imagePreviewContainer.appendChild(previewElement);
+            }
+
+            reader.readAsDataURL(file);
+        });
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        $('input[type="number"]').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+</script>
+<script>
+    // $(document).ready(function() {
+    //     var input = document.querySelector("#phone");
+    //     window.intlTelInput(input, {
+    //         initialCountry: "us", // Default country code set to "us"
+    //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    //     });
+    // });
+</script>
 <script>
     // Initialize intl-tel-input
     const phoneInput = document.querySelector("#phone");
@@ -455,11 +450,9 @@
         updateMask();
     </script>
 <script>
-    
 </script>
 <script>
     $(document).ready(function() {
-       
         $(document).on('change', '.vehicle-year, .vehicle-make', function() {
             var year = $('.vehicle-year').val();
             var makeId = $('.vehicle-make').val();
@@ -467,8 +460,6 @@
                 getModel(year, makeId);
             }
         });
-
-
         function getModel(year, makeId) {
             $.ajax({
                 url: "{{ route('get.models') }}",
@@ -487,39 +478,16 @@
                     });
                     selectOptions += '</select>';
                     modelsDropdown.html(selectOptions);
-
-                    
-                    // handleOtherSelection();
+    
                 },
                 error: function(xhr) {
                     console.log(xhr.responseText);
                 }
             });
         }
-
-      
-        // function handleOtherSelection() {
-         
-        //     $(document).on('change', '#model', function() {
-        //         var modelSelect = $(this);
-        //         var otherModelInput = $('#other_model');
-
-        //         if (modelSelect.val() === 'other') {
-        //             modelSelect.addClass('d-none'); 
-        //             otherModelInput.removeClass('d-none').attr('required', 'required'); 
-        //         } else {
-        //             otherModelInput.addClass('d-none').removeAttr('required'); 
-        //         }
-        //     });
-        // }
-
-        
-        // handleOtherSelection();
     });
 </script>
-
-
-    <script>
+<script>
         $(document).ready(function() {
             $(document).on('change', '#category', function() {
                 var selectedCategory = $(this).find('option:selected').data('id');
@@ -556,7 +524,7 @@
                 });
             });
         });
-    </script>
+</script>
 <script>
     $(document).ready(function() {
          $('#available_at_auction').change(function() {
@@ -581,73 +549,73 @@
              }
          });
      });
- </script>
- <script>
-    $(document).ready(function() {
-    // Function to show error messages
-    function showError(field, message) {
-        $('#' + field).addClass('error-field');
-        $('#' + field + '-error').text(message).show();
-    }
+</script>
+<script>
+        $(document).ready(function() {
+        // Function to show error messages
+        function showError(field, message) {
+            $('#' + field).addClass('error-field');
+            $('#' + field + '-error').text(message).show();
+        }
 
-    // Function to hide error messages
-    function hideError(field) {
-        $('#' + field).removeClass('error-field');
-        $('#' + field + '-error').hide();
-    }
+        // Function to hide error messages
+        function hideError(field) {
+            $('#' + field).removeClass('error-field');
+            $('#' + field + '-error').hide();
+        }
 
-    // Function to validate fields in a given step
-    function validateStep(step) {
-        var isValid = true;
+        // Function to validate fields in a given step
+        function validateStep(step) {
+            var isValid = true;
 
-        // Iterate over each required field in the specified step
-        $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
-            var field = $(this).attr('id');
-            if (!$(this).val()) {
-                showError(field, 'This field is required.');
-                isValid = false;
-            } else {
-                hideError(field);
+            // Iterate over each required field in the specified step
+            $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+                var field = $(this).attr('id');
+                if (!$(this).val()) {
+                    showError(field, 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError(field);
+                }
+            });
+
+            return isValid;
+        }
+
+        // Move to Step 2
+        $('#step1_next').click(function() {
+            if (validateStep('step1')) {
+                $('#step1').hide();
+                $('#step2').show();
             }
         });
 
-        return isValid;
-    }
-
-    // Move to Step 2
-    $('#step1_next').click(function() {
-        if (validateStep('step1')) {
-            $('#step1').hide();
-            $('#step2').show();
-        }
-    });
-
-    // Return to Step 1
-    $('#step2_previous').click(function() {
-        $('#step2').hide();
-        $('#step1').show();
-    });
-
-    // Move to Step 3
-    $('#step2_next').click(function() {
-        if (validateStep('step2')) {
+        // Return to Step 1
+        $('#step2_previous').click(function() {
             $('#step2').hide();
-            $('#step3').show();
+            $('#step1').show();
+        });
+
+        // Move to Step 3
+        $('#step2_next').click(function() {
+            if (validateStep('step2')) {
+                $('#step2').hide();
+                $('#step3').show();
+            }
+        });
+
+        // Return to Step 2
+        $('#step3_previous').click(function() {
+            $('#step3').hide();
+            $('#step2').show();
+        });
+
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
         }
     });
-
-    // Return to Step 2
-    $('#step3_previous').click(function() {
-        $('#step3').hide();
-        $('#step2').show();
-    });
-
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-});
 </script>
 <script>
     // $(document).ready(function() {
@@ -676,7 +644,359 @@
     //     handleOtherSelection('#model', '#other_model');
     // });
 </script>
+{{-- app js  --}}
 
+{{-- index js  --}}
+<script>
+    $(document).ready(function() {
+        $('#owl-caro').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#example-multiple').select2();
+    });
+    $(document).ready(function() {
+        $('#example-multiple-2').select2();
+    });
+</script>
+{{-- <script>
+    $(document).ready(function() {
+        var selectedTab = '';
+        $('#tabSelector').change(function() {
+            $('.vehicles-container').html('');
+            selectedTab = $(this).val();
+            var vehicleType = $(this).val();
+            $('.tab-pane').removeClass('show active');
+            $('#' + selectedTab).addClass('show active');
+
+            $.ajax({
+                url: "{{ route('get.partial.form') }}",
+                method: 'GET',
+                data: {
+                    vehicleType: vehicleType,
+                },
+                success: function(response) {
+                    $('#additionalContent').html('');
+                    $('#additionalContent').html(response);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        });
+
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                    <div class="vehicle-info">
+                    <div class="row select-bm">
+                    <div class="col-md-4">
+                    <div class="input-form tj-select">
+                    <label> Year</label>
+                    <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+
+            newVehicleHtml +=
+                `</select>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="input-form tj-select">
+                    <label>Make</label>
+                    <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
+
+            @foreach ($makes as $make)
+                newVehicleHtml +=
+                    `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
+            @endforeach
+
+            newVehicleHtml += `
+                    </select>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="input-form tj-select model-div">
+                    <label>Model</label>
+                    <select class="nice-select model" name="model[]" id="model" required></select>`;
+
+            newVehicleHtml +=
+                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+
+            newVehicleHtml += `
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        `;
+
+            $('.vehicles-container').append(newVehicleHtml);
+        }
+
+        function addOtherVehicle() {
+            var newVehicleHtml =
+                `
+                    <div class="vehicle-info">
+                    <div class="row select-bm">
+                    <div class="col-md-4">
+                    <div class="input-form tj-select">
+                    <label> Year</label>
+                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+
+            newVehicleHtml +=
+                `</select>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="input-form tj-select">
+                            <label>Make</label>
+                            <input type="text" id="make" name="make[]"
+                            placeholder="Enter Make" required="" />
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="input-form tj-select model-div">
+                            <label>Model</label>
+                            <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                            required="" />`
+            newVehicleHtml +=
+                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+
+            newVehicleHtml += `</div>
+                            </div>
+                            </div>
+                            </div>
+                            `;
+
+            $('.vehicles-container').append(newVehicleHtml);
+        }
+
+        $(document).on('click', '.addVehicleBtn', function() {
+            if ($('#tabSelector').val() == 'Car') {
+                // console.log('yesss');
+                addNewVehicle();
+            } else {
+                // console.log('nooo');
+                addOtherVehicle();
+            }
+        });
+
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+
+        $(document).on('change', '.year, .make', function() {
+            var year = $(this).closest('.vehicle-info').find('.year').val();
+            var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            if (year && makeId) {
+                getModel(year, makeId, vehicleInfo);
+            }
+        });
+
+        function getModel(year, makeId, vehicleInfo) {
+            // console.log('yes inn');
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelsDropdown = vehicleInfo.find('.model');
+                    modelsDropdown.empty();
+                    var selectOptions = '<option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' +
+                            model +
+                            '</option>';
+                    });
+                    modelsDropdown.html(selectOptions);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+    });
+</script> --}}
+<script>
+    function limitDigits(element, maxDigits) {
+        if (element.value.length > maxDigits) {
+            element.value = element.value.slice(0, maxDigits);
+        }
+    }
+
+    $(document).ready(function() {
+        $('#inches-input').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input, #inches-input').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#inches-input1').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input1, #inches-input1').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#inches-input2').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input, #inches-input2').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $(document).on('change', '#available_at_auction', function() {
+            if ($(this).is(':checked')) {
+                $('.div-link').show();
+            } else {
+                $('.div-link').hide();
+            }
+        });
+
+        $(document).on('change', '#modification', function() {
+            if ($(this).is(':checked')) {
+                $('.div-modify_info').show();
+            } else {
+                $('.div-modify_info').hide();
+            }
+        });
+    });
+</script>
+<script>
+    function updateSuggestions(inputField, suggestionsList) {
+        var inputValue = inputField.val();
+
+        $.ajax({
+            url: "{{ route('get.zipcodes') }}",
+            method: "POST",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "input": inputValue
+            },
+            success: function(response) {
+                suggestionsList.empty();
+
+                $.each(response, function(index, suggestion) {
+                    var listItem = $("<li>").text(suggestion).click(function() {
+                        inputField.val(suggestion);
+                        suggestionsList.css("display", "none");
+                    });
+                    suggestionsList.append(listItem);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
+            }
+        });
+    }
+
+    // $("#pickup-location, #delivery-location").keyup(function() {
+    //     var inputField = $(this);
+    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+    //     suggestionsList.css("display", "block");
+    //     if (inputField.val() === "") {
+    //         suggestionsList.css("display", "none");
+    //     }
+    //     updateSuggestions(inputField, suggestionsList);
+    // });
+
+</script>
+<script>
+    $(document).ready(function() {
+        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+            var year = $('.vehicle-year').val();
+            var makeId = $('.vehicle-make').val();
+            if (year && makeId) {
+                getModel(year, makeId);
+            }
+        });
+
+        function getModel(year, makeId) {
+            // console.log('yes inn');
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelsDropdown = $('.vehicle-model-div');
+                    modelsDropdown.empty();
+                    var selectOptions =
+                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' + model +
+                            '</option>';
+                    });
+                    selectOptions += '</select>';
+                    modelsDropdown.html(selectOptions);
+
+                    // console.log('yesssss', response);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+    });
+</script>
+{{-- index js  --}}
 </body>
 
 </html>

@@ -102,9 +102,10 @@
                     <div class="col-xl-4 col-lg-4">
                         <div class="single-input-field">
                             <label class="d-block text-white">Phone:</label>
-                            <input id="phone" class="form-control" name="phone" type="tel"
+                            <input id="phone" class="form-control ophone" name="phone" type="tel"
                                 placeholder="Customer Phone" required>
-                            
+                            <small id="errPhone" class="err-style"></small>
+                            <input type="hidden" name="country_code" id="country_code" />
                         </div>
                     </div>
                     {{-- <div class="col-xl-4 col-lg-4">
@@ -250,21 +251,21 @@
             });
         }
         // Phone Number Input with Intl-Tel-Input
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "auto",
-            geoIpLookup: function(callback) {
-                fetch('https://ipinfo.io/json')
-                    .then(function(response) {
-                        return response.json();
-                    })
-                    .then(function(ipinfo) {
-                        var countryCode = "us";
-                        callback(countryCode);
-                    });
-            },
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-        });
+        // var input = document.querySelector("#phone");
+        // window.intlTelInput(input, {
+        //     initialCountry: "auto",
+        //     geoIpLookup: function(callback) {
+        //         fetch('https://ipinfo.io/json')
+        //             .then(function(response) {
+        //                 return response.json();
+        //             })
+        //             .then(function(ipinfo) {
+        //                 var countryCode = "us";
+        //                 callback(countryCode);
+        //             });
+        //     },
+        //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        // });
         // Play Video on Click
         function playVideo() {
             document.querySelector('.video-thumbnail').style.display = 'none';
@@ -290,35 +291,36 @@
             this.value = this.value.replace(/[^0-9]/g, '');
         });
         // Form Validation
-        function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
-        $('#step1_next').click(function() {
-            var isValid = true;
-            if (!$('#pickup-location').val()) {
-                showError('pickup-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('pickup-location');
-            }
-            if (!$('#delivery-location').val()) {
-                showError('delivery-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('delivery-location');
-            }
-            if (isValid) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
+        // function showError(field, message) {
+        //     $('#' + field).addClass('error-field');
+        //     $('#' + field + '-error').text(message).show();
+        // }
+        // function hideError(field) {
+        //     $('#' + field).removeClass('error-field');
+        //     $('#' + field + '-error').hide();
+        // }
+        // $('#step1_next').click(function() {
+        //     var isValid = true;
+        //     if (!$('#pickup-location').val()) {
+        //         showError('pickup-location', 'This field is required.');
+        //         isValid = false;
+        //     } else {
+        //         hideError('pickup-location');
+        //     }
+        //     if (!$('#delivery-location').val()) {
+        //         showError('delivery-location', 'This field is required.');
+        //         isValid = false;
+        //     } else {
+        //         hideError('delivery-location');
+        //     }
+        //     if (isValid) {
+        //         $('#step1').hide();
+        //         $('#step2').show();
+        //     }
+        // });
     });
 </script>
+
 {{-- <script>
     $(document).ready(function() {
         $('#category').change(function() {

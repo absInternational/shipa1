@@ -289,7 +289,7 @@
         });
     </script>
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
            $('#available_at_auction').change(function() {
            if ($(this).is(':checked')) {
@@ -307,7 +307,7 @@
                 }
             });
         });
-    </script>
+    </script> --}}
 <script>
     var validPickupSuggestions = [];
     var validDeliverySuggestions = [];
