@@ -954,6 +954,9 @@
     //     }
     //     updateSuggestions(inputField, suggestionsList);
     // });
+
+    // NEW CODE 
+
     var validPickupSuggestions = [];
     var validDeliverySuggestions = [];
 
@@ -1068,6 +1071,46 @@
     });
 </script>
 {{-- index js  --}}
+
+<script>
+    $(document).ready(function () {
+        $('form').on('submit', function (e) {
+            // Year validation
+            if ($('#year').val() === null) {
+                e.preventDefault(); // Prevent form submission
+                $('#year').closest('.input-form').find('.error-message').show(); // Show the error message
+                $('#year').focus(); // Focus the select element
+            } else {
+                $('#year').closest('.input-form').find('.error-message').hide(); // Hide the error message
+            }
+
+            // Category validation
+            if ($('#category').val() === null) {
+                e.preventDefault(); // Prevent form submission
+                $('#category').closest('.input-form').find('.error-message').show(); // Show the error message
+                $('#category').focus(); // Focus the select element
+            } else {
+                $('#category').closest('.input-form').find('.error-message').hide(); // Hide the error message
+            }
+        });
+
+        // Hide error on change
+        $('#year').on('change', function () {
+            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
+        });
+
+        $('#category').on('change', function () {
+            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
+
+            // Show input field if "Others" is selected
+            if ($(this).val() === 'Others') {
+                $('#otherCategoryInput').show().prop('disabled', false);
+            } else {
+                $('#otherCategoryInput').hide().prop('disabled', true);
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

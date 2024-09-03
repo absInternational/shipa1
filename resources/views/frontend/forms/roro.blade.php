@@ -362,9 +362,13 @@
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" id="pickup-location"
                                                     placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                                <ul class="suggestions suggestionsTwo"></ul>
+                                                {{-- <ul class="suggestions suggestionsTwo"></ul>
                                                 <label class="error-message" id="pickup-location-error">This field is
-                                                    required.</label>
+                                                    required.</label> --}}
+                                                    <label class="error-message" id="delivery-city-error">This field is
+                                                        required.</label>
+                                                    <small id="errOLoc" class="err-loc"></small>
+                                                     <ul class="suggestions suggestionsTwo"></ul>
                                             </div>
                                         </div>
                                     </div>
@@ -376,9 +380,11 @@
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" id="delivery-country" name="roro_country"
                                                     autocomplete="off" placeholder="Enter Country" required>
-                                                <ul class="suggestions suggestionsCountry"></ul>
+                                                {{-- <ul class="suggestions suggestionsCountry"></ul>
                                                 <label class="error-message" id="delivery-location-error">This field is
-                                                    required.</label>
+                                                    required.</label> --}}
+                                                    <small id="errDLoc" class="err-loc"></small>
+                                                    <ul class="suggestions suggestionsTwo"></ul>
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 mb-4">
@@ -466,10 +472,10 @@
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
-                                                <input id="phone" class="form-control" required name="phone"
+                                                <input id="phone" class="form-control ophone" required name="phone"
                                                     type="tel" placeholder="Customer Phone">
-                                                <label class="error-message" id="Custo_Phone-error">This field is
-                                                    required.</label>
+                                                <small id="errPhone" class="err-style"></small>
+                                                <input type="hidden" name="country_code" id="country_code" />
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4">
@@ -516,77 +522,77 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
     </script>
     <script>
-        var validPickupSuggestions = [];
-        var validDeliverySuggestions = [];
+        // var validPickupSuggestions = [];
+        // var validDeliverySuggestions = [];
     
-        function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-            var inputValue = inputField.val();
+        // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+        //     var inputValue = inputField.val();
     
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-                    validSuggestions.length = 0;  // Clear previous suggestions
+        //     $.ajax({
+        //         url: "{{ route('get.zipcodes') }}",
+        //         method: "POST",
+        //         data: {
+        //             "_token": "{{ csrf_token() }}",
+        //             "input": inputValue
+        //         },
+        //         success: function(response) {
+        //             suggestionsList.empty();
+        //             validSuggestions.length = 0;  // Clear previous suggestions
     
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        validSuggestions.push(suggestion);  // Add to valid suggestions
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
+        //             $.each(response, function(index, suggestion) {
+        //                 var listItem = $("<li>").text(suggestion).click(function() {
+        //                     inputField.val(suggestion);
+        //                     suggestionsList.css("display", "none");
+        //                 });
+        //                 validSuggestions.push(suggestion);  // Add to valid suggestions
+        //                 suggestionsList.append(listItem);
+        //             });
+        //         },
+        //         error: function(xhr, status, error) {
+        //             console.error("Error:", error);
+        //         }
+        //     });
+        // }
     
-        $("#pickup-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-        });
+        // $("#pickup-location").keyup(function() {
+        //     var inputField = $(this);
+        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+        //     suggestionsList.css("display", "block");
+        //     if (inputField.val() === "") {
+        //         suggestionsList.css("display", "none");
+        //     }
+        //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+        // });
     
-        $("#delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-        });
+        // $("#delivery-location").keyup(function() {
+        //     var inputField = $(this);
+        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+        //     suggestionsList.css("display", "block");
+        //     if (inputField.val() === "") {
+        //         suggestionsList.css("display", "none");
+        //     }
+        //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+        // });
     
-        function validateLocationInput(inputField, validSuggestions, errorField) {
-            var inputValue = inputField.val();
-            if (!validSuggestions.includes(inputValue)) {
-                errorField.text("Please select a valid location.");
-                return false;
-            } else {
-                errorField.text("");
-                return true;
-            }
-        }
+        // function validateLocationInput(inputField, validSuggestions, errorField) {
+        //     var inputValue = inputField.val();
+        //     if (!validSuggestions.includes(inputValue)) {
+        //         errorField.text("Please select a valid location.");
+        //         return false;
+        //     } else {
+        //         errorField.text("");
+        //         return true;
+        //     }
+        // }
     
-        $("form").submit(function(event) {
-            var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-            var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+        // $("form").submit(function(event) {
+        //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+        //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
     
-            if (!isPickupValid || !isDeliveryValid) {
-                event.preventDefault();  // Prevent form submission if validation fails
-            }
-        });
+        //     if (!isPickupValid || !isDeliveryValid) {
+        //         event.preventDefault();  // Prevent form submission if validation fails
+        //     }
+        // });
     </script>
     {{-- <script>
         function updateSuggestions(inputField, suggestionsList) {
@@ -835,23 +841,23 @@
     </script> --}}
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var input = document.querySelector("#phone");
-            window.intlTelInput(input, {
-                initialCountry: "auto",
-                geoIpLookup: function(callback) {
-                    fetch('https://ipinfo.io/json')
-                        .then(function(response) {
-                            return response.json();
-                        })
-                        .then(function(ipinfo) {
-                            var countryCode = "us";
-                            callback(countryCode);
-                        });
-                },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-            });
-        });
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     var input = document.querySelector("#phone");
+        //     window.intlTelInput(input, {
+        //         initialCountry: "auto",
+        //         geoIpLookup: function(callback) {
+        //             fetch('https://ipinfo.io/json')
+        //                 .then(function(response) {
+        //                     return response.json();
+        //                 })
+        //                 .then(function(ipinfo) {
+        //                     var countryCode = "us";
+        //                     callback(countryCode);
+        //                 });
+        //         },
+        //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+        //     });
+        // });
     </script>
 
     <script>
@@ -985,23 +991,23 @@
     </script>
 
     <script>
-        $(document).ready(function() {
-            $(document).on('change', '#available_at_auction', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
+        // $(document).ready(function() {
+        //     $(document).on('change', '#available_at_auction', function() {
+        //         if ($(this).is(':checked')) {
+        //             $('.div-link').show();
+        //         } else {
+        //             $('.div-link').hide();
+        //         }
+        //     });
 
-            $(document).on('change', '#modification', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
-        });
+        //     $(document).on('change', '#modification', function() {
+        //         if ($(this).is(':checked')) {
+        //             $('.div-modify_info').show();
+        //         } else {
+        //             $('.div-modify_info').hide();
+        //         }
+        //     });
+        // });
     </script>
 
     <script>

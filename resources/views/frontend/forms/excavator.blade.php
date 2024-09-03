@@ -251,6 +251,9 @@
                                         }
                                         @endphp
                                     </select>
+                                    <div class="error-message" style="color: red; display: none;">
+                                        Please select a year.
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -268,18 +271,6 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-3">
-
-                                <label class="lab-cos">Length</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
-                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
-                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
-                                </div>
-                            </div>
 
                             <div class="row mb-3">
                                 <div class="col-md-3">
@@ -326,34 +317,79 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
-
-                                <label class="lab-cos">Height</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
-                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
-                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                    <select class=" " id="trailer_type" name="trailer_type">
+                                        <option value="RGN" selected>RGN</option>
+                                        <option value="VAN (V)">VAN (V)</option>
+                                        <option value="FLATBED (F)">FLATBED (F)</option>
+                                        <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                        <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
+                                        <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
+                                        <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                        <option value="TRUCK (T)">TRUCK (T)</option>
+                                        <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
+                                        <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                        <option value="LOWBOY (LB)">LOWBOY (LB)</option>
+                                        <option value="ENDUMP (ED)">ENDUMP (ED)</option>
+                                        <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                                        <option value="PARTIAL (PT)">PARTIAL (PT)</option>
+                                        <option value="20ft container">20ft container</option>
+                                        <option value="40ft container">40ft container</option>
+                                        <option value="48ft container">48ft container</option>
+                                        <option value="53ft container">53ft container</option>
+                                    </select>
                                 </div>
                             </div>
-
-                            <div class="col-md-3">
-
-                                <label class="lab-cos">Weight</label>
-                                <div class="input-container1">
-                                    <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
-                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                    <span class="separators-w">(Lbs.)</span>
-
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="condition" class="text-white">Condition</label>
+                                    <select class=" " id="condition" name="condition[]">
+                                        <option value="1" selected>Running</option>
+                                        <option value="2">Non Running</option>
+                                    </select>
                                 </div>
                             </div>
+                    </div>
 
-
-
-
-
+                        <div class="row mt-3">
+                            {{-- <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="load_type" class="text-white">Load Type</label>
+                                    <select class="" id="load_type" name="load_type">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
+                                        <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
+                                    </select>
+                                </div>
+                            </div> --}}
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="load_method" class="text-white">Load Method</label>
+                                    <select class="" id="load_method" name="load_method[]">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="LOADING DOCK">LOADING DOCK</option>
+                                        <option value="CRANE">CRANE</option>
+                                        <option value="FORKLIFT">FORKLIFT</option>
+                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="unload_method" class="text-white">Unload Method</label>
+                                    <select class="" id="unload_method" name="unload_method[]">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="LOADING DOCK">LOADING DOCK</option>
+                                        <option value="CRANE">CRANE</option>
+                                        <option value="FORKLIFT">FORKLIFT</option>
+                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
                         <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
@@ -361,87 +397,7 @@
 
                         <div id="vehicles-container">
                         </div>
-
-                       
-                            
-
-                          
                         <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
-                        <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class=" " id="trailer_type" name="trailer_type">
-                                            <option value="RGN" selected>RGN</option>
-                                            <option value="VAN (V)">VAN (V)</option>
-                                            <option value="FLATBED (F)">FLATBED (F)</option>
-                                            <option value="STEP DECK (SD)">STEP DECK (SD)</option>
-                                            <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
-                                            <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                                            <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
-                                            <option value="TRUCK (T)">TRUCK (T)</option>
-                                            <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
-                                            <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
-                                            <option value="LOWBOY (LB)">LOWBOY (LB)</option>
-                                            <option value="ENDUMP (ED)">ENDUMP (ED)</option>
-                                            <option value="LANDOLL (LD)">LANDOLL (LD)</option>
-                                            <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                            <option value="20ft container">20ft container</option>
-                                            <option value="40ft container">40ft container</option>
-                                            <option value="48ft container">48ft container</option>
-                                            <option value="53ft container">53ft container</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class=" " id="condition" name="condition[]">
-                                            <option value="1" selected>Running</option>
-                                            <option value="2">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mt-3">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="load_type" class="text-white">Load Type</label>
-                                        <select class="" id="load_type" name="load_type">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
-                                            <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="load_method" class="text-white">Load Method</label>
-                                        <select class="" id="load_method" name="load_method">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK">LOADING DOCK</option>
-                                            <option value="CRANE">CRANE</option>
-                                            <option value="FORKLIFT">FORKLIFT</option>
-                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="unload_method" class="text-white">Unload Method</label>
-                                        <select class="" id="unload_method" name="unload_method">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK">LOADING DOCK</option>
-                                            <option value="CRANE">CRANE</option>
-                                            <option value="FORKLIFT">FORKLIFT</option>
-                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
                         {{-- <div class="row mb-3 mt-3">
 
 
@@ -503,8 +459,6 @@
                             
 
                         </div> --}}
-
-
                         <div class="row">
                             <div class="col-md-12">
 
@@ -521,8 +475,6 @@
                                         placeholder="Enter Link" />
                                 </div>
 
-
-
                                 <!-- <div class="form-check">
                                     <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                                         name="available_at_auction" value="1" />
@@ -537,20 +489,14 @@
                                 </div> -->
 
                             </div>
-
-
-                            
                         </div>
-
-
                         <div class="input-form mt-3">
                             <label class="d-block text-white"> Image:</label>
                             <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
                                 placeholder="Upload File" /> -->
                                 <input class="form-control image_input" type="file" name="image[]" accept="image/*" multiple onchange="previewImages(event)">
-    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
                         </div>
-
 
                         <div class="tj-theme-button text-center mt-3">
                             <button class="tj-submit-btn" type="submit" value="submit">
@@ -659,92 +605,125 @@ $(document).ready(function() {
             `
                     <div class="vehicle-info">
                         <div class="row select-bm">
+                            <!-- Bin icon for deleting vehicle -->
+                                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
                                     <label> Year</label>
                                     <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
                                     var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
+                                    for (var year = currentYear; year >= 1936; year--) {
+                                        newVehicleHtml += `<option value="${year}">${year}</option>`;
+                                    }
 
-        newVehicleHtml +=
-            `</select>
+                                        newVehicleHtml +=
+                                    `</select>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                <div class="input-form tj-select">
-                    <label>Make</label>
-                    <input type="text" id="make" name="make[]"
-                                            placeholder="Enter Make" required="" />
+                                <div class="input-form tj-select">
+                                    <label>Make</label>
+                                    <input type="text" id="make" name="make[]"
+                                        placeholder="Enter Make" required="" />
+                                </div>
                             </div>
-                        </div>
                             <div class="col-md-4">
                                 <div class="input-form tj-select model-div">
                                     <label>Model</label>
                                     <input type="text" id="model" name="model[]" placeholder="Enter Model"
                                         required="" />
-                                    <!-- Bin icon for deleting vehicle -->
-                                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-3">
-                                <div class="col-md-3">
+                            <div class="col-md-3">
 
-                                    <label class="lab-cos">Length</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
+                                <label class="lab-cos">Length</label>
+                                <div class="input-container">
+                                    <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
+                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                    <span class="separator">(Ft.)</span>
+                                    <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                    <span class="separators">(In.)</span>
                                 </div>
-
-                                <div class="col-md-3">
-
-                                    <label class="lab-cos">Width</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-
-                                    <label class="lab-cos">Height</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-
-                                    <label class="lab-cos">Weight</label>
-                                    <div class="input-container1">
-                                        <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
-                                            min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                        <span class="separators-w">(Lbs.)</span>
-
-                                    </div>
-                                </div>
-
-
-
-
-
                             </div>
+
+                            <div class="col-md-3">
+
+                                <label class="lab-cos">Width</label>
+                                <div class="input-container">
+                                    <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
+                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                    <span class="separator">(Ft.)</span>
+                                    <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
+                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                    <span class="separators">(In.)</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+
+                                <label class="lab-cos">Height</label>
+                                <div class="input-container">
+                                    <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
+                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                    <span class="separator">(Ft.)</span>
+                                    <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
+                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                    <span class="separators">(In.)</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+
+                                <label class="lab-cos">Weight</label>
+                                <div class="input-container1">
+                                    <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
+                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                                    <span class="separators-w">(Lbs.)</span>
+
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="load_method" class="text-white">Load Method</label>
+                                        <select class="nice-select" id="load_method" name="load_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="unload_method" class="text-white">Unload Method</label>
+                                        <select class="nice-select" id="unload_method" name="unload_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="nice-select " id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
+                             </div>
                     </div>
                 `;
 
@@ -761,7 +740,7 @@ $(document).ready(function() {
 });
 </script>
 
-<script>
+{{-- <script>
 $(document).ready(function() {
     $('#available_at_auction').change(function() {
         if ($(this).is(':checked')) {
@@ -779,79 +758,79 @@ $(document).ready(function() {
         }
     });
 });
-</script>
+</script> --}}
 <script>
-    var validPickupSuggestions = [];
-    var validDeliverySuggestions = [];
+    // var validPickupSuggestions = [];
+    // var validDeliverySuggestions = [];
 
-    function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-        var inputValue = inputField.val();
+    // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+    //     var inputValue = inputField.val();
 
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-                validSuggestions.length = 0;  // Clear previous suggestions
+    //     $.ajax({
+    //         url: "{{ route('get.zipcodes') }}",
+    //         method: "POST",
+    //         data: {
+    //             "_token": "{{ csrf_token() }}",
+    //             "input": inputValue
+    //         },
+    //         success: function(response) {
+    //             suggestionsList.empty();
+    //             validSuggestions.length = 0;  // Clear previous suggestions
 
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    validSuggestions.push(suggestion);  // Add to valid suggestions
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
+    //             $.each(response, function(index, suggestion) {
+    //                 var listItem = $("<li>").text(suggestion).click(function() {
+    //                     inputField.val(suggestion);
+    //                     suggestionsList.css("display", "none");
+    //                 });
+    //                 validSuggestions.push(suggestion);  // Add to valid suggestions
+    //                 suggestionsList.append(listItem);
+    //             });
+    //         },
+    //         error: function(xhr, status, error) {
+    //             console.error("Error:", error);
+    //         }
+    //     });
+    // }
 
-    $("#pickup-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    });
+    // $("#pickup-location").keyup(function() {
+    //     var inputField = $(this);
+    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+    //     suggestionsList.css("display", "block");
+    //     if (inputField.val() === "") {
+    //         suggestionsList.css("display", "none");
+    //     }
+    //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+    // });
 
-    $("#delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    });
+    // $("#delivery-location").keyup(function() {
+    //     var inputField = $(this);
+    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+    //     suggestionsList.css("display", "block");
+    //     if (inputField.val() === "") {
+    //         suggestionsList.css("display", "none");
+    //     }
+    //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+    // });
 
-    function validateLocationInput(inputField, validSuggestions, errorField) {
-        var inputValue = inputField.val();
-        if (!validSuggestions.includes(inputValue)) {
-            errorField.text("Please select a valid location.");
-            return false;
-        } else {
-            errorField.text("");
-            return true;
-        }
-    }
+    // function validateLocationInput(inputField, validSuggestions, errorField) {
+    //     var inputValue = inputField.val();
+    //     if (!validSuggestions.includes(inputValue)) {
+    //         errorField.text("Please select a valid location.");
+    //         return false;
+    //     } else {
+    //         errorField.text("");
+    //         return true;
+    //     }
+    // }
 
-    $("form").submit(function(event) {
-        var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-        var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+    // $("form").submit(function(event) {
+    //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+    //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
 
-        if (!isPickupValid || !isDeliveryValid) {
-            event.preventDefault();  // Prevent form submission if validation fails
-        }
-    });
+    //     if (!isPickupValid || !isDeliveryValid) {
+    //         event.preventDefault();  // Prevent form submission if validation fails
+    //     }
+    // });
 </script>
 
 {{-- <script>

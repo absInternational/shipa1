@@ -592,6 +592,9 @@
                                                 }
                                             @endphp
                                         </select>
+                                        <div class="error-message" style="color: red; display: none;">
+                                            Please select a year.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -693,77 +696,77 @@
         });
     </script> --}}
     <script>
-        var validPickupSuggestions = [];
-        var validDeliverySuggestions = [];
+        // var validPickupSuggestions = [];
+        // var validDeliverySuggestions = [];
     
-        function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-            var inputValue = inputField.val();
+        // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+        //     var inputValue = inputField.val();
     
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-                    validSuggestions.length = 0;  // Clear previous suggestions
+        //     $.ajax({
+        //         url: "{{ route('get.zipcodes') }}",
+        //         method: "POST",
+        //         data: {
+        //             "_token": "{{ csrf_token() }}",
+        //             "input": inputValue
+        //         },
+        //         success: function(response) {
+        //             suggestionsList.empty();
+        //             validSuggestions.length = 0;  // Clear previous suggestions
     
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        validSuggestions.push(suggestion);  // Add to valid suggestions
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
+        //             $.each(response, function(index, suggestion) {
+        //                 var listItem = $("<li>").text(suggestion).click(function() {
+        //                     inputField.val(suggestion);
+        //                     suggestionsList.css("display", "none");
+        //                 });
+        //                 validSuggestions.push(suggestion);  // Add to valid suggestions
+        //                 suggestionsList.append(listItem);
+        //             });
+        //         },
+        //         error: function(xhr, status, error) {
+        //             console.error("Error:", error);
+        //         }
+        //     });
+        // }
     
-        $("#pickup-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-        });
+        // $("#pickup-location").keyup(function() {
+        //     var inputField = $(this);
+        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+        //     suggestionsList.css("display", "block");
+        //     if (inputField.val() === "") {
+        //         suggestionsList.css("display", "none");
+        //     }
+        //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+        // });
     
-        $("#delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-        });
+        // $("#delivery-location").keyup(function() {
+        //     var inputField = $(this);
+        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+        //     suggestionsList.css("display", "block");
+        //     if (inputField.val() === "") {
+        //         suggestionsList.css("display", "none");
+        //     }
+        //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+        // });
     
-        function validateLocationInput(inputField, validSuggestions, errorField) {
-            var inputValue = inputField.val();
-            if (!validSuggestions.includes(inputValue)) {
-                errorField.text("Please select a valid location.");
-                return false;
-            } else {
-                errorField.text("");
-                return true;
-            }
-        }
+        // function validateLocationInput(inputField, validSuggestions, errorField) {
+        //     var inputValue = inputField.val();
+        //     if (!validSuggestions.includes(inputValue)) {
+        //         errorField.text("Please select a valid location.");
+        //         return false;
+        //     } else {
+        //         errorField.text("");
+        //         return true;
+        //     }
+        // }
     
-        $("form").submit(function(event) {
-            var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-            var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+        // $("form").submit(function(event) {
+        //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+        //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
     
-            if (!isPickupValid || !isDeliveryValid) {
-                event.preventDefault();  // Prevent form submission if validation fails
-            }
-        });
+        //     if (!isPickupValid || !isDeliveryValid) {
+        //         event.preventDefault();  // Prevent form submission if validation fails
+        //     }
+        // });
     </script>
     {{-- <script>
         function updateSuggestions(inputField, suggestionsList) {

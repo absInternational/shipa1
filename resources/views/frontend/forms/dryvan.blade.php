@@ -569,6 +569,9 @@
                                                 }
                                             @endphp
                                         </select>
+                                        <div class="error-message" style="color: red; display: none;">
+                                            Please select a year.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
