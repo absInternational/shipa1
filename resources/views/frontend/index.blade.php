@@ -1013,14 +1013,6 @@
         },
     });
 </script> -->
-<script>
-    $(document).ready(function() {
-        $('#example-multiple').select2();
-    });
-    $(document).ready(function() {
-        $('#example-multiple-2').select2();
-    });
-</script>
 {{-- <script>
     $(document).ready(function() {
         $('#category').change(function() {
@@ -1059,7 +1051,16 @@
         });
     });
 </script> --}}
-<script>
+{{-- <script>
+    document.querySelectorAll('input[type="text"]').forEach((input) => {
+        input.addEventListener("input", function() {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    });
+</script> --}}
+
+{{-- moved --}}
+{{-- <script>
     $(document).ready(function() {
         $('#owl-caro').owlCarousel({
             loop: true,
@@ -1082,7 +1083,14 @@
         });
     });
 </script>
-
+<script>
+    $(document).ready(function() {
+        $('#example-multiple').select2();
+    });
+    $(document).ready(function() {
+        $('#example-multiple-2').select2();
+    });
+</script>
 <script>
     $(document).ready(function() {
         var selectedTab = '';
@@ -1252,13 +1260,6 @@
     });
 </script>
 <script>
-    // document.querySelectorAll('input[type="text"]').forEach((input) => {
-    //     input.addEventListener("input", function() {
-    //         this.value = this.value.replace(/[^0-9]/g, "");
-    //     });
-    // });
-</script>
-<script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -1357,15 +1358,16 @@
         });
     }
 
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
+    // $("#pickup-location, #delivery-location").keyup(function() {
+    //     var inputField = $(this);
+    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+    //     suggestionsList.css("display", "block");
+    //     if (inputField.val() === "") {
+    //         suggestionsList.css("display", "none");
+    //     }
+    //     updateSuggestions(inputField, suggestionsList);
+    // });
+
 </script>
 <script>
     $(document).ready(function() {
@@ -1406,5 +1408,7 @@
             });
         }
     });
-</script>
+</script> --}}
+{{-- moved --}}
+
 @endsection
