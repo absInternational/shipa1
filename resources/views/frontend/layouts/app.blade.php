@@ -610,11 +610,11 @@
             $('#step2').show();
         });
 
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
-        }
+        // function limitDigits(element, maxDigits) {
+        //     if (element.value.length > maxDigits) {
+        //         element.value = element.value.slice(0, maxDigits);
+        //     }
+        // }
     });
 </script>
 <script>
@@ -647,37 +647,6 @@
 {{-- app js  --}}
 
 {{-- index js  --}}
-<script>
-    $(document).ready(function() {
-        $('#owl-caro').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            autoplay: true,
-            autoplayTimeout: 4000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 4
-                }
-            }
-        });
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $('#example-multiple').select2();
-    });
-    $(document).ready(function() {
-        $('#example-multiple-2').select2();
-    });
-</script>
 {{-- <script>
     $(document).ready(function() {
         var selectedTab = '';
@@ -846,6 +815,56 @@
         }
     });
 </script> --}}
+{{-- <script>
+    $(document).ready(function() {
+        $(document).on('change', '#available_at_auction', function() {
+            if ($(this).is(':checked')) {
+                $('.div-link').show();
+            } else {
+                $('.div-link').hide();
+            }
+        });
+
+        $(document).on('change', '#modification', function() {
+            if ($(this).is(':checked')) {
+                $('.div-modify_info').show();
+            } else {
+                $('.div-modify_info').hide();
+            }
+        });
+    });
+</script> --}}
+<script>
+    $(document).ready(function() {
+        $('#owl-caro').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#example-multiple').select2();
+    });
+    $(document).ready(function() {
+        $('#example-multiple-2').select2();
+    });
+</script>
 <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
@@ -899,25 +918,6 @@
     });
 </script>
 <script>
-    $(document).ready(function() {
-        $(document).on('change', '#available_at_auction', function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
-
-        $(document).on('change', '#modification', function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script>
-<script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -945,15 +945,15 @@
         });
     }
 
-    // $("#pickup-location, #delivery-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList);
-    // });
+    $("#pickup-location, #delivery-location").keyup(function() {
+        var inputField = $(this);
+        var suggestionsList = inputField.siblings(".suggestionsTwo");
+        suggestionsList.css("display", "block");
+        if (inputField.val() === "") {
+            suggestionsList.css("display", "none");
+        }
+        updateSuggestions(inputField, suggestionsList);
+    });
 
 </script>
 <script>
