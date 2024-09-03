@@ -500,7 +500,7 @@
                        as your trusted and reliable partner who shares mutual feelings when it comes to professionalism and 
                        transparency.</p>
                     <div class="tj-theme-button  text-center mt-2">
-                        <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
+                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.golf_cart') }}" target="_blank">
                             Get Quote
                             <i class="flaticon-right-1"></i>
                         </a>

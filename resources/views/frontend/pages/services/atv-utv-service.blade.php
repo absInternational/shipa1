@@ -469,7 +469,7 @@
                          now and get a rough estimate of your shipment!
                          </p>
                     <div class="tj-theme-button  text-center mt-2">
-                        <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
+                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.atv_utv') }}" target="_blank">
                             Get Quote
                             <i class="flaticon-right-1"></i>
                         </a>
