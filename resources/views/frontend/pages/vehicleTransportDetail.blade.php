@@ -535,7 +535,7 @@
                             </div>
                         </div>
                         <p class="desc">
-                            No matter which mode of transportation you use, ShipA1 assures its customers, utmostsecurity
+                            No matter which mode of transportation you use, ShipA1 assures its customers, atmost security
                             to their assets.
                         </p>
                     </div>
@@ -550,7 +550,7 @@
                             </div>
                         </div>
                         <p class="desc">
-                            Our team is loaded with highly experienced professionals of both customer dealing andvehicle
+                            Our team is loaded with highly experienced professionals of both customer dealing and vehicle
                             handling.
                         </p>
                     </div>

@@ -179,7 +179,26 @@
                                     </ul>
                                 </div>
                             @endif
-                            <div class="input-form">
+                            <div class="col-md-12">
+                                <div class="input-form">
+                                    <label for="category">Category</label>
+                                    <select class="" id="category" name="category">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="Power Boat">Power Boat</option>
+                                        <option value="Sail Boat">Sail Boat</option>
+                                        <option value="Personal Watercraft">Personal Watercraft</option>
+                                        <option value="Boat Parts">Boat Parts</option>
+                                        <option value="Motor Boat">Motor Boat</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                    <div class="error-message" id="category-error" style="color: red; display: none;">
+                                        Please select a category.
+                                    </div>
+                                    <input type="text" class="form-control" id="otherCategoryInput" name="other_category" disabled
+                                        style="display: none;" placeholder="Specify Category">
+                                </div>
+                            </div>
+                            {{-- <div class="input-form">
                                 <label for="category">Category</label>
                                 <select class="" id="category" name="category">
                                     <option value="" disabled selected>Select</option>
@@ -192,7 +211,7 @@
                                 </select>
                                 <input type="text" class="form-control" id="otherCategoryInput" name="category" disabled
                                     style="display: none;" placeholder="Specify Category">
-                            </div><br>
+                            </div><br> --}}
 
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
 
@@ -250,7 +269,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
-                                        <label> Year</label>
+                                        <label for="year">Year</label>
                                         <select class="nice-select vehicle-year" name="year[]" id="year">
                                             <option value="" disabled selected>Select Year</option>
                                             @php
@@ -260,6 +279,9 @@
                                                 }
                                             @endphp
                                         </select>
+                                        <div class="error-message" style="color: red; display: none;">
+                                            Please select a year.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -282,10 +304,10 @@
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                            min="0" maxlength="3" oninput="limitDigits(this, 3)" required="">
                                         <span class="separator">(Ft.)</span>
                                         <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required="">
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
@@ -293,10 +315,10 @@
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                            min="0" maxlength="3" oninput="limitDigits(this, 3)" required="">
                                         <span class="separator">(Ft.)</span>
                                         <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required="">
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
@@ -321,13 +343,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
-                                Add Equipment</a>
-
-                            <div id="vehicles-container">
-                            </div>
-
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -351,6 +366,14 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
+                                Add Equipment</a>
+
+                            <div id="vehicles-container">
+                            </div>
+
+                            
 
                             {{-- <div class="row mb-3">
                                 <div class="col-md-3">
@@ -631,7 +654,15 @@
                                     </div>
                                 </div>
 
-
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="nice-select" id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
 
 
 
@@ -743,6 +774,45 @@
         if (!isPickupValid || !isDeliveryValid) {
             event.preventDefault();  // Prevent form submission if validation fails
         }
+    });
+</script>
+<script>
+     $(document).ready(function () {
+        $('form').on('submit', function (e) {
+            // Year validation
+            if ($('#year').val() === null) {
+                e.preventDefault(); // Prevent form submission
+                $('#year').closest('.input-form').find('.error-message').show(); // Show the error message
+                $('#year').focus(); // Focus the select element
+            } else {
+                $('#year').closest('.input-form').find('.error-message').hide(); // Hide the error message
+            }
+
+            // Category validation
+            if ($('#category').val() === null) {
+                e.preventDefault(); // Prevent form submission
+                $('#category').closest('.input-form').find('.error-message').show(); // Show the error message
+                $('#category').focus(); // Focus the select element
+            } else {
+                $('#category').closest('.input-form').find('.error-message').hide(); // Hide the error message
+            }
+        });
+
+        // Hide error on change
+        $('#year').on('change', function () {
+            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
+        });
+
+        $('#category').on('change', function () {
+            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
+
+            // Show input field if "Others" is selected
+            if ($(this).val() === 'Others') {
+                $('#otherCategoryInput').show().prop('disabled', false);
+            } else {
+                $('#otherCategoryInput').hide().prop('disabled', true);
+            }
+        });
     });
 </script>
     {{-- <script>
