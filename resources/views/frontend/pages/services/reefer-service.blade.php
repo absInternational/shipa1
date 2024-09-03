@@ -275,7 +275,7 @@
                     Despite these challenges, the reefer shipping market is expanding due to the growing demand for temperature-controlled transportation. Ship A1 proudly serves customers across the states, ensuring prompt delivery and safer shipping by trained hands.
                     As a promising logistics company.</p>
                     <div class="tj-theme-button  text-center mt-2">
-                        <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
+                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.reefertrucking') }}" target="_blank">
                             Get Quote
                             <i class="flaticon-right-1"></i>
                         </a>
