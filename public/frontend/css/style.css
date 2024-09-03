@@ -11416,7 +11416,7 @@ PAGE LOAD ANIMATION
         height: 100px;
     }
     .err-loc {
-        color: #ff0000; /* Red color for error messages */
+        color: #ff0000 !important; /* Red color for error messages */
         font-size: 14px;
         font-weight: bold;
         margin-top: 5px;
