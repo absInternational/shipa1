@@ -181,6 +181,7 @@
                             @csrf
                             <input type="hidden" name="car_type" value="3" hidden>
                             <input type="hidden" name="vehicle_opt" value="freight" hidden>
+                            <input type="hidden" name="frieght_class" id="frieght_class" value="" hidden>
                             @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <ul>
@@ -485,10 +486,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input" name="length_ft[]" class="length_ft calculate_freight input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                                        <input type="number" id="inches-input" class="length_in calculate_freight input-field" name="length_in[]" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -496,10 +497,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input1" name="width_ft[]" class="width_ft calculate_freight input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input1" name="width_in[]" class="width_in calculate_freight input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -507,10 +508,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input2" name="height_ft[]" class="height_ft calculate_freight input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input2" name="height_in[]" class="height_in calculate_freight input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -518,7 +519,7 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
-                                        <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
+                                        <input type="number" id="feet-input" class="weight calculate_freight input-field-1" name="weight[]" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
 
@@ -612,7 +613,7 @@
             $('#example-multiple-2').select2();
         });
     </script>
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             $('#available_at_auction').change(function() {
                 if ($(this).is(':checked')) {
@@ -630,12 +631,12 @@
                                 <div class="input-form tj-select">
                                     <label> Year</label>
                                     <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-                newVehicleHtml +=
-                    `</select>
+                                        var currentYear = {{ date('Y') }};
+                                        for (var year = currentYear; year >= 1936; year--) {
+                                            newVehicleHtml += `<option value="${year}">${year}</option>`;
+                                        }
+                                        newVehicleHtml +=
+                                    `</select>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -667,7 +668,7 @@
                 $(this).closest('.vehicle-info').remove();
             });
         });
-    </script>
+    </script> --}}
     {{-- <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
@@ -707,6 +708,7 @@
     <script>
         $(document).ready(function() {
             function checkSpecificFieldsFilled() {
+                // console.log('yesyessss');
                 var allFilled = true;
                 $('.calculate_freight').each(function() {
                     if ($(this).val() === '' || $(this).val() === '0') {
@@ -721,13 +723,13 @@
                 freight_calc();
             }
             function freight_calc() {
-                var length_ft = parseFloat($('#length_ft').val());
-                var length_in = parseFloat($('#length_in').val());
-                var width_ft = parseFloat($('#width_ft').val());
-                var width_in = parseFloat($('#width_in').val());
-                var height_ft = parseFloat($('#height_ft').val());
-                var height_in = parseFloat($('#height_in').val());
-                var weight = parseFloat($('#weight').val());
+                var length_ft = parseFloat($('.length_ft').val());
+                var length_in = parseFloat($('.length_in').val());
+                var width_ft = parseFloat($('.width_ft').val());
+                var width_in = parseFloat($('.width_in').val());
+                var height_ft = parseFloat($('.height_ft').val());
+                var height_in = parseFloat($('.height_in').val());
+                var weight = parseFloat($('.weight').val());
                 console.log(
                     length_ft,
                     length_in,
@@ -798,7 +800,9 @@
                     fright_class = 50;
                 }
                 console.log('fright_class', fright_class);
-                $('#frieght_class').val(fright_class).trigger('change');
+                $('#frieght_class').val(fright_class);
+                console.log('classclass', $('#frieght_class').val());
+                // $('#frieght_class').val(fright_class).trigger('change');
             }
             $('.calculate_freight').on('keyup', function() {
                 if (checkSpecificFieldsFilled()) {
@@ -806,6 +810,12 @@
                 }
             });
         });
+
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
+        }
     </script>
     <script>
         var validPickupSuggestions = [];

@@ -122,17 +122,17 @@ class QuoteController extends Controller
         } else {
             $equipment_type = $request->input('equipment_type', null);
         }
-        $stackable = $request->input('stackable', null);
-        $hazardous = $request->input('hazardous', null);
+        $stackable = $request->input('stackable', 0);
+        $hazardous = $request->input('hazardous', 0);
         $pick_up_services = $request->input('pick_up_services', null);
         $deliver_services = $request->input('deliver_services', null);
         $ex_pickup_date = $request->input('ex_pickup_date', null);
         $ex_pickup_time = $request->input('ex_pickup_time', null);
         $ex_delivery_date = $request->input('ex_delivery_date', null);
         $ex_delivery_time = $request->input('ex_delivery_time', null);
-        $protect_from_freezing = $request->input('protect_from_freezing', null);
-        $sort_segregate = $request->input('sort_segregate', null);
-        $blind_shipment = $request->input('blind_shipment', null);
+        $protect_from_freezing = $request->input('protect_from_freezing', 0);
+        $sort_segregate = $request->input('sort_segregate', 0);
+        $blind_shipment = $request->input('blind_shipment', 0);
         $vehicle_opt = $vehicle_opt;
         $frieght_class = $request->input('frieght_class', null);
         $rv_type = $request->input('rv_type', null);

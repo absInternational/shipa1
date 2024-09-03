@@ -205,6 +205,7 @@
                             @csrf
                             <input type="hidden" name="car_type" value="3" hidden>
                             <input type="hidden" name="vehicle_opt" value="freight" hidden>
+                            <input type="hidden" name="frieght_class" id="frieght_class" value="" hidden>
                             @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <ul>
@@ -524,10 +525,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input" name="length_ft[]" class="length_ft calculate_freight input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                                        <input type="number" id="inches-input" class="length_in calculate_freight input-field" name="length_in[]" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -535,10 +536,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input1" name="width_ft[]" class="width_ft calculate_freight input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input1" name="width_in[]" class="width_in calculate_freight input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -546,10 +547,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input2" name="height_ft[]" class="height_ft calculate_freight input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input2" name="height_in[]" class="height_in calculate_freight input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -557,7 +558,7 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
-                                        <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
+                                        <input type="number" id="feet-input" class="weight calculate_freight input-field-1" name="weight[]" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
 
@@ -824,11 +825,6 @@
         // });
     </script>
     <script>
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
-        }
         $(document).ready(function() {
             $('#inches-input').on('input', function() {
                 if (this.value > 11) {
@@ -868,5 +864,117 @@
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            function checkSpecificFieldsFilled() {
+                // console.log('yesyessss');
+                var allFilled = true;
+                $('.calculate_freight').each(function() {
+                    if ($(this).val() === '' || $(this).val() === '0') {
+                        allFilled = false;
+                        return false;
+                    }
+                });
+                return allFilled;
+            }
+            function allSpecificFieldsFilledFunction() {
+                console.log("All specific fields are filled up!");
+                freight_calc();
+            }
+            function freight_calc() {
+                var length_ft = parseFloat($('.length_ft').val());
+                var length_in = parseFloat($('.length_in').val());
+                var width_ft = parseFloat($('.width_ft').val());
+                var width_in = parseFloat($('.width_in').val());
+                var height_ft = parseFloat($('.height_ft').val());
+                var height_in = parseFloat($('.height_in').val());
+                var weight = parseFloat($('.weight').val());
+                console.log(
+                    length_ft,
+                    length_in,
+                    width_ft,
+                    width_in,
+                    height_ft,
+                    height_in,
+                    weight,
+                );
+                var length = length_ft * 12;
+                length = length + length_in;
+                var width = width_ft * 12;
+                width = width + width_in;
+                var height = height_ft * 12;
+                height = height + height_in;
+                console.log(length, width, height, weight);
+                length = parseFloat(length);
+                width = parseFloat(width);
+                height = parseFloat(height);
+                weight = parseFloat(weight);
+                var unit = 'inch';
+                var answer_1 = (length * height * width).toFixed(4);
+                if (unit == 'inch') {
+                    answer_1 = (answer_1 / 1728).toFixed(4);
+                }
+                var fright_class = 0;
+                var answer_1 = (length * height * width).toFixed(4);
+                if (unit == 'inch') {
+                    answer_1 = (answer_1 / 1728).toFixed(4);
+                }
+                var fright_class = 0;
+                answer_1 = (weight / answer_1).toFixed(4);
+                if (answer_1 < 1) {
+                    fright_class = 500;
+                } else if (answer_1 >= 1 && answer_1 < 2) {
+                    fright_class = 400;
+                } else if (answer_1 >= 2 && answer_1 < 3) {
+                    fright_class = 300;
+                } else if (answer_1 >= 3 && answer_1 < 4) {
+                    fright_class = 250;
+                } else if (answer_1 >= 4 && answer_1 < 5) {
+                    fright_class = 200;
+                } else if (answer_1 >= 5 && answer_1 < 6) {
+                    fright_class = 175;
+                } else if (answer_1 >= 6 && answer_1 < 7) {
+                    fright_class = 150;
+                } else if (answer_1 >= 7 && answer_1 < 8) {
+                    fright_class = 125;
+                } else if (answer_1 >= 8 && answer_1 < 9) {
+                    fright_class = 110;
+                } else if (answer_1 >= 9 && answer_1 < 10.5) {
+                    fright_class = 100;
+                } else if (answer_1 >= 10.5 && answer_1 < 12) {
+                    fright_class = 92.5;
+                } else if (answer_1 >= 12 && answer_1 < 13.5) {
+                    fright_class = 85;
+                } else if (answer_1 >= 13.5 && answer_1 < 15) {
+                    fright_class = 77.5;
+                } else if (answer_1 >= 15 && answer_1 < 22.5) {
+                    fright_class = 70;
+                } else if (answer_1 >= 22.5 && answer_1 < 30) {
+                    fright_class = 65;
+                } else if (answer_1 >= 30 && answer_1 < 35) {
+                    fright_class = 60;
+                } else if (answer_1 >= 35 && answer_1 < 50) {
+                    fright_class = 55;
+                } else if (answer_1 >= 50) {
+                    fright_class = 50;
+                }
+                console.log('fright_class', fright_class);
+                $('#frieght_class').val(fright_class);
+                console.log('classclass', $('#frieght_class').val());
+                // $('#frieght_class').val(fright_class).trigger('change');
+            }
+            $('.calculate_freight').on('keyup', function() {
+                if (checkSpecificFieldsFilled()) {
+                    allSpecificFieldsFilledFunction();
+                }
+            });
+        });
+
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
+        }
     </script>
 @endsection
