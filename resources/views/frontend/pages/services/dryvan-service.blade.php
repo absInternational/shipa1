@@ -91,7 +91,7 @@
                                 <h2 class="title-1">Dry-van Shipping Services</h2>
                             </div>
                             <div class="tj-theme-button">
-                                <a class="tj-transparent-btn" href="contact.html">
+                                <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}">
                                     Get Quote <i class="flaticon-right-1"></i>
                                 </a>
                             </div>
