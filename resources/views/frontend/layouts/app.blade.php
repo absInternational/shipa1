@@ -79,6 +79,13 @@
     .error {
         border: 2px solid red;
     }
+    .err-loc {
+        color: #ff0000 !important; /* Red color for error messages */
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 5px;
+        display: block;
+    }
 </style>
 <!--Start of Tawk.to Script-->
 <!-- <script type="text/javascript">
