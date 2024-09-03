@@ -918,7 +918,46 @@
     });
 </script>
 <script>
-    function updateSuggestions(inputField, suggestionsList) {
+    // function updateSuggestions(inputField, suggestionsList) {
+    //     var inputValue = inputField.val();
+
+    //     $.ajax({
+    //         url: "{{ route('get.zipcodes') }}",
+    //         method: "POST",
+    //         data: {
+    //             "_token": "{{ csrf_token() }}",
+    //             "input": inputValue
+    //         },
+    //         success: function(response) {
+    //             suggestionsList.empty();
+
+    //             $.each(response, function(index, suggestion) {
+    //                 var listItem = $("<li>").text(suggestion).click(function() {
+    //                     inputField.val(suggestion);
+    //                     suggestionsList.css("display", "none");
+    //                 });
+    //                 suggestionsList.append(listItem);
+    //             });
+    //         },
+    //         error: function(xhr, status, error) {
+    //             console.error("Error:", error);
+    //         }
+    //     });
+    // }
+
+    // $("#pickup-location, #delivery-location").keyup(function() {
+    //     var inputField = $(this);
+    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+    //     suggestionsList.css("display", "block");
+    //     if (inputField.val() === "") {
+    //         suggestionsList.css("display", "none");
+    //     }
+    //     updateSuggestions(inputField, suggestionsList);
+    // });
+    var validPickupSuggestions = [];
+    var validDeliverySuggestions = [];
+
+    function updateSuggestions(inputField, suggestionsList, validSuggestions) {
         var inputValue = inputField.val();
 
         $.ajax({
@@ -930,12 +969,14 @@
             },
             success: function(response) {
                 suggestionsList.empty();
+                validSuggestions.length = 0;  // Clear previous suggestions
 
                 $.each(response, function(index, suggestion) {
                     var listItem = $("<li>").text(suggestion).click(function() {
                         inputField.val(suggestion);
                         suggestionsList.css("display", "none");
                     });
+                    validSuggestions.push(suggestion);  // Add to valid suggestions
                     suggestionsList.append(listItem);
                 });
             },
@@ -945,14 +986,44 @@
         });
     }
 
-    $("#pickup-location, #delivery-location").keyup(function() {
+    $("#pickup-location").keyup(function() {
         var inputField = $(this);
         var suggestionsList = inputField.siblings(".suggestionsTwo");
         suggestionsList.css("display", "block");
         if (inputField.val() === "") {
             suggestionsList.css("display", "none");
         }
-        updateSuggestions(inputField, suggestionsList);
+        updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+    });
+
+    $("#delivery-location").keyup(function() {
+        var inputField = $(this);
+        var suggestionsList = inputField.siblings(".suggestionsTwo");
+        suggestionsList.css("display", "block");
+        if (inputField.val() === "") {
+            suggestionsList.css("display", "none");
+        }
+        updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+    });
+
+    function validateLocationInput(inputField, validSuggestions, errorField) {
+        var inputValue = inputField.val();
+        if (!validSuggestions.includes(inputValue)) {
+            errorField.text("Please select a valid location.");
+            return false;
+        } else {
+            errorField.text("");
+            return true;
+        }
+    }
+
+    $("form").submit(function(event) {
+        var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+        var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+
+        if (!isPickupValid || !isDeliveryValid) {
+            event.preventDefault();  // Prevent form submission if validation fails
+        }
     });
 
 </script>
