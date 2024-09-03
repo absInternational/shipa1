@@ -150,12 +150,12 @@
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class="form-control" id="trailer_type" name="trailer_type">
                                             <option value="" selected disabled>Select</option>
-                                            <option value="VAN (V)">VAN (V)</option>
+                                            {{-- <option value="VAN (V)">VAN (V)</option> --}}
                                             <option value="FLATBED (F)">FLATBED (F)</option>
                                             <option value="STEP DECK (SD)">STEP DECK (SD)</option>
                                             <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
                                             <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                                            <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                            {{-- <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option> --}}
                                             <option value="TRUCK (T)">TRUCK (T)</option>
                                             <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
                                             <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
@@ -163,10 +163,10 @@
                                             <option value="ENDUMP (ED)">ENDUMP (ED)</option>
                                             <option value="LANDOLL (LD)">LANDOLL (LD)</option>
                                             <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                            <option value="20ft container">20ft container</option>
+                                            {{-- <option value="20ft container">20ft container</option>
                                             <option value="40ft container">40ft container</option>
                                             <option value="48ft container">48ft container</option>
-                                            <option value="53ft container">53ft container</option>
+                                            <option value="53ft container">53ft container</option> --}}
                                         </select>
                                     </div>
                                 </div>
@@ -184,17 +184,17 @@
                                 {{-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="load_type" class="text-white">Load Type</label>
-                                        <select class="form-control" id="load_type" name="load_type">
+                                        <select class="form-control" id="load_type" name="load_type[]">
                                             <option value="" disabled selected>Select</option>
                                             <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
                                             <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
                                         </select>
                                     </div>
                                 </div> --}}
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="load_method" class="text-white">Load Method</label>
-                                        <select class="form-control" id="load_method" name="load_method">
+                                        <select class="form-control" id="load_method" name="load_method[]">
                                             <option value="" disabled selected>Select</option>
                                             <option value="LOADING DOCK">LOADING DOCK</option>
                                             <option value="CRANE">CRANE</option>
@@ -203,10 +203,10 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="unload_method" class="text-white">Unload Method</label>
-                                        <select class="form-control" id="unload_method" name="unload_method">
+                                        <select class="form-control" id="unload_method" name="unload_method[]">
                                             <option value="" disabled selected>Select</option>
                                             <option value="LOADING DOCK">LOADING DOCK</option>
                                             <option value="CRANE">CRANE</option>

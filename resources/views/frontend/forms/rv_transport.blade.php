@@ -329,18 +329,11 @@
 
 
                             </div>
-
-                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-                                RV</a>
-
-                            <div id="vehicles-container">
-                            </div>
-
                             <div class="row">
                                 <div class="col-4">
                                     <div class="input-form">
                                         <label for="rv_type">RV Types</label>
-                                        <select class="nice-select " id="rv_type" name="rv_type">
+                                        <select class="nice-select " id="rv_type" name="rv_type[]">
                                             <option value="" disabled selected>Select</option>
                                             <option value="Class A Motorhome">Class A Motorhome</option>
                                             <option value="Class B Motorhome">Class B Motorhome</option>
@@ -358,14 +351,14 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="nice-select " id="trailer_type" name="trailer_type">
+                                        <select class="nice-select " id="trailer_type" name="trailer_type[]">
                                             <option value="" selected disabled>Select</option>
-                                            <option value="VAN (V)">VAN (V)</option>
+                                            {{-- <option value="VAN (V)">VAN (V)</option> --}}
                                             <option value="FLATBED (F)">FLATBED (F)</option>
                                             <option value="STEP DECK (SD)">STEP DECK (SD)</option>
                                             <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
                                             <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                                            <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                            {{-- <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option> --}}
                                             <option value="TRUCK (T)">TRUCK (T)</option>
                                             <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
                                             <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
@@ -373,10 +366,10 @@
                                             <option value="ENDUMP (ED)">ENDUMP (ED)</option>
                                             <option value="LANDOLL (LD)">LANDOLL (LD)</option>
                                             <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                            <option value="20ft container">20ft container</option>
+                                            {{-- <option value="20ft container">20ft container</option>
                                             <option value="40ft container">40ft container</option>
                                             <option value="48ft container">48ft container</option>
-                                            <option value="53ft container">53ft container</option>
+                                            <option value="53ft container">53ft container</option> --}}
                                         </select>
                                     </div>
                                 </div>
@@ -390,14 +383,11 @@
                                     </div>
                                 </div>
                             </div>
-                            
-
                             <div class="row mt-3">
-
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="load_method" class="text-white">Load Method</label>
-                                        <select class="nice-select " id="load_method" name="load_method">
+                                        <select class="nice-select " id="load_method" name="load_method[]">
                                             <option value="" disabled selected>Select</option>
                                             <option value="LOADING DOCK">LOADING DOCK</option>
                                             <option value="CRANE">CRANE</option>
@@ -409,7 +399,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="unload_method" class="text-white">Unload Method</label>
-                                        <select class="nice-select " id="unload_method" name="unload_method">
+                                        <select class="nice-select " id="unload_method" name="unload_method[]">
                                             <option value="" disabled selected>Select</option>
                                             <option value="LOADING DOCK">LOADING DOCK</option>
                                             <option value="CRANE">CRANE</option>
@@ -418,6 +408,12 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+
+                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+                                RV</a>
+
+                            <div id="vehicles-container">
                             </div>
                             <div class="row mt-3">
                                 <div class="col-md-12">
@@ -450,14 +446,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
                             <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -470,10 +458,8 @@
         </div>
     </section>
 @endsection
-
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
@@ -526,22 +512,18 @@
             });
         });
     </script>
-
     <script>
         function moveToNext(current, nextId) {
             if (current.value.length >= current.maxLength) {
                 document.getElementById(nextId).focus();
             }
         }
-
-
         // document.querySelectorAll('input[type="text"]').forEach((input) => {
         //     input.addEventListener("input", function() {
         //         this.value = this.value.replace(/[^0-9]/g, "");
         //     });
         // });
     </script>
-
     <script>
         $(document).ready(function() {
             $(document).on('change', '.category', function() {
@@ -556,7 +538,6 @@
             });
         });
     </script>
-
     <script>
         $(document).ready(function() {
             function addNewVehicle() {
@@ -645,11 +626,61 @@
 
                                     </div>
                                 </div>
-
-
-
-
-
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-form">
+                                        <label for="rv_type">RV Types</label>
+                                        <select class="nice-select " id="rv_type" name="rv_type[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="Class A Motorhome">Class A Motorhome</option>
+                                            <option value="Class B Motorhome">Class B Motorhome</option>
+                                            <option value="Class C Motorhome">Class C Motorhome</option>
+                                            <option value="Travel Trailer">Travel Trailer</option>
+                                            <option value="Folding Tent Trailer">Folding Tent Trailer</option>
+                                            <option value="Fifth-Wheel">Fifth-Wheel</option>
+                                            <option value="Truck Camper">Truck Camper</option>
+                                            <option value="Others">Other</option>
+                                        </select>
+                                        <input type="text" class="form-control" id="otherCategoryInput"
+                                            name="rv_type" disabled style="display: none;" placeholder="Specify Please">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="nice-select " id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="load_method" class="text-white">Load Method</label>
+                                        <select class="nice-select " id="load_method" name="load_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="unload_method" class="text-white">Unload Method</label>
+                                        <select class="nice-select " id="unload_method" name="unload_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                     </div>
                 `;

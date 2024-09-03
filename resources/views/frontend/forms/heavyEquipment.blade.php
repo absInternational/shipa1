@@ -310,8 +310,80 @@ shipment efficiently with our instant quote tool.')
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                    <select class=" " id="trailer_type" name="trailer_type">
+                                        <option value="RGN" selected>RGN</option>
+                                        <option value="VAN (V)">VAN (V)</option>
+                                        <option value="FLATBED (F)">FLATBED (F)</option>
+                                        <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                        <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
+                                        <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
+                                        <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                        <option value="TRUCK (T)">TRUCK (T)</option>
+                                        <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
+                                        <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                        <option value="LOWBOY (LB)">LOWBOY (LB)</option>
+                                        <option value="ENDUMP (ED)">ENDUMP (ED)</option>
+                                        <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                                        <option value="PARTIAL (PT)">PARTIAL (PT)</option>
+                                        {{-- <option value="20ft container">20ft container</option>
+                                        <option value="40ft container">40ft container</option>
+                                        <option value="48ft container">48ft container</option>
+                                        <option value="53ft container">53ft container</option> --}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="condition" class="text-white">Condition</label>
+                                    <select class=" " id="condition" name="condition[]">
+                                        <option value="1" selected>Running</option>
+                                        <option value="2">Non Running</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            {{-- <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="load_type" class="text-white">Load Type</label>
+                                    <select class="" id="load_type" name="load_type">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
+                                        <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
+                                    </select>
+                                </div>
+                            </div> --}}
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="load_method" class="text-white">Load Method</label>
+                                    <select class="" id="load_method" name="load_method[]">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="LOADING DOCK">LOADING DOCK</option>
+                                        <option value="CRANE">CRANE</option>
+                                        <option value="FORKLIFT">FORKLIFT</option>
+                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="unload_method" class="text-white">Unload Method</label>
+                                    <select class="" id="unload_method" name="unload_method[]">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="LOADING DOCK">LOADING DOCK</option>
+                                        <option value="CRANE">CRANE</option>
+                                        <option value="FORKLIFT">FORKLIFT</option>
+                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                         <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-                            Vehicle</a>
+                            Equipment</a>
                         <div id="vehicles-container">
                         </div>
                         <div class="row">
@@ -340,78 +412,7 @@ shipment efficiently with our instant quote tool.')
                             </div>
                         </div><br>
                         
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                    <select class=" " id="trailer_type" name="trailer_type">
-                                        <option value="RGN" selected>RGN</option>
-                                        <option value="VAN (V)">VAN (V)</option>
-                                        <option value="FLATBED (F)">FLATBED (F)</option>
-                                        <option value="STEP DECK (SD)">STEP DECK (SD)</option>
-                                        <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
-                                        <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                                        <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
-                                        <option value="TRUCK (T)">TRUCK (T)</option>
-                                        <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
-                                        <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
-                                        <option value="LOWBOY (LB)">LOWBOY (LB)</option>
-                                        <option value="ENDUMP (ED)">ENDUMP (ED)</option>
-                                        <option value="LANDOLL (LD)">LANDOLL (LD)</option>
-                                        <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                        <option value="20ft container">20ft container</option>
-                                        <option value="40ft container">40ft container</option>
-                                        <option value="48ft container">48ft container</option>
-                                        <option value="53ft container">53ft container</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="condition" class="text-white">Condition</label>
-                                    <select class=" " id="condition" name="condition[]">
-                                        <option value="1" selected>Running</option>
-                                        <option value="2">Non Running</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="load_type" class="text-white">Load Type</label>
-                                    <select class="" id="load_type" name="load_type">
-                                        <option value="" disabled selected>Select</option>
-                                        <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
-                                        <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="load_method" class="text-white">Load Method</label>
-                                    <select class="" id="load_method" name="load_method">
-                                        <option value="" disabled selected>Select</option>
-                                        <option value="LOADING DOCK">LOADING DOCK</option>
-                                        <option value="CRANE">CRANE</option>
-                                        <option value="FORKLIFT">FORKLIFT</option>
-                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="unload_method" class="text-white">Unload Method</label>
-                                    <select class="" id="unload_method" name="unload_method">
-                                        <option value="" disabled selected>Select</option>
-                                        <option value="LOADING DOCK">LOADING DOCK</option>
-                                        <option value="CRANE">CRANE</option>
-                                        <option value="FORKLIFT">FORKLIFT</option>
-                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="input-form mt-3">
                             <label class="d-block" class="text-white"> Image:</label>
                             <input class="form-control image_input" type="file" name="image[]" accept="image/*"
@@ -527,6 +528,43 @@ shipment efficiently with our instant quote tool.')
                                 </div>
                             </div>
                     </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="load_method" class="text-white">Load Method</label>
+                                    <select class="nice-select" id="load_method" name="load_method[]">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="LOADING DOCK">LOADING DOCK</option>
+                                        <option value="CRANE">CRANE</option>
+                                        <option value="FORKLIFT">FORKLIFT</option>
+                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="unload_method" class="text-white">Unload Method</label>
+                                    <select class="nice-select" id="unload_method" name="unload_method[]">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="LOADING DOCK">LOADING DOCK</option>
+                                        <option value="CRANE">CRANE</option>
+                                        <option value="FORKLIFT">FORKLIFT</option>
+                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="condition" class="text-white">Condition</label>
+                                    <select class="nice-select " id="condition" name="condition[]">
+                                        <option value="1" selected>Running</option>
+                                        <option value="2">Non Running</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     `;
 

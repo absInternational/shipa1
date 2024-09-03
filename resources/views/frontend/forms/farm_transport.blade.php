@@ -320,32 +320,14 @@
 
                                     </div>
                                 </div>
-
-
-
-
-
                             </div>
-
-                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
-                                Add Equipment</a>
-
-                            <div id="vehicles-container">
-                            </div>
-
-
-
-
-
-                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class=" " id="trailer_type" name="trailer_type">
+                                        <select class=" " id="trailer_type" name="trailer_type[]">
                                             <option value="RGN" selected>RGN</option>
-                                            <option value="VAN (V)">VAN (V)</option>
+                                            {{-- <option value="VAN (V)">VAN (V)</option> --}}
                                             <option value="FLATBED (F)">FLATBED (F)</option>
                                             <option value="STEP DECK (SD)">STEP DECK (SD)</option>
                                             <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
@@ -358,10 +340,10 @@
                                             <option value="ENDUMP (ED)">ENDUMP (ED)</option>
                                             <option value="LANDOLL (LD)">LANDOLL (LD)</option>
                                             <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                            <option value="20ft container">20ft container</option>
+                                            {{-- <option value="20ft container">20ft container</option>
                                             <option value="40ft container">40ft container</option>
                                             <option value="48ft container">48ft container</option>
-                                            <option value="53ft container">53ft container</option>
+                                            <option value="53ft container">53ft container</option> --}}
                                         </select>
                                     </div>
                                 </div>
@@ -377,20 +359,20 @@
                             </div>
 
                             <div class="row mt-3">
-                                <div class="col-md-4">
+                                {{-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="load_type" class="text-white">Load Type</label>
-                                        <select class="" id="load_type" name="load_type">
+                                        <select class="" id="load_type" name="load_type[]">
                                             <option value="" disabled selected>Select</option>
                                             <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
                                             <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
+                                </div> --}}
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="load_method" class="text-white">Load Method</label>
-                                        <select class="" id="load_method" name="load_method">
+                                        <select class="" id="load_method" name="load_method[]">
                                             <option value="" disabled selected>Select</option>
                                             <option value="LOADING DOCK">LOADING DOCK</option>
                                             <option value="CRANE">CRANE</option>
@@ -399,10 +381,10 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="unload_method" class="text-white">Unload Method</label>
-                                        <select class="" id="unload_method" name="unload_method">
+                                        <select class="" id="unload_method" name="unload_method[]">
                                             <option value="" disabled selected>Select</option>
                                             <option value="LOADING DOCK">LOADING DOCK</option>
                                             <option value="CRANE">CRANE</option>
@@ -412,7 +394,11 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
+                                Add Equipment</a>
+                            <div id="vehicles-container">
+                            </div>
+                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
                             {{-- <div class="row mb-3 mt-3">
 
 
@@ -619,6 +605,8 @@
                     `
                     <div class="vehicle-info">
                         <div class="row select-bm">
+                            <!-- Bin icon for deleting vehicle -->
+                                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
                                     <label> Year</label>
@@ -644,8 +632,7 @@
                                     <label>Model</label>
                                     <input type="text" id="model" name="model[]" placeholder="Enter Model"
                                         required="" />
-                                    <!-- Bin icon for deleting vehicle -->
-                                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -699,11 +686,43 @@
 
                                     </div>
                                 </div>
-
-
-
-
-
+                        </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="load_method" class="text-white">Load Method</label>
+                                        <select class="nice-select" id="load_method" name="load_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="unload_method" class="text-white">Unload Method</label>
+                                        <select class="nice-select" id="unload_method" name="unload_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="nice-select " id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                     </div>
                 `;
