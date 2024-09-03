@@ -98,7 +98,7 @@
                                         <label class="d-block"> Pickup Location:</label>
                                         <input type="text" id="pickup-location" name="origin"
                                             placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
+                                        <small id="errOLoc" class="err-loc" style="color: #ff0000 !important;"></small>
                                         <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
                                 </div>
