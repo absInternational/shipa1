@@ -811,13 +811,13 @@
             });
         });
 
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
-        }
+        // function limitDigits(element, maxDigits) {
+        //     if (element.value.length > maxDigits) {
+        //         element.value = element.value.slice(0, maxDigits);
+        //     }
+        // }
     </script>
-    <script>
+    {{-- <script>
         var validPickupSuggestions = [];
         var validDeliverySuggestions = [];
     
@@ -889,5 +889,5 @@
                 event.preventDefault();  // Prevent form submission if validation fails
             }
         });
-    </script>
+    </script> --}}
 @endsection
