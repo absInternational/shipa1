@@ -343,13 +343,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
-                                Add Equipment</a>
-
-                            <div id="vehicles-container">
-                            </div>
-
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -373,6 +366,14 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
+                                Add Equipment</a>
+
+                            <div id="vehicles-container">
+                            </div>
+
+                            
 
                             {{-- <div class="row mb-3">
                                 <div class="col-md-3">
@@ -653,7 +654,15 @@
                                     </div>
                                 </div>
 
-
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="nice-select" id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
 
 
 
