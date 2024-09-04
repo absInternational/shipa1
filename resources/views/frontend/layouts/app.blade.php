@@ -558,68 +558,282 @@
          });
      });
 </script>
+{{-- multi step form --}}
 <script>
-        $(document).ready(function() {
-        // Function to show error messages
-        function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
+    //     $(document).ready(function() {
+    //     // Function to show error messages
+    //     function showError(field, message) {
+    //         $('#' + field).addClass('error-field');
+    //         $('#' + field + '-error').text(message).show();
+    //     }
 
-        // Function to hide error messages
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
+    //     // Function to hide error messages
+    //     function hideError(field) {
+    //         $('#' + field).removeClass('error-field');
+    //         $('#' + field + '-error').hide();
+    //     }
 
-        // Function to validate fields in a given step
+    //     // Function to validate fields in a given step
+    //     function validateStep(step) {
+    //         var isValid = true;
+
+    //         // Iterate over each required field in the specified step
+    //         $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+    //             var field = $(this).attr('id');
+    //             if (!$(this).val()) {
+    //                 showError(field, 'This field is required.');
+    //                 isValid = false;
+    //             } else {
+    //                 hideError(field);
+    //             }
+    //         });
+
+    //         return isValid;
+    //     }
+
+    //     // Move to Step 2
+    //     $('#step1_next').click(function() {
+    //         if (validateStep('step1')) {
+    //             $('#step1').hide();
+    //             $('#step2').show();
+    //         }
+    //     });
+
+    //     // Return to Step 1
+    //     $('#step2_previous').click(function() {
+    //         $('#step2').hide();
+    //         $('#step1').show();
+    //     });
+
+    //     // Move to Step 3
+    //     $('#step2_next').click(function() {
+    //         if (validateStep('step2')) {
+    //             $('#step2').hide();
+    //             $('#step3').show();
+    //         }
+    //     });
+
+    //     // Return to Step 2
+    //     $('#step3_previous').click(function() {
+    //         $('#step3').hide();
+    //         $('#step2').show();
+    //     });
+
+    // });
+</script>
+<script>
+    $(document).ready(function () {
+        // Function to validate the current step
         function validateStep(step) {
-            var isValid = true;
+            let isValid = true;
 
-            // Iterate over each required field in the specified step
-            $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
-                var field = $(this).attr('id');
-                if (!$(this).val()) {
-                    showError(field, 'This field is required.');
+            $(step).find('.form-control').each(function () {
+                if ($(this).attr('required') && $(this).val() === '') {
                     isValid = false;
+                    $(this).addClass('is-invalid');
+                    $(this).siblings('.error-message').show();
                 } else {
-                    hideError(field);
+                    $(this).removeClass('is-invalid');
+                    $(this).siblings('.error-message').hide();
                 }
             });
 
             return isValid;
         }
 
-        // Move to Step 2
-        $('#step1_next').click(function() {
-            if (validateStep('step1')) {
+        // Step 1 Next Button Click
+        $('#step1_next').click(function () {
+            if (validateStep('#step1')) {
                 $('#step1').hide();
                 $('#step2').show();
             }
         });
 
-        // Return to Step 1
-        $('#step2_previous').click(function() {
-            $('#step2').hide();
-            $('#step1').show();
-        });
-
-        // Move to Step 3
-        $('#step2_next').click(function() {
-            if (validateStep('step2')) {
+        // Step 2 Next Button Click
+        $('#step2_next').click(function () {
+            if (validateStep('#step2')) {
                 $('#step2').hide();
                 $('#step3').show();
             }
         });
 
-        // Return to Step 2
-        $('#step3_previous').click(function() {
+        // Step 2 Previous Button Click
+        $('#step2_previous').click(function () {
+            $('#step2').hide();
+            $('#step1').show();
+        });
+
+        // Step 3 Previous Button Click
+        $('#step3_previous').click(function () {
             $('#step3').hide();
             $('#step2').show();
         });
 
+        // Submit Button Click
+        $('#submit_instant_code').click(function (e) {
+            if (!validateStep('#step3')) {
+                e.preventDefault();
+            }
+        });
+
+        // Remove validation error on input change
+        $('.form-control').on('input change', function () {
+            if ($(this).val() !== '') {
+                $(this).removeClass('is-invalid');
+                $(this).siblings('.error-message').hide();
+            }
+        });
     });
 </script>
+<script>
+        $(document).ready(function() {
+        var currentStep = 0; // Initial step is set to 0
+        var validPickupSuggestions = [];
+        var validDeliverySuggestions = [];
+
+        // Show the initial step
+        showStep(currentStep);
+
+        // Function to show the current step and hide others
+        function showStep(stepIndex) {
+            $('.step').hide(); // Hide all steps
+            $('.step').eq(stepIndex).show(); // Show the current step
+            updateStepIndicators(stepIndex); // Update step indicators if any
+        }
+
+        // Function to handle the 'Next' button click
+        $('.nextBtn').click(function() {
+            // Validation before moving to the next step
+            if (validateStep(currentStep)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+
+        // Function to handle the 'Previous' button click
+        $('.prevBtn').click(function() {
+            currentStep--;
+            showStep(currentStep);
+        });
+
+        // Function to validate the current step
+        function validateStep(stepIndex) {
+            var isValid = true;
+            var currentForm = $('.step').eq(stepIndex);
+            
+            // Validate required fields
+            currentForm.find('input, select').each(function() {
+                if ($(this).prop('required') && $(this).val() === '') {
+                    $(this).addClass('is-invalid'); // Add invalid class to highlight errors
+                    isValid = false;
+                } else {
+                    $(this).removeClass('is-invalid'); // Remove invalid class
+                }
+            });
+
+            // Validate location inputs only on the step with locations (if applicable)
+            if (currentStep === 0) { // Assuming the locations are on the first step
+                var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+                var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+                isValid = isValid && isPickupValid && isDeliveryValid;
+            }
+
+            return isValid;
+        }
+
+        // Function to update step indicators (optional)
+        function updateStepIndicators(stepIndex) {
+            $('.step-indicator').removeClass('active');
+            $('.step-indicator').eq(stepIndex).addClass('active');
+        }
+
+        // Handle form submission (Final Step)
+        $('#multiForm').submit(function(e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Final validation
+            if (validateStep(currentStep)) {
+                $.ajax({
+                    url: $(this).attr('action'),
+                    method: $(this).attr('method'),
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        alert('Form submitted successfully!');
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            }
+        });
+
+        // Function to update suggestions
+        function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+            var inputValue = inputField.val();
+
+            $.ajax({
+                url: "{{ route('get.zipcodes') }}",
+                method: "POST",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    "input": inputValue
+                },
+                success: function(response) {
+                    suggestionsList.empty();
+                    validSuggestions.length = 0;  // Clear previous suggestions
+
+                    $.each(response, function(index, suggestion) {
+                        var listItem = $("<li>").text(suggestion).click(function() {
+                            inputField.val(suggestion);
+                            suggestionsList.css("display", "none");
+                        });
+                        validSuggestions.push(suggestion);  // Add to valid suggestions
+                        suggestionsList.append(listItem);
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
+        }
+
+        // Keyup event for pickup location
+        $(document).on('keyup', '#pickup-location', function() {
+            var inputField = $(this);
+            var suggestionsList = inputField.siblings(".suggestionsTwo");
+            suggestionsList.css("display", "block");
+            if (inputField.val() === "") {
+                suggestionsList.css("display", "none");
+            }
+            updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+        });
+
+        // Keyup event for delivery location
+        $(document).on('keyup', '#delivery-location', function() {
+            var inputField = $(this);
+            var suggestionsList = inputField.siblings(".suggestionsTwo");
+            suggestionsList.css("display", "block");
+            if (inputField.val() === "") {
+                suggestionsList.css("display", "none");
+            }
+            updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+        });
+
+        // Function to validate location inputs
+        function validateLocationInput(inputField, validSuggestions, errorField) {
+            var inputValue = inputField.val();
+            if (!validSuggestions.includes(inputValue)) {
+                errorField.text("Please select a valid location.");
+                return false;
+            } else {
+                errorField.text("");
+                return true;
+            }
+        }
+    });
+
+</script>
+{{-- multi step form end --}}
 <script>
     // $(document).ready(function() {
     //     $('#other_year').attr('disabled', true);
@@ -657,174 +871,7 @@
             ->get();
 @endphp
 {{-- index js  --}}
-<script>
-    $(document).ready(function() {
-        var selectedTab = '';
-        $('#tabSelector').change(function() {
-            $('.vehicles-container').html('');
-            selectedTab = $(this).val();
-            var vehicleType = $(this).val();
-            $('.tab-pane').removeClass('show active');
-            $('#' + selectedTab).addClass('show active');
 
-            $.ajax({
-                url: "{{ route('get.partial.form') }}",
-                method: 'GET',
-                data: {
-                    vehicleType: vehicleType,
-                },
-                success: function(response) {
-                    $('#additionalContent').html('');
-                    $('#additionalContent').html(response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        });
-
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label> Year</label>
-                    <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-
-            newVehicleHtml +=
-                `</select>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label>Make</label>
-                    <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-            @foreach ($makes as $make)
-                newVehicleHtml +=
-                    `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-            @endforeach
-
-            newVehicleHtml += `
-                    </select>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select model-div">
-                    <label>Model</label>
-                    <select class="nice-select model" name="model[]" id="model" required></select>`;
-
-            newVehicleHtml +=
-                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-            newVehicleHtml += `
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                        `;
-
-            $('.vehicles-container').append(newVehicleHtml);
-        }
-
-        function addOtherVehicle() {
-            var newVehicleHtml =
-                `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label> Year</label>
-                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-
-            newVehicleHtml +=
-                `</select>
-                            </div>
-                            </div>
-                            <div class="col-md-4">
-                            <div class="input-form tj-select">
-                            <label>Make</label>
-                            <input type="text" id="make" name="make[]"
-                            placeholder="Enter Make" required="" />
-                            </div>
-                            </div>
-                            <div class="col-md-4">
-                            <div class="input-form tj-select model-div">
-                            <label>Model</label>
-                            <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                            required="" />`
-            newVehicleHtml +=
-                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-            newVehicleHtml += `</div>
-                            </div>
-                            </div>
-                            </div>
-                            `;
-
-            $('.vehicles-container').append(newVehicleHtml);
-        }
-
-        $(document).on('click', '.addVehicleBtn', function() {
-            if ($('#tabSelector').val() == 'Car') {
-                // console.log('yesss');
-                addNewVehicle();
-            } else {
-                // console.log('nooo');
-                addOtherVehicle();
-            }
-        });
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-
-        $(document).on('change', '.year, .make', function() {
-            var year = $(this).closest('.vehicle-info').find('.year').val();
-            var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            var vehicleInfo = $(this).closest('.vehicle-info');
-            if (year && makeId) {
-                getModel(year, makeId, vehicleInfo);
-            }
-        });
-
-        function getModel(year, makeId, vehicleInfo) {
-            // console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' +
-                            model +
-                            '</option>';
-                    });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script>
 {{-- <script>
     $(document).ready(function() {
         $(document).on('change', '#available_at_auction', function() {
@@ -1085,7 +1132,7 @@
 </script>
 {{-- index js END  --}}
 
-<script>
+{{-- <script>
     $(document).ready(function () {
         $('form').on('submit', function (e) {
             // Year validation
@@ -1123,7 +1170,7 @@
             }
         });
     });
-</script>
+</script> --}}
 <script>
     // Select all buttons with the class 'scroll-up-btn'
     const scrollButtons = document.querySelectorAll('.scroll-up-btn');
@@ -1163,8 +1210,110 @@
                 }
             });
         });
+        $(document).on('click', '.addVehicleBtn', function() {
+                if ($('#tabSelector').val() == 'Car') {
+                    console.log('yesss');
+                    addNewVehicle();
+                } else {
+                    console.log('nooo');
+                    addOtherVehicle();
+                }
+            }); 
+
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+
+        $(document).on('change', '.year, .make', function() {
+            var year = $(this).closest('.vehicle-info').find('.year').val();
+            var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            if (year && makeId) {
+                getModel(year, makeId, vehicleInfo);
+            }
+        });
+
+        function getModel(year, makeId, vehicleInfo) {
+            // console.log('yes inn');
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelsDropdown = vehicleInfo.find('.model');
+                    modelsDropdown.empty();
+                    var selectOptions = '<option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' +
+                            model +
+                            '</option>';
+                    });
+                    modelsDropdown.html(selectOptions);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
     });
 </script>
+ {{-- L W H W --}}
+ {{-- <script>
+    function limitDigits(element, maxDigits) {
+        if (element.value.length > maxDigits) {
+            element.value = element.value.slice(0, maxDigits);
+        }
+    }
+
+    $(document).ready(function() {
+        $('#inches-input').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input, #inches-input').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#inches-input1').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input1, #inches-input1').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#inches-input2').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input, #inches-input2').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+</script> --}}
+{{-- L W H W --}}
 </body>
 
 </html>
