@@ -287,7 +287,7 @@ class QuoteController extends Controller
             $post_array['image'] = implode('*^', $imageUrls);
         }
 
-        dd($post_array);
+        // dd($post_array);
 
         // $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
         //     $q->where('delivery_latitude', $delivery_latitude)
@@ -305,8 +305,10 @@ class QuoteController extends Controller
 
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
-            dd($response);
-            return view('frontend.pages.thank-you');
+            // dd($response);
+            if ($response['status_code'] == 201) {
+                return view('frontend.pages.thank-you');
+            }
         } catch (\Exception $e) {
             dd($e->getMessage());
             // \Log::error($e->getMessage());
