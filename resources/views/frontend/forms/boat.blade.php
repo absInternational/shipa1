@@ -351,11 +351,11 @@
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class="" id="trailer_type" name="trailer_type">
-                                            <option value="RGN" selected>RGN</option>
-                                            <option value="Stepdeck">Stepdeck</option>
-                                            <option value="Flatbed">Flatbed</option>
-                                            <option value="Hotshot">Hotshot</option>
-                                            <option value="Landoll">Landoll</option>
+                                            <option value="REMOVABLE GOOSENECK (RGN)" selected>REMOVABLE GOOSENECK (RGN)</option>
+                                            <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                            <option value="FLATBED (F)">FLATBED (F)</option>
+                                            <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                            <option value="LANDOLL (LD)">LANDOLL (LD)</option>
                                         </select>
                                     </div>
                                 </div>

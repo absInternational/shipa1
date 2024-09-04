@@ -93,9 +93,9 @@ class QuoteController extends Controller
             ? $this->generateStringFromArray($data['rv_type'])
             : $request->input('rv_type', null);
 
-        $transport = isset($data['trailer_type']) && is_array($data['trailer_type'])
-            ? $this->generateStringFromArray($data['trailer_type'])
-            : $request->input('trailer_type', null);
+        // $transport = isset($data['trailer_type']) && is_array($data['trailer_type'])
+        //     ? $this->generateStringFromArray($data['trailer_type'])
+        //     : $request->input('trailer_type', null);
         // $year = $data['year'][0];
         // $make = $data['make'][0];
         // $model = $data['model'][0];
@@ -106,7 +106,8 @@ class QuoteController extends Controller
         // $destinationData = $request->input('To_ZipCode', null);
         // $destinationData = $request->input('destination', null);
         $additional = $request->input('add_info', null);
-        // $transport = $request->input('trailer_type', [2]);
+        $transport = $request->input('trailer_type');
+        $type = $request->input('trailer_type');
         $shippingdate = $request->input('dates', null);
         $link = $request->input('link', null);
         $modification = $request->input('modification', null);
@@ -267,6 +268,7 @@ class QuoteController extends Controller
             'model' => $model,
             'frieght_class' => $frieght_class,
             'rv_type' => $rv_type,
+            'type' => $type,
             'source' => 'ShipA1',
             'roro' => $roro,
             'heavy_type' => $heavy_type,
@@ -306,8 +308,10 @@ class QuoteController extends Controller
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
             // dd($response);
-            if ($response['status_code'] == 201) {
+            if (isset($response['status_code']) && $response['status_code'] == 201) {
                 return view('frontend.pages.thank-you');
+            } else {
+                return back()->with('error', 'An error occurred while creating the quote. Please try again later.');
             }
         } catch (\Exception $e) {
             dd($e->getMessage());
