@@ -213,7 +213,8 @@
                                     style="display: none;" placeholder="Specify Category">
                             </div><br> --}}
 
-                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                            <input type="hidden" name="vehicle_opt" value="heavy" hidden>
+                            <input type="hidden" name="heavy_type" value="boat" hidden>
 
                             <div class="row">
                                 <div class="col-md-4">

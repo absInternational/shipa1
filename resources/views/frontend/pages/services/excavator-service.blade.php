@@ -589,7 +589,7 @@ safe along with insurance facility at nationwide - Shipa1.')
         }
     });
 </script> --}}
-<script>
+{{-- <script>
     document.addEventListener("DOMContentLoaded", function() {
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
@@ -607,7 +607,7 @@ safe along with insurance facility at nationwide - Shipa1.')
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
         });
     });
-</script>
+</script> --}}
 <script>
     function playVideo() {
         document.querySelector('.video-thumbnail').style.display = 'none';
@@ -652,11 +652,7 @@ safe along with insurance facility at nationwide - Shipa1.')
                     <div class="input-form tj-select">
                     <label> Year</label>
                     <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {
-                {
-                    date('Y')
-                }
-            };
+            var currentYear = {{date('Y')}};
             for (var year = currentYear; year >= 1936; year--) {
                 newVehicleHtml += `<option value="${year}">${year}</option>`;
             }
@@ -703,11 +699,7 @@ safe along with insurance facility at nationwide - Shipa1.')
                     <div class="input-form tj-select">
                     <label> Year</label>
                     <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {
-                {
-                    date('Y')
-                }
-            };
+            var currentYear = {{date('Y')}};
             for (var year = currentYear; year >= 1936; year--) {
                 newVehicleHtml += `<option value="${year}">${year}</option>`;
             }
@@ -852,7 +844,7 @@ safe along with insurance facility at nationwide - Shipa1.')
         });
     });
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         function showError(field, message) {
             $('#' + field).addClass('error-field');
@@ -917,25 +909,25 @@ safe along with insurance facility at nationwide - Shipa1.')
             $('#step2').show();
         });
     });
-</script>
+</script> --}}
 <script>
-    $(document).ready(function() {
-        $(document).on('change', '#available_at_auction', function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
+    // $(document).ready(function() {
+    //     $(document).on('change', '#available_at_auction', function() {
+    //         if ($(this).is(':checked')) {
+    //             $('.div-link').show();
+    //         } else {
+    //             $('.div-link').hide();
+    //         }
+    //     });
 
-        $(document).on('change', '#modification', function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
+    //     $(document).on('change', '#modification', function() {
+    //         if ($(this).is(':checked')) {
+    //             $('.div-modify_info').show();
+    //         } else {
+    //             $('.div-modify_info').hide();
+    //         }
+    //     });
+    // });
 </script>
 <script>
     function updateSuggestions(inputField, suggestionsList) {
@@ -1016,41 +1008,41 @@ safe along with insurance facility at nationwide - Shipa1.')
     });
 </script>
 <script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
+    // function updateSuggestions(inputField, suggestionsList) {
+    //     var inputValue = inputField.val();
 
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
+    //     $.ajax({
+    //         url: "{{ route('get.zipcodes') }}",
+    //         method: "POST",
+    //         data: {
+    //             "_token": "{{ csrf_token() }}",
+    //             "input": inputValue
+    //         },
+    //         success: function(response) {
+    //             suggestionsList.empty();
 
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
+    //             $.each(response, function(index, suggestion) {
+    //                 var listItem = $("<li>").text(suggestion).click(function() {
+    //                     inputField.val(suggestion);
+    //                     suggestionsList.css("display", "none");
+    //                 });
+    //                 suggestionsList.append(listItem);
+    //             });
+    //         },
+    //         error: function(xhr, status, error) {
+    //             console.error("Error:", error);
+    //         }
+    //     });
+    // }
 
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
+    // $("#pickup-location, #delivery-location").keyup(function() {
+    //     var inputField = $(this);
+    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+    //     suggestionsList.css("display", "block");
+    //     if (inputField.val() === "") {
+    //         suggestionsList.css("display", "none");
+    //     }
+    //     updateSuggestions(inputField, suggestionsList);
+    // });
 </script>
 @endsection

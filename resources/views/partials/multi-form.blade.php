@@ -149,6 +149,31 @@
 </div>
 <script>
     $(document).ready(function() {
+         $('#available_at_auction').change(function() {
+             if ($(this).is(':checked')) {
+                 $('.div-link').show();
+                 $('#link').attr('required', true); // Make input required
+             } else {
+                 $('.div-link').hide();
+                 $('#link').val(''); // Clear the input field
+                 $('#link').removeAttr('required'); // Remove required attribute
+             }
+         });
+         
+         $('#modification').change(function() {
+             if ($(this).is(':checked')) {
+                 $('.div-modify_info').show();
+                 $('#c').attr('required', true); // Make input required
+             } else {
+                 $('.div-modify_info').hide();
+                 $('#c').val(''); // Clear the input field
+                 $('#c').removeAttr('required'); // Remove required attribute
+             }
+         });
+     });
+</script>
+<script>
+    $(document).ready(function() {
         // Tab Selection and Content Loading
         $('#tabSelector').change(function() {
             var selectedTab = $(this).val();

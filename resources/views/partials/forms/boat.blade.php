@@ -1,5 +1,6 @@
 <input type="hidden" name="vehicle_opt" value="heavy" hidden>
 <input type="hidden" name="car_type" value="2" hidden>
+<input type="hidden" name="heavy_type" value="boat" hidden>
 <div class="input-form">
     <label for="category">Select Boat Type</label>
     <select class="" id="category" name="category" style="display: none;" required>

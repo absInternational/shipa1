@@ -186,7 +186,8 @@
                                     </ul>
                                 </div>
                             @endif
-                            <input type="hidden" name="vehicle_opt" value="RV" hidden>
+                            <input type="hidden" name="vehicle_opt" value="heavy" hidden>
+                            <input type="hidden" name="heavy_type" value="RV" hidden>
 
                             <div class="row">
                                 <div class="col-md-4">

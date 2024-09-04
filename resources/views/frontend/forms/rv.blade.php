@@ -85,7 +85,8 @@
                                     </ul>
                                 </div>
                             @endif
-                            <input type="hidden" name="vehicle_opt" value="RV" hidden>
+                            <input type="hidden" name="vehicle_opt" value="heavy" hidden>
+                            <input type="hidden" name="car_type" value="2" hidden>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="input-form">

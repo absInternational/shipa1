@@ -832,23 +832,23 @@
 {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "auto",
-            geoIpLookup: function(callback) {
-                fetch('https://ipinfo.io/json')
-                    .then(function(response) {
-                        return response.json();
-                    })
-                    .then(function(ipinfo) {
-                        var countryCode = "us";
-                        callback(countryCode);
-                    });
-            },
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-        });
-    });
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     var input = document.querySelector("#phone");
+    //     window.intlTelInput(input, {
+    //         initialCountry: "auto",
+    //         geoIpLookup: function(callback) {
+    //             fetch('https://ipinfo.io/json')
+    //                 .then(function(response) {
+    //                     return response.json();
+    //                 })
+    //                 .then(function(ipinfo) {
+    //                     var countryCode = "us";
+    //                     callback(countryCode);
+    //                 });
+    //         },
+    //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+    //     });
+    // });
 </script>
 <script>
     function playVideo() {

@@ -324,21 +324,21 @@
             });
         }
 
-        $('#available_at_auction').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
+        // $('#available_at_auction').change(function() {
+        //     if ($(this).is(':checked')) {
+        //         $('.div-link').show();
+        //     } else {
+        //         $('.div-link').hide();
+        //     }
+        // });
 
-        $('#modification').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
+        // $('#modification').change(function() {
+        //     if ($(this).is(':checked')) {
+        //         $('.div-modify_info').show();
+        //     } else {
+        //         $('.div-modify_info').hide();
+        //     }
+        // });
     });
 </script>
 <script>

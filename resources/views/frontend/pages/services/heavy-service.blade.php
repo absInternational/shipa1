@@ -527,23 +527,23 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
     });
 </script> --}}
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "auto",
-            geoIpLookup: function(callback) {
-                fetch('https://ipinfo.io/json')
-                    .then(function(response) {
-                        return response.json();
-                    })
-                    .then(function(ipinfo) {
-                        var countryCode = "us";
-                        callback(countryCode);
-                    });
-            },
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-        });
-    });
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     var input = document.querySelector("#phone");
+    //     window.intlTelInput(input, {
+    //         initialCountry: "auto",
+    //         geoIpLookup: function(callback) {
+    //             fetch('https://ipinfo.io/json')
+    //                 .then(function(response) {
+    //                     return response.json();
+    //                 })
+    //                 .then(function(ipinfo) {
+    //                     var countryCode = "us";
+    //                     callback(countryCode);
+    //                 });
+    //         },
+    //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+    //     });
+    // });
 </script>
 <script>
     function playVideo() {
@@ -856,23 +856,23 @@ the easiest way nationwide, Get free shipping quotes now - Shipa1.')
     });
 </script>
 <script>
-    $(document).ready(function() {
-        $(document).on('change', '#available_at_auction', function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
+    // $(document).ready(function() {
+    //     $(document).on('change', '#available_at_auction', function() {
+    //         if ($(this).is(':checked')) {
+    //             $('.div-link').show();
+    //         } else {
+    //             $('.div-link').hide();
+    //         }
+    //     });
 
-        $(document).on('change', '#modification', function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
+    //     $(document).on('change', '#modification', function() {
+    //         if ($(this).is(':checked')) {
+    //             $('.div-modify_info').show();
+    //         } else {
+    //             $('.div-modify_info').hide();
+    //         }
+    //     });
+    // });
 </script>
 <script>
     function updateSuggestions(inputField, suggestionsList) {

@@ -80,7 +80,7 @@
         border: 2px solid red;
     }
     .err-loc {
-        color: #ff0000 !important; /* Red color for error messages */
+        color: #ff0000 !important; 
         font-size: 14px;
         font-weight: bold;
         margin-top: 5px;
@@ -533,8 +533,9 @@
         });
 </script>
 <script>
-    $(document).ready(function() {
-         $('#available_at_auction').change(function() {
+    $(document).ready(function() {  
+        $(document).on('change', '#available_at_auction', function() {
+            // console.log('abcd')
              if ($(this).is(':checked')) {
                  $('.div-link').show();
                  $('#link').attr('required', true); // Make input required
@@ -545,7 +546,7 @@
              }
          });
          
-         $('#modification').change(function() {
+        $(document).on('change', '#modification', function() {
              if ($(this).is(':checked')) {
                  $('.div-modify_info').show();
                  $('#c').attr('required', true); // Make input required
@@ -652,9 +653,16 @@
     // });
 </script>
 {{-- app js  --}}
-
+@php
+    $makes = App\Models\VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+@endphp
 {{-- index js  --}}
-{{-- <script>
+<script>
     $(document).ready(function() {
         var selectedTab = '';
         $('#tabSelector').change(function() {
@@ -821,7 +829,7 @@
             });
         }
     });
-</script> --}}
+</script>
 {{-- <script>
     $(document).ready(function() {
         $(document).on('change', '#available_at_auction', function() {
@@ -963,7 +971,7 @@
     // });
 
     // NEW CODE 
-
+    $(document).ready(function() {
     var validPickupSuggestions = [];
     var validDeliverySuggestions = [];
 
@@ -996,7 +1004,8 @@
         });
     }
 
-    $("#pickup-location").keyup(function() {
+    // $("#pickup-location").keyup(function() {
+    $(document).on('keyup', '#pickup-location', function() {
         var inputField = $(this);
         var suggestionsList = inputField.siblings(".suggestionsTwo");
         suggestionsList.css("display", "block");
@@ -1006,7 +1015,8 @@
         updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
     });
 
-    $("#delivery-location").keyup(function() {
+    // $("#delivery-location").keyup(function() {
+    $(document).on('keyup', '#delivery-location', function() {
         var inputField = $(this);
         var suggestionsList = inputField.siblings(".suggestionsTwo");
         suggestionsList.css("display", "block");
@@ -1034,6 +1044,7 @@
         if (!isPickupValid || !isDeliveryValid) {
             event.preventDefault();  // Prevent form submission if validation fails
         }
+    });
     });
 
 </script>
@@ -1077,7 +1088,7 @@
         }
     });
 </script>
-{{-- index js  --}}
+{{-- index js END  --}}
 
 <script>
     $(document).ready(function () {
