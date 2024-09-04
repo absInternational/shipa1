@@ -289,7 +289,7 @@ class QuoteController extends Controller
 
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
-            // dd($response);
+            dd($response);
             return view('frontend.pages.thank-you');
         } catch (\Exception $e) {
             // \Log::error($e->getMessage());
