@@ -1129,6 +1129,20 @@
         });
     });
 </script>
+<script>
+    // Select all buttons with the class 'scroll-up-btn'
+    const scrollButtons = document.querySelectorAll('.scroll-up-btn');
+
+    scrollButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Scroll to the top of the page
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // For smooth scrolling
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

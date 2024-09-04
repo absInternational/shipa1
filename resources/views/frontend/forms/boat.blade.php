@@ -179,6 +179,7 @@
                                     </ul>
                                 </div>
                             @endif
+                        <div class="row">
                             <div class="col-md-12">
                                 <div class="input-form">
                                     <label for="category">Category</label>
@@ -198,6 +199,7 @@
                                         style="display: none;" placeholder="Specify Category">
                                 </div>
                             </div>
+                        </div>
                             {{-- <div class="input-form">
                                 <label for="category">Category</label>
                                 <select class="" id="category" name="category">

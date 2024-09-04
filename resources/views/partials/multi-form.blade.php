@@ -79,7 +79,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn float-end">
-                            <button class="tj-submit-btn" type="button" id="step2_next">
+                            <button class="tj-submit-btn scroll-up-btn" type="button" id="step2_next">
                                 Next <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
@@ -90,7 +90,7 @@
             <div class="basic_quote_info" id="step3" style="display: none;">
                 <div class="row mb-3">
                     <h4 class="text-center text-white">Customer Information</h4>
-                    <div class="col-xl-4 col-lg-4">
+                    <div class="col-xl-6 col-lg-6">
                         <div class="single-input-field">
                             <label class="d-block text-white"> Your Name:</label>
                             <input class="form-control" name="phone" type="tel"
@@ -99,7 +99,7 @@
                             
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4">
+                    <div class="col-xl-6 col-lg-6">
                         <div class="single-input-field">
                             <label class="d-block text-white">Phone:</label>
                             <input id="phone" class="form-control ophone" name="phone" type="tel"
@@ -117,7 +117,7 @@
                                     required.</label>
                             </div>
                         </div> --}}
-                    <div class="col-xl-4 col-lg-4">
+                    <div class="col-xl-12 col-lg-12">
                         <div class="single-input-field">
                             <label class="d-block text-white"> Email Address:</label>
                             <input class="form-control"  name="Custo_Email" type="email"
