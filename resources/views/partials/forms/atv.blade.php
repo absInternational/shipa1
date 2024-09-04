@@ -23,7 +23,10 @@
                 }
                 @endphp
             </select>
-            <label class="error-message" id="year-error" style="display:none;">This field is required.</label>
+            <div class="error-message" style="color: red; display: none;">
+                Please select a year.
+            </div>
+            {{-- <label class="error-message" id="year-error" style="display:none;">This field is required.</label> --}}
         </div>
     </div>
     <div class="col-md-4">

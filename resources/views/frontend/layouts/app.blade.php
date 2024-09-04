@@ -618,11 +618,6 @@
             $('#step2').show();
         });
 
-        // function limitDigits(element, maxDigits) {
-        //     if (element.value.length > maxDigits) {
-        //         element.value = element.value.slice(0, maxDigits);
-        //     }
-        // }
     });
 </script>
 <script>
@@ -1139,6 +1134,33 @@
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth' // For smooth scrolling
+            });
+        });
+    });
+</script>
+<script>
+     $(document).ready(function() {
+        var selectedTab = '';
+        $('#tabSelector').change(function() {
+            $('.vehicles-container').html('');
+            selectedTab = $(this).val();
+            var vehicleType = $(this).val();
+            $('.tab-pane').removeClass('show active');
+            $('#' + selectedTab).addClass('show active');
+
+            $.ajax({
+                url: "{{ route('get.partial.form') }}",
+                method: 'GET',
+                data: {
+                    vehicleType: vehicleType,
+                },
+                success: function(response) {
+                    $('#additionalContent').html('');
+                    $('#additionalContent').html(response);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
             });
         });
     });

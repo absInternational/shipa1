@@ -352,7 +352,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class="nice-select " id="trailer_type" name="trailer_type[]">
+                                        <select class="nice-select " id="trailer_type" name="trailer_type">
                                             <option value="" selected disabled>Select</option>
                                             {{-- <option value="VAN (V)">VAN (V)</option> --}}
                                             <option value="FLATBED (F)">FLATBED (F)</option>

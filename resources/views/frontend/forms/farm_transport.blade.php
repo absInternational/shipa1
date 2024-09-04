@@ -325,7 +325,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                        <select class=" " id="trailer_type" name="trailer_type[]">
+                                        <select class=" " id="trailer_type" name="trailer_type">
                                             <option value="RGN" selected>RGN</option>
                                             {{-- <option value="VAN (V)">VAN (V)</option> --}}
                                             <option value="FLATBED (F)">FLATBED (F)</option>
