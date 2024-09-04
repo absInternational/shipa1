@@ -80,6 +80,22 @@ class QuoteController extends Controller
         $weight = isset($data['weight']) && is_array($data['weight'])
             ? $this->generateStringFromArray($data['weight'])
             : $request->input('weight', null);
+
+        $load_method = isset($data['load_method']) && is_array($data['load_method'])
+            ? $this->generateStringFromArray($data['load_method'])
+            : $request->input('load_method', null);
+
+        $unload_method = isset($data['unload_method']) && is_array($data['unload_method'])
+            ? $this->generateStringFromArray($data['unload_method'])
+            : $request->input('unload_method', null);
+
+        $rv_type = isset($data['rv_type']) && is_array($data['rv_type'])
+            ? $this->generateStringFromArray($data['rv_type'])
+            : $request->input('rv_type', null);
+
+        $transport = isset($data['trailer_type']) && is_array($data['trailer_type'])
+            ? $this->generateStringFromArray($data['trailer_type'])
+            : $request->input('trailer_type', null);
         // $year = $data['year'][0];
         // $make = $data['make'][0];
         // $model = $data['model'][0];
@@ -90,7 +106,7 @@ class QuoteController extends Controller
         // $destinationData = $request->input('To_ZipCode', null);
         // $destinationData = $request->input('destination', null);
         $additional = $request->input('add_info', null);
-        $transport = $request->input('trailer_type', [2]);
+        // $transport = $request->input('trailer_type', [2]);
         $shippingdate = $request->input('dates', null);
         $link = $request->input('link', null);
         $modification = $request->input('modification', null);
@@ -106,8 +122,8 @@ class QuoteController extends Controller
         // $weight = $request->input('weight', null);
         $subcategory = $request->input('subcategory', null);
         $load_type = $request->input('load_type', null);
-        $load_method = $request->input('load_method', null);
-        $unload_method = $request->input('unload_method', null);
+        // $load_method = $request->input('load_method', null);
+        // $unload_method = $request->input('unload_method', null);
         $available_at_auction = $request->input('available_at_auction', null);
         $commodity_detail = $request->input('commodity_detail', null);
         $handling_unit = $request->input('handling_unit', null);
@@ -135,7 +151,7 @@ class QuoteController extends Controller
         $blind_shipment = $request->input('blind_shipment', 0);
         $vehicle_opt = $vehicle_opt;
         $frieght_class = $request->input('frieght_class', null);
-        $rv_type = $request->input('rv_type', null);
+        // $rv_type = $request->input('rv_type', null);
         $roro = $request->input('roro', null);
         $heavy_type = $request->input('heavy_type', null);
         $car_type = $request->input('car_type', 1);
