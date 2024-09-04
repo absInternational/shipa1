@@ -309,7 +309,7 @@
                                         <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)" required="">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                                        <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required="">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -629,7 +629,7 @@
                                         <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                                        <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -702,24 +702,24 @@
     </script>
 
     <script>
-        $(document).ready(function() {
+        // $(document).ready(function() {
 
-            $('#available_at_auction').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
+        //     $('#available_at_auction').change(function() {
+        //         if ($(this).is(':checked')) {
+        //             $('.div-link').show();
+        //         } else {
+        //             $('.div-link').hide();
+        //         }
+        //     });
 
-            $('#modification').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
-        });
+        //     $('#modification').change(function() {
+        //         if ($(this).is(':checked')) {
+        //             $('.div-modify_info').show();
+        //         } else {
+        //             $('.div-modify_info').hide();
+        //         }
+        //     });
+        // });
     </script>
 <script>
     // var validPickupSuggestions = [];

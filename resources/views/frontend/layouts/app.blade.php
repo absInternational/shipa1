@@ -922,7 +922,7 @@
         $('#example-multiple-2').select2();
     });
 </script>
-<script>
+{{-- <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -973,7 +973,7 @@
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-</script>
+</script> --}}
 <script>
     // function updateSuggestions(inputField, suggestionsList) {
     //     var inputValue = inputField.val();
@@ -1261,6 +1261,88 @@
     });
 </script>
  {{-- L W H W --}}
+ <script>
+    function limitDigits(element, maxDigits) {
+        if (element.value.length > maxDigits) {
+            element.value = element.value.slice(0, maxDigits);
+        }
+    }
+
+    $(document).ready(function() {
+        $('#inches-input').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input, #inches-input').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+
+    // $(document).ready(function() {
+    //     $('.inches-input1').on('input', function() {
+    //         if (this.value > 11) {
+    //             this.value = 11;
+    //         } else if (this.value < 0) {
+    //             this.value = 0;
+    //         }
+    //     });
+
+    //     // Optionally, you can also prevent the user from typing non-numeric characters.
+    //     $('.feet-input1, .inches-input1').on('input', function() {
+    //         this.value = this.value.replace(/[^0-9]/g, '');
+    //     });
+    // });
+
+    // $(document).ready(function() {
+    //     $('.inches-input2').on('input', function() {
+    //         if (this.value > 11) {
+    //             this.value = 11;
+    //         } else if (this.value < 0) {
+    //             this.value = 0;
+    //         }
+    //     });
+
+    //     // Optionally, you can also prevent the user from typing non-numeric characters.
+    //     $('.feet-input, .inches-input2').on('input', function() {
+    //         this.value = this.value.replace(/[^0-9]/g, '');
+    //     });
+    // });
+    $(document).ready(function() {
+        $(document).on('input', '.inches-input1, .inches-input2', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+
+        $(document).on('input', '.feet-input1, .inches-input1, .feet-input, .inches-input2', function() {
+            console.log('asdasd');
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+
+</script>
+
+<script>
+    function moveToNext(current, nextId) {
+        if (current.value.length >= current.maxLength) {
+            document.getElementById(nextId).focus();
+        }
+    }
+
+
+    //   document.querySelectorAll('input[type="text"]').forEach((input) => {
+    //     input.addEventListener("input", function () {
+    //       this.value = this.value.replace(/[^0-9]/g, "");
+    //     });
+    //   });
+</script>
  {{-- <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {

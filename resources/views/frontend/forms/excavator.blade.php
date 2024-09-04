@@ -271,52 +271,55 @@
                             </div>
                         </div>
                         <div class="row mb-3">
+                            <div class="col-md-3">
 
-                            <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Length</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Width</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Height</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Weight</label>
-                                    <div class="input-container1">
-                                        <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
-                                            min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                        <span class="separators-w">(Lbs.)</span>
-
-                                    </div>
+                                <label class="lab-cos">Length</label>
+                                <div class="input-container">
+                                    <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
+                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                    <span class="separator">(Ft.)</span>
+                                    <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
+                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                    <span class="separators">(In.)</span>
                                 </div>
                             </div>
 
+                            <div class="col-md-3">
+
+                                <label class="lab-cos">Width</label>
+                                <div class="input-container">
+                                    <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
+                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                    <span class="separator">(Ft.)</span>
+                                    <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
+                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                    <span class="separators">(In.)</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+
+                                <label class="lab-cos">Height</label>
+                                <div class="input-container">
+                                    <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
+                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                    <span class="separator">(Ft.)</span>
+                                    <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
+                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                    <span class="separators">(In.)</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+
+                                <label class="lab-cos">Weight</label>
+                                <div class="input-container1">
+                                    <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
+                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                                    <span class="separators-w">(Lbs.)</span>
+
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
@@ -353,7 +356,7 @@
                                     </select>
                                 </div>
                             </div>
-                    </div>
+                        </div>
 
                         <div class="row mt-3">
                             {{-- <div class="col-md-4">
@@ -637,55 +640,55 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-3">
+                                <div class="col-md-3">
 
-                                <label class="lab-cos">Length</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
-                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
-                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
+                                    <label class="lab-cos">Length</label>
+                                    <div class="input-container">
+                                        <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
+                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                        <span class="separator">(Ft.)</span>
+                                        <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
+                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                        <span class="separators">(In.)</span>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-3">
+                                <div class="col-md-3">
 
-                                <label class="lab-cos">Width</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
-                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
-                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
+                                    <label class="lab-cos">Width</label>
+                                    <div class="input-container">
+                                        <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
+                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                        <span class="separator">(Ft.)</span>
+                                        <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
+                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                        <span class="separators">(In.)</span>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-3">
+                                <div class="col-md-3">
 
-                                <label class="lab-cos">Height</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
-                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
-                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
+                                    <label class="lab-cos">Height</label>
+                                    <div class="input-container">
+                                        <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
+                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                        <span class="separator">(Ft.)</span>
+                                        <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
+                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                        <span class="separators">(In.)</span>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-3">
+                                <div class="col-md-3">
 
-                                <label class="lab-cos">Weight</label>
-                                <div class="input-container1">
-                                    <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
-                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                    <span class="separators-w">(Lbs.)</span>
+                                    <label class="lab-cos">Weight</label>
+                                    <div class="input-container1">
+                                        <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
+                                            min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                                        <span class="separators-w">(Lbs.)</span>
 
+                                    </div>
                                 </div>
-                            </div>
                         </div>
                             <div class="row mt-3">
                                 <div class="col-md-6">
