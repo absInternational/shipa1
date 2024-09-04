@@ -306,7 +306,7 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)" required="">
                                         <span class="separator">(Ft.)</span>
                                         <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
@@ -317,10 +317,10 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)" required="">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required="">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -331,7 +331,7 @@
                                         <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -339,7 +339,7 @@
                                 <div class="col-md-3">
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
-                                        <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
+                                        <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
 
@@ -508,8 +508,37 @@
             });
         });
 
+        // $(document).ready(function() {
+        //     $('.inches-input1').on('input', function() {
+        //         if (this.value > 11) {
+        //             this.value = 11;
+        //         } else if (this.value < 0) {
+        //             this.value = 0;
+        //         }
+        //     });
+
+        //     // Optionally, you can also prevent the user from typing non-numeric characters.
+        //     $('.feet-input1, .inches-input1').on('input', function() {
+        //         this.value = this.value.replace(/[^0-9]/g, '');
+        //     });
+        // });
+
+        // $(document).ready(function() {
+        //     $('.inches-input2').on('input', function() {
+        //         if (this.value > 11) {
+        //             this.value = 11;
+        //         } else if (this.value < 0) {
+        //             this.value = 0;
+        //         }
+        //     });
+
+        //     // Optionally, you can also prevent the user from typing non-numeric characters.
+        //     $('.feet-input, .inches-input2').on('input', function() {
+        //         this.value = this.value.replace(/[^0-9]/g, '');
+        //     });
+        // });
         $(document).ready(function() {
-            $('#inches-input1').on('input', function() {
+            $(document).on('input', '.inches-input1, .inches-input2', function() {
                 if (this.value > 11) {
                     this.value = 11;
                 } else if (this.value < 0) {
@@ -517,26 +546,12 @@
                 }
             });
 
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input1, #inches-input1').on('input', function() {
+            $(document).on('input', '.feet-input1, .inches-input1, .feet-input, .inches-input2', function() {
+                console.log('asdasd');
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
 
-        $(document).ready(function() {
-            $('#inches-input2').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input2').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
     </script>
 
     <script>
@@ -611,7 +626,7 @@
 
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
                                         <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
@@ -624,10 +639,10 @@
 
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
+                                        <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" name="width_in[]" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -640,7 +655,7 @@
                                         <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" name="height_in[]" class="input-field" placeholder=""
+                                        <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -650,7 +665,7 @@
 
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
-                                        <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
+                                        <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
 
