@@ -148,31 +148,31 @@
     </form>
 </div>
 <script>
-    $(document).ready(function() {
-         $('#available_at_auction').change(function() {
-             if ($(this).is(':checked')) {
-                 $('.div-link').show();
-                 $('#link').attr('required', true); // Make input required
-             } else {
-                 $('.div-link').hide();
-                 $('#link').val(''); // Clear the input field
-                 $('#link').removeAttr('required'); // Remove required attribute
-             }
-         });
+    // $(document).ready(function() {
+    //      $('#available_at_auction').change(function() {
+    //          if ($(this).is(':checked')) {
+    //              $('.div-link').show();
+    //              $('#link').attr('required', true); // Make input required
+    //          } else {
+    //              $('.div-link').hide();
+    //              $('#link').val(''); // Clear the input field
+    //              $('#link').removeAttr('required'); // Remove required attribute
+    //          }
+    //      });
          
-         $('#modification').change(function() {
-             if ($(this).is(':checked')) {
-                 $('.div-modify_info').show();
-                 $('#c').attr('required', true); // Make input required
-             } else {
-                 $('.div-modify_info').hide();
-                 $('#c').val(''); // Clear the input field
-                 $('#c').removeAttr('required'); // Remove required attribute
-             }
-         });
-     });
+    //      $('#modification').change(function() {
+    //          if ($(this).is(':checked')) {
+    //              $('.div-modify_info').show();
+    //              $('#c').attr('required', true); // Make input required
+    //          } else {
+    //              $('.div-modify_info').hide();
+    //              $('#c').val(''); // Clear the input field
+    //              $('#c').removeAttr('required'); // Remove required attribute
+    //          }
+    //      });
+    //  });
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         // Tab Selection and Content Loading
         $('#tabSelector').change(function() {
@@ -194,56 +194,57 @@
                 }
             });
         });
-        // Add New Vehicle
-        // function addNewVehicle() {
-        //     var newVehicleHtml = `
-        //         <div class="vehicle-info">
-        //             <div class="row select-bm">
-        //                 <div class="col-md-4">
-        //                     <div class="input-form tj-select">
-        //                         <label> Year</label>
-        //                         <select class="nice-select year" name="year[]" required id="year">
-        //                             <option value="" disabled selected>Select Year</option>`;
-        //     var currentYear = {{ date('Y') }};
-        //     for (var year = currentYear; year >= 1936; year--) {
-        //         newVehicleHtml += `<option value="${year}">${year}</option>`;
-        //     }
-        //     newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select"><label>Make</label><select class="nice-select make" name="make[]" required id="make"><option value="" disabled selected>Select Make</option>`;
-        //     @foreach ($makes as $make) {
-        //         newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-        //     }
-        //     @endforeach
-        //     newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select model-div"><label>Model</label><select class="nice-select model" name="model[]" id="model" required></select><span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span></div></div></div></div>`;
-        //     $('.vehicles-container').append(newVehicleHtml);
-        // }
-        // function addOtherVehicle() {
-        //     var newVehicleHtml = `
-        //         <div class="vehicle-info">
-        //             <div class="row select-bm">
-        //                 <div class="col-md-4">
-        //                     <div class="input-form tj-select">
-        //                         <label> Year</label>
-        //                         <select class="nice-select year" name="year[]" id="year">
-        //                             <option value="" disabled selected>Select Year</option>`;
-        //     var currentYear = {{ date('Y') }};
-        //     for (var year = currentYear; year >= 1936; year--) {
-        //         newVehicleHtml += `<option value="${year}">${year}</option>`;
-        //     }
-        //     newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select"><label>Make</label><input type="text" id="make" name="make[]" placeholder="Enter Make" required="" /></div></div><div class="col-md-4"><div class="input-form tj-select model-div"><label>Model</label><input type="text" id="model" name="model[]" placeholder="Enter Model" required="" /><span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span></div></div></div></div>`;
-        //     $('.vehicles-container').append(newVehicleHtml);
-        // }
+        Add New Vehicle
+        function addNewVehicle() {
+            var newVehicleHtml = `
+                <div class="vehicle-info">
+                    <div class="row select-bm">
+                        <div class="col-md-4">
+                            <div class="input-form tj-select">
+                                <label> Year</label>
+                                <select class="nice-select year" name="year[]" required id="year">
+                                    <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+            newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select"><label>Make</label><select class="nice-select make" name="make[]" required id="make"><option value="" disabled selected>Select Make</option>`;
+            @foreach ($makes as $make) {
+                newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
+            }
+            @endforeach
+            newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select model-div"><label>Model</label><select class="nice-select model" name="model[]" id="model" required></select><span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span></div></div></div></div>`;
+            $('.vehicles-container').append(newVehicleHtml);
+        }
+        function addOtherVehicle() {
+            var newVehicleHtml = `
+                <div class="vehicle-info">
+                    <div class="row select-bm">
+                        <div class="col-md-4">
+                            <div class="input-form tj-select">
+                                <label> Year</label>
+                                <select class="nice-select year" name="year[]" id="year">
+                                    <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+            newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select"><label>Make</label><input type="text" id="make" name="make[]" placeholder="Enter Make" required="" /></div></div><div class="col-md-4"><div class="input-form tj-select model-div"><label>Model</label><input type="text" id="model" name="model[]" placeholder="Enter Model" required="" /><span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span></div></div></div></div>`;
+            $('.vehicles-container').append(newVehicleHtml);
+        }
 
-        // $(document).on('click', '.addVehicleBtn', function() {
-        //     if ($('#tabSelector').val() == 'Car') {
-        //         addNewVehicle();
-        //     } else {
-        //         addOtherVehicle();
-        //     }
-        // });
-        // $(document).on('click', '.delete-vehicle', function() {
-        //     $(this).closest('.vehicle-info').remove();
-        // });
-        // Fetch Models Based on Year and Make
+        $(document).on('click', '.addVehicleBtn', function() {
+            if ($('#tabSelector').val() == 'Car') {
+                addNewVehicle();
+            } else {
+                addOtherVehicle();
+            }
+        });
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+        
+        
         $(document).on('change', '.year, .make', function() {
             var year = $(this).closest('.vehicle-info').find('.year').val();
             var makeId = $(this).closest('.vehicle-info').find('.make').val();
@@ -252,6 +253,7 @@
                 getModel(year, makeId, vehicleInfo);
             }
         });
+
         function getModel(year, makeId, vehicleInfo) {
             $.ajax({
                 url: "{{ route('get.models') }}",
@@ -275,30 +277,8 @@
                 }
             });
         }
-        // Phone Number Input with Intl-Tel-Input
-        // var input = document.querySelector("#phone");
-        // window.intlTelInput(input, {
-        //     initialCountry: "auto",
-        //     geoIpLookup: function(callback) {
-        //         fetch('https://ipinfo.io/json')
-        //             .then(function(response) {
-        //                 return response.json();
-        //             })
-        //             .then(function(ipinfo) {
-        //                 var countryCode = "us";
-        //                 callback(countryCode);
-        //             });
-        //     },
-        //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-        // });
-        // Play Video on Click
-        function playVideo() {
-            document.querySelector('.video-thumbnail').style.display = 'none';
-            document.querySelector('.video-iframe').style.display = 'block';
-            var iframe = document.getElementById('videoFrame');
-            var videoSrc = iframe.src;
-            iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
-        }
+        
+        
         // Limit Digits Input
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
@@ -316,35 +296,35 @@
             this.value = this.value.replace(/[^0-9]/g, '');
         });
         // Form Validation
-        // function showError(field, message) {
-        //     $('#' + field).addClass('error-field');
-        //     $('#' + field + '-error').text(message).show();
-        // }
-        // function hideError(field) {
-        //     $('#' + field).removeClass('error-field');
-        //     $('#' + field + '-error').hide();
-        // }
-        // $('#step1_next').click(function() {
-        //     var isValid = true;
-        //     if (!$('#pickup-location').val()) {
-        //         showError('pickup-location', 'This field is required.');
-        //         isValid = false;
-        //     } else {
-        //         hideError('pickup-location');
-        //     }
-        //     if (!$('#delivery-location').val()) {
-        //         showError('delivery-location', 'This field is required.');
-        //         isValid = false;
-        //     } else {
-        //         hideError('delivery-location');
-        //     }
-        //     if (isValid) {
-        //         $('#step1').hide();
-        //         $('#step2').show();
-        //     }
-        // });
+        function showError(field, message) {
+            $('#' + field).addClass('error-field');
+            $('#' + field + '-error').text(message).show();
+        }
+        function hideError(field) {
+            $('#' + field).removeClass('error-field');
+            $('#' + field + '-error').hide();
+        }
+        $('#step1_next').click(function() {
+            var isValid = true;
+            if (!$('#pickup-location').val()) {
+                showError('pickup-location', 'This field is required.');
+                isValid = false;
+            } else {
+                hideError('pickup-location');
+            }
+            if (!$('#delivery-location').val()) {
+                showError('delivery-location', 'This field is required.');
+                isValid = false;
+            } else {
+                hideError('delivery-location');
+            }
+            if (isValid) {
+                $('#step1').hide();
+                $('#step2').show();
+            }
+        });
     });
-</script>
+</script> --}}
 
 {{-- <script>
     $(document).ready(function() {

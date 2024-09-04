@@ -617,7 +617,7 @@ safe along with insurance facility at nationwide - Shipa1.')
         iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
     }
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         var selectedTab = '';
         $('#tabSelector').change(function() {
@@ -784,7 +784,7 @@ safe along with insurance facility at nationwide - Shipa1.')
             }
         });
     });
-</script>
+</script> --}}
 <script>
     // document.querySelectorAll('input[type="text"]').forEach((input) => {
     //     input.addEventListener("input", function() {
