@@ -79,14 +79,14 @@
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn float-end">
-                            <button class="tj-submit-btn scroll-up-btn" type="button" id="step2_next">
+                            <button class="tj-submit-btn " type="button" id="step2_next">
                                 Next <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Step 3: Customer Information -->
+            <!-- Step 3: Customer Information scroll-up-btn -->
             <div class="basic_quote_info" id="step3" style="display: none;">
                 <div class="row mb-3">
                     <h4 class="text-center text-white">Customer Information</h4>

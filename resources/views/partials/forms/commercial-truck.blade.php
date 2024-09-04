@@ -190,3 +190,112 @@ Vehicle</a>
         <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
         <div class="image-preview-container" id="imagePreviewContainer"></div>
 </div>
+<script>
+    function addOtherVehicle() {
+        var newVehicleHtml =
+            `
+            <div class="vehicle-info">
+                <div class="row select-bm">
+                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                    <div class="col-md-4">
+                        <div class="input-form tj-select">
+                            <label> Year</label>
+                            <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                                var currentYear = {{ date('Y') }};
+                                for (var year = currentYear; year >= 1936; year--) {
+                                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                                }
+
+                                newVehicleHtml +=
+                            `</select>
+                        </div>
+                    </div>
+                        <div class="col-md-4">
+                        <div class="input-form tj-select">
+                        <label>Make</label>
+                        <input type="text" id="make" name="make[]"
+                        placeholder="Enter Make" required="" />
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="input-form tj-select model-div">
+                        <label>Model</label>
+                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                        required="" />`
+
+                    newVehicleHtml += `</div>
+                                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="trailer_type" class="text-white">Select Trailer
+                                Type</label>
+                            <select class="form-control" id="trailer_type" name="trailer_type">
+                                <option value="Open" selected>Open</option>
+                                <option value="Enclosed">Enclosed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="condition" class="text-white">Condition</label>
+                            <select class="form-control" id="condition" name="condition[]">
+                                <option value="1" selected>Running</option>
+                                <option value="2">Non Running</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="lab-cos">Length</label>
+                        <div class="input-container">
+                            <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
+                                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                            <span class="separator">(Ft.)</span>
+                            <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                            <span class="separators">(In.)</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="lab-cos">Width</label>
+                        <div class="input-container">
+                            <input type="number" id="feet-input1" class="input-field" placeholder="" name="width_ft[]"
+                                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                            <span class="separator">(Ft.)</span>
+                            <input type="number" id="inches-input1" class="input-field" placeholder="" name="width_in[]"
+                                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                            <span class="separators">(In.)</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="lab-cos">Height</label>
+                        <div class="input-container">
+                            <input type="number" id="feet-input2" class="input-field" placeholder="" name="height_ft[]"
+                                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                            <span class="separator">(Ft.)</span>
+                            <input type="number" id="inches-input2" class="input-field" placeholder="" name="height_in[]"
+                                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                            <span class="separators">(In.)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="lab-cos">Weight</label>
+                        <div class="input-container1">
+                            <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
+                                min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                            <span class="separators-w">(Lbs.)</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        `;
+
+        $('.vehicles-container').append(newVehicleHtml);
+    }
+</script>
