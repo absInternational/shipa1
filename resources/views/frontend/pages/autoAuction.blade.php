@@ -134,7 +134,7 @@
                                 <li> -->
                                     <div class="list-content">
                                     <h5 class="font-weight-bold">Expedited Shipping</h5>
-                                    <p>The speed of delivery is what matters to the customers the most. I want your vehicle to be delivered within a particular time and can not afford the delay. Under standard shipping, your car would be delivered in more than 4 days, with expedited shipping your automobile would be delivered within four days.</p>
+                                    <p>The speed of delivery is what matters to the customers the most. Ship A1 wants your vehicle be delivered within the given time and cannot afford the delay. Under standard shipping, your car would be delivered in more than 4 days, with expedited shipping your automobile would be delivered within four days.</p>
                                     </div>
                                 <!-- </li>
                             </ul> -->
