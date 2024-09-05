@@ -832,7 +832,7 @@
     //     });
     // });
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         var selectedTab = '';
         $('#tabSelector').change(function() {
@@ -886,7 +886,7 @@
             });
         }
     });
-</script>
+</script> --}}
 <script>
     // document.querySelectorAll('input[type="text"]').forEach((input) => {
     //     input.addEventListener("input", function() {
@@ -1069,7 +1069,7 @@
         updateSuggestions(inputField, suggestionsList);
     });
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         var selectedTab = '';
         $('#tabSelector').change(function() {
@@ -1236,7 +1236,7 @@
             });
         }
     });
-</script>
+</script> --}}
 <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();

@@ -232,33 +232,7 @@ shipment efficiently with our instant quote tool.')
                         </div>
 
                         
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                    <select class=" " id="trailer_type" name="trailer_type">
-                                        <option value="RGN" selected>RGN</option>
-                                        <option value="VAN (V)">VAN (V)</option>
-                                        <option value="FLATBED (F)">FLATBED (F)</option>
-                                        <option value="STEP DECK (SD)">STEP DECK (SD)</option>
-                                        <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
-                                        <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                                        <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
-                                        <option value="TRUCK (T)">TRUCK (T)</option>
-                                        <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
-                                        <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
-                                        <option value="LOWBOY (LB)">LOWBOY (LB)</option>
-                                        <option value="ENDUMP (ED)">ENDUMP (ED)</option>
-                                        <option value="LANDOLL (LD)">LANDOLL (LD)</option>
-                                        <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                        {{-- <option value="20ft container">20ft container</option>
-                                        <option value="40ft container">40ft container</option>
-                                        <option value="48ft container">48ft container</option>
-                                        <option value="53ft container">53ft container</option> --}}
-                                    </select>
-                                </div>
-                            </div>
-                        </div><br>
+                        <br>
 
                         <div class="row select-bm">
                             <div class="col-md-12 text-center">
@@ -449,6 +423,31 @@ shipment efficiently with our instant quote tool.')
                                     </select>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                    <select class=" " id="trailer_type" name="trailer_type">
+                                        <option value="RGN" selected>RGN</option>
+                                        <option value="VAN (V)">VAN (V)</option>
+                                        <option value="FLATBED (F)">FLATBED (F)</option>
+                                        <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                        <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
+                                        <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
+                                        <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                        <option value="TRUCK (T)">TRUCK (T)</option>
+                                        <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
+                                        <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                        <option value="LOWBOY (LB)">LOWBOY (LB)</option>
+                                        <option value="ENDUMP (ED)">ENDUMP (ED)</option>
+                                        <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                                        <option value="PARTIAL (PT)">PARTIAL (PT)</option>
+                                        {{-- <option value="20ft container">20ft container</option>
+                                        <option value="40ft container">40ft container</option>
+                                        <option value="48ft container">48ft container</option>
+                                        <option value="53ft container">53ft container</option> --}}
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <br>
                         <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
@@ -604,7 +603,7 @@ shipment efficiently with our instant quote tool.')
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4">
                                 <div class="input-form">
                                     <label for="category">Category</label>
                                     <select class="category nice-select" id="" name="category[]">
@@ -619,7 +618,7 @@ shipment efficiently with our instant quote tool.')
                                         placeholder="Specify Category">
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <div class="input-form subcategory-box" id="">
                                     <label for="subcategory">Subcategory</label>
                                     <select class="subcategory nice-select" id="" name="subcategory[]">
@@ -627,7 +626,7 @@ shipment efficiently with our instant quote tool.')
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="condition" class="text-white">Condition</label>
                                     <select class="nice-select " id="condition" name="condition[]">
