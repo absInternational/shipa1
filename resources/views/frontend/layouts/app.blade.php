@@ -1171,20 +1171,20 @@
         });
     });
 </script> --}}
+{{-- scroll-up-btn --}}
 <script>
-    // Select all buttons with the class 'scroll-up-btn'
     const scrollButtons = document.querySelectorAll('.scroll-up-btn');
-
+    const targetHeading = document.querySelector('.target-top');
     scrollButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Scroll to the top of the page
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // For smooth scrolling
+            targetHeading.scrollIntoView({
+                behavior: 'smooth', 
+                block: 'start' 
             });
         });
     });
 </script>
+{{-- scroll-up-btn --}}
 <script>
      $(document).ready(function() {
         var selectedTab = '';

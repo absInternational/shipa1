@@ -79,14 +79,14 @@
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn float-end">
-                            <button class="tj-submit-btn " type="button" id="step2_next">
+                            <button class="tj-submit-btn scroll-up-btn" type="button" id="step2_next">
                                 Next <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Step 3: Customer Information scroll-up-btn -->
+            <!-- Step 3: Customer Information  -->
             <div class="basic_quote_info" id="step3" style="display: none;">
                 <div class="row mb-3">
                     <h4 class="text-center text-white">Customer Information</h4>
@@ -147,31 +147,31 @@
         </div>
     </form>
 </div>
-<script>
-    // $(document).ready(function() {
-    //      $('#available_at_auction').change(function() {
-    //          if ($(this).is(':checked')) {
-    //              $('.div-link').show();
-    //              $('#link').attr('required', true); // Make input required
-    //          } else {
-    //              $('.div-link').hide();
-    //              $('#link').val(''); // Clear the input field
-    //              $('#link').removeAttr('required'); // Remove required attribute
-    //          }
-    //      });
+{{-- <script>
+    $(document).ready(function() {
+         $('#available_at_auction').change(function() {
+             if ($(this).is(':checked')) {
+                 $('.div-link').show();
+                 $('#link').attr('required', true); // Make input required
+             } else {
+                 $('.div-link').hide();
+                 $('#link').val(''); // Clear the input field
+                 $('#link').removeAttr('required'); // Remove required attribute
+             }
+         });
          
-    //      $('#modification').change(function() {
-    //          if ($(this).is(':checked')) {
-    //              $('.div-modify_info').show();
-    //              $('#c').attr('required', true); // Make input required
-    //          } else {
-    //              $('.div-modify_info').hide();
-    //              $('#c').val(''); // Clear the input field
-    //              $('#c').removeAttr('required'); // Remove required attribute
-    //          }
-    //      });
-    //  });
-</script>
+         $('#modification').change(function() {
+             if ($(this).is(':checked')) {
+                 $('.div-modify_info').show();
+                 $('#c').attr('required', true); // Make input required
+             } else {
+                 $('.div-modify_info').hide();
+                 $('#c').val(''); // Clear the input field
+                 $('#c').removeAttr('required'); // Remove required attribute
+             }
+         });
+     });
+</script> --}}
 {{-- <script>
     $(document).ready(function() {
         // Tab Selection and Content Loading
@@ -325,7 +325,6 @@
         });
     });
 </script> --}}
-
 {{-- <script>
     $(document).ready(function() {
         $('#category').change(function() {

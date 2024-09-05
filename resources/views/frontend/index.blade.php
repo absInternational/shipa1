@@ -644,7 +644,7 @@
         </div>
     </div>
 </section>
-<section class="tj-choose-us-section-home">
+<section class="tj-choose-us-section-home target-top">
     <div class="container">
         <div class="row">
             @if (session('success'))
@@ -658,7 +658,7 @@
                 </div>
             @endif
             <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="choose-us-content-1">
+                <div class="choose-us-content-1 ">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">Get Instant quote</span>
                         <h2 class="title">Get an instant quote in few simple steps</h2>

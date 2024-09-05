@@ -522,77 +522,77 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
     </script>
     <script>
-        // var validPickupSuggestions = [];
-        // var validDeliverySuggestions = [];
+        var validPickupSuggestions = [];
+        var validDeliverySuggestions = [];
     
-        // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-        //     var inputValue = inputField.val();
+        function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+            var inputValue = inputField.val();
     
-        //     $.ajax({
-        //         url: "{{ route('get.zipcodes') }}",
-        //         method: "POST",
-        //         data: {
-        //             "_token": "{{ csrf_token() }}",
-        //             "input": inputValue
-        //         },
-        //         success: function(response) {
-        //             suggestionsList.empty();
-        //             validSuggestions.length = 0;  // Clear previous suggestions
+            $.ajax({
+                url: "{{ route('get.zipcodes') }}",
+                method: "POST",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    "input": inputValue
+                },
+                success: function(response) {
+                    suggestionsList.empty();
+                    validSuggestions.length = 0;  // Clear previous suggestions
     
-        //             $.each(response, function(index, suggestion) {
-        //                 var listItem = $("<li>").text(suggestion).click(function() {
-        //                     inputField.val(suggestion);
-        //                     suggestionsList.css("display", "none");
-        //                 });
-        //                 validSuggestions.push(suggestion);  // Add to valid suggestions
-        //                 suggestionsList.append(listItem);
-        //             });
-        //         },
-        //         error: function(xhr, status, error) {
-        //             console.error("Error:", error);
-        //         }
-        //     });
-        // }
+                    $.each(response, function(index, suggestion) {
+                        var listItem = $("<li>").text(suggestion).click(function() {
+                            inputField.val(suggestion);
+                            suggestionsList.css("display", "none");
+                        });
+                        validSuggestions.push(suggestion);  // Add to valid suggestions
+                        suggestionsList.append(listItem);
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
+        }
     
-        // $("#pickup-location").keyup(function() {
-        //     var inputField = $(this);
-        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-        //     suggestionsList.css("display", "block");
-        //     if (inputField.val() === "") {
-        //         suggestionsList.css("display", "none");
-        //     }
-        //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-        // });
+        $("#pickup-location").keyup(function() {
+            var inputField = $(this);
+            var suggestionsList = inputField.siblings(".suggestionsTwo");
+            suggestionsList.css("display", "block");
+            if (inputField.val() === "") {
+                suggestionsList.css("display", "none");
+            }
+            updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+        });
     
-        // $("#delivery-location").keyup(function() {
-        //     var inputField = $(this);
-        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-        //     suggestionsList.css("display", "block");
-        //     if (inputField.val() === "") {
-        //         suggestionsList.css("display", "none");
-        //     }
-        //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-        // });
+        $("#delivery-location").keyup(function() {
+            var inputField = $(this);
+            var suggestionsList = inputField.siblings(".suggestionsTwo");
+            suggestionsList.css("display", "block");
+            if (inputField.val() === "") {
+                suggestionsList.css("display", "none");
+            }
+            updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+        });
     
-        // function validateLocationInput(inputField, validSuggestions, errorField) {
-        //     var inputValue = inputField.val();
-        //     if (!validSuggestions.includes(inputValue)) {
-        //         errorField.text("Please select a valid location.");
-        //         return false;
-        //     } else {
-        //         errorField.text("");
-        //         return true;
-        //     }
-        // }
+        function validateLocationInput(inputField, validSuggestions, errorField) {
+            var inputValue = inputField.val();
+            if (!validSuggestions.includes(inputValue)) {
+                errorField.text("Please select a valid location.");
+                return false;
+            } else {
+                errorField.text("");
+                return true;
+            }
+        }
     
-        // $("form").submit(function(event) {
-        //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-        //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+        $("form").submit(function(event) {
+            var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+            var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
     
-        //     if (!isPickupValid || !isDeliveryValid) {
-        //         event.preventDefault();  // Prevent form submission if validation fails
-        //     }
-        // });
+            if (!isPickupValid || !isDeliveryValid) {
+                event.preventDefault();  // Prevent form submission if validation fails
+            }
+        });
     </script>
     {{-- <script>
         function updateSuggestions(inputField, suggestionsList) {
@@ -840,25 +840,25 @@
         });
     </script> --}}
 
-    <script>
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     var input = document.querySelector("#phone");
-        //     window.intlTelInput(input, {
-        //         initialCountry: "auto",
-        //         geoIpLookup: function(callback) {
-        //             fetch('https://ipinfo.io/json')
-        //                 .then(function(response) {
-        //                     return response.json();
-        //                 })
-        //                 .then(function(ipinfo) {
-        //                     var countryCode = "us";
-        //                     callback(countryCode);
-        //                 });
-        //         },
-        //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-        //     });
-        // });
-    </script>
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                initialCountry: "auto",
+                geoIpLookup: function(callback) {
+                    fetch('https://ipinfo.io/json')
+                        .then(function(response) {
+                            return response.json();
+                        })
+                        .then(function(ipinfo) {
+                            var countryCode = "us";
+                            callback(countryCode);
+                        });
+                },
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+            });
+        });
+    </script> --}}
 
     <script>
         function playVideo() {
@@ -992,67 +992,47 @@
 
     <script>
         // $(document).ready(function() {
-        //     $(document).on('change', '#available_at_auction', function() {
-        //         if ($(this).is(':checked')) {
-        //             $('.div-link').show();
-        //         } else {
-        //             $('.div-link').hide();
+        //     var countries = ["United States", "Canada", "Mexico", "United Kingdom", "Germany", "France", "Italy",
+        //         "Spain", "Australia"
+        //     ];
+
+        //     $('#delivery-country').on('keyup', function() {
+        //         var query = $(this).val().toLowerCase();
+        //         var suggestions = '';
+
+        //         if (query.length > 0) {
+        //             var filteredCountries = countries.filter(function(country) {
+        //                 return country.toLowerCase().indexOf(query) !== -1;
+        //             });
+
+        //             filteredCountries.forEach(function(country) {
+        //                 suggestions += '<li>' + country + '</li>';
+        //             });
         //         }
+
+        //         $('.suggestionsCountry').html(suggestions).show();
         //     });
 
-        //     $(document).on('change', '#modification', function() {
-        //         if ($(this).is(':checked')) {
-        //             $('.div-modify_info').show();
-        //         } else {
-        //             $('.div-modify_info').hide();
-        //         }
+        //     $(document).on('click', '.suggestionsCountry li', function() {
+        //         $('#delivery-country').val($(this).text());
+        //         $('.suggestionsCountry').hide();
+        //     });
+
+        //     $('#delivery-country').on('blur', function() {
+        //         setTimeout(function() {
+        //             $('.suggestionsCountry').hide();
+        //         }, 200);
         //     });
         // });
     </script>
 
-    <script>
-        $(document).ready(function() {
-            var countries = ["United States", "Canada", "Mexico", "United Kingdom", "Germany", "France", "Italy",
-                "Spain", "Australia"
-            ];
-
-            $('#delivery-country').on('keyup', function() {
-                var query = $(this).val().toLowerCase();
-                var suggestions = '';
-
-                if (query.length > 0) {
-                    var filteredCountries = countries.filter(function(country) {
-                        return country.toLowerCase().indexOf(query) !== -1;
-                    });
-
-                    filteredCountries.forEach(function(country) {
-                        suggestions += '<li>' + country + '</li>';
-                    });
-                }
-
-                $('.suggestionsCountry').html(suggestions).show();
-            });
-
-            $(document).on('click', '.suggestionsCountry li', function() {
-                $('#delivery-country').val($(this).text());
-                $('.suggestionsCountry').hide();
-            });
-
-            $('#delivery-country').on('blur', function() {
-                setTimeout(function() {
-                    $('.suggestionsCountry').hide();
-                }, 200);
-            });
-        });
-    </script>
-
-    <SCript>
+    {{-- <script>
         $('#delivery-zipcode').on('keyup', function() {
             var destination = $('#delivery-city').val() + ',' + $('#delivery-country').val() + ',' + $(
                 '#delivery-zipcode').val();
             $('#destination').val(destination);
         });
-    </SCript>
+    </script> --}}
 
     {{-- <script>
         $(document).ready(function() {
