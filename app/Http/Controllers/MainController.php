@@ -56,7 +56,7 @@ class MainController extends Controller
         $year = $request->year;
         $make = $request->make;
         $searchOrigin = $request->term;
-        $model = array();
+        $model = [];
 
         $selectOri = VehicleName::select('model')
             ->where('model', 'LIKE', $searchOrigin . '%')
@@ -73,8 +73,34 @@ class MainController extends Controller
                 $model[] = $val->model;
             }
         }
-        return $model;
+
+        return response()->json($model);
     }
+
+    // public function getmodel(Request $request)
+    // {
+    //     $year = $request->year;
+    //     $make = $request->make;
+    //     $searchOrigin = $request->term;
+    //     $model = array();
+
+    //     $selectOri = VehicleName::select('model')
+    //         ->where('model', 'LIKE', $searchOrigin . '%')
+    //         ->where('make', 'LIKE', $make . '%')
+    //         ->where('UserId', 14)
+    //         ->where('status', 0)
+    //         ->groupBy('model')
+    //         ->orderBy('model', 'ASC')
+    //         ->limit(10)
+    //         ->get();
+
+    //     if ($selectOri->isNotEmpty()) {
+    //         foreach ($selectOri as $val) {
+    //             $model[] = $val->model;
+    //         }
+    //     }
+    //     return $model;
+    // }
 
     public function get_zip(Request $request)
     {

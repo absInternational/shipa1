@@ -10,6 +10,14 @@
     .error {
         border: 2px solid red;
     }
+    .make-dropdown {
+    max-height: 200px; /* Set the maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    .dropdown-item {
+        white-space: nowrap; /* Prevent text wrapping */
+    }
 </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -145,7 +153,7 @@
                                                 <label>Make</label>
                                                 <div class="dropdown">
                                                     <input class="form-control dropdown-toggle make" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <ul class="dropdown-menu make-dropdown" aria-labelledby="make">
+                                                    <ul class="dropdown-menu make-dropdown" style="" aria-labelledby="make">
                                                         <li><a class="dropdown-item" >Select Make</a></li>
                                                         @foreach ($makes as $make)
                                                             <li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>
@@ -620,6 +628,29 @@
             }
         });
 
+        // function getModel(year, makeId, vehicleInfo) {
+        //     $.ajax({
+        //         url: "{{ route('get.models') }}",
+        //         method: 'GET',
+        //         data: {
+        //             year: year,
+        //             make: makeId
+        //         },
+        //         success: function(response) {
+        //             var modelsDropdown = vehicleInfo.find('.model');
+        //             modelsDropdown.empty();
+        //             var selectOptions = '<option value="">Select Model</option>';
+        //             $.each(response, function(index, model) {
+        //                 selectOptions += '<option value="' + model + '">' + model + '</option>';
+        //             });
+        //             modelsDropdown.html(selectOptions);
+        //         },
+        //         error: function(xhr) {
+        //             console.log(xhr.responseText);
+        //         }
+        //     });
+        // }
+
         function getModel(year, makeId, vehicleInfo) {
             $.ajax({
                 url: "{{ route('get.models') }}",
@@ -630,12 +661,14 @@
                 },
                 success: function(response) {
                     var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
+                    console.log('Models Dropdown:', modelsDropdown); 
+                    modelsDropdown.empty(); 
                     var selectOptions = '<option value="">Select Model</option>';
                     $.each(response, function(index, model) {
                         selectOptions += '<option value="' + model + '">' + model + '</option>';
                     });
                     modelsDropdown.html(selectOptions);
+                    modelsDropdown.niceSelect('update');
                 },
                 error: function(xhr) {
                     console.log(xhr.responseText);
@@ -652,7 +685,43 @@
             });
         });
     });
+
+    
 </script>
+{{-- function getModel(year, makeId, vehicleInfo) {
+        $.ajax({
+            url: "{{ route('get.models') }}",
+            method: 'GET',
+            data: {
+                year: year,
+                make: makeId
+            },
+            success: function(response) {
+                console.log('AJAX Response:', response);
+
+                var modelsDropdown = vehicleInfo.find('.model');
+                console.log('Models Dropdown:', modelsDropdown); // Ensure it's targeting the right element
+
+                modelsDropdown.empty(); // Clear existing options
+
+                var selectOptions = '<option value="">Select Model</option>';
+
+                $.each(response, function(index, model) {
+                    console.log('Adding model:', model);
+                    selectOptions += '<option value="' + model + '">' + model + '</option>';
+                });
+
+                // Update the original <select> element
+                modelsDropdown.html(selectOptions);
+
+                // Reinitialize the nice-select plugin
+                modelsDropdown.niceSelect('update');
+            },
+            error: function(xhr) {
+                console.log(xhr.responseText);
+            }
+        });
+    } --}}
 {{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
