@@ -837,7 +837,7 @@ shipment efficiently with our instant quote tool.')
         $(document).on('change', '.category', function() {
             var $this = $(this);
             var selectedCategory = $this.find('option:selected').data('id');
-            var $subcategoryBox = $this.closest('.col-6').next('.col-6').find('.subcategory-box');
+            var $subcategoryBox = $this.closest('.col-4').next('.col-4').find('.subcategory-box');
 
             $.ajax({
                 url: "{{ route('get.subcategories') }}",
