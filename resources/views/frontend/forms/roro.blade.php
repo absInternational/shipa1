@@ -362,13 +362,13 @@
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" id="pickup-location"
                                                     placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                                {{-- <ul class="suggestions suggestionsTwo"></ul>
+                                                <ul class="suggestions suggestionsTwo"></ul>
                                                 <label class="error-message" id="pickup-location-error">This field is
-                                                    required.</label> --}}
-                                                    <label class="error-message" id="delivery-city-error">This field is
+                                                    required.</label>
+                                                    {{-- <label class="error-message" id="delivery-city-error">This field is
                                                         required.</label>
                                                     <small id="errOLoc" class="err-loc"></small>
-                                                     <ul class="suggestions suggestionsTwo"></ul>
+                                                     <ul class="suggestions suggestionsTwo"></ul> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -380,11 +380,11 @@
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" id="delivery-country" name="roro_country"
                                                     autocomplete="off" placeholder="Enter Country" required>
-                                                {{-- <ul class="suggestions suggestionsCountry"></ul>
+                                                <ul class="suggestions suggestionsCountry"></ul>
                                                 <label class="error-message" id="delivery-location-error">This field is
-                                                    required.</label> --}}
-                                                    <small id="errDLoc" class="err-loc"></small>
-                                                    <ul class="suggestions suggestionsTwo"></ul>
+                                                    required.</label>
+                                                    {{-- <small id="errDLoc" class="err-loc"></small>
+                                                    <ul class="suggestions suggestionsTwo"></ul> --}}
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 mb-4">
@@ -991,48 +991,48 @@
     </script>
 
     <script>
-        // $(document).ready(function() {
-        //     var countries = ["United States", "Canada", "Mexico", "United Kingdom", "Germany", "France", "Italy",
-        //         "Spain", "Australia"
-        //     ];
+        $(document).ready(function() {
+            var countries = ["United States", "Canada", "Mexico", "United Kingdom", "Germany", "France", "Italy",
+                "Spain", "Australia"
+            ];
 
-        //     $('#delivery-country').on('keyup', function() {
-        //         var query = $(this).val().toLowerCase();
-        //         var suggestions = '';
+            $('#delivery-country').on('keyup', function() {
+                var query = $(this).val().toLowerCase();
+                var suggestions = '';
 
-        //         if (query.length > 0) {
-        //             var filteredCountries = countries.filter(function(country) {
-        //                 return country.toLowerCase().indexOf(query) !== -1;
-        //             });
+                if (query.length > 0) {
+                    var filteredCountries = countries.filter(function(country) {
+                        return country.toLowerCase().indexOf(query) !== -1;
+                    });
 
-        //             filteredCountries.forEach(function(country) {
-        //                 suggestions += '<li>' + country + '</li>';
-        //             });
-        //         }
+                    filteredCountries.forEach(function(country) {
+                        suggestions += '<li>' + country + '</li>';
+                    });
+                }
 
-        //         $('.suggestionsCountry').html(suggestions).show();
-        //     });
+                $('.suggestionsCountry').html(suggestions).show();
+            });
 
-        //     $(document).on('click', '.suggestionsCountry li', function() {
-        //         $('#delivery-country').val($(this).text());
-        //         $('.suggestionsCountry').hide();
-        //     });
+            $(document).on('click', '.suggestionsCountry li', function() {
+                $('#delivery-country').val($(this).text());
+                $('.suggestionsCountry').hide();
+            });
 
-        //     $('#delivery-country').on('blur', function() {
-        //         setTimeout(function() {
-        //             $('.suggestionsCountry').hide();
-        //         }, 200);
-        //     });
-        // });
+            $('#delivery-country').on('blur', function() {
+                setTimeout(function() {
+                    $('.suggestionsCountry').hide();
+                }, 200);
+            });
+        });
     </script>
 
-    {{-- <script>
+    <script>
         $('#delivery-zipcode').on('keyup', function() {
             var destination = $('#delivery-city').val() + ',' + $('#delivery-country').val() + ',' + $(
                 '#delivery-zipcode').val();
             $('#destination').val(destination);
         });
-    </script> --}}
+    </script>
 
     {{-- <script>
         $(document).ready(function() {
