@@ -347,7 +347,15 @@ shipment efficiently with our instant quote tool.')
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            {{-- <div class="col-md-3">
+                                <label class="lab-cos">Weight</label>
+                                <div class="input-container1">
+                                    <input type="number" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
+                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                                    <span class="separators-w">(Lbs.)</span>
+                                </div>
+                            </div>  --}}
+                            {{-- <div class="col-md-3">
                                 <label class="lab-cos">Width</label>
                                 <div class="input-container">
                                     <input type="number" id="feet-input1" class="input-field" placeholder="" name="width_ft[]"
@@ -357,8 +365,8 @@ shipment efficiently with our instant quote tool.')
                                         min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                     <span class="separators">(In.)</span>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
+                            </div> --}}
+                            {{-- <div class="col-md-3">
                                 <label class="lab-cos">Height</label>
                                 <div class="input-container">
                                     <input type="number" id="feet-input2" class="input-field" placeholder="" name="height_ft[]"
@@ -369,15 +377,9 @@ shipment efficiently with our instant quote tool.')
                                     <span class="separators">(In.)</span>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <label class="lab-cos">Weight</label>
-                                <div class="input-container1">
-                                    <input type="number" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
-                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                    <span class="separators-w">(Lbs.)</span>
-                                </div>
-                            </div>
+                            
                         </div>
+                        --}}
                         <div class="row mt-3">
                             {{-- <div class="col-md-4">
                                 <div class="form-group">
@@ -447,7 +449,8 @@ shipment efficiently with our instant quote tool.')
                                     </select>
                                 </div>
                             </div>
-                        </div><br>
+                        </div>
+                        <br>
                         <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
                             Equipment</a>
                         <div id="vehicles-container">
@@ -564,13 +567,13 @@ shipment efficiently with our instant quote tool.')
                                     min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                 <span class="separators">(In.)</span>
                             </div>
-                            <div class="col-md-3">
-                                <label class="lab-cos">Weight</label>
-                                <div class="input-container1">
-                                    <input type="number" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
-                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                    <span class="separators-w">(Lbs.)</span>
-                                </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="lab-cos">Weight</label>
+                            <div class="input-container1">
+                                <input type="number" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
+                                    min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                                <span class="separators-w">(Lbs.)</span>
                             </div>
                         </div>
                     </div>
