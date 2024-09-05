@@ -244,7 +244,7 @@
             <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/DSF.webp') }}">
                 <div class="container">
                     <div class="slider-content p-z-idex">
-                        <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY TRANSPORTATION SERVICES</h1>
+                        <h1 class="slider-title">TRUSTWORTHY, EFFICIENT, AND COST-EFFECTIVE AUTO TRANSPORT SOLUTIONS</h1>
                         <div class="slider-desc">
                             ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                             customers and seeks your trust in return of our services.
@@ -388,8 +388,8 @@
                         </div>
                         <div class="service-content">
                             <h4>VEHICLE TRANSPORTATION</h4>
-                            <p>Ship A1 is your trusted partner for safely and
-                                efficiently handling the toughest transportation challenges.</p>
+                            <p>Everything you need to know about 100% insured
+                                and secured vehicle transportation.</p>
                             <div class="d-flex justify-content-end">
                                 <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('vehicleTransportDetail') }}" style="background: #8fc445;color: white;">
                                     Read More<i class="bi bi-chevron-right"></i>
@@ -489,7 +489,7 @@
                         <span class="sub-title active-shape"> A1 Transportation Company</span>
                         <h2 class="title">What Makes Us Dependable?</h2>
                         <p class="desc">
-                            Among all the shipping companies out there, factors that make us stand out from therest are:
+                            Among all the shipping companies out there, factors that make us stand out from the rest are:
                         </p>
                     </div>
                     <div class="tj-icon-box">
@@ -644,7 +644,7 @@
         </div>
     </div>
 </section>
-<section class="tj-choose-us-section-home">
+<section class="tj-choose-us-section-home target-top">
     <div class="container">
         <div class="row">
             @if (session('success'))
@@ -658,7 +658,7 @@
                 </div>
             @endif
             <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="choose-us-content-1">
+                <div class="choose-us-content-1 ">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">Get Instant quote</span>
                         <h2 class="title">Get an instant quote in few simple steps</h2>

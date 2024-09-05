@@ -104,39 +104,50 @@
             var newVehicleHtml =
                 `
                     <div class="vehicle-info">
-                    <div class="row select-bm">
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label> Year</label>
-                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
+                        <div class="row select-bm">
+                            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                            <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                    <label> Year</label>
+                                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                                        var currentYear = {{ date('Y') }};
+                                        for (var year = currentYear; year >= 1936; year--) {
+                                            newVehicleHtml += `<option value="${year}">${year}</option>`;
+                                        }
 
-            newVehicleHtml +=
-                `</select>
-                            </div>
+                                        newVehicleHtml +=
+                                    `</select>
+                                </div>
                             </div>
                             <div class="col-md-4">
-                            <div class="input-form tj-select">
-                            <label>Make</label>
-                            <input type="text" id="make" name="make[]"
-                            placeholder="Enter Make" required="" />
-                            </div>
+                                <div class="input-form tj-select">
+                                    <label>Make</label>
+                                    <input type="text" id="make" name="make[]"
+                                    placeholder="Enter Make" required="" />
+                                </div>
                             </div>
                             <div class="col-md-4">
-                            <div class="input-form tj-select model-div">
-                            <label>Model</label>
-                            <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                            required="" />`
-            newVehicleHtml +=
-                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+                                <div class="input-form tj-select model-div">
+                                    <label>Model</label>
+                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                    required="" />`
 
-            newVehicleHtml += `</div>
+                                        newVehicleHtml += `
+                                </div>
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="condition" class="text-white">Condition</label>
+                                    <select class="form-control" id="condition" name="condition[]">
+                                        <option value="1" selected>Running</option>
+                                        <option value="2">Non Running</option>
+                                    </select>
+                                </div>
                             </div>
-                            </div>
+                        </div>
+                    </div>
                             `;
 
             $('.vehicles-container').append(newVehicleHtml);

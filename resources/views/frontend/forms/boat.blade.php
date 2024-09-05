@@ -309,7 +309,7 @@
                                         <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)" required="">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                                        <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required="">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -365,6 +365,42 @@
                                         <select class="" id="condition" name="condition[]">
                                             <option value="1" selected>Running</option>
                                             <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                {{-- <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="load_type" class="text-white">Load Type</label>
+                                        <select class="" id="load_type" name="load_type">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
+                                            <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
+                                        </select>
+                                    </div>
+                                </div> --}}
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="load_method" class="text-white">Load Method</label>
+                                        <select class="" id="load_method" name="load_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="unload_method" class="text-white">Unload Method</label>
+                                        <select class="" id="unload_method" name="unload_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
                                         </select>
                                     </div>
                                 </div>
@@ -629,7 +665,7 @@
                                         <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                                        <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -672,6 +708,34 @@
                                     </div>
                                 </div>
 
+                                </div>
+                                <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="load_method" class="text-white">Load Method</label>
+                                        <select class="nice-select" id="load_method" name="load_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="unload_method" class="text-white">Unload Method</label>
+                                        <select class="nice-select" id="unload_method" name="unload_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="condition" class="text-white">Condition</label>
@@ -681,10 +745,7 @@
                                         </select>
                                     </div>
                                 </div>
-
-
-
-                            </div>
+                             </div>
                     </div>
                 `;
 
@@ -702,24 +763,24 @@
     </script>
 
     <script>
-        $(document).ready(function() {
+        // $(document).ready(function() {
 
-            $('#available_at_auction').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
+        //     $('#available_at_auction').change(function() {
+        //         if ($(this).is(':checked')) {
+        //             $('.div-link').show();
+        //         } else {
+        //             $('.div-link').hide();
+        //         }
+        //     });
 
-            $('#modification').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
-        });
+        //     $('#modification').change(function() {
+        //         if ($(this).is(':checked')) {
+        //             $('.div-modify_info').show();
+        //         } else {
+        //             $('.div-modify_info').hide();
+        //         }
+        //     });
+        // });
     </script>
 <script>
     // var validPickupSuggestions = [];

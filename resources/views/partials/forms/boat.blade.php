@@ -169,7 +169,7 @@ Vehicle</a>
         <div class="image-preview-container" id="imagePreviewContainer"></div>
     <!-- <input class="form-control image_input" type="file" id="image" name="image[]" placeholder="Upload File" /> -->
 </div>
-<script>
+{{-- <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -220,7 +220,7 @@ Vehicle</a>
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-</script>    
+</script>     --}}
 <script>
     function addOtherVehicle() {
         var newVehicleHtml =

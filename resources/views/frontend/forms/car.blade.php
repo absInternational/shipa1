@@ -4,6 +4,7 @@
     'Experience seamless car shipping with Shipa Car Transport. Get an instant quote,
     nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
 @section('content')
+
 <style>
     /* Error styling */
     .error {
@@ -119,7 +120,115 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row select-bm">
+                            {{-- bootstrap --}}
+                                <!-- Initial Vehicle Information -->
+                                <div class="vehicle-info">
+                                    <div class="row select-bm">
+                                        
+                                        <div class="col-md-4">
+                                            <div class="input-form tj-select">
+                                                <label>Year</label>
+                                                <select class="nice-select year" name="year[]" required id="year">
+                                                    <option value="" disabled selected>Select Year</option>
+                                                    <!-- Years populated by server-side script -->
+                                                    @php
+                                                        $currentYear = date('Y');
+                                                        for ($year = $currentYear; $year >= 1936; $year--) {
+                                                            echo "<option value='$year'>$year</option>";
+                                                        }
+                                                    @endphp
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-form tj-select">
+                                                <label>Make</label>
+                                                <div class="dropdown">
+                                                    <input class="form-control dropdown-toggle make" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <ul class="dropdown-menu make-dropdown" aria-labelledby="make">
+                                                        <li><a class="dropdown-item" >Select Make</a></li>
+                                                        @foreach ($makes as $make)
+                                                            <li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="input-form tj-select model-div">
+                                                <label>Model</label>
+                                                <select class="nice-select model" name="model[]" id="model" required>
+                                                    <option value="">Select Model</option>
+                                                    <!-- Options filled by JavaScript -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{-- <a id="addVehicleBtn" class="add-car mt-3">Add Vehicle</a> --}}
+                            {{-- <div class="row select-bm">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white mb-0">Car Information</h4>
+                                </div>
+                            
+                                <!-- Year Dropdown -->
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Year</label>
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="yearDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Select Year
+                                            </button>
+                                            <ul class="dropdown-menu w-100" aria-labelledby="yearDropdown">
+                                                <li><input type="text" class="form-control" id="searchYear" placeholder="Search year..."></li>
+                                                @php
+                                                    $currentYear = date('Y');
+                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                        echo "<li><a class='dropdown-item' href='#' data-value='$year'>$year</a></li>";
+                                                    }
+                                                @endphp
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Make Dropdown -->
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="makeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Select Make
+                                            </button>
+                                            <ul class="dropdown-menu w-100" aria-labelledby="makeDropdown">
+                                                <li><input type="text" class="form-control" id="searchMake" placeholder="Search make..."></li>
+                                                @foreach ($makes as $make)
+                                                    <li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Model Dropdown -->
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select vehicle-model-div">
+                                        <label>Model</label>
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="modelDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Select Model
+                                            </button>
+                                            <ul class="dropdown-menu w-100" aria-labelledby="modelDropdown">
+                                                <li><input type="text" class="form-control" id="searchModel" placeholder="Search model..."></li>
+                                                <!-- Models will be filled dynamically via AJAX -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            {{-- bootstrap --}}
+                            {{-- my code --}}
+                            {{-- <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white mb-0">Car Information</h4>
                                 </div>
@@ -135,9 +244,7 @@
                                                 }
                                             @endphp
                                         </select>
-                                        {{-- <div class="error-message" style="color: red; display: none;">
-                                            Please select a year.
-                                        </div> --}}
+                                        
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -160,7 +267,8 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
+                            {{-- my code --}}
                             {{-- <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white mb-0">Car Information</h4>
@@ -228,9 +336,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="add-car" id="addVehicleBtn">
-                                <i class="fa fa-plus"> Add
-                                    Vehicle </i>
+                            <a id="addVehicleBtn" class="add-car" >
+                                <i class="fa fa-plus"> Add Vehicle </i>
                             </a>
                             <div id="vehicles-container">
                             </div>
@@ -289,7 +396,7 @@
     </section>
 @endsection
 @section('extraScript')
-<script>
+{{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -422,6 +529,129 @@
             });
         }
     
+</script> --}}
+<script>
+    // $(document).ready(function() {
+    //         $('select').niceSelect(); // Initialize nice-select
+    //     });
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                <div class="vehicle-info">
+                <div class="row select-bm">
+                    <!-- Bin icon for deleting vehicle -->
+                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
+                    <div class="col-md-4">
+                        <div class="input-form tj-select">
+                            <label>Year</label>
+                            <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+            newVehicleHtml += `
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-form tj-select">
+                            <label>Make</label>
+                            <div class="dropdown">
+                                <input class="form-control dropdown-toggle make" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
+                                <ul class="dropdown-menu make-dropdown" aria-labelledby="make">
+                                    <li><a class="dropdown-item" >Select Make</a></li>`;
+            @foreach ($makes as $make)
+                newVehicleHtml += `<li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>`;
+            @endforeach
+            newVehicleHtml += `
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-form tj-select model-div">
+                            <label>Model</label>
+                            <select class="nice-select model" name="model[]" id="model" required>
+                                <!-- Options filled by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="condition" class="text-white">Condition</label>
+                            <select class="nice-select" id="condition" name="condition[]">
+                                <option value="1" selected>Running</option>
+                                <option value="2">Non Running</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            `;
+            $('#vehicles-container').append(newVehicleHtml);
+        }
+
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
+
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+
+        $(document).on('click', '.make-dropdown .dropdown-item', function() {
+            var make = $(this).data('value');
+            $(this).closest('.dropdown').find('.form-control').val(make).end()
+                .find('.dropdown-menu').removeClass('show');
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            var year = vehicleInfo.find('.year').val();
+            if (year && make) {
+                getModel(year, make, vehicleInfo);
+            }
+        });
+
+        $(document).on('change', '.year, .make', function() {
+            var year = $(this).closest('.vehicle-info').find('.year').val();
+            var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            if (year && makeId) {
+                getModel(year, makeId, vehicleInfo);
+            }
+        });
+
+        function getModel(year, makeId, vehicleInfo) {
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelsDropdown = vehicleInfo.find('.model');
+                    modelsDropdown.empty();
+                    var selectOptions = '<option value="">Select Model</option>';
+                    $.each(response, function(index, model) {
+                        selectOptions += '<option value="' + model + '">' + model + '</option>';
+                    });
+                    modelsDropdown.html(selectOptions);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+
+
+        $(document).on('input', '.dropdown-toggle', function() {
+            var input = $(this).val().toLowerCase();
+            $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
+                var text = $(this).text().toLowerCase();
+                $(this).toggle(text.indexOf(input) > -1);
+            });
+        });
+    });
 </script>
 {{-- <script>
     $(document).ready(function() {
