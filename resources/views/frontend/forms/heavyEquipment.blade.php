@@ -231,6 +231,35 @@ shipment efficiently with our instant quote tool.')
                             </div>
                         </div>
 
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                    <select class=" " id="trailer_type" name="trailer_type">
+                                        <option value="RGN" selected>RGN</option>
+                                        <option value="VAN (V)">VAN (V)</option>
+                                        <option value="FLATBED (F)">FLATBED (F)</option>
+                                        <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                                        <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
+                                        <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
+                                        <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
+                                        <option value="TRUCK (T)">TRUCK (T)</option>
+                                        <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
+                                        <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                                        <option value="LOWBOY (LB)">LOWBOY (LB)</option>
+                                        <option value="ENDUMP (ED)">ENDUMP (ED)</option>
+                                        <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                                        <option value="PARTIAL (PT)">PARTIAL (PT)</option>
+                                        {{-- <option value="20ft container">20ft container</option>
+                                        <option value="40ft container">40ft container</option>
+                                        <option value="48ft container">48ft container</option>
+                                        <option value="53ft container">53ft container</option> --}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div><br>
+
                         <div class="row select-bm">
                             <div class="col-md-12 text-center">
                                 <h4 class="text-white">Equipment Information</h4>
@@ -304,45 +333,9 @@ shipment efficiently with our instant quote tool.')
                             <div class="col-md-3">
                                 <label class="lab-cos">Weight</label>
                                 <div class="input-container1">
-                                    <input type="" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
+                                    <input type="number" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
                                         min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                     <span class="separators-w">(Lbs.)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                    <select class=" " id="trailer_type" name="trailer_type">
-                                        <option value="RGN" selected>RGN</option>
-                                        <option value="VAN (V)">VAN (V)</option>
-                                        <option value="FLATBED (F)">FLATBED (F)</option>
-                                        <option value="STEP DECK (SD)">STEP DECK (SD)</option>
-                                        <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
-                                        <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                                        <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
-                                        <option value="TRUCK (T)">TRUCK (T)</option>
-                                        <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
-                                        <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
-                                        <option value="LOWBOY (LB)">LOWBOY (LB)</option>
-                                        <option value="ENDUMP (ED)">ENDUMP (ED)</option>
-                                        <option value="LANDOLL (LD)">LANDOLL (LD)</option>
-                                        <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                        {{-- <option value="20ft container">20ft container</option>
-                                        <option value="40ft container">40ft container</option>
-                                        <option value="48ft container">48ft container</option>
-                                        <option value="53ft container">53ft container</option> --}}
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="condition" class="text-white">Condition</label>
-                                    <select class=" " id="condition" name="condition[]">
-                                        <option value="1" selected>Running</option>
-                                        <option value="2">Non Running</option>
-                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -382,15 +375,11 @@ shipment efficiently with our instant quote tool.')
                                 </div>
                             </div>
                         </div>
-                        <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-                            Equipment</a>
-                        <div id="vehicles-container">
-                        </div>
                         <div class="row">
                             <div class="col-6">
                                 <div class="input-form">
                                     <label for="category">Category</label>
-                                    <select class=" " id="category" name="category">
+                                    <select class="category nice-select" id="" name="category[]">
                                         <option value="" disabled selected>Select</option>
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->name }}" data-id="{{ $category->id }}">
@@ -403,14 +392,27 @@ shipment efficiently with our instant quote tool.')
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="input-form" id="subcategory-box">
+                                <div class="input-form subcategory-box" id="">
                                     <label for="subcategory">Subcategory</label>
-                                    <select class="" id="subcategory" name="subcategory">
+                                    <select class="subcategory nice-select" id="" name="subcategory[]">
                                         <option value="" disabled selected>Select</option>
                                     </select>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="condition" class="text-white">Condition</label>
+                                    <select class=" " id="condition" name="condition[]">
+                                        <option value="1" selected>Running</option>
+                                        <option value="2">Non Running</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div><br>
+                        <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+                            Equipment</a>
+                        <div id="vehicles-container">
+                        </div>
                         
                         
                         <div class="input-form mt-3">
@@ -522,7 +524,7 @@ shipment efficiently with our instant quote tool.')
                             <div class="col-md-3">
                                 <label class="lab-cos">Weight</label>
                                 <div class="input-container1">
-                                    <input type="" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
+                                    <input type="number" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
                                         min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                     <span class="separators-w">(Lbs.)</span>
                                 </div>
@@ -555,6 +557,29 @@ shipment efficiently with our instant quote tool.')
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-6">
+                                <div class="input-form">
+                                    <label for="category">Category</label>
+                                    <select class="category nice-select" id="" name="category[]">
+                                        <option value="" disabled selected>Select</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->name }}" data-id="{{ $category->id }}">
+                                                {{ $category->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    <input type="text" class="form-control" id="otherCategoryInput"
+                                        name="category" disabled style="display: none;"
+                                        placeholder="Specify Category">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-form subcategory-box" id="">
+                                    <label for="subcategory">Subcategory</label>
+                                    <select class="subcategory nice-select" id="" name="subcategory[]">
+                                        <option value="" disabled selected>Select</option>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="condition" class="text-white">Condition</label>
@@ -760,5 +785,43 @@ shipment efficiently with our instant quote tool.')
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
+</script>
+<script>
+    $(document).ready(function() {
+        $(document).on('change', '.category', function() {
+            var $this = $(this);
+            var selectedCategory = $this.find('option:selected').data('id');
+            var $subcategoryBox = $this.closest('.col-6').next('.col-6').find('.subcategory-box');
+
+            $.ajax({
+                url: "{{ route('get.subcategories') }}",
+                method: "POST",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    "category": selectedCategory
+                },
+                success: function(response) {
+                    var html = '';
+                    $subcategoryBox.html('');
+
+                    html += "<label for='subcategory'>Subcategory</label>";
+                    html += "<select class='nice-select form-control subcategory' name='subcategory[]'>";
+                    html += "<option value='' disabled selected>Select</option>";
+
+                    $.each(response, function(index, val) {
+                        html += `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
+                    });
+
+                    html += "</select>";
+
+                    $subcategoryBox.html(html);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
+        });
+    });
+
 </script>
 @endsection

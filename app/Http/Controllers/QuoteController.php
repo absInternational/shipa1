@@ -93,6 +93,14 @@ class QuoteController extends Controller
             ? $this->generateStringFromArray($data['rv_type'])
             : $request->input('rv_type', null);
 
+        $category = isset($data['category']) && is_array($data['category'])
+            ? $this->generateStringFromArray($data['category'])
+            : $request->input('category', null);
+
+        $subcategory = isset($data['subcategory']) && is_array($data['subcategory'])
+            ? $this->generateStringFromArray($data['subcategory'])
+            : $request->input('subcategory', null);
+
         // $transport = isset($data['trailer_type']) && is_array($data['trailer_type'])
         //     ? $this->generateStringFromArray($data['trailer_type'])
         //     : $request->input('trailer_type', null);
@@ -112,7 +120,7 @@ class QuoteController extends Controller
         $link = $request->input('link', null);
         $modification = $request->input('modification', null);
         $modify_info = $request->input('modify_info', null);
-        $category = $request->input('category', null);
+        // $category = $request->input('category', null);
         $boat_on_trailer = $request->input('boat_on_trailer', null);
         // $length_ft = $request->input('length_ft', null);
         // $length_in = $request->input('length_in', null);
@@ -121,7 +129,7 @@ class QuoteController extends Controller
         // $height_ft = $request->input('height_ft', null);
         // // $height_in = $request->input('height_in', null);
         // $weight = $request->input('weight', null);
-        $subcategory = $request->input('subcategory', null);
+        // $subcategory = $request->input('subcategory', null);
         $load_type = $request->input('load_type', null);
         // $load_method = $request->input('load_method', null);
         // $unload_method = $request->input('unload_method', null);
