@@ -253,10 +253,14 @@ else {
                                                     <strong>Order Information</strong>
                                                     <table class="table customtable">
                                                         @php
-                                                            $vehiclearray = explode('*^-', $data['ymk']);
-                                                            $vin_num = explode('*^', $data['vin_num']);
-                                                            $condition1 = explode('*^', $data['condition']);
-                                                            $transport = explode('*^', $data['transport']);
+                                                            // $vehiclearray = explode('*^-', $data['ymk']);
+                                                            // $vin_num = explode('*^', $data['vin_num']);
+                                                            // $condition1 = explode('*^', $data['condition']);
+                                                            // $transport = explode('*^', $data['transport']);
+                                                            $vehiclearray = explode('*^', str_replace('*^-', '*^', $data['ymk']));
+                                                            $vin_num = explode('*^', str_replace('*^-', '*^', $data['vin_num']));
+                                                            $condition1 = explode('*^', str_replace('*^-', '*^', $data['condition']));
+                                                            $transport = explode('*^', str_replace('*^-', '*^', $data['transport']));
                                                         @endphp
                                                         @php
                                                             if ($data['freight']) {
@@ -264,7 +268,7 @@ else {
                                                                 $frieght_class = $data['freight']['frieght_class'];
                                                                 $equipment_type = implode(
                                                                     ', ',
-                                                                    explode('^*', $data['freight']['equipment_type']),
+                                                                    explode('*^', $data['freight']['equipment_type']),
                                                                 );
                                                                 $trailer_specification =
                                                                     $data['freight']['trailer_specification'];
@@ -277,11 +281,11 @@ else {
                                                                 $total_weight_lb = $data['freight']['total_weight_lbs'];
                                                                 $pick_up_service = implode(
                                                                     ', ',
-                                                                    explode('^*', $data['freight']['pick_up_services']),
+                                                                    explode('*^', $data['freight']['pick_up_services']),
                                                                 );
                                                                 $deliver_service = implode(
                                                                     ', ',
-                                                                    explode('^*', $data['freight']['deliver_services']),
+                                                                    explode('*^', $data['freight']['deliver_services']),
                                                                 );
                                                                 $shipment_prefences =
                                                                     $data['freight']['shipment_prefences'];
@@ -298,7 +302,6 @@ else {
                                                                     <td class="font-weight-bold">
                                                                         @foreach ($vehiclearray as $key => $vhicle)
                                                                             {{ $vhicle }}
-                                                                            (Vin:{{ isset($vin_num[$key]) ? (!empty(trim($vin_num[$key])) ? $vin_num[$key] : 'N/A') : 'N/A' }})
                                                                             <br>
                                                                         @endforeach
 
@@ -1126,8 +1129,7 @@ else {
                         </div>
                         <div class="row mb-3">
                             <div class="col-lg-12 text-right">
-                                <button type="submit" class="btn btn-primary btn-lg submit">Next
-                                    Step >>
+                                <button type="submit" class="btn btn-primary btn-lg submit">Confirm Order >>
                                 </button>
                             </div>
                         </div>
