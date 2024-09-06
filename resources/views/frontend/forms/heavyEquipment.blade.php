@@ -603,7 +603,7 @@ shipment efficiently with our instant quote tool.')
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-6">
                                 <div class="input-form">
                                     <label for="category">Category</label>
                                     <select class="category nice-select" id="" name="category[]">
@@ -618,7 +618,7 @@ shipment efficiently with our instant quote tool.')
                                         placeholder="Specify Category">
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-6">
                                 <div class="input-form subcategory-box" id="">
                                     <label for="subcategory">Subcategory</label>
                                     <select class="subcategory nice-select" id="" name="subcategory[]">
@@ -837,7 +837,7 @@ shipment efficiently with our instant quote tool.')
         $(document).on('change', '.category', function() {
             var $this = $(this);
             var selectedCategory = $this.find('option:selected').data('id');
-            var $subcategoryBox = $this.closest('.col-4').next('.col-4').find('.subcategory-box');
+            var $subcategoryBox = $this.closest('.col-6').next('.col-6').find('.subcategory-box');
 
             $.ajax({
                 url: "{{ route('get.subcategories') }}",
