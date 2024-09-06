@@ -18,7 +18,7 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->toArray());
+        dd($request->toArray());
         $data = $request->all();
         $heading = $this->generateHeading($data);
         $name = $request->input('name', null);
@@ -297,7 +297,7 @@ class QuoteController extends Controller
             $post_array['image'] = implode('*^', $imageUrls);
         }
 
-        dd($post_array, $request->toArray());
+        // dd($post_array, $request->toArray());
 
         // $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
         //     $q->where('delivery_latitude', $delivery_latitude)
