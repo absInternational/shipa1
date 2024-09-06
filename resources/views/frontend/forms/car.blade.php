@@ -605,7 +605,7 @@
                         <div class="input-form tj-select">
                             <label>Make</label>
                             <div class="dropdown">
-                                <input class="form-control dropdown-toggle make" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
+                                <input class="form-control dropdown-toggle make" name="make[]" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
                                 <ul class="dropdown-menu make-dropdown" aria-labelledby="make">
                                     <li><a class="dropdown-item" >Select Make</a></li>`;
             @foreach ($makes as $make)
