@@ -184,7 +184,8 @@
                                             <div class="input-form tj-select model-div">
                                                 <label>Model</label>
                                                 <div class="dropdown">
-                                                    <input class="form-control dropdown-toggle model-input" type="text" id="model" placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <input class="form-control dropdown-toggle model-input"
+                                                    name="model[]" type="text" id="model" placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
                                                         <li><a class="dropdown-item" href="#">Select Model</a></li>
                                                         <!-- Options filled by JavaScript -->
