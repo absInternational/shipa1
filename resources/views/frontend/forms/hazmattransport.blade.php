@@ -506,21 +506,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-form ">
-                                <label class="d-block" class="text-white"> Image:</label>
-                                <input class="form-control image_input" name="image[]" type="file" accept="image/*"
-                                    multiple onchange="previewImages(event)">
-                                <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]" onchange="previewImage(event)" />
-                                            <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
-                            </div>
-                            <div class="form-group">
+                            
+                            {{-- <div class="form-group">
                                 <label for="condition" class="text-white">Condition</label>
                                 <select class="form-control" id="condition" name="condition[]">
                                     <option value="1" selected>Running</option>
                                     <option value="2">Non Running</option>
                                 </select>
-                            </div>
+                            </div> --}}
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>
@@ -590,6 +583,16 @@
                                         <label class="form-check-label text-white" for="blind_shipment"
                                             style="font-size: 14px;"> Blind Shipment</label>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-form ">
+                                    <label class="d-block" class="text-white"> Image:</label>
+                                    <input class="form-control image_input" name="image[]" type="file" accept="image/*"
+                                        multiple onchange="previewImages(event)">
+                                    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                    <!-- <input class="form-control image_input" type="file" id="image" name="image[]" onchange="previewImage(event)" />
+                                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                                 </div>
                             </div>
                             <div class="row select-bm" style="display:none;">

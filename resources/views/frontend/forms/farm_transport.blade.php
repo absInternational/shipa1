@@ -455,7 +455,7 @@
 
 
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-6">
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="available_at_auction"
@@ -473,6 +473,19 @@
 
 
 
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-check-input " type="checkbox" id="modification"
+                                            name="modification" value="1" />
+                                        <label class="form-check-label text-white ms-4" for="modification">
+                                            Modified?</label>
+                                    </div>
+                                    <div class="input-form div-modify_info" style="display: none;">
+                                        <label class="d-block"> Modification Information:</label>
+                                        <input class="" type="text" id="c" name="modify_info"
+                                            placeholder="Enter Modification Information" />
+                                    </div>
                                 </div>
 
 

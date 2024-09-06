@@ -485,27 +485,7 @@
                                                 </div>
                                             </div>
                                         </div> -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-form ">
-                                        <label class="d-block" class="text-white"> Image:</label>
-                                        <input class="form-control image_input" type="file" name="image[]"
-                                            accept="image/*" multiple onchange="previewImages(event)">
-                                        <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                        <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                                placeholder="Upload File" /> -->
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition[]">
-                                            <option value="1" selected>Running</option>
-                                            <option value="2">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>
@@ -575,6 +555,27 @@
                                             style="font-size: 14px;"> Blind Shipment</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-form ">
+                                        <label class="d-block" class="text-white"> Image:</label>
+                                        <input class="form-control image_input" type="file" name="image[]"
+                                            accept="image/*" multiple onchange="previewImages(event)">
+                                        <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                        <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
+                                                placeholder="Upload File" /> -->
+                                    </div>
+                                </div>
+                                {{-- <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="form-control" id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div> --}}
                             </div>
                             <div class="row select-bm" style="display:none;">
                                 <div class="col-md-12 text-center">
