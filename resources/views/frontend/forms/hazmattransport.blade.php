@@ -664,52 +664,52 @@
         //             $('.div-link').hide();
         //         }
         //     });
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                    <div class="vehicle-info">
-                        <div class="row select-bm">
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label> Year</label>
-                                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-                newVehicleHtml +=
-                    `</select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                <div class="input-form tj-select">
-                    <label>Make</label>
-                    <input type="text" id="make" name="make[]"
-                                            placeholder="Enter Make" required="" />
-                            </div>
-                        </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                    <label>Model</label>
-                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                        required="" />
-                                    <!-- Bin icon for deleting vehicle -->
-                                    <span class="delete-vehicle"><i class="fa fa-trash"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                $('#vehicles-container').append(newVehicleHtml);
-            }
-            $('#addVehicleBtn').click(function() {
-                addNewVehicle();
-            });
+        //     function addNewVehicle() {
+        //         var newVehicleHtml =
+        //             `
+        //             <div class="vehicle-info">
+        //                 <div class="row select-bm">
+        //                     <div class="col-md-4">
+        //                         <div class="input-form tj-select">
+        //                             <label> Year</label>
+        //                             <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+        //         var currentYear = {{ date('Y') }};
+        //         for (var year = currentYear; year >= 1936; year--) {
+        //             newVehicleHtml += `<option value="${year}">${year}</option>`;
+        //         }
+        //         newVehicleHtml +=
+        //             `</select>
+        //                         </div>
+        //                     </div>
+        //                     <div class="col-md-4">
+        //         <div class="input-form tj-select">
+        //             <label>Make</label>
+        //             <input type="text" id="make" name="make[]"
+        //                                     placeholder="Enter Make" required="" />
+        //                     </div>
+        //                 </div>
+        //                     <div class="col-md-4">
+        //                         <div class="input-form tj-select model-div">
+        //                             <label>Model</label>
+        //                             <input type="text" id="model" name="model[]" placeholder="Enter Model"
+        //                                 required="" />
+        //                             <!-- Bin icon for deleting vehicle -->
+        //                             <span class="delete-vehicle"><i class="fa fa-trash"></i></span>
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //         `;
+        //         $('#vehicles-container').append(newVehicleHtml);
+        //     }
+        //     $('#addVehicleBtn').click(function() {
+        //         addNewVehicle();
+        //     });
 
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
-        });
+        //     $(document).on('click', '.delete-vehicle', function() {
+        //         $(this).closest('.vehicle-info').remove();
+        //     });
+        // });
     </script>
     <script>
         // var validPickupSuggestions = [];

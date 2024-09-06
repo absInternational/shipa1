@@ -301,9 +301,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
@@ -314,15 +312,12 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
                                         <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
-
                                     </div>
                                 </div>
                             </div>
@@ -398,31 +393,12 @@
                                     </div>
                                 </div>
                             </div>
-
-                               
                             <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
                                 Add Equipment</a>
-
                             <div id="vehicles-container">
-                            </div>
-
-
-
-
-
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
-                            
-
-                            
-
                             {{-- <div class="row mb-3 mt-3">
-
-
-
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input" class="input-field" placeholder=""
@@ -433,9 +409,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input1" class="input-field" placeholder=""
@@ -446,9 +420,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input2" class="input-field" placeholder=""
@@ -459,9 +431,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
                                         <input type="" id="feet-input" class="input-field-1" placeholder=""
@@ -470,18 +440,9 @@
 
                                     </div>
                                 </div>
-
-
-
-
-
-
                             </div> --}}
-
-
                             <div class="row">
-                                <div class="col-md-12">
-
+                                <div class="col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="available_at_auction"
                                             name="available_at_auction" value="1" />
@@ -489,30 +450,36 @@
                                             at
                                             Auction?</label>
                                     </div>
-
                                     <div class="input-form div-link mt-3" style="display: none;">
                                         <label class="d-block"> Enter Link:</label>
                                         <input class="form-control" type="url" id="link" name="link"
                                             placeholder="Enter Link" />
                                     </div>
-
                                 </div>
-
-
-
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-check-input " type="checkbox" id="modification"
+                                            name="modification" value="1" />
+                                        <label class="form-check-label text-white ms-4" for="modification">
+                                            Modified?</label>
+                                    </div>
+                                    <div class="input-form div-modify_info" style="display: none;">
+                                        <label class="d-block"> Modification Information:</label>
+                                        <input class="" type="text" id="c" name="modify_info"
+                                            placeholder="Enter Modification Information" />
+                                    </div>
+                                </div>
                             </div>
-
-
-                            <div class="input-form">
-                                <label class="d-block text-white"> Image:</label>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                    placeholder="Upload File" /> -->
-                                <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
-                                    onchange="previewImages(event)">
-                                <div class="image-preview-container" id="imagePreviewContainer"></div>
-                            </div>
-
-
+                            <div class="row">
+                                <div class="input-form">
+                                    <label class="d-block text-white"> Image:</label>
+                                    <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
+                                        placeholder="Upload File" /> -->
+                                    <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
+                                        onchange="previewImages(event)">
+                                    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                </div>
+                            </div>  
                             <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
