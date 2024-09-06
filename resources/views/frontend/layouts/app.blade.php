@@ -548,111 +548,235 @@
 </script>
 {{-- multi step form --}}
 <script>
-    $(document).ready(function() {
-        function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
+    // $(document).ready(function() {
+    //     function showError(field, message) {
+    //         $('#' + field).addClass('error-field');
+    //         $('#' + field + '-error').text(message).show();
+    //     }
 
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
+    //     function hideError(field) {
+    //         $('#' + field).removeClass('error-field');
+    //         $('#' + field + '-error').hide();
+    //     }
 
-        function validateStep(step) {
-            var isValid = true;
-            $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
-                var field = $(this).attr('id');
-                if ($(this).hasClass('ajax-suggestion-input')) {
-                    if (!$(this).data('selected') || $(this).val() === '') {
-                        showError(field, 'Please select a valid option from suggestions.');
-                        isValid = false;
-                    } else {
-                        hideError(field);
-                    }
+    //     function validateStep(step) {
+    //         var isValid = true;
+    //         $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+    //             var field = $(this).attr('id');
+    //             if ($(this).hasClass('ajax-suggestion-input')) {
+    //                 if (!$(this).data('selected') || $(this).val() === '') {
+    //                     showError(field, 'Please select a valid option from suggestions.');
+    //                     isValid = false;
+    //                 } else {
+    //                     hideError(field);
+    //                 }
+    //             } else {
+    //                 if (!$(this).val()) {
+    //                     showError(field, 'This field is required.');
+    //                     isValid = false;
+    //                 } else {
+    //                     hideError(field);
+    //                 }
+    //             }
+    //         });
+    //         return isValid;
+    //     }
+
+    //     function fetchSuggestions(inputField, suggestionsList) {
+    //         var inputValue = inputField.val();
+
+    //         $.ajax({
+    //             url: "{{ route('get.zipcodes') }}",
+    //             method: "POST",
+    //             data: {
+    //                 "_token": "{{ csrf_token() }}",
+    //                 "input": inputValue
+    //             },
+    //             success: function(response) {
+    //                 suggestionsList.empty();
+    //                 inputField.data('selected', false);
+    //                 $.each(response, function(index, suggestion) {
+    //                     var listItem = $("<li>").text(suggestion).click(function() {
+    //                         inputField.val(suggestion);
+    //                         inputField.data('selected', true); 
+    //                         suggestionsList.hide();
+    //                         hideError(inputField.attr('id')); 
+    //                     });
+    //                     suggestionsList.append(listItem);
+    //                 });
+
+    //                 suggestionsList.show(); 
+    //             },
+    //             error: function(xhr, status, error) {
+    //                 console.error("Error:", error);
+    //             }
+    //         });
+    //     }
+
+    //     $('#pickup-location').on('input', function() {
+    //         var inputField = $(this);
+    //         var suggestionsList = $('.suggestionsPickup');
+    //         inputField.data('selected', false);
+
+    //         fetchSuggestions(inputField, suggestionsList);
+    //     });
+
+    //     $('#delivery-location').on('input', function() {
+    //         var inputField = $(this);
+    //         var suggestionsList = $('.suggestionsDelivery');
+    //         inputField.data('selected', false);
+
+    //         fetchSuggestions(inputField, suggestionsList);
+    //     });
+
+    //     $('#step1_next').click(function() {
+    //         if (validateStep('step1')) {
+    //             $('#step1').hide();
+    //             $('#step2').show();
+    //         }
+    //     });
+
+    //     $('#step2_previous').click(function() {
+    //         $('#step2').hide();
+    //         $('#step1').show();
+    //     });
+
+    //     $('#step2_next').click(function() {
+    //         if (validateStep('step2')) {
+    //             $('#step2').hide();
+    //             $('#step3').show();
+    //         }
+    //     });
+
+    //     $('#step3_previous').click(function() {
+    //         $('#step3').hide();
+    //         $('#step2').show();
+    //     });
+    // });
+$(document).ready(function() {
+    function showError(field, message) {
+        $('#' + field).addClass('error-field');
+        $('#' + field + '-error').text(message).show();
+    }
+
+    function hideError(field) {
+        $('#' + field).removeClass('error-field');
+        $('#' + field + '-error').hide();
+    }
+
+    // Regular expression for the desired format: "City,State,ZipCode"
+    function isValidFormat(value) {
+        var regex = /^[A-Za-z\s]+,[A-Z]{2},\d{5}$/; // Adjust regex if needed
+        return regex.test(value);
+    }
+
+    function validateStep(step) {
+        var isValid = true;
+        $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+            var field = $(this).attr('id');
+            var fieldValue = $(this).val();
+            
+            if ($(this).hasClass('ajax-suggestion-input')) {
+                if (!$(this).data('selected') || $(this).val() === '') {
+                    showError(field, 'Please select a valid option from suggestions.');
+                    isValid = false;
                 } else {
-                    if (!$(this).val()) {
-                        showError(field, 'This field is required.');
-                        isValid = false;
-                    } else {
-                        hideError(field);
-                    }
+                    hideError(field);
                 }
-            });
-            return isValid;
-        }
+            } else if (field === 'pickup-location' || field === 'delivery-location') {
+                if (!fieldValue) {
+                    showError(field, 'This field is required.');
+                    isValid = false;
+                } else if (!isValidFormat(fieldValue)) {
+                    showError(field, 'Please enter the address in the format: City,State,ZipCode.');
+                    isValid = false;
+                } else {
+                    hideError(field);
+                }
+            } else {
+                if (!fieldValue) {
+                    showError(field, 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError(field);
+                }
+            }
+        });
+        return isValid;
+    }
 
-        function fetchSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
+    function fetchSuggestions(inputField, suggestionsList) {
+        var inputValue = inputField.val();
 
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-                    inputField.data('selected', false);
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            inputField.data('selected', true); 
-                            suggestionsList.hide();
-                            hideError(inputField.attr('id')); 
-                        });
-                        suggestionsList.append(listItem);
+        $.ajax({
+            url: "{{ route('get.zipcodes') }}",
+            method: "POST",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "input": inputValue
+            },
+            success: function(response) {
+                suggestionsList.empty();
+                inputField.data('selected', false);
+                $.each(response, function(index, suggestion) {
+                    var listItem = $("<li>").text(suggestion).click(function() {
+                        inputField.val(suggestion);
+                        inputField.data('selected', true); 
+                        suggestionsList.hide();
+                        hideError(inputField.attr('id')); 
                     });
+                    suggestionsList.append(listItem);
+                });
 
-                    suggestionsList.show(); 
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
-
-        $('#pickup-location').on('input', function() {
-            var inputField = $(this);
-            var suggestionsList = $('.suggestionsPickup');
-            inputField.data('selected', false);
-
-            fetchSuggestions(inputField, suggestionsList);
-        });
-
-        $('#delivery-location').on('input', function() {
-            var inputField = $(this);
-            var suggestionsList = $('.suggestionsDelivery');
-            inputField.data('selected', false);
-
-            fetchSuggestions(inputField, suggestionsList);
-        });
-
-        $('#step1_next').click(function() {
-            if (validateStep('step1')) {
-                $('#step1').hide();
-                $('#step2').show();
+                suggestionsList.show(); 
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
             }
         });
+    }
 
-        $('#step2_previous').click(function() {
-            $('#step2').hide();
-            $('#step1').show();
-        });
+    $('#pickup-location').on('input', function() {
+        var inputField = $(this);
+        var suggestionsList = $('.suggestionsPickup');
+        inputField.data('selected', false);
 
-        $('#step2_next').click(function() {
-            if (validateStep('step2')) {
-                $('#step2').hide();
-                $('#step3').show();
-            }
-        });
-
-        $('#step3_previous').click(function() {
-            $('#step3').hide();
-            $('#step2').show();
-        });
+        fetchSuggestions(inputField, suggestionsList);
     });
+
+    $('#delivery-location').on('input', function() {
+        var inputField = $(this);
+        var suggestionsList = $('.suggestionsDelivery');
+        inputField.data('selected', false);
+
+        fetchSuggestions(inputField, suggestionsList);
+    });
+
+    $('#step1_next').click(function() {
+        if (validateStep('step1')) {
+            $('#step1').hide();
+            $('#step2').show();
+        }
+    });
+
+    $('#step2_previous').click(function() {
+        $('#step2').hide();
+        $('#step1').show();
+    });
+
+    $('#step2_next').click(function() {
+        if (validateStep('step2')) {
+            $('#step2').hide();
+            $('#step3').show();
+        }
+    });
+
+    $('#step3_previous').click(function() {
+        $('#step3').hide();
+        $('#step2').show();
+    });
+});
+    
 </script>
 {{-- <script>
     $(document).ready(function() {
@@ -901,7 +1025,6 @@
             }
         }
     });
-
 </script> --}}
 {{-- multi step form end --}}
 {{-- <script>

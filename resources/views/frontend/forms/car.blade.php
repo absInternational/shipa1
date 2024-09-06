@@ -180,17 +180,17 @@
                                         </div>
 
                                         <div class="col-md-4">
-    <div class="input-form tj-select model-div">
-        <label>Model</label>
-        <div class="dropdown">
-            <input class="form-control dropdown-toggle model-input" type="text" id="model" placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
-            <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
-                <li><a class="dropdown-item" href="#">Select Model</a></li>
-                <!-- Options filled by JavaScript -->
-            </ul>
-        </div>
-    </div>
-</div>
+                                            <div class="input-form tj-select model-div">
+                                                <label>Model</label>
+                                                <div class="dropdown">
+                                                    <input class="form-control dropdown-toggle model-input" type="text" id="model" placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
+                                                        <li><a class="dropdown-item" href="#">Select Model</a></li>
+                                                        <!-- Options filled by JavaScript -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -665,10 +665,10 @@
         //         getModel(year, makeId, vehicleInfo);
         //     }
         // });
-$(document).on('click', '.year-dropdown .dropdown-item', function() {
-    var selectedYear = $(this).data('value');
-    $('#year').val(selectedYear);  // Set the selected value in the input field
-});        
+        $(document).on('click', '.year-dropdown .dropdown-item', function() {
+            var selectedYear = $(this).data('value');
+            $('#year').val(selectedYear);  // Set the selected value in the input field
+        });        
 
         $(document).on('click', '.year, .make', function() {
             var year = $(this).closest('.vehicle-info').find('.year').val();
@@ -727,125 +727,125 @@ $(document).on('click', '.year-dropdown .dropdown-item', function() {
         //         }
         //     });
         // }
-function getModel(year, makeId, vehicleInfo) {
-    $.ajax({
-        url: "{{ route('get.models') }}",
-        method: 'GET',
-        data: {
-            year: year,
-            make: makeId
-        },
-        success: function(response) {
-            var modelDropdown = vehicleInfo.find('.model-dropdown');
-            var modelInput = vehicleInfo.find('.model-input');
+        function getModel(year, makeId, vehicleInfo) {
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelDropdown = vehicleInfo.find('.model-dropdown');
+                    var modelInput = vehicleInfo.find('.model-input');
 
-            modelDropdown.empty();
-            modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="">Select Model</a></li>');
+                    modelDropdown.empty();
+                    modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="">Select Model</a></li>');
 
-            $.each(response, function(index, model) {
-                modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="' + model + '">' + model + '</a></li>');
-            });
+                    $.each(response, function(index, model) {
+                        modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="' + model + '">' + model + '</a></li>');
+                    });
 
-            // Filter dropdown items based on input value
-            modelInput.on('input', function() {
-                var searchTerm = $(this).val().toLowerCase();
-                modelDropdown.find('li').each(function() {
-                    var itemText = $(this).text().toLowerCase();
-                    if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            });
+                    // Filter dropdown items based on input value
+                    modelInput.on('input', function() {
+                        var searchTerm = $(this).val().toLowerCase();
+                        modelDropdown.find('li').each(function() {
+                            var itemText = $(this).text().toLowerCase();
+                            if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    });
 
-            // Select item from dropdown
-            modelDropdown.on('click', 'a.dropdown-item', function(e) {
-                e.preventDefault(); // Prevent default anchor behavior
-                var selectedText = $(this).text();
-                modelInput.val(selectedText);
-                modelDropdown.hide();
-                // Optional: handle model selection logic
-            });
+                    // Select item from dropdown
+                    modelDropdown.on('click', 'a.dropdown-item', function(e) {
+                        e.preventDefault(); // Prevent default anchor behavior
+                        var selectedText = $(this).text();
+                        modelInput.val(selectedText);
+                        modelDropdown.hide();
+                        // Optional: handle model selection logic
+                    });
 
-            // Show dropdown on input focus
-            modelInput.on('focus', function() {
-                modelDropdown.show();
-            });
+                    // Show dropdown on input focus
+                    modelInput.on('focus', function() {
+                        modelDropdown.show();
+                    });
 
-            // Hide dropdown when clicking outside
-            $(document).on('click', function(e) {
-                if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
-                    modelDropdown.hide();
+                    // Hide dropdown when clicking outside
+                    $(document).on('click', function(e) {
+                        if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
+                            modelDropdown.hide();
+                        }
+                    });
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
                 }
             });
-        },
-        error: function(xhr) {
-            console.log(xhr.responseText);
         }
-    });
-}
 
 
 
-function getModel(year, makeId, vehicleInfo) {
-    $.ajax({
-        url: "{{ route('get.models') }}",
-        method: 'GET',
-        data: {
-            year: year,
-            make: makeId
-        },
-        success: function(response) {
-            var modelDropdown = vehicleInfo.find('.model-dropdown');
-            var modelInput = vehicleInfo.find('.model-input');
+        function getModel(year, makeId, vehicleInfo) {
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelDropdown = vehicleInfo.find('.model-dropdown');
+                    var modelInput = vehicleInfo.find('.model-input');
 
-            modelDropdown.empty();
-            modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="">Select Model</a></li>');
+                    modelDropdown.empty();
+                    modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="">Select Model</a></li>');
 
-            $.each(response, function(index, model) {
-                modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="' + model + '">' + model + '</a></li>');
-            });
+                    $.each(response, function(index, model) {
+                        modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="' + model + '">' + model + '</a></li>');
+                    });
 
-            // Filter dropdown items based on input value
-            modelInput.on('input', function() {
-                var searchTerm = $(this).val().toLowerCase();
-                modelDropdown.find('li').each(function() {
-                    var itemText = $(this).text().toLowerCase();
-                    if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            });
+                    // Filter dropdown items based on input value
+                    modelInput.on('input', function() {
+                        var searchTerm = $(this).val().toLowerCase();
+                        modelDropdown.find('li').each(function() {
+                            var itemText = $(this).text().toLowerCase();
+                            if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    });
 
-            // Select item from dropdown
-            modelDropdown.on('click', 'a.dropdown-item', function(e) {
-                e.preventDefault(); // Prevent default anchor behavior
-                var selectedText = $(this).text();
-                modelInput.val(selectedText);
-                modelDropdown.hide();
-                // Optional: handle model selection logic
-            });
+                    // Select item from dropdown
+                    modelDropdown.on('click', 'a.dropdown-item', function(e) {
+                        e.preventDefault(); // Prevent default anchor behavior
+                        var selectedText = $(this).text();
+                        modelInput.val(selectedText);
+                        modelDropdown.hide();
+                        // Optional: handle model selection logic
+                    });
 
-            // Show dropdown on input focus
-            modelInput.on('focus', function() {
-                modelDropdown.show();
-            });
+                    // Show dropdown on input focus
+                    modelInput.on('focus', function() {
+                        modelDropdown.show();
+                    });
 
-            // Hide dropdown when clicking outside
-            $(document).on('click', function(e) {
-                if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
-                    modelDropdown.hide();
+                    // Hide dropdown when clicking outside
+                    $(document).on('click', function(e) {
+                        if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
+                            modelDropdown.hide();
+                        }
+                    });
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
                 }
             });
-        },
-        error: function(xhr) {
-            console.log(xhr.responseText);
         }
-    });
-}
 
 
 
