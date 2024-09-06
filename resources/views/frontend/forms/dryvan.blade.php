@@ -500,7 +500,7 @@
                                         <input type="number" id="feet-input1" name="width_ft[]" class="width_ft calculate_freight input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" name="width_in[]" class="width_in calculate_freight input-field" placeholder=""
+                                        <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 width_in calculate_freight input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
@@ -511,7 +511,7 @@
                                         <input type="number" id="feet-input2" name="height_ft[]" class="height_ft calculate_freight input-field" placeholder=""
                                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" name="height_in[]" class="height_in calculate_freight input-field" placeholder=""
+                                        <input type="number" id="inches-input2" name="height_in[]" class="inches-input1 height_in calculate_freight input-field" placeholder=""
                                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
