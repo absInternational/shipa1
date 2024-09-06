@@ -185,7 +185,7 @@
 </section>
 <!--========== breadcrumb End ==============-->
 <!--========== Thank You Section Start ==============-->
-<section class="thank-you-section py-5 position-relative">
+<section class="thank-you-section py-5 px-2 position-relative">
     <div class="confetti">
         <div class="confetti-piece"></div>
         <div class="confetti-piece"></div>
@@ -201,9 +201,9 @@
         <div class="confetti-piece"></div>
         <div class="confetti-piece"></div>
     </div>
-    <div class="container">
+    <div class="container text-center my-4">
         <div class="row" style="olid #ebe8e8;box-shadow: 0px 0px 51px -5px rgba(0,0,0,1) inset;-webkit-box-shadow: 0px 0px 51px -5px rgb(233 236 239) inset;-moz-box-shadow: 0px 0px 51px -5px rgba(0,0,0,1) inset;border-radius: 25px;padding: 35px;">
-            <div class="col-lg-12 text-center ps-4 pr-4 mx-4">
+            {{-- <div class="col-lg-12 text-center ps-4 pr-4 mx-4">
                 <i class="fas fa-thumbs-up fa-5x mb-4" style="color: #8fc445; animation: bounce 2s infinite;"></i>
                 <h2 class="thank-you-title">Thank You!</h2>
                 <h2 class="thank-you-title">
@@ -230,6 +230,44 @@
               </div>
               </div>
                 <!-- <a href="{{ route('welcome') }}" class="btn btn-primary mt-3">Go Back to Home</a> -->
+            </div> --}}
+            <div class="col-12 mb-4">
+                <i class="fas fa-thumbs-up fa-5x mb-4" style="color: #8fc445; animation: bounce 2s infinite;"></i>
+                <h2 class="thank-you-title">Thank You!</h2>
+                @if (isset($price))
+                    <h2 class="thank-you-title">{{ $price }}</h2>
+                @endif
+                <p class="thank-you-message">
+                    We have acknowledged confirmation of your request and will provide your quotation to you shortly on email. In a matter of minutes, a transport specialist will get in touch with you to further explore your requirements.
+                </p>
+            </div>
+            <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
+                <div class="mb-3 mb-md-0">
+                    {{-- <a href="{{ route('welcome') }}" class="btn btn-primary d-flex align-items-center">
+                        <span>Back Home</span>
+                        <i class="fa-light fa-arrow-right ms-2"></i>
+                    </a> --}}
+                    <div class="price__cta-btn">
+                        <a href="{{ route('welcome') }}">
+                           <button class="tj-submit-btn previous">
+                               Back Home<i class="fa-light fa-arrow-right"></i>
+                           </button>
+                           </a>
+                        </div>
+                </div>
+                <div>
+                    {{-- <a href="{{ route('quote.form.combine') }}" class="btn btn-primary d-flex align-items-center">
+                        <span>Get New Quote</span>
+                        <i class="fa-light fa-arrow-right ms-2"></i>
+                    </a> --}}
+                    <div class="price__cta-btn">
+                        <a href="{{ route('quote.form.combine') }}">
+                      <button class="tj-submit-btn" type="button">
+                          Get New Quote<i class="fa-light fa-arrow-right"></i>
+                      </button>
+                      </a>
+                  </div>
+                </div>
             </div>
         </div> 
     </div>
@@ -249,26 +287,43 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="slider-tabs slider-tabs-two ">
-                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    {{-- <ul class="nav nav-pills" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
                                 aria-selected="false">
-                                <i class="flaticon-shipped"></i> Vehicle Transportation
+                                <i class="flaticon-shipped"></i>Vehicle Transport
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
                                 aria-selected="true">
-                                <i class="flaticon-global-navigation"></i> Heavy Equipment
+                                <i class="flaticon-global-navigation"></i>Heavy Transport
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
                                 aria-selected="false">
-                                <i class="flaticon-cargo-ship-1"></i> Freight Transportation
+                                <i class="flaticon-cargo-ship-1"></i>Freight Transport
+                            </button>
+                        </li>
+                    </ul> --}}
+                    <ul class="nav nav-pills flex-column flex-md-row" id="pills-tab" role="tablist">
+                        <li class="nav-item d-flex flex-column flex-md-row" role="presentation">
+                            <button class="nav-link active mb-2 mb-md-0" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="flaticon-shipped"></i> Vehicle Transport
+                            </button>
+                        </li>
+                        <li class="nav-item d-flex flex-column flex-md-row" role="presentation">
+                            <button class="nav-link mb-2 mb-md-0" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <i class="flaticon-global-navigation"></i> Heavy Transport
+                            </button>
+                        </li>
+                        <li class="nav-item d-flex flex-column flex-md-row" role="presentation">
+                            <button class="nav-link mb-2 mb-md-0" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                <i class="flaticon-cargo-ship-1"></i> Freight Transport
                             </button>
                         </li>
                     </ul>

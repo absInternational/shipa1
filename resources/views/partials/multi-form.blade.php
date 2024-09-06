@@ -22,8 +22,9 @@
                         <div class="single-input-field">
                             <input class="form-control" type="text" id="pickup-location"
                                 placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                            <ul class="suggestions suggestionsTwo"></ul>
-                            <label class="error-message" id="pickup-location-error">This field is
+                                <ul class="suggestions suggestionsPickup"></ul>
+                            {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
+                            <label class="error-message" id="pickup-location">This field is
                                 required.</label>
                         </div>
                     </div>
@@ -33,8 +34,9 @@
                         <div class="single-input-field">
                             <input class="form-control" type="text" id="delivery-location"
                                 placeholder="Enter City or ZipCode" name="To_ZipCode" required>
-                            <ul class="suggestions suggestionsTwo"></ul>
-                            <label class="error-message" id="delivery-location-error">This field is
+                                <ul class="suggestions suggestionsDelivery"></ul>
+                            {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
+                            <label class="error-message" id="delivery-location">This field is
                                 required.</label>
                         </div>
                     </div>
@@ -108,15 +110,6 @@
                             <input type="hidden" name="country_code" id="country_code" />
                         </div>
                     </div>
-                    {{-- <div class="col-xl-4 col-lg-4">
-                            <div class="single-input-field">
-                                <label class="d-block text-white">Phone:</label>
-                                <input id="phone" class="form-control" required name="phone"
-                                    type="tel" placeholder="Customer Phone">
-                                <label class="error-message" id="Custo_Phone-error">This field is
-                                    required.</label>
-                            </div>
-                        </div> --}}
                     <div class="col-xl-12 col-lg-12">
                         <div class="single-input-field">
                             <label class="d-block text-white"> Email Address:</label>
@@ -147,6 +140,36 @@
         </div>
     </form>
 </div>
+{{-- <script>
+    // Form Validation
+    function showError(field, message) {
+            $('#' + field).addClass('error-field');
+            $('#' + field + '-error').text(message).show();
+        }
+        function hideError(field) {
+            $('#' + field).removeClass('error-field');
+            $('#' + field + '-error').hide();
+        }
+        $('#step1_next').click(function() {
+            var isValid = true;
+            if (!$('#pickup-location').val()) {
+                showError('pickup-location', 'This field is required.');
+                isValid = false;
+            } else {
+                hideError('pickup-location');
+            }
+            if (!$('#delivery-location').val()) {
+                showError('delivery-location', 'This field is required.');
+                isValid = false;
+            } else {
+                hideError('delivery-location');
+            }
+            if (isValid) {
+                $('#step1').hide();
+                $('#step2').show();
+            }
+        });
+</script> --}}
 {{-- <script>
     $(document).ready(function() {
          $('#available_at_auction').change(function() {
