@@ -150,7 +150,7 @@
                                             <div class="input-form tj-select">
                                                 <label>Year</label>
                                                 <div class="dropdown">
-                                                    <input class="form-control dropdown-toggle year" type="text" name="year[] id="year" 
+                                                    <input class="form-control dropdown-toggle year" type="text" name="year[]" id="year" 
                                                     placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
                                                         <li><a class="dropdown-item">Select Year</a></li>
