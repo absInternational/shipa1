@@ -107,7 +107,8 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
+                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number"
+                                         required="" />
                                         <small id="errPhone" class="err-style"></small>
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
@@ -145,7 +146,9 @@
                                 <!-- Initial Vehicle Information -->
                                 <div class="vehicle-info">
                                     <div class="row select-bm">
-                                        
+                                        <div class="col-md-12 text-center">
+                                            <h4 class="text-white">Car Information</h4>
+                                        </div>
                                         <div class="col-md-4">
                                             <div class="input-form tj-select">
                                                 <label>Year</label>
@@ -377,13 +380,15 @@
                                 <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" />
                             </div> --}}
-                            <div class="input-form mt-1">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
-                                    onchange="previewImages(event)">
-                                <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
-                                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                            <div class="row">
+                                <div class="input-form mt-1">
+                                    <label class="d-block text-white"> Image:</label>
+                                    <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
+                                        onchange="previewImages(event)">
+                                    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                    <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
+                                                    <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -427,10 +432,8 @@
     </section>
 @endsection
 @section('extraScript')
-
 <!-- Include Selectize CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.min.css" rel="stylesheet" />
-
 <!-- Include jQuery and Selectize JS -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
@@ -657,7 +660,6 @@
                 getModel(year, make, vehicleInfo);
             }
         });
-
         // $(document).on('change', '.year, .make', function() {
         //     var year = $(this).closest('.vehicle-info').find('.year').val();
         //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
@@ -704,7 +706,6 @@
                 }
             });
         }
-
         // function getModel(year, makeId, vehicleInfo) {
         //     $.ajax({
         //         url: "{{ route('get.models') }}",
@@ -787,9 +788,6 @@
                 }
             });
         }
-
-
-
         function getModel(year, makeId, vehicleInfo) {
             $.ajax({
                 url: "{{ route('get.models') }}",
@@ -856,8 +854,6 @@
             });
         });
     });
-
-    
 </script>
 {{-- function getModel(year, makeId, vehicleInfo) {
         $.ajax({

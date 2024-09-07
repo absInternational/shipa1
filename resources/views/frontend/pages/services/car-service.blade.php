@@ -1,5 +1,6 @@
 @extends('frontend.layouts.app')
 @section('title', 'Car Shipping Service - Vehicle Delivery With Professionals | ShipA1')
+
 @section('meta_description', 'Get car shipping service in the USA, scratchless vehicle transport services along with
 huge discount offers and free shipping quotes nationwide.')
 @section('content')
@@ -144,13 +145,20 @@ huge discount offers and free shipping quotes nationwide.')
                         </div>
                         @endif
                         <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="input-form">
                                     <label class="d-block">Name:</label>
                                     <input type="text" id="name" name="name" placeholder="Name" required="" />
                                     <small id="errName" class="err-style"></small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block">Phone:</label>
+                                    <input class="ophone" type="tel" id="phone" name="phone" placeholder="Number" required="" />
+                                    <small id="errPhone" class="err-style"></small>
+                                    <input type="hidden" name="country_code" id="country_code" />
                                 </div>
                             </div>
                             {{-- <div class="col-xl-4 col-lg-4">
@@ -160,36 +168,87 @@ huge discount offers and free shipping quotes nationwide.')
                                             placeholder="Phone">
                                         <label class="error-message" id="Custo_Phone-error">This field is required.</label>
                                     </div>
-                                </div> --}}
-                            <div class="col-md-4">
+                            </div> --}}
+                            {{-- <div class="col-md-4">
                                 <div class="input-form">
                                     <label class="d-block">Phone:</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="Number" required="" />
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                                        required="" />
                                     <small id="errPhone" class="err-style"></small>
                                 </div>
-                            </div>
-                            <!-- <div class="col-md-4">
+                            </div>  --}}
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
                                         <div class="input-form">
-                                            <label class="d-block">Phone:</label>
-                                            <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                                required="" />
-                                            <small id="errPhone" class="err-style"></small>
+                                            <label class="d-block">Email:</label>
+                                            <input type="email" id="email" name="email" placeholder="Email " required="" />
+                                            <small id="errEmail" class="err-style"></small>
                                         </div>
-                                    </div> -->
-                            <div class="col-md-4">
-                                <div class="input-form">
-                                    <label class="d-block">Email:</label>
-                                    <input type="email" id="email" name="email" placeholder="Email " required="" />
-                                    <small id="errEmail" class="err-style"></small>
+                                    </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white">Car Information</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block mb-0"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin" placeholder="" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block  mb-0"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination" placeholder=""
+                                            required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
                         <div class="row select-bm">
-                            <div class="col-md-12 text-center">
-                                <h4 class="text-white">Motorcycle Information</h4>
+
+                            <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                    <label> Year</label>
+                                    <select class="nice-select vehicle-year" name="year[]" id="year" required>
+                                        <option value="" disabled selected>Select Year
+                                        </option>
+                                        @php
+                                            $currentYear = date('Y');
+                                            for ($year = $currentYear; $year >= 1936; $year--) {
+                                                echo "<option value='$year'>$year</option>";
+                                            }
+                                        @endphp
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                    <label>Make</label>
+                                    <select class="nice-select vehicle-make" name="make[]" id="make" required>
+                                        <option value="" disabled selected>Select Make
+                                        </option>
+                                        @foreach ($makes as $make)
+                                            <option value="{{ $make->make }}">
+                                                {{ $make->make }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-form tj-select vehicle-model-div">
+                                    <label>Model</label>
+                                    <select class="nice-select vehicle-model" name="model[]" id="model" required>
+                                        <option value="">Select Model</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            {{-- <div class="col-md-4">
                                 <div class="input-form tj-select">
                                     <label> Year</label>
                                     <select class="nice-select vehicle-year" name="year[]" id="year">
@@ -214,15 +273,9 @@ huge discount offers and free shipping quotes nationwide.')
                                     <label>Model</label>
                                     <input type="text" id="model" name="model[]" placeholder="Model" required="" />
                                 </div>
-                            </div>
+                            </div> --}}
+
                         </div>
-
-                        <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-                            Vehicle</a>
-
-                        <div id="vehicles-container">
-                        </div>
-
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -243,40 +296,9 @@ huge discount offers and free shipping quotes nationwide.')
                                 </div>
                             </div>
                         </div>
-
-
-
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block mb-0"> Pickup Location:</label>
-                                    <input type="text" id="pickup-location" name="origin" placeholder="" required="" />
-                                    <small id="errOLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block  mb-0"> Delivery Location:</label>
-                                    <input type="text" id="delivery-location" name="destination" placeholder=""
-                                        required="" />
-                                    <small id="errDLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
-                                </div>
-                            </div>
+                        <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add Vehicle</a>
+                        <div id="vehicles-container">
                         </div>
-
-                        <div class="input-form">
-                            <label class="d-block text-white"> Image:</label>
-                            <input class="form-control image_input" type="file" accept="image/*" multiple
-                                onchange="previewImages(event)">
-                            <div class="image-preview-container" id="imagePreviewContainer"></div>
-                            <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
-                                        placeholder="Upload File" /> -->
-                        </div>
-
-
                         <div class="row">
                             <di class="col-md-6">
                                 <div class="form-group">
@@ -305,7 +327,24 @@ huge discount offers and free shipping quotes nationwide.')
                                 </div>
                             </di>
                         </div>
-
+                        <div class="row">
+                            <div class="input-form mt-1">
+                                <label class="d-block text-white"> Image:</label>
+                                <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
+                                    onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
+                                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                            </div>
+                        </div>
+                        {{-- <div class="input-form">
+                            <label class="d-block text-white"> Image:</label>
+                            <input class="form-control image_input" type="file" accept="image/*" multiple
+                                onchange="previewImages(event)">
+                            <div class="image-preview-container" id="imagePreviewContainer"></div>
+                            <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
+                                        placeholder="Upload File" /> -->
+                        </div> --}}
                         <div class="tj-theme-button text-center mt-3">
                             <button class="tj-submit-btn" type="submit" value="submit">
                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -814,251 +853,251 @@ huge discount offers and free shipping quotes nationwide.')
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-<script>
-    $(document).ready(function() {
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label> Year</label>
-                        <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{date('Y')}};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
 
-            newVehicleHtml +=
-                `</select>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label>Make</label>
-                        <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
+    {{-- addNewVehicle --}}
+        <script>
+            $(document).ready(function() {
+                function addNewVehicle() {
+                    var newVehicleHtml =
+                        `
+                                <div class="vehicle-info">
+                                <div class="row select-bm">
+                                <!-- Bin icon for deleting vehicle -->
+                                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
+                                <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                <label> Year</label>
+                                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+                    var currentYear = {{date('Y')}};
+                    for (var year = currentYear; year >= 1936; year--) {
+                        newVehicleHtml += `<option value="${year}">${year}</option>`;
+                    }
 
-            @foreach($makes as $make)
-            newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-            @endforeach
+                    newVehicleHtml +=
+                        `</select>
+                                </div>
+                                </div>
+                                <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                <label>Make</label>
+                                <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
 
-            newVehicleHtml += `
-                    </select>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select model-div">
-                    <label>Model</label>
-                    <select class="nice-select model" name="model[]" id="model" required>
-                    <!-- Options filled by JavaScript -->
-                    </select>
-                    <!-- Bin icon for deleting vehicle -->
-                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    `;
+                    @foreach($makes as $make)
+                    newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
+                    @endforeach
 
-            $('#vehicles-container').append(newVehicleHtml);
-        }
+                    newVehicleHtml += `
+                            </select>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="input-form tj-select model-div">
+                            <label>Model</label>
+                            <select class="nice-select model" name="model[]" id="model" required>
+                            <!-- Options filled by JavaScript -->
+                            </select>
+                            
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            `;
 
-        $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
+                    $('#vehicles-container').append(newVehicleHtml);
+                }
 
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
+                $('#addVehicleBtn').click(function() {
+                    addNewVehicle();
+                });
 
-        $(document).on('change', '.year, .make', function() {
-            var year = $(this).closest('.vehicle-info').find('.year').val();
-            var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            var vehicleInfo = $(this).closest('.vehicle-info');
-            if (year && makeId) {
-                getModel(year, makeId, vehicleInfo);
-            }
-        });
+                $(document).on('click', '.delete-vehicle', function() {
+                    $(this).closest('.vehicle-info').remove();
+                });
 
-        function getModel(year, makeId, vehicleInfo) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
+                $(document).on('change', '.year, .make', function() {
+                    var year = $(this).closest('.vehicle-info').find('.year').val();
+                    var makeId = $(this).closest('.vehicle-info').find('.make').val();
+                    var vehicleInfo = $(this).closest('.vehicle-info');
+                    if (year && makeId) {
+                        getModel(year, makeId, vehicleInfo);
+                    }
+                });
+
+                function getModel(year, makeId, vehicleInfo) {
+                    console.log('yes inn');
+                    $.ajax({
+                        url: "{{ route('get.models') }}",
+                        method: 'GET',
+                        data: {
+                            year: year,
+                            make: makeId
+                        },
+                        success: function(response) {
+                            var modelsDropdown = vehicleInfo.find('.model');
+                            modelsDropdown.empty();
+                            var selectOptions = '<option value="">Select Model</option>';
+                            $.each(response, function(index, model) {
+                                selectOptions += '<option value="' + model + '">' + model +
+                                    '</option>';
+                            });
+                            modelsDropdown.html(selectOptions);
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
                     });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
                 }
             });
-        }
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            var year = $('.vehicle-year').val();
-            var makeId = $('.vehicle-make').val();
-            if (year && makeId) {
-                getModel(year, makeId);
-            }
-        });
-    });
-    function getModel(year, makeId) {
-        console.log('yes inn');
-        $.ajax({
-            url: "{{ route('get.models') }}",
-            method: 'GET',
-            data: {
-                year: year,
-                make: makeId
-            },
-            success: function(response) {
-                var modelsDropdown = $('.vehicle-model-div');
-                modelsDropdown.empty();
-                var selectOptions =
-                    '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                $.each(response, function(index, model) {
-                    selectOptions += '<option value="' + model + '">' + model +
-                        '</option>';
+        </script>
+    {{-- addNewVehicle --}}
+
+    {{-- get.models --}}
+        <script>
+            $(document).ready(function() {
+                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+                    var year = $('.vehicle-year').val();
+                    var makeId = $('.vehicle-make').val();
+                    if (year && makeId) {
+                        getModel(year, makeId);
+                    }
                 });
-                selectOptions += '</select>';
-                modelsDropdown.html(selectOptions);
+            });
+            function getModel(year, makeId) {
+                console.log('yes inn');
+                $.ajax({
+                    url: "{{ route('get.models') }}",
+                    method: 'GET',
+                    data: {
+                        year: year,
+                        make: makeId
+                    },
+                    success: function(response) {
+                        var modelsDropdown = $('.vehicle-model-div');
+                        modelsDropdown.empty();
+                        var selectOptions =
+                            '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                        $.each(response, function(index, model) {
+                            selectOptions += '<option value="' + model + '">' + model +
+                                '</option>';
+                        });
+                        selectOptions += '</select>';
+                        modelsDropdown.html(selectOptions);
 
-                console.log('yesssss', response);
-            },
-            error: function(xhr) {
-                console.log(xhr.responseText);
-            }
-        });
-    }
-    $(document).ready(function() {
-        $('#available_at_auction').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
-        $('#modification').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script>
-<script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
+                        console.log('yesssss', response);
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
                 });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
             }
-        });
-    }
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script>
-<script>
-    $(document).ready(function(){
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: true,
-        items: 3, // Default number of items
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        responsive: {
-          0: {
-            items: 1 // Show 1 item on screens smaller than 600px
-          },
-          600: {
-            items: 2 // Show 2 items on screens larger than 600px
-          },
-          1000: {
-            items: 3 // Show 3 items on screens larger than 1000px
-          }
-        }
-      });
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const counter = document.getElementById('counter-value');
-        const target = +counter.getAttribute('data-target');
-        let count = 0;
-        const increment = target / 50; // Adjust this value to control the speed
+        </script>
+    {{-- get.models --}}
 
-        const updateCounter = () => {
-            if (count < target) {
-                count = Math.ceil(count + increment);
-                counter.textContent = count;
-                setTimeout(updateCounter, 50); // Adjust this value to control the speed
-            } else {
-                counter.textContent = target;
+    {{-- pickup-location --}}
+        <script>
+            function updateSuggestions(inputField, suggestionsList) {
+                var inputValue = inputField.val();
+
+                $.ajax({
+                    url: "{{ route('get.zipcodes') }}",
+                    method: "POST",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "input": inputValue
+                    },
+                    success: function(response) {
+                        suggestionsList.empty();
+
+                        $.each(response, function(index, suggestion) {
+                            var listItem = $("<li>").text(suggestion).click(function() {
+                                inputField.val(suggestion);
+                                suggestionsList.css("display", "none");
+                            });
+                            suggestionsList.append(listItem);
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
+                    }
+                });
             }
-        };
+            $("#pickup-location, #delivery-location").keyup(function() {
+                var inputField = $(this);
+                var suggestionsList = inputField.siblings(".suggestionsTwo");
+                suggestionsList.css("display", "block");
+                if (inputField.val() === "") {
+                    suggestionsList.css("display", "none");
+                }
+                updateSuggestions(inputField, suggestionsList);
+            });
+        </script>
+    {{-- pickup-location --}}
 
-        updateCounter();
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-        const counter = document.getElementById('counter-value-2');
-        const target = +counter.getAttribute('data-target');
-        let count = 0;
-        const increment = target / 50; // Adjust this value to control the speed
+    {{-- owl-carousel --}}
+        <script>
+            $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                items: 3, // Default number of items
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                responsive: {
+                0: {
+                    items: 1 // Show 1 item on screens smaller than 600px
+                },
+                600: {
+                    items: 2 // Show 2 items on screens larger than 600px
+                },
+                1000: {
+                    items: 3 // Show 3 items on screens larger than 1000px
+                }
+                }
+            });
+            });
+        </script>
+    {{-- owl-carousel --}}
 
-        const updateCounter = () => {
-            if (count < target) {
-                count = Math.ceil(count + increment);
-                counter.textContent = count;
-                setTimeout(updateCounter, 50); // Adjust this value to control the speed
-            } else {
-                counter.textContent = target;
-            }
-        };
+    {{-- service counter --}}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const counter = document.getElementById('counter-value');
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const increment = target / 50; // Adjust this value to control the speed
 
-        updateCounter();
-    });
-</script> 
+                const updateCounter = () => {
+                    if (count < target) {
+                        count = Math.ceil(count + increment);
+                        counter.textContent = count;
+                        setTimeout(updateCounter, 50); // Adjust this value to control the speed
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                const counter = document.getElementById('counter-value-2');
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const increment = target / 50; // Adjust this value to control the speed
+
+                const updateCounter = () => {
+                    if (count < target) {
+                        count = Math.ceil(count + increment);
+                        counter.textContent = count;
+                        setTimeout(updateCounter, 50); // Adjust this value to control the speed
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+            });
+        </script> 
+    {{-- service counter --}}                   
 @endsection

@@ -1,6 +1,7 @@
 @extends('frontend.layouts.app')
 @section('title', 'ATV or UTV Shipping Services USA - Change the Way of Shipping | ShipA1')
-@section('meta_description', 'Get ATV or UTV shipping services in the USA, transport your vehicle at your holiday places before you reach without any scratch, best auto transport service.')
+@section('meta_description', 'Get ATV or UTV shipping services in the USA, transport your vehicle at your 
+holiday places before you reach without any scratch, best auto transport service.')
 @section('content')
 <style>
     .full-width {
