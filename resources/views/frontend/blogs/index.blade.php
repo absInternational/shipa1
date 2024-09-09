@@ -1,8 +1,7 @@
 @extends('frontend.layouts.app')
 
-@section('title')
-    Ship A1 Blog Page
-@endsection
+@section('title', 'Blog | ShipA1 Auto Transport')
+@section('meta_description', 'Blog | ShipA1 Auto Transport')
 
 @section('content')
     <style>

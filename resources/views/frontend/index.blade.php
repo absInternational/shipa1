@@ -919,7 +919,7 @@
                             <li><i class="flaticon-placeholder"></i><span> 201 International Cir STE 230, Hunt Valley,
                                     MD 21030-1344</span></li>
                             <li>
-                                <i class="flaticon-mail"></i><a href="mailto:info@shipa1.com">
+                                <i class="flaticon-mail"></i><a href="mailto:shawntransport@shipa1.com">
                                     shawntransport@shipa1.com</a>
                             </li>
                             <li>
