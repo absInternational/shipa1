@@ -297,72 +297,108 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="/assets/intl-tel-input/intlTelInput.js"></script>
     {{-- app js  --}}
-<script>
-    $(document).ready(function() {
-        $('#newsletter-form').submit(function(event) {
-            event.preventDefault();
-            var email = $('#email_newsletter').val();
+    {{-- owl-caro --}}
+        <script>
+            $(document).ready(function() {
+                $('#owl-caro').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    autoplay: true,
+                    autoplayTimeout: 4000,
+                    autoplayHoverPause: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 2
+                        },
+                        1000: {
+                            items: 4
+                        }
+                    }
+                });
+            });
+        </script>
+    {{-- owl-caro --}}
 
-            $.ajax({
-                type: 'POST',
-                url: '{{ route('newsletter.subscribe') }}',
-                data: {
-                    email: email,
-                    _token: '{{ csrf_token() }}'
-                },
-                success: function(response) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Subscription Successful',
-                        text: response.message
-                    }).then(function() {
-                        $('#email_newsletter').val('');
+    {{-- email_newsletter --}}
+        <script>
+            $(document).ready(function() {
+                $('#newsletter-form').submit(function(event) {
+                    event.preventDefault();
+                    var email = $('#email_newsletter').val();
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '{{ route('newsletter.subscribe') }}',
+                        data: {
+                            email: email,
+                            _token: '{{ csrf_token() }}'
+                        },
+                        success: function(response) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Subscription Successful',
+                                text: response.message
+                            }).then(function() {
+                                $('#email_newsletter').val('');
+                            });
+                        },
+                        error: function(xhr, status, error) {
+                            var response = xhr.responseJSON;
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Subscription Failed',
+                                text: response.message
+                            }).then(function() {
+                                $('#email_newsletter').val('');
+                            });
+                        }
                     });
-                },
-                error: function(xhr, status, error) {
-                    var response = xhr.responseJSON;
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Subscription Failed',
-                        text: response.message
-                    }).then(function() {
-                        $('#email_newsletter').val('');
+                });
+            });
+        </script>
+    {{-- email_newsletter --}}
+
+    {{-- imagePreview --}}
+        <script>
+            let selectedFiles = []; // Store selected files
+
+            function previewImages(event) {
+                var input = event.target;
+                var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+
+                if (input.files) {
+                    Array.from(input.files).forEach(file => {
+                        // Check if the file is already in selectedFiles to avoid duplicates
+                        if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
+                            selectedFiles.push(file);
+                            var reader = new FileReader();
+
+                            reader.onload = function(e) {
+                                var previewElement = document.createElement('div');
+                                previewElement.classList.add('image-preview');
+                                previewElement.innerHTML = `
+                            <img src="${e.target.result}" alt="Image Preview">
+                            <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
+                        `;
+                                imagePreviewContainer.appendChild(previewElement);
+                            }
+
+                            reader.readAsDataURL(file);
+                        }
                     });
                 }
-            });
-        });
-    });
-    // function previewImage(event) {
-    //     var input = event.target;
-    //     var imagePreview = document.getElementById('imagePreview');
+            }
+            function removeImage(name, size) {
+                var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+                selectedFiles = selectedFiles.filter(file => !(file.name === name && file.size === size));
 
-    //     if (input.files && input.files[0]) {
-    //         var reader = new FileReader();
-
-    //         reader.onload = function(e) {
-    //             imagePreview.src = e.target.result;
-    //             imagePreview.style.display = 'block';
-    //         }
-
-    //         reader.readAsDataURL(input.files[0]);
-    //     } else {
-    //         imagePreview.src = '#';
-    //         imagePreview.style.display = 'none';
-    //     }
-    // }
-</script>
-<script>
-    let selectedFiles = []; // Store selected files
-
-    function previewImages(event) {
-        var input = event.target;
-        var imagePreviewContainer = document.getElementById('imagePreviewContainer');
-
-        if (input.files) {
-            Array.from(input.files).forEach(file => {
-                // Check if the file is already in selectedFiles to avoid duplicates
-                if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
-                    selectedFiles.push(file);
+                // Clear container and re-render previews
+                imagePreviewContainer.innerHTML = '';
+                selectedFiles.forEach(file => {
                     var reader = new FileReader();
 
                     reader.onload = function(e) {
@@ -376,1582 +412,1360 @@
                     }
 
                     reader.readAsDataURL(file);
-                }
-            });
-        }
-    }
-    function removeImage(name, size) {
-        var imagePreviewContainer = document.getElementById('imagePreviewContainer');
-        selectedFiles = selectedFiles.filter(file => !(file.name === name && file.size === size));
-
-        // Clear container and re-render previews
-        imagePreviewContainer.innerHTML = '';
-        selectedFiles.forEach(file => {
-            var reader = new FileReader();
-
-            reader.onload = function(e) {
-                var previewElement = document.createElement('div');
-                previewElement.classList.add('image-preview');
-                previewElement.innerHTML = `
-            <img src="${e.target.result}" alt="Image Preview">
-            <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
-        `;
-                imagePreviewContainer.appendChild(previewElement);
+                });
             }
+        </script>
+    {{-- imagePreview --}}
 
-            reader.readAsDataURL(file);
-        });
-    }
-</script>
-<script>
-    $(document).ready(function() {
-        $('input[type="number"]').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script>
-{{-- <script>
-    $(document).ready(function() {
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "us", // Default country code set to "us"
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-        });
-    });
-</script> --}}
-{{-- phone mask  --}}
-<script>
-    const phoneInput = document.querySelector("#phone");
-    const iti = window.intlTelInput(phoneInput, {
-        separateDialCode: true,
-        initialCountry: "auto",
-        geoIpLookup: function(callback) {
-            var countryCode = "us";
-            callback(countryCode);
-        },
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-    });
-    function updateMask() {
-        const countryData = iti.getSelectedCountryData();
-        const countryCode = countryData.iso2;
-
-        if (countryCode === 'us') {
-            $(".ophone").mask("(999) 999-9999");
-        } else {
-            $(".ophone").unmask();
-        }
-        document.querySelector('#country_code').value = countryData.dialCode;
-    }
-    phoneInput.addEventListener('input', updateMask);
-    updateMask();
-</script>
-{{-- phone mask  --}}
-<script>
-    $(document).ready(function() {
-        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            var year = $('.vehicle-year').val();
-            var makeId = $('.vehicle-make').val();
-            if (year && makeId) {
-                getModel(year, makeId);
-            }
-        });
-        function getModel(year, makeId) {
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = $('.vehicle-model-div');
-                    modelsDropdown.empty();
-                    var selectOptions =
-                        '<label>Model</label><select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model + '</option>';
-                    });
-                    selectOptions += '</select>';
-                    modelsDropdown.html(selectOptions);
-    
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script>
-<script>
-        $(document).ready(function() {
-            $(document).on('change', '#category', function() {
-                var selectedCategory = $(this).find('option:selected').data('id');
-
-                $.ajax({
-                    url: "{{ route('get.subcategories') }}",
-                    method: "POST",
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        "category": selectedCategory
-                    },
-                    success: function(response) {
-
-                        var html = '';
-                        $('#subcategory-box').html('');
-
-                        html += "<label for='subcategory'>Subcategory</label>";
-                        html +=
-                            "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
-                        html += "<option value='' disabled selected>Select</option>";
-                        $.each(response, function(index, val) {
-                            console.log('val', val);
-                            html +=
-                                `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
-                        });
-                        html += "</select>";
-
-                        $('#subcategory-box').html(html);
-
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Error:", error);
-                    }
+    {{-- input --}}
+        <script>
+            $(document).ready(function() {
+                $('input[type="number"]').on('input', function() {
+                    this.value = this.value.replace(/[^0-9]/g, '');
                 });
             });
-        });
-</script>
-<script>
-    $(document).ready(function() {  
-        $(document).on('change', '#available_at_auction', function() {
-            // console.log('abcd')
-             if ($(this).is(':checked')) {
-                 $('.div-link').show();
-                 $('#link').attr('required', true); // Make input required
-             } else {
-                 $('.div-link').hide();
-                 $('#link').val(''); // Clear the input field
-                 $('#link').removeAttr('required'); // Remove required attribute
-             }
-         });
-         
-        $(document).on('change', '#modification', function() {
-             if ($(this).is(':checked')) {
-                 $('.div-modify_info').show();
-                 $('#c').attr('required', true); // Make input required
-             } else {
-                 $('.div-modify_info').hide();
-                 $('#c').val(''); // Clear the input field
-                 $('#c').removeAttr('required'); // Remove required attribute
-             }
-         });
-     });
-</script>
-{{-- multi step form --}}
-<script>
-    // $(document).ready(function() {
-    //     function showError(field, message) {
-    //         $('#' + field).addClass('error-field');
-    //         $('#' + field + '-error').text(message).show();
-    //     }
+        </script>
+    {{-- input --}}
 
-    //     function hideError(field) {
-    //         $('#' + field).removeClass('error-field');
-    //         $('#' + field + '-error').hide();
-    //     }
+    {{-- phone mask  --}}
+        <script>
+            const phoneInput = document.querySelector("#phone");
+            const iti = window.intlTelInput(phoneInput, {
+                separateDialCode: true,
+                initialCountry: "auto",
+                geoIpLookup: function(callback) {
+                    var countryCode = "us";
+                    callback(countryCode);
+                },
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+            });
+            function updateMask() {
+                const countryData = iti.getSelectedCountryData();
+                const countryCode = countryData.iso2;
 
-    //     function validateStep(step) {
-    //         var isValid = true;
-    //         $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
-    //             var field = $(this).attr('id');
-    //             if ($(this).hasClass('ajax-suggestion-input')) {
-    //                 if (!$(this).data('selected') || $(this).val() === '') {
-    //                     showError(field, 'Please select a valid option from suggestions.');
-    //                     isValid = false;
-    //                 } else {
-    //                     hideError(field);
-    //                 }
-    //             } else {
-    //                 if (!$(this).val()) {
-    //                     showError(field, 'This field is required.');
-    //                     isValid = false;
-    //                 } else {
-    //                     hideError(field);
-    //                 }
-    //             }
-    //         });
-    //         return isValid;
-    //     }
+                if (countryCode === 'us') {
+                    $(".ophone").mask("(999) 999-9999");
+                } else {
+                    $(".ophone").unmask();
+                }
+                document.querySelector('#country_code').value = countryData.dialCode;
+            }
+            phoneInput.addEventListener('input', updateMask);
+            updateMask();
+        </script>
+    {{-- phone mask  --}}
 
-    //     function fetchSuggestions(inputField, suggestionsList) {
-    //         var inputValue = inputField.val();
-
-    //         $.ajax({
-    //             url: "{{ route('get.zipcodes') }}",
-    //             method: "POST",
-    //             data: {
-    //                 "_token": "{{ csrf_token() }}",
-    //                 "input": inputValue
-    //             },
-    //             success: function(response) {
-    //                 suggestionsList.empty();
-    //                 inputField.data('selected', false);
-    //                 $.each(response, function(index, suggestion) {
-    //                     var listItem = $("<li>").text(suggestion).click(function() {
-    //                         inputField.val(suggestion);
-    //                         inputField.data('selected', true); 
-    //                         suggestionsList.hide();
-    //                         hideError(inputField.attr('id')); 
-    //                     });
-    //                     suggestionsList.append(listItem);
-    //                 });
-
-    //                 suggestionsList.show(); 
-    //             },
-    //             error: function(xhr, status, error) {
-    //                 console.error("Error:", error);
-    //             }
-    //         });
-    //     }
-
-    //     $('#pickup-location').on('input', function() {
-    //         var inputField = $(this);
-    //         var suggestionsList = $('.suggestionsPickup');
-    //         inputField.data('selected', false);
-
-    //         fetchSuggestions(inputField, suggestionsList);
-    //     });
-
-    //     $('#delivery-location').on('input', function() {
-    //         var inputField = $(this);
-    //         var suggestionsList = $('.suggestionsDelivery');
-    //         inputField.data('selected', false);
-
-    //         fetchSuggestions(inputField, suggestionsList);
-    //     });
-
-    //     $('#step1_next').click(function() {
-    //         if (validateStep('step1')) {
-    //             $('#step1').hide();
-    //             $('#step2').show();
-    //         }
-    //     });
-
-    //     $('#step2_previous').click(function() {
-    //         $('#step2').hide();
-    //         $('#step1').show();
-    //     });
-
-    //     $('#step2_next').click(function() {
-    //         if (validateStep('step2')) {
-    //             $('#step2').hide();
-    //             $('#step3').show();
-    //         }
-    //     });
-
-    //     $('#step3_previous').click(function() {
-    //         $('#step3').hide();
-    //         $('#step2').show();
-    //     });
-    // });
-$(document).ready(function() {
-    function showError(field, message) {
-        $('#' + field).addClass('error-field');
-        $('#' + field + '-error').text(message).show();
-    }
-
-    function hideError(field) {
-        $('#' + field).removeClass('error-field');
-        $('#' + field + '-error').hide();
-    }
-
-    // Regular expression for the desired format: "City,State,ZipCode"
-    function isValidFormat(value) {
-        var regex = /^[A-Za-z\s]+,[A-Z]{2},\d{5}$/; // Adjust regex if needed
-        return regex.test(value);
-    }
-
-    function validateStep(step) {
-        var isValid = true;
-        $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
-            var field = $(this).attr('id');
-            var fieldValue = $(this).val();
+    {{-- get.models --}}
+        <script>
+            $(document).ready(function() {
+                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+                    var year = $('.vehicle-year').val();
+                    var makeId = $('.vehicle-make').val();
+                    if (year && makeId) {
+                        getModel(year, makeId);
+                    }
+                });
+                function getModel(year, makeId) {
+                    $.ajax({
+                        url: "{{ route('get.models') }}",
+                        method: 'GET',
+                        data: {
+                            year: year,
+                            make: makeId
+                        },
+                        success: function(response) {
+                            var modelsDropdown = $('.vehicle-model-div');
+                            modelsDropdown.empty();
+                            var selectOptions =
+                                '<label>Model</label><select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                            $.each(response, function(index, model) {
+                                selectOptions += '<option value="' + model + '">' + model + '</option>';
+                            });
+                            selectOptions += '</select>';
+                            modelsDropdown.html(selectOptions);
             
-            if ($(this).hasClass('ajax-suggestion-input')) {
-                if (!$(this).data('selected') || $(this).val() === '') {
-                    showError(field, 'Please select a valid option from suggestions.');
-                    isValid = false;
-                } else {
-                    hideError(field);
-                }
-            } else if (field === 'pickup-location' || field === 'delivery-location') {
-                if (!fieldValue) {
-                    showError(field, 'This field is required.');
-                    isValid = false;
-                } else if (!isValidFormat(fieldValue)) {
-                    showError(field, 'Please enter the address in the format: City,State,ZipCode.');
-                    isValid = false;
-                } else {
-                    hideError(field);
-                }
-            } else {
-                if (!fieldValue) {
-                    showError(field, 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError(field);
-                }
-            }
-        });
-        return isValid;
-    }
-
-    function fetchSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-                inputField.data('selected', false);
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        inputField.data('selected', true); 
-                        suggestionsList.hide();
-                        hideError(inputField.attr('id')); 
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
                     });
-                    suggestionsList.append(listItem);
+                }
+            });
+        </script>
+    {{-- get.models --}}
+
+    {{-- category subcategory --}}
+        <script>
+                $(document).ready(function() {
+                    $(document).on('change', '#category', function() {
+                        var selectedCategory = $(this).find('option:selected').data('id');
+
+                        $.ajax({
+                            url: "{{ route('get.subcategories') }}",
+                            method: "POST",
+                            data: {
+                                "_token": "{{ csrf_token() }}",
+                                "category": selectedCategory
+                            },
+                            success: function(response) {
+
+                                var html = '';
+                                $('#subcategory-box').html('');
+
+                                html += "<label for='subcategory'>Subcategory</label>";
+                                html +=
+                                    "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
+                                html += "<option value='' disabled selected>Select</option>";
+                                $.each(response, function(index, val) {
+                                    console.log('val', val);
+                                    html +=
+                                        `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
+                                });
+                                html += "</select>";
+
+                                $('#subcategory-box').html(html);
+
+                            },
+                            error: function(xhr, status, error) {
+                                console.error("Error:", error);
+                            }
+                        });
+                    });
+                });
+        </script>
+    {{-- category subcategory --}}
+
+    {{-- modification / available_at_auction --}}
+        <script>
+            $(document).ready(function() {  
+                $(document).on('change', '#available_at_auction', function() {
+                    if ($(this).is(':checked')) {
+                        $('.div-link').show();
+                        $('#link').attr('required', true); 
+                    } else {
+                        $('.div-link').hide();
+                        $('#link').val(''); 
+                        $('#link').removeAttr('required'); 
+                    }
+                });
+                
+                $(document).on('change', '#modification', function() {
+                    if ($(this).is(':checked')) {
+                        $('.div-modify_info').show();
+                        $('#c').attr('required', true); 
+                    } else {
+                        $('.div-modify_info').hide();
+                        $('#c').val(''); 
+                        $('#c').removeAttr('required');
+                    }
+                });
+            });
+        </script>
+    {{-- modification / available_at_auction --}}
+
+    {{-- multi step form --}}
+        <script>
+            // $(document).ready(function() {
+            //     function showError(field, message) {
+            //         $('#' + field).addClass('error-field');
+            //         $('#' + field + '-error').text(message).show();
+            //     }
+
+            //     function hideError(field) {
+            //         $('#' + field).removeClass('error-field');
+            //         $('#' + field + '-error').hide();
+            //     }
+
+            //     function validateStep(step) {
+            //         var isValid = true;
+            //         $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+            //             var field = $(this).attr('id');
+            //             if ($(this).hasClass('ajax-suggestion-input')) {
+            //                 if (!$(this).data('selected') || $(this).val() === '') {
+            //                     showError(field, 'Please select a valid option from suggestions.');
+            //                     isValid = false;
+            //                 } else {
+            //                     hideError(field);
+            //                 }
+            //             } else {
+            //                 if (!$(this).val()) {
+            //                     showError(field, 'This field is required.');
+            //                     isValid = false;
+            //                 } else {
+            //                     hideError(field);
+            //                 }
+            //             }
+            //         });
+            //         return isValid;
+            //     }
+
+            //     function fetchSuggestions(inputField, suggestionsList) {
+            //         var inputValue = inputField.val();
+
+            //         $.ajax({
+            //             url: "{{ route('get.zipcodes') }}",
+            //             method: "POST",
+            //             data: {
+            //                 "_token": "{{ csrf_token() }}",
+            //                 "input": inputValue
+            //             },
+            //             success: function(response) {
+            //                 suggestionsList.empty();
+            //                 inputField.data('selected', false);
+            //                 $.each(response, function(index, suggestion) {
+            //                     var listItem = $("<li>").text(suggestion).click(function() {
+            //                         inputField.val(suggestion);
+            //                         inputField.data('selected', true); 
+            //                         suggestionsList.hide();
+            //                         hideError(inputField.attr('id')); 
+            //                     });
+            //                     suggestionsList.append(listItem);
+            //                 });
+
+            //                 suggestionsList.show(); 
+            //             },
+            //             error: function(xhr, status, error) {
+            //                 console.error("Error:", error);
+            //             }
+            //         });
+            //     }
+
+            //     $('#pickup-location').on('input', function() {
+            //         var inputField = $(this);
+            //         var suggestionsList = $('.suggestionsPickup');
+            //         inputField.data('selected', false);
+
+            //         fetchSuggestions(inputField, suggestionsList);
+            //     });
+
+            //     $('#delivery-location').on('input', function() {
+            //         var inputField = $(this);
+            //         var suggestionsList = $('.suggestionsDelivery');
+            //         inputField.data('selected', false);
+
+            //         fetchSuggestions(inputField, suggestionsList);
+            //     });
+
+            //     $('#step1_next').click(function() {
+            //         if (validateStep('step1')) {
+            //             $('#step1').hide();
+            //             $('#step2').show();
+            //         }
+            //     });
+
+            //     $('#step2_previous').click(function() {
+            //         $('#step2').hide();
+            //         $('#step1').show();
+            //     });
+
+            //     $('#step2_next').click(function() {
+            //         if (validateStep('step2')) {
+            //             $('#step2').hide();
+            //             $('#step3').show();
+            //         }
+            //     });
+
+            //     $('#step3_previous').click(function() {
+            //         $('#step3').hide();
+            //         $('#step2').show();
+            //     });
+            // });
+            $('#category').on('change', function () {
+                $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
+
+                // Show input field if "Others" is selected
+                if ($(this).val() === 'Others') {
+                    $('#otherCategoryInput').show().prop('disabled', false);
+                } else {
+                    $('#otherCategoryInput').hide().prop('disabled', true);
+                }
+                });
+                $(document).ready(function() {
+                function showError(field, message) {
+                    $('#' + field).addClass('error-field');
+                    $('#' + field + '-error').text(message).show();
+                }
+
+                function hideError(field) {
+                    $('#' + field).removeClass('error-field');
+                    $('#' + field + '-error').hide();
+                }
+
+                // Regular expression for the desired format: "City,State,ZipCode"
+                function isValidFormat(value) {
+                    var regex = /^[A-Za-z\s]+,[A-Z]{2},\d{5}$/; // Adjust regex if needed
+                    return regex.test(value);
+                }
+
+                function validateStep(step) {
+                    var isValid = true;
+                    $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+                        var field = $(this).attr('id');
+                        var fieldValue = $(this).val();
+                        
+                        if ($(this).hasClass('ajax-suggestion-input')) {
+                            if (!$(this).data('selected') || $(this).val() === '') {
+                                showError(field, 'Please select a valid option from suggestions.');
+                                isValid = false;
+                            } else {
+                                hideError(field);
+                            }
+                        } else if (field === 'pickup-location' || field === 'delivery-location') {
+                            if (!fieldValue) {
+                                showError(field, 'This field is required.');
+                                isValid = false;
+                            } else if (!isValidFormat(fieldValue)) {
+                                showError(field, 'Please enter the address in the format: City,State,ZipCode.');
+                                isValid = false;
+                            } else {
+                                hideError(field);
+                            }
+                        } else {
+                            if (!fieldValue) {
+                                showError(field, 'This field is required.');
+                                isValid = false;
+                            } else {
+                                hideError(field);
+                            }
+                        }
+                    });
+                    return isValid;
+                }
+
+                function fetchSuggestions(inputField, suggestionsList) {
+                    var inputValue = inputField.val();
+
+                    $.ajax({
+                        url: "{{ route('get.zipcodes') }}",
+                        method: "POST",
+                        data: {
+                            "_token": "{{ csrf_token() }}",
+                            "input": inputValue
+                        },
+                        success: function(response) {
+                            suggestionsList.empty();
+                            inputField.data('selected', false);
+                            $.each(response, function(index, suggestion) {
+                                var listItem = $("<li>").text(suggestion).click(function() {
+                                    inputField.val(suggestion);
+                                    inputField.data('selected', true); 
+                                    suggestionsList.hide();
+                                    hideError(inputField.attr('id')); 
+                                });
+                                suggestionsList.append(listItem);
+                            });
+
+                            suggestionsList.show(); 
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error:", error);
+                        }
+                    });
+                }
+
+                $('#pickup-location').on('input', function() {
+                    var inputField = $(this);
+                    var suggestionsList = $('.suggestionsPickup');
+                    inputField.data('selected', false);
+
+                    fetchSuggestions(inputField, suggestionsList);
                 });
 
-                suggestionsList.show(); 
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
+                $('#delivery-location').on('input', function() {
+                    var inputField = $(this);
+                    var suggestionsList = $('.suggestionsDelivery');
+                    inputField.data('selected', false);
 
-    $('#pickup-location').on('input', function() {
-        var inputField = $(this);
-        var suggestionsList = $('.suggestionsPickup');
-        inputField.data('selected', false);
+                    fetchSuggestions(inputField, suggestionsList);
+                });
 
-        fetchSuggestions(inputField, suggestionsList);
-    });
-
-    $('#delivery-location').on('input', function() {
-        var inputField = $(this);
-        var suggestionsList = $('.suggestionsDelivery');
-        inputField.data('selected', false);
-
-        fetchSuggestions(inputField, suggestionsList);
-    });
-
-    $('#step1_next').click(function() {
-        if (validateStep('step1')) {
-            $('#step1').hide();
-            $('#step2').show();
-        }
-    });
-
-    $('#step2_previous').click(function() {
-        $('#step2').hide();
-        $('#step1').show();
-    });
-
-    $('#step2_next').click(function() {
-        if (validateStep('step2')) {
-            $('#step2').hide();
-            $('#step3').show();
-        }
-    });
-
-    $('#step3_previous').click(function() {
-        $('#step3').hide();
-        $('#step2').show();
-    });
-});
-    
-</script>
-{{-- <script>
-    $(document).ready(function() {
-        function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
-        function validateStep(step) {
-            var isValid = true;
-            $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
-                var field = $(this).attr('id');
-                if ($(this).hasClass('ajax-suggestion-input')) {
-                    if (!$(this).data('selected') || $(this).val() === '') {
-                        showError(field, 'Please select a valid option from suggestions.');
-                        isValid = false;
-                    } else {
-                        hideError(field);
+                $('#step1_next').click(function() {
+                    if (validateStep('step1')) {
+                        $('#step1').hide();
+                        $('#step2').show();
                     }
+                });
+
+                $('#step2_previous').click(function() {
+                    $('#step2').hide();
+                    $('#step1').show();
+                });
+
+                $('#step2_next').click(function() {
+                    if (validateStep('step2')) {
+                        $('#step2').hide();
+                        $('#step3').show();
+                    }
+                });
+
+                $('#step3_previous').click(function() {
+                    $('#step3').hide();
+                    $('#step2').show();
+                });
+            });
+        </script>
+    {{-- multi step form end --}}
+
+    {{-- app js  --}}
+        @php
+            $makes = App\Models\VehicleName::select('make')
+                    ->where('UserId', 14)
+                    ->where('status', 0)
+                    ->groupBy('make')
+                    ->orderBy('make', 'ASC')
+                    ->get();
+        @endphp
+    {{-- index js  --}}
+        <script>
+            $(document).ready(function() {
+                $('#example-multiple').select2();
+            });
+            $(document).ready(function() {
+                $('#example-multiple-2').select2();
+            });
+        </script>
+        <script>
+            // function updateSuggestions(inputField, suggestionsList) {
+            //     var inputValue = inputField.val();
+
+            //     $.ajax({
+            //         url: "{{ route('get.zipcodes') }}",
+            //         method: "POST",
+            //         data: {
+            //             "_token": "{{ csrf_token() }}",
+            //             "input": inputValue
+            //         },
+            //         success: function(response) {
+            //             suggestionsList.empty();
+
+            //             $.each(response, function(index, suggestion) {
+            //                 var listItem = $("<li>").text(suggestion).click(function() {
+            //                     inputField.val(suggestion);
+            //                     suggestionsList.css("display", "none");
+            //                 });
+            //                 suggestionsList.append(listItem);
+            //             });
+            //         },
+            //         error: function(xhr, status, error) {
+            //             console.error("Error:", error);
+            //         }
+            //     });
+            // }
+
+            // $("#pickup-location, #delivery-location").keyup(function() {
+            //     var inputField = $(this);
+            //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+            //     suggestionsList.css("display", "block");
+            //     if (inputField.val() === "") {
+            //         suggestionsList.css("display", "none");
+            //     }
+            //     updateSuggestions(inputField, suggestionsList);
+            // });
+
+            // NEW CODE 
+            // single form location validation 
+            $(document).ready(function() {
+                var validPickupSuggestions = [];
+                var validDeliverySuggestions = [];
+
+                function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+                    var inputValue = inputField.val();
+
+                    $.ajax({
+                        url: "{{ route('get.zipcodes') }}",
+                        method: "POST",
+                        data: {
+                            "_token": "{{ csrf_token() }}",
+                            "input": inputValue
+                        },
+                        success: function(response) {
+                            suggestionsList.empty();
+                            validSuggestions.length = 0;  // Clear previous suggestions
+
+                            $.each(response, function(index, suggestion) {
+                                var listItem = $("<li>").text(suggestion).click(function() {
+                                    inputField.val(suggestion);
+                                    suggestionsList.css("display", "none");
+                                });
+                                validSuggestions.push(suggestion);  // Add to valid suggestions
+                                suggestionsList.append(listItem);
+                            });
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error:", error);
+                        }
+                    });
+                }
+
+                // $("#pickup-location").keyup(function() {
+                $(document).on('keyup', '#pickup-location', function() {
+                    var inputField = $(this);
+                    var suggestionsList = inputField.siblings(".suggestionsTwo");
+                    suggestionsList.css("display", "block");
+                    if (inputField.val() === "") {
+                        suggestionsList.css("display", "none");
+                    }
+                    updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+                });
+
+                // $("#delivery-location").keyup(function() {
+                $(document).on('keyup', '#delivery-location', function() {
+                    var inputField = $(this);
+                    var suggestionsList = inputField.siblings(".suggestionsTwo");
+                    suggestionsList.css("display", "block");
+                    if (inputField.val() === "") {
+                        suggestionsList.css("display", "none");
+                    }
+                    updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+                });
+
+                function validateLocationInput(inputField, validSuggestions, errorField) {
+                    var inputValue = inputField.val();
+                    if (!validSuggestions.includes(inputValue)) {
+                        errorField.text("Please select a valid location.");
+                        return false;
+                    } else {
+                        errorField.text("");
+                        return true;
+                    }
+                }
+
+                $("form").submit(function(event) {
+                    var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+                    var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+
+                    if (!isPickupValid || !isDeliveryValid) {
+                        event.preventDefault();  // Prevent form submission if validation fails
+                    }
+                });
+            });
+            // single form location validation end 
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+                    var year = $('.vehicle-year').val();
+                    var makeId = $('.vehicle-make').val();
+                    if (year && makeId) {
+                        getModel(year, makeId);
+                    }
+                });
+
+                function getModel(year, makeId) {
+                    // console.log('yes inn');
+                    $.ajax({
+                        url: "{{ route('get.models') }}",
+                        method: 'GET',
+                        data: {
+                            year: year,
+                            make: makeId
+                        },
+                        success: function(response) {
+                            var modelsDropdown = $('.vehicle-model-div');
+                            modelsDropdown.empty();
+                            var selectOptions =
+                                '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                            $.each(response, function(index, model) {
+                                selectOptions += '<option value="' + model + '">' + model +
+                                    '</option>';
+                            });
+                            selectOptions += '</select>';
+                            modelsDropdown.html(selectOptions);
+
+                            // console.log('yesssss', response);
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
+                    });
+                }
+            });
+        </script>
+    {{-- index js END  --}}
+        
+    {{-- scroll-up-btn --}}
+        <script>
+            const scrollButtons = document.querySelectorAll('.scroll-up-btn');
+            const targetHeading = document.querySelector('.target-top');
+            scrollButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    targetHeading.scrollIntoView({
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                });
+            });
+        </script>
+    {{-- scroll-up-btn --}}
+
+    {{-- tabSelector --}}
+        <script>
+            $(document).ready(function() {
+                var selectedTab = '';
+                $('#tabSelector').change(function() {
+                    $('.vehicles-container').html('');
+                    selectedTab = $(this).val();
+                    var vehicleType = $(this).val();
+                    $('.tab-pane').removeClass('show active');
+                    $('#' + selectedTab).addClass('show active');
+
+                    $.ajax({
+                        url: "{{ route('get.partial.form') }}",
+                        method: 'GET',
+                        data: {
+                            vehicleType: vehicleType,
+                        },
+                        success: function(response) {
+                            $('#additionalContent').html('');
+                            $('#additionalContent').html(response);
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
+                    });
+                });
+                $(document).on('click', '.addVehicleBtn', function() {
+                        if ($('#tabSelector').val() == 'Car') {
+                            console.log('yesss');
+                            addNewVehicle();
+                        } else {
+                            console.log('nooo');
+                            addOtherVehicle();
+                        }
+                    }); 
+
+                $(document).on('click', '.delete-vehicle', function() {
+                    $(this).closest('.vehicle-info').remove();
+                });
+
+                $(document).on('change', '.year, .make', function() {
+                    var year = $(this).closest('.vehicle-info').find('.year').val();
+                    var makeId = $(this).closest('.vehicle-info').find('.make').val();
+                    var vehicleInfo = $(this).closest('.vehicle-info');
+                    if (year && makeId) {
+                        getModel(year, makeId, vehicleInfo);
+                    }
+                });
+
+                function getModel(year, makeId, vehicleInfo) {
+                    // console.log('yes inn');
+                    $.ajax({
+                        url: "{{ route('get.models') }}",
+                        method: 'GET',
+                        data: {
+                            year: year,
+                            make: makeId
+                        },
+                        success: function(response) {
+                            var modelsDropdown = vehicleInfo.find('.model');
+                            modelsDropdown.empty();
+                            var selectOptions = '<option value="">Select Model</option>';
+                            $.each(response, function(index, model) {
+                                selectOptions += '<option value="' + model + '">' +
+                                    model +
+                                    '</option>';
+                            });
+                            modelsDropdown.html(selectOptions);
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
+                    });
+                }
+            });
+        </script>
+    {{-- tabSelector --}}
+
+    {{-- L W H W --}}
+        <script>
+            function limitDigits(element, maxDigits) {
+                if (element.value.length > maxDigits) {
+                    element.value = element.value.slice(0, maxDigits);
+                }
+            }
+            $(document).ready(function() {
+                $('#inches-input').on('input', function() {
+                    if (this.value > 11) {
+                        this.value = 11;
+                    } else if (this.value < 0) {
+                        this.value = 0;
+                    }
+                });
+
+                // Optionally, you can also prevent the user from typing non-numeric characters.
+                $('#feet-input, #inches-input').on('input', function() {
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                });
+            });
+            $(document).ready(function() {
+                $(document).on('input', '.inches-input1, .inches-input2', function() {
+                    if (this.value > 11) {
+                        this.value = 11;
+                    } else if (this.value < 0) {
+                        this.value = 0;
+                    }
+                });
+                $(document).on('input', '.feet-input1, .inches-input1, .feet-input, .inches-input2', function() {
+                    console.log('asdasd');
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                });
+            });
+            function moveToNext(current, nextId) {
+                if (current.value.length >= current.maxLength) {
+                    document.getElementById(nextId).focus();
+                }
+            }
+            
+        </script>
+    {{-- L W H W --}}
+
+    {{-- <script>
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
+        }
+
+        $(document).ready(function() {
+            $('#inches-input').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input1').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input1, #inches-input1').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input2').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input2').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script> --}}
+    {{-- <script>
+            document.querySelectorAll('input[type="text"]').forEach((input) => {
+            input.addEventListener("input", function () {
+                this.value = this.value.replace(/[^0-9]/g, "");
+            });
+            });
+        $(document).ready(function() {
+            $('.inches-input1').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('.feet-input1, .inches-input1').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+        $(document).ready(function() {
+            $('.inches-input2').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('.feet-input, .inches-input2').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script> --}}
+    {{-- <script>
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
+        }
+
+        $(document).ready(function() {
+            $('#inches-input').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input1').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input1, #inches-input1').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#inches-input2').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input2').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script> --}}
+    {{-- <script>
+        $(document).ready(function () {
+            $('form').on('submit', function (e) {
+                // Year validation
+                if ($('#year').val() === null) {
+                    e.preventDefault(); // Prevent form submission
+                    $('#year').closest('.input-form').find('.error-message').show(); // Show the error message
+                    $('#year').focus(); // Focus the select element
                 } else {
+                    $('#year').closest('.input-form').find('.error-message').hide(); // Hide the error message
+                }
+
+                // Category validation
+                if ($('#category').val() === null) {
+                    e.preventDefault(); // Prevent form submission
+                    $('#category').closest('.input-form').find('.error-message').show(); // Show the error message
+                    $('#category').focus(); // Focus the select element
+                } else {
+                    $('#category').closest('.input-form').find('.error-message').hide(); // Hide the error message
+                }
+            });
+
+            // Hide error on change
+            $('#year').on('change', function () {
+                $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
+            });
+
+            $('#category').on('change', function () {
+                $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
+
+                // Show input field if "Others" is selected
+                if ($(this).val() === 'Others') {
+                    $('#otherCategoryInput').show().prop('disabled', false);
+                } else {
+                    $('#otherCategoryInput').hide().prop('disabled', true);
+                }
+            });
+        });
+    </script> --}}
+    {{-- <script>
+        $(document).ready(function () {
+            // Function to validate the current step
+            function validateStep(step) {
+                let isValid = true;
+
+                $(step).find('.form-control').each(function () {
+                    if ($(this).attr('required') && $(this).val() === '') {
+                        isValid = false;
+                        $(this).addClass('is-invalid');
+                        $(this).siblings('.error-message').show();
+                    } else {
+                        $(this).removeClass('is-invalid');
+                        $(this).siblings('.error-message').hide();
+                    }
+                });
+
+                return isValid;
+            }
+
+            // Step 1 Next Button Click
+            $('#step1_next').click(function () {
+                if (validateStep('#step1')) {
+                    $('#step1').hide();
+                    $('#step2').show();
+                }
+            });
+
+            // Step 2 Next Button Click
+            $('#step2_next').click(function () {
+                if (validateStep('#step2')) {
+                    $('#step2').hide();
+                    $('#step3').show();
+                }
+            });
+
+            // Step 2 Previous Button Click
+            $('#step2_previous').click(function () {
+                $('#step2').hide();
+                $('#step1').show();
+            });
+
+            // Step 3 Previous Button Click
+            $('#step3_previous').click(function () {
+                $('#step3').hide();
+                $('#step2').show();
+            });
+
+            // Submit Button Click
+            $('#submit_instant_code').click(function (e) {
+                if (!validateStep('#step3')) {
+                    e.preventDefault();
+                }
+            });
+
+            // Remove validation error on input change
+            $('.form-control').on('input change', function () {
+                if ($(this).val() !== '') {
+                    $(this).removeClass('is-invalid');
+                    $(this).siblings('.error-message').hide();
+                }
+            });
+        });
+    </script> --}}
+    {{-- <script>
+        $(document).ready(function () {
+            // Function to validate the current step
+            function validateStep(step) {
+                let isValid = true;
+
+                $(step).find('.form-control').each(function () {
+                    if ($(this).attr('required') && $(this).val() === '') {
+                        isValid = false;
+                        $(this).addClass('is-invalid');
+                        $(this).siblings('.error-message').show();
+                    } else {
+                        $(this).removeClass('is-invalid');
+                        $(this).siblings('.error-message').hide();
+                    }
+                });
+
+                return isValid;
+            }
+
+            // Step 1 Next Button Click
+            $('#step1_next').click(function () {
+                if (validateStep('#step1')) {
+                    $('#step1').hide();
+                    $('#step2').show();
+                }
+            });
+
+            // Step 2 Next Button Click
+            $('#step2_next').click(function () {
+                if (validateStep('#step2')) {
+                    $('#step2').hide();
+                    $('#step3').show();
+                }
+            });
+
+            // Step 2 Previous Button Click
+            $('#step2_previous').click(function () {
+                $('#step2').hide();
+                $('#step1').show();
+            });
+
+            // Step 3 Previous Button Click
+            $('#step3_previous').click(function () {
+                $('#step3').hide();
+                $('#step2').show();
+            });
+
+            // Submit Button Click
+            $('#submit_instant_code').click(function (e) {
+                if (!validateStep('#step3')) {
+                    e.preventDefault();
+                }
+            });
+
+            // Remove validation error on input change
+            $('.form-control').on('input change', function () {
+                if ($(this).val() !== '') {
+                    $(this).removeClass('is-invalid');
+                    $(this).siblings('.error-message').hide();
+                }
+            });
+        });
+    </script> --}}
+    {{-- <script>
+            $(document).ready(function() {
+            // Function to show error messages
+            function showError(field, message) {
+                $('#' + field).addClass('error-field');
+                $('#' + field + '-error').text(message).show();
+            }
+
+            // Function to hide error messages
+            function hideError(field) {
+                $('#' + field).removeClass('error-field');
+                $('#' + field + '-error').hide();
+            }
+
+            // Function to validate fields in a given step
+            function validateStep(step) {
+                var isValid = true;
+
+                // Iterate over each required field in the specified step
+                $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+                    var field = $(this).attr('id');
                     if (!$(this).val()) {
                         showError(field, 'This field is required.');
                         isValid = false;
                     } else {
                         hideError(field);
                     }
-                }
-            });
-            return isValid;
-        }
-        
-        function fetchSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
-
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-                    inputField.data('selected', false);
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            inputField.data('selected', true); 
-                            suggestionsList.hide();
-                            hideError(inputField.attr('id')); 
-                        });
-                        suggestionsList.append(listItem);
-                    });
-
-                    suggestionsList.show(); 
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
-        $('#pickup-location').on('input', function() {
-            var inputField = $(this);
-            var suggestionsList = $('.suggestions');
-            inputField.data('selected', false);
-
-            fetchSuggestions(inputField, suggestionsList);
-        });
-
-        $('#delivery-location').on('input', function() {
-            var inputField = $(this);
-            var suggestionsList = $('.suggestionsTwo');
-            inputField.data('selected', false);
-
-            fetchSuggestions(inputField, suggestionsList);
-        });
-        $('#step1_next').click(function() {
-            if (validateStep('step1')) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
-        $('#step2_previous').click(function() {
-            $('#step2').hide();
-            $('#step1').show();
-        });
-        $('#step2_next').click(function() {
-            if (validateStep('step2')) {
-                $('#step2').hide();
-                $('#step3').show();
-            }
-        });
-        $('#step3_previous').click(function() {
-            $('#step3').hide();
-            $('#step2').show();
-        });
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        var currentStep = 0; // Initial step is set to 0
-        var validPickupSuggestions = [];
-        var validDeliverySuggestions = [];
-
-        // Show the initial step
-        showStep(currentStep);
-
-        // Function to show the current step and hide others
-        function showStep(stepIndex) {
-            $('.step').hide(); // Hide all steps
-            $('.step').eq(stepIndex).show(); // Show the current step
-            updateStepIndicators(stepIndex); // Update step indicators if any
-        }
-
-        // Function to handle the 'Next' button click
-        $('.nextBtn').click(function() {
-            // Validation before moving to the next step
-            if (validateStep(currentStep)) {
-                currentStep++;
-                showStep(currentStep);
-            }
-        });
-
-        // Function to handle the 'Previous' button click
-        $('.prevBtn').click(function() {
-            currentStep--;
-            showStep(currentStep);
-        });
-
-        // Function to validate the current step
-        function validateStep(stepIndex) {
-            var isValid = true;
-            var currentForm = $('.step').eq(stepIndex);
-            
-            // Validate required fields
-            currentForm.find('input, select').each(function() {
-                if ($(this).prop('required') && $(this).val() === '') {
-                    $(this).addClass('is-invalid'); // Add invalid class to highlight errors
-                    isValid = false;
-                } else {
-                    $(this).removeClass('is-invalid'); // Remove invalid class
-                }
-            });
-
-            // Validate location inputs only on the step with locations (if applicable)
-            if (currentStep === 0) { // Assuming the locations are on the first step
-                var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-                var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-                isValid = isValid && isPickupValid && isDeliveryValid;
-            }
-
-            return isValid;
-        }
-
-        // Function to update step indicators (optional)
-        function updateStepIndicators(stepIndex) {
-            $('.step-indicator').removeClass('active');
-            $('.step-indicator').eq(stepIndex).addClass('active');
-        }
-
-        // Handle form submission (Final Step)
-        $('#multiForm').submit(function(e) {
-            e.preventDefault(); // Prevent default form submission
-
-            // Final validation
-            if (validateStep(currentStep)) {
-                $.ajax({
-                    url: $(this).attr('action'),
-                    method: $(this).attr('method'),
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        alert('Form submitted successfully!');
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
                 });
-            }
-        });
 
-        // Function to update suggestions
-        function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-            var inputValue = inputField.val();
-
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-                    validSuggestions.length = 0;  // Clear previous suggestions
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        validSuggestions.push(suggestion);  // Add to valid suggestions
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
-
-        // Keyup event for pickup location
-        $(document).on('keyup', '#pickup-location', function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-        });
-
-        // Keyup event for delivery location
-        $(document).on('keyup', '#delivery-location', function() {
-            console.log('sasasas')
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-        });
-
-        // Function to validate location inputs
-        function validateLocationInput(inputField, validSuggestions, errorField) {
-            var inputValue = inputField.val();
-            if (!validSuggestions.includes(inputValue)) {
-                errorField.text("Please select a valid location.");
-                return false;
-            } else {
-                errorField.text("");
-                return true;
-            }
-        }
-    });
-</script> --}}
-{{-- multi step form end --}}
-{{-- <script>
-    $(document).ready(function() {
-        $('#other_year').attr('disabled', true);
-        $('#other_make').attr('disabled', true);
-        $('#other_model').attr('disabled', true);
-
-        function handleOtherSelection(selectId, inputId) {
-            $(selectId).on('change', function() {
-                if ($(this).val() === 'other') {
-                    $(this).addClass('d-none');
-                    $(inputId).removeClass('d-none')
-                            .attr('required', 'required')
-                            .removeAttr('disabled');
-                } else {
-                    $(inputId).addClass('d-none')
-                            .removeAttr('required')
-                            .attr('disabled', true);
-                    $(this).removeClass('d-none');
-                }
-            });
-        }
-
-        handleOtherSelection('#year', '#other_year');
-        handleOtherSelection('#make', '#other_make');
-        handleOtherSelection('#model', '#other_model');
-    });
-</script> --}}
-{{-- app js  --}}
-@php
-    $makes = App\Models\VehicleName::select('make')
-            ->where('UserId', 14)
-            ->where('status', 0)
-            ->groupBy('make')
-            ->orderBy('make', 'ASC')
-            ->get();
-@endphp
-{{-- index js  --}}
-
-{{-- <script>
-    $(document).ready(function() {
-        $(document).on('change', '#available_at_auction', function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
-
-        $(document).on('change', '#modification', function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script> --}}
-<script>
-    $(document).ready(function() {
-        $('#owl-caro').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            autoplay: true,
-            autoplayTimeout: 4000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 4
-                }
-            }
-        });
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $('#example-multiple').select2();
-    });
-    $(document).ready(function() {
-        $('#example-multiple-2').select2();
-    });
-</script>
-{{-- <script>
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-
-    $(document).ready(function() {
-        $('#inches-input').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input1').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input1, #inches-input1').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input2').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input2').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script> --}}
-<script>
-    // function updateSuggestions(inputField, suggestionsList) {
-    //     var inputValue = inputField.val();
-
-    //     $.ajax({
-    //         url: "{{ route('get.zipcodes') }}",
-    //         method: "POST",
-    //         data: {
-    //             "_token": "{{ csrf_token() }}",
-    //             "input": inputValue
-    //         },
-    //         success: function(response) {
-    //             suggestionsList.empty();
-
-    //             $.each(response, function(index, suggestion) {
-    //                 var listItem = $("<li>").text(suggestion).click(function() {
-    //                     inputField.val(suggestion);
-    //                     suggestionsList.css("display", "none");
-    //                 });
-    //                 suggestionsList.append(listItem);
-    //             });
-    //         },
-    //         error: function(xhr, status, error) {
-    //             console.error("Error:", error);
-    //         }
-    //     });
-    // }
-
-    // $("#pickup-location, #delivery-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList);
-    // });
-
-    // NEW CODE 
-    // single form location validation 
-    // $(document).ready(function() {
-    //     var validPickupSuggestions = [];
-    //     var validDeliverySuggestions = [];
-
-    //     function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-    //         var inputValue = inputField.val();
-
-    //         $.ajax({
-    //             url: "{{ route('get.zipcodes') }}",
-    //             method: "POST",
-    //             data: {
-    //                 "_token": "{{ csrf_token() }}",
-    //                 "input": inputValue
-    //             },
-    //             success: function(response) {
-    //                 suggestionsList.empty();
-    //                 validSuggestions.length = 0;  // Clear previous suggestions
-
-    //                 $.each(response, function(index, suggestion) {
-    //                     var listItem = $("<li>").text(suggestion).click(function() {
-    //                         inputField.val(suggestion);
-    //                         suggestionsList.css("display", "none");
-    //                     });
-    //                     validSuggestions.push(suggestion);  // Add to valid suggestions
-    //                     suggestionsList.append(listItem);
-    //                 });
-    //             },
-    //             error: function(xhr, status, error) {
-    //                 console.error("Error:", error);
-    //             }
-    //         });
-    //     }
-
-    //     // $("#pickup-location").keyup(function() {
-    //     $(document).on('keyup', '#pickup-location', function() {
-    //         var inputField = $(this);
-    //         var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //         suggestionsList.css("display", "block");
-    //         if (inputField.val() === "") {
-    //             suggestionsList.css("display", "none");
-    //         }
-    //         updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    //     });
-
-    //     // $("#delivery-location").keyup(function() {
-    //     $(document).on('keyup', '#delivery-location', function() {
-    //         var inputField = $(this);
-    //         var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //         suggestionsList.css("display", "block");
-    //         if (inputField.val() === "") {
-    //             suggestionsList.css("display", "none");
-    //         }
-    //         updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    //     });
-
-    //     function validateLocationInput(inputField, validSuggestions, errorField) {
-    //         var inputValue = inputField.val();
-    //         if (!validSuggestions.includes(inputValue)) {
-    //             errorField.text("Please select a valid location.");
-    //             return false;
-    //         } else {
-    //             errorField.text("");
-    //             return true;
-    //         }
-    //     }
-
-    //     $("form").submit(function(event) {
-    //         var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-    //         var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
-    //         if (!isPickupValid || !isDeliveryValid) {
-    //             event.preventDefault();  // Prevent form submission if validation fails
-    //         }
-    //     });
-    // });
-    // single form location validation end 
-</script>
-<script>
-    $(document).ready(function() {
-        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            var year = $('.vehicle-year').val();
-            var makeId = $('.vehicle-make').val();
-            if (year && makeId) {
-                getModel(year, makeId);
-            }
-        });
-
-        function getModel(year, makeId) {
-            // console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = $('.vehicle-model-div');
-                    modelsDropdown.empty();
-                    var selectOptions =
-                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
-                    });
-                    selectOptions += '</select>';
-                    modelsDropdown.html(selectOptions);
-
-                    // console.log('yesssss', response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script>
-{{-- index js END  --}}
-
-{{-- <script>
-    $(document).ready(function () {
-        $('form').on('submit', function (e) {
-            // Year validation
-            if ($('#year').val() === null) {
-                e.preventDefault(); // Prevent form submission
-                $('#year').closest('.input-form').find('.error-message').show(); // Show the error message
-                $('#year').focus(); // Focus the select element
-            } else {
-                $('#year').closest('.input-form').find('.error-message').hide(); // Hide the error message
+                return isValid;
             }
 
-            // Category validation
-            if ($('#category').val() === null) {
-                e.preventDefault(); // Prevent form submission
-                $('#category').closest('.input-form').find('.error-message').show(); // Show the error message
-                $('#category').focus(); // Focus the select element
-            } else {
-                $('#category').closest('.input-form').find('.error-message').hide(); // Hide the error message
-            }
-        });
-
-        // Hide error on change
-        $('#year').on('change', function () {
-            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
-        });
-
-        $('#category').on('change', function () {
-            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
-
-            // Show input field if "Others" is selected
-            if ($(this).val() === 'Others') {
-                $('#otherCategoryInput').show().prop('disabled', false);
-            } else {
-                $('#otherCategoryInput').hide().prop('disabled', true);
-            }
-        });
-    });
-</script> --}}
-{{-- scroll-up-btn --}}
-<script>
-    const scrollButtons = document.querySelectorAll('.scroll-up-btn');
-    const targetHeading = document.querySelector('.target-top');
-    scrollButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            targetHeading.scrollIntoView({
-                behavior: 'smooth', 
-                block: 'start' 
-            });
-        });
-    });
-</script>
-{{-- scroll-up-btn --}}
-<script>
-     $(document).ready(function() {
-        var selectedTab = '';
-        $('#tabSelector').change(function() {
-            $('.vehicles-container').html('');
-            selectedTab = $(this).val();
-            var vehicleType = $(this).val();
-            $('.tab-pane').removeClass('show active');
-            $('#' + selectedTab).addClass('show active');
-
-            $.ajax({
-                url: "{{ route('get.partial.form') }}",
-                method: 'GET',
-                data: {
-                    vehicleType: vehicleType,
-                },
-                success: function(response) {
-                    $('#additionalContent').html('');
-                    $('#additionalContent').html(response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        });
-        $(document).on('click', '.addVehicleBtn', function() {
-                if ($('#tabSelector').val() == 'Car') {
-                    console.log('yesss');
-                    addNewVehicle();
-                } else {
-                    console.log('nooo');
-                    addOtherVehicle();
-                }
-            }); 
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-
-        $(document).on('change', '.year, .make', function() {
-            var year = $(this).closest('.vehicle-info').find('.year').val();
-            var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            var vehicleInfo = $(this).closest('.vehicle-info');
-            if (year && makeId) {
-                getModel(year, makeId, vehicleInfo);
-            }
-        });
-
-        function getModel(year, makeId, vehicleInfo) {
-            // console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' +
-                            model +
-                            '</option>';
-                    });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script>
- {{-- L W H W --}}
-<script>
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-    $(document).ready(function() {
-        $('#inches-input').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-    $(document).ready(function() {
-        $(document).on('input', '.inches-input1, .inches-input2', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-        $(document).on('input', '.feet-input1, .inches-input1, .feet-input, .inches-input2', function() {
-            console.log('asdasd');
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-    // $(document).ready(function() {
-    //     $('.inches-input1').on('input', function() {
-    //         if (this.value > 11) {
-    //             this.value = 11;
-    //         } else if (this.value < 0) {
-    //             this.value = 0;
-    //         }
-    //     });
-
-    //     // Optionally, you can also prevent the user from typing non-numeric characters.
-    //     $('.feet-input1, .inches-input1').on('input', function() {
-    //         this.value = this.value.replace(/[^0-9]/g, '');
-    //     });
-    // });
-    // $(document).ready(function() {
-    //     $('.inches-input2').on('input', function() {
-    //         if (this.value > 11) {
-    //             this.value = 11;
-    //         } else if (this.value < 0) {
-    //             this.value = 0;
-    //         }
-    //     });
-
-    //     // Optionally, you can also prevent the user from typing non-numeric characters.
-    //     $('.feet-input, .inches-input2').on('input', function() {
-    //         this.value = this.value.replace(/[^0-9]/g, '');
-    //     });
-    // });
-</script>
-<script>
-    function moveToNext(current, nextId) {
-        if (current.value.length >= current.maxLength) {
-            document.getElementById(nextId).focus();
-        }
-    }
-    //   document.querySelectorAll('input[type="text"]').forEach((input) => {
-    //     input.addEventListener("input", function () {
-    //       this.value = this.value.replace(/[^0-9]/g, "");
-    //     });
-    //   });
-</script>
- {{-- <script>
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-
-    $(document).ready(function() {
-        $('#inches-input').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input1').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input1, #inches-input1').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input2').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input2').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script> --}}
-{{-- L W H W --}}
-
-{{-- <script>
-    $(document).ready(function () {
-        // Function to validate the current step
-        function validateStep(step) {
-            let isValid = true;
-
-            $(step).find('.form-control').each(function () {
-                if ($(this).attr('required') && $(this).val() === '') {
-                    isValid = false;
-                    $(this).addClass('is-invalid');
-                    $(this).siblings('.error-message').show();
-                } else {
-                    $(this).removeClass('is-invalid');
-                    $(this).siblings('.error-message').hide();
+            // Move to Step 2
+            $('#step1_next').click(function() {
+                if (validateStep('step1')) {
+                    $('#step1').hide();
+                    $('#step2').show();
                 }
             });
 
-            return isValid;
-        }
-
-        // Step 1 Next Button Click
-        $('#step1_next').click(function () {
-            if (validateStep('#step1')) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
-
-        // Step 2 Next Button Click
-        $('#step2_next').click(function () {
-            if (validateStep('#step2')) {
+            // Return to Step 1
+            $('#step2_previous').click(function() {
                 $('#step2').hide();
-                $('#step3').show();
-            }
-        });
+                $('#step1').show();
+            });
 
-        // Step 2 Previous Button Click
-        $('#step2_previous').click(function () {
-            $('#step2').hide();
-            $('#step1').show();
-        });
-
-        // Step 3 Previous Button Click
-        $('#step3_previous').click(function () {
-            $('#step3').hide();
-            $('#step2').show();
-        });
-
-        // Submit Button Click
-        $('#submit_instant_code').click(function (e) {
-            if (!validateStep('#step3')) {
-                e.preventDefault();
-            }
-        });
-
-        // Remove validation error on input change
-        $('.form-control').on('input change', function () {
-            if ($(this).val() !== '') {
-                $(this).removeClass('is-invalid');
-                $(this).siblings('.error-message').hide();
-            }
-        });
-    });
-</script> --}}
-{{-- <script>
-    $(document).ready(function () {
-        // Function to validate the current step
-        function validateStep(step) {
-            let isValid = true;
-
-            $(step).find('.form-control').each(function () {
-                if ($(this).attr('required') && $(this).val() === '') {
-                    isValid = false;
-                    $(this).addClass('is-invalid');
-                    $(this).siblings('.error-message').show();
-                } else {
-                    $(this).removeClass('is-invalid');
-                    $(this).siblings('.error-message').hide();
+            // Move to Step 3
+            $('#step2_next').click(function() {
+                if (validateStep('step2')) {
+                    $('#step2').hide();
+                    $('#step3').show();
                 }
             });
 
-            return isValid;
-        }
-
-        // Step 1 Next Button Click
-        $('#step1_next').click(function () {
-            if (validateStep('#step1')) {
-                $('#step1').hide();
+            // Return to Step 2
+            $('#step3_previous').click(function() {
+                $('#step3').hide();
                 $('#step2').show();
-            }
-        });
+            });
 
-        // Step 2 Next Button Click
-        $('#step2_next').click(function () {
-            if (validateStep('#step2')) {
-                $('#step2').hide();
-                $('#step3').show();
-            }
         });
-
-        // Step 2 Previous Button Click
-        $('#step2_previous').click(function () {
-            $('#step2').hide();
-            $('#step1').show();
-        });
-
-        // Step 3 Previous Button Click
-        $('#step3_previous').click(function () {
-            $('#step3').hide();
-            $('#step2').show();
-        });
-
-        // Submit Button Click
-        $('#submit_instant_code').click(function (e) {
-            if (!validateStep('#step3')) {
-                e.preventDefault();
-            }
-        });
-
-        // Remove validation error on input change
-        $('.form-control').on('input change', function () {
-            if ($(this).val() !== '') {
-                $(this).removeClass('is-invalid');
-                $(this).siblings('.error-message').hide();
-            }
-        });
-    });
-</script> --}}
-{{-- <script>
-        $(document).ready(function() {
-        // Function to show error messages
+    </script> --}}
+    {{-- <script>
+        // Form Validation
         function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
-
-        // Function to hide error messages
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
-
-        // Function to validate fields in a given step
-        function validateStep(step) {
-            var isValid = true;
-
-            // Iterate over each required field in the specified step
-            $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
-                var field = $(this).attr('id');
-                if (!$(this).val()) {
-                    showError(field, 'This field is required.');
+                $('#' + field).addClass('error-field');
+                $('#' + field + '-error').text(message).show();
+            }
+            function hideError(field) {
+                $('#' + field).removeClass('error-field');
+                $('#' + field + '-error').hide();
+            }
+            $('#step1_next').click(function() {
+                var isValid = true;
+                if (!$('#pickup-location').val()) {
+                    showError('pickup-location', 'This field is required.');
                     isValid = false;
                 } else {
-                    hideError(field);
+                    hideError('pickup-location');
+                }
+                if (!$('#delivery-location').val()) {
+                    showError('delivery-location', 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError('delivery-location');
+                }
+                if (isValid) {
+                    $('#step1').hide();
+                    $('#step2').show();
                 }
             });
+    </script> --}}
+    {{-- <script>
+            $(document).ready(function() {
+            var currentStep = 0; // Initial step is set to 0
+            var validPickupSuggestions = [];
+            var validDeliverySuggestions = [];
 
-            return isValid;
-        }
-
-        // Move to Step 2
-        $('#step1_next').click(function() {
-            if (validateStep('step1')) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
-
-        // Return to Step 1
-        $('#step2_previous').click(function() {
-            $('#step2').hide();
-            $('#step1').show();
-        });
-
-        // Move to Step 3
-        $('#step2_next').click(function() {
-            if (validateStep('step2')) {
-                $('#step2').hide();
-                $('#step3').show();
-            }
-        });
-
-        // Return to Step 2
-        $('#step3_previous').click(function() {
-            $('#step3').hide();
-            $('#step2').show();
-        });
-
-    });
-</script> --}}
-{{-- <script>
-    // Form Validation
-    function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
-        $('#step1_next').click(function() {
-            var isValid = true;
-            if (!$('#pickup-location').val()) {
-                showError('pickup-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('pickup-location');
-            }
-            if (!$('#delivery-location').val()) {
-                showError('delivery-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('delivery-location');
-            }
-            if (isValid) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
-</script> --}}
-{{-- <script>
-        $(document).ready(function() {
-        var currentStep = 0; // Initial step is set to 0
-        var validPickupSuggestions = [];
-        var validDeliverySuggestions = [];
-
-        // Show the initial step
-        showStep(currentStep);
-
-        // Function to show the current step and hide others
-        function showStep(stepIndex) {
-            $('.step').hide(); // Hide all steps
-            $('.step').eq(stepIndex).show(); // Show the current step
-            updateStepIndicators(stepIndex); // Update step indicators if any
-        }
-
-        // Function to handle the 'Next' button click
-        $('.nextBtn').click(function() {
-            // Validation before moving to the next step
-            if (validateStep(currentStep)) {
-                currentStep++;
-                showStep(currentStep);
-            }
-        });
-
-        // Function to handle the 'Previous' button click
-        $('.prevBtn').click(function() {
-            currentStep--;
+            // Show the initial step
             showStep(currentStep);
-        });
 
-        // Function to validate the current step
-        function validateStep(stepIndex) {
-            var isValid = true;
-            var currentForm = $('.step').eq(stepIndex);
-            
-            // Validate required fields
-            currentForm.find('input, select').each(function() {
-                if ($(this).prop('required') && $(this).val() === '') {
-                    $(this).addClass('is-invalid'); // Add invalid class to highlight errors
-                    isValid = false;
-                } else {
-                    $(this).removeClass('is-invalid'); // Remove invalid class
+            // Function to show the current step and hide others
+            function showStep(stepIndex) {
+                $('.step').hide(); // Hide all steps
+                $('.step').eq(stepIndex).show(); // Show the current step
+                updateStepIndicators(stepIndex); // Update step indicators if any
+            }
+
+            // Function to handle the 'Next' button click
+            $('.nextBtn').click(function() {
+                // Validation before moving to the next step
+                if (validateStep(currentStep)) {
+                    currentStep++;
+                    showStep(currentStep);
                 }
             });
 
-            // Validate location inputs only on the step with locations (if applicable)
-            if (currentStep === 0) { // Assuming the locations are on the first step
-                var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-                var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-                isValid = isValid && isPickupValid && isDeliveryValid;
+            // Function to handle the 'Previous' button click
+            $('.prevBtn').click(function() {
+                currentStep--;
+                showStep(currentStep);
+            });
+
+            // Function to validate the current step
+            function validateStep(stepIndex) {
+                var isValid = true;
+                var currentForm = $('.step').eq(stepIndex);
+                
+                // Validate required fields
+                currentForm.find('input, select').each(function() {
+                    if ($(this).prop('required') && $(this).val() === '') {
+                        $(this).addClass('is-invalid'); // Add invalid class to highlight errors
+                        isValid = false;
+                    } else {
+                        $(this).removeClass('is-invalid'); // Remove invalid class
+                    }
+                });
+
+                // Validate location inputs only on the step with locations (if applicable)
+                if (currentStep === 0) { // Assuming the locations are on the first step
+                    var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+                    var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+                    isValid = isValid && isPickupValid && isDeliveryValid;
+                }
+
+                return isValid;
             }
 
-            return isValid;
-        }
+            // Function to update step indicators (optional)
+            function updateStepIndicators(stepIndex) {
+                $('.step-indicator').removeClass('active');
+                $('.step-indicator').eq(stepIndex).addClass('active');
+            }
 
-        // Function to update step indicators (optional)
-        function updateStepIndicators(stepIndex) {
-            $('.step-indicator').removeClass('active');
-            $('.step-indicator').eq(stepIndex).addClass('active');
-        }
+            // Handle form submission (Final Step)
+            $('#multiForm').submit(function(e) {
+                e.preventDefault(); // Prevent default form submission
 
-        // Handle form submission (Final Step)
-        $('#multiForm').submit(function(e) {
-            e.preventDefault(); // Prevent default form submission
+                // Final validation
+                if (validateStep(currentStep)) {
+                    $.ajax({
+                        url: $(this).attr('action'),
+                        method: $(this).attr('method'),
+                        data: $(this).serialize(),
+                        success: function(response) {
+                            alert('Form submitted successfully!');
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
+                    });
+                }
+            });
 
-            // Final validation
-            if (validateStep(currentStep)) {
+            // Function to update suggestions
+            function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+                var inputValue = inputField.val();
+
                 $.ajax({
-                    url: $(this).attr('action'),
-                    method: $(this).attr('method'),
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        alert('Form submitted successfully!');
+                    url: "{{ route('get.zipcodes') }}",
+                    method: "POST",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "input": inputValue
                     },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
+                    success: function(response) {
+                        suggestionsList.empty();
+                        validSuggestions.length = 0;  // Clear previous suggestions
+
+                        $.each(response, function(index, suggestion) {
+                            var listItem = $("<li>").text(suggestion).click(function() {
+                                inputField.val(suggestion);
+                                suggestionsList.css("display", "none");
+                            });
+                            validSuggestions.push(suggestion);  // Add to valid suggestions
+                            suggestionsList.append(listItem);
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
                     }
                 });
             }
+
+            // Keyup event for pickup location
+            $(document).on('keyup', '#pickup-location', function() {
+                var inputField = $(this);
+                var suggestionsList = inputField.siblings(".suggestionsTwo");
+                suggestionsList.css("display", "block");
+                if (inputField.val() === "") {
+                    suggestionsList.css("display", "none");
+                }
+                updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+            });
+
+            // Keyup event for delivery location
+            $(document).on('keyup', '#delivery-location', function() {
+                console.log('sasasas')
+                var inputField = $(this);
+                var suggestionsList = inputField.siblings(".suggestionsTwo");
+                suggestionsList.css("display", "block");
+                if (inputField.val() === "") {
+                    suggestionsList.css("display", "none");
+                }
+                updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+            });
+
+            // Function to validate location inputs
+            function validateLocationInput(inputField, validSuggestions, errorField) {
+                var inputValue = inputField.val();
+                if (!validSuggestions.includes(inputValue)) {
+                    errorField.text("Please select a valid location.");
+                    return false;
+                } else {
+                    errorField.text("");
+                    return true;
+                }
+            }
         });
 
-        // Function to update suggestions
-        function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-            var inputValue = inputField.val();
+    </script> --}}
+    {{-- <script>
+        $(document).ready(function() {
+            function showError(field, message) {
+                $('#' + field).addClass('error-field');
+                $('#' + field + '-error').text(message).show();
+            }
+            function hideError(field) {
+                $('#' + field).removeClass('error-field');
+                $('#' + field + '-error').hide();
+            }
+            function validateStep(step) {
+                var isValid = true;
+                $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+                    var field = $(this).attr('id');
+                    if ($(this).hasClass('ajax-suggestion-input')) {
+                        if (!$(this).data('selected') || $(this).val() === '') {
+                            showError(field, 'Please select a valid option from suggestions.');
+                            isValid = false;
+                        } else {
+                            hideError(field);
+                        }
+                    } else {
+                        if (!$(this).val()) {
+                            showError(field, 'This field is required.');
+                            isValid = false;
+                        } else {
+                            hideError(field);
+                        }
+                    }
+                });
+                return isValid;
+            }
+            
+            function fetchSuggestions(inputField, suggestionsList) {
+                var inputValue = inputField.val();
 
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-                    validSuggestions.length = 0;  // Clear previous suggestions
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
+                $.ajax({
+                    url: "{{ route('get.zipcodes') }}",
+                    method: "POST",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "input": inputValue
+                    },
+                    success: function(response) {
+                        suggestionsList.empty();
+                        inputField.data('selected', false);
+                        $.each(response, function(index, suggestion) {
+                            var listItem = $("<li>").text(suggestion).click(function() {
+                                inputField.val(suggestion);
+                                inputField.data('selected', true); 
+                                suggestionsList.hide();
+                                hideError(inputField.attr('id')); 
+                            });
+                            suggestionsList.append(listItem);
                         });
-                        validSuggestions.push(suggestion);  // Add to valid suggestions
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
+
+                        suggestionsList.show(); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
+                    }
+                });
+            }
+            $('#pickup-location').on('input', function() {
+                var inputField = $(this);
+                var suggestionsList = $('.suggestions');
+                inputField.data('selected', false);
+
+                fetchSuggestions(inputField, suggestionsList);
+            });
+
+            $('#delivery-location').on('input', function() {
+                var inputField = $(this);
+                var suggestionsList = $('.suggestionsTwo');
+                inputField.data('selected', false);
+
+                fetchSuggestions(inputField, suggestionsList);
+            });
+            $('#step1_next').click(function() {
+                if (validateStep('step1')) {
+                    $('#step1').hide();
+                    $('#step2').show();
                 }
             });
-        }
-
-        // Keyup event for pickup location
-        $(document).on('keyup', '#pickup-location', function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+            $('#step2_previous').click(function() {
+                $('#step2').hide();
+                $('#step1').show();
+            });
+            $('#step2_next').click(function() {
+                if (validateStep('step2')) {
+                    $('#step2').hide();
+                    $('#step3').show();
+                }
+            });
+            $('#step3_previous').click(function() {
+                $('#step3').hide();
+                $('#step2').show();
+            });
         });
-
-        // Keyup event for delivery location
-        $(document).on('keyup', '#delivery-location', function() {
-            console.log('sasasas')
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-        });
-
-        // Function to validate location inputs
-        function validateLocationInput(inputField, validSuggestions, errorField) {
-            var inputValue = inputField.val();
-            if (!validSuggestions.includes(inputValue)) {
-                errorField.text("Please select a valid location.");
-                return false;
-            } else {
-                errorField.text("");
-                return true;
-            }
-        }
-    });
-
-</script> --}}
+    </script>--}}
 </body>
 
 </html>

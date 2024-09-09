@@ -107,7 +107,8 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
+                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number"
+                                         required="" />
                                         <small id="errPhone" class="err-style"></small>
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
@@ -145,7 +146,9 @@
                                 <!-- Initial Vehicle Information -->
                                 <div class="vehicle-info">
                                     <div class="row select-bm">
-                                        
+                                        <div class="col-md-12 text-center">
+                                            <h4 class="text-white">Car Information</h4>
+                                        </div>
                                         <div class="col-md-4">
                                             <div class="input-form tj-select">
                                                 <label>Year</label>
@@ -377,16 +380,18 @@
                                 <input class="form-control image_input" type="file" id="image" name="image"
                                     placeholder="Upload File" />
                             </div> --}}
-                            <div class="input-form mt-1">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
-                                    onchange="previewImages(event)">
-                                <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
-                                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                            <div class="row">
+                                <div class="input-form mt-1">
+                                    <label class="d-block text-white"> Image:</label>
+                                    <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
+                                        onchange="previewImages(event)">
+                                    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                    <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
+                                                    <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                </div>
                             </div>
                             <div class="row">
-                                <di class="col-md-6">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <input class="form-check-input " type="checkbox" id="modification"
                                             name="modification" value="1" />
@@ -398,7 +403,7 @@
                                         <input class="" type="text" id="c" name="modify_info"
                                             placeholder="Enter Modification Information" />
                                     </div>
-                                </di>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="available_at_auction"
@@ -427,10 +432,8 @@
     </section>
 @endsection
 @section('extraScript')
-
 <!-- Include Selectize CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.min.css" rel="stylesheet" />
-
 <!-- Include jQuery and Selectize JS -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
@@ -657,7 +660,6 @@
                 getModel(year, make, vehicleInfo);
             }
         });
-
         // $(document).on('change', '.year, .make', function() {
         //     var year = $(this).closest('.vehicle-info').find('.year').val();
         //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
@@ -704,7 +706,6 @@
                 }
             });
         }
-
         // function getModel(year, makeId, vehicleInfo) {
         //     $.ajax({
         //         url: "{{ route('get.models') }}",
@@ -787,9 +788,6 @@
                 }
             });
         }
-
-
-
         function getModel(year, makeId, vehicleInfo) {
             $.ajax({
                 url: "{{ route('get.models') }}",
@@ -848,12 +846,6 @@
                 }
             });
         }
-
-
-
-
-
-
         $(document).on('input', '.dropdown-toggle', function() {
             var input = $(this).val().toLowerCase();
             $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
@@ -862,8 +854,6 @@
             });
         });
     });
-
-    
 </script>
 {{-- function getModel(year, makeId, vehicleInfo) {
         $.ajax({
@@ -1028,70 +1018,70 @@
     //     });
 </script>
 <script>
-    var validPickupSuggestions = [];
-    var validDeliverySuggestions = [];
-    function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-        var inputValue = inputField.val();
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-                validSuggestions.length = 0;  // Clear previous suggestions
+    // var validPickupSuggestions = [];
+    // var validDeliverySuggestions = [];
+    // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+    //     var inputValue = inputField.val();
+    //     $.ajax({
+    //         url: "{{ route('get.zipcodes') }}",
+    //         method: "POST",
+    //         data: {
+    //             "_token": "{{ csrf_token() }}",
+    //             "input": inputValue
+    //         },
+    //         success: function(response) {
+    //             suggestionsList.empty();
+    //             validSuggestions.length = 0;  // Clear previous suggestions
 
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    validSuggestions.push(suggestion);  // Add to valid suggestions
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-    $("#pickup-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    });
-    $("#delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    });
-    function validateLocationInput(inputField, validSuggestions, errorField) {
-        var inputValue = inputField.val();
-        if (!validSuggestions.includes(inputValue)) {
-            errorField.text("Please select a valid location.");
-            return false;
-        } else {
-            errorField.text("");
-            return true;
-        }
-    }
-    $("form").submit(function(event) {
-        var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-        var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+    //             $.each(response, function(index, suggestion) {
+    //                 var listItem = $("<li>").text(suggestion).click(function() {
+    //                     inputField.val(suggestion);
+    //                     suggestionsList.css("display", "none");
+    //                 });
+    //                 validSuggestions.push(suggestion);  // Add to valid suggestions
+    //                 suggestionsList.append(listItem);
+    //             });
+    //         },
+    //         error: function(xhr, status, error) {
+    //             console.error("Error:", error);
+    //         }
+    //     });
+    // }
+    // $("#pickup-location").keyup(function() {
+    //     var inputField = $(this);
+    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+    //     suggestionsList.css("display", "block");
+    //     if (inputField.val() === "") {
+    //         suggestionsList.css("display", "none");
+    //     }
+    //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+    // });
+    // $("#delivery-location").keyup(function() {
+    //     var inputField = $(this);
+    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+    //     suggestionsList.css("display", "block");
+    //     if (inputField.val() === "") {
+    //         suggestionsList.css("display", "none");
+    //     }
+    //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+    // });
+    // function validateLocationInput(inputField, validSuggestions, errorField) {
+    //     var inputValue = inputField.val();
+    //     if (!validSuggestions.includes(inputValue)) {
+    //         errorField.text("Please select a valid location.");
+    //         return false;
+    //     } else {
+    //         errorField.text("");
+    //         return true;
+    //     }
+    // }
+    // $("form").submit(function(event) {
+    //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+    //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
 
-        if (!isPickupValid || !isDeliveryValid) {
-            event.preventDefault();  // Prevent form submission if validation fails
-        }
-    });
+    //     if (!isPickupValid || !isDeliveryValid) {
+    //         event.preventDefault();  // Prevent form submission if validation fails
+    //     }
+    // });
 </script>
 @endsection

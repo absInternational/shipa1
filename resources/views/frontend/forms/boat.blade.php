@@ -1,9 +1,9 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Get Car Shipping Quote | ShipA1')
+@section('title', 'Get Boat Shipping Quote | ShipA1')
 
 @section('meta_description',
-    'Experience seamless car shipping with Shipa Car Transport. Get an instant quote,
+    'Experience seamless boat shipping with Shipa Boat Transport. Get an instant quote,
     nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
 
 @section('content')
@@ -528,7 +528,6 @@
                 element.value = element.value.slice(0, maxDigits);
             }
         }
-
         $(document).ready(function() {
             $('#inches-input').on('input', function() {
                 if (this.value > 11) {
@@ -543,36 +542,6 @@
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
-
-        // $(document).ready(function() {
-        //     $('.inches-input1').on('input', function() {
-        //         if (this.value > 11) {
-        //             this.value = 11;
-        //         } else if (this.value < 0) {
-        //             this.value = 0;
-        //         }
-        //     });
-
-        //     // Optionally, you can also prevent the user from typing non-numeric characters.
-        //     $('.feet-input1, .inches-input1').on('input', function() {
-        //         this.value = this.value.replace(/[^0-9]/g, '');
-        //     });
-        // });
-
-        // $(document).ready(function() {
-        //     $('.inches-input2').on('input', function() {
-        //         if (this.value > 11) {
-        //             this.value = 11;
-        //         } else if (this.value < 0) {
-        //             this.value = 0;
-        //         }
-        //     });
-
-        //     // Optionally, you can also prevent the user from typing non-numeric characters.
-        //     $('.feet-input, .inches-input2').on('input', function() {
-        //         this.value = this.value.replace(/[^0-9]/g, '');
-        //     });
-        // });
         $(document).ready(function() {
             $(document).on('input', '.inches-input1, .inches-input2', function() {
                 if (this.value > 11) {
@@ -581,28 +550,11 @@
                     this.value = 0;
                 }
             });
-
             $(document).on('input', '.feet-input1, .inches-input1, .feet-input, .inches-input2', function() {
                 console.log('asdasd');
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
-
-    </script>
-
-    <script>
-        function moveToNext(current, nextId) {
-            if (current.value.length >= current.maxLength) {
-                document.getElementById(nextId).focus();
-            }
-        }
-
-
-        //   document.querySelectorAll('input[type="text"]').forEach((input) => {
-        //     input.addEventListener("input", function () {
-        //       this.value = this.value.replace(/[^0-9]/g, "");
-        //     });
-        //   });
     </script>
 
     <script>
@@ -618,6 +570,11 @@
                 }
             });
         });
+        function moveToNext(current, nextId) {
+            if (current.value.length >= current.maxLength) {
+                document.getElementById(nextId).focus();
+            }
+        }
     </script>
 
     <script>
@@ -631,22 +588,21 @@
                                 <div class="input-form tj-select">
                                     <label> Year</label>
                                     <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
+                                        var currentYear = {{ date('Y') }};
+                                        for (var year = currentYear; year >= 1936; year--) {
+                                            newVehicleHtml += `<option value="${year}">${year}</option>`;
+                                        }
 
-                newVehicleHtml +=
-                    `</select>
+                                        newVehicleHtml +=
+                                    `</select>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                <div class="input-form tj-select">
-                    <label>Make</label>
-                    <input type="text" id="make" name="make[]"
-                                            placeholder="Enter Make" required="" />
+                                <div class="input-form tj-select">
+                                    <label>Make</label>
+                                    <input type="text" id="make" name="make[]" placeholder="Enter Make" required="" />
+                                </div>
                             </div>
-                        </div>
                             <div class="col-md-4">
                                 <div class="input-form tj-select model-div">
                                     <label>Model</label>
@@ -707,8 +663,7 @@
 
                                     </div>
                                 </div>
-
-                                </div>
+                        </div>
                                 <div class="row mt-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -762,99 +717,80 @@
         });
     </script>
 
-    <script>
-        // $(document).ready(function() {
+     
+{{-- <script>
+    var validPickupSuggestions = [];
+    var validDeliverySuggestions = [];
 
-        //     $('#available_at_auction').change(function() {
-        //         if ($(this).is(':checked')) {
-        //             $('.div-link').show();
-        //         } else {
-        //             $('.div-link').hide();
-        //         }
-        //     });
+    function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+        var inputValue = inputField.val();
 
-        //     $('#modification').change(function() {
-        //         if ($(this).is(':checked')) {
-        //             $('.div-modify_info').show();
-        //         } else {
-        //             $('.div-modify_info').hide();
-        //         }
-        //     });
-        // });
-    </script>
-<script>
-    // var validPickupSuggestions = [];
-    // var validDeliverySuggestions = [];
+        $.ajax({
+            url: "{{ route('get.zipcodes') }}",
+            method: "POST",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "input": inputValue
+            },
+            success: function(response) {
+                suggestionsList.empty();
+                validSuggestions.length = 0;  // Clear previous suggestions
 
-    // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-    //     var inputValue = inputField.val();
+                $.each(response, function(index, suggestion) {
+                    var listItem = $("<li>").text(suggestion).click(function() {
+                        inputField.val(suggestion);
+                        suggestionsList.css("display", "none");
+                    });
+                    validSuggestions.push(suggestion);  // Add to valid suggestions
+                    suggestionsList.append(listItem);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
+            }
+        });
+    }
 
-    //     $.ajax({
-    //         url: "{{ route('get.zipcodes') }}",
-    //         method: "POST",
-    //         data: {
-    //             "_token": "{{ csrf_token() }}",
-    //             "input": inputValue
-    //         },
-    //         success: function(response) {
-    //             suggestionsList.empty();
-    //             validSuggestions.length = 0;  // Clear previous suggestions
+    $("#pickup-location").keyup(function() {
+        var inputField = $(this);
+        var suggestionsList = inputField.siblings(".suggestionsTwo");
+        suggestionsList.css("display", "block");
+        if (inputField.val() === "") {
+            suggestionsList.css("display", "none");
+        }
+        updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+    });
 
-    //             $.each(response, function(index, suggestion) {
-    //                 var listItem = $("<li>").text(suggestion).click(function() {
-    //                     inputField.val(suggestion);
-    //                     suggestionsList.css("display", "none");
-    //                 });
-    //                 validSuggestions.push(suggestion);  // Add to valid suggestions
-    //                 suggestionsList.append(listItem);
-    //             });
-    //         },
-    //         error: function(xhr, status, error) {
-    //             console.error("Error:", error);
-    //         }
-    //     });
-    // }
+    $("#delivery-location").keyup(function() {
+        var inputField = $(this);
+        var suggestionsList = inputField.siblings(".suggestionsTwo");
+        suggestionsList.css("display", "block");
+        if (inputField.val() === "") {
+            suggestionsList.css("display", "none");
+        }
+        updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+    });
 
-    // $("#pickup-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    // });
+    function validateLocationInput(inputField, validSuggestions, errorField) {
+        var inputValue = inputField.val();
+        if (!validSuggestions.includes(inputValue)) {
+            errorField.text("Please select a valid location.");
+            return false;
+        } else {
+            errorField.text("");
+            return true;
+        }
+    }
 
-    // $("#delivery-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    // });
+    $("form").submit(function(event) {
+        var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+        var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
 
-    // function validateLocationInput(inputField, validSuggestions, errorField) {
-    //     var inputValue = inputField.val();
-    //     if (!validSuggestions.includes(inputValue)) {
-    //         errorField.text("Please select a valid location.");
-    //         return false;
-    //     } else {
-    //         errorField.text("");
-    //         return true;
-    //     }
-    // }
-
-    // $("form").submit(function(event) {
-    //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-    //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
-    //     if (!isPickupValid || !isDeliveryValid) {
-    //         event.preventDefault();  // Prevent form submission if validation fails
-    //     }
-    // });
-</script>
+        if (!isPickupValid || !isDeliveryValid) {
+            event.preventDefault();  // Prevent form submission if validation fails
+        }
+    });
+</script> --}}
 <script>
      $(document).ready(function () {
         $('form').on('submit', function (e) {

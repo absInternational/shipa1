@@ -1,7 +1,12 @@
 @extends('frontend.layouts.app')
-@section('title', 'Motorcycle Shipping Service - Free Shipping Quotes and Calculator | ShipA1')
-@section('meta_description', 'Best Motorcycle shipping services in the USA, ship your vehicle countrywide or international in reasonable prices, Get Free shipping quotes - ShipA1.')
+{{-- @section('title', 'Motorcycle Shipping Service - Free Shipping Quotes and Calculator | ShipA1') --}}
+@section('title', 'ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA')
+
+{{-- @section('meta_description', 'Best Motorcycle shipping services in the USA, ship your vehicle countrywide or international in reasonable prices, Get Free shipping quotes - ShipA1.') --}}
+@section('meta_description', 'Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.')
+
 @section('content')
+
 <style>
     .full-width {
         width: 100%;
@@ -137,7 +142,22 @@
                                 <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
 
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
+                                        <div class="input-form">
+                                            <label class="d-block">Name:</label>
+                                            <input type="text" id="name" name="name" placeholder="Name" required="" />
+                                            <small id="errName" class="err-style"></small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-form">
+                                            <label class="d-block">Phone:</label>
+                                            <input class="ophone" type="tel" id="phone" name="phone" placeholder="Number" required="" />
+                                            <small id="errPhone" class="err-style"></small>
+                                            <input type="hidden" name="country_code" id="country_code" />
+                                        </div>
+                                    </div>
+                                    {{-- <div class="col-md-4">
                                         <div class="input-form">
                                             <label class="d-block">Name:</label>
                                             <input type="text" id="name" name="name" placeholder="Name"
@@ -145,22 +165,6 @@
                                             <small id="errName" class="err-style"></small>
                                         </div>
                                     </div>
-                                    {{-- <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white">Phone:</label>
-                                            <input class="form-control" required name="phone" type="tel"
-                                                placeholder="Phone">
-                                            <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                        </div>
-                                    </div> --}}
-                                    <!-- <div class="col-md-4">
-                                        <div class="input-form">
-                                            <label class="d-block">Phone:</label>
-                                            <input type="tel" id="phone" name="phone" placeholder="Number"
-                                                required="" />
-                                            <small id="errPhone" class="err-style"></small>
-                                        </div>
-                                    </div> -->
                                     <div class="col-md-4">
                                             <div class="input-form">
                                                 <label class="d-block">Phone:</label>
@@ -168,8 +172,26 @@
                                                     required="" />
                                                 <small id="errPhone" class="err-style"></small>
                                             </div>
+                                    </div> --}}
+                                     {{-- <div class="col-xl-4 col-lg-4">
+                                        <div class="single-input-field">
+                                            <label class="d-block text-white">Phone:</label>
+                                            <input class="form-control" required name="phone" type="tel"
+                                                placeholder="Phone">
+                                            <label class="error-message" id="Custo_Phone-error">This field is required.</label>
                                         </div>
-                                    <div class="col-md-4">
+                                    </div> --}}
+                                   {{-- <div class="col-md-4">
+                                        <div class="input-form">
+                                            <label class="d-block">Phone:</label>
+                                            <input type="tel" id="phone" name="phone" placeholder="Number"
+                                                required="" />
+                                            <small id="errPhone" class="err-style"></small>
+                                        </div>
+                                    </div>  --}}
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
                                         <div class="input-form">
                                             <label class="d-block">Email:</label>
                                             <input type="email" id="email" name="email" placeholder="Email "
@@ -178,7 +200,26 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-form">
+                                            <label class="d-block mb-0"> Pickup Location:</label>
+                                            <input type="text" id="pickup-location" name="origin"
+                                                placeholder="" required="" />
+                                            <small id="errOLoc" class="err-loc"></small>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-form">
+                                            <label class="d-block  mb-0"> Delivery Location:</label>
+                                            <input type="text" id="delivery-location" name="destination"
+                                                placeholder="" required="" />
+                                            <small id="errDLoc" class="err-loc"></small>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row select-bm">
                                     <div class="col-md-12 text-center">
                                         <h4 class="text-white">Motorcycle Information</h4>
@@ -212,13 +253,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-                                    Vehicle</a>
-
-                                <div id="vehicles-container">
-                                </div>
-
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -239,41 +273,9 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block mb-0"> Pickup Location:</label>
-                                            <input type="text" id="pickup-location" name="origin"
-                                                placeholder="" required="" />
-                                            <small id="errOLoc" class="err-loc"></small>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block  mb-0"> Delivery Location:</label>
-                                            <input type="text" id="delivery-location" name="destination"
-                                                placeholder="" required="" />
-                                            <small id="errDLoc" class="err-loc"></small>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                        </div>
-                                    </div>
+                                <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add Vehicle</a>
+                                <div id="vehicles-container">
                                 </div>
-
-                                <div class="input-form">
-                                    <label class="d-block text-white"> Image:</label>
-                                    <input class="form-control image_input" type="file" accept="image/*" multiple
-                                        onchange="previewImages(event)">
-                                    <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                    <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
-                                            placeholder="Upload File" /> -->
-                                </div>
-
-
                                 <div class="row">
                                     <di class="col-md-6">
                                         <div class="form-group">
@@ -282,7 +284,6 @@
                                             <label class="form-check-label text-white ms-4" for="modification">
                                                 Modified?</label>
                                         </div>
-
                                         <div class="input-form div-modify_info" style="display: none;">
                                             <label class="d-block"> Modification Information:</label>
                                             <input class="" type="text" id="c" name="modify_info"
@@ -296,7 +297,6 @@
                                             <label class="form-check-label text-white" for="available_at_auction">
                                                 Auction?</label>
                                         </div>
-
                                         <div class="input-form div-link mt-3" style="display: none;">
                                             <label class="d-block"> Enter Link:</label>
                                             <input class="form-control" type="url" id="link" name="link"
@@ -304,7 +304,24 @@
                                         </div>
                                     </di>
                                 </div>
-
+                                <div class="row">
+                                    <div class="input-form mt-1">
+                                        <label class="d-block text-white"> Image:</label>
+                                        <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
+                                            onchange="previewImages(event)">
+                                        <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                        <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
+                                                        <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                    </div>
+                                </div>
+                                {{-- <div class="input-form">
+                                    <label class="d-block text-white"> Image:</label>
+                                    <input class="form-control image_input" type="file" accept="image/*" multiple
+                                        onchange="previewImages(event)">
+                                    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                    <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
+                                            placeholder="Upload File" /> -->
+                                </div> --}}
                                 <div class="tj-theme-button text-center mt-3">
                                     <button class="tj-submit-btn" type="submit" value="submit">
                                         Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -648,7 +665,7 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-<script>
+{{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -779,22 +796,6 @@
             }
         });
     }
-    $(document).ready(function() {
-        $('#available_at_auction').change(function() {
-        if ($(this).is(':checked')) {
-        $('.div-link').show();
-        } else {
-        $('.div-link').hide();
-        }
-        });
-        $('#modification').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
 </script>
 <script>
     function updateSuggestions(inputField, suggestionsList) {
@@ -832,5 +833,5 @@
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
+</script> --}}
 @endsection
