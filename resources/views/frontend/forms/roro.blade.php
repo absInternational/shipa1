@@ -1,12 +1,8 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Get Quote on RORO | ShipA1')
-
 @section('meta_description',
     'Get an instant RORO shipping quote with ease! Trust our reliable service for nationwide
     coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
-
-
 @section('content')
     <style>
         .tj-testimonial-section {
@@ -322,7 +318,6 @@
             </div>
         </div>
     </section>
-
     <section class="tj-choose-us-section-roro">
         <div class="container-flude">
             <div class="row">
@@ -339,8 +334,7 @@
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
-                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
-                            enctype="multipart/form-data">
+                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
                             @csrf
                             @if ($errors->any())
                                 <div class="alert alert-danger">
@@ -351,8 +345,8 @@
                                     </ul>
                                 </div>
                             @endif
-                            <input type="hidden" name="roro" value="RORO SHIPMENT">
                             <div class="container mt-2">
+                                <input type="hidden" name="roro" value="RORO SHIPMENT">
                                 <div class="route_quote_info" id="step1">
                                     <div class="row">
                                         <h4 class="title text-center">Quote Request!</h4>
@@ -387,11 +381,11 @@
                                                     <ul class="suggestions suggestionsTwo"></ul> --}}
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-lg-4 mb-4">
+                                        {{-- <div class="col-xl-4 col-lg-4 mb-4">
                                             <label class="text-white mb-2">City:</label>
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" id="delivery-city" name="roro_city"
-                                                    autocomplete="off" placeholder="Enter City" required>
+                                                    autocomplete="off" placeholder="Enter City" >
                                                 <ul class="suggestions suggestionsTwo"></ul>
                                                 <label class="error-message" id="delivery-city-error">This field is
                                                     required.</label>
@@ -401,9 +395,9 @@
                                             <label class="text-white mb-2">Zip Code:</label>
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" id="delivery-zipcode" name="roro_zipcode"
-                                                    placeholder="Enter ZipCode" autocomplete="off" required>
+                                                    placeholder="Enter ZipCode" autocomplete="off" >
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <input type="hidden" name="destination" id="destination">
 
@@ -481,7 +475,7 @@
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white"> Email Address:</label>
-                                                <input class="form-control" required name="Custo_Email" type="email"
+                                                <input class="form-control" required id="email"  name="email" type="email"
                                                     placeholder="Email address">
                                                 <label class="error-message" id="Custo_Email-error">This field is
                                                     required.</label>
@@ -499,7 +493,7 @@
                                         <div class="col-xl-6 col-lg-6">
                                             <div class="price__cta-btn float-end">
 
-                                                <button class=" tj-submit-btn " href="" type="submit"
+                                                <button class=" tj-submit-btn check_roro" href="" type="submit"
                                                     id="submit_instant_code" value="Submit Form">
                                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                                 </button>
@@ -514,14 +508,12 @@
             </div>
         </div>
     </section>
-
 @endsection
-
 @section('extraScript')
-    <script type="text/javascript"
+    {{-- <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
-    </script>
-    <script>
+    </script> --}}
+    {{-- <script>
         var validPickupSuggestions = [];
         var validDeliverySuggestions = [];
     
@@ -593,7 +585,7 @@
                 event.preventDefault();  // Prevent form submission if validation fails
             }
         });
-    </script>
+    </script> --}}
     {{-- <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
@@ -632,7 +624,7 @@
             updateSuggestions(inputField, suggestionsList);
         });
     </script> --}}
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             var selectedTab = '';
             $('#tabSelector').change(function() {
@@ -799,7 +791,7 @@
                 });
             }
         });
-    </script>
+    </script> --}}
     {{-- <script>
         $(document).ready(function() {
             $(document).on('change', '.category', function() {
@@ -839,7 +831,6 @@
             });
         });
     </script> --}}
-
     {{-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             var input = document.querySelector("#phone");
@@ -859,8 +850,7 @@
             });
         });
     </script> --}}
-
-    <script>
+    {{-- <script>
         function playVideo() {
             document.querySelector('.video-thumbnail').style.display = 'none';
             document.querySelector('.video-iframe').style.display = 'block';
@@ -869,7 +859,6 @@
             iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
         }
     </script>
-
     <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
@@ -922,7 +911,6 @@
             });
         });
     </script>
-
     <script>
         $(document).ready(function() {
             function showError(field, message) {
@@ -988,8 +976,14 @@
                 $('#step2').show();
             });
         });
-    </script>
+    </script> --}}
 
+    <script>
+        //  $(document).on( function() {
+        //     console.log('okok');
+        //     $("#calculatePriceFrom").submit();
+        //     });    
+    </script>
     <script>
         $(document).ready(function() {
             var countries = ["United States", "Canada", "Mexico", "United Kingdom", "Germany", "France", "Italy",
