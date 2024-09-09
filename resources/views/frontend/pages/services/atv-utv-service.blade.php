@@ -86,19 +86,18 @@ holiday places before you reach without any scratch, best auto transport service
    <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                        <div class="image-container">
-                            <img class="img-fluid" src="{{ asset('frontend/images/project/atv-urv service.webp') }}" loading="lazy" alt="Motorcyle Transport">
-                        </div>
-                            <br>
+                <div class="image-container">
+                    <img class="img-fluid" src="{{ asset('frontend/images/project/atv-urv service.webp') }}" loading="lazy" alt="Motorcyle Transport">
+                </div>
+                    <br>
                 <div class="text-container text-left">
                     <h3>ATV/UTV Transport Service</h3>
                     <p>Are you in search of a trustworthy ATV/UTV transport company for your shipment? Well, then you are on the right platform.
-                         Ship A1 is a dominating vehicle transport company providing top-rated ATV/UTV services to its valuable customers at competitive 
-                         market rates. Choosing the right company will save you from trouble, and you will have a remarkable journey. 
+                        Ship A1 is a dominating vehicle transport company providing top-rated ATV/UTV services to its valuable customers at competitive 
+                        market rates. Choosing the right company will save you from trouble, and you will have a remarkable journey. 
                         We will share some noteworthy factors that come into play whenever you plan to ship an ATV/UTV. <br> The key considerations
-                         during the ATV shipment that you need to consider are:
-                         <br>
-                         
+                        during the ATV shipment that you need to consider are:
+                        <br>
                             <ul>
                             <li>Convenience</li>
                             <li>Ratings</li>
@@ -106,13 +105,10 @@ holiday places before you reach without any scratch, best auto transport service
                             <li>Affordability</li>
                             </ul> 
                     </p> 
-                    
                     <br>
-                    
                 </div>
             </div>
             <div class="col-lg-5 p-0">
-                
                     @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
@@ -123,7 +119,6 @@ holiday places before you reach without any scratch, best auto transport service
                         {{ session('error') }}
                     </div>
                     @endif
-                
                     <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
                     <div class="tj-input-form w-100" data-bg-image="">
                         <h4 class="title text-center">ATV/UTV Quote!</h4>
@@ -141,7 +136,6 @@ holiday places before you reach without any scratch, best auto transport service
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -170,7 +164,7 @@ holiday places before you reach without any scratch, best auto transport service
                                 <div class="col-md-4">
                                         <div class="input-form">
                                             <label class="d-block">Phone:</label>
-                                            <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                                            <input type="tel" id="ophone" name="phone" placeholder="Phone Number"
                                                 required="" />
                                             <small id="errPhone" class="err-style"></small>
                                         </div>
@@ -184,7 +178,29 @@ holiday places before you reach without any scratch, best auto transport service
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white">ATV/UTV Information</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block mb-0"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin"
+                                            placeholder="" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block  mb-0"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination"
+                                            placeholder="" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row select-bm">
                                 <!-- <div class="col-md-12 text-center">
                                     <h4 class="text-white">Motorcycle Information</h4>
@@ -218,13 +234,6 @@ holiday places before you reach without any scratch, best auto transport service
                                     </div>
                                 </div>
                             </div>
-
-                            <a class="add-car-1 mb-2" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-                                Vehicle</a>
-
-                            <div id="vehicles-container">
-                            </div>
-
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -245,41 +254,11 @@ holiday places before you reach without any scratch, best auto transport service
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block mb-0"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin"
-                                            placeholder="" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block  mb-0"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination"
-                                            placeholder="" required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
+                            
+                            <a class="add-car-1 mb-2" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+                                Vehicle</a>
+                            <div id="vehicles-container">
                             </div>
-
-                            <div class="input-form">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" accept="image/*" multiple
-                                    onchange="previewImages(event)">
-                                <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
-                                        placeholder="Upload File" /> -->
-                            </div>
-
-
                             <div class="row">
                                 <di class="col-md-6">
                                     <div class="form-group">
@@ -295,7 +274,7 @@ holiday places before you reach without any scratch, best auto transport service
                                             placeholder="Modification" />
                                     </div>
                                 </di>
-                                <di class="col-md-6">
+                                <div class="col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="available_at_auction"
                                             name="available_at_auction" value="1" />
@@ -308,7 +287,15 @@ holiday places before you reach without any scratch, best auto transport service
                                         <input class="form-control" type="url" id="link" name="link"
                                             placeholder="Link" />
                                     </div>
-                                </di>
+                                </div>
+                            </div>
+                            <div class="input-form">
+                                <label class="d-block text-white"> Image:</label>
+                                <input class="form-control image_input" type="file" accept="image/*" multiple
+                                    onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
+                                        placeholder="Upload File" /> -->
                             </div>
 
                             <div class="tj-theme-button text-center mt-3">

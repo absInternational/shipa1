@@ -262,7 +262,7 @@
             <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
                 <div class="container">
                     <div class="slider-content p-z-idex">
-                        <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY TRANSPORTATION SERVICES</h1>
+                        <h1 class="slider-title">Trustworthy, Efficient and Cost-Effective Transportation Services</h1>
                         <div class="slider-desc">
                             ShipA1 has pledged to provide all-in-one Heavy Equipment transportation solutions to all its
                             customers and seeks your trust in return of our services.
@@ -280,7 +280,7 @@
             <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/freight-banner-home.webp') }}">
                 <div class="container">
                     <div class="slider-content p-z-idex">
-                        <h1 class="slider-title">RELIABLE, SECURE & VALUE FOR MONEY LOGISTICS SERVICES</h1>
+                        <h1 class="slider-title">Trustworthy, Efficient and Cost-Effective Logistic Services</h1>
                         <div class="slider-desc">
                             ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its
                             customers and seeks your trust in return of our services.
