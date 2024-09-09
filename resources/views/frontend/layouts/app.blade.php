@@ -84,12 +84,8 @@
 </head>
 <style>
     /* Error styling */
-    .error-message {
-        font-size: 0.9em;
-        margin-left: 10px;
-        border: 2px solid red!important;
-    }
-    .error {
+    
+    /* .error {
         border: 2px solid red;
     }
     .err-loc {
@@ -98,7 +94,7 @@
         font-weight: bold;
         margin-top: 5px;
         display: block;
-    }
+    } */
 </style>
 <!--Start of Tawk.to Script-->
 <!-- <script type="text/javascript">
