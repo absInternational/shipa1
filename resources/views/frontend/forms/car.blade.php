@@ -72,8 +72,8 @@
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
                         <h4 class="title text-center">Instant Car Shipping Quote!</h4>
-                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
-                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
+                            id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
                             @if ($errors->any())

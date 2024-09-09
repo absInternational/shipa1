@@ -172,8 +172,8 @@
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
                         <h4 class="title text-center">Instant Construction Transport Quote!</h4>
-                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
-                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
+                            id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="car_type" value="2" hidden>

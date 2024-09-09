@@ -169,9 +169,9 @@
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
                         <h4 class="title text-center">Instant Farm Transport Quote!</h4>
-                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
-                            enctype="multipart/form-data">
+                            enctype="multipart/form-data" novalidate>
                             @csrf
                             <input type="hidden" name="car_type" value="2" hidden>
                             @if ($errors->any())

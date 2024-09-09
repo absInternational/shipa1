@@ -1,5 +1,5 @@
 <div class="tj-input-form w-100" data-bg-image="">
-    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform" id="calculatePriceFrom"
+    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form" novalidate id="calculatePriceFrom"
         data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
         @csrf
         @if ($errors->any())
