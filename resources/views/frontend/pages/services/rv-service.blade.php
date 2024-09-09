@@ -667,25 +667,51 @@ from one state to another state in one click - ShipA1.')
         });
     });
 </script> --}}
-<script>
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     var input = document.querySelector("#phone");
-    //     window.intlTelInput(input, {
-    //         initialCountry: "auto",
-    //         geoIpLookup: function(callback) {
-    //             fetch('https://ipinfo.io/json')
-    //                 .then(function(response) {
-    //                     return response.json();
-    //                 })
-    //                 .then(function(ipinfo) {
-    //                     var countryCode = "us";
-    //                     callback(countryCode);
-    //                 });
-    //         },
-    //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-    //     });
-    // });
-</script>
+{{-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                fetch('https://ipinfo.io/json')
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(ipinfo) {
+                        var countryCode = "us";
+                        callback(countryCode);
+                    });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+        });
+    });
+</script> --}}
+{{-- <script>
+    document.querySelectorAll('input[type="text"]').forEach((input) => {
+        input.addEventListener("input", function() {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    });
+</script> --}}
+{{-- <script>
+    $(document).ready(function() {
+        $(document).on('change', '#available_at_auction', function() {
+            if ($(this).is(':checked')) {
+                $('.div-link').show();
+            } else {
+                $('.div-link').hide();
+            }
+        });
+
+        $(document).on('change', '#modification', function() {
+            if ($(this).is(':checked')) {
+                $('.div-modify_info').show();
+            } else {
+                $('.div-modify_info').hide();
+            }
+        });
+    });
+</script> --}}
 <script>
     function playVideo() {
         document.querySelector('.video-thumbnail').style.display = 'none';
@@ -872,13 +898,6 @@ from one state to another state in one click - ShipA1.')
     });
 </script>
 <script>
-    // document.querySelectorAll('input[type="text"]').forEach((input) => {
-    //     input.addEventListener("input", function() {
-    //         this.value = this.value.replace(/[^0-9]/g, "");
-    //     });
-    // });
-</script>
-<script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -997,25 +1016,6 @@ from one state to another state in one click - ShipA1.')
     });
 </script>
 <script>
-    $(document).ready(function() {
-        $(document).on('change', '#available_at_auction', function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
-
-        $(document).on('change', '#modification', function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script>
-<script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -1091,44 +1091,6 @@ from one state to another state in one click - ShipA1.')
                 }
             });
         }
-    });
-</script>
-<script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
     });
 </script>
 @endsection
