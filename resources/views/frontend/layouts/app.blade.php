@@ -1142,12 +1142,8 @@
         //             form.addEventListener('submit', function(e) {
         //                 var valid = true;
 
-        //                 // Collect input elements by their classes
-        //                 var name = form.querySelector('.name');
-        //                 var phone = form.querySelector('.phone');
-        //                 var email = form.querySelector('.email');
-        //                 var pickupLocation = form.querySelector('.pickup-location');
-        //                 var deliveryLocation = form.querySelector('.delivery-location');
+        //                 // Collect all input elements that have the 'required' attribute
+        //                 var requiredInputs = form.querySelectorAll('[required]');
 
         //                 // Function to create an error span dynamically if not present
         //                 function createErrorSpan(inputElement, errorMessageClass) {
@@ -1163,55 +1159,27 @@
         //                     return errorSpan;
         //                 }
 
-        //                 // Name validation
-        //                 if (name && !name.value) {
-        //                     var errNameSpan = createErrorSpan(name, 'errName');
-        //                     errNameSpan.textContent = 'Name is required.';
-        //                     valid = false;
-        //                 } else {
-        //                     var errNameSpan = createErrorSpan(name, 'errName');
-        //                     errNameSpan.textContent = '';
-        //                 }
+        //                 // Loop through each required input field and validate
+        //                 requiredInputs.forEach(function(input) {
+        //                     var errorMessageClass = 'err' + input.name; // Use input name for error class
+        //                     var errorSpan = createErrorSpan(input, errorMessageClass);
 
-        //                 // Phone validation
-        //                 if (phone && (!phone.value || !/^\d+$/.test(phone.value))) {
-        //                     var errPhoneSpan = createErrorSpan(phone, 'errPhone');
-        //                     errPhoneSpan.textContent = 'Valid phone number is required.';
-        //                     valid = false;
-        //                 } else {
-        //                     var errPhoneSpan = createErrorSpan(phone, 'errPhone');
-        //                     errPhoneSpan.textContent = '';
-        //                 }
-
-        //                 // Email validation
-        //                 if (email && (!email.value || !/\S+@\S+\.\S+/.test(email.value))) {
-        //                     var errEmailSpan = createErrorSpan(email, 'errEmail');
-        //                     errEmailSpan.textContent = 'Valid email is required.';
-        //                     valid = false;
-        //                 } else {
-        //                     var errEmailSpan = createErrorSpan(email, 'errEmail');
-        //                     errEmailSpan.textContent = '';
-        //                 }
-
-        //                 // Pickup Location validation
-        //                 if (pickupLocation && !pickupLocation.value) {
-        //                     var errPickupSpan = createErrorSpan(pickupLocation, 'errPickupLocation');
-        //                     errPickupSpan.textContent = 'Pickup location is required.';
-        //                     valid = false;
-        //                 } else {
-        //                     var errPickupSpan = createErrorSpan(pickupLocation, 'errPickupLocation');
-        //                     errPickupSpan.textContent = '';
-        //                 }
-
-        //                 // Delivery Location validation
-        //                 if (deliveryLocation && !deliveryLocation.value) {
-        //                     var errDeliverySpan = createErrorSpan(deliveryLocation, 'errDeliveryLocation');
-        //                     errDeliverySpan.textContent = 'Delivery location is required.';
-        //                     valid = false;
-        //                 } else {
-        //                     var errDeliverySpan = createErrorSpan(deliveryLocation, 'errDeliveryLocation');
-        //                     errDeliverySpan.textContent = '';
-        //                 }
+        //                     if (!input.value) {
+        //                         errorSpan.textContent = input.name + ' is required.';
+        //                         valid = false;
+        //                     } else {
+        //                         // Additional validation for phone and email fields
+        //                         if (input.type === 'tel' && !/^\d+$/.test(input.value)) {
+        //                             errorSpan.textContent = 'Valid phone number is required.';
+        //                             valid = false;
+        //                         } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
+        //                             errorSpan.textContent = 'Valid email is required.';
+        //                             valid = false;
+        //                         } else {
+        //                             errorSpan.textContent = ''; // Clear error if valid
+        //                         }
+        //                     }
+        //                 });
 
         //                 // If not valid, prevent the form submission
         //                 if (!valid) {
@@ -1219,61 +1187,67 @@
         //                 }
         //             });
         //         });
-        //     });
+        // });
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all forms with the class 'validate-form'
-            var forms = document.querySelectorAll('.validate-form');
+        // Get all forms with the class 'validate-form'
+        var forms = document.querySelectorAll('.validate-form');
 
-                forms.forEach(function(form) {
-                    form.addEventListener('submit', function(e) {
-                        var valid = true;
+            forms.forEach(function(form) {
+                form.addEventListener('submit', function(e) {
+                    var valid = true;
 
-                        // Collect all input elements that have the 'required' attribute
-                        var requiredInputs = form.querySelectorAll('[required]');
+                    // Collect all input and select elements that have the 'required' attribute
+                    var requiredInputs = form.querySelectorAll('[required], select');
 
-                        // Function to create an error span dynamically if not present
-                        function createErrorSpan(inputElement, errorMessageClass) {
-                            let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
+                    // Function to create an error span dynamically if not present
+                    function createErrorSpan(inputElement, errorMessageClass) {
+                        let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
 
-                            if (!errorSpan) {
-                                errorSpan = document.createElement('span');
-                                errorSpan.className = errorMessageClass + ' error-message';
-                                errorSpan.style.color = 'red'; // Style the error message
-                                inputElement.parentNode.appendChild(errorSpan);
-                            }
-
-                            return errorSpan;
+                        if (!errorSpan) {
+                            errorSpan = document.createElement('span');
+                            errorSpan.className = errorMessageClass + ' error-message';
+                            errorSpan.style.color = 'red'; // Style the error message
+                            inputElement.parentNode.appendChild(errorSpan);
                         }
 
-                        // Loop through each required input field and validate
-                        requiredInputs.forEach(function(input) {
-                            var errorMessageClass = 'err' + input.name; // Use input name for error class
-                            var errorSpan = createErrorSpan(input, errorMessageClass);
+                        return errorSpan;
+                    }
 
-                            if (!input.value) {
-                                errorSpan.textContent = input.name + ' is required.';
+                    // Loop through each required input field and validate
+                    requiredInputs.forEach(function(input) {
+                        var errorMessageClass = 'err' + input.name.replace('[]', ''); // Adjust error class for array fields
+                        var errorSpan = createErrorSpan(input, errorMessageClass);
+
+                        if (!input.value || (input.tagName === 'SELECT' && input.value === '')) {
+                            errorSpan.textContent = input.tagName === 'SELECT' ? 'Please select an option.' : input.name + ' is required.';
+                            input.style.border = '2px solid red'; // Add red border for invalid input
+                            valid = false;
+                        } else {
+                            // Additional validation for phone and email fields if present
+                            if (input.type === 'tel' && !/^\d+$/.test(input.value)) {
+                                errorSpan.textContent = 'Valid phone number is required.';
+                                input.style.border = '2px solid red'; // Add red border for invalid phone number
+                                valid = false;
+                            } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
+                                errorSpan.textContent = 'Valid email is required.';
+                                input.style.border = '2px solid red'; // Add red border for invalid email
                                 valid = false;
                             } else {
-                                // Additional validation for phone and email fields
-                                if (input.type === 'tel' && !/^\d+$/.test(input.value)) {
-                                    errorSpan.textContent = 'Valid phone number is required.';
-                                    valid = false;
-                                } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
-                                    errorSpan.textContent = 'Valid email is required.';
-                                    valid = false;
-                                } else {
-                                    errorSpan.textContent = ''; // Clear error if valid
-                                }
+                                errorSpan.textContent = ''; // Clear error if valid
+                                input.style.border = ''; // Remove red border when valid
                             }
-                        });
-
-                        // If not valid, prevent the form submission
-                        if (!valid) {
-                            e.preventDefault();
                         }
                     });
+
+                    // If not valid, prevent the form submission
+                    if (!valid) {
+                        e.preventDefault();
+                    }
                 });
             });
+        });
+
+
         </script>  
     {{-- validate-form --}} 
 
