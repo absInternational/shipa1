@@ -10,6 +10,14 @@
     <meta name="description" content="@yield('meta_description', 'Ship A1')">
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ahrefs-site-verification" content="6cd07582328e97b072cfaad2711175d5b3d5f0d349648e8ede9c50ea23dfc68d">
+    <!--==========twitter-card=============-->        
+    <meta name="twitter:card" content="summary_large_image">        
+    <meta name="twitter:site" content="@ShipA1Transport">        
+    <meta name="twitter:title" content="ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA">        
+    <meta name="twitter:description" content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">        
+    <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">        
+    <!--========== twitter-card============-->
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />

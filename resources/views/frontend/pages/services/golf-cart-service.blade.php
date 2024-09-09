@@ -148,7 +148,7 @@
                                 <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
 
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="input-form">
                                             <label class="d-block">Name:</label>
                                             <input type="text" id="name" name="name" placeholder="Name"
@@ -172,15 +172,18 @@
                                             <small id="errPhone" class="err-style"></small>
                                         </div>
                                     </div> -->
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                             <div class="input-form">
                                                 <label class="d-block">Phone:</label>
-                                                <input type="tel" id="phone" name="phone" placeholder="Number"
+                                                <input type="tel" class="ophone" id="phone" name="phone" placeholder="Number"
                                                     required="" />
+                                                <input type="hidden" name="country_code" id="country_code" />
                                                 <small id="errPhone" class="err-style"></small>
                                             </div>
                                         </div>
-                                    <div class="col-md-4">
+                                    </div>
+                                <div class="row">
+                                    <div class="col-md-12">
                                         <div class="input-form">
                                             <label class="d-block">Email:</label>
                                             <input type="email" id="email" name="email" placeholder="Email "
@@ -189,11 +192,30 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4 class="text-white">Golf Cart Information</h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-form">
+                                            <label class="d-block mb-0"> Pickup Location:</label>
+                                            <input type="text" id="pickup-location" name="origin"
+                                                placeholder="" required="" />
+                                            <small id="errOLoc" class="err-loc"></small>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-form">
+                                            <label class="d-block  mb-0"> Delivery Location:</label>
+                                            <input type="text" id="delivery-location" name="destination"
+                                                placeholder="" required="" />
+                                            <small id="errDLoc" class="err-loc"></small>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row select-bm">
-                                    <!-- <div class="col-md-12 text-center">
-                                        <h4 class="text-white">Motorcycle Information</h4>
-                                    </div> -->
                                     <div class="col-md-4">
                                         <div class="input-form tj-select">
                                             <label> Year</label>
@@ -223,13 +245,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <a class="add-car-1 mb-2" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-                                    Vehicle</a>
-
-                                <div id="vehicles-container">
-                                </div>
-
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -250,41 +265,11 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block mb-0"> Pickup Location:</label>
-                                            <input type="text" id="pickup-location" name="origin"
-                                                placeholder="" required="" />
-                                            <small id="errOLoc" class="err-loc"></small>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block  mb-0"> Delivery Location:</label>
-                                            <input type="text" id="delivery-location" name="destination"
-                                                placeholder="" required="" />
-                                            <small id="errDLoc" class="err-loc"></small>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                        </div>
-                                    </div>
+                                <a class="add-car-1 mb-2" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+                                    Vehicle</a>
+                                <div id="vehicles-container">
                                 </div>
-
-                                <div class="input-form">
-                                    <label class="d-block text-white"> Image:</label>
-                                    <input class="form-control image_input" type="file" accept="image/*" multiple
-                                        onchange="previewImages(event)">
-                                    <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                    <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
-                                            placeholder="Upload File" /> -->
-                                </div>
-
-
+                                
                                 <div class="row">
                                     <di class="col-md-6">
                                         <div class="form-group">
@@ -315,7 +300,16 @@
                                         </div>
                                     </di>
                                 </div>
-
+                                <div class="row">
+                                    <div class="input-form">
+                                        <label class="d-block text-white"> Image:</label>
+                                        <input class="form-control image_input" type="file" accept="image/*" multiple
+                                            onchange="previewImages(event)">
+                                        <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                        <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
+                                                placeholder="Upload File" /> -->
+                                    </div>
+                                </div>
                                 <div class="tj-theme-button text-center mt-3">
                                     <button class="tj-submit-btn" type="submit" value="submit">
                                         Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -725,6 +719,68 @@
                 `
                 <div class="vehicle-info">
                 <div class="row select-bm">
+                    <!-- Bin icon for deleting vehicle -->
+                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                <div class="col-md-4">
+                <div class="input-form tj-select">
+                <label> Year</label>
+                <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+
+            newVehicleHtml +=
+                `</select>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="input-form tj-select">
+                    <label>Make</label>
+                    <input type="text" id="make" name="make[]"
+                    placeholder="Enter Make" required="" />
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="input-form tj-select model-div">
+                    <label>Model</label>
+                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                    required="" />
+                    
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="condition" class="text-white">Condition</label>
+                            <select class="nice-select" id="condition" name="condition[]">
+                                <option value="1" selected>Running</option>
+                                <option value="2">Non Running</option>
+                            </select>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    `;
+
+            $('#vehicles-container').append(newVehicleHtml);
+        }
+
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
+
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+    });
+</script>
+{{-- <script>
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                <div class="vehicle-info">
+                <div class="row select-bm">
                 <div class="col-md-4">
                 <div class="input-form tj-select">
                 <label> Year</label>
@@ -944,5 +1000,5 @@
 
         updateCounter();
     });
-</script> 
+</script>  --}}
 @endsection

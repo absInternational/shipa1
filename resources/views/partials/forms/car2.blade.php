@@ -39,12 +39,7 @@
         </div>
     </div>
 </div>
-<a class="add-car addVehicleBtn" id="addVehicleBtn">
-    <i class="fa fa-plus"> Add
-        Vehicle </i>
-</a>
-<div class="vehicles-container">
-</div>
+
 <div class="row mb-3 ">
     <div class="col-md-6">
         <div class="form-group" style="line-height:23px;">
@@ -65,6 +60,12 @@
             </select>
         </div>
     </div>
+</div>
+<a class="add-car addVehicleBtn" id="addVehicleBtn">
+    <i class="fa fa-plus"> Add
+        Vehicle </i>
+</a>
+<div class="vehicles-container">
 </div>
 <div class="row ms-3">
     <di class="col-md-6">
@@ -106,6 +107,7 @@
                 `
                     <div class="vehicle-info">
                     <div class="row select-bm">
+                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
                     <div class="col-md-4">
                     <div class="input-form tj-select">
                     <label> Year</label>
@@ -137,13 +139,20 @@
                     <div class="input-form tj-select model-div">
                     <label>Model</label>
                     <select class="nice-select model" name="model[]" id="model" required></select>`;
-
-            newVehicleHtml +=
-                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
             newVehicleHtml += `
                         </div>
                         </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="condition" class="text-white">Condition</label>
+                                    <select class="form-control" id="condition" name="condition[]">
+                                        <option value="1" selected>Running</option>
+                                        <option value="2">Non Running</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         </div>
                         `;

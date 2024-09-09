@@ -177,40 +177,39 @@ huge discount offers and free shipping quotes nationwide.')
                                     <small id="errPhone" class="err-style"></small>
                                 </div>
                             </div>  --}}
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="input-form">
-                                            <label class="d-block">Email:</label>
-                                            <input type="email" id="email" name="email" placeholder="Email " required="" />
-                                            <small id="errEmail" class="err-style"></small>
-                                        </div>
-                                    </div>
-                                </div>
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="text-white">Car Information</h4>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block mb-0"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin" placeholder="" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block  mb-0"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination" placeholder=""
-                                            required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-form">
+                                    <label class="d-block">Email:</label>
+                                    <input type="email" id="email" name="email" placeholder="Email " required="" />
+                                    <small id="errEmail" class="err-style"></small>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h4 class="text-white">Car Information</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block mb-0"> Pickup Location:</label>
+                                    <input type="text" id="pickup-location" name="origin" placeholder="" required="" />
+                                    <small id="errOLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block  mb-0"> Delivery Location:</label>
+                                    <input type="text" id="delivery-location" name="destination" placeholder=""
+                                        required="" />
+                                    <small id="errDLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row select-bm">
-
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
                                     <label> Year</label>
@@ -899,6 +898,17 @@ huge discount offers and free shipping quotes nationwide.')
                             
                             </div>
                             </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="nice-select " id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             </div>
                             `;
