@@ -69,7 +69,7 @@ Route::prefix('services')->group(function () {
     // Service detail
     Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');
 });
-Route::get('/roro-shipping-international-service', [FrontendController::class, 'roroService'])->name('frontend.pages.services.roro-service');
+Route::get('/roro-shipping-international', [FrontendController::class, 'roroService'])->name('frontend.pages.services.roro-service');
 Route::get('/nationwide-autotransport', [FrontendController::class, 'nationwideAutotransport'])->name('frontend.pages.nationwide-autotransport');
 Route::get('/nationwide-autotransport/{slug}', [FrontendController::class, 'getNationWideData'])->name('get.nation.data');
 // Auto Auction
@@ -108,7 +108,7 @@ Route::get('/atv-utv', [FormVehicleController::class, 'atv_utv'])->name('form.ve
 Route::get('/boat', [FormVehicleController::class, 'boat'])->name('form.vehicle.boat');
 Route::get('/heavy', [FormVehicleController::class, 'heavyEquipment'])->name('form.vehicle.heavyEquipment');
 Route::get('/freight', [FormVehicleController::class, 'freight'])->name('form.vehicle.freight');
-Route::get('/roro-shipping-international', [FormVehicleController::class, 'roro'])->name('form.vehicle.roro');
+Route::get('/roro-shipping', [FormVehicleController::class, 'roro'])->name('form.vehicle.roro');
 Route::get('/recreational-vehicle', [FormVehicleController::class, 'recreationalVehicle'])->name('form.recreational-vehicle');
 Route::get('/quote-form', [FormVehicleController::class, 'quoteForm'])->name('quote.form.combine');
 Route::get('/commercial-truck-transport', [FormVehicleController::class, 'commercialTruck'])->name('commercial.truck.transport');
