@@ -354,53 +354,37 @@
                                             <h6 class="text-white">Moving From</h6>
                                             <label class="text-white mb-2">Where Are You Moving From?</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="pickup-location"
-                                                    placeholder="Enter City or ZipCode" name="From_ZipCode" required>
+                                                <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
-                                                <label class="error-message" id="pickup-location-error">This field is
-                                                    required.</label>
-                                                    {{-- <label class="error-message" id="delivery-city-error">This field is
-                                                        required.</label>
-                                                    <small id="errOLoc" class="err-loc"></small>
-                                                     <ul class="suggestions suggestionsTwo"></ul> --}}
+                                                {{-- <label class="error-message" id="pickup-location-error">This field is required.</label> --}}
                                             </div>
-                                        </div>
+                                        </div>   
                                     </div>
-
                                     <div class="row">
                                         <h6 class="text-white">Deliver To</h6>
                                         <div class="col-xl-4 col-lg-4 mb-4">
                                             <label class="text-white mb-2">Country:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-country" name="roro_country"
-                                                    autocomplete="off" placeholder="Enter Country" required>
-                                                <ul class="suggestions suggestionsCountry"></ul>
-                                                <label class="error-message" id="delivery-location-error">This field is
-                                                    required.</label>
-                                                    {{-- <small id="errDLoc" class="err-loc"></small>
-                                                    <ul class="suggestions suggestionsTwo"></ul> --}}
+                                                <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_ZipCode" required>
+                                                <ul class="suggestions suggestionsTwo"></ul>
+                                                {{-- <label class="error-message" id="delivery-location-error">This field is required.</label> --}}
                                             </div>
                                         </div>
-                                        {{-- <div class="col-xl-4 col-lg-4 mb-4">
+                                        <div class="col-xl-4 col-lg-4 mb-4">    
                                             <label class="text-white mb-2">City:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-city" name="roro_city"
-                                                    autocomplete="off" placeholder="Enter City" >
+                                                <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_ZipCode" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
-                                                <label class="error-message" id="delivery-city-error">This field is
-                                                    required.</label>
+                                                {{-- <label class="error-message" id="delivery-location-1-error">This field is required.</label> --}}
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-lg-4 mb-4">
+                                        <div class="col-xl-4 col-lg-4 mb-4"> 
                                             <label class="text-white mb-2">Zip Code:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-zipcode" name="roro_zipcode"
-                                                    placeholder="Enter ZipCode" autocomplete="off" >
+                                                <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>      
                                             </div>
-                                        </div> --}}
+                                        </div>
                                     </div>
-                                    <input type="hidden" name="destination" id="destination">
-
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <div class="price__cta-btn text-center">

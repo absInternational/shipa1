@@ -65,7 +65,7 @@
             <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
                 {{--  @include('partials.multi-form') --}}
                 <div class="tj-input-form  w-100" data-bg-image="">
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                    <form action="{{ route('submit.quote') }}" novalidate method="post" class="rd-mailform validate-form"
                         id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                         enctype="multipart/form-data">
                         @csrf
@@ -157,7 +157,7 @@
                                         <div class="single-input-field">
                                             <input class="form-control" type="text" id="pickup-location" placeholder="Enter City or ZipCode" name="From_ZipCode" required>
                                             <ul class="suggestions suggestionsTwo"></ul>
-                                            <label class="error-message" id="pickup-location-error">This field is required.</label>
+                                            {{-- <label class="error-message" id="pickup-location-error">This field is required.</label> --}}
                                         </div>
                                     </div>   
                                 </div>
@@ -168,7 +168,7 @@
                                         <div class="single-input-field">
                                             <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_ZipCode" required>
                                             <ul class="suggestions suggestionsTwo"></ul>
-                                            <label class="error-message" id="delivery-location-error">This field is required.</label>
+                                            {{-- <label class="error-message" id="delivery-location-error">This field is required.</label> --}}
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 mb-4">    
@@ -176,7 +176,7 @@
                                         <div class="single-input-field">
                                             <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_ZipCode" required>
                                             <ul class="suggestions suggestionsTwo"></ul>
-                                            <label class="error-message" id="delivery-location-1-error">This field is required.</label>
+                                            {{-- <label class="error-message" id="delivery-location-1-error">This field is required.</label> --}}
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 mb-4"> 
@@ -275,7 +275,7 @@
                                             <input class="form-control" required name="phone" type="tel"
                                                 placeholder="Customer Name">
                                             <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-                                            <label class="error-message" id="Custo_Name-error">This field is
+                                            {{-- <label class="error-message" id="Custo_Name-error">This field is --}}
                                                 required.</label>
                                         </div>
                                     </div>
@@ -292,7 +292,7 @@
                                             <label class="d-block text-white">Phone:</label>
                                             <input id="phone" class="form-control" required name="phone"
                                                 type="tel" placeholder="Customer Phone">
-                                            <label class="error-message" id="Custo_Phone-error">This field is
+                                            {{-- <label class="error-message" id="Custo_Phone-error">This field is --}}
                                                 required.</label>
                                         </div>
                                     </div>
@@ -301,7 +301,7 @@
                                             <label class="d-block text-white"> Email Address:</label>
                                             <input class="form-control" required name="Custo_Email" type="email"
                                                 placeholder="Email address">
-                                            <label class="error-message" id="Custo_Email-error">This field is
+                                            {{-- <label class="error-message" id="Custo_Email-error">This field is --}}
                                                 required.</label>
                                         </div>
                                     </div>

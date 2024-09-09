@@ -24,8 +24,8 @@
                                 placeholder="Enter City or ZipCode" name="From_ZipCode" required>
                                 <ul class="suggestions suggestionsPickup"></ul>
                             {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
-                            <label class="error-message" id="pickup-location">This field is
-                                required.</label>
+                            {{-- <label class="error-message" id="pickup-location">This field is
+                                required.</label> --}}
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 mb-4">
@@ -36,8 +36,8 @@
                                 placeholder="Enter City or ZipCode" name="To_ZipCode" required>
                                 <ul class="suggestions suggestionsDelivery"></ul>
                             {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
-                            <label class="error-message" id="delivery-location">This field is
-                                required.</label>
+                            {{-- <label class="error-message" id="delivery-location">This field is
+                                required.</label> --}}
                         </div>
                     </div>
                 </div>
