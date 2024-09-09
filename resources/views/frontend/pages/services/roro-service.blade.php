@@ -1,4 +1,7 @@
 @extends('frontend.layouts.app')
+@section('title', 'Open and Container RORO Shipping. Services With Experts - Shipa1')
+@section('meta_description',
+'Shipa1 offering RORO shipping services, Clear all documentation and other paper works with our experts and professionals, Get amazing discounts and offers for RORO transport.')
 @section('content')
 <Style>
     .title-2 {

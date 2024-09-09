@@ -388,7 +388,7 @@
     </div>
 </div>
 <div class="row mt-3">
-    <div class="col-md-6">
+    {{-- <div class="col-md-6">
         <div class="form-group">
             <label for="condition" class="text-white">Condition</label>
             <select class="form-control" id="condition" name="condition[]">
@@ -396,8 +396,8 @@
                 <option value="2">Non Running</option>
             </select>
         </div>
-    </div>
-    <div class="col-md-6">
+    </div> --}}
+    <div class="col-md-12">
         <div class="input-form">
             <label class="d-block" class="text-white"> Image:</label>
             <input class="form-control image_input" type="file" accept="image/*" multiple
