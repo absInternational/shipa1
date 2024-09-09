@@ -84,6 +84,11 @@
 </head>
 <style>
     /* Error styling */
+    .error-message {
+        font-size: 0.9em;
+        margin-left: 10px;
+        border: 2px solid red!important;
+    }
     .error {
         border: 2px solid red;
     }
@@ -1126,6 +1131,151 @@
             
         </script>
     {{-- L W H W --}}
+
+    {{-- validate-form --}}
+        <script>
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // Get all forms with the class 'validate-form'
+        //     var forms = document.querySelectorAll('.validate-form');
+
+        //         forms.forEach(function(form) {
+        //             form.addEventListener('submit', function(e) {
+        //                 var valid = true;
+
+        //                 // Collect input elements by their classes
+        //                 var name = form.querySelector('.name');
+        //                 var phone = form.querySelector('.phone');
+        //                 var email = form.querySelector('.email');
+        //                 var pickupLocation = form.querySelector('.pickup-location');
+        //                 var deliveryLocation = form.querySelector('.delivery-location');
+
+        //                 // Function to create an error span dynamically if not present
+        //                 function createErrorSpan(inputElement, errorMessageClass) {
+        //                     let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
+
+        //                     if (!errorSpan) {
+        //                         errorSpan = document.createElement('span');
+        //                         errorSpan.className = errorMessageClass + ' error-message';
+        //                         errorSpan.style.color = 'red'; // Style the error message
+        //                         inputElement.parentNode.appendChild(errorSpan);
+        //                     }
+
+        //                     return errorSpan;
+        //                 }
+
+        //                 // Name validation
+        //                 if (name && !name.value) {
+        //                     var errNameSpan = createErrorSpan(name, 'errName');
+        //                     errNameSpan.textContent = 'Name is required.';
+        //                     valid = false;
+        //                 } else {
+        //                     var errNameSpan = createErrorSpan(name, 'errName');
+        //                     errNameSpan.textContent = '';
+        //                 }
+
+        //                 // Phone validation
+        //                 if (phone && (!phone.value || !/^\d+$/.test(phone.value))) {
+        //                     var errPhoneSpan = createErrorSpan(phone, 'errPhone');
+        //                     errPhoneSpan.textContent = 'Valid phone number is required.';
+        //                     valid = false;
+        //                 } else {
+        //                     var errPhoneSpan = createErrorSpan(phone, 'errPhone');
+        //                     errPhoneSpan.textContent = '';
+        //                 }
+
+        //                 // Email validation
+        //                 if (email && (!email.value || !/\S+@\S+\.\S+/.test(email.value))) {
+        //                     var errEmailSpan = createErrorSpan(email, 'errEmail');
+        //                     errEmailSpan.textContent = 'Valid email is required.';
+        //                     valid = false;
+        //                 } else {
+        //                     var errEmailSpan = createErrorSpan(email, 'errEmail');
+        //                     errEmailSpan.textContent = '';
+        //                 }
+
+        //                 // Pickup Location validation
+        //                 if (pickupLocation && !pickupLocation.value) {
+        //                     var errPickupSpan = createErrorSpan(pickupLocation, 'errPickupLocation');
+        //                     errPickupSpan.textContent = 'Pickup location is required.';
+        //                     valid = false;
+        //                 } else {
+        //                     var errPickupSpan = createErrorSpan(pickupLocation, 'errPickupLocation');
+        //                     errPickupSpan.textContent = '';
+        //                 }
+
+        //                 // Delivery Location validation
+        //                 if (deliveryLocation && !deliveryLocation.value) {
+        //                     var errDeliverySpan = createErrorSpan(deliveryLocation, 'errDeliveryLocation');
+        //                     errDeliverySpan.textContent = 'Delivery location is required.';
+        //                     valid = false;
+        //                 } else {
+        //                     var errDeliverySpan = createErrorSpan(deliveryLocation, 'errDeliveryLocation');
+        //                     errDeliverySpan.textContent = '';
+        //                 }
+
+        //                 // If not valid, prevent the form submission
+        //                 if (!valid) {
+        //                     e.preventDefault();
+        //                 }
+        //             });
+        //         });
+        //     });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all forms with the class 'validate-form'
+            var forms = document.querySelectorAll('.validate-form');
+
+                forms.forEach(function(form) {
+                    form.addEventListener('submit', function(e) {
+                        var valid = true;
+
+                        // Collect all input elements that have the 'required' attribute
+                        var requiredInputs = form.querySelectorAll('[required]');
+
+                        // Function to create an error span dynamically if not present
+                        function createErrorSpan(inputElement, errorMessageClass) {
+                            let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
+
+                            if (!errorSpan) {
+                                errorSpan = document.createElement('span');
+                                errorSpan.className = errorMessageClass + ' error-message';
+                                errorSpan.style.color = 'red'; // Style the error message
+                                inputElement.parentNode.appendChild(errorSpan);
+                            }
+
+                            return errorSpan;
+                        }
+
+                        // Loop through each required input field and validate
+                        requiredInputs.forEach(function(input) {
+                            var errorMessageClass = 'err' + input.name; // Use input name for error class
+                            var errorSpan = createErrorSpan(input, errorMessageClass);
+
+                            if (!input.value) {
+                                errorSpan.textContent = input.name + ' is required.';
+                                valid = false;
+                            } else {
+                                // Additional validation for phone and email fields
+                                if (input.type === 'tel' && !/^\d+$/.test(input.value)) {
+                                    errorSpan.textContent = 'Valid phone number is required.';
+                                    valid = false;
+                                } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
+                                    errorSpan.textContent = 'Valid email is required.';
+                                    valid = false;
+                                } else {
+                                    errorSpan.textContent = ''; // Clear error if valid
+                                }
+                            }
+                        });
+
+                        // If not valid, prevent the form submission
+                        if (!valid) {
+                            e.preventDefault();
+                        }
+                    });
+                });
+            });
+        </script>  
+    {{-- validate-form --}} 
 
     {{-- <script>
         function limitDigits(element, maxDigits) {

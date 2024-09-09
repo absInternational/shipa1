@@ -1,4 +1,4 @@
-<section class="tj-blog-section pt-0">
+<section class="tj-blog-section pt-4">
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">

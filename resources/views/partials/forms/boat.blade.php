@@ -83,10 +83,17 @@
         <div class="form-group">
             <label for="trailer_type" class="text-white">Select Trailer
                 Type</label>
-            <select class="form-control" id="trailer_type" name="trailer_type">
+                <select class="form-control" id="trailer_type" name="trailer_type">
+                    <option value="REMOVABLE GOOSENECK (RGN)" selected>REMOVABLE GOOSENECK (RGN)</option>
+                    <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                    <option value="FLATBED (F)">FLATBED (F)</option>
+                    <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                    <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                </select>
+            {{-- <select class="form-control" id="trailer_type" name="trailer_type">
                 <option value="Open" selected>Open</option>
                 <option value="Enclosed">Enclosed</option>
-            </select>
+            </select> --}}
         </div>
     </div>
     <div class="col-md-6">

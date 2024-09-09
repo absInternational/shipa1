@@ -48,9 +48,9 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
                         <h4 class="title text-center">Instant ATV/UTV Shipping Quote!</h4>
-                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
-                            enctype="multipart/form-data">
+                            enctype="multipart/form-data" novalidate>
                             @csrf
                             <input type="hidden" name="car_type" value="1" hidden>
                             @if ($errors->any())
@@ -70,16 +70,17 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Your Name:</label>
-                                        <input type="text" id="name" name="name" placeholder="Full Name"
+                                        <input type="text" class="name" id="name" name="name" placeholder="Full Name"
                                             required="" />
-                                        <small id="errName" class="err-style"></small>
+                                            {{-- <span class="errName error-message"></span> --}}
+                                        {{-- <small id="errName" class="err-style"></small> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
                                         <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
-                                        <small id="errPhone" class="err-style"></small>
+                                        {{-- <small id="errPhone" class="err-style"></small> --}}
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
                                 </div>

@@ -30,7 +30,7 @@
     </div>
 </div>
 <a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-Vehicle</a>
+    Equipment</a>
 <div class="vehicles-container">
 </div>               
 <div class="row">

@@ -176,7 +176,7 @@
 </div>
 
 <a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-    heavy</a>
+    Equipment</a>
 
 <div class="vehicles-container">
 </div>

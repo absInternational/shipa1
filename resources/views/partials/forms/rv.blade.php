@@ -141,7 +141,7 @@
             <label for="trailer_type" class="text-white">Trailer Type</label>
             <select class="nice-select " id="trailer_type" name="trailer_type">
                 <option value="" selected disabled>Select</option>
-                <option value="VAN (V)">VAN (V)</option>
+                {{-- <option value="VAN (V)">VAN (V)</option> --}}
                 <option value="FLATBED (F)">FLATBED (F)</option>
                 <option value="STEP DECK (SD)">STEP DECK (SD)</option>
                 <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
@@ -154,10 +154,10 @@
                 <option value="ENDUMP (ED)">ENDUMP (ED)</option>
                 <option value="LANDOLL (LD)">LANDOLL (LD)</option>
                 <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                <option value="20ft container">20ft container</option>
+                {{-- <option value="20ft container">20ft container</option>
                 <option value="40ft container">40ft container</option>
                 <option value="48ft container">48ft container</option>
-                <option value="53ft container">53ft container</option>
+                <option value="53ft container">53ft container</option> --}}
             </select>
         </div>
     </div>

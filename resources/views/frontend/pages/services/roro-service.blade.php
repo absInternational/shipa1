@@ -1302,7 +1302,7 @@
         });
     });
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         $(document).on('change', '#available_at_auction', function() {
             if ($(this).is(':checked')) {
@@ -1320,5 +1320,5 @@
             }
         });
     });
-</script>
+</script> --}}
 @endsection

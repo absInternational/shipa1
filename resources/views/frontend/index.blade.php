@@ -560,7 +560,7 @@
                             <i class="flaticon-in-person"></i>
                         </div>
                         <div class="about-number">
-                            <div class="tj-count"><span class="odometer" data-count="1700">0</span></div>
+                            <div class="tj-count"><span class="odometer" data-count="289">0</span>k+</div>
                             <p class="desc">Satisfied Client</p>
                         </div>
                     </div>
