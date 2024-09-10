@@ -22,6 +22,21 @@
 <input type="hidden" name="vehicle_opt" value="freight" hidden>
 <input type="hidden" name="car_type" value="3" hidden>
 <div class="row">
+    <div class="col-md-12">
+        <div class="input-form">
+            <label for="category">Category</label>
+            <select class="form-control" id="category" name="category">
+                <option value="" disabled selected>Select</option>
+                <option value="LTL USED COMMERCIAL GOODS">LTL USED COMMERCIAL GOODS</option>
+                <option value="LTL NEW COMMERCIAL GOODS">LTL NEW COMMERCIAL GOODS</option>
+                <option value="LTL USED GOODS">LTL USED GOODS</option>
+                <option value="LTL NEW GOODS">LTL NEW GOODS</option>
+                <option value="FTL FULL TRUCK LOAD">FTL FULL TRUCK LOAD</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row">
     <div class="col-md-6">
         <div class="input-form">
             <label class="d-block">Trailer Specification</label>
