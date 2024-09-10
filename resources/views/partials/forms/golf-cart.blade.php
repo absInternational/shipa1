@@ -40,8 +40,8 @@
                 Type</label>
             <select class="form-control" id="trailer_type"
                 name="trailer_type">
-                <option value="Open" selected>Open</option>
-                <option value="Enclosed">Enclosed</option>
+                <option value="1" selected>Open Trailer</option>
+                <option value="2">Enclosed Trailer</option>
             </select>
         </div>
     </div>

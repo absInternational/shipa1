@@ -33,20 +33,13 @@
         </div>
     </div>
 </div>
-
-<a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-    Vehicle</a>
-
-<div class="vehicles-container">
-</div>
-
 <div class="row mb-3">
     <div class="col-md-6">
         <div class="form-group">
             <label for="trailer_type" class="text-white">Select Trailer Type</label>
             <select class="nice-select " id="trailer_type" name="trailer_type">
-                <option value="Open" selected>Open</option>
-                <option value="Enclosed">Enclosed</option>
+                <option value="1" selected>Open Trailer</option>
+                <option value="2">Enclosed Trailer</option>
             </select>
         </div>
     </div>
@@ -60,10 +53,11 @@
         </div>
     </div>
 </div>
+<a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+    Vehicle</a>
 
-
-
-
+<div class="vehicles-container">
+</div>
 <div class="row ms-3">
     <di class="col-md-6">
         <div class="form-group">
