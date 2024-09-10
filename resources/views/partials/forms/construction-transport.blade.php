@@ -145,11 +145,11 @@
     <div class="col-md-4">
         <label class="lab-cos">Weight</label>
         <div class="input-container1">
-                                                <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
-                                                    min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                                <span class="separators-w">(Lbs.)</span>
+            <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
+                min="0" maxlength="6" oninput="limitDigits(this, 6)">
+            <span class="separators-w">(Lbs.)</span>
 
-                                            </div>
+        </div>
     </div>
 </div>
 <div class="row mt-3">

@@ -11282,7 +11282,7 @@ PAGE LOAD ANIMATION
 }
 
 .error-field {
-    border: 2px solid red;
+    border: 2px solid red!important;
 }
 
 .lab-cos {
