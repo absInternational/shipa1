@@ -18,18 +18,18 @@
     .dropdown-item {
         white-space: nowrap; /* Prevent text wrapping */
     }
-    /* Ensure the dropdown menu does not push the page */
-    .model-dropdown {
-        max-height: 200px; /* Adjust based on your design */
-        overflow-y: auto;
-        position: absolute; /* Ensures dropdown is properly positioned */
-        z-index: 1000; /* Ensures dropdown appears above other content */
-    }
+/* Ensure the dropdown menu does not push the page */
+.model-dropdown {
+    max-height: 200px; /* Adjust based on your design */
+    overflow-y: auto;
+    position: absolute; /* Ensures dropdown is properly positioned */
+    z-index: 1000; /* Ensures dropdown appears above other content */
+}
 
-    /* Adjust this if needed to prevent overflow issues */
-    .input-form.tj-select {
-        position: relative;
-    }
+/* Adjust this if needed to prevent overflow issues */
+.input-form.tj-select {
+    position: relative;
+}
 
 </style>
     <!--========== breadcrumb Start ==============-->
@@ -109,7 +109,7 @@
                                         <label class="d-block">Phone:</label>
                                         <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number"
                                          required="" />
-                                        {{-- <small id="errPhone" class="err-style"></small> --}}
+                                        <small id="errPhone" class="err-style"></small>
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
                                 </div>
@@ -438,13 +438,13 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
 <script>
-    $(document).ready(function() {
-        // Initialize Select2 on the select element
-        $('.year').select2({
-            placeholder: "Select Year",
-            allowClear: true
-        });
-    });
+    // $(document).ready(function() {
+    //     // Initialize Select2 on the select element
+    //     $('.year').select2({
+    //         placeholder: "Select Year",
+    //         allowClear: true
+    //     });
+    // });
 </script>
 {{-- <script>
     $(document).ready(function() {
@@ -551,33 +551,32 @@
             }
         });
     });
-        function getModel(year, makeId) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = $('.vehicle-model-div');
-                    modelsDropdown.empty();
-                    var selectOptions =
-                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
-                    });
-                    selectOptions += '</select>';
-                    modelsDropdown.html(selectOptions);
-                    console.log('yesssss', response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
+        // function getModel(year, makeId) {
+        //     $.ajax({
+        //         url: "{{ route('get.models') }}",
+        //         method: 'GET',
+        //         data: {
+        //             year: year,
+        //             make: makeId
+        //         },
+        //         success: function(response) {
+        //             var modelsDropdown = $('.vehicle-model-div');
+        //             modelsDropdown.empty();
+        //             var selectOptions =
+        //                 '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+        //             $.each(response, function(index, model) {
+        //                 selectOptions += '<option value="' + model + '">' + model +
+        //                     '</option>';
+        //             });
+        //             selectOptions += '</select>';
+        //             modelsDropdown.html(selectOptions);
+        //             console.log('yesssss', response);
+        //         },
+        //         error: function(xhr) {
+        //             console.log(xhr.responseText);
+        //         }
+        //     });
+        // }
     
 </script> --}}
 <script>
@@ -623,7 +622,7 @@
                         <div class="input-form tj-select model-div">
                             <label>Model</label>
                             <select class="nice-select model" name="model[]" id="model" required>
-                                <!-- Options filled by JavaScript -->
+                                <!-- Options will be filled by JavaScript -->
                             </select>
                         </div>
                     </div>
@@ -684,28 +683,32 @@
             }
         });
 
-        function getModel(year, makeId, vehicleInfo) {
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model + '</option>';
-                    });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
+        // function getModel(year, makeId, vehicleInfo) {
+        //     alert('yes inn');
+
+        //     $.ajax({
+        //         url: "{{ route('get.models') }}",
+        //         method: 'GET',
+        //         data: {
+        //             year: year,
+        //             make: makeId
+        //         },
+        //         success: function(response) {
+        //             var modelsDropdown = vehicleInfo.find('.model');
+        //             modelsDropdown.empty();
+        //             var selectOptions = '<option value="">Select Model</option>';
+        //             $.each(response, function(index, model) {
+        //                 selectOptions += '<option value="' + model + '">' + model + '</option>';
+        //             });
+        //             modelsDropdown.html(selectOptions);
+        //         },
+        //         error: function(xhr) {
+        //             console.log(xhr.responseText);
+        //         }
+        //     });
+        // }
+
+
         // function getModel(year, makeId, vehicleInfo) {
         //     $.ajax({
         //         url: "{{ route('get.models') }}",
@@ -730,122 +733,292 @@
         //         }
         //     });
         // }
-        function getModel(year, makeId, vehicleInfo) {
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelDropdown = vehicleInfo.find('.model-dropdown');
-                    var modelInput = vehicleInfo.find('.model-input');
 
-                    modelDropdown.empty();
-                    modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="">Select Model</a></li>');
+        // function getModel(year, makeId, vehicleInfo) {
+        //     $.ajax({
+        //         url: "{{ route('get.models') }}",
+        //         method: 'GET',
+        //         data: {
+        //             year: year,
+        //             make: makeId
+        //         },
+        //         success: function(response) {
+        //             console.log('inn');
+        //             var modelDropdown = vehicleInfo.find('.model-dropdown');
+        //             var modelInput = vehicleInfo.find('.model-input');
 
-                    $.each(response, function(index, model) {
-                        modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="' + model + '">' + model + '</a></li>');
-                    });
+        //             modelDropdown.empty();
+        //             modelDropdown.append('<li><a class="dropdown-item"  data-value="">Select Model</a></li>');
 
-                    // Filter dropdown items based on input value
-                    modelInput.on('input', function() {
-                        var searchTerm = $(this).val().toLowerCase();
-                        modelDropdown.find('li').each(function() {
-                            var itemText = $(this).text().toLowerCase();
-                            if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-                            }
-                        });
-                    });
+        //             $.each(response, function(index, model) {
+        //                 modelDropdown.append('<li><a class="dropdown-item"  data-value="' + model + '">' + model + '</a></li>');
+        //             });
 
-                    // Select item from dropdown
-                    modelDropdown.on('click', 'a.dropdown-item', function(e) {
-                        e.preventDefault(); // Prevent default anchor behavior
-                        var selectedText = $(this).text();
-                        modelInput.val(selectedText);
-                        modelDropdown.hide();
-                        // Optional: handle model selection logic
-                    });
+        //             // Filter dropdown items based on input value
+        //             modelInput.on('input', function() {
+        //                 var searchTerm = $(this).val().toLowerCase();
+        //                 modelDropdown.find('li').each(function() {
+        //                     var itemText = $(this).text().toLowerCase();
+        //                     if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+        //                         $(this).show();
+        //                     } else {
+        //                         $(this).hide();
+        //                     }
+        //                 });
+        //             });
 
-                    // Show dropdown on input focus
-                    modelInput.on('focus', function() {
-                        modelDropdown.show();
-                    });
+        //             // Select item from dropdown
+        //             modelDropdown.on('click', 'a.dropdown-item', function(e) {
+        //                 e.preventDefault(); // Prevent default anchor behavior
+        //                 var selectedText = $(this).text();
+        //                 modelInput.val(selectedText);
+        //                 modelDropdown.hide();
+        //                 // Optional: handle model selection logic
+        //             });
 
-                    // Hide dropdown when clicking outside
-                    $(document).on('click', function(e) {
-                        if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
-                            modelDropdown.hide();
+        //             // Show dropdown on input focus
+        //             modelInput.on('focus', function() {
+        //                 modelDropdown.show();
+        //             });
+
+        //             // Hide dropdown when clicking outside
+        //             $(document).on('click', function(e) {
+        //                 if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
+        //                     modelDropdown.hide();
+        //                 }
+        //             });
+        //         },
+        //         error: function(xhr) {
+        //             console.log(xhr.responseText);
+        //         }
+        //     });
+        // }
+
+        // function getModel(year, makeId, vehicleInfo) {
+        //     $.ajax({
+        //         url: "{{ route('get.models') }}",
+        //         method: 'GET',
+        //         data: {
+        //             year: year,
+        //             make: makeId
+        //         },
+        //         success: function(response) {
+        //             var modelDropdown = vehicleInfo.find('.model-dropdown');
+        //             var modelInput = vehicleInfo.find('.model-input');
+
+        //             modelDropdown.empty();
+        //             modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="">Select Model</a></li>');
+
+        //             $.each(response, function(index, model) {
+        //                 modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="' + model + '">' + model + '</a></li>');
+        //             });
+
+        //             // Filter dropdown items based on input value
+        //             modelInput.on('input', function() {
+        //                 var searchTerm = $(this).val().toLowerCase();
+        //                 modelDropdown.find('li').each(function() {
+        //                     var itemText = $(this).text().toLowerCase();
+        //                     if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+        //                         $(this).show();
+        //                     } else {
+        //                         $(this).hide();
+        //                     }
+        //                 });
+        //             });
+
+        //             // Select item from dropdown
+        //             modelDropdown.on('click', 'a.dropdown-item', function(e) {
+        //                 e.preventDefault(); // Prevent default anchor behavior
+        //                 var selectedText = $(this).text();
+        //                 modelInput.val(selectedText);
+        //                 modelDropdown.hide();
+        //                 // Optional: handle model selection logic
+        //             });
+
+        //             // Show dropdown on input focus
+        //             modelInput.on('focus', function() {
+        //                 modelDropdown.show();
+        //             });
+
+        //             // Hide dropdown when clicking outside
+        //             $(document).on('click', function(e) {
+        //                 if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
+        //                     modelDropdown.hide();
+        //                 }
+        //             });
+        //         },
+        //         error: function(xhr) {
+        //             console.log(xhr.responseText);
+        //         }
+        //     });
+        // }
+
+// function getModel(year, makeId, vehicleInfo) {
+//     $.ajax({
+//         url: "{{ route('get.models') }}",
+//         method: 'GET',
+//         data: {
+//             year: year,
+//             make: makeId
+//         },
+//         success: function(response) {
+//             // Handle <ul><li> custom dropdown (for modals or other components)
+//             var modelDropdown = vehicleInfo.find('.model-dropdown');
+//             var modelInput = vehicleInfo.find('.model-input');
+
+//             if (modelDropdown.length && modelInput.length) {
+//                 modelDropdown.empty();
+//                 modelDropdown.append('<li><a class="dropdown-item" data-value="">Select Model</a></li>');
+
+//                 $.each(response, function(index, model) {
+//                     modelDropdown.append('<li><a class="dropdown-item" data-value="' + model + '">' + model + '</a></li>');
+//                 });
+
+//                 // Filter dropdown items based on input value
+//                 modelInput.on('input', function() {
+//                     var searchTerm = $(this).val().toLowerCase();
+//                     modelDropdown.find('li').each(function() {
+//                         var itemText = $(this).text().toLowerCase();
+//                         if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+//                             $(this).show();
+//                         } else {
+//                             $(this).hide();
+//                         }
+//                     });
+//                 });
+
+//                 // Select item from dropdown
+//                 modelDropdown.on('click', 'a.dropdown-item', function(e) {
+//                     e.preventDefault(); // Prevent default anchor behavior
+//                     var selectedText = $(this).text();
+//                     modelInput.val(selectedText);
+//                     modelDropdown.hide();
+//                 });
+
+//                 // Show dropdown on input focus
+//                 modelInput.on('focus', function() {
+//                     modelDropdown.show();
+//                 });
+
+//                 // Hide dropdown when clicking outside
+//                 $(document).on('click', function(e) {
+//                     if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
+//                         modelDropdown.hide();
+//                     }
+//                 });
+//             }
+
+//             // Handle standard <select> dropdown (for form or other sections)
+//             var modelSelect = vehicleInfo.find('.model');
+//             if (modelSelect.length) {
+//                 modelSelect.empty(); // Clear any existing options
+//                 modelSelect.append('<option value="">Select Model</option>'); // Add default option
+
+//                 // Append each model as an option to the select element
+//                 $.each(response, function(index, model) {
+//                     modelSelect.append('<option value="' + model + '">' + model + '</option>');
+//                 });
+
+//                 // Handle selection from dropdown
+//                 modelSelect.on('change', function() {
+//                     var selectedModel = $(this).val();
+//                     console.log('Selected model:', selectedModel);
+//                 });
+//             }
+//         },
+//         error: function(xhr) {
+//             console.log(xhr.responseText);
+//         }
+//     });
+// }
+
+function getModel(year, makeId, vehicleInfo) {
+    $.ajax({
+        url: "{{ route('get.models') }}",
+        method: 'GET',
+        data: {
+            year: year,
+            make: makeId
+        },
+        success: function(response) {
+            var modelDropdown = vehicleInfo.find('.model-dropdown');
+            var modelInput = vehicleInfo.find('.model-input');
+            var modelSelect = vehicleInfo.find('.model'); // Standard <select> element
+
+            // Update custom dropdown
+            if (modelDropdown.length && modelInput.length) {
+                modelDropdown.empty();
+                modelDropdown.append('<li><a class="dropdown-item" data-value="">Select Model</a></li>');
+
+                $.each(response, function(index, model) {
+                    modelDropdown.append('<li><a class="dropdown-item" data-value="' + model + '">' + model + '</a></li>');
+                });
+
+                modelInput.on('focus', function() {
+                    modelSelect.empty(); // Clear the <select> options
+                    modelSelect.append('<option value="">Select Model</option>'); // Add default option
+                    modelDropdown.show();
+                });
+
+                modelInput.on('input', function() {
+                    var searchTerm = $(this).val().toLowerCase();
+                    modelDropdown.find('li').each(function() {
+                        var itemText = $(this).text().toLowerCase();
+                        if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
                         }
                     });
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-        function getModel(year, makeId, vehicleInfo) {
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelDropdown = vehicleInfo.find('.model-dropdown');
-                    var modelInput = vehicleInfo.find('.model-input');
+                });
 
-                    modelDropdown.empty();
-                    modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="">Select Model</a></li>');
+                modelDropdown.on('click', 'a.dropdown-item', function(e) {
+                    e.preventDefault(); // Prevent default anchor behavior
+                    var selectedText = $(this).text();
+                    var selectedValue = $(this).data('value');
 
-                    $.each(response, function(index, model) {
-                        modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="' + model + '">' + model + '</a></li>');
-                    });
+                    modelInput.val(selectedText); // Set the selected text in modelInput
+                    modelDropdown.hide(); // Hide the custom dropdown
 
-                    // Filter dropdown items based on input value
-                    modelInput.on('input', function() {
-                        var searchTerm = $(this).val().toLowerCase();
-                        modelDropdown.find('li').each(function() {
-                            var itemText = $(this).text().toLowerCase();
-                            if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-                            }
-                        });
-                    });
+                    modelSelect.empty(); // Clear the <select> options
+                    modelSelect.append('<option value="' + selectedValue + '">' + selectedText + '</option>');
+                    modelSelect.val(selectedValue); // Set the selected value in the select dropdown
+                });
 
-                    // Select item from dropdown
-                    modelDropdown.on('click', 'a.dropdown-item', function(e) {
-                        e.preventDefault(); // Prevent default anchor behavior
-                        var selectedText = $(this).text();
-                        modelInput.val(selectedText);
+                $(document).on('click', function(e) {
+                    if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
                         modelDropdown.hide();
-                        // Optional: handle model selection logic
-                    });
+                    }
+                });
+            }
 
-                    // Show dropdown on input focus
-                    modelInput.on('focus', function() {
-                        modelDropdown.show();
-                    });
+            // Handle standard <select> dropdown
+            if (modelSelect.length) {
+                modelSelect.empty(); // Clear any existing options
+                modelSelect.append('<option value="">Select Model</option>'); // Add default option
 
-                    // Hide dropdown when clicking outside
-                    $(document).on('click', function(e) {
-                        if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
-                            modelDropdown.hide();
-                        }
-                    });
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
+                $.each(response, function(index, model) {
+                    modelSelect.append('<option value="' + model + '">' + model + '</option>');
+                });
+
+                modelSelect.on('change', function() {
+                    var selectedModel = $(this).val();
+                    // Optional: Sync custom input when user selects from <select>
+                    modelInput.val(modelSelect.find('option:selected').text());
+                });
+            }
+        },
+        error: function(xhr) {
+            console.log(xhr.responseText);
         }
+    });
+}
+
+
+
+
+
+
         $(document).on('input', '.dropdown-toggle', function() {
             var input = $(this).val().toLowerCase();
             $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
