@@ -434,6 +434,9 @@
         </div>
     </div>
 </div>
+<input type="hidden" value="2010" name="year[]">
+<input type="hidden" value="freight" name="model[]">
+<input type="hidden" value="freight" name="make[]">
 
 {{-- <div class="row select-bm" style="display:none;">
     <div class="col-md-4">
