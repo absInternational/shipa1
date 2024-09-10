@@ -1284,71 +1284,138 @@
         
         // <>
         
+        // document.addEventListener('DOMContentLoaded', function() {
+        // // Get all forms with the class 'validate-form'
+        // var forms = document.querySelectorAll('.validate-form');
+
+        //     forms.forEach(function(form) {
+        //         form.addEventListener('submit', function(e) {
+        //             var valid = true;
+
+        //             // Collect all input and select elements that have the 'required' attribute
+        //             var requiredInputs = form.querySelectorAll('[required], select');
+
+        //             // Function to create an error span dynamically if not present
+        //             function createErrorSpan(inputElement, errorMessageClass) {
+        //                 let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
+
+        //                 if (!errorSpan) {
+        //                     errorSpan = document.createElement('span');
+        //                     errorSpan.className = errorMessageClass + ' error-message';
+        //                     errorSpan.style.color = 'red'; // Style the error message
+        //                     inputElement.parentNode.appendChild(errorSpan);
+        //                 }
+
+        //                 return errorSpan;
+        //             }
+
+        //             // Loop through each required input field and validate
+        //             requiredInputs.forEach(function(input) {
+        //                 var errorMessageClass = 'err' + input.name.replace('[]', ''); // Adjust error class for array fields
+        //                 var errorSpan = createErrorSpan(input, errorMessageClass);
+
+        //                 if (!input.value || (input.tagName === 'SELECT' && input.value === '')) {
+        //                     errorSpan.textContent = input.tagName === 'SELECT' ? 'Please select an option.' : input.name + ' is required.';
+        //                     input.style.border = '2px solid red'; // Add red border for invalid input
+        //                     valid = false;
+        //                 } else {
+        //                     // Phone number validation for `intl-tel-input`
+        //                     if (input.type === 'tel' && typeof iti !== 'undefined') {
+        //                         // Use intl-tel-input's validation method
+        //                         const rawPhoneNumber = iti.getNumber();
+        //                         if (!iti.isValidNumber()) {
+        //                             errorSpan.textContent = 'Valid phone number is required.';
+        //                             input.style.border = '2px solid red'; // Add red border for invalid phone number
+        //                             valid = false;
+        //                         } else {
+        //                             errorSpan.textContent = ''; // Clear error if valid
+        //                             input.style.border = ''; // Remove red border when valid
+        //                         }
+        //                     } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
+        //                         errorSpan.textContent = 'Valid email is required.';
+        //                         input.style.border = '2px solid red'; // Add red border for invalid email
+        //                         valid = false;
+        //                     } else {
+        //                         errorSpan.textContent = ''; // Clear error if valid
+        //                         input.style.border = ''; // Remove red border when valid
+        //                     }
+        //                 }
+        //             });
+
+        //             // If not valid, prevent the form submission
+        //             if (!valid) {
+        //                 e.preventDefault();
+        //             }
+        //         });
+        //     });
+        // });
+
+
         document.addEventListener('DOMContentLoaded', function() {
         // Get all forms with the class 'validate-form'
         var forms = document.querySelectorAll('.validate-form');
 
-            forms.forEach(function(form) {
-                form.addEventListener('submit', function(e) {
-                    var valid = true;
+        forms.forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+                var valid = true;
 
-                    // Collect all input and select elements that have the 'required' attribute
-                    var requiredInputs = form.querySelectorAll('[required], select');
+                // Collect only input and select elements that have the 'required' attribute
+                var requiredInputs = form.querySelectorAll('[required]'); // Remove ', select' to only select those with 'required'
 
-                    // Function to create an error span dynamically if not present
-                    function createErrorSpan(inputElement, errorMessageClass) {
-                        let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
+                // Function to create an error span dynamically if not present
+                function createErrorSpan(inputElement, errorMessageClass) {
+                    let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
 
-                        if (!errorSpan) {
-                            errorSpan = document.createElement('span');
-                            errorSpan.className = errorMessageClass + ' error-message';
-                            errorSpan.style.color = 'red'; // Style the error message
-                            inputElement.parentNode.appendChild(errorSpan);
-                        }
-
-                        return errorSpan;
+                    if (!errorSpan) {
+                        errorSpan = document.createElement('span');
+                        errorSpan.className = errorMessageClass + ' error-message';
+                        errorSpan.style.color = 'red'; // Style the error message
+                        inputElement.parentNode.appendChild(errorSpan);
                     }
 
-                    // Loop through each required input field and validate
-                    requiredInputs.forEach(function(input) {
-                        var errorMessageClass = 'err' + input.name.replace('[]', ''); // Adjust error class for array fields
-                        var errorSpan = createErrorSpan(input, errorMessageClass);
+                    return errorSpan;
+                }
 
-                        if (!input.value || (input.tagName === 'SELECT' && input.value === '')) {
-                            errorSpan.textContent = input.tagName === 'SELECT' ? 'Please select an option.' : input.name + ' is required.';
-                            input.style.border = '2px solid red'; // Add red border for invalid input
-                            valid = false;
-                        } else {
-                            // Phone number validation for `intl-tel-input`
-                            if (input.type === 'tel' && typeof iti !== 'undefined') {
-                                // Use intl-tel-input's validation method
-                                const rawPhoneNumber = iti.getNumber();
-                                if (!iti.isValidNumber()) {
-                                    errorSpan.textContent = 'Valid phone number is required.';
-                                    input.style.border = '2px solid red'; // Add red border for invalid phone number
-                                    valid = false;
-                                } else {
-                                    errorSpan.textContent = ''; // Clear error if valid
-                                    input.style.border = ''; // Remove red border when valid
-                                }
-                            } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
-                                errorSpan.textContent = 'Valid email is required.';
-                                input.style.border = '2px solid red'; // Add red border for invalid email
+                // Loop through each required input field and validate
+                requiredInputs.forEach(function(input) {
+                    var errorMessageClass = 'err' + input.name.replace('[]', ''); // Adjust error class for array fields
+                    var errorSpan = createErrorSpan(input, errorMessageClass);
+
+                    if (!input.value || (input.tagName === 'SELECT' && input.value === '')) {
+                        errorSpan.textContent = input.tagName === 'SELECT' ? 'Please select an option.' : input.name + ' is required.';
+                        input.style.border = '2px solid red'; // Add red border for invalid input
+                        valid = false;
+                    } else {
+                        // Phone number validation for `intl-tel-input`
+                        if (input.type === 'tel' && typeof iti !== 'undefined') {
+                            // Use intl-tel-input's validation method
+                            const rawPhoneNumber = iti.getNumber();
+                            if (!iti.isValidNumber()) {
+                                errorSpan.textContent = 'Valid phone number is required.';
+                                input.style.border = '2px solid red'; // Add red border for invalid phone number
                                 valid = false;
                             } else {
                                 errorSpan.textContent = ''; // Clear error if valid
                                 input.style.border = ''; // Remove red border when valid
                             }
+                        } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
+                            errorSpan.textContent = 'Valid email is required.';
+                            input.style.border = '2px solid red'; // Add red border for invalid email
+                            valid = false;
+                        } else {
+                            errorSpan.textContent = ''; // Clear error if valid
+                            input.style.border = ''; // Remove red border when valid
                         }
-                    });
-
-                    // If not valid, prevent the form submission
-                    if (!valid) {
-                        e.preventDefault();
                     }
                 });
+
+                // If not valid, prevent the form submission
+                if (!valid) {
+                    e.preventDefault();
+                }
             });
         });
+    });
 
 
         </script>  

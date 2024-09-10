@@ -48,8 +48,8 @@
             <label for="trailer_type" class="text-white">Select Trailer
                 Type</label>
             <select class="form-control" id="trailer_type" name="trailer_type" required>
-                <option value="Open" selected>Open</option>
-                <option value="Enclosed">Enclosed</option>
+                <option value="1" selected>Open Trailer</option>
+                <option value="2">Enclosed Trailer</option>
             </select>
         </div>
     </div>
@@ -95,7 +95,7 @@
 </div>
 <div class="input-form mt-3">
     <label class="d-block" class="text-white"> Image:</label>
-    <input class="form-control image_input" type="file" accept="image/*" multiple onchange="previewImages(event)">
+    <input class="form-control image_input" type="file" name="image[]" accept="image/*" multiple onchange="previewImages(event)">
     <div class="image-preview-container" id="imagePreviewContainer"></div>
     <!-- <input class="form-control image_input" type="file" id="image" name="image[]" placeholder="Upload File" required /> -->
 </div>

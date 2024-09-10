@@ -39,9 +39,9 @@
                 <option value="Motor Boat">Motor Boat</option>
                 <option value="Others">Others</option>
             </select>
-            <div class="error-message" id="category-error" style="color: red; display: none;">
+            {{-- <div class="error-message" id="category-error" style="color: red; display: none;">
                 Please select a category.
-            </div>
+            </div> --}}
             <input type="text" class="form-control" id="otherCategoryInput" name="other_category" disabled
                 style="display: none;" placeholder="Specify Category">
         </div>
@@ -182,6 +182,42 @@
 
         </div>
     </div> --}}
+</div>
+<div class="row mt-3">
+    {{-- <div class="col-md-4">
+        <div class="form-group">
+            <label for="load_type" class="text-white">Load Type</label>
+            <select class="" id="load_type" name="load_type">
+                <option value="" disabled selected>Select</option>
+                <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
+                <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
+            </select>
+        </div>
+    </div> --}}
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="load_method" class="text-white">Load Method</label>
+            <select class="form-control" id="load_method" name="load_method[]">
+                <option value="" disabled selected>Select</option>
+                <option value="LOADING DOCK">LOADING DOCK</option>
+                <option value="CRANE">CRANE</option>
+                <option value="FORKLIFT">FORKLIFT</option>
+                <option value="DRIVE ROLL">DRIVE ROLL</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="unload_method" class="text-white">Unload Method</label>
+            <select class="form-control" id="unload_method" name="unload_method[]">
+                <option value="" disabled selected>Select</option>
+                <option value="LOADING DOCK">LOADING DOCK</option>
+                <option value="CRANE">CRANE</option>
+                <option value="FORKLIFT">FORKLIFT</option>
+                <option value="DRIVE ROLL">DRIVE ROLL</option>
+            </select>
+        </div>
+    </div>
 </div>
 <a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
 Equipment</a>
@@ -370,6 +406,32 @@ Equipment</a>
                                 min="0" maxlength="6" oninput="limitDigits(this, 6)">
                             <span class="separators-w">(Lbs.)</span>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="load_method" class="text-white">Load Method</label>
+                            <select class="nice-select" id="load_method" name="load_method[]">
+                                <option value="" disabled selected>Select</option>
+                                <option value="LOADING DOCK">LOADING DOCK</option>
+                                <option value="CRANE">CRANE</option>
+                                <option value="FORKLIFT">FORKLIFT</option>
+                                <option value="DRIVE ROLL">DRIVE ROLL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="unload_method" class="text-white">Unload Method</label>
+                            <select class="nice-select" id="unload_method" name="unload_method[]">
+                                <option value="" disabled selected>Select</option>
+                                <option value="LOADING DOCK">LOADING DOCK</option>
+                                <option value="CRANE">CRANE</option>
+                                <option value="FORKLIFT">FORKLIFT</option>
+                                <option value="DRIVE ROLL">DRIVE ROLL</option>
+                            </select>
                         </div>
                     </div>
                 </div>

@@ -18,18 +18,18 @@
     .dropdown-item {
         white-space: nowrap; /* Prevent text wrapping */
     }
-/* Ensure the dropdown menu does not push the page */
-.model-dropdown {
-    max-height: 200px; /* Adjust based on your design */
-    overflow-y: auto;
-    position: absolute; /* Ensures dropdown is properly positioned */
-    z-index: 1000; /* Ensures dropdown appears above other content */
-}
+    /* Ensure the dropdown menu does not push the page */
+    .model-dropdown {
+        max-height: 200px; /* Adjust based on your design */
+        overflow-y: auto;
+        position: absolute; /* Ensures dropdown is properly positioned */
+        z-index: 1000; /* Ensures dropdown appears above other content */
+    }
 
-/* Adjust this if needed to prevent overflow issues */
-.input-form.tj-select {
-    position: relative;
-}
+    /* Adjust this if needed to prevent overflow issues */
+    .input-form.tj-select {
+        position: relative;
+    }
 
 </style>
     <!--========== breadcrumb Start ==============-->

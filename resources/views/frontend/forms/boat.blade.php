@@ -192,9 +192,9 @@
                                         <option value="Motor Boat">Motor Boat</option>
                                         <option value="Others">Others</option>
                                     </select>
-                                    <div class="error-message" id="category-error" style="color: red; display: none;">
+                                    {{-- <div class="error-message" id="category-error" style="color: red; display: none;">
                                         Please select a category.
-                                    </div>
+                                    </div> --}}
                                     <input type="text" class="form-control" id="otherCategoryInput" name="other_category" disabled
                                         style="display: none;" placeholder="Specify Category">
                                 </div>
@@ -804,13 +804,15 @@
             }
 
             // Category validation
-            if ($('#category').val() === null) {
-                e.preventDefault(); // Prevent form submission
-                $('#category').closest('.input-form').find('.error-message').show(); // Show the error message
-                $('#category').focus(); // Focus the select element
-            } else {
-                $('#category').closest('.input-form').find('.error-message').hide(); // Hide the error message
-            }
+
+            // if ($('#category').val() === null) {
+            //     e.preventDefault(); // Prevent form submission
+            //     $('#category').closest('.input-form').find('.error-message').show(); // Show the error message
+            //     $('#category').focus(); // Focus the select element
+            // } else {
+            //     $('#category').closest('.input-form').find('.error-message').hide(); // Hide the error message
+            // }
+            
         });
 
         // Hide error on change
