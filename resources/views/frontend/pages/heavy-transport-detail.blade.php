@@ -277,7 +277,7 @@
                             {{ session('error') }}
                         </div>
                     @endif
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
                         id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                         enctype="multipart/form-data">
                         @csrf

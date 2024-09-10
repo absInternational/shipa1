@@ -256,7 +256,7 @@
             <div class="col-lg-6 mt-4" data-sal="slide-down" data-sal-duration="800">
                 <div class="tj-input-form mt-4 w-100" data-bg-image="">
                     <!-- <h4 class="title text-center">Instant Freight Quote!</h4> -->
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
                         id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                         enctype="multipart/form-data">
                         @csrf
@@ -784,7 +784,7 @@
                                     <div class="col-xl-4 col-lg-4">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
-                                            <input class="form-control" required name="phone" type="tel"
+                                            <input class="form-control" required name="phone" type="text"
                                                 placeholder="Customer Name">
                                             <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
                                             <label class="error-message" id="Custo_Name-error">This field is
@@ -1246,20 +1246,20 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
-<script>
+{{-- <script>
     $(document).ready(function() {
         $('#example-multiple').select2();
     });
     $(document).ready(function() {
         $('#example-multiple-2').select2();
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         $('.your-select-element').select2();
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         var selectedTab = '';
         $('#tabSelector').change(function() {
@@ -1313,15 +1313,15 @@
             });
         }
     });
-</script>
-<script>
-    // document.querySelectorAll('input[type="text"]').forEach((input) => {
-    //     input.addEventListener("input", function() {
-    //         this.value = this.value.replace(/[^0-9]/g, "");
-    //     });
-    // });
-</script>
-<script>
+</script> --}}
+{{-- <script>
+    document.querySelectorAll('input[type="text"]').forEach((input) => {
+        input.addEventListener("input", function() {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    });
+</script> --}}
+{{-- <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -1372,8 +1372,8 @@
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         function showError(field, message) {
             $('#' + field).addClass('error-field');
@@ -1438,8 +1438,8 @@
             $('#step2').show();
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         $(document).on('change', '#available_at_auction', function() {
             if ($(this).is(':checked')) {
@@ -1457,8 +1457,8 @@
             }
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -1495,8 +1495,8 @@
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         var selectedTab = '';
         $('#tabSelector').change(function() {
@@ -1663,8 +1663,8 @@
             }
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -1701,15 +1701,15 @@
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
-<script>
-    // document.querySelectorAll('input[type="text"]').forEach((input) => {
-    //     input.addEventListener("input", function() {
-    //         this.value = this.value.replace(/[^0-9]/g, "");
-    //     });
-    // });
-</script>
-<script>
+</script> --}}
+{{-- <script>
+    document.querySelectorAll('input[type="text"]').forEach((input) => {
+        input.addEventListener("input", function() {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    });
+</script> --}}
+{{-- <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -1760,5 +1760,5 @@
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-</script>
+</script> --}}
 @endsection
