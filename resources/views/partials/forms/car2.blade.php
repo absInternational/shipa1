@@ -215,13 +215,13 @@
         } 
 </script>
 <script>
-    $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
+    // $('#addVehicleBtn').click(function() {
+    //         addNewVehicle();
+    //     });
 
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
+    //     $(document).on('click', '.delete-vehicle', function() {
+    //         $(this).closest('.vehicle-info').remove();
+    //     });
 
         $(document).on('click', '.make-dropdown .dropdown-item', function() {
             var make = $(this).data('value');

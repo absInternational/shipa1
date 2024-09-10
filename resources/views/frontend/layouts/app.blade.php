@@ -1071,19 +1071,19 @@
                         }
                     });
                 });
-                // $(document).on('click', '.addVehicleBtn', function() {
-                //         if ($('#tabSelector').val() == 'Car') {
-                //             console.log('yesss');
-                //             addNewVehicle();
-                //         } else {
-                //             console.log('nooo');
-                //             addOtherVehicle();
-                //         }
-                //     }); 
+                $(document).on('click', '.addVehicleBtn', function() {
+                        if ($('#tabSelector').val() == 'Car') {
+                            console.log('yesss');
+                            addNewVehicle();
+                        } else {
+                            console.log('nooo');
+                            addOtherVehicle();
+                        }
+                    }); 
 
-                // $(document).on('click', '.delete-vehicle', function() {
-                //     $(this).closest('.vehicle-info').remove();
-                // });
+                $(document).on('click', '.delete-vehicle', function() {
+                    $(this).closest('.vehicle-info').remove();
+                });
 
                 // $(document).on('change', '.year, .make', function() {
                 //     var year = $(this).closest('.vehicle-info').find('.year').val();

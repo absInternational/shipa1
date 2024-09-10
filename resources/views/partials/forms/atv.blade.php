@@ -65,7 +65,7 @@
 </div>
 <a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
     Vehicle</a>
-<div class="vehicles-container">
+<div class="vehicles-container" id="vehicles-container">
 </div>
 <div class="row ms-3">
     <di class="col-md-6">

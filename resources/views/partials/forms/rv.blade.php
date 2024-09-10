@@ -199,7 +199,7 @@
     </div>
 </div>
 <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add RV</a>
-<div id="vehicles-container">
+<div id="vehicles-container" id="vehicles-container">
 </div>
 {{-- <a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add RV</a>
 <div class="vehicles-container">

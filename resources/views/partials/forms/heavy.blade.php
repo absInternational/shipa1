@@ -178,7 +178,7 @@
 <a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
     Equipment</a>
 
-<div class="vehicles-container">
+<div class="vehicles-container" id="vehicles-container">
 </div>
 <div class="row">
     <div class="col-md-6">
