@@ -174,10 +174,16 @@ class QuoteController extends Controller
         $origin_city = isset($originValues[0]) ? trim($originValues[0]) : null;
         $origin_state = isset($originValues[1]) ? trim($originValues[1]) : null;
 
-        $destinationValues = explode(',', $destinationData);
-        $destination_zip = isset($destinationValues[2]) ? trim($destinationValues[2]) : null;
-        $destination_city = isset($destinationValues[0]) ? trim($destinationValues[0]) : null;
-        $destination_state = isset($destinationValues[1]) ? trim($destinationValues[1]) : null;
+        if ($roro == null) {
+            $destinationValues = explode(',', $destinationData);
+            $destination_zip = isset($destinationValues[2]) ? trim($destinationValues[2]) : null;
+            $destination_city = isset($destinationValues[0]) ? trim($destinationValues[0]) : null;
+            $destination_state = isset($destinationValues[1]) ? trim($destinationValues[1]) : null;
+        } else {
+            $destination_zip = $request->input('From_ZipCode', null);
+            $destination_city = $request->input('To_City', null);
+            $destination_state = $request->input('To_Country', null);
+        }
 
         $client = new Client();
         try {
@@ -196,7 +202,7 @@ class QuoteController extends Controller
             $ippostal = null;
         }
 
-        if (!is_null($destinationData)) {
+        if (is_null($roro)) {
             $delivery_latitude = $originData;
             $delivery_longitude = $destinationData;
 

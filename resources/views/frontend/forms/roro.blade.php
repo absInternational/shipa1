@@ -365,7 +365,7 @@
                                         <div class="col-xl-4 col-lg-4 mb-4">
                                             <label class="text-white mb-2">Country:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_ZipCode" required>
+                                                <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_Country" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
                                                 {{-- <label class="error-message" id="delivery-location-error">This field is required.</label> --}}
                                             </div>
@@ -373,7 +373,7 @@
                                         <div class="col-xl-4 col-lg-4 mb-4">    
                                             <label class="text-white mb-2">City:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_ZipCode" required>
+                                                <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_City" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
                                                 {{-- <label class="error-message" id="delivery-location-1-error">This field is required.</label> --}}
                                             </div>
