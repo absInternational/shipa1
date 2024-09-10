@@ -109,7 +109,7 @@
                                         <label class="d-block">Phone:</label>
                                         <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number"
                                          required="" />
-                                        <small id="errPhone" class="err-style"></small>
+                                        {{-- <small id="errPhone" class="err-style"></small> --}}
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
                                 </div>

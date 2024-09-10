@@ -327,27 +327,6 @@ Equipment</a>
                     newVehicleHtml += `</div>
                                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="trailer_type" class="text-white">Select Trailer
-                                Type</label>
-                            <select class="form-control" id="trailer_type" name="trailer_type">
-                                <option value="Open" selected>Open</option>
-                                <option value="Enclosed">Enclosed</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="condition" class="text-white">Condition</label>
-                            <select class="form-control" id="condition" name="condition[]">
-                                <option value="1" selected>Running</option>
-                                <option value="2">Non Running</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
                 <div class="row mb-3">
                     <div class="col-md-4">
                         <label class="lab-cos">Length</label>
@@ -391,6 +370,17 @@ Equipment</a>
                                 min="0" maxlength="6" oninput="limitDigits(this, 6)">
                             <span class="separators-w">(Lbs.)</span>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="condition" class="text-white">Condition</label>
+                            <select class="form-control" id="condition" name="condition[]">
+                                <option value="1" selected>Running</option>
+                                <option value="2">Non Running</option>
+                            </select>
                         </div>
                     </div>
                 </div>

@@ -95,7 +95,7 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="single-input-field">
                             <label class="d-block text-white"> Your Name:</label>
-                            <input class="form-control" id="name" name="name" type="tel"
+                            <input class="form-control" id="name" name="name" type="text"
                                 placeholder="Customer Name" required>
                             <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
                             
