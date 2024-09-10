@@ -66,8 +66,8 @@
                         <option value="Motorcycle">Motorcycle</option>
                         <option value="RV-Transport">RV Transport</option>
                     </select>
-                    <label class="error-message" id="tabSelector-error">This field is
-                        required.</label>
+                    {{-- <label class="error-message" id="tabSelector-error">This field is
+                        required.</label> --}}
 
                     <div class="tab-content mt-3" id="additionalContent"></div>
                 </div>
