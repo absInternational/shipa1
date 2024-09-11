@@ -49,7 +49,7 @@
                 <label>Year</label>
                 <div class="dropdown">
                     <input class="form-control dropdown-toggle year" type="text" name="year[]" id="year" 
-                    placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false">
+                    placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false" required>
                     <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
                         <li><a class="dropdown-item">Select Year</a></li>
                         @php
@@ -67,7 +67,7 @@
             <div class="input-form tj-select">
                 <label>Make</label>
                 <div class="dropdown">
-                    <input class="form-control dropdown-toggle make" name="make[]" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
+                    <input class="form-control dropdown-toggle make" name="make[]" type="text" required id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
                     <ul class="dropdown-menu make-dropdown" style="" aria-labelledby="make">
                         <li><a class="dropdown-item" >Select Make</a></li>
                         @foreach ($makes as $make)
@@ -83,7 +83,7 @@
                 <label>Model</label>
                 <div class="dropdown">
                     <input class="form-control dropdown-toggle model-input"
-                    name="model[]" type="text" id="model" placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
+                    name="model[]" type="text" id="model" required placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
                     <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
                         <li><a class="dropdown-item">Select Model</a></li>
                         <!-- Options filled by JavaScript -->

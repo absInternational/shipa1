@@ -154,7 +154,7 @@
                                                 <label>Year</label>
                                                 <div class="dropdown">
                                                     <input class="form-control dropdown-toggle year" type="text" name="year[]" id="year" 
-                                                    placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false" required>
                                                     <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
                                                         <li><a class="dropdown-item">Select Year</a></li>
                                                         @php
@@ -172,7 +172,7 @@
                                             <div class="input-form tj-select">
                                                 <label>Make</label>
                                                 <div class="dropdown">
-                                                    <input class="form-control dropdown-toggle make" name="make[]" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <input class="form-control dropdown-toggle make" name="make[]" required type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <ul class="dropdown-menu make-dropdown" style="" aria-labelledby="make">
                                                         <li><a class="dropdown-item" >Select Make</a></li>
                                                         @foreach ($makes as $make)
@@ -188,7 +188,7 @@
                                                 <label>Model</label>
                                                 <div class="dropdown">
                                                     <input class="form-control dropdown-toggle model-input"
-                                                    name="model[]" type="text" id="model" placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    name="model[]" type="text" id="model" required placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
                                                         <li><a class="dropdown-item" href="#">Select Model</a></li>
                                                         <!-- Options filled by JavaScript -->
@@ -1165,96 +1165,5 @@ function getModel(year, makeId, vehicleInfo) {
         }
     });
 </script> --}}
-<script>
-    //    $(document).ready(function() {
-    //         $('#available_at_auction').change(function() {
-    //             if ($(this).is(':checked')) {
-    //                 $('.div-link').show();
-    //                 $('#link').attr('required', true); 
-    //             } else {
-    //                 $('.div-link').hide();
-    //                 $('#link').val(''); ld
-    //                 $('#link').removeAttr('required'); 
-    //             }
-    //         });
-            
-    //         $('#modification').change(function() {
-    //             if ($(this).is(':checked')) {
-    //                 $('.div-modify_info').show();
-    //                 $('#c').attr('required', true); 
-    //             } else {
-    //                 $('.div-modify_info').hide();
-    //                 $('#c').val('');eld
-    //                 $('#c').removeAttr('required'); 
-    //             }
-    //         });
-    //     });
-</script>
-<script>
-    // var validPickupSuggestions = [];
-    // var validDeliverySuggestions = [];
-    // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-    //     var inputValue = inputField.val();
-    //     $.ajax({
-    //         url: "{{ route('get.zipcodes') }}",
-    //         method: "POST",
-    //         data: {
-    //             "_token": "{{ csrf_token() }}",
-    //             "input": inputValue
-    //         },
-    //         success: function(response) {
-    //             suggestionsList.empty();
-    //             validSuggestions.length = 0;  // Clear previous suggestions
 
-    //             $.each(response, function(index, suggestion) {
-    //                 var listItem = $("<li>").text(suggestion).click(function() {
-    //                     inputField.val(suggestion);
-    //                     suggestionsList.css("display", "none");
-    //                 });
-    //                 validSuggestions.push(suggestion);  // Add to valid suggestions
-    //                 suggestionsList.append(listItem);
-    //             });
-    //         },
-    //         error: function(xhr, status, error) {
-    //             console.error("Error:", error);
-    //         }
-    //     });
-    // }
-    // $("#pickup-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    // });
-    // $("#delivery-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    // });
-    // function validateLocationInput(inputField, validSuggestions, errorField) {
-    //     var inputValue = inputField.val();
-    //     if (!validSuggestions.includes(inputValue)) {
-    //         errorField.text("Please select a valid location.");
-    //         return false;
-    //     } else {
-    //         errorField.text("");
-    //         return true;
-    //     }
-    // }
-    // $("form").submit(function(event) {
-    //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-    //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
-    //     if (!isPickupValid || !isDeliveryValid) {
-    //         event.preventDefault();  // Prevent form submission if validation fails
-    //     }
-    // });
-</script>
 @endsection

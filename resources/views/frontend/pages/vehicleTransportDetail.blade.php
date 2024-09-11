@@ -352,8 +352,10 @@
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
-                                            <input class="form-control" required name="Custo_Name" type="text"
-                                                placeholder="Customer Name">
+                                            {{-- <input class="form-control" required name="Custo_Name" type="text"
+                                                placeholder="Customer Name"> --}}
+                                                <input type="text" id="name" name="name" placeholder="Full Name"
+                                                required />
                                             <label class="error-message" id="Custo_Name-error">This field is
                                                 required.</label>
                                         </div>
@@ -377,8 +379,10 @@
                                     <div class="col-xl-12 col-lg-12">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
-                                            <input class="form-control" required name="Custo_Email" type="email"
-                                                placeholder="Email address">
+                                            {{-- <input class="form-control" required name="Custo_Email" type="email"
+                                                placeholder="Email address"> --}}
+                                                <input type="email" id="email" name="email" placeholder="Your Email Address"
+                                            required />
                                             <label class="error-message" id="Custo_Email-error">This field is
                                                 required.</label>
                                         </div>
