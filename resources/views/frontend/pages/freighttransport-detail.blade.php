@@ -334,30 +334,70 @@
                                             <option value="FTL FULL TRUCK LOAD">FTL FULL TRUCK LOAD</option>
                                         </select>
                                     </div>
-                                    <div class="row">
+                                    
+                                    {{-- <div class="row">
                                         <div class="col-md-6">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="available_at_auction" name="available_at_auction"
-                                                    value="1" />
-                                                <label class="form-check-label text-white" for="available_at_auction">
-                                                    Available at
-                                                    Auction?</label>
-                                            </div>
-                                            <div class="input-form div-link mt-3" style="display: none;">
-                                                <label class="d-block"> Enter Link:</label>
-                                                <input class="form-control" type="url" id="link"
-                                                    name="link" placeholder="Enter Link" />
+                                            <div class="input-form">
+                                                <label class="d-block"> Pickup Location:</label>
+                                                <input type="text" id="pickup-location" name="origin"
+                                                    placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                                <small id="errOLoc" class="err-loc"></small>
+                                                <ul class="suggestions suggestionsTwo"></ul>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="boat_on_trailer"
-                                                    name="boat_on_trailer" value="1" />
-                                                <label class="form-check-label text-white" for="boat_on_trailer"> Is
-                                                    your freight already on
-                                                    a
-                                                    trailer?</label>
+                                            <div class="input-form">
+                                                <label class="d-block"> Delivery Location:</label>
+                                                <input type="text" id="delivery-location" name="destination"
+                                                    placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                                <small id="errDLoc" class="err-loc"></small>
+                                                <ul class="suggestions suggestionsTwo"></ul>
+                                            </div>
+                                        </div>
+                                    </div> --}}
+                                    <div class="row mb-3 mt-3">
+                                        <div class="col-md-4">
+                                            <label class="lab-cos">Length</label>
+                                            <div class="input-container">
+                                                <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
+                                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                                <span class="separator">(Ft.)</span>
+                                                <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                                <span class="separators">(In.)</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="lab-cos">Width</label>
+                                            <div class="input-container">
+                                                <input type="number" id="feet-input1" class="input-field" placeholder="" name="width_ft[]"
+                                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                                <span class="separator">(Ft.)</span>
+                                                <input type="number" id="inches-input1" class="inches-input1 input-field" placeholder="" name="width_in[]"
+                                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                                <span class="separators">(In.)</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="lab-cos">Height</label>
+                                            <div class="input-container">
+                                                <input type="number" id="feet-input2" class="input-field" placeholder="" name="height_ft[]"
+                                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                                <span class="separator">(Ft.)</span>
+                                                <input type="number" id="inches-input2" class="inches-input1 input-field" placeholder="" name="height_in[]"
+                                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                                <span class="separators">(In.)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="lab-cos">Weight</label>
+                                            <div class="input-container1">
+                                                <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
+                                                    min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                                                <span class="separators-w">(Lbs.)</span>
+
                                             </div>
                                         </div>
                                     </div>
@@ -400,7 +440,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="input-form">
-                                                <label class="d-block">Commodity Detail:</label>
+                                                <label class="d-block">Commodity :</label>
                                                 <input type="text" id="commodity_detail" name="commodity_detail"
                                                     placeholder="Commodity Detail" required="" />
                                             </div>
@@ -535,6 +575,15 @@
                                                 <select class="form-control" id="pick_up_services"
                                                     name="pick_up_services">
                                                     <option value="" disabled selected>Select</option>
+                                                    <option value="Construction_Utility">Construction / Utility</option>
+                                                    <option value="Container_Station">Container Station</option>
+                                                    <option value="Exhibition">Exhibition</option>
+                                                    <option value="Inside_Pickup">Inside Pickup</option>
+                                                    <option value="Lift_Gate_Service">Lift Gate Service</option>
+                                                    <option value="Residential">Residential</option>
+                                                    <option value="Single_Shipment">Single Shipment</option>
+                                                    <option value="Sorting_Segregation">Sorting / Segregation</option>
+                                                    {{-- <option value="" disabled selected>Select</option>
                                                     <option value="Construction / Utility">Construction / Utility
                                                     </option>
                                                     <option value="Container Station">Container Station</option>
@@ -544,7 +593,7 @@
                                                     <option value="Residential">Residential</option>
                                                     <option value="Single Shipment">Single Shipment</option>
                                                     <option value="Sorting / Segregation">Sorting / Segregation
-                                                    </option>
+                                                    </option> --}}
                                                 </select>
                                             </div>
                                         </div>
@@ -555,6 +604,24 @@
                                                 <select class="form-control" id="deliver_services"
                                                     name="deliver_services">
                                                     <option value="" disabled selected>Select</option>
+                                                    <option value="After_Business_Hours_Delivery">After Business Hours Delivery
+                                                    </option>
+                                                    <option value="Construction_Utility">Construction / Utility</option>
+                                                    <option value="Appointment">Appointment</option>
+                                                    <option value="Container_Station">Container Station</option>
+                                                    <option value="Exhibition">Exhibition</option>
+                                                    <option value="In_Bond_Freight">In Bond Freight</option>
+                                                    <option value="In_Bond_TIR_Caret">In Bond TIR Caret</option>
+                                                    <option value="Inside_Same_Level_as_Delivery_Vehicle">Inside - Same Level as
+                                                        Delivery Vehicle</option>
+                                                    <option value="Lift_Gate_Service">Lift Gate Service</option>
+                                                    <option value="Residential">Residential</option>
+                                                    <option value="Mine_Govt_Airport">Mine / Govt / Airport</option>
+                                                    <option value="Notification_Prior_Delivery">Notification Prior Delivery
+                                                    </option>
+                                                    <option value="Delivery_Appointment_Required">Delivery appointment required
+                                                    </option>
+                                                    {{-- <option value="" disabled selected>Select</option>
                                                     <option value="After Business Hours Delivery">After Business Hours
                                                         Delivery
                                                     </option>
@@ -577,7 +644,7 @@
                                                     </option>
                                                     <option value="Delivery appointment required">Delivery appointment
                                                         required
-                                                    </option>
+                                                    </option> --}}
                                                 </select>
                                             </div>
                                         </div>
@@ -612,31 +679,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="input-form">
-                                        <label class="d-block" class="text-white"> Image:</label>
-                                        <input class="form-control image_input" type="file" id="image"
-                                            name="image[]" placeholder="Upload File" />
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="input-form">
-                                                <label class="d-block"> Pickup Location:</label>
-                                                <input type="text" id="pickup-location" name="origin"
-                                                    placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                                <small id="errOLoc" class="err-loc"></small>
-                                                <ul class="suggestions suggestionsTwo"></ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-form">
-                                                <label class="d-block"> Delivery Location:</label>
-                                                <input type="text" id="delivery-location" name="destination"
-                                                    placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                                <small id="errDLoc" class="err-loc"></small>
-                                                <ul class="suggestions suggestionsTwo"></ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
+                                    
                                     {{-- <div class="form-group">
                                         <label for="condition" class="text-white">Condition</label>
                                         <select class="form-control" id="condition" name="condition[]">
@@ -644,52 +688,50 @@
                                             <option value="2">Non Running</option>
                                         </select>
                                     </div> --}}
-                                    <div class="row mb-3 mt-3">
-                                        <div class="col-md-4">
-                                            <label class="lab-cos">Length</label>
-                                            <div class="input-container">
-                                                <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
-                                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                                <span class="separator">(Ft.)</span>
-                                                <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
-                                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                                <span class="separators">(In.)</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="lab-cos">Width</label>
-                                            <div class="input-container">
-                                                <input type="number" id="feet-input1" class="input-field" placeholder="" name="width_ft[]"
-                                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                                <span class="separator">(Ft.)</span>
-                                                <input type="number" id="inches-input1" class="input-field" placeholder="" name="width_in[]"
-                                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                                <span class="separators">(In.)</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="lab-cos">Height</label>
-                                            <div class="input-container">
-                                                <input type="number" id="feet-input2" class="input-field" placeholder="" name="height_ft[]"
-                                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                                <span class="separator">(Ft.)</span>
-                                                <input type="number" id="inches-input2" class="input-field" placeholder="" name="height_in[]"
-                                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                                <span class="separators">(In.)</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="row">
-                                        <div class="col-md-4">
-                                            <label class="lab-cos">Weight</label>
-                                            <div class="input-container1">
-                                                <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
-                                                    min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                                <span class="separators-w">(Lbs.)</span>
-
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="available_at_auction" name="available_at_auction"
+                                                    value="1" />
+                                                <label class="form-check-label text-white" for="available_at_auction">
+                                                    Available at
+                                                    Auction?</label>
+                                            </div>
+                                            <div class="input-form div-link mt-3" style="display: none;">
+                                                <label class="d-block"> Enter Link:</label>
+                                                <input class="form-control" type="url" id="link"
+                                                    name="link" placeholder="Enter Link" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="boat_on_trailer"
+                                                    name="boat_on_trailer" value="1" />
+                                                <label class="form-check-label text-white" for="boat_on_trailer"> Is
+                                                    your freight already on
+                                                    a
+                                                    trailer?</label>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-12">
+                                            <div class="input-form">
+                                                <label class="d-block" class="text-white"> Image:</label>
+                                                <input class="form-control image_input"  name="image[]" type="file" accept="image/*" multiple
+                                                    onchange="previewImages(event)">
+                                                <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]" placeholder="Upload File" /> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- <div class="input-form">
+                                        <label class="d-block" class="text-white"> Image:</label>
+                                        <input class="form-control image_input" type="file" id="image"
+                                            name="image[]" placeholder="Upload File" />
+                                    </div> --}}
                                     <div class="row">
                                         <h4 class="text-white">Additional Services</h4>
                                         <div class="col-md-4">
@@ -718,6 +760,12 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <input type="hidden" value="2010" name="year[]">
+                                    <input type="hidden" value="freight" name="model[]">
+                                    <input type="hidden" value="freight" name="make[]">
+                                    <input type="hidden" name="vehicle_opt" value="freight" hidden>
+                                    <input type="hidden" name="car_type" value="3" hidden>
+                                    <input type="hidden" name="frieght_class" id="frieght_class" value="" hidden>
                                     <!-- <div class="row select-bm" style="display:none;">
                                                 <div class="col-md-12 text-center">
                                                     <h4 class="text-white">Vehicle Information</h4>
@@ -784,8 +832,10 @@
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
-                                            <input class="form-control" required name="phone" type="text"
-                                                placeholder="Customer Name">
+                                            {{-- <input class="form-control" required name="phone" type="text"
+                                                placeholder="Customer Name"> --}}
+                                                <input class="form-control" id="name" name="name" type="text"
+                                                    placeholder="Customer Name" required>
                                             <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
                                             <label class="error-message" id="Custo_Name-error">This field is
                                                 required.</label>
@@ -811,8 +861,10 @@
                                     <div class="col-xl-12 col-lg-12">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
-                                            <input class="form-control" required name="Custo_Email" type="email"
-                                                placeholder="Email address">
+                                            {{-- <input class="form-control" required name="Custo_Email" type="email"
+                                                placeholder="Email address"> --}}
+                                                <input class="form-control" id="email" name="email" type="email"
+                                                 placeholder="Email address" required>
                                             <label class="error-message" id="Custo_Email-error">This field is
                                                 required.</label>
                                         </div>

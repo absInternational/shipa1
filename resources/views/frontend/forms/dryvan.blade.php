@@ -260,7 +260,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
+                                        <label class="d-block">Delivery Location:</label>
                                         <input type="text" id="delivery-location" name="destination"
                                             placeholder="Ex: 90005 Or Los Angeles" required="" />
                                         <small id="errDLoc" class="err-loc"></small>
@@ -281,14 +281,14 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
-                                        <label class="d-block"> Commodity Detail:</label>
+                                        <label class="d-block">Commodity Detail:</label>
                                         <input type="text" id="commodity_detail" name="commodity_detail"
                                             placeholder="Commodity Detail" required="" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form">
-                                        <label class="d-block"> Select Handling Unit:</label>
+                                        <label class="d-block">Select Handling Unit:</label>
                                         <select class="form-control" id="handling_unit" name="handling_unit">
                                             <option value="" selected disabled>Select</option>
                                             <option value="Pallet">Pallet</option>
