@@ -365,8 +365,8 @@
                                         <div class="col-xl-4 col-lg-4 mb-4">
                                             <label class="text-white mb-2">Country:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-location" placeholder="Enter Country" name="To_Country" required>
-                                                <ul class="suggestions suggestionsTwo"></ul>
+                                                <input class="form-control" type="text" id="delivery-country" placeholder="Enter Country" name="To_Country" required>
+                                                <ul class="suggestions suggestionsCountry"></ul>
                                                 {{-- <label class="error-message" id="delivery-location-error">This field is required.</label> --}}
                                             </div>
                                         </div>
@@ -968,7 +968,7 @@
         //     $("#calculatePriceFrom").submit();
         //     });    
     </script>
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             var countries = ["United States", "Canada", "Mexico", "United Kingdom", "Germany", "France", "Italy",
                 "Spain", "Australia"
@@ -1010,7 +1010,7 @@
                 '#delivery-zipcode').val();
             $('#destination').val(destination);
         });
-    </script>
+    </script> --}}
 
     {{-- <script>
         $(document).ready(function() {
@@ -1050,5 +1050,45 @@
             });
         });
     </script> --}}
+    <script>
+        $(document).ready(function() {
+            $(document).on('keyup', '#delivery-country', function() {
+                var inputField = $(this);
+                var suggestionsList = inputField.siblings(".suggestionsCountry");
+                var query = inputField.val();
+                
+                if (query !== "") {
+                    suggestionsList.css("display", "block");
+
+                    $.ajax({
+                        url: '/get-countries',  
+                        type: 'GET',
+                        data: { search: query },  
+                        success: function(response) {
+                            
+                            suggestionsList.empty();
+                            
+                            if (response.length > 0) {
+                                response.forEach(function(country) {
+                                    suggestionsList.append('<li class="suggestion-item-country">' + country.name + '</li>');
+                                });
+                            } else {
+                                suggestionsList.append('<li class="no-results">No results found</li>');
+                            }
+                        }
+                    });
+                } else {
+                    suggestionsList.css("display", "none");
+                }
+            });
+            
+            $(document).on('click', '.suggestion-item-country', function() {
+                var selectedCountry = $(this).text();
+                $('#delivery-country').val(selectedCountry);  
+                $('.suggestionsCountry').css("display", "none");  
+            });
+        });
+
+    </script>
 
 @endsection

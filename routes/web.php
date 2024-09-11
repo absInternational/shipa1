@@ -100,6 +100,10 @@ Route::get('/Dry-Van-Transport', [FrontendController::class, 'dryVan'])->name('f
 Route::get('/Reefer-Shipping-Transport', [FrontendController::class, 'reeferTrucking'])->name('frontend.forms.reefertrucking');
 // order tracking
 Route::post('order/tracking', [MainController::class, 'trackOrder'])->name('track.order');
+
+// get country
+Route::get('/get-countries', [MainController::class, 'getCountry']);
+
 // Route::prefix('vehicle')->group(function () {
 Route::get('/car', [FormVehicleController::class, 'car'])->name('form.vehicle.car');
 Route::get('/motorcycle', [FormVehicleController::class, 'motorcycle'])->name('form.vehicle.form.vehicle.car');

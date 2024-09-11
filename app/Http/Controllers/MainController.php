@@ -8,6 +8,7 @@ use App\Models\VehicleName;
 use App\Models\ZipCode;
 use App\Models\Subcategory;
 use App\Models\Category;
+use App\Models\Country;
 
 class MainController extends Controller
 {
@@ -125,7 +126,7 @@ class MainController extends Controller
     public function get_subcategories(Request $request)
     {
         $categoryId = $request->category;
-        
+
         $subcategories = Subcategory::where('category_id', $categoryId)->get();
         return response()->json($subcategories);
     }
@@ -145,40 +146,39 @@ class MainController extends Controller
 
         if ($request->vehicleType == 'Car') {
             return view('partials.forms.car2', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'Golf-Cart') {
+        } elseif ($request->vehicleType == 'Golf-Cart') {
             return view('partials.forms.golf-cart', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'Atv') {
+        } elseif ($request->vehicleType == 'Atv') {
             return view('partials.forms.atv', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'Boat-Transport') {
+        } elseif ($request->vehicleType == 'Boat-Transport') {
             return view('partials.forms.boat', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'Freight-Transportation') {
+        } elseif ($request->vehicleType == 'Freight-Transportation') {
             return view('partials.forms.freight', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'Heavy-Equipment') {
+        } elseif ($request->vehicleType == 'Heavy-Equipment') {
             return view('partials.forms.heavy', compact('makes', 'vehicleType', 'categories'));
-        }
-        elseif ($request->vehicleType == 'Motorcycle') {
+        } elseif ($request->vehicleType == 'Motorcycle') {
             return view('partials.forms.motorcycle', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'RV-Transport') {
+        } elseif ($request->vehicleType == 'RV-Transport') {
             return view('partials.forms.rv', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'Excavator-Tr') {
+        } elseif ($request->vehicleType == 'Excavator-Tr') {
             return view('partials.forms.excavator', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'Commercial-Truck') {
+        } elseif ($request->vehicleType == 'Commercial-Truck') {
             return view('partials.forms.commercial-truck', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'Construction-Transport') {
+        } elseif ($request->vehicleType == 'Construction-Transport') {
             return view('partials.forms.construction-transport', compact('makes', 'vehicleType'));
-        }
-        elseif ($request->vehicleType == 'Farm-Transport') {
+        } elseif ($request->vehicleType == 'Farm-Transport') {
             return view('partials.forms.farm-transport', compact('makes', 'vehicleType'));
         }
+    }
 
+    public function getCountry(Request $request)
+    {
+        $search = $request->input('search');
+
+        $countries = Country::where('name', 'like', '%' . $search . '%')
+            ->orWhere('short', 'like', '%' . $search . '%')
+            ->get();
+
+        return response()->json($countries);
     }
 }
