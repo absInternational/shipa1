@@ -95,6 +95,9 @@
         margin-top: 5px;
         display: block;
     } */
+    .error-field {
+    border: 2px solid red!important;
+}
 </style>
 <!--Start of Tawk.to Script-->
 <!-- <script type="text/javascript">

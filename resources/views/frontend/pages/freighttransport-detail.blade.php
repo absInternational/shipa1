@@ -257,7 +257,7 @@
                 <div class="tj-input-form mt-4 w-100" data-bg-image="">
                     <!-- <h4 class="title text-center">Instant Freight Quote!</h4> -->
                     <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
-                        id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                        id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
                         enctype="multipart/form-data">
                         @csrf
                         @if ($errors->any())

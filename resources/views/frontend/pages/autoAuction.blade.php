@@ -37,7 +37,7 @@
 <section class="tj-blog-standard">
     <div class="container">
         <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
                         <div class="image-container">
                             <img class="img-fluid" src="https://www.shipa1.com/img/banner-5-800x400-landing.webp" loading="lazy" alt="Auction Car Transport">
                         </div>
@@ -142,7 +142,7 @@
                     </div>
                             </div> 
                 </div>
-            <div class="col-lg-4 p-0">
+            <div class="col-lg-5 p-0">
             @if (session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
@@ -157,8 +157,8 @@
             <div class="tj-input-form-car" data-bg-image="">
             <img src="{{ asset('img/disco-.png') }}" alt="Your Image" class="top-left-image">
             <h4 class="title text-center">Instant Car Shipping Quote!</h4>
-                    <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform "
-                        id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                    <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform  validate-form"
+                        id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
                         enctype="multipart/form-data">
                         @csrf
                         @if ($errors->any())
@@ -174,32 +174,35 @@
 
 
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="input-form">
                                     <label class="d-block"> Name:</label>
-                                    <input type="text" id="name" name="name" placeholder=""
-                                        required="" />
+                                    <input type="text" id="name" name="name" placeholder="Customer Name"
+                                        required />
                                     <small id="errName" class="err-style"></small>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="input-form">
                                     <label class="d-block"> Phone:</label>
-                                    <input type="text" id="phone" name="phone" placeholder=" "
-                                        required="" />
+                                    {{-- <input type="tel" id="phone" name="phone" placeholder=" "
+                                        required="" /> --}}
+                                    <input id="phone" class="form-control ophone" required name="phone"
+                                        type="tel" placeholder="Phone">
                                     <small id="errPhone" class="err-style"></small>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="input-form">
-                                    <label class="d-block"> Email:</label>
-                                    <input type="email" id="email" name="email" placeholder=""
-                                        required="" />
-                                    <small id="errEmail" class="err-style"></small>
-                                </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-form">
+                                <label class="d-block"> Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Email address"
+                                    required />
+                                <small id="errEmail" class="err-style"></small>
                             </div>
                         </div>
-
+                    </div>
                         <div class="row select-bm">
                             <div class="col-md-12 text-center">
                                 <h4 class="text-white mb-0">Vehicle Information</h4>
@@ -239,17 +242,30 @@
                             </div>
                         </div>
 
-                        <a class="add-car-1 mb-2" id="addVehicleBtn">
-                            <i class="fa fa-plus"> Add
-                                Vehicle </i>
-                        </a>
-
-                        <div id="vehicles-container">
-                        </div>
-
+                        
 
 
                         <div class="row mt-0">
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block"> Pickup Location:</label>
+                                    <input type="text" id="pickup-location" name="origin"
+                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                    <small id="errOLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block"> Delivery Location:</label>
+                                    <input type="text" id="delivery-location" name="destination"
+                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                    <small id="errDLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- <div class="row mt-0">
                             <div class="col-md-6">
                                 <div class="input-form">
                                     <label class="d-block">Pickup Location:</label>
@@ -268,9 +284,28 @@
                                     <ul class="suggestions suggestionsTwo"></ul>
                                 </div>
                             </div>
+                        </div> --}}
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group" style="line-height:23px;">
+                                    <label for="trailer_type" class="text-white">Trailer Type</label>
+                                    <select class="form-control" id="trailer_type" name="trailer_type">
+                                        <option value="1" selected>Open Trailer</option>
+                                        <option value="2">Enclosed Trailer</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="condition" class="text-white">Condition</label>
+                                    <select class="form-control" id="condition" name="condition[]">
+                                        <option value="1" selected>Running</option>
+                                        <option value="2">Non Running</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group" style="line-height:23px;">
                                     <label for="trailer_type" class="text-white">Select</label>
@@ -289,6 +324,13 @@
                                     </select>
                                 </div>
                             </div>
+                        </div> --}}
+                        <a class="add-car-1 mb-2" id="addVehicleBtn">
+                            <i class="fa fa-plus"> Add
+                                Vehicle </i>
+                        </a>
+
+                        <div id="vehicles-container">
                         </div>
 
                         <div class="input-form mt-3">
@@ -345,7 +387,7 @@
 </section>
 @endsection
 @section('extraScript')
-<script>
+{{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -533,5 +575,5 @@
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
+</script> --}}
 @endsection
