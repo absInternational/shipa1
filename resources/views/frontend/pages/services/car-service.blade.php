@@ -854,7 +854,7 @@ huge discount offers and free shipping quotes nationwide.')
 @section('extraScript')
 
     {{-- addNewVehicle --}}
-        <script>
+        {{-- <script>
             $(document).ready(function() {
                 function addNewVehicle() {
                     var newVehicleHtml =
@@ -958,11 +958,11 @@ huge discount offers and free shipping quotes nationwide.')
                     });
                 }
             });
-        </script>
+        </script> --}}
     {{-- addNewVehicle --}}
 
     {{-- get.models --}}
-        <script>
+        {{-- <script>
             $(document).ready(function() {
                 $(document).on('change', '.vehicle-year, .vehicle-make', function() {
                     var year = $('.vehicle-year').val();
@@ -1000,11 +1000,11 @@ huge discount offers and free shipping quotes nationwide.')
                     }
                 });
             }
-        </script>
+        </script> --}}
     {{-- get.models --}}
 
     {{-- pickup-location --}}
-        <script>
+        {{-- <script>
             function updateSuggestions(inputField, suggestionsList) {
                 var inputValue = inputField.val();
 
@@ -1040,7 +1040,7 @@ huge discount offers and free shipping quotes nationwide.')
                 }
                 updateSuggestions(inputField, suggestionsList);
             });
-        </script>
+        </script> --}}
     {{-- pickup-location --}}
 
     {{-- owl-carousel --}}
