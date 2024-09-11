@@ -989,7 +989,7 @@
                     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
                     var currentRoute = "{{ Route::currentRouteName() }}";
 
-                    if (currentRoute !== 'form.vehicle.roro') {
+                    if (currentRoute !== 'form.vehicle.roro' && currentRoute !== 'frontend.pages.services.roro-service') {
                         var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
                         if (!isPickupValid || !isDeliveryValid) {
                             event.preventDefault();
@@ -1000,7 +1000,6 @@
                         }
                     }
                 });
-
             });
             // single form location validation end 
         </script>
