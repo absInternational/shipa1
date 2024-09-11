@@ -29,10 +29,52 @@
         </div>
     </div>
 </div>
-<a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-    Equipment</a>
-<div class="vehicles-container" id="vehicles-container">
-</div>               
+<div class="row mb-3">
+    <div class="col-md-4">
+        <label class="lab-cos">Length</label>
+        <div class="input-container">
+            <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
+                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+            <span class="separator">(Ft.)</span>
+            <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
+                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+            <span class="separators">(In.)</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="lab-cos">Width</label>
+        <div class="input-container">
+            <input type="number" id="feet-input1" class="input-field" placeholder="" name="width_ft[]"
+                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+            <span class="separator">(Ft.)</span>
+            <input type="number" id="inches-input1" class="input-field" placeholder="" name="width_in[]"
+                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+            <span class="separators">(In.)</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="lab-cos">Height</label>
+        <div class="input-container">
+            <input type="number" id="feet-input2" class="input-field" placeholder="" name="height_ft[]"
+                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+            <span class="separator">(Ft.)</span>
+            <input type="number" id="inches-input2" class="input-field" placeholder="" name="height_in[]"
+                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+            <span class="separators">(In.)</span>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <label class="lab-cos">Weight</label>
+        <div class="input-container1">
+            <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
+                min="0" maxlength="6" oninput="limitDigits(this, 6)">
+            <span class="separators-w">(Lbs.)</span>
+        </div>
+    </div>
+</div>
+              
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
@@ -105,52 +147,10 @@
         </div>
     </div>
 </div>
-<div class="row mb-3">
-    <div class="col-md-4">
-        <label class="lab-cos">Length</label>
-        <div class="input-container">
-            <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input" class="input-field" name="length_in[]" placeholder=""
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <label class="lab-cos">Width</label>
-        <div class="input-container">
-            <input type="number" id="feet-input1" class="input-field" placeholder="" name="width_ft[]"
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input1" class="input-field" placeholder="" name="width_in[]"
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <label class="lab-cos">Height</label>
-        <div class="input-container">
-            <input type="number" id="feet-input2" class="input-field" placeholder="" name="height_ft[]"
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input2" class="input-field" placeholder="" name="height_in[]"
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <label class="lab-cos">Weight</label>
-        <div class="input-container1">
-                                                <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
-                                                    min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                                <span class="separators-w">(Lbs.)</span>
-
-                                            </div>
-    </div>
-</div>
+<a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+    Equipment</a>
+<div class="vehicles-container" id="vehicles-container">
+</div> 
 <div class="row mt-3">
     <div class="col-md-12">
         <div class="form-check">
@@ -159,28 +159,22 @@
             <label class="form-check-label text-white" for="available_at_auction"> Available at
                 Auction?</label>
         </div>
-
         <div class="input-form div-link mt-3" style="display: none;">
             <label class="d-block"> Enter Link:</label>
             <input class="form-control" type="url" id="link" name="link"
                 placeholder="Enter Link" />
         </div>
-
-
-
         <!-- <div class="form-check">
             <input class="form-check-input" checked type="checkbox" id="available_at_auction"
                 name="available_at_auction" value="1" />
             <label class="form-check-label text-white" for="available_at_auction"> Available at
                 Auction?</label>
         </div>
-
         <div class="input-form div-link mt-3">
             <label class="d-block"> Enter Link:</label>
             <input class="form-control" type="url" id="link" name="link"
                 placeholder="Enter Link" />
         </div> -->
-
     </div>
 </div>
 <div class="input-form mt-3">

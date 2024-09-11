@@ -173,8 +173,8 @@ class MainController extends Controller
         elseif ($request->vehicleType == 'Commercial-Truck') {
             return view('partials.forms.commercial-truck', compact('makes', 'vehicleType'));
         }
-        elseif ($request->vehicleType == 'Consrtuction-Transport') {
-            return view('partials.forms.consrtuction-transport', compact('makes', 'vehicleType'));
+        elseif ($request->vehicleType == 'Construction-Transport') {
+            return view('partials.forms.construction-transport', compact('makes', 'vehicleType'));
         }
         elseif ($request->vehicleType == 'Farm-Transport') {
             return view('partials.forms.farm-transport', compact('makes', 'vehicleType'));
