@@ -276,7 +276,7 @@
                             <!-- Step 1: Moving From/To -->
                             <div class="route_quote_info" id="step1">
                                 <div class="row">
-                                    <h4 class="title text-center">Quote Request!</h4>
+                                    <h4 class="title text-center target-top">Quote Request!</h4>
                                     <div class="col-xl-12 col-lg-12 mb-4">
                                         <h6 class="text-white">Moving From</h6>
                                         <label class="text-white mb-2">Where Are You Moving From?</label>
@@ -311,7 +311,7 @@
                                 </div>
                             </div>
                             <!-- Step 2: Vehicle Information -->
-                            <div class="vehicle_quote_info" id="step2" style="display: none;">
+                            <div class="vehicle_quote_info target-top" id="step2" style="display: none;">
                                 <div class="row">
                                     <h4 class="title text-center">VEHICLE INFORMATION</h4>
                                     <select id="tabSelector" class="" aria-label="Tab selector" required>
@@ -331,14 +331,14 @@
                                 <div class="row mt-2">
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step2_previous">
+                                            <button class="tj-submit-btn previous scroll-up-btn" id="step2_previous">
                                                 Previous <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn float-end">
-                                            <button class="tj-submit-btn" type="button" id="step2_next">
+                                            <button class="tj-submit-btn scroll-up-btn" type="button" id="step2_next">
                                                 Next <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
@@ -348,8 +348,8 @@
                             <!-- Step 3: Customer Information -->
                             <div class="basic_quote_info" id="step3" style="display: none;">
                                 <div class="row mb-3">
-                                    <h4 class="text-center text-white">Customer Information</h4>
-                                    <div class="col-xl-4 col-lg-4">
+                                    <h4 class="text-center text-white target-top">Customer Information</h4>
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
                                             <input class="form-control" required name="Custo_Name" type="text"
@@ -365,16 +365,16 @@
                                                 <label class="error-message" id="Custo_Phone-error">This field is required.</label>
                                             </div>
                                         </div> -->
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white">Phone:</label>
-                                            <input id="phone" class="form-control" required name="phone"
+                                            <input id="phone" class="form-control ophone" required name="phone"
                                                 type="tel" placeholder="Customer Phone">
                                             <label class="error-message" id="Custo_Phone-error">This field is
                                                 required.</label>
                                         </div>
                                     </div>
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-12 col-lg-12">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
                                             <input class="form-control" required name="Custo_Email" type="email"
@@ -387,7 +387,7 @@
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step3_previous">
+                                            <button class="tj-submit-btn previous scroll-up-btn" id="step3_previous">
                                                 Previous <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>

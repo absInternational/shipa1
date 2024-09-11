@@ -346,8 +346,7 @@
                                     min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
                                 <span class="separators">(In.)</span>
                             </div>
-                        </div>
-                        
+                        </div>            
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
