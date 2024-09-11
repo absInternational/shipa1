@@ -334,7 +334,7 @@
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="">
                         <form action="{{ route('submit.quote') }}" novalidate method="post" class="rd-mailform validate-form"
-                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
+                            id="calculatePriceFromRoro" data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
                             @csrf
                             @if ($errors->any())
                                 <div class="alert alert-danger">
@@ -367,21 +367,25 @@
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" id="delivery-country" placeholder="Enter Country" name="To_Country" required>
                                                 <ul class="suggestions suggestionsCountry"></ul>
+                                                {{-- <input type="text" id="delivery-location" name="destination"
+                                                    placeholder="Ex: 90005 Or Los Angeles" required="" /> --}}
+                                                <small id="errDLoc" class="err-loc"></small>
+                                                {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
                                                 {{-- <label class="error-message" id="delivery-location-error">This field is required.</label> --}}
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 mb-4">    
                                             <label class="text-white mb-2">City:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" id="delivery-location-1" placeholder="Enter City" name="To_City" required>
-                                                <ul class="suggestions suggestionsTwo"></ul>
+                                                <input class="form-control" type="text" id="delivery-city" placeholder="Enter City" name="To_City" required>
+                                                {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
                                                 {{-- <label class="error-message" id="delivery-location-1-error">This field is required.</label> --}}
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 mb-4"> 
                                             <label class="text-white mb-2">Zip Code:</label>
                                             <div class="single-input-field">
-                                                <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>      
+                                                <input class="form-control" type="text" id="delivery-zipcode" placeholder="Enter ZipCode" name="To_ZipCode" required>      
                                             </div>
                                         </div>
                                     </div>
@@ -1086,6 +1090,11 @@
                 var selectedCountry = $(this).text();
                 $('#delivery-country').val(selectedCountry);  
                 $('.suggestionsCountry').css("display", "none");  
+            });
+            
+            $(document).on('click', '#submit_instant_code', function() {
+                console.log('yes yes yes');
+                $('#calculatePriceFromRoro').submit();  
             });
         });
 

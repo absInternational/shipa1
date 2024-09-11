@@ -977,14 +977,30 @@
                     }
                 }
 
+                // $("form").submit(function(event) {
+                //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+                //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+
+                //     if (!isPickupValid || !isDeliveryValid) {
+                //         event.preventDefault();  // Prevent form submission if validation fails
+                //     }
+                // });
                 $("form").submit(function(event) {
                     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-                    var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+                    var currentRoute = "{{ Route::currentRouteName() }}";
 
-                    if (!isPickupValid || !isDeliveryValid) {
-                        event.preventDefault();  // Prevent form submission if validation fails
+                    if (currentRoute !== 'form.vehicle.roro') {
+                        var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+                        if (!isPickupValid || !isDeliveryValid) {
+                            event.preventDefault();
+                        }
+                    } else {
+                        if (!isPickupValid) {
+                            event.preventDefault();
+                        }
                     }
                 });
+
             });
             // single form location validation end 
         </script>
