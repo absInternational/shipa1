@@ -119,7 +119,7 @@
     <i class="fa fa-plus"> Add
         Vehicle </i>
 </a>
-<div class="vehicles-container">
+<div class="vehicles-container" id="vehicles-container">
 </div>
 <div class="row ms-3">
     <di class="col-md-6">
@@ -215,13 +215,13 @@
         } 
 </script>
 <script>
-    $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
+    // $('#addVehicleBtn').click(function() {
+    //         addNewVehicle();
+    //     });
 
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
+    //     $(document).on('click', '.delete-vehicle', function() {
+    //         $(this).closest('.vehicle-info').remove();
+    //     });
 
         $(document).on('click', '.make-dropdown .dropdown-item', function() {
             var make = $(this).data('value');

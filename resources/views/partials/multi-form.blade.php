@@ -52,7 +52,7 @@
                 </div>
             </div>
             <!-- Step 2: Vehicle Information -->
-            <div class="vehicle_quote_info" id="step2" style="display: none;">
+            <div class="vehicle_quote_info target-top" id="step2" style="display: none;">
                 <div class="row">
                     <h4 class="title text-center target-top">VEHICLE INFORMATION</h4>
                     <select id="tabSelector" class="" aria-label="Tab selector" required>
@@ -66,8 +66,8 @@
                         <option value="Motorcycle">Motorcycle</option>
                         <option value="RV-Transport">RV Transport</option>
                     </select>
-                    <label class="error-message" id="tabSelector-error">This field is
-                        required.</label>
+                    {{-- <label class="error-message" id="tabSelector-error">This field is
+                        required.</label> --}}
 
                     <div class="tab-content mt-3" id="additionalContent"></div>
                 </div>

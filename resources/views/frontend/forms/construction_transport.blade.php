@@ -177,6 +177,7 @@
                             enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="car_type" value="2" hidden>
+                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
                             @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <ul>
@@ -396,7 +397,7 @@
                             <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
                                 Add Equipment</a>
                             <div id="vehicles-container">
-                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                            </div>
                             {{-- <div class="row mb-3 mt-3">
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>

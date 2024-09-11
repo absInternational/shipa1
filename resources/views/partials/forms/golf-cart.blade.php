@@ -60,7 +60,7 @@
         class="fa fa-plus"></i> Add
     Vehicle</a>
 
-<div class="vehicles-container">
+<div class="vehicles-container" id="vehicles-container">
 </div>
 
 

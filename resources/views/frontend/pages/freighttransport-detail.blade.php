@@ -637,13 +637,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    {{-- <div class="form-group">
                                         <label for="condition" class="text-white">Condition</label>
                                         <select class="form-control" id="condition" name="condition[]">
                                             <option value="1" selected>Running</option>
                                             <option value="2">Non Running</option>
                                         </select>
-                                    </div>
+                                    </div> --}}
                                     <div class="row mb-3 mt-3">
                                         <div class="col-md-4">
                                             <label class="lab-cos">Length</label>
@@ -781,7 +781,7 @@
                             <div class="basic_quote_info" id="step3" style="display: none;">
                                 <div class="row mb-3">
                                     <h4 class="text-center text-white">Customer Information</h4>
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
                                             <input class="form-control" required name="phone" type="text"
@@ -799,16 +799,16 @@
                                         <label class="error-message" id="Custo_Phone-error">This field is required.</label>
                                     </div>
                                 </div> -->
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white">Phone:</label>
-                                            <input id="phone" class="form-control" required name="phone"
+                                            <input id="phone" class="form-control ophone" required name="phone"
                                                 type="tel" placeholder="Customer Phone">
                                             <label class="error-message" id="Custo_Phone-error">This field is
                                                 required.</label>
                                         </div>
                                     </div>
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-12 col-lg-12">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
                                             <input class="form-control" required name="Custo_Email" type="email"

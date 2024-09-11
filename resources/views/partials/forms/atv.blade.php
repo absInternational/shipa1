@@ -65,7 +65,7 @@
 </div>
 <a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
     Vehicle</a>
-<div class="vehicles-container">
+<div class="vehicles-container" id="vehicles-container">
 </div>
 <div class="row ms-3">
     <di class="col-md-6">
@@ -109,7 +109,7 @@
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
                                     <label> Year</label>
-                                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                                    <select class="nice-select year" name="year[]" id="year" required> <option value="" disabled selected>Select Year</option>`;
                                         var currentYear = {{ date('Y') }};
                                         for (var year = currentYear; year >= 1936; year--) {
                                             newVehicleHtml += `<option value="${year}">${year}</option>`;
@@ -123,14 +123,14 @@
                                 <div class="input-form tj-select">
                                     <label>Make</label>
                                     <input type="text" id="make" name="make[]"
-                                    placeholder="Enter Make" required="" />
+                                    placeholder="Enter Make" required />
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="input-form tj-select model-div">
                                     <label>Model</label>
                                     <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                    required="" />`
+                                    required />`
 
                                         newVehicleHtml += `
                                 </div>

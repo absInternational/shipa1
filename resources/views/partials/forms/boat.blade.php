@@ -78,34 +78,7 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-6">
-        <div class="form-group">
-            <label for="trailer_type" class="text-white">Select Trailer
-                Type</label>
-                <select class="form-control" id="trailer_type" name="trailer_type">
-                    <option value="REMOVABLE GOOSENECK (RGN)" selected>REMOVABLE GOOSENECK (RGN)</option>
-                    <option value="STEP DECK (SD)">STEP DECK (SD)</option>
-                    <option value="FLATBED (F)">FLATBED (F)</option>
-                    <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
-                    <option value="LANDOLL (LD)">LANDOLL (LD)</option>
-                </select>
-            {{-- <select class="form-control" id="trailer_type" name="trailer_type">
-                <option value="Open" selected>Open</option>
-                <option value="Enclosed">Enclosed</option>
-            </select> --}}
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group">
-            <label for="condition" class="text-white">Condition</label>
-            <select class="form-control" id="condition" name="condition[]">
-                <option value="1" selected>Running</option>
-                <option value="2">Non Running</option>
-            </select>
-        </div>
-    </div>
-</div>
+
 <div class="row mb-3">
     <div class="col-md-4">
         <label class="lab-cos">Length</label>
@@ -183,6 +156,34 @@
         </div>
     </div> --}}
 </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="trailer_type" class="text-white">Select Trailer
+                Type</label>
+                <select class="form-control" id="trailer_type" name="trailer_type">
+                    <option value="REMOVABLE GOOSENECK (RGN)" selected>REMOVABLE GOOSENECK (RGN)</option>
+                    <option value="STEP DECK (SD)">STEP DECK (SD)</option>
+                    <option value="FLATBED (F)">FLATBED (F)</option>
+                    <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
+                    <option value="LANDOLL (LD)">LANDOLL (LD)</option>
+                </select>
+            {{-- <select class="form-control" id="trailer_type" name="trailer_type">
+                <option value="Open" selected>Open</option>
+                <option value="Enclosed">Enclosed</option>
+            </select> --}}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="condition" class="text-white">Condition</label>
+            <select class="form-control" id="condition" name="condition[]">
+                <option value="1" selected>Running</option>
+                <option value="2">Non Running</option>
+            </select>
+        </div>
+    </div>
+</div>
 <div class="row mt-3">
     {{-- <div class="col-md-4">
         <div class="form-group">
@@ -221,7 +222,7 @@
 </div>
 <a class="add-car addVehicleBtn" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
 Equipment</a>
-<div class="vehicles-container">
+<div class="vehicles-container" id="vehicles-container">
 </div>
 
 <div class="row">

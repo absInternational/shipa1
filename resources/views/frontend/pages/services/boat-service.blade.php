@@ -551,7 +551,7 @@ from one state to another state in one click - ShipA1.')
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-<script>
+{{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -739,5 +739,5 @@ from one state to another state in one click - ShipA1.')
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script> 
+</script>  --}}
 @endsection

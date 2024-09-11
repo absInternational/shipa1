@@ -1,6 +1,9 @@
 @extends('frontend.layouts.app')
+@section('title', 'ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA')
+@section('meta_description',
+'Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.')
+{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" /> --}}
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 <style>
     .tj-testimonial-section {
         padding: 50px 0;
@@ -294,7 +297,7 @@
                             <!-- Step 1: Moving From/To -->
                             <div class="route_quote_info" id="step1">
                                 <div class="row">
-                                    <h4 class="title text-center">Quote Request!</h4>
+                                    <h4 class="title text-center target-top">Quote Request!</h4>
                                     <div class="col-xl-12 col-lg-12 mb-4">
                                         <h6 class="text-white">Moving From</h6>
                                         <label class="text-white mb-2">Where Are You Moving From?</label>
@@ -321,7 +324,7 @@
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="price__cta-btn text-center">
-                                            <button class="tj-submit-btn" type="button" id="step1_next">
+                                            <button class="tj-submit-btn " type="button" id="step1_next">
                                                 Next <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
@@ -329,14 +332,14 @@
                                 </div>
                             </div>
                             <!-- Step 2: Vehicle Information -->
-                            <div class="vehicle_quote_info" id="step2" style="display: none;">
+                            <div class="vehicle_quote_info target-top" id="step2" style="display: none;">
                                 <div class="row">
-                                    <h4 class="title text-center">HEAVY INFORMATION</h4>
-                                    <select id="tabSelector" class="" aria-label="Tab selector">
+                                    <h4 class="title text-center target-top">HEAVY INFORMATION</h4>
+                                    <select id="tabSelector" class="" aria-label="Tab selector" required>
                                         <option value="" selected disabled>Select a Vehicle</option>
                                         <option value="Boat-Transport">Boat Transport</option>
-                                        <option value="Commercial-Truck">Commercial-Truck</option>
-                                        <option value="Consrtuction-Transport">Consrtuction-Transport</option>
+                                        <option value="Commercial-Truck">Commercial -Truck</option>
+                                        <option value="Construction-Transport">Construction-Transport</option>
                                         <option value="Excavator-Tr">Excavator</option>
                                         <option value="Farm-Transport">Farm-Transport</option>
                                         <option value="Heavy-Equipment">Heavy Equipment</option>
@@ -349,14 +352,14 @@
                                 <div class="row mt-2">
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step2_previous">
+                                            <button class="tj-submit-btn previous scroll-up-btn" id="step2_previous">
                                                 Previous <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn float-end">
-                                            <button class="tj-submit-btn" type="button" id="step2_next">
+                                            <button class="tj-submit-btn scroll-up-btn" type="button" id="step2_next">
                                                 Next <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
@@ -366,20 +369,20 @@
                             <!-- Step 3: Customer Information -->
                             <div class="basic_quote_info" id="step3" style="display: none;">
                                 <div class="row mb-3">
-                                    <h4 class="text-center text-white">Customer Information</h4>
-                                    <div class="col-xl-4 col-lg-4">
+                                    <h4 class="text-center text-white target-top">Customer Information</h4>
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
-                                            <input class="form-control" name="phone" type="tel"
+                                            <input class="form-control" name="phone" type="text"
                                                 placeholder="Customer Name">
                                             <!-- <input class="form-control" name="Custo_Name" type="text"
                                                     placeholder="Customer Name"> -->
                                         </div>
                                     </div>
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white">Phone:</label>
-                                            <input id="phone" class="form-control" required name="phone"
+                                            <input id="phone" class="form-control ophone" required name="phone"
                                                 type="tel" placeholder="Phone">
                                             <label class="error-message" id="Custo_Phone-error">This field is
                                                 required.</label>
@@ -395,7 +398,7 @@
                                                     <label class="error-message" id="tabSelector-error">This field is required.</label>
                                             </div>
                                         </div> -->
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-12 col-lg-12">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
                                             <input class="form-control" name="Custo_Email" type="email"
@@ -408,7 +411,7 @@
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step3_previous">
+                                            <button class="tj-submit-btn previous scroll-up-btn" id="step3_previous">
                                                 Previous <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
@@ -831,25 +834,27 @@
 <script src="path/to/jquery.min.js"></script>
 {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> -->
-<script>
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     var input = document.querySelector("#phone");
-    //     window.intlTelInput(input, {
-    //         initialCountry: "auto",
-    //         geoIpLookup: function(callback) {
-    //             fetch('https://ipinfo.io/json')
-    //                 .then(function(response) {
-    //                     return response.json();
-    //                 })
-    //                 .then(function(ipinfo) {
-    //                     var countryCode = "us";
-    //                     callback(countryCode);
-    //                 });
-    //         },
-    //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-    //     });
-    // });
-</script>
+{{-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                fetch('https://ipinfo.io/json')
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(ipinfo) {
+                        var countryCode = "us";
+                        callback(countryCode);
+                    });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+        });
+    });
+</script> --}}
+@endsection
+@section('extraScript')
 <script>
     function playVideo() {
         document.querySelector('.video-thumbnail').style.display = 'none';
@@ -859,7 +864,7 @@
         iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
     }
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         var selectedTab = '';
         $('#tabSelector').change(function() {
@@ -1026,15 +1031,15 @@
             }
         });
     });
-</script>
-<script>
-    // document.querySelectorAll('input[type="text"]').forEach((input) => {
-    //     input.addEventListener("input", function() {
-    //         this.value = this.value.replace(/[^0-9]/g, "");
-    //     });
-    // });
-</script>
-<script>
+</script> --}}
+{{-- <script>
+    document.querySelectorAll('input[type="text"]').forEach((input) => {
+        input.addEventListener("input", function() {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    });
+</script> --}}
+{{-- <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -1085,8 +1090,8 @@
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         function showError(field, message) {
             $('#' + field).addClass('error-field');
@@ -1151,8 +1156,8 @@
             $('#step2').show();
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         $(document).on('change', '#available_at_auction', function() {
             if ($(this).is(':checked')) {
@@ -1170,8 +1175,8 @@
             }
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -1208,8 +1213,8 @@
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         $(document).on('change', '.vehicle-year, .vehicle-make', function() {
             var year = $('.vehicle-year').val();
@@ -1248,8 +1253,8 @@
             });
         }
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -1286,5 +1291,5 @@
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
+</script> --}}
 @endsection
