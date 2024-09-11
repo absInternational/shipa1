@@ -122,8 +122,8 @@ holiday places before you reach without any scratch, best auto transport service
                     <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
                     <div class="tj-input-form w-100" data-bg-image="">
                         <h4 class="title text-center">ATV/UTV Quote!</h4>
-                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
-                            id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
+                            id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
                             @if ($errors->any())
@@ -137,7 +137,7 @@ holiday places before you reach without any scratch, best auto transport service
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block">Name:</label>
                                         <input type="text" id="name" name="name" placeholder="Name"
@@ -161,15 +161,25 @@ holiday places before you reach without any scratch, best auto transport service
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
                                 </div> -->
-                                <div class="col-md-4">
-                                        <div class="input-form">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block">Phone:</label>
+                                        <input type="tel" class="ophone" id="phone" name="phone" placeholder="Number"
+                                            required="" />
+                                        <input type="hidden" name="country_code" id="country_code" />
+                                        <small id="errPhone" class="err-style"></small>
+                                    </div>
+                                        {{-- <div class="input-form">
                                             <label class="d-block">Phone:</label>
-                                            <input type="tel" id="ophone" name="phone" placeholder="Phone Number"
+                                            <input class="ophone" type="tel" id="ophone" name="phone" placeholder="Phone Number"
                                                 required="" />
                                             <small id="errPhone" class="err-style"></small>
-                                        </div>
+                                        </div> --}}
                                     </div>
-                                <div class="col-md-4">
+                                </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
                                     <div class="input-form">
                                         <label class="d-block">Email:</label>
                                         <input type="email" id="email" name="email" placeholder="Email "
@@ -208,7 +218,7 @@ holiday places before you reach without any scratch, best auto transport service
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label> Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year">
+                                        <select class="nice-select vehicle-year" required name="year[]" id="year">
                                             <option value="" disabled selected>Select</option>
                                             @php
                                                 $currentYear = date('Y');
@@ -223,14 +233,14 @@ holiday places before you reach without any scratch, best auto transport service
                                     <div class="input-form tj-select">
                                         <label>Make</label>
                                         <input type="text" id="make" name="make[]" placeholder="Make"
-                                            required="" />
+                                            required />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form tj-select vehicle-model-div">
                                         <label>Model</label>
                                         <input type="text" id="model" name="model[]" placeholder="Model"
-                                            required="" />
+                                            required />
                                     </div>
                                 </div>
                             </div>
@@ -682,6 +692,67 @@ holiday places before you reach without any scratch, best auto transport service
             var newVehicleHtml =
                 `
                 <div class="vehicle-info">
+                    <div class="row select-bm">
+                        <!-- Bin icon for deleting vehicle -->
+                                <span class="delete-vehicle"><i class="fa fa-trash mt-3" style="float: right; color: red; cursor: pointer;"></i></span>
+                        <div class="col-md-4">
+                            <div class="input-form tj-select">
+                                <label> Year</label>
+                                <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                                    var currentYear = {{ date('Y') }};
+                                    for (var year = currentYear; year >= 1936; year--) {
+                                        newVehicleHtml += `<option value="${year}">${year}</option>`;
+                                    }
+                                    newVehicleHtml +=
+                                `</select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                             <div class="input-form tj-select">
+                                 <label>Make</label>
+                                 <input type="text" id="make" name="make[]"
+                                                    placeholder="Enter Make" required="" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-form tj-select model-div">
+                                <label>Model</label>
+                                <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                    required="" />
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="condition" class="text-white">Condition</label>
+                                <select class="form-control" id="condition" name="condition[]">
+                                    <option value="1" selected>Running</option>
+                                    <option value="2">Non Running</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            $('#vehicles-container').append(newVehicleHtml);
+        }
+
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
+
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+    });
+</script>
+{{-- <script>
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                <div class="vehicle-info">
                 <div class="row select-bm">
                 <div class="col-md-4">
                 <div class="input-form tj-select">
@@ -860,5 +931,5 @@ holiday places before you reach without any scratch, best auto transport service
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
+</script> --}}
 @endsection

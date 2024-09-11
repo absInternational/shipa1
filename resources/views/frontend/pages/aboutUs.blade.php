@@ -1,5 +1,24 @@
 @extends('frontend.layouts.app')
 @section('content')
+<style>
+    .service-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    }
+    .service-link:hover {
+        text-decoration: none; /* Ensure no underline on hover */
+    }
+    .service-link:hover .tj-service-item {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    }
+    .service-link:hover .service-content {
+        color: #8FC445; /* Change text color on hover */
+    }
+    .service-link:hover .icon-box i {
+        color: white; /* Change icon color on hover */
+    }
+</style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
@@ -131,7 +150,7 @@
                             <i class="flaticon-in-person"></i>
                         </div>
                         <div class="about-number">
-                            <div class="tj-count"><span class="odometer" data-count="1700">0</span></div>
+                            <div class="tj-count"><span class="odometer" data-count="289">0</span>k+</div>
                             <p class="desc">Satisfied Client</p>
                         </div>
                     </div>
@@ -183,54 +202,79 @@
 </section>
 <!--=========== Cta Section End =========-->
 <!--=========== Service Section Start =========-->
-<section class="tj-service-section">
+<section class="tj-service-section pt-4">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="tj-section-heading text-center">
-                    <span class="sub-title active-shape"> What We Do</span>
+                    <span class="sub-title active-shape">What We Do</span>
                     <h2 class="title">Logistic & Transport</h2>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-                <div class="tj-service-item"
-                    data-bg-image="{{ asset('frontend/images/service/vehicle-transport.webp') }}">
-                    <div class="icon-box">
-                        <i class="flaticon-air-freight"></i>
+                <a href="{{ route('vehicleTransportDetail') }}" class="service-link">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
+                        <div class="icon-box">
+                            <i class="fa-light fa-car-side fa-2xs"></i>
+                            <!-- <i class="flaticon-air-freight"></i> -->
+                        </div>
+                        <div class="service-content">
+                            <h4>VEHICLE TRANSPORTATION</h4>
+                            <p>Everything you need to know about 100% insured
+                                and secured vehicle transportation.</p>
+                            <div class="d-flex justify-content-end">
+                                <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('vehicleTransportDetail') }}" style="background: #8fc445;color: white;">
+                                    Read More<i class="bi bi-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <h4><a class="title-link" href="service-details.html"> VEHICLE TRANSPORTATION</a></h4>
-                        <p>Long established fact that reader will be distracted by the</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-                <div class="tj-service-item"
-                    data-bg-image="{{ asset('frontend/images/service/heavy-transport.webp') }}">
-                    <div class="icon-box">
-                        <i class="flaticon-cargo-ship-1"></i>
+                <a href="{{ route('heavy-transport-detail') }}" class="service-link">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/HEAVY-CARD.webp') }}">
+                        <div class="icon-box">
+                            <i class="fa-light fa-tractor fa-2xs"></i>
+                            <!-- <i class="flaticon-cargo-ship-1"></i> -->
+                        </div>
+                        <div class="service-content">
+                            <h4>HEAVY TRANSPORTATION</h4>
+                            <p>Ship A1 is your trusted partner for safely and
+                                efficiently handling the toughest transportation challenges.</p>
+                            <div class="d-flex justify-content-end">
+                                <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('heavy-transport-detail') }}" style="background: #8fc445;color: white;">
+                                    Read More<i class="bi bi-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <h4>
-                            <a class="title-link" href="service-details.html"> HEAVY TRANSPORTATION</a>
-                        </h4>
-                        <p>Long established fact that reader will be distracted by the</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                <div class="tj-service-item"
-                    data-bg-image="{{ asset('frontend/images/service/feright-transport.webp') }}">
-                    <div class="icon-box">
-                        <i class="flaticon-delivery-van"></i>
+                <a href="{{ route('freighttransport-detail') }}" class="service-link">
+                    <div class="tj-service-item"
+                        data-bg-image="{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}">
+                        <div class="icon-box">
+                            <i class="fa-light fa-truck fa-2xs"></i>
+                            <!-- <i class="flaticon-delivery-van"></i> -->
+                        </div>
+                        <div class="service-content">
+                            <h4>FREIGHT TRANSPORTATION</h4>
+                            <p>Unlock the door to smooth freight logistic
+                                transportation with Ship A1.</p>
+                            <div class="d-flex justify-content-end">
+                                <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('freighttransport-detail') }}" style="background: #8fc445;color: white;">
+                                    Read More<i class="bi bi-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <h4><a class="title-link" href="service-details.html"> FREIGHT TRANSPORTATION</a></h4>
-                        <p>Long established fact that reader will be distracted by the</p>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>

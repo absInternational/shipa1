@@ -6,7 +6,19 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
 
 
 @section('content')
+{{-- <style>
+    .custom-select-style{
 
+        background: #f0f2f7;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 500;
+        height: 35px;
+        line-height: 38px;
+        padding: 15px 15px;
+        border-radius: 3px;
+    }
+</style> --}}
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -71,7 +83,7 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                     <div class="input-form">
                                         <label class="d-block"> Your Name:</label>
                                         <input type="text" class="name" id="name" name="name" placeholder="Full Name"
-                                            required="" />
+                                            required />
                                             {{-- <span class="errName error-message"></span> --}}
                                         {{-- <small id="errName" class="err-style"></small> --}}
                                     </div>
@@ -79,7 +91,7 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
+                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required />
                                         {{-- <small id="errPhone" class="err-style"></small> --}}
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
@@ -88,7 +100,7 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                     <div class="input-form">
                                         <label class="d-block"> Email Address:</label>
                                         <input type="email" id="email" name="email" placeholder="Your Email Address"
-                                            required="" />
+                                            required />
                                         <small id="errEmail" class="err-style"></small>
                                     </div>
                                 </div>
@@ -100,7 +112,7 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Location:</label>
                                         <input type="text" id="pickup-location" name="origin"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                            placeholder="Ex: 90005 Or Los Angeles" required />
                                         <small id="errOLoc" class="err-loc" style="color: #ff0000 !important;"></small>
                                         <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
@@ -109,7 +121,7 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                     <div class="input-form">
                                         <label class="d-block"> Delivery Location:</label>
                                         <input type="text" id="delivery-location" name="destination"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                            placeholder="Ex: 90005 Or Los Angeles" required />
                                         <small id="errDLoc" class="err-loc"></small>
                                         <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
@@ -123,7 +135,20 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label> Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year">
+                                        {{-- <div class="dropdown">
+                                            <input class="form-control dropdown-toggle year" type="text" name="year[]" id="year" 
+                                            placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false" required>
+                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                                <li><a class="dropdown-item">Select Year</a></li>
+                                                @php
+                                                    $currentYear = date('Y');
+                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
+                                                    }
+                                                @endphp
+                                            </ul>
+                                        </div> --}}
+                                        <select class="nice-select year vehicle-year custom-select-style" name="year[]" id="year" required>
                                             <option value="" disabled selected>Select Year</option>
                                             @php
                                                 $currentYear = date('Y');
@@ -234,6 +259,7 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
 
 @section('extraScript')
     <script>
+        
         $(document).ready(function() {
             function addNewVehicle() {
                 var newVehicleHtml =

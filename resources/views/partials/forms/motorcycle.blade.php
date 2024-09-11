@@ -8,7 +8,7 @@
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label> Year</label>
-            <select class="nice-select vehicle-year" name="year[]" id="year">
+            <select class="nice-select vehicle-year" name="year[]" id="year" required>
                 <option value="" disabled selected>Select Year
                 </option>
                 @php

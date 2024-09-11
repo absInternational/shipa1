@@ -1014,11 +1014,6 @@ function getModel(year, makeId, vehicleInfo) {
     });
 }
 
-
-
-
-
-
         $(document).on('input', '.dropdown-toggle', function() {
             var input = $(this).val().toLowerCase();
             $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
