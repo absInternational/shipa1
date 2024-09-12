@@ -966,12 +966,12 @@
         });
     </script> --}}
 
-    <script>
-        //  $(document).on( function() {
-        //     console.log('okok');
-        //     $("#calculatePriceFrom").submit();
-        //     });    
-    </script>
+    {{-- <script>
+         $(document).on( function() {
+            console.log('okok');
+            $("#calculatePriceFrom").submit();
+            });    
+    </script> --}}
     {{-- <script>
         $(document).ready(function() {
             var countries = ["United States", "Canada", "Mexico", "United Kingdom", "Germany", "France", "Italy",
