@@ -374,7 +374,7 @@
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
                                             <input class="form-control" name="phone" type="text"
-                                                placeholder="Customer Name">
+                                                placeholder="Customer Name" required>
                                             <!-- <input class="form-control" name="Custo_Name" type="text"
                                                     placeholder="Customer Name"> -->
                                         </div>
@@ -402,7 +402,7 @@
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
                                             <input class="form-control" name="Custo_Email" type="email"
-                                                placeholder="Email address">
+                                                placeholder="Email address" required>
                                             <label class="error-message" id="tabSelector-error">This field is
                                                 required.</label>
                                         </div>
