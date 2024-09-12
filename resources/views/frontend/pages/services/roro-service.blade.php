@@ -182,7 +182,7 @@
                                     <div class="col-xl-4 col-lg-4 mb-4"> 
                                         <label class="text-white mb-2">Zip Code:</label>
                                         <div class="single-input-field">
-                                            <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode" required>      
+                                            <input class="form-control" type="text" placeholder="Enter ZipCode" name="To_ZipCode">      
                                         </div>
                                     </div>
                                 </div>
@@ -268,56 +268,46 @@
                             <!-- Step 3: Customer Information -->
                             <div class="basic_quote_info" id="step3" style="display: none;">
                                 <div class="row mb-3">
-                                    <h4 class="text-center text-white">Customer Information</h4>
-                                    <div class="col-xl-4 col-lg-4">
+                                    <h4 class="text-center text-white target-top">Customer Information</h4>
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
-                                            <input class="form-control" required name="phone" type="tel"
-                                                placeholder="Customer Name">
+                                            <input class="form-control" id="name" name="name" type="text"
+                                                placeholder="Customer Name" required>
                                             <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-                                            {{-- <label class="error-message" id="Custo_Name-error">This field is --}}
-                                                required.</label>
+                                            
                                         </div>
                                     </div>
-                                    <!-- <div class="col-xl-4 col-lg-4">
-                                            <div class="single-input-field">
-                                                <label class="d-block text-white"> Phone:</label>
-                                                <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
-                                                <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
-                                                <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                            </div>
-                                        </div> -->
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white">Phone:</label>
-                                            <input id="phone" class="form-control" required name="phone"
-                                                type="tel" placeholder="Customer Phone">
-                                            {{-- <label class="error-message" id="Custo_Phone-error">This field is --}}
-                                                required.</label>
+                                            <input id="phone" class="form-control ophone" name="phone" type="tel"
+                                                placeholder="Customer Phone" required>
+                                            <small id="errPhone" class="err-style"></small>
+                                            <input type="hidden" name="country_code" id="country_code" />
                                         </div>
                                     </div>
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-12 col-lg-12">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
-                                            <input class="form-control" required name="Custo_Email" type="email"
-                                                placeholder="Email address">
-                                            {{-- <label class="error-message" id="Custo_Email-error">This field is --}}
-                                                required.</label>
+                                            <input class="form-control" id="email" name="email" type="email"
+                                                placeholder="Email address" required>
+                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn">
-                                            <button class="tj-submit-btn previous" id="step3_previous">
+                                            <button class="tj-submit-btn previous scroll-up-btn" id="step3_previous">
                                                 Previous <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="price__cta-btn float-end">
-                                            <button class=" tj-submit-btn " href="" type="submit"
-                                                id="submit_instant_code" value="Submit Form">
+                                            <button class=" tj-submit-btn " href="" type="submit" id="submit_instant_code"
+                                                value="Submit Form">
                                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
                                             </button>
                                         </div>
@@ -506,6 +496,7 @@
         </div>
     </div>
 </section>
+@include('partials.cta-section')
 <section class="tj-about-section pt-4">
     <div class="container">
         <div class="row">
@@ -623,7 +614,7 @@
         </div>
     </div>
 </section>
-@include('partials.cta-section')
+
 {{-- <section class="tj-cta-section-two">
     <div class="tj_cta_image-4 w-100 h-50"></div>
     <div class="container">
