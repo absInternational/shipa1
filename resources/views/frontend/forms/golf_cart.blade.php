@@ -237,7 +237,7 @@
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label> Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year">
+                                        <!-- <select class="nice-select vehicle-year" name="year[]" id="year">
                                             <option value="" disabled selected>Select Year</option>
                                             @php
                                                 $currentYear = date('Y');
@@ -245,7 +245,21 @@
                                                     echo "<option value='$year'>$year</option>";
                                                 }
                                             @endphp
-                                        </select>
+                                        </select> -->
+                                        <div class="dropdown">
+                                            <input class="form-control dropdown-toggle year" type="text"
+                                                name="year[]" id="year" placeholder="Select Year"
+                                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                                <li><a class="dropdown-item">Select Year</a></li>
+                                                @php
+                                                    $currentYear = date('Y');
+                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
+                                                    }
+                                                @endphp
+                                            </ul>
+                                        </div>
                                         <div class="error-message" style="color: red; display: none;">
                                             Please select a year.
                                         </div>
@@ -353,14 +367,20 @@
                     <div class="col-md-4">
                     <div class="input-form tj-select">
                     <label> Year</label>
-                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
+                    <div class="dropdown">
+                            <input class="form-control dropdown-toggle year" type="text"
+                                name="year[]" id="year" placeholder="Select Year"
+                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                <li><a class="dropdown-item">Select Year</a></li>`;
+                    var currentYear = {{ date('Y') }};
+                    for (var year = currentYear; year >= 1936; year--) {
+                        newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
+                    }
 
-                newVehicleHtml +=
-                    `</select>
+                    newVehicleHtml +=
+                        `</ul>
+                        </div>
                         </div>
                         </div>
                         <div class="col-md-4">
@@ -391,11 +411,17 @@
                         `;
 
                 $('#vehicles-container').append(newVehicleHtml);
+                // Initialize the searchable dropdown for new elements
+                    initializeSearchableDropdown();
+
             }
 
             $('#addVehicleBtn').click(function() {
                 addNewVehicle();
             });
+            // Initialize the searchable dropdown for new elements
+                    initializeSearchableDropdown();
+
 
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
