@@ -1,12 +1,13 @@
 @extends('frontend.layouts.app')
 @section('title', 'Get Quote on ATV/UTV | ShipA1')
 
-@section('meta_description', 'Get an instant atv-utv shipping quote with ease! Trust our reliable service for 
-nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
+@section('meta_description',
+    'Get an instant atv-utv shipping quote with ease! Trust our reliable service for
+    nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
 
 
 @section('content')
-{{-- <style>
+    {{-- <style>
     .custom-select-style{
         background: #f0f2f7;
         width: 100%;
@@ -75,22 +76,23 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
 
-                                
+
 
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Your Name:</label>
-                                        <input type="text" class="name" id="name" name="name" placeholder="Full Name"
-                                            required />
-                                            {{-- <span class="errName error-message"></span> --}}
+                                        <input type="text" class="name" id="name" name="name"
+                                            placeholder="Full Name" required />
+                                        {{-- <span class="errName error-message"></span> --}}
                                         {{-- <small id="errName" class="err-style"></small> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required />
+                                        <input type="tel" id="phone" name="phone" class="ophone"
+                                            placeholder="Phone Number" required />
                                         {{-- <small id="errPhone" class="err-style"></small> --}}
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
@@ -126,7 +128,7 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white">Atv/Utv Information</h4>
@@ -147,7 +149,8 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                                 @endphp
                                             </ul>
                                         </div> --}}
-                                        <select class="nice-select year vehicle-year custom-select-style" name="year[]" id="year" required>
+                                        <select class="nice-select year vehicle-year custom-select-style" name="year[]"
+                                            id="year" required>
                                             <option value="" disabled selected>Select Year</option>
                                             @php
                                                 $currentYear = date('Y');
@@ -196,32 +199,34 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                         </select>
                                     </div>
                                 </div>
-                             </div>
+                            </div>
 
-                            <a class="add-car" id="addVehicleBtn"
-                               ><i class="fa fa-plus"></i> Add
+                            <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
                             <div id="vehicles-container">
                             </div>
 
-                              
+
                             <div class="row">
                                 <di class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-check-input " type="checkbox" id="modification" name="modification" value="1">
+                                        <input class="form-check-input " type="checkbox" id="modification"
+                                            name="modification" value="1">
                                         <label class="form-check-label text-white ms-4" for="modification">
                                             Modified?</label>
                                     </div>
 
                                     <div class="input-form div-modify_info" style="display: none;">
                                         <label class="d-block"> Modification Information:</label>
-                                        <input class="" type="text" id="c" name="modify_info" placeholder="Enter Modification Information">
+                                        <input class="" type="text" id="c" name="modify_info"
+                                            placeholder="Enter Modification Information">
                                     </div>
                                 </di>
                                 <di class="col-md-6">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="available_at_auction" name="available_at_auction" value="1">
+                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                            name="available_at_auction" value="1">
                                         <label class="form-check-label text-white" for="available_at_auction"> Available
                                             at
                                             Auction?</label>
@@ -229,18 +234,20 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
 
                                     <div class="input-form div-link" style="display: none;">
                                         <label class="d-block"> Enter Link:</label>
-                                        <input class="" type="url" id="link" name="link" placeholder="Enter Link">
+                                        <input class="" type="url" id="link" name="link"
+                                            placeholder="Enter Link">
                                     </div>
                                 </di>
                             </div>
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
                                 <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                    placeholder="Upload File" /> -->
-                                    <input class="form-control image_input" type="file" name="image[]" accept="image/*" multiple onchange="previewImages(event)">
-                         <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                        placeholder="Upload File" /> -->
+                                <input class="form-control image_input" type="file" name="image[]" accept="image/*"
+                                    multiple onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
-                            
+
                             <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -258,7 +265,6 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
 
 @section('extraScript')
     <script>
-        
         $(document).ready(function() {
             function addNewVehicle() {
                 var newVehicleHtml =
@@ -271,12 +277,12 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
                                 <div class="input-form tj-select">
                                     <label> Year</label>
                                     <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                                        var currentYear = {{ date('Y') }};
-                                        for (var year = currentYear; year >= 1936; year--) {
-                                            newVehicleHtml += `<option value="${year}">${year}</option>`;
-                                        }
-                                        newVehicleHtml +=
-                                    `</select>
+                var currentYear = {{ date('Y') }};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
+                newVehicleHtml +=
+                    `</select>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -339,79 +345,79 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
             });
         });
     </script> --}}
-<script>
-    // var validPickupSuggestions = [];
-    // var validDeliverySuggestions = [];
+    <script>
+        // var validPickupSuggestions = [];
+        // var validDeliverySuggestions = [];
 
-    // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-    //     var inputValue = inputField.val();
+        // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+        //     var inputValue = inputField.val();
 
-    //     $.ajax({
-    //         url: "{{ route('get.zipcodes') }}",
-    //         method: "POST",
-    //         data: {
-    //             "_token": "{{ csrf_token() }}",
-    //             "input": inputValue
-    //         },
-    //         success: function(response) {
-    //             suggestionsList.empty();
-    //             validSuggestions.length = 0;  // Clear previous suggestions
+        //     $.ajax({
+        //         url: "{{ route('get.zipcodes') }}",
+        //         method: "POST",
+        //         data: {
+        //             "_token": "{{ csrf_token() }}",
+        //             "input": inputValue
+        //         },
+        //         success: function(response) {
+        //             suggestionsList.empty();
+        //             validSuggestions.length = 0;  // Clear previous suggestions
 
-    //             $.each(response, function(index, suggestion) {
-    //                 var listItem = $("<li>").text(suggestion).click(function() {
-    //                     inputField.val(suggestion);
-    //                     suggestionsList.css("display", "none");
-    //                 });
-    //                 validSuggestions.push(suggestion);  // Add to valid suggestions
-    //                 suggestionsList.append(listItem);
-    //             });
-    //         },
-    //         error: function(xhr, status, error) {
-    //             console.error("Error:", error);
-    //         }
-    //     });
-    // }
+        //             $.each(response, function(index, suggestion) {
+        //                 var listItem = $("<li>").text(suggestion).click(function() {
+        //                     inputField.val(suggestion);
+        //                     suggestionsList.css("display", "none");
+        //                 });
+        //                 validSuggestions.push(suggestion);  // Add to valid suggestions
+        //                 suggestionsList.append(listItem);
+        //             });
+        //         },
+        //         error: function(xhr, status, error) {
+        //             console.error("Error:", error);
+        //         }
+        //     });
+        // }
 
-    // $("#pickup-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    // });
+        // $("#pickup-location").keyup(function() {
+        //     var inputField = $(this);
+        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+        //     suggestionsList.css("display", "block");
+        //     if (inputField.val() === "") {
+        //         suggestionsList.css("display", "none");
+        //     }
+        //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+        // });
 
-    // $("#delivery-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    // });
+        // $("#delivery-location").keyup(function() {
+        //     var inputField = $(this);
+        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+        //     suggestionsList.css("display", "block");
+        //     if (inputField.val() === "") {
+        //         suggestionsList.css("display", "none");
+        //     }
+        //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+        // });
 
-    // function validateLocationInput(inputField, validSuggestions, errorField) {
-    //     var inputValue = inputField.val();
-    //     if (!validSuggestions.includes(inputValue)) {
-    //         errorField.text("Please select a valid location.");
-    //         return false;
-    //     } else {
-    //         errorField.text("");
-    //         return true;
-    //     }
-    // }
+        // function validateLocationInput(inputField, validSuggestions, errorField) {
+        //     var inputValue = inputField.val();
+        //     if (!validSuggestions.includes(inputValue)) {
+        //         errorField.text("Please select a valid location.");
+        //         return false;
+        //     } else {
+        //         errorField.text("");
+        //         return true;
+        //     }
+        // }
 
-    // $("form").submit(function(event) {
-    //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-    //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+        // $("form").submit(function(event) {
+        //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+        //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
 
-    //     if (!isPickupValid || !isDeliveryValid) {
-    //         event.preventDefault();  // Prevent form submission if validation fails
-    //     }
-    // });
-</script>
+        //     if (!isPickupValid || !isDeliveryValid) {
+        //         event.preventDefault();  // Prevent form submission if validation fails
+        //     }
+        // });
+    </script>
     {{-- <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();

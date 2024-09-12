@@ -5,33 +5,40 @@
     nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
 @section('content')
 
-<style>
-    /* Error styling */
-    .error {
-        border: 2px solid red;
-    }
-    .make-dropdown {
-    max-height: 200px; /* Set the maximum height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    }
+    <style>
+        /* Error styling */
+        .error {
+            border: 2px solid red;
+        }
 
-    .dropdown-item {
-        white-space: nowrap; /* Prevent text wrapping */
-    }
-/* Ensure the dropdown menu does not push the page */
-.model-dropdown {
-    max-height: 200px; /* Adjust based on your design */
-    overflow-y: auto;
-    position: absolute; /* Ensures dropdown is properly positioned */
-    z-index: 1000; /* Ensures dropdown appears above other content */
-}
+        .make-dropdown {
+            max-height: 200px;
+            /* Set the maximum height */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
 
-/* Adjust this if needed to prevent overflow issues */
-.input-form.tj-select {
-    position: relative;
-}
+        .dropdown-item {
+            white-space: nowrap;
+            /* Prevent text wrapping */
+        }
 
-</style>
+        /* Ensure the dropdown menu does not push the page */
+        .model-dropdown {
+            max-height: 200px;
+            /* Adjust based on your design */
+            overflow-y: auto;
+            position: absolute;
+            /* Ensures dropdown is properly positioned */
+            z-index: 1000;
+            /* Ensures dropdown appears above other content */
+        }
+
+        /* Adjust this if needed to prevent overflow issues */
+        .input-form.tj-select {
+            position: relative;
+        }
+    </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -107,8 +114,8 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number"
-                                         required="" />
+                                        <input type="tel" id="phone" name="phone" class="ophone"
+                                            placeholder="Phone Number" required="" />
                                         <small id="errPhone" class="err-style"></small>
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
@@ -143,62 +150,70 @@
                                 </div>
                             </div>
                             {{-- bootstrap --}}
-                                <!-- Initial Vehicle Information -->
-                                <div class="vehicle-info">
-                                    <div class="row select-bm">
-                                        <div class="col-md-12 text-center">
-                                            <h4 class="text-white">Car Information</h4>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input-form tj-select">
-                                                <label>Year</label>
-                                                <div class="dropdown">
-                                                    <input class="form-control dropdown-toggle year" type="text" name="year[]" id="year" 
-                                                    placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false" required>
-                                                    <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                                        <li><a class="dropdown-item">Select Year</a></li>
-                                                        @php
-                                                            $currentYear = date('Y');
-                                                            for ($year = $currentYear; $year >= 1936; $year--) {
-                                                                echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
-                                                            }
-                                                        @endphp
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="input-form tj-select">
-                                                <label>Make</label>
-                                                <div class="dropdown">
-                                                    <input class="form-control dropdown-toggle make" name="make[]" required type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <ul class="dropdown-menu make-dropdown" style="" aria-labelledby="make">
-                                                        <li><a class="dropdown-item" >Select Make</a></li>
-                                                        @foreach ($makes as $make)
-                                                            <li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>
-                                                        @endforeach
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="input-form tj-select model-div">
-                                                <label>Model</label>
-                                                <div class="dropdown">
-                                                    <input class="form-control dropdown-toggle model-input"
-                                                    name="model[]" type="text" id="model" required placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
-                                                        <li><a class="dropdown-item" href="#">Select Model</a></li>
-                                                        <!-- Options filled by JavaScript -->
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                            <!-- Initial Vehicle Information -->
+                            <div class="vehicle-info">
+                                <div class="row select-bm">
+                                    <div class="col-md-12 text-center">
+                                        <h4 class="text-white">Car Information</h4>
                                     </div>
+                                    <div class="col-md-4">
+                                        <div class="input-form tj-select">
+                                            <label>Year</label>
+                                            <div class="dropdown">
+                                                <input class="form-control dropdown-toggle year" type="text"
+                                                    name="year[]" id="year" placeholder="Select Year"
+                                                    data-bs-toggle="dropdown" aria-expanded="false" required>
+                                                <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                                    <li><a class="dropdown-item">Select Year</a></li>
+                                                    @php
+                                                        $currentYear = date('Y');
+                                                        for ($year = $currentYear; $year >= 1936; $year--) {
+                                                            echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
+                                                        }
+                                                    @endphp
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="input-form tj-select">
+                                            <label>Make</label>
+                                            <div class="dropdown">
+                                                <input class="form-control dropdown-toggle make" name="make[]" required
+                                                    type="text" id="make" placeholder="Select Make"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                <ul class="dropdown-menu make-dropdown" style=""
+                                                    aria-labelledby="make">
+                                                    <li><a class="dropdown-item">Select Make</a></li>
+                                                    @foreach ($makes as $make)
+                                                        <li><a class="dropdown-item"
+                                                                data-value="{{ $make->make }}">{{ $make->make }}</a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="input-form tj-select model-div">
+                                            <label>Model</label>
+                                            <div class="dropdown">
+                                                <input class="form-control dropdown-toggle model-input" name="model[]"
+                                                    type="text" id="model" required placeholder="Select Model"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                <ul class="dropdown-menu model-dropdown" style=""
+                                                    aria-labelledby="model">
+                                                    <li><a class="dropdown-item" href="#">Select Model</a></li>
+                                                    <!-- Options filled by JavaScript -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
+                            </div>
                             {{-- <a id="addVehicleBtn" class="add-car mt-3">Add Vehicle</a> --}}
                             {{-- <div class="row select-bm">
                                 <div class="col-md-12 text-center">
@@ -370,7 +385,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a id="addVehicleBtn" class="add-car" >
+                            <a id="addVehicleBtn" class="add-car">
                                 <i class="fa fa-plus"> Add Vehicle </i>
                             </a>
                             <div id="vehicles-container">
@@ -383,11 +398,11 @@
                             <div class="row">
                                 <div class="input-form mt-1">
                                     <label class="d-block text-white"> Image:</label>
-                                    <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
-                                        onchange="previewImages(event)">
+                                    <input class="form-control image_input" name="image[]" type="file"
+                                        accept="image/*" multiple onchange="previewImages(event)">
                                     <div class="image-preview-container" id="imagePreviewContainer"></div>
                                     <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
-                                                    <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                                            <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                                 </div>
                             </div>
                             <div class="row">
@@ -432,21 +447,21 @@
     </section>
 @endsection
 @section('extraScript')
-<!-- Include Selectize CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.min.css" rel="stylesheet" />
-<!-- Include jQuery and Selectize JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
-<script>
-    // $(document).ready(function() {
-    //     // Initialize Select2 on the select element
-    //     $('.year').select2({
-    //         placeholder: "Select Year",
-    //         allowClear: true
-    //     });
-    // });
-</script>
-{{-- <script>
+    <!-- Include Selectize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.min.css" rel="stylesheet" />
+    <!-- Include jQuery and Selectize JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    <script>
+        // $(document).ready(function() {
+        //     // Initialize Select2 on the select element
+        //     $('.year').select2({
+        //         placeholder: "Select Year",
+        //         allowClear: true
+        //     });
+        // });
+    </script>
+    {{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -579,14 +594,14 @@
         // }
     
 </script> --}}
-<script>
-    // $(document).ready(function() {
-    //         $('select').niceSelect(); // Initialize nice-select
-    //     });
-    $(document).ready(function() {
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
+    <script>
+        // $(document).ready(function() {
+        //         $('select').niceSelect(); // Initialize nice-select
+        //     });
+        $(document).ready(function() {
+            function addNewVehicle() {
+                var newVehicleHtml =
+                    `
                 <div class="vehicle-info">
                 <div class="row select-bm">
                     <!-- Bin icon for deleting vehicle -->
@@ -595,11 +610,11 @@
                         <div class="input-form tj-select">
                             <label>Year</label>
                             <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-            newVehicleHtml += `
+                var currentYear = {{ date('Y') }};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
+                newVehicleHtml += `
                             </select>
                         </div>
                     </div>
@@ -610,10 +625,11 @@
                                 <input class="form-control dropdown-toggle make" name="make[]" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
                                 <ul class="dropdown-menu make-dropdown" aria-labelledby="make">
                                     <li><a class="dropdown-item" >Select Make</a></li>`;
-            @foreach ($makes as $make)
-                newVehicleHtml += `<li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>`;
-            @endforeach
-            newVehicleHtml += `
+                @foreach ($makes as $make)
+                    newVehicleHtml +=
+                        `<li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>`;
+                @endforeach
+                newVehicleHtml += `
                                 </ul>
                             </div>
                         </div>
@@ -638,392 +654,405 @@
                 </div>
                 </div>
             `;
-            $('#vehicles-container').append(newVehicleHtml);
-        }
-
-        $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-
-        $(document).on('click', '.make-dropdown .dropdown-item', function() {
-            var make = $(this).data('value');
-            $(this).closest('.dropdown').find('.form-control').val(make).end()
-                .find('.dropdown-menu').removeClass('show');
-            var vehicleInfo = $(this).closest('.vehicle-info');
-            var year = vehicleInfo.find('.year').val();
-            if (year && make) {
-                getModel(year, make, vehicleInfo);
+                $('#vehicles-container').append(newVehicleHtml);
             }
-        });
-        // $(document).on('change', '.year, .make', function() {
-        //     var year = $(this).closest('.vehicle-info').find('.year').val();
-        //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
-        //     alert(makeId);
-        //     var vehicleInfo = $(this).closest('.vehicle-info');
-        //     if (year && makeId) {
-        //         getModel(year, makeId, vehicleInfo);
-        //     }
-        // });
-        $(document).on('click', '.year-dropdown .dropdown-item', function() {
-            var selectedYear = $(this).data('value');
-            $('#year').val(selectedYear);  // Set the selected value in the input field
-        });        
 
-        $(document).on('click', '.year, .make', function() {
-            var year = $(this).closest('.vehicle-info').find('.year').val();
-            var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            // alert(makeId);
-            var vehicleInfo = $(this).closest('.vehicle-info');
-            if (year && makeId) {
-                getModel(year, makeId, vehicleInfo);
-            }
-        });
+            $('#addVehicleBtn').click(function() {
+                addNewVehicle();
+            });
 
-        // function getModel(year, makeId, vehicleInfo) {
-        //     alert('yes inn');
+            $(document).on('click', '.delete-vehicle', function() {
+                $(this).closest('.vehicle-info').remove();
+            });
 
-        //     $.ajax({
-        //         url: "{{ route('get.models') }}",
-        //         method: 'GET',
-        //         data: {
-        //             year: year,
-        //             make: makeId
-        //         },
-        //         success: function(response) {
-        //             var modelsDropdown = vehicleInfo.find('.model');
-        //             modelsDropdown.empty();
-        //             var selectOptions = '<option value="">Select Model</option>';
-        //             $.each(response, function(index, model) {
-        //                 selectOptions += '<option value="' + model + '">' + model + '</option>';
-        //             });
-        //             modelsDropdown.html(selectOptions);
-        //         },
-        //         error: function(xhr) {
-        //             console.log(xhr.responseText);
-        //         }
-        //     });
-        // }
+            $(document).on('click', '.make-dropdown .dropdown-item', function() {
+                var make = $(this).data('value');
+                $(this).closest('.dropdown').find('.form-control').val(make).end()
+                    .find('.dropdown-menu').removeClass('show');
+                var vehicleInfo = $(this).closest('.vehicle-info');
+                var year = vehicleInfo.find('.year').val();
+                if (year && make) {
+                    getModel(year, make, vehicleInfo);
+                }
+            });
+            // $(document).on('change', '.year, .make', function() {
+            //     var year = $(this).closest('.vehicle-info').find('.year').val();
+            //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            //     alert(makeId);
+            //     var vehicleInfo = $(this).closest('.vehicle-info');
+            //     if (year && makeId) {
+            //         getModel(year, makeId, vehicleInfo);
+            //     }
+            // });
+            $(document).on('click', '.year-dropdown .dropdown-item', function() {
+                var selectedYear = $(this).data('value');
+                $('#year').val(selectedYear); // Set the selected value in the input field
+            });
+
+            $(document).on('click', '.year, .make', function() {
+                var year = $(this).closest('.vehicle-info').find('.year').val();
+                var makeId = $(this).closest('.vehicle-info').find('.make').val();
+                // alert(makeId);
+                var vehicleInfo = $(this).closest('.vehicle-info');
+                if (year && makeId) {
+                    getModel(year, makeId, vehicleInfo);
+                }
+            });
+
+            // function getModel(year, makeId, vehicleInfo) {
+            //     alert('yes inn');
+
+            //     $.ajax({
+            //         url: "{{ route('get.models') }}",
+            //         method: 'GET',
+            //         data: {
+            //             year: year,
+            //             make: makeId
+            //         },
+            //         success: function(response) {
+            //             var modelsDropdown = vehicleInfo.find('.model');
+            //             modelsDropdown.empty();
+            //             var selectOptions = '<option value="">Select Model</option>';
+            //             $.each(response, function(index, model) {
+            //                 selectOptions += '<option value="' + model + '">' + model + '</option>';
+            //             });
+            //             modelsDropdown.html(selectOptions);
+            //         },
+            //         error: function(xhr) {
+            //             console.log(xhr.responseText);
+            //         }
+            //     });
+            // }
 
 
-        // function getModel(year, makeId, vehicleInfo) {
-        //     $.ajax({
-        //         url: "{{ route('get.models') }}",
-        //         method: 'GET',
-        //         data: {
-        //             year: year,
-        //             make: makeId
-        //         },
-        //         success: function(response) {
-        //             var modelsDropdown = vehicleInfo.find('.model');
-        //             // console.log('Models Dropdown:', modelsDropdown);
-        //             modelsDropdown.empty(); 
-        //             var selectOptions = '<option value="">Select Model</option>';
-        //             $.each(response, function(index, model) {
-        //                 selectOptions += '<option value="' + model + '">' + model + '</option>';
-        //             });
-        //             modelsDropdown.html(selectOptions);
-        //             modelsDropdown.niceSelect('update');
-        //         },
-        //         error: function(xhr) {
-        //             console.log(xhr.responseText);
-        //         }
-        //     });
-        // }
+            // function getModel(year, makeId, vehicleInfo) {
+            //     $.ajax({
+            //         url: "{{ route('get.models') }}",
+            //         method: 'GET',
+            //         data: {
+            //             year: year,
+            //             make: makeId
+            //         },
+            //         success: function(response) {
+            //             var modelsDropdown = vehicleInfo.find('.model');
+            //             // console.log('Models Dropdown:', modelsDropdown);
+            //             modelsDropdown.empty(); 
+            //             var selectOptions = '<option value="">Select Model</option>';
+            //             $.each(response, function(index, model) {
+            //                 selectOptions += '<option value="' + model + '">' + model + '</option>';
+            //             });
+            //             modelsDropdown.html(selectOptions);
+            //             modelsDropdown.niceSelect('update');
+            //         },
+            //         error: function(xhr) {
+            //             console.log(xhr.responseText);
+            //         }
+            //     });
+            // }
 
-        // function getModel(year, makeId, vehicleInfo) {
-        //     $.ajax({
-        //         url: "{{ route('get.models') }}",
-        //         method: 'GET',
-        //         data: {
-        //             year: year,
-        //             make: makeId
-        //         },
-        //         success: function(response) {
-        //             console.log('inn');
-        //             var modelDropdown = vehicleInfo.find('.model-dropdown');
-        //             var modelInput = vehicleInfo.find('.model-input');
+            // function getModel(year, makeId, vehicleInfo) {
+            //     $.ajax({
+            //         url: "{{ route('get.models') }}",
+            //         method: 'GET',
+            //         data: {
+            //             year: year,
+            //             make: makeId
+            //         },
+            //         success: function(response) {
+            //             console.log('inn');
+            //             var modelDropdown = vehicleInfo.find('.model-dropdown');
+            //             var modelInput = vehicleInfo.find('.model-input');
 
-        //             modelDropdown.empty();
-        //             modelDropdown.append('<li><a class="dropdown-item"  data-value="">Select Model</a></li>');
+            //             modelDropdown.empty();
+            //             modelDropdown.append('<li><a class="dropdown-item"  data-value="">Select Model</a></li>');
 
-        //             $.each(response, function(index, model) {
-        //                 modelDropdown.append('<li><a class="dropdown-item"  data-value="' + model + '">' + model + '</a></li>');
-        //             });
+            //             $.each(response, function(index, model) {
+            //                 modelDropdown.append('<li><a class="dropdown-item"  data-value="' + model + '">' + model + '</a></li>');
+            //             });
 
-        //             // Filter dropdown items based on input value
-        //             modelInput.on('input', function() {
-        //                 var searchTerm = $(this).val().toLowerCase();
-        //                 modelDropdown.find('li').each(function() {
-        //                     var itemText = $(this).text().toLowerCase();
-        //                     if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
-        //                         $(this).show();
-        //                     } else {
-        //                         $(this).hide();
-        //                     }
-        //                 });
-        //             });
+            //             // Filter dropdown items based on input value
+            //             modelInput.on('input', function() {
+            //                 var searchTerm = $(this).val().toLowerCase();
+            //                 modelDropdown.find('li').each(function() {
+            //                     var itemText = $(this).text().toLowerCase();
+            //                     if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+            //                         $(this).show();
+            //                     } else {
+            //                         $(this).hide();
+            //                     }
+            //                 });
+            //             });
 
-        //             // Select item from dropdown
-        //             modelDropdown.on('click', 'a.dropdown-item', function(e) {
-        //                 e.preventDefault(); // Prevent default anchor behavior
-        //                 var selectedText = $(this).text();
-        //                 modelInput.val(selectedText);
-        //                 modelDropdown.hide();
-        //                 // Optional: handle model selection logic
-        //             });
+            //             // Select item from dropdown
+            //             modelDropdown.on('click', 'a.dropdown-item', function(e) {
+            //                 e.preventDefault(); // Prevent default anchor behavior
+            //                 var selectedText = $(this).text();
+            //                 modelInput.val(selectedText);
+            //                 modelDropdown.hide();
+            //                 // Optional: handle model selection logic
+            //             });
 
-        //             // Show dropdown on input focus
-        //             modelInput.on('focus', function() {
-        //                 modelDropdown.show();
-        //             });
+            //             // Show dropdown on input focus
+            //             modelInput.on('focus', function() {
+            //                 modelDropdown.show();
+            //             });
 
-        //             // Hide dropdown when clicking outside
-        //             $(document).on('click', function(e) {
-        //                 if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
-        //                     modelDropdown.hide();
-        //                 }
-        //             });
-        //         },
-        //         error: function(xhr) {
-        //             console.log(xhr.responseText);
-        //         }
-        //     });
-        // }
+            //             // Hide dropdown when clicking outside
+            //             $(document).on('click', function(e) {
+            //                 if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
+            //                     modelDropdown.hide();
+            //                 }
+            //             });
+            //         },
+            //         error: function(xhr) {
+            //             console.log(xhr.responseText);
+            //         }
+            //     });
+            // }
 
-        // function getModel(year, makeId, vehicleInfo) {
-        //     $.ajax({
-        //         url: "{{ route('get.models') }}",
-        //         method: 'GET',
-        //         data: {
-        //             year: year,
-        //             make: makeId
-        //         },
-        //         success: function(response) {
-        //             var modelDropdown = vehicleInfo.find('.model-dropdown');
-        //             var modelInput = vehicleInfo.find('.model-input');
+            // function getModel(year, makeId, vehicleInfo) {
+            //     $.ajax({
+            //         url: "{{ route('get.models') }}",
+            //         method: 'GET',
+            //         data: {
+            //             year: year,
+            //             make: makeId
+            //         },
+            //         success: function(response) {
+            //             var modelDropdown = vehicleInfo.find('.model-dropdown');
+            //             var modelInput = vehicleInfo.find('.model-input');
 
-        //             modelDropdown.empty();
-        //             modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="">Select Model</a></li>');
+            //             modelDropdown.empty();
+            //             modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="">Select Model</a></li>');
 
-        //             $.each(response, function(index, model) {
-        //                 modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="' + model + '">' + model + '</a></li>');
-        //             });
+            //             $.each(response, function(index, model) {
+            //                 modelDropdown.append('<li><a class="dropdown-item" href="#" data-value="' + model + '">' + model + '</a></li>');
+            //             });
 
-        //             // Filter dropdown items based on input value
-        //             modelInput.on('input', function() {
-        //                 var searchTerm = $(this).val().toLowerCase();
-        //                 modelDropdown.find('li').each(function() {
-        //                     var itemText = $(this).text().toLowerCase();
-        //                     if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
-        //                         $(this).show();
-        //                     } else {
-        //                         $(this).hide();
-        //                     }
-        //                 });
-        //             });
+            //             // Filter dropdown items based on input value
+            //             modelInput.on('input', function() {
+            //                 var searchTerm = $(this).val().toLowerCase();
+            //                 modelDropdown.find('li').each(function() {
+            //                     var itemText = $(this).text().toLowerCase();
+            //                     if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+            //                         $(this).show();
+            //                     } else {
+            //                         $(this).hide();
+            //                     }
+            //                 });
+            //             });
 
-        //             // Select item from dropdown
-        //             modelDropdown.on('click', 'a.dropdown-item', function(e) {
-        //                 e.preventDefault(); // Prevent default anchor behavior
-        //                 var selectedText = $(this).text();
-        //                 modelInput.val(selectedText);
-        //                 modelDropdown.hide();
-        //                 // Optional: handle model selection logic
-        //             });
+            //             // Select item from dropdown
+            //             modelDropdown.on('click', 'a.dropdown-item', function(e) {
+            //                 e.preventDefault(); // Prevent default anchor behavior
+            //                 var selectedText = $(this).text();
+            //                 modelInput.val(selectedText);
+            //                 modelDropdown.hide();
+            //                 // Optional: handle model selection logic
+            //             });
 
-        //             // Show dropdown on input focus
-        //             modelInput.on('focus', function() {
-        //                 modelDropdown.show();
-        //             });
+            //             // Show dropdown on input focus
+            //             modelInput.on('focus', function() {
+            //                 modelDropdown.show();
+            //             });
 
-        //             // Hide dropdown when clicking outside
-        //             $(document).on('click', function(e) {
-        //                 if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
-        //                     modelDropdown.hide();
-        //                 }
-        //             });
-        //         },
-        //         error: function(xhr) {
-        //             console.log(xhr.responseText);
-        //         }
-        //     });
-        // }
+            //             // Hide dropdown when clicking outside
+            //             $(document).on('click', function(e) {
+            //                 if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
+            //                     modelDropdown.hide();
+            //                 }
+            //             });
+            //         },
+            //         error: function(xhr) {
+            //             console.log(xhr.responseText);
+            //         }
+            //     });
+            // }
 
-// function getModel(year, makeId, vehicleInfo) {
-//     $.ajax({
-//         url: "{{ route('get.models') }}",
-//         method: 'GET',
-//         data: {
-//             year: year,
-//             make: makeId
-//         },
-//         success: function(response) {
-//             // Handle <ul><li> custom dropdown (for modals or other components)
-//             var modelDropdown = vehicleInfo.find('.model-dropdown');
-//             var modelInput = vehicleInfo.find('.model-input');
+            // function getModel(year, makeId, vehicleInfo) {
+            //     $.ajax({
+            //         url: "{{ route('get.models') }}",
+            //         method: 'GET',
+            //         data: {
+            //             year: year,
+            //             make: makeId
+            //         },
+            //         success: function(response) {
+            //             // Handle <ul><li> custom dropdown (for modals or other components)
+            //             var modelDropdown = vehicleInfo.find('.model-dropdown');
+            //             var modelInput = vehicleInfo.find('.model-input');
 
-//             if (modelDropdown.length && modelInput.length) {
-//                 modelDropdown.empty();
-//                 modelDropdown.append('<li><a class="dropdown-item" data-value="">Select Model</a></li>');
+            //             if (modelDropdown.length && modelInput.length) {
+            //                 modelDropdown.empty();
+            //                 modelDropdown.append('<li><a class="dropdown-item" data-value="">Select Model</a></li>');
 
-//                 $.each(response, function(index, model) {
-//                     modelDropdown.append('<li><a class="dropdown-item" data-value="' + model + '">' + model + '</a></li>');
-//                 });
+            //                 $.each(response, function(index, model) {
+            //                     modelDropdown.append('<li><a class="dropdown-item" data-value="' + model + '">' + model + '</a></li>');
+            //                 });
 
-//                 // Filter dropdown items based on input value
-//                 modelInput.on('input', function() {
-//                     var searchTerm = $(this).val().toLowerCase();
-//                     modelDropdown.find('li').each(function() {
-//                         var itemText = $(this).text().toLowerCase();
-//                         if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
-//                             $(this).show();
-//                         } else {
-//                             $(this).hide();
-//                         }
-//                     });
-//                 });
+            //                 // Filter dropdown items based on input value
+            //                 modelInput.on('input', function() {
+            //                     var searchTerm = $(this).val().toLowerCase();
+            //                     modelDropdown.find('li').each(function() {
+            //                         var itemText = $(this).text().toLowerCase();
+            //                         if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+            //                             $(this).show();
+            //                         } else {
+            //                             $(this).hide();
+            //                         }
+            //                     });
+            //                 });
 
-//                 // Select item from dropdown
-//                 modelDropdown.on('click', 'a.dropdown-item', function(e) {
-//                     e.preventDefault(); // Prevent default anchor behavior
-//                     var selectedText = $(this).text();
-//                     modelInput.val(selectedText);
-//                     modelDropdown.hide();
-//                 });
+            //                 // Select item from dropdown
+            //                 modelDropdown.on('click', 'a.dropdown-item', function(e) {
+            //                     e.preventDefault(); // Prevent default anchor behavior
+            //                     var selectedText = $(this).text();
+            //                     modelInput.val(selectedText);
+            //                     modelDropdown.hide();
+            //                 });
 
-//                 // Show dropdown on input focus
-//                 modelInput.on('focus', function() {
-//                     modelDropdown.show();
-//                 });
+            //                 // Show dropdown on input focus
+            //                 modelInput.on('focus', function() {
+            //                     modelDropdown.show();
+            //                 });
 
-//                 // Hide dropdown when clicking outside
-//                 $(document).on('click', function(e) {
-//                     if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
-//                         modelDropdown.hide();
-//                     }
-//                 });
-//             }
+            //                 // Hide dropdown when clicking outside
+            //                 $(document).on('click', function(e) {
+            //                     if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
+            //                         modelDropdown.hide();
+            //                     }
+            //                 });
+            //             }
 
-//             // Handle standard <select> dropdown (for form or other sections)
-//             var modelSelect = vehicleInfo.find('.model');
-//             if (modelSelect.length) {
-//                 modelSelect.empty(); // Clear any existing options
-//                 modelSelect.append('<option value="">Select Model</option>'); // Add default option
+            //             // Handle standard <select> dropdown (for form or other sections)
+            //             var modelSelect = vehicleInfo.find('.model');
+            //             if (modelSelect.length) {
+            //                 modelSelect.empty(); // Clear any existing options
+            //                 modelSelect.append('<option value="">Select Model</option>'); // Add default option
 
-//                 // Append each model as an option to the select element
-//                 $.each(response, function(index, model) {
-//                     modelSelect.append('<option value="' + model + '">' + model + '</option>');
-//                 });
+            //                 // Append each model as an option to the select element
+            //                 $.each(response, function(index, model) {
+            //                     modelSelect.append('<option value="' + model + '">' + model + '</option>');
+            //                 });
 
-//                 // Handle selection from dropdown
-//                 modelSelect.on('change', function() {
-//                     var selectedModel = $(this).val();
-//                     console.log('Selected model:', selectedModel);
-//                 });
-//             }
-//         },
-//         error: function(xhr) {
-//             console.log(xhr.responseText);
-//         }
-//     });
-// }
+            //                 // Handle selection from dropdown
+            //                 modelSelect.on('change', function() {
+            //                     var selectedModel = $(this).val();
+            //                     console.log('Selected model:', selectedModel);
+            //                 });
+            //             }
+            //         },
+            //         error: function(xhr) {
+            //             console.log(xhr.responseText);
+            //         }
+            //     });
+            // }
 
-function getModel(year, makeId, vehicleInfo) {
-    $.ajax({
-        url: "{{ route('get.models') }}",
-        method: 'GET',
-        data: {
-            year: year,
-            make: makeId
-        },
-        success: function(response) {
-            var modelDropdown = vehicleInfo.find('.model-dropdown');
-            var modelInput = vehicleInfo.find('.model-input');
-            var modelSelect = vehicleInfo.find('.model'); // Standard <select> element
+            function getModel(year, makeId, vehicleInfo) {
+                $.ajax({
+                    url: "{{ route('get.models') }}",
+                    method: 'GET',
+                    data: {
+                        year: year,
+                        make: makeId
+                    },
+                    success: function(response) {
+                        var modelDropdown = vehicleInfo.find('.model-dropdown');
+                        var modelInput = vehicleInfo.find('.model-input');
+                        var modelSelect = vehicleInfo.find('.model'); // Standard <select> element
 
-            // Update custom dropdown
-            if (modelDropdown.length && modelInput.length) {
-                modelDropdown.empty();
-                modelDropdown.append('<li><a class="dropdown-item" data-value="">Select Model</a></li>');
+                        // Update custom dropdown
+                        if (modelDropdown.length && modelInput.length) {
+                            modelDropdown.empty();
+                            modelDropdown.append(
+                                '<li><a class="dropdown-item" data-value="">Select Model</a></li>');
 
-                $.each(response, function(index, model) {
-                    modelDropdown.append('<li><a class="dropdown-item" data-value="' + model + '">' + model + '</a></li>');
-                });
+                            $.each(response, function(index, model) {
+                                modelDropdown.append(
+                                    '<li><a class="dropdown-item" data-value="' + model +
+                                    '">' + model + '</a></li>');
+                            });
 
-                modelInput.on('focus', function() {
-                    modelSelect.empty(); // Clear the <select> options
-                    modelSelect.append('<option value="">Select Model</option>'); // Add default option
-                    modelDropdown.show();
-                });
+                            modelInput.on('focus', function() {
+                                modelSelect.empty(); // Clear the <select> options
+                                modelSelect.append(
+                                    '<option value="">Select Model</option>'
+                                    ); // Add default option
+                                modelDropdown.show();
+                            });
 
-                modelInput.on('input', function() {
-                    var searchTerm = $(this).val().toLowerCase();
-                    modelDropdown.find('li').each(function() {
-                        var itemText = $(this).text().toLowerCase();
-                        if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
-                            $(this).show();
-                        } else {
-                            $(this).hide();
+                            modelInput.on('input', function() {
+                                var searchTerm = $(this).val().toLowerCase();
+                                modelDropdown.find('li').each(function() {
+                                    var itemText = $(this).text().toLowerCase();
+                                    if (itemText.indexOf(searchTerm) !== -1 ||
+                                        searchTerm === '') {
+                                        $(this).show();
+                                    } else {
+                                        $(this).hide();
+                                    }
+                                });
+                            });
+
+                            modelDropdown.on('click', 'a.dropdown-item', function(e) {
+                                e.preventDefault(); // Prevent default anchor behavior
+                                var selectedText = $(this).text();
+                                var selectedValue = $(this).data('value');
+
+                                modelInput.val(
+                                    selectedText); // Set the selected text in modelInput
+                                modelDropdown.hide(); // Hide the custom dropdown
+
+                                modelSelect.empty(); // Clear the <select> options
+                                modelSelect.append('<option value="' + selectedValue + '">' +
+                                    selectedText + '</option>');
+                                modelSelect.val(
+                                    selectedValue
+                                    ); // Set the selected value in the select dropdown
+                            });
+
+                            $(document).on('click', function(e) {
+                                if (!modelInput.is(e.target) && !modelDropdown.is(e.target) &&
+                                    modelDropdown.has(e.target).length === 0) {
+                                    modelDropdown.hide();
+                                }
+                            });
                         }
-                    });
-                });
 
-                modelDropdown.on('click', 'a.dropdown-item', function(e) {
-                    e.preventDefault(); // Prevent default anchor behavior
-                    var selectedText = $(this).text();
-                    var selectedValue = $(this).data('value');
+                        // Handle standard <select> dropdown
+                        if (modelSelect.length) {
+                            modelSelect.empty(); // Clear any existing options
+                            modelSelect.append(
+                                '<option value="">Select Model</option>'); // Add default option
 
-                    modelInput.val(selectedText); // Set the selected text in modelInput
-                    modelDropdown.hide(); // Hide the custom dropdown
+                            $.each(response, function(index, model) {
+                                modelSelect.append('<option value="' + model + '">' + model +
+                                    '</option>');
+                            });
 
-                    modelSelect.empty(); // Clear the <select> options
-                    modelSelect.append('<option value="' + selectedValue + '">' + selectedText + '</option>');
-                    modelSelect.val(selectedValue); // Set the selected value in the select dropdown
-                });
-
-                $(document).on('click', function(e) {
-                    if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
-                        modelDropdown.hide();
+                            modelSelect.on('change', function() {
+                                var selectedModel = $(this).val();
+                                // Optional: Sync custom input when user selects from <select>
+                                modelInput.val(modelSelect.find('option:selected').text());
+                            });
+                        }
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
                     }
                 });
             }
 
-            // Handle standard <select> dropdown
-            if (modelSelect.length) {
-                modelSelect.empty(); // Clear any existing options
-                modelSelect.append('<option value="">Select Model</option>'); // Add default option
-
-                $.each(response, function(index, model) {
-                    modelSelect.append('<option value="' + model + '">' + model + '</option>');
+            $(document).on('input', '.dropdown-toggle', function() {
+                var input = $(this).val().toLowerCase();
+                $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
+                    var text = $(this).text().toLowerCase();
+                    $(this).toggle(text.indexOf(input) > -1);
                 });
-
-                modelSelect.on('change', function() {
-                    var selectedModel = $(this).val();
-                    // Optional: Sync custom input when user selects from <select>
-                    modelInput.val(modelSelect.find('option:selected').text());
-                });
-            }
-        },
-        error: function(xhr) {
-            console.log(xhr.responseText);
-        }
-    });
-}
-
-        $(document).on('input', '.dropdown-toggle', function() {
-            var input = $(this).val().toLowerCase();
-            $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
-                var text = $(this).text().toLowerCase();
-                $(this).toggle(text.indexOf(input) > -1);
             });
         });
-    });
-</script>
-{{-- function getModel(year, makeId, vehicleInfo) {
+    </script>
+    {{-- function getModel(year, makeId, vehicleInfo) {
         $.ajax({
             url: "{{ route('get.models') }}",
             method: 'GET',
@@ -1057,7 +1086,7 @@ function getModel(year, makeId, vehicleInfo) {
             }
         });
     } --}}
-{{-- <script>
+    {{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
