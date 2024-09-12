@@ -1,5 +1,5 @@
 <div class="tj-input-form w-100 target-top" data-bg-image="">
-    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form" novalidate id="calculatePriceFrom"
+    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form target-top-1" novalidate id="calculatePriceFrom"
         data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
         @csrf
         @if ($errors->any())
@@ -52,9 +52,9 @@
                 </div>
             </div>
             <!-- Step 2: Vehicle Information -->
-            <div class="vehicle_quote_info target-top" id="step2" style="display: none;">
+            <div class="vehicle_quote_info " id="step2" style="display: none;">
                 <div class="row">
-                    <h4 class="title text-center">VEHICLE INFORMATION</h4>
+                    <h4 class="target-top target-top-3 title text-center">VEHICLE INFORMATION</h4>
                     <select id="tabSelector" class="" aria-label="Tab selector" required>
                         <option value="" selected disabled>Select a Vehicle</option>
                         <option value="Atv">Atv Utv Transport</option>
@@ -74,14 +74,14 @@
                 <div class="row mt-2">
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn">
-                            <button class="tj-submit-btn previous scroll-up-btn" id="step2_previous">
+                            <button class="tj-submit-btn previous scroll-up-btn-1" id="step2_previous">
                                 Previous <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn float-end">
-                            <button class="tj-submit-btn scroll-up-btn" type="button" id="step2_next">
+                            <button class="tj-submit-btn scroll-up-btn-2" type="button" id="step2_next">
                                 Next <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
@@ -89,9 +89,9 @@
                 </div>
             </div>
             <!-- Step 3: Customer Information  -->
-            <div class="basic_quote_info" id="step3" style="display: none;">
+            <div class="basic_quote_info " id="step3" style="display: none;">
                 <div class="row mb-3">
-                    <h4 class="text-center text-white target-top">Customer Information</h4>
+                    <h4 class="text-center text-white target-top-2">Customer Information</h4>
                     <div class="col-xl-6 col-lg-6">
                         <div class="single-input-field">
                             <label class="d-block text-white"> Your Name:</label>
@@ -122,7 +122,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn">
-                            <button class="tj-submit-btn previous scroll-up-btn" id="step3_previous">
+                            <button class="tj-submit-btn previous scroll-up-btn-3" id="step3_previous">
                                 Previous <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>

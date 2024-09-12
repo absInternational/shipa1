@@ -6,7 +6,7 @@
 <div class="col-md-4">
     <div class="input-form tj-select">
         <label> Year</label>
-        <select class="nice-select vehicle-year" name="year[]" id="year">
+        <select class="nice-select vehicle-year" name="year[]" id="year" required>
             <option value="" disabled selected>Select Year
             </option>
             @php
@@ -36,10 +36,10 @@
         <label class="lab-cos">Length</label>
         <div class="input-container">
             <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                min="0" maxlength="3" oninput="limitDigits(this, 3)" required>
             <span class="separator">(Ft.)</span>
             <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required>
             <span class="separators">(In.)</span>
         </div>
     </div>
@@ -47,10 +47,10 @@
         <label class="lab-cos">Width</label>
         <div class="input-container">
             <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                min="0" maxlength="3" oninput="limitDigits(this, 3)" required>
             <span class="separator">(Ft.)</span>
             <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required>
             <span class="separators">(In.)</span>
         </div>
     </div>
@@ -58,10 +58,10 @@
         <label class="lab-cos">Height</label>
         <div class="input-container">
             <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                min="0" maxlength="3" oninput="limitDigits(this, 3)" required>
             <span class="separator">(Ft.)</span>
             <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required>
             <span class="separators">(In.)</span>
         </div>
     </div>
@@ -104,7 +104,7 @@
         <label class="lab-cos">Weight</label>
         <div class="input-container1">
             <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
-                min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                min="0" maxlength="6" oninput="limitDigits(this, 6)" required>
             <span class="separators-w">(Lbs.)</span>
         </div>
     </div>

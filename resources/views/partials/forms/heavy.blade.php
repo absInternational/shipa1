@@ -5,7 +5,7 @@
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label> Year</label>
-            <select class="nice-select vehicle-year" name="year[]" id="year">
+            <select class="nice-select vehicle-year" name="year[]" id="year" required>
                 <option value="" disabled selected>Select Year
                 </option>
                 @php
@@ -71,7 +71,7 @@
         <label class="lab-cos">Weight</label>
         <div class="input-container1">
             <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
-                min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                min="0" maxlength="6" oninput="limitDigits(this, 6)" required>
             <span class="separators-w">(Lbs.)</span>
         </div>
     </div>

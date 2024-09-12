@@ -1111,13 +1111,48 @@
 
     {{-- scroll-up-btn --}}
     <script>
-        const scrollButtons = document.querySelectorAll('.scroll-up-btn');
-        const targetHeading = document.querySelector('.target-top');
-        scrollButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                targetHeading.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollButtons = document.querySelectorAll('.scroll-up-btn');
+            const targetHeading = document.querySelector('.target-top');
+            scrollButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    targetHeading.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+
+            const scrollButtons1 = document.querySelectorAll('.scroll-up-btn-1');
+            const targetHeading1 = document.querySelector('.target-top-1');
+            scrollButtons1.forEach(button => {
+                button.addEventListener('click', function() {
+                    targetHeading1.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+
+            const scrollButtons2 = document.querySelectorAll('.scroll-up-btn-2');
+            const targetHeading2 = document.querySelector('.target-top-2');
+            scrollButtons2.forEach(button => {
+                button.addEventListener('click', function() {
+                    targetHeading2.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+
+            const scrollButtons3 = document.querySelectorAll('.scroll-up-btn-3');
+            const targetHeading3 = document.querySelector('.target-top-3');
+            scrollButtons3.forEach(button => {
+                button.addEventListener('click', function() {
+                    targetHeading3.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 });
             });
         });
