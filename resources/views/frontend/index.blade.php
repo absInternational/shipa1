@@ -644,7 +644,7 @@
         </div>
     </div>
 </section>
-<section class="tj-choose-us-section-home target-top">
+<section class="tj-choose-us-section-home">
     <div class="container">
         <div class="row">
             @if (session('success'))

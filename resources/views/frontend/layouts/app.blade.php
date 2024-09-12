@@ -29,6 +29,7 @@
 
 
     <!-- Include jQuery -->
+    <script src="https://unpkg.com/imask"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
@@ -473,6 +474,30 @@
             },
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
         });
+        //     if (countryCode === 'us') {
+        //         $(".ophone").mask("(999) 999-9999");
+        //     } else {
+        //         $(".ophone").unmask();
+        //     }
+        //     document.querySelector('#country_code').value = countryData.dialCode;
+        // }
+        // phoneInput.addEventListener('input', updateMask);
+        // updateMask();
+
+
+        const phoneInput = document.querySelector("#phone");
+        const countryInput = document.querySelector('#country_code');
+
+        // Initialize intlTelInput
+        const iti = window.intlTelInput(phoneInput, {
+            separateDialCode: true,
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                var countryCode = "us"; // Default country code
+                callback(countryCode);
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
 
         function updateMask() {
             const countryData = iti.getSelectedCountryData();
@@ -485,6 +510,29 @@
             }
             document.querySelector('#country_code').value = countryData.dialCode;
         }
+        let maskPattern = '';
+        if (countryCode === 'us') {
+            maskPattern = '(000) 000-0000';
+        } else {
+            maskPattern = ''; // No mask for other countries
+        }
+
+        // Apply mask using IMask.js
+        if (maskPattern) {
+            IMask(phoneInput, {
+                mask: maskPattern
+            });
+        } else {
+            // Clear mask
+            phoneInput.inputmask.remove();
+        }
+
+        countryInput.value = countryData.dialCode;
+        }
+
+        // Event listeners
+        phoneInput.addEventListener('input', updateMask);
+        phoneInput.addEventListener('countrychange', updateMask);
 
         function validatePhoneNumber() {
             const rawPhoneNumber = iti.getNumber(); // Gets the number in E.164 format
@@ -495,9 +543,58 @@
             return true;
         }
 
+        function validatePhoneNumber() {
+            if (!iti.isValidNumber()) {
+                // alert("Please enter a valid phone number.");
+                return false;
+            }
+            return true;
+        }
+
         phoneInput.addEventListener('input', updateMask);
         phoneInput.addEventListener('blur', validatePhoneNumber); // Validation on blur or submit
         updateMask();
+    </script>
+    phoneInput.addEventListener('blur', validatePhoneNumber);
+    updateMask();
+
+    // last-work
+    // const phoneInput = document.querySelector("#phone");
+    // const iti = window.intlTelInput(phoneInput, {
+    // separateDialCode: true,
+    // initialCountry: "auto",
+    // geoIpLookup: function(callback) {
+    // var countryCode = "us";
+    // callback(countryCode);
+    // },
+    // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    // });
+
+    // function updateMask() {
+    // const countryData = iti.getSelectedCountryData();
+    // const countryCode = countryData.iso2;
+
+    // if (countryCode === 'us') {
+    // $(".ophone").mask("(999) 999-9999");
+    // } else {
+    // $(".ophone").unmask();
+    // }
+    // document.querySelector('#country_code').value = countryData.dialCode;
+    // }
+
+    // function validatePhoneNumber() {
+    // const rawPhoneNumber = iti.getNumber(); // Gets the number in E.164 format
+    // if (!iti.isValidNumber()) {
+    // // alert("Please enter a valid phone number.");
+    // return false;
+    // }
+    // return true;
+    // }
+
+    // phoneInput.addEventListener('input', updateMask);
+    // phoneInput.addEventListener('blur', validatePhoneNumber); // Validation on blur or submit
+    // updateMask();
+    // last-work
     </script>
     {{-- phone mask  --}}
 

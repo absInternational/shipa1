@@ -8,7 +8,6 @@ nationwide coverage, transparent pricing, and secure transportation. Plan your s
 @section('content')
 {{-- <style>
     .custom-select-style{
-
         background: #f0f2f7;
         width: 100%;
         font-size: 14px;

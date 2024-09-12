@@ -1,4 +1,4 @@
-<div class="tj-input-form w-100" data-bg-image="">
+<div class="tj-input-form w-100 target-top" data-bg-image="">
     <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form" novalidate id="calculatePriceFrom"
         data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
         @csrf
@@ -15,7 +15,7 @@
             <!-- Step 1: Moving From/To -->
             <div class="route_quote_info" id="step1">
                 <div class="row">
-                    <h4 class="title text-center target-top">Quote Request!</h4>
+                    <h4 class="title text-center">Quote Request!</h4>
                     <div class="col-xl-12 col-lg-12 mb-4">
                         <h6 class="text-white">Moving From</h6>
                         <label class="text-white mb-2">Where Are You Moving From?</label>
@@ -54,7 +54,7 @@
             <!-- Step 2: Vehicle Information -->
             <div class="vehicle_quote_info target-top" id="step2" style="display: none;">
                 <div class="row">
-                    <h4 class="title text-center target-top">VEHICLE INFORMATION</h4>
+                    <h4 class="title text-center">VEHICLE INFORMATION</h4>
                     <select id="tabSelector" class="" aria-label="Tab selector" required>
                         <option value="" selected disabled>Select a Vehicle</option>
                         <option value="Atv">Atv Utv Transport</option>
