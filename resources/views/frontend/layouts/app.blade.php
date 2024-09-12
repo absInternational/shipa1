@@ -11,12 +11,13 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="ahrefs-site-verification" content="6cd07582328e97b072cfaad2711175d5b3d5f0d349648e8ede9c50ea23dfc68d">
-    <!--==========twitter-card=============-->        
-    <meta name="twitter:card" content="summary_large_image">        
-    <meta name="twitter:site" content="@ShipA1Transport">        
-    <meta name="twitter:title" content="ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA">        
-    <meta name="twitter:description" content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">        
-    <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">        
+    <!--==========twitter-card=============-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ShipA1Transport">
+    <meta name="twitter:title" content="ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA">
+    <meta name="twitter:description"
+        content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
+    <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
     <!--========== twitter-card============-->
 
     <!-- Favicon -->
@@ -85,20 +86,17 @@
 </head>
 <style>
     /* Error styling */
-    
+
     /* .error {
         border: 2px solid red;
     }
     .err-loc {
-        color: #ff0000 !important; 
+        color: #ff0000 !important;
         font-size: 14px;
         font-weight: bold;
         margin-top: 5px;
         display: block;
     } */
-    .error-field {
-    border: 2px solid red!important;
-}
 </style>
 <!--Start of Tawk.to Script-->
 <!-- <script type="text/javascript">
@@ -311,255 +309,297 @@
     <script src="/assets/intl-tel-input/intlTelInput.js"></script>
     {{-- app js  --}}
     {{-- owl-caro --}}
-        <script>
-            $(document).ready(function() {
-                $('#owl-caro').owlCarousel({
-                    loop: true,
-                    margin: 10,
-                    nav: true,
-                    autoplay: true,
-                    autoplayTimeout: 4000,
-                    autoplayHoverPause: true,
-                    responsive: {
-                        0: {
-                            items: 1
-                        },
-                        600: {
-                            items: 2
-                        },
-                        1000: {
-                            items: 4
-                        }
+    <script>
+        $(document).ready(function() {
+            $('#owl-caro').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 4
                     }
-                });
+                }
             });
-        </script>
+        });
+    </script>
     {{-- owl-caro --}}
 
     {{-- email_newsletter --}}
-        <script>
-            $(document).ready(function() {
-                $('#newsletter-form').submit(function(event) {
-                    event.preventDefault();
-                    var email = $('#email_newsletter').val();
+    <script>
+        $(document).ready(function() {
+            $('#newsletter-form').submit(function(event) {
+                event.preventDefault();
+                var email = $('#email_newsletter').val();
 
-                    $.ajax({
-                        type: 'POST',
-                        url: '{{ route('newsletter.subscribe') }}',
-                        data: {
-                            email: email,
-                            _token: '{{ csrf_token() }}'
-                        },
-                        success: function(response) {
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Subscription Successful',
-                                text: response.message
-                            }).then(function() {
-                                $('#email_newsletter').val('');
-                            });
-                        },
-                        error: function(xhr, status, error) {
-                            var response = xhr.responseJSON;
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Subscription Failed',
-                                text: response.message
-                            }).then(function() {
-                                $('#email_newsletter').val('');
-                            });
-                        }
-                    });
+                $.ajax({
+                    type: 'POST',
+                    url: '{{ route('newsletter.subscribe') }}',
+                    data: {
+                        email: email,
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function(response) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Subscription Successful',
+                            text: response.message
+                        }).then(function() {
+                            $('#email_newsletter').val('');
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        var response = xhr.responseJSON;
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Subscription Failed',
+                            text: response.message
+                        }).then(function() {
+                            $('#email_newsletter').val('');
+                        });
+                    }
                 });
             });
-        </script>
+        });
+    </script>
     {{-- email_newsletter --}}
 
     {{-- imagePreview --}}
-        <script>
-            let selectedFiles = []; // Store selected files
+    <script>
+        let selectedFiles = []; // Store selected files
 
-            function previewImages(event) {
-                var input = event.target;
-                var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+        function previewImages(event) {
+            var input = event.target;
+            var imagePreviewContainer = document.getElementById('imagePreviewContainer');
 
-                if (input.files) {
-                    Array.from(input.files).forEach(file => {
-                        // Check if the file is already in selectedFiles to avoid duplicates
-                        if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
-                            selectedFiles.push(file);
-                            var reader = new FileReader();
+            if (input.files) {
+                Array.from(input.files).forEach(file => {
+                    // Check if the file is already in selectedFiles to avoid duplicates
+                    if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
+                        selectedFiles.push(file);
+                        var reader = new FileReader();
 
-                            reader.onload = function(e) {
-                                var previewElement = document.createElement('div');
-                                previewElement.classList.add('image-preview');
-                                previewElement.innerHTML = `
+                        reader.onload = function(e) {
+                            var previewElement = document.createElement('div');
+                            previewElement.classList.add('image-preview');
+                            previewElement.innerHTML = `
                             <img src="${e.target.result}" alt="Image Preview">
                             <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
                         `;
-                                imagePreviewContainer.appendChild(previewElement);
-                            }
-
-                            reader.readAsDataURL(file);
+                            imagePreviewContainer.appendChild(previewElement);
                         }
-                    });
-                }
+
+                        reader.readAsDataURL(file);
+                    }
+                });
             }
-            function removeImage(name, size) {
-                var imagePreviewContainer = document.getElementById('imagePreviewContainer');
-                selectedFiles = selectedFiles.filter(file => !(file.name === name && file.size === size));
+        }
 
-                // Clear container and re-render previews
-                imagePreviewContainer.innerHTML = '';
-                selectedFiles.forEach(file => {
-                    var reader = new FileReader();
+        function removeImage(name, size) {
+            var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+            selectedFiles = selectedFiles.filter(file => !(file.name === name && file.size === size));
 
-                    reader.onload = function(e) {
-                        var previewElement = document.createElement('div');
-                        previewElement.classList.add('image-preview');
-                        previewElement.innerHTML = `
+            // Clear container and re-render previews
+            imagePreviewContainer.innerHTML = '';
+            selectedFiles.forEach(file => {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    var previewElement = document.createElement('div');
+                    previewElement.classList.add('image-preview');
+                    previewElement.innerHTML = `
                     <img src="${e.target.result}" alt="Image Preview">
                     <button class="remove-button" onclick="removeImage('${file.name}', ${file.size})">Remove</button>
                 `;
-                        imagePreviewContainer.appendChild(previewElement);
-                    }
+                    imagePreviewContainer.appendChild(previewElement);
+                }
 
-                    reader.readAsDataURL(file);
-                });
-            }
-        </script>
+                reader.readAsDataURL(file);
+            });
+        }
+    </script>
     {{-- imagePreview --}}
 
     {{-- input --}}
-        <script>
-            $(document).ready(function() {
-                $('input[type="number"]').on('input', function() {
-                    this.value = this.value.replace(/[^0-9]/g, '');
-                });
+    <script>
+        $(document).ready(function() {
+            $('input[type="number"]').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
             });
-        </script>
+        });
+    </script>
     {{-- input --}}
 
     {{-- phone mask  --}}
-        <script>
-            // const phoneInput = document.querySelector("#phone");
-            // const iti = window.intlTelInput(phoneInput, {
-            //     separateDialCode: true,
-            //     initialCountry: "auto",
-            //     geoIpLookup: function(callback) {
-            //         var countryCode = "us";
-            //         callback(countryCode);
-            //     },
-            //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-            // });
-            // function updateMask() {
-            //     const countryData = iti.getSelectedCountryData();
-            //     const countryCode = countryData.iso2;
+    <script>
+        // const phoneInput = document.querySelector("#phone");
+        // const iti = window.intlTelInput(phoneInput, {
+        //     separateDialCode: true,
+        //     initialCountry: "auto",
+        //     geoIpLookup: function(callback) {
+        //         var countryCode = "us";
+        //         callback(countryCode);
+        //     },
+        //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        // });
+        // function updateMask() {
+        //     const countryData = iti.getSelectedCountryData();
+        //     const countryCode = countryData.iso2;
 
-            //     if (countryCode === 'us') {
-            //         $(".ophone").mask("(999) 999-9999");
-            //     } else {
-            //         $(".ophone").unmask();
-            //     }
-            //     document.querySelector('#country_code').value = countryData.dialCode;
-            // }
-            // phoneInput.addEventListener('input', updateMask);
-            // updateMask();
+        //     if (countryCode === 'us') {
+        //         $(".ophone").mask("(999) 999-9999");
+        //     } else {
+        //         $(".ophone").unmask();
+        //     }
+        //     document.querySelector('#country_code').value = countryData.dialCode;
+        // }
+        // phoneInput.addEventListener('input', updateMask);
+        // updateMask();
+        const phoneInput = document.querySelector("#phone");
+        const iti = window.intlTelInput(phoneInput, {
+            separateDialCode: true,
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                var countryCode = "us";
+                callback(countryCode);
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+        //     if (countryCode === 'us') {
+        //         $(".ophone").mask("(999) 999-9999");
+        //     } else {
+        //         $(".ophone").unmask();
+        //     }
+        //     document.querySelector('#country_code').value = countryData.dialCode;
+        // }
+        // phoneInput.addEventListener('input', updateMask);
+        // updateMask();
 
 
-            const phoneInput = document.querySelector("#phone");
-            const countryInput = document.querySelector('#country_code');
+        const phoneInput = document.querySelector("#phone");
+        const countryInput = document.querySelector('#country_code');
 
-            // Initialize intlTelInput
-            const iti = window.intlTelInput(phoneInput, {
-                separateDialCode: true,
-                initialCountry: "auto",
-                geoIpLookup: function(callback) {
-                    var countryCode = "us"; // Default country code
-                    callback(countryCode);
-                },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        // Initialize intlTelInput
+        const iti = window.intlTelInput(phoneInput, {
+            separateDialCode: true,
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                var countryCode = "us"; // Default country code
+                callback(countryCode);
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+
+        function updateMask() {
+            const countryData = iti.getSelectedCountryData();
+            const countryCode = countryData.iso2;
+
+            if (countryCode === 'us') {
+                $(".ophone").mask("(999) 999-9999");
+            } else {
+                $(".ophone").unmask();
+            }
+            document.querySelector('#country_code').value = countryData.dialCode;
+        }
+        let maskPattern = '';
+        if (countryCode === 'us') {
+            maskPattern = '(000) 000-0000';
+        } else {
+            maskPattern = ''; // No mask for other countries
+        }
+
+        // Apply mask using IMask.js
+        if (maskPattern) {
+            IMask(phoneInput, {
+                mask: maskPattern
             });
+        } else {
+            // Clear mask
+            phoneInput.inputmask.remove();
+        }
 
-            function updateMask() {
-                const countryData = iti.getSelectedCountryData();
-                const countryCode = countryData.iso2;
+        countryInput.value = countryData.dialCode;
+        }
 
-                let maskPattern = '';
-                if (countryCode === 'us') {
-                    maskPattern = '(000) 000-0000';
-                } else {
-                    maskPattern = ''; // No mask for other countries
-                }
+        // Event listeners
+        phoneInput.addEventListener('input', updateMask);
+        phoneInput.addEventListener('countrychange', updateMask);
 
-                // Apply mask using IMask.js
-                if (maskPattern) {
-                    IMask(phoneInput, { mask: maskPattern });
-                } else {
-                    // Clear mask
-                    phoneInput.inputmask.remove();
-                }
-
-                countryInput.value = countryData.dialCode;
+        function validatePhoneNumber() {
+            const rawPhoneNumber = iti.getNumber(); // Gets the number in E.164 format
+            if (!iti.isValidNumber()) {
+                // alert("Please enter a valid phone number.");
+                return false;
             }
+            return true;
+        }
 
-            // Event listeners
-            phoneInput.addEventListener('input', updateMask);
-            phoneInput.addEventListener('countrychange', updateMask);
-
-            function validatePhoneNumber() {
-                if (!iti.isValidNumber()) {
-                    // alert("Please enter a valid phone number.");
-                    return false;
-                }
-                return true;
+        function validatePhoneNumber() {
+            if (!iti.isValidNumber()) {
+                // alert("Please enter a valid phone number.");
+                return false;
             }
+            return true;
+        }
 
-            phoneInput.addEventListener('blur', validatePhoneNumber);
-            updateMask();
+        phoneInput.addEventListener('input', updateMask);
+        phoneInput.addEventListener('blur', validatePhoneNumber); // Validation on blur or submit
+        updateMask();
+    </script>
+    phoneInput.addEventListener('blur', validatePhoneNumber);
+    updateMask();
 
-            //  last-work
-            // const phoneInput = document.querySelector("#phone");
-            // const iti = window.intlTelInput(phoneInput, {
-            //     separateDialCode: true,
-            //     initialCountry: "auto",
-            //     geoIpLookup: function(callback) {
-            //         var countryCode = "us";
-            //         callback(countryCode);
-            //     },
-            //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-            // });
+    // last-work
+    // const phoneInput = document.querySelector("#phone");
+    // const iti = window.intlTelInput(phoneInput, {
+    // separateDialCode: true,
+    // initialCountry: "auto",
+    // geoIpLookup: function(callback) {
+    // var countryCode = "us";
+    // callback(countryCode);
+    // },
+    // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    // });
 
-            // function updateMask() {
-            //     const countryData = iti.getSelectedCountryData();
-            //     const countryCode = countryData.iso2;
+    // function updateMask() {
+    // const countryData = iti.getSelectedCountryData();
+    // const countryCode = countryData.iso2;
 
-            //     if (countryCode === 'us') {
-            //         $(".ophone").mask("(999) 999-9999");
-            //     } else {
-            //         $(".ophone").unmask();
-            //     }
-            //     document.querySelector('#country_code').value = countryData.dialCode;
-            // }
+    // if (countryCode === 'us') {
+    // $(".ophone").mask("(999) 999-9999");
+    // } else {
+    // $(".ophone").unmask();
+    // }
+    // document.querySelector('#country_code').value = countryData.dialCode;
+    // }
 
-            // function validatePhoneNumber() {
-            //     const rawPhoneNumber = iti.getNumber();  // Gets the number in E.164 format
-            //     if (!iti.isValidNumber()) {
-            //         // alert("Please enter a valid phone number.");
-            //         return false;
-            //     }
-            //     return true;
-            // }
+    // function validatePhoneNumber() {
+    // const rawPhoneNumber = iti.getNumber(); // Gets the number in E.164 format
+    // if (!iti.isValidNumber()) {
+    // // alert("Please enter a valid phone number.");
+    // return false;
+    // }
+    // return true;
+    // }
 
-            // phoneInput.addEventListener('input', updateMask);
-            // phoneInput.addEventListener('blur', validatePhoneNumber);  // Validation on blur or submit
-            // updateMask();
-            //  last-work
-        </script>
+    // phoneInput.addEventListener('input', updateMask);
+    // phoneInput.addEventListener('blur', validatePhoneNumber); // Validation on blur or submit
+    // updateMask();
+    // last-work
+    </script>
     {{-- phone mask  --}}
 
     {{-- get.models --}}
-        {{-- <script>
+    {{-- <script>
             $(document).ready(function() {
                 $(document).on('change', '.vehicle-year, .vehicle-make', function() {
                     var year = $('.vehicle-year').val();
@@ -598,214 +638,215 @@
     {{-- get.models --}}
 
     {{-- category subcategory --}}
-        <script>
-                $(document).ready(function() {
-                    $(document).on('change', '#category', function() {
-                        var selectedCategory = $(this).find('option:selected').data('id');
+    <script>
+        $(document).ready(function() {
+            $(document).on('change', '#category', function() {
+                var selectedCategory = $(this).find('option:selected').data('id');
 
-                        $.ajax({
-                            url: "{{ route('get.subcategories') }}",
-                            method: "POST",
-                            data: {
-                                "_token": "{{ csrf_token() }}",
-                                "category": selectedCategory
-                            },
-                            success: function(response) {
+                $.ajax({
+                    url: "{{ route('get.subcategories') }}",
+                    method: "POST",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "category": selectedCategory
+                    },
+                    success: function(response) {
 
-                                var html = '';
-                                $('#subcategory-box').html('');
+                        var html = '';
+                        $('#subcategory-box').html('');
 
-                                html += "<label for='subcategory'>Subcategory</label>";
-                                html +=
-                                    "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
-                                html += "<option value='' disabled selected>Select</option>";
-                                $.each(response, function(index, val) {
-                                    console.log('val', val);
-                                    html +=
-                                        `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
-                                });
-                                html += "</select>";
-
-                                $('#subcategory-box').html(html);
-
-                            },
-                            error: function(xhr, status, error) {
-                                console.error("Error:", error);
-                            }
+                        html += "<label for='subcategory'>Subcategory</label>";
+                        html +=
+                            "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
+                        html += "<option value='' disabled selected>Select</option>";
+                        $.each(response, function(index, val) {
+                            console.log('val', val);
+                            html +=
+                                `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
                         });
-                    });
-                });
-        </script>
-    {{-- category subcategory --}}
+                        html += "</select>";
 
-    {{-- modification / available_at_auction --}}
-        <script>
-            $(document).ready(function() {  
-                $(document).on('change', '#available_at_auction', function() {
-                    if ($(this).is(':checked')) {
-                        $('.div-link').show();
-                        $('#link').attr('required', true); 
-                    } else {
-                        $('.div-link').hide();
-                        $('#link').val(''); 
-                        $('#link').removeAttr('required'); 
-                    }
-                });
-                
-                $(document).on('change', '#modification', function() {
-                    if ($(this).is(':checked')) {
-                        $('.div-modify_info').show();
-                        $('#c').attr('required', true); 
-                    } else {
-                        $('.div-modify_info').hide();
-                        $('#c').val(''); 
-                        $('#c').removeAttr('required');
+                        $('#subcategory-box').html(html);
+
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
                     }
                 });
             });
-        </script>
+        });
+    </script>
+    {{-- category subcategory --}}
+
+    {{-- modification / available_at_auction --}}
+    <script>
+        $(document).ready(function() {
+            $(document).on('change', '#available_at_auction', function() {
+                if ($(this).is(':checked')) {
+                    $('.div-link').show();
+                    $('#link').attr('required', true);
+                } else {
+                    $('.div-link').hide();
+                    $('#link').val('');
+                    $('#link').removeAttr('required');
+                }
+            });
+
+            $(document).on('change', '#modification', function() {
+                if ($(this).is(':checked')) {
+                    $('.div-modify_info').show();
+                    $('#c').attr('required', true);
+                } else {
+                    $('.div-modify_info').hide();
+                    $('#c').val('');
+                    $('#c').removeAttr('required');
+                }
+            });
+        });
+    </script>
     {{-- modification / available_at_auction --}}
 
     {{-- multi step form --}}
-        <script>
-            // $(document).ready(function() {
-            //     function showError(field, message) {
-            //         $('#' + field).addClass('error-field');
-            //         $('#' + field + '-error').text(message).show();
-            //     }
+    <script>
+        // $(document).ready(function() {
+        //     function showError(field, message) {
+        //         $('#' + field).addClass('error-field');
+        //         $('#' + field + '-error').text(message).show();
+        //     }
 
-            //     function hideError(field) {
-            //         $('#' + field).removeClass('error-field');
-            //         $('#' + field + '-error').hide();
-            //     }
+        //     function hideError(field) {
+        //         $('#' + field).removeClass('error-field');
+        //         $('#' + field + '-error').hide();
+        //     }
 
-            //     function validateStep(step) {
-            //         var isValid = true;
-            //         $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
-            //             var field = $(this).attr('id');
-            //             if ($(this).hasClass('ajax-suggestion-input')) {
-            //                 if (!$(this).data('selected') || $(this).val() === '') {
-            //                     showError(field, 'Please select a valid option from suggestions.');
-            //                     isValid = false;
-            //                 } else {
-            //                     hideError(field);
-            //                 }
-            //             } else {
-            //                 if (!$(this).val()) {
-            //                     showError(field, 'This field is required.');
-            //                     isValid = false;
-            //                 } else {
-            //                     hideError(field);
-            //                 }
-            //             }
-            //         });
-            //         return isValid;
-            //     }
+        //     function validateStep(step) {
+        //         var isValid = true;
+        //         $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+        //             var field = $(this).attr('id');
+        //             if ($(this).hasClass('ajax-suggestion-input')) {
+        //                 if (!$(this).data('selected') || $(this).val() === '') {
+        //                     showError(field, 'Please select a valid option from suggestions.');
+        //                     isValid = false;
+        //                 } else {
+        //                     hideError(field);
+        //                 }
+        //             } else {
+        //                 if (!$(this).val()) {
+        //                     showError(field, 'This field is required.');
+        //                     isValid = false;
+        //                 } else {
+        //                     hideError(field);
+        //                 }
+        //             }
+        //         });
+        //         return isValid;
+        //     }
 
-            //     function fetchSuggestions(inputField, suggestionsList) {
-            //         var inputValue = inputField.val();
+        //     function fetchSuggestions(inputField, suggestionsList) {
+        //         var inputValue = inputField.val();
 
-            //         $.ajax({
-            //             url: "{{ route('get.zipcodes') }}",
-            //             method: "POST",
-            //             data: {
-            //                 "_token": "{{ csrf_token() }}",
-            //                 "input": inputValue
-            //             },
-            //             success: function(response) {
-            //                 suggestionsList.empty();
-            //                 inputField.data('selected', false);
-            //                 $.each(response, function(index, suggestion) {
-            //                     var listItem = $("<li>").text(suggestion).click(function() {
-            //                         inputField.val(suggestion);
-            //                         inputField.data('selected', true); 
-            //                         suggestionsList.hide();
-            //                         hideError(inputField.attr('id')); 
-            //                     });
-            //                     suggestionsList.append(listItem);
-            //                 });
+        //         $.ajax({
+        //             url: "{{ route('get.zipcodes') }}",
+        //             method: "POST",
+        //             data: {
+        //                 "_token": "{{ csrf_token() }}",
+        //                 "input": inputValue
+        //             },
+        //             success: function(response) {
+        //                 suggestionsList.empty();
+        //                 inputField.data('selected', false);
+        //                 $.each(response, function(index, suggestion) {
+        //                     var listItem = $("<li>").text(suggestion).click(function() {
+        //                         inputField.val(suggestion);
+        //                         inputField.data('selected', true); 
+        //                         suggestionsList.hide();
+        //                         hideError(inputField.attr('id')); 
+        //                     });
+        //                     suggestionsList.append(listItem);
+        //                 });
 
-            //                 suggestionsList.show(); 
-            //             },
-            //             error: function(xhr, status, error) {
-            //                 console.error("Error:", error);
-            //             }
-            //         });
-            //     }
+        //                 suggestionsList.show(); 
+        //             },
+        //             error: function(xhr, status, error) {
+        //                 console.error("Error:", error);
+        //             }
+        //         });
+        //     }
 
-            //     $('#pickup-location').on('input', function() {
-            //         var inputField = $(this);
-            //         var suggestionsList = $('.suggestionsPickup');
-            //         inputField.data('selected', false);
+        //     $('#pickup-location').on('input', function() {
+        //         var inputField = $(this);
+        //         var suggestionsList = $('.suggestionsPickup');
+        //         inputField.data('selected', false);
 
-            //         fetchSuggestions(inputField, suggestionsList);
-            //     });
+        //         fetchSuggestions(inputField, suggestionsList);
+        //     });
 
-            //     $('#delivery-location').on('input', function() {
-            //         var inputField = $(this);
-            //         var suggestionsList = $('.suggestionsDelivery');
-            //         inputField.data('selected', false);
+        //     $('#delivery-location').on('input', function() {
+        //         var inputField = $(this);
+        //         var suggestionsList = $('.suggestionsDelivery');
+        //         inputField.data('selected', false);
 
-            //         fetchSuggestions(inputField, suggestionsList);
-            //     });
+        //         fetchSuggestions(inputField, suggestionsList);
+        //     });
 
-            //     $('#step1_next').click(function() {
-            //         if (validateStep('step1')) {
-            //             $('#step1').hide();
-            //             $('#step2').show();
-            //         }
-            //     });
+        //     $('#step1_next').click(function() {
+        //         if (validateStep('step1')) {
+        //             $('#step1').hide();
+        //             $('#step2').show();
+        //         }
+        //     });
 
-            //     $('#step2_previous').click(function() {
-            //         $('#step2').hide();
-            //         $('#step1').show();
-            //     });
+        //     $('#step2_previous').click(function() {
+        //         $('#step2').hide();
+        //         $('#step1').show();
+        //     });
 
-            //     $('#step2_next').click(function() {
-            //         if (validateStep('step2')) {
-            //             $('#step2').hide();
-            //             $('#step3').show();
-            //         }
-            //     });
+        //     $('#step2_next').click(function() {
+        //         if (validateStep('step2')) {
+        //             $('#step2').hide();
+        //             $('#step3').show();
+        //         }
+        //     });
 
-            //     $('#step3_previous').click(function() {
-            //         $('#step3').hide();
-            //         $('#step2').show();
-            //     });
-            // });
-            $('#category').on('change', function () {
-                $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
+        //     $('#step3_previous').click(function() {
+        //         $('#step3').hide();
+        //         $('#step2').show();
+        //     });
+        // });
+        $('#category').on('change', function() {
+            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
 
-                // Show input field if "Others" is selected
-                if ($(this).val() === 'Others') {
-                    $('#otherCategoryInput').show().prop('disabled', false);
-                } else {
-                    $('#otherCategoryInput').hide().prop('disabled', true);
-                }
-                });
-                $(document).ready(function() {
-                function showError(field, message) {
-                    $('#' + field).addClass('error-field');
-                    $('#' + field + '-error').text(message).show();
-                }
+            // Show input field if "Others" is selected
+            if ($(this).val() === 'Others') {
+                $('#otherCategoryInput').show().prop('disabled', false);
+            } else {
+                $('#otherCategoryInput').hide().prop('disabled', true);
+            }
+        });
+        $(document).ready(function() {
+            function showError(field, message) {
+                $('#' + field).addClass('error-field');
+                $('#' + field + '-error').text(message).show();
+            }
 
-                function hideError(field) {
-                    $('#' + field).removeClass('error-field');
-                    $('#' + field + '-error').hide();
-                }
+            function hideError(field) {
+                $('#' + field).removeClass('error-field');
+                $('#' + field + '-error').hide();
+            }
 
-                // Regular expression for the desired format: "City,State,ZipCode"
-                function isValidFormat(value) {
-                    var regex = /^[A-Za-z\s]+,[A-Z]{2},\d{5}$/; // Adjust regex if needed
-                    return regex.test(value);
-                }
+            // Regular expression for the desired format: "City,State,ZipCode"
+            function isValidFormat(value) {
+                var regex = /^[A-Za-z\s]+,[A-Z]{2},\d{5}$/; // Adjust regex if needed
+                return regex.test(value);
+            }
 
-                function validateStep(step) {
-                    var isValid = true;
-                    $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]').each(function() {
+            function validateStep(step) {
+                var isValid = true;
+                $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]')
+                    .each(function() {
                         var field = $(this).attr('id');
                         var fieldValue = $(this).val();
-                        
+
                         if ($(this).hasClass('ajax-suggestion-input')) {
                             if (!$(this).data('selected') || $(this).val() === '') {
                                 showError(field, 'Please select a valid option from suggestions.');
@@ -832,238 +873,241 @@
                             }
                         }
                     });
-                    return isValid;
-                }
+                return isValid;
+            }
 
-                function fetchSuggestions(inputField, suggestionsList) {
-                    var inputValue = inputField.val();
+            function fetchSuggestions(inputField, suggestionsList) {
+                var inputValue = inputField.val();
 
-                    $.ajax({
-                        url: "{{ route('get.zipcodes') }}",
-                        method: "POST",
-                        data: {
-                            "_token": "{{ csrf_token() }}",
-                            "input": inputValue
-                        },
-                        success: function(response) {
-                            suggestionsList.empty();
-                            inputField.data('selected', false);
-                            $.each(response, function(index, suggestion) {
-                                var listItem = $("<li>").text(suggestion).click(function() {
-                                    inputField.val(suggestion);
-                                    inputField.data('selected', true); 
-                                    suggestionsList.hide();
-                                    hideError(inputField.attr('id')); 
-                                });
-                                suggestionsList.append(listItem);
+                $.ajax({
+                    url: "{{ route('get.zipcodes') }}",
+                    method: "POST",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "input": inputValue
+                    },
+                    success: function(response) {
+                        suggestionsList.empty();
+                        inputField.data('selected', false);
+                        $.each(response, function(index, suggestion) {
+                            var listItem = $("<li>").text(suggestion).click(function() {
+                                inputField.val(suggestion);
+                                inputField.data('selected', true);
+                                suggestionsList.hide();
+                                hideError(inputField.attr('id'));
                             });
+                            suggestionsList.append(listItem);
+                        });
 
-                            suggestionsList.show(); 
-                        },
-                        error: function(xhr, status, error) {
-                            console.error("Error:", error);
-                        }
-                    });
-                }
-
-                $('#pickup-location').on('input', function() {
-                    var inputField = $(this);
-                    var suggestionsList = $('.suggestionsPickup');
-                    inputField.data('selected', false);
-
-                    fetchSuggestions(inputField, suggestionsList);
-                });
-
-                $('#delivery-location').on('input', function() {
-                    var inputField = $(this);
-                    var suggestionsList = $('.suggestionsDelivery');
-                    inputField.data('selected', false);
-
-                    fetchSuggestions(inputField, suggestionsList);
-                });
-
-                $('#step1_next').click(function() {
-                    if (validateStep('step1')) {
-                        $('#step1').hide();
-                        $('#step2').show();
+                        suggestionsList.show();
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
                     }
                 });
+            }
 
-                $('#step2_previous').click(function() {
-                    $('#step2').hide();
-                    $('#step1').show();
-                });
+            $('#pickup-location').on('input', function() {
+                var inputField = $(this);
+                var suggestionsList = $('.suggestionsPickup');
+                inputField.data('selected', false);
 
-                $('#step2_next').click(function() {
-                    if (validateStep('step2')) {
-                        $('#step2').hide();
-                        $('#step3').show();
-                    }
-                });
-
-                $('#step3_previous').click(function() {
-                    $('#step3').hide();
-                    $('#step2').show();
-                });
+                fetchSuggestions(inputField, suggestionsList);
             });
-        </script>
+
+            $('#delivery-location').on('input', function() {
+                var inputField = $(this);
+                var suggestionsList = $('.suggestionsDelivery');
+                inputField.data('selected', false);
+
+                fetchSuggestions(inputField, suggestionsList);
+            });
+
+            $('#step1_next').click(function() {
+                if (validateStep('step1')) {
+                    $('#step1').hide();
+                    $('#step2').show();
+                }
+            });
+
+            $('#step2_previous').click(function() {
+                $('#step2').hide();
+                $('#step1').show();
+            });
+
+            $('#step2_next').click(function() {
+                if (validateStep('step2')) {
+                    $('#step2').hide();
+                    $('#step3').show();
+                }
+            });
+
+            $('#step3_previous').click(function() {
+                $('#step3').hide();
+                $('#step2').show();
+            });
+        });
+    </script>
     {{-- multi step form end --}}
 
     {{-- app js  --}}
-        @php
-            $makes = App\Models\VehicleName::select('make')
-                    ->where('UserId', 14)
-                    ->where('status', 0)
-                    ->groupBy('make')
-                    ->orderBy('make', 'ASC')
-                    ->get();
-        @endphp
+    @php
+        $makes = App\Models\VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+    @endphp
     {{-- index js  --}}
-        <script>
-            $(document).ready(function() {
-                $('#example-multiple').select2();
-            });
-            $(document).ready(function() {
-                $('#example-multiple-2').select2();
-            });
-        </script>
+    <script>
+        $(document).ready(function() {
+            $('#example-multiple').select2();
+        });
+        $(document).ready(function() {
+            $('#example-multiple-2').select2();
+        });
+    </script>
 
     {{-- single form location validation --}}
-        <script>
-            // function updateSuggestions(inputField, suggestionsList) {
-            //     var inputValue = inputField.val();
+    <script>
+        // function updateSuggestions(inputField, suggestionsList) {
+        //     var inputValue = inputField.val();
 
-            //     $.ajax({
-            //         url: "{{ route('get.zipcodes') }}",
-            //         method: "POST",
-            //         data: {
-            //             "_token": "{{ csrf_token() }}",
-            //             "input": inputValue
-            //         },
-            //         success: function(response) {
-            //             suggestionsList.empty();
+        //     $.ajax({
+        //         url: "{{ route('get.zipcodes') }}",
+        //         method: "POST",
+        //         data: {
+        //             "_token": "{{ csrf_token() }}",
+        //             "input": inputValue
+        //         },
+        //         success: function(response) {
+        //             suggestionsList.empty();
 
-            //             $.each(response, function(index, suggestion) {
-            //                 var listItem = $("<li>").text(suggestion).click(function() {
-            //                     inputField.val(suggestion);
-            //                     suggestionsList.css("display", "none");
-            //                 });
-            //                 suggestionsList.append(listItem);
-            //             });
-            //         },
-            //         error: function(xhr, status, error) {
-            //             console.error("Error:", error);
-            //         }
-            //     });
-            // }
+        //             $.each(response, function(index, suggestion) {
+        //                 var listItem = $("<li>").text(suggestion).click(function() {
+        //                     inputField.val(suggestion);
+        //                     suggestionsList.css("display", "none");
+        //                 });
+        //                 suggestionsList.append(listItem);
+        //             });
+        //         },
+        //         error: function(xhr, status, error) {
+        //             console.error("Error:", error);
+        //         }
+        //     });
+        // }
 
-            // $("#pickup-location, #delivery-location").keyup(function() {
-            //     var inputField = $(this);
-            //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-            //     suggestionsList.css("display", "block");
-            //     if (inputField.val() === "") {
-            //         suggestionsList.css("display", "none");
-            //     }
-            //     updateSuggestions(inputField, suggestionsList);
-            // });
+        // $("#pickup-location, #delivery-location").keyup(function() {
+        //     var inputField = $(this);
+        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+        //     suggestionsList.css("display", "block");
+        //     if (inputField.val() === "") {
+        //         suggestionsList.css("display", "none");
+        //     }
+        //     updateSuggestions(inputField, suggestionsList);
+        // });
 
-            // NEW CODE 
-            // single form location validation 
-            $(document).ready(function() {
-                var validPickupSuggestions = [];
-                var validDeliverySuggestions = [];
+        // NEW CODE 
+        // single form location validation 
+        $(document).ready(function() {
+            var validPickupSuggestions = [];
+            var validDeliverySuggestions = [];
 
-                function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-                    var inputValue = inputField.val();
+            function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+                var inputValue = inputField.val();
 
-                    $.ajax({
-                        url: "{{ route('get.zipcodes') }}",
-                        method: "POST",
-                        data: {
-                            "_token": "{{ csrf_token() }}",
-                            "input": inputValue
-                        },
-                        success: function(response) {
-                            suggestionsList.empty();
-                            validSuggestions.length = 0;  // Clear previous suggestions
+                $.ajax({
+                    url: "{{ route('get.zipcodes') }}",
+                    method: "POST",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "input": inputValue
+                    },
+                    success: function(response) {
+                        suggestionsList.empty();
+                        validSuggestions.length = 0; // Clear previous suggestions
 
-                            $.each(response, function(index, suggestion) {
-                                var listItem = $("<li>").text(suggestion).click(function() {
-                                    inputField.val(suggestion);
-                                    suggestionsList.css("display", "none");
-                                });
-                                validSuggestions.push(suggestion);  // Add to valid suggestions
-                                suggestionsList.append(listItem);
+                        $.each(response, function(index, suggestion) {
+                            var listItem = $("<li>").text(suggestion).click(function() {
+                                inputField.val(suggestion);
+                                suggestionsList.css("display", "none");
                             });
-                        },
-                        error: function(xhr, status, error) {
-                            console.error("Error:", error);
-                        }
-                    });
+                            validSuggestions.push(suggestion); // Add to valid suggestions
+                            suggestionsList.append(listItem);
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
+                    }
+                });
+            }
+
+            // $("#pickup-location").keyup(function() {
+            $(document).on('keyup', '#pickup-location', function() {
+                var inputField = $(this);
+                var suggestionsList = inputField.siblings(".suggestionsTwo");
+                suggestionsList.css("display", "block");
+                if (inputField.val() === "") {
+                    suggestionsList.css("display", "none");
                 }
-
-                // $("#pickup-location").keyup(function() {
-                $(document).on('keyup', '#pickup-location', function() {
-                    var inputField = $(this);
-                    var suggestionsList = inputField.siblings(".suggestionsTwo");
-                    suggestionsList.css("display", "block");
-                    if (inputField.val() === "") {
-                        suggestionsList.css("display", "none");
-                    }
-                    updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-                });
-
-                // $("#delivery-location").keyup(function() {
-                $(document).on('keyup', '#delivery-location', function() {
-                    var inputField = $(this);
-                    var suggestionsList = inputField.siblings(".suggestionsTwo");
-                    suggestionsList.css("display", "block");
-                    if (inputField.val() === "") {
-                        suggestionsList.css("display", "none");
-                    }
-                    updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-                });
-
-                function validateLocationInput(inputField, validSuggestions, errorField) {
-                    var inputValue = inputField.val();
-                    if (!validSuggestions.includes(inputValue)) {
-                        errorField.text("Please select a valid location.");
-                        return false;
-                    } else {
-                        errorField.text("");
-                        return true;
-                    }
-                }
-
-                // $("form").submit(function(event) {
-                //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-                //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
-                //     if (!isPickupValid || !isDeliveryValid) {
-                //         event.preventDefault();  // Prevent form submission if validation fails
-                //     }
-                // });
-                $("form").submit(function(event) {
-                    var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-                    var currentRoute = "{{ Route::currentRouteName() }}";
-
-                    if (currentRoute !== 'form.vehicle.roro' && currentRoute !== 'frontend.pages.services.roro-service') {
-                        var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-                        if (!isPickupValid || !isDeliveryValid) {
-                            event.preventDefault();
-                        }
-                    } else {
-                        if (!isPickupValid) {
-                            event.preventDefault();
-                        }
-                    }
-                });
+                updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
             });
-            // single form location validation end 
-        </script>
+
+            // $("#delivery-location").keyup(function() {
+            $(document).on('keyup', '#delivery-location', function() {
+                var inputField = $(this);
+                var suggestionsList = inputField.siblings(".suggestionsTwo");
+                suggestionsList.css("display", "block");
+                if (inputField.val() === "") {
+                    suggestionsList.css("display", "none");
+                }
+                updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+            });
+
+            function validateLocationInput(inputField, validSuggestions, errorField) {
+                var inputValue = inputField.val();
+                if (!validSuggestions.includes(inputValue)) {
+                    errorField.text("Please select a valid location.");
+                    return false;
+                } else {
+                    errorField.text("");
+                    return true;
+                }
+            }
+
+            // $("form").submit(function(event) {
+            //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+            //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+
+            //     if (!isPickupValid || !isDeliveryValid) {
+            //         event.preventDefault();  // Prevent form submission if validation fails
+            //     }
+            // });
+            $("form").submit(function(event) {
+                var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $(
+                    "#errOLoc"));
+                var currentRoute = "{{ Route::currentRouteName() }}";
+
+                if (currentRoute !== 'form.vehicle.roro' && currentRoute !==
+                    'frontend.pages.services.roro-service') {
+                    var isDeliveryValid = validateLocationInput($("#delivery-location"),
+                        validDeliverySuggestions, $("#errDLoc"));
+                    if (!isPickupValid || !isDeliveryValid) {
+                        event.preventDefault();
+                    }
+                } else {
+                    if (!isPickupValid) {
+                        event.preventDefault();
+                    }
+                }
+            });
+        });
+        // single form location validation end 
+    </script>
     {{-- single form location validation --}}
 
-        {{-- <script>
+    {{-- <script>
             $(document).ready(function() {
                 $(document).on('change', '.vehicle-year, .vehicle-make', function() {
                     var year = $('.vehicle-year').val();
@@ -1102,331 +1146,331 @@
             });
         </script> --}}
     {{-- index js END  --}}
-        
+
     {{-- scroll-up-btn --}}
-        <script>
-            const scrollButtons = document.querySelectorAll('.scroll-up-btn');
-            const targetHeading = document.querySelector('.target-top');
-            scrollButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    targetHeading.scrollIntoView({
-                        behavior: 'smooth', 
-                        block: 'start' 
-                    });
+    <script>
+        const scrollButtons = document.querySelectorAll('.scroll-up-btn');
+        const targetHeading = document.querySelector('.target-top');
+        scrollButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                targetHeading.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             });
-        </script>
+        });
+    </script>
     {{-- scroll-up-btn --}}
 
     {{-- tabSelector --}}
-        <script>
-            $(document).ready(function() {
-                var selectedTab = '';
-                $('#tabSelector').change(function() {
-                    $('.vehicles-container').html('');
-                    selectedTab = $(this).val();
-                    var vehicleType = $(this).val();
-                    $('.tab-pane').removeClass('show active');
-                    $('#' + selectedTab).addClass('show active');
+    <script>
+        $(document).ready(function() {
+            var selectedTab = '';
+            $('#tabSelector').change(function() {
+                $('.vehicles-container').html('');
+                selectedTab = $(this).val();
+                var vehicleType = $(this).val();
+                $('.tab-pane').removeClass('show active');
+                $('#' + selectedTab).addClass('show active');
 
-                    $.ajax({
-                        url: "{{ route('get.partial.form') }}",
-                        method: 'GET',
-                        data: {
-                            vehicleType: vehicleType,
-                        },
-                        success: function(response) {
-                            $('#additionalContent').html('');
-                            $('#additionalContent').html(response);
-                        },
-                        error: function(xhr) {
-                            console.log(xhr.responseText);
-                        }
-                    });
+                $.ajax({
+                    url: "{{ route('get.partial.form') }}",
+                    method: 'GET',
+                    data: {
+                        vehicleType: vehicleType,
+                    },
+                    success: function(response) {
+                        $('#additionalContent').html('');
+                        $('#additionalContent').html(response);
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
                 });
-                $(document).on('click', '.addVehicleBtn', function() {
-                        if ($('#tabSelector').val() == 'Car') {
-                            console.log('yesss');
-                            addNewVehicle();
-                        } else {
-                            console.log('nooo');
-                            addOtherVehicle();
-                        }
-                    }); 
-
-                $(document).on('click', '.delete-vehicle', function() {
-                    $(this).closest('.vehicle-info').remove();
-                });
-
-                // $(document).on('change', '.year, .make', function() {
-                //     var year = $(this).closest('.vehicle-info').find('.year').val();
-                //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
-                //     var vehicleInfo = $(this).closest('.vehicle-info');
-                //     if (year && makeId) {
-                //         getModel(year, makeId, vehicleInfo);
-                //     }
-                // });
-
-                // function getModel(year, makeId, vehicleInfo) {
-                //     // console.log('yes inn');
-                //     $.ajax({
-                //         url: "{{ route('get.models') }}",
-                //         method: 'GET',
-                //         data: {
-                //             year: year,
-                //             make: makeId
-                //         },
-                //         success: function(response) {
-                //             var modelsDropdown = vehicleInfo.find('.model');
-                //             modelsDropdown.empty();
-                //             var selectOptions = '<option value="">Select Model</option>';
-                //             $.each(response, function(index, model) {
-                //                 selectOptions += '<option value="' + model + '">' +
-                //                     model +
-                //                     '</option>';
-                //             });
-                //             modelsDropdown.html(selectOptions);
-                //         },
-                //         error: function(xhr) {
-                //             console.log(xhr.responseText);
-                //         }
-                //     });
-                // }
             });
-        </script>
+            $(document).on('click', '.addVehicleBtn', function() {
+                if ($('#tabSelector').val() == 'Car') {
+                    console.log('yesss');
+                    addNewVehicle();
+                } else {
+                    console.log('nooo');
+                    addOtherVehicle();
+                }
+            });
+
+            $(document).on('click', '.delete-vehicle', function() {
+                $(this).closest('.vehicle-info').remove();
+            });
+
+            // $(document).on('change', '.year, .make', function() {
+            //     var year = $(this).closest('.vehicle-info').find('.year').val();
+            //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            //     var vehicleInfo = $(this).closest('.vehicle-info');
+            //     if (year && makeId) {
+            //         getModel(year, makeId, vehicleInfo);
+            //     }
+            // });
+
+            // function getModel(year, makeId, vehicleInfo) {
+            //     // console.log('yes inn');
+            //     $.ajax({
+            //         url: "{{ route('get.models') }}",
+            //         method: 'GET',
+            //         data: {
+            //             year: year,
+            //             make: makeId
+            //         },
+            //         success: function(response) {
+            //             var modelsDropdown = vehicleInfo.find('.model');
+            //             modelsDropdown.empty();
+            //             var selectOptions = '<option value="">Select Model</option>';
+            //             $.each(response, function(index, model) {
+            //                 selectOptions += '<option value="' + model + '">' +
+            //                     model +
+            //                     '</option>';
+            //             });
+            //             modelsDropdown.html(selectOptions);
+            //         },
+            //         error: function(xhr) {
+            //             console.log(xhr.responseText);
+            //         }
+            //     });
+            // }
+        });
+    </script>
     {{-- tabSelector --}}
 
     {{-- L W H W --}}
-        <script>
-            function limitDigits(element, maxDigits) {
-                if (element.value.length > maxDigits) {
-                    element.value = element.value.slice(0, maxDigits);
-                }
+    <script>
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
             }
-            $(document).ready(function() {
-                $('#inches-input').on('input', function() {
-                    if (this.value > 11) {
-                        this.value = 11;
-                    } else if (this.value < 0) {
-                        this.value = 0;
-                    }
-                });
+        }
+        $(document).ready(function() {
+            $('#inches-input').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
 
-                // Optionally, you can also prevent the user from typing non-numeric characters.
-                $('#feet-input, #inches-input').on('input', function() {
-                    this.value = this.value.replace(/[^0-9]/g, '');
-                });
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
             });
-            $(document).ready(function() {
-                $(document).on('input', '.inches-input1, .inches-input2', function() {
-                    if (this.value > 11) {
-                        this.value = 11;
-                    } else if (this.value < 0) {
-                        this.value = 0;
-                    }
-                });
-                $(document).on('input', '.feet-input1, .inches-input1, .feet-input, .inches-input2', function() {
-                    console.log('asdasd');
-                    this.value = this.value.replace(/[^0-9]/g, '');
-                });
-            });
-            function moveToNext(current, nextId) {
-                if (current.value.length >= current.maxLength) {
-                    document.getElementById(nextId).focus();
+        });
+        $(document).ready(function() {
+            $(document).on('input', '.inches-input1, .inches-input2', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
                 }
+            });
+            $(document).on('input', '.feet-input1, .inches-input1, .feet-input, .inches-input2', function() {
+                console.log('asdasd');
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+
+        function moveToNext(current, nextId) {
+            if (current.value.length >= current.maxLength) {
+                document.getElementById(nextId).focus();
             }
-            
-        </script>
+        }
+    </script>
     {{-- L W H W --}}
 
     {{-- validate-form --}}
-        <script>
-            // document.addEventListener('DOMContentLoaded', function() {
-            //     // Get all forms with the class 'validate-form'
-            //     var forms = document.querySelectorAll('.validate-form');
+    <script>
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // Get all forms with the class 'validate-form'
+        //     var forms = document.querySelectorAll('.validate-form');
 
-            //         forms.forEach(function(form) {
-            //             form.addEventListener('submit', function(e) {
-            //                 var valid = true;
+        //         forms.forEach(function(form) {
+        //             form.addEventListener('submit', function(e) {
+        //                 var valid = true;
 
-            //                 // Collect all input elements that have the 'required' attribute
-            //                 var requiredInputs = form.querySelectorAll('[required]');
+        //                 // Collect all input elements that have the 'required' attribute
+        //                 var requiredInputs = form.querySelectorAll('[required]');
 
-            //                 // Function to create an error span dynamically if not present
-            //                 function createErrorSpan(inputElement, errorMessageClass) {
-            //                     let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
+        //                 // Function to create an error span dynamically if not present
+        //                 function createErrorSpan(inputElement, errorMessageClass) {
+        //                     let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
 
-            //                     if (!errorSpan) {
-            //                         errorSpan = document.createElement('span');
-            //                         errorSpan.className = errorMessageClass + ' error-message';
-            //                         errorSpan.style.color = 'red'; // Style the error message
-            //                         inputElement.parentNode.appendChild(errorSpan);
-            //                     }
+        //                     if (!errorSpan) {
+        //                         errorSpan = document.createElement('span');
+        //                         errorSpan.className = errorMessageClass + ' error-message';
+        //                         errorSpan.style.color = 'red'; // Style the error message
+        //                         inputElement.parentNode.appendChild(errorSpan);
+        //                     }
 
-            //                     return errorSpan;
-            //                 }
+        //                     return errorSpan;
+        //                 }
 
-            //                 // Loop through each required input field and validate
-            //                 requiredInputs.forEach(function(input) {
-            //                     var errorMessageClass = 'err' + input.name; // Use input name for error class
-            //                     var errorSpan = createErrorSpan(input, errorMessageClass);
+        //                 // Loop through each required input field and validate
+        //                 requiredInputs.forEach(function(input) {
+        //                     var errorMessageClass = 'err' + input.name; // Use input name for error class
+        //                     var errorSpan = createErrorSpan(input, errorMessageClass);
 
-            //                     if (!input.value) {
-            //                         errorSpan.textContent = input.name + ' is required.';
-            //                         valid = false;
-            //                     } else {
-            //                         // Additional validation for phone and email fields
-            //                         if (input.type === 'tel' && !/^\d+$/.test(input.value)) {
-            //                             errorSpan.textContent = 'Valid phone number is required.';
-            //                             valid = false;
-            //                         } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
-            //                             errorSpan.textContent = 'Valid email is required.';
-            //                             valid = false;
-            //                         } else {
-            //                             errorSpan.textContent = ''; // Clear error if valid
-            //                         }
-            //                     }
-            //                 });
+        //                     if (!input.value) {
+        //                         errorSpan.textContent = input.name + ' is required.';
+        //                         valid = false;
+        //                     } else {
+        //                         // Additional validation for phone and email fields
+        //                         if (input.type === 'tel' && !/^\d+$/.test(input.value)) {
+        //                             errorSpan.textContent = 'Valid phone number is required.';
+        //                             valid = false;
+        //                         } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
+        //                             errorSpan.textContent = 'Valid email is required.';
+        //                             valid = false;
+        //                         } else {
+        //                             errorSpan.textContent = ''; // Clear error if valid
+        //                         }
+        //                     }
+        //                 });
 
-            //                 // If not valid, prevent the form submission
-            //                 if (!valid) {
-            //                     e.preventDefault();
-            //                 }
-            //             });
-            //         });
-            // });
+        //                 // If not valid, prevent the form submission
+        //                 if (!valid) {
+        //                     e.preventDefault();
+        //                 }
+        //             });
+        //         });
+        // });
 
-            // <>
+        // <>
 
-            // document.addEventListener('DOMContentLoaded', function() {
-            // // Get all forms with the class 'validate-form'
-            // var forms = document.querySelectorAll('.validate-form');
+        // document.addEventListener('DOMContentLoaded', function() {
+        // // Get all forms with the class 'validate-form'
+        // var forms = document.querySelectorAll('.validate-form');
 
-            //     forms.forEach(function(form) {
-            //         form.addEventListener('submit', function(e) {
-            //             var valid = true;
+        //     forms.forEach(function(form) {
+        //         form.addEventListener('submit', function(e) {
+        //             var valid = true;
 
-            //             // Collect all input and select elements that have the 'required' attribute
-            //             var requiredInputs = form.querySelectorAll('[required], select');
+        //             // Collect all input and select elements that have the 'required' attribute
+        //             var requiredInputs = form.querySelectorAll('[required], select');
 
-            //             // Function to create an error span dynamically if not present
-            //             function createErrorSpan(inputElement, errorMessageClass) {
-            //                 let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
+        //             // Function to create an error span dynamically if not present
+        //             function createErrorSpan(inputElement, errorMessageClass) {
+        //                 let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
 
-            //                 if (!errorSpan) {
-            //                     errorSpan = document.createElement('span');
-            //                     errorSpan.className = errorMessageClass + ' error-message';
-            //                     errorSpan.style.color = 'red'; // Style the error message
-            //                     inputElement.parentNode.appendChild(errorSpan);
-            //                 }
+        //                 if (!errorSpan) {
+        //                     errorSpan = document.createElement('span');
+        //                     errorSpan.className = errorMessageClass + ' error-message';
+        //                     errorSpan.style.color = 'red'; // Style the error message
+        //                     inputElement.parentNode.appendChild(errorSpan);
+        //                 }
 
-            //                 return errorSpan;
-            //             }
+        //                 return errorSpan;
+        //             }
 
-            //             // Loop through each required input field and validate
-            //             requiredInputs.forEach(function(input) {
-            //                 var errorMessageClass = 'err' + input.name.replace('[]', ''); // Adjust error class for array fields
-            //                 var errorSpan = createErrorSpan(input, errorMessageClass);
+        //             // Loop through each required input field and validate
+        //             requiredInputs.forEach(function(input) {
+        //                 var errorMessageClass = 'err' + input.name.replace('[]', ''); // Adjust error class for array fields
+        //                 var errorSpan = createErrorSpan(input, errorMessageClass);
 
-            //                 if (!input.value || (input.tagName === 'SELECT' && input.value === '')) {
-            //                     errorSpan.textContent = input.tagName === 'SELECT' ? 'Please select an option.' : input.name + ' is required.';
-            //                     input.style.border = '2px solid red'; // Add red border for invalid input
-            //                     valid = false;
-            //                 } else {
-            //                     // Additional validation for phone and email fields if present
-            //                     if (input.type === 'tel' && !/^\d+$/.test(input.value)) {
-            //                         errorSpan.textContent = 'Valid phone number is required.';
-            //                         input.style.border = '2px solid red'; // Add red border for invalid phone number
-            //                         valid = false;
-            //                     } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
-            //                         errorSpan.textContent = 'Valid email is required.';
-            //                         input.style.border = '2px solid red'; // Add red border for invalid email
-            //                         valid = false;
-            //                     } else {
-            //                         errorSpan.textContent = ''; // Clear error if valid
-            //                         input.style.border = ''; // Remove red border when valid
-            //                     }
-            //                 }
-            //             });
+        //                 if (!input.value || (input.tagName === 'SELECT' && input.value === '')) {
+        //                     errorSpan.textContent = input.tagName === 'SELECT' ? 'Please select an option.' : input.name + ' is required.';
+        //                     input.style.border = '2px solid red'; // Add red border for invalid input
+        //                     valid = false;
+        //                 } else {
+        //                     // Additional validation for phone and email fields if present
+        //                     if (input.type === 'tel' && !/^\d+$/.test(input.value)) {
+        //                         errorSpan.textContent = 'Valid phone number is required.';
+        //                         input.style.border = '2px solid red'; // Add red border for invalid phone number
+        //                         valid = false;
+        //                     } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
+        //                         errorSpan.textContent = 'Valid email is required.';
+        //                         input.style.border = '2px solid red'; // Add red border for invalid email
+        //                         valid = false;
+        //                     } else {
+        //                         errorSpan.textContent = ''; // Clear error if valid
+        //                         input.style.border = ''; // Remove red border when valid
+        //                     }
+        //                 }
+        //             });
 
-            //             // If not valid, prevent the form submission
-            //             if (!valid) {
-            //                 e.preventDefault();
-            //             }
-            //         });
-            //     });
-            // });
-            
-            // <>
-            
-            // document.addEventListener('DOMContentLoaded', function() {
-            // // Get all forms with the class 'validate-form'
-            // var forms = document.querySelectorAll('.validate-form');
+        //             // If not valid, prevent the form submission
+        //             if (!valid) {
+        //                 e.preventDefault();
+        //             }
+        //         });
+        //     });
+        // });
 
-            //     forms.forEach(function(form) {
-            //         form.addEventListener('submit', function(e) {
-            //             var valid = true;
+        // <>
 
-            //             // Collect all input and select elements that have the 'required' attribute
-            //             var requiredInputs = form.querySelectorAll('[required], select');
+        // document.addEventListener('DOMContentLoaded', function() {
+        // // Get all forms with the class 'validate-form'
+        // var forms = document.querySelectorAll('.validate-form');
 
-            //             // Function to create an error span dynamically if not present
-            //             function createErrorSpan(inputElement, errorMessageClass) {
-            //                 let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
+        //     forms.forEach(function(form) {
+        //         form.addEventListener('submit', function(e) {
+        //             var valid = true;
 
-            //                 if (!errorSpan) {
-            //                     errorSpan = document.createElement('span');
-            //                     errorSpan.className = errorMessageClass + ' error-message';
-            //                     errorSpan.style.color = 'red'; // Style the error message
-            //                     inputElement.parentNode.appendChild(errorSpan);
-            //                 }
+        //             // Collect all input and select elements that have the 'required' attribute
+        //             var requiredInputs = form.querySelectorAll('[required], select');
 
-            //                 return errorSpan;
-            //             }
+        //             // Function to create an error span dynamically if not present
+        //             function createErrorSpan(inputElement, errorMessageClass) {
+        //                 let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
 
-            //             // Loop through each required input field and validate
-            //             requiredInputs.forEach(function(input) {
-            //                 var errorMessageClass = 'err' + input.name.replace('[]', ''); // Adjust error class for array fields
-            //                 var errorSpan = createErrorSpan(input, errorMessageClass);
+        //                 if (!errorSpan) {
+        //                     errorSpan = document.createElement('span');
+        //                     errorSpan.className = errorMessageClass + ' error-message';
+        //                     errorSpan.style.color = 'red'; // Style the error message
+        //                     inputElement.parentNode.appendChild(errorSpan);
+        //                 }
 
-            //                 if (!input.value || (input.tagName === 'SELECT' && input.value === '')) {
-            //                     errorSpan.textContent = input.tagName === 'SELECT' ? 'Please select an option.' : input.name + ' is required.';
-            //                     input.style.border = '2px solid red'; // Add red border for invalid input
-            //                     valid = false;
-            //                 } else {
-            //                     // Phone number validation for `intl-tel-input`
-            //                     if (input.type === 'tel' && typeof iti !== 'undefined') {
-            //                         // Use intl-tel-input's validation method
-            //                         const rawPhoneNumber = iti.getNumber();
-            //                         if (!iti.isValidNumber()) {
-            //                             errorSpan.textContent = 'Valid phone number is required.';
-            //                             input.style.border = '2px solid red'; // Add red border for invalid phone number
-            //                             valid = false;
-            //                         } else {
-            //                             errorSpan.textContent = ''; // Clear error if valid
-            //                             input.style.border = ''; // Remove red border when valid
-            //                         }
-            //                     } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
-            //                         errorSpan.textContent = 'Valid email is required.';
-            //                         input.style.border = '2px solid red'; // Add red border for invalid email
-            //                         valid = false;
-            //                     } else {
-            //                         errorSpan.textContent = ''; // Clear error if valid
-            //                         input.style.border = ''; // Remove red border when valid
-            //                     }
-            //                 }
-            //             });
+        //                 return errorSpan;
+        //             }
 
-            //             // If not valid, prevent the form submission
-            //             if (!valid) {
-            //                 e.preventDefault();
-            //             }
-            //         });
-            //     });
-            // });
+        //             // Loop through each required input field and validate
+        //             requiredInputs.forEach(function(input) {
+        //                 var errorMessageClass = 'err' + input.name.replace('[]', ''); // Adjust error class for array fields
+        //                 var errorSpan = createErrorSpan(input, errorMessageClass);
+
+        //                 if (!input.value || (input.tagName === 'SELECT' && input.value === '')) {
+        //                     errorSpan.textContent = input.tagName === 'SELECT' ? 'Please select an option.' : input.name + ' is required.';
+        //                     input.style.border = '2px solid red'; // Add red border for invalid input
+        //                     valid = false;
+        //                 } else {
+        //                     // Phone number validation for `intl-tel-input`
+        //                     if (input.type === 'tel' && typeof iti !== 'undefined') {
+        //                         // Use intl-tel-input's validation method
+        //                         const rawPhoneNumber = iti.getNumber();
+        //                         if (!iti.isValidNumber()) {
+        //                             errorSpan.textContent = 'Valid phone number is required.';
+        //                             input.style.border = '2px solid red'; // Add red border for invalid phone number
+        //                             valid = false;
+        //                         } else {
+        //                             errorSpan.textContent = ''; // Clear error if valid
+        //                             input.style.border = ''; // Remove red border when valid
+        //                         }
+        //                     } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
+        //                         errorSpan.textContent = 'Valid email is required.';
+        //                         input.style.border = '2px solid red'; // Add red border for invalid email
+        //                         valid = false;
+        //                     } else {
+        //                         errorSpan.textContent = ''; // Clear error if valid
+        //                         input.style.border = ''; // Remove red border when valid
+        //                     }
+        //                 }
+        //             });
+
+        //             // If not valid, prevent the form submission
+        //             if (!valid) {
+        //                 e.preventDefault();
+        //             }
+        //         });
+        //     });
+        // });
 
 
-            document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() {
             // Get all forms with the class 'validate-form'
             var forms = document.querySelectorAll('.validate-form');
 
@@ -1435,11 +1479,13 @@
                     var valid = true;
 
                     // Collect only input and select elements that have the 'required' attribute
-                    var requiredInputs = form.querySelectorAll('[required]'); // Remove ', select' to only select those with 'required'
+                    var requiredInputs = form.querySelectorAll(
+                        '[required]'); // Remove ', select' to only select those with 'required'
 
                     // Function to create an error span dynamically if not present
                     function createErrorSpan(inputElement, errorMessageClass) {
-                        let errorSpan = inputElement.parentNode.querySelector('.' + errorMessageClass);
+                        let errorSpan = inputElement.parentNode.querySelector('.' +
+                            errorMessageClass);
 
                         if (!errorSpan) {
                             errorSpan = document.createElement('span');
@@ -1451,50 +1497,56 @@
                         return errorSpan;
                     }
 
-                        // Loop through each required input field and validate
-                        requiredInputs.forEach(function(input) {
-                            var errorMessageClass = 'err' + input.name.replace('[]', ''); // Adjust error class for array fields
-                            var errorSpan = createErrorSpan(input, errorMessageClass);
+                    // Loop through each required input field and validate
+                    requiredInputs.forEach(function(input) {
+                        var errorMessageClass = 'err' + input.name.replace('[]',
+                            ''); // Adjust error class for array fields
+                        var errorSpan = createErrorSpan(input, errorMessageClass);
 
-                            if (!input.value || (input.tagName === 'SELECT' && input.value === '')) {
-                                errorSpan.textContent = input.tagName === 'SELECT' ? 'Please select an option.' : input.name + ' is required.';
-                                input.style.border = '2px solid red'; // Add red border for invalid input
-                                valid = false;
-                            } else {
-                                // Phone number validation for `intl-tel-input`
-                                if (input.type === 'tel' && typeof iti !== 'undefined') {
-                                    // Use intl-tel-input's validation method
-                                    const rawPhoneNumber = iti.getNumber();
-                                    if (!iti.isValidNumber()) {
-                                        errorSpan.textContent = 'Valid phone number is required.';
-                                        input.style.border = '2px solid red'; // Add red border for invalid phone number
-                                        valid = false;
-                                    } else {
-                                        errorSpan.textContent = ''; // Clear error if valid
-                                        input.style.border = ''; // Remove red border when valid
-                                    }
-                                } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
-                                    errorSpan.textContent = 'Valid email is required.';
-                                    input.style.border = '2px solid red'; // Add red border for invalid email
+                        if (!input.value || (input.tagName === 'SELECT' && input.value ===
+                                '')) {
+                            errorSpan.textContent = input.tagName === 'SELECT' ?
+                                'Please select an option.' : input.name + ' is required.';
+                            input.style.border =
+                                '2px solid red'; // Add red border for invalid input
+                            valid = false;
+                        } else {
+                            // Phone number validation for `intl-tel-input`
+                            if (input.type === 'tel' && typeof iti !== 'undefined') {
+                                // Use intl-tel-input's validation method
+                                const rawPhoneNumber = iti.getNumber();
+                                if (!iti.isValidNumber()) {
+                                    errorSpan.textContent =
+                                        'Valid phone number is required.';
+                                    input.style.border =
+                                        '2px solid red'; // Add red border for invalid phone number
                                     valid = false;
                                 } else {
                                     errorSpan.textContent = ''; // Clear error if valid
                                     input.style.border = ''; // Remove red border when valid
                                 }
+                            } else if (input.type === 'email' && !/\S+@\S+\.\S+/.test(input
+                                    .value)) {
+                                errorSpan.textContent = 'Valid email is required.';
+                                input.style.border =
+                                    '2px solid red'; // Add red border for invalid email
+                                valid = false;
+                            } else {
+                                errorSpan.textContent = ''; // Clear error if valid
+                                input.style.border = ''; // Remove red border when valid
                             }
-                        });
-
-                        // If not valid, prevent the form submission
-                        if (!valid) {
-                            e.preventDefault();
                         }
                     });
+
+                    // If not valid, prevent the form submission
+                    if (!valid) {
+                        e.preventDefault();
+                    }
                 });
             });
-
-
-        </script>  
-    {{-- validate-form --}} 
+        });
+    </script>
+    {{-- validate-form --}}
 
     {{-- <script>
         function limitDigits(element, maxDigits) {
@@ -2142,7 +2194,7 @@
                 $('#step2').show();
             });
         });
-    </script>--}}
+    </script> --}}
 </body>
 
 </html>
