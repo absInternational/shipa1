@@ -51,7 +51,7 @@
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label> Year</label>
-            <!-- <select class="nice-select vehicle-year" name="year[]" id="year" required>
+            {{-- <!-- <select class="nice-select vehicle-year" name="year[]" id="year" required>
                 <option value="" disabled selected>Select Year
                 </option>
                 @php
@@ -60,7 +60,7 @@
                 echo "<option value='$year'>$year</option>";
                 }
                 @endphp
-            </select> -->
+            </select> --> --}}
             <div class="dropdown">
                 <input class="form-control dropdown-toggle year" type="text"
                     name="year[]" id="year" placeholder="Select Year"
@@ -465,5 +465,109 @@ Equipment</a>
                         `;
 
         $('.vehicles-container').append(newVehicleHtml);
+        // Initialize the searchable dropdown for new elements
+        initializeSearchableDropdown();
     }
 </script>
+
+   <!-- year search work -->
+
+   <script>
+    // Initialize Select2 on existing dropdowns (if needed)
+    initializeSearchableDropdown();
+    document.addEventListener('DOMContentLoaded', function() {
+        const input = document.querySelector('.year');
+        const dropdownMenu = document.querySelector('.year-dropdown');
+        const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
+        
+        // Function to filter dropdown items
+        function filterDropdown() {
+            const searchValue = input.value.toLowerCase();
+            dropdownItems.forEach(function(item) {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchValue) || searchValue === '') {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Filter dropdown items on input
+        input.addEventListener('input', function() {
+            filterDropdown();
+        });
+
+        // Set input value from dropdown item click
+        dropdownMenu.addEventListener('click', function(e) {
+            if (e.target.classList.contains('dropdown-item')) {
+                input.value = e.target.textContent;
+                dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+            }
+        });
+
+        // Hide dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+
+        // Show dropdown when input is focused
+        input.addEventListener('focus', function() {
+            dropdownMenu.style.display = 'block';
+        });
+
+        // Handle Enter key press to set the input value
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const searchValue = input.value;
+                // Check if the entered value exists in the dropdown
+                const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
+                if (item) {
+                    input.value = item.textContent;
+                }
+                dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                e.preventDefault(); // Prevent default form submission behavior if in a form
+            }
+        });
+    });
+
+    function initializeSearchableDropdown() {
+            $('.dropdown-toggle.year').on('input', function() {
+                var input = $(this);
+                var filter = input.val().toLowerCase();
+                var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                dropdown.find('.dropdown-item').each(function() {
+                    var text = $(this).text().toLowerCase();
+                    if (text.includes(filter) || filter === '') {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+
+            $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                var item = $(this);
+                var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                input.val(item.text());
+                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+            });
+
+            // Show dropdown when input is focused
+            $('.dropdown-toggle.year').on('focus', function() {
+                $(this).siblings('.dropdown-menu.year-dropdown').show();
+            });
+
+            // Hide dropdown when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.dropdown').length) {
+                    $('.dropdown-menu.year-dropdown').hide();
+                }
+            });
+        }
+    
+</script>
+
+<!-- year search work -->
