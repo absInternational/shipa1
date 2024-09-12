@@ -208,7 +208,7 @@ class QuoteController extends Controller
 
             $distance = $this->getDistance($origin_zip, $destination_zip);
         } else {
-            $destinationData = $request->roro_country . ',' . $request->roro_city . ',' . $request->roro_zipcode;
+            $destinationData = $request->To_Country . ',' . $request->To_City . ',' . $request->To_ZipCode;
         }
 
         $post_array = [
