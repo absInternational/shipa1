@@ -286,14 +286,14 @@
             padding-left: 10px !important;
         }
 
-        .error-message {
+        /* .error-message {
             display: none;
             color: red;
         }
 
         .error-field {
             border: 2px solid red;
-        }
+        } */
     </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -387,10 +387,10 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 mb-4">
-                                            <label class="text-white mb-2">Zip Code:</label>
+                                            <label class="text-white mb-2">Zip Code:<small>(Optional)</small></label>
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" id="delivery-zipcode"
-                                                    placeholder="Enter ZipCode" name="To_ZipCode" required>
+                                                    placeholder="Enter ZipCode" name="To_ZipCode"  >
                                             </div>
                                         </div>
                                     </div>
@@ -418,10 +418,10 @@
                                             <option value="Motorcycle">Motorcycle</option>
                                             <option value="RV-Transport">RV Transport</option>
                                         </select>
-                                        <label class="error-message" id="tabSelector-error">This field is
-                                            required.</label>
+                                        {{-- <label class="error-message" id="tabSelector-error">This field is
+                                            required.</label> --}}
 
-                                        <div class="tab-content mt-3" id="additionalContent"></div>
+                                        <div class="tab-content" id="additionalContent"></div>
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-xl-6 col-lg-6">
@@ -445,48 +445,45 @@
                                 <!-- Step 3: Customer Information -->
                                 <div class="basic_quote_info" id="step3" style="display: none;">
                                     <div class="row mb-3">
-                                        <h4 class="text-center text-white">Customer Information</h4>
-                                        <div class="col-xl-4 col-lg-4">
+                                        <h4 class="text-center text-white target-top">Customer Information</h4>
+                                        <div class="col-xl-6 col-lg-6">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white"> Your Name:</label>
-                                                <input class="form-control" required name="name" type="text"
-                                                    placeholder="Customer Name">
+                                                <input class="form-control" id="name" name="name" type="text"
+                                                    placeholder="Customer Name" required>
                                                 <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-                                                <label class="error-message" id="Custo_Name-error">This field is
-                                                    required.</label>
+
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-lg-4">
+                                        <div class="col-xl-6 col-lg-6">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
-                                                <input id="phone" class="form-control ophone" required name="phone"
-                                                    type="tel" placeholder="Customer Phone">
+                                                <input id="phone" class="form-control ophone" name="phone"
+                                                    type="tel" placeholder="Customer Phone" required>
                                                 <small id="errPhone" class="err-style"></small>
                                                 <input type="hidden" name="country_code" id="country_code" />
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-lg-4">
+                                        <div class="col-xl-12 col-lg-12">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white"> Email Address:</label>
-                                                <input class="form-control" required id="email" name="email"
-                                                    type="email" placeholder="Email address">
-                                                <label class="error-message" id="Custo_Email-error">This field is
-                                                    required.</label>
+                                                <input class="form-control" id="email" name="email" type="email"
+                                                    placeholder="Email address" required>
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-6 col-lg-6">
                                             <div class="price__cta-btn">
-                                                <button class="tj-submit-btn previous" id="step3_previous">
+                                                <button class="tj-submit-btn previous scroll-up-btn" id="step3_previous">
                                                     Previous <i class="fa-light fa-arrow-right"></i>
                                                 </button>
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-lg-6">
                                             <div class="price__cta-btn float-end">
-
-                                                <button class=" tj-submit-btn check_roro" href="" type="submit"
+                                                <button class=" tj-submit-btn " href="" type="submit"
                                                     id="submit_instant_code" value="Submit Form">
                                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                                 </button>

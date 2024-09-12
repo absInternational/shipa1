@@ -188,7 +188,7 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 mb-4">
-                                            <label class="text-white mb-2">Zip Code:</label>
+                                            <label class="text-white mb-2">Zip Code:<small>(Optional)</small></label>
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" placeholder="Enter ZipCode"
                                                     name="To_ZipCode">
@@ -220,19 +220,19 @@
                                             <option value="Motorcycle">Motorcycle</option>
                                             <option value="RV-Transport">RV Transport</option>
                                         </select>
-                                        <label class="error-message" id="tabSelector-error">This field is
-                                            required.</label>
-                                        <div class="my-4">
-                                            <!-- <div class="col-xl-4 col-lg-4">
-                                                        <div class="single-input-field">
-                                                            <label class="d-block text-white">Country:</label>
-                                                            <select class="form-control" id="country-dropdown" required
-                                                                name="country1">
-                                                                <option value="">Select a country</option>
-                                                            </select>
-                                                            <label class="error-message" id="country1-error">This field is
-                                                                required.</label>
-                                                        </div>
+                                        {{-- <label class="error-message" id="tabSelector-error">This field is
+                                            required.</label> --}}
+                                        {{-- <div class="my-4">
+                                            <div class="col-xl-4 col-lg-4">
+                                                    <div class="single-input-field">
+                                                        <label class="d-block text-white">Country:</label>
+                                                        <select class="form-control" id="country-dropdown" required
+                                                            name="country1">
+                                                            <option value="">Select a country</option>
+                                                        </select>
+                                                        <label class="error-message" id="country1-error">This field is
+                                                            required.</label>
+                                                    </div>
                                                     </div>
                                                     <div class="col-xl-4 col-lg-4">
                                                         <div class="single-input-field">
@@ -252,10 +252,10 @@
                                                                 placeholder="Postal/Zip">
                                                             <label class="error-message" id="zip1-error">This field is
                                                                 required.</label>
-                                                        </div>
-                                                    </div> -->
-                                        </div>
-                                        <div class="tab-content mt-3" id="additionalContent"></div>
+                                                    </div>
+                                            </div> 
+                                        </div> --}}
+                                        <div class="tab-content" id="additionalContent"></div>
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-xl-6 col-lg-6">
@@ -785,7 +785,7 @@
             </div>
         </div>
     </div>
-</section> --}}
+    </section> --}}
     <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
@@ -872,6 +872,72 @@
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
     </script>
+    
+    {{-- Delivery - Country - RORO --}}
+        <script>
+            $(document).ready(function() {
+                $(document).on('keyup', '#delivery-country', function() {
+                    var inputField = $(this);
+                    var suggestionsList = inputField.siblings(".suggestionsCountry");
+                    var query = inputField.val();
+
+                    if (query !== "") {
+                        suggestionsList.css("display", "block");
+
+                        $.ajax({
+                            url: '/get-countries',
+                            type: 'GET',
+                            data: {
+                                search: query
+                            },
+                            success: function(response) {
+
+                                suggestionsList.empty();
+
+                                if (response.length > 0) {
+                                    response.forEach(function(country) {
+                                        suggestionsList.append(
+                                            '<li class="suggestion-item-country">' +
+                                            country.name + '</li>');
+                                    });
+                                } else {
+                                    suggestionsList.append(
+                                        '<li class="no-results">No results found</li>');
+                                }
+                            }
+                        });
+                    } else {
+                        suggestionsList.css("display", "none");
+                    }
+                });
+
+                $(document).on('click', '.suggestion-item-country', function() {
+                    var selectedCountry = $(this).text();
+                    $('#delivery-country').val(selectedCountry);
+                    $('.suggestionsCountry').css("display", "none");
+                });
+
+                $(document).on('click', '#submit_instant_code', function() {
+                    console.log('yes yes yes');
+                    $('#calculatePriceFromRoro').submit();
+                });
+            });
+        </script>
+    {{-- Delivery - Country - RORO --}}
+
+    {{-- playVideo --}}
+        <script>
+            function playVideo() {
+                document.querySelector('.video-thumbnail').style.display = 'none';
+                document.querySelector('.video-iframe').style.display = 'block';
+                var iframe = document.getElementById('videoFrame');
+                var videoSrc = iframe.src;
+                iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
+            }
+        </script>
+    {{-- playVideo --}}
+
+
     {{-- <script>
         $(document).ready(function() {
             var selectedTab = '';
@@ -1024,422 +1090,365 @@
                 });
             }
         });
-</script> --}}
-    {{-- <script>
-    $(document).ready(function() {
-    $(document).on('change', '.category', function() {
-        var selectedCategory = $(this).val();
-
-        $.ajax({
-            url: "{{ route('get.subcategories') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "category": selectedCategory
-            },
-            success: function(response) {
-                console.log(response);
-                console.log(response.length);
-
-                var html = '';
-                $('#subcategory-box').html('');
-
-                html += "<label for='subcategory'>Subcategory</label>";
-                html +=
-                    "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
-                html += "<option value='' disabled selected>Select</option>";
-                $.each(response, function(index, val) {
-                    html +=
-                        `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
-                });
-                html += "</select>";
-                console.log('html', html);
-
-                $('#subcategory-box').html(html);
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    });
-    });
-</script> --}}
-    {{-- <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var input = document.querySelector("#phone");
-    window.intlTelInput(input, {
-        initialCountry: "auto",
-        geoIpLookup: function(callback) {
-            fetch('https://ipinfo.io/json')
-                .then(function(response) {
-                    return response.json();
-                })
-                .then(function(ipinfo) {
-                    var countryCode = "us";
-                    callback(countryCode);
-                });
-        },
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-    });
-    });
-</script> --}}
-    <script>
-        function playVideo() {
-            document.querySelector('.video-thumbnail').style.display = 'none';
-            document.querySelector('.video-iframe').style.display = 'block';
-            var iframe = document.getElementById('videoFrame');
-            var videoSrc = iframe.src;
-            iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
-        }
-    </script>
-    {{-- <script>
-    $(document).ready(function() {
-        var selectedTab = '';
-        $('#tabSelector').change(function() {
-            $('.vehicles-container').html('');
-            selectedTab = $(this).val();
-            var vehicleType = $(this).val();
-            $('.tab-pane').removeClass('show active');
-            $('#' + selectedTab).addClass('show active');
+    </script> --}}
+        {{-- <script>
+        $(document).ready(function() {
+        $(document).on('change', '.category', function() {
+            var selectedCategory = $(this).val();
 
             $.ajax({
-                url: "{{ route('get.partial.form') }}",
-                method: 'GET',
+                url: "{{ route('get.subcategories') }}",
+                method: "POST",
                 data: {
-                    vehicleType: vehicleType,
+                    "_token": "{{ csrf_token() }}",
+                    "category": selectedCategory
                 },
                 success: function(response) {
-                    $('#additionalContent').html('');
-                    $('#additionalContent').html(response);
+                    console.log(response);
+                    console.log(response.length);
+
+                    var html = '';
+                    $('#subcategory-box').html('');
+
+                    html += "<label for='subcategory'>Subcategory</label>";
+                    html +=
+                        "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
+                    html += "<option value='' disabled selected>Select</option>";
+                    $.each(response, function(index, val) {
+                        html +=
+                            `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
+                    });
+                    html += "</select>";
+                    console.log('html', html);
+
+                    $('#subcategory-box').html(html);
                 },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
                 }
             });
         });
-
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                            <div class="vehicle-info">
-                            <div class="row select-bm">
-                            <div class="col-md-4">
-                            <div class="input-form tj-select">
-                            <label> Year</label>
-                            <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{date('Y')}};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-
-            newVehicleHtml +=
-                `</select>
-                            </div>
-                            </div>
-                            <div class="col-md-4">
-                            <div class="input-form tj-select">
-                            <label>Make</label>
-                            <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-
-
-            newVehicleHtml += `
-                            </select>
-                            </div>
-                            </div>
-                            <div class="col-md-4">
-                            <div class="input-form tj-select model-div">
-                            <label>Model</label>
-                            <select class="nice-select model" name="model[]" id="model" required></select>`;
-
-            newVehicleHtml +=
-                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-            newVehicleHtml += `
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                                `;
-
-            $('.vehicles-container').append(newVehicleHtml);
-        }
-
-        function addOtherVehicle() {
-            var newVehicleHtml =
-                `
-                            <div class="vehicle-info">
-                            <div class="row select-bm">
-                            <div class="col-md-4">
-                            <div class="input-form tj-select">
-                            <label> Year</label>
-                            <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {
-                {
-                    date('Y')
-                }
-            };
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-
-            newVehicleHtml +=
-                `</select>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                    <label>Make</label>
-                                    <input type="text" id="make" name="make[]"
-                                    placeholder="Enter Make" required="" />
-                                    </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                    <div class="input-form tj-select model-div">
-                                    <label>Model</label>
-                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                    required="" />`
-            newVehicleHtml +=
-                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-            newVehicleHtml += `</div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    `;
-
-            $('.vehicles-container').append(newVehicleHtml);
-        }
-
-        $(document).on('click', '.addVehicleBtn', function() {
-            if ($('#tabSelector').val() == 'Car') {
-                addNewVehicle();
-            } else {
-                addOtherVehicle();
-            }
         });
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
+    </script> --}}
+        {{-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                fetch('https://ipinfo.io/json')
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(ipinfo) {
+                        var countryCode = "us";
+                        callback(countryCode);
+                    });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
         });
-
+        });
+    </script> --}}
+        {{-- <script>
         $(document).ready(function() {
-            $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                var year = $('.vehicle-year').val();
-                var makeId = $('.vehicle-make').val();
-                if (year && makeId) {
-                    getModel(year, makeId);
-                }
-            });
+            var selectedTab = '';
+            $('#tabSelector').change(function() {
+                $('.vehicles-container').html('');
+                selectedTab = $(this).val();
+                var vehicleType = $(this).val();
+                $('.tab-pane').removeClass('show active');
+                $('#' + selectedTab).addClass('show active');
 
-            function getModel(year, makeId) {
-                console.log('yes inn');
                 $.ajax({
-                    url: "{{ route('get.models') }}",
+                    url: "{{ route('get.partial.form') }}",
                     method: 'GET',
                     data: {
-                        year: year,
-                        make: makeId
+                        vehicleType: vehicleType,
                     },
                     success: function(response) {
-                        var modelsDropdown = $('.vehicle-model-div');
-                        modelsDropdown.empty();
-                        var selectOptions =
-                            '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' +
-                                model +
-                                '</option>';
-                        });
-                        selectOptions += '</select>';
-                        modelsDropdown.html(selectOptions);
-
-                        console.log('yesssss', response);
+                        $('#additionalContent').html('');
+                        $('#additionalContent').html(response);
                     },
                     error: function(xhr) {
                         console.log(xhr.responseText);
                     }
                 });
-            }
-        });
-    });
-</script> --}}
-    {{-- <script>
-    document.querySelectorAll('input[type="text"]').forEach((input) => {
-        input.addEventListener("input", function() {
-            this.value = this.value.replace(/[^0-9]/g, "");
-        });
-    });
-</script> --}}
-    {{-- <script>
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-    $(document).ready(function() {
-    $('#inches-input').on('input', function() {
-        if (this.value > 11) {
-            this.value = 11;
-        } else if (this.value < 0) {
-            this.value = 0;
-        }
-    });
-    // Optionally, you can also prevent the user from typing non-numeric characters.
-    $('#feet-input, #inches-input').on('input', function() {
-        this.value = this.value.replace(/[^0-9]/g, '');
-    });
-    });
-    $(document).ready(function() {
-        $('#inches-input1').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
+            });
 
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input1, #inches-input1').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-    $(document).ready(function() {
-        $('#inches-input2').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input2').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script> --}}
-    {{-- <script>
-    $(document).ready(function() {
-        function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
-        // Move to Step 2
-        $('#step1_next').click(function() {
-            var isValid = true;
-            if (!$('#pickup-location').val()) {
-                showError('pickup-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('pickup-location');
-            }
-            if (!$('#delivery-location').val()) {
-                showError('delivery-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('delivery-location');
-            }
-            if (isValid) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
-        // Return to Step 1
-        $('#step2_previous').click(function() {
-            $('#step2').hide();
-            $('#step1').show();
-        });
-        // Move to Step 3
-        $('#step2_next').click(function() {
-            var isValid = true;
-            if (!$('#tabSelector').val()) {
-                showError('tabSelector', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('tabSelector');
-            }
-            if (isValid) {
-                $('#step2').hide();
-                $('#step3').show();
-            }
-        });
-        // Return to Step 2
-        $('#step3_previous').click(function() {
-            $('#step3').hide();
-            $('#step2').show();
-        });
-    });
-</script> --}}
-    {{-- <script>
-    $(document).ready(function() {
-        $(document).on('change', '#available_at_auction', function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
+            function addNewVehicle() {
+                var newVehicleHtml =
+                    `
+                                <div class="vehicle-info">
+                                <div class="row select-bm">
+                                <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                <label> Year</label>
+                                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
+                var currentYear = {{date('Y')}};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
 
-        $(document).on('change', '#modification', function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
+                newVehicleHtml +=
+                    `</select>
+                                </div>
+                                </div>
+                                <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                <label>Make</label>
+                                <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
+
+
+
+                newVehicleHtml += `
+                                </select>
+                                </div>
+                                </div>
+                                <div class="col-md-4">
+                                <div class="input-form tj-select model-div">
+                                <label>Model</label>
+                                <select class="nice-select model" name="model[]" id="model" required></select>`;
+
+                newVehicleHtml +=
+                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
+
+                newVehicleHtml += `
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    `;
+
+                $('.vehicles-container').append(newVehicleHtml);
             }
-        });
-    });
-</script> --}}
-    <script>
-        $(document).ready(function() {
-            $(document).on('keyup', '#delivery-country', function() {
-                var inputField = $(this);
-                var suggestionsList = inputField.siblings(".suggestionsCountry");
-                var query = inputField.val();
 
-                if (query !== "") {
-                    suggestionsList.css("display", "block");
+            function addOtherVehicle() {
+                var newVehicleHtml =
+                    `
+                                <div class="vehicle-info">
+                                <div class="row select-bm">
+                                <div class="col-md-4">
+                                <div class="input-form tj-select">
+                                <label> Year</label>
+                                <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+                var currentYear = {
+                    {
+                        date('Y')
+                    }
+                };
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<option value="${year}">${year}</option>`;
+                }
 
-                    $.ajax({
-                        url: '/get-countries',
-                        type: 'GET',
-                        data: {
-                            search: query
-                        },
-                        success: function(response) {
+                newVehicleHtml +=
+                    `</select>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                        <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <input type="text" id="make" name="make[]"
+                                        placeholder="Enter Make" required="" />
+                                        </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                        <div class="input-form tj-select model-div">
+                                        <label>Model</label>
+                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                        required="" />`
+                newVehicleHtml +=
+                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
 
-                            suggestionsList.empty();
+                newVehicleHtml += `</div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        `;
 
-                            if (response.length > 0) {
-                                response.forEach(function(country) {
-                                    suggestionsList.append(
-                                        '<li class="suggestion-item-country">' +
-                                        country.name + '</li>');
-                                });
-                            } else {
-                                suggestionsList.append(
-                                    '<li class="no-results">No results found</li>');
-                            }
-                        }
-                    });
+                $('.vehicles-container').append(newVehicleHtml);
+            }
+
+            $(document).on('click', '.addVehicleBtn', function() {
+                if ($('#tabSelector').val() == 'Car') {
+                    addNewVehicle();
                 } else {
-                    suggestionsList.css("display", "none");
+                    addOtherVehicle();
                 }
             });
 
-            $(document).on('click', '.suggestion-item-country', function() {
-                var selectedCountry = $(this).text();
-                $('#delivery-country').val(selectedCountry);
-                $('.suggestionsCountry').css("display", "none");
+            $(document).on('click', '.delete-vehicle', function() {
+                $(this).closest('.vehicle-info').remove();
             });
 
-            $(document).on('click', '#submit_instant_code', function() {
-                console.log('yes yes yes');
-                $('#calculatePriceFromRoro').submit();
+            $(document).ready(function() {
+                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
+                    var year = $('.vehicle-year').val();
+                    var makeId = $('.vehicle-make').val();
+                    if (year && makeId) {
+                        getModel(year, makeId);
+                    }
+                });
+
+                function getModel(year, makeId) {
+                    console.log('yes inn');
+                    $.ajax({
+                        url: "{{ route('get.models') }}",
+                        method: 'GET',
+                        data: {
+                            year: year,
+                            make: makeId
+                        },
+                        success: function(response) {
+                            var modelsDropdown = $('.vehicle-model-div');
+                            modelsDropdown.empty();
+                            var selectOptions =
+                                '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
+                            $.each(response, function(index, model) {
+                                selectOptions += '<option value="' + model + '">' +
+                                    model +
+                                    '</option>';
+                            });
+                            selectOptions += '</select>';
+                            modelsDropdown.html(selectOptions);
+
+                            console.log('yesssss', response);
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
+                    });
+                }
             });
         });
-    </script>
+    </script> --}}
+        {{-- <script>
+        document.querySelectorAll('input[type="text"]').forEach((input) => {
+            input.addEventListener("input", function() {
+                this.value = this.value.replace(/[^0-9]/g, "");
+            });
+        });
+    </script> --}}
+        {{-- <script>
+        function limitDigits(element, maxDigits) {
+            if (element.value.length > maxDigits) {
+                element.value = element.value.slice(0, maxDigits);
+            }
+        }
+        $(document).ready(function() {
+        $('#inches-input').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input, #inches-input').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+        });
+        $(document).ready(function() {
+            $('#inches-input1').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input1, #inches-input1').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+        $(document).ready(function() {
+            $('#inches-input2').on('input', function() {
+                if (this.value > 11) {
+                    this.value = 11;
+                } else if (this.value < 0) {
+                    this.value = 0;
+                }
+            });
+            // Optionally, you can also prevent the user from typing non-numeric characters.
+            $('#feet-input, #inches-input2').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script> --}}
+        {{-- <script>
+        $(document).ready(function() {
+            function showError(field, message) {
+                $('#' + field).addClass('error-field');
+                $('#' + field + '-error').text(message).show();
+            }
+            function hideError(field) {
+                $('#' + field).removeClass('error-field');
+                $('#' + field + '-error').hide();
+            }
+            // Move to Step 2
+            $('#step1_next').click(function() {
+                var isValid = true;
+                if (!$('#pickup-location').val()) {
+                    showError('pickup-location', 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError('pickup-location');
+                }
+                if (!$('#delivery-location').val()) {
+                    showError('delivery-location', 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError('delivery-location');
+                }
+                if (isValid) {
+                    $('#step1').hide();
+                    $('#step2').show();
+                }
+            });
+            // Return to Step 1
+            $('#step2_previous').click(function() {
+                $('#step2').hide();
+                $('#step1').show();
+            });
+            // Move to Step 3
+            $('#step2_next').click(function() {
+                var isValid = true;
+                if (!$('#tabSelector').val()) {
+                    showError('tabSelector', 'This field is required.');
+                    isValid = false;
+                } else {
+                    hideError('tabSelector');
+                }
+                if (isValid) {
+                    $('#step2').hide();
+                    $('#step3').show();
+                }
+            });
+            // Return to Step 2
+            $('#step3_previous').click(function() {
+                $('#step3').hide();
+                $('#step2').show();
+            });
+        });
+    </script> --}}
+        {{-- <script>
+        $(document).ready(function() {
+            $(document).on('change', '#available_at_auction', function() {
+                if ($(this).is(':checked')) {
+                    $('.div-link').show();
+                } else {
+                    $('.div-link').hide();
+                }
+            });
+
+            $(document).on('change', '#modification', function() {
+                if ($(this).is(':checked')) {
+                    $('.div-modify_info').show();
+                } else {
+                    $('.div-modify_info').hide();
+                }
+            });
+        });
+    </script> --}}
+
 @endsection
