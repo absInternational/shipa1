@@ -2340,8 +2340,8 @@
                         }
                     });
                 }
-                
-        </script>
+            
+    </script>
 
     <!-- year search work -->
 
