@@ -338,11 +338,11 @@
                                     <select id="tabSelector" class="" aria-label="Tab selector" required>
                                         <option value="" selected disabled>Select a Vehicle</option>
                                         <option value="Boat-Transport">Boat Transport</option>
-                                        <option value="Commercial-Truck">Commercial -Truck</option>
-                                        <option value="Construction-Transport">Construction-Transport</option>
-                                        <option value="Excavator-Tr">Excavator</option>
-                                        <option value="Farm-Transport">Farm-Transport</option>
-                                        <option value="Heavy-Equipment">Heavy Equipment</option>
+                                        <option value="Commercial-Truck">Commercial Truck Transport</option>
+                                        <option value="Construction-Transport">Construction Transport</option>
+                                        <option value="Excavator-Tr">Excavator Transport</option>
+                                        <option value="Farm-Transport">Farm Transport</option>
+                                        <option value="Heavy-Equipment">Heavy Equipment Transport</option>
                                         <option value="RV-Transport">RV Transport</option>
                                     </select>
                                     <label class="error-message" id="tabSelector-error">This field is required.</label>

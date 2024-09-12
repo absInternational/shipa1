@@ -62,7 +62,7 @@
                         <option value="Car">Car</option>
                         <option value="Freight-Transportation">Freight Transportation</option>
                         <option value="Golf-Cart">Golf Cart</option>
-                        <option value="Heavy-Equipment">Heavy Equipment</option>
+                        <option value="Heavy-Equipment">Heavy Equipment Transport</option>
                         <option value="Motorcycle">Motorcycle</option>
                         <option value="RV-Transport">RV Transport</option>
                     </select>

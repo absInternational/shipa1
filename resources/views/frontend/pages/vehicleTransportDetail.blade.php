@@ -317,9 +317,9 @@
                                     <select id="tabSelector" class="" aria-label="Tab selector" required>
                                         <option value="" selected disabled>Select a Vehicle</option>
                                         <option value="Atv">Atv Utv Transport</option>
-                                        <option value="Car">Car</option>
-                                        <option value="Golf-Cart">Golf Cart</option>
-                                        <option value="Motorcycle">Motorcycle</option>
+                                        <option value="Car">Car Transport</option>
+                                        <option value="Golf-Cart">Golf Cart Transport</option>
+                                        <option value="Motorcycle">Motorcycle Transport</option>
                                         <!-- <option value="Boat-Transport">Boat Transport</option> -->
                                         <!-- <option value="Freight-Transportation">Freight Transportation</option> -->
                                         <!-- <option value="Heavy-Equipment">Heavy Equipment</option> -->
