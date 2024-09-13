@@ -152,6 +152,60 @@
             margin-bottom: 10px; /* Space below input */
         }
     }
+    
+    /* General dropdown style */
+    .dropdown-menu {
+        /* display: flex; */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        max-height: 300px;
+        overflow-y: auto;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        width: auto;
+    }
+
+    .dropdown-item {
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #eee;
+    }
+
+    .dropdown-item:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Adjust dropdown on smaller screens */
+    @media (max-width: 768px) {
+        .dropdown-menu {
+            width: 100%;
+            position: relative;
+            max-height: 400px;
+        }
+
+        .dropdown-item {
+            padding: 12px 20px;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+
+    /* Larger touch areas on smaller screens */
+    @media (max-width: 480px) {
+        .dropdown-item {
+            font-size: 18px;
+            padding: 15px 20px;
+        }
+    }
+
 </style>
 <!--Start of Tawk.to Script-->
 <!-- <script type="text/javascript">
