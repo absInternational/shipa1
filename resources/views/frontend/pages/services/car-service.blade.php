@@ -188,9 +188,9 @@ huge discount offers and free shipping quotes nationwide.')
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 text-center">
+                            {{-- <div class="col-md-12 text-center">
                                 <h4 class="text-white">Car Information</h4>
-                            </div>
+                            </div> --}}
                             <div class="col-md-6">
                                 <div class="input-form">
                                     <label class="d-block mb-0"> Pickup Location:</label>
@@ -344,10 +344,10 @@ huge discount offers and free shipping quotes nationwide.')
                                 </div>
                             </div>
                         </div>
-                        <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add Vehicle</a>
+                        <a class="add-car-1" id="addVehicleBtn"><i class="fa fa-plus"></i> Add Vehicle</a>
                         <div id="vehicles-container">
                         </div>
-                        <div class="row">
+                        <div class="row mt-2">
                             <di class="col-md-6">
                                 <div class="form-group">
                                     <input class="form-check-input " type="checkbox" id="modification"

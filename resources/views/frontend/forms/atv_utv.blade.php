@@ -386,7 +386,7 @@
                 // Initialize Select2 on existing dropdowns (if needed)
                 initializeSearchableDropdown();
             });
-        </script>
+    </script>
 
         <!-- <script>
             document.addEventListener('DOMContentLoaded', function() {

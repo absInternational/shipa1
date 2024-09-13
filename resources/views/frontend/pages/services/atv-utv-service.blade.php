@@ -189,9 +189,9 @@ holiday places before you reach without any scratch, best auto transport service
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12 text-center">
+                                {{-- <div class="col-md-12 text-center">
                                     <h4 class="text-white">ATV/UTV Information</h4>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block mb-0"> Pickup Location:</label>
@@ -212,6 +212,70 @@ holiday places before you reach without any scratch, best auto transport service
                                 </div>
                             </div>
                             <div class="row select-bm">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white">Atv/Utv Information</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label> Year</label>
+                                        {{-- <div class="dropdown">
+                                            <input class="form-control dropdown-toggle year" type="text" name="year[]" id="year" 
+                                            placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false" required>
+                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                                <li><a class="dropdown-item">Select Year</a></li>
+                                                @php
+                                                    $currentYear = date('Y');
+                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
+                                                    }
+                                                @endphp
+                                            </ul>
+                                        </div> --}}
+                                        <div class="dropdown">
+                                            <input class="form-control dropdown-toggle year" type="text"
+                                                name="year[]" id="year" placeholder="Select Year"
+                                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                                <li><a class="dropdown-item">Select Year</a></li>
+                                                @php
+                                                    $currentYear = date('Y');
+                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
+                                                    }
+                                                @endphp
+                                            </ul>
+                                        </div>
+                                        <!-- <select class="nice-select year vehicle-year custom-select-style" name="year[]"
+                                            id="year" required>
+                                            <option value="" disabled selected>Select Year</option>
+                                            @php
+                                                $currentYear = date('Y');
+                                                for ($year = $currentYear; $year >= 1936; $year--) {
+                                                    echo "<option value='$year'>$year</option>";
+                                                }
+                                            @endphp
+                                        </select> -->
+                                        <div class="error-message" style="color: red; display: none;">
+                                            Please select a year.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <input type="text" id="make" name="make[]" placeholder="Enter Make"
+                                            required="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select vehicle-model-div">
+                                        <label>Model</label>
+                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                            required="" />
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- <div class="row select-bm">
                                 <!-- <div class="col-md-12 text-center">
                                     <h4 class="text-white">Motorcycle Information</h4>
                                 </div> -->
@@ -243,7 +307,7 @@ holiday places before you reach without any scratch, best auto transport service
                                             required />
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -269,7 +333,7 @@ holiday places before you reach without any scratch, best auto transport service
                                 Vehicle</a>
                             <div id="vehicles-container">
                             </div>
-                            <div class="row">
+                            <div class="row mt-2">
                                 <di class="col-md-6">
                                     <div class="form-group">
                                         <input class="form-check-input " type="checkbox" id="modification"
@@ -686,6 +750,117 @@ holiday places before you reach without any scratch, best auto transport service
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
+<script>
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                <div class="vehicle-info">
+                <div class="row select-bm">
+                    <!-- Bin icon for deleting vehicle -->
+                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                <div class="col-md-4">
+                <div class="input-form tj-select">
+                <label>Year</label>
+                <div class="dropdown">
+                    <input class="form-control dropdown-toggle year" type="text"
+                        name="year[]" id="year" placeholder="Select Year"
+                        data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                    <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                        <li><a class="dropdown-item">Select Year</a></li>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
+            }
+
+            newVehicleHtml +=
+                `</ul>
+                </div>
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="input-form tj-select">
+                <label>Make</label>
+                <input type="text" id="make" name="make[]"
+                placeholder="Enter Make" required="" />
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="input-form tj-select model-div">
+                <label>Model</label>
+                <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                required="" />
+                
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="condition" class="text-white">Condition</label>
+                        <select class="nice-select" id="condition" name="condition[]">
+                            <option value="1" selected>Running</option>
+                            <option value="2">Non Running</option>
+                        </select>
+                    </div>
+                </div>
+                </div>
+                </div>
+                `;
+
+            $('#vehicles-container').append(newVehicleHtml);
+
+            // Initialize the searchable dropdown for new elements
+            initializeSearchableDropdown();
+        }
+
+        function initializeSearchableDropdown() {
+            $('.dropdown-toggle.year').on('input', function() {
+                var input = $(this);
+                var filter = input.val().toLowerCase();
+                var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                dropdown.find('.dropdown-item').each(function() {
+                    var text = $(this).text().toLowerCase();
+                    if (text.includes(filter) || filter === '') {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+
+            $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                var item = $(this);
+                var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                input.val(item.text());
+                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+            });
+
+            // Show dropdown when input is focused
+            $('.dropdown-toggle.year').on('focus', function() {
+                $(this).siblings('.dropdown-menu.year-dropdown').show();
+            });
+
+            // Hide dropdown when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.dropdown').length) {
+                    $('.dropdown-menu.year-dropdown').hide();
+                }
+            });
+        }
+
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
+
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+
+        // Initialize Select2 on existing dropdowns (if needed)
+        initializeSearchableDropdown();
+    });
+</script>
+
+<!-- year search work -->
 {{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
