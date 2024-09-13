@@ -686,7 +686,7 @@ holiday places before you reach without any scratch, best auto transport service
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-<script>
+{{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -746,7 +746,7 @@ holiday places before you reach without any scratch, best auto transport service
             $(this).closest('.vehicle-info').remove();
         });
     });
-</script>
+</script> --}}
 {{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {

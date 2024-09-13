@@ -502,31 +502,31 @@
 <!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
 <!--=========== Blog Section End =========-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-<script src="path/to/jquery.min.js"></script>
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
+{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+{{-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> --}}
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> --}}
+{{-- <script src="path/to/jquery.min.js"></script> --}}
 {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
-<script>
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     var input = document.querySelector("#phone");
-    //     window.intlTelInput(input, {
-    //         initialCountry: "auto",
-    //         geoIpLookup: function(callback) {
-    //             fetch('https://ipinfo.io/json')
-    //                 .then(function(response) {
-    //                     return response.json();
-    //                 })
-    //                 .then(function(ipinfo) {
-    //                     var countryCode = "us";
-    //                     callback(countryCode);
-    //                 });
-    //         },
-    //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-    //     });
-    // });
-</script>
+{{-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                fetch('https://ipinfo.io/json')
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(ipinfo) {
+                        var countryCode = "us";
+                        callback(countryCode);
+                    });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+        });
+    });
+</script> --}}
 <script>
     function playVideo() {
         document.querySelector('.video-thumbnail').style.display = 'none';
@@ -536,7 +536,7 @@
         iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
     }
 </script>
-<script>
+{{-- <script>
     $(document).ready(function() {
         var selectedTab = '';
         $('#tabSelector').change(function() {
@@ -703,15 +703,15 @@
         }
     });
     });
-</script>
-<script>
-    // document.querySelectorAll('input[type="text"]').forEach((input) => {
-    //     input.addEventListener("input", function() {
-    //         this.value = this.value.replace(/[^0-9]/g, "");
-    //     });
-    // });
-</script>
-<script>
+</script> --}}
+{{-- <script>
+    document.querySelectorAll('input[type="text"]').forEach((input) => {
+        input.addEventListener("input", function() {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    });
+</script> --}}
+{{-- <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -762,8 +762,8 @@
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         function showError(field, message) {
             $('#' + field).addClass('error-field');
@@ -828,8 +828,8 @@
             $('#step2').show();
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         $(document).on('change', '#available_at_auction', function() {
             if ($(this).is(':checked')) {
@@ -847,8 +847,8 @@
             }
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -885,8 +885,8 @@
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         $(document).on('change', '.vehicle-year, .vehicle-make', function() {
             var year = $('.vehicle-year').val();
@@ -925,8 +925,8 @@
             });
         }
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -963,5 +963,5 @@
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
+</script> --}}
 @endsection

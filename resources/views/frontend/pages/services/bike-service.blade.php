@@ -662,7 +662,7 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-<script>
+{{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -723,7 +723,7 @@
             $(this).closest('.vehicle-info').remove();
         });
     });
-</script>
+</script> --}}
 {{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {

@@ -785,14 +785,14 @@ safe along with insurance facility at nationwide - Shipa1.')
         });
     });
 </script> --}}
-<script>
-    // document.querySelectorAll('input[type="text"]').forEach((input) => {
-    //     input.addEventListener("input", function() {
-    //         this.value = this.value.replace(/[^0-9]/g, "");
-    //     });
-    // });
-</script>
-<script>
+{{-- <script>
+    document.querySelectorAll('input[type="text"]').forEach((input) => {
+        input.addEventListener("input", function() {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+    });
+</script> --}}
+{{-- <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -843,7 +843,7 @@ safe along with insurance facility at nationwide - Shipa1.')
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-</script>
+</script> --}}
 {{-- <script>
     $(document).ready(function() {
         function showError(field, message) {
@@ -910,26 +910,26 @@ safe along with insurance facility at nationwide - Shipa1.')
         });
     });
 </script> --}}
-<script>
-    // $(document).ready(function() {
-    //     $(document).on('change', '#available_at_auction', function() {
-    //         if ($(this).is(':checked')) {
-    //             $('.div-link').show();
-    //         } else {
-    //             $('.div-link').hide();
-    //         }
-    //     });
+{{-- <script>
+    $(document).ready(function() {
+        $(document).on('change', '#available_at_auction', function() {
+            if ($(this).is(':checked')) {
+                $('.div-link').show();
+            } else {
+                $('.div-link').hide();
+            }
+        });
 
-    //     $(document).on('change', '#modification', function() {
-    //         if ($(this).is(':checked')) {
-    //             $('.div-modify_info').show();
-    //         } else {
-    //             $('.div-modify_info').hide();
-    //         }
-    //     });
-    // });
-</script>
-<script>
+        $(document).on('change', '#modification', function() {
+            if ($(this).is(':checked')) {
+                $('.div-modify_info').show();
+            } else {
+                $('.div-modify_info').hide();
+            }
+        });
+    });
+</script> --}}
+{{-- <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -966,8 +966,8 @@ safe along with insurance facility at nationwide - Shipa1.')
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         $(document).on('change', '.vehicle-year, .vehicle-make', function() {
             var year = $('.vehicle-year').val();
@@ -1006,43 +1006,43 @@ safe along with insurance facility at nationwide - Shipa1.')
             });
         }
     });
-</script>
-<script>
-    // function updateSuggestions(inputField, suggestionsList) {
-    //     var inputValue = inputField.val();
+</script> --}}
+{{-- <script>
+    function updateSuggestions(inputField, suggestionsList) {
+        var inputValue = inputField.val();
 
-    //     $.ajax({
-    //         url: "{{ route('get.zipcodes') }}",
-    //         method: "POST",
-    //         data: {
-    //             "_token": "{{ csrf_token() }}",
-    //             "input": inputValue
-    //         },
-    //         success: function(response) {
-    //             suggestionsList.empty();
+        $.ajax({
+            url: "{{ route('get.zipcodes') }}",
+            method: "POST",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "input": inputValue
+            },
+            success: function(response) {
+                suggestionsList.empty();
 
-    //             $.each(response, function(index, suggestion) {
-    //                 var listItem = $("<li>").text(suggestion).click(function() {
-    //                     inputField.val(suggestion);
-    //                     suggestionsList.css("display", "none");
-    //                 });
-    //                 suggestionsList.append(listItem);
-    //             });
-    //         },
-    //         error: function(xhr, status, error) {
-    //             console.error("Error:", error);
-    //         }
-    //     });
-    // }
+                $.each(response, function(index, suggestion) {
+                    var listItem = $("<li>").text(suggestion).click(function() {
+                        inputField.val(suggestion);
+                        suggestionsList.css("display", "none");
+                    });
+                    suggestionsList.append(listItem);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
+            }
+        });
+    }
 
-    // $("#pickup-location, #delivery-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList);
-    // });
-</script>
+    $("#pickup-location, #delivery-location").keyup(function() {
+        var inputField = $(this);
+        var suggestionsList = inputField.siblings(".suggestionsTwo");
+        suggestionsList.css("display", "block");
+        if (inputField.val() === "") {
+            suggestionsList.css("display", "none");
+        }
+        updateSuggestions(inputField, suggestionsList);
+    });
+</script> --}}
 @endsection

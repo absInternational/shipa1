@@ -904,7 +904,7 @@ huge discount offers and free shipping quotes nationwide.')
 @endsection
 @section('extraScript')
 
-<script>
+{{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -1087,7 +1087,7 @@ huge discount offers and free shipping quotes nationwide.')
             });
         });
     });
-</script>
+</script> --}}
 
     {{-- addNewVehicle --}}
         {{-- <script>

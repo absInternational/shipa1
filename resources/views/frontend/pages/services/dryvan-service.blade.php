@@ -719,7 +719,7 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-<script>
+{{-- <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -811,8 +811,8 @@
             });
         }
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     $(document).ready(function() {
         $(document).on('change', '.vehicle-year, .vehicle-make', function() {
             var year = $('.vehicle-year').val();
@@ -869,8 +869,8 @@
             }
         });
     });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
 
@@ -907,5 +907,5 @@
         }
         updateSuggestions(inputField, suggestionsList);
     });
-</script>
+</script> --}}
 @endsection
