@@ -402,7 +402,7 @@
                                         accept="image/*" multiple onchange="previewImages(event)">
                                     <div class="image-preview-container" id="imagePreviewContainer"></div>
                                     <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
-                                                            <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                                                                                                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                                 </div>
                             </div>
                             <div class="row">
@@ -609,13 +609,19 @@
                     <div class="col-md-4">
                         <div class="input-form tj-select">
                             <label>Year</label>
-                            <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-                    var currentYear = {{ date('Y') }};
-                    for (var year = currentYear; year >= 1936; year--) {
-                        newVehicleHtml += `<option value="${year}">${year}</option>`;
-                    }
-                    newVehicleHtml += `
-                            </select>
+                            <div class="dropdown">
+                                <input class="form-control dropdown-toggle year" type="text"
+                                    name="year[]" id="year" placeholder="Select Year"
+                                    data-bs-toggle="dropdown" aria-expanded="false" required>
+                                <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                    <li><a class="dropdown-item">Select Year</a></li>`;
+                var currentYear = {{ date('Y') }};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
+                }
+                newVehicleHtml += `
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -728,7 +734,7 @@
                                 modelSelect.empty(); // Clear the <select> options
                                 modelSelect.append(
                                     '<option value="">Select Model</option>'
-                                    ); // Add default option
+                                ); // Add default option
                                 modelDropdown.show();
                             });
 
@@ -746,6 +752,7 @@
                             });
 
                             modelDropdown.on('click', 'a.dropdown-item', function(e) {
+
                                 e.preventDefault(); // Prevent default anchor behavior
                                 var selectedText = $(this).text();
                                 var selectedValue = $(this).data('value');
@@ -759,7 +766,7 @@
                                     selectedText + '</option>');
                                 modelSelect.val(
                                     selectedValue
-                                    ); // Set the selected value in the select dropdown
+                                ); // Set the selected value in the select dropdown
                             });
 
                             $(document).on('click', function(e) {
@@ -782,6 +789,7 @@
                             });
 
                             modelSelect.on('change', function() {
+
                                 var selectedModel = $(this).val();
                                 // Optional: Sync custom input when user selects from <select>
                                 modelInput.val(modelSelect.find('option:selected').text());
