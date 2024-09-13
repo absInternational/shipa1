@@ -402,7 +402,7 @@
                                         accept="image/*" multiple onchange="previewImages(event)">
                                     <div class="image-preview-container" id="imagePreviewContainer"></div>
                                     <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
-                                                                                                                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                                                                                                                                                        <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                                 </div>
                             </div>
                             <div class="row">
@@ -691,8 +691,12 @@
             //     }
             // });
             $(document).on('click', '.year-dropdown .dropdown-item', function() {
+                console.log('okokok');
                 var selectedYear = $(this).data('value');
-                $('#year').val(selectedYear); // Set the selected value in the input field
+                var vehicleInfo = $(this).closest(
+                    '.vehicle-info');
+                vehicleInfo.find('.year').val(
+                    selectedYear);
             });
 
             $(document).on('click', '.year, .make', function() {
@@ -804,6 +808,7 @@
 
             $(document).on('input', '.dropdown-toggle', function() {
                 var input = $(this).val().toLowerCase();
+                // console.log('ttt', text);
                 $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
                     var text = $(this).text().toLowerCase();
                     $(this).toggle(text.indexOf(input) > -1);
