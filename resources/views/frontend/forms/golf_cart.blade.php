@@ -355,79 +355,115 @@
 @endsection
 
 @section('extraScript')
-    <script>
-        $(document).ready(function() {
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                         <!-- Bin icon for deleting vehicle -->
-                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label> Year</label>
-                    <div class="dropdown">
-                            <input class="form-control dropdown-toggle year" type="text"
-                                name="year[]" id="year" placeholder="Select Year"
-                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
-                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                <li><a class="dropdown-item">Select Year</a></li>`;
-                    var currentYear = {{ date('Y') }};
-                    for (var year = currentYear; year >= 1936; year--) {
-                        newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
-                    }
-
-                    newVehicleHtml +=
-                        `</ul>
-                        </div>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label>Make</label>
-                        <input type="text" id="make" name="make[]"
-                        placeholder="Enter Make" required="" />
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select model-div">
-                        <label>Model</label>
-                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                        required="" />
-                        </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="condition" class="text-white">Condition</label>
-                                <select class="nice-select" id="condition" name="condition[]">
-                                    <option value="1" selected>Running</option>
-                                    <option value="2">Non Running</option>
-                                </select>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-                        `;
-
-                $('#vehicles-container').append(newVehicleHtml);
-                // Initialize the searchable dropdown for new elements
-                    initializeSearchableDropdown();
-
+<script>
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                <div class="vehicle-info">
+                <div class="row select-bm">
+                    <!-- Bin icon for deleting vehicle -->
+                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                <div class="col-md-4">
+                <div class="input-form tj-select">
+                <label>Year</label>
+                <div class="dropdown">
+                    <input class="form-control dropdown-toggle year" type="text"
+                        name="year[]" id="year" placeholder="Select Year"
+                        data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                    <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                        <li><a class="dropdown-item">Select Year</a></li>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
             }
 
-            $('#addVehicleBtn').click(function() {
-                addNewVehicle();
-            });
+            newVehicleHtml +=
+                `</ul>
+                </div>
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="input-form tj-select">
+                <label>Make</label>
+                <input type="text" id="make" name="make[]"
+                placeholder="Enter Make" required="" />
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="input-form tj-select model-div">
+                <label>Model</label>
+                <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                required="" />
+                
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="condition" class="text-white">Condition</label>
+                        <select class="nice-select" id="condition" name="condition[]">
+                            <option value="1" selected>Running</option>
+                            <option value="2">Non Running</option>
+                        </select>
+                    </div>
+                </div>
+                </div>
+                </div>
+                `;
+
+            $('#vehicles-container').append(newVehicleHtml);
+
             // Initialize the searchable dropdown for new elements
-                    initializeSearchableDropdown();
+            initializeSearchableDropdown();
+        }
 
-
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
+        function initializeSearchableDropdown() {
+            $('.dropdown-toggle.year').on('input', function() {
+                var input = $(this);
+                var filter = input.val().toLowerCase();
+                var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                dropdown.find('.dropdown-item').each(function() {
+                    var text = $(this).text().toLowerCase();
+                    if (text.includes(filter) || filter === '') {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
             });
+
+            $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                var item = $(this);
+                var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                input.val(item.text());
+                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+            });
+
+            // Show dropdown when input is focused
+            $('.dropdown-toggle.year').on('focus', function() {
+                $(this).siblings('.dropdown-menu.year-dropdown').show();
+            });
+
+            // Hide dropdown when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.dropdown').length) {
+                    $('.dropdown-menu.year-dropdown').hide();
+                }
+            });
+        }
+
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
         });
-    </script>
+
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+
+        // Initialize Select2 on existing dropdowns (if needed)
+        initializeSearchableDropdown();
+    });
+</script>
 
     <script>
         // $(document).ready(function() {

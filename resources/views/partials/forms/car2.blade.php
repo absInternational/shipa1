@@ -166,13 +166,13 @@
                     <div class="input-form tj-select">
                     <label> Year</label>
                     <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
+                        var currentYear = {{ date('Y') }};
+                        for (var year = currentYear; year >= 1936; year--) {
+                            newVehicleHtml += `<option value="${year}">${year}</option>`;
+                        }
 
-            newVehicleHtml +=
-                `</select>
+                        newVehicleHtml +=
+                    `</select>
                     </div>
                     </div>
                     <div class="col-md-4">
@@ -180,21 +180,21 @@
                     <label>Make</label>
                     <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
 
-            @foreach ($makes as $make)
-                newVehicleHtml +=
-                    `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-            @endforeach
+                        @foreach ($makes as $make)
+                            newVehicleHtml +=
+                                `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
+                        @endforeach
 
-            newVehicleHtml += `
+                        newVehicleHtml += `
                     </select>
                     </div>
                     </div>
                     <div class="col-md-4">
                     <div class="input-form tj-select model-div">
-                    <label>Model</label>
-                    <select class="nice-select model" name="model[]" id="model" required></select>`;
-            newVehicleHtml += `
-                        </div>
+                        <label>Model</label>
+                        <select class="nice-select model" name="model[]" id="model" required></select>`;
+                            newVehicleHtml += `
+                    </div>
                         </div>
                         </div>
                         <div class="row">
@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
                         `;
 
             $('.vehicles-container').append(newVehicleHtml);
@@ -330,14 +330,14 @@
             console.log(xhr.responseText);
         }
     });
-}
-$(document).on('input', '.dropdown-toggle', function() {
-            var input = $(this).val().toLowerCase();
-            $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
-                var text = $(this).text().toLowerCase();
-                $(this).toggle(text.indexOf(input) > -1);
-            });
+    }
+    $(document).on('input', '.dropdown-toggle', function() {
+        var input = $(this).val().toLowerCase();
+        $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
+            var text = $(this).text().toLowerCase();
+            $(this).toggle(text.indexOf(input) > -1);
         });
+    });
 
 
 </script>
