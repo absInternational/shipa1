@@ -535,6 +535,387 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                        <div class="vehicle-info">
+                            <div class="row select-bm">
+                                <!-- Bin icon for deleting vehicle -->
+                                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label> Year</label>
+                                        <div class="dropdown">
+                                <input class="form-control dropdown-toggle year" type="text"
+                                    name="year[]" id="year" placeholder="Select Year"
+                                    data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                                <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                    <li><a class="dropdown-item">Select Year</a></li>`;
+                        var currentYear = {{ date('Y') }};
+                        for (var year = currentYear; year >= 1936; year--) {
+                            newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
+                        }
+
+                        newVehicleHtml +=
+                            `</ul>
+                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <input type="text" id="make" name="make[]"
+                                            placeholder="Enter Make" required="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select model-div">
+                                        <label>Model</label>
+                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                            required="" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                    <div class="col-md-3">
+
+                                        <label class="lab-cos">Length</label>
+                                        <div class="input-container">
+                                            <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
+                                                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                            <span class="separator">(Ft.)</span>
+                                            <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
+                                                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                            <span class="separators">(In.)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+
+                                        <label class="lab-cos">Width</label>
+                                        <div class="input-container">
+                                            <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
+                                                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                            <span class="separator">(Ft.)</span>
+                                            <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
+                                                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                            <span class="separators">(In.)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+
+                                        <label class="lab-cos">Height</label>
+                                        <div class="input-container">
+                                            <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
+                                                min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                            <span class="separator">(Ft.)</span>
+                                            <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
+                                                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                            <span class="separators">(In.)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+
+                                        <label class="lab-cos">Weight</label>
+                                        <div class="input-container1">
+                                            <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
+                                                min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                                            <span class="separators-w">(Lbs.)</span>
+
+                                        </div>
+                                    </div>
+                            </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="load_method" class="text-white">Load Method</label>
+                                            <select class="nice-select" id="load_method" name="load_method[]">
+                                                <option value="" disabled selected>Select</option>
+                                                <option value="LOADING DOCK">LOADING DOCK</option>
+                                                <option value="CRANE">CRANE</option>
+                                                <option value="FORKLIFT">FORKLIFT</option>
+                                                <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="unload_method" class="text-white">Unload Method</label>
+                                            <select class="nice-select" id="unload_method" name="unload_method[]">
+                                                <option value="" disabled selected>Select</option>
+                                                <option value="LOADING DOCK">LOADING DOCK</option>
+                                                <option value="CRANE">CRANE</option>
+                                                <option value="FORKLIFT">FORKLIFT</option>
+                                                <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="condition" class="text-white">Condition</label>
+                                            <select class="nice-select " id="condition" name="condition[]">
+                                                <option value="1" selected>Running</option>
+                                                <option value="2">Non Running</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    `;
+
+            $('#vehicles-container').append(newVehicleHtml);
+            // Initialize the searchable dropdown for new elements
+                        initializeSearchableDropdown();
+        }
+
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
+        // Initialize the searchable dropdown for new elements
+                initializeSearchableDropdown();
+
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+    });
+</script>
+<!-- year search work -->
+    <script>
+        // Initialize Select2 on existing dropdowns (if needed)
+        initializeSearchableDropdown();
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector('.year');
+            const dropdownMenu = document.querySelector('.year-dropdown');
+            const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
+            
+            // Function to filter dropdown items
+            function filterDropdown() {
+                const searchValue = input.value.toLowerCase();
+                dropdownItems.forEach(function(item) {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchValue) || searchValue === '') {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            // Filter dropdown items on input
+            input.addEventListener('input', function() {
+                filterDropdown();
+            });
+
+            // Set input value from dropdown item click
+            dropdownMenu.addEventListener('click', function(e) {
+                if (e.target.classList.contains('dropdown-item')) {
+                    input.value = e.target.textContent;
+                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                }
+            });
+
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+
+            // Show dropdown when input is focused
+            input.addEventListener('focus', function() {
+                dropdownMenu.style.display = 'block';
+            });
+
+            // Handle Enter key press to set the input value
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const searchValue = input.value;
+                    // Check if the entered value exists in the dropdown
+                    const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
+                    if (item) {
+                        input.value = item.textContent;
+                    }
+                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                    e.preventDefault(); // Prevent default form submission behavior if in a form
+                }
+            });
+        });
+
+        function initializeSearchableDropdown() {
+                $('.dropdown-toggle.year').on('input', function() {
+                    var input = $(this);
+                    var filter = input.val().toLowerCase();
+                    var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                    dropdown.find('.dropdown-item').each(function() {
+                        var text = $(this).text().toLowerCase();
+                        if (text.includes(filter) || filter === '') {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                });
+
+                $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                    var item = $(this);
+                    var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                    input.val(item.text());
+                    item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                });
+
+                // Show dropdown when input is focused
+                $('.dropdown-toggle.year').on('focus', function() {
+                    $(this).siblings('.dropdown-menu.year-dropdown').show();
+                });
+
+                // Hide dropdown when clicking outside
+                $(document).on('click', function(e) {
+                    if (!$(e.target).closest('.dropdown').length) {
+                        $('.dropdown-menu.year-dropdown').hide();
+                    }
+                });
+            }
+        
+    </script>
+<!-- year search work -->
+
+{{-- <script>
+    $(document).ready(function() {
+        $('#available_at_auction').change(function() {
+            if ($(this).is(':checked')) {
+                $('.div-link').show();
+            } else {
+                $('.div-link').hide();
+            }
+        });
+
+        $('#modification').change(function() {
+            if ($(this).is(':checked')) {
+                $('.div-modify_info').show();
+            } else {
+                $('.div-modify_info').hide();
+            }
+        });
+    });
+</script> --}}
+{{-- <script>
+    var validPickupSuggestions = [];
+    var validDeliverySuggestions = [];
+
+    function updateSuggestions(inputField, suggestionsList, validSuggestions) {
+        var inputValue = inputField.val();
+
+        $.ajax({
+            url: "{{ route('get.zipcodes') }}",
+            method: "POST",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "input": inputValue
+            },
+            success: function(response) {
+                suggestionsList.empty();
+                validSuggestions.length = 0;  // Clear previous suggestions
+
+                $.each(response, function(index, suggestion) {
+                    var listItem = $("<li>").text(suggestion).click(function() {
+                        inputField.val(suggestion);
+                        suggestionsList.css("display", "none");
+                    });
+                    validSuggestions.push(suggestion);  // Add to valid suggestions
+                    suggestionsList.append(listItem);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
+            }
+        });
+    }
+
+    $("#pickup-location").keyup(function() {
+        var inputField = $(this);
+        var suggestionsList = inputField.siblings(".suggestionsTwo");
+        suggestionsList.css("display", "block");
+        if (inputField.val() === "") {
+            suggestionsList.css("display", "none");
+        }
+        updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+    });
+
+    $("#delivery-location").keyup(function() {
+        var inputField = $(this);
+        var suggestionsList = inputField.siblings(".suggestionsTwo");
+        suggestionsList.css("display", "block");
+        if (inputField.val() === "") {
+            suggestionsList.css("display", "none");
+        }
+        updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+    });
+
+    function validateLocationInput(inputField, validSuggestions, errorField) {
+        var inputValue = inputField.val();
+        if (!validSuggestions.includes(inputValue)) {
+            errorField.text("Please select a valid location.");
+            return false;
+        } else {
+            errorField.text("");
+            return true;
+        }
+    }
+
+    $("form").submit(function(event) {
+        var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
+        var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
+
+        if (!isPickupValid || !isDeliveryValid) {
+            event.preventDefault();  // Prevent form submission if validation fails
+        }
+    });
+</script> --}}
+{{-- <script>
+    function updateSuggestions(inputField, suggestionsList) {
+        var inputValue = inputField.val();
+
+        $.ajax({
+            url: "{{ route('get.zipcodes') }}",
+            method: "POST",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "input": inputValue
+            },
+            success: function(response) {
+                suggestionsList.empty();
+
+                $.each(response, function(index, suggestion) {
+                    var listItem = $("<li>").text(suggestion).click(function() {
+                        inputField.val(suggestion);
+                        suggestionsList.css("display", "none");
+                    });
+                    suggestionsList.append(listItem);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
+            }
+        });
+    }
+
+    $("#pickup-location, #delivery-location").keyup(function() {
+        var inputField = $(this);
+        var suggestionsList = inputField.siblings(".suggestionsTwo");
+        suggestionsList.css("display", "block");
+        if (inputField.val() === "") {
+            suggestionsList.css("display", "none");
+        }
+        updateSuggestions(inputField, suggestionsList);
+    });
+</script> --}}
+{{-- <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
                 element.value = element.value.slice(0, maxDigits);
@@ -585,9 +966,8 @@
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
-    </script>
-
-<script>
+</script> --}}
+{{-- <script>
       function moveToNext(current, nextId) {
         if (current.value.length >= current.maxLength) {
           document.getElementById(nextId).focus();
@@ -600,306 +980,19 @@
     //       this.value = this.value.replace(/[^0-9]/g, "");
     //     });
     //   });
-    </script>
-
-<script>
-$(document).ready(function() {
-    $(document).on('change', '.category', function() {
-        var selectedCategory = $(this).val();
-        if (selectedCategory === "Others") {
-            $('#otherCategoryInput').show();
-            $('#otherCategoryInput').attr('disabled', false);
-        } else {
-            $('#otherCategoryInput').hide();
-            $('#otherCategoryInput').attr('disabled', true);
-        }
-    });
-});
-</script>
-
-<script>
-$(document).ready(function() {
-    function addNewVehicle() {
-        var newVehicleHtml =
-            `
-                    <div class="vehicle-info">
-                        <div class="row select-bm">
-                            <!-- Bin icon for deleting vehicle -->
-                                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label> Year</label>
-                                    <div class="dropdown">
-                            <input class="form-control dropdown-toggle year" type="text"
-                                name="year[]" id="year" placeholder="Select Year"
-                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
-                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                <li><a class="dropdown-item">Select Year</a></li>`;
-                    var currentYear = {{ date('Y') }};
-                    for (var year = currentYear; year >= 1936; year--) {
-                        newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
-                    }
-
-                    newVehicleHtml +=
-                        `</ul>
-                        </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label>Make</label>
-                                    <input type="text" id="make" name="make[]"
-                                        placeholder="Enter Make" required="" />
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                    <label>Model</label>
-                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                        required="" />
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                                <div class="col-md-3">
-
-                                    <label class="lab-cos">Length</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-
-                                    <label class="lab-cos">Width</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-
-                                    <label class="lab-cos">Height</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-
-                                    <label class="lab-cos">Weight</label>
-                                    <div class="input-container1">
-                                        <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
-                                            min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                        <span class="separators-w">(Lbs.)</span>
-
-                                    </div>
-                                </div>
-                        </div>
-                            <div class="row mt-3">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="load_method" class="text-white">Load Method</label>
-                                        <select class="nice-select" id="load_method" name="load_method[]">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK">LOADING DOCK</option>
-                                            <option value="CRANE">CRANE</option>
-                                            <option value="FORKLIFT">FORKLIFT</option>
-                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="unload_method" class="text-white">Unload Method</label>
-                                        <select class="nice-select" id="unload_method" name="unload_method[]">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LOADING DOCK">LOADING DOCK</option>
-                                            <option value="CRANE">CRANE</option>
-                                            <option value="FORKLIFT">FORKLIFT</option>
-                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="nice-select " id="condition" name="condition[]">
-                                            <option value="1" selected>Running</option>
-                                            <option value="2">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                             </div>
-                    </div>
-                `;
-
-        $('#vehicles-container').append(newVehicleHtml);
-        // Initialize the searchable dropdown for new elements
-                    initializeSearchableDropdown();
-    }
-
-    $('#addVehicleBtn').click(function() {
-        addNewVehicle();
-    });
-    // Initialize the searchable dropdown for new elements
-            initializeSearchableDropdown();
-
-    $(document).on('click', '.delete-vehicle', function() {
-        $(this).closest('.vehicle-info').remove();
-    });
-});
-</script>
-
-{{-- <script>
-$(document).ready(function() {
-    $('#available_at_auction').change(function() {
-        if ($(this).is(':checked')) {
-            $('.div-link').show();
-        } else {
-            $('.div-link').hide();
-        }
-    });
-
-    $('#modification').change(function() {
-        if ($(this).is(':checked')) {
-            $('.div-modify_info').show();
-        } else {
-            $('.div-modify_info').hide();
-        }
-    });
-});
 </script> --}}
-<script>
-    // var validPickupSuggestions = [];
-    // var validDeliverySuggestions = [];
-
-    // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-    //     var inputValue = inputField.val();
-
-    //     $.ajax({
-    //         url: "{{ route('get.zipcodes') }}",
-    //         method: "POST",
-    //         data: {
-    //             "_token": "{{ csrf_token() }}",
-    //             "input": inputValue
-    //         },
-    //         success: function(response) {
-    //             suggestionsList.empty();
-    //             validSuggestions.length = 0;  // Clear previous suggestions
-
-    //             $.each(response, function(index, suggestion) {
-    //                 var listItem = $("<li>").text(suggestion).click(function() {
-    //                     inputField.val(suggestion);
-    //                     suggestionsList.css("display", "none");
-    //                 });
-    //                 validSuggestions.push(suggestion);  // Add to valid suggestions
-    //                 suggestionsList.append(listItem);
-    //             });
-    //         },
-    //         error: function(xhr, status, error) {
-    //             console.error("Error:", error);
-    //         }
-    //     });
-    // }
-
-    // $("#pickup-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    // });
-
-    // $("#delivery-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    // });
-
-    // function validateLocationInput(inputField, validSuggestions, errorField) {
-    //     var inputValue = inputField.val();
-    //     if (!validSuggestions.includes(inputValue)) {
-    //         errorField.text("Please select a valid location.");
-    //         return false;
-    //     } else {
-    //         errorField.text("");
-    //         return true;
-    //     }
-    // }
-
-    // $("form").submit(function(event) {
-    //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-    //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
-    //     if (!isPickupValid || !isDeliveryValid) {
-    //         event.preventDefault();  // Prevent form submission if validation fails
-    //     }
-    // });
-</script>
-
 {{-- <script>
-function updateSuggestions(inputField, suggestionsList) {
-    var inputValue = inputField.val();
-
-    $.ajax({
-        url: "{{ route('get.zipcodes') }}",
-        method: "POST",
-        data: {
-            "_token": "{{ csrf_token() }}",
-            "input": inputValue
-        },
-        success: function(response) {
-            suggestionsList.empty();
-
-            $.each(response, function(index, suggestion) {
-                var listItem = $("<li>").text(suggestion).click(function() {
-                    inputField.val(suggestion);
-                    suggestionsList.css("display", "none");
-                });
-                suggestionsList.append(listItem);
-            });
-        },
-        error: function(xhr, status, error) {
-            console.error("Error:", error);
-        }
+    $(document).ready(function() {
+        $(document).on('change', '.category', function() {
+            var selectedCategory = $(this).val();
+            if (selectedCategory === "Others") {
+                $('#otherCategoryInput').show();
+                $('#otherCategoryInput').attr('disabled', false);
+            } else {
+                $('#otherCategoryInput').hide();
+                $('#otherCategoryInput').attr('disabled', true);
+            }
+        });
     });
-}
-
-$("#pickup-location, #delivery-location").keyup(function() {
-    var inputField = $(this);
-    var suggestionsList = inputField.siblings(".suggestionsTwo");
-    suggestionsList.css("display", "block");
-    if (inputField.val() === "") {
-        suggestionsList.css("display", "none");
-    }
-    updateSuggestions(inputField, suggestionsList);
-});
 </script> --}}
-
-
 @endsection
