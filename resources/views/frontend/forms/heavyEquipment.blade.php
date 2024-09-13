@@ -521,181 +521,319 @@ shipment efficiently with our instant quote tool.')
 @endsection
 @section('extraScript')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function() {
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                <div class="vehicle-info">
-                <div class="row select-bm">
-                    <!-- Bin icon for deleting vehicle -->
-                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
-                </div>
-                    <div class="row select-bm">
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label> Year</label>
-                <div class="dropdown">
-                            <input class="form-control dropdown-toggle year" type="text"
-                                name="year[]" id="year" placeholder="Select Year"
-                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
-                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                <li><a class="dropdown-item">Select Year</a></li>`;
-                    var currentYear = {{ date('Y') }};
-                    for (var year = currentYear; year >= 1936; year--) {
-                        newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
-                    }
 
-                    newVehicleHtml +=
-                        `</ul>
-                        </div>
+    <script>
+        $(document).ready(function() {
+            function addNewVehicle() {
+                var newVehicleHtml =
+                    `
+                    <div class="vehicle-info">
+                    <div class="row select-bm">
+                        <!-- Bin icon for deleting vehicle -->
+                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
                     </div>
-                    </div>
+                        <div class="row select-bm">
                     <div class="col-md-4">
                     <div class="input-form tj-select">
-                    <label>Make</label>
-                    <input type="text" id="make" name="make[]"
-                    placeholder="Enter Make" required="" />
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select model-div">
-                    <label>Model</label>
-                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                    required="" />
-                    </div>
-                    </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-3">
+                    <label> Year</label>
+                    <div class="dropdown">
+                                <input class="form-control dropdown-toggle year" type="text"
+                                    name="year[]" id="year" placeholder="Select Year"
+                                    data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                                <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                    <li><a class="dropdown-item">Select Year</a></li>`;
+                        var currentYear = {{ date('Y') }};
+                        for (var year = currentYear; year >= 1936; year--) {
+                            newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
+                        }
 
-                            <label class="lab-cos">Length</label>
-                            <div class="input-container">
-                                <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
-                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                <span class="separator">(Ft.)</span>
-                                <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
-                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                <span class="separators">(In.)</span>
+                        newVehicleHtml +=
+                            `</ul>
                             </div>
                         </div>
-
-                        <div class="col-md-3">
-
-                            <label class="lab-cos">Width</label>
-                            <div class="input-container">
-                                <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
-                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                <span class="separator">(Ft.)</span>
-                                <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
-                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                <span class="separators">(In.)</span>
-                            </div>
                         </div>
-
-                        <div class="col-md-3">
-
-                            <label class="lab-cos">Height</label>
-                            <div class="input-container">
-                                <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
-                                    min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                <span class="separator">(Ft.)</span>
-                                <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
-                                    min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                <span class="separators">(In.)</span>
-                            </div>
+                        <div class="col-md-4">
+                        <div class="input-form tj-select">
+                        <label>Make</label>
+                        <input type="text" id="make" name="make[]"
+                        placeholder="Enter Make" required="" />
                         </div>
-                        <div class="col-md-3">
-                            <label class="lab-cos">Weight</label>
-                            <div class="input-container1">
-                                <input type="number" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
-                                    min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                <span class="separators-w">(Lbs.)</span>
-                            </div>
                         </div>
-                    </div>
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="load_method" class="text-white">Load Method</label>
-                                    <select class="nice-select" id="load_method" name="load_method[]">
-                                        <option value="" disabled selected>Select</option>
-                                        <option value="LOADING DOCK">LOADING DOCK</option>
-                                        <option value="CRANE">CRANE</option>
-                                        <option value="FORKLIFT">FORKLIFT</option>
-                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                    </select>
+                        <div class="col-md-4">
+                        <div class="input-form tj-select model-div">
+                        <label>Model</label>
+                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                        required="" />
+                        </div>
+                        </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-3">
+
+                                <label class="lab-cos">Length</label>
+                                <div class="input-container">
+                                    <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
+                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                    <span class="separator">(Ft.)</span>
+                                    <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
+                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                    <span class="separators">(In.)</span>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="unload_method" class="text-white">Unload Method</label>
-                                    <select class="nice-select" id="unload_method" name="unload_method[]">
-                                        <option value="" disabled selected>Select</option>
-                                        <option value="LOADING DOCK">LOADING DOCK</option>
-                                        <option value="CRANE">CRANE</option>
-                                        <option value="FORKLIFT">FORKLIFT</option>
-                                        <option value="DRIVE ROLL">DRIVE ROLL</option>
-                                    </select>
+
+                            <div class="col-md-3">
+
+                                <label class="lab-cos">Width</label>
+                                <div class="input-container">
+                                    <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
+                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                    <span class="separator">(Ft.)</span>
+                                    <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
+                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                    <span class="separators">(In.)</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+
+                                <label class="lab-cos">Height</label>
+                                <div class="input-container">
+                                    <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
+                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                    <span class="separator">(Ft.)</span>
+                                    <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
+                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                    <span class="separators">(In.)</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="lab-cos">Weight</label>
+                                <div class="input-container1">
+                                    <input type="number" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
+                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
+                                    <span class="separators-w">(Lbs.)</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="input-form">
-                                    <label for="category">Category</label>
-                                    <select class="category nice-select" id="" name="category[]">
-                                        <option value="" disabled selected>Select</option>
-                                        @foreach ($categories as $category)
-                                            <option value="{{ $category->name }}" data-id="{{ $category->id }}">
-                                                {{ $category->name }}</option>
-                                        @endforeach
-                                    </select>
-                                    <input type="text" class="form-control" id="otherCategoryInput"
-                                        name="category" disabled style="display: none;"
-                                        placeholder="Specify Category">
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="load_method" class="text-white">Load Method</label>
+                                        <select class="nice-select" id="load_method" name="load_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="unload_method" class="text-white">Unload Method</label>
+                                        <select class="nice-select" id="unload_method" name="unload_method[]">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="LOADING DOCK">LOADING DOCK</option>
+                                            <option value="CRANE">CRANE</option>
+                                            <option value="FORKLIFT">FORKLIFT</option>
+                                            <option value="DRIVE ROLL">DRIVE ROLL</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="input-form subcategory-box" id="">
-                                    <label for="subcategory">Subcategory</label>
-                                    <select class="subcategory nice-select" id="" name="subcategory[]">
-                                        <option value="" disabled selected>Select</option>
-                                    </select>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-form">
+                                        <label for="category">Category</label>
+                                        <select class="category nice-select" id="" name="category[]">
+                                            <option value="" disabled selected>Select</option>
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->name }}" data-id="{{ $category->id }}">
+                                                    {{ $category->name }}</option>
+                                            @endforeach
+                                        </select>
+                                        <input type="text" class="form-control" id="otherCategoryInput"
+                                            name="category" disabled style="display: none;"
+                                            placeholder="Specify Category">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="condition" class="text-white">Condition</label>
-                                    <select class="nice-select " id="condition" name="condition[]">
-                                        <option value="1" selected>Running</option>
-                                        <option value="2">Non Running</option>
-                                    </select>
+                                <div class="col-6">
+                                    <div class="input-form subcategory-box" id="">
+                                        <label for="subcategory">Subcategory</label>
+                                        <select class="subcategory nice-select" id="" name="subcategory[]">
+                                            <option value="" disabled selected>Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="nice-select " id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    `;
+                        `;
 
-            $('#vehicles-container').append(newVehicleHtml);
+                $('#vehicles-container').append(newVehicleHtml);
+                // Initialize the searchable dropdown for new elements
+                        initializeSearchableDropdown();
+
+            }
+
+            $('#addVehicleBtn').click(function() {
+                addNewVehicle();
+            });
             // Initialize the searchable dropdown for new elements
-                    initializeSearchableDropdown();
+                        initializeSearchableDropdown();
 
-        }
 
-        $('#addVehicleBtn').click(function() {
-            addNewVehicle();
+            $(document).on('click', '.delete-vehicle', function() {
+                $(this).closest('.vehicle-info').remove();
+            });
         });
-        // Initialize the searchable dropdown for new elements
-                    initializeSearchableDropdown();
+    </script>
+<!-- year search work -->
+    <script>
+        // Initialize Select2 on existing dropdowns (if needed)
+        initializeSearchableDropdown();
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector('.year');
+            const dropdownMenu = document.querySelector('.year-dropdown');
+            const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
+            
+            // Function to filter dropdown items
+            function filterDropdown() {
+                const searchValue = input.value.toLowerCase();
+                dropdownItems.forEach(function(item) {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchValue) || searchValue === '') {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
 
+            // Filter dropdown items on input
+            input.addEventListener('input', function() {
+                filterDropdown();
+            });
 
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
+            // Set input value from dropdown item click
+            dropdownMenu.addEventListener('click', function(e) {
+                if (e.target.classList.contains('dropdown-item')) {
+                    input.value = e.target.textContent;
+                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                }
+            });
+
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+
+            // Show dropdown when input is focused
+            input.addEventListener('focus', function() {
+                dropdownMenu.style.display = 'block';
+            });
+
+            // Handle Enter key press to set the input value
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const searchValue = input.value;
+                    // Check if the entered value exists in the dropdown
+                    const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
+                    if (item) {
+                        input.value = item.textContent;
+                    }
+                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                    e.preventDefault(); // Prevent default form submission behavior if in a form
+                }
+            });
+        });
+
+        function initializeSearchableDropdown() {
+                $('.dropdown-toggle.year').on('input', function() {
+                    var input = $(this);
+                    var filter = input.val().toLowerCase();
+                    var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                    dropdown.find('.dropdown-item').each(function() {
+                        var text = $(this).text().toLowerCase();
+                        if (text.includes(filter) || filter === '') {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                });
+
+                $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                    var item = $(this);
+                    var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                    input.val(item.text());
+                    item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                });
+
+                // Show dropdown when input is focused
+                $('.dropdown-toggle.year').on('focus', function() {
+                    $(this).siblings('.dropdown-menu.year-dropdown').show();
+                });
+
+                // Hide dropdown when clicking outside
+                $(document).on('click', function(e) {
+                    if (!$(e.target).closest('.dropdown').length) {
+                        $('.dropdown-menu.year-dropdown').hide();
+                    }
+                });
+            }
+        
+    </script>
+<!-- year search work -->
+<script>
+    $(document).ready(function() {
+        $(document).on('change', '.category', function() {
+            var $this = $(this);
+            var selectedCategory = $this.find('option:selected').data('id');
+            var $subcategoryBox = $this.closest('.col-6').next('.col-6').find('.subcategory-box');
+
+            $.ajax({
+                url: "{{ route('get.subcategories') }}",
+                method: "POST",
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    "category": selectedCategory
+                },
+                success: function(response) {
+                    var html = '';
+                    $subcategoryBox.html('');
+
+                    html += "<label for='subcategory'>Subcategory</label>";
+                    html += "<select class='nice-select form-control subcategory' name='subcategory[]'>";
+                    html += "<option value='' disabled selected>Select</option>";
+
+                    $.each(response, function(index, val) {
+                        html += `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
+                    });
+
+                    html += "</select>";
+
+                    $subcategoryBox.html(html);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
         });
     });
+
 </script>
-<script>
+{{-- <script>
     // $(document).ready(function() {
     //     $('#available_at_auction').change(function() {
     //         if ($(this).is(':checked')) {
@@ -705,8 +843,8 @@ shipment efficiently with our instant quote tool.')
     //         }
     //     });
     // });
-</script>
-<script>
+</script> --}}
+{{-- <script>
     // var validPickupSuggestions = [];
     // var validDeliverySuggestions = [];
 
@@ -778,7 +916,7 @@ shipment efficiently with our instant quote tool.')
     //         event.preventDefault();  // Prevent form submission if validation fails
     //     }
     // });
-</script>
+</script> --}}
 {{-- <script>
     function updateSuggestions(inputField, suggestionsList) {
         var inputValue = inputField.val();
@@ -817,14 +955,14 @@ shipment efficiently with our instant quote tool.')
         updateSuggestions(inputField, suggestionsList);
     });
 </script> --}}
-<!-- <script>
+{{-- <!-- <script>
     $(document).ready(function() {
         $('input[type="number"]').on('input', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-</script> -->
-<script>
+</script> --> --}}
+{{-- <script>
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
@@ -875,43 +1013,5 @@ shipment efficiently with our instant quote tool.')
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-</script>
-<script>
-    $(document).ready(function() {
-        $(document).on('change', '.category', function() {
-            var $this = $(this);
-            var selectedCategory = $this.find('option:selected').data('id');
-            var $subcategoryBox = $this.closest('.col-6').next('.col-6').find('.subcategory-box');
-
-            $.ajax({
-                url: "{{ route('get.subcategories') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "category": selectedCategory
-                },
-                success: function(response) {
-                    var html = '';
-                    $subcategoryBox.html('');
-
-                    html += "<label for='subcategory'>Subcategory</label>";
-                    html += "<select class='nice-select form-control subcategory' name='subcategory[]'>";
-                    html += "<option value='' disabled selected>Select</option>";
-
-                    $.each(response, function(index, val) {
-                        html += `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
-                    });
-
-                    html += "</select>";
-
-                    $subcategoryBox.html(html);
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        });
-    });
-
-</script>
+</script> --}}
 @endsection
