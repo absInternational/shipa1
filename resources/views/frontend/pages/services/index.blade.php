@@ -28,35 +28,35 @@
 
     <!--========== Service Section Start ==============-->
     <!-- <section class="tj-service-section-four tj-service-page">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="tj-section-heading text-center">
-                                                <span class="sub-title active-shape"> What We Do</span>
-                                                <h2 class="title">Logistic & Transport</h2>
-                                            </div>
-                                        </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="tj-section-heading text-center">
+                                <span class="sub-title active-shape"> What We Do</span>
+                                <h2 class="title">Logistic & Transport</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        @foreach ($services as $service)
+                        <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                                <div class="service-item-three">
+                                    <div class="service-image">
+                                        <img src="{{ asset(!is_null($service->banner_image) ? $service->banner_image : '') }}"
+                                            alt="Image" />
+                                        {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                                     </div>
-                                    <div class="row">
-                                        @foreach ($services as $service)
-    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                                                <div class="service-item-three">
-                                                    <div class="service-image">
-                                                        <img src="{{ asset(!is_null($service->banner_image) ? $service->banner_image : '') }}"
-                                                            alt="Image" />
-                                                        {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
-                                                    </div>
-                                                    <div class="service-content">
-                                                        <h4><a class="title" href="{{ route('service.details', $service->slug) }}">
-                                                                {{ $service->name }}</a></h4>
-                                                        <p>{!! Illuminate\Support\Str::limit($service->text_to_show, 200, '...') !!}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-    @endforeach
+                                    <div class="service-content">
+                                        <h4><a class="title" href="{{ route('service.details', $service->slug) }}">
+                                                {{ $service->name }}</a></h4>
+                                        <p>{!! Illuminate\Support\Str::limit($service->text_to_show, 200, '...') !!}</p>
                                     </div>
                                 </div>
-                            </section> -->
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </section> -->
 
     <section class="tj-service-section-four tj-service-page">
         <div class="container">
@@ -627,25 +627,25 @@
         });
     </script> --}}
 
-    <script>
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     var input = document.querySelector("#phone");
-        //     window.intlTelInput(input, {
-        //         initialCountry: "auto",
-        //         geoIpLookup: function(callback) {
-        //             fetch('https://ipinfo.io/json')
-        //                 .then(function(response) {
-        //                     return response.json();
-        //                 })
-        //                 .then(function(ipinfo) {
-        //                     var countryCode = "us";
-        //                     callback(countryCode);
-        //                 });
-        //         },
-        //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-        //     });
-        // });
-    </script>
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                initialCountry: "auto",
+                geoIpLookup: function(callback) {
+                    fetch('https://ipinfo.io/json')
+                        .then(function(response) {
+                            return response.json();
+                        })
+                        .then(function(ipinfo) {
+                            var countryCode = "us";
+                            callback(countryCode);
+                        });
+                },
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
+            });
+        });
+    </script> --}}
     {{-- <script>
         function playVideo() {
             document.querySelector('.video-thumbnail').style.display = 'none';
@@ -825,13 +825,13 @@
         });
     </script> --}}
 
-    <script>
-        // document.querySelectorAll('input[type="text"]').forEach((input) => {
-        //     input.addEventListener("input", function() {
-        //         this.value = this.value.replace(/[^0-9]/g, "");
-        //     });
-        // });
-    </script>
+    {{-- <script>
+        document.querySelectorAll('input[type="text"]').forEach((input) => {
+            input.addEventListener("input", function() {
+                this.value = this.value.replace(/[^0-9]/g, "");
+            });
+        });
+    </script> --}}
 
     {{-- <script>
         function limitDigits(element, maxDigits) {
@@ -955,7 +955,7 @@
 
 
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             $(document).on('change', '#available_at_auction', function() {
                 if ($(this).is(':checked')) {
@@ -973,9 +973,9 @@
                 }
             });
         });
-    </script>
+    </script> --}}
 
-    <script>
+    {{-- <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
 
@@ -1012,9 +1012,9 @@
             }
             updateSuggestions(inputField, suggestionsList);
         });
-    </script>
+    </script> --}}
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             $(document).on('change', '.vehicle-year, .vehicle-make', function() {
                 var year = $('.vehicle-year').val();
@@ -1053,9 +1053,9 @@
                 });
             }
         });
-    </script>
+    </script> --}}
 
-    <script>
+    {{-- <script>
         function updateSuggestions(inputField, suggestionsList) {
             var inputValue = inputField.val();
 
@@ -1092,6 +1092,6 @@
             }
             updateSuggestions(inputField, suggestionsList);
         });
-    </script>
+    </script> --}}
 
 @endsection
