@@ -1,47 +1,37 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Get Quote on Excavator Equip. | ShipA1')
-
 @section('meta_description', 'Need to transport heavy equipment? Get an instant shipping quote now! Our reliable service provides nationwide coverage, transparent pricing, and secure transportation for your heavy machinery. Plan your shipment efficiently with our instant quote tool.')
-
-
-
 @section('content')
-
-
 <style>
-
-
-
     .lab-cos{
         font-size: 15px;
-    font-weight: 500;
-    color: var(--tj-white-color);
-    margin-bottom: 10px;
+        font-weight: 500;
+        color: var(--tj-white-color);
+        margin-bottom: 10px;
     }
 
 
     .input-container {
-    height: 34px;
-    background: white;
-    display: flex;
-    align-items: center;
-    /* border: 1px solid #ccc; */
-    border-radius: 4px;
-    padding: 8px 0px 8px 0px;
-    width: fit-content;
+        height: 34px;
+        background: white;
+        display: flex;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        border-radius: 4px;
+        padding: 8px 0px 8px 0px;
+        width: fit-content;
 
         }
 
         .input-container1 {
-    height: 34px;
-    background: white;
-    display: flex;
-    align-items: center;
-    /* border: 1px solid #ccc; */
-    border-radius: 4px;
-    padding: 8px 0px 8px 0px;
-    width: fit-content;
+        height: 34px;
+        background: white;
+        display: flex;
+        align-items: center;
+        /* border: 1px solid #ccc; */
+        border-radius: 4px;
+        padding: 8px 0px 8px 0px;
+        width: fit-content;
 
         }
 
@@ -110,7 +100,7 @@
       .input-container .placeholders {
         /* color:white; */
         position: relative;
-    right: 72px;
+        right: 72px;
         color: black;
         display: inline-block;
         width: auto;
@@ -123,13 +113,12 @@
         color: red;
       }
       .tj-input-form .input-form label {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--tj-white-color);
-    margin-bottom: 10px;
-}
-      
-    </style>
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--tj-white-color);
+        margin-bottom: 10px;
+        }
+</style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
@@ -154,7 +143,6 @@
     </div>
 </section>
 <!--========== breadcrumb End ==============-->
-
 <section class="tj-choose-us-section-excavator">
     <div class="container-flude">
         <div class="row">
@@ -184,7 +172,6 @@
                             </ul>
                         </div>
                         @endif
-
                         <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -211,8 +198,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
                             <div class="row">
                             <div class="col-md-6">
                                 <div class="input-form">
@@ -233,8 +218,6 @@
                                 </div>
                             </div>
                         </div> 
- 
-
                             <div class="row select-bm ">
                             <div class="col-md-12 text-center">
                                 <h4 class="text-white">Equipment Information</h4>
@@ -242,7 +225,7 @@
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
                                     <label> Year</label>
-                                    <!-- <select class="nice-select vehicle-year" name="year[]" id="year">
+                                    {{-- <!-- <select class="nice-select vehicle-year" name="year[]" id="year">
                                         <option value="" disabled selected>Select Year</option>
                                         @php
                                         $currentYear = date('Y');
@@ -250,7 +233,7 @@
                                         echo "<option value='$year'>$year</option>";
                                         }
                                         @endphp
-                                    </select> -->
+                                    </select> --> --}}
                                     <div class="dropdown">
                                             <input class="form-control dropdown-toggle year" type="text"
                                                 name="year[]" id="year" placeholder="Select Year"
@@ -286,7 +269,6 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-3">
-
                                 <label class="lab-cos">Length</label>
                                 <div class="input-container">
                                     <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
@@ -297,9 +279,7 @@
                                     <span class="separators">(In.)</span>
                                 </div>
                             </div>
-
                             <div class="col-md-3">
-
                                 <label class="lab-cos">Width</label>
                                 <div class="input-container">
                                     <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
@@ -310,9 +290,7 @@
                                     <span class="separators">(In.)</span>
                                 </div>
                             </div>
-
                             <div class="col-md-3">
-
                                 <label class="lab-cos">Height</label>
                                 <div class="input-container">
                                     <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
@@ -323,15 +301,12 @@
                                     <span class="separators">(In.)</span>
                                 </div>
                             </div>
-
                             <div class="col-md-3">
-
                                 <label class="lab-cos">Weight</label>
                                 <div class="input-container1">
                                     <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
                                         min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                     <span class="separators-w">(Lbs.)</span>
-
                                 </div>
                             </div>
                         </div>
@@ -371,7 +346,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row mt-3">
                             {{-- <div class="col-md-4">
                                 <div class="form-group">
@@ -408,20 +382,13 @@
                                 </div>
                             </div>
                         </div>
-
                         <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
                          Add Equipment</a>
-
                         <div id="vehicles-container">
                         </div>
                         <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
                         {{-- <div class="row mb-3 mt-3">
-
-
-                        
-
                             <div class="col-md-3 ">
-
                                 <label class="lab-cos">Length</label>
                                 <div class="input-container">
                                     <input type="number" id="feet-input" class="input-field" placeholder=""
@@ -432,9 +399,7 @@
                                     <span class="separators">(In.)</span>
                                 </div>
                             </div>
-
                             <div class="col-md-3">
-
                             <label class="lab-cos">Width</label>
                             <div class="input-container">
                                 <input type="number" id="feet-input1" class="input-field" placeholder=""
@@ -445,9 +410,7 @@
                                 <span class="separators">(In.)</span>
                             </div>
                             </div>
-                            
                             <div class="col-md-3">
-
                             <label class="lab-cos">Height</label>
                             <div class="input-container">
                                 <input type="number" id="feet-input2" class="input-field" placeholder=""
@@ -458,27 +421,17 @@
                                 <span class="separators">(In.)</span>
                             </div>
                             </div>
-
                             <div class="col-md-3">
-
                             <label class="lab-cos">Weight</label>
                             <div class="input-container1">
                                 <input type="" id="feet-input" class="input-field-1" placeholder=""
                                     min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                 <span class="separators-w">(Lbs.)</span>
-                                
                             </div>
                             </div>
-                        
-
-                        
-
-                            
-
                         </div> --}}
                         <div class="row">
                             <div class="col-md-6">
-
                             <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="available_at_auction"
                                         name="available_at_auction" value="1" />
@@ -491,9 +444,6 @@
                                     <input class="form-control" type="url" id="link" name="link"
                                         placeholder="Enter Link" />
                                 </div>
-
-                               
-
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -516,7 +466,6 @@
                                 <input class="form-control image_input" type="file" name="image[]" accept="image/*" multiple onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                         </div>
-
                         <div class="tj-theme-button text-center mt-3">
                             <button class="tj-submit-btn" type="submit" value="submit">
                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -530,10 +479,8 @@
     </div>
 </section>
 @endsection
-
 @section('extraScript')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <script>
     $(document).ready(function() {
         function addNewVehicle() {
@@ -784,215 +731,4 @@
         
     </script>
 <!-- year search work -->
-
-{{-- <script>
-    $(document).ready(function() {
-        $('#available_at_auction').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
-
-        $('#modification').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script> --}}
-{{-- <script>
-    var validPickupSuggestions = [];
-    var validDeliverySuggestions = [];
-
-    function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-                validSuggestions.length = 0;  // Clear previous suggestions
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    validSuggestions.push(suggestion);  // Add to valid suggestions
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    });
-
-    $("#delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    });
-
-    function validateLocationInput(inputField, validSuggestions, errorField) {
-        var inputValue = inputField.val();
-        if (!validSuggestions.includes(inputValue)) {
-            errorField.text("Please select a valid location.");
-            return false;
-        } else {
-            errorField.text("");
-            return true;
-        }
-    }
-
-    $("form").submit(function(event) {
-        var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-        var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
-        if (!isPickupValid || !isDeliveryValid) {
-            event.preventDefault();  // Prevent form submission if validation fails
-        }
-    });
-</script> --}}
-{{-- <script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script> --}}
-{{-- <script>
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
-        }
-
-        $(document).ready(function() {
-            $('#inches-input').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-
-        $(document).ready(function() {
-            $('#inches-input1').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input1, #inches-input1').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-
-        $(document).ready(function() {
-            $('#inches-input2').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input2').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-</script> --}}
-{{-- <script>
-      function moveToNext(current, nextId) {
-        if (current.value.length >= current.maxLength) {
-          document.getElementById(nextId).focus();
-        }
-      }
-
-      
-    //   document.querySelectorAll('input[type="text"]').forEach((input) => {
-    //     input.addEventListener("input", function () {
-    //       this.value = this.value.replace(/[^0-9]/g, "");
-    //     });
-    //   });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        $(document).on('change', '.category', function() {
-            var selectedCategory = $(this).val();
-            if (selectedCategory === "Others") {
-                $('#otherCategoryInput').show();
-                $('#otherCategoryInput').attr('disabled', false);
-            } else {
-                $('#otherCategoryInput').hide();
-                $('#otherCategoryInput').attr('disabled', true);
-            }
-        });
-    });
-</script> --}}
 @endsection

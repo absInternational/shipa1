@@ -535,42 +535,6 @@
 
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
-        }
-        $(document).ready(function() {
-            $('#inches-input').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-        $(document).ready(function() {
-            $(document).on('input', '.inches-input1, .inches-input2', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-            $(document).on('input', '.feet-input1, .inches-input1, .feet-input, .inches-input2', function() {
-                console.log('asdasd');
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-    </script>
-
     <script>
         $(document).ready(function() {
             $(document).on('change', '.category', function() {
@@ -590,7 +554,6 @@
             }
         }
     </script>
-
     <script>
         $(document).ready(function() {
             function addNewVehicle() {
@@ -740,183 +703,105 @@
             });
         });
     </script>
+    <!-- year search work -->
+        <script>
+            // Initialize Select2 on existing dropdowns (if needed)
+            initializeSearchableDropdown();
+            document.addEventListener('DOMContentLoaded', function() {
+                const input = document.querySelector('.year');
+                const dropdownMenu = document.querySelector('.year-dropdown');
+                const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
+                
+                // Function to filter dropdown items
+                function filterDropdown() {
+                    const searchValue = input.value.toLowerCase();
+                    dropdownItems.forEach(function(item) {
+                        const text = item.textContent.toLowerCase();
+                        if (text.includes(searchValue) || searchValue === '') {
+                            item.style.display = '';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                }
 
-       <!-- year search work -->
+                // Filter dropdown items on input
+                input.addEventListener('input', function() {
+                    filterDropdown();
+                });
 
-            <script>
-                // Initialize Select2 on existing dropdowns (if needed)
-                initializeSearchableDropdown();
-                document.addEventListener('DOMContentLoaded', function() {
-                    const input = document.querySelector('.year');
-                    const dropdownMenu = document.querySelector('.year-dropdown');
-                    const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
-                    
-                    // Function to filter dropdown items
-                    function filterDropdown() {
-                        const searchValue = input.value.toLowerCase();
-                        dropdownItems.forEach(function(item) {
-                            const text = item.textContent.toLowerCase();
-                            if (text.includes(searchValue) || searchValue === '') {
-                                item.style.display = '';
+                // Set input value from dropdown item click
+                dropdownMenu.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('dropdown-item')) {
+                        input.value = e.target.textContent;
+                        dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                    }
+                });
+
+                // Hide dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+
+                // Show dropdown when input is focused
+                input.addEventListener('focus', function() {
+                    dropdownMenu.style.display = 'block';
+                });
+
+                // Handle Enter key press to set the input value
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        const searchValue = input.value;
+                        // Check if the entered value exists in the dropdown
+                        const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
+                        if (item) {
+                            input.value = item.textContent;
+                        }
+                        dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                        e.preventDefault(); // Prevent default form submission behavior if in a form
+                    }
+                });
+            });
+
+            function initializeSearchableDropdown() {
+                    $('.dropdown-toggle.year').on('input', function() {
+                        var input = $(this);
+                        var filter = input.val().toLowerCase();
+                        var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                        dropdown.find('.dropdown-item').each(function() {
+                            var text = $(this).text().toLowerCase();
+                            if (text.includes(filter) || filter === '') {
+                                $(this).show();
                             } else {
-                                item.style.display = 'none';
+                                $(this).hide();
                             }
                         });
-                    }
-
-                    // Filter dropdown items on input
-                    input.addEventListener('input', function() {
-                        filterDropdown();
                     });
 
-                    // Set input value from dropdown item click
-                    dropdownMenu.addEventListener('click', function(e) {
-                        if (e.target.classList.contains('dropdown-item')) {
-                            input.value = e.target.textContent;
-                            dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-                        }
-                    });
-
-                    // Hide dropdown when clicking outside
-                    document.addEventListener('click', function(e) {
-                        if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                            dropdownMenu.style.display = 'none';
-                        }
+                    $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                        var item = $(this);
+                        var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                        input.val(item.text());
+                        item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
                     });
 
                     // Show dropdown when input is focused
-                    input.addEventListener('focus', function() {
-                        dropdownMenu.style.display = 'block';
+                    $('.dropdown-toggle.year').on('focus', function() {
+                        $(this).siblings('.dropdown-menu.year-dropdown').show();
                     });
 
-                    // Handle Enter key press to set the input value
-                    input.addEventListener('keydown', function(e) {
-                        if (e.key === 'Enter') {
-                            const searchValue = input.value;
-                            // Check if the entered value exists in the dropdown
-                            const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
-                            if (item) {
-                                input.value = item.textContent;
-                            }
-                            dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-                            e.preventDefault(); // Prevent default form submission behavior if in a form
+                    // Hide dropdown when clicking outside
+                    $(document).on('click', function(e) {
+                        if (!$(e.target).closest('.dropdown').length) {
+                            $('.dropdown-menu.year-dropdown').hide();
                         }
                     });
-                });
-
-                function initializeSearchableDropdown() {
-                        $('.dropdown-toggle.year').on('input', function() {
-                            var input = $(this);
-                            var filter = input.val().toLowerCase();
-                            var dropdown = input.siblings('.dropdown-menu.year-dropdown');
-                            dropdown.find('.dropdown-item').each(function() {
-                                var text = $(this).text().toLowerCase();
-                                if (text.includes(filter) || filter === '') {
-                                    $(this).show();
-                                } else {
-                                    $(this).hide();
-                                }
-                            });
-                        });
-
-                        $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
-                            var item = $(this);
-                            var input = item.closest('.dropdown').find('.dropdown-toggle.year');
-                            input.val(item.text());
-                            item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
-                        });
-
-                        // Show dropdown when input is focused
-                        $('.dropdown-toggle.year').on('focus', function() {
-                            $(this).siblings('.dropdown-menu.year-dropdown').show();
-                        });
-
-                        // Hide dropdown when clicking outside
-                        $(document).on('click', function(e) {
-                            if (!$(e.target).closest('.dropdown').length) {
-                                $('.dropdown-menu.year-dropdown').hide();
-                            }
-                        });
-                    }
-                
-            </script>
-
-        <!-- year search work -->
-
-     
-{{-- <script>
-    var validPickupSuggestions = [];
-    var validDeliverySuggestions = [];
-
-    function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-                validSuggestions.length = 0;  // Clear previous suggestions
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    validSuggestions.push(suggestion);  // Add to valid suggestions
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    });
-
-    $("#delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    });
-
-    function validateLocationInput(inputField, validSuggestions, errorField) {
-        var inputValue = inputField.val();
-        if (!validSuggestions.includes(inputValue)) {
-            errorField.text("Please select a valid location.");
-            return false;
-        } else {
-            errorField.text("");
-            return true;
-        }
-    }
-
-    $("form").submit(function(event) {
-        var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-        var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
-        if (!isPickupValid || !isDeliveryValid) {
-            event.preventDefault();  // Prevent form submission if validation fails
-        }
-    });
-</script> --}}
+                }
+            
+        </script>
+    <!-- year search work -->
 <script>
      $(document).ready(function () {
         $('form').on('submit', function (e) {
@@ -958,44 +843,4 @@
         });
     });
 </script>
-    {{-- <script>
-        function updateSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
-
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
-
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList);
-        });
-    </script> --}}
-
-
 @endsection

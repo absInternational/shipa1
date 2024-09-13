@@ -644,76 +644,69 @@
 
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('#example-multiple').select2();
+<script>
+    $(document).ready(function() {
+        $('#example-multiple').select2();
+    });
+    $(document).ready(function() {
+        $('#example-multiple-2').select2();
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#available_at_auction').change(function() {
+            if ($(this).is(':checked')) {
+                $('.div-link').show();
+            } else {
+                $('.div-link').hide();
+            }
         });
-        $(document).ready(function() {
-            $('#example-multiple-2').select2();
-        });
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            $('#available_at_auction').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
-
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                    <div class="vehicle-info">
-                        <div class="row select-bm">
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label> Year</label>
-                                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                newVehicleHtml +=
-                    `</select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                <div class="input-form tj-select">
-                    <label>Make</label>
-                    <input type="text" id="make" name="make[]"
-                                            placeholder="Enter Make" required="" />
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                <div class="vehicle-info">
+                    <div class="row select-bm">
+                        <div class="col-md-4">
+                            <div class="input-form tj-select">
+                                <label> Year</label>
+                                <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<option value="${year}">${year}</option>`;
+            }
+            newVehicleHtml +=
+                `</select>
                             </div>
                         </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                    <label>Model</label>
-                                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                        required="" />
-                                    <!-- Bin icon for deleting vehicle -->
-                                    <span class="delete-vehicle"><i class="fa fa-trash"></i></span>
-                                </div>
+                        <div class="col-md-4">
+            <div class="input-form tj-select">
+                <label>Make</label>
+                <input type="text" id="make" name="make[]"
+                                        placeholder="Enter Make" required="" />
+                        </div>
+                    </div>
+                        <div class="col-md-4">
+                            <div class="input-form tj-select model-div">
+                                <label>Model</label>
+                                <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                    required="" />
+                                <!-- Bin icon for deleting vehicle -->
+                                <span class="delete-vehicle"><i class="fa fa-trash"></i></span>
                             </div>
                         </div>
                     </div>
-                `;
-
-                $('#vehicles-container').append(newVehicleHtml);
-            }
-
-            $('#addVehicleBtn').click(function() {
-                addNewVehicle();
-            });
-
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
+                </div>
+            `;
+            $('#vehicles-container').append(newVehicleHtml);
+        }
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
         });
-    </script>
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+    });
+</script>
 <script>
     var validPickupSuggestions = [];
     var validDeliverySuggestions = [];
@@ -787,227 +780,179 @@
         }
     });
 </script>
-    {{-- <script>
-        function updateSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
-
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
+<script>
+    $(document).ready(function() {
+        function checkSpecificFieldsFilled() {
+            var allFilled = true;
+            $('.calculate_freight').each(function() {
+                if ($(this).val() === '' || $(this).val() === '0') {
+                    allFilled = false;
+                    return false;
                 }
             });
+            return allFilled;
         }
 
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList);
-        });
-    </script> --}}
-
-    <script>
-        $(document).ready(function() {
-            function checkSpecificFieldsFilled() {
-                var allFilled = true;
-                $('.calculate_freight').each(function() {
-                    if ($(this).val() === '' || $(this).val() === '0') {
-                        allFilled = false;
-                        return false;
-                    }
-                });
-                return allFilled;
-            }
-
-            function allSpecificFieldsFilledFunction() {
-                console.log("All specific fields are filled up!");
-                freight_calc();
-            }
-
-            function freight_calc() {
-                // var length_ft = $('#length_ft').val();
-                // var length_in = $('#length_in').val();
-                // var width_ft = $('#width_ft').val();
-                // var width_in = $('#width_in').val();
-                // var height_ft = $('#height_ft').val();
-                // var height_in = $('#height_in').val();
-                // var weight = $('#weight').val();
-
-                // var length = length_ft * 12 + parseFloat(length_in);
-                // var width = width_ft * 12 + parseFloat(width_in);
-                // var height = height_ft * 12 + parseFloat(height_in);
-                var length_ft = parseFloat($('#length_ft').val());
-                var length_in = parseFloat($('#length_in').val());
-                var width_ft = parseFloat($('#width_ft').val());
-                var width_in = parseFloat($('#width_in').val());
-                var height_ft = parseFloat($('#height_ft').val());
-                var height_in = parseFloat($('#height_in').val());
-                var weight = parseFloat($('#weight').val());
-
-                console.log(
-                    length_ft,
-                    length_in,
-                    width_ft,
-                    width_in,
-                    height_ft,
-                    height_in,
-                    weight,
-                );
-
-                var length = length_ft * 12;
-                length = length + length_in;
-
-                var width = width_ft * 12;
-                width = width + width_in;
-
-                var height = height_ft * 12;
-                height = height + height_in;
-
-                console.log(length, width, height, weight);
-
-                length = parseFloat(length);
-                width = parseFloat(width);
-                height = parseFloat(height);
-                weight = parseFloat(weight);
-
-
-                var unit = 'inch';
-                var answer_1 = (length * height * width).toFixed(4);
-                if (unit == 'inch') {
-                    answer_1 = (answer_1 / 1728).toFixed(4);
-                }
-                var fright_class = 0;
-                var answer_1 = (length * height * width).toFixed(4);
-                if (unit == 'inch') {
-                    answer_1 = (answer_1 / 1728).toFixed(4);
-                }
-                var fright_class = 0;
-                answer_1 = (weight / answer_1).toFixed(4);
-                if (answer_1 < 1) {
-                    fright_class = 500;
-                } else if (answer_1 >= 1 && answer_1 < 2) {
-                    fright_class = 400;
-                } else if (answer_1 >= 2 && answer_1 < 3) {
-                    fright_class = 300;
-                } else if (answer_1 >= 3 && answer_1 < 4) {
-                    fright_class = 250;
-                } else if (answer_1 >= 4 && answer_1 < 5) {
-                    fright_class = 200;
-                } else if (answer_1 >= 5 && answer_1 < 6) {
-                    fright_class = 175;
-                } else if (answer_1 >= 6 && answer_1 < 7) {
-                    fright_class = 150;
-                } else if (answer_1 >= 7 && answer_1 < 8) {
-                    fright_class = 125;
-                } else if (answer_1 >= 8 && answer_1 < 9) {
-                    fright_class = 110;
-                } else if (answer_1 >= 9 && answer_1 < 10.5) {
-                    fright_class = 100;
-                } else if (answer_1 >= 10.5 && answer_1 < 12) {
-                    fright_class = 92.5;
-                } else if (answer_1 >= 12 && answer_1 < 13.5) {
-                    fright_class = 85;
-                } else if (answer_1 >= 13.5 && answer_1 < 15) {
-                    fright_class = 77.5;
-                } else if (answer_1 >= 15 && answer_1 < 22.5) {
-                    fright_class = 70;
-                } else if (answer_1 >= 22.5 && answer_1 < 30) {
-                    fright_class = 65;
-                } else if (answer_1 >= 30 && answer_1 < 35) {
-                    fright_class = 60;
-                } else if (answer_1 >= 35 && answer_1 < 50) {
-                    fright_class = 55;
-                } else if (answer_1 >= 50) {
-                    fright_class = 50;
-                }
-                console.log('fright_class', fright_class);
-                $('#frieght_class').val(fright_class).trigger('change');
-            }
-
-            $('.calculate_freight').on('keyup', function() {
-                if (checkSpecificFieldsFilled()) {
-                    allSpecificFieldsFilledFunction();
-                }
-            });
-        });
-    </script>
-
-    {{-- <script>
-        $(document).ready(function() {
-            $('input[type="number"]').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-    </script> --}}
-
-    <script>
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
+        function allSpecificFieldsFilledFunction() {
+            console.log("All specific fields are filled up!");
+            freight_calc();
         }
 
-        $(document).ready(function() {
-            $('#inches-input').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
+        function freight_calc() {
+            // var length_ft = $('#length_ft').val();
+            // var length_in = $('#length_in').val();
+            // var width_ft = $('#width_ft').val();
+            // var width_in = $('#width_in').val();
+            // var height_ft = $('#height_ft').val();
+            // var height_in = $('#height_in').val();
+            // var weight = $('#weight').val();
 
-            $('#feet-input, #inches-input').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
+            // var length = length_ft * 12 + parseFloat(length_in);
+            // var width = width_ft * 12 + parseFloat(width_in);
+            // var height = height_ft * 12 + parseFloat(height_in);
+            var length_ft = parseFloat($('#length_ft').val());
+            var length_in = parseFloat($('#length_in').val());
+            var width_ft = parseFloat($('#width_ft').val());
+            var width_in = parseFloat($('#width_in').val());
+            var height_ft = parseFloat($('#height_ft').val());
+            var height_in = parseFloat($('#height_in').val());
+            var weight = parseFloat($('#weight').val());
+
+            console.log(
+                length_ft,
+                length_in,
+                width_ft,
+                width_in,
+                height_ft,
+                height_in,
+                weight,
+            );
+
+            var length = length_ft * 12;
+            length = length + length_in;
+
+            var width = width_ft * 12;
+            width = width + width_in;
+
+            var height = height_ft * 12;
+            height = height + height_in;
+
+            console.log(length, width, height, weight);
+
+            length = parseFloat(length);
+            width = parseFloat(width);
+            height = parseFloat(height);
+            weight = parseFloat(weight);
+
+
+            var unit = 'inch';
+            var answer_1 = (length * height * width).toFixed(4);
+            if (unit == 'inch') {
+                answer_1 = (answer_1 / 1728).toFixed(4);
+            }
+            var fright_class = 0;
+            var answer_1 = (length * height * width).toFixed(4);
+            if (unit == 'inch') {
+                answer_1 = (answer_1 / 1728).toFixed(4);
+            }
+            var fright_class = 0;
+            answer_1 = (weight / answer_1).toFixed(4);
+            if (answer_1 < 1) {
+                fright_class = 500;
+            } else if (answer_1 >= 1 && answer_1 < 2) {
+                fright_class = 400;
+            } else if (answer_1 >= 2 && answer_1 < 3) {
+                fright_class = 300;
+            } else if (answer_1 >= 3 && answer_1 < 4) {
+                fright_class = 250;
+            } else if (answer_1 >= 4 && answer_1 < 5) {
+                fright_class = 200;
+            } else if (answer_1 >= 5 && answer_1 < 6) {
+                fright_class = 175;
+            } else if (answer_1 >= 6 && answer_1 < 7) {
+                fright_class = 150;
+            } else if (answer_1 >= 7 && answer_1 < 8) {
+                fright_class = 125;
+            } else if (answer_1 >= 8 && answer_1 < 9) {
+                fright_class = 110;
+            } else if (answer_1 >= 9 && answer_1 < 10.5) {
+                fright_class = 100;
+            } else if (answer_1 >= 10.5 && answer_1 < 12) {
+                fright_class = 92.5;
+            } else if (answer_1 >= 12 && answer_1 < 13.5) {
+                fright_class = 85;
+            } else if (answer_1 >= 13.5 && answer_1 < 15) {
+                fright_class = 77.5;
+            } else if (answer_1 >= 15 && answer_1 < 22.5) {
+                fright_class = 70;
+            } else if (answer_1 >= 22.5 && answer_1 < 30) {
+                fright_class = 65;
+            } else if (answer_1 >= 30 && answer_1 < 35) {
+                fright_class = 60;
+            } else if (answer_1 >= 35 && answer_1 < 50) {
+                fright_class = 55;
+            } else if (answer_1 >= 50) {
+                fright_class = 50;
+            }
+            console.log('fright_class', fright_class);
+            $('#frieght_class').val(fright_class).trigger('change');
+        }
+
+        $('.calculate_freight').on('keyup', function() {
+            if (checkSpecificFieldsFilled()) {
+                allSpecificFieldsFilledFunction();
+            }
+        });
+    });
+</script>
+<script>
+    function limitDigits(element, maxDigits) {
+        if (element.value.length > maxDigits) {
+            element.value = element.value.slice(0, maxDigits);
+        }
+    }
+
+    $(document).ready(function() {
+        $('#inches-input').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
         });
 
-        $(document).ready(function() {
-            $('#inches-input1').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
+        $('#feet-input, #inches-input').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
 
-            $('#feet-input1, #inches-input1').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
+    $(document).ready(function() {
+        $('#inches-input1').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
         });
 
-        $(document).ready(function() {
-            $('#inches-input2').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input2').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
+        $('#feet-input1, #inches-input1').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
         });
-    </script>
+    });
+
+    $(document).ready(function() {
+        $('#inches-input2').on('input', function() {
+            if (this.value > 11) {
+                this.value = 11;
+            } else if (this.value < 0) {
+                this.value = 0;
+            }
+        });
+
+        // Optionally, you can also prevent the user from typing non-numeric characters.
+        $('#feet-input, #inches-input2').on('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    });
+</script>
 @endsection

@@ -148,6 +148,30 @@
                         </div>
                     </div>
                 </div>
+                {{-- <div class="footer-widget footer1_col_4 footer-contact-info mt-4">
+                    <div class="footer-title">
+                        <h5 class="title">Review & Rating</h5>
+                    </div>
+                    <div class="widget-contact">
+                        <div class="contact-list">
+                             <!-- Google Reviews Icon -->
+                            <a href="https://www.google.com/search?q=your+business" target="_blank" title="Google Reviews">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        
+                            <!-- Trustpilot Icon -->
+                            <a href="https://www.trustpilot.com/review/your-business" target="_blank" title="Trustpilot">
+                                <img src="" alt="">
+                                <i class="fab fa-trustpilot"></i>
+                            </a>
+                        
+                            <!-- BBB Icon -->
+                            <a href="https://www.bbb.org/us/your-business" target="_blank" title="BBB">
+                                <i class="fas fa-badge-check"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </div>
