@@ -37,7 +37,7 @@
 <section class="tj-blog-standard">
     <div class="container">
         <div class="row">
-        <div class="col-lg-7">
+            <div class="col-lg-7">
                         <div class="image-container">
                             <img class="img-fluid" src="https://www.shipa1.com/img/banner-5-800x400-landing.webp" loading="lazy" alt="Auction Car Transport">
                         </div>
@@ -141,303 +141,214 @@
                         </div>	
                     </div>
                             </div> 
-                </div>
-            <div class="col-lg-5 p-0">
-            @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-            @if (session('error'))
-                <div class="alert alert-error">
-                    {{ session('error') }}
-                </div>
-            @endif
-            <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
-            <div class="tj-input-form-car" data-bg-image="">
-            <img src="{{ asset('img/disco-.png') }}" alt="Your Image" class="top-left-image">
-            <h4 class="title text-center">Instant Car Shipping Quote!</h4>
-                    <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform  validate-form"
-                        id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
-                        enctype="multipart/form-data">
-                        @csrf
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                        <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block"> Name:</label>
-                                    <input type="text" id="name" name="name" placeholder="Customer Name"
-                                        required />
-                                    <small id="errName" class="err-style"></small>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block"> Phone:</label>
-                                    {{-- <input type="tel" id="phone" name="phone" placeholder=" "
-                                        required="" /> --}}
-                                    <input id="phone" class="form-control ophone" required name="phone"
-                                        type="tel" placeholder="Phone">
-                                    <small id="errPhone" class="err-style"></small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                        <div class="col-md-12">
-                            <div class="input-form">
-                                <label class="d-block"> Email:</label>
-                                <input type="email" id="email" name="email" placeholder="Email address"
-                                    required />
-                                <small id="errEmail" class="err-style"></small>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-lg-5">
+                @include('partials.multi-form')
+                {{-- @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
                     </div>
-                    <div class="row mt-0">
-                        <div class="col-md-6">
-                            <div class="input-form">
-                                <label class="d-block"> Pickup Location:</label>
-                                <input type="text" id="pickup-location" name="origin"
-                                    placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                <small id="errOLoc" class="err-loc"></small>
-                                <ul class="suggestions suggestionsTwo"></ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-form">
-                                <label class="d-block"> Delivery Location:</label>
-                                <input type="text" id="delivery-location" name="destination"
-                                    placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                <small id="errDLoc" class="err-loc"></small>
-                                <ul class="suggestions suggestionsTwo"></ul>
-                            </div>
-                        </div>
+                @endif
+                @if (session('error'))
+                    <div class="alert alert-error">
+                        {{ session('error') }}
                     </div>
-                        <div class="row select-bm">
-                            <div class="col-md-12 text-center">
-                                <h4 class="text-white mb-0">Vehicle Information</h4>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label>Year</label>
-                                    <div class="dropdown">
-                                        <input class="form-control dropdown-toggle year" required type="text" name="year[]" id="year" 
-                                        placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                            <li><a class="dropdown-item">Select Year</a></li>
-                                            @php
-                                                $currentYear = date('Y');
-                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                    echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
-                                                }
-                                            @endphp
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label>Make</label>
-                                    <div class="dropdown">
-                                        <input class="form-control dropdown-toggle make" name="make[]" required type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <ul class="dropdown-menu make-dropdown" style="" aria-labelledby="make">
-                                            <li><a class="dropdown-item" >Select Make</a></li>
-                                            @foreach ($makes as $make)
-                                                <li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                    <label>Model</label>
-                                    <div class="dropdown">
-                                        <input class="form-control dropdown-toggle model-input"
-                                        name="model[]" type="text" id="model" required placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
-                                            <li><a class="dropdown-item" href="#">Select Model</a></li>
-                                            <!-- Options filled by JavaScript -->
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label> Year</label>
-                                    <select class="nice-select vehicle-year" name="year[]" id="year" required>
-                                        <option value="" disabled selected>Select</option>
-                                        @php
-                                            $currentYear = date('Y');
-                                            for ($year = $currentYear; $year >= 1936; $year--) {
-                                                echo "<option value='$year'>$year</option>";
-                                            }
-                                        @endphp
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label>Make</label>
-                                    <select class="nice-select vehicle-make" name="make[]" id="make" required>
-                                        <option value="" disabled selected>Select</option>
-                                        @foreach ($makes as $make)
-                                            <option value="{{ $make->make }}">{{ $make->make }}</option>
+                @endif
+                <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
+                <div class="tj-input-form-car" data-bg-image="">
+                <img src="{{ asset('img/disco-.png') }}" alt="Your Image" class="top-left-image">
+                <h4 class="title text-center">Instant Car Shipping Quote!</h4>
+                        <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform  validate-form"
+                            id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
+                            enctype="multipart/form-data">
+                            @csrf
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
                                         @endforeach
-                                    </select>
+                                    </ul>
+                                </div>
+                            @endif
+                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Customer Name"
+                                            required />
+                                        <small id="errName" class="err-style"></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Phone:</label>
+                                        <input id="phone" class="form-control ophone" required name="phone"
+                                            type="tel" placeholder="Phone">
+                                        <small id="errPhone" class="err-style"></small>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="input-form tj-select vehicle-model-div">
-                                    <label>Model</label>
-                                    <select class="nice-select vehicle-model" name="model[]" id="model" required>
-                                        <option value="">Select</option>
-                                    </select>
-                                </div>
-                            </div> --}}
-                        </div>
-
-                        
-
-
-                        
-                        {{-- <div class="row mt-0">
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block">Pickup Location:</label>
-                                    <input type="text" id="pickup-location" name="origin"
-                                        placeholder="" required="" />
-                                    <small id="errOLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-form">
+                                        <label class="d-block"> Email:</label>
+                                        <input type="email" id="email" name="email" placeholder="Email address"
+                                            required />
+                                        <small id="errEmail" class="err-style"></small>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="input-form">
-                                    <label class="d-block"> Delivery Location:</label>
-                                    <input type="text" id="delivery-location" name="destination"
-                                        placeholder="" required="" />
-                                    <small id="errDLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
+                            <div class="row mt-0">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div> --}}
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <div class="form-group" style="line-height:23px;">
-                                    <label for="trailer_type" class="text-white">Trailer Type</label>
-                                    <select class="form-control" id="trailer_type" name="trailer_type">
-                                        <option value="1" selected>Open Trailer</option>
-                                        <option value="2">Enclosed Trailer</option>
-                                    </select>
+                            <div class="row select-bm">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white mb-0">Vehicle Information</h4>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="condition" class="text-white">Condition</label>
-                                    <select class="form-control" id="condition" name="condition[]">
-                                        <option value="1" selected>Running</option>
-                                        <option value="2">Non Running</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        {{-- <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group" style="line-height:23px;">
-                                    <label for="trailer_type" class="text-white">Select</label>
-                                    <select class="form-control" id="trailer_type" name="trailer_type">
-                                        <option value="Open" selected>Open</option>
-                                        <option value="Enclosed">Enclosed</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="condition" class="text-white">Condition</label>
-                                    <select class="form-control" id="condition" name="condition[]">
-                                        <option value="1" selected>Running</option>
-                                        <option value="2">Non Running</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div> --}}
-                        <a class="add-car-1 mb-2" id="addVehicleBtn">
-                            <i class="fa fa-plus"> Add
-                                Vehicle </i>
-                        </a>
-
-                        <div id="vehicles-container">
-                        </div>
-
-                        
-
-                        <div class="row">
-                            <di class="col-md-6">
-                                <div class="form-group">
-                                    <input class="form-check-input " type="checkbox" id="modification"
-                                        name="modification" value="1" />
-                                    <label class="form-check-label text-white ms-4" for="modification">
-                                        Modified?</label>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Year</label>
+                                        <div class="dropdown">
+                                            <input class="form-control dropdown-toggle year" required type="text" name="year[]" id="year" 
+                                            placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                                <li><a class="dropdown-item">Select Year</a></li>
+                                                @php
+                                                    $currentYear = date('Y');
+                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
+                                                    }
+                                                @endphp
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="input-form div-modify_info" style="display: none;">
-                                    <label class="d-block"> Modification Information:</label>
-                                    <input class="" type="text" id="c" name="modify_info"
-                                        placeholder="Modification Info" />
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <div class="dropdown">
+                                            <input class="form-control dropdown-toggle make" name="make[]" required type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <ul class="dropdown-menu make-dropdown" style="" aria-labelledby="make">
+                                                <li><a class="dropdown-item" >Select Make</a></li>
+                                                @foreach ($makes as $make)
+                                                    <li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                            </di>
-                            <div class="col-md-6">
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                    name="available_at_auction" value="1" />
-                                <label class="form-check-label text-white" for="available_at_auction">Available at
-                                    Auction?</label>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select model-div">
+                                        <label>Model</label>
+                                        <div class="dropdown">
+                                            <input class="form-control dropdown-toggle model-input"
+                                            name="model[]" type="text" id="model" required placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
+                                                <li><a class="dropdown-item" href="#">Select Model</a></li>
+                                                <!-- Options filled by JavaScript -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="input-form div-link mt-3" style="display: none;">
-                                <label class="d-block"> Enter Link:</label>
-                                <input class="form-control" type="url" id="link" name="link"
-                                    placeholder="Enter Link" />
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group" style="line-height:23px;">
+                                        <label for="trailer_type" class="text-white">Trailer Type</label>
+                                        <select class="form-control" id="trailer_type" name="trailer_type">
+                                            <option value="1" selected>Open Trailer</option>
+                                            <option value="2">Enclosed Trailer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class="form-control" id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                                
+                            <a class="add-car-1 mb-2" id="addVehicleBtn">
+                                <i class="fa fa-plus"> Add
+                                    Vehicle </i>
+                            </a>
+                            <div id="vehicles-container">
                             </div>
-                        </div>
-                        <div class="input-form mt-3">
-                            <label class="d-block text-white"> Image:</label>
-                            <input class="form-control image_input" type="file" id="image" name="image[]"
-                                placeholder="Upload File" />
-                        </div>
+                            <div class="row">
+                                <di class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-check-input " type="checkbox" id="modification"
+                                            name="modification" value="1" />
+                                        <label class="form-check-label text-white ms-4" for="modification">
+                                            Modified?</label>
+                                    </div>
 
+                                    <div class="input-form div-modify_info" style="display: none;">
+                                        <label class="d-block"> Modification Information:</label>
+                                        <input class="" type="text" id="c" name="modify_info"
+                                            placeholder="Modification Info" />
+                                    </div>
+                                </di>
+                                <div class="col-md-6">
 
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                        name="available_at_auction" value="1" />
+                                    <label class="form-check-label text-white" for="available_at_auction">Available at
+                                        Auction?</label>
+                                </div>
 
-                        <div class="tj-theme-button text-center mt-3">
-                            <button class="tj-submit-btn" type="submit" value="submit">
-                                Calculate Price <i class="fa-light fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </form>
+                                <div class="input-form div-link mt-3" style="display: none;">
+                                    <label class="d-block"> Enter Link:</label>
+                                    <input class="form-control" type="url" id="link" name="link"
+                                        placeholder="Enter Link" />
+                                </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="input-form mt-3">
+                                <label class="d-block text-white"> Image:</label>
+                                <input class="form-control image_input" type="file" id="image" name="image[]"
+                                    placeholder="Upload File" />
+                            </div>
+                            <div class="tj-theme-button text-center mt-3">
+                                <button class="tj-submit-btn" type="submit" value="submit">
+                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                </div> --}}
             </div>
-            </div>
-            </div>
+        </div>
     </div>
 </section>
 @endsection
 @section('extraScript')
 <script>
-    
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -531,87 +442,87 @@
         });
 
 
-function getModel(year, makeId, vehicleInfo) {
-    $.ajax({
-        url: "{{ route('get.models') }}",
-        method: 'GET',
-        data: {
-            year: year,
-            make: makeId
-        },
-        success: function(response) {
-            var modelDropdown = vehicleInfo.find('.model-dropdown');
-            var modelInput = vehicleInfo.find('.model-input');
-            var modelSelect = vehicleInfo.find('.model'); // Standard <select> element
+        function getModel(year, makeId, vehicleInfo) {
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelDropdown = vehicleInfo.find('.model-dropdown');
+                    var modelInput = vehicleInfo.find('.model-input');
+                    var modelSelect = vehicleInfo.find('.model'); // Standard <select> element
 
-            // Update custom dropdown
-            if (modelDropdown.length && modelInput.length) {
-                modelDropdown.empty();
-                modelDropdown.append('<li><a class="dropdown-item" data-value="">Select Model</a></li>');
+                    // Update custom dropdown
+                    if (modelDropdown.length && modelInput.length) {
+                        modelDropdown.empty();
+                        modelDropdown.append('<li><a class="dropdown-item" data-value="">Select Model</a></li>');
 
-                $.each(response, function(index, model) {
-                    modelDropdown.append('<li><a class="dropdown-item" data-value="' + model + '">' + model + '</a></li>');
-                });
+                        $.each(response, function(index, model) {
+                            modelDropdown.append('<li><a class="dropdown-item" data-value="' + model + '">' + model + '</a></li>');
+                        });
 
-                modelInput.on('focus', function() {
-                    modelSelect.empty(); // Clear the <select> options
-                    modelSelect.append('<option value="">Select Model</option>'); // Add default option
-                    modelDropdown.show();
-                });
+                        modelInput.on('focus', function() {
+                            modelSelect.empty(); // Clear the <select> options
+                            modelSelect.append('<option value="">Select Model</option>'); // Add default option
+                            modelDropdown.show();
+                        });
 
-                modelInput.on('input', function() {
-                    var searchTerm = $(this).val().toLowerCase();
-                    modelDropdown.find('li').each(function() {
-                        var itemText = $(this).text().toLowerCase();
-                        if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
-                            $(this).show();
-                        } else {
-                            $(this).hide();
-                        }
-                    });
-                });
+                        modelInput.on('input', function() {
+                            var searchTerm = $(this).val().toLowerCase();
+                            modelDropdown.find('li').each(function() {
+                                var itemText = $(this).text().toLowerCase();
+                                if (itemText.indexOf(searchTerm) !== -1 || searchTerm === '') {
+                                    $(this).show();
+                                } else {
+                                    $(this).hide();
+                                }
+                            });
+                        });
 
-                modelDropdown.on('click', 'a.dropdown-item', function(e) {
-                    e.preventDefault(); // Prevent default anchor behavior
-                    var selectedText = $(this).text();
-                    var selectedValue = $(this).data('value');
+                        modelDropdown.on('click', 'a.dropdown-item', function(e) {
+                            e.preventDefault(); // Prevent default anchor behavior
+                            var selectedText = $(this).text();
+                            var selectedValue = $(this).data('value');
 
-                    modelInput.val(selectedText); // Set the selected text in modelInput
-                    modelDropdown.hide(); // Hide the custom dropdown
+                            modelInput.val(selectedText); // Set the selected text in modelInput
+                            modelDropdown.hide(); // Hide the custom dropdown
 
-                    modelSelect.empty(); // Clear the <select> options
-                    modelSelect.append('<option value="' + selectedValue + '">' + selectedText + '</option>');
-                    modelSelect.val(selectedValue); // Set the selected value in the select dropdown
-                });
+                            modelSelect.empty(); // Clear the <select> options
+                            modelSelect.append('<option value="' + selectedValue + '">' + selectedText + '</option>');
+                            modelSelect.val(selectedValue); // Set the selected value in the select dropdown
+                        });
 
-                $(document).on('click', function(e) {
-                    if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
-                        modelDropdown.hide();
+                        $(document).on('click', function(e) {
+                            if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
+                                modelDropdown.hide();
+                            }
+                        });
                     }
-                });
-            }
 
-            // Handle standard <select> dropdown
-            if (modelSelect.length) {
-                modelSelect.empty(); // Clear any existing options
-                modelSelect.append('<option value="">Select Model</option>'); // Add default option
+                    // Handle standard <select> dropdown
+                    if (modelSelect.length) {
+                        modelSelect.empty(); // Clear any existing options
+                        modelSelect.append('<option value="">Select Model</option>'); // Add default option
 
-                $.each(response, function(index, model) {
-                    modelSelect.append('<option value="' + model + '">' + model + '</option>');
-                });
+                        $.each(response, function(index, model) {
+                            modelSelect.append('<option value="' + model + '">' + model + '</option>');
+                        });
 
-                modelSelect.on('change', function() {
-                    var selectedModel = $(this).val();
-                    // Optional: Sync custom input when user selects from <select>
-                    modelInput.val(modelSelect.find('option:selected').text());
-                });
-            }
-        },
-        error: function(xhr) {
-            console.log(xhr.responseText);
+                        modelSelect.on('change', function() {
+                            var selectedModel = $(this).val();
+                            // Optional: Sync custom input when user selects from <select>
+                            modelInput.val(modelSelect.find('option:selected').text());
+                        });
+                    }
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
         }
-    });
-}
 
 
 

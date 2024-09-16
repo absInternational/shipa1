@@ -148,30 +148,28 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="footer-widget footer1_col_4 footer-contact-info mt-4">
+                <div class="footer-widget footer1_col_4 footer-contact-info mt-4">
                     <div class="footer-title">
                         <h5 class="title">Review & Rating</h5>
                     </div>
-                    <div class="widget-contact">
+                    <div class="widget-contact d-flex"style=" position: relative; right: 19px;">
                         <div class="contact-list">
-                             <!-- Google Reviews Icon -->
-                            <a href="https://www.google.com/search?q=your+business" target="_blank" title="Google Reviews">
-                                <i class="fab fa-google"></i>
+                            <a href="https://www.google.com/search?q=your+business" target="_blank" title="Google Reviews"> 
+                                <img class="" src="http://127.0.0.1:8000/frontend/images/project/test-BBB (1).png" alt="Image" style="width: 191px;">
                             </a>
-                        
-                            <!-- Trustpilot Icon -->
-                            <a href="https://www.trustpilot.com/review/your-business" target="_blank" title="Trustpilot">
-                                <img src="" alt="">
-                                <i class="fab fa-trustpilot"></i>
-                            </a>
-                        
-                            <!-- BBB Icon -->
-                            <a href="https://www.bbb.org/us/your-business" target="_blank" title="BBB">
-                                <i class="fas fa-badge-check"></i>
+                        </div>
+                        <div class="contact-list">
+                            <a href="https://www.trustpilot.com/review/your-business" target="_blank" title="Trustpilot"> 
+                                <img class="" src="http://127.0.0.1:8000/frontend/images/project/test-BBB (2).png"
+                                 alt="Image" style=" position: relative; width: 102px; bottom: 4px;">
+                                </a>
+                                 <a href="https://www.trustpilot.com/review/your-business" target="_blank" title="Trustpilot">
+                                <img class="" src="http://127.0.0.1:8000/frontend/images/project/test-BBB (3).png" 
+                                alt="Image" style="height: 100px;width: 100px;position: relative;bottom: 58px;">
                             </a>
                         </div>
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div>
     </div>

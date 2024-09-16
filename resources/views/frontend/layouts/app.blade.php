@@ -71,8 +71,10 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}" />
     <!-- Style css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}" />
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend/css/responsive.css') }}" />
 
     {{-- csrf --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
