@@ -12,7 +12,7 @@
     }
 </style>
 <!--========== breadcrumb Start ==============-->
-<section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
+{{-- <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -33,316 +33,249 @@
             </div>
         </div>
     </div>
+</section> --}}
+<section class="tj-choose-us-section-service-Auto-Transport">
+    <div class="container mt-4">
+        <div class="row mt-4">
+
+            <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="choose-us-content-1">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape2">Specialized Service</span>
+                        <h2 class="title">Auctions Auto Transport</h2>
+                        <p class="desc-2 text-white">
+                            We deliver quality, with prosperity. Because your Shipping needs, our solution.
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+            @endif
+            @if (session('error'))
+            <div class="alert alert-error">
+                {{ session('error') }}
+            </div>
+            @endif
+            <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
+            @include('partials.multi-form')
+                
+            </div>
+
+        </div>
+    </div>
 </section>
-<section class="tj-blog-standard">
+@include('partials.reveiw-small-detail') 
+<section class="tj-blog-standard pt-2">
     <div class="container">
         <div class="row">
-            <div class="col-lg-7">
-                        <div class="image-container">
-                            <img class="img-fluid" src="https://www.shipa1.com/img/banner-5-800x400-landing.webp" loading="lazy" alt="Auction Car Transport">
-                        </div>
-                            <br>
-                <div class="text-container text-left">
-                    <h3>We deliver quality, with prosperity. Because your Shipping needs, our solution.</h3>
-                    <p>You can be an auction dealer looking for a car shipping company to ship vehicles to other states to your clients, or a customer looking for an auto mover to transport automobile to your home on another state. Ship-A1 provides auction vehicle shipping services to auction dealers and direct customers to make transportation for vehicles easy and affordable. We ship automobiles for companies like Copart, iaai, manheim, auction direct usa and etc.</p> 
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        {{-- <span class="sub-title active-shape">Seamless Boat Transport</span> --}}
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">What are Auto Auctions?</h3>
+                        <p class="desc">Ever heard of thrifting? Auctions are similar to that, basically at auctions all types of dealers and customers come to either purchase or sell out their vehicles in exceptional deals and rare models. Consider it a dynamic way of doing business, the best part is this dealing can be done both virtually and physically. Auto Auctions can handle a massive amount of all sorts of vehicles like motorcycles, cars,  golf carts, ATV, UTV pickup trucks, and so on.</p>
+                        <br>
+                        <p>If you’re confused about which Auto Auction to choose, below is a breakdown of the best auto auctions that cater to the needs of its customers:</p>
+                        
+                    </div>
                     
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                <div class="image-box">
+                    <img class="rounded" src="{{ asset('frontend/images/project/auto-auction.webp') }}" alt="Image">
+                </div>
+                <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
+                </div>
+            </div>
+        </div>
+            {{-- <div class="row">
+            <div class="col-lg-12">
+                <br>
+                <div class="text-container text-left">
+                    
+                    <p>On any regular and standard auction day, it isn’t unfamiliar or bizarre for hundreds and thousands of vehicles to get sold or purchased. Multiple good ratings and high-profile auctions monitor the purchasing and selling of 1000 vehicles in a single day, depending on the pace and high volume of transactions. For a company to run this well there should be a strong team and a reliable and efficient system. This is when Ship A1 comes into the picture, we work nationwide, providing transportation solutions that ensure every vehicle reaches its destination safe and sound.</p>
                     <br>
-                    <p>Many people use a shipping company to transport their vehicles from one place to another, but none quite so much as car dealerships. There are hundreds of car auction dealers across the United States, and some like Copart and auction direct USA host auctions across the United States. If you are shipping to or from such a sale, your best option would be to find a car shipping company that provides auction vehicle auto transport services. </p>
+                    <p>When it comes to heavy equipment auctions, the scale and complexity of transportation are even more pronounced. Here are the key players in the heavy equipment auction space:</p>
                     <br>
-                    <p>The Internet has played a significant role in benefitting auction car shipping companies, with the majority of customers purchasing their next car from online auto auctions, and shipping their automobile home instead of going out and driving it home. This has led to the rise of the auctioned vehicle transport industry, which plays a crucial role in the survival of the auto shipping industry. Ship-A1 is an automobile shipping business, specializing in all range of transport like cars, excavators, trucks, SUVs, and motorcycles to anywhere across the United States. We have pledged to provide all-in-one auto transport solutions to all its customers and seek your trust in return for our services.</p>
+                    <h5>RICHTEBROS:</h5>
+                    <p>Dealing especially in heavy equipment and specializing in the efficient delivery of RICHTEBROS auctions requires precision and reliability to handle large machinery and equipment efficiently.</p>
                     <br>
-                    <p>If you work for a vehicle dealership, or if you own one, then you know the importance of reliable auto transportation services to facilitate the shipment of individual automobile shipments from auction to consumers. There are a few things that you need to watch out for when getting the automobile to your customer, which includes.</p>
+                    <h5>Iron Planet:</h5>
+                    <p>Specifically known for its online presence of heavy equipment auctions, Iron Planet specializes in and facilitates the selling of machinery. The transporting logistics of heavy equipment demand effective and efficient services to ensure the safe and timely shipping.</p>
                     <br>
-                    <h5>Price:</h5>
-                    <p>When preparing to ship a vehicle for the customer, do not look for the company with an affordable price point. But look for the company which can get the job done without ultimately bankrupting you. You do not need to break the bank to ship a vehicle, you can get a necessary shipping service fit for an automobile at an affordable price.</p>
+                    <h5>Machinery Trader:</h5>
+                    <p>This auction majorly focuses on the auction of heavy equipment and machinery, involving large and cumbersome items, as well as necessitating dependable transportation solutions to manage logistics.</p>
                     <br>
-                    <h3>Quality Shipping Service:</h3>
-                    <p>As previously mentioned, auto movers must get the vehicle to the destination on time, intact, and without any legal incidents every time. This might seem like common sense to you, but some fail at it, and these are not the type of companies you should be hiring. Experienced shipping companies boast about their services because they have the muscle to live up to their words.</p>
+                    <h5>Proxi-bid:</h5>
+                    <p>Offering a massive platform for the auction of multiple heavy equipment types and a wide range of machinery equipment. This auction provides a user-friendly interface for both buyers and sellers.</p>
                     <br>
-                    <h5>Insurance:</h5>
-                    <p>According to federal law, all shipping companies should carry a valid insurance certificate. When speaking with an auto shipping representative, make sure that you understand the policy. Find out what damage is not covered, such as that which might occur during loading, offloading, and transit. A professional auto shipper like Ship-A1 will ensure that you are relaxed and comfortable with the process.</p>
-                    <br>
-                    <p>The best way to find the best car shipping auction services is to fill out our free online quote form and get multiple quotes to deliver your automobile from Ship-A1 because we are a reputable and reliable auto mover that has specialized in auction car shipping services. You can reach numerous free quotes that you can then differentiate against each other so you can find the best price to deliver your automobile. Even if you do not purchase your car at an auction, you can still get a free shipping quote, and this is a great source to help you find the appropriate auto transport company for your specific needs. </p>
+                    <h3>Why Choose ShipA1?</h3>
+                    <p>For both auto and heavy equipment auctions, ShipA1 is a reliable choice for transportation nationwide. With expertise in handling high volumes of vehicles and equipment, ShipA1 ensures that all items are transported securely and efficiently, meeting the needs of both buyers and sellers. Their comprehensive network and commitment to quality service make ShipA1 a trusted partner for smooth auction transportation.</p>
                     <br>
                     <a href="{{ route('quote.form.combine') }}"><img src="https://www.shipa1.com/img/banner-1-1600-x200-landing.webp" width="100%" loading="lazy" alt="Auction Car Transport"></a>
                     <br>
                     <br>
-                    <p>Many customers tend to score great deals on auto auctions, but moving the automobiles to the consumers can be a challenge. In my cases, vehicles need to be removed from the auction premises right away. If clients wish to deliver their car to their home on another state, you can contact Ship-A1 for auction to consumer car shipping.</p>
+                    <p>Many customers tend to score great deals on auto auctions, but moving the automobiles to the consumers can be a challenge. In many cases, vehicles need to be removed from the auction premises right away. If clients wish to deliver their car to their home in another state, you can contact Ship-A1 for auction-to-consumer car shipping.</p>
                     <br>
-                    <p>If you are selling or purchasing a vehicle through an auction, you must contemplate how the automobile will arrive at its destination. There are two main options available, either you drive the car or hire an auto mover. Choosing to ship your vehicle is the safest option because there are several advantages to hiring a professional company to transport a vehicle to or from the auction house. Down below are listed some benefits:</p>
+                    <p>If you are selling or purchasing a vehicle through an auction, you must contemplate how the automobile will arrive at its destination. There are two main options available: either you drive the car or hire an auto mover. Choosing to ship your vehicle is the safest option because there are several advantages to hiring a professional company to transport a vehicle to or from the auction house. Below are some benefits:</p>
                     
                     <div class="list-wrapper">
-                            <h4 class="list-title">Benefits</h4>
+                        <h4 class="list-title">Benefits</h4>
                         <div class="list-style">
-                            <!-- <ul>
-                                <li> -->
-                                    <div class="list-content">
-                                        <h6>Safer Form of Transport</h6>
-                                        <p>We at Ship-A1 ensure that your automobile arrives in perfect condition, and so does the other shipping companies too. Driving your vehicle across the states will result in the number of miles the car will accumulate, more mileage means wear and tear, which is going to decrease your vehicle market value. With auto transport, you can rest assured that the vehicle will arrive in the condition you bought it in.</p>
-                                    </div>
-                                <!-- </li>
-                                <li> -->
-                                    <div class="list-content">
-                                        <h6>Customize Delivery</h6>
-                                        <p>At Ship-A1, we provide a wide array of services, and you can choose the type of services that best fit your car requirements. We can also ship your inoperable vehicle, and also pick your vehicle directly from auction to your doorstep and save you from spending hours stuck behind the wheel.</p>
-                                    </div>
-                                <!-- </li>
-                                <li> -->
-                                    <div class="list-content">
-                                        <h6>Attractive Rates and Discounts</h6>
-                                        <p>Many transport companies provide special discounts depending on the seasons. This feature is an advantage because it can save you a lot of money and time.</p>
-                                    </div>
-                                <!-- </li>
-                                <li> -->
-                                    <div class="list-content">
-                                        <h6>Save Money</h6>
-                                        <p>Shipping your vehicle is often your least expensive choice once you calculate all the costs. An auto carrier moves several cars at once, not just your vehicle. By Delivering your automobiles, you do not need to pay for any accommodation, food, or gas. By shipping your car, you do not have to take time off from work.</p>
-                                    </div>
-                                <!-- </li>
-                            </ul> -->
-                        </div>	
+                            <div class="list-content">
+                                <h6>Safer Form of Transport</h6>
+                                <p>We at Ship-A1 ensure that your automobile arrives in perfect condition, and so do other shipping companies. Driving your vehicle across the states will result in mileage accumulation, which can decrease your vehicle's market value. With auto transport, you can rest assured that the vehicle will arrive in the condition you bought it in.</p>
+                            </div>
+                            <div class="list-content">
+                                <h6>Customize Delivery</h6>
+                                <p>At Ship-A1, we provide a wide array of services, and you can choose the type of services that best fit your car requirements. We can also ship your inoperable vehicle and pick your vehicle directly from auction to your doorstep, saving you from spending hours stuck behind the wheel.</p>
+                            </div>
+                            <div class="list-content">
+                                <h6>Attractive Rates and Discounts</h6>
+                                <p>Many transport companies provide special discounts depending on the seasons. This feature is an advantage because it can save you a lot of money and time.</p>
+                            </div>
+                            <div class="list-content">
+                                <h6>Save Money</h6>
+                                <p>Shipping your vehicle is often your least expensive choice once you calculate all the costs. An auto carrier moves several cars at once, not just your vehicle. By delivering your automobiles, you do not need to pay for any accommodation, food, or gas. By shipping your car, you do not have to take time off from work.</p>
+                            </div>
+                        </div>    
                     </div>
                     <div class="list-wrapper">
                         <h4 class="list-title">Auction Car Shipping Services</h4>
-                        <p>Due to many variables during the auto transport process, it is recommended to plan in advance. The type of automobile you are shipping is going to decide which method of shipment is optimal for you. Here are some of the shipping services we provide:</p>
+                        <p>Due to many variables during the auto transport process, it is recommended to plan in advance. The type of automobile you are shipping will decide which method of shipment is optimal for you. Here are some of the shipping services we provide:</p>
                         <div class="list-style list-2ndstyle">
-                            <!-- <ul>
-                                <li> -->
-                                    <div class="list-content">
-                                    <h5 class="font-weight-bold">Open Carrier</h5>
-                                    <p>Under open carrier transport, cars are shipped in the free trailer with automobiles being exposed to the atmosphere. But do not let these facts distract you from the affordability and cheap services provided by an open container. They are the most popular mode of transportation, mostly because the vehicles are shipped on a two-level trailer with 7 to 10 automobiles shipped at one time. This makes them cheaper and provides faster services due to their efficiency.</p>
-                                    </div>
-                                <!-- </li>
-                            </ul>
-                            <ul>
-                                <li> -->
-                                    <div class="list-content">
-                                    <h5 class="font-weight-bold">Enclosed Carriers</h5>
-                                    <p>Enclosed carriers are covered to protect the vehicle from dust, road debris, rain, and snow. This service is optimal for antique automobiles, which require special care and experienced crew. This is a premium service that comes with added features like extra vehicle insurance, constant surveillance, and updates. This service will cost you more, but it serves to offer more protection to the car.</p>
-                                    </div>
-                                <!-- </li>
-                            </ul>
-                            <ul>
-                                <li> -->
-                                    <div class="list-content">
-                                    <h5 class="font-weight-bold">Door to Door Transport</h5>
-                                    <p>Under door to door transport delivery, your automobile will be picked right from your door and will be delivered to your exact location. This is the most popular method of car shipping because it is more convenient for both the auto shipping company and the customer. With door to door delivery, you do not need to drive your vehicle to a terminal. You also do not need to pay to have it spend time in a card terminal.</p>
-                                    </div>
-                                <!-- </li>
-                            </ul>
-                            <ul>
-                                <li> -->
-                                    <div class="list-content">
-                                    <h5 class="font-weight-bold">Expedited Shipping</h5>
-                                    <p>The speed of delivery is what matters to the customers the most. Ship A1 wants your vehicle be delivered within the given time and cannot afford the delay. Under standard shipping, your car would be delivered in more than 4 days, with expedited shipping your automobile would be delivered within four days.</p>
-                                    </div>
-                                <!-- </li>
-                            </ul> -->
-                        </div>	
+                            <div class="list-content">
+                                <h5 class="font-weight-bold">Open Carrier</h5>
+                                <p>Under open carrier transport, cars are shipped in an open trailer with automobiles being exposed to the atmosphere. But do not let these facts distract you from the affordability and cheap services provided by an open carrier. They are the most popular mode of transportation, mostly because the vehicles are shipped on a two-level trailer with 7 to 10 automobiles shipped at one time. This makes them cheaper and provides faster services due to their efficiency.</p>
+                            </div>
+                            <div class="list-content">
+                                <h5 class="font-weight-bold">Enclosed Carriers</h5>
+                                <p>Enclosed carriers are covered to protect the vehicle from dust, road debris, rain, and snow. This service is optimal for antique automobiles, which require special care and experienced crew. This is a premium service that comes with added features like extra vehicle insurance, constant surveillance, and updates. This service will cost you more, but it offers more protection to the car.</p>
+                            </div>
+                            <div class="list-content">
+                                <h5 class="font-weight-bold">Door to Door Transport</h5>
+                                <p>Under door-to-door transport, our team will pick up the automobile at a pre-arranged location and drop it at the final destination. This service is practical for many clients who have busy schedules or cannot pick up or drop off the vehicle themselves. While this option is more convenient, it does cost more. The location of the destination and pickup can also affect the price and time taken for delivery.</p>
+                            </div>
+                            <div class="list-content">
+                                <h5 class="font-weight-bold">Expedited Transport</h5>
+                                <p>Expedited transport is a premium service that prioritizes the automobile to be delivered in less time than standard shipping. Although this service is quick and effective, it will cost you more than other options due to its priority status. For immediate delivery and availability, expedited transport is highly recommended.</p>
+                            </div>
+                        </div>    
                     </div>
-                            </div> 
+                </div>
             </div>
-            <div class="col-lg-5">
-                @include('partials.multi-form')
-                {{-- @if (session('success'))
-                    <div class="alert alert-success">
-                        {{ session('success') }}
+            </div> --}}
+    </div>
+</section>
+<section class="tj-choose-us-section-two-1 pt-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="choose-us-top-content-1">
+                    <div class="tj-section-heading-1">
+                        <!-- <span class="sub-title-1 active-shape2"> Have any ideas in your mind?</span> -->
+                        <h2 class="title-1">Auto Auctions</h2>
                     </div>
-                @endif
-                @if (session('error'))
-                    <div class="alert alert-error">
-                        {{ session('error') }}
-                    </div>
-                @endif
-                <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
-                <div class="tj-input-form-car" data-bg-image="">
-                <img src="{{ asset('img/disco-.png') }}" alt="Your Image" class="top-left-image">
-                <h4 class="title text-center">Instant Car Shipping Quote!</h4>
-                        <form action="{{ route('submit.quote') }}"  method="post" class="rd-mailform  validate-form"
-                            id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
-                            enctype="multipart/form-data">
-                            @csrf
-                            @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Name:</label>
-                                        <input type="text" id="name" name="name" placeholder="Customer Name"
-                                            required />
-                                        <small id="errName" class="err-style"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Phone:</label>
-                                        <input id="phone" class="form-control ophone" required name="phone"
-                                            type="tel" placeholder="Phone">
-                                        <small id="errPhone" class="err-style"></small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="input-form">
-                                        <label class="d-block"> Email:</label>
-                                        <input type="email" id="email" name="email" placeholder="Email address"
-                                            required />
-                                        <small id="errEmail" class="err-style"></small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mt-0">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Pickup Location:</label>
-                                        <input type="text" id="pickup-location" name="origin"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errOLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block"> Delivery Location:</label>
-                                        <input type="text" id="delivery-location" name="destination"
-                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                        <small id="errDLoc" class="err-loc"></small>
-                                        <ul class="suggestions suggestionsTwo"></ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row select-bm">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="text-white mb-0">Vehicle Information</h4>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Year</label>
-                                        <div class="dropdown">
-                                            <input class="form-control dropdown-toggle year" required type="text" name="year[]" id="year" 
-                                            placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                                <li><a class="dropdown-item">Select Year</a></li>
-                                                @php
-                                                    $currentYear = date('Y');
-                                                    for ($year = $currentYear; $year >= 1936; $year--) {
-                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
-                                                    }
-                                                @endphp
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <div class="dropdown">
-                                            <input class="form-control dropdown-toggle make" name="make[]" required type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <ul class="dropdown-menu make-dropdown" style="" aria-labelledby="make">
-                                                <li><a class="dropdown-item" >Select Make</a></li>
-                                                @foreach ($makes as $make)
-                                                    <li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select model-div">
-                                        <label>Model</label>
-                                        <div class="dropdown">
-                                            <input class="form-control dropdown-toggle model-input"
-                                            name="model[]" type="text" id="model" required placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
-                                                <li><a class="dropdown-item" href="#">Select Model</a></li>
-                                                <!-- Options filled by JavaScript -->
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <div class="form-group" style="line-height:23px;">
-                                        <label for="trailer_type" class="text-white">Trailer Type</label>
-                                        <select class="form-control" id="trailer_type" name="trailer_type">
-                                            <option value="1" selected>Open Trailer</option>
-                                            <option value="2">Enclosed Trailer</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition[]">
-                                            <option value="1" selected>Running</option>
-                                            <option value="2">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="add-car-1 mb-2" id="addVehicleBtn">
-                                <i class="fa fa-plus"> Add
-                                    Vehicle </i>
-                            </a>
-                            <div id="vehicles-container">
-                            </div>
-                            <div class="row">
-                                <di class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-check-input " type="checkbox" id="modification"
-                                            name="modification" value="1" />
-                                        <label class="form-check-label text-white ms-4" for="modification">
-                                            Modified?</label>
-                                    </div>
-
-                                    <div class="input-form div-modify_info" style="display: none;">
-                                        <label class="d-block"> Modification Information:</label>
-                                        <input class="" type="text" id="c" name="modify_info"
-                                            placeholder="Modification Info" />
-                                    </div>
-                                </di>
-                                <div class="col-md-6">
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                        name="available_at_auction" value="1" />
-                                    <label class="form-check-label text-white" for="available_at_auction">Available at
-                                        Auction?</label>
-                                </div>
-
-                                <div class="input-form div-link mt-3" style="display: none;">
-                                    <label class="d-block"> Enter Link:</label>
-                                    <input class="form-control" type="url" id="link" name="link"
-                                        placeholder="Enter Link" />
-                                </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="input-form mt-3">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image[]"
-                                    placeholder="Upload File" />
-                            </div>
-                            <div class="tj-theme-button text-center mt-3">
-                                <button class="tj-submit-btn" type="submit" value="submit">
-                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
-                                </button>
-                            </div>
-                        </form>
-                </div> --}}
+                    {{-- <div class="tj-theme-button">
+                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}">
+                            Get Quote <i class="flaticon-right-1"></i>
+                        </a>
+                    </div> --}}
+                </div>
             </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="choose-us-step-item-1">
+                    <div class="choose-step-box-1">
+                        <div class="choose-box-1"></div>
+                        <div class="step-content-1">
+                            <h6 class="title-1">Copart:</h6>
+                        </div>
+                    </div>
+                    <p>
+                        Being one of the leading providers and suppliers of online auto auctions, Copart specializes in selling a wide range of vehicles daily, including salvage vehicles, clean title cars, and various other vehicle models and types. With its extensive inventory and innovative bidding platform, Copart is here to make itself renowned worldwide.
+                    </p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="choose-us-step-item-1">
+                    <div class="choose-step-box-1">
+                        <div class="choose-box-1"></div>
+                        <div class="step-content-1">
+                            <h6 class="title-1">Manheim:</h6>
+                        </div>
+                    </div>
+                    <p>
+                        A global leading auto auction that only offers a variety of vehicles and services but also allows customers
+                        to bid however they want, whether it's online or a physical auction, it's your choice. Manheim provides a 
+                        vast platform full of comprehensive solutions just for your comfort, from cars to motorcycles and plenty
+                         of other vehicles Manheim provides the best vehicles.</p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="choose-us-step-item-1">
+                    <div class="choose-step-box-1">
+                        <div class="choose-box-1"></div>
+                        <div class="step-content-1">
+                            <h6 class="title-1">IAA:</h6>
+                        </div>
+                    </div>
+                    <p>
+                        Insurance Auto Auction short for IAA is also another premium platform for the purchasing and selling of
+                         vehicles that are a total loss, salvage as well as clean title vehicles. With 100% transparency maintained,
+                          they ensure their customers are aware of every vehicle’s situation, model, as well as price.</p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="choose-us-step-item-1">
+                    <div class="choose-step-box-1">
+                        <div class="choose-box-1"></div>
+                        <div class="step-content-1">
+                            <h6 class="title-1">ACV Auction:</h6>
+                        </div>
+                    </div>
+                    <p>
+                        Unlike the rest auctions, ACV only specializes in digital auto auctions, facilitating the purchasing and 
+                        selling of vehicles through its online platform. Manheim’s system efficiency demands robust transportation 
+                        to handle the quick bidding of vehicles.</p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="choose-us-step-item-1">
+                    <div class="choose-step-box-1">
+                        <div class="choose-box-1"></div>
+                        <div class="step-content-1">
+                            <h6 class="title-1">ADESA:</h6>
+                        </div>
+                    </div>
+                    <p>
+                        This auto auction offers its services both digitally and physically, allowing users to bid nationwide 
+                        according to their convenience only. ADESA also has a vast network of vehicles of all kinds while ensuring 
+                        its services meet the standards and comfort of customers.</p>
+                </div>
+            </div>
+           
         </div>
     </div>
 </section>
