@@ -225,16 +225,16 @@
                     <div class="widget-contact d-flex"style=" position: relative; right: 19px;">
                         <div class="contact-list">
                             <a href="https://www.google.com/search?q=your+business" target="_blank" title="Google Reviews"> 
-                                <img class="" src="{{ asset('/frontend/images/project/test-BBB (1).png') }}" alt="Image" style="width: 191px;">
+                                <img class="" src="{{ asset('/public/frontend/images/project/test-BBB (1).png') }}" alt="Image" style="width: 191px;">
                             </a>
                         </div>
                         <div class="contact-list">
                             <a href="https://www.trustpilot.com/review/your-business" target="_blank" title="Trustpilot"> 
-                                <img class="" src="{{ asset('/frontend/images/project/test-BBB (2).png') }}"
+                                <img class="" src="{{ asset('/public/frontend/images/project/test-BBB (2).png') }}"
                                  alt="Image" style=" position: relative; width: 102px; bottom: 4px;">
                                 </a>
                                  <a href="https://www.trustpilot.com/review/your-business" target="_blank" title="Trustpilot">
-                                <img class="" src="{{ asset('/frontend/images/project/test-BBB (3).png') }}" 
+                                <img class="" src="{{ asset('/public/frontend/images/project/test-BBB (3).png') }}" 
                                 alt="Image" style="height: 100px;width: 100px;position: relative;bottom: 58px;">
                             </a>
                         </div>
