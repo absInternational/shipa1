@@ -12,7 +12,8 @@
     .social-media-section h1 {
         /* font-size: 24px; */
         margin-bottom: 20px;
-        color: #fff; /* White text color */
+        color: #fff;
+        /* White text color */
     }
 
     .social-icons {
@@ -23,14 +24,18 @@
     }
 
     .social-icons a {
-        color: #fff; /* White color for icons */
+        color: #fff;
+        /* White color for icons */
         transition: color 0.3s ease, transform 0.3s ease;
-        text-decoration: none; /* Remove underline from links */
+        text-decoration: none;
+        /* Remove underline from links */
     }
 
     .social-icons a:hover {
-        color: #ddd; /* Slightly lighter color on hover */
-        transform: scale(1.1); /* Slight zoom effect on hover */
+        color: #ddd;
+        /* Slightly lighter color on hover */
+        transform: scale(1.1);
+        /* Slight zoom effect on hover */
     }
 
     /* Responsive Design */
@@ -44,7 +49,8 @@
         }
 
         .social-icons a {
-            font-size: 1.5rem; /* Smaller icons on smaller screens */
+            font-size: 1.5rem;
+            /* Smaller icons on smaller screens */
         }
     }
 
@@ -55,7 +61,8 @@
         }
 
         .social-icons a {
-            font-size: 1.2rem; /* Even smaller icons on very small screens */
+            font-size: 1.2rem;
+            /* Even smaller icons on very small screens */
         }
     }
 </style>
@@ -63,8 +70,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
-                <div class="footer-widget footer1_col_1 footer-content-info"
-                    >
+                <div class="footer-widget footer1_col_1 footer-content-info">
                     <a href="{{ route('welcome') }}"> <img src="{{ asset('frontend/images/logo/logo-white-2.png') }}"
                             alt="Logo" /></a>
                     <p>
@@ -97,14 +103,18 @@
                     <div class="col-lg-12">
                         <h4 class="text-white text-center">Follow Us on Social Media</h4>
                         <div class="social-icons">
-                            <a href="https://www.facebook.com/ShipA1/"> <i class="fa-brands fa-facebook-f text-white fa-2x"></i></a>
-                            
+                            <a href="https://www.facebook.com/ShipA1/"> <i
+                                    class="fa-brands fa-facebook-f text-white fa-2x"></i></a>
+
                             <a href="https://www.instagram.com/shipa1_transport/"> <i
-                                class="fa-brands fa-instagram text-white fa-2x"></i></a>
-                          
-                            <a href="https://www.linkedin.com/in/shipa1-transport/"> <i class="fa-brands fa-linkedin-in text-white fa-2x"></i></a>
-                            <a href="https://www.youtube.com/@shipA1392"> <i class="fa-brands fa-youtube text-white fa-2x"></i></a>
-                            <a href="https://wa.me/+14107184031"> <i class="fa-brands fa-whatsapp text-white fa-2x"></i></a>
+                                    class="fa-brands fa-instagram text-white fa-2x"></i></a>
+
+                            <a href="https://www.linkedin.com/in/shipa1-transport/"> <i
+                                    class="fa-brands fa-linkedin-in text-white fa-2x"></i></a>
+                            <a href="https://www.youtube.com/@shipA1392"> <i
+                                    class="fa-brands fa-youtube text-white fa-2x"></i></a>
+                            <a href="https://wa.me/+14107184031"> <i
+                                    class="fa-brands fa-whatsapp text-white fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -117,32 +127,33 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="{{ route('frontend.pages.services.boat-service') }}" >Boat Transport</a>
+                                <a href="{{ route('frontend.pages.services.boat-service') }}">Boat Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.car-service') }}" >Car Transport</a>
+                                <a href="{{ route('frontend.pages.services.car-service') }}">Car Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.dryvan-service') }}" >Dry Van Transport</a>
+                                <a href="{{ route('frontend.pages.services.dryvan-service') }}">Dry Van Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.golf-cart-service') }}" >Golf Cart Transport</a>
+                                <a href="{{ route('frontend.pages.services.golf-cart-service') }}">Golf Cart
+                                    Transport</a>
                             </li>
-                            
+
                             <li>
-                                <a href="{{ route('frontend.pages.services.heavy-service') }}" >Heavy Equipment</a>
+                                <a href="{{ route('frontend.pages.services.heavy-service') }}">Heavy Equipment</a>
                             </li>
                             <li style="width: 108%;">
-                                <a href="{{ route('frontend.pages.services.bike-service') }}" >Motorcycle Shipping</a>
+                                <a href="{{ route('frontend.pages.services.bike-service') }}">Motorcycle Shipping</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.reefer-service') }}" >Reefer Transport</a>
+                                <a href="{{ route('frontend.pages.services.reefer-service') }}">Reefer Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('frontend.pages.services.rv-service') }}" >RV Transport</a>
+                                <a href="{{ route('frontend.pages.services.rv-service') }}">RV Transport</a>
                             </li>
                             <li>
-                                <a href="{{ route('services') }}" >View More</a>
+                                <a href="{{ route('services') }}">View More</a>
                             </li>
                         </ul>
                     </div>
@@ -156,37 +167,37 @@
                     <div class="widget-menu">
                         <ul>
                             <li>
-                                <a href="{{ route('aboutUs') }}" >About Us </a>
+                                <a href="{{ route('aboutUs') }}">About Us </a>
                             </li>
                             <li>
-                                <a href="{{ route('blogs') }}" >Blogs</a>
+                                <a href="{{ route('blogs') }}">Blogs</a>
                             </li>
                             <li>
-                                <a href="{{ route('contactUs') }}" >Contact Us</a>
+                                <a href="{{ route('contactUs') }}">Contact Us</a>
                             </li>
                             <!-- <li>
                                 <a href="#">Case Studies</a>
                             </li> -->
-                            
+
 
                             <li>
-                                <a href="{{ route('faq') }}" >FAQ!</a>
+                                <a href="{{ route('faq') }}">FAQ!</a>
                             </li>
                             <li>
-                                <a href="{{ route('order.form') }}" >Order Form</a>
+                                <a href="{{ route('order.form') }}">Order Form</a>
                             </li>
                             <li>
-                                <a href="{{ route('blogs.trailer.truck') }}" >Trailers & Trucks</a>
+                                <a href="{{ route('blogs.trailer.truck') }}">Trailers & Trucks</a>
                             </li>
                             <li>
-                                <a href="{{ route('order.tracking') }}" >Track Order </a>
+                                <a href="{{ route('order.tracking') }}">Track Order </a>
                             </li>
 
                             <li>
-                                <a href="{{ route('termsAndConditions') }}" >Terms & Conditions</a>
+                                <a href="{{ route('termsAndConditions') }}">Terms & Conditions</a>
                             </li>
                             <li>
-                                <a href="{{ route('privacyPolicy') }}" >Privacy Policy</a>
+                                <a href="{{ route('privacyPolicy') }}">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>
@@ -202,8 +213,8 @@
                             <ul class="list-gap">
 
                                 <li><i class="flaticon-placeholder"></i><a
-                                        href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu"
-                                        > 201 International Cir STE 230, Hunt Valley, MD 21030-1344</a>
+                                        href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu">
+                                        201 International Cir STE 230, Hunt Valley, MD 21030-1344</a>
                                 </li>
 
                                 <li>
@@ -224,18 +235,22 @@
                     </div>
                     <div class="widget-contact d-flex"style=" position: relative; right: 19px;">
                         <div class="contact-list">
-                            <a href="https://www.google.com/search?q=your+business" target="_blank" title="Google Reviews"> 
-                                <img class="" src="{{ asset('/public/frontend/images/project/test-BBB (1).png') }}" alt="Image" style="width: 191px;">
+                            <a href="https://www.bbb.org/" target="_blank" title="Google Reviews">
+                                <img class=""
+                                    src="{{ asset('/public/frontend/images/project/test-BBB (1).png') }}"
+                                    alt="Image" style="width: 191px;">
                             </a>
                         </div>
                         <div class="contact-list">
-                            <a href="https://www.trustpilot.com/review/your-business" target="_blank" title="Trustpilot"> 
-                                <img class="" src="{{ asset('/public/frontend/images/project/test-BBB (2).png') }}"
-                                 alt="Image" style=" position: relative; width: 102px; bottom: 4px;">
-                                </a>
-                                 <a href="https://www.trustpilot.com/review/your-business" target="_blank" title="Trustpilot">
-                                <img class="" src="{{ asset('/public/frontend/images/project/test-BBB (3).png') }}" 
-                                alt="Image" style="height: 100px;width: 100px;position: relative;bottom: 58px;">
+                            <a href="https://www.google.com/search?q=shipa1.com" target="_blank" title="Trustpilot">
+                                <img class=""
+                                    src="{{ asset('/public/frontend/images/project/test-BBB (2).png') }}"
+                                    alt="Image" style=" position: relative; width: 102px; bottom: 4px;">
+                            </a>
+                            <a href="https://www.trustpilot.com/review/shipa1.com" target="_blank" title="Trustpilot">
+                                <img class=""
+                                    src="{{ asset('/public/frontend/images/project/test-BBB (3).png') }}"
+                                    alt="Image" style="height: 100px;width: 100px;position: relative;bottom: 58px;">
                             </a>
                         </div>
                     </div>
