@@ -19,7 +19,7 @@
                             <input type="email" id="email_newsletter" name="email" placeholder="Email Address" required />
                         </div>
                         <div class="tj-theme-button">
-                            <button class="tj-submit-btn" type="submit">Submit Now <i
+                            <button class="tj-submit-btn previous" type="submit">Submit Now <i
                                     class="fa-light fa-arrow-right"></i></button>
                         </div>
                     </form>

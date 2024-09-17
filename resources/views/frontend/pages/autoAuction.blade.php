@@ -10,6 +10,101 @@
     width: 100px;
     height: 100px; 
     }
+    .why-choose-us-slider {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .section-description {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .slider {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        min-width: 33.333%;
+        box-sizing: border-box;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .slide-icon {
+        margin-bottom: 20px;
+    }
+
+    .slide-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .slide-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .slide-text {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    .slider-button {
+        position: absolute;
+        top: 50%;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transform: translateY(-50%);
+        z-index: 1000;
+    }
+
+    .prev-button {
+        left: 10px;
+    }
+
+    .next-button {
+        right: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .slide-icon img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .slide-icon img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
 </style>
 <!--========== breadcrumb Start ==============-->
 {{-- <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -279,8 +374,98 @@
         </div>
     </div>
 </section>
+<section class="why-choose-us-slider">
+    <div class="container">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <p class="section-description">Discover the benefits of choosing ShipA1 through our interactive slider.</p>
+        <div class="slider">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <div class="slide-icon">
+                        <img src="path/to/your/icon1.png" alt="Global Reach">
+                    </div>
+                    <div class="slide-content">
+                        <h3 class="slide-title">Global Reach</h3>
+                        <p class="slide-text">We offer shipping services to numerous international destinations, ensuring your vehicle reaches its destination safely and efficiently.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-icon">
+                        <img src="path/to/your/icon2.png" alt="Reliable Service">
+                    </div>
+                    <div class="slide-content">
+                        <h3 class="slide-title">Reliable Service</h3>
+                        <p class="slide-text">Our team ensures your shipment is handled with the utmost care, providing reliable and punctual services.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-icon">
+                        <img src="path/to/your/icon3.png" alt="Customer Support">
+                    </div>
+                    <div class="slide-content">
+                        <h3 class="slide-title">Customer Support</h3>
+                        <p class="slide-text">Exceptional customer support is our priority, guiding you through the shipping process with ease.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-icon">
+                        <img src="path/to/your/icon4.png" alt="Secure Shipping">
+                    </div>
+                    <div class="slide-content">
+                        <h3 class="slide-title">Secure Shipping</h3>
+                        <p class="slide-text">We prioritize the safety of your vehicle with secure shipping practices and tracking throughout the journey.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-icon">
+                        <img src="path/to/your/icon5.png" alt="Affordable Rates">
+                    </div>
+                    <div class="slide-content">
+                        <h3 class="slide-title">Affordable Rates</h3>
+                        <p class="slide-text">Enjoy competitive rates and transparent pricing with no hidden fees for all your shipping needs.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-button prev-button">&lt;</button>
+            <button class="slider-button next-button">&gt;</button>
+        </div>
+    </div>
+</section>
+
+
 @endsection
 @section('extraScript')
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelector('.slider-wrapper');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    let index = 0;
+    const totalSlides = document.querySelectorAll('.slide').length;
+    const slidesToShow = 3; // Number of slides to show at once
+
+    function updateSlider() {
+        const offset = -index * (100 / slidesToShow);
+        slides.style.transform = `translateX(${offset}%)`;
+    }
+
+    nextButton.addEventListener('click', function() {
+        index = (index + 1) % (totalSlides - slidesToShow + 1);
+        updateSlider();
+    });
+
+    prevButton.addEventListener('click', function() {
+        index = (index - 1 + (totalSlides - slidesToShow + 1)) % (totalSlides - slidesToShow + 1);
+        updateSlider();
+    });
+
+    // Optional: Auto-slide functionality
+    setInterval(function() {
+        nextButton.click();
+    }, 2000); // Change slide every 5 seconds
+});
+
+</script>
 <script>
     $(document).ready(function() {
         function addNewVehicle() {
