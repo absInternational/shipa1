@@ -72,7 +72,7 @@
                     <div class="tab-content mt-3" id="additionalContent"></div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-xl-6 col-lg-6">
+                    {{-- <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn">
                             <button class="tj-submit-btn previous scroll-up-btn-1" id="step2_previous">
                                 Previous <i class="fa-light fa-arrow-right"></i>
@@ -80,6 +80,18 @@
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">
+                        <div class="price__cta-btn float-end">
+                            <button class="tj-submit-btn scroll-up-btn-2" type="button" id="step2_next">
+                                Next <i class="fa-light fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div> --}}
+                    <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
+                        <div class="price__cta-btn">
+                            <button class="tj-submit-btn previous scroll-up-btn-1" id="step2_previous">
+                                Previous <i class="fa-light fa-arrow-right"></i>
+                            </button>
+                        </div>
                         <div class="price__cta-btn float-end">
                             <button class="tj-submit-btn scroll-up-btn-2" type="button" id="step2_next">
                                 Next <i class="fa-light fa-arrow-right"></i>
@@ -120,7 +132,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6 col-lg-6">
+                    {{-- <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn">
                             <button class="tj-submit-btn previous scroll-up-btn-3" id="step3_previous">
                                 Previous <i class="fa-light fa-arrow-right"></i>
@@ -134,8 +146,43 @@
                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
+                    </div> --}}
+                    <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
+                        <div class="price__cta-btn">
+                            <button class="tj-submit-btn previous scroll-up-btn-3" id="step3_previous">
+                                Previous <i class="fa-light fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="price__cta-btn float-end">
+                            <button class=" tj-submit-btn " href="" type="submit" id="submit_instant_code"
+                                value="Submit Form">
+                                Calculate Price <i class="fa-light fa-arrow-right"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
+                {{-- <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
+                    <div class="mb-3 mb-md-0">
+                        
+                        <div class="price__cta-btn">
+                            <a href="{{ route('welcome') }}">
+                               <button class="tj-submit-btn previous">
+                                   Back Home<i class="fa-light fa-arrow-right"></i>
+                               </button>
+                               </a>
+                            </div>
+                    </div>
+                    <div>
+                        
+                        <div class="price__cta-btn">
+                            <a href="{{ route('quote.form.combine') }}">
+                          <button class="tj-submit-btn" type="button">
+                              Get New Quote<i class="fa-light fa-arrow-right"></i>
+                          </button>
+                          </a>
+                      </div>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </form>
