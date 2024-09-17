@@ -8996,14 +8996,14 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-footer-area .footer-content-info {
-    background: var(--tj-secondary-color);
     /* padding: 80px 50px 110px; */
+    /* margin-left: -50px; */
+    /* margin-bottom: 0; */
+    background: var(--tj-secondary-color);
     padding: 40px 30px 40px 30px;
     max-width: 385px;
-    /* margin-left: -50px; */
     width: 100%;
     border-radius: 12px;
-    /* margin-bottom: 0; */
 }
 
 .tj-footer-area .footer-content-info .footer-social-icon {
