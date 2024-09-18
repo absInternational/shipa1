@@ -235,14 +235,14 @@
                     </div>
                     <div class="widget-contact d-flex"style=" position: relative; right: 19px;">
                         <div class="contact-list">
-                            <a href="https://www.bbb.org/" target="_blank" title="Google Reviews">
+                            <a href="https://www.bbb.org/us/md/hunt-valley/profile/trucking-transportation-brokers/ship-a1-llc-0011-90287002/customer-reviews" target="_blank" title="Google Reviews">
                                 <img class=""
                                     src="{{ asset('/public/frontend/images/project/test-BBB (1).png') }}"
                                     alt="Image" style="width: 191px;">
                             </a>
                         </div>
                         <div class="contact-list">
-                            <a href="https://www.google.com/search?q=shipa1.com" target="_blank" title="Trustpilot">
+                            <a href="https://www.google.com/search?q=shipa1&rlz=1C1GCEU_enPK1086PK1086&oq=shipa1+&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYPDIGCAMQRRg8MgYIBBBFGDwyBggFEEUYQTIGCAYQRRhBMgYIBxBFGEHSAQg2MzYwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" target="_blank" title="Trustpilot">
                                 <img class=""
                                     src="{{ asset('/public/frontend/images/project/test-BBB (2).png') }}"
                                     alt="Image" style=" position: relative; width: 102px; bottom: 4px;">
