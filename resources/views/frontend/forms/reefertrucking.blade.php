@@ -11,6 +11,7 @@
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
+
         .input-container {
             height: 34px;
             background: white;
@@ -21,6 +22,7 @@
             padding: 8px 0px 8px 0px;
             width: fit-content;
         }
+
         .input-container1 {
             height: 34px;
             background: white;
@@ -31,6 +33,7 @@
             padding: 8px 0px 8px 0px;
             width: fit-content;
         }
+
         .input-field {
             width: 50px;
             padding: 5px;
@@ -38,6 +41,7 @@
             border: none;
             outline: none;
         }
+
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -45,39 +49,48 @@
             border: none;
             outline: none;
         }
+
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
         }
+
         .separators {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
+
         .separators-w {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
+
         .input-container input[type="number"] {
             -moz-appearance: textfield;
         }
+
         .input-container input[type="number"]::-webkit-outer-spin-button,
         .input-container input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
+
         .form-wrap {
             margin-bottom: 10px;
             position: relative;
         }
+
         .form-label-outside {
             color: white;
             display: block;
             margin-bottom: 5px;
         }
+
         .input-container {
             display: flex;
             align-items: center;
         }
+
         .input-container input {
             border: none;
             /* border-bottom: 1px solid #ccc; */
@@ -87,6 +100,7 @@
             text-align: center;
             /* margin-right: 5px; */
         }
+
         .input-container .placeholders {
             /* color:white; */
             position: relative;
@@ -97,6 +111,7 @@
             padding: 0px 8px;
             /* background: white; */
         }
+
         .suggestionsTwo {
             background: #fff;
             font-size: 14px;
@@ -107,16 +122,20 @@
             padding-left: 14px;
             display: none;
         }
+
         .suggestionsTwo li {
             cursor: pointer;
         }
+
         .suggestionsTwo li:hover {
             color: #8fc445;
         }
+
         .image_input {
             padding: 0px !important;
             padding-left: 10px !important;
         }
+
         .select2 {
             color: #38413b;
             opacity: 2;
@@ -124,6 +143,7 @@
             border: 1px solid #318eefc9;
             font-family: inherit;
         }
+
         select {
             width: 100%;
             min-height: 100px;
@@ -217,7 +237,8 @@
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" class="ophone" placeholder="Phone Number" required="" />
+                                        <input type="tel" id="phone" name="phone" class="ophone"
+                                            placeholder="Phone Number" required="" />
                                         <small id="errPhone" class="err-style"></small>
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
@@ -454,7 +475,7 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
-                            <div class="col-md-6">
+                                <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Date:</label>
                                         <input type="date" id="ex_pickup_date" name="ex_pickup_date"
@@ -469,61 +490,73 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="row mt-3">      
-                                            <div class="col-md-6">
-                                                <div class="input-form">
-                                                    <label class="d-block"> Delivery Date:</label>
-                                                    <input type="date" id="ex_delivery_date" name="ex_delivery_date"
-                                                        required="" />
+                            <!-- <div class="row mt-3">
+                                                <div class="col-md-6">
+                                                    <div class="input-form">
+                                                        <label class="d-block"> Delivery Date:</label>
+                                                        <input type="date" id="ex_delivery_date" name="ex_delivery_date"
+                                                            required="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="input-form">
-                                                    <label class="d-block"> Delivery Time:</label>
-                                                    <input type="time" id="ex_delivery_time" name="ex_delivery_time"
-                                                        required="" />
+                                                <div class="col-md-6">
+                                                    <div class="input-form">
+                                                        <label class="d-block"> Delivery Time:</label>
+                                                        <input type="time" id="ex_delivery_time" name="ex_delivery_time"
+                                                            required="" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div> -->
-                            
+                                            </div> -->
+
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input" name="length_ft[]" class="length_ft calculate_freight input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                        <input type="number" id="feet-input" name="length_ft[]"
+                                            class="length_ft calculate_freight input-field" placeholder="" min="0"
+                                            maxlength="3" oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="length_in calculate_freight input-field" name="length_in[]" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                        <input type="number" id="inches-input"
+                                            class="length_in calculate_freight input-field" name="length_in[]"
+                                            placeholder="" min="0" max="11" maxlength="2"
+                                            oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input1" class="width_ft calculate_freight input-field" placeholder="" name="width_ft[]"
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                        <input type="number" id="feet-input1"
+                                            class="width_ft calculate_freight input-field" placeholder=""
+                                            name="width_ft[]" min="0" maxlength="3"
+                                            oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" class="inches-input2 width_in calculate_freight input-field" placeholder="" name="width_in[]"
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                        <input type="number" id="inches-input1"
+                                            class="inches-input2 width_in calculate_freight input-field" placeholder=""
+                                            name="width_in[]" min="0" max="11" maxlength="2"
+                                            oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
-                                        <input type="number" id="feet-input2" class="height_ft calculate_freight input-field" placeholder="" name="height_ft[]"
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
+                                        <input type="number" id="feet-input2"
+                                            class="height_ft calculate_freight input-field" placeholder=""
+                                            name="height_ft[]" min="0" maxlength="3"
+                                            oninput="limitDigits(this, 3)">
                                         <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" class="inches-input2 height_in calculate_freight input-field" placeholder="" name="height_in[]"
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
+                                        <input type="number" id="inches-input2"
+                                            class="inches-input2 height_in calculate_freight input-field" placeholder=""
+                                            name="height_in[]" min="0" max="11" maxlength="2"
+                                            oninput="limitDigits(this, 2)">
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
-                                        <input type="number" id="feet-input" class="weight calculate_freight input-field-1" placeholder="" name="weight[]"
+                                        <input type="number" id="feet-input"
+                                            class="weight calculate_freight input-field-1" placeholder="" name="weight[]"
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
                                     </div>
@@ -564,7 +597,7 @@
                                             accept="image/*" multiple onchange="previewImages(event)">
                                         <div class="image-preview-container" id="imagePreviewContainer"></div>
                                         <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                                placeholder="Upload File" /> -->
+                                                    placeholder="Upload File" /> -->
                                     </div>
                                 </div>
                                 {{-- <div class="col-md-6">
@@ -577,7 +610,7 @@
                                     </div>
                                 </div> --}}
                             </div>
-                            <div class="row select-bm" style="display:none;">
+                            {{-- <div class="row select-bm" style="display:none;">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white">Vehicle Information</h4>
                                 </div>
@@ -626,10 +659,10 @@
                                             placeholder="Enter Model" />
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                            style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                            Vehicle</a> -->
+                                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
+                                                Vehicle</a> -->
                             <div id="vehicles-container" style="display:none;">
                             </div>
                             <div class="tj-theme-button text-center mt-3">
@@ -726,10 +759,10 @@
     <script>
         // var validPickupSuggestions = [];
         // var validDeliverySuggestions = [];
-    
+
         // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
         //     var inputValue = inputField.val();
-    
+
         //     $.ajax({
         //         url: "{{ route('get.zipcodes') }}",
         //         method: "POST",
@@ -740,7 +773,7 @@
         //         success: function(response) {
         //             suggestionsList.empty();
         //             validSuggestions.length = 0;  // Clear previous suggestions
-    
+
         //             $.each(response, function(index, suggestion) {
         //                 var listItem = $("<li>").text(suggestion).click(function() {
         //                     inputField.val(suggestion);
@@ -755,7 +788,7 @@
         //         }
         //     });
         // }
-    
+
         // $("#pickup-location").keyup(function() {
         //     var inputField = $(this);
         //     var suggestionsList = inputField.siblings(".suggestionsTwo");
@@ -765,7 +798,7 @@
         //     }
         //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
         // });
-    
+
         // $("#delivery-location").keyup(function() {
         //     var inputField = $(this);
         //     var suggestionsList = inputField.siblings(".suggestionsTwo");
@@ -775,7 +808,7 @@
         //     }
         //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
         // });
-    
+
         // function validateLocationInput(inputField, validSuggestions, errorField) {
         //     var inputValue = inputField.val();
         //     if (!validSuggestions.includes(inputValue)) {
@@ -786,11 +819,11 @@
         //         return true;
         //     }
         // }
-    
+
         // $("form").submit(function(event) {
         //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
         //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-    
+
         //     if (!isPickupValid || !isDeliveryValid) {
         //         event.preventDefault();  // Prevent form submission if validation fails
         //     }
@@ -845,10 +878,12 @@
                 });
                 return allFilled;
             }
+
             function allSpecificFieldsFilledFunction() {
                 console.log("All specific fields are filled up!");
                 freight_calc();
             }
+
             function freight_calc() {
                 var length_ft = parseFloat($('.length_ft').val());
                 var length_in = parseFloat($('.length_in').val());

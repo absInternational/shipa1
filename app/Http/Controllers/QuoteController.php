@@ -20,7 +20,21 @@ class QuoteController extends Controller
     {
         // dd($request->toArray());
         $data = $request->all();
-        $heading = $this->generateHeading($data);
+        if (isset($data['year']) && is_array($data['year'])) {
+            $heading = $this->generateHeading($data);
+
+            foreach ($data['year'] as $index => $count) {
+                $vehicle_opt = implode('*^', array_fill(0, count($data['year']), $data['vehicle_opt']));
+                $vehicles[] = [
+                    'year' => $data['year'][$index],
+                    'make' => $data['make'][$index],
+                    'model' => $data['model'][$index],
+                    'vehicle_opt' => $vehicle_opt
+                ];
+            }
+        } else {
+            $heading = '';
+        }
         $name = $request->input('name', null);
         $email = $request->input('email', null);
         $phone = $request->input('phone', null);
@@ -28,15 +42,6 @@ class QuoteController extends Controller
         $vehicles = [];
         $vehicle_opt = '';
 
-        foreach ($data['year'] as $index => $count) {
-            $vehicle_opt = implode('*^', array_fill(0, count($data['year']), $data['vehicle_opt']));
-            $vehicles[] = [
-                'year' => $data['year'][$index],
-                'make' => $data['make'][$index],
-                'model' => $data['model'][$index],
-                'vehicle_opt' => $vehicle_opt
-            ];
-        }
         $year = isset($data['year']) && is_array($data['year'])
             ? $this->generateStringFromArray($data['year'])
             : $request->input('year', null);
