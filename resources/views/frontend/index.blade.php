@@ -885,8 +885,9 @@
                     data-bs-parent="#accordionExample" style="">
                     <div class="accordion-body">
                         <ul class="list-gap">
-                            <li><i class="flaticon-placeholder"></i><span> 201 International Cir STE 230, Hunt Valley,
-                                    MD 21030-1344</span></li>
+                            <li><i class="flaticon-placeholder"></i><a
+                                href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu">201 International Cir STE 230, Hunt Valley,
+                                    MD 21030-1344</a></li>
                             <li>
                                 <i class="flaticon-mail"></i><a href="mailto:shawntransport@shipa1.com">
                                     shawntransport@shipa1.com</a>
