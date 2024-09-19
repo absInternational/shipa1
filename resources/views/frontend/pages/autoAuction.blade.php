@@ -36,11 +36,32 @@
     height: 100px; 
     }
     
-    .why-choose-us-slider {
+    /* .why-choose-us-slider {
     padding: 60px 0;
     background-color: #f9f9f9;
     position: relative;
     overflow: hidden;
+    } */
+    .why-choose-us-slider::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+        z-index: 0; /* Ensures it appears on top of the background */
+    }
+
+    .why-choose-us-slider {
+        background: url(https://www.cilt.co.zw/wp-content/uploads/2023/07/istockphoto-1409387561-170667a.webp);
+        padding: 60px 0;
+        background-color: #f9f9f9;
+        position: relative;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1; /* Keeps the background behind the ::before element */
     }
 
     .section-title {
@@ -402,8 +423,12 @@
 </section>
 <section class="why-choose-us-slider">
     <div class="container">
-        <h2 class="section-title">Why Choose Us?</h2>
-        <p class="section-description">Discover the benefits of choosing ShipA1 through our features.</p>
+        <div class="tj-section-heading text-center">
+            <h2 class="title text-white">Why Choose Us?</h2>
+            <span class="sub-title active-shape">Discover the benefits of choosing ShipA1 through our features.</span>
+        </div>
+        {{-- <h2 class="section-title">Why Choose Us?</h2>
+        <p class="section-description">Discover the benefits of choosing ShipA1 through our features.</p> --}}
         <div class="row">
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
@@ -445,7 +470,7 @@
         </div>
     </div>
 </section>
-@include('partials.car-cta-section')
+
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -473,6 +498,7 @@
         </div>
     </div>
 </div>
+@include('partials.car-cta-section')
 <section class="tj-about-section pt-4 mt-4">   
     <div class="container">
         <div class="row">
