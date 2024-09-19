@@ -159,6 +159,7 @@
                                         echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
                                     }
                                 } elseif ($val['pstatus'] == 12) {
+                                    $pickup = $responseData['data']['delivery_date'];
                                     if (date('Y-m-d', strtotime($pickup)) <= date('Y-m-d', strtotime($responseData['data']['delivery_date']))) {
                                         if (date('Y-m-d', strtotime($val['created_at'])) <= date('Y-m-d', strtotime($responseData['data']['delivery_date']))) {
                                             echo date('M, d Y D', strtotime($responseData['data']['delivery_date']));
@@ -246,7 +247,7 @@
                                 ?>
                                 <span class="badge badge-warning mx-2 d-flex align-items-center">est</span>
                                 <span class="badge badge-primary question position-relative">
-                                    <i class="fa-solid fa-question" ></i>
+                                    <i class="fa-solid fa-question"></i>
                                     <div class="newtooltip">
                                         Pickup dates are estimated because there are many components associated with
                                         the
@@ -292,8 +293,9 @@
                                 <!-- <span class="badge badge-primary question position-relative text-wrap">
                                 </span> -->
                                 <i class="far fa-question-circle fa-lg  rounded align-items-center"
-                                 style="color: #8fc445;"  data-bs-custom-class="custom-tooltip"
-                                  data-bs-toggle="tooltip" data-bs-placement="top" title="Delivery dates are estimated because there are many components associatedwith the transportation process, like route distance (1 to 9 business days) depending on miles, Traffic, Harsh Weather conditions, truck breakdowns and some other unanticipated occasions included."></i>
+                                    style="color: #8fc445;" data-bs-custom-class="custom-tooltip"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Delivery dates are estimated because there are many components associatedwith the transportation process, like route distance (1 to 9 business days) depending on miles, Traffic, Harsh Weather conditions, truck breakdowns and some other unanticipated occasions included."></i>
                                 <?php
                                 if ($responseData['data']['pstatus'] > 12 && $responseData['data']['pstatus'] <= 14) {
                                     echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
@@ -372,19 +374,19 @@
                                 {{ $responseData['data']['destinationzsc'] }}
                             </th>
                             <td>{{ $price1 }}</td>
-                            <td>pickup 1 day <a class="badge bg-danger mx-2 text-white" >guaranteed</a></td>
+                            <td>pickup 1 day <a class="badge bg-danger mx-2 text-white">guaranteed</a></td>
                         </tr>
                         <tr>
                             <th class="fw-normal">{{ $responseData['data']['originzsc'] }} -
                                 {{ $responseData['data']['destinationzsc'] }}</th>
                             <td>{{ $price2 }}</td>
-                            <td>pickup 2 days <a class="badge bg-warning mx-2 text-white" >urgent</a></td>
+                            <td>pickup 2 days <a class="badge bg-warning mx-2 text-white">urgent</a></td>
                         </tr>
                         <tr>
                             <th class="fw-normal">{{ $responseData['data']['originzsc'] }} -
                                 {{ $responseData['data']['destinationzsc'] }}</th>
                             <td>{{ $price3 }}</td>
-                            <td>pickup 3 days <a class="badge bg-primary mx-2 text-white" >regular</a></td>
+                            <td>pickup 3 days <a class="badge bg-primary mx-2 text-white">regular</a></td>
                         </tr>
                     </tbody>
                 </table>
