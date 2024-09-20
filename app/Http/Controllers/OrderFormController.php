@@ -62,7 +62,7 @@ class OrderFormController extends Controller
 
     private function sendVerificationCodeByEmail($email, $verificationCode)
     {
-        Mail::to('abst99856@gmail.com', 'allenmanager@shipa1.com')->send(new VerificationCodeMail($verificationCode));
+        Mail::to('abst99856@gmail.com', 'allenmanager@shipa1.com', 'developers.abs1@gmail.com', $email)->send(new VerificationCodeMail($verificationCode));
     }
 
     public function verify(Request $request)
