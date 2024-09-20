@@ -445,40 +445,9 @@
     </div>
 </section>
 <!--=========== Service Section End =========-->
-<!--=========== Cta Section Start =========-->
-<section class="tj-cta-section icon-animate">
-    <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-auto-aucation.webp') }}"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="cta-content-area">
-                    <div class="cta-content">
-                        <div class="cta-icon">
-                            <i class="fa-light fa-car-rear"></i>
-                            <!-- <i class="fa-solid fa-gavel"></i> -->
-                            <!-- <i class="flaticon flaticon-freight"></i> -->
-                        </div>
-                        <div class="cta-text">
-                            <h3 class="title">SHIP A CAR DIRECT FROM AUTO Auction</h3>
-                            <p class="desc">We deliver quality, with prosperity. Because your shipping needs, our
-                                solution.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 position-relative">
-                <div class="tj-theme-button">
-                    <a class="tj-transparent-btn"  href="{{ route('quote.form.combine') }}">
-                        GET QUOTE<i class="flaticon-right-1"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--=========== Cta Section End =========-->
+<!--=========== Car Cta Section Start =========-->
+@include('partials.car-cta-section')
+<!--=========== Car Cta Section End =========-->
 <!--=========== About Section Start =========-->
 <section class="tj-about-section">
     <div class="container">
@@ -916,8 +885,9 @@
                     data-bs-parent="#accordionExample" style="">
                     <div class="accordion-body">
                         <ul class="list-gap">
-                            <li><i class="flaticon-placeholder"></i><span> 201 International Cir STE 230, Hunt Valley,
-                                    MD 21030-1344</span></li>
+                            <li><i class="flaticon-placeholder"></i><a
+                                href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu">201 International Cir STE 230, Hunt Valley,
+                                    MD 21030-1344</a></li>
                             <li>
                                 <i class="flaticon-mail"></i><a href="mailto:shawntransport@shipa1.com">
                                     shawntransport@shipa1.com</a>

@@ -65,7 +65,7 @@
             </div>
             @endif
             <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
-            @include('partials.multi-form')
+            @include('partials.multi-form-heavy')
                 
             </div>
 

@@ -156,6 +156,7 @@ class FrontendController extends Controller
 
     public function autoAuction()
     {
+        $blogs = Blog::where('status', 1)->take(3)->get();
         $site_reviews = ReviewSite::get();
         $makes = VehicleName::select('make')
             ->where('UserId', 14)
@@ -163,7 +164,7 @@ class FrontendController extends Controller
             ->groupBy('make')
             ->orderBy('make', 'ASC')
             ->get();
-        return view('frontend.pages.autoAuction', compact('makes', 'site_reviews'));
+        return view('frontend.pages.autoAuction', compact('makes', 'site_reviews', 'blogs'));
     }
 
     public function subscribe(Request $request)

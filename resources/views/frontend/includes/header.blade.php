@@ -36,28 +36,28 @@
                                 <div class="header-content-right">
                                     <div class="header-social-icon">
                                     <ul class="list-gap social-list">
-  <li>
-    <a href="https://www.facebook.com/shipa1autotransport" > <i class="fa-brands fa-facebook-f"></i></a>
-  </li>
-  <li>
-    <a href="https://www.youtube.com/@shipA1autotransport" > <i class="fa-brands fa-youtube"></i></a>
-  </li>
-  <li>
-    <a href="https://www.linkedin.com/in/shipa1-transport/" > <i class="fa-brands fa-linkedin-in"></i></a>
-  </li>
-  {{-- <li>
-    <a href="https://twitter.com/ShipA1Transport" > <i class="fa-brands fa-twitter"></i></a>
-  </li>
-  <li>
-    <a href="https://www.yelp.com/biz/ship-a1-hunt-valley" > <i class="fa-brands fa-yelp"></i></a>
-  </li> --}}
-  <li>
-    <a href="https://wa.me/+14107184031" > <i class="fa-brands fa-whatsapp"></i></a>
-  </li>
-  <li>
-    <a href="https://www.instagram.com/shipa1_transport/" > <i class="fa-brands fa-instagram"></i></a>
-  </li>
-</ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/shipa1autotransport" > <i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/@shipA1autotransport" > <i class="fa-brands fa-youtube"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/shipa1-transport/" > <i class="fa-brands fa-linkedin-in"></i></a>
+                                        </li>
+                                        {{-- <li>
+                                            <a href="https://twitter.com/ShipA1Transport" > <i class="fa-brands fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.yelp.com/biz/ship-a1-hunt-valley" > <i class="fa-brands fa-yelp"></i></a>
+                                        </li> --}}
+                                        <li>
+                                            <a href="https://wa.me/+14107184031" > <i class="fa-brands fa-whatsapp"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/shipa1_transport/" > <i class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
 
                                     </div>
                                 </div>
@@ -445,25 +445,25 @@
                             <!-- Mainmenu Item End -->
 
                             <div class="header-menu-select d-flex align-items-center justify-content-end">
-                        {{-- <div class="header-language">
-                                    <ul class="languages dropdown">
-                                        <li class="activated"></li>
-                                        <li>
-                                            <ul class="lang_lists">
+                                {{-- <div class="header-language">
+                                            <ul class="languages dropdown">
+                                                <li class="activated"></li>
                                                 <li>
-                                                    <a><img src="{{ asset('frontend/images/icon/flag-1.png')}}"
-                                alt="Icon" /></a>
-                                </li>
-                                <li>
-                                    <a><img src="{{ asset('frontend/images/icon/flag-2.png')}}" alt="Icon" /></a>
-                                </li>
-                                <li class="active">
-                                    <a><img src="{{ asset('frontend/images/icon/flag4.png')}}" alt="Icon" /></a>
-                                </li>
-                                </ul>
-                                </li>
-                                </ul>
-                            </div> --}}
+                                                    <ul class="lang_lists">
+                                                        <li>
+                                                            <a><img src="{{ asset('frontend/images/icon/flag-1.png')}}"
+                                        alt="Icon" /></a>
+                                        </li>
+                                        <li>
+                                            <a><img src="{{ asset('frontend/images/icon/flag-2.png')}}" alt="Icon" /></a>
+                                        </li>
+                                        <li class="active">
+                                            <a><img src="{{ asset('frontend/images/icon/flag4.png')}}" alt="Icon" /></a>
+                                        </li>
+                                        </ul>
+                                        </li>
+                                        </ul>
+                                    </div> --}}
                                 <div class="tj-header-button d-none d-lg-block">
                                     <a class="tj-header-btn" href="{{ route('quote.form.combine') }}" >
                                         Get Quote<i class="flaticon-right-1"></i>

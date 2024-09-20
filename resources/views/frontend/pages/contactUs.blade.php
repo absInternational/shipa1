@@ -6,6 +6,11 @@
     'Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.')
 
 @section('content')
+<style>
+    .is-invalid {
+        border-color: #dc3545;
+    }
+</style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
@@ -75,32 +80,32 @@
                     <h3 class="title">Get in Touch With Us</h3>
                 </div>
                 <div class="tj-animate-form d-flex align-items-center">
-                    <form id="contactForm" class="animate-form" action="{{ route('contact_messages.store') }}"
+                    <form id="contactForm" class="animate-form contactForm" action="{{ route('contact_messages.store') }}"
                         method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="form__div">
-                                    <input type="text" class="form__input" name="first_name" placeholder=" " />
-                                    <label class="form__label">First Name</label>
+                                    <input type="text" class="form__input" name="first_name" placeholder=" " required/>
+                                    <label class="form__label">First Name*</label>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form__div">
-                                    <input type="text" class="form__input" name="last_name" placeholder=" " />
-                                    <label class="form__label">Last Name</label>
+                                    <input type="text" class="form__input" name="last_name" placeholder=" " required/>
+                                    <label class="form__label">Last Name*</label>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form__div">
-                                    <input type="text" class="form__input" name="phone" placeholder=" " />
-                                    <label class="form__label">Phone</label>
+                                    <input type="tel" class="form__input" name="phone" placeholder=" " required/>
+                                    <label class="form__label">Phone*</label>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form__div">
-                                    <input type="email" class="form__input" name="email" placeholder=" " />
-                                    <label class="form__label">Email Address</label>
+                                    <input type="email" class="form__input" name="email" placeholder=" " required/>
+                                    <label class="form__label">Email Address*</label>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
@@ -117,8 +122,8 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="form__div">
-                                    <input type="text" class="form__input textarea" name="message" placeholder=" " />
-                                    <label class="form__label">Message</label>
+                                    <input type="text" class="form__input textarea" name="message" placeholder=" " required/>
+                                    <label class="form__label">Message*</label>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +151,7 @@
 <!--=========== Newsletter Section End =========-->
 @endsection
 @section('extraScript')
-<script>
+{{-- <script>
     $(document).ready(function() {
         $('#submitButton').click(function() {
             var formData = $('#contactForm').serialize();
@@ -175,5 +180,66 @@
             });
         });
     });
+</script> --}}
+<script>
+    $(document).ready(function() {
+        $('#submitButton').click(function(e) {
+            e.preventDefault(); 
+            $('.contactForm .invalid-feedback').remove();
+            var isValid = true;
+            $('.contactForm input, .contactForm textarea').each(function() {
+                var field = $(this);
+                var fieldValue = field.val().trim();
+                if (field.prop('required') && fieldValue === '') {
+                    field.addClass('is-invalid');
+                    isValid = false;
+                    if (!field.next('.invalid-feedback').length) {
+                        field.after('<div class="invalid-feedback">This field is required.</div>');
+                    }
+                } else {
+                    field.removeClass('is-invalid'); 
+                    field.next('.invalid-feedback').remove(); 
+                }
+            });
+            if (isValid) {
+                var formData = $('.contactForm').serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: '{{ route('contact_messages.store') }}',
+                    data: formData,
+                    success: function(response) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Message Sent',
+                            text: response.message
+                        }).then(function() {
+                            $('.contactForm')[0].reset();
+                            $('.contactForm input, .contactForm textarea').removeClass('is-invalid');
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        var response = xhr.responseJSON;
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: response.message
+                        });
+                    }
+                });
+            } else {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Form Validation Error',
+                    text: 'Please fill in all required fields.'
+                });
+            }
+        });
+        $('.contactForm input, .contactForm textarea').on('input', function() {
+            $(this).removeClass('is-invalid');
+            $(this).next('.invalid-feedback').remove(); 
+        });
+    });
 </script>
+
+
 @endsection
