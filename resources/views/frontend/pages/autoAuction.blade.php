@@ -458,7 +458,7 @@
                 <div class="slide text-center">
                     <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
                     <h3 class="slide-title">24/7 Customer Support</h3>
-                    <p class="slide-text">Our priority. For ship AA1 there is no odd time, we are present 24/7 for our customers and provide the best care and support throughout.</p>
+                    <p class="slide-text">Our priority. For Ship A1 there is no odd time, we are present 24/7 for our customers and provide the best care and support throughout.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
