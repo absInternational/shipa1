@@ -54,7 +54,7 @@
     }
 
     .why-choose-us-slider {
-        background: url(https://www.cilt.co.zw/wp-content/uploads/2023/07/istockphoto-1409387561-170667a.webp);
+        background: url('../../img/autoauction banner 2.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
@@ -186,7 +186,8 @@
                         <span class="sub-title active-shape2">Specialized Service</span>
                         <h2 class="title">Auctions Auto Transport</h2>
                         <p class="desc-2 text-white">
-                            We deliver quality, with prosperity. Because your Shipping needs, our solution.
+                            Ship A1 specializes in providing all types of vehicles for auto
+                            auction services tailored to your needs and specifications!
 
                         </p>
                     </div>
@@ -457,7 +458,7 @@
                 <div class="slide text-center">
                     <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
                     <h3 class="slide-title">24/7 Customer Support</h3>
-                    <p class="slide-text">Our priority. For ship a1 there is no odd time, we are present 24/7 for our customers and provide the best care and support throughout.</p>
+                    <p class="slide-text">Our priority. For ship AA1 there is no odd time, we are present 24/7 for our customers and provide the best care and support throughout.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
@@ -498,76 +499,6 @@
         </div>
     </div>
 </div>
-@include('partials.car-cta-section')
-<section class="tj-about-section pt-4 mt-4">   
-    <div class="container">
-        <div class="row">
-            <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
-            Auto Transport Hauling Services</h2>
-            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded-5 p-4 mb-0">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">open transport</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <p class="desc">
-                            This is the usual method we use while shipping cars. The most affordable choice for car transportation
-                            is an open transport, which makes it perfect for individuals looking for a low-cost option. Due of its
-                            price and effectiveness, this method is very popular even if your car faces exposure to the environment
-                            while in transit.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded-5 p-4 mb-0">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Enclosed transport</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <p class="desc">
-                            Enclosed transport service is the ideal option for people who want to provide their cars
-                            additional security. Although a little more expensive, guarantees that your vehicle
-                            is completely protected from outside elements including weather, road debris, and other possible
-                            threats.</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded-5 p-4 mb-0">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Expedited Shipping</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <p class="desc">
-                            Our expedited shipping service provides the quickest route to delivery for the vehicle when
-                            time is of the importance. This service caters to your urgent shipping needs, whether you're
-                            moving on short notice or just need your vehicle delivered as soon as possible. We give your
-                            shipment top priority in order to guarantee the quickest arrival possible, giving you piece 
-                            of mind throughout your shipment.
-                        </p>
-                    </div> 
-                </div>
-            </div>
-            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded-5 p-4 mb-0">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Door to Door Transport</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <p class="desc">
-                            Under door to door transport delivery, your automobile will be picked right from your door and 
-                            will be delivered to your exact location. This is the most popular method of car shipping because 
-                            it is more convenient for both the auto shipping company and the customer. With door to door
-                             delivery, you do not need to drive your vehicle to a terminal. You also do not need to pay to
-                              have it spend time in a card terminal.
-                        </p>
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-@include('partials.cta-section')
 <section class=" mt-4">
     <div class="container why-box">
         <div class="row services">
@@ -612,6 +543,77 @@
         </div>
     </div>
 </section>
+@include('partials.car-cta-section')
+<section class="tj-about-section pt-4 mt-4">   
+    <div class="container">
+        <div class="row">
+            <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
+            Auto Transport Hauling Services</h2>
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Open Carrier</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Under open carrier transport, cars are shipped in the free trailer with automobiles being exposed
+                             to the atmosphere. But do not let these facts distract you from the affordability and cheap services
+                              provided by an open container. They are the most popular mode of transportation, mostly because the 
+                              vehicles are shipped on a two-level trailer with 7 to 10 automobiles shipped at one time. This makes
+                               them cheaper and provides faster services due to their efficiency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Enclosed Carriers</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Enclosed carriers are covered to protect the vehicle from dust, road debris, rain, and snow. This 
+                            service is optimal for antique automobiles, which require special care and experienced crew. This is
+                            a premium service that comes with added features like extra vehicle insurance, constant surveillance,
+                            and updates. This service will cost you more, but it serves to offer more protection to the car.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Door to Door Transport</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            Under door to door transport delivery, your automobile will be picked right from your door and will be
+                            delivered to your exact location. This is the most popular method of car shipping because it is more
+                            convenient for both the auto shipping company and the customer. With door to door delivery, you do
+                            not need to drive your vehicle to a terminal. You also do not need to pay to have it spend time in 
+                            a card terminal.
+                        </p>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one border rounded-5 p-4 mb-0">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">Expedited Shipping</span>
+                        <!-- <h2 class="title">Why Choose Us?</h2> -->
+                        <p class="desc">
+                            The speed of delivery is what matters to the customers the most. Ship A1 wants your vehicle be 
+                            delivered within the given time and cannot afford the delay. Under standard shipping, your car would
+                            be delivered in more than 4 days, with expedited shipping your automobile would be delivered within
+                            four days.
+                        </p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@include('partials.cta-section')
+
 <section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
