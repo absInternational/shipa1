@@ -652,11 +652,12 @@
                     <div class="choose-step-box">
                         <div class="choose-box"></div>
                         <div class="step-content">
-                            <h6 class="title">Shipping Methods:</h6>
+                            <h6 class="title">Competitive Pricing:</h6>
                         </div>
                     </div>
                     <p>
-                    Offering wide range of shipping methods tailored to various needs, including vehicles, heavy equipment, and freight across the US.
+                        At Ship A1 we offer the best services to our customers accompanied by multiple benefits like affordable rates,
+                         we do not let this factor affect the quality of our services. 
                     </p>
                 </div>
             </div>
@@ -665,11 +666,12 @@
                     <div class="choose-step-box">
                         <div class="choose-box"></div>
                         <div class="step-content">
-                            <h6 class="title">Quality Service:</h6>
+                            <h6 class="title">Real-Time Tracking:</h6>
                         </div>
                     </div>
                     <p>
-                    Providing top-notch quality service with a well-equipped and professional team dedicated to meeting customer expectations.
+                        Track your shipping status anytime and anywhere, this enables the customers to secure 
+                        their peace of mind and trust the process. 
                     </p>
                 </div>
             </div>
@@ -678,11 +680,11 @@
                     <div class="choose-step-box">
                         <div class="choose-box"></div>
                         <div class="step-content">
-                            <h6 class="title">Timely Delivery: </h6>
+                            <h6 class="title">100% Insurance:</h6>
                         </div>
                     </div>
                     <p>
-                    Ensuring timely delivery of shipments, emphasizing reliability and efficiency in logistics.
+                        Rest assured! Because our Dry Vans are 100% insured and secured from any unforeseen incidents.
                     </p>
                 </div>
             </div>
@@ -691,11 +693,12 @@
                     <div class="choose-step-box">
                         <div class="choose-box"></div>
                         <div class="step-content">
-                            <h6 class="title">Customer focused Approach: </h6>
+                            <h6 class="title">24/7 Customer Support:</h6>
                         </div>
                     </div>
                     <p>
-                    Focusing on customer satisfaction by catering to their needs and maintaining loyalty through personalized service.
+                        Our expert and professional team ensures our customers are not left unattended, with 24/7 service to diminish customer
+                         concerns we take our job very seriously and our main motive is to gain customer loyalty. 
                     </p>
                 </div>
             </div>
@@ -704,11 +707,12 @@
                     <div class="choose-step-box">
                         <div class="choose-box"></div>
                         <div class="step-content">
-                            <h6 class="title">Trustworthiness & Security:</h6>
+                            <h6 class="title">Door to Door:</h6>
                         </div>
                     </div>
                     <p>
-                    Prioritizing safe and secure transportation, with a commitment to maintaining customer trust and peace of mind.
+                        We handle every step, picking up the vehicle from your location and delivering 
+                        it to your destination saving you time and effort.
                     </p>
                 </div>
             </div>

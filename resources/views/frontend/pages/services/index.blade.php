@@ -1,6 +1,113 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+<style>
+    /* Container Styling */
+    .tj-service-section-four {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Service Item */
+    .service-item-three {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+    
+    .service-item-three:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Overlay Effect */
+    .service-item-three .overlay {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(143 196 69 / 71%);
+        transition: top 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .service-item-three:hover .overlay {
+        top: 0; /* Slides down from the top */
+    }
+    
+    /* Service Image */
+    .service-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .service-item-three:hover .service-image img {
+        transform: scale(1.05);
+    }
+    
+    /* Service Content */
+    .service-content {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .service-content h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    
+    .service-content h4 a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+    
+    /* Animation */
+    [data-sal="slide-up"] {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    [data-sal="slide-up"].sal-animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Smooth Scroll Animation */
+    .tj-service-section-four {
+        scroll-behavior: smooth;
+    }
+    
+    /* Responsive */
+    @media (max-width: 991px) {
+        .tj-section-heading .title {
+            font-size: 28px;
+        }
+        .service-content h4 {
+            font-size: 18px;
+        }
+    }
+    </style>
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -56,8 +163,7 @@
                         @endforeach
                     </div>
                 </div>
-            </section> -->
-
+    </section> -->
     <section class="tj-service-section-four tj-service-page">
         <div class="container">
             <div class="row">
@@ -76,6 +182,41 @@
                             <img src="{{ asset('frontend/images/slider/car-transports.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
+                        {{-- <div class="overlay">
+                            <div class="row">
+                                <div class="col-12 text-dark">The First Stop Platform of Car Shipping Services</div>
+                                <div class="col-12">
+                                    <div class="price__cta-btn">
+                                        <button class=" tj-submit-btn previous" 
+                                        href="{{ route('frontend.pages.services.car-service') }}" type="button">
+                                            Car Shipping Service <i class="fa-light fa-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
+                        <div class="overlay">
+                            <div class="row justify-content-center align-items-center">
+                                <!-- Icon Section -->
+                                <div class="col-12 text-center mb-3">
+                                    <i class="fa fa-car fa-3x text-white"></i> <!-- Add your icon here -->
+                                </div>
+                                
+                                <!-- Text Section -->
+                                <div class="col-12 text-center text-white mb-3">
+                                    <h4 class="overlay-title">The First Stop Platform of Car Shipping Services</h4>
+                                </div>
+                        
+                                <!-- Button Section -->
+                                <div class="col-12 text-center">
+                                    <a href="{{ route('frontend.pages.services.car-service') }}">
+                                        <button class="tj-submit-btn previous">
+                                            Car Shipping Service <i class="fa fa-arrow-left"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="service-content">
                             <h4><a class="title" href="{{ route('frontend.pages.services.car-service') }}">
                                     Car Shipping Service </a></h4>
@@ -88,6 +229,28 @@
                         <div class="service-image">
                             <img src="{{ asset('frontend/images/project/motorcycle-service.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
+                        </div>
+                        <div class="overlay">
+                            <div class="row justify-content-center align-items-center">
+                                <!-- Icon Section -->
+                                <div class="col-12 text-center mb-3">
+                                    <i class="fa fa-motorcycle fa-3x"></i>
+                                </div>
+                                
+                                <!-- Text Section -->
+                                <div class="col-12 text-center text-white mb-3">
+                                    <h4 class="overlay-title">The First Stop Platform of Car Shipping Services</h4>
+                                </div>
+                        
+                                <!-- Button Section -->
+                                <div class="col-12 text-center">
+                                    <a class="fs-5" href="{{ route('frontend.pages.services.bike-service') }}">
+                                        <button class="tj-submit-btn fs-5 previous">
+                                            Motorcycle Service <i class="fa fa-arrow-left"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="service-content">
                             <h4><a class="title" href="{{ route('frontend.pages.services.bike-service') }}">
@@ -334,11 +497,8 @@
                     </div>
                 @endif
                 <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
-                    <div class="tj-input-form-ser" data-bg-image="">
-
-
-
-                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
+                    @include('partials.multi-form')
+                    {{-- <div class="tj-input-form-ser" data-bg-image=""><form action="{{ route('submit.quote') }}" method="post" class="rd-mailform"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data">
                             @csrf
@@ -363,8 +523,6 @@
                                                 <input class="form-control" type="text" id="pickup-location"
                                                     placeholder="Enter City or ZipCode" name="From_ZipCode" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
-                                                <label class="error-message" id="pickup-location-error">This field is
-                                                    required.</label>
                                             </div>
                                         </div>
 
@@ -375,8 +533,6 @@
                                                 <input class="form-control" type="text" id="delivery-location"
                                                     placeholder="Enter City or ZipCode" name="To_ZipCode" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
-                                                <label class="error-message" id="delivery-location-error">This field is
-                                                    required.</label>
                                             </div>
                                         </div>
                                     </div>
@@ -405,8 +561,6 @@
                                             <option value="Motorcycle">Motorcycle</option>
                                             <option value="RV-Transport">RV Transport</option>
                                         </select>
-                                        <label class="error-message" id="tabSelector-error">This field is
-                                            required.</label>
 
                                         <div class="tab-content mt-3" id="additionalContent"></div>
                                     </div>
@@ -438,9 +592,6 @@
                                                 <label class="d-block text-white"> Your Name:</label>
                                                 <input class="form-control" required name="phone" type="tel"
                                                     placeholder="Customer Name">
-                                                <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-                                                <label class="error-message" id="Custo_Name-error">This field is
-                                                    required.</label>
                                             </div>
                                         </div>
 
@@ -449,27 +600,13 @@
                                                 <label class="d-block text-white">Phone:</label>
                                                 <input id="phone" class="form-control" required name="phone"
                                                     type="tel" placeholder="Customer Phone">
-                                                <label class="error-message" id="Custo_Phone-error">This field is
-                                                    required.</label>
                                             </div>
                                         </div>
-                                        {{-- <div class="col-xl-4 col-lg-4">
-                                            <div class="single-input-field">
-                                                <label class="d-block text-white">Phone:</label>
-                                                <input id="phone" class="form-control" required name="phone"
-                                                    type="tel" placeholder="Customer Phone">
-                                                <label class="error-message" id="Custo_Phone-error">This field is
-                                                    required.</label>
-                                            </div>
-                                        </div> --}}
-
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white"> Email Address:</label>
                                                 <input class="form-control" required name="Custo_Email" type="email"
                                                     placeholder="Email address">
-                                                <label class="error-message" id="Custo_Email-error">This field is
-                                                    required.</label>
                                             </div>
                                         </div>
 
@@ -497,7 +634,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

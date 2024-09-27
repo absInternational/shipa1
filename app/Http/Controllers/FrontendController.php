@@ -167,6 +167,19 @@ class FrontendController extends Controller
         return view('frontend.pages.autoAuction', compact('makes', 'site_reviews', 'blogs'));
     }
 
+    public function heavyAuction()
+    {
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        $site_reviews = ReviewSite::get();
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        return view('frontend.pages.heavyAuction', compact('makes', 'site_reviews', 'blogs'));
+    }
+
     public function subscribe(Request $request)
     {
         $request->validate([

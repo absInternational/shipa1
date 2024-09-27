@@ -806,6 +806,7 @@
                         "input": inputValue
                     },
                     success: function(response) {
+                    console.log('responseresponse', response);
                         suggestionsList.empty();
                         inputField.data('selected', false);
                         $.each(response, function(index, suggestion) {

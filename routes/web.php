@@ -74,6 +74,8 @@ Route::get('/nationwide-autotransport', [FrontendController::class, 'nationwideA
 Route::get('/nationwide-autotransport/{slug}', [FrontendController::class, 'getNationWideData'])->name('get.nation.data');
 // Auto Auction
 Route::get('/auctions-car-transport', [FrontendController::class, 'autoAuction'])->name('autoAuction');
+// heavy Auction
+Route::get('/heavy-auction-transport', [FrontendController::class, 'heavyAuction'])->name('heavyAuction');
 // news letter add
 Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('newsletter.subscribe');
 // contact msgs add

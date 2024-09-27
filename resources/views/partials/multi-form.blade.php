@@ -88,7 +88,7 @@
                     </div> --}}
                     <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
                         <div class="price__cta-btn">
-                            <button class="tj-submit-btn previous scroll-up-btn-1" id="step2_previous">
+                            <button class="tj-submit-btn previous scroll-up-btn-1" type="button" id="step2_previous">
                                 Previous <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
@@ -149,12 +149,12 @@
                     </div> --}}
                     <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
                         <div class="price__cta-btn">
-                            <button class="tj-submit-btn previous scroll-up-btn-3" id="step3_previous">
+                            <button class="tj-submit-btn previous scroll-up-btn-3" type="button" id="step3_previous">
                                 Previous <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
                         <div class="price__cta-btn float-end">
-                            <button class=" tj-submit-btn " href="" type="submit" id="submit_instant_code"
+                            <button class=" tj-submit-btn" type="submit" id="submit_instant_code"
                                 value="Submit Form">
                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
                             </button>
