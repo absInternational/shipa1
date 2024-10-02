@@ -1,8 +1,6 @@
 @extends('frontend.layouts.app')
-{{-- @section('title', 'Motorcycle Shipping Service - Free Shipping Quotes and Calculator | ShipA1') --}}
-@section('title', 'ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA')
-{{-- @section('meta_description', 'Best Motorcycle shipping services in the USA, ship your vehicle countrywide or international in reasonable prices, Get Free shipping quotes - ShipA1.') --}}
-@section('meta_description', 'Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.')
+@section('title', 'Bike & Motorcycle Shipping Services in USA with Fast Delivery')
+@section('meta_description', 'Trust our professional motorcycle shipping services for secure and timely delivery. Get your bike transported with care and precision all over the USA.')
 @section('content')
 <style>
     .full-width {

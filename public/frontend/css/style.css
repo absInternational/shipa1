@@ -5529,6 +5529,30 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 35px;
     border-radius: 3px;
 }
+
+/* .tj-input-form-filler {
+    box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
+    background: #062e39d4;
+    border-radius: 25px;
+    padding: 30px;
+    position: relative;
+    z-index: 3;
+    height: auto; 
+}
+
+.tj-input-form-filler .title {
+    color: var(--tj-white-color);
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.tj-input-form-filler .text {
+    color: var(--tj-white-color);
+    font-size: 15px;
+    font-weight: 500;
+} */
+
 /* .select2-container--default.select2-container--focus .select2-selection--multiple {
     border: solid white 1px;
     outline: 0;

@@ -34,7 +34,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(143 196 69 / 71%);
+        background-color: rgb(6 46 57 / 59%);
         transition: top 0.3s ease-in-out;
         display: flex;
         justify-content: center;
@@ -210,7 +210,7 @@
                                 <!-- Button Section -->
                                 <div class="col-12 text-center">
                                     <a href="{{ route('frontend.pages.services.car-service') }}">
-                                        <button class="tj-submit-btn previous">
+                                        <button class="tj-submit-btn">
                                             Car Shipping Service <i class="fa fa-arrow-left"></i>
                                         </button>
                                     </a>
@@ -239,13 +239,13 @@
                                 
                                 <!-- Text Section -->
                                 <div class="col-12 text-center text-white mb-3">
-                                    <h4 class="overlay-title">The First Stop Platform of Car Shipping Services</h4>
+                                    <h4 class="overlay-title">Cost-Effective Way of Motorcycle Shipping</h4>
                                 </div>
                         
                                 <!-- Button Section -->
                                 <div class="col-12 text-center">
                                     <a class="fs-5" href="{{ route('frontend.pages.services.bike-service') }}">
-                                        <button class="tj-submit-btn fs-5 previous">
+                                        <button class="tj-submit-btn fs-5">
                                             Motorcycle Service <i class="fa fa-arrow-left"></i>
                                         </button>
                                     </a>

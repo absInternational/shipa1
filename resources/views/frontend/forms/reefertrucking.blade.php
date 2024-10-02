@@ -1,8 +1,7 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on Reefer shipping | ShipA1')
+@section('title', 'Reefer Trucking Get Quote')
 @section('meta_description',
-    'Get an instant reefer shipping quote with ease! Trust our reliable service for nationwide
-    coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently')
+    'Discover reliable reefer trucking services! Get a quick quote today and ensure your perishable goods are transported safely and efficiently.')
 @section('content')
     <style>
         .lab-cos {

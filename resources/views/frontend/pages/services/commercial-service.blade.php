@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Commercial Truck Transport Service - Truck Delivery | ShipA1')
-@section('meta_description', 'Commercial truck transport services in all over the USA, ship your vehicle easiest way with one-click solution, Truck shipping from one state to another.')
+@section('title', 'State to State Commercial Truck Transport Services in USA')
+@section('meta_description', 'Experience hassle free commercial truck transport with our trusted services in USA. We provide efficient and cost-effective solutions for truck transportation.')
 @section('content')
 <Style>
     .title-2 {

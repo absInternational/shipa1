@@ -1,9 +1,60 @@
 @extends('frontend.layouts.app')
-@section('title', 'Car Shipping Service - Vehicle Delivery With Professionals | ShipA1')
-@section('meta_description', 'Get car shipping service in the USA, scratchless vehicle transport services along with
-huge discount offers and free shipping quotes nationwide.')
+@section('title', 'Best Car Shipping Services in USA with Fast Delivery')
+@section('meta_description', 'Professional car shipping services in USA guarantee that your vehicle is delivered securely on time at affordable prices and quality services.')
 @section('content')
 <style>
+    /* General styling for the hover container */
+    .custom-hover-flip {
+        position: relative;
+        display: inline-block;
+        perspective: 1000px; /* Creates the 3D space for the flip */
+    }
+
+    .custom-hover-flip img {
+        width: 100%;
+        display: block;
+        transition: transform 0.6s ease; /* Smooth flip animation */
+        transform-style: preserve-3d; /* Maintain 3D space for the flip */
+    }
+
+    .custom-hover-flip:hover img {
+        transform: rotateY(180deg); /* The flip effect on hover */
+    }
+
+    /* Overlay styling */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Hide the overlay initially */
+        transition: opacity 0.3s ease; /* Fade-in effect for the overlay */
+        border-radius: 30px;
+    }
+
+    .custom-hover-flip:hover .overlay {
+        opacity: 1; /* Show the overlay on hover */
+    }
+
+    /* Styling for the button */
+    .flip-button {
+        background-color: #ff6347; /* Adjust the background color to your preference */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: opacity 0.3s ease;
+        z-index: 1; /* Ensure the button is above the overlay */
+        opacity: 1; /* Make button visible */
+    }
+
     .full-width {
         width: 100%;
     }
@@ -502,9 +553,16 @@ huge discount offers and free shipping quotes nationwide.')
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded">
+                <div class="mt-4 rounded custom-hover-flip">
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/car-transport.webp') }}" alt="Image">
+                        <div class="overlay"> <!-- Added overlay div -->
+                            <a href="{{ route('form.vehicle.car') }}">
+                                <button class="tj-submit-btn">
+                                    Get Quote <i class="fa fa-arrow-left"></i>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                     <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 

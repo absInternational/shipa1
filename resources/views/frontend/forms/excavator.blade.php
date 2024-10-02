@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on Excavator Equip. | ShipA1')
-@section('meta_description', 'Need to transport heavy equipment? Get an instant shipping quote now! Our reliable service provides nationwide coverage, transparent pricing, and secure transportation for your heavy machinery. Plan your shipment efficiently with our instant quote tool.')
+@section('title', 'Excavator Shipping Get Quote')
+@section('meta_description', 'Discover hassle-free excavator shipping services! Get a quick quote today and ensure your heavy equipment is transported safely and efficiently.')
 @section('content')
 <style>
     .lab-cos{

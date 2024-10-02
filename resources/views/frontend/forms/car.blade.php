@@ -1,10 +1,7 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Car Shipping Quote | ShipA1')
-@section('meta_description',
-    'Experience seamless car shipping with Shipa Car Transport. Get an instant quote,
-    nationwide coverage, and transparent pricing. Trust us for swift and secure vehicle transportation.')
+@section('title', 'Car Transport Get Quote')
+@section('meta_description', 'Get the best car transport quotes! Request yours today for fast, easy service tailored to your needs. Instant car shipping quotes available feel free to contact.')
 @section('content')
-
     <style>
         /* Error styling */
         .error {

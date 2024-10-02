@@ -1,8 +1,7 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on RORO | ShipA1')
+@section('title', 'RORO Shipping Get Quote')
 @section('meta_description',
-    'Get an instant RORO shipping quote with ease! Trust our reliable service for nationwide
-    coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
+    'Need RORO shipping? Get an instant quote now! We offer efficient and affordable solutions for transporting your vehicles safely and securely.')
 @section('content')
     <style>
         .tj-testimonial-section {

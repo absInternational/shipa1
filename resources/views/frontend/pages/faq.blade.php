@@ -1,4 +1,7 @@
 @extends('frontend.layouts.app')
+@section('title', 'FAQs')
+@section('meta_description',
+'Explore our FAQs to get quick answers and valuable information on common inquiries. Your go to resource for clarity and support is just a click away.')
 @section('content')
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/slider/FAQ.webp') }}">

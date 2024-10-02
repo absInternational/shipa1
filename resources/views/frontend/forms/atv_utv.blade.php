@@ -1,24 +1,8 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on ATV/UTV | ShipA1')
-
+@section('title', 'Get Quote for ATV UTV in The USA')
 @section('meta_description',
-    'Get an instant atv-utv shipping quote with ease! Trust our reliable service for
-    nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
-
-
+    'Get Instant ATV/UTV Shipping Quote ! Request yours today for fast pricing and easy service tailored to your needs.Trust us for nationwide transportation.')
 @section('content')
-    {{-- <style>
-    .custom-select-style{
-        background: #f0f2f7;
-        width: 100%;
-        font-size: 14px;
-        font-weight: 500;
-        height: 35px;
-        line-height: 38px;
-        padding: 15px 15px;
-        border-radius: 3px;
-    }
-</style> --}}
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -43,10 +27,15 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <section class="tj-choose-us-section-service-atv-utv">
         <div class="container-flude">
             <div class="row">
+                {{-- <div class="col-2">
+                    <div class="tj-input-form-filler">
+                        <h4 class="title text-center">Placeholder Section</h4>
+                        <p class="text">This is a placeholder section that follows the same height and design as the form on the right.</p>
+                    </div>
+                </div> --}}
                 @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
@@ -270,15 +259,18 @@
                         </form>
                     </div>
                 </div>
+                {{-- <div class="col-2">
+                    <div class="tj-input-form-filler">
+                        <h4 class="title text-center">Placeholder Section</h4>
+                        <p class="text">This is a placeholder section that follows the same height and design as the form on the right.</p>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </section>
-
-
-@endsection
-
-@section('extraScript')
-<script>
+    @endsection
+    @section('extraScript')
+    <script>
     $(document).ready(function() {
         function addNewVehicle() {
             var newVehicleHtml =
@@ -394,7 +386,7 @@
         // Initialize the searchable dropdown for existing elements
         initializeSearchableDropdown();
     });
-</script>
+    </script>
     {{-- <script>
             $(document).ready(function() {
                 function addNewVehicle() {
@@ -504,4 +496,4 @@
                 initializeSearchableDropdown();
             });
     </script> --}}
-@endsection
+    @endsection

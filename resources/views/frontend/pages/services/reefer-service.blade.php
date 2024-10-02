@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Reefer Shipping Service - Freight Delivery | Ship A1')
-@section('meta_description', 'Reefer transport services in all over the USA, ship your vehicle easiest way with one-click solution, Reefer shipping from one state to another.')
+@section('title', 'Reliable Refrigerated Trucking Transport Services in USA')
+@section('meta_description', 'We provide top refrigerated trucking transport services with full safety and security, delivering to your specified location across the USA.')
 @section('content')
 <style>
     .full-width {

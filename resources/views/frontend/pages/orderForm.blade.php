@@ -1,4 +1,7 @@
 @extends('frontend.layouts.app')
+@section('title', 'Order Form ')
+@section('meta_description',
+'Streamline your purchasing process with our user-friendly order form. Easily submit your requests and enjoy a hassle-free experience today!')
 @section('content')
 @include('partials.return_function2')
 <style>

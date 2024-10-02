@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on Golf Cart | ShipA1')
-@section('meta_description', 'Get an instant Golf Cart shipping quote with ease! Trust our reliable service for nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
+@section('title', 'Golf Cart Transport Get Quote')
+@section('meta_description', 'Need to transport your golf cart? Get a quick quote today! Our reliable service ensures your cart arrives safely and on time. Easy, fast, and affordable!')
 @section('content')
 <style>
     .suggestionsTwo {

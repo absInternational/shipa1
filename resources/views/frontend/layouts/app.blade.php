@@ -87,18 +87,89 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <style>
-    /* Error styling */
-    
-    /* .error {
-        border: 2px solid red;
+
+   /* Smooth page transition loader */
+
+    /* .page-transition-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(45deg, rgba(0, 100, 0, 0.6), rgba(140, 196, 69, 0.9));
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.8s ease;
     }
-    .err-loc {
-        color: #ff0000 !important; 
-        font-size: 14px;
-        font-weight: bold;
-        margin-top: 5px;
-        display: block;
+
+
+    .page-transition-overlay.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+  
+    .fade-in {
+        animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: scale(1.02) translateY(20px); 
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+
+    .fade-out {
+        animation: fadeOut 0.8s ease forwards;
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1) translateX(10px); 
+        }
+    }
+
+
+    .page-transition-overlay::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.4);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+        }
     } */
+    
+    
+    
     .error-field {
     border: 2px solid red!important;
     }
@@ -225,7 +296,10 @@
 </script> -->
 <!--End of Tawk.to Script-->
 
-<body>
+<body class="fade-in">
+
+    {{-- <div class="page-transition-overlay"></div> --}}
+    
     <!-- Preloader start -->
     <!-- <div id="preloader" class="preloader">
         <div class="animation-preloader">
@@ -1252,6 +1326,39 @@
     </script>
     {{-- validate-form --}}
 
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Apply fade-in effect on page load
+            document.body.classList.add('fade-in');
+    
+            const transitionOverlay = document.querySelector('.page-transition-overlay');
+    
+            // Trigger the fade-out and overlay effect on link click
+            const links = document.querySelectorAll('a[href^="/"], a[href^="{{ url('/') }}"]');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default link action
+                    
+                    // Activate transition overlay
+                    transitionOverlay.classList.add('active');
+                    
+                    // Trigger fade-out effect on body
+                    document.body.classList.add('fade-out');
+                    
+                    // Wait for the animation before navigating
+                    setTimeout(() => {
+                        window.location.href = link.href;
+                    }, 800); // Match the duration of the animations
+                });
+            });
+    
+            // Fade-in on page load after overlay hides
+            setTimeout(() => {
+                transitionOverlay.classList.remove('active');
+            }, 500); // Slight delay for overlay fade-out
+        });
+    </script> --}}
+    
 </body>
 
 </html>

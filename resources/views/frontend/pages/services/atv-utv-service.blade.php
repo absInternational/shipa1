@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
-@section('title', 'ATV or UTV Shipping Services USA - Change the Way of Shipping | ShipA1')
-@section('meta_description', 'Get ATV or UTV shipping services in the USA, transport your vehicle at your 
-holiday places before you reach without any scratch, best auto transport service.')
+@section('title', 'Best ATV & UTV Transport Services in USA with Quick Delivery
+')
+@section('meta_description', 'Affordable and fast ATV and UTV transport services in USA. We ensure your ATV/UTV are transported safely and efficiently to your destination.')
 @section('content')
 <style>
     .full-width {

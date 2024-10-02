@@ -1,8 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on Farm Equipment | ShipA1')
-@section('meta_description', 'Need to transport heavy equipment? Get an instant shipping quote now! Our reliable service
-    provides nationwide coverage, transparent pricing, and secure transportation for your heavy machinery. Plan your
-    shipment efficiently with our instant quote tool.')
+@section('title', 'Farm Transport Get Quote')
+@section('meta_description', 'Discover reliable farm transport services tailored to your needs. Get a quick quote today and ensure your goods are delivered safely and efficiently!')
 @section('content')
     <style>
         .lab-cos {

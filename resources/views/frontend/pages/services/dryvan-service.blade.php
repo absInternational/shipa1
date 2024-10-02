@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Dry Van Shipping Service - Freight Delivery | Ship A1')
-@section('meta_description', 'Dry van transport services in all over the USA, ship your vehicle easiest way with one-click solution, Dry van shipping from one state to another.')
+@section('title', 'Efficient Dry Van Transportation Services Across USA')
+@section('meta_description', 'Our professional team provides excellent dry van transportation across the USA. We value punctuality for all of your van transportation needs.')
 @section('content')
 <style>
     .full-width {

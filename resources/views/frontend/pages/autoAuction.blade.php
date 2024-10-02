@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Ship Car From Auction Auto Transport Services | ShipA1')
-@section('meta_description', 'Transport your car from directly auction auto transport, Shipa1 provides door to door auto transport services with scratchless and insured auto shipping.')
+@section('title', 'Auctions Car and Auto Transport Services in USA')
+@section('meta_description', 'We are providing the best auctions car and auto transport services in USA, reliable auto and car delivery services to ensure your auctions run smoothly.')
 @section('content')
 <style>
     .why-box {

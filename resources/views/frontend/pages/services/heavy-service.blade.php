@@ -1,7 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Heavy Equipment Shipping Services - Shipping Quotes and Calculator | ShipA1')
-@section('meta_description', 'Get Heavy Equipment Shipping Services with insurance get vehicle transport with safety in
-the easiest way nationwide, Get free shipping quotes now - Shipa1.')
+@section('title', 'Best Nationwide Heavy Equipment Shipping Services')
+@section('meta_description', 'Experience hassle free nationwide heavy equipment shipping services in USA. We specialize in safe and efficient shipping, ensuring arrival on time.')
 @section('content')
 <Style>
     .title-2 {

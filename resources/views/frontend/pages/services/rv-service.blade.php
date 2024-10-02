@@ -1,7 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'RV Transport - One State to Another State | ShipA1')
-@section('meta_description', 'RV transport services in all over the USA, Ship your desired vehicle
-from one state to another state in one click - ShipA1.')
+@section('title', 'Best Fast RV Transport and Shipping Services in USA')
+@section('meta_description', 'Across the country RV transport services with ease! Our expert team provides reliable RV shipping services to ensure your RV arrives on time.')
 @section('content')
 <Style>
     .text-c-1 {

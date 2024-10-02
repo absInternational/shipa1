@@ -1,13 +1,7 @@
 @extends('frontend.layouts.app')
-
-@section('title', 'Get Quote on Construction Equip. | ShipA1')
-
-@section('meta_description', 'Need to transport heavy equipment? Get an instant shipping quote now! Our reliable service provides nationwide coverage, transparent pricing, and secure transportation for your heavy machinery. Plan your shipment efficiently with our instant quote tool.')
-
-
+@section('title', 'Construction Transport Get Quote')
+@section('meta_description', 'Streamline your construction project with our transport services. Request a quote now and experience efficient, reliable solutions for all your transport needs!')
 @section('content')
-
-
     <style>
         .lab-cos {
             font-size: 15px;
@@ -155,7 +149,6 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <section class="tj-choose-us-section-construction">
         <div class="container-flude">
             <div class="row">
@@ -508,7 +501,6 @@
         </div>
     </section>
 @endsection
-
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>

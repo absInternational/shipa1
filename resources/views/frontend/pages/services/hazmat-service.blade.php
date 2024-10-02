@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Hazmat Shipping Service - Freight Delivery | Ship A1')
-@section('meta_description', 'Hazmat transport services in all over the USA, ship your vehicle easiest way with one-click solution, Hazmat shipping from one state to another.')
+@section('title', 'Top Hazmat Transport and Shipping Services Across USA')
+@section('meta_description', 'Discover safe and reliable hazmat transport services. We ensure your hazmat materials are handled with care and ship on time.')
 @section('content')
 <style>
     .full-width {

@@ -1,10 +1,6 @@
 @extends('frontend.layouts.app')
-{{-- @section('title', 'Construction Equipment Transport - One State to Another State | ShipA1')
-@section('meta_description', 'Construction equipment transport services in all over the USA, Ship your desired vehicle
-from one state to another state in one click - ShipA1.') --}}
-@section('title', 'Construction Equipment Transport - One State to Another State | ShipA1')
-@section('meta_description', 'Construction equipment transport services in all over the USA, Ship your desired vehicle
-from one state to another state in one click - ShipA1.')
+@section('title', 'Heavy Construction Equipment Transport & Shipping in USA ')
+@section('meta_description', 'Get your heavy construction equipment transport and shipping safely across the USA. Our expert services ensure timely delivery and peace of mind for your projects.')
 @section('content')
 <Style>
     .title-2 {

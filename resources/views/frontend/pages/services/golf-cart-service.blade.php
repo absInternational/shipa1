@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Golf Cart Shipping Service - Free Shipping Quotes and Calculator | ShipA1')
-@section('meta_description', 'Best Golf cart shipping services in the USA, ship your vehicle countrywide or international in reasonable prices, Get Free shipping quotes - ShipA1.')
+@section('title', 'Fast Golf Cart Shipping Services in USA at Best Pricing')
+@section('meta_description', 'Professional golf cart shipping services for safe, efficient delivery in USA. Enjoy peace of mind while we handle your golf cart shipping with care.')
 @section('content')
 <style>
     .full-width {
