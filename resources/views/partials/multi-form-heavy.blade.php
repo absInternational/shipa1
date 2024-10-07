@@ -81,7 +81,7 @@
                 <div class="row mt-2">
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn">
-                            <button class="tj-submit-btn previous scroll-up-btn" id="step2_previous">
+                            <button class="tj-submit-btn previous scroll-up-btn" type="button" id="step2_previous">
                                 Previous <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
@@ -140,7 +140,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6">
                         <div class="price__cta-btn">
-                            <button class="tj-submit-btn previous scroll-up-btn" id="step3_previous">
+                            <button class="tj-submit-btn previous scroll-up-btn" type="button" id="step3_previous">
                                 Previous <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>

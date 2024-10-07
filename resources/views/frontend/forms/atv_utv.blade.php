@@ -1,24 +1,8 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on ATV/UTV | ShipA1')
-
+@section('title', 'Get Quote for ATV UTV in The USA')
 @section('meta_description',
-    'Get an instant atv-utv shipping quote with ease! Trust our reliable service for
-    nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
-
-
+    'Get Instant ATV/UTV Shipping Quote ! Request yours today for fast pricing and easy service tailored to your needs.Trust us for nationwide transportation.')
 @section('content')
-    {{-- <style>
-    .custom-select-style{
-        background: #f0f2f7;
-        width: 100%;
-        font-size: 14px;
-        font-weight: 500;
-        height: 35px;
-        line-height: 38px;
-        padding: 15px 15px;
-        border-radius: 3px;
-    }
-</style> --}}
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -43,10 +27,15 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <section class="tj-choose-us-section-service-atv-utv">
         <div class="container-flude">
             <div class="row">
+                {{-- <div class="col-2">
+                    <div class="tj-input-form-filler">
+                        <h4 class="title text-center">Placeholder Section</h4>
+                        <p class="text">This is a placeholder section that follows the same height and design as the form on the right.</p>
+                    </div>
+                </div> --}}
                 @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
@@ -270,15 +259,135 @@
                         </form>
                     </div>
                 </div>
+                {{-- <div class="col-2">
+                    <div class="tj-input-form-filler">
+                        <h4 class="title text-center">Placeholder Section</h4>
+                        <p class="text">This is a placeholder section that follows the same height and design as the form on the right.</p>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </section>
-
-
-@endsection
-
-@section('extraScript')
+    @endsection
+    @section('extraScript')
     <script>
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+                <div class="vehicle-info custom-delete-class" style="display: none;">
+                    <div class="row select-bm">
+                        <!-- Bin icon for deleting vehicle -->
+                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                        <div class="col-md-4">
+                            <div class="input-form tj-select">
+                                <label>Year</label>
+                                <div class="dropdown">
+                                    <input class="form-control dropdown-toggle year" type="text"
+                                        name="year[]" id="year" placeholder="Select Year"
+                                        data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                                    <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                        <li><a class="dropdown-item">Select Year</a></li>`;
+            
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
+            }
+
+            newVehicleHtml +=
+                `               </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-form tj-select">
+                                <label>Make</label>
+                                <input type="text" id="make" name="make[]" placeholder="Enter Make" required="" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-form tj-select model-div">
+                                <label>Model</label>
+                                <input type="text" id="model" name="model[]" placeholder="Enter Model" required="" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="condition" class="text-white">Condition</label>
+                                <select class="nice-select" id="condition" name="condition[]">
+                                    <option value="1" selected>Running</option>
+                                    <option value="2">Non Running</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+
+            var $newVehicle = $(newVehicleHtml);
+            $('#vehicles-container').append($newVehicle);
+
+            // Animate the new vehicle info smoothly
+            $newVehicle.slideDown('slow');
+
+            // Initialize the searchable dropdown for new elements
+            initializeSearchableDropdown();
+        }
+
+        function initializeSearchableDropdown() {
+            $('.dropdown-toggle.year').on('input', function() {
+                var input = $(this);
+                var filter = input.val().toLowerCase();
+                var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                dropdown.find('.dropdown-item').each(function() {
+                    var text = $(this).text().toLowerCase();
+                    if (text.includes(filter) || filter === '') {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+
+            $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                var item = $(this);
+                var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                input.val(item.text());
+                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+            });
+
+            // Show dropdown when input is focused
+            $('.dropdown-toggle.year').on('focus', function() {
+                $(this).siblings('.dropdown-menu.year-dropdown').show();
+            });
+
+            // Hide dropdown when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.dropdown').length) {
+                    $('.dropdown-menu.year-dropdown').hide();
+                }
+            });
+        }
+
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
+
+        // Smooth delete with custom class
+        $(document).on('click', '.delete-vehicle', function() {
+            var $vehicleInfo = $(this).closest('.custom-delete-class');
+            
+            // Slide up the element first, then remove it after the animation is done
+            $vehicleInfo.slideUp('slow', function() {
+                $vehicleInfo.remove();
+            });
+        });
+
+        // Initialize the searchable dropdown for existing elements
+        initializeSearchableDropdown();
+    });
+    </script>
+    {{-- <script>
             $(document).ready(function() {
                 function addNewVehicle() {
                     var newVehicleHtml =
@@ -335,7 +444,7 @@
                         `;
 
                     $('#vehicles-container').append(newVehicleHtml);
-
+       
                     // Initialize the searchable dropdown for new elements
                     initializeSearchableDropdown();
                 }
@@ -386,5 +495,5 @@
                 // Initialize Select2 on existing dropdowns (if needed)
                 initializeSearchableDropdown();
             });
-    </script>
-@endsection
+    </script> --}}
+    @endsection

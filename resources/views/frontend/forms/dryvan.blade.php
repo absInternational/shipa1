@@ -1,9 +1,7 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on Freight Class | ShipA1')
+@section('title', 'Dry Van Transport Get Quote')
 @section('meta_description',
-    'Need to ship temperature-sensitive goods? Get an instant reefer shipping quote now! Our
-    reliable service provides nationwide coverage, transparent pricing, and secure transportation for your perishable cargo.
-    Plan your shipment efficiently with our instant quote tool. Trust us for seamless and timely reefer shipping.')
+    'Need dry van transport? Get a fast quote now! We offer dependable services to keep your shipments secure and on schedule. Start your journey with us!')
 @section('content')
     <style>
         .lab-cos {

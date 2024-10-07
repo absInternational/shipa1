@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Blog | ShipA1 Auto Transport')
-@section('meta_description', 'Blog | ShipA1 Auto Transport')
+@section('title', 'Blog')
+@section('meta_description', 'Discover insightful articles, expert tips on auto shipping and transportation at SHIPA1 Blog. Stay informed and enhance your knowledge.')
 
 @section('content')
     <style>

@@ -1,10 +1,60 @@
 @extends('frontend.layouts.app')
-@section('title', 'Car Shipping Service - Vehicle Delivery With Professionals | ShipA1')
-
-@section('meta_description', 'Get car shipping service in the USA, scratchless vehicle transport services along with
-huge discount offers and free shipping quotes nationwide.')
+@section('title', 'Best Car Shipping Services in USA with Fast Delivery')
+@section('meta_description', 'Professional car shipping services in USA guarantee that your vehicle is delivered securely on time at affordable prices and quality services.')
 @section('content')
 <style>
+    /* General styling for the hover container */
+    .custom-hover-flip {
+        position: relative;
+        display: inline-block;
+        perspective: 1000px; /* Creates the 3D space for the flip */
+    }
+
+    .custom-hover-flip img {
+        width: 100%;
+        display: block;
+        transition: transform 0.6s ease; /* Smooth flip animation */
+        transform-style: preserve-3d; /* Maintain 3D space for the flip */
+    }
+
+    .custom-hover-flip:hover img {
+        transform: rotateY(180deg); /* The flip effect on hover */
+    }
+
+    /* Overlay styling */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Hide the overlay initially */
+        transition: opacity 0.3s ease; /* Fade-in effect for the overlay */
+        border-radius: 30px;
+    }
+
+    .custom-hover-flip:hover .overlay {
+        opacity: 1; /* Show the overlay on hover */
+    }
+
+    /* Styling for the button */
+    .flip-button {
+        background-color: #ff6347; /* Adjust the background color to your preference */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: opacity 0.3s ease;
+        z-index: 1; /* Ensure the button is above the overlay */
+        opacity: 1; /* Make button visible */
+    }
+
     .full-width {
         width: 100%;
     }
@@ -57,6 +107,101 @@ huge discount offers and free shipping quotes nationwide.')
         /* text-decoration: overline; */
         margin-bottom: 50px;
         /* color: #ffffff; */
+    }
+    .why-choose-us-slider::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+        z-index: 0; /* Ensures it appears on top of the background */
+    }
+
+    .why-choose-us-slider {
+        background: url('../../img/autoauction banner 2.webp');
+        padding: 60px 0;
+        background-color: #f9f9f9;
+        position: relative;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1; /* Keeps the background behind the ::before element */
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .section-description {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        opacity: 0.8;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .slide {
+        min-width: 33.333%;
+        box-sizing: border-box;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        border: 1px solid rgba(221, 221, 221, 0.6);
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide:hover {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .slide i {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 3rem;
+        transition: color 0.3s ease;
+    }
+
+    .slide:hover i {
+        color: #8FC445;
+    }
+
+    .slide-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+        letter-spacing: 0.3px;
+        transition: color 0.3s ease;
+    }
+
+    .slide:hover .slide-title {
+        color: #8FC445;
+    }
+
+    .slide-text {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        opacity: 0.9;
     }
 </style>
 <!--========== breadcrumb Start ==============-->
@@ -408,9 +553,16 @@ huge discount offers and free shipping quotes nationwide.')
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded">
+                <div class="mt-4 rounded custom-hover-flip">
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/car-transport.webp') }}" alt="Image">
+                        <div class="overlay"> <!-- Added overlay div -->
+                            <a href="{{ route('form.vehicle.car') }}">
+                                <button class="tj-submit-btn">
+                                    Get Quote <i class="fa fa-arrow-left"></i>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                     <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 
@@ -898,6 +1050,60 @@ huge discount offers and free shipping quotes nationwide.')
     </div>
 
 </section> --}}
+<section class="why-choose-us-slider">
+    <div class="container">
+        <div class="tj-section-heading text-center">
+            <h2 class="title text-white">Why Choose Us?</h2>
+            <span class="sub-title active-shape">Discover the benefits of choosing ShipA1 through our features.</span>
+        </div>
+        {{-- <h2 class="section-title">Why Choose Us?</h2>
+        <p class="section-description">Discover the benefits of choosing ShipA1 through our features.</p> --}}
+        <div class="row">
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-users icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">24/7 Customer Support</h3>
+                    <p class="slide-text">24/7 Customer Support: Our customers are our top priority, which is why we offer
+                         24/7 support to our customers to erase any doubt and offer tailored solutions to their needs and concerns.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-dollar-sign icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">On-Time Delivery</h3>
+                    <p class="slide-text">At Ship A1 we keep in mind that time is equally valuable for both our customers and our company which is why we 
+                        ensure the quick delivery of your cargo as scheduled and in perfect condition.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-clock icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Experienced Professionals</h3>
+                    <p class="slide-text">Our highly skilled and professional carriers and staff are experts in what they do, which is handling, maintaining,
+                         and easily loading your vehicle on our trailers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Real-Time Tracking</h3>
+                    <p class="slide-text">Making it easy for our customers to easily track their vehicle’s current and updated status anytime and anywhere.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-shield-alt icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Refrigeration Technology</h3>
+                    <p class="slide-text">Our fully equipped trailers maintain precise temperature control
+                         suitable for your cargo throughout the journey</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')

@@ -1,7 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on Motorcycle | ShipA1')
-@section('meta_description', 'Get an instant motorcycle shipping quote with ease! Trust our reliable service for
-nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
+@section('title', 'Motorcycle Shipping Quote')
+@section('meta_description', 'Get your instant motorcycle shipping quote today! Fast, reliable, and hassle-free service to transport your bike anywhere. Start your journey now!')
 @section('content')
 <style>
     .lab-cos {

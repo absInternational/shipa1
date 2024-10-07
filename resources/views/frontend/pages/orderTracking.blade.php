@@ -1,4 +1,7 @@
 @extends('frontend.layouts.app')
+@section('title', 'Order Tracking')
+@section('meta_description',
+'Simplify your shopping experience by tracking your orders seamlessly. Receive real-time notifications and stay informed about your delivery progress.')
 @section('content')
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">

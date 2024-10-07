@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
-@section('title', 'ATV or UTV Shipping Services USA - Change the Way of Shipping | ShipA1')
-@section('meta_description', 'Get ATV or UTV shipping services in the USA, transport your vehicle at your 
-holiday places before you reach without any scratch, best auto transport service.')
+@section('title', 'Best ATV & UTV Transport Services in USA with Quick Delivery
+')
+@section('meta_description', 'Affordable and fast ATV and UTV transport services in USA. We ensure your ATV/UTV are transported safely and efficiently to your destination.')
 @section('content')
 <style>
     .full-width {
@@ -57,6 +57,101 @@ holiday places before you reach without any scratch, best auto transport service
         left: -25px;
         width: 100px;
         height: 100px; 
+    }
+    .why-choose-us-slider::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+        z-index: 0; /* Ensures it appears on top of the background */
+    }
+
+    .why-choose-us-slider {
+        background: url('../../img/autoauction banner 2.webp');
+        padding: 60px 0;
+        background-color: #f9f9f9;
+        position: relative;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1; /* Keeps the background behind the ::before element */
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .section-description {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        opacity: 0.8;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .slide {
+        min-width: 33.333%;
+        box-sizing: border-box;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        border: 1px solid rgba(221, 221, 221, 0.6);
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide:hover {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .slide i {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 3rem;
+        transition: color 0.3s ease;
+    }
+
+    .slide:hover i {
+        color: #8FC445;
+    }
+
+    .slide-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+        letter-spacing: 0.3px;
+        transition: color 0.3s ease;
+    }
+
+    .slide:hover .slide-title {
+        color: #8FC445;
+    }
+
+    .slide-text {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        opacity: 0.9;
     }
 </style>
 <!--========== breadcrumb Start ==============-->
@@ -747,6 +842,53 @@ holiday places before you reach without any scratch, best auto transport service
     </div>
 
 </section> --}}
+<section class="why-choose-us-slider">
+    <div class="container">
+        <div class="tj-section-heading text-center">
+            <h2 class="title text-white">Why Choose Us?</h2>
+            <span class="sub-title active-shape">Discover the benefits of choosing ShipA1 through our features.</span>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">24/7 Customer Support</h3>
+                    <p class="slide-text">Our customers are our top priority, which is why we offer 24/7 support to address any concerns and provide tailored solutions to meet their needs.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-truck icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Competitive Pricing</h3>
+                    <p class="slide-text">We provide cost-effective rates and premium services without compromising the quality of our customer’s shipments.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-shield-alt icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Full Insurance Coverage</h3>
+                    <p class="slide-text">100% insured vehicles to ensure peace of mind and security for our customers against unforeseen incidents.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-map-marker-alt icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Real-Time Tracking</h3>
+                    <p class="slide-text">Track your shipment from anywhere, anytime with the help of our advanced tracking service.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-trailer icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Advanced Trailers</h3>
+                    <p class="slide-text">We offer reliable enclosed and open trailers equipped with premium features to protect your UTV and ATV during transport.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')

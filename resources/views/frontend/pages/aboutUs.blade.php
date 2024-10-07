@@ -1,4 +1,7 @@
 @extends('frontend.layouts.app')
+@section('title', 'About Us')
+@section('meta_description',
+'Learn more about our mission and the people behind it! Our about us page highlights our values and commitment to making an impact. Check it out!')
 @section('content')
 <style>
     .service-link {

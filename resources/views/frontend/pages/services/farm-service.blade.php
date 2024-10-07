@@ -1,7 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Farm Transport Services - Heavy Haul Trucking Shipping Service | ShipA1')
-@section('meta_description', 'Farm Transport Services, Ship your farming vehicle at your desired place in the USA with
-insurance services and securely without any scratch - Shipa1.')
+@section('title', 'Best State to State Farm Transport Services in USA')
+@section('meta_description', 'Experience seamless state to state farm transport services in the USA. We specialize in safe delivery and transportation of farm equipment.')
 @section('content')
 <Style>
     .title-2 {
@@ -21,7 +20,7 @@ insurance services and securely without any scratch - Shipa1.')
     border-radius: 12px;
     padding: 15px;
     box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
-        }
+    }
     .services {
     text-align: center;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -30,10 +29,105 @@ insurance services and securely without any scratch - Shipa1.')
     /* background-color: #9d9e9f14;*/
     }
     .services-h1 {
-    text-align:center;
     /* text-decoration: overline; */
-    margin-bottom: 50px;
     /* color: #ffffff; */
+    text-align:center;
+    margin-bottom: 50px;
+    }
+    .why-choose-us-slider::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+        z-index: 0; /* Ensures it appears on top of the background */
+    }
+
+    .why-choose-us-slider {
+        background: url('../../img/autoauction banner 2.webp');
+        padding: 60px 0;
+        background-color: #f9f9f9;
+        position: relative;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1; /* Keeps the background behind the ::before element */
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .section-description {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        opacity: 0.8;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .slide {
+        min-width: 33.333%;
+        box-sizing: border-box;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        border: 1px solid rgba(221, 221, 221, 0.6);
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide:hover {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .slide i {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 3rem;
+        transition: color 0.3s ease;
+    }
+
+    .slide:hover i {
+        color: #8FC445;
+    }
+
+    .slide-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+        letter-spacing: 0.3px;
+        transition: color 0.3s ease;
+    }
+
+    .slide:hover .slide-title {
+        color: #8FC445;
+    }
+
+    .slide-text {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        opacity: 0.9;
     }
 </Style>
 <!--========== blog details Start ==============-->
@@ -542,6 +636,57 @@ insurance services and securely without any scratch - Shipa1.')
     </div>
 </section>
 <!--========== Faq Section End ==============-->
+<section class="why-choose-us-slider">
+    <div class="container">
+        <div class="tj-section-heading text-center">
+            <h2 class="title text-white">Why Choose Us?</h2>
+            <span class="sub-title active-shape">Discover the benefits of choosing ShipA1 through our features.</span>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-shield-alt icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">100% Insured Vehicles</h3>
+                    <p class="slide-text">Our 100% insured vehicles ensure customers’ peace of mind and satisfaction, 
+                       every vehicle at Ship A1 is fully secured and protected.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-clock icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Timely Delivery</h3>
+                    <p class="slide-text">Your satisfaction is our top priority, which is why Ship A1 ensures that your farm equipment 
+                        reaches its destination on time, avoiding delays.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-users icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Team of Professionals</h3>
+                    <p class="slide-text">With a highly experienced and professional staff, you can rest knowing your vehicle is in safe hands. 
+                        With 16 years of experience, Ship A1 delivers the absolute best to its customers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">Real-Time Tracking</h3>
+                    <p class="slide-text">Avail our real-time tracking service that allows the customer to track their shipment status anytime.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 mb-4">
+                <div class="slide text-center">
+                    <i class="fas fa-phone-alt icon-hover-shake" style="font-size: 50px;"></i>
+                    <h3 class="slide-title">24/7 Customer Support</h3>
+                    <p class="slide-text">Our customers are our top priority, which is why we offer 24/7 support to erase any doubts 
+                        and offer tailored solutions to their needs and concerns.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
 <!--=========== Blog Section End =========-->

@@ -1,9 +1,7 @@
 @extends('frontend.layouts.app')
-@section('title', 'Get Quote on Heavy Equipment | ShipA1')
+@section('title', 'Heavy Shipping Get Quote')
 @section('meta_description',
-'Need to transport heavy equipment? Get an instant shipping quote now! Our reliable service
-provides nationwide coverage, transparent pricing, and secure transportation for your heavy machinery. Plan your
-shipment efficiently with our instant quote tool.')
+'Get instant quotes for heavy shipping services! Our platform connects you with reliable carriers to ensure your cargo arrives safely and on time.')
 @section('content')
 <style>
     .lab-cos {

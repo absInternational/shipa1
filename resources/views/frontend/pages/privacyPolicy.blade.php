@@ -1,4 +1,7 @@
 @extends('frontend.layouts.app')
+@section('title', 'Privacy Policy ')
+@section('meta_description',
+'Read our privacy policy to learn about our commitment to protecting your personal information and how we handle your data responsibly and securely.')
 @section('content')
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">

@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Auctions Car and Auto Transport Services in USA')
-@section('meta_description', 'We are providing the best auctions car and auto transport services in USA, reliable auto and car delivery services to ensure your auctions run smoothly.')
+@section('title', 'Ship Equipment From Auction Heavy Transport Services | ShipA1')
+@section('meta_description', 'Transport your car from directly auction Heavy transport, Shipa1 provides door to door auto transport services with scratchless and insured auto shipping.')
 @section('content')
 <style>
     .why-box {
@@ -176,7 +176,7 @@
         </div>
     </div>
 </section> --}}
-<section class="tj-choose-us-section-service-Auto-Transport">
+<section class="tj-choose-us-section-service-Heavy-Auctions-Transport">
     <div class="container mt-4">
         <div class="row mt-4">
 
@@ -184,10 +184,10 @@
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">Specialized Service</span>
-                        <h2 class="title">Auctions Auto Transport</h2>
+                        <h2 class="title">Heavy Auctions Transport</h2>
                         <p class="desc-2 text-white">
-                            Ship A1 specializes in providing all types of vehicles for auto
-                            auction services tailored to your needs and specifications!
+                            Ship A1 specializes in providing all types of Equipment for Heavy
+                            auction transport services tailored to your needs and specifications!
 
                         </p>
                     </div>
@@ -205,7 +205,7 @@
             </div>
             @endif
             <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
-            @include('partials.multi-form')
+            @include('partials.multi-form-heavy')
                 
             </div>
 
@@ -221,10 +221,18 @@
                     <div class="tj-section-heading">
                         {{-- <span class="sub-title active-shape">Seamless Boat Transport</span> --}}
                         <!-- <h2 class="title">Why Choose Us?</h2> -->
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">What are Auto Auctions?</h3>
-                        <p class="desc">Ever heard of thrifting? Auctions are similar to that, basically at auctions all types of dealers and customers come to either purchase or sell out their vehicles in exceptional deals and rare models. Consider it a dynamic way of doing business, the best part is this dealing can be done both virtually and physically. Auto Auctions can handle a massive amount of all sorts of vehicles like motorcycles, cars,  golf carts, ATV, UTV pickup trucks, and so on.</p>
-                        <br>
-                        <p>If you’re confused about which Auto Auction to choose, below is a breakdown of the best auto auctions that cater to the needs of its customers:</p>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">What are Heavy Auctions?</h3>
+                        <p class="desc">Did you know there’s an auction for heavy equipment as well? Are you looking to auction
+                            your heavy equipment but cannot find a reliable company? It's safe to say you have come to the right 
+                            place at the right time! <br>
+                            Ship A1 understands the cruciality of timely, reliable, and convenient transportation services and our
+                            expert team ensures the safety and protection of your heavy equipment. Whether you are buying or
+                            selling a heavy vehicle, our specialized heavy equipment auction transportation services ensure 
+                            that your entire experience is as seamless as possible that too in affordable rates and quality
+                            services.
+                            </p>
+                        {{-- <p>If you’re confused about which Auto Auction to choose, below is a breakdown of the best auto auctions 
+                            that cater to the needs of its customers:</p> --}}
                         
                     </div>
                     
@@ -325,7 +333,7 @@
                 <div class="choose-us-top-content-1">
                     <div class="tj-section-heading-1">
                         <!-- <span class="sub-title-1 active-shape2"> Have any ideas in your mind?</span> -->
-                        <h2 class="title-1">Auto Auctions</h2>
+                        <h2 class="title-1">Heavy Auctions</h2>
                     </div>
                     {{-- <div class="tj-theme-button">
                         <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}">
@@ -341,11 +349,12 @@
                     <div class="choose-step-box-1">
                         <div class="choose-box-1"></div>
                         <div class="step-content-1">
-                            <h6 class="title-1">Copart:</h6>
+                            <h6 class="title-1">RICHTEBROS:</h6>
                         </div>
                     </div>
                     <p>
-                        Being one of the leading providers and suppliers of online auto auctions, Copart specializes in selling a wide range of vehicles daily, including salvage vehicles, clean title cars, and various other vehicle models and types. With its extensive inventory and innovative bidding platform, Copart is here to make itself renowned worldwide.
+                        Dealing especially in heavy equipment and specializing in the efficient delivery of RICHTEBROS
+                        auctions require precision and reliability to handle large machinery and equipment efficiently
                     </p>
                 </div>
             </div>
@@ -357,14 +366,13 @@
                     <div class="choose-step-box-1">
                         <div class="choose-box-1"></div>
                         <div class="step-content-1">
-                            <h6 class="title-1">Manheim:</h6>
+                            <h6 class="title-1">Iron Planet:</h6>
                         </div>
                     </div>
                     <p>
-                        A global leading auto auction that only offers a variety of vehicles and services but also allows customers
-                        to bid however they want, whether it's online or a physical auction, it's your choice. Manheim provides a 
-                        vast platform full of comprehensive solutions just for your comfort, from cars to motorcycles and plenty
-                         of other vehicles Manheim provides the best vehicles.</p>
+                    Specifically known for its online presence of heavy equipment auctions, Iron Planet specializes in and
+                    facilitates the selling of machinery, the transporting logistics of heavy equipment demand effective 
+                    and efficient services to ensure the safe and timely shipping</p>
                 </div>
             </div>
            
@@ -375,13 +383,12 @@
                     <div class="choose-step-box-1">
                         <div class="choose-box-1"></div>
                         <div class="step-content-1">
-                            <h6 class="title-1">IAA:</h6>
+                            <h6 class="title-1">Machinery Trader:</h6>
                         </div>
                     </div>
                     <p>
-                        Insurance Auto Auction short for IAA is also another premium platform for the purchasing and selling of
-                         vehicles that are a total loss, salvage as well as clean title vehicles. With 100% transparency maintained,
-                          they ensure their customers are aware of every vehicle’s situation, model, as well as price.</p>
+                        This auction majorly focuses on the auction of heavy equipment and machinery, involving large and cumbersome items,
+                         as well as necessitating dependable transportation solutions to manage logistics.</p>
                 </div>
             </div>
            
@@ -392,33 +399,14 @@
                     <div class="choose-step-box-1">
                         <div class="choose-box-1"></div>
                         <div class="step-content-1">
-                            <h6 class="title-1">ACV Auction:</h6>
+                            <h6 class="title-1">Proxi-bid:</h6>
                         </div>
                     </div>
                     <p>
-                        Unlike the rest auctions, ACV only specializes in digital auto auctions, facilitating the purchasing and 
-                        selling of vehicles through its online platform. Manheim’s system efficiency demands robust transportation 
-                        to handle the quick bidding of vehicles.</p>
+                        Offering a massive platform for the auction of multiple heavy equipment types and a wide range of machinery equipment. 
+                        This auction provides a user-friendly interface for both buyers and sellers.</p>
                 </div>
             </div>
-           
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                <div class="choose-us-step-item-1">
-                    <div class="choose-step-box-1">
-                        <div class="choose-box-1"></div>
-                        <div class="step-content-1">
-                            <h6 class="title-1">ADESA:</h6>
-                        </div>
-                    </div>
-                    <p>
-                        This auto auction offers its services both digitally and physically, allowing users to bid nationwide 
-                        according to their convenience only. ADESA also has a vast network of vehicles of all kinds while ensuring 
-                        its services meet the standards and comfort of customers.</p>
-                </div>
-            </div>
-           
         </div>
     </div>
 </section>
@@ -477,8 +465,16 @@
         <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
             <div class="about-content-one">
                 <div class="tj-section-heading">
-                    {{-- <span class="sub-title active-shape">Seamless Boat Transport</span> --}}
-                    <!-- <h2 class="title">Why Choose Us?</h2> -->
+                    <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Why Choose Ship A1 for Heavy Equipment Transport?</h3>
+                    <ul class="desc">
+                        <li><strong>Expert Handling of Heavy Equipment:</strong> Our expert and experienced team handle all types of heavy equipment varying from bulldozers to excavators, cranes, as well as loaders. Ship A1 uses specialized equipment and methods to ensure that your equipment is transported safely and without any damage.</li>
+                        <li><strong>Customizable Solutions:</strong> We understand that every piece of heavy equipment and every auction has different requirements, which is why we offer customizable solutions tailored to the needs of our customers.</li>
+                        <li><strong>Real-Time Tracking:</strong> With our real-time tracking system, customers can stay informed throughout the transportation process without needing to call the helpline.</li>
+                    </ul>
+                </div>
+            </div>
+            {{-- <div class="about-content-one">
+                <div class="tj-section-heading">
                     <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">What are Auto Auctions?</h3>
                     <p class="desc">On any regular and standard auction day, it isn’t unfamiliar or bizarre for hundreds and 
                         thousands of vehicles to get sold or purchased. Multiple good ratings and high-profile auctions monitor
@@ -487,7 +483,7 @@
                           efficient system. This is when Ship A1 comes into the picture, we work nationwide, providing 
                           transportation solutions that ensure every vehicle reaches its destination safe and sound.</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
             <div class="mt-4 rounded">
@@ -503,40 +499,35 @@
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
-                <h1 class="services-h1">Benefits of Our Services</h1>
+                <h1 class="services-h1">How Does This Work?</h1>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-dark">Price</h5>
-                        <p class="card-text text-dark"> When preparing to ship a vehicle, it can be a daunting task to look for a 
-                            company that has affordable rates as well as provides quality services, when working with Ship A1 you 
-                            do not need to break the bank to ship a vehicle, you can get a necessary shipping service fit for an
-                             automobile at an affordable price.</p>
+                        <h5 class="card-title text-dark">Request a Quote</h5>
+                        <p class="card-text text-dark"> To start, a quote is the entire estimated cost of your shipping so firstly
+                             you have to start by providing us with the initial details regarding your transportation needs and 
+                             requirements, and shortly after sending the details our team will offer a tailored quote according 
+                             to your budget via email or call.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-dark">Quality Shipping Service</h5>
-                        <p class="card-text text-dark">As previously mentioned, auto movers must get the vehicle to the 
-                            destination on time, intact, and without any legal incidents every time. While this sounds pretty
-                             basic, some companies fail to understand the assignment. However, at Ship A1, with 16 years of 
-                             experience and a proven record of satisfied customers, we proudly claim our services because we 
-                             have the muscle to live up to our words.</p>
+                        <h5 class="card-title text-dark">Pick-up Scheduling</h5>
+                        <p class="card-text text-dark"> Once you are satisfied with the given quote, upon your approval we will
+                             arrange your equipment’s pick up at the auction location or your desired location.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
                     <div class="card-body">
-                        <h5 class="card-title text-dark">Insurance</h5>
-                        <p class="card-text text-dark">According to federal law, all shipping companies should carry a valid
-                             insurance certificate. When speaking with an auto-shipping representative, make sure that you
-                              understand the policy. Find out what damage is not covered, such as that which might occur during
-                               loading, offloading, and transit. A professional auto shipper like Ship-A1 will ensure that you 
-                               are relaxed and comfortable with the process.</p>
+                        <h5 class="card-title text-dark">Delivery and Transportation</h5>
+                        <p class="card-text text-dark">After that our experienced drivers will handle the transportation with the
+                            help of appropriate and safe shipping measures to ensure the smooth delivery of your vehicle. We will
+                            then deliver your equipment to the designated location provided to us.</p>
                     </div>
                 </div>
             </div>

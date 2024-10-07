@@ -1,13 +1,7 @@
 @extends('frontend.layouts.app')
-
-@section('title', 'Get Quote on RV Transport | ShipA1')
-
-@section('meta_description', 'Get an instant RV Transport quote with ease! Trust our reliable service for nationwide coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
-
-
+@section('title', 'Instant RV Shipping Quote')
+@section('meta_description', 'Discover the easiest way to ship your RV! Get an instant quote and enjoy fast, reliable service tailored to your needs. Start your shipping journey today!')
 @section('content')
-
-
     <style>
         .lab-cos {
             font-size: 15px;
@@ -475,7 +469,6 @@
 @endsection
 @section('extraScript')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
         $(document).ready(function() {
             function addNewVehicle() {
@@ -738,7 +731,6 @@
         
     </script>
 <!-- year search work -->
-
 {{-- <script>
         $(document).ready(function() {
             $('#available_at_auction').change(function() {
