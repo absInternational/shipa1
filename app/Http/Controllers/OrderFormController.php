@@ -31,9 +31,12 @@ class OrderFormController extends Controller
     // public function getOrderDetails($id, $userid, Request $request)
     public function getOrderDetails(Request $request)
     {
+        // dd($request->toArray());
         $verificationCode = $this->generateVerificationCode();
 
-        $this->sendVerificationCodeByEmail($request->input('oemail'), $verificationCode);
+        $order_id = $request->order_id;
+
+        $this->sendVerificationCodeByEmail($request->input('email'), $verificationCode, $order_id);
 
         session(['order_id' => $request->order_id]);
         session(['email' => $request->email]);
@@ -60,9 +63,16 @@ class OrderFormController extends Controller
         return $verificationCode;
     }
 
-    private function sendVerificationCodeByEmail($email, $verificationCode)
+    private function sendVerificationCodeByEmail($email, $verificationCode, $order_id)
     {
-        Mail::to('abst99856@gmail.com', 'allenmanager@shipa1.com', $email)->send(new VerificationCodeMail($verificationCode));
+        $response = Http::get("https://washington.shawntransport.com/api/email_order_api/{$order_id}/{$email}");
+        if ($response->successful()) {
+            // dd($response->json(), $response['data']['oemail']);
+            $oemail = $response['data']['oemail'];
+            // dd($oemail, 'abst99856@gmail.com');
+            Mail::to($response['data']['oemail'], 'hodontime@shipa1.com')->send(new VerificationCodeMail($verificationCode));
+            // abst99856@gmail.com
+        }
     }
 
     public function verify(Request $request)
