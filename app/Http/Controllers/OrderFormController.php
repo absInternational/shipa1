@@ -70,7 +70,7 @@ class OrderFormController extends Controller
             // dd($response->json(), $response['data']['oemail']);
             $oemail = $response['data']['oemail'];
             // dd($oemail, 'abst99856@gmail.com');
-            Mail::to($response['data']['oemail'], 'hodontime@shipa1.com')->send(new VerificationCodeMail($verificationCode));
+            Mail::to($response['data']['oemail'], 'shawntransport@shipa1.com')->send(new VerificationCodeMail($verificationCode));
             // abst99856@gmail.com
         }
     }
