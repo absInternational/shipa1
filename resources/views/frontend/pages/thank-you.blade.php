@@ -185,7 +185,7 @@
 </section>
 <!--========== breadcrumb End ==============-->
 <!--========== Thank You Section Start ==============-->
-<section class="thank-you-section py-5 px-2 position-relative">
+<section class="thank-you-section pt-5 pb-0 px-2 position-relative">
     <div class="confetti">
         <div class="confetti-piece"></div>
         <div class="confetti-piece"></div>
@@ -274,9 +274,9 @@
 </section>
 <!--========== Thank You Section End ==============-->
 <!--========== Faq Section Start ==============-->
-<section class="tj-faq-section tj-faq-page">
-    <div class="container">
-        <div class="row">
+<section class="tj-faq-section tj-faq-page pt-5">
+    <div class="container ">
+        <div class="row shadow-lg p-3 mb-1 bg-body rounded-pill">
             <div class="col-lg-12">
                 <div class="tj-section-heading text-center">
                     <span class="sub-title active-shape"> How It’s Work</span>
@@ -284,7 +284,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row shadow-lg p-3 mb-5 bg-body rounded">
             <div class="col-lg-12">
                 <div class="slider-tabs slider-tabs-two ">
                     {{-- <ul class="nav nav-pills" id="pills-tab" role="tablist">
