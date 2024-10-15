@@ -197,7 +197,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE1.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/3b image for commercial truck transport (1).webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -209,7 +209,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE3.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/3a images for commercial transport.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -311,7 +311,7 @@
             <div class="col-lg-4 col-md-12 sal-animate d-flex align-items-center justify-content-center" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/COMMERCIAL-SERVICE-2.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/3c images for commercial transport.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>

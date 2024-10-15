@@ -225,9 +225,8 @@
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/TEST.png') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/4a images for boat transport.webp') }}" alt="Image">
                     </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
                     </div>
                 </div>
             </div>
@@ -237,7 +236,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/BOAT-2.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/4c images for boat transport.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -317,7 +316,7 @@
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/BOAT-4.webp') }}" alt="Image">
+                            <img class="rounded" src="{{ asset('frontend/images/project/4b images for boat transport.webp') }}" alt="Image">
                         </div>
                     </div>
                 
@@ -329,7 +328,7 @@
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/BOAT-3.webp') }}" alt="Image">
+                            <img class="rounded" src="{{ asset('frontend/images/project/4d images for boat transport.webp') }}" alt="Image">
                         </div>
                     </div>
                 </div>

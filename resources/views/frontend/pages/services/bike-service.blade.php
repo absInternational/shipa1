@@ -180,7 +180,7 @@
            <div class="row">
                 <div class="col-lg-7">
 							<div class="image-container">
-                                <img class="img-fluid" src="{{ asset('frontend/images/project/motorcycle-service.webp') }}" loading="lazy" alt="Motorcyle Transport">
+                                <img class="img-fluid" src="{{ asset('frontend/images/project/1-banner-for-motorcycle-transport.webp') }}" loading="lazy" alt="Motorcyle Transport">
                             </div>
                              <br>
                     <div class="text-container text-left">
