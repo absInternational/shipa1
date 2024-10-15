@@ -30,7 +30,6 @@ class FrontendController extends Controller
         return view('frontend.index', compact('reviews', 'blogs', 'makes', 'site_reviews'));
     }
 
-
     // public function blogs()
     // {
     //     $blogTitle = Blog::get();
