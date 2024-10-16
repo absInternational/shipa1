@@ -387,45 +387,30 @@
         {{-- <h2 class="section-title">Why Choose Us?</h2>
         <p class="section-description">Discover the benefits of choosing ShipA1 through our features.</p> --}}
         <div class="row">
-            Advanced Refrigeration Technology: Our fully equipped trailers maintain precise temperature control
-            suitable for your cargo throughout the journey
-
-            On-Time Delivery: At Ship A1 we keep in mind that time is equally valuable for both our customers and
-            our company which is why we ensure the quick delivery of your cargo as scheduled and in perfect
-            condition.
-
-            Experienced Professionals: Our highly skilled and professional carriers and staff are experts in what they
-            do, which is handling, maintaining, and easily loading your vehicle on our trailers.
-
-            Real-Time Tracking: Making it easy for our customers to easily track their vehicle’s current and updated
-            status anytime and anywhere.
-
-            24/7 Customer Support: 24/7 Customer Support: Our customers are our top priority, which is why we
-            offer 24/7 support to our customers to erase any doubt and offer tailored solutions to their needs and
-            concerns.
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-users icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">24/7 Customer Support</h3>
-                    <p class="slide-text">24/7 Customer Support: Our customers are our top priority, which is why we offer
-                         24/7 support to our customers to erase any doubt and offer tailored solutions to their needs and concerns.
+                    <h3 class="slide-title">Advanced Refrigeration Technology:</h3>
+                    <p class="slide-text">Our fully equipped trailers maintain precise temperature control
+                        suitable for your cargo throughout the journey
                     </p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-dollar-sign icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">On-Time Delivery</h3>
-                    <p class="slide-text">At Ship A1 we keep in mind that time is equally valuable for both our customers and our company which is why we 
-                        ensure the quick delivery of your cargo as scheduled and in perfect condition.</p>
+                    <h3 class="slide-title">On-Time Delivery:</h3>
+                    <p class="slide-text"> At Ship A1 we keep in mind that time is equally valuable for both our customers and
+                        our company which is why we ensure the quick delivery of your cargo as scheduled and in perfect
+                        condition.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-clock icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Experienced Professionals</h3>
-                    <p class="slide-text">Our highly skilled and professional carriers and staff are experts in what they do, which is handling, maintaining,
-                         and easily loading your vehicle on our trailers.</p>
+                    <h3 class="slide-title">Experienced Professionals:</h3>
+                    <p class="slide-text"> Our highly skilled and professional carriers and staff are experts in what they
+                        do, which is handling, maintaining, and easily loading your vehicle on our trailers.</p>
                 </div>
             </div>
         </div>
@@ -433,16 +418,18 @@
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Real-Time Tracking</h3>
-                    <p class="slide-text">Making it easy for our customers to easily track their vehicle’s current and updated status anytime and anywhere.</p>
+                    <h3 class="slide-title"> Real-Time Tracking: </h3>
+                    <p class="slide-text">Making it easy for our customers to easily track their vehicle’s current and updated
+                        status anytime and anywhere.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-shield-alt icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Refrigeration Technology</h3>
-                    <p class="slide-text">Our fully equipped trailers maintain precise temperature control
-                         suitable for your cargo throughout the journey</p>
+                    <h3 class="slide-title">24/7 Customer Support:</h3>
+                    <p class="slide-text"> Our customers are our top priority, which is why we
+                        offer 24/7 support to our customers to erase any doubt and offer tailored solutions to their needs and
+                        concerns.</p>
                 </div>
             </div>
         </div>
