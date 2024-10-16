@@ -553,7 +553,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded custom-hover-flip">
+                <div class="mt-4 rounded ">
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/car-transport.webp') }}" alt="Image">
                         <div class="overlay"> <!-- Added overlay div -->
@@ -611,10 +611,10 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded custom-hover-flip">
+                <div class="mt-4 rounded ">
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/tuxpi.com.1724264978.webp') }}" alt="Image">
-                        <div class="overlay"> <!-- Added overlay div -->
+                        <div class="overlay"> 
                             <a href="{{ route('form.vehicle.car') }}">
                                 <button class="tj-submit-btn">
                                     Get Quote <i class="fa fa-arrow-left"></i>
@@ -672,7 +672,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded custom-hover-flip">
+                <div class="mt-4 rounded ">
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/open vs enclosed.webp') }}" alt="Image">
                         <div class="overlay"> <!-- Added overlay div -->
