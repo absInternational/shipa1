@@ -170,14 +170,6 @@
                                     <small id="errName" class="err-style"></small>
                                 </div>
                             </div>
-                            {{-- <div class="col-xl-4 col-lg-4">
-                                <div class="single-input-field">
-                                    <label class="d-block text-white"> Phone:</label>
-                                    <input class="form-control" required name="phone" type="tel"
-                                        placeholder="Customer Phone">
-                                    <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                </div>
-                            </div> --}}
                             <div class="col-md-4">
                                 <div class="input-form">
                                     <label class="d-block">Phone:</label>
@@ -186,14 +178,6 @@
                                     <input type="hidden" name="country_code" id="country_code" />
                                 </div>
                             </div>
-                            <!-- <div class="col-md-4">
-                                    <div class="input-form">
-                                        <label class="d-block"> Phone:</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                            required="" />
-                                        <small id="errPhone" class="err-style"></small>
-                                    </div>
-                                </div> -->
                             <div class="col-md-4">
                                 <div class="input-form">
                                     <label class="d-block"> Email Address:</label>
@@ -244,15 +228,6 @@
                                             @endphp
                                         </ul>
                                     </div>
-                                    {{-- <select class="nice-select vehicle-year" name="year[]" id="year">
-                                        <option value="" disabled selected>Select Year</option>
-                                        @php
-                                            $currentYear = date('Y');
-                                            for ($year = $currentYear; $year >= 1936; $year--) {
-                                                echo "<option value='$year'>$year</option>";
-                                            }
-                                        @endphp
-                                    </select> --}}
                                     <div class="error-message" style="color: red; display: none;">
                                         Please select a year.
                                     </div>
@@ -302,8 +277,6 @@
                             <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
                                 onchange="previewImages(event)">
                             <div class="image-preview-container" id="imagePreviewContainer"></div>
-                            <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
-                                    placeholder="Upload File" /> -->
                         </div>
                         <div class="row">
                             <di class="col-md-6">
@@ -347,7 +320,6 @@
 </section>
 @endsection
 @section('extraScript')
-{{-- new work --}}
 <script>
     $(document).ready(function() {
         function addNewVehicle() {
@@ -403,13 +375,9 @@
                 </div>
                 </div>
                 `;
-
             $('#vehicles-container').append(newVehicleHtml);
-
-            // Initialize the searchable dropdown for new elements
             initializeSearchableDropdown();
         }
-
         function initializeSearchableDropdown() {
             $('.dropdown-toggle.year').on('input', function() {
                 var input = $(this);
@@ -424,97 +392,29 @@
                     }
                 });
             });
-
             $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
                 var item = $(this);
                 var input = item.closest('.dropdown').find('.dropdown-toggle.year');
                 input.val(item.text());
-                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                item.closest('.dropdown-menu').hide();
             });
-
-            // Show dropdown when input is focused
             $('.dropdown-toggle.year').on('focus', function() {
                 $(this).siblings('.dropdown-menu.year-dropdown').show();
             });
-
-            // Hide dropdown when clicking outside
             $(document).on('click', function(e) {
                 if (!$(e.target).closest('.dropdown').length) {
                     $('.dropdown-menu.year-dropdown').hide();
                 }
             });
         }
-
         $('#addVehicleBtn').click(function() {
             addNewVehicle();
         });
-
         $(document).on('click', '.delete-vehicle', function() {
             $(this).closest('.vehicle-info').remove();
         });
-
-        // Initialize Select2 on existing dropdowns (if needed)
         initializeSearchableDropdown();
     });
 </script>
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const input = document.querySelector('.year');
-        const dropdownMenu = document.querySelector('.year-dropdown');
-        const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
-        
-        // Function to filter dropdown items
-        function filterDropdown() {
-            const searchValue = input.value.toLowerCase();
-            dropdownItems.forEach(function(item) {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(searchValue) || searchValue === '') {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
 
-        // Filter dropdown items on input
-        input.addEventListener('input', function() {
-            filterDropdown();
-        });
-
-        // Set input value from dropdown item click
-        dropdownMenu.addEventListener('click', function(e) {
-            if (e.target.classList.contains('dropdown-item')) {
-                input.value = e.target.textContent;
-                dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-            }
-        });
-
-        // Hide dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                dropdownMenu.style.display = 'none';
-            }
-        });
-
-        // Show dropdown when input is focused
-        input.addEventListener('focus', function() {
-            dropdownMenu.style.display = 'block';
-        });
-
-        // Handle Enter key press to set the input value
-        input.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                const searchValue = input.value;
-                // Check if the entered value exists in the dropdown
-                const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
-                if (item) {
-                    input.value = item.textContent;
-                }
-                dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-                e.preventDefault(); // Prevent default form submission behavior if in a form
-            }
-        });
-    });
-</script> -->
-{{-- new work --}}
 @endsection

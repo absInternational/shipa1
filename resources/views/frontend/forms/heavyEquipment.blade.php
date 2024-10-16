@@ -15,7 +15,6 @@
         background: white;
         display: flex;
         align-items: center;
-        /* border: 1px solid #ccc; */
         border-radius: 4px;
         padding: 8px 0px 8px 0px;
         width: fit-content;
@@ -25,7 +24,6 @@
         background: white;
         display: flex;
         align-items: center;
-        /* border: 1px solid #ccc; */
         border-radius: 4px;
         padding: 8px 0px 8px 0px;
         width: fit-content;
@@ -79,22 +77,18 @@
     }
     .input-container input {
         border: none;
-        /* border-bottom: 1px solid #ccc; */
         padding: 5px 0px 5px 0px;
         font-size: 14px;
         width: 38px;
         text-align: center;
-        /* margin-right: 5px; */
     }
     .input-container .placeholders {
-        /* color:white; */
         position: relative;
         right: 72px;
         color: black;
         display: inline-block;
         width: auto;
         padding: 0px 8px;
-        /* background: white; */
     }
     .err-style {
         color: red;
@@ -235,15 +229,6 @@
                             <div class="col-md-4">
                                 <div class="input-form tj-select">
                                     <label> Year</label>
-                                    {{-- <!-- <select class="nice-select vehicle-year" name="year[]" id="year">
-                                        <option value="" disabled selected>Select Year</option>
-                                        @php
-                                            $currentYear = date('Y');
-                                            for ($year = $currentYear; $year >= 1936; $year--) {
-                                                echo "<option value='$year'>$year</option>";
-                                            }
-                                        @endphp
-                                    </select> --> --}}
                                     <div class="dropdown">
                                             <input class="form-control dropdown-toggle year" type="text"
                                                 name="year[]" id="year" placeholder="Select Year"
@@ -321,50 +306,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="col-md-3">
-                                <label class="lab-cos">Weight</label>
-                                <div class="input-container1">
-                                    <input type="number" id="feet-input" class="input-field-1" placeholder="" name="weight[]"
-                                        min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                    <span class="separators-w">(Lbs.)</span>
-                                </div>
-                            </div>  --}}
-                            {{-- <div class="col-md-3">
-                                <label class="lab-cos">Width</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input1" class="input-field" placeholder="" name="width_ft[]"
-                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input1" class="input-field" placeholder="" name="width_in[]"
-                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
-                                </div>
-                            </div> --}}
-                            {{-- <div class="col-md-3">
-                                <label class="lab-cos">Height</label>
-                                <div class="input-container">
-                                    <input type="number" id="feet-input2" class="input-field" placeholder="" name="height_ft[]"
-                                        min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                    <span class="separator">(Ft.)</span>
-                                    <input type="number" id="inches-input2" class="input-field" placeholder="" name="height_in[]"
-                                        min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                    <span class="separators">(In.)</span>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        --}}
                         <div class="row mt-3">
-                            {{-- <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="load_type" class="text-white">Load Type</label>
-                                    <select class="" id="load_type" name="load_type">
-                                        <option value="" disabled selected>Select</option>
-                                        <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
-                                        <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
-                                    </select>
-                                </div>
-                            </div> --}}
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="load_method" class="text-white">Load Method</label>
@@ -441,10 +383,6 @@
                                         <option value="ENDUMP (ED)">ENDUMP (ED)</option>
                                         <option value="LANDOLL (LD)">LANDOLL (LD)</option>
                                         <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                        {{-- <option value="20ft container">20ft container</option>
-                                        <option value="40ft container">40ft container</option>
-                                        <option value="48ft container">48ft container</option>
-                                        <option value="53ft container">53ft container</option> --}}
                                     </select>
                                 </div>
                             </div>
@@ -488,8 +426,6 @@
                                 <input class="form-control image_input" type="file" name="image[]" accept="image/*"
                                     multiple onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                            placeholder="Upload File" /> -->
                             </div>
                         </div>
                         <div class="tj-theme-button mt-3">
@@ -661,35 +597,24 @@
                         </div>
                     </div>
                     `;
-
             $('#vehicles-container').append(newVehicleHtml);
-            // Initialize the searchable dropdown for new elements
                     initializeSearchableDropdown();
-
-        }
-
-        $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
-        // Initialize the searchable dropdown for new elements
-                    initializeSearchableDropdown();
-
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
+            }
+            $('#addVehicleBtn').click(function() {
+                addNewVehicle();
+            });
+                initializeSearchableDropdown();
+            $(document).on('click', '.delete-vehicle', function() {
+                $(this).closest('.vehicle-info').remove();
+            });
     });
 </script>
-<!-- year search work -->
 <script>
-    // Initialize Select2 on existing dropdowns (if needed)
     initializeSearchableDropdown();
     document.addEventListener('DOMContentLoaded', function() {
         const input = document.querySelector('.year');
         const dropdownMenu = document.querySelector('.year-dropdown');
         const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
-        
-        // Function to filter dropdown items
         function filterDropdown() {
             const searchValue = input.value.toLowerCase();
             dropdownItems.forEach(function(item) {
@@ -701,47 +626,35 @@
                 }
             });
         }
-
-        // Filter dropdown items on input
         input.addEventListener('input', function() {
             filterDropdown();
         });
-
-        // Set input value from dropdown item click
         dropdownMenu.addEventListener('click', function(e) {
             if (e.target.classList.contains('dropdown-item')) {
                 input.value = e.target.textContent;
-                dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                dropdownMenu.style.display = 'none';
             }
         });
-
-        // Hide dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
                 dropdownMenu.style.display = 'none';
             }
         });
-
-        // Show dropdown when input is focused
         input.addEventListener('focus', function() {
             dropdownMenu.style.display = 'block';
         });
-
-        // Handle Enter key press to set the input value
         input.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') {
                 const searchValue = input.value;
-                // Check if the entered value exists in the dropdown
                 const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
                 if (item) {
                     input.value = item.textContent;
                 }
-                dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-                e.preventDefault(); // Prevent default form submission behavior if in a form
+                dropdownMenu.style.display = 'none'; 
+                e.preventDefault();
             }
         });
     });
-
     function initializeSearchableDropdown() {
             $('.dropdown-toggle.year').on('input', function() {
                 var input = $(this);
@@ -756,36 +669,28 @@
                     }
                 });
             });
-
             $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
                 var item = $(this);
                 var input = item.closest('.dropdown').find('.dropdown-toggle.year');
                 input.val(item.text());
-                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                item.closest('.dropdown-menu').hide();
             });
-
-            // Show dropdown when input is focused
             $('.dropdown-toggle.year').on('focus', function() {
                 $(this).siblings('.dropdown-menu.year-dropdown').show();
             });
-
-            // Hide dropdown when clicking outside
             $(document).on('click', function(e) {
                 if (!$(e.target).closest('.dropdown').length) {
                     $('.dropdown-menu.year-dropdown').hide();
                 }
             });
         }
-    
 </script>
-<!-- year search work -->
 <script>
     $(document).ready(function() {
         $(document).on('change', '.category', function() {
             var $this = $(this);
             var selectedCategory = $this.find('option:selected').data('id');
             var $subcategoryBox = $this.closest('.col-6').next('.col-6').find('.subcategory-box');
-
             $.ajax({
                 url: "{{ route('get.subcategories') }}",
                 method: "POST",
@@ -796,17 +701,13 @@
                 success: function(response) {
                     var html = '';
                     $subcategoryBox.html('');
-
                     html += "<label for='subcategory'>Subcategory</label>";
                     html += "<select class='nice-select form-control subcategory' name='subcategory[]'>";
                     html += "<option value='' disabled selected>Select</option>";
-
                     $.each(response, function(index, val) {
                         html += `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
                     });
-
                     html += "</select>";
-
                     $subcategoryBox.html(html);
                 },
                 error: function(xhr, status, error) {
@@ -815,187 +716,5 @@
             });
         });
     });
-
 </script>
-{{-- <script>
-    // $(document).ready(function() {
-    //     $('#available_at_auction').change(function() {
-    //         if ($(this).is(':checked')) {
-    //             $('.div-link').show();
-    //         } else {
-    //             $('.div-link').hide();
-    //         }
-    //     });
-    // });
-</script> --}}
-{{-- <script>
-    // var validPickupSuggestions = [];
-    // var validDeliverySuggestions = [];
-
-    // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-    //     var inputValue = inputField.val();
-
-    //     $.ajax({
-    //         url: "{{ route('get.zipcodes') }}",
-    //         method: "POST",
-    //         data: {
-    //             "_token": "{{ csrf_token() }}",
-    //             "input": inputValue
-    //         },
-    //         success: function(response) {
-    //             suggestionsList.empty();
-    //             validSuggestions.length = 0;  // Clear previous suggestions
-
-    //             $.each(response, function(index, suggestion) {
-    //                 var listItem = $("<li>").text(suggestion).click(function() {
-    //                     inputField.val(suggestion);
-    //                     suggestionsList.css("display", "none");
-    //                 });
-    //                 validSuggestions.push(suggestion);  // Add to valid suggestions
-    //                 suggestionsList.append(listItem);
-    //             });
-    //         },
-    //         error: function(xhr, status, error) {
-    //             console.error("Error:", error);
-    //         }
-    //     });
-    // }
-
-    // $("#pickup-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-    // });
-
-    // $("#delivery-location").keyup(function() {
-    //     var inputField = $(this);
-    //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-    //     suggestionsList.css("display", "block");
-    //     if (inputField.val() === "") {
-    //         suggestionsList.css("display", "none");
-    //     }
-    //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-    // });
-
-    // function validateLocationInput(inputField, validSuggestions, errorField) {
-    //     var inputValue = inputField.val();
-    //     if (!validSuggestions.includes(inputValue)) {
-    //         errorField.text("Please select a valid location.");
-    //         return false;
-    //     } else {
-    //         errorField.text("");
-    //         return true;
-    //     }
-    // }
-
-    // $("form").submit(function(event) {
-    //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-    //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
-    //     if (!isPickupValid || !isDeliveryValid) {
-    //         event.preventDefault();  // Prevent form submission if validation fails
-    //     }
-    // });
-</script> --}}
-{{-- <script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script> --}}
-{{-- <!-- <script>
-    $(document).ready(function() {
-        $('input[type="number"]').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script> --> --}}
-{{-- <script>
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-
-    $(document).ready(function() {
-        $('#inches-input').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input1').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input1, #inches-input1').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input2').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input2').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script> --}}
 @endsection

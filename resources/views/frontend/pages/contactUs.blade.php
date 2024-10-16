@@ -57,7 +57,7 @@
                     </div>
                     <div class="contact-header">
                         <span>Any Questions? Email us</span>
-                        <a href="mailto:info@shipa1.com" class="text-break"> shawntransport@shipa1.com</a>
+                        <a href="mailto:shawntransport@shipa1.com" class="text-break"> shawntransport@shipa1.com</a>
                     </div>
                 </div>
             </div>

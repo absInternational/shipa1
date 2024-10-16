@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="header-content-left me-auto">
                                     <span><i class="fa-regular fa-envelope fa-bounce fa-lg" style="color: #8fc445;"></i>
-                                        <a href="mailto:info@shipa1.com" class="text-white"> shawntransport@shipa1.com</a></span>
+                                        <a href="mailto:shawntransport@shipa1.com" class="text-white"> shawntransport@shipa1.com</a></span>
                                 </div>
                                 <div class="header-content-right">
                                     <div class="header-social-icon">

@@ -504,13 +504,6 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="form-group">
-                            <label for="condition" class="text-white">Condition</label>
-                            <select class="form-control" id="condition" name="condition[]">
-                                <option value="1" selected>Running</option>
-                                <option value="2">Non Running</option>
-                            </select>
-                        </div> --}}
                         <div class="row mb-3">
                             <div class="col-md-3">
                                 <label class="lab-cos">Length</label>
@@ -588,8 +581,6 @@
                                 <input class="form-control image_input" name="image[]" type="file" accept="image/*"
                                     multiple onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]" onchange="previewImage(event)" />
-                                            <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
                         </div>
                         <div class="row select-bm" style="display:none;">
@@ -628,9 +619,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                        style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                        Vehicle</a> -->
                         <div id="vehicles-container" style="display:none;">
                         </div>
                         <div class="tj-theme-button mt-3">
@@ -664,7 +652,6 @@
                 this.value = 0;
             }
         });
-        // Optionally, you can also prevent the user from typing non-numeric characters.
         $('#feet-input, #inches-input').on('input', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
         });
@@ -677,7 +664,6 @@
                 this.value = 0;
             }
         });
-        // Optionally, you can also prevent the user from typing non-numeric characters.
         $('#feet-input1, #inches-input1').on('input', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
         });
@@ -690,7 +676,6 @@
                 this.value = 0;
             }
         });
-        // Optionally, you can also prevent the user from typing non-numeric characters.
         $('#feet-input, #inches-input2').on('input', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
         });
@@ -699,7 +684,6 @@
 <script>
     $(document).ready(function() {
         function checkSpecificFieldsFilled() {
-            // console.log('yesyessss');
             var allFilled = true;
             $('.calculate_freight').each(function() {
                 if ($(this).val() === '' || $(this).val() === '0') {
@@ -793,7 +777,6 @@
             console.log('fright_class', fright_class);
             $('#frieght_class').val(fright_class);
             console.log('classclass', $('#frieght_class').val());
-            // $('#frieght_class').val(fright_class).trigger('change');
         }
         $('.calculate_freight').on('keyup', function() {
             if (checkSpecificFieldsFilled()) {
@@ -801,7 +784,6 @@
             }
         });
     });
-
     function limitDigits(element, maxDigits) {
         if (element.value.length > maxDigits) {
             element.value = element.value.slice(0, maxDigits);
