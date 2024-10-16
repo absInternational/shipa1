@@ -712,22 +712,24 @@
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-users icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">24/7 Customer Support</h3>
-                    <p class="slide-text">We are available 24/7 to assist our customers with any logistics concerns or needs, ensuring they receive the best support and tailored solutions.</p>
+                    <h3 class="slide-title">Affordability: </h3>
+                    <p class="slide-text">We offer the best rates in the market, and that too without compromising the quality of
+                        our services.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-dollar-sign icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Affordability</h3>
-                    <p class="slide-text">We offer the best rates in the market without compromising on the quality of our services.</p>
+                    <h3 class="slide-title">Fast and Secure Shipping:</h3>
+                    <p class="slide-text"> Gain access to our super speedy services like door-to-door and expedited,
+                        specially tailored to the tailored needs of our customers.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-clock icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Fast and Secure Shipping</h3>
-                    <p class="slide-text">Our super speedy services, such as door-to-door and expedited shipping, are tailored to the specific needs of our customers.</p>
+                    <h3 class="slide-title">100% Insurance:</h3>
+                    <p class="slide-text"> Each vehicle at Ship A1 is 100% protected to avoid unforeseen incidents</p>
                 </div>
             </div>
         </div>
@@ -735,15 +737,17 @@
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Real-Time Tracking</h3>
-                    <p class="slide-text">Customers can track their shipment status anytime, making it easy to stay updated.</p>
+                    <h3 class="slide-title">24/7 Customer Support: </h3>
+                    <p class="slide-text">We are present 24/7 for our customers to best assist them according to their
+                        logistic concerns and needs.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-shield-alt icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">100% Insurance</h3>
-                    <p class="slide-text">Every vehicle is fully insured at Ship A1, providing complete protection against unforeseen incidents.</p>
+                    <h3 class="slide-title">Real-Time Tracking: </h3>
+                    <p class="slide-text">Avail our real-time tracking service that allows the customer to track their shipment
+                        status anytime.</p>
                 </div>
             </div>
         </div>

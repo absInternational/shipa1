@@ -651,22 +651,26 @@
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-users icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">16 Years of Experience</h3>
-                    <p class="slide-text">Ship A1 has been in the transportation industry for 16 years, maintaining a proven record of satisfied customers across the USA.</p>
+                    <h3 class="slide-title">Experience:</h3>
+                    <p class="slide-text">Ship A1 has been in this business for 16 years maintaining a proven record of satisfied
+                        customers all across the USA</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-dollar-sign icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Cost-Effective Rates</h3>
-                    <p class="slide-text">We offer the best rates in the market without compromising on the quality of our services.</p>
+                    <h3 class="slide-title">Cost-Effective Rates:</h3>
+                    <p class="slide-text">We offer the best rates in the market without compromising the quality of our
+                        services.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">24/7 Customer Support</h3>
-                    <p class="slide-text">Customers can reach out to our helpline 1 (844) 474-4721 any time for assistance, ensuring a satisfying experience.</p>
+                    <h3 class="slide-title">24/7 Customer Support: </h3>
+                    <p class="slide-text">Anywhere and anytime customers reach out to our helpline 1 (844) 474-4721
+                        whenever they have questions and concerns, we provide our assistance 24/7 leaving the customer
+                        satisfied and happy at the end of the day.</p>
                 </div>
             </div>
         </div>
@@ -674,15 +678,17 @@
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-shield-alt icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">100% Insurance</h3>
-                    <p class="slide-text">All vehicles are secured and protected, so our customers can have peace of mind while shipping with Ship A1.</p>
+                    <h3 class="slide-title">Real-Time Tracking:</h3>
+                    <p class="slide-text"> When transporting with Ship A1 you will have the benefit of tracking your boat
+                        from anywhere and anytime with the help of our tracking service.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-clock icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Real-Time Tracking</h3>
-                    <p class="slide-text">Benefit from real-time tracking of your vehicle, accessible from anywhere and anytime through our tracking service.</p>
+                    <h3 class="slide-title">100% Insurance:</h3>
+                    <p class="slide-text"> At Ship A1 all of our vehicles are secured and protected so our customers don’t have to
+                        worry about stressing over this factor.</p>
                 </div>
             </div>
         </div>        
