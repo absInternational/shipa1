@@ -383,9 +383,7 @@
         <div class="tj-section-heading text-center">
             <h2 class="title text-white">Why Choose Us?</h2>
             <span class="sub-title active-shape">Discover the benefits of choosing ShipA1 through our features.</span>
-        </div>
-        {{-- <h2 class="section-title">Why Choose Us?</h2>
-        <p class="section-description">Discover the benefits of choosing ShipA1 through our features.</p> --}}
+        </div> 
         <div class="row">
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">

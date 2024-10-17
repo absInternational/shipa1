@@ -41,7 +41,7 @@
         z-index: 0; 
     }
     .why-choose-us-slider {
-        background: url('../../img/autoauction banner 2.webp');
+        background: url('../../img/1-background-image-heavy-equipment-transport.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;

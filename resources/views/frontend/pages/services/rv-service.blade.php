@@ -26,16 +26,12 @@
         }
     .services {
     text-align: center;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     border-radius: 12px;
     padding: 10px 30px 0px 30px;
-    /* background-color: #9d9e9f14;*/
     }
     .services-h1 {
     text-align:center;
-    /* text-decoration: overline; */
     margin-bottom: 50px;
-    /* color: #ffffff; */
     }
     .why-choose-us-slider::before {
         content: "";
@@ -44,21 +40,19 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
-        z-index: 0; /* Ensures it appears on top of the background */
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: 0; 
     }
-
     .why-choose-us-slider {
-        background: url('../../img/autoauction banner 2.webp');
+        background: url('../../img/1 background image RV on trailer.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1; /* Keeps the background behind the ::before element */
+        z-index: 1;
     }
-
     .section-title {
         text-align: center;
         font-size: 2.5rem;
@@ -69,7 +63,6 @@
         text-transform: uppercase;
         animation: fadeIn 1s ease-in-out;
     }
-
     .section-description {
         text-align: center;
         font-size: 1.1rem;
@@ -81,7 +74,6 @@
         opacity: 0.8;
         animation: fadeIn 1.2s ease-in-out;
     }
-
     .slide {
         min-width: 33.333%;
         box-sizing: border-box;
@@ -95,24 +87,20 @@
         position: relative;
         overflow: hidden;
     }
-
     .slide:hover {
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px);
         background-color: rgba(255, 255, 255, 1);
     }
-
     .slide i {
         margin-bottom: 20px;
         color: #666;
         font-size: 3rem;
         transition: color 0.3s ease;
     }
-
     .slide:hover i {
         color: #8FC445;
     }
-
     .slide-title {
         font-size: 1.5rem;
         color: #333;
@@ -121,11 +109,9 @@
         letter-spacing: 0.3px;
         transition: color 0.3s ease;
     }
-
     .slide:hover .slide-title {
         color: #8FC445;
     }
-
     .slide-text {
         font-size: 1rem;
         color: #666;
@@ -168,12 +154,6 @@
 </section>
 {{-- @include('partials.reveiw-site') --}}
 @include('partials.reveiw-small-detail') 
-{{-- <section class="tj-about-section-four">
-    <div class="container">
-        <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">Shipping Your
-            RV with ShipA1 Transport</h2>
-    </div>
-</section> --}}
 <section class="tj-about-section pt-4">
     <div class="container">
         <div class="row">
@@ -201,15 +181,9 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/RV-2.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/4a image for RV-Transport.webp') }}" alt="Image">
                     </div>
                 </div>
-                <!-- <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
-                    <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
-                    </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
-                </div> -->
             </div>
         </div>
     </div>
@@ -218,7 +192,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/RV-1.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/4b image for RV-Transport.webp') }}" alt="Image">
                     </div>
 
                 </div>
@@ -226,8 +200,6 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape">What is RV Shipping ?</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">What is RV Shipping ?</h3>
                         <p class="desc">
                             Just like any other shipping of vehicles, RV shipping includes transporting your
@@ -265,7 +237,6 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape">Types of Shipping Methods We Use</span> --}}
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Seamless RV Shipping with Customized Solutions</h3>
                         <p class="desc">Your go-to company for RV Transportation should be Ship A1! A leading transportation
                              company providing access to a number of the best, most affordable, and most convenient ways of RV 
@@ -280,7 +251,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/RV-3.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/4c image for RV-Transport.webp') }}" alt="Image">
                     </div>
 
                 </div>
@@ -294,7 +265,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/RV-4.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('frontend/images/project/4d image for RV-Transport.webp') }}" alt="Image">
                     </div>
 
                 </div>
