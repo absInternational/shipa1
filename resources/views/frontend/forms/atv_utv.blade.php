@@ -48,7 +48,7 @@
                 @endif
                 <div class="col-lg-12" data-sal="slide-down" data-sal-duration="800">
                     <div class="tj-input-form" data-bg-image="{{ asset('frontend/images/banner/form-shape.png') }}">
-                        <h4 class="title text-center">Instant ATV/UTV Shipping Quote!</h4>
+                        <h2 class="title text-center">Instant ATV/UTV Shipping Quote!</h2>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
                             id="calculatePriceFrom" data-parsley-validate data-parsley-errors-messages-disabled
                             enctype="multipart/form-data" novalidate>

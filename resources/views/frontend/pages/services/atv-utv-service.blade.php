@@ -640,7 +640,7 @@
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
-                <h1 class="services-h1">Things To Keep In Mind</h1>
+                <h2 class="services-h1">Things To Keep In Mind</h2>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
@@ -672,40 +672,6 @@
         </div>
     </div>
 </section>
-{{-- <section class="tj-about-section-five">
-    <div class="container">
-        <div class="row services">
-            <h1 class="services-h1">Things To Keep In Mind</h1>
-            <div class="col-12 col-md-4 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Transit Insured</h5>
-                        <p class="card-text text-light">One of the things that is a make or break for the customer is whether he 
-                            would get insurance or not?. At ShipA1 you will get a full insurance coverage during transit.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Suspension for Safer Transit</h5>
-                        <p class="card-text text-light">The ATV/UTV hauling service becomes even more safer because of the suspensions
-                             our trailers are equipped with. It will nullify the road debris completely.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Tracking of ATV/UTV</h5>
-                        <p class="card-text text-light">In some of the cases we give you the system to track the activity of the
-                             trucker where he has reached & how long would it take to deliver shipment?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
 <section class="tj-faq-section tj-faq-page pt-4">
         <div class="container">
             <div class="row">
@@ -731,19 +697,41 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How much does it cost to ship an ATV/UTV?
+                                        Is my ATV/UTV insured during transport?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                    The price to send an ATV/UTV will depend on distance, the type of car shipping, open or enclosed,
-                                     and any other services that might be necessary, such as an expedited service.
-                                     Local hauling is usually around $200 to $600, and coast-to-coast shipping would
-                                     run from $600 to $1500. Please feel free to contact us with the details so we can provide you with an exact quote for your shipment.
+                                        Yes, your ATV/UTV is fully insured during transportation. Our insurance covers any 
+                                        possible damage that may be caused during transit. Please refer to our insurance 
+                                        policy for more details.
 
                                     </div>
                                 </div>
                             </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        How much does it cost to ship an ATV/UTV?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>The price to send an ATV/UTV will depend on distance, the type of car shipping, open or enclosed,
+                                            and any other services that might be necessary, such as an expedited service.
+                                            Local hauling is usually around $200 to $600, and coast-to-coast shipping would
+                                            run from $600 to $1500. Please feel free to contact us with the details so we can
+                                             provide you with an exact quote for your shipment.
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+
+
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -781,67 +769,6 @@
         </div>
     </div>
 </section>
-{{-- <section class="tj-choose-us-section-service-atv">
-    <div class="container why-box">
-        <div class="row">
-        <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
-                <div class="about-content-two">
-                    <div class="tj-section-heading">
-
-                        <h2 class="title-2">Why Choose Us?</h2>
-                        <p class="desc-2">
-                            We have a distinct approach when it comes to the philosophy of business.<br>Our belief in
-                            innovation & unique business practices differentiate us & here are the reasons why you must
-                            choose us:
-                        </p>
-                    </div>
-
-                    <div class="content-box d-flex align-items-center border-top">
-
-                        <div class="tj-icon-box">
-                            <div class="ab-text d-flex align-items-center">
-
-                            </div>
-                            <p class="desc-2">★ Offering wide range of shipping methods tailored to various needs, including vehicles, heavy equipment, and freight across the US.</p>
-                        </div>
-
-                        <div class="tj-icon-box">
-
-                            <p class="desc-2">★ Providing top-notch quality service with a well-equipped and professional team dedicated to meeting customer expectations.</p>
-                        </div>
-                        <div class="tj-icon-box pb-4">
-
-                            <p class="desc-2">★ Ensuring timely delivery of shipments, emphasizing reliability and efficiency in logistics.</p>
-                        </div>
-                    </div>
-                    <div class="content-box d-flex align-items-center">
-
-                        <div class="tj-icon-box mr-3">
-
-                            <p class="desc-2">★ Focusing on customer satisfaction by catering to their needs and maintaining loyalty through personalized service.</p>
-                        </div>
-                        <div class="tj-icon-box">
-
-                            <p class="desc-2">★ Prioritizing safe and secure transportation, with a commitment to maintaining customer trust and peace of mind.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
-                    <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
-                            alt="Image">
-                    </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
-                        alt="Image">
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section> --}}
 <section class="why-choose-us-slider">
     <div class="container">
         <div class="tj-section-heading text-center">
@@ -889,364 +816,116 @@
         </div>
     </div>
 </section>
-@include('partials.blog-slider')
+    @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-<script>
-    $(document).ready(function() {
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                <div class="vehicle-info">
-                <div class="row select-bm">
-                    <!-- Bin icon for deleting vehicle -->
-                    <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label>Year</label>
-                <div class="dropdown">
-                    <input class="form-control dropdown-toggle year" type="text"
-                        name="year[]" id="year" placeholder="Select Year"
-                        data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
-                    <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                        <li><a class="dropdown-item">Select Year</a></li>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
-            }
-
-            newVehicleHtml +=
-                `</ul>
-                </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label>Make</label>
-                <input type="text" id="make" name="make[]"
-                placeholder="Enter Make" required="" />
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="input-form tj-select model-div">
-                <label>Model</label>
-                <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                required="" />
-                
-                </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="condition" class="text-white">Condition</label>
-                        <select class="nice-select" id="condition" name="condition[]">
-                            <option value="1" selected>Running</option>
-                            <option value="2">Non Running</option>
-                        </select>
-                    </div>
-                </div>
-                </div>
-                </div>
-                `;
-
-            $('#vehicles-container').append(newVehicleHtml);
-
-            // Initialize the searchable dropdown for new elements
-            initializeSearchableDropdown();
-        }
-
-        function initializeSearchableDropdown() {
-            $('.dropdown-toggle.year').on('input', function() {
-                var input = $(this);
-                var filter = input.val().toLowerCase();
-                var dropdown = input.siblings('.dropdown-menu.year-dropdown');
-                dropdown.find('.dropdown-item').each(function() {
-                    var text = $(this).text().toLowerCase();
-                    if (text.includes(filter) || filter === '') {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            });
-
-            $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
-                var item = $(this);
-                var input = item.closest('.dropdown').find('.dropdown-toggle.year');
-                input.val(item.text());
-                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
-            });
-
-            // Show dropdown when input is focused
-            $('.dropdown-toggle.year').on('focus', function() {
-                $(this).siblings('.dropdown-menu.year-dropdown').show();
-            });
-
-            // Hide dropdown when clicking outside
-            $(document).on('click', function(e) {
-                if (!$(e.target).closest('.dropdown').length) {
-                    $('.dropdown-menu.year-dropdown').hide();
-                }
-            });
-        }
-
-        $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-
-        // Initialize Select2 on existing dropdowns (if needed)
-        initializeSearchableDropdown();
-    });
-</script>
-
-<!-- year search work -->
-{{-- <script>
-    $(document).ready(function() {
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                <div class="vehicle-info">
+    <script>
+        $(document).ready(function() {
+            function addNewVehicle() {
+                var newVehicleHtml =
+                    `
+                    <div class="vehicle-info">
                     <div class="row select-bm">
                         <!-- Bin icon for deleting vehicle -->
-                                <span class="delete-vehicle"><i class="fa fa-trash mt-3" style="float: right; color: red; cursor: pointer;"></i></span>
-                        <div class="col-md-4">
-                            <div class="input-form tj-select">
-                                <label> Year</label>
-                                <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                                    var currentYear = {{ date('Y') }};
-                                    for (var year = currentYear; year >= 1936; year--) {
-                                        newVehicleHtml += `<option value="${year}">${year}</option>`;
-                                    }
-                                    newVehicleHtml +=
-                                `</select>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                             <div class="input-form tj-select">
-                                 <label>Make</label>
-                                 <input type="text" id="make" name="make[]"
-                                                    placeholder="Enter Make" required="" />
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-form tj-select model-div">
-                                <label>Model</label>
-                                <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                    required="" />
-                                
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="condition" class="text-white">Condition</label>
-                                <select class="form-control" id="condition" name="condition[]">
-                                    <option value="1" selected>Running</option>
-                                    <option value="2">Non Running</option>
-                                </select>
-                            </div>
+                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                    <div class="col-md-4">
+                    <div class="input-form tj-select">
+                    <label>Year</label>
+                    <div class="dropdown">
+                        <input class="form-control dropdown-toggle year" type="text"
+                            name="year[]" id="year" placeholder="Select Year"
+                            data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                        <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                            <li><a class="dropdown-item">Select Year</a></li>`;
+                var currentYear = {{ date('Y') }};
+                for (var year = currentYear; year >= 1936; year--) {
+                    newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
+                }
+
+                newVehicleHtml +=
+                    `</ul>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="input-form tj-select">
+                    <label>Make</label>
+                    <input type="text" id="make" name="make[]"
+                    placeholder="Enter Make" required="" />
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="input-form tj-select model-div">
+                    <label>Model</label>
+                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                    required="" />
+                    
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="condition" class="text-white">Condition</label>
+                            <select class="nice-select" id="condition" name="condition[]">
+                                <option value="1" selected>Running</option>
+                                <option value="2">Non Running</option>
+                            </select>
                         </div>
                     </div>
-                </div>
-            `;
+                    </div>
+                    </div>
+                    `;
 
-            $('#vehicles-container').append(newVehicleHtml);
-        }
+                $('#vehicles-container').append(newVehicleHtml);
 
-        $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-    });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                <div class="vehicle-info">
-                <div class="row select-bm">
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label> Year</label>
-                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
+                // Initialize the searchable dropdown for new elements
+                initializeSearchableDropdown();
             }
 
-            newVehicleHtml +=
-                `</select>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label>Make</label>
-                <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-            @foreach ($makes as $make)
-                newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-            @endforeach
-
-            newVehicleHtml += `
-            </select>
-            </div>
-            </div>
-            <div class="col-md-4">
-            <div class="input-form tj-select model-div">
-            <label>Model</label>
-            <select class="nice-select model" name="model[]" id="model" required>
-            <!-- Options filled by JavaScript -->
-            </select>
-            <!-- Bin icon for deleting vehicle -->
-            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
-            </div>
-            </div>
-            </div>
-            </div>
-            `;
-
-            $('#vehicles-container').append(newVehicleHtml);
-        }
-
-        $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-
-        $(document).on('change', '.year, .make', function() {
-            var year = $(this).closest('.vehicle-info').find('.year').val();
-            var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            var vehicleInfo = $(this).closest('.vehicle-info');
-            if (year && makeId) {
-                getModel(year, makeId, vehicleInfo);
-            }
-        });
-
-        function getModel(year, makeId, vehicleInfo) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
+            function initializeSearchableDropdown() {
+                $('.dropdown-toggle.year').on('input', function() {
+                    var input = $(this);
+                    var filter = input.val().toLowerCase();
+                    var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                    dropdown.find('.dropdown-item').each(function() {
+                        var text = $(this).text().toLowerCase();
+                        if (text.includes(filter) || filter === '') {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
                     });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            var year = $('.vehicle-year').val();
-            var makeId = $('.vehicle-make').val();
-            if (year && makeId) {
-                getModel(year, makeId);
-            }
-        });
-    });
-        function getModel(year, makeId) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = $('.vehicle-model-div');
-                    modelsDropdown.empty();
-                    var selectOptions =
-                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
-                    });
-                    selectOptions += '</select>';
-                    modelsDropdown.html(selectOptions);
-
-                    console.log('yesssss', response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    $(document).ready(function() {
-        $('#available_at_auction').change(function() {
-        if ($(this).is(':checked')) {
-        $('.div-link').show();
-        } else {
-        $('.div-link').hide();
-        }
-        });
-        $('#modification').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script>
-<script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
                 });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
+
+                $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                    var item = $(this);
+                    var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                    input.val(item.text());
+                    item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                });
+
+                // Show dropdown when input is focused
+                $('.dropdown-toggle.year').on('focus', function() {
+                    $(this).siblings('.dropdown-menu.year-dropdown').show();
+                });
+
+                // Hide dropdown when clicking outside
+                $(document).on('click', function(e) {
+                    if (!$(e.target).closest('.dropdown').length) {
+                        $('.dropdown-menu.year-dropdown').hide();
+                    }
+                });
             }
+
+            $('#addVehicleBtn').click(function() {
+                addNewVehicle();
+            });
+
+            $(document).on('click', '.delete-vehicle', function() {
+                $(this).closest('.vehicle-info').remove();
+            });
+
+            // Initialize Select2 on existing dropdowns (if needed)
+            initializeSearchableDropdown();
         });
-    }
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script> --}}
+    </script>
 @endsection

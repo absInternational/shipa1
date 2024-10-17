@@ -509,7 +509,7 @@
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
-                <h1 class="services-h1">Motorcyle Hauling Services</h1>
+                <h2 class="services-h1">Motorcyle Hauling Services</h2>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
@@ -565,32 +565,33 @@
                 <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
                     <div class="tj-faq-area">
                     <div class="accordion" id="accordionExample">
+                            
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How much does it cost to ship  Motorcycle?
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How do I get a quote?
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                    The price to send  Motorcycle will depend on distance, the type of car shipping, open or enclosed,
-                                     and any other services that might be necessary, such as an expedited service.
-                                     Local hauling is usually around $200 to $600, and coast-to-coast shipping would
-                                     run from $600 to $1500. Please feel free to contact us with the details so we can provide you with an exact quote for your shipment.
-
+                                At Ship A1, we have the convenience of free quotes that we offer to all our customers online.<br>You can call our direct 
+                                number<a class="pp-link-2" href="#"> 1 (844) 474-4721</a> for an instant quote.
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How do I get a quote?
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How much does it cost to ship  Motorcycle?
                                     </button>
                                 </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                At Ship A1, we have the convenience of free quotes that we offer to all our customers online.<br>You can call our direct 
-                                number<a class="pp-link-2" href="#"> 1 (844) 474-4721</a> for an instant quote.
+                                    The price to send  Motorcycle will depend on distance, the type of shipping, open or enclosed,
+                                     and any other services that might be necessary, such as an expedited service.
+                                     Local hauling is usually around $200 to $600, and coast-to-coast shipping would
+                                     run from $600 to $1500. Please feel free to contact us with the details so we can provide you with an exact quote for your shipment.
+
                                     </div>
                                 </div>
                             </div>
@@ -611,6 +612,23 @@
                                     </div>
                                 </div>
                             </div> 
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Is my Motorcycle insured during transport?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>Yes, your Motorcycle is fully insured during transportation. Our insurance 
+                                            covers any possible damage that may be caused during transit. Please refer to our
+                                             insurance policy for more details.
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
                 </div>
                 </div>
             </div>

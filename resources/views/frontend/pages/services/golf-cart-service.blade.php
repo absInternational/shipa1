@@ -662,67 +662,6 @@
           </div>
         </div>
 </section>
-{{-- @include('partials.reveiw-site') --}}
-{{-- <section class="tj-about-section-five">
-    <div class="container">
-        <div class="row justify-content-center services">
-            <h1 class="services-h1">Discussing the Golf Cart Types!</h1>
-            <div class="col-12 col-md-4 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Standard Golf Cart</h5>
-                        <p class="card-text text-light">Standard Golf Carts are preferred for their cost-effectiveness, 2-4 seat
-                             capacity, electric or gas engines, and features like cup holders, golf bag holders, and basic seating.
-                              Designed for smooth rides, they typically measure around 92 x 48 x 75 inches, with variations by
-                               model and brand.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Utility Golf Cart</h5>
-                        <p class="card-text text-light">Utility Golf Carts, categorized as Utility Vehicles (UTVs) or Golf Utility
-                             Vehicles (GUVs), are versatile machines. Ship A1's models excel beyond golf courses, ideal for hauling
-                              equipment, maintenance on large properties, and even on construction sites for transporting cement,
-                               bricks, and tools.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Off-Road Golf Carts</h5>
-                        <p class="card-text text-light">Have you tried karting or hunting? It's tough! Our Off-Road Golf Carts are built for rugged terrain with 
-                            heavy-duty suspension, all-terrain tires, and powerful engines. Perfect for trail riding, hunting, camping, and exploring rough
-                             terrain.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Luxury Golf Carts</h5>
-                        <p class="card-text text-light">Want to golf in style? Explore our luxury Golf Carts with premium features for a smooth ride. 
-                            Our carts include posh seating, polished chrome accents, woodgrain trim,
-                             advanced technology like an excellent sound system, and GPS navigation, ensuring an outstanding golfing experience.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Street-Legal Golf Carts</h5>
-                        <p class="card-text text-light">Drive with friends through streets in our Street-Legal Golf Cart! It combines car features
-                             with golf cart convenience, meeting legal requirements. Equipped with
-                             headlights, taillights, turn signals, seat belts, mirrors, it's perfect for gated communities and urban 
-                             low-speed vehicle areas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
 <section class="why-choose-us-slider">
     <div class="container">
         <div class="tj-section-heading text-center">
@@ -804,22 +743,16 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How long does it take to deliver a golf cart?
+                                        Is my Golf Cart insured during transport?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        This is one of the many factors that depend on miles covered, shipping methods, and the demand at that time. Usually, local shipment within just a few
-                                             hundred miles takes 1-3 days, while cross-country transportation could come in anywhere from 5 to 10 days. 
-                                             You will be given estimated delivery times as you book your transport and can track your shipment throughout.
-
-
+                                        Yes, your Golf Cart is fully insured during transportation. Our insurance covers any possible damage that
+                                         may be caused during transit. Please refer to our insurance policy for more details.
                                     </div>
                                 </div>
                             </div>
-                            
-
-
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -840,94 +773,48 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                How much does it cost to transport a golf cart?
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                The amount to ship your golf cart varies from a number of different elements involved: the distance,
-                                 shipping method, open versus enclosed transport, and any added services for which you might want 
-                                 to pay. Local transport, on average, will cost anything from $200 to $500, while intercontinental 
-                                 may cost up to $600-$1,200. Please contact us with details of what you need that is, pickup and
-                                  delivery locations, weight, and other specifications and we'll be sure to provide you with an 
-                                  estimate of the cost involved.
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    How much does it cost to transport a golf cart?
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    The amount to ship your golf cart varies from a number of different elements involved: the distance,
+                                    shipping method, open versus enclosed transport, and any added services for which you might want 
+                                    to pay. Local transport, on average, will cost anything from $200 to $500, while intercontinental 
+                                    may cost up to $600-$1,200. Please contact us with details of what you need that is, pickup and
+                                    delivery locations, weight, and other specifications and we'll be sure to provide you with an 
+                                    estimate of the cost involved.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        How long does it take to deliver a golf cart?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is one of the many factors that depend on miles covered, shipping methods, and the demand at that time. Usually, local shipment within just a few
+                                            hundred miles takes 1-3 days, while cross-country transportation could come in anywhere from 5 to 10 days. 
+                                            You will be given estimated delivery times as you book your transport and can track your shipment throughout.
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-{{-- <section class="tj-choose-us-section-service-golfcart">
-    <div class="container why-box">
-        <div class="row">
-        <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
-                <div class="about-content-two">
-                    <div class="tj-section-heading">
-
-                        <h2 class="title-2">Why Choose Us?</h2>
-                        <p class="desc-2">
-                            We have a distinct approach when it comes to the philosophy of business.<br>Our belief in
-                            innovation & unique business practices differentiate us & here are the reasons why you must
-                            choose us:
-                        </p>
-                    </div>
-
-                    <div class="content-box d-flex align-items-center border-top">
-
-                        <div class="tj-icon-box">
-                            <div class="ab-text d-flex align-items-center">
-
-                            </div>
-                            <p class="desc-2">★ Offering wide range of shipping methods tailored to various needs, including vehicles, heavy equipment, and freight across the US.</p>
-                        </div>
-
-                        <div class="tj-icon-box">
-
-                            <p class="desc-2">★ Providing top-notch quality service with a well-equipped and professional team dedicated to meeting customer expectations.</p>
-                        </div>
-                        <div class="tj-icon-box pb-4">
-
-                            <p class="desc-2">★ Ensuring timely delivery of shipments, emphasizing reliability and efficiency in logistics.</p>
-                        </div>
-                    </div>
-                    <div class="content-box d-flex align-items-center">
-
-                        <div class="tj-icon-box mr-3">
-
-                            <p class="desc-2">★ Focusing on customer satisfaction by catering to their needs and maintaining loyalty through personalized service.</p>
-                        </div>
-                        <div class="tj-icon-box">
-
-                            <p class="desc-2">★ Prioritizing safe and secure transportation, with a commitment to maintaining customer trust and peace of mind.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
-                    <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
-                            alt="Image">
-                    </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
-                        alt="Image">
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section> --}}
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-
     {{-- addNewVehicle --}}
     <script>
         $(document).ready(function() {
@@ -1141,232 +1028,4 @@
             });
         </script> 
     {{-- service counter --}}  
-
-{{-- <script>
-    $(document).ready(function() {
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                <div class="vehicle-info">
-                <div class="row select-bm">
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label> Year</label>
-                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-
-            newVehicleHtml +=
-                `</select>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label>Make</label>
-                <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-            @foreach ($makes as $make)
-                newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-            @endforeach
-
-            newVehicleHtml += `
-            </select>
-            </div>
-            </div>
-            <div class="col-md-4">
-            <div class="input-form tj-select model-div">
-            <label>Model</label>
-            <select class="nice-select model" name="model[]" id="model" required>
-            <!-- Options filled by JavaScript -->
-            </select>
-            <!-- Bin icon for deleting vehicle -->
-            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
-            </div>
-            </div>
-            </div>
-            </div>
-            `;
-
-            $('#vehicles-container').append(newVehicleHtml);
-        }
-
-        $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-
-        $(document).on('change', '.year, .make', function() {
-            var year = $(this).closest('.vehicle-info').find('.year').val();
-            var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            var vehicleInfo = $(this).closest('.vehicle-info');
-            if (year && makeId) {
-                getModel(year, makeId, vehicleInfo);
-            }
-        });
-
-        function getModel(year, makeId, vehicleInfo) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
-                    });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            var year = $('.vehicle-year').val();
-            var makeId = $('.vehicle-make').val();
-            if (year && makeId) {
-                getModel(year, makeId);
-            }
-        });
-    });
-        function getModel(year, makeId) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = $('.vehicle-model-div');
-                    modelsDropdown.empty();
-                    var selectOptions =
-                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
-                    });
-                    selectOptions += '</select>';
-                    modelsDropdown.html(selectOptions);
-
-                    console.log('yesssss', response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-
-    
-
-    $(document).ready(function() {
-        $('#available_at_auction').change(function() {
-        if ($(this).is(':checked')) {
-        $('.div-link').show();
-        } else {
-        $('.div-link').hide();
-        }
-        });
-        $('#modification').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script>
-<script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const counter = document.getElementById('counter-value');
-        const target = +counter.getAttribute('data-target');
-        let count = 0;
-        const increment = target / 50; // Adjust this value to control the speed
-
-        const updateCounter = () => {
-            if (count < target) {
-                count = Math.ceil(count + increment);
-                counter.textContent = count;
-                setTimeout(updateCounter, 50); // Adjust this value to control the speed
-            } else {
-                counter.textContent = target;
-            }
-        };
-
-        updateCounter();
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-        const counter = document.getElementById('counter-value-2');
-        const target = +counter.getAttribute('data-target');
-        let count = 0;
-        const increment = target / 50; // Adjust this value to control the speed
-
-        const updateCounter = () => {
-            if (count < target) {
-                count = Math.ceil(count + increment);
-                counter.textContent = count;
-                setTimeout(updateCounter, 50); // Adjust this value to control the speed
-            } else {
-                counter.textContent = target;
-            }
-        };
-
-        updateCounter();
-    });
-</script>  --}}
 @endsection

@@ -35,7 +35,7 @@
             <div class="">
                 <div class="tj-section-heading">
                     <span class="sub-title active-shape"> Want To Know Your Order Status?</span>
-                    <h3 class="title">Get Status of Your Order</h3>
+                    <h2 class="title">Get Status of Your Order</h2>
                 </div>
                 <div class="tj-animate-form d-flex align-items-center">
                     <form id="orderTrackingForm" class="animate-form">

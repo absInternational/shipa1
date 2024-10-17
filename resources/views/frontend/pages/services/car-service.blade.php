@@ -761,7 +761,7 @@
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
-                <h1 class="services-h1">The Premier Unmatched Excellence</h1>
+                <h2 class="services-h1">The Premier Unmatched Excellence</h2>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card- h-100">
@@ -866,13 +866,13 @@
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Is my Motorcycle insured during transport?
+                                    Is my vehicle insured during transport?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>Yes, your Motorcycle is fully insured during transportation. Our insurance 
+                                    <strong>Yes, your vehicle is fully insured during transportation. Our insurance 
                                         covers any possible damage that may be caused during transit. Please refer to our
                                          insurance policy for more details.
                                     </strong>

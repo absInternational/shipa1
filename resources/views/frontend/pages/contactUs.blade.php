@@ -8,8 +8,40 @@
 @section('content')
 <style>
     .is-invalid {
-        border-color: #dc3545;
+        border-color: #ff0019;
     }
+    /* Custom styles for SweetAlert2 */
+    .swal2-popup {
+        background-color: #f8f9fa; /* Background color */
+        border-radius: 10px; /* Rounded corners */
+        color: #333; /* Text color */
+    }
+
+    .swal2-title {
+        font-size: 24px; /* Title font size */
+        font-weight: bold; /* Title font weight */
+    }
+
+    .swal2-content {
+        font-size: 16px; /* Content font size */
+    }
+
+    .swal2-confirm {
+        background-color: var(--tj-primary-color); /* Confirm button background color */
+        color: #fff; /* Confirm button text color */
+        border: none; /* Remove border */
+    }
+
+    .swal2-cancel {
+        background-color: #ff0019; /* Cancel button background color */
+        color: #fff; /* Cancel button text color */
+        border: none; /* Remove border */
+    }
+
+    .swal2-styled {
+        border-radius: 5px; /* Rounded corners for buttons */
+    }
+
 </style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -77,7 +109,7 @@
             <div class="col-lg-7" data-sal="slide-right" data-sal-duration="800">
                 <div class="tj-section-heading">
                     <span class="sub-title active-shape"> Need Any Help?</span>
-                    <h3 class="title">Get in Touch With Us</h3>
+                    <h2 class="title">Get in Touch With Us</h2>
                 </div>
                 <div class="tj-animate-form d-flex align-items-center">
                     <form id="contactForm" class="animate-form contactForm" action="{{ route('contact_messages.store') }}"
