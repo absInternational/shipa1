@@ -160,7 +160,7 @@
              margin: 10,
              nav: true,
              autoplay: true,
-             autoplayTimeout: 4000, // 2 seconds
+             autoplayTimeout: 2000, // 2 seconds
              autoplayHoverPause: true,
              responsive: {
                  0: {

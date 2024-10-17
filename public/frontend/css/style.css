@@ -2034,7 +2034,11 @@ body [class*=" icon-"]::before {
 .tj-service-item .service-content .title-link:hover {
     color: var(--tj-primary-color);
 }
-
+.service-content h4:hover,
+.service-content p:hover,
+.service-content a:hover {
+    color: var(--tj-primary-color);
+}
 .tj-service-item .service-content p {
     color: var(--tj-white-color);
     margin-bottom: 0;
@@ -3639,11 +3643,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     border-radius: 50%;
     color: var(--tj-white-color);
     transition: 0.4s;
+    font-weight: 700;
 }
 
 .tj-step-area .tj-step-item:hover .number {
     background-color: var(--tj-white-color);
-    color: var(--tj-primary-color);
+    color: var(--tj-secondary-color);
 }
 
 .tj-step-area .tj-step-item .step-content {
@@ -3722,8 +3727,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .about-group-image .group-1 {
-    margin-top: 20px;
-    width: 60%;
+    margin-top: 30px;
+    width: 70%;
 }
 
 .about-group-image .group-shape {
@@ -6417,7 +6422,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     width: 20px;
     height: 20px;
     -ms-flex-negative: 0;
-    background: var(--tj-primary-color2);
+    background: var(--tj-secondary-color);
     flex-shrink: 0;
     border: none;
     -webkit-transform: scale(1);
@@ -8709,7 +8714,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-subscribe-section {
     position: relative;
     z-index: 9;
-    margin-bottom: -70px;
+    margin-bottom: -35px;
 }
 
 .subscribe-content-box {
@@ -9097,7 +9102,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .footer-widget p {
-    color: var(--tj-gray-color2);
+    color: var(--tj-white-color);
     margin-top: 40px;
 }
 
@@ -9204,7 +9209,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     color: var(--tj-gray-color2);
     font-size: 17px;
     font-weight: 500;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     position: relative;
     padding-left: 60px;
 }

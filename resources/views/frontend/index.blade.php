@@ -4,6 +4,9 @@
 'Best state to state auto transport services in USA for quick, safe & secure auto vehicle delivery. We focus on your satisfaction with reliable, affordable services.')
 @section('content')
 <style>
+    .custom-hover-service-heading:hover{
+        color: green
+    }
     .tj-testimonial-section {
         padding: 120px 0px 0px 0;
         background: #ffffff;
@@ -244,7 +247,7 @@
             <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/DSF.webp') }}">
                 <div class="container">
                     <div class="slider-content p-z-idex">
-                        <h1 class="slider-title">TRUSTWORTHY, EFFICIENT, AND COST-EFFECTIVE AUTO TRANSPORT SOLUTIONS</h1>
+                        <h1 class="slider-title">Trustworthy, Efficient, And Cost-effective Auto Transport Solutions</h1>
                         <div class="slider-desc">
                             ShipA1 has pledged to provide all-in-one auto transport solutions to all its
                             customers and seeks your trust in return of our services.
@@ -522,7 +525,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
+            <div class="col-lg-6 align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-right" data-sal-duration="800">
                 <div class="about-group-image d-flex flex-wrap align-items-start flex-column">
                     <div class="tj-icon-box2 text-center">
                         <div class="number-icon">

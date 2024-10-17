@@ -1,5 +1,4 @@
 @extends('frontend.layouts.app')
-
 @section('content')
 <style>
     /* Container Styling */
@@ -9,7 +8,6 @@
         position: relative;
         overflow: hidden;
     }
-    
     /* Service Item */
     .service-item-three {
         background-color: #fff;
@@ -21,12 +19,10 @@
         margin-bottom: 30px;
         cursor: pointer;
     }
-    
     .service-item-three:hover {
         transform: translateY(-10px);
         box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
     }
-    
     /* Overlay Effect */
     .service-item-three .overlay {
         position: absolute;
@@ -46,11 +42,9 @@
         padding: 20px;
         box-sizing: border-box;
     }
-    
     .service-item-three:hover .overlay {
         top: 0; /* Slides down from the top */
     }
-    
     /* Service Image */
     .service-image img {
         width: 100%;
@@ -58,52 +52,44 @@
         display: block;
         transition: transform 0.3s ease-in-out;
     }
-    
     .service-item-three:hover .service-image img {
         transform: scale(1.05);
     }
-    
     /* Service Content */
-    .service-content {
+    .service-content-1 {
         padding: 20px;
         text-align: center;
     }
-    
-    .service-content h4 {
+    .service-content-1 h4 {
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 15px;
     }
-    
-    .service-content h4 a {
+    .service-content-1 h4 a {
         text-decoration: none;
         color: #333;
         transition: color 0.3s ease;
     }
-    
     /* Animation */
     [data-sal="slide-up"] {
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 0.8s ease, transform 0.8s ease;
     }
-    
     [data-sal="slide-up"].sal-animate {
         opacity: 1;
         transform: translateY(0);
     }
-    
     /* Smooth Scroll Animation */
     .tj-service-section-four {
         scroll-behavior: smooth;
     }
-    
     /* Responsive */
     @media (max-width: 991px) {
         .tj-section-heading .title {
             font-size: 28px;
         }
-        .service-content h4 {
+        .service-content-1 h4 {
             font-size: 18px;
         }
     }
@@ -132,7 +118,6 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <!--========== Service Section Start ==============-->
     <!-- <section class="tj-service-section-four tj-service-page">
                 <div class="container">
@@ -217,7 +202,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4><a class="title" href="{{ route('frontend.pages.services.car-service') }}">
                                     Car Shipping Service </a></h4>
                             <p></p>
@@ -252,7 +237,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4><a class="title" href="{{ route('frontend.pages.services.bike-service') }}">
                                     Motorcycle Shipping Service </a></h4>
                             <p></p>
@@ -265,7 +250,7 @@
                             <img src="{{ asset('frontend/images/project/atv-urv service.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4><a class="title" href="{{ route('frontend.pages.services.atv-utv-service') }}">
                                     ATV/UTV Shipping Service </a></h4>
                             <p></p>
@@ -282,7 +267,7 @@
                             <img src="{{ asset('frontend/images/project/golf-cart-service.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4> <a class="title" href="{{ route('frontend.pages.services.golf-cart-service') }}">
                                     Golf Cart Shipping Service </a></h4>
                             <p></p>
@@ -295,7 +280,7 @@
                             <img src="{{ asset('img/BOAT-BANNER.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4><a class="title" href="{{ route('frontend.pages.services.boat-service') }}">
                                     Boat Transport Services</a></h4>
                             <p></p>
@@ -308,7 +293,7 @@
                             <img src="{{ asset('img/construction-banner.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4> <a class="title" href="{{ route('frontend.pages.services.construction-service') }}">
                                     Construction Equipment Services</a></h4>
                             <p></p>
@@ -325,7 +310,7 @@
                             <img src="{{ asset('img/COMMERCIAL-TRUCK-BANNER.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4> <a class="title" href="{{ route('frontend.pages.services.commercial-service') }}">
                                     Commercial Truck Transport</a></h4>
                             <p></p>
@@ -338,7 +323,7 @@
                             <img src="{{ asset('img/excavator-banner.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4><a class="title" href="{{ route('frontend.pages.services.excavator-service') }}">
                                     Excavator Transport Services</a></h4>
                             <p></p>
@@ -351,7 +336,7 @@
                             <img src="{{ asset('img/farm-service-1.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4> <a class="title" href="{{ route('frontend.pages.services.farm-service') }}">
                                     Farm Transport Services</a></h4>
                             <p></p>
@@ -368,7 +353,7 @@
                             <img src="{{ asset('img/heavy-equipment-service.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4><a class="title" href="{{ route('frontend.pages.services.heavy-service') }}">
                                     Heavy Equipment Services </a></h4>
                             <p></p>
@@ -381,7 +366,7 @@
                             <img src="{{ asset('img/rv-banner.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4> <a class="title" href="{{ route('frontend.pages.services.rv-service') }}">
                                     RV Transport Services </a></h4>
                             <p></p>
@@ -394,7 +379,7 @@
                             <img src="{{ asset('img/dry-van.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4><a class="title" href="{{ route('frontend.pages.services.dryvan-service') }}">
                                     Dry Van Transport </a></h4>
                             <p></p>
@@ -411,7 +396,7 @@
                             <img src="{{ asset('img/HAZMAT-BANNER.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4><a class="title" href="{{ route('frontend.pages.services.hazmat-service') }}">
                                     Hazmat Transport</a></h4>
                             <p></p>
@@ -424,7 +409,7 @@
                             <img src="{{ asset('img/ReeferTruck3.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4> <a class="title" href="{{ route('frontend.pages.services.reefer-service') }}">
                                     Reefer Transport</a></h4>
                             <p></p>
@@ -437,7 +422,7 @@
                             <img src="{{ asset('img/roro-banner.webp') }}" alt="Image" />
                             {{-- <img src="{{ asset($service->banner_image) }}" alt="Image" /> --}}
                         </div>
-                        <div class="service-content">
+                        <div class="service-content-1">
                             <h4><a class="title" href="{{ route('frontend.pages.services.roro-service') }}">
                                     Roro Shipping International</a></h4>
                             <p></p>
@@ -447,9 +432,7 @@
             </div>
         </div>
     </section>
-
     <!--========== Service Section End ==============-->
-
     <!--=========== Feature Section Start =========-->
     <section class="tj-choose-us-section">
         <div class="container">
@@ -640,8 +623,7 @@
         </div>
     </section>
     <!--=========== Feature Section End =========-->
-
- <!--=========== Service Section Start =========-->
+    <!--=========== Service Section Start =========-->
     <section class="tj-service-section pt-4">
         <div class="container">
             <div class="row">
@@ -654,7 +636,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-                    <a href="{{ route('vehicleTransportDetail') }}" class="service-link">
+                    <a href="{{ route('vehicleTransportDetail') }}" class="service-link text-decoration-none">
                         <div class="tj-service-item"
                             data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
                             <div class="icon-box">
@@ -675,7 +657,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-                    <a href="{{ route('heavy-transport-detail') }}" class="service-link">
+                    <a href="{{ route('heavy-transport-detail') }}" class="service-link text-decoration-none">
                         <div class="tj-service-item"
                             data-bg-image="{{ asset('frontend/images/service/HEAVY-CARD.webp') }}">
                             <div class="icon-box">
@@ -696,7 +678,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                    <a href="{{ route('freighttransport-detail') }}" class="service-link">
+                    <a href="{{ route('freighttransport-detail') }}" class="service-link text-decoration-none">
                         <div class="tj-service-item"
                             data-bg-image="{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}">
                             <div class="icon-box">
@@ -719,516 +701,8 @@
             </div>
         </div>
     </section>
-<!--=========== Service Section End =========-->
-
+    <!--=========== Service Section End =========-->
     <!--=========== Newsletter Section Start =========-->
     @include('partials.newsletter')
     <!--=========== Newsletter Section End =========-->
-    {{-- <script>
-        $(document).ready(function() {
-            $(document).on('change', '.category', function() {
-                var selectedCategory = $(this).val();
-
-                $.ajax({
-                    url: "{{ route('get.subcategories') }}",
-                    method: "POST",
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        "category": selectedCategory
-                    },
-                    success: function(response) {
-                        console.log(response);
-                        console.log(response.length);
-
-                        var html = '';
-                        $('#subcategory-box').html('');
-
-                        html += "<label for='subcategory'>Subcategory</label>";
-                        html +=
-                            "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
-                        html += "<option value='' disabled selected>Select</option>";
-                        $.each(response, function(index, val) {
-                            html +=
-                                `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
-                        });
-                        html += "</select>";
-                        console.log('html', html);
-
-                        $('#subcategory-box').html(html);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Error:", error);
-                    }
-                });
-            });
-        });
-    </script> --}}
-
-    {{-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var input = document.querySelector("#phone");
-            window.intlTelInput(input, {
-                initialCountry: "auto",
-                geoIpLookup: function(callback) {
-                    fetch('https://ipinfo.io/json')
-                        .then(function(response) {
-                            return response.json();
-                        })
-                        .then(function(ipinfo) {
-                            var countryCode = "us";
-                            callback(countryCode);
-                        });
-                },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-            });
-        });
-    </script> --}}
-    {{-- <script>
-        function playVideo() {
-            document.querySelector('.video-thumbnail').style.display = 'none';
-            document.querySelector('.video-iframe').style.display = 'block';
-            var iframe = document.getElementById('videoFrame');
-            var videoSrc = iframe.src;
-            iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
-        }
-    </script> --}}
-
-    {{-- <script>
-        $(document).ready(function() {
-            var selectedTab = '';
-            $('#tabSelector').change(function() {
-                $('.vehicles-container').html('');
-                selectedTab = $(this).val();
-                var vehicleType = $(this).val();
-                $('.tab-pane').removeClass('show active');
-                $('#' + selectedTab).addClass('show active');
-
-                $.ajax({
-                    url: "{{ route('get.partial.form') }}",
-                    method: 'GET',
-                    data: {
-                        vehicleType: vehicleType,
-                    },
-                    success: function(response) {
-                        $('#additionalContent').html('');
-                        $('#additionalContent').html(response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            });
-
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label> Year</label>
-                        <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{date('Y')}};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                newVehicleHtml +=
-                    `</select>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label>Make</label>
-                        <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-
-
-                newVehicleHtml += `
-                        </select>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select model-div">
-                        <label>Model</label>
-                        <select class="nice-select model" name="model[]" id="model" required></select>`;
-
-                newVehicleHtml +=
-                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-                newVehicleHtml += `
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            `;
-
-                $('.vehicles-container').append(newVehicleHtml);
-            }
-
-            function addOtherVehicle() {
-                var newVehicleHtml =
-                    `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label> Year</label>
-                        <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{date('Y')}};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                newVehicleHtml +=
-                    `</select>
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                <label>Make</label>
-                                <input type="text" id="make" name="make[]"
-                                placeholder="Enter Make" required="" />
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                <label>Model</label>
-                                <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                required="" />`
-                newVehicleHtml +=
-                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-                newVehicleHtml += `</div>
-                                </div>
-                                </div>
-                                </div>
-                                `;
-
-                $('.vehicles-container').append(newVehicleHtml);
-            }
-
-            $(document).on('click', '.addVehicleBtn', function() {
-                if ($('#tabSelector').val() == 'Car') {
-                    addNewVehicle();
-                } else {
-                    addOtherVehicle();
-                }
-            });
-
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
-
-            $(document).ready(function() {
-                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                    var year = $('.vehicle-year').val();
-                    var makeId = $('.vehicle-make').val();
-                    if (year && makeId) {
-                        getModel(year, makeId);
-                    }
-                });
-
-                function getModel(year, makeId) {
-                    console.log('yes inn');
-                    $.ajax({
-                        url: "{{ route('get.models') }}",
-                        method: 'GET',
-                        data: {
-                            year: year,
-                            make: makeId
-                        },
-                        success: function(response) {
-                            var modelsDropdown = $('.vehicle-model-div');
-                            modelsDropdown.empty();
-                            var selectOptions =
-                                '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                            $.each(response, function(index, model) {
-                                selectOptions += '<option value="' + model + '">' +
-                                    model +
-                                    '</option>';
-                            });
-                            selectOptions += '</select>';
-                            modelsDropdown.html(selectOptions);
-
-                            console.log('yesssss', response);
-                        },
-                        error: function(xhr) {
-                            console.log(xhr.responseText);
-                        }
-                    });
-                }
-            });
-        });
-    </script> --}}
-
-    {{-- <script>
-        document.querySelectorAll('input[type="text"]').forEach((input) => {
-            input.addEventListener("input", function() {
-                this.value = this.value.replace(/[^0-9]/g, "");
-            });
-        });
-    </script> --}}
-
-    {{-- <script>
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
-        }
-
-        $(document).ready(function() {
-            $('#inches-input').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-
-        $(document).ready(function() {
-            $('#inches-input1').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input1, #inches-input1').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-
-        $(document).ready(function() {
-            $('#inches-input2').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input2').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-    </script> --}}
-
-    {{-- <script>
-        $(document).ready(function() {
-            function showError(field, message) {
-                $('#' + field).addClass('error-field');
-                $('#' + field + '-error').text(message).show();
-            }
-
-            function hideError(field) {
-                $('#' + field).removeClass('error-field');
-                $('#' + field + '-error').hide();
-            }
-
-            // Move to Step 2
-            $('#step1_next').click(function() {
-                var isValid = true;
-
-                if (!$('#pickup-location').val()) {
-                    showError('pickup-location', 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError('pickup-location');
-                }
-
-                if (!$('#delivery-location').val()) {
-                    showError('delivery-location', 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError('delivery-location');
-                }
-
-                if (isValid) {
-                    $('#step1').hide();
-                    $('#step2').show();
-                }
-            });
-
-            // Return to Step 1
-            $('#step2_previous').click(function() {
-                $('#step2').hide();
-                $('#step1').show();
-            });
-
-            // Move to Step 3
-            $('#step2_next').click(function() {
-                var isValid = true;
-
-                if (!$('#tabSelector').val()) {
-                    showError('tabSelector', 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError('tabSelector');
-                }
-
-                if (isValid) {
-                    $('#step2').hide();
-                    $('#step3').show();
-                }
-            });
-
-            // Return to Step 2
-            $('#step3_previous').click(function() {
-                $('#step3').hide();
-                $('#step2').show();
-            });
-        });
-    </script> --}}
-
-
-
-    {{-- <script>
-        $(document).ready(function() {
-            $(document).on('change', '#available_at_auction', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
-
-            $(document).on('change', '#modification', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
-        });
-    </script> --}}
-
-    {{-- <script>
-        function updateSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
-
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
-
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList);
-        });
-    </script> --}}
-
-    {{-- <script>
-        $(document).ready(function() {
-            $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                var year = $('.vehicle-year').val();
-                var makeId = $('.vehicle-make').val();
-                if (year && makeId) {
-                    getModel(year, makeId);
-                }
-            });
-
-            function getModel(year, makeId) {
-                console.log('yes inn');
-                $.ajax({
-                    url: "{{ route('get.models') }}",
-                    method: 'GET',
-                    data: {
-                        year: year,
-                        make: makeId
-                    },
-                    success: function(response) {
-                        var modelsDropdown = $('.vehicle-model-div');
-                        modelsDropdown.empty();
-                        var selectOptions =
-                            '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' + model +
-                                '</option>';
-                        });
-                        selectOptions += '</select>';
-                        modelsDropdown.html(selectOptions);
-
-                        console.log('yesssss', response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            }
-        });
-    </script> --}}
-
-    {{-- <script>
-        function updateSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
-
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
-
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList);
-        });
-    </script> --}}
-
 @endsection

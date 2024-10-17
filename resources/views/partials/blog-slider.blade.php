@@ -19,19 +19,18 @@
                         </div>
                         <div class="blog-content-area">
                             <div class="blog-meta">
-                                <div class="meta-date">
+                                {{-- <div class="meta-date">
                                     <ul class="list-gap">
-                                        {{-- <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</li>
-                                        <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('M') }}</li> --}}
+                                        <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</li>
+                                        <li>{{ \Carbon\Carbon::parse($blog->created_at)->format('M') }}</li>
                                     </ul>
-                                </div>
-                                <div class="meta-list">
+                                </div> --}}
+                                {{-- <div class="meta-list">
                                     <ul class="list-gap">
                                         <li><i class="fa-light fa-user"></i><a href="#">
-                                                {{-- {{ $blog->user->name }}</a></li> --}}
                                                 {{ !is_null($blog->user->name) ? $blog->user->name : '' }}</a></li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="blog-text-box">
                                 <div class="blog-header">
@@ -44,14 +43,30 @@
                                     </h4>
                                 </div>
                                 <div class="blog-button">
-                                    <ul class="list-gap">
-                                        <li>
+                                    {{-- <ul class="list-gap">
+                                        <li> --}}
+                                            <div class="blog-info d-flex justify-content-between">
+                                                <!-- Date with Icon -->
+                                                <span class="date-icon">
+                                                    <i class="fa-regular fa-calendar"></i> 
+                                                    {{ \Carbon\Carbon::parse($blog->created_at)->format('d M') }}
+                                                </span>
+                                            
+                                                <!-- Read More Link -->
+                                                <a class="ms-3" 
+                                                    @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" 
+                                                    @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
+                                                    Read More <i class="fa-regular fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        {{-- <span>{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
+                                        <span>{{ \Carbon\Carbon::parse($blog->created_at)->format('M') }}</span>
                                             <a
                                                 @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else
                                             href="{{ route('blog.details', $blog->slug_name) }}" @endif>
-                                                Read More <i class="fa-regular fa-arrow-right"></i></a>
-                                        </li>
-                                    </ul>
+                                                Read More <i class="fa-regular fa-arrow-right"></i></a> --}}
+                                        {{-- </li>
+                                    </ul> --}}
                                 </div>
                             </div>
                         </div>

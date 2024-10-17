@@ -23,7 +23,7 @@
 </style>
 <section class="pt-4 mt-4">
     <div class="container">
-        <h3 class="text-center">See what customers say about their experience with ShipA1 Transport.</h3>
+        <h3 class="text-center mb-4">See what customers say about their experience with ShipA1 Transport.</h3>
         <div class="owl-carousel owl-theme">
             @foreach ($site_reviews as $key => $site_review)  
                 <div class="item">

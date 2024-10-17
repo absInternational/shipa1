@@ -2,6 +2,14 @@
     .active {
         color: #8fc445 !important;
     }
+  .ul-child-custom-heading {
+    letter-spacing: 1px;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: #212529;
+  }
+
 </style>
 
 <header class="tj-header-section" id="header-sticky">
@@ -17,7 +25,6 @@
                         </div>
                     </div>
                     <!-- Logo Area End -->
-
                     <div class="header-content-area">
                         <!-- Topbar Section Start -->
                         <div class="header-topbar">
@@ -64,12 +71,13 @@
                             </div>
                         </div>
                         <!-- Topbar Section End-->
-
                         <!-- Header menu Start -->
                         <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
                             <div class="mobile-logo-area d-lg-none">
-                                <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"
-                                        alt="Logo" /></a>
+                                <a href="{{ route('welcome') }}">
+                                    <img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"
+                                    alt="Logo" />
+                                </a>
                             </div>
                             <!-- Mainmenu Item Start -->
                             <div class="tj-main-menu d-lg-block d-none text-end" id="main-menu">
@@ -77,26 +85,14 @@
                                     @php
                                     $navbars = App\Models\Menu::where('status',1)->orderBy('id', 'ASC')->get();
                                     @endphp
-
-
                                     @foreach ($navbars as $navbar)
                                     @if($navbar->id == 1)
-
-                                    
                                     <li class="ab-gap">
                                         <a href="{{ route('welcome') }}"
                                             class="{{ Request::routeIs('welcome') ? ' active' : '' }}"> {{ $navbar->menu_name }}</a>
                                     </li>
-                                
-                                @endif
+                                    @endif
                                     @endforeach
-
-
-
-                                    {{-- <li class="ab-gap">
-                                        <a href="{{ route('welcome') }}"
-                                            class="{{ Request::routeIs('welcome') ? ' active' : '' }}"> Home</a>
-                                    </li> --}}
                                     @foreach ($navbars as $navbar)
                                     @if($navbar->id == 2)
                                     <li class="ab-gap">
@@ -105,18 +101,9 @@
                                         <ul class="list-gap sub-menu-list" >
                                             <div class="row">
                                                 <div class="col-sm-4 bd-l bd-r">
-                                                    <a class=" mb-3"
-                                                        style="
-                                                             letter-spacing: 1px;
-                                                              font-size: larger;
-                                                              text-decoration: none;
-                                                              font-weight: bold;
-                                                         "
-                                                        href="">Vehicle Transportation</a>
+                                                    <h4 class="mb-3 ul-child-custom-heading">Vehicle Transportation</h4>
                                                     <li>
-                                                        <a class="title" 
-                                                            href="{{ route('form.vehicle.atv_utv') }}">Atv Utv
-                                                            Transport</a>
+                                                        <a class="title"  href="{{ route('form.vehicle.atv_utv') }}">Atv Utv Transport</a>
                                                     </li>
                                                     <li>
                                                         <a class="title" 
@@ -130,119 +117,53 @@
                                                         <a class="title" 
                                                             href="{{ route('form.vehicle.form.vehicle.car') }}">Motorcycle Transport</a>
                                                     </li>
-
-
                                                 </div>
-
                                                 <div class="col-sm-4 bd-r">
-                                                    <a class=" mb-3"
-                                                        style="
-                                                          letter-spacing: 1px;
-                                                          font-size: larger;
-                                                          text-decoration: none;
-                                                          font-weight: bold;
-                                                      "
-                                                        href="#">Heavy Equipment</a>
-                                                    <!-- <li>
-                                                        <a class="title"  href=""> Heavy    </a>
-                                                    </li> -->
-
+                                                    <h4 class="mb-3 ul-child-custom-heading">Heavy Equipment</h4>
                                                     <li>
                                                         <a class="title" 
                                                             href="{{ route('form.vehicle.boat') }}"> Boat Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" 
-                                                            href="{{ route('commercial.truck.transport') }}">
-                                                            Commercial
-                                                            Truck Transport</a>
+                                                        <a class="title" href="{{ route('commercial.truck.transport') }}">Commercial Truck Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" 
-                                                            href="{{ route('frontend.forms.construction_transport') }}">
-                                                            Construction Transport</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a class="title" 
-                                                            href="{{ route('form.vehicle.heavyEquipment') }}">
-                                                            Heavy Transport</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a class="title" 
-                                                            href="{{ route('frontend.forms.excavator') }}"> Excavator Transport
-                                                        </a>
+                                                        <a class="title" href="{{ route('frontend.forms.construction_transport') }}">Construction Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" 
-                                                            href="{{ route('frontend.forms.farm_transport') }}"> Farm
-                                                            Transport</a>
+                                                        <a class="title" href="{{ route('form.vehicle.heavyEquipment') }}">Heavy Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" 
-                                                            href="{{ route('frontend.forms.rv_transport') }}"> RV
-                                                            Transport</a>
+                                                        <a class="title" href="{{ route('frontend.forms.excavator') }}"> Excavator Transport</a>
                                                     </li>
-
+                                                    <li>
+                                                        <a class="title" href="{{ route('frontend.forms.farm_transport') }}">Farm Transport</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" href="{{ route('frontend.forms.rv_transport') }}">RV Transport</a>
+                                                    </li>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <a class=" mb-3"
-                                                        style="
-                                                             letter-spacing: 1px;
-                                                            font-size: larger;
-                                                            text-decoration: none;
-                                                            font-weight: bold;
-                                                         "
-                                                        href="">Freight Transportation</a>
-
+                                                    <h4 class="mb-3 ul-child-custom-heading">Freight Transportation</h4>
                                                     <li>
-                                                        <a class="title"  href="{{ route('frontend.forms.hazmattransport') }}" > Hazmat
-                                                            Transport</a>
+                                                        <a class="title"  href="{{ route('frontend.forms.hazmattransport') }}">Hazmat Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title" href="{{ route('frontend.forms.dryvan') }}" > Dry Van
-                                                        Transport</a>
+                                                        <a class="title" href="{{ route('frontend.forms.dryvan') }}">Dry Van Transport</a>
                                                     </li>
                                                     <li>
-                                                        <a class="title"  href="{{ route('frontend.forms.reefertrucking') }}"> Reefer
-                                                            Trucking</a>
+                                                        <a class="title"  href="{{ route('frontend.forms.reefertrucking') }}">Reefer Trucking</a>
                                                     </li>
-                                                    <a class=" mb-3"
-                                                        style="
-                                                             letter-spacing: 1px;
-                                                            font-size: larger;
-                                                            text-decoration: none;
-                                                            font-weight: bold;
-                                                         "
-                                                        href="">RORO</a>
+                                                    <h4 class="mb-3 ul-child-custom-heading">RORO</h4>
                                                     <li>
-                                                        <a class="title" 
-                                                            href="{{ route('form.vehicle.roro') }}"> Roro
-                                                            Transportation</a>
+                                                        <a class="title" href="{{ route('form.vehicle.roro') }}">Roro Transportation</a>
                                                     </li>
                                                 </div>
-                                                <!-- <div class="col-sm-3">
-                                                    <a class=" mb-3" style="
-                                                             letter-spacing: 1px;
-                                                             font-size: medium;
-                                                             text-decoration: underline;
-                                                             font-weight: bold;
-                                                         " href="">RORO</a>
-                                                    <li>
-                                                        <a class="title"  href="{{ route('form.vehicle.roro') }}" > Roro Transportation</a>
-                                                    </li>
-                                                </div> -->
                                             </div>
                                         </ul>
-
                                     </li>
                                     @endif
                                     @endforeach
-
-                                    {{-- <li class="ab-gap">
-                                        <a href="{{ route('services') }}"> Service</a>
-                                    </li> --}}
                                     @php
                                         $categories = \App\Models\ServiceCategory::has('services')->get();
                                         $services = \App\Models\Service::where('status', '=', 1)->get();
@@ -255,10 +176,7 @@
                                         <ul class="list-gap sub-menu-list sub-menu-list-2" >
                                             <div class="row">
                                                 <div class="col-sm-4 bd-l bd-r">
-                                                    {{-- <a class=" mb-3"
-                                                        href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
-                                                    <a class=" mb-3 "style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold;" 
-                                                    href="">Vehicle Transportation</a>
+                                                    <h4 class="mb-3 ul-child-custom-heading">Vehicle Transportation</h4>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Vehicle Transportation')
                                                             <li>
@@ -300,8 +218,7 @@
                                                             </li> -->
                                                 </div>
                                                 <div class="col-sm-4 bd-r">
-                                                   
-                                                    <a class=" mb-3" style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold;" href="">Heavy Equipment</a>
+                                                    <h4 class="mb-3 ul-child-custom-heading">Heavy Equipment</h4>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Heavy Equipment')
                                                             <li>
@@ -312,54 +229,43 @@
                                                         @endif
                                                     @endforeach
                                                     <li>
-                                                                <a class="title" 
-                                                                    href="{{ route('frontend.pages.services.boat-service') }}">
-                                                                    Boat Transport Services</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="title" 
-                                                                    href="{{ route('frontend.pages.services.construction-service') }}">
-                                                                    Construction Equipment Services</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="title" 
-                                                                    href="{{ route('frontend.pages.services.commercial-service') }}">
-                                                                    Commercial Truck Transport</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="title" 
-                                                                    href="{{ route('frontend.pages.services.excavator-service') }}">
-                                                                    Excavator Transport Services</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="title" 
-                                                                    href="{{ route('frontend.pages.services.farm-service') }}">
-                                                                    Farm Transport Services</a>
-                                                            </li>
-                                                            <!-- <li>
-                                                                <a class="title" 
-                                                                    href="{{ route('frontend.pages.services.freight-service') }}">
-                                                                    Freight Transportation Services</a>
-                                                            </li> -->
-                                                            <li>
-                                                                <a class="title" 
-                                                                    href="{{ route('frontend.pages.services.heavy-service') }}">
-                                                                    Heavy Equipment Services</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="title" 
-                                                                    href="{{ route('frontend.pages.services.rv-service') }}">
-                                                                    RV Transport Services</a>
-                                                            </li>
-                                                            
-                                                           
-                                                            
-                                                            
+                                                        <a class="title" 
+                                                            href="{{ route('frontend.pages.services.boat-service') }}">
+                                                            Boat Transport Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" 
+                                                            href="{{ route('frontend.pages.services.construction-service') }}">
+                                                            Construction Equipment Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" 
+                                                            href="{{ route('frontend.pages.services.commercial-service') }}">
+                                                            Commercial Truck Transport</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" 
+                                                            href="{{ route('frontend.pages.services.excavator-service') }}">
+                                                            Excavator Transport Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" 
+                                                            href="{{ route('frontend.pages.services.farm-service') }}">
+                                                            Farm Transport Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" 
+                                                            href="{{ route('frontend.pages.services.heavy-service') }}">
+                                                            Heavy Equipment Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="title" 
+                                                            href="{{ route('frontend.pages.services.rv-service') }}">
+                                                            RV Transport Services</a>
+                                                    </li>   
                                                 </div>
                                                 <div class="col-sm-4 ">
-                                                    {{-- <a class=" mb-3"
-                                                        href="{{ route('services', ['category' => $category->slug]) }}">{{ $category->name }}</a> --}}
-                                                    <a class=" mb-3" style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold;" href="">Freight Transportation</a>
+                                                    <h4 class="mb-3 ul-child-custom-heading">Freight Transportation</h4>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Freight Transportation')
                                                             <li>
@@ -385,11 +291,7 @@
                                                                     Reefer Transport</a>
                                                             </li>
                                                             
-
-                                                            
-
-
-                                                    <a class=" mb-3" href="" style=" letter-spacing: 1px;font-size: larger;text-decoration: none;font-weight: bold; ">RORO</a>
+                                                    <h4 class="mb-3 ul-child-custom-heading">RORO</h4>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'RORO')
                                                             <li>
@@ -400,13 +302,11 @@
                                                         @endif
                                                     @endforeach 
                                                      <li>
-                                                                <a class="title" 
-                                                                    href="{{ route('frontend.pages.services.roro-service') }}">
-                                                                    Roro Shipping International</a>
-                                                            </li> 
-                                                    
-                                                </div>
-                                                
+                                                        <a class="title" 
+                                                            href="{{ route('frontend.pages.services.roro-service') }}">
+                                                            Roro Shipping International</a>
+                                                    </li> 
+                                                </div>  
                                             </div>
                                         </ul>
                                     </li>
@@ -443,27 +343,7 @@
                                 </ul>
                             </div>
                             <!-- Mainmenu Item End -->
-
                             <div class="header-menu-select d-flex align-items-center justify-content-end">
-                                {{-- <div class="header-language">
-                                            <ul class="languages dropdown">
-                                                <li class="activated"></li>
-                                                <li>
-                                                    <ul class="lang_lists">
-                                                        <li>
-                                                            <a><img src="{{ asset('frontend/images/icon/flag-1.png')}}"
-                                        alt="Icon" /></a>
-                                        </li>
-                                        <li>
-                                            <a><img src="{{ asset('frontend/images/icon/flag-2.png')}}" alt="Icon" /></a>
-                                        </li>
-                                        <li class="active">
-                                            <a><img src="{{ asset('frontend/images/icon/flag4.png')}}" alt="Icon" /></a>
-                                        </li>
-                                        </ul>
-                                        </li>
-                                        </ul>
-                                    </div> --}}
                                 <div class="tj-header-button d-none d-lg-block">
                                     <a class="tj-header-btn" href="{{ route('quote.form.combine') }}" >
                                         Get Quote<i class="flaticon-right-1"></i>
