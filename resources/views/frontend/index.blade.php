@@ -4,7 +4,7 @@
 'Best state to state auto transport services in USA for quick, safe & secure auto vehicle delivery. We focus on your satisfaction with reliable, affordable services.')
 @section('content')
 <style>
-    .custom-hover-service-heading:hover{
+    /* .custom-hover-service-heading:hover{
         color: green
     }
     .tj-testimonial-section {
@@ -13,13 +13,12 @@
     }
     .tj-testimonial2-section {
         padding: 50px 0;
-        /* background: #f9f9f9; */
     }
     .carousel-wrapper {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 15px;
-    }
+    } */
     .card {
         background: #fff;
         border: 1px solid #ddd;
@@ -34,7 +33,7 @@
     .card .col-6 {
         width: 50%;
     }
-    .star {
+    /* .star {
         margin-top: 10px;
     }
     .fa-star {
@@ -45,15 +44,15 @@
         border: none;
         font-size: 2rem;
         color: #333;
-    }
-    .owl-nav button {
+    } */
+    /* .owl-nav button {
         display: none;
         background: none;
         border: none;
         font-size: 2rem;
         color: #333;
-    }
-    .owl-dot {
+    } */
+    /* .owl-dot {
         display: inline-block;
         width: 12px;
         height: 12px;
@@ -63,7 +62,7 @@
     }
     .owl-dot.active {
         background: #333;
-    }
+    } */
     @keyframes custom-slides {
         from {
             transform: translateX(0);
@@ -72,7 +71,7 @@
             transform: translateX(-80%);
         }
     }
-    .lab-cos {
+    /* .lab-cos {
         font-size: 15px;
         font-weight: 500;
         color: var(--tj-white-color);
@@ -83,7 +82,6 @@
         background: white;
         display: flex;
         align-items: center;
-        /* border: 1px solid #ccc; */
         border-radius: 4px;
         padding: 8px 0px 8px 0px;
         width: fit-content;
@@ -93,11 +91,10 @@
         background: white;
         display: flex;
         align-items: center;
-        /* border: 1px solid #ccc; */
         border-radius: 4px;
         padding: 8px 0px 8px 0px;
         width: fit-content;
-    }
+    } */
     .input-field {
         width: 50px;
         padding: 5px;
@@ -112,14 +109,14 @@
         border: none;
         outline: none;
     }
-    .input-container input[type="number"] {
+    /* .input-container input[type="number"] {
         -moz-appearance: textfield;
     }
     .input-container input[type="number"]::-webkit-outer-spin-button,
     .input-container input[type="number"]::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
-    }
+    } */
     .form-wrap {
         margin-bottom: 10px;
         position: relative;
@@ -129,35 +126,31 @@
         display: block;
         margin-bottom: 5px;
     }
-    .input-container {
+    /* .input-container {
         display: flex;
         align-items: center;
     }
     .input-container input {
         border: none;
-        /* border-bottom: 1px solid #ccc; */
         padding: 5px 0px 5px 0px;
         font-size: 14px;
         width: 38px;
         text-align: center;
-        /* margin-right: 5px; */
     }
     .input-container .placeholders {
-        /* color:white; */
         position: relative;
         right: 72px;
         color: black;
         display: inline-block;
         width: auto;
         padding: 0px 8px;
-        /* background: white; */
-    }
-    .tj-input-form .input-form label {
+    } */
+    /* .tj-input-form .input-form label {
         font-size: 15px;
         font-weight: 500;
         color: var(--tj-white-color);
         margin-bottom: 10px;
-    }
+    } */
     .err-style {
         color: red;
     }
@@ -168,38 +161,38 @@
     .error-field {
         border: 2px solid red;
     }
-    .separator {
+    /* .separator {
         margin: 0px 0px 0px 0px;
         font-size: 14px;
-    }
-    .separators {
+    } */
+    /* .separators {
         margin: 0px 5px 0px 0px;
         font-size: 14px;
-    }
-    .separators-w {
+    } */
+    /* .separators-w {
         margin: 0px 5px 0px 0px;
         font-size: 14px;
-    }
+    } */
     .service-link {
         display: block;
         text-decoration: none;
         color: white;
     }
     .service-link:hover {
-        text-decoration: none; /* Ensure no underline on hover */
+        text-decoration: none;
     }
     .service-link:hover .tj-service-item {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .service-link:hover .service-content {
-        color: #8FC445; /* Change text color on hover */
+        color: #8FC445; 
     }
     .service-link:hover .icon-box i {
-        color: white; /* Change icon color on hover */
+        color: white; 
     }
     .project-link {
         display: block;
-        position: relative; /* Ensure it covers the .tj-project-item */
+        position: relative; 
         text-decoration: none;
         color: inherit;
         width: 100%;
@@ -207,38 +200,18 @@
     }
     .tj-project-item {
         position: relative;
-        overflow: hidden; /* Ensure content does not overflow */
+        overflow: hidden; 
     }
     .tj-project-item img {
         width: 100%;
-        height: auto; /* Maintain aspect ratio */
+        height: auto; 
         display: block;
     }
 </style>
-<!-- Preloader start -->
 <div id="preloader" class="preloader">
     <div class="animation-preloader">
-        <!-- <div class="spinner">
-                <div class="loader-icon">
-                     <img loading="lazy" src="{{ asset('frontend/images/logo/favicon.png') }}"
-                        alt="Corporate Business HTML Template" />
-                </div>
-            </div>
-            <div class="txt-loading">
-                <span data-text-preloader="S" class="letters-loading"> S </span>
-                <span data-text-preloader="H" class="letters-loading"> H </span>
-                <span data-text-preloader="I" class="letters-loading"> I </span>
-                <span data-text-preloader="P" class="letters-loading"> P </span>
-                <span data-text-preloader="" class="letters-loading"> </span>
-                <span data-text-preloader="A" class="letters-loading"> A </span>
-                <span data-text-preloader="1" class="letters-loading"> 1 </span>
-                <span data-text-preloader="" class="letters-loading"> </span>
-            </div> -->
     </div>
-    <!-- <button class="tj-primary-btn">Cancel Preloader</button> -->
 </div>
-<!-- Preloader end -->
-<!--=========== Slider Section Start =========-->
 <section class="tj-slider-section">
     <div class="slider_shape"> <img loading="lazy" src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image"/>
     </div>
@@ -364,11 +337,7 @@
         </ul>
     </div>
 </section>
-<!--=========== Slider Section End =========-->
-<!--=========== Testimonial Section Start =========-->
 @include('partials.reveiw-site')
-<!--=========== Testimonial Section End =========-->
-<!--=========== Testimonial Section Start =========-->
 <!--=========== Service Section Start =========-->
 <section class="tj-service-section pt-4">
     <div class="container">
@@ -974,19 +943,15 @@
     document.addEventListener('DOMContentLoaded', function () {
     const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdownMenu = document.querySelector('.dropdown-menu');
-
-    // Toggle dropdown on button click
     dropdownToggle.addEventListener('click', function (event) {
         dropdownMenu.classList.toggle('show');
-        event.stopPropagation(); // Prevent click from bubbling up to the document
+        event.stopPropagation();  
     });
-
-    // Close dropdown when clicking outside
     document.addEventListener('click', function (event) {
         if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('show'); // Hide the dropdown
+            dropdownMenu.classList.remove('show'); 
         }
     });
-});
+    });
 </script>
 @endsection
