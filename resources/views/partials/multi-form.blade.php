@@ -23,9 +23,6 @@
                             <input class="form-control" type="text" id="pickup-location"
                                 placeholder="Enter City or ZipCode" name="From_ZipCode" required>
                                 <ul class="suggestions suggestionsPickup"></ul>
-                            {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
-                            {{-- <label class="error-message" id="pickup-location">This field is
-                                required.</label> --}}
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 mb-4">
@@ -35,9 +32,6 @@
                             <input class="form-control" type="text" id="delivery-location"
                                 placeholder="Enter City or ZipCode" name="To_ZipCode" required>
                                 <ul class="suggestions suggestionsDelivery"></ul>
-                            {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
-                            {{-- <label class="error-message" id="delivery-location">This field is
-                                required.</label> --}}
                         </div>
                     </div>
                 </div>
@@ -66,26 +60,10 @@
                         <option value="Motorcycle">Motorcycle</option>
                         <option value="RV-Transport">RV Transport</option>
                     </select>
-                    {{-- <label class="error-message" id="tabSelector-error">This field is
-                        required.</label> --}}
 
                     <div class="tab-content mt-3" id="additionalContent"></div>
                 </div>
                 <div class="row mt-2">
-                    {{-- <div class="col-xl-6 col-lg-6">
-                        <div class="price__cta-btn">
-                            <button class="tj-submit-btn previous scroll-up-btn-1" id="step2_previous">
-                                Previous <i class="fa-light fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="price__cta-btn float-end">
-                            <button class="tj-submit-btn scroll-up-btn-2" type="button" id="step2_next">
-                                Next <i class="fa-light fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div> --}}
                     <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
                         <div class="price__cta-btn">
                             <button class="tj-submit-btn previous scroll-up-btn-1" type="button" id="step2_previous">
@@ -132,21 +110,6 @@
                     </div>
                 </div>
                 <div class="row">
-                    {{-- <div class="col-xl-6 col-lg-6">
-                        <div class="price__cta-btn">
-                            <button class="tj-submit-btn previous scroll-up-btn-3" id="step3_previous">
-                                Previous <i class="fa-light fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="price__cta-btn float-end">
-                            <button class=" tj-submit-btn " href="" type="submit" id="submit_instant_code"
-                                value="Submit Form">
-                                Calculate Price <i class="fa-light fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div> --}}
                     <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
                         <div class="price__cta-btn">
                             <button class="tj-submit-btn previous scroll-up-btn-3" type="button" id="step3_previous">
@@ -161,270 +124,8 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
-                    <div class="mb-3 mb-md-0">
-                        
-                        <div class="price__cta-btn">
-                            <a href="{{ route('welcome') }}">
-                               <button class="tj-submit-btn previous">
-                                   Back Home<i class="fa-light fa-arrow-right"></i>
-                               </button>
-                               </a>
-                            </div>
-                    </div>
-                    <div>
-                        
-                        <div class="price__cta-btn">
-                            <a href="{{ route('quote.form.combine') }}">
-                          <button class="tj-submit-btn" type="button">
-                              Get New Quote<i class="fa-light fa-arrow-right"></i>
-                          </button>
-                          </a>
-                      </div>
-                    </div>
-                </div> --}}
+                
             </div>
         </div>
     </form>
 </div>
-{{-- <script>
-    // Form Validation
-    function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
-        $('#step1_next').click(function() {
-            var isValid = true;
-            if (!$('#pickup-location').val()) {
-                showError('pickup-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('pickup-location');
-            }
-            if (!$('#delivery-location').val()) {
-                showError('delivery-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('delivery-location');
-            }
-            if (isValid) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-         $('#available_at_auction').change(function() {
-             if ($(this).is(':checked')) {
-                 $('.div-link').show();
-                 $('#link').attr('required', true); // Make input required
-             } else {
-                 $('.div-link').hide();
-                 $('#link').val(''); // Clear the input field
-                 $('#link').removeAttr('required'); // Remove required attribute
-             }
-         });
-         
-         $('#modification').change(function() {
-             if ($(this).is(':checked')) {
-                 $('.div-modify_info').show();
-                 $('#c').attr('required', true); // Make input required
-             } else {
-                 $('.div-modify_info').hide();
-                 $('#c').val(''); // Clear the input field
-                 $('#c').removeAttr('required'); // Remove required attribute
-             }
-         });
-     });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        // Tab Selection and Content Loading
-        $('#tabSelector').change(function() {
-            var selectedTab = $(this).val();
-            $('.tab-pane').removeClass('show active');
-            $('#' + selectedTab).addClass('show active');
-
-            $.ajax({
-                url: "{{ route('get.partial.form') }}",
-                method: 'GET',
-                data: {
-                    vehicleType: selectedTab
-                },
-                success: function(response) {
-                    $('#additionalContent').html(response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        });
-        Add New Vehicle
-        function addNewVehicle() {
-            var newVehicleHtml = `
-                <div class="vehicle-info">
-                    <div class="row select-bm">
-                        <div class="col-md-4">
-                            <div class="input-form tj-select">
-                                <label> Year</label>
-                                <select class="nice-select year" name="year[]" required id="year">
-                                    <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-            newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select"><label>Make</label><select class="nice-select make" name="make[]" required id="make"><option value="" disabled selected>Select Make</option>`;
-            @foreach ($makes as $make) {
-                newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-            }
-            @endforeach
-            newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select model-div"><label>Model</label><select class="nice-select model" name="model[]" id="model" required></select><span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span></div></div></div></div>`;
-            $('.vehicles-container').append(newVehicleHtml);
-        }
-        function addOtherVehicle() {
-            var newVehicleHtml = `
-                <div class="vehicle-info">
-                    <div class="row select-bm">
-                        <div class="col-md-4">
-                            <div class="input-form tj-select">
-                                <label> Year</label>
-                                <select class="nice-select year" name="year[]" id="year">
-                                    <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-            newVehicleHtml += `</select></div></div><div class="col-md-4"><div class="input-form tj-select"><label>Make</label><input type="text" id="make" name="make[]" placeholder="Enter Make" required="" /></div></div><div class="col-md-4"><div class="input-form tj-select model-div"><label>Model</label><input type="text" id="model" name="model[]" placeholder="Enter Model" required="" /><span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span></div></div></div></div>`;
-            $('.vehicles-container').append(newVehicleHtml);
-        }
-
-        $(document).on('click', '.addVehicleBtn', function() {
-            if ($('#tabSelector').val() == 'Car') {
-                addNewVehicle();
-            } else {
-                addOtherVehicle();
-            }
-        });
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-        
-        
-        $(document).on('change', '.year, .make', function() {
-            var year = $(this).closest('.vehicle-info').find('.year').val();
-            var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            var vehicleInfo = $(this).closest('.vehicle-info');
-            if (year && makeId) {
-                getModel(year, makeId, vehicleInfo);
-            }
-        });
-
-        function getModel(year, makeId, vehicleInfo) {
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
-                    });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-        
-        
-        // Limit Digits Input
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
-        }
-        $('#inches-input, #inches-input1, #inches-input2').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-        $('#feet-input, #feet-input1, #feet-input2').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-        // Form Validation
-        function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
-        $('#step1_next').click(function() {
-            var isValid = true;
-            if (!$('#pickup-location').val()) {
-                showError('pickup-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('pickup-location');
-            }
-            if (!$('#delivery-location').val()) {
-                showError('delivery-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('delivery-location');
-            }
-            if (isValid) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
-    });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        $('#category').change(function() {
-            var selectedCategory = $(this).find('option:selected').data('id');
-            $.ajax({
-                url: "{{ route('get.subcategories') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "category": selectedCategory
-                },
-                success: function(response) {
-                    var html = '';
-                    $('#subcategory-box').html('');
-                    html += "<label for='subcategory'>Subcategory</label>";
-                    html +=
-                        "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
-                    html += "<option value='' disabled selected>Select</option>";
-                    $.each(response, function(index, val) {
-                        console.log('val', val);
-                        html +=
-                            `<option value='${val.name}' style='white-space: nowrap;'>${val.name}</option>`;
-                    });
-                    html += "</select>";
-                    $('#subcategory-box').html(html);
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        });
-    });
-</script> --}}

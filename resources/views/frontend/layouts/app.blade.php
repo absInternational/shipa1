@@ -946,6 +946,8 @@
                 });
             }
 
+            $(document).ready(function() {
+            // Handle input for pickup location
             $('#pickup-location').on('input', function() {
                 var inputField = $(this);
                 var suggestionsList = $('.suggestionsPickup');
@@ -954,6 +956,7 @@
                 fetchSuggestions(inputField, suggestionsList);
             });
 
+            // Handle input for delivery location
             $('#delivery-location').on('input', function() {
                 var inputField = $(this);
                 var suggestionsList = $('.suggestionsDelivery');
@@ -961,6 +964,45 @@
 
                 fetchSuggestions(inputField, suggestionsList);
             });
+
+            // Close the suggestions list when clicking outside of the inputs or suggestions
+            $(document).on('click', function(event) {
+                var pickupInputField = $('#pickup-location');
+                var pickupSuggestionsList = $('.suggestionsPickup');
+                var deliveryInputField = $('#delivery-location');
+                var deliverySuggestionsList = $('.suggestionsDelivery');
+                
+                // Check if click was outside pickup input and suggestions
+                if (!pickupInputField.is(event.target) && 
+                    !pickupSuggestionsList.is(event.target) && 
+                    pickupSuggestionsList.has(event.target).length === 0) {
+                    pickupSuggestionsList.hide(); // Hide pickup suggestions
+                }
+
+                // Check if click was outside delivery input and suggestions
+                if (!deliveryInputField.is(event.target) && 
+                    !deliverySuggestionsList.is(event.target) && 
+                    deliverySuggestionsList.has(event.target).length === 0) {
+                    deliverySuggestionsList.hide(); // Hide delivery suggestions
+                }
+            });
+        });
+
+            // $('#pickup-location').on('input', function() {
+            //     var inputField = $(this);
+            //     var suggestionsList = $('.suggestionsPickup');
+            //     inputField.data('selected', false);
+
+            //     fetchSuggestions(inputField, suggestionsList);
+            // });
+
+            // $('#delivery-location').on('input', function() {
+            //     var inputField = $(this);
+            //     var suggestionsList = $('.suggestionsDelivery');
+            //     inputField.data('selected', false);
+
+            //     fetchSuggestions(inputField, suggestionsList);
+            // });
 
             $('#step1_next').click(function() {
                 if (validateStep('step1')) {
