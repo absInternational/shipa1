@@ -508,7 +508,7 @@
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/GOLFCART-1.webp') }}" alt="Image">
+                            <img class="rounded" src="{{ asset('frontend/images/project/2a-image-for-golf-cart-transport.webp') }}" alt="Image">
                         </div>
                         <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
 

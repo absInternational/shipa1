@@ -1413,38 +1413,24 @@
     </script>
     {{-- validate-form --}}
 
-    {{-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Apply fade-in effect on page load
-            document.body.classList.add('fade-in');
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lazyBackgrounds = document.querySelectorAll(".lazy-background");
     
-            const transitionOverlay = document.querySelector('.page-transition-overlay');
-    
-            // Trigger the fade-out and overlay effect on link click
-            const links = document.querySelectorAll('a[href^="/"], a[href^="{{ url('/') }}"]');
-            links.forEach(function(link) {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default link action
-                    
-                    // Activate transition overlay
-                    transitionOverlay.classList.add('active');
-                    
-                    // Trigger fade-out effect on body
-                    document.body.classList.add('fade-out');
-                    
-                    // Wait for the animation before navigating
-                    setTimeout(() => {
-                        window.location.href = link.href;
-                    }, 800); // Match the duration of the animations
-                });
-            });
-    
-            // Fade-in on page load after overlay hides
-            setTimeout(() => {
-                transitionOverlay.classList.remove('active');
-            }, 500); // Slight delay for overlay fade-out
-        });
-    </script> --}}
+    lazyBackgrounds.forEach(function (lazyBg) {
+      const imageSrc = lazyBg.getAttribute("data-bg-image");
+      
+      if (imageSrc) {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = function () {
+          lazyBg.style.backgroundImage = 'url(' + imageSrc + ')';
+        };
+      }
+    });
+  });
+</script>
+
     
 </body>
 

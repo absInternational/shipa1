@@ -220,7 +220,7 @@
     <div class="animation-preloader">
         <!-- <div class="spinner">
                 <div class="loader-icon">
-                    <img src="{{ asset('frontend/images/logo/favicon.png') }}"
+                     <img loading="lazy" src="{{ asset('frontend/images/logo/favicon.png') }}"
                         alt="Corporate Business HTML Template" />
                 </div>
             </div>
@@ -240,7 +240,7 @@
 <!-- Preloader end -->
 <!--=========== Slider Section Start =========-->
 <section class="tj-slider-section">
-    <div class="slider_shape"><img src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image" />
+    <div class="slider_shape"> <img loading="lazy" src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image"/>
     </div>
     <div class="swiper sc-slider-1" data-autoplay="5000">
         <div class="swiper-wrapper">
@@ -467,8 +467,8 @@
                     <div class="tj-icon-box">
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
-                                <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
-                                <!-- <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
+                                 <img loading="lazy" src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
+                                <!--  <img loading="lazy" src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Our Values</h5>
@@ -483,7 +483,7 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
+                                <!--  <img loading="lazy" src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Scope of Services</h5>
@@ -497,7 +497,7 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
+                                <!--  <img loading="lazy" src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Safety Is Our Priority</h5>
@@ -512,7 +512,7 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
+                                <!--  <img loading="lazy" src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Skilful & Devoted Staff</h5>
@@ -537,12 +537,12 @@
                         </div>
                     </div>
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/about/about-3.webp') }}"
+                        <img class="p-z-idex" src="{{ asset('frontend/images/about/about-3.webp') }}"  loading="lazy"
                             alt="Image" />
                     </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/about/about-5.webp') }}"
+                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/about/about-5.webp') }}"  loading="lazy"
                         alt="Image" />
-                    <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"
+                    <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"  loading="lazy"
                         alt="Image" />
                 </div>
             </div>
@@ -685,7 +685,7 @@
     <div class="tj-project-slider owl-carousel">
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.car-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/9.webp') }}" alt="Car Shipping Service" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/9.webp') }}" alt="Car Shipping Service" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.car-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -699,7 +699,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.bike-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/62.webp') }}" alt="Motorcycle Shipping Service" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/62.webp') }}" alt="Motorcycle Shipping Service" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.bike-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -713,7 +713,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.heavy-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/1.webp') }}" alt="Heavy Transportation Services" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/1.webp') }}" alt="Heavy Transportation Services" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.heavy-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -727,7 +727,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.roro-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/roro-slider-image.webp') }}" alt="Roro Shipping" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/roro-slider-image.webp') }}" alt="Roro Shipping" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.roro-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -741,7 +741,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.golf-cart-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/4.webp') }}" alt="Golf Cart Transport Service" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/4.webp') }}" alt="Golf Cart Transport Service" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.golf-cart-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -755,7 +755,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.atv-utv-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/atv,utv-1.webp') }}" alt="ATV/UTV Transport Service" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/atv,utv-1.webp') }}" alt="ATV/UTV Transport Service" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.atv-utv-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -769,7 +769,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.construction-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/Commercial--.webp') }}" alt="Construction Transport Service" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/Commercial--.webp') }}" alt="Construction Transport Service" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.construction-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -783,7 +783,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.farm-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/10.webp') }}" alt="Farm equipment Transport service" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/10.webp') }}" alt="Farm equipment Transport service" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.farm-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -797,7 +797,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.excavator-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="excavator Transport service" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="excavator Transport service" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.excavator-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -811,7 +811,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.commercial-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/commercial-truck.webp') }}" alt="commercial transport service" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/commercial-truck.webp') }}" alt="commercial transport service" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.commercial-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -825,7 +825,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.reefer-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Reefer Transport Service" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Reefer Transport Service" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.reefer-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -839,7 +839,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.hazmat-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/7.webp') }}" alt="Hazmat Transportation Services" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/7.webp') }}" alt="Hazmat Transportation Services" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.hazmat-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
@@ -853,7 +853,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.dryvan-service') }}" class="project-link">
-            <img src="{{ asset('frontend/images/project/5.webp') }}" alt="Dry van Transportation Services" />
+             <img loading="lazy" src="{{ asset('frontend/images/project/5.webp') }}" alt="Dry van Transportation Services" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.dryvan-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
