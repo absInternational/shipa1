@@ -20,7 +20,7 @@
                     <!-- Logo Area Start -->
                     <div class="logo-area">
                         <div class="logo-box">
-                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"
+                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"  loading="lazy"
                                     alt="Logo" /></a>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                         <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
                             <div class="mobile-logo-area d-lg-none">
                                 <a href="{{ route('welcome') }}">
-                                    <img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"
+                                    <img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"  loading="lazy"
                                     alt="Logo" />
                                 </a>
                             </div>
