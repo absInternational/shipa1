@@ -108,13 +108,13 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="details-sidebar-inner">
-                        <div class="tj-sidebar-widget sidebar-search">
+                        {{-- <div class="tj-sidebar-widget sidebar-search">
                             <form action="#">
                                 <input type="text" class="form-control" name="search" id="searchOne"
                                     placeholder="Search">
                                 <i class="flaticon-loupe"></i>
                             </form>
-                        </div>
+                        </div> --}}
                         <div class="tj-sidebar-widget sidebar-post">
                             <h5 class="details_title">Recent Blogs</h5>
 
