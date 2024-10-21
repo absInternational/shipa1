@@ -25,12 +25,12 @@
             }
         });
     }
-    setTimeout(loading, 100);
+    setTimeout(loading, 1000);
 
     $(window).on("load", function () {
         // Animate loader off screen
         const preloader = $(".preloader");
-        preloader.delay(600).fadeOut();
+        preloader.delay(1000).fadeOut();
     });
 
     $(".preloader .tj-primary-btn").on("click", function(){

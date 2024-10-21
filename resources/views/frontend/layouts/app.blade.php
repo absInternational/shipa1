@@ -740,45 +740,6 @@
         </script>
     {{-- phone mask  --}}
 
-    {{-- get.models --}}
-    {{-- <script>
-            $(document).ready(function() {
-                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                    var year = $('.vehicle-year').val();
-                    var makeId = $('.vehicle-make').val();
-                    if (year && makeId) {
-                        getModel(year, makeId);
-                    }
-                });
-                function getModel(year, makeId) {
-                    $.ajax({
-                        url: "{{ route('get.models') }}",
-                        method: 'GET',
-                        data: {
-                            year: year,
-                            make: makeId
-                        },
-                        success: function(response) {
-                            var modelsDropdown = $('.vehicle-model-div');
-                            modelsDropdown.empty();
-                            var selectOptions =
-                                '<label>Model</label><select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                            $.each(response, function(index, model) {
-                                selectOptions += '<option value="' + model + '">' + model + '</option>';
-                            });
-                            selectOptions += '</select>';
-                            modelsDropdown.html(selectOptions);
-            
-                        },
-                        error: function(xhr) {
-                            console.log(xhr.responseText);
-                        }
-                    });
-                }
-            });
-        </script> --}}
-    {{-- get.models --}}
-
     {{-- category subcategory --}}
     <script>
         $(document).ready(function() {
@@ -1087,27 +1048,58 @@
                 });
             }
 
-            // $("#pickup-location").keyup(function() {
-            $(document).on('keyup', '#pickup-location', function() {
-                var inputField = $(this);
-                var suggestionsList = inputField.siblings(".suggestionsTwo");
-                suggestionsList.css("display", "block");
-                if (inputField.val() === "") {
-                    suggestionsList.css("display", "none");
-                }
-                updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-            });
+            // // $("#pickup-location").keyup(function() {
+            // $(document).on('keyup', '#pickup-location', function() {
+            //     var inputField = $(this);
+            //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+            //     suggestionsList.css("display", "block");
+            //     if (inputField.val() === "") {
+            //         suggestionsList.css("display", "none");
+            //     }
+            //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+            // });
 
-            // $("#delivery-location").keyup(function() {
-            $(document).on('keyup', '#delivery-location', function() {
-                var inputField = $(this);
-                var suggestionsList = inputField.siblings(".suggestionsTwo");
-                suggestionsList.css("display", "block");
-                if (inputField.val() === "") {
-                    suggestionsList.css("display", "none");
-                }
-                updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-            });
+            // // $("#delivery-location").keyup(function() {
+            // $(document).on('keyup', '#delivery-location', function() {
+            //     var inputField = $(this);
+            //     var suggestionsList = inputField.siblings(".suggestionsTwo");
+            //     suggestionsList.css("display", "block");
+            //     if (inputField.val() === "") {
+            //         suggestionsList.css("display", "none");
+            //     }
+            //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+            // });
+            
+            // Show suggestions for pickup location
+                $(document).on('keyup', '#pickup-location', function() {
+                    var inputField = $(this);
+                    var suggestionsList = inputField.siblings(".suggestionsTwo");
+                    suggestionsList.css("display", "block");
+                    if (inputField.val() === "") {
+                        suggestionsList.css("display", "none");
+                    }
+                    updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
+                });
+
+                // Show suggestions for delivery location
+                $(document).on('keyup', '#delivery-location', function() {
+                    var inputField = $(this);
+                    var suggestionsList = inputField.siblings(".suggestionsTwo");
+                    suggestionsList.css("display", "block");
+                    if (inputField.val() === "") {
+                        suggestionsList.css("display", "none");
+                    }
+                    updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
+                });
+
+                // Close suggestions dropdown when clicking outside of input or suggestions
+                $(document).on('click', function(event) {
+                    var target = $(event.target);
+                    if (!target.closest('#pickup-location').length && !target.closest('#delivery-location').length && !target.closest('.suggestionsTwo').length) {
+                        $('.suggestionsTwo').css("display", "none"); // Hide all suggestion lists
+                    }
+                });
+
 
             function validateLocationInput(inputField, validSuggestions, errorField) {
                 var inputValue = inputField.val();
