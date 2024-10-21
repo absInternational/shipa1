@@ -23,6 +23,7 @@ class NationWideTransportController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->toArray());
         $request->validate([
             'name' => 'required|string|max:255',
             'status' => 'required|integer',
