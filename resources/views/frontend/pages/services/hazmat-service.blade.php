@@ -69,10 +69,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
-        z-index: 0; /* Ensures it appears on top of the background */
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0; 
     }
-
     .why-choose-us-slider {
         background: url('../../img/autoauction banner 2.webp');
         padding: 60px 0;
@@ -81,9 +80,8 @@
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1; /* Keeps the background behind the ::before element */
+        z-index: 1; 
     }
-
     .section-title {
         text-align: center;
         font-size: 2.5rem;
@@ -94,7 +92,6 @@
         text-transform: uppercase;
         animation: fadeIn 1s ease-in-out;
     }
-
     .section-description {
         text-align: center;
         font-size: 1.1rem;
@@ -106,7 +103,6 @@
         opacity: 0.8;
         animation: fadeIn 1.2s ease-in-out;
     }
-
     .slide {
         min-width: 33.333%;
         box-sizing: border-box;
@@ -120,24 +116,20 @@
         position: relative;
         overflow: hidden;
     }
-
     .slide:hover {
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px);
         background-color: rgba(255, 255, 255, 1);
     }
-
     .slide i {
         margin-bottom: 20px;
         color: #666;
         font-size: 3rem;
         transition: color 0.3s ease;
     }
-
     .slide:hover i {
         color: #8FC445;
     }
-
     .slide-title {
         font-size: 1.5rem;
         color: #333;
@@ -146,11 +138,9 @@
         letter-spacing: 0.3px;
         transition: color 0.3s ease;
     }
-
     .slide:hover .slide-title {
         color: #8FC445;
     }
-
     .slide-text {
         font-size: 1rem;
         color: #666;
@@ -181,7 +171,6 @@
         </div>
     </div>
 </section>
-{{-- @include('partials.reveiw-site') --}}
 @include('partials.reveiw-small-detail') 
 <section class="tj-about-section pt-0 pb-0">
     <div class="container">
@@ -190,7 +179,6 @@
                 <div class="about-content-one">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Safe Handling and Storage of Hazardous Materials</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">SAFE HANDLING AND STORAGE OF HAZARDOUS MATERIALS
                             It's essential to label all hazardous materials with the appropriate
                             Hazmat symbols. Different symbols correspond to each category, so ensure
@@ -203,7 +191,6 @@
                             various materials. You can find these sheets online, but be sure to use
                             the most recent version and print multiple copies.</p>
                     </div>
-                    
                 </div>
             </div>
             <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
@@ -211,7 +198,6 @@
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/OLD/hazmat-service2.webp') }}" alt="Image">
                     </div>
-
                 </div>
             </div>
         </div>
@@ -221,7 +207,6 @@
                 <div class="image-box">
                     <img class="rounded" src="{{ asset('frontend/images/project/OLD/hazmat-service4.webp') }}" alt="Image">
                 </div>
-
                 </div>
             </div>
             <div class="col-lg-8 sal-animate " data-sal="slide-left" data-sal-duration="800">
@@ -235,21 +220,18 @@
                                 <div class="col-md-6 mb-3">
                                     <ul class="ps-0">
                                         <li> <strong>General Awareness:</strong>  Employees should have a basic understanding of Hazmat safety and how your facility operates.</li>
-                                        <li> <strong>Security Training:</strong>  Offer basic security awareness training for handling, storing, and transporting hazardous materials securely.</li>
-                                        
+                                        <li> <strong>Security Training:</strong>  Offer basic security awareness training for handling, storing, and transporting hazardous materials securely.</li>  
                                     </ul>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <ul class=" ps-0">
                                         <li> <Strong>Safety Training:</Strong>  Teach them how to respond to emergencies and prevent accidents, fostering a safety-conscious workplace culture.</li>
-                                        <li> <strong>Job-Specific Training:</strong>  Provide training that is tailored to their specific roles and responsibilities.</li>
-                                        
+                                        <li> <strong>Job-Specific Training:</strong>  Provide training that is tailored to their specific roles and responsibilities.</li>   
                                     </ul>
                                 </div>
                             </div>
                         </p>
                     </div>
-                    
                 </div>
             </div>    
         </div>
@@ -263,7 +245,6 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Job Procedures</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">Define specific procedures and job duties for each employee,
                             and ensure they receive job-specific training.
                         </p>
@@ -274,7 +255,6 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Personal Protective Gear</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">Always have personal protective equipment available. Employees should inspect it 
                             before use to ensure it's safe; if damaged, replace it.</p>
                     </div>
@@ -286,27 +266,13 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Proper Use</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">In handling hazardous materials, employees should only use them for their intended purposes.
                         Avoid using substances for tasks they weren't designed for, ensuring safety and compliance.
-                            
                         </p>
                     </div>
-                    
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
-        <div class="col-lg-12 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded p-4">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Proper Use</span>
-                        <p class="desc">In handling hazardous materials, employees should only use them for their intended purposes.
-                            Avoid using substances for tasks they weren't designed for, ensuring safety and compliance.</p>
-                    </div>   
-                </div>
-            </div>
-        </div> -->
     </div>
 </section>
 <section class="tj-blog-standard pt-0 pb-4">
@@ -338,14 +304,8 @@
             <div class="col-lg-12">
                 <div class="choose-us-top-content-1">
                     <div class="tj-section-heading-1">
-                        <!-- <span class="sub-title-1 active-shape2"> Have any ideas in your mind?</span> -->
                         <h2 class="title-1">Hazmat Shipping Services</h2>
                     </div>
-                    <!-- <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="contact.html">
-                            Get Quote <i class="flaticon-right-1"></i>
-                        </a>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -366,7 +326,6 @@
                     Goods Code. These rules help everyone involved in transporting these materials do it safely.</p>
                 </div>
             </div>
-            
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
@@ -381,7 +340,6 @@
                             guides how these materials should be treated to ensure safety during their handling and 
                             transportation. Each class has specific rules and precautions associated with it to prevent 
                             accidents, spills, fires, or other dangers.
-                    
                             <div class="row">
                             <div class="col-md-6 mb-3">
                                 <ul class="list-unstyled ps-0">
@@ -396,11 +354,9 @@
                                     <li>★  Oxidizing Substances (Class 5): These substances can make other things catch fire more easily.</li>
                                     <li>★  Toxic Substances (Class 6): These are things that can seriously hurt or even kill you if you're exposed to them. Think of strong acids or poisonous chemicals.</li>
                                     <li>★ Radioactive Materials (Class 7): These are materials that give off harmful radiation, like some medical stuff or uranium.</li>
-                                    <!-- <li>★ Corrosives (Class 8): These can eat away at other materials, like strong acids or batteries.</li> -->
                                 </ul>
                             </div>
                         </div>
-                            
                     </p>
                 </div>
             </div>
@@ -417,7 +373,6 @@
                             <h6 class="title-1">Proper Packaging</h6>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
@@ -428,9 +383,7 @@
                             <h6 class="title-1">Correct Labels</h6>
                         </div>
                     </div>
-                    
                 </div>
-            
             </div>
             <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="choose-us-step-item-1">
@@ -440,9 +393,7 @@
                             <h6 class="title-1">Safety Data Sheets (SDS)</h6>
                         </div>
                     </div>
-                    
                 </div>
-            
             </div>
             <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="choose-us-step-item-1">
@@ -452,9 +403,7 @@
                             <h6 class="title-1">Separate Containers</h6>
                         </div>
                     </div>
-                    
                 </div>
-            
             </div>
         </div>
     </div>

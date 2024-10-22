@@ -24,7 +24,6 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <!--========== blog details Start ==============-->
     <section class="tj-service-details">
         <div class="container">
@@ -47,7 +46,6 @@
                                     </h3>
                                 </div>
                             </div>
-
                             @if ($service->desc_one != null)
                                 <p>
                                     {{ !is_null($service->desc_one) ? $service->desc_one : '' }}
@@ -71,9 +69,6 @@
                                         </h5>
                                         <p>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}</p>
                                         <ul class="list-gap">
-                                            {{-- <li><i
-                                                class="fa-light fa-check"></i>{{ !is_null($service->desc_two_one) ? $service->desc_two_one : '' }}
-                                        </li> --}}
                                             <li><i
                                                     class="fa-light fa-check"></i>{{ !is_null($service->desc_two_two) ? $service->desc_two_two : '' }}
                                             </li>
@@ -95,13 +90,6 @@
                             @endif
                         </div>
                         <div class="details-video-content">
-                            {{-- <h4 class="title">Communicate With Us</h4>
-                            <p>
-                                Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui
-                                dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta
-                                sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit
-                                amet finibus eros. Lorem Ipsum
-                            </p> --}}
                             {!! !is_null($service->extra) ? $service->extra : '' !!}
                             @if ($service->image3 != null)
                                 <div class="row">
@@ -114,46 +102,10 @@
                                 </div>
                             @endif
                         </div>
-                        {{-- <div class="row">
-                            <div class="col-lg-12">
-                                <div class="tj-faq-area">
-                                    <div class="accordion" id="accordionExample">
-                                        @foreach ($faqs as $key => $faq)
-                                            <div class="accordion-item {{ $key === 0 ? 'show' : '' }}">
-                                                <h2 class="accordion-header" id="heading{{ $faq->id }}">
-                                                    <button class="accordion-button {{ $key === 0 ? '' : 'collapsed' }}"
-                                                        type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#collapseOne{{ $faq->id }}"
-                                                        aria-expanded="{{ $key === 0 ? 'true' : 'false' }}"
-                                                        aria-controls="collapseOne{{ $faq->id }}">
-                                                        {{ $faq->heading }}
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseOne{{ $faq->id }}"
-                                                    class="accordion-collapse collapse {{ $key === 0 ? 'show' : '' }}"
-                                                    aria-labelledby="heading{{ $faq->id }}"
-                                                    data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body">
-                                                        <strong>{{ $faq->description }}</strong>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="details-sidebar-inner">
-                        {{-- <div class="tj-sidebar-widget sidebar-search">
-                            <form action="#">
-                                <input type="text" class="form-control" name="search" id="search"
-                                    placeholder="Search" />
-                                <i class="flaticon-loupe"></i>
-                            </form>
-                        </div> --}}
                         <div class="tj-sidebar-widget sidebar-service">
                             <h5 class="details_title">Logistics Services</h5>
                             <ul class="list-gap">
@@ -166,7 +118,6 @@
                                 @endforeach
                             </ul>
                         </div>
-                        
                         <div class="tj-appointment-box" data-bg-image="assets/images/service/service-15.jpg">
                             <div class="tj-appointment-bg" data-bg-image="assets/images/banner/service_shape.png"></div>
                             <div class="tj-appointment-body">

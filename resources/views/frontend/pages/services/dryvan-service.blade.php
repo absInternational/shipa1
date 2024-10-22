@@ -247,13 +247,11 @@
                 <div class="about-content-one">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">LTL and FTL Frieght Shipping</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Shipping can be a daunting task, especially when it comes to choosing between FTL and LTL.
                             Both methods have their own unique advantages and disadvantages, Which is why it's important to 
                             understand the differences between them because ate Day Dispatch we empower you to choice with your 
                             own needs.
-                        
                             <h3>What is FTL ?</h3>
                             If you have a large amount of freight that needs to be shipped, FTL is probably the best option for you. With FTL shipping, you'll have access to an entire trailer that's dedicated solely to your freight.
                             This means that your shipment won't be mixed with other shipments, and it'll be delivered directly to its destination.
@@ -269,7 +267,6 @@
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/FTL.webp') }}" alt="Image">
                     </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
                 </div>
             </div>
         </div>
@@ -282,15 +279,12 @@
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/LTL.webp') }}" alt="Image">
                     </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                 </div>
             </div>
             <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">LTL and FTL Frieght Shipping</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                         <h3>What is LTL ?</h3>
                         If you have a smaller shipment that doesn't require an entire trailer, LTL might be a better option. With 
@@ -317,25 +311,21 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Materials Used</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                         Dry van trailers are typically constructed from various materials, including galvanised steel, aluminium, 
                         hardwood, or iron. The choice of material can impact the trailer's durability, weight, and cost.
                         </p>
                     </div>
-                    
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Limitations</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                         Despite various benefits, the shippers must consider the following limitations and discuss them with the
                             customer service team of the logistic company while shipping their valuable assets.</p>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -344,66 +334,26 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">No Climate Control</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                         Unlike refrigerated containers, often referred to as "reefers," dry vans do not have climate control capabilities. This means they are not equipped to maintain specific temperature conditions within the trailer. Therefore, dry van 
                         shipping is best suited for goods that do not require temperature-sensitive handling, such as frozen or refrigerated items.
                         </p>
                     </div>
-                    
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Enclosed Container</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                         One of the defining features of dry van shipping is the use of fully enclosed trailers. These trailers have walls, a roof, and a floor, creating a sealed container to protect cargo from external elements. 
                         This enclosure provides a high level of security against weather conditions, dust, and theft. Dry van shipping involves sealed containers attached to semi-trucks. </p>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-{{-- <section class="tj-cta-section-two">
-    <div class="tj_cta_image"></div>
-    <div class="tj_cta_image1"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="tj-cta-content">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape2"> Here We Are</span>
-                        <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
-                    </div>
-                    <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" target="_blank">
-                            Get Quote<i class="flaticon-right-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="tj-cta-content tj-cta-content2">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                        <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
-                    </div>
-                    <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
-                            Get Support<i class="flaticon-right-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-{{-- @include('partials.reveiw-site') --}}
 <section class="tj-choose-us-section-service-farm-8">
     <div class="container why-box">
         <div class="row services">
@@ -462,85 +412,8 @@
         </div>
     </div>
 </section>
-{{-- <section class="tj-about-section-five">
-    <div class="container">
-        <div class="row services ">
-            <h1 class="services-h1">Common Sizes</h1>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">28' (pup trailer)</h5>
-                        <p class="card-text text-light">
-                            <ul class="list-unstyled ps-0 text-light">
-                                <li>★ Length: 8.5 metres (28 feet)</li>
-                                <li>★ Width: 2.4 metres</li>
-                                <li>★ Height: 2.7 metres</li>
-                                <li>★ Approximate Load Capacity:
-                                Typically, pup trailers can carry up to 14 pallets.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                    <h5 class="card-title text-white">48' Dry Van:</h5>
-                        <p class="card-text text-light">
-                            <ul class="list-unstyled ps-0 text-light">
-                                <li>★ Length: 14.6 metres (48 feet)</li>
-                                <li>★ Width: 2.59 metres</li>
-                                <li>★ Height: 4 metres</li>
-                                <li>★ Approximate Load Capacity:
-                                These trailers can accommodate around 24 pallets of cargo.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                    <h5 class="card-title text-white">53' Dry Van:</h5>
-                        <p class="card-text text-light">
-                            <ul class="list-unstyled ps-0 text-light">
-                                
-                                <li>★ Length: 16 metres (53 feet)</li>
-                                <li>★ Width: 2.59 metres</li>
-                                <li>★ Height: 2.59 metres</li>
-                                <li>★ Approximate Load Capacity:
-                                    53-foot dry vans are among the largest and can carry
-                                    approximately 26 pallets.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card- h-100">
-                    <div class="card-body">
-                    <h5 class="card-title text-white">Straight or Box Truck:</h5>
-                        <p class="card-text text-light">
-                            <ul class="list-unstyled ps-0 text-light">
-                                <li>★ Dimensions can vary, but a common size is approximately:</li>
-                                <li>★ Length: 7.3 metres</li>
-                                <li>★ Width: 2.4 metres</li>
-                                <li>★ Height: 2.59 metres</li>
-                                <li>★ Approximate Load Capacity:
-                                       These trucks can typically handle payloads of up to
-                                       4,500 kilogrammes.
-                                </li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
  <!--========== Faq Section Start ==============-->
- <section class="tj-faq-section tj-faq-page pt-5">
+<section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -556,7 +429,6 @@
                     <div class="faq-image">
                         <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                     </div>
-                    
                 </div>
             </div>
             <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
@@ -620,7 +492,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -723,193 +594,4 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-{{-- <script>
-    $(document).ready(function() {
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                <div class="vehicle-info">
-                <div class="row select-bm">
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label> Year</label>
-                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-
-            newVehicleHtml +=
-                `</select>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="input-form tj-select">
-                <label>Make</label>
-                <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-            @foreach ($makes as $make)
-                newVehicleHtml += `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-            @endforeach
-
-            newVehicleHtml += `
-            </select>
-            </div>
-            </div>
-            <div class="col-md-4">
-            <div class="input-form tj-select model-div">
-            <label>Model</label>
-            <select class="nice-select model" name="model[]" id="model" required>
-            <!-- Options filled by JavaScript -->
-            </select>
-            <!-- Bin icon for deleting vehicle -->
-            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
-            </div>
-            </div>
-            </div>
-            </div>
-            `;
-
-            $('#vehicles-container').append(newVehicleHtml);
-        }
-
-        $('#addVehicleBtn').click(function() {
-            addNewVehicle();
-        });
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-
-        $(document).on('change', '.year, .make', function() {
-            var year = $(this).closest('.vehicle-info').find('.year').val();
-            var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            var vehicleInfo = $(this).closest('.vehicle-info');
-            if (year && makeId) {
-                getModel(year, makeId, vehicleInfo);
-            }
-        });
-
-        function getModel(year, makeId, vehicleInfo) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
-                    });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-            var year = $('.vehicle-year').val();
-            var makeId = $('.vehicle-make').val();
-            if (year && makeId) {
-                getModel(year, makeId);
-            }
-        });
-    });
-        function getModel(year, makeId) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = $('.vehicle-model-div');
-                    modelsDropdown.empty();
-                    var selectOptions =
-                        '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' + model +
-                            '</option>';
-                    });
-                    selectOptions += '</select>';
-                    modelsDropdown.html(selectOptions);
-
-                    console.log('yesssss', response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-
-    
-
-    $(document).ready(function() {
-        $('#available_at_auction').change(function() {
-        if ($(this).is(':checked')) {
-        $('.div-link').show();
-        } else {
-        $('.div-link').hide();
-        }
-        });
-        $('#modification').change(function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script> --}}
-{{-- <script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script> --}}
 @endsection

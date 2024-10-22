@@ -40,7 +40,6 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 0; 
     }
-
     .why-choose-us-slider {
         background: url('../../img/1 background image Farm transport.webp');
         padding: 60px 0;
@@ -51,7 +50,6 @@
         background-size: cover;
         z-index: 1;
     }
-
     .section-title {
         text-align: center;
         font-size: 2.5rem;
@@ -62,7 +60,6 @@
         text-transform: uppercase;
         animation: fadeIn 1s ease-in-out;
     }
-
     .section-description {
         text-align: center;
         font-size: 1.1rem;
@@ -74,7 +71,6 @@
         opacity: 0.8;
         animation: fadeIn 1.2s ease-in-out;
     }
-
     .slide {
         min-width: 33.333%;
         box-sizing: border-box;
@@ -88,24 +84,20 @@
         position: relative;
         overflow: hidden;
     }
-
     .slide:hover {
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px);
         background-color: rgba(255, 255, 255, 1);
     }
-
     .slide i {
         margin-bottom: 20px;
         color: #666;
         font-size: 3rem;
         transition: color 0.3s ease;
     }
-
     .slide:hover i {
         color: #8FC445;
     }
-
     .slide-title {
         font-size: 1.5rem;
         color: #333;
@@ -114,11 +106,9 @@
         letter-spacing: 0.3px;
         transition: color 0.3s ease;
     }
-
     .slide:hover .slide-title {
         color: #8FC445;
     }
-
     .slide-text {
         font-size: 1rem;
         color: #666;
@@ -130,7 +120,6 @@
 <section class="tj-choose-us-section-service-farm">
     <div class="container mt-4">
         <div class="row mt-4">
-
             <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
@@ -166,8 +155,6 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape"> Farm Transportation</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Efficient Farm Transportation</h3>
                         <p class="desc">
                             Transportation has its importance in every industry, whether it be the industrial sector or
@@ -213,7 +200,6 @@
                             Ship A1, a leading transportation company with a proven record of 16 successful years of dealing with
                              shipments across the USA is fully equipped with advanced vehicles used for farming, along with 
                              affordable rates, and multiple modes of services we are here to offer what we do best!
-
                         </p>
                     </div>
                 </div>
@@ -308,7 +294,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Safeguarding From Insurance</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Expert shipping firms like Ship A1 offer complete insurance coverage for your farm equipment 
                             during transportation, making sure you are covered and reimbursed in the event that any damage occurs.</p>
@@ -319,7 +304,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Professional Shipping Team</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Our knowledgeable shipping staff prioritizes your equipment's safety by securely fastening it with straps and following
                              all required safety measures, guaranteeing your total pleasure with our service.</p>
@@ -332,7 +316,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Timely Delivery </span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Ship A1 places a high value on timeliness, ensuring that your farm equipment reaches its destination on schedule. 
                             This minimizes delays and keeps your farming operations operating efficiently.</p>
@@ -343,7 +326,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Personalized Transportation Options</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Based on the unique requirements of your Farm equipment, we provide customized transport solutions. This includes choosing the
                              right trailers and organizing the necessary logistics to guarantee a timely and safe delivery.</p>
@@ -407,7 +389,6 @@
                     <div class="faq-image">
                         <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
@@ -485,12 +466,9 @@
                                     Not only you will get the insurance coverage. The carrier company will provide you
                                     with insurance up to a whopping upto $1 million. As soon as you get in touch with
                                     the driver you will get the documents which are related to your insurance.
-
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
