@@ -180,7 +180,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/3a images for commercial transport.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('/public/frontend/images/project/3a images for commercial transport.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
