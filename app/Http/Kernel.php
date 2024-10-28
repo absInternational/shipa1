@@ -37,7 +37,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \ErlandMuchasaj\LaravelGzip\Middleware\GzipEncodeResponse::class,
-            \App\Http\Middleware\ForceHttps::class,
+            // \App\Http\Middleware\ForceHttps::class,
         ],
 
         'api' => [
@@ -46,6 +46,20 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
+
+    /**
+     * Create a new HTTP kernel instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+
+        if (app()->environment('production')) {
+            $this->middlewareGroups['web'][] = \App\Http\Middleware\ForceHttps::class;
+        }
+    }
 
     /**
      * The application's route middleware.
