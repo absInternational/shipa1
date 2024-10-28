@@ -10,8 +10,6 @@
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
-
         .input-container {
             height: 34px;
             background: white;
@@ -20,9 +18,7 @@
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-container1 {
             height: 34px;
             background: white;
@@ -31,9 +27,7 @@
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-field {
             width: 50px;
             padding: 5px;
@@ -41,7 +35,6 @@
             border: none;
             outline: none;
         }
-
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -49,48 +42,39 @@
             border: none;
             outline: none;
         }
-
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
         }
-
         .separators {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .separators-w {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .input-container input[type="number"] {
             -moz-appearance: textfield;
         }
-
         .input-container input[type="number"]::-webkit-outer-spin-button,
         .input-container input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-
         .form-wrap {
             margin-bottom: 10px;
             position: relative;
         }
-
         .form-label-outside {
             color: white;
             display: block;
             margin-bottom: 5px;
         }
-
         .input-container {
             display: flex;
             align-items: center;
         }
-
         .input-container input {
             border: none;
             padding: 5px 0px 5px 0px;
@@ -98,21 +82,17 @@
             width: 38px;
             text-align: center;
         }
-
         .input-container .placeholders {
             position: relative;
             right: 72px;
             color: black;
             display: inline-block;
             width: auto;
-
             padding: 0px 8px;
         }
-
         .err-style {
             color: red;
         }
-
         .tj-input-form .input-form label {
             font-size: 15px;
             font-weight: 500;
@@ -187,32 +167,13 @@
                                         <option value="Motor Boat">Motor Boat</option>
                                         <option value="Others">Others</option>
                                     </select>
-                                    {{-- <div class="error-message" id="category-error" style="color: red; display: none;">
-                                        Please select a category.
-                                    </div> --}}
                                     <input type="text" class="form-control" id="otherCategoryInput" name="other_category" disabled
                                         style="display: none;" placeholder="Specify Category">
                                 </div>
                             </div>
                         </div>
-                            {{-- <div class="input-form">
-                                <label for="category">Category</label>
-                                <select class="" id="category" name="category">
-                                    <option value="" disabled selected>Select</option>
-                                    <option value="Power Boat">Power Boat</option>
-                                    <option value="Sail Boat">Sail Boat</option>
-                                    <option value="Personal Watercraft">Personal Watercraft</option>
-                                    <option value="Boat Parts">Boat Parts</option>
-                                    <option value="Motor Boat">Motor Boat</option>
-                                    <option value="Others">Others</option>
-                                </select>
-                                <input type="text" class="form-control" id="otherCategoryInput" name="category" disabled
-                                    style="display: none;" placeholder="Specify Category">
-                            </div><br> --}}
-
                             <input type="hidden" name="vehicle_opt" value="heavy" hidden>
                             <input type="hidden" name="heavy_type" value="boat" hidden>
-
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
@@ -239,7 +200,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -351,7 +311,6 @@
                                         <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
-
                                     </div>
                                 </div>
                             </div>
@@ -379,16 +338,6 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                {{-- <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="load_type" class="text-white">Load Type</label>
-                                        <select class="" id="load_type" name="load_type">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
-                                            <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
-                                        </select>
-                                    </div>
-                                </div> --}}
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="load_method" class="text-white">Load Method</label>
@@ -414,63 +363,10 @@
                                     </div>
                                 </div>
                             </div>
-
                             <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i>
                                 Add Equipment</a>
-
                             <div id="vehicles-container">
                             </div>
-
-                            
-
-                            {{-- <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Length</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Width</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input1" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Height</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input2" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Weight</label>
-                                    <div class="input-container1">
-                                        <input type="" id="feet-input" class="input-field-1" placeholder=""
-                                            min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                        <span class="separators-w">(Lbs.)</span>
-
-                                    </div>
-                                </div>
-                            </div> --}}
-
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="boat_on_trailer"
                                     name="boat_on_trailer" value="1" />
@@ -486,7 +382,6 @@
                                             at
                                             Auction?</label>
                                     </div>
-
                                     <div class="input-form div-link mt-3" style="display: none;">
                                         <label class="d-block"> Enter Link:</label>
                                         <input class="form-control" type="url" id="link" name="link"
@@ -507,7 +402,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="input-form">
                                 <label class="d-block text-white"> Image:</label>
                                 <input class="form-control image_input" type="file" name="image[]" accept="image/*"
