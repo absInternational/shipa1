@@ -205,7 +205,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/OLD/3a-image-for-Reefer-transport.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('/public/frontend/images/project/3a-image-for-Reefer-transport.webp') }}" alt="Image">
                     </div>
 
                 </div>
@@ -215,7 +215,7 @@
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/OLD/3b-image-for-Reefer-transport.webp') }}" alt="Image">
+                            <img class="rounded" src="{{ asset('/public/frontend/images/project/3b-image-for-Reefer-transport.webp') }}" alt="Image">
                         </div>
 
                     </div>
@@ -302,7 +302,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/OLD/3c-image-for-Reefer-transport.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('/public/frontend/images/project/3c-image-for-Reefer-transport.webp') }}" alt="Image">
                     </div>
 
                 </div>
