@@ -180,10 +180,8 @@
                             of benefits that leave the customer wanting to work with us again and again. Not only do we 
                             provide the best services we also take care of your budget and offer reasonable rates without 
                             compromising the quality.
-                            </p> 
-                        
+                            </p>
                         <br>
-                       
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -406,7 +404,6 @@
                               by offering tailored solutions and taking care of your vehicle.
                             </p>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -435,7 +432,6 @@
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/MOTORCYCLE-2.webp') }}" alt="Image">
                     </div>
-                   
                 </div>
             </div>
         </div>
@@ -448,7 +444,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Secure Shipment</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                         The shipment of your vehicle is handled with utmost care and in a completely guarded way with us.
                         </p>
@@ -459,7 +454,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Affordable Price</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                         The combination of affordable price & timely vehicles delivery is what make our services unique and special.</p>
                     </div>
@@ -471,7 +465,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">100% Insurance Coverage</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             We believe in the safety and security of our vehicles as well as our customers which is why we 
                             have 100% insured vehicles to take care of any risks or unforeseen events.
@@ -483,7 +476,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">24/7 Customer Support</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Our customers are our top priority, which is why we offer 24/7 support to our customers to
                              erase any doubt and offer tailored solutions to their needs and concerns.</p>
@@ -635,58 +627,6 @@
         </div>
     </div>
 </section>
-{{-- <section class="why-choose-us-slider">
-    <div class="container">
-        <div class="tj-section-heading text-center">
-            <h2 class="title text-white">Why Choose Us?</h2>
-            <span class="sub-title active-shape">Discover the benefits of choosing ShipA1 through our features.</span>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-lg-4 mb-4">
-                <div class="slide text-center">
-                    <i class="fas fa-users icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">24/7 Customer Support</h3>
-                    <p class="slide-text">24/7 Customer Support: Our customers are our top priority, which is why we offer
-                         24/7 support to our customers to erase any doubt and offer tailored solutions to their needs and concerns.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4 mb-4">
-                <div class="slide text-center">
-                    <i class="fas fa-dollar-sign icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">On-Time Delivery</h3>
-                    <p class="slide-text">At Ship A1 we keep in mind that time is equally valuable for both our customers and our company which is why we 
-                        ensure the quick delivery of your cargo as scheduled and in perfect condition.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4 mb-4">
-                <div class="slide text-center">
-                    <i class="fas fa-clock icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Experienced Professionals</h3>
-                    <p class="slide-text">Our highly skilled and professional carriers and staff are experts in what they do, which is handling, maintaining,
-                         and easily loading your vehicle on our trailers.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-4 col-lg-4 mb-4">
-                <div class="slide text-center">
-                    <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Real-Time Tracking</h3>
-                    <p class="slide-text">Making it easy for our customers to easily track their vehicle’s current and updated status anytime and anywhere.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4 mb-4">
-                <div class="slide text-center">
-                    <i class="fas fa-shield-alt icon-hover-shake" style="font-size: 50px;"></i>
-                    <h3 class="slide-title">Refrigeration Technology</h3>
-                    <p class="slide-text">Our fully equipped trailers maintain precise temperature control
-                         suitable for your cargo throughout the journey</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
@@ -712,7 +652,6 @@
             for (var year = currentYear; year >= 1936; year--) {
                 newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
             }
-
             newVehicleHtml +=
                 `</ul>
                 </div>
@@ -730,7 +669,6 @@
                 <label>Model</label>
                 <input type="text" id="model" name="model[]" placeholder="Enter Model"
                 required="" />
-                
                 </div>
                 </div>
                 <div class="col-md-6">
@@ -745,13 +683,9 @@
                 </div>
                 </div>
                 `;
-
             $('#vehicles-container').append(newVehicleHtml);
-
-            // Initialize the searchable dropdown for new elements
             initializeSearchableDropdown();
         }
-
         function initializeSearchableDropdown() {
             $('.dropdown-toggle.year').on('input', function() {
                 var input = $(this);
@@ -766,36 +700,27 @@
                     }
                 });
             });
-
             $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
                 var item = $(this);
                 var input = item.closest('.dropdown').find('.dropdown-toggle.year');
                 input.val(item.text());
-                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                item.closest('.dropdown-menu').hide(); 
             });
-
-            // Show dropdown when input is focused
             $('.dropdown-toggle.year').on('focus', function() {
                 $(this).siblings('.dropdown-menu.year-dropdown').show();
             });
-
-            // Hide dropdown when clicking outside
             $(document).on('click', function(e) {
                 if (!$(e.target).closest('.dropdown').length) {
                     $('.dropdown-menu.year-dropdown').hide();
                 }
             });
         }
-
         $('#addVehicleBtn').click(function() {
             addNewVehicle();
         });
-
         $(document).on('click', '.delete-vehicle', function() {
             $(this).closest('.vehicle-info').remove();
         });
-
-        // Initialize Select2 on existing dropdowns (if needed)
         initializeSearchableDropdown();
     });
 </script>

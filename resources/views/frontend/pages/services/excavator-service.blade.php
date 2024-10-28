@@ -195,8 +195,6 @@
             <div class="col-lg-8 col-md-12 order-sm-1 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape"> Excavator Transportation</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Ship A1's Excavator Transport Solutions</h3>
                         <p class="desc">
                             Excavator shipping services is just one of the major services here at ShipA1. Usually, when
@@ -216,7 +214,6 @@
                             the only
                             approach to get it transported ship A1 provides free online quotes.</p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -227,8 +224,6 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape"> Excavator Transportation</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Specialized Transport for Heavy Excavators</h3>
                         <p class="desc">
                             Heavy excavators need a step-deck trailer and expert loading. This will have an influence on
@@ -249,7 +244,6 @@
                             customers’
                             expectations. </p>
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
@@ -272,24 +266,20 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Protected Shipment</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Whenever we are shipping a heavy equipment our ultimate focus must be on
                             choosing the right trailer for a safer experience during transit & at time of delivery.</p>
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Trailer for Excavator</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Not every trailer that can be used in shipping an excavator. Mostly a lowboy trailer is used
                             while others are used as per the dimensions of the excavator.</p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -298,24 +288,20 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Expert Loading</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">Loading and securing in a professional way protect from damage and assure safety 
                             from start to finish, minimizing the risk and delays of transportation.
                         </p>
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Custom Transport Solutions</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Custom transport options are offered in relation to the excavator's 
                             specifications and delivery requirements for optimum safety and efficiency.</p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -489,7 +475,6 @@
                         offer the best reasonable and cost-effective rates without compromising the quality of our services.</p>
                 </div>
             </div>
-             
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-clock icon-hover-shake" style="font-size: 50px;"></i>

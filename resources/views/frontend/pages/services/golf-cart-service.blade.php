@@ -177,307 +177,235 @@
 </section>
 <section class="tj-blog-standard pb-0 pt-4">
    <div class="container">
-           <div class="row">
-                <div class="col-lg-7">
-							<div class="image-container">
-                                <img class="img-fluid" src="{{ asset('frontend/images/project/golf-cart-service.webp') }}" loading="lazy" alt="Motorcyle Transport">
-                            </div>
-                             <br>
-                    <div class="text-container text-left">
-                        {{-- <h3>Choosing the best shipping company for your golf cart?</h3>
-                        <p>Want to know the secret to choosing the best shipping company 
-                            for your golf cart? We’ve got you. First, let's talk about it.</p>  --}}
-                            <h3>What is golf cart shipping?</h3>
-                            <p>Similar to any vehicle shipping, golf carts are also modes of transport that have proven to be 100%
-                                 convenient and cost-effective. Just like any other vehicle being shipped, they also require the
-                                  same amount of maintenance, care, and the shipping process. Golf carts are not limited to the
-                                   golf course but are also pretty well reputable in other factors.You must be wondering where and 
-                                   how else are golf carts used. You will come across multiple golf carts being utilized in places
-                                    like communities, hospitals, companies, resorts, etc.
-                            </p> 
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-6 text-center">
-                            <h4><i class="fas fa-ship" style="color: var(--tj-primary-color);"></i> Successful Shipment</h4>
-                            <div class="review-counter fs-2">
-                                <span id="counter-value" class="ms-3" data-target="318" style="color: var(--tj-secondary-color);">0</span>k+
-                            </div>
+        <div class="row">
+            <div class="col-lg-7">
+                        <div class="image-container">
+                            <img class="img-fluid" src="{{ asset('frontend/images/project/golf-cart-service.webp') }}" loading="lazy" alt="Motorcyle Transport">
                         </div>
-                        <div class="col-6 text-center">
-                            <h4><i class="fas fa-smile" style="color: var(--tj-primary-color);"></i> Satisfied Clients</h4>
-                            <div class="review-counter fs-2">
-                                <span id="counter-value-2" class="ms-3 " data-target="289" style="color: var(--tj-secondary-color);">0</span>k+
-                            </div>
+                            <br>
+                <div class="text-container text-left">
+                        <h3>What is golf cart shipping?</h3>
+                        <p> Similar to any vehicle shipping, golf carts are also modes of transport that have proven to be 100%
+                            convenient and cost-effective. Just like any other vehicle being shipped, they also require the
+                            same amount of maintenance, care, and the shipping process. Golf carts are not limited to the
+                            golf course but are also pretty well reputable in other factors.You must be wondering where and 
+                            how else are golf carts used. You will come across multiple golf carts being utilized in places
+                            like communities, hospitals, companies, resorts, etc.
+                        </p> 
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6 text-center">
+                        <h4><i class="fas fa-ship" style="color: var(--tj-primary-color);"></i> Successful Shipment</h4>
+                        <div class="review-counter fs-2">
+                            <span id="counter-value" class="ms-3" data-target="318" style="color: var(--tj-secondary-color);">0</span>k+
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h4><i class="fas fa-smile" style="color: var(--tj-primary-color);"></i> Satisfied Clients</h4>
+                        <div class="review-counter fs-2">
+                            <span id="counter-value-2" class="ms-3 " data-target="289" style="color: var(--tj-secondary-color);">0</span>k+
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 p-0">
-                    
-                        @if (session('success'))
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                        @endif
-                        @if (session('error'))
-                        <div class="alert alert-error">
-                            {{ session('error') }}
-                        </div>
-                        @endif
-                    
-                        <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
-                        <div class="tj-input-form w-100" data-bg-image="">
-                            <h4 class="title text-center">Golf Cart Quote!</h4>
-                            <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
-                                id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
-                                enctype="multipart/form-data">
-                                @csrf
-                                @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
+            </div>
+            <div class="col-lg-5 p-0">
+                    @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                    @endif
+                    @if (session('error'))
+                    <div class="alert alert-error">
+                        {{ session('error') }}
+                    </div>
+                    @endif
+                    <div class="tj-input-form w-100" data-bg-image="">
+                        <h4 class="title text-center">Golf Cart Quote!</h4>
+                        <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
+                            id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
+                            enctype="multipart/form-data">
+                            @csrf
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block">Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Name"
+                                            required="" />
+                                        <small id="errName" class="err-style"></small>
                                     </div>
-                                @endif
-                                <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block">Name:</label>
-                                            <input type="text" id="name" name="name" placeholder="Name"
-                                                required="" />
-                                            <small id="errName" class="err-style"></small>
-                                        </div>
-                                    </div>
-                                    {{-- <div class="col-xl-4 col-lg-4">
-                                        <div class="single-input-field">
-                                            <label class="d-block text-white">Phone:</label>
-                                            <input class="form-control" required name="phone" type="tel"
-                                                placeholder="Phone">
-                                            <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                        </div>
-                                    </div> --}}
-                                    <!-- <div class="col-md-4">
+                                </div>
+                                <div class="col-md-6">
                                         <div class="input-form">
                                             <label class="d-block">Phone:</label>
-                                            <input type="tel" id="phone" name="phone" placeholder="Number"
+                                            <input type="tel" class="ophone" id="phone" name="phone" placeholder="Number"
                                                 required="" />
+                                            <input type="hidden" name="country_code" id="country_code" />
                                             <small id="errPhone" class="err-style"></small>
                                         </div>
-                                    </div> -->
-                                    <div class="col-md-6">
-                                            <div class="input-form">
-                                                <label class="d-block">Phone:</label>
-                                                <input type="tel" class="ophone" id="phone" name="phone" placeholder="Number"
-                                                    required="" />
-                                                <input type="hidden" name="country_code" id="country_code" />
-                                                <small id="errPhone" class="err-style"></small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="input-form">
-                                            <label class="d-block">Email:</label>
-                                            <input type="email" id="email" name="email" placeholder="Email "
-                                                required="" />
-                                            <small id="errEmail" class="err-style"></small>
-                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    {{-- <div class="col-md-12 text-center">
-                                        <h4 class="text-white">Golf Cart Information</h4>
-                                    </div> --}}
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block mb-0"> Pickup Location:</label>
-                                            <input type="text" id="pickup-location" name="origin"
-                                                placeholder="" required="" />
-                                            <small id="errOLoc" class="err-loc"></small>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block  mb-0"> Delivery Location:</label>
-                                            <input type="text" id="delivery-location" name="destination"
-                                                placeholder="" required="" />
-                                            <small id="errDLoc" class="err-loc"></small>
-                                            <ul class="suggestions suggestionsTwo"></ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row select-bm">
-                                    <div class="col-md-12 text-center">
-                                        <h4 class="text-white">Golf Cart Information</h4>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form tj-select">
-                                            <label> Year</label>
-                                            {{-- <div class="dropdown">
-                                                <input class="form-control dropdown-toggle year" type="text" name="year[]" id="year" 
-                                                placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false" required>
-                                                <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                                    <li><a class="dropdown-item">Select Year</a></li>
-                                                    @php
-                                                        $currentYear = date('Y');
-                                                        for ($year = $currentYear; $year >= 1936; $year--) {
-                                                            echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
-                                                        }
-                                                    @endphp
-                                                </ul>
-                                            </div> --}}
-                                            <div class="dropdown">
-                                                <input class="form-control dropdown-toggle year" type="text"
-                                                    name="year[]" id="year" placeholder="Select Year"
-                                                    data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
-                                                <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                                    <li><a class="dropdown-item">Select Year</a></li>
-                                                    @php
-                                                        $currentYear = date('Y');
-                                                        for ($year = $currentYear; $year >= 1936; $year--) {
-                                                            echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
-                                                        }
-                                                    @endphp
-                                                </ul>
-                                            </div>
-                                            <!-- <select class="nice-select year vehicle-year custom-select-style" name="year[]"
-                                                id="year" required>
-                                                <option value="" disabled selected>Select Year</option>
-                                                @php
-                                                    $currentYear = date('Y');
-                                                    for ($year = $currentYear; $year >= 1936; $year--) {
-                                                        echo "<option value='$year'>$year</option>";
-                                                    }
-                                                @endphp
-                                            </select> -->
-                                            <div class="error-message" style="color: red; display: none;">
-                                                Please select a year.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form tj-select">
-                                            <label>Make</label>
-                                            <input type="text" id="make" name="make[]" placeholder="Enter Make"
-                                                required="" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form tj-select vehicle-model-div">
-                                            <label>Model</label>
-                                            <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                                required="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- <div class="row select-bm">
-                                    <div class="col-md-4">
-                                        <div class="input-form tj-select">
-                                            <label> Year</label>
-                                            <select class="nice-select vehicle-year" name="year[]" id="year" required>
-                                                <option value="" disabled selected>Select</option>
-                                                @php
-                                                    $currentYear = date('Y');
-                                                    for ($year = $currentYear; $year >= 1936; $year--) {
-                                                        echo "<option value='$year'>$year</option>";
-                                                    }
-                                                @endphp
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form tj-select">
-                                            <label>Make</label>
-                                            <input type="text" id="make" name="make[]" placeholder="Make"
-                                                required="" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="input-form tj-select vehicle-model-div">
-                                            <label>Model</label>
-                                            <input type="text" id="model" name="model[]" placeholder="Model"
-                                                required="" />
-                                        </div>
-                                    </div>
-                                </div> --}}
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                            <select class=" " id="trailer_type" name="trailer_type">
-                                                <option value="1" selected>Open Trailer</option>
-                                                <option value="2">Enclosed Trailer</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="condition" class="text-white">Condition</label>
-                                            <select class=" " id="condition" name="condition[]">
-                                                <option value="1" selected>Running</option>
-                                                <option value="2">Non Running</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="add-car-1 mb-2" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
-                                    Vehicle</a>
-                                <div id="vehicles-container">
-                                </div>
-                                
-                                <div class="row mt-2">
-                                    <di class="col-md-6">
-                                        <div class="form-group">
-                                            <input class="form-check-input " type="checkbox" id="modification"
-                                                name="modification" value="1" />
-                                            <label class="form-check-label text-white ms-4" for="modification">
-                                                Modified?</label>
-                                        </div>
-
-                                        <div class="input-form div-modify_info" style="display: none;">
-                                            <label class="d-block"> Modification Information:</label>
-                                            <input class="" type="text" id="c" name="modify_info"
-                                                placeholder="Modification" />
-                                        </div>
-                                    </di>
-                                    <di class="col-md-6">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="available_at_auction"
-                                                name="available_at_auction" value="1" />
-                                            <label class="form-check-label text-white" for="available_at_auction">
-                                                Auction?</label>
-                                        </div>
-
-                                        <div class="input-form div-link mt-3" style="display: none;">
-                                            <label class="d-block"> Enter Link:</label>
-                                            <input class="form-control" type="url" id="link" name="link"
-                                                placeholder="Link" />
-                                        </div>
-                                    </di>
-                                </div>
-                                <div class="row">
+                            <div class="row">
+                                <div class="col-md-12">
                                     <div class="input-form">
-                                        <label class="d-block text-white"> Image:</label>
-                                        <input class="form-control image_input" type="file" accept="image/*" multiple
-                                            onchange="previewImages(event)">
-                                        <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                        <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
-                                                placeholder="Upload File" /> -->
+                                        <label class="d-block">Email:</label>
+                                        <input type="email" id="email" name="email" placeholder="Email "
+                                            required="" />
+                                        <small id="errEmail" class="err-style"></small>
                                     </div>
                                 </div>
-                                <div class="tj-theme-button text-center mt-3">
-                                    <button class="tj-submit-btn" type="submit" value="submit">
-                                        Calculate Price <i class="fa-light fa-arrow-right"></i>
-                                    </button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block mb-0"> Pickup Location:</label>
+                                        <input type="text" id="pickup-location" name="origin"
+                                            placeholder="" required="" />
+                                        <small id="errOLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
                                 </div>
-                            </form>
-                        </div>
-                </div>
-           </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block  mb-0"> Delivery Location:</label>
+                                        <input type="text" id="delivery-location" name="destination"
+                                            placeholder="" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row select-bm">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white">Golf Cart Information</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label> Year</label>
+                                        <div class="dropdown">
+                                            <input class="form-control dropdown-toggle year" type="text"
+                                                name="year[]" id="year" placeholder="Select Year"
+                                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                                <li><a class="dropdown-item">Select Year</a></li>
+                                                @php
+                                                    $currentYear = date('Y');
+                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
+                                                    }
+                                                @endphp
+                                            </ul>
+                                        </div>
+                                        <!-- <select class="nice-select year vehicle-year custom-select-style" name="year[]"
+                                            id="year" required>
+                                            <option value="" disabled selected>Select Year</option>
+                                            @php
+                                                $currentYear = date('Y');
+                                                for ($year = $currentYear; $year >= 1936; $year--) {
+                                                    echo "<option value='$year'>$year</option>";
+                                                }
+                                            @endphp
+                                        </select> -->
+                                        <div class="error-message" style="color: red; display: none;">
+                                            Please select a year.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <input type="text" id="make" name="make[]" placeholder="Enter Make"
+                                            required="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select vehicle-model-div">
+                                        <label>Model</label>
+                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
+                                            required="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                        <select class=" " id="trailer_type" name="trailer_type">
+                                            <option value="1" selected>Open Trailer</option>
+                                            <option value="2">Enclosed Trailer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="condition" class="text-white">Condition</label>
+                                        <select class=" " id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="add-car-1 mb-2" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
+                                Vehicle</a>
+                            <div id="vehicles-container">
+                            </div>
+                            <div class="row mt-2">
+                                <di class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-check-input " type="checkbox" id="modification"
+                                            name="modification" value="1" />
+                                        <label class="form-check-label text-white ms-4" for="modification">
+                                            Modified?</label>
+                                    </div>
+
+                                    <div class="input-form div-modify_info" style="display: none;">
+                                        <label class="d-block"> Modification Information:</label>
+                                        <input class="" type="text" id="c" name="modify_info"
+                                            placeholder="Modification" />
+                                    </div>
+                                </di>
+                                <di class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                            name="available_at_auction" value="1" />
+                                        <label class="form-check-label text-white" for="available_at_auction">
+                                            Auction?</label>
+                                    </div>
+
+                                    <div class="input-form div-link mt-3" style="display: none;">
+                                        <label class="d-block"> Enter Link:</label>
+                                        <input class="form-control" type="url" id="link" name="link"
+                                            placeholder="Link" />
+                                    </div>
+                                </di>
+                            </div>
+                            <div class="row">
+                                <div class="input-form">
+                                    <label class="d-block text-white"> Image:</label>
+                                    <input class="form-control image_input" type="file" accept="image/*" multiple
+                                        onchange="previewImages(event)">
+                                    <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                </div>
+                            </div>
+                            <div class="tj-theme-button text-center mt-3">
+                                <button class="tj-submit-btn" type="submit" value="submit">
+                                    Calculate Price <i class="fa-light fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
    </div>
 </section>
 @include('partials.reveiw-small-detail') 
@@ -487,8 +415,6 @@
                 <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            {{-- <span class="sub-title active-shape">Why is that?</span> --}}
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <h3 class="sal-animate" data-sal="slide-left" 
                              data-sal-duration="800">Why is that?</h3>
                             <p class="desc">
@@ -502,7 +428,6 @@
                                  the entire process.
                             </p>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
@@ -510,8 +435,6 @@
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/2a-image-for-golf-cart-transport.webp') }}" alt="Image">
                         </div>
-                        <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                     </div>
                 </div>
             </div>
@@ -523,15 +446,11 @@
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/GOLFCART-2.webp') }}" alt="Image">
                         </div>
-                        <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            {{-- <span class="sub-title active-shape">Why is that?</span> --}}
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <h3 class="sal-animate" data-sal="slide-left" 
                              data-sal-duration="800">Why Choose Ship A1 Transport?</h3>
                             <p class="desc">
@@ -546,7 +465,6 @@
                                  the security, timely delivery, and protection of your vehicles. Hence, <a class="pp-link-2" href="{{ route('welcome') }}">choosing Ship A1</a>
                                   Transport for your golf cart shipping has to be the best option for your transportation needs.</p>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -557,54 +475,33 @@
                 <div class="col-lg-12 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            {{-- <span class="sub-title active-shape">Golf Cart Shipping Methods</span> --}}
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <h3 class="sal-animate text-center" data-sal="slide-left" 
                             data-sal-duration="800">Golf Cart Shipping Methods</h3>
                             <p class="desc text-center">Ship A1 provides a comprehensive range of services tailored to accommodate 
                                 types of distances, timelines, and modes of protection for your golf cart.
                                  Here are the most common modes of shipping used:
-                                {{-- <ul>
-                                    <li>Open-air Transport</li>
-                                    <li>Enclosed Auto Transport</li>
-                                    <li>Door-to-Door Delivery</li>
-                                    <li>Terminal-to-Terminal Shipping</li>
-                                </ul> --}}
                             </p>
                         </div>
-                        
                     </div>
                 </div>
-                {{-- <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                    <div class="mt-4 rounded">
-                        <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/GOLFCART-1.webp') }}" alt="Image">
-                        </div>
-                        <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
-                    </div>
-                </div> --}}
             </div>
             <div class="row">  
                 <div class="col-lg-6 sal-animate pt-2 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Open Auto Transport</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 It's the affordable golf cart transport: It's the cheapest option of open truck or 
                                 trailer transport carrying your vehicle. Your vehicle is exposed to weather, but on-board 
                                 experts ensure your vehicle to be safe throughout the travel.
                             </p>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate pt-2 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Enclosed Auto Transport</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 This is the maximum protection; the vehicle is completely sheltered in a trailer. 
                                 It's ideal to travel long distances or through bad weather, but it is considerably more 
@@ -619,26 +516,22 @@
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Door-to-Door Delivery</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 This service will conveniently pick up a golf cart from its location
                                  and drop it off right at the destination. Great for anyone that enjoys an 
                                  ordeal-free experience.
                             </p>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading mb-4">
                             <span class="sub-title active-shape">Terminal-to-Terminal Shipping</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">A cost-effective option is that you drop your golf cart at a 
                                 terminal in proximity and pick up from another at the destination. This is, 
                                 above all, a budget-friendly choice, more so in the long run.</p>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -734,7 +627,6 @@
                         <div class="faq-image">
                             <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
                         </div>
-                        
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -816,150 +708,45 @@
 @endsection
 @section('extraScript')
     {{-- addNewVehicle --}}
-    <script>
-        $(document).ready(function() {
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                        <!-- Bin icon for deleting vehicle -->
-                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label>Year</label>
-                    <div class="dropdown">
-                        <input class="form-control dropdown-toggle year" type="text"
-                            name="year[]" id="year" placeholder="Select Year"
-                            data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
-                        <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                            <li><a class="dropdown-item">Select Year</a></li>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
-                }
-
-                newVehicleHtml +=
-                    `</ul>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label>Make</label>
-                    <input type="text" id="make" name="make[]"
-                    placeholder="Enter Make" required="" />
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select model-div">
-                    <label>Model</label>
-                    <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                    required="" />
-                    
-                    </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="condition" class="text-white">Condition</label>
-                            <select class="nice-select" id="condition" name="condition[]">
-                                <option value="1" selected>Running</option>
-                                <option value="2">Non Running</option>
-                            </select>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-                    `;
-
-                $('#vehicles-container').append(newVehicleHtml);
-
-                // Initialize the searchable dropdown for new elements
-                initializeSearchableDropdown();
-            }
-
-            function initializeSearchableDropdown() {
-                $('.dropdown-toggle.year').on('input', function() {
-                    var input = $(this);
-                    var filter = input.val().toLowerCase();
-                    var dropdown = input.siblings('.dropdown-menu.year-dropdown');
-                    dropdown.find('.dropdown-item').each(function() {
-                        var text = $(this).text().toLowerCase();
-                        if (text.includes(filter) || filter === '') {
-                            $(this).show();
-                        } else {
-                            $(this).hide();
-                        }
-                    });
-                });
-
-                $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
-                    var item = $(this);
-                    var input = item.closest('.dropdown').find('.dropdown-toggle.year');
-                    input.val(item.text());
-                    item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
-                });
-
-                // Show dropdown when input is focused
-                $('.dropdown-toggle.year').on('focus', function() {
-                    $(this).siblings('.dropdown-menu.year-dropdown').show();
-                });
-
-                // Hide dropdown when clicking outside
-                $(document).on('click', function(e) {
-                    if (!$(e.target).closest('.dropdown').length) {
-                        $('.dropdown-menu.year-dropdown').hide();
+        <script>
+            $(document).ready(function() {
+                function addNewVehicle() {
+                    var newVehicleHtml =
+                        `
+                        <div class="vehicle-info">
+                        <div class="row select-bm">
+                            <!-- Bin icon for deleting vehicle -->
+                            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
+                        <div class="col-md-4">
+                        <div class="input-form tj-select">
+                        <label>Year</label>
+                        <div class="dropdown">
+                            <input class="form-control dropdown-toggle year" type="text"
+                                name="year[]" id="year" placeholder="Select Year"
+                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
+                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                <li><a class="dropdown-item">Select Year</a></li>`;
+                    var currentYear = {{ date('Y') }};
+                    for (var year = currentYear; year >= 1936; year--) {
+                        newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
                     }
-                });
-            }
-
-            $('#addVehicleBtn').click(function() {
-                addNewVehicle();
-            });
-
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
-
-            // Initialize Select2 on existing dropdowns (if needed)
-            initializeSearchableDropdown();
-        });
-    </script>
-    {{-- <script>
-        $(document).ready(function() {
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                        <!-- Bin icon for deleting vehicle -->
-                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label> Year</label>
-                    <select class="nice-select year" name="year[]" id="year" required> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                newVehicleHtml +=
-                    `</select>
+                    newVehicleHtml +=
+                        `</ul>
+                        </div>
                         </div>
                         </div>
                         <div class="col-md-4">
                         <div class="input-form tj-select">
                         <label>Make</label>
                         <input type="text" id="make" name="make[]"
-                        placeholder="Enter Make" required />
+                        placeholder="Enter Make" required="" />
                         </div>
                         </div>
                         <div class="col-md-4">
                         <div class="input-form tj-select model-div">
                         <label>Model</label>
                         <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                        required />
-                        
+                        required="" />
                         </div>
                         </div>
                         <div class="col-md-6">
@@ -974,19 +761,47 @@
                         </div>
                         </div>
                         `;
-
-                $('#vehicles-container').append(newVehicleHtml);
-            }
-
-            $('#addVehicleBtn').click(function() {
-                addNewVehicle();
+                    $('#vehicles-container').append(newVehicleHtml);
+                    initializeSearchableDropdown();
+                }
+                function initializeSearchableDropdown() {
+                    $('.dropdown-toggle.year').on('input', function() {
+                        var input = $(this);
+                        var filter = input.val().toLowerCase();
+                        var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                        dropdown.find('.dropdown-item').each(function() {
+                            var text = $(this).text().toLowerCase();
+                            if (text.includes(filter) || filter === '') {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    });
+                    $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                        var item = $(this);
+                        var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                        input.val(item.text());
+                        item.closest('.dropdown-menu').hide();
+                    });
+                    $('.dropdown-toggle.year').on('focus', function() {
+                        $(this).siblings('.dropdown-menu.year-dropdown').show();
+                    });
+                    $(document).on('click', function(e) {
+                        if (!$(e.target).closest('.dropdown').length) {
+                            $('.dropdown-menu.year-dropdown').hide();
+                        }
+                    });
+                }
+                $('#addVehicleBtn').click(function() {
+                    addNewVehicle();
+                });
+                $(document).on('click', '.delete-vehicle', function() {
+                    $(this).closest('.vehicle-info').remove();
+                });
+                initializeSearchableDropdown();
             });
-
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
-        });
-    </script> --}}
+        </script>
     {{-- addNewVehicle --}}
     {{-- service counter --}}
         <script>

@@ -9,21 +9,17 @@
             padding: 15px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .why-box {
             border-radius: 12px;
             padding: 40px 0px;
             background: #183c46eb;
         }
-
         .title-2 {
             color: #8fc445;
         }
-
         .desc-2 {
             color: white;
         }
-
         .services {
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,53 +27,40 @@
             padding: 10px 10px 30px 10px;
             background-color: #9d9e9f14;
         }
-
         .services h1 {
             text-decoration: overline;
             margin-bottom: 50px;
             color: #8FC445;
         }
-
         .service-container {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
-
         .service-box {
-
-
-
             max-width: 300px;
             text-align: left;
-
             background-color: #29494e;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 30px;
-
         }
-
         .service-box img {
             height: 40px;
             width: 40px;
         }
-
         .service-box h3 {
             margin: 20px 0 10px;
             color: #333333;
         }
-
         .service-box p {
             color: #666666;
         }
     </Style>
     <!--========== blog details Start ==============-->
-
     <section class="tj-choose-us-section-service-car">
         <div class="container mt-4">
             <div class="row mt-4">
-
                 <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="choose-us-content-1">
                         <div class="tj-section-heading">
@@ -87,7 +70,6 @@
                                 {{ $service->text_to_show }}
                             </p>
                         </div>
-
                     </div>
                 </div>
                 @if (session('success'))
@@ -116,7 +98,6 @@
                                 </div>
                             @endif
                             <div class="container mt-2">
-
                                 <div class="route_quote_info" id="step1">
                                     <div class="row">
                                         <h4 class="title text-center">Quote Request!</h4>
@@ -131,7 +112,6 @@
                                                     required.</label>
                                             </div>
                                         </div>
-
                                         <div class="col-xl-12 col-lg-12 mb-4">
                                             <h6 class="text-white">Moving To</h6>
                                             <label class="text-white mb-2">Where Are You Moving To?</label>
@@ -154,7 +134,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="vehicle_quote_info" id="step2" style="display: none;">
                                     <div class="row">
                                         <h4 class="title text-center">VEHICLE INFORMATION</h4>
@@ -164,10 +143,8 @@
                                             <option value="Car">Car</option>
                                             <option value="Golf-Cart">Golf Cart</option>
                                             <option value="Motorcycle">Motorcycle</option>
-
                                         </select>
                                         <label class="error-message" id="tabSelector-error">This field is required.</label>
-
                                         <div class="tab-content mt-3" id="additionalContent"></div>
                                     </div>
                                     <div class="row mt-2">
@@ -178,7 +155,6 @@
                                                 </button>
                                             </div>
                                         </div>
-
                                         <div class="col-xl-6 col-lg-6">
                                             <div class="price__cta-btn float-end">
                                                 <button class="tj-submit-btn" type="button" id="step2_next">
@@ -188,8 +164,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div class="basic_quote_info" id="step3" style="display: none;">
                                     <div class="row mb-3">
                                         <h4 class="text-center text-white">Customer Information</h4>
@@ -202,8 +176,6 @@
                                                     required.</label>
                                             </div>
                                         </div>
-
-
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white">Phone:</label>
@@ -213,7 +185,6 @@
                                                     required.</label>
                                             </div>
                                         </div>
-
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="single-input-field">
                                                 <label class="d-block text-white"> Email Address:</label>
@@ -232,7 +203,6 @@
                                                 </button>
                                             </div>
                                         </div>
-
                                         <div class="col-xl-6 col-lg-6">
                                             <div class="price__cta-btn float-end">
                                                 <button class="tj-submit-btn" type="submit" id="submit_instant_code"
@@ -247,23 +217,15 @@
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
-
     @include('partials.reveiw-site')
-
     <section class="tj-about-section-four">
         <div class="container">
             <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">{{ $service->display_name }}</h2>
-
-
         </div>
     </section>
-
-
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
@@ -271,12 +233,10 @@
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> {{ $service->heading_one }}</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 {{ $service->desc_one }}
                             </p>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
@@ -287,18 +247,14 @@
                         </div>
                         <img class="group-1 p-z-idex"
                             src="{{ !is_null($service->image2) ? asset($service->image2) : '' }}" alt="Image">
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
                         <div class="image-box">
@@ -307,14 +263,12 @@
                         </div>
                         <img class="group-1 p-z-idex"
                             src="{{ !is_null($service->image3) ? asset($service->image3) : '' }}" alt="Image">
-
                     </div>
                 </div>
                 <div class="col-lg-8 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> {{ $service->heading_two }}</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 {{ $service->desc_two_one }}
                             </p>
@@ -324,71 +278,50 @@
                 </div>
             </div>
         </div>
-
         <div class="container">
             <div class="row">
-
-
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> {{ $service->heading_three }}</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 {{ $service->desc_three }}
                             </p>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape"> {{ $service->heading_four }}</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 {{ $service->desc_four }}
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
     <section class="tj-cta-section-two">
         <div class="tj_cta_image-4 w-100 h-50"></div>
-
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-12 col-md-6">
-
-
                     <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-
                         <div class="tj-section-heading ">
                             <span class="sub-title active-shape2"> Support Center 24/7 </span>
                             <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
                         </div>
-
-
                         <div class="tj-theme-button mt-2">
                             <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
                                 Get Support<i class="flaticon-right-1"></i>
                             </a>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>
     </section>
-
     <section class="tj-about-section-five">
         <div class="container">
             <div class="row">
@@ -397,55 +330,45 @@
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
                             <div class="card- h-100 ">
-
                                 <div class="card-body">
                                     <h5 class="card-title text-white">{{ $service->heading_six }}</h5>
                                     <p class="card-text text-light">
                                         {{ $service->desc_six }}
                                     </p>
                                 </div>
-
                             </div>
                         </div>
                         <div class="col">
                             <div class="card- h-100">
-
                                 <div class="card-body">
                                     <h5 class="card-title text-white">{{ $service->heading_seven }}</h5>
                                     <p class="card-text text-light">
                                         {{ $service->desc_seven }}
                                     </p>
                                 </div>
-
                             </div>
                         </div>
                         <div class="col">
                             <div class="card- h-100">
-
                                 <div class="card-body">
                                     <h5 class="card-title text-white">{{ $service->heading_eight }}</h5>
                                     <p class="card-text text-light">
                                         {{ $service->desc_eight }}
                                     </p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </section>
-
     <section class="tj-choose-us-section-service-car-2">
         <div class="container why-box">
             <div class="row">
                 <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
                     <div class="about-content-two">
                         <div class="tj-section-heading">
-
                             <h2 class="title-2">Why Choose Us?</h2>
                             <p class="desc-2">
                                 We have a distinct approach when it comes to the philosophy of business.<br>Our belief in
@@ -453,33 +376,24 @@
                                 choose us:
                             </p>
                         </div>
-
                         <div class="content-box d-flex align-items-center border-top">
-
                             <div class="tj-icon-box">
                                 <div class="ab-text d-flex align-items-center">
-
                                 </div>
                                 <p class="desc-2">★ Professional & responsive customer service available 24/7.</p>
                             </div>
-
                             <div class="tj-icon-box">
-
                                 <p class="desc-2">★ A wide range of services such as open, enclosed & expedited.</p>
                             </div>
                             <div class="tj-icon-box pb-4">
-
                                 <p class="desc-2">★ Prompt delivery due to efficient use of trailers.</p>
                             </div>
                         </div>
                         <div class="content-box d-flex align-items-center">
-
                             <div class="tj-icon-box">
-
                                 <p class="desc-2">★ Legion of truckers available with years old network.</p>
                             </div>
                             <div class="tj-icon-box">
-
                                 <p class="desc-2">★ Get online car shipping quotes.</p>
                             </div>
                         </div>
@@ -493,14 +407,11 @@
                         </div>
                         <img class="group-1 p-z-idex"
                             src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}" alt="Image">
-
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
-
     <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
@@ -517,7 +428,6 @@
                         <div class="faq-image">
                             <img src="{{ !is_null($service->banner_image) ? asset($service->banner_image) : '' }}" alt="Image">
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -572,90 +482,15 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
     <!--=========== Blog Section Start =========-->
     @include('partials.blog-slider')
     <!--=========== Blog Section End =========-->
-
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="path/to/jquery.min.js"></script> --}}
-    {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> --}}
-
-    {{-- <script>
-        $(document).ready(function() {
-            $(document).on('change', '.category', function() {
-                var selectedCategory = $(this).val();
-
-                $.ajax({
-                    url: "{{ route('get.subcategories') }}",
-                    method: "POST",
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        "category": selectedCategory
-                    },
-                    success: function(response) {
-                        console.log(response);
-                        console.log(response.length);
-
-                        var html = '';
-                        $('#subcategory-box').html('');
-
-                        html += "<label for='subcategory'>Subcategory</label>";
-                        html +=
-                            "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
-                        html += "<option value='' disabled selected>Select</option>";
-                        $.each(response, function(index, val) {
-                            html +=
-                                `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
-                        });
-                        html += "</select>";
-                        console.log('html', html);
-
-                        $('#subcategory-box').html(html);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Error:", error);
-                    }
-                });
-            });
-        });
-    </script> --}}
-
-    {{-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var input = document.querySelector("#phone");
-            window.intlTelInput(input, {
-                initialCountry: "auto",
-                geoIpLookup: function(callback) {
-                    fetch('https://ipinfo.io/json')
-                        .then(function(response) {
-                            return response.json();
-                        })
-                        .then(function(ipinfo) {
-                            var countryCode = "us";
-                            callback(countryCode);
-                        });
-                },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-            });
-        });
-    </script> --}}
     <script>
         function playVideo() {
             document.querySelector('.video-thumbnail').style.display = 'none';
@@ -665,7 +500,6 @@
             iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
         }
     </script>
-
     <script>
         $(document).ready(function() {
             var selectedTab = '';
@@ -691,7 +525,6 @@
                     }
                 });
             });
-
             function addNewVehicle() {
                 var newVehicleHtml =
                     `
@@ -709,7 +542,6 @@
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
-
                 newVehicleHtml +=
                     `</select>
                         </div>
@@ -718,9 +550,6 @@
                         <div class="input-form tj-select">
                         <label>Make</label>
                         <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-
-
                 newVehicleHtml += `
                         </select>
                         </div>
@@ -729,20 +558,16 @@
                         <div class="input-form tj-select model-div">
                         <label>Model</label>
                         <select class="nice-select model" name="model[]" id="model" required></select>`;
-
                 newVehicleHtml +=
                     `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
                 newVehicleHtml += `
                             </div>
                             </div>
                             </div>
                             </div>
                             `;
-
                 $('.vehicles-container').append(newVehicleHtml);
             }
-
             function addOtherVehicle() {
                 var newVehicleHtml =
                     `
@@ -760,7 +585,6 @@
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<option value="${year}">${year}</option>`;
                 }
-
                 newVehicleHtml +=
                     `</select>
                                 </div>
@@ -779,16 +603,13 @@
                                 required="" />`
                 newVehicleHtml +=
                     `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
                 newVehicleHtml += `</div>
                                 </div>
                                 </div>
                                 </div>
                                 `;
-
                 $('.vehicles-container').append(newVehicleHtml);
             }
-
             $(document).on('click', '.addVehicleBtn', function() {
                 if ($('#tabSelector').val() == 'Car') {
                     addNewVehicle();
@@ -796,11 +617,9 @@
                     addOtherVehicle();
                 }
             });
-
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
             });
-
             $(document).ready(function() {
                 $(document).on('change', '.vehicle-year, .vehicle-make', function() {
                     var year = $('.vehicle-year').val();
@@ -809,7 +628,6 @@
                         getModel(year, makeId);
                     }
                 });
-
                 function getModel(year, makeId) {
                     console.log('yes inn');
                     $.ajax({
@@ -831,7 +649,6 @@
                             });
                             selectOptions += '</select>';
                             modelsDropdown.html(selectOptions);
-
                             console.log('yesssss', response);
                         },
                         error: function(xhr) {
@@ -842,274 +659,4 @@
             });
         });
     </script>
-
-    {{-- <script>
-        document.querySelectorAll('input[type="text"]').forEach((input) => {
-            input.addEventListener("input", function() {
-                this.value = this.value.replace(/[^0-9]/g, "");
-            });
-        });
-    </script> --}}
-
-    {{-- <script>
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
-        }
-
-        $(document).ready(function() {
-            $('#inches-input').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-
-        $(document).ready(function() {
-            $('#inches-input1').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input1, #inches-input1').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-
-        $(document).ready(function() {
-            $('#inches-input2').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input2').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-    </script> --}}
-
-    {{-- <script>
-        $(document).ready(function() {
-            function showError(field, message) {
-                $('#' + field).addClass('error-field');
-                $('#' + field + '-error').text(message).show();
-            }
-
-            function hideError(field) {
-                $('#' + field).removeClass('error-field');
-                $('#' + field + '-error').hide();
-            }
-
-            // Move to Step 2
-            $('#step1_next').click(function() {
-                var isValid = true;
-
-                if (!$('#pickup-location').val()) {
-                    showError('pickup-location', 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError('pickup-location');
-                }
-
-                if (!$('#delivery-location').val()) {
-                    showError('delivery-location', 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError('delivery-location');
-                }
-
-                if (isValid) {
-                    $('#step1').hide();
-                    $('#step2').show();
-                }
-            });
-
-            // Return to Step 1
-            $('#step2_previous').click(function() {
-                $('#step2').hide();
-                $('#step1').show();
-            });
-
-            // Move to Step 3
-            $('#step2_next').click(function() {
-                var isValid = true;
-
-                if (!$('#tabSelector').val()) {
-                    showError('tabSelector', 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError('tabSelector');
-                }
-
-                if (isValid) {
-                    $('#step2').hide();
-                    $('#step3').show();
-                }
-            });
-
-            // Return to Step 2
-            $('#step3_previous').click(function() {
-                $('#step3').hide();
-                $('#step2').show();
-            });
-        });
-    </script> --}}
-
-
-
-    {{-- <script>
-        $(document).ready(function() {
-            $(document).on('change', '#available_at_auction', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
-
-            $(document).on('change', '#modification', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
-        });
-    </script> --}}
-
-    {{-- <script>
-        function updateSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
-
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
-
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList);
-        });
-    </script> --}}
-
-    {{-- <script>
-        $(document).ready(function() {
-            $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                var year = $('.vehicle-year').val();
-                var makeId = $('.vehicle-make').val();
-                if (year && makeId) {
-                    getModel(year, makeId);
-                }
-            });
-
-            function getModel(year, makeId) {
-                console.log('yes inn');
-                $.ajax({
-                    url: "{{ route('get.models') }}",
-                    method: 'GET',
-                    data: {
-                        year: year,
-                        make: makeId
-                    },
-                    success: function(response) {
-                        var modelsDropdown = $('.vehicle-model-div');
-                        modelsDropdown.empty();
-                        var selectOptions =
-                            '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' + model +
-                                '</option>';
-                        });
-                        selectOptions += '</select>';
-                        modelsDropdown.html(selectOptions);
-
-                        console.log('yesssss', response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            }
-        });
-    </script> --}}
-
-    {{-- <script>
-        function updateSuggestions(inputField, suggestionsList) {
-            var inputValue = inputField.val();
-
-            $.ajax({
-                url: "{{ route('get.zipcodes') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "input": inputValue
-                },
-                success: function(response) {
-                    suggestionsList.empty();
-
-                    $.each(response, function(index, suggestion) {
-                        var listItem = $("<li>").text(suggestion).click(function() {
-                            inputField.val(suggestion);
-                            suggestionsList.css("display", "none");
-                        });
-                        suggestionsList.append(listItem);
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        }
-
-        $("#pickup-location, #delivery-location").keyup(function() {
-            var inputField = $(this);
-            var suggestionsList = inputField.siblings(".suggestionsTwo");
-            suggestionsList.css("display", "block");
-            if (inputField.val() === "") {
-                suggestionsList.css("display", "none");
-            }
-            updateSuggestions(inputField, suggestionsList);
-        });
-    </script> --}}
-
 @endsection

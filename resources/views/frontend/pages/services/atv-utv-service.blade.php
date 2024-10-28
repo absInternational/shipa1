@@ -214,7 +214,6 @@
                         {{ session('error') }}
                     </div>
                     @endif
-                    <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
                     <div class="tj-input-form w-100" data-bg-image="">
                         <h4 class="title text-center">ATV/UTV Quote!</h4>
                         <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
@@ -240,22 +239,6 @@
                                         <small id="errName" class="err-style"></small>
                                     </div>
                                 </div>
-                                {{-- <div class="col-xl-4 col-lg-4">
-                                    <div class="single-input-field">
-                                        <label class="d-block text-white">Phone:</label>
-                                        <input class="form-control" required name="phone" type="tel"
-                                            placeholder="Phone">
-                                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                    </div>
-                                </div> --}}
-                                <!-- <div class="col-md-4">
-                                    <div class="input-form">
-                                        <label class="d-block">Phone:</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="Number"
-                                            required="" />
-                                        <small id="errPhone" class="err-style"></small>
-                                    </div>
-                                </div> -->
                                 <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
@@ -264,12 +247,6 @@
                                         <input type="hidden" name="country_code" id="country_code" />
                                         <small id="errPhone" class="err-style"></small>
                                     </div>
-                                        {{-- <div class="input-form">
-                                            <label class="d-block">Phone:</label>
-                                            <input class="ophone" type="tel" id="ophone" name="phone" placeholder="Phone Number"
-                                                required="" />
-                                            <small id="errPhone" class="err-style"></small>
-                                        </div> --}}
                                     </div>
                                 </div>
                             
@@ -284,9 +261,6 @@
                                 </div>
                             </div>
                             <div class="row">
-                                {{-- <div class="col-md-12 text-center">
-                                    <h4 class="text-white">ATV/UTV Information</h4>
-                                </div> --}}
                                 <div class="col-md-6">
                                     <div class="input-form">
                                         <label class="d-block mb-0"> Pickup Location:</label>
@@ -313,19 +287,6 @@
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label> Year</label>
-                                        {{-- <div class="dropdown">
-                                            <input class="form-control dropdown-toggle year" type="text" name="year[]" id="year" 
-                                            placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false" required>
-                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                                <li><a class="dropdown-item">Select Year</a></li>
-                                                @php
-                                                    $currentYear = date('Y');
-                                                    for ($year = $currentYear; $year >= 1936; $year--) {
-                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
-                                                    }
-                                                @endphp
-                                            </ul>
-                                        </div> --}}
                                         <div class="dropdown">
                                             <input class="form-control dropdown-toggle year" type="text"
                                                 name="year[]" id="year" placeholder="Select Year"
@@ -370,39 +331,6 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="row select-bm">
-                                <!-- <div class="col-md-12 text-center">
-                                    <h4 class="text-white">Motorcycle Information</h4>
-                                </div> -->
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label> Year</label>
-                                        <select class="nice-select vehicle-year" required name="year[]" id="year">
-                                            <option value="" disabled selected>Select</option>
-                                            @php
-                                                $currentYear = date('Y');
-                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                    echo "<option value='$year'>$year</option>";
-                                                }
-                                            @endphp
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <input type="text" id="make" name="make[]" placeholder="Make"
-                                            required />
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select vehicle-model-div">
-                                        <label>Model</label>
-                                        <input type="text" id="model" name="model[]" placeholder="Model"
-                                            required />
-                                    </div>
-                                </div>
-                            </div> --}}
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -463,8 +391,6 @@
                                 <input class="form-control image_input" type="file" accept="image/*" multiple
                                     onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
-                                        placeholder="Upload File" /> -->
                             </div>
 
                             <div class="tj-theme-button text-center mt-3">
@@ -485,8 +411,6 @@
                 <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            {{-- <span class="sub-title active-shape">Insurance and Safety</span> --}}
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <h3 class="sal-animate" data-sal="slide-left" 
                              data-sal-duration="800">Insurance and Safety</h3>
                             <p class="desc">
@@ -508,8 +432,6 @@
                         <div class="image-box">
                             <img class="rounded" src="{{ asset('frontend/images/project/ATV-1.webp') }}" alt="Image">
                         </div>
-                        <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                     </div>
                </div>
             </div>
@@ -521,21 +443,17 @@
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/ATV-2.webp') }}" alt="Image">
                     </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
                 </div>
             </div>
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape">Pricing Factors Consideration</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" 
                         data-sal-duration="800">Pricing Factors Consideration</h3>
                     <p class="desc">
                         At last, you cannot erase the price factor from the list when talking about
                          All-Terrain transportation. The price for the shipment of an ATV depends on several factors such as <br>
                          <ul>
-      
                             <li>Weight</li>
                             <li>Size</li>
                             <li>Shape</li>
@@ -546,10 +464,8 @@
                             Weight is the main factor affecting the price of the shipment. Considering all these factors, Ship A1 is the all-in-one 
                             choice for anyone willing to ship their All-Terrain vehicle. You can get our services all over the United States with ease. 
                             So, get your quotes and start your car transport journey with us.
-
                     </p>
                     </div>
-                    
                 </div>
             </div>
             </div>
@@ -563,7 +479,6 @@
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Access To All Locations</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             We currently ship all around the contiguous United States and in case of ATV/UTV 
                             it’s easier to reach locations because the trailers aren’t big in size for atv shipping.
@@ -576,7 +491,6 @@
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Types of ATV/UTV</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                             A wide range of ATV’s and UTV’s could be shipped with the car hauling method 
                             of door to door transport such as Quads, Sports ATV etc.</p>
@@ -590,7 +504,6 @@
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Advanced Trailers</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 We offer our customers 2 premium and most convenient modes of trailers that are enclosed and open. Enclosed trailers are expensive 
                                 as they ensure the protection of your vehicle and ship it in a closed trailer whereas an open trailer is the most cost-effective and standard mode of shipping your vehicle,
@@ -604,7 +517,6 @@
                     <div class="about-content-one border rounded p-4">
                         <div class="tj-section-heading">
                             <span class="sub-title active-shape">Tracking System</span>
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <p class="desc">
                                 When transporting with Ship A1 you will have the benefit of tracking
                                  your shipment from anywhere and anytime.</p>
@@ -635,7 +547,6 @@
             </div>
         </div>
 </section>
-{{-- @include('partials.reveiw-site') --}}
 <section class="tj-choose-us-section-service-atv-utv-2">
     <div class="container why-box">
         <div class="row services">
@@ -728,10 +639,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            
-
-
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -762,7 +669,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
                 </div>
                 </div>
             </div>
@@ -841,7 +747,6 @@
                 for (var year = currentYear; year >= 1936; year--) {
                     newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
                 }
-
                 newVehicleHtml +=
                     `</ul>
                     </div>
@@ -859,7 +764,6 @@
                     <label>Model</label>
                     <input type="text" id="model" name="model[]" placeholder="Enter Model"
                     required="" />
-                    
                     </div>
                     </div>
                     <div class="col-md-6">
@@ -874,13 +778,9 @@
                     </div>
                     </div>
                     `;
-
                 $('#vehicles-container').append(newVehicleHtml);
-
-                // Initialize the searchable dropdown for new elements
                 initializeSearchableDropdown();
             }
-
             function initializeSearchableDropdown() {
                 $('.dropdown-toggle.year').on('input', function() {
                     var input = $(this);
@@ -895,27 +795,21 @@
                         }
                     });
                 });
-
                 $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
                     var item = $(this);
                     var input = item.closest('.dropdown').find('.dropdown-toggle.year');
                     input.val(item.text());
-                    item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                    item.closest('.dropdown-menu').hide(); 
                 });
-
-                // Show dropdown when input is focused
                 $('.dropdown-toggle.year').on('focus', function() {
                     $(this).siblings('.dropdown-menu.year-dropdown').show();
                 });
-
-                // Hide dropdown when clicking outside
                 $(document).on('click', function(e) {
                     if (!$(e.target).closest('.dropdown').length) {
                         $('.dropdown-menu.year-dropdown').hide();
                     }
                 });
             }
-
             $('#addVehicleBtn').click(function() {
                 addNewVehicle();
             });
@@ -923,8 +817,6 @@
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
             });
-
-            // Initialize Select2 on existing dropdowns (if needed)
             initializeSearchableDropdown();
         });
     </script>

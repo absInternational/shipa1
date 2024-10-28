@@ -3,47 +3,39 @@
 @section('meta_description', 'Professional car shipping services in USA guarantee that your vehicle is delivered securely on time at affordable prices and quality services.')
 @section('content')
 <style>
-    /* General styling for the hover container */
     .custom-hover-flip {
         position: relative;
         display: inline-block;
-        perspective: 1000px; /* Creates the 3D space for the flip */
+        perspective: 1000px;
     }
-
     .custom-hover-flip img {
         width: 100%;
         display: block;
-        transition: transform 0.6s ease; /* Smooth flip animation */
-        transform-style: preserve-3d; /* Maintain 3D space for the flip */
+        transition: transform 0.6s ease; 
+        transform-style: preserve-3d; 
     }
-
     .custom-hover-flip:hover img {
-        transform: rotateY(180deg); /* The flip effect on hover */
+        transform: rotateY(180deg); 
     }
-
-    /* Overlay styling */
     .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        background-color: rgba(0, 0, 0, 0.5); 
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 0; /* Hide the overlay initially */
-        transition: opacity 0.3s ease; /* Fade-in effect for the overlay */
+        opacity: 0; 
+        transition: opacity 0.3s ease;
         border-radius: 30px;
     }
-
     .custom-hover-flip:hover .overlay {
-        opacity: 1; /* Show the overlay on hover */
+        opacity: 1; 
     }
-
-    /* Styling for the button */
     .flip-button {
-        background-color: #ff6347; /* Adjust the background color to your preference */
+        background-color: #ff6347;
         color: white;
         border: none;
         padding: 10px 20px;
@@ -51,10 +43,9 @@
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.3s ease;
-        z-index: 1; /* Ensure the button is above the overlay */
-        opacity: 1; /* Make button visible */
+        z-index: 1;
+        opacity: 1; 
     }
-
     .full-width {
         width: 100%;
     }
@@ -97,16 +88,12 @@
     }
     .services {
         text-align: center;
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
         border-radius: 12px;
         padding: 10px 30px 0px 30px;
-        /* background-color: #9d9e9f14;*/
     }
     .services-h1 {
         text-align:center;
-        /* text-decoration: overline; */
         margin-bottom: 50px;
-        /* color: #ffffff; */
     }
     .why-choose-us-slider::before {
         content: "";
@@ -115,10 +102,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
-        z-index: 0; /* Ensures it appears on top of the background */
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: 0; 
     }
-
     .why-choose-us-slider {
         background: url('../../img/autoauction banner 2.webp');
         padding: 60px 0;
@@ -127,9 +113,8 @@
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1; /* Keeps the background behind the ::before element */
+        z-index: 1; 
     }
-
     .section-title {
         text-align: center;
         font-size: 2.5rem;
@@ -140,7 +125,6 @@
         text-transform: uppercase;
         animation: fadeIn 1s ease-in-out;
     }
-
     .section-description {
         text-align: center;
         font-size: 1.1rem;
@@ -152,7 +136,6 @@
         opacity: 0.8;
         animation: fadeIn 1.2s ease-in-out;
     }
-
     .slide {
         min-width: 33.333%;
         box-sizing: border-box;
@@ -166,24 +149,20 @@
         position: relative;
         overflow: hidden;
     }
-
     .slide:hover {
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px);
         background-color: rgba(255, 255, 255, 1);
     }
-
     .slide i {
         margin-bottom: 20px;
         color: #666;
         font-size: 3rem;
         transition: color 0.3s ease;
     }
-
     .slide:hover i {
         color: #8FC445;
     }
-
     .slide-title {
         font-size: 1.5rem;
         color: #333;
@@ -192,11 +171,9 @@
         letter-spacing: 0.3px;
         transition: color 0.3s ease;
     }
-
     .slide:hover .slide-title {
         color: #8FC445;
     }
-
     .slide-text {
         font-size: 1rem;
         color: #666;
@@ -259,10 +236,8 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
             <div class="col-lg-5">
-
                 @if (session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
@@ -273,8 +248,6 @@
                     {{ session('error') }}
                 </div>
                 @endif
-
-                <!-- <span class="dix-1"> <img src="" alt=""> </span> -->
                 <div class="tj-input-form w-100" data-bg-image="">
                     <h4 class="title text-center">Car Quote!</h4>
                     <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form" novalidate id="calculatePriceFrom"
@@ -306,22 +279,6 @@
                                     <input type="hidden" name="country_code" id="country_code" />
                                 </div>
                             </div>
-                            {{-- <div class="col-xl-4 col-lg-4">
-                                    <div class="single-input-field">
-                                        <label class="d-block text-white">Phone:</label>
-                                        <input class="form-control" required name="phone" type="tel"
-                                            placeholder="Phone">
-                                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                    </div>
-                            </div> --}}
-                            {{-- <div class="col-md-4">
-                                <div class="input-form">
-                                    <label class="d-block">Phone:</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                        required="" />
-                                    <small id="errPhone" class="err-style"></small>
-                                </div>
-                            </div>  --}}
                         </div>
                         <div class="row">
                             <div class="col-md-12">
@@ -333,9 +290,6 @@
                             </div>
                         </div>
                         <div class="row">
-                            {{-- <div class="col-md-12 text-center">
-                                <h4 class="text-white">Car Information</h4>
-                            </div> --}}
                             <div class="col-md-6">
                                 <div class="input-form">
                                     <label class="d-block mb-0"> Pickup Location:</label>
@@ -409,7 +363,6 @@
                                             <ul class="dropdown-menu model-dropdown" style=""
                                                 aria-labelledby="model">
                                                 <li><a class="dropdown-item" href="#">Select Model</a></li>
-                                                <!-- Options filled by JavaScript -->
                                             </ul>
                                         </div>
                                     </div>
@@ -417,58 +370,6 @@
 
                             </div>
                         </div>
-                        {{-- <div class="row select-bm">
-
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label>Year</label>
-                                    <div class="dropdown">
-                                        <input class="form-control dropdown-toggle year" type="text"
-                                            name="year[]" id="year" placeholder="Select Year"
-                                            data-bs-toggle="dropdown" aria-expanded="false" required>
-                                        <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                            <li><a class="dropdown-item">Select Year</a></li>
-                                            @php
-                                                $currentYear = date('Y');
-                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                    echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
-                                                }
-                                            @endphp
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                    <label>Make</label>
-                                    <div class="dropdown">
-                                        <input class="form-control dropdown-toggle make" name="make[]" required type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <ul class="dropdown-menu make-dropdown" style="" aria-labelledby="make">
-                                            <li><a class="dropdown-item" >Select Make</a></li>
-                                            @foreach ($makes as $make)
-                                                <li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                    <label>Model</label>
-                                    <div class="dropdown">
-                                        <input class="form-control dropdown-toggle model-input"
-                                        name="model[]" type="text" id="model" required placeholder="Select Model" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <ul class="dropdown-menu model-dropdown" style="" aria-labelledby="model">
-                                            <li><a class="dropdown-item">Select Model</a></li>
-                                            <!-- Options filled by JavaScript -->
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> --}}
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -530,14 +431,6 @@
                                                 <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
                         </div>
-                        {{-- <div class="input-form">
-                            <label class="d-block text-white"> Image:</label>
-                            <input class="form-control image_input" type="file" accept="image/*" multiple
-                                onchange="previewImages(event)">
-                            <div class="image-preview-container" id="imagePreviewContainer"></div>
-                            <!-- <input class="form-control  image_input" type="file" id="image" name="image[]"
-                                        placeholder="Upload File" /> -->
-                        </div> --}}
                         <div class="tj-theme-button text-center mt-3">
                             <button class="tj-submit-btn" type="submit" value="submit">
                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -809,7 +702,6 @@
                     <div class="faq-image">
                         <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -879,7 +771,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -948,9 +839,6 @@
 @section('extraScript')
     {{-- addNewVehicle --}}
         <script>
-            // $(document).ready(function() {
-            //         $('select').niceSelect(); // Initialize nice-select
-            //     });
             $(document).ready(function() {
                 function addNewVehicle() {
                     var newVehicleHtml =
@@ -1015,15 +903,12 @@
                 `;
                     $('#vehicles-container').append(newVehicleHtml);
                 }
-
                 $('#addVehicleBtn').click(function() {
                     addNewVehicle();
                 });
-
                 $(document).on('click', '.delete-vehicle', function() {
                     $(this).closest('.vehicle-info').remove();
                 });
-
                 $(document).on('click', '.make-dropdown .dropdown-item', function() {
                     var make = $(this).data('value');
                     $(this).closest('.dropdown').find('.form-control').val(make).end()
@@ -1051,7 +936,6 @@
                     vehicleInfo.find('.year').val(
                         selectedYear);
                 });
-
                 $(document).on('click', '.year, .make', function() {
                     var year = $(this).closest('.vehicle-info').find('.year').val();
                     var makeId = $(this).closest('.vehicle-info').find('.make').val();
@@ -1061,7 +945,6 @@
                         getModel(year, makeId, vehicleInfo);
                     }
                 });
-
                 function getModel(year, makeId, vehicleInfo) {
                     $.ajax({
                         url: "{{ route('get.models') }}",
@@ -1073,28 +956,23 @@
                         success: function(response) {
                             var modelDropdown = vehicleInfo.find('.model-dropdown');
                             var modelInput = vehicleInfo.find('.model-input');
-                            var modelSelect = vehicleInfo.find('.model'); // Standard <select> element
-
-                            // Update custom dropdown
+                            var modelSelect = vehicleInfo.find('.model');
                             if (modelDropdown.length && modelInput.length) {
                                 modelDropdown.empty();
                                 modelDropdown.append(
                                     '<li><a class="dropdown-item" data-value="">Select Model</a></li>');
-
                                 $.each(response, function(index, model) {
                                     modelDropdown.append(
                                         '<li><a class="dropdown-item" data-value="' + model +
                                         '">' + model + '</a></li>');
                                 });
-
                                 modelInput.on('focus', function() {
-                                    modelSelect.empty(); // Clear the <select> options
+                                    modelSelect.empty(); 
                                     modelSelect.append(
                                         '<option value="">Select Model</option>'
-                                    ); // Add default option
+                                    );
                                     modelDropdown.show();
                                 });
-
                                 modelInput.on('input', function() {
                                     var searchTerm = $(this).val().toLowerCase();
                                     modelDropdown.find('li').each(function() {
@@ -1107,25 +985,20 @@
                                         }
                                     });
                                 });
-
                                 modelDropdown.on('click', 'a.dropdown-item', function(e) {
-
-                                    e.preventDefault(); // Prevent default anchor behavior
+                                    e.preventDefault(); 
                                     var selectedText = $(this).text();
                                     var selectedValue = $(this).data('value');
-
                                     modelInput.val(
-                                        selectedText); // Set the selected text in modelInput
-                                    modelDropdown.hide(); // Hide the custom dropdown
-
-                                    modelSelect.empty(); // Clear the <select> options
+                                        selectedText); 
+                                    modelDropdown.hide();
+                                    modelSelect.empty(); 
                                     modelSelect.append('<option value="' + selectedValue + '">' +
                                         selectedText + '</option>');
                                     modelSelect.val(
                                         selectedValue
-                                    ); // Set the selected value in the select dropdown
+                                    ); 
                                 });
-
                                 $(document).on('click', function(e) {
                                     if (!modelInput.is(e.target) && !modelDropdown.is(e.target) &&
                                         modelDropdown.has(e.target).length === 0) {
@@ -1133,22 +1006,16 @@
                                     }
                                 });
                             }
-
-                            // Handle standard <select> dropdown
                             if (modelSelect.length) {
-                                modelSelect.empty(); // Clear any existing options
+                                modelSelect.empty(); 
                                 modelSelect.append(
-                                    '<option value="">Select Model</option>'); // Add default option
-
+                                    '<option value="">Select Model</option>'); 
                                 $.each(response, function(index, model) {
                                     modelSelect.append('<option value="' + model + '">' + model +
                                         '</option>');
                                 });
-
                                 modelSelect.on('change', function() {
-
                                     var selectedModel = $(this).val();
-                                    // Optional: Sync custom input when user selects from <select>
                                     modelInput.val(modelSelect.find('option:selected').text());
                                 });
                             }
@@ -1158,10 +1025,8 @@
                         }
                     });
                 }
-
                 $(document).on('input', '.dropdown-toggle', function() {
                     var input = $(this).val().toLowerCase();
-                    // console.log('ttt', text);
                     $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
                         var text = $(this).text().toLowerCase();
                         $(this).toggle(text.indexOf(input) > -1);
@@ -1204,36 +1069,32 @@
                 const counter = document.getElementById('counter-value');
                 const target = +counter.getAttribute('data-target');
                 let count = 0;
-                const increment = target / 50; // Adjust this value to control the speed
-
+                const increment = target / 50; 
                 const updateCounter = () => {
                     if (count < target) {
                         count = Math.ceil(count + increment);
                         counter.textContent = count;
-                        setTimeout(updateCounter, 50); // Adjust this value to control the speed
+                        setTimeout(updateCounter, 50);
                     } else {
                         counter.textContent = target;
                     }
                 };
-
                 updateCounter();
             });
             document.addEventListener("DOMContentLoaded", function () {
                 const counter = document.getElementById('counter-value-2');
                 const target = +counter.getAttribute('data-target');
                 let count = 0;
-                const increment = target / 50; // Adjust this value to control the speed
-
+                const increment = target / 50; 
                 const updateCounter = () => {
                     if (count < target) {
                         count = Math.ceil(count + increment);
                         counter.textContent = count;
-                        setTimeout(updateCounter, 50); // Adjust this value to control the speed
+                        setTimeout(updateCounter, 50); 
                     } else {
                         counter.textContent = target;
                     }
                 };
-
                 updateCounter();
             });
         </script> 
