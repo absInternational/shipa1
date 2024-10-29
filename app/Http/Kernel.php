@@ -3,6 +3,8 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Routing\Router;
 
 class Kernel extends HttpKernel
 {
@@ -52,9 +54,9 @@ class Kernel extends HttpKernel
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Application $app, Router $router)
     {
-        parent::__construct();
+        parent::__construct($app, $router);
 
         if (app()->environment('production')) {
             $this->middlewareGroups['web'][] = \App\Http\Middleware\ForceHttps::class;
