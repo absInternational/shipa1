@@ -41,7 +41,7 @@
         z-index: 0;
     }
     .why-choose-us-slider {
-        background: url('../../img/autoauction banner 2.webp');
+        background: url('/public/img/autoauction banner 2.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
@@ -169,7 +169,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/3b image for commercial truck transport (1).webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('/public/frontend/images/project/3b image for commercial truck transport (1).webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -180,7 +180,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/3a images for commercial transport.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('/public/frontend/images/project/3a images for commercial transport.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>

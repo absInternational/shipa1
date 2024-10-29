@@ -65,7 +65,7 @@
             z-index: 0;
         }
         .why-choose-us-slider {
-            background: url('../../img/1-background-image-for-boat-transport.webp');
+            background: url('/public/img/1-background-image-for-boat-transport.webp');
             padding: 60px 0;
             background-color: #f9f9f9;
             position: relative;
@@ -203,7 +203,7 @@
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded"
-                                src="{{ asset('frontend/images/project/4a images for boat transport.webp') }}"
+                                src="{{ asset('/public/frontend/images/project/4a images for boat transport.webp') }}"
                                 alt="Image">
                         </div>
                     </div>
@@ -217,7 +217,7 @@
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded"
-                                src="{{ asset('frontend/images/project/4c images for boat transport.webp') }}"
+                                src="{{ asset('/public/frontend/images/project/4c images for boat transport.webp') }}"
                                 alt="Image">
                         </div>
                     </div>
@@ -300,7 +300,7 @@
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded"
-                                src="{{ asset('frontend/images/project/4b images for boat transport.webp') }}"
+                                src="{{ asset('/public/frontend/images/project/4b images for boat transport.webp') }}"
                                 alt="Image">
                         </div>
                     </div>

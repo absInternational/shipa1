@@ -48,6 +48,20 @@ class Kernel extends HttpKernel
     ];
 
     /**
+     * Create a new HTTP kernel instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+
+        if (app()->environment('production')) {
+            $this->middlewareGroups['web'][] = \App\Http\Middleware\ForceHttps::class;
+        }
+    }
+
+    /**
      * The application's route middleware.
      *
      * These middleware may be assigned to groups or used individually.
