@@ -387,6 +387,7 @@
                 <div class="mt-4 rounded">
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('public/frontend/images/project/2a-image-for-motorcycle-transport-_1_.webp') }}" alt="Image">
+                        {{-- <img class="rounded" src="{{ asset('public/frontend/images/project/2a-image-for-motorcycle-transport-_1_.webp') }}" alt="Image"> --}}
                     </div>
                 </div>
             </div>
