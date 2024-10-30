@@ -43,7 +43,7 @@
                 <div class="col-lg-8">
                     <div class="page-details-wrapper">
                         @foreach ($blogs as $blog)
-                            <div class="tj-blog-item-three">
+                            <div class="tj-blog-item-three"  data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
                                 <div class="tj-blog-image">
                                     <a
                                         @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}"
@@ -115,7 +115,7 @@
                                 <i class="flaticon-loupe"></i>
                             </form>
                         </div> --}}
-                        <div class="tj-sidebar-widget sidebar-post">
+                        <div class="tj-sidebar-widget sidebar-post"   data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
                             <h5 class="details_title">Recent Blogs</h5>
 
                             @foreach ($recent_blogs as $blog)
@@ -139,7 +139,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="tj-appointment-box" data-bg-image="/assets/images/service/service-15.jpg">
+                        <div class="tj-appointment-box" data-bg-image="/assets/images/service/service-15.jpg"   data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
                             <div class="tj-appointment-bg" data-bg-image="/assets/images/banner/service_shape.png"></div>
                             <div class="tj-appointment-body">
                                 <div class="appointment-percent text-center">

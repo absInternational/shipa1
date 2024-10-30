@@ -41,7 +41,7 @@
         z-index: 0;
     }
     .why-choose-us-slider {
-        background: url('/public/img/autoauction banner 2.webp');
+        background: url('/public/img/1 background bas commercial bas.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
@@ -224,7 +224,7 @@
             <div class="col-lg-4 col-md-12 sal-animate d-flex align-items-center justify-content-center" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded img-fluid" src="{{ asset('frontend/images/project/3c images for commercial transport.webp') }}" alt="Image">
+                        <img class="rounded img-fluid" src="{{ asset('/public/frontend/images/project/3c images for commercial transport.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>

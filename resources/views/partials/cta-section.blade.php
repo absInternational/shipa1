@@ -1,9 +1,9 @@
 <section class="tj-cta-section-two">
-    <div class="tj_cta_image"></div>
-    <div class="tj_cta_image1"></div>
+    <div class="tj_cta_image"  data-sal="slide-right" data-sal-duration="800" data-sal-delay="100"></div>
+    <div class="tj_cta_image1"  data-sal="slide-left" data-sal-duration="800" data-sal-delay="100"></div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-6 col-md-6"  data-sal="slide-right" data-sal-duration="800" data-sal-delay="100">
                 <div class="tj-cta-content">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2"> Here We Are</span>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-6 col-md-6"  data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
                 <div class="tj-cta-content tj-cta-content2">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2"> Support Center 24/7 </span>

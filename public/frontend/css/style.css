@@ -4092,7 +4092,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-service-commercial-2 {
     background-color: #000000;
-    background-image: url('../../img/COMMERCIAL-TRUCK-BANNER.webp');
+    background-image: url('/public/img/1 image for Commercial booh.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4140,7 +4140,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-service-commercial-3 {
     background-color: #000000;
-    background-image: url('../../img/construction-banner.webp');
+    background-image: url('/public/img/1 image for Construction equipment transport.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4212,7 +4212,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-service-commercial-5 {
     background-color: #000000;
-    background-image: url('../../img/excavator-banner.webp');
+    background-image: url('../../img/1 image for Excavator transport.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4354,7 +4354,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-service-commercial {
     background-color: #000000;
-    background-image: url('../../img/COMMERCIAL-TRUCK-BANNER.webp');
+    background-image: url('/public/img/1 banner for commercial-truck-transport.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7326,6 +7326,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .tj-blog-item-three .tj-blog-image {
+    border: 1px solid rgb(74 74 74 / 20%);
+    border-radius: 20px 20px 0px 0px;
     position: relative;
     overflow: hidden;
 }
@@ -7434,6 +7436,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .page-details-wrapper .tj-blog-item-three {
+    border-radius: 20px;
+    box-shadow: #c9c9c9 0px 0px 10px 3px;
     position: relative;
     margin-bottom: 45px;
 }
@@ -7471,7 +7475,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .page-details-wrapper .tj-blog-item-three .tj-content-box {
-    border: 1px solid rgba(169, 169, 169, 0.2);
+    border-radius: 0px 0px 20px 20px;
+    border: 1px solid rgb(74 74 74 / 20%);
     padding: 0 30px;
 }
 
@@ -7781,8 +7786,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .details-sidebar-inner .tj-sidebar-widget {
+    border: 1px solid rgb(74 74 74 / 20%);
     background: var(--tj-gray-color11);
-    border-radius: 4px;
+    border-radius: 20px;
     padding: 25px 30px;
     margin-bottom: 30px;
 }
@@ -8058,10 +8064,13 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 
 .details-sidebar-inner .tj-appointment-box {
+    box-shadow: #939393 0px 0px 10px 3px;
     z-index: 1;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 1px solid white;
+    border-radius: 20px;
 }
 .details-sidebar-inner .tj-appointment-box:before {
     top: 0;
@@ -8069,6 +8078,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     z-index: -1;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
     content: "";
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
@@ -8076,6 +8086,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: all 0.3s ease-out 0s;
 }
 .details-sidebar-inner .tj-appointment-box .tj-appointment-bg {
+    border-radius: 20px;
     height: 155px;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 71%, 50% 100%, 0 70%);
     clip-path: polygon(0 0, 100% 0, 100% 71%, 50% 100%, 0 70%);

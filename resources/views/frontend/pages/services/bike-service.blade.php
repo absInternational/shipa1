@@ -3,6 +3,57 @@
 @section('meta_description', 'Trust our professional motorcycle shipping services for secure and timely delivery. Get your bike transported with care and precision all over the USA.')
 @section('content')
 <style>
+    .owl-carousel .item {
+        transition: opacity 0.8s ease-in-out; /* Smooth transition */
+        opacity: 0; /* Initially hidden */
+    }
+
+    .owl-carousel .owl-item.active .item {
+        opacity: 1; /* Fully visible for the active item */
+    }
+    .card-2 {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        /* max-width: 800px;
+        width: 90%; */
+        /* background-image: url('https://shipa1.com/frontend/images/project/golf-cart-service.webp'); /* Placeholder image */
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.85); */
+    }
+
+    .card-image-2 {
+        flex: 1;
+        background-image: url('https://shipa1.com/frontend/images/project/golf-cart-service.webp'); /* Placeholder image */
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.85);
+        /* clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%); */
+    }
+
+    .card-content {
+        background: #1a191929;
+        flex: 1;
+        padding: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #1a73e8;
+        margin-bottom: 1rem;
+    }
+
+    .card-description {
+        font-size: 1rem;
+        color: #ffffff;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
     .full-width {
         width: 100%;
     }
@@ -162,7 +213,7 @@
     </div>
 </section>
 <section class="tj-blog-standard pb-0 pt-4">
-   <div class="container">
+   <div class="container" data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
            <div class="row">
                 <div class="col-lg-7">
 							<div class="image-container">
@@ -430,7 +481,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/MOTORCYCLE-2.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('public/frontend/images/project/tuxpicom.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -497,6 +548,134 @@
       </div>
     </div>
 </section>
+{{-- <section class="tj-testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="tj-section-heading text-center">
+                <span class="sub-title active-shape"> test </span>
+                <h2 class="title"> test</h2>
+            </div>
+        </div>
+        <div class="owl-carousel" id="owl-carousel-new">
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="https://shipa1.com/frontend/images/project/golf-cart-service.webp" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
+                                    <p class="card-text  text-dark">It involves shipping of backhoes from one place to another with the use of
+                                    specialized trailers and equipment. All State to State Auto Transport offers
+                                    high-quality shipping services for heavy equipment, including backhoes. 
+                                    On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
+                                    charges, though the transportation cost can be high.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
+                                    <p class="card-text text-dark">It involves shipping of backhoes from one place to another with the use of
+                                    specialized trailers and equipment. All State to State Auto Transport offers
+                                    high-quality shipping services for heavy equipment, including backhoes. 
+                                    On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
+                                    charges, though the transportation cost can be high.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="https://shipa1.com/frontend/images/project/golf-cart-service.webp" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="https://shipa1.com/frontend/images/project/golf-cart-service.webp" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
+                                    <p class="card-text text-dark">It involves shipping of backhoes from one place to another with the use of
+                                    specialized trailers and equipment. All State to State Auto Transport offers
+                                    high-quality shipping services for heavy equipment, including backhoes. 
+                                    On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
+                                    charges, though the transportation cost can be high.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
+                                    <p class="card-text text-dark">It involves shipping of backhoes from one place to another with the use of
+                                    specialized trailers and equipment. All State to State Auto Transport offers
+                                    high-quality shipping services for heavy equipment, including backhoes. 
+                                    On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
+                                    charges, though the transportation cost can be high.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="https://shipa1.com/frontend/images/project/golf-cart-service.webp" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> --}}
 <section class="tj-choose-us-section-service-bike-6">
     <div class="container why-box">
         <div class="row services">
@@ -630,6 +809,37 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
+<script>
+    $(document).ready(function(){
+        $("#owl-carousel-new").owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            smartSpeed: 800, // Animation speed
+
+            // animateOut: 'rotateOut',
+            // animateIn: 'rotateIn',
+
+            // animateOut: 'bounceOut',
+            // animateIn: 'bounceIn',
+
+            // animateOut: 'fadeOut',
+            // animateIn: 'fadeIn',
+
+            // animateOut: 'flipOutX',
+            // animateIn: 'flipInX',
+
+            // animateOut: 'lightSpeedOut',
+            // animateIn: 'lightSpeedIn',
+            fluidSpeed: true
+        });
+    });
+</script>
 <script>
     $(document).ready(function() {
         function addNewVehicle() {

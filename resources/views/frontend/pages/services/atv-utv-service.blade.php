@@ -70,7 +70,7 @@
     }
 
     .why-choose-us-slider {
-        background: url('/public/img/autoauction banner 2.webp');
+        background: url('/public/img/1-background-image-ATV-Transport.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
@@ -182,7 +182,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="image-container">
-                    <img class="img-fluid" src="{{ asset('frontend/images/project/atv-urv service.webp') }}" loading="lazy" alt="Motorcyle Transport">
+                    <img class="img-fluid" src="{{ asset('/public/frontend/images/project/tuxpi.coo.webp') }}" loading="lazy" alt="Motorcyle Transport">
                 </div>
                     <br>
                 <div class="text-container text-left">
@@ -430,7 +430,7 @@
                 <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="mt-4 rounded">
                         <div class="image-box">
-                            <img class="rounded" src="{{ asset('frontend/images/project/ATV-1.webp') }}" alt="Image">
+                            <img class="rounded" src="{{ asset('/public/frontend/images/project/2a-image-for-ATV-UTV-transport-_1_.webp') }}" alt="Image">
                         </div>
                     </div>
                </div>
@@ -441,7 +441,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                  <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/ATV-2.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('/public/frontend/images/project/2b-image-for-ATV-UTV-transport-_1_.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
