@@ -4188,7 +4188,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-service-RV-4 {
     background-color: #000000;
-    background-image: url('../../img/rv-.webp');
+    background-image: url('/public/img/1 image for RV Transport.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4284,7 +4284,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-service-heavy-7 {
     background-color: #000000;
-    background-image: url('../../img/heavy-equipment-quote.webp');
+    background-image: url('/public/img/1 image for Heavy Equipment Transport.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4330,7 +4330,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 .tj-choose-us-section-service-farm-8 {
     background-color: #000000;
-    background-image: url('../../img/farm-service-1.webp');
+    background-image: url('/public/img/1B background image dry van.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4828,20 +4828,16 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
 .tj-choose-us-section-dryvan {
     background-color: #000000;
-    background-image: url('../../img/dry-van.webp');
-   
+    background-image: url('/public/img/1 background image dry van.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 120px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
 .tj-choose-us-section-dryvan::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4853,8 +4849,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
 .tj-choose-us-section-excavator {
     background-color: #000000;
     background-image: url('../../img/EXCAVATOR.webp');
@@ -4865,8 +4859,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 120px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
 .tj-choose-us-section-excavator::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4878,20 +4871,16 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
 .tj-choose-us-section-golfcart {
     background-color: #000000;
     background-image: url('../../img/golf-cart.webp');
-   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 120px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
 .tj-choose-us-section-golfcart::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4903,10 +4892,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
 .tj-choose-us-section-roro {
     background-color: #000000;
-    
     background-image: url('../../frontend/images/project/roro.webp');
     background-position: center;
     background-repeat: no-repeat;
@@ -4914,8 +4901,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 120px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
 .tj-choose-us-section-roro::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4927,11 +4913,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
 .tj-choose-us-section-freight {
     background-color: #000000;
-    
     background-image: url('../../frontend/images/slider/home-slider-3.webp');
     background-position: center;
     background-repeat: no-repeat;
@@ -4939,8 +4922,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 120px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
 .tj-choose-us-section-freight::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4952,10 +4934,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
 .tj-choose-us-section-heavy {
     background-color: #000000;
-    
     background-image: url('../../frontend/images/slider/home-slider-2.webp');
     background-position: center;
     background-repeat: no-repeat;
@@ -4963,8 +4943,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 120px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
 .tj-choose-us-section-heavy::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4976,11 +4955,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
 .tj-choose-us-section-bike {
     background-color: #000000;
-    
     background-image: url('../../img/bike.webp');
     background-position: center;
     background-repeat: no-repeat;
@@ -4989,7 +4965,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
 .tj-choose-us-section-bike::before {
     background: rgba(6, 46, 57, 0.7);
@@ -5001,10 +4976,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
 .tj-choose-us-section-home {
     background-color: #000000;
-    
     background-image: url('../../img/home-.webp');
     background-position: center;
     background-repeat: no-repeat;
@@ -5012,8 +4985,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 120px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
 .tj-choose-us-section-home::before {
     background: rgba(6, 46, 57, 0.7);
@@ -5025,7 +4997,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
 .tj-choose-us-section {
     background-color: #000000;
     background-image: url(https://blog.shipa1.daydispatch.com/public/frontend/images/slider/DSF.webp);
@@ -5035,10 +5006,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 120px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
-
 .tj-choose-us-section::before {
     width: 100%;
     position: absolute;
@@ -5049,24 +5018,19 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgb(6 46 57 / 46%);
 }
-
 .tj-choose-us-section .tj-section-heading .title {
     margin-bottom: 25px;
 }
-
 .tj-choose-us-section .choose-us-content-1 {
     position: relative;
     z-index: 3;
 }
-
 .choose-us-content-1 .tj-section-heading .title {
     color: var(--tj-white-color);
 }
-
 .choose-us-content-1 .tj-section-heading .desc {
     color: var(--tj-white-color);
 }
-
 .tj-choose-us-section-two {
     background: url('../../img/HAZMAT-BANNER.webp');
     background-repeat: no-repeat;
@@ -5076,7 +5040,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 65px;
     position: relative;
 }
-
 .tj-choose-us-section-two::before {
     width: 100%;
     position: absolute;
@@ -5087,7 +5050,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.9);
 }
-
 .choose-us-top-content {
     display: flex;
     justify-content: space-between;
@@ -5095,11 +5057,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: relative;
     z-index: 3;
 }
-
 .choose-us-top-content .tj-section-heading .title {
     color: var(--tj-white-color);
 }
-
 .choose-us-step-item {
     position: relative;
     transition: 0.4s;
@@ -5107,14 +5067,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: relative;
     z-index: 3;
 }
-
 .choose-us-step-item .choose-step-box {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
-
 .choose-us-step-item .choose-step-box .choose-box {
     width: 20px;
     height: 20px;
@@ -5129,24 +5087,20 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: -3px;
     transition: 0.4s;
 }
-
 .choose-us-step-item:hover .choose-step-box .choose-box {
     border-color: var(--tj-white-color);
     background-color: var(--tj-primary-color);
 }
-
 .choose-us-step-item .choose-step-box .step-content .title {
     color: var(--tj-white-color);
     font-size: 24px;
     font-weight: 500;
 }
-
 .choose-us-step-item p {
     color: var(--tj-white-color);
     position: relative;
     padding-left: 35px;
 }
-
 .choose-us-step-item p::before {
     position: absolute;
     content: "";
@@ -5157,14 +5111,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: rgba(255, 255, 255, 0.4);
     transition: 0.4s;
 }
-
 .choose-us-step-item:hover p::before {
     background-color: var(--tj-primary-color);
 }
-
-/* /// */
 .tj-choose-us-section-two-1 {
-    /* background: url(../images/banner/cta-bg2.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -5172,7 +5122,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 65px;
     position: relative;
 }
-
 .tj-choose-us-section-two-1::before {
     width: 100%;
     position: absolute;
@@ -5181,9 +5130,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.9); */
 }
-
 .choose-us-top-content-1 {
     display: flex;
     justify-content: space-between;
@@ -5191,11 +5138,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: relative;
     z-index: 3;
 }
-
 .choose-us-top-content-1 .tj-section-heading-1 .title-1 {
     color: black;
 }
-
 .choose-us-step-item-1 {
     position: relative;
     transition: 0.4s;
@@ -5203,14 +5148,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: relative;
     z-index: 3;
 }
-
 .choose-us-step-item-1 .choose-step-box-1 {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
-
 .choose-us-step-item-1 .choose-step-box-1 .choose-box-1 {
     width: 20px;
     height: 20px;
@@ -5225,24 +5168,20 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: -3px;
     transition: 0.4s;
 }
-
 .choose-us-step-item-1:hover .choose-step-box-1 .choose-box-1 {
     border-color: var(--tj-white-color);
     background-color: var(--tj-primary-color);
 }
-
 .choose-us-step-item-1 .choose-step-box-1 .step-content-1 .title-1 {
     color: black;
     font-size: 18px;
     font-weight: 500;
 }
-
 .choose-us-step-item-1 p {
     color: black;
     position: relative;
     padding-left: 35px;
 }
-
 .choose-us-step-item-1 p::before {
     position: absolute;
     content: "";
@@ -5253,24 +5192,15 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: rgba(255, 255, 255, 0.4);
     transition: 0.4s;
 }
-
 .choose-us-step-item-1:hover p::before {
     background-color: var(--tj-primary-color);
 }
-
-/* .dix-1{
-    background-image: url(../images/disco.png) !important;
-    background-repeat: no-repeat !important;
-} */
 .tj-input-form-car {
-    
     box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
     background: #062e39d4;
     border-radius: 5%;
     padding: 25px;
     width: 100%;
-    /* margin-left: 7%; */
-    /* margin-left: auto; */
     position: relative;
     z-index: 3;
 }
@@ -5280,18 +5210,15 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     font-weight: 700;
     margin-bottom: 25px;
 }
-
 .tj-input-form-car  .input-form label {
     font-size: 15px;
     font-weight: 500;
     color: var(--tj-white-color);
     margin-bottom: 10px;
 }
-
 .tj-input-form-car  .input-form {
     margin-bottom: 20px;
 }
-
 .tj-input-form-car  .input-form input {
     background: #f0f2f7;
     width: 100%;
@@ -5302,15 +5229,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding: 15px 15px;
     border-radius: 3px;
 }
-
 .tj-input-fom .select-bm {
     margin-top: 50px;
 }
-
 .tj-input-form-car  .select-bm .nice-select {
     margin-bottom: 35px;
 }
-
 .tj-input-form-car  .nice-select {
     width: 100%;
     border: none;
@@ -5319,36 +5243,29 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 35px;
     border-radius: 3px;
 }
-
 .tj-input-form-car  .nice-select .list {
     width: 100%;
     margin-top: 0;
     height: 280px;
     overflow: auto;
 }
-
 .tj-input-form-car  .nice-select .list li {
     font-size: 14px;
 }
-
 .tj-input-form-car  .nice-select .list li:last-child {
     margin-bottom: 10px;
 }
-
 .tj-input-form-car  .nice-select .option.selected {
     font-weight: 500;
 }
-
 .nice-select .option:hover,
 .nice-select .option.focus,
 .nice-select .option.selected {
     color: var(--tj-body-color);
 }
-
 .tj-input-form-car  .nice-select .option.disabled {
     color: var(--tj-body-color);
 }
-
 .tj-input-form-car  .nice-select:after {
     border-bottom: 1px solid var(--tj-body-color);
     border-right: 1px solid var(--tj-body-color);
@@ -5358,7 +5275,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     right: 20px;
     width: 10px;
 }
-
 .add-car-1 {
     padding: 5px;
     border: white 1px solid;
@@ -5376,8 +5292,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     color: var(--tj-primary-color) !important;
     text-decoration: none !important;
 }
-/* car form end  */
-
 .tj-input-form-ser{
     box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
     background: #062e39d4;
@@ -5385,29 +5299,24 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding: 30px;
     width: 100%;
     margin-left: 7%;
-    /* margin-left: auto; */
     position: relative;
     z-index: 3;
 }
-
 .tj-input-form-ser  .title {
     color: var(--tj-white-color);
     font-size: 29px;
     font-weight: 700;
     margin-bottom: 25px;
 }
-
 .tj-input-form-ser  .input-form label {
     font-size: 15px;
     font-weight: 500;
     color: var(--tj-white-color);
     margin-bottom: 10px;
 }
-
 .tj-input-form-ser  .input-form {
     margin-bottom: 20px;
 }
-
 .tj-input-form-ser  .input-form input {
     background: #f0f2f7;
     width: 100%;
@@ -5418,15 +5327,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding: 15px 15px;
     border-radius: 3px;
 }
-
 .tj-input-fom .select-bm {
     margin-top: 50px;
 }
-
 .tj-input-form-ser  .select-bm .nice-select {
     margin-bottom: 35px;
 }
-
 .tj-input-form-ser  .nice-select {
     width: 100%;
     border: none;
@@ -5435,36 +5341,29 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 35px;
     border-radius: 3px;
 }
-
 .tj-input-form-ser  .nice-select .list {
     width: 100%;
     margin-top: 0;
     height: 120px;
     overflow: auto;
 }
-
 .tj-input-form-ser  .nice-select .list li {
     font-size: 14px;
 }
-
 .tj-input-form-ser  .nice-select .list li:last-child {
     margin-bottom: 10px;
 }
-
 .tj-input-form-ser  .nice-select .option.selected {
     font-weight: 500;
 }
-
 .nice-select .option:hover,
 .nice-select .option.focus,
 .nice-select .option.selected {
     color: var(--tj-body-color);
 }
-
 .tj-input-form-ser  .nice-select .option.disabled {
     color: var(--tj-body-color);
 }
-
 .tj-input-form-ser  .nice-select:after {
     border-bottom: 1px solid var(--tj-body-color);
     border-right: 1px solid var(--tj-body-color);
@@ -5474,7 +5373,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     right: 20px;
     width: 10px;
 }
-
 .tj-input-form {
     box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
     background: #062e39d4;
@@ -5482,30 +5380,24 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding: 30px;
     width: 50%;
     margin-left: 7%;
-    /* margin-left: auto; */
     position: relative;
     z-index: 3;
 }
-
-
 .tj-input-form .title {
     color: var(--tj-white-color);
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 25px;
 }
-
 .tj-input-form .input-form label {
     font-size: 15px;
     font-weight: 500;
     color: var(--tj-white-color);
     margin-bottom: 10px;
 }
-
 .tj-input-form .input-form {
     margin-bottom: 20px;
 }
-
 .tj-input-form .input-form input {
     background: #f0f2f7;
     width: 100%;
@@ -5516,52 +5408,20 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding: 15px 15px;
     border-radius: 3px;
 }
-
 .tj-input-fom .select-bm {
     margin-top: 50px;
 }
-
 .tj-input-form .select-bm .nice-select {
     margin-bottom: 35px;
 }
-
 .tj-input-form .nice-select {
     width: 100%;
-    /* display: none; */
     border: none;
     font-size: 14px;
     line-height: 34px;
     height: 35px;
     border-radius: 3px;
 }
-
-/* .tj-input-form-filler {
-    box-shadow: 0px 0px 20px 6px rgb(255 255 255 / 50%);
-    background: #062e39d4;
-    border-radius: 25px;
-    padding: 30px;
-    position: relative;
-    z-index: 3;
-    height: auto; 
-}
-
-.tj-input-form-filler .title {
-    color: var(--tj-white-color);
-    font-size: 35px;
-    font-weight: 700;
-    margin-bottom: 25px;
-}
-
-.tj-input-form-filler .text {
-    color: var(--tj-white-color);
-    font-size: 15px;
-    font-weight: 500;
-} */
-
-/* .select2-container--default.select2-container--focus .select2-selection--multiple {
-    border: solid white 1px;
-    outline: 0;
-} */
 .select2 {
     background-color: white;
     color: #38413b;
@@ -5579,36 +5439,29 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 35px;
     border-radius: 3px;
 }
-
 .tj-input-form .nice-select .list {
     width: 100%;
     margin-top: 0;
     height: 110px;
     overflow: auto;
 }
-
 .tj-input-form .nice-select .list li {
     font-size: 14px;
 }
-
 .tj-input-form .nice-select .list li:last-child {
     margin-bottom: 10px;
 }
-
 .tj-input-form .nice-select .option.selected {
     font-weight: 500;
 }
-
 .nice-select .option:hover,
 .nice-select .option.focus,
 .nice-select .option.selected {
     color: var(--tj-body-color);
 }
-
 .tj-input-form .nice-select .option.disabled {
     color: var(--tj-body-color);
 }
-
 .tj-input-form .nice-select:after {
     border-bottom: 1px solid var(--tj-body-color);
     border-right: 1px solid var(--tj-body-color);
@@ -5618,29 +5471,24 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     right: 20px;
     width: 10px;
 }
-
 .tj-input-range {
     position: relative;
     margin-bottom: 15px;
 }
-
 .tj-input-range label {
     color: var(--tj-white-color);
     font-size: 15px;
     font-weight: 500;
 }
-
 .tj-input-range .tj-range-1 {
     width: 100%;
     cursor: pointer;
 }
-
 .tj-input-range output {
     color: var(--tj-white-color);
     font-size: 15px;
     font-weight: 500;
 }
-
 .tj-input-range .tj-range-1[type="range"] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -5651,7 +5499,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     outline: none;
     cursor: pointer;
 }
-
 .tj-input-range .tj-range-1[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -5662,7 +5509,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: var(--tj-white-color);
     border: 1px solid var(--tj-white-color);
 }
-
 .tj-input-range .tj-range-1[type="range"]::-moz-range-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -5673,7 +5519,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: var(--tj-white-color);
     border: 1px solid var(--tj-white-color);
 }
-
 .tj-input-range .tj-range-1[type="range"]::-ms-track {
     width: 300px;
     height: 6px;
@@ -5682,7 +5527,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     border-width: 2px 0;
     color: transparent;
 }
-
 .tj-input-range .tj-range-1[type="range"]::-ms-thumb {
     height: 14px;
     width: 14px;
@@ -5690,25 +5534,20 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: var(--tj-white-color);
     border: 1px solid var(--tj-white-color);
 }
-
 .tj-input-range .tj-range-1[type="range"]::-ms-fill-lower {
     background: var(--tj-primary-color);
     border-radius: 2px;
 }
-
 .tj-input-range .tj-range-1[type="range"]::-ms-fill-upper {
     background: var(--tj-primary-color);
     border-radius: 2px;
 }
-
 .tj-input-range .tj-range-1[type="range"]::-ms-tooltip {
     display: none;
 }
-
 .tj-input-range .tj-range-1[type="text"] {
     border: none;
 }
-
 .tj-input-range .tj-range-1[type="range"]::range-track {
     width: 100%;
     height: 20px;
@@ -5716,7 +5555,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background-color: #eee;
     border: 2px solid #ccc;
 }
-
 /* ----------------------------------
     15. Team CSS
 ------------------------------------ */
@@ -5724,27 +5562,22 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     padding-bottom: 95px;
 }
-
 .tj-team-section.tj-team-page .tj-theme-btn {
     margin-top: 30px;
 }
-
 .tj-team-item {
     background: var(--tj-white-color);
     border-radius: 5px;
     margin-bottom: 25px;
 }
-
 .tj-team-item .image-box {
     position: relative;
     overflow: hidden;
 }
-
 .tj-team-item .image-box img {
     width: 100%;
     transition: 0.4s;
 }
-
 .tj-team-item .image-box .social-icon-box {
     width: 75px;
     height: 100%;
@@ -5756,11 +5589,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     text-align: center;
     transition: 0.4s;
 }
-
 .tj-team-item:hover .image-box .social-icon-box {
     opacity: 1;
 }
-
 .tj-team-item .image-box .social-icon {
     margin: 0;
     padding: 0;
@@ -5773,7 +5604,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
 .tj-team-item .image-box .social-icon {
     background: var(--tj-primary-color);
     padding: 15px 0;
@@ -5782,18 +5612,15 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: relative;
     left: -20px;
 }
-
 .tj-team-item .image-box .social-icon li {
     margin-bottom: 20px;
     -webkit-transform: translateX(30px);
     -ms-transform: translateX(30px);
     transform: translateX(30px);
 }
-
 .tj-team-item .image-box .social-icon li:last-child {
     margin-bottom: 0;
 }
-
 .tj-team-item:hover .image-box .social-icon li:nth-child(1) {
     -webkit-transition: transform 0.2s ease-in-out 0.1s;
     -o-transition: transform 0.2s ease-in-out 0.1s;
@@ -5806,7 +5633,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
 .tj-team-item:hover .image-box .social-icon li:nth-child(2) {
     -webkit-transition: transform 0.2s ease-in-out 0.2s;
     -o-transition: transform 0.2s ease-in-out 0.2s;
@@ -5819,7 +5645,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
 .tj-team-item:hover .image-box .social-icon li:nth-child(3) {
     -webkit-transition: transform 0.2s ease-in-out 0.3s;
     -o-transition: transform 0.2s ease-in-out 0.3s;
@@ -5832,7 +5657,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
 .tj-team-item:hover .image-box .social-icon li:nth-child(4) {
     -webkit-transition: transform 0.2s ease-in-out 0.4s;
     -o-transition: transform 0.2s ease-in-out 0.4s;
@@ -5845,86 +5669,69 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
 .tj-team-item .image-box .social-icon li a {
     color: var(--tj-white-color);
     transition: 0.3s;
 }
-
 .tj-team-item .image-box .social-icon li a i {
     font-size: 20px;
 }
-
 .tj-team-item .image-box .social-icon li a:hover {
     color: var(--tj-secondary-color);
 }
-
 .tj-team-item .team-content {
     border-radius: 0px 0px 5px 5px;
     box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
     padding: 30px;
 }
-
 .tj-team-item:hover .team-content .title-link {
     color: var(--tj-primary-color);
 }
-
 .tj-team-item .team-content h4 {
     margin-bottom: 0;
     font-size: 24px;
 }
-
 .tj-team-item .team-content .title-link {
     color: var(--tj-secondary-color);
     margin-bottom: 0;
 }
-
 .tj-team-section-two {
     padding-top: 110px;
     padding-bottom: 95px;
 }
-
 .tj-team-item-two {
     background-color: var(--tj-white-color);
     box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
     padding: 50px 50px 40px;
     margin-bottom: 25px;
 }
-
 .tj-team-item-two .image-box {
     margin-bottom: 30px;
 }
-
 .tj-team-item-two .image-box img {
     transition: 0.4s;
     border: 2px dashed transparent;
     padding: 10px;
     border-radius: 50%;
 }
-
 .tj-team-item-two:hover .image-box img {
     border: 2px dashed var(--tj-primary-color);
 }
-
 .tj-team-item-two {
     position: relative;
     overflow: hidden;
     transition: 0.4s;
 }
-
 .tj-team-item-two .social-icon-box {
     text-align: center;
 }
-
 .tj-team-item-two .social-icon-box ul li {
     display: inline-block;
     margin-right: 5px;
 }
-
 .tj-team-item-two .social-icon-box ul li:last-child {
     margin-right: 0;
 }
-
 .tj-team-item-two .social-icon-box ul li i {
     width: 45px;
     height: 45px;
@@ -5936,13 +5743,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     border: 1px solid var(--tj-gray-color6);
     border-radius: 50%;
 }
-
 .tj-team-item-two .social-icon-box ul li i:hover {
     color: var(--tj-white-color);
     background-color: var(--tj-primary-color);
     border-color: transparent;
 }
-
 .tj-team-item-two .social-icon {
     margin: 0;
     padding: 0;
@@ -5955,23 +5760,19 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
 .tj-team-item-two .social-icon {
     border-radius: 4px;
     position: relative;
 }
-
 .tj-team-item-two .social-icon li {
     margin-bottom: 0;
     -webkit-transform: translateY(10px);
     -ms-transform: translateY(10px);
     transform: translateY(10px);
 }
-
 .tj-team-item-two .social-icon li:last-child {
     margin-bottom: 0;
 }
-
 .tj-team-item-two:hover .social-icon li:nth-child(1) {
     -webkit-transition: transform 0.2s ease-in-out 0.1s;
     -o-transition: transform 0.2s ease-in-out 0.1s;
@@ -5984,7 +5785,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
 .tj-team-item-two:hover .social-icon li:nth-child(2) {
     -webkit-transition: transform 0.2s ease-in-out 0.2s;
     -o-transition: transform 0.2s ease-in-out 0.2s;
@@ -5997,7 +5797,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
 .tj-team-item-two:hover .social-icon li:nth-child(3) {
     -webkit-transition: transform 0.2s ease-in-out 0.3s;
     -o-transition: transform 0.2s ease-in-out 0.3s;
@@ -6010,7 +5809,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
 .tj-team-item-two:hover .social-icon li:nth-child(4) {
     -webkit-transition: transform 0.2s ease-in-out 0.4s;
     -o-transition: transform 0.2s ease-in-out 0.4s;
@@ -6023,44 +5821,35 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
 .tj-team-item-two .social-icon li a {
     color: var(--tj-white-color);
     transition: 0.3s;
 }
-
 .tj-team-item-two .social-icon li a i {
     font-size: 20px;
 }
-
 .tj-team-item-two .social-icon li a:hover {
     color: var(--tj-secondary-color);
 }
-
 .tj-team-item-two .team-content {
     margin-bottom: 35px;
 }
-
 .tj-team-item-two .team-content h4 {
     margin-bottom: 0;
     font-size: 24px;
 }
-
 .tj-team-item-two .team-content .title-link {
     color: var(--tj-secondary-color);
     margin-bottom: 0;
     transition: 0.4s;
 }
-
 .tj-team-item-two .team-content .title-link:hover {
     color: var(--tj-primary-color);
 }
-
 .tj-team-item-two .team-content span {
     color: var(--tj-primary-color);
     font-weight: 500;
 }
-
 .tj-testimonial-section-two .swiper-pagination {
     width: auto;
     right: 80px;
@@ -6076,7 +5865,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     .swiper-pagination-bullet:last-child {
     margin-bottom: 0;
 }
-
 .tj-testimonial-section-two .swiper-pagination-bullet {
     background: rgba(255, 255, 255, 0.8);
     width: 20px;
@@ -6087,7 +5875,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
 }
-
 .tj-testimonial-section-two .swiper-pagination-bullet-active {
     background: var(--tj-primary-color);
     border-color: var(--tj-primary-color);
@@ -6095,32 +5882,27 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     height: 20px;
     position: relative;
 }
-
 .tj-team-section-three {
     padding-top: 110px;
     padding-bottom: 95px;
 }
-
 .team-item-three {
     position: relative;
     border-radius: 4px;
     margin-bottom: 25px;
     overflow: hidden;
 }
-
 .team-item-three:hover .tj-project-content {
     position: absolute;
     bottom: 0;
     transform: translateY(-30px);
 }
-
 .team-item-three .arrow-icon {
     position: absolute;
     right: 20px;
     top: 30px;
     transition: 0.4s;
 }
-
 .team-item-three .tj-project-content {
     position: absolute;
     bottom: 20px;
@@ -6128,7 +5910,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 30px;
     transition: 0.4s;
 }
-
 .team-item-three .tj-project-content .sub-title {
     background: var(--tj-secondary-color);
     color: var(--tj-white-color);
@@ -6141,15 +5922,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     font-size: 15px;
     display: inline-block;
 }
-
 .team-item-three:hover .tj-project-content .sub-title {
     background-color: var(--tj-primary-color);
 }
-
 .team-item-three .tj-project-content h4 {
     margin-bottom: 0;
 }
-
 .team-item-three .tj-project-content .title-link {
     background: var(--tj-white-color);
     color: var(--tj-secondary-color);
@@ -6162,19 +5940,15 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     width: 280px;
     text-align: center;
 }
-
 .team-item-three .tj-project-content .title-link:hover {
     color: var(--tj-primary-color);
 }
-
 .team-item-three:hover .arrow-icon {
     right: 30px;
 }
-
 .team-item-three .arrow-icon .social-active {
     position: relative;
 }
-
 .team-item-three .arrow-icon .team-social .social-active .team-social-dropdown {
     opacity: 0;
     visibility: hidden;
@@ -6183,7 +5957,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     transition: 0.4s;
 }
-
 .team-item-three
     .arrow-icon
     .team-social:hover
@@ -6192,7 +5965,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     opacity: 1;
     visibility: visible;
 }
-
 .team-item-three .arrow-icon .social-active i {
     background: var(--tj-secondary-color);
     color: var(--tj-white-color);
@@ -6207,18 +5979,15 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     cursor: pointer;
     margin-bottom: 15px;
 }
-
 .team-item-three .arrow-icon .social-active:hover i {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-
 .team-item-three .arrow-icon:hover .social-active i {
     background-color: var(--tj-primary-color);
     color: var(--tj-white-color);
 }
-
 .team-item-three
     .arrow-icon
     .team-social
@@ -6240,7 +6009,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     font-size: 20px;
     transition: 0.4s;
 }
-
 .team-item-three
     .arrow-icon
     .team-social
@@ -6252,14 +6020,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background-color: var(--tj-primary-color);
     color: var(--tj-white-color);
 }
-
 /* ----------------------------------
     16. Project CSS
 ------------------------------------ */
 .tj-project-section {
     padding-bottom: 75px;
 }
-
 .tj-project-item {
     position: relative;
     border-radius: 12px;
@@ -6270,23 +6036,19 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transform: scale(1.1);
     transition: transform 0.5s ease-in-out;
 }
-
 .tj-project-item img {
     border-radius: 3px;
     width: 100%;
 }
-
 .tj-project-item:hover::before {
     opacity: 1;
     visibility: visible;
 }
-
 .tj-project-item:hover .arrow-icon {
     opacity: 1;
     visibility: visible;
     right: 20px;
 }
-
 .tj-project-item:hover .tj-project-content {
     position: absolute;
     bottom: 0;
@@ -6294,7 +6056,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     visibility: visible;
     transform: translateY(-65px);
 }
-
 .tj-project-item::before {
     position: absolute;
     content: "";
@@ -6308,7 +6069,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background: rgba(6, 46, 57, 0.5);
     border-radius: 4px;
 }
-
 .tj-project-item .arrow-icon {
     position: absolute;
     right: 0;
@@ -6317,7 +6077,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     visibility: hidden;
     transition: 0.3s;
 }
-
 .tj-project-item .arrow-icon a i {
     width: 50px;
     height: 50px;
@@ -6330,13 +6089,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     transform: rotate(-35deg);
 }
-
 .tj-project-item .arrow-icon a i:hover {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
 }
-
 .tj-project-item .tj-project-content {
     position: absolute;
     bottom: 0;
@@ -6344,10 +6101,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 20px;
     margin-bottom: 10px;
     transition: 0.4s;
-    /* opacity: 0;
-    visibility: hidden; */
 }
-
 .tj-project-item .tj-project-content .sub-title {
     background: var(--tj-primary-color);
     color: var(--tj-white-color);
@@ -6357,11 +6111,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     text-align: center;
     display: inline-block;
 }
-
 .tj-project-item .tj-project-content h4 {
     margin-bottom: 0;
 }
-
 .tj-project-item .tj-project-content .title-link {
     background: var(--tj-white-color);
     color: var(--tj-secondary-color);
@@ -6371,11 +6123,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding: 15px 25px;
     text-align: center;
 }
-
 .tj-project-item .tj-project-content .title-link:hover {
     color: var(--tj-primary-color);
 }
-
 .tj-project-section .swiper-pagination {
     width: auto;
     bottom: 0;
@@ -6389,16 +6139,13 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-project-section .swiper-pagination .swiper-pagination-bullet:last-child {
     margin-bottom: 0;
 }
-
 .tj-project-section .owl-carousel .owl-dots.disabled,
 .owl-carousel .owl-nav.disabled {
     display: none;
 }
-
 .tj-project-section .owl-carousel .owl-nav.disabled {
     display: none;
 }
-
 .tj-project-section .owl-dots {
     position: absolute;
     left: 50%;
@@ -6417,7 +6164,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     align-items: center;
     gap: 10px;
 }
-
 .tj-project-section .owl-dots .owl-dot {
     width: 20px;
     height: 20px;
@@ -6430,58 +6176,46 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transform: scale(1);
     border-radius: 50%;
 }
-
 .tj-project-section .owl-dots .owl-dot.active {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
     background: var(--tj-primary-color);
 }
-
 .tj-project-section-two {
     padding-top: 110px;
     padding-bottom: 90px;
 }
-
 .tj-project-section-two.tj-project-page {
     padding-bottom: 110px;
 }
-
 .tj-project-section-two.tj-project-page .tj-theme-btn {
     margin-top: 30px;
 }
-
 .tj-project-area .project-image {
     border-radius: 3px;
 }
-
 .tj-project-area .grid-item {
     margin-bottom: 1.5%;
 }
-
 .tj-project-area .project-item-three.grid-division-1 {
     width: 38%;
 }
-
 .tj-project-area .project-item-three.grid-division {
     width: 29%;
 }
-
 .tj-project-area .project-item-three .project-image {
     min-height: 395px;
 }
-
 .tj-project-area .gutter-sizer {
     width: 1.5%;
 }
-
 .project-item-three {
     width: 25%;
     border-right: 2px solid var(--tj-white-color);
     position: relative;
     margin-bottom: 2px;
 }
-
 .project-item-three .project-image {
     position: relative;
     background-position: center;
@@ -6489,14 +6223,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background-size: cover;
     min-height: 673px;
 }
-
 .project-item-three .project-image img {
     width: 100%;
     min-height: 673px;
     height: 100%;
     border-radius: 3px;
 }
-
 .project-item-three .project-image:before {
     top: 0;
     left: 0;
@@ -6513,7 +6245,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
         rgba(255, 255, 255, 0) 100%
     );
 }
-
 .project-item-three .project-text {
     left: 30px;
     bottom: -25px;
@@ -6525,12 +6256,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.4s;
     transition: 500ms all ease;
 }
-
 .project-item-three:hover .project-text {
     opacity: 1;
     visibility: visible;
 }
-
 .project-item-three .project-text .sub-title {
     color: var(--tj-white-color);
     font-size: 16px;
@@ -6538,7 +6267,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     display: block;
     margin-bottom: 15px;
 }
-
 .project-item-three .project-text .title-link {
     color: var(--tj-white-color);
     font-size: 24px;
@@ -6546,11 +6274,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding: 25px 0px 25px;
     transition: 0.4s;
 }
-
 .project-item-three .project-text .title-link:hover {
     color: var(--tj-primary-color);
 }
-
 .project-item-three .project-text p {
     opacity: 0;
     color: var(--tj-white-color);
@@ -6559,7 +6285,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: 500ms all ease;
     transition: 500ms all ease;
 }
-
 .project-item-three .arrow-btn i {
     right: 0;
     color: var(--tj-white-color);
@@ -6577,53 +6302,43 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.4s;
     background: var(--tj-primary-color);
 }
-
 .project-item-three .arrow-btn i:hover {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
 }
-
 .project-item-three:hover .arrow-btn i {
     right: 30px;
     opacity: 1;
     visibility: visible;
 }
-
 .project-item-three .more-btn:hover {
     color: var(--tj-primary-color);
     background-color: var(--tj-white-color);
 }
-
 .project-item-three:hover .project-text {
     bottom: 30px;
 }
-
 .project-item-three:hover .project-text p {
     opacity: 1;
 }
-
 .project-item-three:hover .project-image:before {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 3px;
 }
-
 .tj-project-section-three .tj-project-content-area {
     display: flex;
     flex-wrap: wrap;
 }
-
 /* ----------------------------------
     17. Testimonial CSS
 ------------------------------------ */
 .tj-testimonial-section {
     padding-bottom: 90px;
 }
-
 .tj-testimonial-section .tj-testimonial-slider {
     padding: 0 20px;
 }
-
 .tj-testimonial-section.tj-testimonial-page {
     background: url('../images/banner/test-2.jpg');
     background-position: center;
@@ -6631,7 +6346,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     background-repeat: no-repeat;
     padding-top: 110px;
 }
-
 .tj-testimonial-item {
     border-radius: 12px;
     background: var(--tj-white-color);
@@ -6640,29 +6354,23 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding: 0 0 50px 35px;
     transition: 0.6s;
 }
-
 .tj-testimonial-item .testimoniasl-image {
     position: relative;
     margin-top: -30px;
 }
-
 .tj-testimonial-item .testimonial-comment img {
     transition: 0.6s;
     transform: translateY(0);
 }
-
 .tj-testimonial-item:hover .testimonial-comment img {
     transform: translateY(-10px);
 }
-
 .tj-testimonial-item .content-area {
     padding-right: 35px;
 }
-
 .tj-testimonial-item .testimonial-rating {
     margin-bottom: 50px;
 }
-
 .tj-testimonial-item .testimonial-rating .rating-icon {
     background: var(--tj-primary-color);
     padding: 0 45px;
@@ -6670,13 +6378,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     line-height: 50px;
     border-radius: 0px 3px;
 }
-
 .tj-testimonial-item .testimonial-rating .rating-icon ul li {
     color: var(--tj-white-color);
     display: inline-block;
     margin-right: 5px;
 }
-
 .tj-testimonial-item p {
     font-style: italic;
     font-size: 18px;
@@ -6684,16 +6390,13 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     display: block;
     margin-bottom: 25px;
 }
-
 .tj-testimonial-item .testimonial-content .testimonial-auother .title {
     font-weight: 700;
     margin-bottom: 0;
 }
-
 .tj-testimonial-item .testimonial-content .testimonial-auother .sub-title {
     color: var(--tj-primary-color);
 }
-
 .tj-testimonial-section-two {
     padding-bottom: 175px;
     background: url('../images/banner/testimonial-bg.jpg');
@@ -6703,7 +6406,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
 }
-
 .tj-testimonial-section-two::before {
     width: 100%;
     position: absolute;
@@ -6714,11 +6416,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.7);
 }
-
 .tj-testimonial-section-two .tj-section-heading .title {
     color: var(--tj-white-color);
 }
-
 .tj-testimonial-item-two {
     padding: 45px 25px 45px 40px;
     border: 1px solid rgba(253, 85, 35, 0.6);
@@ -6728,12 +6428,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: relative;
     z-index: 3;
 }
-
 .tj-testimonial-item-two .description p {
     color: var(--tj-white-color);
     margin-bottom: 35px;
 }
-
 .tj-testimonial-item-two .testimonial-auother {
     background: var(--tj-dark-color2);
     min-width: 386px;
@@ -6744,11 +6442,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: relative;
     transition: 0.4s;
 }
-
 .tj-testimonial-item-two:hover .testimonial-auother {
     background-color: var(--tj-primary-color);
 }
-
 .tj-testimonial-item-two .testimonial-auother::before {
     z-index: 1;
     top: -20px;
@@ -6764,40 +6460,32 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     transition: 0.4s;
 }
-
 .tj-testimonial-item-two:hover .testimonial-auother::before {
     background-color: var(--tj-primary-color3);
 }
-
 .tj-testimonial-item-two .testimonial-auother .client-image {
     max-width: 65px;
     margin-right: 15px;
 }
-
 .tj-testimonial-item-two .testimonial-auother .title {
     margin-bottom: 0;
     font-size: 24px;
     display: block;
     transition: 0.4s;
 }
-
 .tj-testimonial-item-two:hover .testimonial-auother .title {
     color: var(--tj-white-color);
 }
-
 .tj-testimonial-item-two .testimonial-auother .sub-title {
     transition: 0.4s;
 }
-
 .tj-testimonial-item-two:hover .testimonial-auother .sub-title {
     color: var(--tj-white-color);
 }
-
 .tj-testimonial-item-two .rating-icon ul li {
     display: inline-block;
     color: var(--tj-gray-color8);
 }
-
 /* ----------------------------------
     18. Counter CSS
 ------------------------------------ */

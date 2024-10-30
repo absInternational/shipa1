@@ -265,7 +265,7 @@
             <div class="col-lg-4  pt-4 mt-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/FTL.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('/public/frontend/images/project/tuxpi.co0293926.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -277,7 +277,7 @@
             <div class="col-lg-4  pt-4 mt-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/LTL.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('/public/frontend/images/project/tuxpi.com.1665.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>

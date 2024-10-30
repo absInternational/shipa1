@@ -173,7 +173,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/CONSTRUCTION-1.webp') }}"
+                        <img class="rounded" src="{{ asset('/public/frontend/images/project/tuxpi.com.1729.webp') }}"
                             alt="Image">
                     </div>
                 </div>
@@ -187,7 +187,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/construction-666.webp') }}"
+                        <img class="rounded" src="{{ asset('/public/frontend/images/project/tuxpi.com.17292466.webp') }}"
                             alt="Image">
                     </div>
                 </div>
@@ -234,7 +234,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('frontend/images/project/CONSTRUCTION-4.webp') }}"
+                        <img class="rounded" src="{{ asset('/public/frontend/images/project/tuxpi.commmm.webp') }}"
                             alt="Image">
                     </div>
                 </div>
