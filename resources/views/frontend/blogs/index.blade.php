@@ -143,7 +143,7 @@
                             <div class="tj-appointment-bg" data-bg-image="/assets/images/banner/service_shape.png"></div>
                             <div class="tj-appointment-body">
                                 <div class="appointment-percent text-center">
-                                    <span class="text-uppercase">100% <br />Quality
+                                    <span class="text-uppercase fa-beat-fade">100% <br />Quality
                                     </span>
                                 </div>
                                 <div class="appointment-content text-center">

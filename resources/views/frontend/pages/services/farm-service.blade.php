@@ -335,7 +335,7 @@
         </div>
     </div>
 </section>
-<section class="tj-choose-us-section-service-farm-8">
+<section class="tj-choose-us-section-service-farming-8">
     <div class="container why-box">
         <div class="row services">
             <div class="col-12">
