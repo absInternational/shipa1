@@ -44,7 +44,6 @@
                                     <a
                                         @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}"
                                         @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
-                                        {{-- <img src="{{ asset('frontend/images/blog/blog-14.jpg') }}" alt="Blog" /></a> --}}
                                         <img src="{{ asset($blog->post_image) }}" alt="Blog" />
                                     </a>
                                 </div>
@@ -68,25 +67,11 @@
                                             </h2>
                                         </div>
                                         <div class="blog-meta">
-                                            {{-- <div class="meta-list">
-                                            <ul class="list-gap">
-                                                <li><i class="fa-light fa-user"></i> <a href="#">
-                                                        {{ $blog->user->name }}</a></li>
-                                                <li>
-                                                    <i class="flaticon-calendar"></i> <span>
-                                                        {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</span>
-                                                </li>
-
-                                                </ul>
-                                            </div> --}}
                                         </div>
                                     </div>
                                     <p>
                                         {!! Illuminate\Support\Str::limit($blog->post_short_description, 200, '...') !!}
                                     </p>
-                                    <!-- <div>
-                                        {!! Illuminate\Support\Str::limit($blog->post_short_description ?: $blog->post_description, 120, '...') !!}
-                                    </div> -->
                                     <div class="read-more">
                                         <a
                                             @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}"
@@ -103,7 +88,6 @@
                     <div class="details-sidebar-inner">
                         <div class="tj-sidebar-widget sidebar-post"   data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
                             <h5 class="details_title">Recent Blogs</h5>
-
                             @foreach ($recent_blogs as $blog)
                                 <div class="tj-post-content">
                                     <div class="tj-auother-img">
@@ -125,7 +109,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="tj-appointment-box" data-bg-image="/assets/images/service/service-15.jpg"   data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
+                        <div class="tj-appointment-box fa-fade" data-bg-image="/assets/images/service/service-15.jpg"   data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
                             <div class="tj-appointment-bg" data-bg-image="/assets/images/banner/service_shape.png"></div>
                             <div class="tj-appointment-body">
                                 <div class="appointment-percent text-center">
@@ -154,7 +138,6 @@
         </div>
     </section>
     <!--========== blog details End ==============-->
-
     <!--=========== Newsletter Section Start =========-->
     @include('partials.newsletter')
     <!--=========== Newsletter Section End =========-->
