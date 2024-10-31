@@ -1,16 +1,13 @@
 @extends('frontend.layouts.app')
-
 @section('title')
 {{-- {{ $blog->meta_title }} --}}
 {{ $blog->meta_title ? $blog->meta_title : 'Opps Title is Not Availabe' }}
 @endsection
-
 @section('meta_description')
 {{ $blog->meta_description }}
 @endsection
-
 @section('content')
-<style>
+    <style>
         font {
             display: contents;
         }
@@ -38,7 +35,6 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <!--========== blog details Start ==============-->
     <section class="tj-blog-details">
         <div class="container">
@@ -66,15 +62,6 @@
                                     </h3>
                                 </div>
                                 <div class="blog-meta">
-                                    {{-- <div class="meta-list">
-                                        <ul class="list-gap">
-                                            <li><i class="fa-light fa-user"></i> <a href="#">
-                                                    {{ $blog->user->name }}</a></li>
-                                            <li><i class="flaticon-calendar"></i> <span>
-                                                    {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</span>
-                                            </li>
-                                        </ul>
-                                    </div> --}}
                                 </div>
                             </div>
                             <p>
@@ -85,13 +72,6 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="details-sidebar-inner">
-                        {{-- <div class="tj-sidebar-widget sidebar-search">
-                            <form action="#">
-                                <input type="text" class="form-control" name="search" id="searchOne"
-                                    placeholder="Search" />
-                                <i class="flaticon-loupe"></i>
-                            </form>
-                        </div> --}}
                         <div class="tj-sidebar-widget sidebar-post">
                             <h5 class="details_title">Recent Blogs</h5>
                             @foreach ($recent_blogs as $blog)
@@ -102,12 +82,6 @@
                                             <img src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
                                     </div>
                                     <div class="tj-details-text">
-                                        <!-- <div class="details-meta">
-                                            <ul class="list-gap">
-                                                <li><i class="flaticon-calendar"></i>
-                                                    {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}</li>
-                                            </ul>
-                                        </div> -->
                                         <div class="tj-details-header">
                                             <h6>
                                                 <a
@@ -120,14 +94,12 @@
                                 </div>
                             @endforeach
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!--========== blog details End ==============-->
-
     <!--=========== Newsletter Section Start =========-->
     @include('partials.newsletter')
     <!--=========== Newsletter Section End =========-->
