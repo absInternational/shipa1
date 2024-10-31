@@ -18,7 +18,7 @@ class ForceHttps
 
     public function handle(Request $request, Closure $next)
     {
-        if ($this->app->environment('production')) {
+        if (app()->environment('production')) {
             $host = $request->getHost();
 
             if (!$request->isSecure() || !str_starts_with($host, 'www.')) {
