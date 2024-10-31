@@ -545,6 +545,124 @@
           </div>
         </div>
 </section>
+<section class="tj-testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="tj-section-heading text-center">
+                {{-- <span class="sub-title active-shape"> test </span> --}}
+                <h5 class="title fs-1">Trailers used for Gold Cart</h5>
+            </div>
+        </div> 
+        <div class="owl-carousel carousel11">
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/Golf cart on enclosed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Enclosed Trailers</h5>
+                                    <p class="card-text  text-dark">Used for expensive or luxury golf carts, this type of trailer is designed to protect your
+                                        vehicle from potential scratches, road debris, and weather conditions although it is a bit pricey as
+                                        compared to the other trailers it offers peace of mind to the customers.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Open Trailers</h5>
+                                    <p class="card-text text-dark">A cost-effective option for those who just want their standard golf carts to be shipped, it
+                                        provides accessibility and visibility to the golf carts strapped onto the trailer, without compromising the
+                                        quality or duration of your shipment.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Golf cart on open trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/1 image for Commercial b00h.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Tilt Trailers</h5>
+                                    <p class="card-text text-dark">This trailer facilitates easy loading and
+                                         unloading of a golf cart because of its tilted deck.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Hydraulic Lift Trailers</h5>
+                                    <p class="card-text text-dark">This trailer has a hydraulic feature that allows the bed to be lowered and raised
+                                        making unloading and loading a golf cart much more convenient.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Golf cart on hydraulic lift trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="why-choose-us-slider">
     <div class="container">
         <div class="tj-section-heading text-center">
@@ -797,36 +915,32 @@
                 const counter = document.getElementById('counter-value');
                 const target = +counter.getAttribute('data-target');
                 let count = 0;
-                const increment = target / 50; // Adjust this value to control the speed
-
+                const increment = target / 50; 
                 const updateCounter = () => {
                     if (count < target) {
                         count = Math.ceil(count + increment);
                         counter.textContent = count;
-                        setTimeout(updateCounter, 50); // Adjust this value to control the speed
+                        setTimeout(updateCounter, 50); 
                     } else {
                         counter.textContent = target;
                     }
                 };
-
                 updateCounter();
             });
             document.addEventListener("DOMContentLoaded", function () {
                 const counter = document.getElementById('counter-value-2');
                 const target = +counter.getAttribute('data-target');
                 let count = 0;
-                const increment = target / 50; // Adjust this value to control the speed
-
+                const increment = target / 50; 
                 const updateCounter = () => {
                     if (count < target) {
                         count = Math.ceil(count + increment);
                         counter.textContent = count;
-                        setTimeout(updateCounter, 50); // Adjust this value to control the speed
+                        setTimeout(updateCounter, 50); 
                     } else {
                         counter.textContent = target;
                     }
                 };
-
                 updateCounter();
             });
         </script> 
