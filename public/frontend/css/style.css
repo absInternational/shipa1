@@ -10761,3 +10761,28 @@ PAGE LOAD ANIMATION
         color: #fff;
         border: none;
     }
+    .owl-carousel .item {
+        transition: opacity 0.8s ease-in-out;
+        opacity: 0; 
+    }
+    .owl-carousel .owl-item.active .item {
+        opacity: 1; 
+    }
+    .card-2 {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.85); 
+    }
+    .card-image-2 {
+        flex: 1;
+        background-image: url('https://shipa1.com/frontend/images/project/golf-cart-service.webp'); 
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.85);
+    }

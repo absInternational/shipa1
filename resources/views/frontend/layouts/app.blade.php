@@ -1016,5 +1016,35 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function(){
+            // Initialize the first carousel
+            $(".carousel11").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                smartSpeed: 800,
+                animateOut: 'animate__fadeOut',
+                animateIn: 'animate__fadeIn',
+                fluidSpeed: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

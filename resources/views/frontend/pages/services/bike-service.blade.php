@@ -4,12 +4,11 @@
 @section('content')
 <style>
     .owl-carousel .item {
-        transition: opacity 0.8s ease-in-out; /* Smooth transition */
-        opacity: 0; /* Initially hidden */
+        transition: opacity 0.8s ease-in-out;
+        opacity: 0; 
     }
-
     .owl-carousel .owl-item.active .item {
-        opacity: 1; /* Fully visible for the active item */
+        opacity: 1; 
     }
     .card-2 {
         display: flex;
@@ -18,36 +17,21 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
         overflow: hidden;
-        /* max-width: 800px;
-        width: 90%; */
-        /* background-image: url('https://shipa1.com/frontend/images/project/golf-cart-service.webp'); /* Placeholder image */
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.85); */
-    }
-
-    .card-image-2 {
-        flex: 1;
-        background-image: url('https://shipa1.com/frontend/images/project/golf-cart-service.webp'); /* Placeholder image */
         background-size: cover;
         background-position: center;
         filter: brightness(0.85);
-        /* clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%); */
     }
-
     .card-content {
         background: #1a191929;
         flex: 1;
         padding: 2rem;
     }
-
     .card-title {
         font-size: 1.5rem;
         font-weight: bold;
         color: #1a73e8;
         margin-bottom: 1rem;
     }
-
     .card-description {
         font-size: 1rem;
         color: #ffffff;
@@ -548,31 +532,28 @@
       </div>
     </div>
 </section>
-{{-- <section class="tj-testimonial-section">
+<section class="tj-testimonial-section">
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
-                <span class="sub-title active-shape"> test </span>
-                <h2 class="title"> test</h2>
+                {{-- <span class="sub-title active-shape"> test </span> --}}
+                <h5 class="title fs-1">Advanced Trailers used for Motorcycles</h5>
             </div>
         </div>
-        <div class="owl-carousel" id="owl-carousel-new">
+        <div class="owl-carousel carousel11">
             <div class="item">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-2 mb-3">
                             <div class="row g-0">
                                 <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="https://shipa1.com/frontend/images/project/golf-cart-service.webp" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                <img src="{{ asset('/public/frontend/images/slider/Single-Motorcycle-on-Closed-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                 </div>
                                 <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                 <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
-                                    <p class="card-text  text-dark">It involves shipping of backhoes from one place to another with the use of
-                                    specialized trailers and equipment. All State to State Auto Transport offers
-                                    high-quality shipping services for heavy equipment, including backhoes. 
-                                    On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
-                                    charges, though the transportation cost can be high.</p>
+                                    <h5 class="card-title sub-title active-shape">Single-Motorcycle Trailers</h5>
+                                    <p class="card-text  text-dark">Designed for a single motorcycle, this type
+                                         of trailer is lightweight and easy to transport</p>
                                     <div class="tj-theme-button mt-2">
                                     <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
                                         Get Quote
@@ -593,12 +574,9 @@
                             <div class="row g-0">
                                 <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                 <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
-                                    <p class="card-text text-dark">It involves shipping of backhoes from one place to another with the use of
-                                    specialized trailers and equipment. All State to State Auto Transport offers
-                                    high-quality shipping services for heavy equipment, including backhoes. 
-                                    On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
-                                    charges, though the transportation cost can be high.</p>
+                                    <h5 class="card-title sub-title active-shape">Multi-Motorcycle Trailers</h5>
+                                    <p class="card-text text-dark">Capable of carrying more than 1 motorcycle, this type 
+                                        of trailer has a strong body and has more features than the single motorcycle trailer.</p>
                                     <div class="tj-theme-button mt-2">
                                     <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
                                         Get Quote
@@ -608,20 +586,20 @@
                                 </div>
                                 </div>
                                 <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="https://shipa1.com/frontend/images/project/golf-cart-service.webp" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    <img src="{{ asset('/public/frontend/images/slider/Multiple-Motorcycles-on-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="item">
+            {{-- <div class="item">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-2 mb-3">
                             <div class="row g-0">
                                 <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="https://shipa1.com/frontend/images/project/golf-cart-service.webp" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                 </div>
                                 <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                 <div class="card-body tj-section-heading mb-0">
@@ -666,16 +644,16 @@
                                 </div>
                                 </div>
                                 <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="https://shipa1.com/frontend/images/project/golf-cart-service.webp" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
-</section> --}}
+</section>
 <section class="tj-choose-us-section-service-bike-6">
     <div class="container why-box">
         <div class="row services">
@@ -811,7 +789,8 @@
 @section('extraScript')
 <script>
     $(document).ready(function(){
-        $("#owl-carousel-new").owlCarousel({
+        // Initialize the first carousel
+        $("#carousel1").owlCarousel({
             items: 1,
             loop: true,
             margin: 10,
@@ -820,23 +799,21 @@
             autoplay: true,
             autoplayTimeout: 3000,
             autoplayHoverPause: true,
-            smartSpeed: 800, // Animation speed
-
-            // animateOut: 'rotateOut',
-            // animateIn: 'rotateIn',
-
-            // animateOut: 'bounceOut',
-            // animateIn: 'bounceIn',
-
-            // animateOut: 'fadeOut',
-            // animateIn: 'fadeIn',
-
-            // animateOut: 'flipOutX',
-            // animateIn: 'flipInX',
-
-            // animateOut: 'lightSpeedOut',
-            // animateIn: 'lightSpeedIn',
-            fluidSpeed: true
+            smartSpeed: 800,
+            animateOut: 'animate__fadeOut',
+            animateIn: 'animate__fadeIn',
+            fluidSpeed: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
         });
     });
 </script>

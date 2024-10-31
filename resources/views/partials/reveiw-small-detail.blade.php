@@ -214,7 +214,7 @@
 </section>
 <script>
     $(document).ready(function(){
-      $(".owl-carousel").owlCarousel({
+      $(".owl-theme").owlCarousel({
         loop: true,
         margin: 30,
         nav: true,
