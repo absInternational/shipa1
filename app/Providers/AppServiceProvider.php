@@ -23,26 +23,29 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
     public function boot()
     {
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
+
+            $this->app['router']->pushMiddlewareToGroup('web', function ($request, $next) {
+                $host = $request->getHost();
+
+                if (!str_starts_with($host, 'www.')) {
+                    $newUrl = 'https://www.' . ltrim($host, 'www.') . $request->getRequestUri();
+                    return Redirect::to($newUrl, 301);
+                }
+
+                return $next($request);
+            });
         }
-
-        // if ($this->app->environment('production')) {
-        //     URL::forceScheme('https');
-
-        //     $this->app['request']->server->set('HTTPS', true);
-        //     if (!str_starts_with(request()->getHost(), 'www')) {
-        //         $this->app['request']->server->set('HTTP_HOST', 'www.shipa1.com');
-        //     }
-
-        //     $this->app['router']->pushMiddlewareToGroup('web', function ($request, $next) {
-        //         if (!str_starts_with($request->getHost(), 'www')) {
-        //             return Redirect::secure('www.' . $request->getHost() . $request->getRequestUri());
-        //         }
-        //         return $next($request);
-        //     });
-        // }
     }
+
+    // public function boot()
+    // {
+    //     if ($this->app->environment('production')) {
+    //         URL::forceScheme('https');
+    //     }
+    // }
 }
