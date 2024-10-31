@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <!-- Meta Tag -->
     <meta charset="utf-8" />
@@ -19,20 +18,14 @@
         content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
     <!--========== twitter-card============-->
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
-
     <!-- Select2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-
-
     <!-- Include jQuery -->
     <script src="https://unpkg.com/imask"></script>
-
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -47,7 +40,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
-
     <!-- Bootstrap  v5.1.3 css -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
@@ -75,13 +67,11 @@
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
     <link rel="stylesheet" href="{{ asset('public/frontend/css/responsive.css') }}" />
-
+    <link rel="canonical" href="{{ url()->current() }}">
     {{-- csrf --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -132,148 +122,50 @@
     </script>
 </head>
 <style>
-
-   /* Smooth page transition loader */
-
-    /* .page-transition-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        background: linear-gradient(45deg, rgba(0, 100, 0, 0.6), rgba(140, 196, 69, 0.9));
-        z-index: 9999;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.8s ease;
-    }
-
-
-    .page-transition-overlay.active {
-        opacity: 1;
-        pointer-events: all;
-    }
-
-  
-    .fade-in {
-        animation: fadeIn 0.8s ease forwards;
-    }
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: scale(1.02) translateY(20px); 
-        }
-        100% {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }
-    }
-
-
-    .fade-out {
-        animation: fadeOut 0.8s ease forwards;
-    }
-
-    @keyframes fadeOut {
-        0% {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }
-        100% {
-            opacity: 0;
-            transform: scale(1) translateX(10px); 
-        }
-    }
-
-
-    .page-transition-overlay::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.4);
-        animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-        0% {
-            transform: translate(-50%, -50%) scale(1);
-        }
-        50% {
-            transform: translate(-50%, -50%) scale(1.2);
-        }
-        100% {
-            transform: translate(-50%, -50%) scale(1);
-        }
-    } */
-    
-    
-    
     .error-field {
     border: 2px solid red!important;
     }
-    
-    /* Dropdown Container */
     .dropdown {
         position: relative;
         width: 100%;
     }
-
-    /* Dropdown Input */
     .dropdown-toggle {
         width: 100%;
-        padding: 0.375rem 0.75rem; /* Adjust padding as needed */
-        font-size: 1rem; /* Adjust font size */
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem; 
         line-height: 1.5;
         border: 1px solid #ced4da;
-        border-radius: 0.25rem; /* Rounded corners */
+        border-radius: 0.25rem; 
     }
-
-    /* Dropdown Menu */
     .dropdown-menu.year-dropdown {
-        width: 100%; /* Full width of the container */
-        max-height: 200px; /* Limit height for scrolling */
-        overflow-y: auto; /* Enable scrolling */
-        padding: 0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
+        width: 100%; 
+        max-height: 200px;
+        overflow-y: auto;
+        padding: 0; 
+        margin: 0;
         border: 1px solid #ced4da;
-        border-radius: 0.25rem; /* Rounded corners */
-        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Add shadow for better visibility */
+        border-radius: 0.25rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
     }
-
-    /* Dropdown Items */
     .dropdown-item {
-        padding: 0.375rem 0.75rem; /* Adjust padding */
-        font-size: 1rem; /* Adjust font size */
-        color: #212529; /* Text color */
-        text-decoration: none; /* Remove underline */
+        padding: 0.375rem 0.75rem; 
+        font-size: 1rem;
+        color: #212529;
+        text-decoration: none;
     }
-
     .dropdown-item:hover {
-        background-color: #f8f9fa; /* Highlight on hover */
-        color: #16181b; /* Darker text color on hover */
+        background-color: #f8f9fa; 
+        color: #16181b;
     }
-
-    /* Responsive Adjustments */
     @media (max-width: 576px) {
         .dropdown-menu.year-dropdown {
-            position: static; /* Ensure proper alignment on small devices */
+            position: static;
         }
-
         .dropdown-toggle {
-            margin-bottom: 10px; /* Space below input */
+            margin-bottom: 10px; 
         }
     }
-    
-    /* General dropdown style */
     .dropdown-menu {
-        /* display: flex; */
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -287,7 +179,6 @@
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
         width: auto;
     }
-
     .dropdown-item {
         padding: 10px 15px;
         font-size: 14px;
@@ -296,79 +187,29 @@
         display: block;
         border-bottom: 1px solid #eee;
     }
-
     .dropdown-item:hover {
         background-color: #f1f1f1;
     }
-
-    /* Adjust dropdown on smaller screens */
     @media (max-width: 768px) {
         .dropdown-menu {
             width: 100%;
             position: relative;
             max-height: 400px;
         }
-
         .dropdown-item {
             padding: 12px 20px;
             font-size: 16px;
             text-align: center;
         }
     }
-
-    /* Larger touch areas on smaller screens */
     @media (max-width: 480px) {
         .dropdown-item {
             font-size: 18px;
             padding: 15px 20px;
         }
     }
-
 </style>
-<!--Start of Tawk.to Script-->
-<!-- <script type="text/javascript">
-    var Tawk_API = Tawk_API || {},
-        Tawk_LoadStart = new Date();
-    (function() {
-        var s1 = document.createElement("script"),
-            s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/6675d43ceaf3bd8d4d1320dc/1i0u4a3i2';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    })();
-</script> -->
-<!--End of Tawk.to Script-->
-
 <body class="fade-in">
-
-    {{-- <div class="page-transition-overlay"></div> --}}
-    
-    <!-- Preloader start -->
-    <!-- <div id="preloader" class="preloader">
-        <div class="animation-preloader">
-            <div class="spinner">
-                <div class="loader-icon">
-                    <img src="{{ asset('frontend/images/logo/favicon.png') }}"
-                        alt="Corporate Business HTML Template" />
-                </div>
-            </div>
-            <div class="txt-loading">
-                <span data-text-preloader="S" class="letters-loading"> S </span>
-                <span data-text-preloader="H" class="letters-loading"> H </span>
-                <span data-text-preloader="I" class="letters-loading"> I </span>
-                <span data-text-preloader="P" class="letters-loading"> P </span>
-                <span data-text-preloader="" class="letters-loading"> </span>
-                <span data-text-preloader="A" class="letters-loading"> A </span>
-                <span data-text-preloader="1" class="letters-loading"> 1 </span>
-                <span data-text-preloader="" class="letters-loading"> </span>
-            </div>
-        </div>
-        <button class="tj-primary-btn">Cancel Preloader</button>
-    </div> -->
-    <!-- Preloader end -->
-
     <!-- Offcanvas Area Start-->
     <div id="tj-overlay-bg2" class="tj-overlay-canvas"></div>
     <div class="tj-offcanvas-area">
@@ -383,12 +224,6 @@
                 </a>
             </div>
         </div>
-        {{-- <div class="tj-search-box">
-            <form action="#">
-                <input type="text" class="form-control-1" name="search" id="searchTwo" placeholder="Search" />
-                <a href="#"> <i class="fal fa-search"></i></a>
-            </form>
-        </div> --}}
         <!-- Canvas Mobile Menu start -->
         <nav class="right_menu_togle mobile-navbar-menu d-lg-none" id="mobile-navbar-menu"></nav>
         <p class="des d-none d-lg-block">
@@ -396,81 +231,16 @@
             leads thanks to our work.
         </p>
         <!-- Canvas Menu end -->
-        <!-- <div class="contact-info-list">
-            <h4 class="offcanvas-title">Contact info</h4>
-            <div class="contact-box">
-                <div class="contact-icon">
-                    <i class="fa-light fa-location-dot"></i>
-                </div>
-                <div class="contact-link">
-                    <span class="d-block">Location:</span>
-                    <p><a href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu"
-                            target="_blank">201 International Cir STE 230,<br>Hunt Valley, MD 21030-1344</a></p>
-                </div>
-            </div>
-            <div class="contact-box contact-box1">
-                <div class="contact-icon">
-                    <i class="flaticon-email-2"></i>
-                </div>
-                <div class="contact-link">
-                    <span class="d-block">Email us:</span>
-                    <a href="mailto:info@shipa1.com">shawntransport@shipa1.com</a>
-                </div>
-            </div>
-            <div class="contact-box">
-                <div class="contact-icon">
-                    <i class="flaticon-telephone"></i>
-                </div>
-                <div class="contact-link">
-                    <span class="d-block"> Call us:</span>
-                    <a href="tel: 1 (844) 474-4721">1 (844) 474-4721</a>
-                </div>
-            </div>
-        </div>
-        <div class="tj-offcanvas-icon-list">
-            <h4 class="offcanvas-title">Social Item</h4>
-            <ul>
-                <li>
-                    <a href="https://www.facebook.com/ShipA1/" target="_blank"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/shipa1_transport/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/@shipA1392" target="_blank"><i
-                            class="fa-brands fa-youtube"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                </li>
-            </ul>
-        </div>
-        <div class="contact-map d-none d-lg-block">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s"
-                style="border: 0" allowfullscreen=""></iframe>
-        </div>
-        <div class="tj-theme-button tj-btn d-lg-none">
-            <a class="tj-primary-btn" href="#">Track Order<i class="flaticon-right-1"></i> </a>
-        </div> -->
     </div>
     <!-- Offcanvas Area End-->
-
     {{-- Header Section Start --}}
     @include('frontend.includes.header')
-
     {{-- page content --}}
     @yield('content')
-
     {{-- Footer Section Start --}}
     @include('frontend.includes.footer')
-
     {{-- page content --}}
     @yield('extraScript')
-
     <!-- start scrollUp  -->
     <div class="logiland-scroll-top progress-done">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -491,7 +261,6 @@
         </div>
     </div>
     <!-- End scrollUp  -->
-
     <!-- INDEX-HOME  -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -500,12 +269,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="path/to/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-
-
-
     {{-- sweet alert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <!-- Modernizr.JS -->
     <script src="{{ asset('frontend/js/modernizr-2.8.3.min.js') }}"></script>
     <!-- jQuery.min JS -->
@@ -563,7 +328,6 @@
         });
     </script>
     {{-- owl-caro --}}
-
     {{-- email_newsletter --}}
     <script>
         $(document).ready(function() {
@@ -601,7 +365,6 @@
         });
     </script>
     {{-- email_newsletter --}}
-
     {{-- imagePreview --}}
     <script>
         let selectedFiles = [];
@@ -647,7 +410,6 @@
         }
     </script>
     {{-- imagePreview --}}
-
     {{-- input --}}
     <script>
         $(document).ready(function() {
@@ -657,7 +419,6 @@
         });
     </script>
     {{-- input --}}
-
     {{-- phone mask  --}}
         <script>
             const phoneInput = document.querySelector("#phone");
@@ -739,7 +500,6 @@
             //  last-work
         </script>
     {{-- phone mask  --}}
-
     {{-- category subcategory --}}
     <script>
         $(document).ready(function() {
@@ -780,7 +540,6 @@
         });
     </script>
     {{-- category subcategory --}}
-
     {{-- modification / available_at_auction --}}
     <script>
         $(document).ready(function() {
@@ -794,7 +553,6 @@
                     $('#link').removeAttr('required');
                 }
             });
-
             $(document).on('change', '#modification', function() {
                 if ($(this).is(':checked')) {
                     $('.div-modify_info').show();
@@ -808,10 +566,8 @@
         });
     </script>
     {{-- modification / available_at_auction --}}
-
     {{-- multi step form --}}
-    <script>
-        
+    <script>  
         $('#category').on('change', function() {
             $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
 
@@ -827,25 +583,20 @@
                 $('#' + field).addClass('error-field');
                 $('#' + field + '-error').text(message).show();
             }
-
             function hideError(field) {
                 $('#' + field).removeClass('error-field');
                 $('#' + field + '-error').hide();
             }
-
-            // Regular expression for the desired format: "City,State,ZipCode"
             function isValidFormat(value) {
-                var regex = /^[A-Za-z\s]+,[A-Z]{2},\d{5}$/; // Adjust regex if needed
+                var regex = /^[A-Za-z\s]+,[A-Z]{2},\d{5}$/;
                 return regex.test(value);
             }
-
             function validateStep(step) {
                 var isValid = true;
                 $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]')
                     .each(function() {
                         var field = $(this).attr('id');
                         var fieldValue = $(this).val();
-
                         if ($(this).hasClass('ajax-suggestion-input')) {
                             if (!$(this).data('selected') || $(this).val() === '') {
                                 showError(field, 'Please select a valid option from suggestions.');
@@ -874,10 +625,8 @@
                     });
                 return isValid;
             }
-
             function fetchSuggestions(inputField, suggestionsList) {
                 var inputValue = inputField.val();
-
                 $.ajax({
                     url: "{{ route('get.zipcodes') }}",
                     method: "POST",
@@ -898,7 +647,6 @@
                             });
                             suggestionsList.append(listItem);
                         });
-
                         suggestionsList.show();
                     },
                     error: function(xhr, status, error) {
@@ -906,84 +654,52 @@
                     }
                 });
             }
-
             $(document).ready(function() {
-            // Handle input for pickup location
             $('#pickup-location').on('input', function() {
                 var inputField = $(this);
                 var suggestionsList = $('.suggestionsPickup');
                 inputField.data('selected', false);
-
                 fetchSuggestions(inputField, suggestionsList);
             });
-
-            // Handle input for delivery location
             $('#delivery-location').on('input', function() {
                 var inputField = $(this);
                 var suggestionsList = $('.suggestionsDelivery');
                 inputField.data('selected', false);
-
                 fetchSuggestions(inputField, suggestionsList);
             });
-
-            // Close the suggestions list when clicking outside of the inputs or suggestions
             $(document).on('click', function(event) {
                 var pickupInputField = $('#pickup-location');
                 var pickupSuggestionsList = $('.suggestionsPickup');
                 var deliveryInputField = $('#delivery-location');
                 var deliverySuggestionsList = $('.suggestionsDelivery');
-                
-                // Check if click was outside pickup input and suggestions
                 if (!pickupInputField.is(event.target) && 
                     !pickupSuggestionsList.is(event.target) && 
                     pickupSuggestionsList.has(event.target).length === 0) {
-                    pickupSuggestionsList.hide(); // Hide pickup suggestions
+                    pickupSuggestionsList.hide();
                 }
-
-                // Check if click was outside delivery input and suggestions
                 if (!deliveryInputField.is(event.target) && 
                     !deliverySuggestionsList.is(event.target) && 
                     deliverySuggestionsList.has(event.target).length === 0) {
-                    deliverySuggestionsList.hide(); // Hide delivery suggestions
+                    deliverySuggestionsList.hide();
                 }
             });
         });
-
-            // $('#pickup-location').on('input', function() {
-            //     var inputField = $(this);
-            //     var suggestionsList = $('.suggestionsPickup');
-            //     inputField.data('selected', false);
-
-            //     fetchSuggestions(inputField, suggestionsList);
-            // });
-
-            // $('#delivery-location').on('input', function() {
-            //     var inputField = $(this);
-            //     var suggestionsList = $('.suggestionsDelivery');
-            //     inputField.data('selected', false);
-
-            //     fetchSuggestions(inputField, suggestionsList);
-            // });
-
             $('#step1_next').click(function() {
                 if (validateStep('step1')) {
                     $('#step1').hide();
                     $('#step2').show();
                 }
             });
-
             $('#step2_previous').click(function() {
                 $('#step2').hide();
                 $('#step1').show();
             });
-
             $('#step2_next').click(function() {
                 if (validateStep('step2')) {
                     $('#step2').hide();
                     $('#step3').show();
                 }
             });
-
             $('#step3_previous').click(function() {
                 $('#step3').hide();
                 $('#step2').show();
@@ -991,7 +707,6 @@
         });
     </script>
     {{-- multi step form end --}}
-
     {{-- app js  --}}
     @php
         $makes = App\Models\VehicleName::select('make')
@@ -1010,18 +725,13 @@
             $('#example-multiple-2').select2();
         });
     </script>
-
     {{-- single form location validation --}}
-    <script>
-        // NEW CODE 
-        // single form location validation 
+    <script> 
         $(document).ready(function() {
             var validPickupSuggestions = [];
             var validDeliverySuggestions = [];
-
             function updateSuggestions(inputField, suggestionsList, validSuggestions) {
                 var inputValue = inputField.val();
-
                 $.ajax({
                     url: "{{ route('get.zipcodes') }}",
                     method: "POST",
@@ -1031,14 +741,13 @@
                     },
                     success: function(response) {
                         suggestionsList.empty();
-                        validSuggestions.length = 0; // Clear previous suggestions
-
+                        validSuggestions.length = 0;
                         $.each(response, function(index, suggestion) {
                             var listItem = $("<li>").text(suggestion).click(function() {
                                 inputField.val(suggestion);
                                 suggestionsList.css("display", "none");
                             });
-                            validSuggestions.push(suggestion); // Add to valid suggestions
+                            validSuggestions.push(suggestion);
                             suggestionsList.append(listItem);
                         });
                     },
@@ -1047,30 +756,6 @@
                     }
                 });
             }
-
-            // // $("#pickup-location").keyup(function() {
-            // $(document).on('keyup', '#pickup-location', function() {
-            //     var inputField = $(this);
-            //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-            //     suggestionsList.css("display", "block");
-            //     if (inputField.val() === "") {
-            //         suggestionsList.css("display", "none");
-            //     }
-            //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-            // });
-
-            // // $("#delivery-location").keyup(function() {
-            // $(document).on('keyup', '#delivery-location', function() {
-            //     var inputField = $(this);
-            //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-            //     suggestionsList.css("display", "block");
-            //     if (inputField.val() === "") {
-            //         suggestionsList.css("display", "none");
-            //     }
-            //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-            // });
-            
-            // Show suggestions for pickup location
                 $(document).on('keyup', '#pickup-location', function() {
                     var inputField = $(this);
                     var suggestionsList = inputField.siblings(".suggestionsTwo");
@@ -1080,8 +765,6 @@
                     }
                     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
                 });
-
-                // Show suggestions for delivery location
                 $(document).on('keyup', '#delivery-location', function() {
                     var inputField = $(this);
                     var suggestionsList = inputField.siblings(".suggestionsTwo");
@@ -1091,16 +774,12 @@
                     }
                     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
                 });
-
-                // Close suggestions dropdown when clicking outside of input or suggestions
                 $(document).on('click', function(event) {
                     var target = $(event.target);
                     if (!target.closest('#pickup-location').length && !target.closest('#delivery-location').length && !target.closest('.suggestionsTwo').length) {
-                        $('.suggestionsTwo').css("display", "none"); // Hide all suggestion lists
+                        $('.suggestionsTwo').css("display", "none"); 
                     }
                 });
-
-
             function validateLocationInput(inputField, validSuggestions, errorField) {
                 var inputValue = inputField.val();
                 if (!validSuggestions.includes(inputValue)) {
@@ -1111,12 +790,10 @@
                     return true;
                 }
             }
-
             $("form").submit(function(event) {
                 var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $(
                     "#errOLoc"));
                 var currentRoute = "{{ Route::currentRouteName() }}";
-
                 if (currentRoute !== 'form.vehicle.roro' && currentRoute !==
                     'frontend.pages.services.roro-service') {
                     var isDeliveryValid = validateLocationInput($("#delivery-location"),
@@ -1131,50 +808,8 @@
                 }
             });
         });
-        // single form location validation end 
     </script>
     {{-- single form location validation --}}
-
-    {{-- <script>
-            $(document).ready(function() {
-                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                    var year = $('.vehicle-year').val();
-                    var makeId = $('.vehicle-make').val();
-                    if (year && makeId) {
-                        getModel(year, makeId);
-                    }
-                });
-                function getModel(year, makeId) {
-                    $.ajax({
-                        url: "{{ route('get.models') }}",
-                        method: 'GET',
-                        data: {
-                            year: year,
-                            make: makeId
-                        },
-                        success: function(response) {
-                            var modelsDropdown = $('.vehicle-model-div');
-                            modelsDropdown.empty();
-                            var selectOptions =
-                                '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                            $.each(response, function(index, model) {
-                                selectOptions += '<option value="' + model + '">' + model +
-                                    '</option>';
-                            });
-                            selectOptions += '</select>';
-                            modelsDropdown.html(selectOptions);
-
-                            // console.log('yesssss', response);
-                        },
-                        error: function(xhr) {
-                            console.log(xhr.responseText);
-                        }
-                    });
-                }
-            });
-        </script> --}}
-    {{-- index js END  --}}
-
     {{-- scroll-up-btn --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -1221,7 +856,6 @@
         });
     </script>
     {{-- scroll-up-btn --}}
-
     {{-- tabSelector --}}
     <script>
         $(document).ready(function() {
@@ -1232,7 +866,6 @@
                 var vehicleType = $(this).val();
                 $('.tab-pane').removeClass('show active');
                 $('#' + selectedTab).addClass('show active');
-
                 $.ajax({
                     url: "{{ route('get.partial.form') }}",
                     method: 'GET',
@@ -1257,49 +890,12 @@
                     addOtherVehicle();
                 }
             });
-
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
             });
-
-            // $(document).on('change', '.year, .make', function() {
-            //     var year = $(this).closest('.vehicle-info').find('.year').val();
-            //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            //     var vehicleInfo = $(this).closest('.vehicle-info');
-            //     if (year && makeId) {
-            //         getModel(year, makeId, vehicleInfo);
-            //     }
-            // });
-
-            // function getModel(year, makeId, vehicleInfo) {
-            //     // console.log('yes inn');
-            //     $.ajax({
-            //         url: "{{ route('get.models') }}",
-            //         method: 'GET',
-            //         data: {
-            //             year: year,
-            //             make: makeId
-            //         },
-            //         success: function(response) {
-            //             var modelsDropdown = vehicleInfo.find('.model');
-            //             modelsDropdown.empty();
-            //             var selectOptions = '<option value="">Select Model</option>';
-            //             $.each(response, function(index, model) {
-            //                 selectOptions += '<option value="' + model + '">' +
-            //                     model +
-            //                     '</option>';
-            //             });
-            //             modelsDropdown.html(selectOptions);
-            //         },
-            //         error: function(xhr) {
-            //             console.log(xhr.responseText);
-            //         }
-            //     });
-            // }
         });
     </script>
     {{-- tabSelector --}}
-
     {{-- L W H W --}}
     <script>
         function limitDigits(element, maxDigits) {
@@ -1339,7 +935,6 @@
         }
     </script>
     {{-- L W H W --}}
-
     {{-- validate-form --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -1404,26 +999,22 @@
         });
     </script>
     {{-- validate-form --}}
-
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lazyBackgrounds = document.querySelectorAll(".lazy-background");
-    
-    lazyBackgrounds.forEach(function (lazyBg) {
-      const imageSrc = lazyBg.getAttribute("data-bg-image");
-      
-      if (imageSrc) {
-        const img = new Image();
-        img.src = imageSrc;
-        img.onload = function () {
-          lazyBg.style.backgroundImage = 'url(' + imageSrc + ')';
-        };
-      }
-    });
-  });
-</script>
-
-    
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyBackgrounds = document.querySelectorAll(".lazy-background");
+            
+            lazyBackgrounds.forEach(function (lazyBg) {
+            const imageSrc = lazyBg.getAttribute("data-bg-image");
+            
+            if (imageSrc) {
+                const img = new Image();
+                img.src = imageSrc;
+                img.onload = function () {
+                lazyBg.style.backgroundImage = 'url(' + imageSrc + ')';
+                };
+            }
+            });
+        });
+    </script>
 </body>
-
 </html>

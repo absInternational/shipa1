@@ -4,21 +4,6 @@
 'Best state to state auto transport services in USA for quick, safe & secure auto vehicle delivery. We focus on your satisfaction with reliable, affordable services.')
 @section('content')
 <style>
-    /* .custom-hover-service-heading:hover{
-        color: green
-    }
-    .tj-testimonial-section {
-        padding: 120px 0px 0px 0;
-        background: #ffffff;
-    }
-    .tj-testimonial2-section {
-        padding: 50px 0;
-    }
-    .carousel-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    } */
     .card {
         background: #fff;
         border: 1px solid #ddd;
@@ -33,36 +18,6 @@
     .card .col-6 {
         width: 50%;
     }
-    /* .star {
-        margin-top: 10px;
-    }
-    .fa-star {
-        color: #f39c12;
-    }
-    .owl-nav button {
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: #333;
-    } */
-    /* .owl-nav button {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: #333;
-    } */
-    /* .owl-dot {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        background: #ddd;
-        border-radius: 50%;
-        margin: 0 5px;
-    }
-    .owl-dot.active {
-        background: #333;
-    } */
     @keyframes custom-slides {
         from {
             transform: translateX(0);
@@ -71,30 +26,6 @@
             transform: translateX(-80%);
         }
     }
-    /* .lab-cos {
-        font-size: 15px;
-        font-weight: 500;
-        color: var(--tj-white-color);
-        margin-bottom: 10px;
-    }
-    .input-container {
-        height: 34px;
-        background: white;
-        display: flex;
-        align-items: center;
-        border-radius: 4px;
-        padding: 8px 0px 8px 0px;
-        width: fit-content;
-    }
-    .input-container1 {
-        height: 34px;
-        background: white;
-        display: flex;
-        align-items: center;
-        border-radius: 4px;
-        padding: 8px 0px 8px 0px;
-        width: fit-content;
-    } */
     .input-field {
         width: 50px;
         padding: 5px;
@@ -109,14 +40,6 @@
         border: none;
         outline: none;
     }
-    /* .input-container input[type="number"] {
-        -moz-appearance: textfield;
-    }
-    .input-container input[type="number"]::-webkit-outer-spin-button,
-    .input-container input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    } */
     .form-wrap {
         margin-bottom: 10px;
         position: relative;
@@ -126,31 +49,6 @@
         display: block;
         margin-bottom: 5px;
     }
-    /* .input-container {
-        display: flex;
-        align-items: center;
-    }
-    .input-container input {
-        border: none;
-        padding: 5px 0px 5px 0px;
-        font-size: 14px;
-        width: 38px;
-        text-align: center;
-    }
-    .input-container .placeholders {
-        position: relative;
-        right: 72px;
-        color: black;
-        display: inline-block;
-        width: auto;
-        padding: 0px 8px;
-    } */
-    /* .tj-input-form .input-form label {
-        font-size: 15px;
-        font-weight: 500;
-        color: var(--tj-white-color);
-        margin-bottom: 10px;
-    } */
     .err-style {
         color: red;
     }
@@ -161,18 +59,6 @@
     .error-field {
         border: 2px solid red;
     }
-    /* .separator {
-        margin: 0px 0px 0px 0px;
-        font-size: 14px;
-    } */
-    /* .separators {
-        margin: 0px 5px 0px 0px;
-        font-size: 14px;
-    } */
-    /* .separators-w {
-        margin: 0px 5px 0px 0px;
-        font-size: 14px;
-    } */
     .service-link {
         display: block;
         text-decoration: none;
@@ -266,7 +152,6 @@
                                 >
                                 Get Quote<i class="flaticon-right-1"></i>
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -301,7 +186,6 @@
                 <a href="{{ route('heavy-transport-detail') }}" class="service-link">
                     <div class="tj-service-icon">
                         <div class="service-icon">
-
                             <i class="fa-light fa-tractor fa-xs"></i>
                         </div>
                         <div class="sub-title">
@@ -320,7 +204,6 @@
                 <a href="{{ route('freighttransport-detail') }}" class="service-link">
                     <div class="tj-service-icon">
                         <div class="service-icon">
-
                             <i class="fa-light fa-truck fa-xs"></i>
                         </div>
                         <div class="sub-title">
@@ -356,7 +239,6 @@
                         data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
                         <div class="icon-box">
                             <i class="fa-light fa-car-side fa-2xs"></i>
-                            <!-- <i class="flaticon-air-freight"></i> -->
                         </div>
                         <div class="service-content">
                             <h4>VEHICLE TRANSPORTATION</h4>
@@ -377,7 +259,6 @@
                         data-bg-image="{{ asset('frontend/images/service/HEAVY-CARD.webp') }}">
                         <div class="icon-box">
                             <i class="fa-light fa-tractor fa-2xs"></i>
-                            <!-- <i class="flaticon-cargo-ship-1"></i> -->
                         </div>
                         <div class="service-content">
                             <h4>HEAVY TRANSPORTATION</h4>
@@ -398,7 +279,6 @@
                         data-bg-image="{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}">
                         <div class="icon-box">
                             <i class="fa-light fa-truck fa-2xs"></i>
-                            <!-- <i class="flaticon-delivery-van"></i> -->
                         </div>
                         <div class="service-content">
                             <h4>FREIGHT TRANSPORTATION</h4>
@@ -437,7 +317,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                  <img loading="lazy" src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
-                                <!--  <img loading="lazy" src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Our Values</h5>
@@ -452,7 +331,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
-                                <!--  <img loading="lazy" src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Scope of Services</h5>
@@ -466,7 +344,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
-                                <!--  <img loading="lazy" src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Safety Is Our Priority</h5>
@@ -481,7 +358,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
-                                <!--  <img loading="lazy" src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Skilful & Devoted Staff</h5>
@@ -911,19 +787,6 @@
                             <span class="sub-title">Miles Covered</span>
                         </div>
                     </div>
-                    <!-- <div
-                                class="counter-item d-flex align-items-center"
-                                data-sal="slide-up"
-                                data-sal-duration="800"
-                                data-sal-delay="500">
-                                <div class="counter-icon">
-                                    <i class="flaticon-worldwide"></i>
-                                </div>
-                                <div class="counter-number">
-                                    <div class="tj-count"><span class="odometer" data-count="2709">0</span></div>
-                                    <span class="sub-title">Worldwide Clients</span>
-                                </div>
-                            </div> -->
                 </div>
             </div>
         </div>
@@ -941,17 +804,17 @@
 <!--=========== Newsletter Section End =========-->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    dropdownToggle.addEventListener('click', function (event) {
-        dropdownMenu.classList.toggle('show');
-        event.stopPropagation();  
-    });
-    document.addEventListener('click', function (event) {
-        if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('show'); 
-        }
-    });
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        dropdownToggle.addEventListener('click', function (event) {
+            dropdownMenu.classList.toggle('show');
+            event.stopPropagation();  
+        });
+        document.addEventListener('click', function (event) {
+            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show'); 
+            }
+        });
     });
 </script>
 @endsection
