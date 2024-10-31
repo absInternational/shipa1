@@ -29,13 +29,4 @@ class ForceHttps
 
         return $next($request);
     }
-
-    // public function handle(Request $request, Closure $next)
-    // {
-    //     if (!$request->isSecure()) {
-    //         return redirect()->secure($request->getRequestUri());
-    //     }
-
-    //     return $next($request);
-    // }
 }
