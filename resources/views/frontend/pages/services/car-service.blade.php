@@ -209,7 +209,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="image-container">
-                    <img class="img-fluid" src="{{ asset('frontend/images/project/CAR-SERVICE-MAIN.webp') }}"
+                    <img class="img-fluid" src="{{ asset('/public/frontend/images/project/CAR-SERVICE-MAIN.webp') }}"
                         loading="lazy" alt="Motorcyle Transport">
                 </div>
                 <br>
