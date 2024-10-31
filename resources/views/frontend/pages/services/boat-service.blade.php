@@ -314,7 +314,7 @@
                     <div class="mt-4 rounded">
                         <div class="image-box">
                             <img class="rounded"
-                                src="{{ asset('frontend/images/project/4d images for boat transport.webp') }}"
+                                src="{{ asset('/public/frontend/images/project/4d images for boat transport.webp') }}"
                                 alt="Image">
                         </div>
                     </div>

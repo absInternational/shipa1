@@ -228,7 +228,6 @@
                              endeavor. However, ShipA1 with its heavy equipment shipping promises high quality at competitive rates.
                         </p>
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
@@ -350,7 +349,6 @@
                     <div class="faq-image">
                         <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">

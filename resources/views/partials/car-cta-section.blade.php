@@ -11,8 +11,8 @@
                             <!-- <i class="flaticon flaticon-freight"></i> -->
                         </div>
                         <div class="cta-text">
-                            <h3 class="title">SHIP A CAR DIRECT FROM AUTO Auction</h3>
-                            <p class="desc">We deliver quality, with prosperity. Because your shipping needs, our
+                            <h3 class="title">SHIP A CAR DIRECT FROM AUTO AUCTION</h3>
+                            <p class="desc">We deliver quality, with prosperity, because your shipping needs, our
                                 solution.</p>
                         </div>
                     </div>

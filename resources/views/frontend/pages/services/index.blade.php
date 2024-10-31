@@ -1,14 +1,12 @@
 @extends('frontend.layouts.app')
 @section('content')
 <style>
-    /* Container Styling */
     .tj-service-section-four {
         background-color: #f8f9fa;
         padding: 60px 0;
         position: relative;
         overflow: hidden;
     }
-    /* Service Item */
     .service-item-three {
         background-color: #fff;
         border-radius: 8px;
@@ -23,7 +21,6 @@
         transform: translateY(-10px);
         box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
     }
-    /* Overlay Effect */
     .service-item-three .overlay {
         position: absolute;
         top: -100%;
@@ -43,9 +40,8 @@
         box-sizing: border-box;
     }
     .service-item-three:hover .overlay {
-        top: 0; /* Slides down from the top */
+        top: 0;
     }
-    /* Service Image */
     .service-image img {
         width: 100%;
         height: auto;
@@ -55,7 +51,6 @@
     .service-item-three:hover .service-image img {
         transform: scale(1.05);
     }
-    /* Service Content */
     .service-content-1 {
         padding: 20px;
         text-align: center;
@@ -70,7 +65,6 @@
         color: #333;
         transition: color 0.3s ease;
     }
-    /* Animation */
     [data-sal="slide-up"] {
         opacity: 0;
         transform: translateY(50px);
@@ -80,11 +74,9 @@
         opacity: 1;
         transform: translateY(0);
     }
-    /* Smooth Scroll Animation */
     .tj-service-section-four {
         scroll-behavior: smooth;
     }
-    /* Responsive */
     @media (max-width: 991px) {
         .tj-section-heading .title {
             font-size: 28px;

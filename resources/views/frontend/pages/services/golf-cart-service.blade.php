@@ -63,10 +63,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
-        z-index: 0; /* Ensures it appears on top of the background */
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: 0; 
     }
-
     .why-choose-us-slider {
         background: url('/public/img/1 background image golf cart transport.webp');
         padding: 60px 0;
@@ -75,9 +74,8 @@
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1; /* Keeps the background behind the ::before element */
+        z-index: 1; 
     }
-
     .section-title {
         text-align: center;
         font-size: 2.5rem;
@@ -88,7 +86,6 @@
         text-transform: uppercase;
         animation: fadeIn 1s ease-in-out;
     }
-
     .section-description {
         text-align: center;
         font-size: 1.1rem;
@@ -100,7 +97,6 @@
         opacity: 0.8;
         animation: fadeIn 1.2s ease-in-out;
     }
-
     .slide {
         min-width: 33.333%;
         box-sizing: border-box;
@@ -114,24 +110,20 @@
         position: relative;
         overflow: hidden;
     }
-
     .slide:hover {
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px);
         background-color: rgba(255, 255, 255, 1);
     }
-
     .slide i {
         margin-bottom: 20px;
         color: #666;
         font-size: 3rem;
         transition: color 0.3s ease;
     }
-
     .slide:hover i {
         color: #8FC445;
     }
-
     .slide-title {
         font-size: 1.5rem;
         color: #333;
@@ -140,11 +132,9 @@
         letter-spacing: 0.3px;
         transition: color 0.3s ease;
     }
-
     .slide:hover .slide-title {
         color: #8FC445;
     }
-
     .slide-text {
         font-size: 1rem;
         color: #666;
@@ -561,8 +551,6 @@
             <h2 class="title text-white">Why Choose Us?</h2>
             <span class="sub-title active-shape">Discover the benefits of choosing ShipA1 through our features.</span>
         </div>
-        {{-- <h2 class="section-title">Why Choose Us?</h2>
-        <p class="section-description">Discover the benefits of choosing ShipA1 through our features.</p> --}}
         <div class="row">
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
@@ -611,7 +599,7 @@
         </div>
     </div>
 </section>
-<section class="tj-faq-section tj-faq-page pt-0">
+<section class="tj-faq-section tj-faq-page pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

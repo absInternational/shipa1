@@ -41,7 +41,7 @@
         z-index: 0; 
     }
     .why-choose-us-slider {
-        background: url('/public/img/autoauction banner 2.webp');
+        background: url('/public/img/Excavator-transport-on-semi-truck.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
