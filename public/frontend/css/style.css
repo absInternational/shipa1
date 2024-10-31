@@ -3618,7 +3618,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
+    
 }
 
 .tj-choose-us-section-service-golfcart::before {
@@ -3642,7 +3642,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
+    
 }
 
 .tj-choose-us-section-service-atv-utv::before {
@@ -3666,7 +3666,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
+    
 }
 
 .tj-choose-us-section-service-atv::before {
@@ -3690,7 +3690,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
+    
 }
 
 .tj-choose-us-section-service-reefer::before {
@@ -3714,7 +3714,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
+    
 }
 
 .tj-choose-us-section-service-commercial-2::before {
@@ -3738,7 +3738,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
+    
 }
 
 .tj-choose-us-section-service-commercial-2::before {
@@ -3749,12 +3749,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
-
 .tj-choose-us-section-service-atv-utv-2 {
     background-color: #000000;
-    background-image: url('../../img/ATVUTV-QUOTE.webp');
+    background-image: url('/public/img/ATV-transport-on-semi-truck.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3762,9 +3760,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-atv-utv-2::before {
     width: 100%;
     position: absolute;
@@ -3773,9 +3769,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
-
 .tj-choose-us-section-service-commercial-3 {
     background-color: #000000;
     background-image: url('/public/img/1 image for Construction equipment transport.webp');
@@ -3786,9 +3780,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-commercial-3::before {
     width: 100%;
     position: absolute;
@@ -3797,9 +3789,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
-
 .tj-choose-us-section-service-commercial-4 {
     background-color: #000000;
     background-image: url('../../img/BOAT-BANNER.webp');
@@ -3809,10 +3799,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 50px;
     padding-top: 50px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
-
 .tj-choose-us-section-service-commercial-4::before {
     width: 100%;
     position: absolute;
@@ -3821,9 +3809,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
-
 .tj-choose-us-section-service-RV-4 {
     background-color: #000000;
     background-image: url('/public/img/1 image for RV Transport.webp');
@@ -3833,10 +3819,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 50px;
     padding-top: 50px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
-
 .tj-choose-us-section-service-RV-4::before {
     width: 100%;
     position: absolute;
@@ -3845,9 +3829,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
-
 .tj-choose-us-section-service-commercial-5 {
     background-color: #000000;
     background-image: url('../../img/1 image for Excavator transport.webp');
@@ -3858,9 +3840,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-commercial-5::before {
     width: 100%;
     position: absolute;
@@ -3869,9 +3849,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
-
 .tj-choose-us-section-service-bike-6 {
     background-color: #000000;
     background-image: url('../../img/bike.webp');
@@ -3882,9 +3860,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-bike-6::before {
     width: 100%;
     position: absolute;
@@ -3893,9 +3869,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
-
 .tj-choose-us-section-service-commercial-7 {
     background-color: #000000;
     background-image: url('../../img/COMMERCIAL-TRUCK-BANNER.webp');
@@ -3906,9 +3880,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-commercial-7::before {
     width: 100%;
     position: absolute;
@@ -3917,9 +3889,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
-
 .tj-choose-us-section-service-heavy-7 {
     background-color: #000000;
     background-image: url('/public/img/1 image for Heavy Equipment Transport.webp');
@@ -3930,9 +3900,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-heavy-7::before {
     width: 100%;
     position: absolute;
@@ -3941,7 +3909,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
 .tj-choose-us-section-service-roro-8 {
     background-color: #000000;
@@ -3953,9 +3920,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-roro-8::before {
     width: 100%;
     position: absolute;
@@ -3964,7 +3929,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
 .tj-choose-us-section-service-farm-8 {
     background-color: #000000;
@@ -3976,9 +3940,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-farm-8::before {
     width: 100%;
     position: absolute;
@@ -3987,7 +3949,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
 .tj-choose-us-section-service-farming-8 {
     background-color: #000000;
@@ -3999,9 +3960,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 50px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-farming-8::before {
     width: 100%;
     position: absolute;
@@ -4010,9 +3969,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.6s;
     left: 0;
     top: 0;
-    /* background: rgba(6, 46, 57, 0.7); */
 }
-
 .tj-choose-us-section-service-commercial {
     background-color: #000000;
     background-image: url('/public/img/1 banner for commercial-truck-transport.webp');
@@ -4023,9 +3980,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-commercial::before {
     width: 100%;
     position: absolute;
@@ -4036,7 +3991,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.7);
 }
-
 .tj-choose-us-section-service-excavator {
     background-color: #000000;
     background-image: url('../../img/1-background-image-excavator-on-trailer.webp');
@@ -4046,10 +4000,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 20px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
-
 .tj-choose-us-section-service-excavator::before {
     width: 100%;
     position: absolute;
@@ -4060,7 +4012,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.7);
 }
-
 .tj-choose-us-section-service-farm {
     background-color: #000000;
     background-image: url('../../img/1 banner for Farm transport.webp');
@@ -4070,10 +4021,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 20px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
-
 .tj-choose-us-section-service-farm::before {
     width: 100%;
     position: absolute;
@@ -4084,7 +4033,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.7);
 }
-
 .tj-choose-us-section-service-boat {
     background-color: #000000;
     background-image: url('../../img/new-1-background-image-for-boat-transport.webp');
@@ -4095,9 +4043,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-boat::before {
     width: 100%;
     position: absolute;
@@ -4108,7 +4054,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.7);
 }
-
 .tj-choose-us-section-service-construction {
     background-color: #000000;
     background-image: url('../../img/1-banner-for-construction-equipment-_2_.webp');
@@ -4119,9 +4064,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-construction::before {
     width: 100%;
     position: absolute;
@@ -4132,7 +4075,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.7);
 }
-
 .tj-choose-us-section-service-heavy {
     background-color: #000000;
     background-image: url('../../img/1-banner-for-Heavy-equipment-transport.webp');
@@ -4143,9 +4085,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-heavy::before {
     width: 100%;
     position: absolute;
@@ -4156,7 +4096,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.7);
 }
-
 .tj-choose-us-section-service-Auto-Transport {
     background-color: #000000;
     background-image: url('../../img/auction banner.webp');
@@ -4166,10 +4105,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 20px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
-
 .tj-choose-us-section-service-Auto-Transport::before {
     width: 100%;
     position: absolute;
@@ -4180,7 +4117,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.7);
 }
-
 .tj-choose-us-section-service-Heavy-Auctions-Transport {
     background-color: #000000;
     background-image: url('../../img/Heavy-Auction.webp');
@@ -4191,9 +4127,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-Heavy-Auctions-Transport::before {
     width: 100%;
     position: absolute;
@@ -4204,7 +4138,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 0;
     background: rgba(6, 46, 57, 0.7);
 }
-
 .tj-choose-us-section-service-rv {
     background-color: #000000;
     background-image: url('../../img/rv-banner.webp');
@@ -4215,9 +4148,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
-
 .tj-choose-us-section-service-rv::before {
     width: 100%;
     position: absolute;
@@ -4237,10 +4168,8 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-bottom: 20px;
     padding-top: 110px;
     position: relative;
-    background-attachment: fixed; 
-    /* opacity: 1; */
+    background-attachment: fixed;
 }
-
 .tj-choose-us-section-service-roro::before {
     width: 100%;
     position: absolute;
@@ -4261,7 +4190,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
 
 .tj-choose-us-section-service-car::before {
@@ -4285,7 +4213,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
+    
 }
 
 .tj-choose-us-section-service-car-2::before {
@@ -4309,7 +4237,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 200px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
+    
 }
 .tj-choose-us-section-get-quote::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4333,7 +4261,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
+    
 }
 .tj-choose-us-section-rv::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4345,9 +4273,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
-
 .tj-choose-us-section-construction {
     background-color: #000000;
     background-image: url('../../img/construction_1.webp');
@@ -4358,7 +4283,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
 .tj-choose-us-section-construction::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4370,8 +4294,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
 .tj-choose-us-section-farm {
     background-color: #000000;
     background-image: url('../../img/farm-equipment.webp');
@@ -4382,7 +4304,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
 .tj-choose-us-section-farm::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4394,8 +4315,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
 .tj-choose-us-section-boat {
     background-color: #000000;
     background-image: url('../../img/boat2.webp');
@@ -4406,7 +4325,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
 .tj-choose-us-section-boat::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4418,8 +4336,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
 .tj-choose-us-section-commercial {
     background-color: #000000;
     background-image: url('../../img/truck-.webp');
@@ -4430,7 +4346,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
 .tj-choose-us-section-commercial::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4442,8 +4357,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
-
 .tj-choose-us-section-reefer {
     background-color: #000000;
     background-image: url('../../img/ReeferTruck3.webp');
@@ -4454,7 +4367,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
 .tj-choose-us-section-reefer::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4466,7 +4378,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     left: 0;
     top: 0;
 }
-
 .tj-choose-us-section-hazmat {
     background-color: #000000;
     background-image: url('../../img/Hazmat-Truck.webp');
@@ -4477,7 +4388,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding-top: 110px;
     position: relative;
     background-attachment: fixed; 
-    /* opacity: 1; */
 }
 .tj-choose-us-section-hazmat::before {
     background: rgba(6, 46, 57, 0.7);
@@ -4513,7 +4423,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-choose-us-section-excavator {
     background-color: #000000;
     background-image: url('../../img/EXCAVATOR.webp');
-   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9451,11 +9360,9 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     content: "";
     z-index: 2;
 }
-
 .tj-submit-btn:hover:after {
     border-bottom: 27px solid var(--tj-gray-color5);
 }
-
 .tj-submit-btn:before {
     content: "";
     position: absolute;
@@ -9468,15 +9375,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     border-radius: 3px;
     z-index: -1;
 }
-
 .tj-submit-btn:hover {
     color: var(--tj-secondary-color);
 }
-
 .tj-submit-btn:hover:before {
     width: 100%;
 }
-
 .tj-submit-btn i {
     font-size: 17px;
     color: var(--tj-white-color);
@@ -9488,20 +9392,16 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     position: relative;
     top: 3px;
 }
-
 .tj-submit-btn:hover i {
     transform: rotate(0deg);
     color: var(--tj-secondary-color);
 }
-
 .tj-theme-button.price-button {
     width: 100%;
 }
-
 .tj-theme-button.price-button .tj-primary-btn::after {
     background-color: var(--tj-secondary-color);
 }
-
 .tj-theme-button.price-button .tj-primary-btn::before {
     background-color: var(--tj-primary-color);
 }
@@ -9509,28 +9409,22 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .tj-price-item-active .tj-theme-button.price-button .tj-primary-btn::before {
     width: 100%;
 }
-
 .tj-theme-button.price-button::before {
     bottom: 6px;
     border-bottom: 27px solid rgba(255, 255, 255, 0.05);
 }
-
 .tj-theme-button.price-button .tj-primary-btn {
     border: none;
     width: 100%;
 }
-
 .tj-theme-button .tj-transparent-btn.submit-btn:after {
     background-color: var(--tj-secondary-color);
 }
-
 .tabs-button {
     border: none;
     width: 316px;
     padding: 23px 26px;
 }
-
-/* modal css */
 .search_popup {
     position: fixed;
     top: 0;
@@ -9555,7 +9449,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition-delay: 0.5s;
     transition-delay: 0.5s;
 }
-
 .header_searce button {
     background-color: transparent;
     border: none;
@@ -9563,25 +9456,21 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     top: 3px;
     padding-right: 25px;
 }
-
 .header_searce button i {
     color: var(--tj-secondary-color);
     transition: 0.4s;
     font-size: 25px;
     font-weight: 700;
 }
-
 .header-section-three .header_searce button i {
     color: var(--tj-white-color);
     transition: 0.4s;
     font-size: 25px;
     font-weight: 600;
 }
-
 .header_searce button i:hover {
     color: var(--tj-primary-color);
 }
-
 .search_popup.search-opened {
     opacity: 1;
     -webkit-transform: translateY(0%);
@@ -9599,27 +9488,22 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
 }
-
 .search_popup.search-opened .search_form .search_input i {
     font-size: 25px;
     transition: 0.4s;
     color: var(--tj-body-color);
 }
-
 .search_popup.search-opened .search_form .search_input i:hover {
     color: var(--tj-primary-color);
 }
-
 .search_popup .search_form .search_input i {
     font-size: 25px;
     transition: 0.4s;
     color: var(--tj-body-color);
 }
-
 .search_popup .search_form .search_input i:hover {
     color: var(--tj-primary-color);
 }
-
 .search_popup.search-opened .search_form .search_input::after {
     width: 100%;
     -webkit-transition-delay: 0.5s;
@@ -9631,25 +9515,20 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
         padding-bottom: 70px;
     }
 }
-
 .search_wrapper .search_top {
     margin-bottom: 50px;
 }
-
 .search_wrapper .search_top .search_logo {
     max-width: 200px;
 }
-
 .search_wrapper .search_top .search_logo a {
     display: block;
 }
-
 @media (max-width: 575px) {
     .search_wrapper .search_top .search_logo {
         max-width: 196px;
     }
 }
-
 .search_wrapper .search_top .search_close i {
     font-size: 40px;
     color: var(--tj-body-color);
@@ -9658,14 +9537,12 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     font-weight: 200;
     transition: 0.4s;
 }
-
 .search_wrapper .search_top .search_close i:hover {
     color: var(--tj-primary-color);
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .search_wrapper .search_top {
         margin-bottom: 50px;
@@ -9676,7 +9553,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
         margin-bottom: 40px;
     }
 }
-
 .search_wrapper .search_form .search_input {
     position: relative;
     height: 80px;
@@ -9694,7 +9570,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     align-items: center;
     justify-content: space-between;
 }
-
 .search_wrapper .search_form .search_input::after {
     position: absolute;
     content: "";
@@ -9720,27 +9595,21 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     padding: 0;
     padding-right: 30px;
 }
-
 .search_wrapper .search_form .search_input input::-webkit-input-placeholder {
     font-size: 24px;
 }
-
 .search_wrapper .search_form .search_input input::-moz-placeholder {
     font-size: 24px;
 }
-
 .search_wrapper .search_form .search_input input:-ms-input-placeholder {
     font-size: 24px;
 }
-
 .search_wrapper .search_form .search_input input::-ms-input-placeholder {
     font-size: 24px;
 }
-
 .search_wrapper .search_form .search_input input::placeholder {
     font-size: 24px;
 }
-
 .search_wrapper .search_form .search_input input ~ .search-focus-border {
     position: absolute;
     bottom: 0;
@@ -9752,7 +9621,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
-
 .search_wrapper .search_form .search_input input:focus ~ .search-focus-border {
     width: 100%;
     left: 0;
@@ -9760,7 +9628,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
-
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .search_wrapper .search_form .search_input input {
         font-size: 20px;
@@ -9784,7 +9651,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
         font-size: 20px;
     }
 }
-
 @media (max-width: 575px) {
     .search_wrapper .search_form .search_input input {
         font-size: 18px;
@@ -9808,7 +9674,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
         font-size: 18px;
     }
 }
-
 .search_wrapper .search_form .search_input button {
     position: absolute;
     top: 50%;
@@ -9819,7 +9684,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     font-size: 18px;
     color: var(--tj-common-white);
 }
-
 .search-popup-overlay {
     position: fixed;
     left: 0;
@@ -9839,15 +9703,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
 }
-
 .search-popup-overlay.search-popup-overlay-open {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
 }
-
-/*Pulse Border Animation*/
-
 @keyframes circle-ripple {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 84, 33, 0.3),
@@ -9876,12 +9736,10 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     animation: up-down 4s alternate infinite;
     -webkit-animation: up-down 4s alternate infinite;
 }
-
 .up-down-new {
     animation: up-down 8s alternate infinite;
     -webkit-animation: up-down 8s alternate infinite;
 }
-
 @keyframes up-down {
     0% {
         transform: translateY(30px);
@@ -9915,13 +9773,11 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     -webkit-animation: left-right 5s cubic-bezier(0.41, 0.04, 0.03, 1.1)
         infinite;
 }
-
 .left-right-new {
     animation: left-right 8s cubic-bezier(0.41, 0.04, 0.03, 1.1) infinite;
     -webkit-animation: left-right 8s cubic-bezier(0.41, 0.04, 0.03, 1.1)
         infinite;
 }
-
 @keyframes left-right {
     0% {
         transform: translatex(0);
@@ -9954,7 +9810,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     animation: spine 5s linear infinite;
     -webkit-animation: spine 5s linear infinite;
 }
-
 @keyframes spine {
     0% {
         transform: rotate(0);
@@ -9979,7 +9834,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     animation: spine-r 5s linear infinite;
     -webkit-animation: spine-r 5s linear infinite;
 }
-
 @keyframes spine-r {
     0% {
         transform: rotate(0);
@@ -10003,7 +9857,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 .spine2 {
     animation: spine 8s linear infinite;
 }
-
 @keyframes spine2 {
     from {
         transform: rotate(0deg);
@@ -10056,7 +9909,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
         transform: scale(1.2);
     }
 }
-/*Pulse Border Animation*/
 @keyframes pulse-border {
     0% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
@@ -10077,7 +9929,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
         opacity: 0;
     }
 }
-/*Pulse Border Animation*/
 @keyframes pulse-border {
     0% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
@@ -10098,7 +9949,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
         opacity: 0;
     }
 }
-
 @-webkit-keyframes bounce {
     0%,
     20%,
@@ -10159,7 +10009,6 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
         transform: translateY(-15px);
     }
 }
-
 /* -----------------------
     17. modal CSS
 --------------------------*/
@@ -10169,7 +10018,6 @@ body .search-modal .modal-content {
     border: 0;
     position: relative;
 }
-
 body .search-modal .search-block input {
     height: 60px;
     line-height: 60px;
@@ -10183,7 +10031,6 @@ body .search-modal .search-block input {
     font-weight: 600;
     font-size: 18px;
 }
-
 body .search-modal button {
     background: none;
     border: none;
@@ -10193,11 +10040,9 @@ body .search-modal button {
     right: 20px;
     z-index: 99;
 }
-
 body .search-modal button svg {
     background-color: transparent;
 }
-
 body .search-modal button svg path {
     fill: var(--tj-primary-color);
     opacity: 1;
@@ -10205,30 +10050,24 @@ body .search-modal button svg path {
     transition: 0.4s;
     font-size: 24px;
 }
-
 body .modal-backdrop {
     opacity: 0.95 !important;
 }
-
 .shake-y {
     -webkit-animation: shakeY 5s ease-in-out infinite;
     animation: shakeY 5s ease-in-out infinite;
 }
-
 .pulse {
     -webkit-animation: pulse 3s ease-in-out infinite;
     animation: pulse 3s ease-in-out infinite;
 }
-
 .skew-spin {
     -webkit-animation: skewSpin 5s linear infinite;
     animation: skewSpin 5s linear infinite;
 }
-
 .left-right-rotate {
     animation: rotated-style3 2s infinite alternate;
 }
-
 /***********************************
 PAGE LOAD ANIMATION
 ***********************************/
@@ -10251,17 +10090,14 @@ PAGE LOAD ANIMATION
     justify-content: center;
     background: var(--tj-gray-color12);
 }
-
 .preloader .tj-primary-btn {
     position: absolute;
     top: 15px;
     right: 15px;
 }
-
 .preloader .animation-preloader {
     z-index: 1000;
 }
-
 .preloader .animation-preloader .spinner {
     position: absolute;
     top: 40%;
@@ -10288,7 +10124,6 @@ PAGE LOAD ANIMATION
     animation: loaderspin 1.8s infinite ease-in-out;
     -webkit-animation: loaderspin 1.8s infinite ease-in-out;
 }
-
 @media (max-width: 767px) {
     .preloader .animation-preloader .spinner {
         width: 7.5em;
@@ -10307,7 +10142,6 @@ PAGE LOAD ANIMATION
     font-weight: 700;
     margin-top: 170px;
 }
-
 @media (max-width: 767px) {
     .preloader .animation-preloader .txt-loading {
         font-size: 50px;
@@ -10320,7 +10154,6 @@ PAGE LOAD ANIMATION
         line-height: 58px;
     }
 }
-
 @media (max-width: 991px) {
     .preloader .animation-preloader .text-loading {
         font-size: 25px;
@@ -10342,12 +10175,10 @@ PAGE LOAD ANIMATION
         line-height: 94px;
     }
 }
-
 .preloader .animation-preloader .txt-loading .letters-loading {
     color: #0b0f28;
     position: relative;
 }
-
 .preloader
     .animation-preloader
     .txt-loading
@@ -10355,7 +10186,6 @@ PAGE LOAD ANIMATION
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
 }
-
 .preloader
     .animation-preloader
     .txt-loading
@@ -10363,7 +10193,6 @@ PAGE LOAD ANIMATION
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
 }
-
 .preloader
     .animation-preloader
     .txt-loading
@@ -10371,7 +10200,6 @@ PAGE LOAD ANIMATION
     -webkit-animation-delay: 0.6s;
     animation-delay: 0.6s;
 }
-
 .preloader
     .animation-preloader
     .txt-loading
@@ -10379,7 +10207,6 @@ PAGE LOAD ANIMATION
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
 }
-
 .preloader
     .animation-preloader
     .txt-loading
@@ -10387,7 +10214,6 @@ PAGE LOAD ANIMATION
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
-
 .preloader
     .animation-preloader
     .txt-loading
@@ -10395,7 +10221,6 @@ PAGE LOAD ANIMATION
     -webkit-animation-delay: 1.2s;
     animation-delay: 1.2s;
 }
-
 .preloader
     .animation-preloader
     .txt-loading
@@ -10403,7 +10228,6 @@ PAGE LOAD ANIMATION
     -webkit-animation-delay: 1.4s;
     animation-delay: 1.4s;
 }
-
 .preloader .animation-preloader .txt-loading .letters-loading::before {
     -webkit-animation: letters-loading 4s infinite;
     animation: letters-loading 4s infinite;
@@ -10416,7 +10240,6 @@ PAGE LOAD ANIMATION
     -webkit-transform: rotateY(-90deg);
     transform: rotateY(-90deg);
 }
-
 .preloader p {
     font-size: 15px;
     font-weight: 600;
@@ -10424,8 +10247,6 @@ PAGE LOAD ANIMATION
     letter-spacing: 8px;
     color: #243342;
 }
-
-/*-- logiland-scroll-top start --*/
 .logiland-scroll-top {
     position: fixed;
     right: 30px;
@@ -10442,12 +10263,10 @@ PAGE LOAD ANIMATION
     transform: translateY(0.75rem);
     transition: all 0.2s linear, margin-right 0s;
 }
-
 .logiland-scroll-top.progress-done {
     visibility: visible;
     transform: translateY(0);
 }
-
 .logiland-scroll-top-icon {
     position: absolute;
     left: 0;
@@ -10460,25 +10279,20 @@ PAGE LOAD ANIMATION
     font-size: 18px;
     color: var(--tj-primary-color);
 }
-
 .logiland-scroll-top > svg path {
     fill: none;
 }
-
 .logiland-scroll-top > svg.progress-circle path {
     stroke: var(--tj-primary-color);
     stroke-width: 4;
     box-sizing: border-box;
     transition: all 200ms linear;
 }
-
 @media (min-width: 1px) {
     .logiland-scroll-top.progress-done {
         opacity: 1;
     }
 }
-
-/*-- logiland-scroll-top end --*/
 @-webkit-keyframes letters-loading {
     0%,
     75%,
@@ -10603,18 +10417,13 @@ PAGE LOAD ANIMATION
         -webkit-transform: rotate(10deg);
     }
 }
-
-/* Webkit (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 10px; 
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: #8fc445; 
     border-radius: 5px;
 }
-
-/*car page start*/
 .suggestionsTwo {
     background: #fff;
     font-size: 14px;
@@ -10625,20 +10434,16 @@ PAGE LOAD ANIMATION
     padding-left: 14px;
     display: none;
 }
-
 .suggestionsTwo li {
     cursor: pointer;
 }
-
 .suggestionsTwo li:hover {
     color: #8fc445;
 }
-
 .image_input {
     padding: 0px !important;
     padding-left: 10px !important;
 }
-
 .add-car {
     color: white !important;
     display: flex !important;
@@ -10653,8 +10458,6 @@ PAGE LOAD ANIMATION
     color: var(--tj-primary-color) !important;
     text-decoration: none !important;
 }
-/*car page end*/
-
 .bd-r{
     border-right: 1px solid;
     color: var(--tj-primary-color);
@@ -10663,15 +10466,12 @@ PAGE LOAD ANIMATION
     border-left: 1px solid;
     color: var(--tj-primary-color);
 }
-
 .custom-testimonial-section {
     padding-bottom: 90px;
 }
-
 .custom-testimonial-section .custom-testimonial-slider {
     padding: 0 20px;
 }
-
 .custom-testimonial-section.custom-testimonial-page {
     background: url('../images/banner/test-2.jpg');
     background-position: center;
@@ -10679,7 +10479,6 @@ PAGE LOAD ANIMATION
     background-repeat: no-repeat;
     padding-top: 110px;
 }
-
 .custom-testimonial-item {
     border-radius: 2px;
     background: var(--custom-white-color);
@@ -10688,29 +10487,23 @@ PAGE LOAD ANIMATION
     padding: 0 0 50px 35px;
     transition: 0.6s;
 }
-
 .custom-testimonial-item .custom-testimonial-image {
     position: relative;
     margin-top: -30px;
 }
-
 .custom-testimonial-item .testimonial-comment img {
     transition: 0.6s;
     transform: translateY(0);
 }
-
 .custom-testimonial-item:hover .testimonial-comment img {
     transform: translateY(-10px);
 }
-
 .custom-testimonial-item .content-area {
     padding-right: 35px;
 }
-
 .custom-testimonial-item .testimonial-rating {
     margin-bottom: 50px;
 }
-
 .custom-testimonial-item .testimonial-rating .rating-icon {
     background: var(--custom-primary-color);
     padding: 0 45px;
@@ -10718,13 +10511,11 @@ PAGE LOAD ANIMATION
     line-height: 50px;
     border-radius: 0px 3px;
 }
-
 .custom-testimonial-item .testimonial-rating .rating-icon ul li {
     color: var(--custom-white-color);
     display: inline-block;
     margin-right: 5px;
 }
-
 .custom-testimonial-item p {
     font-style: italic;
     font-size: 18px;
@@ -10732,27 +10523,20 @@ PAGE LOAD ANIMATION
     display: block;
     margin-bottom: 25px;
 }
-
 .custom-testimonial-item .testimonial-content .custom-testimonial-author .title {
     font-weight: 700;
     margin-bottom: 0;
 }
-
 .custom-testimonial-item .testimonial-content .custom-testimonial-author .sub-title {
     color: var(--custom-primary-color);
 }
-
 .swiper-slide {
     width: calc(100% / 4);
     margin-right: 30px;
 }
-
 .swiper-slide:last-child {
     margin-right: 0;
 }
-
-/************ image-preview ****************/
-
 .image-preview-container {
     display: flex;
     flex-wrap: wrap;
@@ -10777,25 +10561,18 @@ PAGE LOAD ANIMATION
     cursor: pointer;
     padding: 5px;
 }
-
-/************ image-preview ****************/
-
 .err-style {
     color: red;
 }
-
 .error-field {
     border: 2px solid red!important;
 }
-
 .lab-cos {
     font-size: 15px;
     font-weight: 500;
     color: var(--tj-white-color);
     margin-bottom: 10px;
 }
-
-
 .input-container {
     height: 34px;
     background: white;
@@ -10804,9 +10581,7 @@ PAGE LOAD ANIMATION
     border-radius: 4px;
     padding: 8px 0px 8px 0px;
     width: fit-content;
-
 }
-
 .input-container1 {
     height: 34px;
     background: white;
@@ -10815,9 +10590,7 @@ PAGE LOAD ANIMATION
     border-radius: 4px;
     padding: 8px 0px 8px 0px;
     width: fit-content;
-
 }
-
 .input-field {
     width: 50px;
     padding: 5px;
@@ -10825,7 +10598,6 @@ PAGE LOAD ANIMATION
     border: none;
     outline: none;
 }
-
 .input-field-1 {
     width: 65px;
     padding: 0px 0px 0px 10px;
@@ -10833,17 +10605,14 @@ PAGE LOAD ANIMATION
     border: none;
     outline: none;
 }
-
 .separator {
     margin: 0px 0px 0px 0px;
     font-size: 14px;
 }
-
 .separators {
     margin: 0px 5px 0px 0px;
     font-size: 14px;
 }
-
 .separators-w {
     margin: 0px 5px 0px 0px;
     font-size: 14px;
@@ -10851,8 +10620,6 @@ PAGE LOAD ANIMATION
 .nav-num-hover:hover{
     color: var(--tj-primary-color);
 }
-
-/* index style  */
 .rates {
     background:#8FC445 ;
     font-size: 24px; 
@@ -10867,14 +10634,12 @@ PAGE LOAD ANIMATION
     justify-content: center;
     margin: auto;
     }
-
     .custom-logos {
         overflow: hidden;
         padding: 30px 0px;
         white-space: nowrap;
         position: relative;
     }
-
     .custom-logos:before,
     .custom-logos:after {
         position: absolute;
@@ -10884,26 +10649,21 @@ PAGE LOAD ANIMATION
         height: 100%;
         z-index: 2;
     }
-
     .custom-logos:before {
         left: 0;
         background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
     }
-
     .custom-logos:after {
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
     }
-
     .custom-logo-items {
         display: inline-block;
         animation: 35s custom-slides infinite linear;
     }
-
     .custom-logos:hover .custom-logo-items {
         animation-play-state: paused;
     }
-
     .custom-logo-items img {
         height: 100px;
     }
@@ -10914,7 +10674,6 @@ PAGE LOAD ANIMATION
         margin-top: 5px;
         display: block;
     }
-    
     .input-form input {
         width: 100%;
         padding: 10px;
@@ -10924,12 +10683,10 @@ PAGE LOAD ANIMATION
         box-sizing: border-box;
         transition: border-color 0.3s;
     }
-    
     .input-form input:focus {
         border-color: #007bff;
         outline: none;
     }
-    
     .suggestions {
         list-style-type: none;
         margin: 0;
@@ -10943,28 +10700,21 @@ PAGE LOAD ANIMATION
         position: absolute; 
         z-index: 1000;
     }
-    
     .suggestions li {
         padding: 8px 12px;
         cursor: pointer;
         transition: background-color 0.2s;
     }
-    
     .suggestions li:hover {
         background-color: #f0f0f0;
     }
-    
     .input-form {
         position: relative;
     }
-
-    /* Dropdown Container */
     .dropdown {
         position: relative;
         width: 100%;
     }
-
-    /* Dropdown Input */
     .dropdown-toggle {
         width: 100%;
         padding: 0.375rem 0.75rem;
@@ -10973,8 +10723,6 @@ PAGE LOAD ANIMATION
         border: 1px solid #ced4da;
         border-radius: 0.25rem;
     }
-
-    /* Dropdown Menu */
     .dropdown-menu.year-dropdown {
         width: 100%;
         max-height: 200px;
@@ -10985,38 +10733,29 @@ PAGE LOAD ANIMATION
         border-radius: 0.25rem;
         box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
     }
-
-    /* Dropdown Items */
     .dropdown-item {
         padding: 0.375rem 0.75rem;
         font-size: 1rem;
         color: #212529; 
         text-decoration: none; 
     }
-
     .dropdown-item:hover {
         background-color: #f8f9fa; 
         color: #16181b; 
     }
-
-    /* Responsive Adjustments */
     @media (max-width: 576px) {
         .dropdown-menu.year-dropdown {
             position: static; 
         }
-
         .dropdown-toggle {
             margin-bottom: 10px; 
         }
     }
-
-    /* swal2-confirm modal */
     .swal2-confirm {
         background-color: var(--tj-primary-color); 
         color: #fff;
         border: none; 
     }
-
     .swal2-cancel {
         background-color: #ff0019; 
         color: #fff;

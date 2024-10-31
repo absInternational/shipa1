@@ -8,17 +8,14 @@
         .title-2 {
             color: #8fc445;
         }
-
         .desc-2 {
             color: white;
         }
-
         .why-box {
             border-radius: 12px;
             padding: 20px 0px;
             background: #f8f9fa9c;
         }
-
         .card- {
             background: #ffffff;
             border: 1px solid #ddd;
@@ -26,20 +23,14 @@
             padding: 15px;
             box-shadow: 0 5px 30px 0 rgba(35, 43, 54, .3);
         }
-
         .services {
             text-align: center;
-            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
             border-radius: 12px;
             padding: 10px 30px 0px 30px;
-            /* background-color: #9d9e9f14;*/
         }
-
         .services-h1 {
             text-align: center;
-            /* text-decoration: overline; */
             margin-bottom: 50px;
-            /* color: #ffffff; */
         }
         .why-choose-us-slider::before {
         content: "";
@@ -48,10 +39,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
-        z-index: 0; /* Ensures it appears on top of the background */
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: 0; 
         }
-
         .why-choose-us-slider {
             background: url('/public/img/RoRo-Shipping.webp');
             padding: 60px 0;
@@ -60,9 +50,8 @@
             overflow: hidden;
             background-repeat: no-repeat;
             background-size: cover;
-            z-index: 1; /* Keeps the background behind the ::before element */
+            z-index: 1;
         }
-
         .section-title {
             text-align: center;
             font-size: 2.5rem;
@@ -73,7 +62,6 @@
             text-transform: uppercase;
             animation: fadeIn 1s ease-in-out;
         }
-
         .section-description {
             text-align: center;
             font-size: 1.1rem;
@@ -85,7 +73,6 @@
             opacity: 0.8;
             animation: fadeIn 1.2s ease-in-out;
         }
-
         .slide {
             min-width: 33.333%;
             box-sizing: border-box;
@@ -99,24 +86,20 @@
             position: relative;
             overflow: hidden;
         }
-
         .slide:hover {
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
             transform: translateY(-5px);
             background-color: rgba(255, 255, 255, 1);
         }
-
         .slide i {
             margin-bottom: 20px;
             color: #666;
             font-size: 3rem;
             transition: color 0.3s ease;
         }
-
         .slide:hover i {
             color: #8FC445;
         }
-
         .slide-title {
             font-size: 1.5rem;
             color: #333;
@@ -125,11 +108,9 @@
             letter-spacing: 0.3px;
             transition: color 0.3s ease;
         }
-
         .slide:hover .slide-title {
             color: #8FC445;
         }
-
         .slide-text {
             font-size: 1rem;
             color: #666;
@@ -163,7 +144,6 @@
                     </div>
                 @endif
                 <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
-                    {{--  @include('partials.multi-form') --}}
                     <div class="tj-input-form  w-100" data-bg-image="">
                         <form action="{{ route('submit.quote') }}" novalidate method="post"
                             class="rd-mailform validate-form" id="calculatePriceFrom" data-parsley-validate
@@ -179,74 +159,6 @@
                                 </div>
                             @endif
                             <div class="container mt-2">
-                                <!-- Step 1: Moving From/To -->
-                                <!-- <div class="route_quote_info" id="step1">
-                                            <div class="row">
-                                                <h4 class="title text-center">Quote Request!</h4>
-                                                <div class="col-xl-12 col-lg-12 mb-4">
-                                                    <h6 class="text-white">Moving From</h6>
-                                                    <label class="text-white mb-2">Where Are You Moving From?</label>
-                                                    <div class="single-input-field">
-                                                        <input class="form-control" type="text" id="pickup-location"
-                                                            placeholder="Enter City or ZipCode" name="From_ZipCode" required>
-                                                        <ul class="suggestions suggestionsTwo"></ul>
-                                                        <label class="error-message" id="pickup-location-error">This field is
-                                                            required.</label>
-                                                    </div>
-                                                </div> -->
-                                <!-- <div class="col-xl-12 col-lg-12 mb-4">
-                                                    <h6 class="text-white">Deliver To</h6>
-                                                    <label class="text-white mb-2">Where Are You Moving To?</label>
-                                                    <div class="single-input-field">
-                                                        <input class="form-control" type="text" id="delivery-location"
-                                                            placeholder="Enter City or ZipCode" name="To_ZipCode" required>
-                                                        <ul class="suggestions suggestionsTwo"></ul>
-                                                        <label class="error-message" id="delivery-location-error">This field is
-                                                            required.</label>
-                                                    </div>
-                                                </div> -->
-                                <!-- <div class="col-xl-4 col-lg-4 mb-4">
-                                                        <div class="single-input-field">
-                                                            <label class="d-block text-white">Country:</label>
-                                                            <select class="form-control" id="country-dropdown"
-                                                                name="country1">
-                                                                <option value="">Select a country</option>
-                                                            </select>
-                                                            <label class="error-message" id="country1-error">This field is
-                                                                required.</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-4 col-lg-4">
-                                                        <div class="single-input-field">
-                                                            <label class="d-block text-white"> City:</label>
-                                                            <input class="form-control" required name="city1" type="text"
-                                                                placeholder="City">
-                                                            <label class="error-message" id="city1-error">This field is
-                                                                required.</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-4 col-lg-4">
-                                                        <div class="single-input-field">
-                                                            <label class="d-block text-white">
-                                                                Postal/Zip(Optional)
-                                                                :</label>
-                                                            <input class="form-control" name="zip1" type="text"
-                                                                placeholder="Postal/Zip">
-                                                            <label class="error-message" id="zip1-error">This field is
-                                                                required.</label>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-xl-12">
-                                                    <div class="price__cta-btn text-center">
-                                                        <button class="tj-submit-btn" type="button" id="step1_next">
-                                                            Next <i class="fa-light fa-arrow-right"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
                                 <input type="hidden" name="roro" value="RORO SHIPMENT">
                                 <div class="route_quote_info" id="step1">
                                     <div class="row">
@@ -258,7 +170,6 @@
                                                 <input class="form-control" type="text" id="pickup-location"
                                                     placeholder="Enter City or ZipCode" name="From_ZipCode" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
-                                                {{-- <label class="error-message" id="pickup-location-error">This field is required.</label> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -279,7 +190,6 @@
                                                 <input class="form-control" type="text" id="delivery-location-1"
                                                     placeholder="Enter City" name="To_ZipCode" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
-                                                {{-- <label class="error-message" id="delivery-location-1-error">This field is required.</label> --}}
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 mb-4">
@@ -309,47 +219,11 @@
                                             <option value="Atv">Atv Utv Transport</option>
                                             <option value="Boat-Transport">Boat Transport</option>
                                             <option value="Car">Car Transport</option>
-                                            <!-- <option value="Freight-Transportation">Freight Transportation</option> -->
                                             <option value="Golf-Cart">Golf Cart Transport</option>
                                             <option value="Heavy-Equipment">Heavy Equipment Transport</option>
                                             <option value="Motorcycle">Motorcycle Transport</option>
                                             <option value="RV-Transport">RV Transport</option>
                                         </select>
-                                        {{-- <label class="error-message" id="tabSelector-error">This field is
-                                            required.</label> --}}
-                                        {{-- <div class="my-4">
-                                            <div class="col-xl-4 col-lg-4">
-                                                    <div class="single-input-field">
-                                                        <label class="d-block text-white">Country:</label>
-                                                        <select class="form-control" id="country-dropdown" required
-                                                            name="country1">
-                                                            <option value="">Select a country</option>
-                                                        </select>
-                                                        <label class="error-message" id="country1-error">This field is
-                                                            required.</label>
-                                                    </div>
-                                                    </div>
-                                                    <div class="col-xl-4 col-lg-4">
-                                                        <div class="single-input-field">
-                                                            <label class="d-block text-white"> City:</label>
-                                                            <input class="form-control" required name="city1" type="text"
-                                                                placeholder="City">
-                                                            <label class="error-message" id="city1-error">This field is
-                                                                required.</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-4 col-lg-4">
-                                                        <div class="single-input-field">
-                                                            <label class="d-block text-white">
-                                                                Postal/Zip(Optional)
-                                                                :</label>
-                                                            <input class="form-control" name="zip1" type="text"
-                                                                placeholder="Postal/Zip">
-                                                            <label class="error-message" id="zip1-error">This field is
-                                                                required.</label>
-                                                    </div>
-                                            </div> 
-                                        </div> --}}
                                         <div class="tab-content" id="additionalContent"></div>
                                     </div>
                                     <div class="row mt-2">
@@ -378,8 +252,6 @@
                                                 <label class="d-block text-white"> Your Name:</label>
                                                 <input class="form-control" id="name" name="name" type="text"
                                                     placeholder="Customer Name" required>
-                                                <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-lg-6">
@@ -396,7 +268,6 @@
                                                 <label class="d-block text-white"> Email Address:</label>
                                                 <input class="form-control" id="email" name="email" type="email"
                                                     placeholder="Email address" required>
-
                                             </div>
                                         </div>
                                     </div>
@@ -426,12 +297,6 @@
         </div>
     </section>
     @include('partials.reveiw-small-detail')
-    {{-- <section class="tj-about-section-four">
-    <div class="container">
-        <h2 class="title sal-animate text-center mb-4 pb-4" data-sal="slide-left" data-sal-duration="800">The First Stop
-            Platform of RORO <br>Shipping Services</h2>
-    </div>
-</section> --}}
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
@@ -439,8 +304,6 @@
                     data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            {{-- <span class="sub-title active-shape">RORO Shipping Overview</span> --}}
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">RORO Shipping Overview
                             </h3>
                             <p class="desc">Ship-A1 is a US-based auto shipping company providing transportation services
@@ -486,8 +349,6 @@
                     data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            {{-- <span class="sub-title active-shape">RORO Shipping Destinations</span> --}}
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">RORO Shipping
                                 Destinations</h3>
                             <p class="desc">We are providing Facilities in roro shipping service our experts are here to
@@ -564,8 +425,6 @@
                     data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            {{-- <span class="sub-title active-shape">Comparing RORO and Container Shipping</span> --}}
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Comparing RORO and
                                 Container Shipping</h3>
                             <p class="desc">
@@ -611,8 +470,6 @@
                     data-sal="slide-left" data-sal-duration="800">
                     <div class="about-content-one">
                         <div class="tj-section-heading">
-                            {{-- <span class="sub-title active-shape">Benefits of RORO Shipping Service</span> --}}
-                            <!-- <h2 class="title">Why Choose Us?</h2> -->
                             <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Benefits of RORO
                                 Shipping Service</h3>
                             <p class="desc">Some of the advantages are as follows: <br>
@@ -775,28 +632,6 @@
             </div>
         </div>
     </section>
-
-    {{-- <section class="tj-cta-section-two">
-    <div class="tj_cta_image-4 w-100 h-50"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-6">
-                <div class="tj-cta-content d-flex justify-content-around" style="bottom: 40px; z-index: 3;">
-                    <div class="tj-section-heading ">
-                        <span class="sub-title active-shape2"> Support Center 24/7 </span>
-                        <p class="text-white mt-2">Feel Free To Contact Us For Additional Info</p>
-                    </div>
-                    <div class="tj-theme-button mt-2">
-                        <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
-                            Get Support<i class="flaticon-right-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-
     <section class="tj-choose-us-section-service-roro-8">
         <div class="container why-box">
             <div class="row services">
@@ -832,55 +667,6 @@
             </div>
         </div>
     </section>
-    {{-- <section class="tj-choose-us-section-service-roro">
-    <div class="container why-box">
-        <div class="row">
-            <div class="col-lg-8 sal-animate" data-sal="slide-right" data-sal-duration="800">
-                <div class="about-content-two">
-                    <div class="tj-section-heading">
-                        <h2 class="title-2">Why Choose Us?</h2>
-                        <p class="desc-2">
-                            We have a distinct approach when it comes to the philosophy of business.<br>Our belief in
-                            innovation & unique business practices differentiate us & here are the reasons why you must
-                            choose us:
-                        </p>
-                    </div>
-                    <div class="content-box d-flex align-items-center border-top">
-                        <div class="tj-icon-box">
-                            <div class="ab-text d-flex align-items-center">
-                            </div>
-                            <p class="desc-2">★ Professional & responsive customer service available 24/7.</p>
-                        </div>
-                        <div class="tj-icon-box">
-                            <p class="desc-2">★ A wide range of services such as open, enclosed & expedited.</p>
-                        </div>
-                        <div class="tj-icon-box pb-4">
-                            <p class="desc-2">★ Prompt delivery due to efficient use of trailers.</p>
-                        </div>
-                    </div>
-                    <div class="content-box d-flex align-items-center">
-                        <div class="tj-icon-box">
-                            <p class="desc-2">★ Legion of truckers available with years old network.</p>
-                        </div>
-                        <div class="tj-icon-box">
-                            <p class="desc-2">★ Get online car shipping quotes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-group-image2 d-flex flex-wrap align-items-start flex-column mt-4">
-                    <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
-                            alt="Image">
-                    </div>
-                    <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/vehicle-detail-page.webp') }}"
-                        alt="Image">
-                </div>
-            </div>
-        </div>
-    </div>
-    </section> --}}
     <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
@@ -961,8 +747,6 @@
                 <h2 class="title text-white">Why Choose Us?</h2>
                 <span class="sub-title active-shape">Discover the benefits of choosing ShipA1 through our features.</span>
             </div>
-            {{-- <h2 class="section-title">Why Choose Us?</h2>
-            <p class="section-description">Discover the benefits of choosing ShipA1 through our features.</p> --}}
             <div class="row">
                 <div class="col-md-4 col-lg-4 mb-4">
                     <div class="slide text-center">
@@ -1021,7 +805,6 @@
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
     </script>
-    
     {{-- Delivery - Country - RORO --}}
         <script>
             $(document).ready(function() {
@@ -1073,7 +856,6 @@
             });
         </script>
     {{-- Delivery - Country - RORO --}}
-
     {{-- playVideo --}}
         <script>
             function playVideo() {
@@ -1085,519 +867,4 @@
             }
         </script>
     {{-- playVideo --}}
-
-
-    {{-- <script>
-        $(document).ready(function() {
-            var selectedTab = '';
-            $('#tabSelector').change(function() {
-                $('.vehicles-container').html('');
-                selectedTab = $(this).val();
-                var vehicleType = $(this).val();
-                $('.tab-pane').removeClass('show active');
-                $('#' + selectedTab).addClass('show active');
-
-                $.ajax({
-                    url: "{{ route('get.partial.form') }}",
-                    method: 'GET',
-                    data: {
-                        vehicleType: vehicleType,
-                    },
-                    success: function(response) {
-                        $('#additionalContent').html('');
-                        $('#additionalContent').html(response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            });
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label> Year</label>
-                        <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-                newVehicleHtml +=
-                    `</select>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label>Make</label>
-                        <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-                @foreach ($makes as $make)
-                    newVehicleHtml +=
-                        `<option value="{{ $make->make }}">{{ $make->make }}</option>`;
-                @endforeach
-                newVehicleHtml += `
-                        </select>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select model-div">
-                        <label>Model</label>
-                        <select class="nice-select model" name="model[]" id="model" required></select>`;
-                newVehicleHtml +=
-                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-                newVehicleHtml += `
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            `;
-                $('.vehicles-container').append(newVehicleHtml);
-            }
-            function addOtherVehicle() {
-                var newVehicleHtml =
-                    `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label> Year</label>
-                        <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{ date('Y') }};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-                newVehicleHtml +=
-                    `</select>
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                <label>Make</label>
-                                <input type="text" id="make" name="make[]"
-                                placeholder="Enter Make" required="" />
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                <label>Model</label>
-                                <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                required="" />`
-                newVehicleHtml +=
-                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-                newVehicleHtml += `</div>
-                                </div>
-                                </div>
-                                </div>
-                                `;
-                $('.vehicles-container').append(newVehicleHtml);
-            }
-            $(document).on('click', '.addVehicleBtn', function() {
-                if ($('#tabSelector').val() == 'Car') {
-                    // console.log('yesss');
-                    addNewVehicle();
-                } else {
-                    // console.log('nooo');
-                    addOtherVehicle();
-                }
-            });
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
-            $(document).on('change', '.year, .make', function() {
-                var year = $(this).closest('.vehicle-info').find('.year').val();
-                var makeId = $(this).closest('.vehicle-info').find('.make').val();
-                var vehicleInfo = $(this).closest('.vehicle-info');
-                if (year && makeId) {
-                    getModel(year, makeId, vehicleInfo);
-                }
-            });
-            function getModel(year, makeId, vehicleInfo) {
-                // console.log('yes inn');
-                $.ajax({
-                    url: "{{ route('get.models') }}",
-                    method: 'GET',
-                    data: {
-                        year: year,
-                        make: makeId
-                    },
-                    success: function(response) {
-                        var modelsDropdown = vehicleInfo.find('.model');
-                        modelsDropdown.empty();
-                        var selectOptions = '<option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' +
-                                model +
-                                '</option>';
-                        });
-                        modelsDropdown.html(selectOptions);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            }
-        });
-    </script> --}}
-        {{-- <script>
-        $(document).ready(function() {
-        $(document).on('change', '.category', function() {
-            var selectedCategory = $(this).val();
-
-            $.ajax({
-                url: "{{ route('get.subcategories') }}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "category": selectedCategory
-                },
-                success: function(response) {
-                    console.log(response);
-                    console.log(response.length);
-
-                    var html = '';
-                    $('#subcategory-box').html('');
-
-                    html += "<label for='subcategory'>Subcategory</label>";
-                    html +=
-                        "<select class='nice-select form-control' id='subcategory' name='subcategory'>";
-                    html += "<option value='' disabled selected>Select</option>";
-                    $.each(response, function(index, val) {
-                        html +=
-                            `<option value='${val.id}' style='white-space: nowrap;'>${val.name}</option>`;
-                    });
-                    html += "</select>";
-                    console.log('html', html);
-
-                    $('#subcategory-box').html(html);
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
-                }
-            });
-        });
-        });
-    </script> --}}
-        {{-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "auto",
-            geoIpLookup: function(callback) {
-                fetch('https://ipinfo.io/json')
-                    .then(function(response) {
-                        return response.json();
-                    })
-                    .then(function(ipinfo) {
-                        var countryCode = "us";
-                        callback(countryCode);
-                    });
-            },
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // for formatting/validation etc.
-        });
-        });
-    </script> --}}
-        {{-- <script>
-        $(document).ready(function() {
-            var selectedTab = '';
-            $('#tabSelector').change(function() {
-                $('.vehicles-container').html('');
-                selectedTab = $(this).val();
-                var vehicleType = $(this).val();
-                $('.tab-pane').removeClass('show active');
-                $('#' + selectedTab).addClass('show active');
-
-                $.ajax({
-                    url: "{{ route('get.partial.form') }}",
-                    method: 'GET',
-                    data: {
-                        vehicleType: vehicleType,
-                    },
-                    success: function(response) {
-                        $('#additionalContent').html('');
-                        $('#additionalContent').html(response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            });
-
-            function addNewVehicle() {
-                var newVehicleHtml =
-                    `
-                                <div class="vehicle-info">
-                                <div class="row select-bm">
-                                <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                <label> Year</label>
-                                <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {{date('Y')}};
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                newVehicleHtml +=
-                    `</select>
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                <label>Make</label>
-                                <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-
-
-                newVehicleHtml += `
-                                </select>
-                                </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="input-form tj-select model-div">
-                                <label>Model</label>
-                                <select class="nice-select model" name="model[]" id="model" required></select>`;
-
-                newVehicleHtml +=
-                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-                newVehicleHtml += `
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    `;
-
-                $('.vehicles-container').append(newVehicleHtml);
-            }
-
-            function addOtherVehicle() {
-                var newVehicleHtml =
-                    `
-                                <div class="vehicle-info">
-                                <div class="row select-bm">
-                                <div class="col-md-4">
-                                <div class="input-form tj-select">
-                                <label> Year</label>
-                                <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-                var currentYear = {
-                    {
-                        date('Y')
-                    }
-                };
-                for (var year = currentYear; year >= 1936; year--) {
-                    newVehicleHtml += `<option value="${year}">${year}</option>`;
-                }
-
-                newVehicleHtml +=
-                    `</select>
-                                        </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                        <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <input type="text" id="make" name="make[]"
-                                        placeholder="Enter Make" required="" />
-                                        </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                        <div class="input-form tj-select model-div">
-                                        <label>Model</label>
-                                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                                        required="" />`
-                newVehicleHtml +=
-                    `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-                newVehicleHtml += `</div>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        `;
-
-                $('.vehicles-container').append(newVehicleHtml);
-            }
-
-            $(document).on('click', '.addVehicleBtn', function() {
-                if ($('#tabSelector').val() == 'Car') {
-                    addNewVehicle();
-                } else {
-                    addOtherVehicle();
-                }
-            });
-
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
-
-            $(document).ready(function() {
-                $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                    var year = $('.vehicle-year').val();
-                    var makeId = $('.vehicle-make').val();
-                    if (year && makeId) {
-                        getModel(year, makeId);
-                    }
-                });
-
-                function getModel(year, makeId) {
-                    console.log('yes inn');
-                    $.ajax({
-                        url: "{{ route('get.models') }}",
-                        method: 'GET',
-                        data: {
-                            year: year,
-                            make: makeId
-                        },
-                        success: function(response) {
-                            var modelsDropdown = $('.vehicle-model-div');
-                            modelsDropdown.empty();
-                            var selectOptions =
-                                '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                            $.each(response, function(index, model) {
-                                selectOptions += '<option value="' + model + '">' +
-                                    model +
-                                    '</option>';
-                            });
-                            selectOptions += '</select>';
-                            modelsDropdown.html(selectOptions);
-
-                            console.log('yesssss', response);
-                        },
-                        error: function(xhr) {
-                            console.log(xhr.responseText);
-                        }
-                    });
-                }
-            });
-        });
-    </script> --}}
-        {{-- <script>
-        document.querySelectorAll('input[type="text"]').forEach((input) => {
-            input.addEventListener("input", function() {
-                this.value = this.value.replace(/[^0-9]/g, "");
-            });
-        });
-    </script> --}}
-        {{-- <script>
-        function limitDigits(element, maxDigits) {
-            if (element.value.length > maxDigits) {
-                element.value = element.value.slice(0, maxDigits);
-            }
-        }
-        $(document).ready(function() {
-        $('#inches-input').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-        });
-        $(document).ready(function() {
-            $('#inches-input1').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input1, #inches-input1').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-        $(document).ready(function() {
-            $('#inches-input2').on('input', function() {
-                if (this.value > 11) {
-                    this.value = 11;
-                } else if (this.value < 0) {
-                    this.value = 0;
-                }
-            });
-            // Optionally, you can also prevent the user from typing non-numeric characters.
-            $('#feet-input, #inches-input2').on('input', function() {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            });
-        });
-    </script> --}}
-        {{-- <script>
-        $(document).ready(function() {
-            function showError(field, message) {
-                $('#' + field).addClass('error-field');
-                $('#' + field + '-error').text(message).show();
-            }
-            function hideError(field) {
-                $('#' + field).removeClass('error-field');
-                $('#' + field + '-error').hide();
-            }
-            // Move to Step 2
-            $('#step1_next').click(function() {
-                var isValid = true;
-                if (!$('#pickup-location').val()) {
-                    showError('pickup-location', 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError('pickup-location');
-                }
-                if (!$('#delivery-location').val()) {
-                    showError('delivery-location', 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError('delivery-location');
-                }
-                if (isValid) {
-                    $('#step1').hide();
-                    $('#step2').show();
-                }
-            });
-            // Return to Step 1
-            $('#step2_previous').click(function() {
-                $('#step2').hide();
-                $('#step1').show();
-            });
-            // Move to Step 3
-            $('#step2_next').click(function() {
-                var isValid = true;
-                if (!$('#tabSelector').val()) {
-                    showError('tabSelector', 'This field is required.');
-                    isValid = false;
-                } else {
-                    hideError('tabSelector');
-                }
-                if (isValid) {
-                    $('#step2').hide();
-                    $('#step3').show();
-                }
-            });
-            // Return to Step 2
-            $('#step3_previous').click(function() {
-                $('#step3').hide();
-                $('#step2').show();
-            });
-        });
-    </script> --}}
-        {{-- <script>
-        $(document).ready(function() {
-            $(document).on('change', '#available_at_auction', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                } else {
-                    $('.div-link').hide();
-                }
-            });
-
-            $(document).on('change', '#modification', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                } else {
-                    $('.div-modify_info').hide();
-                }
-            });
-        });
-    </script> --}}
-
 @endsection
