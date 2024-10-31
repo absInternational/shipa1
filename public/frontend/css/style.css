@@ -6786,7 +6786,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .page-details-wrapper .tj-blog-item-three {
     border-radius: 20px;
-    box-shadow: #c9c9c9 0px 0px 10px 3px;
+    /* box-shadow: #c9c9c9 0px 0px 10px 3px; */
     position: relative;
     margin-bottom: 45px;
 }

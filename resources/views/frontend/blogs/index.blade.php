@@ -1,8 +1,6 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Blog')
 @section('meta_description', 'Discover insightful articles, expert tips on auto shipping and transportation at SHIPA1 Blog. Stay informed and enhance your knowledge.')
-
 @section('content')
     <style>
         font {
@@ -10,7 +8,6 @@
         }
         
     </style>
-
     <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
@@ -35,7 +32,6 @@
         </div>
     </section>
     <!--========== breadcrumb End ==============-->
-
     <!--========== blog details Start ==============-->
     <section class="tj-blog-standard">
         <div class="container">
@@ -101,20 +97,10 @@
                                 </div>
                             </div>
                         @endforeach
-
-                        
-
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="details-sidebar-inner">
-                        {{-- <div class="tj-sidebar-widget sidebar-search">
-                            <form action="#">
-                                <input type="text" class="form-control" name="search" id="searchOne"
-                                    placeholder="Search">
-                                <i class="flaticon-loupe"></i>
-                            </form>
-                        </div> --}}
                         <div class="tj-sidebar-widget sidebar-post"   data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
                             <h5 class="details_title">Recent Blogs</h5>
 
