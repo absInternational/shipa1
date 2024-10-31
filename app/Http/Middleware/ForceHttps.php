@@ -18,11 +18,13 @@ class ForceHttps
 
     public function handle(Request $request, Closure $next)
     {
-        $host = $request->getHost();
+        if ($this->app->environment('production')) {
+            $host = $request->getHost();
 
-        if (!$request->isSecure() || !str_starts_with($host, 'www.')) {
-            $newUrl = 'https://www.' . ltrim($host, 'www.') . $request->getRequestUri();
-            return Redirect::to($newUrl, 301);
+            if (!$request->isSecure() || !str_starts_with($host, 'www.')) {
+                $newUrl = 'https://www.' . ltrim($host, 'www.') . $request->getRequestUri();
+                return Redirect::to($newUrl, 301);
+            }
         }
 
         return $next($request);
