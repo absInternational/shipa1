@@ -640,8 +640,8 @@
                             modelDropdown.append('<li><a class="dropdown-item" data-value="' + model + '">' + model + '</a></li>');
                         });
                         modelInput.on('focus', function() {
-                            modelSelect.empty(); // Clear the <select> options
-                            modelSelect.append('<option value="">Select Model</option>'); // Add default option
+                            modelSelect.empty(); 
+                            modelSelect.append('<option value="">Select Model</option>');
                             modelDropdown.show();
                         });
                         modelInput.on('input', function() {
@@ -656,14 +656,14 @@
                             });
                         });
                         modelDropdown.on('click', 'a.dropdown-item', function(e) {
-                            e.preventDefault(); // Prevent default anchor behavior
+                            e.preventDefault(); 
                             var selectedText = $(this).text();
                             var selectedValue = $(this).data('value');
-                            modelInput.val(selectedText); // Set the selected text in modelInput
-                            modelDropdown.hide(); // Hide the custom dropdown
-                            modelSelect.empty(); // Clear the <select> options
+                            modelInput.val(selectedText);
+                            modelDropdown.hide(); 
+                            modelSelect.empty();
                             modelSelect.append('<option value="' + selectedValue + '">' + selectedText + '</option>');
-                            modelSelect.val(selectedValue); // Set the selected value in the select dropdown
+                            modelSelect.val(selectedValue); 
                         });
                         $(document).on('click', function(e) {
                             if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
@@ -671,16 +671,14 @@
                             }
                         });
                     }
-                    // Handle standard <select> dropdown
                     if (modelSelect.length) {
-                        modelSelect.empty(); // Clear any existing options
-                        modelSelect.append('<option value="">Select Model</option>'); // Add default option
+                        modelSelect.empty(); 
+                        modelSelect.append('<option value="">Select Model</option>'); 
                         $.each(response, function(index, model) {
                             modelSelect.append('<option value="' + model + '">' + model + '</option>');
                         });
                         modelSelect.on('change', function() {
                             var selectedModel = $(this).val();
-                            // Optional: Sync custom input when user selects from <select>
                             modelInput.val(modelSelect.find('option:selected').text());
                         });
                     }

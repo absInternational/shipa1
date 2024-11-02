@@ -3,35 +3,22 @@
 @section('meta_description', 'Get the best car transport quotes! Request yours today for fast, easy service tailored to your needs. Instant car shipping quotes available feel free to contact.')
 @section('content')
     <style>
-        /* Error styling */
         .error {
             border: 2px solid red;
         }
-
         .make-dropdown {
             max-height: 200px;
-            /* Set the maximum height */
             overflow-y: auto;
-            /* Enable vertical scrolling */
         }
-
         .dropdown-item {
             white-space: nowrap;
-            /* Prevent text wrapping */
         }
-
-        /* Ensure the dropdown menu does not push the page */
         .model-dropdown {
             max-height: 200px;
-            /* Adjust based on your design */
             overflow-y: auto;
             position: absolute;
-            /* Ensures dropdown is properly positioned */
             z-index: 1000;
-            /* Ensures dropdown appears above other content */
         }
-
-        /* Adjust this if needed to prevent overflow issues */
         .input-form.tj-select {
             position: relative;
         }
@@ -100,14 +87,6 @@
                                         <small id="errName" class="err-style"></small>
                                     </div>
                                 </div>
-                                {{-- <div class="col-md-4">
-                                    <div class="input-form">
-                                        <label class="d-block"> Phone:</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                            required="" />
-                                        <small id="errPhone" class="err-style"></small>
-                                    </div>
-                                </div> --}}
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block">Phone:</label>
@@ -146,8 +125,6 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- bootstrap --}}
-                            <!-- Initial Vehicle Information -->
                             <div class="vehicle-info">
                                 <div class="row select-bm">
                                     <div class="col-md-12 text-center">
@@ -203,7 +180,6 @@
                                                 <ul class="dropdown-menu model-dropdown" style=""
                                                     aria-labelledby="model">
                                                     <li><a class="dropdown-item" href="#">Select Model</a></li>
-                                                    <!-- Options filled by JavaScript -->
                                                 </ul>
                                             </div>
                                         </div>
@@ -211,157 +187,6 @@
 
                                 </div>
                             </div>
-                            {{-- <a id="addVehicleBtn" class="add-car mt-3">Add Vehicle</a> --}}
-                            {{-- <div class="row select-bm">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="text-white mb-0">Car Information</h4>
-                                </div>
-                            
-                                <!-- Year Dropdown -->
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Year</label>
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="yearDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Select Year
-                                            </button>
-                                            <ul class="dropdown-menu w-100" aria-labelledby="yearDropdown">
-                                                <li><input type="text" class="form-control" id="searchYear" placeholder="Search year..."></li>
-                                                @php
-                                                    $currentYear = date('Y');
-                                                    for ($year = $currentYear; $year >= 1936; $year--) {
-                                                        echo "<li><a class='dropdown-item' href='#' data-value='$year'>$year</a></li>";
-                                                    }
-                                                @endphp
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <!-- Make Dropdown -->
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="makeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Select Make
-                                            </button>
-                                            <ul class="dropdown-menu w-100" aria-labelledby="makeDropdown">
-                                                <li><input type="text" class="form-control" id="searchMake" placeholder="Search make..."></li>
-                                                @foreach ($makes as $make)
-                                                    <li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <!-- Model Dropdown -->
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select vehicle-model-div">
-                                        <label>Model</label>
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="modelDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Select Model
-                                            </button>
-                                            <ul class="dropdown-menu w-100" aria-labelledby="modelDropdown">
-                                                <li><input type="text" class="form-control" id="searchModel" placeholder="Search model..."></li>
-                                                <!-- Models will be filled dynamically via AJAX -->
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
-                            {{-- bootstrap --}}
-                            {{-- my code --}}
-                            {{-- <div class="row select-bm">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="text-white mb-0">Car Information</h4>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label> Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year" required>
-                                            <option value="" disabled selected>Select Year</option>
-                                            @php
-                                                $currentYear = date('Y');
-                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                    echo "<option value='$year'>$year</option>";
-                                                }
-                                            @endphp
-                                        </select>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <select class="nice-select vehicle-make" name="make[]" id="make" required>
-                                            <option value="" disabled selected>Select Make</option>
-                                            @foreach ($makes as $make)
-                                                <option value="{{ $make->make }}">{{ $make->make }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select vehicle-model-div">
-                                        <label>Model</label>
-                                        <select class="nice-select vehicle-model" name="model[]" id="model" required>
-                                            <option value="">Select Model</option>
-                                            
-                                        </select>
-                                    </div>
-                                </div>
-                            </div> --}}
-                            {{-- my code --}}
-                            {{-- <div class="row select-bm">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="text-white mb-0">Car Information</h4>
-                                </div>
-                                <!-- Year -->
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Year</label>
-                                        <select class="nice-select vehicle-year" name="year[]" id="year" required>
-                                            <option value="" disabled selected>Select Year</option>
-                                            @php
-                                                $currentYear = date('Y');
-                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                    echo "<option value='$year'>$year</option>";
-                                                }
-                                            @endphp
-                                            <option value="other">Other</option>
-                                        </select>
-                                        <input type="text" class="form-control mt-2 d-none" name="year[]" id="other_year" placeholder="Enter Year">
-                                    </div>
-                                </div>
-                                <!-- Make -->
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <select class="nice-select vehicle-make" name="make[]" id="make" required>
-                                            <option value="" disabled selected>Select Make</option>
-                                            @foreach ($makes as $make)
-                                                <option value="{{ $make->make }}">{{ $make->make }}</option>
-                                            @endforeach
-                                            <option value="other">Other</option>
-                                        </select>
-                                        <input type="text" class="form-control mt-2 d-none" name="make[]" id="other_make" placeholder="Enter Make">
-                                    </div>
-                                </div>
-                                <!-- Model -->
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select vehicle-model-div">
-                                        <label>Model</label>
-                                        <select class="nice-select vehicle-model" name="model[]" id="model" required>
-                                            <option value="" disabled selected>Select Model</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                        <input type="text" class="form-control mt-2 d-none" name="model[]" id="other_model" placeholder="Enter Model">
-                                    </div>
-                                </div>
-                            </div> --}}
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-group" style="line-height:23px;">
@@ -387,19 +212,12 @@
                             </a>
                             <div id="vehicles-container">
                             </div>
-                            {{-- <div class="input-form mt-3">
-                                <label class="d-block text-white"> Image:</label>
-                                <input class="form-control image_input" type="file" id="image" name="image"
-                                    placeholder="Upload File" />
-                            </div> --}}
                             <div class="row">
                                 <div class="input-form mt-1">
                                     <label class="d-block text-white"> Image:</label>
                                     <input class="form-control image_input" name="image[]" type="file"
                                         accept="image/*" multiple onchange="previewImages(event)">
-                                    <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                    <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
-                                                                                                                                                                        <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                    <div class="image-preview-container" id="imagePreviewContainer"></div>                                                                                                                                      <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                                 </div>
                             </div>
                             <div class="row">

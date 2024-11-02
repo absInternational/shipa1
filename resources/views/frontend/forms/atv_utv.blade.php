@@ -30,12 +30,6 @@
     <section class="tj-choose-us-section-service-atv-utv">
         <div class="container-flude">
             <div class="row">
-                {{-- <div class="col-2">
-                    <div class="tj-input-form-filler">
-                        <h4 class="title text-center">Placeholder Section</h4>
-                        <p class="text">This is a placeholder section that follows the same height and design as the form on the right.</p>
-                    </div>
-                </div> --}}
                 @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
@@ -64,17 +58,12 @@
                                 </div>
                             @endif
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-
-
-
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-form">
                                         <label class="d-block"> Your Name:</label>
                                         <input type="text" class="name" id="name" name="name"
                                             placeholder="Full Name" required />
-                                        {{-- <span class="errName error-message"></span> --}}
-                                        {{-- <small id="errName" class="err-style"></small> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -82,7 +71,6 @@
                                         <label class="d-block">Phone:</label>
                                         <input type="tel" id="phone" name="phone" class="ophone"
                                             placeholder="Phone Number" required />
-                                        {{-- <small id="errPhone" class="err-style"></small> --}}
                                         <input type="hidden" name="country_code" id="country_code" />
                                     </div>
                                 </div>
@@ -95,8 +83,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -117,7 +103,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white">Atv/Utv Information</h4>
@@ -125,19 +110,6 @@
                                 <div class="col-md-4">
                                     <div class="input-form tj-select">
                                         <label> Year</label>
-                                        {{-- <div class="dropdown">
-                                            <input class="form-control dropdown-toggle year" type="text" name="year[]" id="year" 
-                                            placeholder="Select Year" data-bs-toggle="dropdown" aria-expanded="false" required>
-                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                                <li><a class="dropdown-item">Select Year</a></li>
-                                                @php
-                                                    $currentYear = date('Y');
-                                                    for ($year = $currentYear; $year >= 1936; $year--) {
-                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
-                                                    }
-                                                @endphp
-                                            </ul>
-                                        </div> --}}
                                         <div class="dropdown">
                                             <input class="form-control dropdown-toggle year" type="text"
                                                 name="year[]" id="year" placeholder="Select Year"
@@ -203,14 +175,11 @@
                                     </div>
                                 </div>
                             </div>
-
                             <a class="add-car" id="addVehicleBtn"><i class="fa fa-plus"></i> Add
                                 Vehicle</a>
 
                             <div id="vehicles-container">
                             </div>
-
-
                             <div class="row">
                                 <di class="col-md-6">
                                     <div class="form-group">
@@ -219,7 +188,6 @@
                                         <label class="form-check-label text-white ms-4" for="modification">
                                             Modified?</label>
                                     </div>
-
                                     <div class="input-form div-modify_info" style="display: none;">
                                         <label class="d-block"> Modification Information:</label>
                                         <input class="" type="text" id="c" name="modify_info"
@@ -234,7 +202,6 @@
                                             at
                                             Auction?</label>
                                     </div>
-
                                     <div class="input-form div-link" style="display: none;">
                                         <label class="d-block"> Enter Link:</label>
                                         <input class="" type="url" id="link" name="link"
@@ -244,13 +211,10 @@
                             </div>
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                        placeholder="Upload File" /> -->
                                 <input class="form-control image_input" type="file" name="image[]" accept="image/*"
                                     multiple onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
-
                             <div class="tj-theme-button text-center mt-3">
                                 <button class="tj-submit-btn" type="submit" value="submit">
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
@@ -259,12 +223,6 @@
                         </form>
                     </div>
                 </div>
-                {{-- <div class="col-2">
-                    <div class="tj-input-form-filler">
-                        <h4 class="title text-center">Placeholder Section</h4>
-                        <p class="text">This is a placeholder section that follows the same height and design as the form on the right.</p>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </section>
@@ -323,17 +281,11 @@
                     </div>
                 </div>
                 `;
-
             var $newVehicle = $(newVehicleHtml);
             $('#vehicles-container').append($newVehicle);
-
-            // Animate the new vehicle info smoothly
             $newVehicle.slideDown('slow');
-
-            // Initialize the searchable dropdown for new elements
             initializeSearchableDropdown();
         }
-
         function initializeSearchableDropdown() {
             $('.dropdown-toggle.year').on('input', function() {
                 var input = $(this);
@@ -348,152 +300,31 @@
                     }
                 });
             });
-
             $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
                 var item = $(this);
                 var input = item.closest('.dropdown').find('.dropdown-toggle.year');
                 input.val(item.text());
-                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                item.closest('.dropdown-menu').hide();
             });
-
-            // Show dropdown when input is focused
             $('.dropdown-toggle.year').on('focus', function() {
                 $(this).siblings('.dropdown-menu.year-dropdown').show();
             });
-
-            // Hide dropdown when clicking outside
             $(document).on('click', function(e) {
                 if (!$(e.target).closest('.dropdown').length) {
                     $('.dropdown-menu.year-dropdown').hide();
                 }
             });
         }
-
         $('#addVehicleBtn').click(function() {
             addNewVehicle();
         });
-
-        // Smooth delete with custom class
         $(document).on('click', '.delete-vehicle', function() {
             var $vehicleInfo = $(this).closest('.custom-delete-class');
-            
-            // Slide up the element first, then remove it after the animation is done
             $vehicleInfo.slideUp('slow', function() {
                 $vehicleInfo.remove();
             });
         });
-
-        // Initialize the searchable dropdown for existing elements
         initializeSearchableDropdown();
     });
     </script>
-    {{-- <script>
-            $(document).ready(function() {
-                function addNewVehicle() {
-                    var newVehicleHtml =
-                        `
-                        <div class="vehicle-info">
-                        <div class="row select-bm">
-                            <!-- Bin icon for deleting vehicle -->
-                            <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label>Year</label>
-                        <div class="dropdown">
-                            <input class="form-control dropdown-toggle year" type="text"
-                                name="year[]" id="year" placeholder="Select Year"
-                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
-                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                <li><a class="dropdown-item">Select Year</a></li>`;
-                    var currentYear = {{ date('Y') }};
-                    for (var year = currentYear; year >= 1936; year--) {
-                        newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
-                    }
-
-                    newVehicleHtml +=
-                        `</ul>
-                        </div>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select">
-                        <label>Make</label>
-                        <input type="text" id="make" name="make[]"
-                        placeholder="Enter Make" required="" />
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                        <div class="input-form tj-select model-div">
-                        <label>Model</label>
-                        <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                        required="" />
-                        
-                        </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="condition" class="text-white">Condition</label>
-                                <select class="nice-select" id="condition" name="condition[]">
-                                    <option value="1" selected>Running</option>
-                                    <option value="2">Non Running</option>
-                                </select>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-                        `;
-
-                    $('#vehicles-container').append(newVehicleHtml);
-       
-                    // Initialize the searchable dropdown for new elements
-                    initializeSearchableDropdown();
-                }
-
-                function initializeSearchableDropdown() {
-                    $('.dropdown-toggle.year').on('input', function() {
-                        var input = $(this);
-                        var filter = input.val().toLowerCase();
-                        var dropdown = input.siblings('.dropdown-menu.year-dropdown');
-                        dropdown.find('.dropdown-item').each(function() {
-                            var text = $(this).text().toLowerCase();
-                            if (text.includes(filter) || filter === '') {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-                            }
-                        });
-                    });
-
-                    $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
-                        var item = $(this);
-                        var input = item.closest('.dropdown').find('.dropdown-toggle.year');
-                        input.val(item.text());
-                        item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
-                    });
-
-                    // Show dropdown when input is focused
-                    $('.dropdown-toggle.year').on('focus', function() {
-                        $(this).siblings('.dropdown-menu.year-dropdown').show();
-                    });
-
-                    // Hide dropdown when clicking outside
-                    $(document).on('click', function(e) {
-                        if (!$(e.target).closest('.dropdown').length) {
-                            $('.dropdown-menu.year-dropdown').hide();
-                        }
-                    });
-                }
-
-                $('#addVehicleBtn').click(function() {
-                    addNewVehicle();
-                });
-
-                $(document).on('click', '.delete-vehicle', function() {
-                    $(this).closest('.vehicle-info').remove();
-                });
-
-                // Initialize Select2 on existing dropdowns (if needed)
-                initializeSearchableDropdown();
-            });
-    </script> --}}
     @endsection

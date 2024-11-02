@@ -1,7 +1,6 @@
 <!-- Favicon -->
 <link rel="apple-touch-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
-
 <!-- Bootstrap  v5.1.3 css -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
@@ -27,15 +26,11 @@
 <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
 <!-- Responsive css -->
 <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
-
 {{-- jquery --}}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 @yield('forms_content')
-
 {{-- sweet alert --}}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 <!-- Modernizr.JS -->
 <script src="{{ asset('frontend/js/modernizr-2.8.3.min.js') }}"></script>
 <!-- jQuery.min JS -->

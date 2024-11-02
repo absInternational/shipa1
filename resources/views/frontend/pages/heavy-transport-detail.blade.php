@@ -448,11 +448,11 @@
                             </div>
                         </div>
                         <div class="image-box">
-                            <img class="p-z-idex" src="{{ asset('frontend/images/about/resize 410-630.jpg') }}"
+                            <img class="p-z-idex" src="{{ asset('/public/frontend/images/about/what-makes-us-Heavy1.webp') }}"
                                 alt="Image" />
                         </div>
                         <img class="group-1 p-z-idex"
-                            src="{{ asset('frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}" alt="Image" />
+                            src="{{ asset('/public/frontend/images/about/what-makes-us-Heavy2.webp') }}" alt="Image" />
                         <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"
                             alt="Image" />
                     </div>
@@ -463,7 +463,7 @@
     <!--=========== About Section End =========-->
     <!--=========== Cta Section Start =========-->
     <section class="tj-cta-section icon-animate">
-        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/heavy-cta.webp') }}"></div>
+        <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/Efficient-trans-Heavy.webp') }}"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -511,7 +511,7 @@
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/1.webp') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/PYT-Heavy.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank"> <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -535,7 +535,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/Commercial--.webp') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/PYT-Construction.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.construction-service') }}" target="_blank"> <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -547,7 +547,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/10.webp') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/PYT-Farm.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.farm-service') }}" target="_blank"> <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -559,7 +559,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/excavator-pickup.webp') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/PYT-Excavator.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.excavator-service') }}" target="_blank"> <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -571,7 +571,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('frontend/images/project/commercial-truck.webp') }}" alt="Image" />
+                <img src="{{ asset('frontend/images/project/PYT-Commercial.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.commercial-service') }}" target="_blank"> <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -608,17 +608,6 @@
             </div>
         </div>
     </section>
-    <!-- <section class="tj-video-section">
-            <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="video-wrapper text-center">
-                    <iframe width="80%" height="500" src="https://www.youtube.com/embed/cr4Nya5jVn0?si=RLh4uuppLT63xVBT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section> -->
     @include('partials.transport-by-state')
     <!--========== Faq Section Start ==============-->
     <section class="tj-faq-section tj-faq-page">

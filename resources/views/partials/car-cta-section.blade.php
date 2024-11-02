@@ -7,8 +7,6 @@
                     <div class="cta-content">
                         <div class="cta-icon">
                             <i class="fa-light fa-car-rear"></i>
-                            <!-- <i class="fa-solid fa-gavel"></i> -->
-                            <!-- <i class="flaticon flaticon-freight"></i> -->
                         </div>
                         <div class="cta-text">
                             <h3 class="title">SHIP A CAR DIRECT FROM AUTO AUCTION</h3>

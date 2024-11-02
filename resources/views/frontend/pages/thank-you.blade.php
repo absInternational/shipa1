@@ -18,7 +18,7 @@
         top: 0;
         left: 0;
         overflow: hidden;
-        pointer-events: none; /* Ensure confetti does not block interaction */
+        pointer-events: none;
     }
     .confetti-piece {
         position: absolute;
@@ -203,34 +203,6 @@
     </div>
     <div class="container text-center my-4">
         <div class="row" style="olid #ebe8e8;box-shadow: 0px 0px 51px -5px rgba(0,0,0,1) inset;-webkit-box-shadow: 0px 0px 51px -5px rgb(233 236 239) inset;-moz-box-shadow: 0px 0px 51px -5px rgba(0,0,0,1) inset;border-radius: 25px;padding: 35px;">
-            {{-- <div class="col-lg-12 text-center ps-4 pr-4 mx-4">
-                <i class="fas fa-thumbs-up fa-5x mb-4" style="color: #8fc445; animation: bounce 2s infinite;"></i>
-                <h2 class="thank-you-title">Thank You!</h2>
-                <h2 class="thank-you-title">
-                    @if (isset($price))
-                        {{ $price }}
-                    @endif
-                </h2>
-                <p class="thank-you-message" style="padding: 0px 100px 0px 100px;">We have acknowledged confirmation of your request and will provide your quotation to you shortly on email. In a matter of minutes, a transport specialist will get in touch with you to further explore your requirements.</p>
-               <br>
-                <div class="d-flex justify-content-evenly" style="padding: 0px 100px;">
-                <div class="price__cta-btn">
-                <a href="{{ route('welcome') }}">
-                   <button class="tj-submit-btn previous">
-                       Back Home<i class="fa-light fa-arrow-right"></i>
-                   </button>
-                   </a>
-                </div>
-                <div class="price__cta-btn">
-                    <a href="{{ route('quote.form.combine') }}">
-                  <button class="tj-submit-btn" type="button">
-                      Get New Quote<i class="fa-light fa-arrow-right"></i>
-                  </button>
-                  </a>
-              </div>
-              </div>
-                <!-- <a href="{{ route('welcome') }}" class="btn btn-primary mt-3">Go Back to Home</a> -->
-            </div> --}}
             <div class="col-12 mb-4">
                 <i class="fas fa-thumbs-up fa-5x mb-4" style="color: #8fc445; animation: bounce 2s infinite;"></i>
                 <h2 class="thank-you-title">Thank You!</h2>
@@ -243,10 +215,6 @@
             </div>
             <div class="col-12 d-flex flex-column flex-md-row justify-content-evenly">
                 <div class="mb-3 mb-md-0">
-                    {{-- <a href="{{ route('welcome') }}" class="btn btn-primary d-flex align-items-center">
-                        <span>Back Home</span>
-                        <i class="fa-light fa-arrow-right ms-2"></i>
-                    </a> --}}
                     <div class="price__cta-btn">
                         <a href="{{ route('welcome') }}">
                            <button class="tj-submit-btn previous">
@@ -256,10 +224,6 @@
                         </div>
                 </div>
                 <div>
-                    {{-- <a href="{{ route('quote.form.combine') }}" class="btn btn-primary d-flex align-items-center">
-                        <span>Get New Quote</span>
-                        <i class="fa-light fa-arrow-right ms-2"></i>
-                    </a> --}}
                     <div class="price__cta-btn">
                         <a href="{{ route('quote.form.combine') }}">
                       <button class="tj-submit-btn" type="button">
@@ -287,29 +251,6 @@
         <div class="row shadow-lg p-3 mb-5 bg-body rounded">
             <div class="col-lg-12">
                 <div class="slider-tabs slider-tabs-two ">
-                    {{-- <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                                aria-selected="false">
-                                <i class="flaticon-shipped"></i>Vehicle Transport
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="true">
-                                <i class="flaticon-global-navigation"></i>Heavy Transport
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                                aria-selected="false">
-                                <i class="flaticon-cargo-ship-1"></i>Freight Transport
-                            </button>
-                        </li>
-                    </ul> --}}
                     <ul class="nav nav-pills flex-column flex-md-row" id="pills-tab" role="tablist">
                         <li class="nav-item d-flex flex-column flex-md-row" role="presentation">
                             <button class="nav-link active mb-2 mb-md-0" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
@@ -330,32 +271,6 @@
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                             <div class="row">
-                                <!-- <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
-                                    <div class="tj-faq-left-content">
-                                        <div class="faq-image">
-                                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
-                                        </div>
-                                        <div class="faq-content">
-                                            <div class="faq-icon">
-                                                <i class="fa-regular fa-check"></i>
-                                            </div>
-                                            <div class="faq-text">
-                                                <h6 class="text-dark title">Reliable & Trustworthy</h6>
-                                                <p class="text-dark">Safe, trustworthy, and reliable for all of your shipping and transportation needs.</p>
-                                            </div>
-                                        </div>
-                                        <div class="faq-content">
-                                            <div class="faq-icon">
-                                                <i class="fa-regular fa-check"></i>
-                                            </div>
-                                            <div class="faq-text">
-                                                <h6 class="text-dark title">High Quality Service</h6>
-                                                <p class="text-dark">Attention to detail and customer satisfaction are incorporated 
-                                                    in delivering quality service consistently.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="col-lg-12" data-sal="slide-right" data-sal-duration="800">
                                     <div class="tj-faq-area">
                                         <div class="accordion" id="accordionExample">
@@ -564,32 +479,6 @@
                         <div class="tab-pane fade active show" id="pills-profile" role="tabpanel"
                             aria-labelledby="pills-profile-tab">
                             <div class="row">
-                                <!-- <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
-                                    <div class="tj-faq-left-content">
-                                        <div class="faq-image">
-                                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
-                                        </div>
-                                        <div class="faq-content">
-                                            <div class="faq-icon">
-                                                <i class="fa-regular fa-check"></i>
-                                            </div>
-                                            <div class="faq-text">
-                                                <h6 class="text-dark title">Reliable & Trustworthy</h6>
-                                                <p class="text-dark">Safe, trustworthy, and reliable for all of your shipping and transportation needs.</p>
-                                            </div>
-                                        </div>
-                                        <div class="faq-content">
-                                            <div class="faq-icon">
-                                                <i class="fa-regular fa-check"></i>
-                                            </div>
-                                            <div class="faq-text">
-                                                <h6 class="text-dark title">High Quality Material</h6>
-                                                <p class="text-dark">Attention to detail and customer satisfaction are incorporated in delivering
-                                                     quality service consistently.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="col-lg-12" data-sal="slide-right" data-sal-duration="800">
                                     <div class="tj-faq-area">
                                         <div class="accordion" id="accordionExample">
@@ -781,32 +670,6 @@
                         <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                             aria-labelledby="pills-contact-tab">
                             <div class="row">
-                                <!-- <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
-                                    <div class="tj-faq-left-content">
-                                        <div class="faq-image">
-                                            <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
-                                        </div>
-                                        <div class="faq-content">
-                                            <div class="faq-icon">
-                                                <i class="fa-regular fa-check"></i>
-                                            </div>
-                                            <div class="faq-text">
-                                                <h6 class="text-dark title">Reliable & Trustworthy</h6>
-                                                <p class="text-dark">Safe, trustworthy, and reliable for all of your shipping and transportation needs.</p>
-                                            </div>
-                                        </div>
-                                        <div class="faq-content">
-                                            <div class="faq-icon">
-                                                <i class="fa-regular fa-check"></i>
-                                            </div>
-                                            <div class="faq-text">
-                                                <h6 class="text-dark title">High Quality Material</h6>
-                                                <p class="text-dark">Attention to detail and customer satisfaction are 
-                                                    incorporated in delivering quality service consistently.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="col-lg-12" data-sal="slide-right" data-sal-duration="800">
                                     <div class="tj-faq-area">
                                         <div class="accordion" id="accordionExample">

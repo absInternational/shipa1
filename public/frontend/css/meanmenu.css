@@ -1,18 +1,12 @@
 /*! #######################################################################
-
 	MeanMenu 2.0.7
 	--------
-
 	To be used with jquery.meanmenu.js by Chris Wharton (http://www.meanthemes.com/plugins/meanmenu/)
-
 ####################################################################### */
-
 /* hide the link until viewport size is reached */
 a.meanmenu-reveal {
 	display: none;
 }
-
-/* when under viewport size, .mean-container is added to body */
 .mean-container .mean-bar {
 	float: left;
 	width: 100%;
@@ -22,7 +16,6 @@ a.meanmenu-reveal {
 	min-height: 42px;
 	z-index: 999999;
 }
-
 .mean-container a.meanmenu-reveal {
 	width: 22px;
 	height: 22px;
@@ -41,34 +34,29 @@ a.meanmenu-reveal {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 700;
 }
-
 .mean-container a.meanmenu-reveal span {
 	display: block;
 	background: #fff;
 	height: 3px;
 	margin-top: 3px;
 }
-
 .mean-container .mean-nav {
 	float: left;
 	width: 100%;
 	background: #070337;
 	margin-top: 44px;
 }
-
 .mean-container .mean-nav ul {
 	padding: 0;
 	margin: 0;
 	width: 98%;
 	list-style-type: none;
 }
-
 .mean-container .mean-nav ul li {
 	position: relative;
 	float: left;
 	width: 100%;
 }
-
 .mean-container .mean-nav ul li a {
 	display: block;
 	float: left;
@@ -81,34 +69,28 @@ a.meanmenu-reveal {
 	text-decoration: none;
 	text-transform: uppercase;
 }
-
 .mean-container .mean-nav ul li li a {
 	width: 80%;
 	padding: 10px 10%;
 	text-shadow: none !important;
 	visibility: visible;
 }
-
 .mean-container .mean-nav ul li.mean-last a {
 	border-bottom: none;
 	margin-bottom: 0;
 }
-
 .mean-container .mean-nav ul li li li a {
 	width: 70%;
 	padding: 10px 15%;
 }
-
 .mean-container .mean-nav ul li li li li a {
 	width: 60%;
 	padding: 10px 20%;
 }
-
 .mean-container .mean-nav ul li li li li li a {
 	width: 50%;
 	padding: 10px 25%;
 }
-
 .mean-container .mean-nav ul li a.mean-expand {
 	margin-top: 1px;
 	width: 26px;
@@ -123,7 +105,6 @@ a.meanmenu-reveal {
 	border: none !important;
 	font-size: 14px;
 }
-
 .mean-container .mean-push {
 	float: left;
 	width: 100%;
@@ -131,21 +112,17 @@ a.meanmenu-reveal {
 	margin: 0;
 	clear: both;
 }
-
 .mean-nav .wrapper {
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
-
-/* Fix for box sizing on Foundation Framework etc. */
 .mean-container .mean-bar,
 .mean-container .mean-bar * {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
-
 .mean-remove {
 	display: none !important;
 }

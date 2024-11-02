@@ -66,7 +66,6 @@
     }
     .header_heading {
         background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/opacity/see-through */
         color: white;
         font-weight: bold;
         position: absolute;
@@ -176,7 +175,6 @@
         border: 1px solid #b0a6e0 !important;
     }
     body {
-        /*background-image: linear-gradient(to right, rgb(109, 213, 250), rgb(255, 255, 255), rgb(41, 128, 185)) !important;*/
         box-shadow: 2px 2px #9E9E9E !important;
         background-color: white;
     }
@@ -274,19 +272,15 @@
         function get_cartype(id) {
             return id == 1 ? "Open" : "Enclosed";
         }
-
         function get_condtion(id) {
             return id == 1 ? "Running" : "Not-Running";
         }
-
         var csrfToken = $('meta[name="csrf-token"]').attr('content');
-
         $('#calculatePriceFrom').submit(function(event) {
             event.preventDefault();
             var formData = $(this).serialize();
             $('.invalid-feedback').hide();
             $('#all-order-details').html('');
-
             $.ajax({
                 type: 'POST',
                 url: '{{ route('get.order.details') }}',
@@ -345,11 +339,9 @@
                 }
             });
         });
-
         $(document).on('submit', '#submitEmailOrder', function(event) {
             event.preventDefault();
             var formData = $(this).serialize();
-
             $.ajax({
                 type: 'POST',
                 url: '{{ route('order.form.store') }}',
@@ -370,12 +362,10 @@
                 }
             });
         });
-
         $(document).on('submit', '#submitEmailOrderCard', function(event) {
             event.preventDefault();
             var formData = $(this).serialize();
             formData += '&save_but=' + $('#save_but_value').val();
-
             $.ajax({
                 type: 'POST',
                 url: '{{ route('order.form.storeCard') }}',
@@ -396,7 +386,6 @@
                 }
             });
         });
-
         $(document).on('click', '#submit_with_pay_btn', function() {
             $('#save_but_value').val('save_with_pay');
         });

@@ -307,6 +307,121 @@
         </div>
     </div>
 </section>
+<section class="tj-testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="tj-section-heading text-center">
+                <h5 class="title fs-1">Trailers used for Excavator</h5>
+            </div>
+        </div>
+        <div class="owl-carousel carousel11">
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/Excavator on Lowboy Trailor (1).webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Lowboy Trailers</h5>
+                                    <p class="card-text  text-dark">These trailers are designed to carry heavy loads like excavators featuring a low deck height to support
+                                        the stability and easy loading of excavators.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Flatbed Trailers</h5>
+                                    <p class="card-text text-dark">This trailer has an open deck which is convenient for flexible loading and securing machinery, most commonly
+                                        used for small excavators.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Excavator on flatbed Trailor.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/Excavator on Dropdeck Trailor.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Drop Deck Trailers</h5>
+                                    <p class="card-text text-dark">This type of trailer has combined elements of a flatbed and a lowboy. With the help of 
+                                        a lower deck height, allows easy accommodation of taller equipment like excavators.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Extendable Trailers</h5>
+                                    <p class="card-text text-dark">This trailer is adjustable in length and can handle longer or oversized excavators while also 
+                                        offering versatility for multiple sizes and configurations of excavators.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Excavator on Extendable Trailor.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="tj-choose-us-section-service-commercial-5">
     <div class="container why-box">
         <div class="row services">

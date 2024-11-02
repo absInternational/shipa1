@@ -32,7 +32,6 @@
                             </div>
                         @else
                             @foreach ($ymk as $key => $val)
-                                {{-- <span class="fw-bold">Vehicle Name: {{ $responseData['data']['ymk'] }}</span><br> --}}
                                 <span class="fw-bold">Vehicle Name: {{ $val }}</span><br>
                             @endforeach
                             <div class="d-flex justify-content-center">
@@ -290,8 +289,6 @@
                                 }
                                 ?>
                                 <span class="badge badge-warning mx-2 text-white d-flex align-items-center">est</span>
-                                <!-- <span class="badge badge-primary question position-relative text-wrap">
-                                </span> -->
                                 <i class="far fa-question-circle fa-lg  rounded align-items-center"
                                     style="color: #8fc445;" data-bs-custom-class="custom-tooltip"
                                     data-bs-toggle="tooltip" data-bs-placement="top"

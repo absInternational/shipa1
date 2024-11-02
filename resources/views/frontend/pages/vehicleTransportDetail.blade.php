@@ -7,7 +7,6 @@
     }
     .tj-testimonial2-section {
         padding: 50px 0;
-        /* background: #f9f9f9; */
     }
     .carousel-wrapper {
         max-width: 1200px;
@@ -55,7 +54,6 @@
         border-radius: 50%;
         margin: 0 5px;
     }
-
     .owl-dot.active {
         background: #333;
     }
@@ -63,7 +61,6 @@
         from {
             transform: translateX(0);
         }
-
         to {
             transform: translateX(-80%);
         }
@@ -91,7 +88,6 @@
         right: 0;
         background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
     }
-
     .custom-logo-items {
         display: inline-block;
         animation: 35s custom-slides infinite linear;
@@ -113,7 +109,6 @@
         background: white;
         display: flex;
         align-items: center;
-        /* border: 1px solid #ccc; */
         border-radius: 4px;
         padding: 8px 0px 8px 0px;
         width: fit-content;
@@ -123,7 +118,6 @@
         background: white;
         display: flex;
         align-items: center;
-        /* border: 1px solid #ccc; */
         border-radius: 4px;
         padding: 8px 0px 8px 0px;
         width: fit-content;
@@ -177,22 +171,18 @@
     }
     .input-container input {
         border: none;
-        /* border-bottom: 1px solid #ccc; */
         padding: 5px 0px 5px 0px;
         font-size: 14px;
         width: 38px;
         text-align: center;
-        /* margin-right: 5px; */
     }
     .input-container .placeholders {
-        /* color:white; */
         position: relative;
         right: 72px;
         color: black;
         display: inline-block;
         width: auto;
         padding: 0px 8px;
-        /* background: white; */
     }
     .err-style {
         color: red;
@@ -319,10 +309,6 @@
                                         <option value="Car">Car Transport</option>
                                         <option value="Golf-Cart">Golf Cart Transport</option>
                                         <option value="Motorcycle">Motorcycle Transport</option>
-                                        <!-- <option value="Boat-Transport">Boat Transport</option> -->
-                                        <!-- <option value="Freight-Transportation">Freight Transportation</option> -->
-                                        <!-- <option value="Heavy-Equipment">Heavy Equipment</option> -->
-                                        <!-- <option value="RV-Transport">RV Transport</option> -->
                                     </select>
                                     <label class="error-message" id="tabSelector-error">This field is required.</label>
                                     <div class="tab-content mt-3" id="additionalContent"></div>
@@ -351,21 +337,12 @@
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
-                                            {{-- <input class="form-control" required name="Custo_Name" type="text"
-                                                placeholder="Customer Name"> --}}
                                                 <input class="form-control" type="text" id="name" name="name" placeholder="Full Name"
                                                 required />
                                             <label class="error-message" id="Custo_Name-error">This field is
                                                 required.</label>
                                         </div>
                                     </div>
-                                    <!-- <div class="col-xl-4 col-lg-4">
-                                            <div class="single-input-field">
-                                                <label class="d-block text-white"> Phone:</label>
-                                                <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
-                                                <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                            </div>
-                                        </div> -->
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white">Phone:</label>
@@ -378,8 +355,6 @@
                                     <div class="col-xl-12 col-lg-12">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
-                                            {{-- <input class="form-control" required name="Custo_Email" type="email"
-                                                placeholder="Email address"> --}}
                                                 <input class="form-control" type="email" id="email" name="email" placeholder="Your Email Address"
                                             required />
                                             <label class="error-message" id="Custo_Email-error">This field is
@@ -412,7 +387,6 @@
         </div>
     </div>
 </section>
-{{-- @include('partials.reveiw-site') --}}
 @include('partials.reveiw-small-detail') 
 <section class="tj-about-section-three">
     <div class="container">
@@ -442,24 +416,6 @@
         </div>
     </div>
 </section>
-<!-- <section class="tj-service-details pt-4 pb-0">
-    <div class="container-flude">
-        <div class="row">
-        <div class="col-lg-2">
-        </div>
-            <div class="col-lg-10">
-                <div class="tj-section-heading-1 text-center">
-                    <span class="sub-title-1 active-shape">Ship A1 Transport</span>
-                    <p>
-                    Want to ship your vehicle without worrying about emptying your bank account? At Ship A1 your comfort is our top priority, ship the best vehicles at reasonable rates without compromising quality. Our professional and expert team provides you with 100% insured and secure vehicle transport solutions that are specifically tailored to your needs.
-                        <br> At Ship A1 you don’t just have 1 option for shipping your vehicle, here you can even find various suitable services! For shipping your luxurious vehicle, you can opt for enclosed trailers as they are made to protect your vehicle from road debris, scratches, the uncertainty of weather conditions, and potential risks. However, if you are searching for something equally cost-effective and safe, go for open transport! We have expedited options and door-to-door delivery for fast vehicle shipping.
-                        <br> So, what are you waiting for? Get a free online quote now and enjoy the ride!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 <!--=========== About Section Start =========-->
 <section class="tj-about-section pt-4">
     <div class="container">
@@ -477,7 +433,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                             <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
-                                <!-- <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Our Values</h5>
@@ -492,7 +447,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                             <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Scope of Services</h5>
@@ -506,7 +460,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                             <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Safety Is Our Priority</h5>
@@ -521,7 +474,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                             <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Skilful & Devoted Staff</h5>
@@ -546,11 +498,11 @@
                         </div>
                     </div>
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/about/resize 410-630.jpg') }}"
+                        <img class="p-z-idex" src="{{ asset('/public/frontend/images/about/resize 410-630.jpg') }}"
                             alt="Image" />
                     </div>
                     <img class="group-1 p-z-idex"
-                        src="{{ asset('frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}" alt="Image" />
+                        src="{{ asset('/public/frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}" alt="Image" />
                     <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"
                         alt="Image" />
                 </div>
@@ -609,7 +561,7 @@
 <section class="tj-project-section">
     <div class="tj-project-slider owl-carousel">
         <div class="tj-project-item">
-            <img src="{{ asset('frontend/images/project/9.webp') }}" alt="Image" />
+            <img src="{{ asset('/public/frontend/images/project/9.webp') }}" alt="Image" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.car-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
             </div>
@@ -619,17 +571,17 @@
             </div>
         </div>
         <div class="tj-project-item">
-            <img src="{{ asset('frontend/images/project/62.webp') }}" alt="Image" />
+            <img src="{{ asset('/public/frontend/images/project/PYT-Bike.webp') }}" alt="Image" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.bike-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Motorcycle</span>
-                <h4><a href="{{ route('frontend.pages.services.bike-service') }}"  target="_blank" class="title-link">MOTORCYCLE Transportation Services</a></h4>
+                <h4><a href="{{ route('frontend.pages.services.bike-service') }}"  target="_blank" class="title-link">Motorcycle Transportation Services</a></h4>
             </div>
         </div>
         <div class="tj-project-item">
-            <img src="{{ asset('frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
+            <img src="{{ asset('/public/frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.roro-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
             </div>
@@ -639,7 +591,7 @@
             </div>
         </div>
         <div class="tj-project-item">
-            <img src="{{ asset('frontend/images/project/atv,utv-1.webp') }}" alt="Image" />
+            <img src="{{ asset('/public/frontend/images/project/PYT-ATV.webp') }}" alt="Image" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.atv-utv-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
             </div>
@@ -649,7 +601,7 @@
             </div>
         </div>
         <div class="tj-project-item">
-            <img src="{{ asset('frontend/images/project/4.webp') }}" alt="Image" />
+            <img src="{{ asset('/public/frontend/images/project/PYT-Golf.webp') }}" alt="Image" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.golf-cart-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
             </div>
@@ -677,7 +629,6 @@
         </div>
     </div>
 </section>
-{{-- @include('partials.transport-by-state') --}}
 <!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page">
     <div class="container">

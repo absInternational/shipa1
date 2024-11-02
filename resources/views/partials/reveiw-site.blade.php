@@ -23,7 +23,6 @@
      }
      .tj-testimonial2-section {
          padding: 50px 0;
-         /* background: #f9f9f9; */
      }
      .carousel-wrapper {
          max-width: 1200px;
@@ -58,43 +57,11 @@
              transform: translateX(-80%);
          }
      }
-     /* .owl-nav button {
-         background: none;
-         border: none;
-         font-size: 2rem;
-         color: #333;
-     }
-     .owl-nav button {
-         display: none;
-         background: none;
-         border: none;
-         font-size: 2rem;
-         color: #333;
-     }
-     .owl-dot {
-         display: inline-block;
-         width: 12px;
-         height: 12px;
-         background: #ddd;
-         border-radius: 50%;
-         margin: 0 5px;
-     }
-     .owl-dot.active {
-         background: #333;
-     } */
  </style>
  <!--=========== Testimonial Section Start =========-->
  <section class="tj-testimonial-section pb-0">
-        <!-- <div class="row">
-            <div class="tj-section-heading text-center">
-                <span class="sub-title active-shape">check our ratings on the top review sites
-                </span>
-                <h1 class="title">Our Client Reviews</h1>
-            </div>
-        </div> -->
      <div class="carousel-wrapper">
          <div class="owl-carousel owl-theme" id="owl-caro">
-         
              @foreach ($site_reviews as $site_review)
                  <div class="item">
                      <div class="card">
@@ -102,7 +69,6 @@
                              style="text-decoration: none; color: inherit;">
                              <div class="row">
                                  <div class="col-md-6 col-6">
-                                     {{-- new for condition --}}
                                      <div>
                                          @if ($site_review->profile_name == 'BBB')
                                              <img loading="lazy"
@@ -145,14 +111,9 @@
                  </div>
              @endforeach
          </div>
-         <!-- <div class="owl-nav">
-            <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
-            <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
-        </div> -->
      </div>
  </section>
  <!--=========== Testimonial Section End =========-->
- {{-- <script src="path/to/owl.carousel.min.js"></script> --}}
  <script>
      $(document).ready(function() {
          $('#owl-caro').owlCarousel({

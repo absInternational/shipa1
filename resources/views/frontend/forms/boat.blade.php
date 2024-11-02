@@ -220,7 +220,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row select-bm ">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white">Equipment Information</h4>
@@ -574,18 +573,13 @@
                              </div>
                     </div>
                 `;
-
                 $('#vehicles-container').append(newVehicleHtml);
-                // Initialize the searchable dropdown for new elements
                     initializeSearchableDropdown();
             }
-
             $('#addVehicleBtn').click(function() {
                 addNewVehicle();
             });
-            // Initialize the searchable dropdown for new elements
             initializeSearchableDropdown();
-
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
             });
@@ -652,7 +646,6 @@
                 }
             });
         });
-
         function initializeSearchableDropdown() {
                 $('.dropdown-toggle.year').on('input', function() {
                     var input = $(this);
@@ -667,62 +660,39 @@
                         }
                     });
                 });
-
                 $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
                     var item = $(this);
                     var input = item.closest('.dropdown').find('.dropdown-toggle.year');
                     input.val(item.text());
-                    item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                    item.closest('.dropdown-menu').hide();
                 });
-
-                // Show dropdown when input is focused
                 $('.dropdown-toggle.year').on('focus', function() {
                     $(this).siblings('.dropdown-menu.year-dropdown').show();
                 });
-
-                // Hide dropdown when clicking outside
                 $(document).on('click', function(e) {
                     if (!$(e.target).closest('.dropdown').length) {
                         $('.dropdown-menu.year-dropdown').hide();
                     }
                 });
             }
-        
     </script>
 <!-- year search work -->
 <script>
      $(document).ready(function () {
         $('form').on('submit', function (e) {
-            // Year validation
             if ($('#year').val() === null) {
-                e.preventDefault(); // Prevent form submission
-                $('#year').closest('.input-form').find('.error-message').show(); // Show the error message
-                $('#year').focus(); // Focus the select element
+                e.preventDefault(); 
+                $('#year').closest('.input-form').find('.error-message').show();
+                $('#year').focus(); 
             } else {
-                $('#year').closest('.input-form').find('.error-message').hide(); // Hide the error message
+                $('#year').closest('.input-form').find('.error-message').hide(); 
             }
-
-            // Category validation
-
-            // if ($('#category').val() === null) {
-            //     e.preventDefault(); // Prevent form submission
-            //     $('#category').closest('.input-form').find('.error-message').show(); // Show the error message
-            //     $('#category').focus(); // Focus the select element
-            // } else {
-            //     $('#category').closest('.input-form').find('.error-message').hide(); // Hide the error message
-            // }
-            
         });
-
-        // Hide error on change
         $('#year').on('change', function () {
-            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
+            $(this).closest('.input-form').find('.error-message').hide();
         });
-
         $('#category').on('change', function () {
-            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
-
-            // Show input field if "Others" is selected
+            $(this).closest('.input-form').find('.error-message').hide(); 
             if ($(this).val() === 'Others') {
                 $('#otherCategoryInput').show().prop('disabled', false);
             } else {

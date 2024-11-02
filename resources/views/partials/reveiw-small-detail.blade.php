@@ -15,10 +15,6 @@
         align-items: center;
         justify-content: center;
         margin-right: 10px;
-        /* box-shadow: 0 0px 30px 0 #56ff0061; */
-        /* -webkit-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
-        -moz-box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7);
-        box-shadow: 0px 0px 15px 5px rgba(143, 196, 69, 0.7); */
     }
 </style>
 <section class="pt-4 mt-4">
@@ -92,123 +88,6 @@
                     </div>
                 </div>
             @endforeach
-                {{-- <div class="item">
-                    <div class="card">
-                        <div class="firstrow px-2 pt-2 d-flex justify-content-between">
-                            <div>Peter A</div>
-                            <div class="d-flex">
-                                <div class="rate">5.0</div>
-                                <div>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="secondrow px-2 ">
-                            <p>
-                                <a href="#" >
-                                    <span class="less">
-                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
-                                    </span>
-                                    <span style="display:none;" class="more">
-                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
-                                    <span class="text-muted readless">Read Less</span>
-                                    </span>
-                                </a>
-                            </p>
-                        </div>
-                        <div class="thirdrow px-2 py-2 d-flex justify-content-between">
-                            <div class="date">Sep,22 2022</div>
-                            <div>
-                                <div class="images">
-                                    <!-- <div class="title">BBB Reviews</div> -->
-                                    <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/google.png') }}" width="40%" height="50%" alt="BBB">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="firstrow px-2 pt-2 d-flex justify-content-between">
-                            <div>Peter A</div>
-                            <div class="d-flex">
-                                <div class="rate">5.0</div>
-                                <div>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="secondrow px-2 ">
-                            <p>
-                                <a href="#" >
-                                    <span class="less">
-                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
-                                    </span>
-                                    <span style="display:none;" class="more">
-                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
-                                    <span class="text-muted readless">Read Less</span>
-                                    </span>
-                                </a>
-                            </p>
-                        </div>
-                        <div class="thirdrow d-flex justify-content-between py-2 px-2">
-                            <div class="date">Sep,22 2022</div>
-                            <div>
-                                <div class="images">
-                                    <!-- <div class="title">BBB Reviews</div> -->
-                                    <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/transport.png') }}" width="50%" height="50%" alt="BBB">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="firstrow px-2 pt-2 d-flex justify-content-between">
-                            <div>Peter A</div>
-                            <div class="d-flex">
-                                <div class="rate">5.0</div>
-                                <div>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                    <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="secondrow px-2 ">
-                            <p>
-                                <a href="#" >
-                                    <span class="less">
-                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course  <span class="text-muted readmore">Read More</span>
-                                    </span>
-                                    <span style="display:none;" class="more">
-                                    I have used Sean Auto Transport (Ship A1) for over 10 years, and of course given referred them to several people. These guys are reliable and competitively priced. Sean is really a nice guy to work with. There was a time he arranged a pickup for me without any margin because the driver delayed in picking them up. Good guys I can also recommend without a shred of doubt.
-                                    <span class="text-muted readless">Read Less</span>
-                                    </span>
-                                </a>
-                            </p>
-                        </div>
-                        <div class="thirdrow px-2 py-2 d-flex justify-content-between">
-                            <div class="date">Sep,22 2022</div>
-                            <div>
-                                <div class="images">
-                                    <!-- <div class="title">BBB Reviews</div> -->
-                                    <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/turst.png') }}" width="50%" height="50%" alt="BBB">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
         </div>
     </div>
 </section>
@@ -218,19 +97,19 @@
         loop: true,
         margin: 30,
         nav: true,
-        items: 3, // Default number of items
+        items: 3, 
         autoplay: true,
         autoplayTimeout: 4000,
         autoplayHoverPause: true,
         responsive: {
           0: {
-            items: 1 // Show 1 item on screens smaller than 600px
+            items: 1 
           },
           600: {
-            items: 2 // Show 2 items on screens larger than 600px
+            items: 2 
           },
           1000: {
-            items: 3 // Show 3 items on screens larger than 1000px
+            items: 3 
           }
         }
       });

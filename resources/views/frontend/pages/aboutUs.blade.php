@@ -10,16 +10,16 @@
     color: white;
     }
     .service-link:hover {
-        text-decoration: none; /* Ensure no underline on hover */
+        text-decoration: none; 
     }
     .service-link:hover .tj-service-item {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     }
     .service-link:hover .service-content {
-        color: #8FC445; /* Change text color on hover */
+        color: #8FC445; 
     }
     .service-link:hover .icon-box i {
-        color: white; /* Change icon color on hover */
+        color: white; 
     }
 </style>
 <!--========== breadcrumb Start ==============-->
@@ -64,7 +64,6 @@
                     about what our customers require from us, with our professional, expert, and highly equipped team 
                     we can fully meet your needs and expectations without any hassle.
                     </p>
-                    <!-- <h2 class="title">Welcome to the  &amp; privacy policy </h2> -->
                 </div>
             </div>
         </div>
@@ -86,7 +85,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                             <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
-                                <!-- <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Our Values</h5>
@@ -102,7 +100,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                             <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Scope of Services</h5>
@@ -116,7 +113,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                             <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Safety Is Our Priority</h5>
@@ -133,7 +129,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                             <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Skilful & Devoted Staff</h5>
@@ -180,8 +175,6 @@
                     <div class="cta-content">
                         <div class="cta-icon">
                         <i class="fa-light fa-car-rear"></i>
-                        <!-- <i class="fa-solid fa-gavel"></i> -->
-                            <!-- <i class="flaticon flaticon-freight"></i> -->
                         </div>
                         <div class="cta-text">
                             <h3 class="title">SHIP A CAR DIRECT FROM AUTO Auction</h3>
@@ -222,7 +215,6 @@
                         data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
                         <div class="icon-box">
                             <i class="fa-light fa-car-side fa-2xs"></i>
-                            <!-- <i class="flaticon-air-freight"></i> -->
                         </div>
                         <div class="service-content">
                             <h4>VEHICLE TRANSPORTATION</h4>
@@ -243,7 +235,6 @@
                         data-bg-image="{{ asset('frontend/images/service/HEAVY-CARD.webp') }}">
                         <div class="icon-box">
                             <i class="fa-light fa-tractor fa-2xs"></i>
-                            <!-- <i class="flaticon-cargo-ship-1"></i> -->
                         </div>
                         <div class="service-content">
                             <h4>HEAVY TRANSPORTATION</h4>
@@ -264,7 +255,6 @@
                         data-bg-image="{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}">
                         <div class="icon-box">
                             <i class="fa-light fa-truck fa-2xs"></i>
-                            <!-- <i class="flaticon-delivery-van"></i> -->
                         </div>
                         <div class="service-content">
                             <h4>FREIGHT TRANSPORTATION</h4>
@@ -326,26 +316,14 @@
             <div class="col-lg-12">
                 <div class="choose-us-top-content-1">
                     <div class="tj-section-heading-1">
-                        <!-- <span class="sub-title-1 active-shape2"> Have any ideas in your mind?</span> -->
                         <h2 class="title-1">Customer Commitment at Ship A1 Transport </h2>
                     </div>
-                    <!-- <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="contact.html">
-                            Get Quote <i class="flaticon-right-1"></i>
-                        </a>
-                    </div> -->
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="choose-us-step-item-1">
-                    <!-- <div class="choose-step-box-1">
-                        <div class="choose-box-1"></div>
-                        <div class="step-content-1">
-                            <h6 class="title-1"></h6>
-                        </div>
-                    </div> -->
                     <p>
                     At ShipA1 transport, We think it's important to build long-term relationships with our clients. We focus on getting to know what you need and providing custom solutions that go above and beyond. Here's how we show our dedication to you:</p>
                 </div>
@@ -442,134 +420,7 @@
                     <p>We want to hear what you think, and we use your thoughts to make our service better. What you tell us helps us improve how we work and stay your top choice for shipping. ShipA1 always try to do better and give you great service.</p>
                 </div>
             </div>
-        </div>    
-            <!-- <div class="row ">
-                    <h2 class="title-1">Advantages and Key Features of Dry Van Transportation:</h2>
-                    <p>
-                    This method of shipping involves the use of fully enclosed trailers to protect cargo from external elements such as weather,
-                    dust, and theft. It is well known for its key features, which are:</p>
-                        
-                    
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Versatility</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Convenience</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Cost-effectiveness</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Security</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Additional Dry Van Services</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Same-Day Shipping</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Expedited Freight</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Shipment Pairing</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">High-Value Cargo Protection Services</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                
-                    </div>
-                    <div class="col-lg-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                        <div class="choose-us-step-item-1">
-                            <div class="choose-step-box-1">
-                                <div class="choose-box-1"></div>
-                                <div class="step-content-1">
-                                    <h6 class="title-1">Drop Trailers</h6>
-                                </div>
-                            </div>
-                            
-                        </div>
-                
-                    </div>
-                 </div>  -->
+        </div>
     </div> 
 </section>
 <!--========== Chhose Section Start ==============-->

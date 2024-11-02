@@ -1,47 +1,36 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Contact Us')
-
-@section('meta_description',
-    'Need assistance or have a question? Our team is ready to help! Contact us now and let’s get the conversation started. We’d love to hear from you!')
-
+@section('meta_description','Need assistance or have a question? Our team is ready to help! Contact us now and let’s get the conversation started. We’d love to hear from you!')
 @section('content')
 <style>
     .is-invalid {
         border-color: #ff0019;
     }
-    /* Custom styles for SweetAlert2 */
     .swal2-popup {
-        background-color: #f8f9fa; /* Background color */
-        border-radius: 10px; /* Rounded corners */
-        color: #333; /* Text color */
+        background-color: #f8f9fa; 
+        border-radius: 10px;
+        color: #333;
     }
-
     .swal2-title {
-        font-size: 24px; /* Title font size */
-        font-weight: bold; /* Title font weight */
+        font-size: 24px;
+        font-weight: bold;
     }
-
     .swal2-content {
-        font-size: 16px; /* Content font size */
+        font-size: 16px;
     }
-
     .swal2-confirm {
-        background-color: var(--tj-primary-color); /* Confirm button background color */
-        color: #fff; /* Confirm button text color */
-        border: none; /* Remove border */
+        background-color: var(--tj-primary-color);
+        color: #fff;
+        border: none;
     }
-
     .swal2-cancel {
-        background-color: #ff0019; /* Cancel button background color */
-        color: #fff; /* Cancel button text color */
-        border: none; /* Remove border */
+        background-color: #ff0019; 
+        color: #fff; 
+        border: none; 
     }
-
     .swal2-styled {
         border-radius: 5px; /* Rounded corners for buttons */
     }
-
 </style>
 <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
@@ -183,36 +172,6 @@
 <!--=========== Newsletter Section End =========-->
 @endsection
 @section('extraScript')
-{{-- <script>
-    $(document).ready(function() {
-        $('#submitButton').click(function() {
-            var formData = $('#contactForm').serialize();
-            $.ajax({
-                type: 'POST',
-                url: '{{ route('contact_messages.store') }}',
-                data: formData,
-                success: function(response) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Message Sent',
-                        text: response.message
-                    }).then(function() {
-                        // Optionally clear the form fields after successful submission
-                        $('#contactForm')[0].reset();
-                    });
-                },
-                error: function(xhr, status, error) {
-                    var response = xhr.responseJSON;
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: response.message
-                    });
-                }
-            });
-        });
-    });
-</script> --}}
 <script>
     $(document).ready(function() {
         $('#submitButton').click(function(e) {
@@ -272,6 +231,4 @@
         });
     });
 </script>
-
-
 @endsection

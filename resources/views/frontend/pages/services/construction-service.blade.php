@@ -120,7 +120,6 @@
 <section class="tj-choose-us-section-service-construction">
     <div class="container mt-4">
         <div class="row mt-4">
-
             <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
@@ -284,7 +283,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Experienced</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             You should know, not every shipping company has the ability for construction equipment
                             shipping as it’s quite a daunting task and requires top-notch skilled personnel & the
@@ -298,7 +296,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Availability of Trailers</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             For construction equipment transport the hauler must have (RGN) Removable Gooseneck
                             Trailer, Flatbeds and Expendable trailers etc. And along with having these trailers and the
@@ -313,7 +310,6 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Specialized Handling</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Construction equipment calls for handling with precision and care. Our staff at Ship A1 is
                              specially trained in the loading and offloading requirements of heavy machinery and securing 
@@ -327,13 +323,126 @@
                 <div class="about-content-one border rounded-5 p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Tailor-Made Solutions</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Every construction project differs. Ship A1 offers personalized transport solutions with a 
                             customized combination of trailers and logistical expertise in order to meet the specifications 
                             of the equipment, giving flexibility and reliability.</p>
                     </div>
-
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tj-testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="tj-section-heading text-center">
+                {{-- <span class="sub-title active-shape"> test </span> --}}
+                <h5 class="title fs-1">Trailers used for Construction Transport</h5>
+            </div>
+        </div>
+        <div class="owl-carousel carousel11">
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/Construction equipment on flatbed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Flatbed Trailers</h5>
+                                    <p class="card-text  text-dark">This trailer is most ideal for transporting multiple construction vehicles due to its open structure and easy access.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Lowboy Trailers</h5>
+                                    <p class="card-text text-dark">Most commonly used for oversized and heavy construction vehicles offering a low deck which is used to manage
+                                        height restrictions as well as stability.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Construction equipment on lowboy trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/Construction equipment on gooseneck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Gooseneck Trailers</h5>
+                                    <p class="card-text text-dark">This trailer is widely known and popular for its stability and capacity to easily handle and carry large loads,
+                                        equipped with a detachable front that allows easier loading and unloading.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Step Deck Trailers</h5>
+                                    <p class="card-text text-dark">Mainly used for the shipping of tall construction vehicles, equipped with a lower deck for height
+                                        accommodation and a higher deck for additional load.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Construction equipment on step deck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

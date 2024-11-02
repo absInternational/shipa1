@@ -33,7 +33,6 @@
             <div class="col-lg-12">
                 <div class="tj-section-heading text-center">
                     <span class="sub-title active-shape">Ship A1 Transport</span>
-                    <!-- <h2 class="title">Welcome to the  &amp; privacy policy </h2> -->
                 </div>
             </div>
         </div>
@@ -45,7 +44,6 @@
                         www.shipa1.com </a>(the "Site"), is outlined in
                     this Privacy Policy. By accessing or using the Site or its services, you agree to the
                     Privacy Policy.
-
                 </p>
                 <p>
                     By accepting and agreeing to the privacy and policy of Ship A1 Transport you therefore agree
@@ -62,7 +60,6 @@
                     browsing behavior and cookies. We ensure the awareness and accuracy of our legal obligation
                     to safeguard our client and viewer’s information with the highest discretion and care and to
                     use it only for the delivery of transportation services.
-
                 </p>
                 <p>
                     By accessing or using our services, users agree to our Privacy Policy and the terms outlined
@@ -77,7 +74,6 @@
                                 <i class="fa-regular fa-check pp-list"></i>
                             </div>
                             <div class="faq-text">
-                                <!-- <h6 class="title">Reliable & Trustworthy</h6> -->
                                 <p class="mb-1">Name</p>
                             </div>
                         </div>
@@ -86,7 +82,6 @@
                                 <i class="fa-regular fa-check pp-list"></i>
                             </div>
                             <div class="faq-text">
-                                <!-- <h6 class="title">High Quality Material</h6> -->
                                 <p class="mb-1">Email Address</p>
                             </div>
                         </div>
@@ -95,7 +90,6 @@
                                 <i class="fa-regular fa-check pp-list"></i>
                             </div>
                             <div class="faq-text">
-                                <!-- <h6 class="title">High Quality Material</h6> -->
                                 <p class="mb-1">Phone Number</p>
                             </div>
                         </div>
@@ -104,7 +98,6 @@
                                 <i class="fa-regular fa-check pp-list"></i>
                             </div>
                             <div class="faq-text">
-                                <!-- <h6 class="title">High Quality Material</h6> -->
                                 <p class="mb-1">Shipping Address</p>
                             </div>
                         </div>
@@ -113,7 +106,6 @@
                                 <i class="fa-regular fa-check pp-list"></i>
                             </div>
                             <div class="faq-text">
-                                <!-- <h6 class="title">High Quality Material</h6> -->
                                 <p class="mb-1">Shipping Details</p>
                             </div>
                         </div>
@@ -122,7 +114,6 @@
                                 <i class="fa-regular fa-check pp-list"></i>
                             </div>
                             <div class="faq-text">
-                                <!-- <h6 class="title mb-1">High Quality Material</h6> -->
                                 <p class="mb-1">Vehicle Information</p>
                             </div>
                         </div>
@@ -131,7 +122,6 @@
                                 <i class="fa-regular fa-check pp-list"></i>
                             </div>
                             <div class="faq-text">
-                                <!-- <h6 class="title mb-1">High Quality Material</h6> -->
                                 <p class="mb-1">Pick-up City, State & Zip Code</p>
                             </div>
                         </div>
@@ -140,7 +130,6 @@
                                 <i class="fa-regular fa-check pp-list"></i>
                             </div>
                             <div class="faq-text">
-                                <!-- <h6 class="title mb-1">High Quality Material</h6> -->
                                 <p class="mb-1">Delivery City, State & Zip Code</p>
                             </div>
                         </div>
@@ -152,7 +141,6 @@
                 <p>
                     To book a transport Ship A1 Transport diligently collects personal information relevant to
                     your transportation needs.
-
                 </p>
                 <p>
                     This could include:
@@ -166,42 +154,6 @@
                     website’s functionality and optimization. To maintain our commitment to improving user
                     experience, it is vital to collect information about how our users and clients utilize our
                     website, such as:</p>
-                <!-- <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                    <div class="tj-faq-left-content">
-                        <div class="faq-content mb-2">
-                            <div class="faq-icon">
-                                <i class="fa-regular fa-check pp-list"></i>
-                            </div>
-                            <div class="faq-text">  
-                                <p class="mb-1">IP Adress</p>
-                            </div>
-                        </div>
-                        <div class="faq-content mb-2">
-                            <div class="faq-icon">
-                                <i class="fa-regular fa-check pp-list"></i>
-                            </div>
-                            <div class="faq-text">   
-                                <p class="mb-1">Browser Type</p>
-                            </div>
-                        </div>
-                        <div class="faq-content mb-2">
-                            <div class="faq-icon">
-                                <i class="fa-regular fa-check pp-list"></i>
-                            </div>
-                            <div class="faq-text">
-                                <p class="mb-1">Operating System </p>
-                            </div>
-                        </div>
-                        <div class="faq-content mb-2">
-                            <div class="faq-icon">
-                                <i class="fa-regular fa-check pp-list"></i>
-                            </div>
-                            <div class="faq-text">
-                                <p class="mb-1">Pages Viewed</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <p>All of the information collected is only to upgrade the operation of our website <a class="pp-link"
                         href="#"> www.shipa1.com</a>
                 </p>

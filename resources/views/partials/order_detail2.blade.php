@@ -6,7 +6,6 @@
         border: 1px solid #b0a6e0 !important;
     }
     body {
-        /*background-image: linear-gradient(to right, rgb(109, 213, 250), rgb(255, 255, 255), rgb(41, 128, 185)) !important;*/
         box-shadow: 2px 2px #9E9E9E !important;
         background-color: white;
     }
@@ -47,7 +46,6 @@
             <div class="card">
                 <div class="card-header" style="    border-bottom: 1px solid;">
                     <div class=" mb-0 w-100"><strong class="heading">Order Online # {{ $data['id'] }} </strong>
-                        {{-- <p class="subhead">Your IP address - {{ $ip }}</p> --}}
                     </div>
                 </div>
                 <div class="card-body">
@@ -341,10 +339,8 @@
             temp++;
         }
         if (temp > 0) {
-            //            $('.submit_btn').prop("disabled", false);
         }
         if (temp <= 0) {
-            //            $('.submit_btn').prop("disabled", true);
             $(".error_text").html("Please enter valid expiry date");
             $("#success-alert").fadeTo(2000, 500).slideUp(500, function() {
                 $("#success-alert").slideUp(500);

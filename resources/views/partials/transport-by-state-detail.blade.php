@@ -41,7 +41,6 @@
                         <div class="about-content-one">
                             <div class="tj-section-heading">
                                 <span class="sub-title active-shape">{{ $detail->heading }}</span>
-                                <!-- <h2 class="title">Why Choose Us?</h2> -->
                                 <p class="desc">{!! $detail->description !!}</p>
                             </div>
                         </div>

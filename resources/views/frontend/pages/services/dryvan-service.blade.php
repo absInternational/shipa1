@@ -354,6 +354,122 @@
         </div>
     </div>
 </section>
+<section class="tj-testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="tj-section-heading text-center">
+                <h5 class="title fs-1">Trailers used for DRY VAN</h5>
+            </div>
+        </div>
+        <div class="owl-carousel carousel11">
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/Standard Dry Van Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Standard Dry Van Trailers</h5>
+                                    <p class="card-text  text-dark">One of the most prevalent types of trailers which are used for the transportation of dry vans, these are in enclosed
+                                        form, protected from weather conditions, road debris, and any other potential scratches.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Reefer Trailers</h5>
+                                    <p class="card-text text-dark">Reefers are a transportation required for temperature-sensitive cargo however these can also transport dry vans, 
+                                        especially when temperature control is a secondary concern. These are equipped with a cooling unit that assists in
+                                         maintaining a cool temperature making them an ideal choice for dry goods</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Reefer Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/Flatbed Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Flatbed Trailers</h5>
+                                    <p class="card-text text-dark">This type of trailer is used for flexible loading and unloading of dry vans, because of its accessible structure 
+                                        this trailer is an ideal type for any oversized or oddly shaped vehicle and cargo.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Drop Deck Trailers</h5>
+                                    <p class="card-text text-dark">These types of trailers usually are pretty similar to flatbeds but with a lower deck, which allows easy transportation 
+                                        of dry vans that exceeds the height limit.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Dropdeck Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="tj-choose-us-section-service-farm-8">
     <div class="container why-box">
         <div class="row services">

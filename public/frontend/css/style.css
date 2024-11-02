@@ -3353,7 +3353,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     width: 59%;
     height: 53%;
     z-index: 10;
-    border: 2px dashed var(--tj-gray-color3);
+    /* border: 2px dashed var(--tj-gray-color3); */
     transition: 0.4s;
     transform: scale(1);
     max-width: 250px;
@@ -3634,7 +3634,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-service-atv-utv {
     background-color: #000000;
-    background-image: url('../../img/ATVUTV-QUOTE.webp');
+    background-image: url('/public/img/1-background-image-ATV-Transport.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4253,7 +4253,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 
 .tj-choose-us-section-rv {
     background-color: #000000;
-    background-image: url('../../img/rv-.webp');
+    background-image: url('/public/img/1 background image RV on trailer.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4275,7 +4275,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 .tj-choose-us-section-construction {
     background-color: #000000;
-    background-image: url('../../img/construction_1.webp');
+    background-image: url('/public/img/1-background-image-construction-equipment.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4338,7 +4338,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 .tj-choose-us-section-commercial {
     background-color: #000000;
-    background-image: url('../../img/truck-.webp');
+    background-image: url('/public/img/1 background bas commercial bas.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4422,7 +4422,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 .tj-choose-us-section-excavator {
     background-color: #000000;
-    background-image: url('../../img/EXCAVATOR.webp');
+    background-image: url('/public/img/Excavator-transport-on-semi-truck.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4443,7 +4443,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 .tj-choose-us-section-golfcart {
     background-color: #000000;
-    background-image: url('../../img/golf-cart.webp');
+    background-image: url('/public/img/1 background image golf cart transport.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -5636,7 +5636,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
     transition: 0.4s;
     top: 0;
     left: 0;
-    background: rgba(6, 46, 57, 0.5);
+    /* background: rgba(6, 46, 57, 0.5); */
     border-radius: 4px;
 }
 .tj-project-item .arrow-icon {

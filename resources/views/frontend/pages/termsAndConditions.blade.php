@@ -39,7 +39,6 @@
                         choosing Ship A1 Transport for your shipping solutions. Review the following terms and
                         conditions carefully before proceeding with our services.
                     </p>
-                    <!-- <h2 class="title">Welcome to the  &amp; privacy policy </h2> -->
                 </div>
             </div>
         </div>
