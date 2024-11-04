@@ -512,7 +512,8 @@
 </section>
 <!--=========== About Section End =========-->
 <!--=========== Cta Section Start =========-->
-<section class="tj-cta-section icon-animate">
+@include('partials.car-cta-section')
+{{-- <section class="tj-cta-section icon-animate">
     <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/abcabc.webp') }}"></div>
     <div class="container">
         <div class="row">
@@ -541,7 +542,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!--=========== Cta Section End =========-->
 <!--=========== Team Section Start =========-->
 <section class="tj-team-section">
