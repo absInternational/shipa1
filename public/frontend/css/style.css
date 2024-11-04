@@ -796,8 +796,8 @@ body [class*=" icon-"]::before {
     width: 485px;
     z-index: 9999;
     background: var(--tj-white-color);
-    padding: 0px 30px 30px 50px;
-    right: -450px;
+    padding: 0px 0px 0px 35px;
+    right: -480px;
     opacity: 0;
     visibility: visible;
     overflow-y: scroll;

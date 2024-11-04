@@ -94,12 +94,10 @@
         display: block;
     }
 </style>
-
 <div id="preloader" class="preloader">
     <div class="animation-preloader">
     </div>
 </div>
-
 <section class="tj-slider-section">
     <div class="slider_shape"> <img loading="lazy" src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image"/>
     </div>
