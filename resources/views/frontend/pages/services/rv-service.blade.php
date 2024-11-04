@@ -44,7 +44,7 @@
         z-index: 0; 
     }
     .why-choose-us-slider {
-        background: url('/public/img/1 background image RV on trailer.webp');
+        background: url('/public/img/RV services page 1 background image.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;

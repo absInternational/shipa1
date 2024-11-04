@@ -909,8 +909,7 @@
             <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-three">
                     <div class="tj-section-heading">
-                        <span class="sub-title active-shape ">Ship A1 Transport</span>
-                        <!-- <h2 class="title">Delivering Excellence in Air Freight Services</h2> -->
+                        <span class="sub-title active-shape ">Ship A1 Transport</span> 
                         <p class="desc">
                             Looking for a shipping company for your freight transportation? Introducing you to Ship A1,
                             where our delivery matches top-notch quality catered especially according to the needs of
@@ -933,27 +932,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
-                            <div class="col-lg-12">
-                                <div class="tj-section-heading text-center">
-                                    <span class="sub-title active-shape">Ship A1 Transport</span>
-                                    <p>
-                                        Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                                        choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                                        conditions carefully before proceeding with our services.
-                                        Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                                        choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                                        conditions carefully before proceeding with our services.
-                                        Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                                        choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                                        conditions carefully before proceeding with our services.
-                                        Hello, welcome to the terms and conditions of Ship A1 Transport. Thank you for trusting and
-                                        choosing Ship A1 Transport for your shipping solutions. Review the following terms and
-                                        conditions carefully before proceeding with our services.
-                                    </p>
-                                </div>
-                            </div>
-                        </div> -->
     </div>
 </section>
 <!--=========== About Section Start =========-->
@@ -973,7 +951,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" />
-                                <!-- <img src="{{ asset('frontend/images/icon/global.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Our Values</h5>
@@ -988,7 +965,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <i class="fa-light fa-bell-concierge fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Scope of Services</h5>
@@ -1002,7 +978,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <i class="fa-light fa-shield-heart fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Safety Is Our Priority</h5>
@@ -1017,7 +992,6 @@
                         <div class="ab-text d-flex align-items-center">
                             <div class="ab-icon">
                                 <i class="fa-light fa-handshake fa-2xl" style="color: #8fc445;"></i>
-                                <!-- <img src="{{ asset('frontend/images/icon/winner.svg') }}" alt="Icon" /> -->
                             </div>
                             <div class="ab-title">
                                 <h5 class="title">Skilful & Devoted Staff</h5>
@@ -1042,11 +1016,11 @@
                         </div>
                     </div>
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('frontend/images/about/resize 410-630.jpg') }}"
+                        <img class="p-z-idex" src="{{ asset('/public/frontend/images/about/Freight Transportation 1b image.webp') }}"
                             alt="Image" />
                     </div>
                     <img class="group-1 p-z-idex"
-                        src="{{ asset('frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}" alt="Image" />
+                        src="{{ asset('/public/frontend/images/about/Freight Transportation 1a image.webp') }}" alt="Image" />
                     <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"
                         alt="Image" />
                 </div>
@@ -1104,16 +1078,6 @@
 <!--=========== Project Section Start =========-->
 <section class="tj-project-section">
     <div class="tj-project-slider owl-carousel">
-        <!-- <div class="tj-project-item">
-                            <img src="{{ asset('frontend/images/project/project.jpg') }}" alt="Image" />
-                            <div class="arrow-icon">
-                                <a href="{{ route('services') }}" target="_blank" > <i class="fa-light fa-arrow-right"></i></a>
-                            </div>
-                            <div class="tj-project-content">
-                                <span class="sub-title">logistics</span>
-                                <h4><a href="{{ route('services') }}" target="_blank"  class="title-link">Freight Solution</a></h4>
-                            </div>
-                        </div> -->
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
             <div class="arrow-icon">
@@ -1287,530 +1251,4 @@
 <!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
 <!--=========== Blog Section End =========-->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script src="path/to/jquery.min.js"></script>
-{{-- <script src="path/to/owl.carousel.min.js"></script> --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
-{{-- <script>
-    $(document).ready(function() {
-        $('#example-multiple').select2();
-    });
-    $(document).ready(function() {
-        $('#example-multiple-2').select2();
-    });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        $('.your-select-element').select2();
-    });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        var selectedTab = '';
-        $('#tabSelector').change(function() {
-            $('.vehicles-container').html('');
-            selectedTab = $(this).val();
-            var vehicleType = $(this).val();
-            $('.tab-pane').removeClass('show active');
-            $('#' + selectedTab).addClass('show active');
-
-            $.ajax({
-                url: "{{ route('get.partial.form') }}",
-                method: 'GET',
-                data: {
-                    vehicleType: vehicleType,
-                },
-                success: function(response) {
-                    $('#additionalContent').html('');
-                    $('#additionalContent').html(response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        });
-
-
-
-        function getModel(year, makeId, vehicleInfo) {
-            console.log('yes inn');
-            $.ajax({
-                url: "{{ route('get.models') }}",
-                method: 'GET',
-                data: {
-                    year: year,
-                    make: makeId
-                },
-                success: function(response) {
-                    var modelsDropdown = vehicleInfo.find('.model');
-                    modelsDropdown.empty();
-                    var selectOptions = '<option value="">Select Model</option>';
-                    $.each(response, function(index, model) {
-                        selectOptions += '<option value="' + model + '">' +
-                            model +
-                            '</option>';
-                    });
-                    modelsDropdown.html(selectOptions);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        }
-    });
-</script> --}}
-{{-- <script>
-    document.querySelectorAll('input[type="text"]').forEach((input) => {
-        input.addEventListener("input", function() {
-            this.value = this.value.replace(/[^0-9]/g, "");
-        });
-    });
-</script> --}}
-{{-- <script>
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-
-    $(document).ready(function() {
-        $('#inches-input').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input1').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input1, #inches-input1').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input2').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input2').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        function showError(field, message) {
-            $('#' + field).addClass('error-field');
-            $('#' + field + '-error').text(message).show();
-        }
-
-        function hideError(field) {
-            $('#' + field).removeClass('error-field');
-            $('#' + field + '-error').hide();
-        }
-
-        // Move to Step 2
-        $('#step1_next').click(function() {
-            var isValid = true;
-
-            if (!$('#pickup-location').val()) {
-                showError('pickup-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('pickup-location');
-            }
-
-            if (!$('#delivery-location').val()) {
-                showError('delivery-location', 'This field is required.');
-                isValid = false;
-            } else {
-                hideError('delivery-location');
-            }
-
-            if (isValid) {
-                $('#step1').hide();
-                $('#step2').show();
-            }
-        });
-
-        // Return to Step 1
-        $('#step2_previous').click(function() {
-            $('#step2').hide();
-            $('#step1').show();
-        });
-
-        // Move to Step 3
-        $('#step2_next').click(function() {
-            var isValid = true;
-
-            // if (!$('#tabSelector').val()) {
-            //     showError('tabSelector', 'This field is required.');
-            //     isValid = false;
-            // } else {
-            //     hideError('tabSelector');
-            // }
-
-            if (isValid) {
-                $('#step2').hide();
-                $('#step3').show();
-            }
-        });
-
-        // Return to Step 2
-        $('#step3_previous').click(function() {
-            $('#step3').hide();
-            $('#step2').show();
-        });
-    });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        $(document).on('change', '#available_at_auction', function() {
-            if ($(this).is(':checked')) {
-                $('.div-link').show();
-            } else {
-                $('.div-link').hide();
-            }
-        });
-
-        $(document).on('change', '#modification', function() {
-            if ($(this).is(':checked')) {
-                $('.div-modify_info').show();
-            } else {
-                $('.div-modify_info').hide();
-            }
-        });
-    });
-</script> --}}
-{{-- <script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script> --}}
-{{-- <script>
-    $(document).ready(function() {
-        var selectedTab = '';
-        $('#tabSelector').change(function() {
-            $('.vehicles-container').html('');
-            selectedTab = $(this).val();
-            var vehicleType = $(this).val();
-            $('.tab-pane').removeClass('show active');
-            $('#' + selectedTab).addClass('show active');
-
-            $.ajax({
-                url: "{{ route('get.partial.form') }}",
-                method: 'GET',
-                data: {
-                    vehicleType: vehicleType,
-                },
-                success: function(response) {
-                    $('#additionalContent').html('');
-                    $('#additionalContent').html(response);
-                },
-                error: function(xhr) {
-                    console.log(xhr.responseText);
-                }
-            });
-        });
-
-        function addNewVehicle() {
-            var newVehicleHtml =
-                `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label> Year</label>
-                    <select class="nice-select year" name="year[]" required id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-
-            newVehicleHtml +=
-                `</select>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label>Make</label>
-                    <select class="nice-select make" name="make[]" required id="make"> <option value="" disabled selected>Select Make</option>`;
-
-
-
-            newVehicleHtml += `
-                    </select>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="input-form tj-select model-div">
-                    <label>Model</label>
-                    <select class="nice-select model" name="model[]" id="model" required></select>`;
-
-            newVehicleHtml +=
-                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-            newVehicleHtml += `
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                        `;
-
-            $('.vehicles-container').append(newVehicleHtml);
-        }
-
-        function addOtherVehicle() {
-            var newVehicleHtml =
-                `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                    <div class="col-md-4">
-                    <div class="input-form tj-select">
-                    <label> Year</label>
-                    <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-            var currentYear = {{ date('Y') }};
-            for (var year = currentYear; year >= 1936; year--) {
-                newVehicleHtml += `<option value="${year}">${year}</option>`;
-            }
-
-            newVehicleHtml +=
-                `</select>
-                            </div>
-                            </div>
-                            <div class="col-md-4">
-                            <div class="input-form tj-select">
-                            <label>Make</label>
-                            <input type="text" id="make" name="make[]"
-                            placeholder="Enter Make" required="" />
-                            </div>
-                            </div>
-                            <div class="col-md-4">
-                            <div class="input-form tj-select model-div">
-                            <label>Model</label>
-                            <input type="text" id="model" name="model[]" placeholder="Enter Model"
-                            required="" />`
-            newVehicleHtml +=
-                `<span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>`;
-
-            newVehicleHtml += `</div>
-                            </div>
-                            </div>
-                            </div>
-                            `;
-
-            $('.vehicles-container').append(newVehicleHtml);
-        }
-
-        $(document).on('click', '.addVehicleBtn', function() {
-            if ($('#tabSelector').val() == 'Car') {
-                addNewVehicle();
-            } else {
-                addOtherVehicle();
-            }
-        });
-
-        $(document).on('click', '.delete-vehicle', function() {
-            $(this).closest('.vehicle-info').remove();
-        });
-
-        $(document).ready(function() {
-            $(document).on('change', '.vehicle-year, .vehicle-make', function() {
-                var year = $('.vehicle-year').val();
-                var makeId = $('.vehicle-make').val();
-                if (year && makeId) {
-                    getModel(year, makeId);
-                }
-            });
-
-            function getModel(year, makeId) {
-                console.log('yes inn');
-                $.ajax({
-                    url: "{{ route('get.models') }}",
-                    method: 'GET',
-                    data: {
-                        year: year,
-                        make: makeId
-                    },
-                    success: function(response) {
-                        var modelsDropdown = $('.vehicle-model-div');
-                        modelsDropdown.empty();
-                        var selectOptions =
-                            '<label>Model</label> <select class="nice-select model" name="model[]" id="model" required> <option value="">Select Model</option>';
-                        $.each(response, function(index, model) {
-                            selectOptions += '<option value="' + model + '">' +
-                                model +
-                                '</option>';
-                        });
-                        selectOptions += '</select>';
-                        modelsDropdown.html(selectOptions);
-
-                        console.log('yesssss', response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            }
-        });
-    });
-</script> --}}
-{{-- <script>
-    function updateSuggestions(inputField, suggestionsList) {
-        var inputValue = inputField.val();
-
-        $.ajax({
-            url: "{{ route('get.zipcodes') }}",
-            method: "POST",
-            data: {
-                "_token": "{{ csrf_token() }}",
-                "input": inputValue
-            },
-            success: function(response) {
-                suggestionsList.empty();
-
-                $.each(response, function(index, suggestion) {
-                    var listItem = $("<li>").text(suggestion).click(function() {
-                        inputField.val(suggestion);
-                        suggestionsList.css("display", "none");
-                    });
-                    suggestionsList.append(listItem);
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error("Error:", error);
-            }
-        });
-    }
-
-    $("#pickup-location, #delivery-location").keyup(function() {
-        var inputField = $(this);
-        var suggestionsList = inputField.siblings(".suggestionsTwo");
-        suggestionsList.css("display", "block");
-        if (inputField.val() === "") {
-            suggestionsList.css("display", "none");
-        }
-        updateSuggestions(inputField, suggestionsList);
-    });
-</script> --}}
-{{-- <script>
-    document.querySelectorAll('input[type="text"]').forEach((input) => {
-        input.addEventListener("input", function() {
-            this.value = this.value.replace(/[^0-9]/g, "");
-        });
-    });
-</script> --}}
-{{-- <script>
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-
-    $(document).ready(function() {
-        $('#inches-input').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input1').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input1, #inches-input1').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input2').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input2').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script> --}}
 @endsection

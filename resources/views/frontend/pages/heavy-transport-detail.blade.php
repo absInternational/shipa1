@@ -324,7 +324,7 @@
             <div class="row">
                 <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
                     <div class="about_image text-center">
-                        <img src="{{ asset('/public/frontend/images/project/Heavy-detail-page.webp') }}" alt="Image">
+                        <img src="{{ asset('frontend/images/project/Heavy Transportation 1 image.webp') }}" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
