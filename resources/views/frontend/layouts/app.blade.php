@@ -237,6 +237,7 @@
     @include('frontend.includes.header')
     {{-- page content --}}
     @yield('content')
+    @include('partials.sidebtn-track')
     {{-- Footer Section Start --}}
     @include('frontend.includes.footer')
     {{-- page content --}}

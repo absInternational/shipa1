@@ -1110,6 +1110,24 @@ body [class*=" icon-"]::before {
     width: 53rem;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
+.tj-main-menu li .sub-menu-list-2 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: var(--tj-white-color);
+    padding: 30px 20px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    top: 130%;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    width: 33rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
 @media screen and (max-width: 768px) {
     .tj-main-menu li .sub-menu-list {
         width: 17rem;
@@ -1166,6 +1184,7 @@ body [class*=" icon-"]::before {
     opacity: 1;
     visibility: visible;
     top: 100%;
+    left: -60px;
 }
 .tj-main-menu li:hover .sub-menu-list::before {
     width: 100%;

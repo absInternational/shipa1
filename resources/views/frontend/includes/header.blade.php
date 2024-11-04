@@ -100,7 +100,7 @@
                                             class="{{ Request::routeIs('quote.form.combine') ? ' active' : '' }}"> {{ $navbar->menu_name }}</a>
                                         <ul class="list-gap sub-menu-list" >
                                             <div class="row">
-                                                <div class="col-sm-4 bd-l bd-r">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 bd-l bd-r">
                                                     <h4 class="mb-3 ul-child-custom-heading">Vehicle Transportation</h4>
                                                     <li>
                                                         <a class="title"  href="{{ route('form.vehicle.atv_utv') }}">Atv Utv Transport</a>
@@ -118,7 +118,7 @@
                                                             href="{{ route('form.vehicle.form.vehicle.car') }}">Motorcycle Transport</a>
                                                     </li>
                                                 </div>
-                                                <div class="col-sm-4 bd-r">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 bd-r">
                                                     <h4 class="mb-3 ul-child-custom-heading">Heavy Equipment</h4>
                                                     <li>
                                                         <a class="title" 
@@ -143,7 +143,7 @@
                                                         <a class="title" href="{{ route('frontend.forms.rv_transport') }}">RV Transport</a>
                                                     </li>
                                                 </div>
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-12 col-md-12 col-lg-4">
                                                     <h4 class="mb-3 ul-child-custom-heading">Freight Transportation</h4>
                                                     <li>
                                                         <a class="title"  href="{{ route('frontend.forms.hazmattransport') }}">Hazmat Transport</a>
@@ -173,9 +173,9 @@
                                     <li class="current-menu-item menu-item-has-children">
                                         <a href="{{ route('services') }}"
                                             class="{{ Request::routeIs('services*') ? ' active' : '' }}">{{ $navbar->menu_name }}</a>
-                                        <ul class="list-gap sub-menu-list sub-menu-list-2" >
+                                        <ul class="list-gap sub-menu-list" >
                                             <div class="row">
-                                                <div class="col-sm-4 bd-l bd-r">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 bd-l bd-r">
                                                     <h4 class="mb-3 ul-child-custom-heading">Vehicle Transportation</h4>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Vehicle Transportation')
@@ -217,7 +217,7 @@
                                                                     Excavator Service Transport</a>
                                                             </li> -->
                                                 </div>
-                                                <div class="col-sm-4 bd-r">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 bd-r">
                                                     <h4 class="mb-3 ul-child-custom-heading">Heavy Equipment</h4>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Heavy Equipment')
@@ -264,7 +264,7 @@
                                                             RV Transport Services</a>
                                                     </li>   
                                                 </div>
-                                                <div class="col-sm-4 ">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 ">
                                                     <h4 class="mb-3 ul-child-custom-heading">Freight Transportation</h4>
                                                     @foreach ($services as $service)
                                                         @if ($service->category->name == 'Freight Transportation')
@@ -316,7 +316,24 @@
                                     @if($navbar->id == 4)
                                     <li class="ab-gap">
                                         <a href="{{ route('autoAuction') }}"
-                                            class="{{ Request::routeIs('autoAuction') ? ' active' : '' }}">{{ $navbar->menu_name }}</a>
+                                            class="{{ Request::routeIs('autoAuction') || Request::routeIs('heavyAuction') ? ' active' : '' }}">{{ $navbar->menu_name }}</a>
+                                            <ul class="list-gap sub-menu-list sub-menu-list-2" >
+                                                <div class="row">
+                                                    <div class="col-sm-12 bd-l bd-r">
+                                                        <h4 class="mb-3 ul-child-custom-heading">Auction Transport Service</h4>
+                                                        <li>
+                                                            <a class="title" 
+                                                            href="{{ route('autoAuction') }}">
+                                                            Auto Auction Transport</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="title" 
+                                                                href="{{ route('heavyAuction') }}">
+                                                                Heavy Auction Transport</a>
+                                                        </li>
+                                                    </div>  
+                                                </div>
+                                            </ul>
                                     </li>
                                     @endif
                                     @endforeach
@@ -336,10 +353,10 @@
                                     </li>
                                     @endif
                                     @endforeach
-                                    <li>
+                                    {{-- <li>
                                         <a href="{{ route('order.tracking') }}" 
                                             class="{{ Request::routeIs('order.tracking') ? ' active' : '' }}">Track Order</a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <!-- Mainmenu Item End -->
