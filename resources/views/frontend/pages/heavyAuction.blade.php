@@ -219,8 +219,6 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape">Seamless Boat Transport</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">What are Heavy Auctions?</h3>
                         <p class="desc">Did you know there’s an auction for heavy equipment as well? Are you looking to auction
                             your heavy equipment but cannot find a reliable company? It's safe to say you have come to the right 
@@ -231,19 +229,14 @@
                             that your entire experience is as seamless as possible that too in affordable rates and quality
                             services.
                             </p>
-                        {{-- <p>If you’re confused about which Auto Auction to choose, below is a breakdown of the best auto auctions 
-                            that cater to the needs of its customers:</p> --}}
-                        
                     </div>
-                    
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                 <div class="image-box">
-                    <img class="rounded" src="{{ asset('frontend/images/project/auto-auction.webp') }}" alt="Image">
+                    <img class="rounded" src="{{ asset('frontend/images/project/2a image for heavy equipment auction transport (1) (1).webp') }}" alt="Image">
                 </div>
-                <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
                 </div>
             </div>
         </div>
@@ -332,14 +325,8 @@
             <div class="col-lg-12">
                 <div class="choose-us-top-content-1">
                     <div class="tj-section-heading-1">
-                        <!-- <span class="sub-title-1 active-shape2"> Have any ideas in your mind?</span> -->
                         <h2 class="title-1">Heavy Auctions</h2>
                     </div>
-                    {{-- <div class="tj-theme-button">
-                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}">
-                            Get Quote <i class="flaticon-right-1"></i>
-                        </a>
-                    </div> --}}
                 </div>
             </div>
         </div>
@@ -358,7 +345,6 @@
                     </p>
                 </div>
             </div>
-           
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
@@ -416,8 +402,6 @@
             <h2 class="title text-white">Why Choose Us?</h2>
             <span class="sub-title active-shape">Discover the benefits of choosing ShipA1 through our features.</span>
         </div>
-        {{-- <h2 class="section-title">Why Choose Us?</h2>
-        <p class="section-description">Discover the benefits of choosing ShipA1 through our features.</p> --}}
         <div class="row">
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
@@ -465,7 +449,7 @@
         <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
             <div class="about-content-one">
                 <div class="tj-section-heading">
-                    <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Why Choose Ship A1 for Heavy Equipment Transport?</h3>
+                    <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Advantages of Heavy Equipment Transport with ShipA1 Transport</h3>
                     <ul class="desc">
                         <li><strong>Expert Handling of Heavy Equipment:</strong> Our expert and experienced team handle all types of heavy equipment varying from bulldozers to excavators, cranes, as well as loaders. Ship A1 uses specialized equipment and methods to ensure that your equipment is transported safely and without any damage.</li>
                         <li><strong>Customizable Solutions:</strong> We understand that every piece of heavy equipment and every auction has different requirements, which is why we offer customizable solutions tailored to the needs of our customers.</li>
@@ -473,24 +457,12 @@
                     </ul>
                 </div>
             </div>
-            {{-- <div class="about-content-one">
-                <div class="tj-section-heading">
-                    <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">What are Auto Auctions?</h3>
-                    <p class="desc">On any regular and standard auction day, it isn’t unfamiliar or bizarre for hundreds and 
-                        thousands of vehicles to get sold or purchased. Multiple good ratings and high-profile auctions monitor
-                         the purchasing and selling of 1000 vehicles in a single day, depending on the pace and high volume of
-                          transactions. For a company to run this well there should be a strong team and a reliable and 
-                          efficient system. This is when Ship A1 comes into the picture, we work nationwide, providing 
-                          transportation solutions that ensure every vehicle reaches its destination safe and sound.</p>
-                </div>
-            </div> --}}
         </div>
         <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
             <div class="mt-4 rounded">
             <div class="image-box">
-                <img class="rounded" src="{{ asset('frontend/images/project/car-auction-2-.webp') }}" alt="Image">
+                <img class="rounded" src="{{ asset('frontend/images/project/2b image for heavy equipment auction transport (1).webp') }}" alt="Image">
             </div>
-            <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
             </div>
         </div>
     </div>
@@ -604,7 +576,6 @@
     </div>
 </section>
 @include('partials.cta-section')
-
 <section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
@@ -682,82 +653,6 @@
     </div>
 </section>
 @include('partials.blog-slider')
-{{-- <section class="why-choose-us-slider">
-    <div class="container">
-        <h2 class="section-title">Why Choose Us?</h2>
-        <p class="section-description">Discover the benefits of choosing ShipA1 through our interactive slider.</p>
-        <div class="slider">
-            <div class="slider-wrapper">
-                <div class="slide">
-                    <div class="slide-icon">
-
-                        <i class="fas fa-headset" style="font-size: 50px;"></i>
-                    </div>
-                    <div class="slide-content">
-                        <h3 class="slide-title">24/7 Customer Support</h3>
-                        <p class="slide-text">Our priority. For ship a1 there is no odd time, we are present 24/7 for our customers and provide the best care and
-                            support throughout. With an experienced staff, we are here to make your shipping services better!</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide-icon">
-                        <i class="fas fa-dollar-sign" style="font-size: 50px;"></i>
-                    </div>
-                    <div class="slide-content">
-                        <h3 class="slide-title">Affordability</h3>
-                        <p class="slide-text">No need to fret about the overpriced services, at ship A1 your quality is assured and your amount is sustained because we offer
-                            reasonable rates without compromising the quality of your shipment!</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide-icon">
-                        <i class="fas fa-clock" style="font-size: 50px;"></i>
-                    </div>
-                    <div class="slide-content">
-                        <h3 class="slide-title">Convenience</h3>
-                        <p class="slide-text">Your peace of mind is our responsibility, we ensure that the time and amount you invest in us is returned in the form of 
-                            convenience, and top-notch quality.</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide-icon">
-                        <i class="fas fa-shield-alt" style="font-size: 50px;"></i>
-                    </div>
-                    <div class="slide-content">
-                        <h3 class="slide-title">Insurance</h3>
-                        <p class="slide-text">Our 100% insured vehicles guarantee the comfort of our customers and allow them to sit back and relax when partnering with 
-                            Ship A1 knowing that any unforeseen incidents are completely covered.</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide-icon">
-                        <i class="fas fa-users" style="font-size: 50px;"></i>
-                    </div>
-                    <div class="slide-content">
-                        <h3 class="slide-title">Trusted By Many</h3>
-                        <p class="slide-text">You can check our satisfied clients on our website, google as well as on different platforms like BBB (Better Business Bureau)
-                            and social media platforms.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="slider-button prev-button">&lt;</button>
-            <button class="slider-button next-button">&gt;</button>
-        </div>
-    </div>
-</section> --}}
-{{-- <div class="video-simulation">
-    <div class="stripe"></div>
-    <div class="stripe"></div>
-    <div class="moving-shape"></div>
-    <div class="moving-shape"></div>
-
-    <div class="content-overlay">
-        <div>
-            <h1>Welcome to Truckload</h1>
-            <p>Reliable Transportation Services</p>
-        </div>
-    </div>
-</div> --}}
 @endsection
 @section('extraScript')
 <script>

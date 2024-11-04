@@ -7,7 +7,6 @@
     }
     .tj-testimonial2-section {
         padding: 50px 0;
-        /* background: #f9f9f9; */
     }
     .carousel-wrapper {
         max-width: 1200px;
@@ -110,7 +109,6 @@
         background: white;
         display: flex;
         align-items: center;
-        /* border: 1px solid #ccc; */
         border-radius: 4px;
         padding: 8px 0px 8px 0px;
         width: fit-content;
@@ -120,7 +118,6 @@
         background: white;
         display: flex;
         align-items: center;
-        /* border: 1px solid #ccc; */
         border-radius: 4px;
         padding: 8px 0px 8px 0px;
         width: fit-content;
@@ -174,22 +171,18 @@
     }
     .input-container input {
         border: none;
-        /* border-bottom: 1px solid #ccc; */
         padding: 5px 0px 5px 0px;
         font-size: 14px;
         width: 38px;
         text-align: center;
-        /* margin-right: 5px; */
     }
     .input-container .placeholders {
-        /* color:white; */
         position: relative;
         right: 72px;
         color: black;
         display: inline-block;
         width: auto;
         padding: 0px 8px;
-        /* background: white; */
     }
     .err-style {
         color: red;
@@ -255,7 +248,6 @@
             @endif
             <div class="col-lg-6 mt-4" data-sal="slide-down" data-sal-duration="800">
                 <div class="tj-input-form mt-4 w-100" data-bg-image="">
-                    <!-- <h4 class="title text-center">Instant Freight Quote!</h4> -->
                     <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
                         id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
                         enctype="multipart/form-data">
@@ -270,7 +262,6 @@
                             </div>
                         @endif
                         <div class="container mt-2">
-                            <!-- Step 1: Moving From/To -->
                             <div class="route_quote_info" id="step1">
                                 <div class="row">
                                     <h4 class="title text-center">Quote Request!</h4>
@@ -307,21 +298,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Step 2: Vehicle Information -->
                             <div class="vehicle_quote_info" id="step2" style="display: none;">
                                 <div class="row">
                                     <h4 class="title text-center">FREIGHT INFORMATION</h4>
-                                    <!-- <select id="tabSelector" class="" aria-label="Tab selector" required>
-                                    <option value=""  disabled>Select a Vehicle</option>
-                                    <option value="Atv">Atv Utv Transport</option>
-                                    <option value="Boat-Transport">Boat Transport</option>
-                                    <option value="Car">Car</option>
-                                    <option value="Freight-Transportation" selected>Freight Transportation</option>
-                                    <option value="Golf-Cart">Golf Cart</option>
-                                    <option value="Heavy-Equipment">Heavy Equipment</option>
-                                    <option value="Motorcycle">Motorcycle</option>
-                                    <option value="RV-Transport">RV Transport</option>
-                                </select> -->
                                     <div class="input-form">
                                         <label for="category">Category</label>
                                         <select class="form-control" id="category" name="category">
@@ -334,27 +313,6 @@
                                             <option value="FTL FULL TRUCK LOAD">FTL FULL TRUCK LOAD</option>
                                         </select>
                                     </div>
-                                    
-                                    {{-- <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="input-form">
-                                                <label class="d-block"> Pickup Location:</label>
-                                                <input type="text" id="pickup-location" name="origin"
-                                                    placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                                <small id="errOLoc" class="err-loc"></small>
-                                                <ul class="suggestions suggestionsTwo"></ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-form">
-                                                <label class="d-block"> Delivery Location:</label>
-                                                <input type="text" id="delivery-location" name="destination"
-                                                    placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                                <small id="errDLoc" class="err-loc"></small>
-                                                <ul class="suggestions suggestionsTwo"></ul>
-                                            </div>
-                                        </div>
-                                    </div> --}}
                                     <div class="row mb-3 mt-3">
                                         <div class="col-md-4">
                                             <label class="lab-cos">Length</label>
@@ -401,42 +359,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="row mt-3">
-                                                <div class="col-md-4">
-                                                    <div class="input-form">
-                                                        <label class="d-block"> Your Name:</label>
-                                                        <input type="text" id="name" name="name" placeholder="Full Name"
-                                                            required="" />
-                                                        <small id="errName" class="err-style"></small>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="input-form">
-                                                        <label class="d-block"> Phone:</label>
-                                                        <input type="tel" id="phone" name="phone" placeholder="Phone Number"
-                                                            required="" />
-                                                        <small id="errPhone" class="err-style"></small>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="input-form">
-                                                        <label class="d-block"> Email Address:</label>
-                                                        <input type="email" id="email" name="email" placeholder="Email Address"
-                                                            required="" />
-                                                        <small id="errEmail" class="err-style"></small>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                    <!-- <div class="form-group" style="display:none;">
-                                                <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                                <select class="form-control" id="trailer_type" name="trailer_type">
-                                                    <option value="RGN" selected>RGN</option>
-                                                    <option value="Stepdeck">Stepdeck</option>
-                                                    <option value="Flatbed">Flatbed</option>
-                                                    <option value="Hotshot">Hotshot</option>
-                                                    <option value="Landoll">Landoll</option>
-                                                </select>
-                                            </div> -->
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="input-form">
@@ -583,17 +505,6 @@
                                                     <option value="Residential">Residential</option>
                                                     <option value="Single_Shipment">Single Shipment</option>
                                                     <option value="Sorting_Segregation">Sorting / Segregation</option>
-                                                    {{-- <option value="" disabled selected>Select</option>
-                                                    <option value="Construction / Utility">Construction / Utility
-                                                    </option>
-                                                    <option value="Container Station">Container Station</option>
-                                                    <option value="Exhibition">Exhibition</option>
-                                                    <option value="Inside Pickup">Inside Pickup</option>
-                                                    <option value="Lift Gate Service">Lift Gate Service</option>
-                                                    <option value="Residential">Residential</option>
-                                                    <option value="Single Shipment">Single Shipment</option>
-                                                    <option value="Sorting / Segregation">Sorting / Segregation
-                                                    </option> --}}
                                                 </select>
                                             </div>
                                         </div>
@@ -621,30 +532,6 @@
                                                     </option>
                                                     <option value="Delivery_Appointment_Required">Delivery appointment required
                                                     </option>
-                                                    {{-- <option value="" disabled selected>Select</option>
-                                                    <option value="After Business Hours Delivery">After Business Hours
-                                                        Delivery
-                                                    </option>
-                                                    <option value="Construction / Utility">Construction / Utility
-                                                    </option>
-                                                    <option value="Appointment">Appointment</option>
-                                                    <option value="Container Station">Container Station</option>
-                                                    <option value="Exhibition">Exhibition</option>
-                                                    <option value="In Bond Freight">In Bond Freight</option>
-                                                    <option value="In Bond TIR Caret">In Bond TIR Caret</option>
-                                                    <option value="Inside - Same Level as Delivery Vehicle">Inside -
-                                                        Same Level as
-                                                        Delivery Vehicle</option>
-                                                    <option value="Lift Gate Service">Lift Gate Service</option>
-                                                    <option value="Residential">Residential</option>
-                                                    <option value="Mine / Govt / Airport">Mine / Govt / Airport
-                                                    </option>
-                                                    <option value="Notification Prior Delivery">Notification Prior
-                                                        Delivery
-                                                    </option>
-                                                    <option value="Delivery appointment required">Delivery appointment
-                                                        required
-                                                    </option> --}}
                                                 </select>
                                             </div>
                                         </div>
@@ -679,16 +566,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    
-                                    {{-- <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition[]">
-                                            <option value="1" selected>Running</option>
-                                            <option value="2">Non Running</option>
-                                        </select>
-                                    </div> --}}
-                                    
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-check">
@@ -723,15 +600,9 @@
                                                 <input class="form-control image_input"  name="image[]" type="file" accept="image/*" multiple
                                                     onchange="previewImages(event)">
                                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]" placeholder="Upload File" /> -->
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- <div class="input-form">
-                                        <label class="d-block" class="text-white"> Image:</label>
-                                        <input class="form-control image_input" type="file" id="image"
-                                            name="image[]" placeholder="Upload File" />
-                                    </div> --}}
                                     <div class="row">
                                         <h4 class="text-white">Additional Services</h4>
                                         <div class="col-md-4">
@@ -766,46 +637,6 @@
                                     <input type="hidden" name="vehicle_opt" value="freight" hidden>
                                     <input type="hidden" name="car_type" value="3" hidden>
                                     <input type="hidden" name="frieght_class" id="frieght_class" value="" hidden>
-                                    <!-- <div class="row select-bm" style="display:none;">
-                                                <div class="col-md-12 text-center">
-                                                    <h4 class="text-white">Vehicle Information</h4>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="input-form tj-select">
-                                                        <label> Year</label>
-                                                        <select class="nice-select vehicle-year" name="year[]" id="year">
-                                                            <option value="2010" selected>Select Year</option>
-                                                            @php
-                                                                $currentYear = date('Y');
-                                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                                    echo "<option value='$year'>$year</option>";
-                                                                }
-                                                            @endphp
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="input-form tj-select">
-                                                        <label>Make</label>
-                                                        <input type="text" value="null" id="make" name="make[]"
-                                                            placeholder="Enter Make" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="input-form tj-select vehicle-model-div">
-                                                        <label>Model</label>
-                                                        <input type="text" id="model" value="null" name="model[]"
-                                                            placeholder="Enter Model" />
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                                Vehicle</a>
-                                            <div id="vehicles-container" style="display:none;">
-                                            </div> -->
-                                    <!-- <label class="error-message" id="tabSelector-error">This field is required.</label> -->
                                     <div class="tab-content mt-3" id="additionalContent"></div>
                                 </div>
                                 <div class="row mt-2">
@@ -825,30 +656,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Step 3: Customer Information -->
                             <div class="basic_quote_info" id="step3" style="display: none;">
                                 <div class="row mb-3">
                                     <h4 class="text-center text-white">Customer Information</h4>
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Your Name:</label>
-                                            {{-- <input class="form-control" required name="phone" type="text"
-                                                placeholder="Customer Name"> --}}
                                                 <input class="form-control" id="name" name="name" type="text"
                                                     placeholder="Customer Name" required>
-                                            <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
                                             <label class="error-message" id="Custo_Name-error">This field is
                                                 required.</label>
                                         </div>
                                     </div>
-                                    <!-- <div class="col-xl-4 col-lg-4">
-                                    <div class="single-input-field">
-                                        <label class="d-block text-white"> Phone:</label>
-                                        <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Phone">
-                                        <input class="form-control" required name="phone" type="tel" placeholder="Customer Phone">
-                                        <label class="error-message" id="Custo_Phone-error">This field is required.</label>
-                                    </div>
-                                </div> -->
                                     <div class="col-xl-6 col-lg-6">
                                         <div class="single-input-field">
                                             <label class="d-block text-white">Phone:</label>
@@ -861,8 +680,6 @@
                                     <div class="col-xl-12 col-lg-12">
                                         <div class="single-input-field">
                                             <label class="d-block text-white"> Email Address:</label>
-                                            {{-- <input class="form-control" required name="Custo_Email" type="email"
-                                                placeholder="Email address"> --}}
                                                 <input class="form-control" id="email" name="email" type="email"
                                                  placeholder="Email address" required>
                                             <label class="error-message" id="Custo_Email-error">This field is

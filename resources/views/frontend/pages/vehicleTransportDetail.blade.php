@@ -498,11 +498,11 @@
                         </div>
                     </div>
                     <div class="image-box">
-                        <img class="p-z-idex" src="{{ asset('/public/frontend/images/about/resize 410-630.jpg') }}"
+                        <img class="p-z-idex" src="{{ asset('/public/frontend/images/about/Untitled design-neww.webp') }}"
                             alt="Image" />
                     </div>
                     <img class="group-1 p-z-idex"
-                        src="{{ asset('/public/frontend/images/about/kuch-be-rak-dy-is-ka-nam.webp') }}" alt="Image" />
+                        src="{{ asset('/public/frontend/images/about/new--design.webp') }}" alt="Image" />
                     <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"
                         alt="Image" />
                 </div>
@@ -513,7 +513,7 @@
 <!--=========== About Section End =========-->
 <!--=========== Cta Section Start =========-->
 <section class="tj-cta-section icon-animate">
-    <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-auto-aucation.webp') }}"></div>
+    <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/abcabc.webp') }}"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">

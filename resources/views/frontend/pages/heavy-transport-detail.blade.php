@@ -2,25 +2,20 @@
 @section('title', 'ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA')
 @section('meta_description', 'Get car shipping services in USA, scratchless vehicle transport service along with huge
     discount offers and FREE auto shipping quotes nationwide.')
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" /> --}}
 @section('content')
     <style>
         .tj-testimonial-section {
             padding: 50px 0;
             background: #f9f9f9;
         }
-
         .tj-testimonial2-section {
             padding: 50px 0;
-            /* background: #f9f9f9; */
         }
-
         .carousel-wrapper {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
-
         .card {
             background: #fff;
             border: 1px solid #ddd;
@@ -28,31 +23,25 @@
             padding: 15px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .card .row {
             display: flex;
             flex-wrap: wrap;
         }
-
         .card .col-6 {
             width: 50%;
         }
-
         .star {
             margin-top: 10px;
         }
-
         .fa-star {
             color: #f39c12;
         }
-
         .owl-nav button {
             background: none;
             border: none;
             font-size: 2rem;
             color: #333;
         }
-
         .owl-nav button {
             display: none;
             background: none;
@@ -60,7 +49,6 @@
             font-size: 2rem;
             color: #333;
         }
-
         .owl-dot {
             display: inline-block;
             width: 12px;
@@ -69,28 +57,23 @@
             border-radius: 50%;
             margin: 0 5px;
         }
-
         .owl-dot.active {
             background: #333;
         }
-
         @keyframes custom-slides {
             from {
                 transform: translateX(0);
             }
-
             to {
                 transform: translateX(-80%);
             }
         }
-
         .custom-logos {
             overflow: hidden;
             padding: 30px 0px;
             white-space: nowrap;
             position: relative;
         }
-
         .custom-logos:before,
         .custom-logos:after {
             position: absolute;
@@ -100,59 +83,48 @@
             height: 100%;
             z-index: 2;
         }
-
         .custom-logos:before {
             left: 0;
             background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
         }
-
         .custom-logos:after {
             right: 0;
             background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
         }
-
         .custom-logo-items {
             display: inline-block;
             animation: 35s custom-slides infinite linear;
         }
-
         .custom-logos:hover .custom-logo-items {
             animation-play-state: paused;
         }
-
         .custom-logo-items img {
             height: 100px;
         }
-
         .lab-cos {
             font-size: 15px;
             font-weight: 500;
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
         .input-container {
             height: 34px;
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
         }
-
         .input-container1 {
             height: 34px;
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
         }
-
         .input-field {
             width: 50px;
             padding: 5px;
@@ -160,7 +132,6 @@
             border: none;
             outline: none;
         }
-
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -168,91 +139,72 @@
             border: none;
             outline: none;
         }
-
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
         }
-
         .separators {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .separators-w {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .input-container input[type="number"] {
             -moz-appearance: textfield;
         }
-
         .input-container input[type="number"]::-webkit-outer-spin-button,
         .input-container input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-
         .form-wrap {
             margin-bottom: 10px;
             position: relative;
         }
-
         .form-label-outside {
             color: white;
             display: block;
             margin-bottom: 5px;
         }
-
         .input-container {
             display: flex;
             align-items: center;
         }
-
         .input-container input {
             border: none;
-            /* border-bottom: 1px solid #ccc; */
             padding: 5px 0px 5px 0px;
             font-size: 14px;
             width: 38px;
             text-align: center;
-            /* margin-right: 5px; */
         }
-
         .input-container .placeholders {
-            /* color:white; */
             position: relative;
             right: 72px;
             color: black;
             display: inline-block;
             width: auto;
             padding: 0px 8px;
-            /* background: white; */
         }
-
         .err-style {
             color: red;
         }
-
         .tj-input-form .input-form label {
             font-size: 15px;
             font-weight: 500;
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
         .video-thumbnail {
             position: relative;
             cursor: pointer;
             display: inline-block;
         }
-
         .video-thumbnail img {
             width: 100%;
             height: auto;
         }
-
         .play-button {
             position: absolute;
             top: 50%;
@@ -262,16 +214,13 @@
             color: white;
             opacity: 0.8;
         }
-
         .play-button:hover {
             opacity: 1;
         }
-
         .error-message {
             display: none;
             color: red;
         }
-
         .error-field {
             border: 2px solid red;
         }
