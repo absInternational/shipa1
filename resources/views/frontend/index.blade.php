@@ -221,7 +221,6 @@
     </div>
 </section>
 @include('partials.reveiw-site')
-<!--=========== Service Section Start =========-->
 <section class="tj-service-section pt-4">
     <div class="container">
         <div class="row">
@@ -296,11 +295,7 @@
         </div>
     </div>
 </section>
-<!--=========== Service Section End =========-->
-<!--=========== Car Cta Section Start =========-->
 @include('partials.car-cta-section')
-<!--=========== Car Cta Section End =========-->
-<!--=========== About Section Start =========-->
 <section class="tj-about-section">
     <div class="container">
         <div class="row">
@@ -394,7 +389,6 @@
         </div>
     </div>
 </section>
-<!--=========== About Section End =========-->
 @include('partials.cta-section')
 <section class="tj-step-section">
     <div class="container">
@@ -510,8 +504,6 @@
         </div>
     </div>
 </section>
-<!--=========== Feature Section End =========-->
-<!--=========== Team Section Start =========-->
 <section class="tj-team-section">
     <div class="container">
         <div class="row">
@@ -524,8 +516,6 @@
         </div>
     </div>
 </section>
-<!--=========== Team Section End =========-->
-<!--=========== Project Section Start =========-->
 <section class="tj-project-section">
     <div class="tj-project-slider owl-carousel">
         <div class="tj-project-item">
@@ -712,8 +702,6 @@
         </div>
     </div>
 </section>
-<!--=========== Project Section End =========-->
-<!--=========== Map Section Start =========-->
 <section class="tj-map-section">
     <div class="google-map">
         <iframe
@@ -750,8 +738,6 @@
         </div>
     </div>
 </section>
-<!--=========== Map Section End =========-->
-<!--=========== Counter Section Start =========-->
 <section class="tj-counter-section">
     <div class="container">
         <div class="row">
@@ -792,16 +778,9 @@
         </div>
     </div>
 </section>
-<!--=========== Counter Section End ========= -->
-<!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
-<!--=========== Blog Section End =========-->
-<!--=========== Testimonial Section Start =========-->
 @include('partials.reveiw-detail')
-<!--=========== Testimonial Section End =========-->
-<!--=========== Newsletter Section Start =========-->
 @include('partials.newsletter')
-<!--=========== Newsletter Section End =========-->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const dropdownToggle = document.querySelector('.dropdown-toggle');
@@ -817,14 +796,4 @@
         });
     });
 </script>
-{{-- <script>
-    $(document).ready(function() {
-            $(".clickbutton").click(function() {
-                $('.Rightbutton').toggleClass("active");
-            });
-            $('.floating_strip .rotatekaro a').on('click', function(e) {
-                $('.floating_form').toggleClass("open");
-            });
-    });
-</script> --}}
 @endsection

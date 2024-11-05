@@ -15,7 +15,7 @@
                                 <div class="tj-testimonial-item">
                                     <div class="testimonial-rating d-flex justify-content-between">
                                         <div class="testimoniasl-image">
-                                            <img src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />
+                                            <img loading="lazy" src="{{ asset('frontend/images/icon/comment.svg') }}" alt="Icon" />
                                         </div>
                                         <div class="rating-icon">
                                             <ul class="list-gap">

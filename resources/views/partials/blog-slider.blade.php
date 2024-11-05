@@ -14,7 +14,7 @@
                             <a
                                 @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else
                             href="{{ route('blog.details', $blog->slug_name) }}" @endif>
-                                <img src="{{ !is_null($blog->post_image) ? asset($blog->post_image) : '' }}"
+                                <img loading="lazy" src="{{ !is_null($blog->post_image) ? asset($blog->post_image) : '' }}"
                                     alt="Blog" /></a>
                         </div>
                         <div class="blog-content-area">

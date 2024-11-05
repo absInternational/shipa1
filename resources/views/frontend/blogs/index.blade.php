@@ -44,7 +44,7 @@
                                     <a
                                         @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}"
                                         @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
-                                        <img src="{{ asset($blog->post_image) }}" alt="Blog" />
+                                        <img loading="lazy" src="{{ asset($blog->post_image) }}" alt="Blog" />
                                     </a>
                                 </div>
                                 <div class="active-text">
@@ -92,7 +92,7 @@
                                 <div class="tj-post-content">
                                     <div class="tj-auother-img">
                                         <a href="">
-                                            <img src="{{ asset($blog->post_image) }}" alt="Blog Image"></a>
+                                            <img loading="lazy" src="{{ asset($blog->post_image) }}" alt="Blog Image"></a>
                                     </div>
                                     <div class="tj-details-text">
                                         <div class="tj-details-header">
@@ -137,8 +137,5 @@
             </div>
         </div>
     </section>
-    <!--========== blog details End ==============-->
-    <!--=========== Newsletter Section Start =========-->
     @include('partials.newsletter')
-    <!--=========== Newsletter Section End =========-->
 @endsection

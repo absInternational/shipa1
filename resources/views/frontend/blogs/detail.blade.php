@@ -44,7 +44,7 @@
                         <div class="tj-blog-item-three">
                             <div class="tj-blog-image">
                                 <a href="blog-details.html">
-                                    <img src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
+                                    <img loading="lazy" src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
                             </div>
                             <div class="active-text">
                                 <span class="p-2">
@@ -79,7 +79,7 @@
                                     <div class="tj-auother-img">
                                         <a
                                             @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
-                                            <img src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
+                                            <img loading="lazy" src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
                                     </div>
                                     <div class="tj-details-text">
                                         <div class="tj-details-header">
