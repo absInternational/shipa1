@@ -41,6 +41,8 @@
         margin: 17px 0 0 15px;
     }
     .banner-form {
+        border-bottom: 4px solid #8fc445;
+        border-top: 4px solid #8fc445;
         background: #fff;
         padding: 30px;
         border-radius: 5px;
