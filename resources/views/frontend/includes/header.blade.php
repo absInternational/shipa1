@@ -9,28 +9,22 @@
     font-weight: bold;
     color: #212529;
   }
-
 </style>
-
 <header class="tj-header-section" id="header-sticky">
     <div class="container" style=" border-radius: 12px; ">
         <div class="row">
             <div class="col-lg-12" >
                 <div class="bg-color d-flex flex-wrap">
-                    <!-- Logo Area Start -->
                     <div class="logo-area">
                         <div class="logo-box">
                             <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"  loading="lazy"
                                     alt="Logo" /></a>
                         </div>
                     </div>
-                    <!-- Logo Area End -->
                     <div class="header-content-area">
-                        <!-- Topbar Section Start -->
                         <div class="header-topbar">
                             <div
                                 class="topbar-content-area d-flex flex-wrap align-items-center justify-content-start">
-                                
                                 <div class="header-content-right mr-4">
                                     <span><i class="fa-regular fa-mobile-screen fa-bounce fa-lg" style="color: #8fc445;"></i>
                                     <a href="tel: 1 (844) 474-4721" class="text-white nav-num-hover">1 (844) 474-4721</a> 
@@ -52,12 +46,6 @@
                                         <li>
                                             <a href="https://www.linkedin.com/in/shipa1-transport/" > <i class="fa-brands fa-linkedin-in"></i></a>
                                         </li>
-                                        {{-- <li>
-                                            <a href="https://twitter.com/ShipA1Transport" > <i class="fa-brands fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.yelp.com/biz/ship-a1-hunt-valley" > <i class="fa-brands fa-yelp"></i></a>
-                                        </li> --}}
                                         <li>
                                             <a href="https://wa.me/+14107184031" > <i class="fa-brands fa-whatsapp"></i></a>
                                         </li>
@@ -65,13 +53,10 @@
                                             <a href="https://www.instagram.com/shipa1_transport/" > <i class="fa-brands fa-instagram"></i></a>
                                         </li>
                                     </ul>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Topbar Section End-->
-                        <!-- Header menu Start -->
                         <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
                             <div class="mobile-logo-area d-lg-none">
                                 <a href="{{ route('welcome') }}">
@@ -79,7 +64,6 @@
                                     alt="Logo" />
                                 </a>
                             </div>
-                            <!-- Mainmenu Item Start -->
                             <div class="tj-main-menu d-lg-block d-none text-end" id="main-menu">
                                 <ul class="main-menu">
                                     @php
@@ -353,13 +337,8 @@
                                     </li>
                                     @endif
                                     @endforeach
-                                    {{-- <li>
-                                        <a href="{{ route('order.tracking') }}" 
-                                            class="{{ Request::routeIs('order.tracking') ? ' active' : '' }}">Track Order</a>
-                                    </li> --}}
                                 </ul>
                             </div>
-                            <!-- Mainmenu Item End -->
                             <div class="header-menu-select d-flex align-items-center justify-content-end">
                                 <div class="tj-header-button d-none d-lg-block">
                                     <a class="tj-header-btn" href="{{ route('quote.form.combine') }}" >
@@ -375,7 +354,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Header end End -->
                     </div>
                 </div>
             </div>

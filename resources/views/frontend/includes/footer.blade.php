@@ -1,68 +1,46 @@
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+{{-- 
 <!-- jQuery Mask Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script> --}}
 <style>
     .social-media-section {
         position: relative;
         bottom: 70px;
     }
-
     .social-media-section h1 {
-        /* font-size: 24px; */
         margin-bottom: 20px;
         color: #fff;
-        /* White text color */
     }
-
     .social-icons {
         display: flex;
         justify-content: space-evenly;
-        /* justify-content: center; */
-        /* gap: 15px; */
     }
-
     .social-icons a {
         color: #fff;
-        /* White color for icons */
         transition: color 0.3s ease, transform 0.3s ease;
         text-decoration: none;
-        /* Remove underline from links */
     }
-
     .social-icons a:hover {
         color: #ddd;
-        /* Slightly lighter color on hover */
         transform: scale(1.1);
-        /* Slight zoom effect on hover */
     }
-
-    /* Responsive Design */
     @media (max-width: 768px) {
         .social-media-section h1 {
             font-size: 20px;
         }
-
         .social-icons {
             gap: 10px;
         }
-
         .social-icons a {
             font-size: 1.5rem;
-            /* Smaller icons on smaller screens */
         }
     }
-
-    /* Additional Styles for Small Screens */
     @media (max-width: 576px) {
         .social-media-section h1 {
             font-size: 18px;
         }
-
         .social-icons a {
             font-size: 1.2rem;
-            /* Even smaller icons on very small screens */
         }
     }
 </style>
@@ -96,47 +74,7 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="footer-social-icon">
-                        <ul class="list-gap">
-                            <li class="mb-2">
-                                <a href="https://www.facebook.com/ShipA1/"> <i class="fa-brands fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/shipa1_transport/"> <i
-                                        class="fa-brands fa-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/shipa1-transport/"> <i
-                                        class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/@shipA1392"> <i class="fa-brands fa-youtube"></i></a>
-                            </li>
-                            <!-- <li>
-                                <a href="https://wa.me/+14107184031"> <i class="fa-brands fa-whatsapp"></i></a>
-                            </li> -->
-                        </ul>
-                    </div> --}}
                 </div>
-                {{-- <div class="row">
-                    <div class="col-lg-12">
-                        <h4 class="text-white text-center">Follow Us on Social Media</h4>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/ShipA1/"> <i
-                                    class="fa-brands fa-facebook-f text-white fa-2x"></i></a>
-
-                            <a href="https://www.instagram.com/shipa1_transport/"> <i
-                                    class="fa-brands fa-instagram text-white fa-2x"></i></a>
-
-                            <a href="https://www.linkedin.com/in/shipa1-transport/"> <i
-                                    class="fa-brands fa-linkedin-in text-white fa-2x"></i></a>
-                            <a href="https://www.youtube.com/@shipA1392"> <i
-                                    class="fa-brands fa-youtube text-white fa-2x"></i></a>
-                            <a href="https://wa.me/+14107184031"> <i
-                                    class="fa-brands fa-whatsapp text-white fa-2x"></i></a>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
             <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
                 <div class="footer-widget footer1_col_2 widget_nav_menu">
@@ -158,7 +96,6 @@
                                 <a href="{{ route('frontend.pages.services.golf-cart-service') }}">Golf Cart
                                     Transport</a>
                             </li>
-
                             <li>
                                 <a href="{{ route('frontend.pages.services.heavy-service') }}">Heavy Equipment</a>
                             </li>
@@ -194,11 +131,6 @@
                             <li>
                                 <a href="{{ route('contactUs') }}">Contact Us</a>
                             </li>
-                            <!-- <li>
-                                <a href="#">Case Studies</a>
-                            </li> -->
-
-
                             <li>
                                 <a href="{{ route('faq') }}">FAQ!</a>
                             </li>
@@ -277,60 +209,6 @@
             </div>
         </div>
     </div>
-    {{-- <div class="social-media-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="text-white">Follow Us on Social Media</h1>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/ShipA1/"> <i class="fa-brands fa-facebook-f text-white fa-2x"></i></a>
-                        
-                        <a href="https://www.instagram.com/shipa1_transport/"> <i
-                            class="fa-brands fa-instagram text-white fa-2x"></i></a>
-                      
-                        <a href="https://www.linkedin.com/in/shipa1-transport/"> <i class="fa-brands fa-linkedin-in text-white fa-2x"></i></a>
-                        <a href="https://www.youtube.com/@shipA1392"> <i class="fa-brands fa-youtube text-white fa-2x"></i></a>
-                        <a href="https://wa.me/+14107184031"> <i class="fa-brands fa-whatsapp text-white fa-2x"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    {{-- <ul class="list-gap">
-        <li class="mb-2">
-            <a href="https://www.facebook.com/ShipA1/"> <i class="fa-brands fa-facebook-f"></i></a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/shipa1_transport/"> <i
-                    class="fa-brands fa-instagram"></i></a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com/in/shipa1-transport/"> <i
-                    class="fa-brands fa-linkedin-in"></i></a>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/@shipA1392"> <i class="fa-brands fa-youtube"></i></a>
-        </li>
-        <!-- <li>
-            <a href="https://wa.me/+14107184031"> <i class="fa-brands fa-whatsapp"></i></a>
-        </li> -->
-    </ul> --}}
-    {{-- <div class="social-media-section">
-        <div class="footer-title">
-            <h3 class="title">Follow us on Social Media</h3>
-        </div>
-        <div class="footer-content-info">
-            <div class="footer-social-icon">
-                <ul>
-                    <li><a href="https://www.facebook.com/ShipA1/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="https://www.youtube.com/@shipA1autotransport" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/shipa1-transport/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="https://twitter.com/ShipA1Transport" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://wa.me/+14107184031" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div> --}}
     <div class="copyright-bottom">
         <div class="container">
             <div class="row">
@@ -342,13 +220,6 @@
                                 Reserved.
                             </p>
                         </div>
-                        <!-- <div class="copyright-menu">
-                            <ul class="list-gap">
-                                <li><a href="#"> Setting & privacy</a></li>
-                                <li><a href="#"> Faqs</a></li>
-                                <li><a href="#"> Support</a></li>
-                            </ul>
-                        </div> -->
                     </div>
                 </div>
             </div>
