@@ -252,7 +252,9 @@
     @include('frontend.includes.header')
     {{-- page content --}}
     @yield('content')
-    @include('partials.sidebtn-track')
+    @if (Route::currentRouteName() !== 'order.tracking')
+        @include('partials.sidebtn-track')
+    @endif
     {{-- Footer Section Start --}}
     @include('frontend.includes.footer')
     {{-- page content --}}

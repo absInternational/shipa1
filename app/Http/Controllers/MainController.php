@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\VehicleName;
@@ -12,22 +13,37 @@ use App\Models\Country;
 
 class MainController extends Controller
 {
+    
     public function trackOrder(Request $request)
     {
         $id = $request->order_num;
         $apiUrl = 'https://washington.shawntransport.com/api/tracking-order';
-
-        $response = Http::post($apiUrl, [
-            'id' => $id,
-        ]);
-        $responseData = $response->json();
-
-        if ($responseData['status_code'] == 200) {
-            return view('partials.orderTrackingTable', compact('responseData'));
-        } else {
+    
+        try {
+            $response = Http::post($apiUrl, ['id' => $id]);
+    
+            // Check if the API request was successful
+            if (!$response->successful()) {
+                Log::error('API Request Failed', ['status' => $response->status(), 'body' => $response->body()]);
+                return response()->json(['status_code' => $response->status(), 'message' => 'API request failed'], 500);
+            }
+    
+            $responseData = $response->json();
+    
+            if ($responseData['status_code'] == 200) {
+                if (!empty($request->modal)) {
+                    return view('partials.orderTrackingTableModal', compact('responseData'));
+                }
+                return view('partials.orderTrackingTable', compact('responseData'));
+            } 
+    
             return $responseData;
+        } catch (\Exception $e) {
+            Log::error('Track Order Exception', ['error' => $e->getMessage()]);
+            return response()->json(['status_code' => 500, 'message' => 'Internal Server Error'], 500);
         }
     }
+    
 
     public function getmake(Request $request)
     {

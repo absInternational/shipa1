@@ -31,30 +31,31 @@
 <section class="tj-contact-page">
     <div class="container">
         <div class="row align-items-center">
-            {{-- <div class="col-lg-7"> --}}
-            <div class="">
-                <div class="tj-section-heading">
-                    <span class="sub-title active-shape"> Want To Know Your Order Status?</span>
-                    <h2 class="title">Get Status of Your Order</h2>
-                </div>
-                <div class="tj-animate-form d-flex align-items-center">
-                    <form id="orderTrackingForm" class="animate-form">
-                        @csrf
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form__div">
-                                    <input type="text" class="form__input" name="order_num" id="order_num"
-                                        placeholder=" " />
-                                    <label class="form__label">Order #:</label>
+            <div class="col-lg-12">
+                <div class="">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape"> Want To Know Your Order Status?</span>
+                        <h2 class="title">Get Status of Your Order</h2>
+                    </div>
+                    <div class="tj-animate-form d-flex align-items-center">
+                        <form id="orderTrackingForm" class="animate-form">
+                            @csrf
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form__div">
+                                        <input type="text" class="form__input" name="order_num" id="order_num"
+                                            placeholder=" " />
+                                        <label class="form__label">Order #:</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <button id="submitButton" class="tj-primary-btn contact-btn" type="button">
+                                        Track Order <i class="flaticon-right-1"></i>
+                                    </button>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6">
-                                <button id="submitButton" class="tj-primary-btn contact-btn" type="button">
-                                    Track Order <i class="flaticon-right-1"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

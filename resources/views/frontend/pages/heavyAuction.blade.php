@@ -17,16 +17,12 @@
     }
     .services {
         text-align: center;
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
         border-radius: 12px;
         padding: 10px 30px 0px 30px;
-        /* background-color: #9d9e9f14;*/
     }
     .services-h1 {
         text-align:center;
-        /* text-decoration: overline; */
         margin-bottom: 50px;
-        /* color: #ffffff; */
     }
     .top-left-image {
     position: absolute;
@@ -35,13 +31,6 @@
     width: 100px;
     height: 100px; 
     }
-    
-    /* .why-choose-us-slider {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    position: relative;
-    overflow: hidden;
-    } */
     .why-choose-us-slider::before {
         content: "";
         position: absolute;
@@ -49,21 +38,19 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
-        z-index: 0; /* Ensures it appears on top of the background */
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
     }
-
     .why-choose-us-slider {
-        background: url('../../img/autoauction banner 2.webp');
+        background: url('/public/img/heavy-equipment-quote.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1; /* Keeps the background behind the ::before element */
+        z-index: 1;
     }
-
     .section-title {
         text-align: center;
         font-size: 2.5rem;
@@ -74,7 +61,6 @@
         text-transform: uppercase;
         animation: fadeIn 1s ease-in-out;
     }
-
     .section-description {
         text-align: center;
         font-size: 1.1rem;
@@ -86,7 +72,6 @@
         opacity: 0.8;
         animation: fadeIn 1.2s ease-in-out;
     }
-
     .slide {
         min-width: 33.333%;
         box-sizing: border-box;
@@ -100,24 +85,20 @@
         position: relative;
         overflow: hidden;
     }
-
     .slide:hover {
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px);
         background-color: rgba(255, 255, 255, 1);
     }
-
     .slide i {
         margin-bottom: 20px;
         color: #666;
         font-size: 3rem;
         transition: color 0.3s ease;
     }
-
     .slide:hover i {
         color: #8FC445;
     }
-
     .slide-title {
         font-size: 1.5rem;
         color: #333;
@@ -126,60 +107,31 @@
         letter-spacing: 0.3px;
         transition: color 0.3s ease;
     }
-
     .slide:hover .slide-title {
         color: #8FC445;
     }
-
     .slide-text {
         font-size: 1rem;
         color: #666;
         line-height: 1.6;
         opacity: 0.9;
     }
-
     @media (max-width: 768px) {
         .col-md-4 {
             flex: 0 0 50%;
             max-width: 50%;
         }
     }
-
     @media (max-width: 576px) {
         .col-md-4 {
             flex: 0 0 100%;
             max-width: 100%;
         }
     }
-
 </style>
-<!--========== breadcrumb Start ==============-->
-{{-- <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title text-center">Auctions Car Transport</h1>
-                    <div class="breadcrumb-link">
-                        <span>
-                            <a href="{{ route('welcome') }}">
-                                <span>Home</span>
-                            </a>
-                        </span>
-                        >
-                        <span>
-                            <span> Auctions Car</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
 <section class="tj-choose-us-section-service-Heavy-Auctions-Transport">
     <div class="container mt-4">
         <div class="row mt-4">
-
             <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
@@ -191,7 +143,6 @@
 
                         </p>
                     </div>
-
                 </div>
             </div>
             @if (session('success'))
@@ -208,7 +159,6 @@
             @include('partials.multi-form-heavy')
                 
             </div>
-
         </div>
     </div>
 </section>
@@ -235,88 +185,11 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                 <div class="image-box">
-                    <img class="rounded" src="{{ asset('frontend/images/project/2a image for heavy equipment auction transport (1) (1).webp') }}" alt="Image">
+                    <img class="rounded" src="{{ asset('/public/frontend/images/project/2a image for heavy equipment auction transport (1) (1).webp') }}" alt="Image">
                 </div>
                 </div>
             </div>
         </div>
-        {{-- <div class="row">
-                <div class="col-lg-12">
-                    <br>
-                    <div class="text-container text-left">
-                        
-                        <p>On any regular and standard auction day, it isn’t unfamiliar or bizarre for hundreds and thousands of vehicles to get sold or purchased. Multiple good ratings and high-profile auctions monitor the purchasing and selling of 1000 vehicles in a single day, depending on the pace and high volume of transactions. For a company to run this well there should be a strong team and a reliable and efficient system. This is when Ship A1 comes into the picture, we work nationwide, providing transportation solutions that ensure every vehicle reaches its destination safe and sound.</p>
-                        <br>
-                        <p>When it comes to heavy equipment auctions, the scale and complexity of transportation are even more pronounced. Here are the key players in the heavy equipment auction space:</p>
-                        <br>
-                        <h5>RICHTEBROS:</h5>
-                        <p>Dealing especially in heavy equipment and specializing in the efficient delivery of RICHTEBROS auctions requires precision and reliability to handle large machinery and equipment efficiently.</p>
-                        <br>
-                        <h5>Iron Planet:</h5>
-                        <p>Specifically known for its online presence of heavy equipment auctions, Iron Planet specializes in and facilitates the selling of machinery. The transporting logistics of heavy equipment demand effective and efficient services to ensure the safe and timely shipping.</p>
-                        <br>
-                        <h5>Machinery Trader:</h5>
-                        <p>This auction majorly focuses on the auction of heavy equipment and machinery, involving large and cumbersome items, as well as necessitating dependable transportation solutions to manage logistics.</p>
-                        <br>
-                        <h5>Proxi-bid:</h5>
-                        <p>Offering a massive platform for the auction of multiple heavy equipment types and a wide range of machinery equipment. This auction provides a user-friendly interface for both buyers and sellers.</p>
-                        <br>
-                        <h3>Why Choose ShipA1?</h3>
-                        <p>For both auto and heavy equipment auctions, ShipA1 is a reliable choice for transportation nationwide. With expertise in handling high volumes of vehicles and equipment, ShipA1 ensures that all items are transported securely and efficiently, meeting the needs of both buyers and sellers. Their comprehensive network and commitment to quality service make ShipA1 a trusted partner for smooth auction transportation.</p>
-                        <br>
-                        <a href="{{ route('quote.form.combine') }}"><img src="https://www.shipa1.com/img/banner-1-1600-x200-landing.webp" width="100%" loading="lazy" alt="Auction Car Transport"></a>
-                        <br>
-                        <br>
-                        <p>Many customers tend to score great deals on auto auctions, but moving the automobiles to the consumers can be a challenge. In many cases, vehicles need to be removed from the auction premises right away. If clients wish to deliver their car to their home in another state, you can contact Ship-A1 for auction-to-consumer car shipping.</p>
-                        <br>
-                        <p>If you are selling or purchasing a vehicle through an auction, you must contemplate how the automobile will arrive at its destination. There are two main options available: either you drive the car or hire an auto mover. Choosing to ship your vehicle is the safest option because there are several advantages to hiring a professional company to transport a vehicle to or from the auction house. Below are some benefits:</p>
-                        
-                        <div class="list-wrapper">
-                            <h4 class="list-title">Benefits</h4>
-                            <div class="list-style">
-                                <div class="list-content">
-                                    <h6>Safer Form of Transport</h6>
-                                    <p>We at Ship-A1 ensure that your automobile arrives in perfect condition, and so do other shipping companies. Driving your vehicle across the states will result in mileage accumulation, which can decrease your vehicle's market value. With auto transport, you can rest assured that the vehicle will arrive in the condition you bought it in.</p>
-                                </div>
-                                <div class="list-content">
-                                    <h6>Customize Delivery</h6>
-                                    <p>At Ship-A1, we provide a wide array of services, and you can choose the type of services that best fit your car requirements. We can also ship your inoperable vehicle and pick your vehicle directly from auction to your doorstep, saving you from spending hours stuck behind the wheel.</p>
-                                </div>
-                                <div class="list-content">
-                                    <h6>Attractive Rates and Discounts</h6>
-                                    <p>Many transport companies provide special discounts depending on the seasons. This feature is an advantage because it can save you a lot of money and time.</p>
-                                </div>
-                                <div class="list-content">
-                                    <h6>Save Money</h6>
-                                    <p>Shipping your vehicle is often your least expensive choice once you calculate all the costs. An auto carrier moves several cars at once, not just your vehicle. By delivering your automobiles, you do not need to pay for any accommodation, food, or gas. By shipping your car, you do not have to take time off from work.</p>
-                                </div>
-                            </div>    
-                        </div>
-                        <div class="list-wrapper">
-                            <h4 class="list-title">Auction Car Shipping Services</h4>
-                            <p>Due to many variables during the auto transport process, it is recommended to plan in advance. The type of automobile you are shipping will decide which method of shipment is optimal for you. Here are some of the shipping services we provide:</p>
-                            <div class="list-style list-2ndstyle">
-                                <div class="list-content">
-                                    <h5 class="font-weight-bold">Open Carrier</h5>
-                                    <p>Under open carrier transport, cars are shipped in an open trailer with automobiles being exposed to the atmosphere. But do not let these facts distract you from the affordability and cheap services provided by an open carrier. They are the most popular mode of transportation, mostly because the vehicles are shipped on a two-level trailer with 7 to 10 automobiles shipped at one time. This makes them cheaper and provides faster services due to their efficiency.</p>
-                                </div>
-                                <div class="list-content">
-                                    <h5 class="font-weight-bold">Enclosed Carriers</h5>
-                                    <p>Enclosed carriers are covered to protect the vehicle from dust, road debris, rain, and snow. This service is optimal for antique automobiles, which require special care and experienced crew. This is a premium service that comes with added features like extra vehicle insurance, constant surveillance, and updates. This service will cost you more, but it offers more protection to the car.</p>
-                                </div>
-                                <div class="list-content">
-                                    <h5 class="font-weight-bold">Door to Door Transport</h5>
-                                    <p>Under door-to-door transport, our team will pick up the automobile at a pre-arranged location and drop it at the final destination. This service is practical for many clients who have busy schedules or cannot pick up or drop off the vehicle themselves. While this option is more convenient, it does cost more. The location of the destination and pickup can also affect the price and time taken for delivery.</p>
-                                </div>
-                                <div class="list-content">
-                                    <h5 class="font-weight-bold">Expedited Transport</h5>
-                                    <p>Expedited transport is a premium service that prioritizes the automobile to be delivered in less time than standard shipping. Although this service is quick and effective, it will cost you more than other options due to its priority status. For immediate delivery and availability, expedited transport is highly recommended.</p>
-                                </div>
-                            </div>    
-                        </div>
-                    </div>
-                </div>
-        </div> --}}
     </div>
 </section>
 <section class="tj-choose-us-section-two-1 pt-2">
@@ -361,7 +234,6 @@
                     and efficient services to ensure the safe and timely shipping</p>
                 </div>
             </div>
-           
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
@@ -377,7 +249,6 @@
                          as well as necessitating dependable transportation solutions to manage logistics.</p>
                 </div>
             </div>
-           
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
@@ -443,7 +314,6 @@
         </div>
     </div>
 </section>
-
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -461,7 +331,7 @@
         <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
             <div class="mt-4 rounded">
             <div class="image-box">
-                <img class="rounded" src="{{ asset('frontend/images/project/2b image for heavy equipment auction transport (1).webp') }}" alt="Image">
+                <img class="rounded" src="{{ asset('/public/frontend/images/project/2b image for heavy equipment auction transport (1).webp') }}" alt="Image">
             </div>
             </div>
         </div>
@@ -516,7 +386,6 @@
                 <div class="about-content-one border rounded-5 p-4 mb-0">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Open Carrier</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Under open carrier transport, cars are shipped in the free trailer with automobiles being exposed
                              to the atmosphere. But do not let these facts distract you from the affordability and cheap services
@@ -531,14 +400,12 @@
                 <div class="about-content-one border rounded-5 p-4 mb-0">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Enclosed Carriers</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Enclosed carriers are covered to protect the vehicle from dust, road debris, rain, and snow. This 
                             service is optimal for antique automobiles, which require special care and experienced crew. This is
                             a premium service that comes with added features like extra vehicle insurance, constant surveillance,
                             and updates. This service will cost you more, but it serves to offer more protection to the car.</p>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -547,7 +414,6 @@
                 <div class="about-content-one border rounded-5 p-4 mb-0">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Door to Door Transport</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Under door to door transport delivery, your automobile will be picked right from your door and will be
                             delivered to your exact location. This is the most popular method of car shipping because it is more
@@ -562,7 +428,6 @@
                 <div class="about-content-one border rounded-5 p-4 mb-0">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Expedited Shipping</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             The speed of delivery is what matters to the customers the most. Ship A1 wants your vehicle be 
                             delivered within the given time and cannot afford the delay. Under standard shipping, your car would
@@ -592,7 +457,6 @@
                     <div class="faq-image">
                         <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image">
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
@@ -645,7 +509,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -713,15 +576,12 @@
             `;
             $('#vehicles-container').append(newVehicleHtml);
         }
-
         $('#addVehicleBtn').click(function() {
             addNewVehicle();
         });
-
         $(document).on('click', '.delete-vehicle', function() {
             $(this).closest('.vehicle-info').remove();
         });
-
         $(document).on('click', '.make-dropdown .dropdown-item', function() {
             var make = $(this).data('value');
             $(this).closest('.dropdown').find('.form-control').val(make).end()
@@ -732,23 +592,18 @@
                 getModel(year, make, vehicleInfo);
             }
         });
-       
         $(document).on('click', '.year-dropdown .dropdown-item', function() {
             var selectedYear = $(this).data('value');
-            $('#year').val(selectedYear);  // Set the selected value in the input field
+            $('#year').val(selectedYear);
         });        
-
         $(document).on('click', '.year, .make', function() {
             var year = $(this).closest('.vehicle-info').find('.year').val();
             var makeId = $(this).closest('.vehicle-info').find('.make').val();
-            // alert(makeId);
             var vehicleInfo = $(this).closest('.vehicle-info');
             if (year && makeId) {
                 getModel(year, makeId, vehicleInfo);
             }
         });
-
-
         function getModel(year, makeId, vehicleInfo) {
             $.ajax({
                 url: "{{ route('get.models') }}",
@@ -760,23 +615,18 @@
                 success: function(response) {
                     var modelDropdown = vehicleInfo.find('.model-dropdown');
                     var modelInput = vehicleInfo.find('.model-input');
-                    var modelSelect = vehicleInfo.find('.model'); // Standard <select> element
-
-                    // Update custom dropdown
+                    var modelSelect = vehicleInfo.find('.model');
                     if (modelDropdown.length && modelInput.length) {
                         modelDropdown.empty();
                         modelDropdown.append('<li><a class="dropdown-item" data-value="">Select Model</a></li>');
-
                         $.each(response, function(index, model) {
                             modelDropdown.append('<li><a class="dropdown-item" data-value="' + model + '">' + model + '</a></li>');
                         });
-
                         modelInput.on('focus', function() {
-                            modelSelect.empty(); // Clear the <select> options
-                            modelSelect.append('<option value="">Select Model</option>'); // Add default option
+                            modelSelect.empty(); 
+                            modelSelect.append('<option value="">Select Model</option>');
                             modelDropdown.show();
                         });
-
                         modelInput.on('input', function() {
                             var searchTerm = $(this).val().toLowerCase();
                             modelDropdown.find('li').each(function() {
@@ -788,39 +638,30 @@
                                 }
                             });
                         });
-
                         modelDropdown.on('click', 'a.dropdown-item', function(e) {
-                            e.preventDefault(); // Prevent default anchor behavior
+                            e.preventDefault(); 
                             var selectedText = $(this).text();
                             var selectedValue = $(this).data('value');
-
-                            modelInput.val(selectedText); // Set the selected text in modelInput
-                            modelDropdown.hide(); // Hide the custom dropdown
-
-                            modelSelect.empty(); // Clear the <select> options
+                            modelInput.val(selectedText); 
+                            modelDropdown.hide(); 
+                            modelSelect.empty(); 
                             modelSelect.append('<option value="' + selectedValue + '">' + selectedText + '</option>');
-                            modelSelect.val(selectedValue); // Set the selected value in the select dropdown
+                            modelSelect.val(selectedValue); 
                         });
-
                         $(document).on('click', function(e) {
                             if (!modelInput.is(e.target) && !modelDropdown.is(e.target) && modelDropdown.has(e.target).length === 0) {
                                 modelDropdown.hide();
                             }
                         });
                     }
-
-                    // Handle standard <select> dropdown
                     if (modelSelect.length) {
-                        modelSelect.empty(); // Clear any existing options
-                        modelSelect.append('<option value="">Select Model</option>'); // Add default option
-
+                        modelSelect.empty(); 
+                        modelSelect.append('<option value="">Select Model</option>');
                         $.each(response, function(index, model) {
                             modelSelect.append('<option value="' + model + '">' + model + '</option>');
                         });
-
                         modelSelect.on('change', function() {
                             var selectedModel = $(this).val();
-                            // Optional: Sync custom input when user selects from <select>
                             modelInput.val(modelSelect.find('option:selected').text());
                         });
                     }
@@ -830,12 +671,6 @@
                 }
             });
         }
-
-
-
-
-
-
         $(document).on('input', '.dropdown-toggle', function() {
             var input = $(this).val().toLowerCase();
             $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
