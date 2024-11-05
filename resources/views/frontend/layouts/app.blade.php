@@ -14,15 +14,15 @@
     <meta name="twitter:description"
         content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--========== twitter-card============-->
     <link rel="apple-touch-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-    <script src="https://unpkg.com/imask"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" crossorigin>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -50,53 +50,8 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
     <link rel="stylesheet" href="{{ asset('public/frontend/css/responsive.css') }}" />
     <link rel="canonical" href="{{ url()->current() }}">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script async type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "ShipA1",
-            "image": "https://shipa1.com/frontend/images/logo/LOGO%20NEW-2.png",
-            "@id": "https://www.shipa1.com",
-            "url": "https://www.shipa1.com/",
-            "telephone": "(844) 474-4721",
-            "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "201 International Cir STE 230",
-            "addressLocality": "Hunt Valley", 
-            "addressRegion": "MD",
-            "postalCode": "21030",
-            "addressCountry": "US"
-            },
-            "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 39.4960629,
-            "longitude": -76.66032469999999
-            },
-            "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-            ],
-            "opens": "08:00",
-            "closes": "07:00"
-            },
-            "sameAs": [
-            "https://www.facebook.com/shipa1autotransport",
-            "https://www.instagram.com/shipa1_transport",
-            "https://www.youtube.com/@shipA1autotransport",
-            "https://www.linkedin.com/in/shipa1-transport",
-            "https://www.shipa1.com/"
-            ] 
-        }
-    </script>
 </head>
 <style>
     .error-field {
@@ -208,17 +163,6 @@
         </p>
         <!-- Canvas Menu end -->
     </div>
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/6728df992480f5b4f5986b9c/1ibrqis6f';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
     @include('frontend.includes.header')
     @yield('content')
     @if (Route::currentRouteName() !== 'order.tracking')
@@ -244,6 +188,62 @@
             </svg>
         </div>
     </div>
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6728df992480f5b4f5986b9c/1ibrqis6f';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <script async type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "ShipA1",
+            "image": "https://shipa1.com/frontend/images/logo/LOGO%20NEW-2.png",
+            "@id": "https://www.shipa1.com",
+            "url": "https://www.shipa1.com/",
+            "telephone": "(844) 474-4721",
+            "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "201 International Cir STE 230",
+            "addressLocality": "Hunt Valley", 
+            "addressRegion": "MD",
+            "postalCode": "21030",
+            "addressCountry": "US"
+            },
+            "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.4960629,
+            "longitude": -76.66032469999999
+            },
+            "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "07:00"
+            },
+            "sameAs": [
+            "https://www.facebook.com/shipa1autotransport",
+            "https://www.instagram.com/shipa1_transport",
+            "https://www.youtube.com/@shipA1autotransport",
+            "https://www.linkedin.com/in/shipa1-transport",
+            "https://www.shipa1.com/"
+            ] 
+        }
+    </script>
+    <script src="https://unpkg.com/imask" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" defer></script>
