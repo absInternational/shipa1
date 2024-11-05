@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <!-- Meta Tag -->
     <meta charset="utf-8" />
-    {{-- <title>ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA</title> --}}
     <title>@yield('title')</title>
-    {{-- <meta name="description" content="" /> --}}
     <meta name="description" content="@yield('meta_description', 'Ship A1')">
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,12 +15,9 @@
         content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
     <!--========== twitter-card============-->
-    <!-- Favicon -->
     <link rel="apple-touch-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
-    <!-- Select2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-    <!-- Include jQuery -->
     <script src="https://unpkg.com/imask"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
@@ -40,41 +34,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
-    <!-- Bootstrap  v5.1.3 css -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
-    <!-- Meanmenu  css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/meanmenu.css') }}" />
-    <!-- Sal css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/sal.css') }}" />
-    <!-- Magnific css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}" />
-    <!-- Swiper Slider css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/swiper.min.css') }}" />
-    <!-- Carousel css file -->
     <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css') }}" />
-    <!-- Icons css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/icons.css') }}" />
-    <!-- Odometer css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/odometer.min.css') }}" />
-    <!-- Select css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/nice-select.css') }}" />
-    <!-- Animate css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}" />
-    <!-- Style css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}" />
-    <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
     <link rel="stylesheet" href="{{ asset('public/frontend/css/responsive.css') }}" />
     <link rel="canonical" href="{{ url()->current() }}">
-    {{-- csrf --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    {{-- jquery --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- JSON-LD structured data -->
     <script async type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -209,7 +187,6 @@
     }
 </style>
 <body class="fade-in">
-    <!-- Offcanvas Area Start-->
     <div id="tj-overlay-bg2" class="tj-overlay-canvas"></div>
     <div class="tj-offcanvas-area">
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
@@ -231,8 +208,6 @@
         </p>
         <!-- Canvas Menu end -->
     </div>
-
-    <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
@@ -244,21 +219,13 @@
         s0.parentNode.insertBefore(s1,s0);
         })();
     </script>
-    <!--End of Tawk.to Script-->
-
-    <!-- Offcanvas Area End-->
-    {{-- Header Section Start --}}
     @include('frontend.includes.header')
-    {{-- page content --}}
     @yield('content')
     @if (Route::currentRouteName() !== 'order.tracking')
         @include('partials.sidebtn-track')
     @endif
-    {{-- Footer Section Start --}}
     @include('frontend.includes.footer')
-    {{-- page content --}}
     @yield('extraScript')
-    <!-- start scrollUp  -->
     <div class="logiland-scroll-top progress-done">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
@@ -277,51 +244,30 @@
             </svg>
         </div>
     </div>
-    <!-- End scrollUp  -->
-    <!-- INDEX-HOME  -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
-    <!-- <script src="path/to/jquery.min.js" defer></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
-    {{-- sweet alert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <!-- Modernizr.JS -->
     <script src="{{ asset('frontend/js/modernizr-2.8.3.min.js') }}" defer></script>
-    <!-- jQuery.min JS -->
     <script src="{{ asset('frontend/js/jquery.min.js') }}" defer></script>
-    <!-- Bootstrap.min JS -->
     <script src="{{ asset('frontend/js/bootstrap.min.js') }}" defer></script>
-    <!-- Meanmenu JS -->
     <script src="{{ asset('frontend/js/meanmenu.js') }}" defer></script>
-    <!-- Imagesloaded JS -->
     <script src="{{ asset('frontend/js/imagesloaded.pkgd.min.js') }}" defer></script>
-    <!-- Isotope JS -->
     <script src="{{ asset('frontend/js/isotope.pkgd.min.js') }}" defer></script>
-    <!-- Magnific JS -->
     <script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}" defer></script>
-    <!-- Swiper.min JS -->
     <script src="{{ asset('frontend/js/swiper.min.js') }}" defer></script>
-    <!-- Owl.min JS -->
     <script src="{{ asset('frontend/js/owl.carousel.js') }}" defer></script>
-    <!-- Appear JS -->
     <script src="{{ asset('frontend/js/jquery.appear.min.js') }}" defer></script>
-    <!-- Odometer JS -->
     <script src="{{ asset('frontend/js/odometer.min.js') }}" defer></script>
-    <!-- Sal JS -->
     <script src="{{ asset('frontend/js/sal.js') }}" defer></script>
-    <!-- Nice JS -->
     <script src="{{ asset('frontend/js/jquery.nice-select.min.js') }}" defer></script>
-    <!-- Main JS -->
     <script src="{{ asset('frontend/js/main.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
     <script src="/assets/intl-tel-input/intlTelInput.js" defer></script>
-    {{-- app js  --}}
-    {{-- owl-caro --}}
     <script>
         $(document).ready(function() {
             $('#owl-caro').owlCarousel({
@@ -345,8 +291,6 @@
             });
         });
     </script>
-    {{-- owl-caro --}}
-    {{-- email_newsletter --}}
     <script>
         $(document).ready(function() {
             $('#newsletter-form').submit(function(event) {
@@ -382,8 +326,6 @@
             });
         });
     </script>
-    {{-- email_newsletter --}}
-    {{-- imagePreview --}}
     <script>
         let selectedFiles = [];
         function previewImages(event) {
@@ -427,8 +369,6 @@
             });
         }
     </script>
-    {{-- imagePreview --}}
-    {{-- input --}}
     <script>
         $(document).ready(function() {
             $('input[type="number"]').on('input', function() {
@@ -436,94 +376,49 @@
             });
         });
     </script>
-    {{-- input --}}
-    {{-- phone mask  --}}
-        <script>
-            const phoneInput = document.querySelector("#phone");
-            const countryInput = document.querySelector('#country_code');
-            const iti = window.intlTelInput(phoneInput, {
-                separateDialCode: true,
-                initialCountry: "auto",
-                geoIpLookup: function(callback) {
-                    var countryCode = "us"; 
-                    callback(countryCode);
-                },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-            });
-
-                function updateMask() {
-                    const countryData = iti.getSelectedCountryData();
-                    const countryCode = countryData.iso2;
-
-                    let maskPattern = '';
-                    if (countryCode === 'us') {
-                        maskPattern = '(000) 000-0000';
-                    } else {
-                        maskPattern = ''; 
-                    }
-                    if (maskPattern) {
-                        IMask(phoneInput, { mask: maskPattern });
-                    } else {
-                        phoneInput.inputmask.remove();
-                    }
-                    countryInput.value = countryData.dialCode;
+    <script>
+        const phoneInput = document.querySelector("#phone");
+        const countryInput = document.querySelector('#country_code');
+        const iti = window.intlTelInput(phoneInput, {
+            separateDialCode: true,
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                var countryCode = "us"; 
+                callback(countryCode);
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+            function updateMask() {
+                const countryData = iti.getSelectedCountryData();
+                const countryCode = countryData.iso2;
+                let maskPattern = '';
+                if (countryCode === 'us') {
+                    maskPattern = '(000) 000-0000';
+                } else {
+                    maskPattern = ''; 
                 }
-                phoneInput.addEventListener('input', updateMask);
-                phoneInput.addEventListener('countrychange', updateMask);
-                function validatePhoneNumber() {
-                    if (!iti.isValidNumber()) {
-                        // alert("valid phone number");
-                        return false;
-                    }
-                    return true;
+                if (maskPattern) {
+                    IMask(phoneInput, { mask: maskPattern });
+                } else {
+                    phoneInput.inputmask.remove();
                 }
-                phoneInput.addEventListener('blur', validatePhoneNumber);
-                updateMask();
-            //  last-work
-            // const phoneInput = document.querySelector("#phone");
-            // const iti = window.intlTelInput(phoneInput, {
-            //     separateDialCode: true,
-            //     initialCountry: "auto",
-            //     geoIpLookup: function(callback) {
-            //         var countryCode = "us";
-            //         callback(countryCode);
-            //     },
-            //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-            // });
-
-            // function updateMask() {
-            //     const countryData = iti.getSelectedCountryData();
-            //     const countryCode = countryData.iso2;
-
-            //     if (countryCode === 'us') {
-            //         $(".ophone").mask("(999) 999-9999");
-            //     } else {
-            //         $(".ophone").unmask();
-            //     }
-            //     document.querySelector('#country_code').value = countryData.dialCode;
-            // }
-
-            // function validatePhoneNumber() {
-            //     const rawPhoneNumber = iti.getNumber();  // Gets the number in E.164 format
-            //     if (!iti.isValidNumber()) {
-            //         // alert("Please enter a valid phone number.");
-            //         return false;
-            //     }
-            //     return true;
-            // }
-
-            // phoneInput.addEventListener('input', updateMask);
-            // phoneInput.addEventListener('blur', validatePhoneNumber);  // Validation on blur or submit
-            // updateMask();
-            //  last-work
-        </script>
-    {{-- phone mask  --}}
-    {{-- category subcategory --}}
+                countryInput.value = countryData.dialCode;
+            }
+            phoneInput.addEventListener('input', updateMask);
+            phoneInput.addEventListener('countrychange', updateMask);
+            function validatePhoneNumber() {
+                if (!iti.isValidNumber()) {
+                    return false;
+                }
+                return true;
+            }
+            phoneInput.addEventListener('blur', validatePhoneNumber);
+            updateMask();
+    </script>
     <script>
         $(document).ready(function() {
             $(document).on('change', '#category', function() {
                 var selectedCategory = $(this).find('option:selected').data('id');
-
                 $.ajax({
                     url: "{{ route('get.subcategories') }}",
                     method: "POST",
@@ -532,7 +427,6 @@
                         "category": selectedCategory
                     },
                     success: function(response) {
-
                         var html = '';
                         $('#subcategory-box').html('');
 
@@ -557,8 +451,6 @@
             });
         });
     </script>
-    {{-- category subcategory --}}
-    {{-- modification / available_at_auction --}}
     <script>
         $(document).ready(function() {
             $(document).on('change', '#available_at_auction', function() {
@@ -583,13 +475,9 @@
             });
         });
     </script>
-    {{-- modification / available_at_auction --}}
-    {{-- multi step form --}}
     <script>  
         $('#category').on('change', function() {
-            $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
-
-            // Show input field if "Others" is selected
+            $(this).closest('.input-form').find('.error-message').hide();
             if ($(this).val() === 'Others') {
                 $('#otherCategoryInput').show().prop('disabled', false);
             } else {
@@ -724,8 +612,6 @@
             });
         });
     </script>
-    {{-- multi step form end --}}
-    {{-- app js  --}}
     @php
         $makes = App\Models\VehicleName::select('make')
             ->where('UserId', 14)
@@ -734,7 +620,6 @@
             ->orderBy('make', 'ASC')
             ->get();
     @endphp
-    {{-- index js  --}}
     <script>
         $(document).ready(function() {
             $('#example-multiple').select2();
@@ -743,7 +628,6 @@
             $('#example-multiple-2').select2();
         });
     </script>
-    {{-- single form location validation --}}
     <script> 
         $(document).ready(function() {
             var validPickupSuggestions = [];
@@ -827,8 +711,6 @@
             });
         });
     </script>
-    {{-- single form location validation --}}
-    {{-- scroll-up-btn --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const scrollButtons = document.querySelectorAll('.scroll-up-btn');
@@ -873,8 +755,6 @@
             });
         });
     </script>
-    {{-- scroll-up-btn --}}
-    {{-- tabSelector --}}
     <script>
         $(document).ready(function() {
             var selectedTab = '';
@@ -913,8 +793,6 @@
             });
         });
     </script>
-    {{-- tabSelector --}}
-    {{-- L W H W --}}
     <script>
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
@@ -952,8 +830,6 @@
             }
         }
     </script>
-    {{-- L W H W --}}
-    {{-- validate-form --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var forms = document.querySelectorAll('.validate-form');
@@ -1016,14 +892,11 @@
             });
         });
     </script>
-    {{-- validate-form --}}
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const lazyBackgrounds = document.querySelectorAll(".lazy-background");
-            
             lazyBackgrounds.forEach(function (lazyBg) {
-            const imageSrc = lazyBg.getAttribute("data-bg-image");
-            
+            const imageSrc = lazyBg.getAttribute("data-bg-image");     
             if (imageSrc) {
                 const img = new Image();
                 img.src = imageSrc;
@@ -1036,7 +909,6 @@
     </script>
     <script>
         $(document).ready(function(){
-            // Initialize the first carousel
             $(".carousel11").owlCarousel({
                 items: 1,
                 loop: true,
