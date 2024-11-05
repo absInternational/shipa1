@@ -98,7 +98,7 @@
     <div class="animation-preloader">
     </div>
 </div>
-<section class="tj-slider-section">
+{{-- <section class="tj-slider-section">
     <div class="slider_shape"> <img loading="lazy" src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image"/>
     </div>
     <div class="swiper sc-slider-1" data-autoplay="5000">
@@ -390,7 +390,7 @@
     </div>
 </section>
 @include('partials.cta-section')
-{{-- <section class="tj-step-section">
+<section class="tj-step-section">
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
