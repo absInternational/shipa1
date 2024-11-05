@@ -12,7 +12,6 @@
             </div>
         @endif
         <div class="container mt-2">
-            <!-- Step 1: Moving From/To -->
             <div class="route_quote_info" id="step1">
                 <div class="row">
                     <h4 class="title text-center">Quote Request!</h4>
@@ -45,7 +44,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Step 2: Vehicle Information -->
             <div class="vehicle_quote_info " id="step2" style="display: none;">
                 <div class="row">
                     <h4 class="target-top target-top-3 title text-center">VEHICLE INFORMATION</h4>
@@ -78,7 +76,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Step 3: Customer Information  -->
             <div class="basic_quote_info " id="step3" style="display: none;">
                 <div class="row mb-3">
                     <h4 class="text-center text-white target-top-2">Customer Information</h4>
@@ -121,7 +118,6 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </form>

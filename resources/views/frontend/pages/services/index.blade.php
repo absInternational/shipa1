@@ -86,7 +86,6 @@
         }
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -109,8 +108,6 @@
         </div>
     </div>
 </section>
-<!--========== breadcrumb End ==============-->
-<!--========== Service Section Start ==============-->
 <section class="tj-service-section-four tj-service-page">
     <div class="container">
         <div class="row">
@@ -122,7 +119,6 @@
             </div>
         </div>
         <div class="row">
-
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
@@ -130,7 +126,6 @@
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
-                            <!-- Icon Section -->
                             <div class="col-12 text-center mb-3">
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
@@ -294,7 +289,6 @@
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
-                            <!-- Icon Section -->
                             <div class="col-12 text-center mb-3">
                                 <i class="fa-solid fa-truck-fast fa-3x" style="color: #ffffff;"></i>
                             </div>
@@ -499,8 +493,6 @@
         </div>
     </div>
 </section>
-<!--========== Service Section End ==============-->
-<!--=========== Feature Section Start =========-->
 <section class="tj-choose-us-section">
     <div class="container">
         <div class="row">
@@ -552,8 +544,6 @@
         </div>
     </div>
 </section>
-<!--=========== Feature Section End =========-->
-<!--=========== Service Section Start =========-->
 <section class="tj-service-section pt-4">
     <div class="container">
         <div class="row">
@@ -628,8 +618,5 @@
         </div>
     </div>
 </section>
-<!--=========== Service Section End =========-->
-<!--=========== Newsletter Section Start =========-->
 @include('partials.newsletter')
-<!--=========== Newsletter Section End =========-->
 @endsection

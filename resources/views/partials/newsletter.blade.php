@@ -6,7 +6,7 @@
                     data-bg-image="{{ asset('frontend/images/banner/subscribe.png') }}">
                     <div class="subscribe-content d-flex align-items-center">
                         <div class="mail-icon">
-                            <img src="{{ asset('frontend/images/icon/email.svg') }}" alt="Icon" />
+                            <img loading="lazy" src="{{ asset('frontend/images/icon/email.svg') }}" alt="Icon" />
                         </div>
                         <div class="subscribe-title">
                             <h3 class="title">Subscribe Our Newsletter</h3>
