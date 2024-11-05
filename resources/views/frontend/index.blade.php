@@ -390,7 +390,7 @@
     </div>
 </section>
 @include('partials.cta-section')
-<section class="tj-step-section">
+{{-- <section class="tj-step-section">
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
@@ -777,7 +777,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 @include('partials.blog-slider')
 @include('partials.reveiw-detail')
 @include('partials.newsletter')
