@@ -61,7 +61,7 @@
  <!--=========== Testimonial Section Start =========-->
  <section class="tj-testimonial-section pb-0">
      <div class="carousel-wrapper">
-         <div class="owl-carousel owl-theme" id="owl-caro">
+         <div class="owl-carousel owl-big-reveiw">
              @foreach ($site_reviews as $site_review)
                  <div class="item">
                      <div class="card">
@@ -114,9 +114,10 @@
      </div>
  </section>
  <!--=========== Testimonial Section End =========-->
+ 
  <script>
      $(document).ready(function() {
-         $('#owl-caro').owlCarousel({
+         $('.owl-big-reveiw').owlCarousel({
              loop: true,
              margin: 10,
              nav: true,

@@ -89,8 +89,8 @@
     </div>
     <?php
     if ($responseData['data']['pstatus'] >= 10 && $responseData['data']['pstatus'] <= 14) { ?>
-    <div class="cards text-center">
-        <table class="table caption-top m-0">
+    <div class="table-responsive">
+        <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Status</th>
@@ -271,8 +271,12 @@
                             echo date('M, d Y D');
                         }
                         ?>
-                        <span class="badge badge-warning mx-2 d-flex align-items-center">est</span>
-                        <span class="badge badge-primary question position-relative">
+                        <span class="badge badge-primary mx-2 d-flex align-items-center">est</span>
+                        <i class="fa fa-question-circle fa-lg  rounded align-items-center"
+                            style="margin-top: 10px; color: #8fc445;" data-bs-custom-class="custom-tooltip"
+                            data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Pickup dates are estimated because there are many components associated with the transportation process, like Traffic, Harsh Weather conditions, truck breakdowns 5 business days) for pickup"></i>
+                        {{-- <span class="badge badge-primary question position-relative">
                             <i class="fa-solid fa-question"></i>
                             <div class="newtooltip">
                                 Pickup dates are estimated because there are many components associated with
@@ -283,7 +287,7 @@
                                 5
                                 business days) for pickup
                             </div>
-                        </span>
+                        </span> --}}
                         <?php
                         if ($responseData['data']['pstatus'] > 11 && $responseData['data']['pstatus'] <= 14) {
                             echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';
@@ -299,7 +303,7 @@
                     <th scope="row">
                         Delivered
                     </th>
-                    <td class="d-flex w-100 d-flex align-items-center justify-content-center w-100">
+                    <td class="d-flex w-100">
                         <?php
                         if (isset($responseData['data']['delivery_date'])) {
                             if (date('Y-m-d', strtotime($pickup)) <= date('Y-m-d', strtotime($responseData['data']['delivery_date']))) {
@@ -316,10 +320,10 @@
                         }
                         ?>
                         <span class="badge badge-warning mx-2 text-white d-flex align-items-center">est</span>
-                        <i class="far fa-question-circle fa-lg  rounded align-items-center"
-                            style="color: #8fc445;" data-bs-custom-class="custom-tooltip"
+                        <i class="fa fa-question-circle fa-lg  rounded align-items-center"
+                            style="margin-top: 10px; color: #8fc445;" data-bs-custom-class="custom-tooltip"
                             data-bs-toggle="tooltip" data-bs-placement="top"
-                            title="Delivery dates are estimated because there are many components associatedwith the transportation process, like route distance (1 to 9 business days) depending on miles, Traffic, Harsh Weather conditions, truck breakdowns and some other unanticipated occasions included."></i>
+                            title="Delivery dates are estimated because there are many components associatedwith the transportation process, Traffic, Harsh Weather conditions, truck breakdowns and some other unanticipated occasions included."></i>
                         <?php
                         if ($responseData['data']['pstatus'] > 12 && $responseData['data']['pstatus'] <= 14) {
                             echo ' <i class="far fa-check-circle fa-lg mr-2 "  style="color: #8fc445;"></i>';

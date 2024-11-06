@@ -3,13 +3,13 @@
 @section('meta_description', 'Trust our professional motorcycle shipping services for secure and timely delivery. Get your bike transported with care and precision all over the USA.')
 @section('content')
 <style>
-    .owl-carousel .item {
+    /* .owl-carousel .item {
         transition: opacity 0.8s ease-in-out;
         opacity: 0; 
     }
     .owl-carousel .owl-item.active .item {
         opacity: 1; 
-    }
+    } */
     .card-2 {
         display: flex;
         align-items: center;
@@ -540,7 +540,7 @@
                 <h5 class="title fs-1">Advanced Trailers used for Motorcycles</h5>
             </div>
         </div>
-        <div class="owl-carousel carousel11">
+        <div class="owl-carousel carousel1">
             <div class="item">
                 <div class="row">
                     <div class="col-lg-12">
@@ -593,64 +593,6 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
-                                    <p class="card-text text-dark">It involves shipping of backhoes from one place to another with the use of
-                                    specialized trailers and equipment. All State to State Auto Transport offers
-                                    high-quality shipping services for heavy equipment, including backhoes. 
-                                    On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
-                                    charges, though the transportation cost can be high.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
-                                    <p class="card-text text-dark">It involves shipping of backhoes from one place to another with the use of
-                                    specialized trailers and equipment. All State to State Auto Transport offers
-                                    high-quality shipping services for heavy equipment, including backhoes. 
-                                    On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
-                                    charges, though the transportation cost can be high.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 </section>
@@ -787,10 +729,9 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-<script>
+{{-- <script>
     $(document).ready(function(){
-        // Initialize the first carousel
-        $("#carousel1").owlCarousel({
+        $(".carousel1").owlCarousel({
             items: 1,
             loop: true,
             margin: 10,
@@ -816,7 +757,7 @@
             }
         });
     });
-</script>
+</script> --}}
 <script>
     $(document).ready(function() {
         function addNewVehicle() {

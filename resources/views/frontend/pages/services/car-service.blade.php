@@ -1037,7 +1037,7 @@
     {{-- addNewVehicle --}}
 
     {{-- owl-carousel --}}
-        <script>
+        {{-- <script>
             $(document).ready(function(){
             $(".owl-carousel").owlCarousel({
                 loop: true,
@@ -1060,7 +1060,7 @@
                 }
             });
             });
-        </script>
+        </script> --}}
     {{-- owl-carousel --}}
 
     {{-- service counter --}}
