@@ -51,7 +51,8 @@
 </style>
 <div class="Rightbutton">
     <div class="clickbutton">
-        <div class="crossplus" onclick="window.location.href='{{ route('order.tracking') }}';">Track Order</div>
+        {{-- <div class="crossplus" onclick="window.location.href='{{ route('order.tracking') }}';">Track Order</div> --}}
+        <div class="crossplus">Track Order</div>
     </div>
     <div class="banner-form">
         <form id="orderTrackingForm" class="form">
@@ -80,7 +81,7 @@
         </div>
     </div>
 </div>
-<script>
+{{-- <script>
     $(document).ready(function() {
         $('#submitButton').click(function() {
             var formData = $('#orderTrackingForm').serialize();
@@ -124,4 +125,53 @@
             $('.floating_form').toggleClass("open");
         });
     });
-</script>
+</script> --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#submitButton').click(function() {
+            var formData = $('#orderTrackingForm').serialize();
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('track.order') }}',
+                data: formData,
+                success: function(response) {
+                    if (response['status_code'] == 400) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: response.message
+                        });
+                        $('#orderTrackingHtml').html('');
+                    } else {
+                        $('#orderTrackingHtml').html(response);
+                        $('#trackingResultModal').modal('show');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    var response = xhr.responseJSON;
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: response.message
+                    });
+                }
+            });
+        });
+        $(window).keydown(function(event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+            }
+        });
+        $(document).on('click', '.clickbutton', function() {
+            console.log("Click button clicked"); 
+            $('.Rightbutton').toggleClass("active");
+        });
+        $(document).on('click', '.floating_strip .rotatekaro a', function(e) {
+            e.preventDefault(); 
+            console.log("Floating strip clicked"); 
+            $('.floating_form').toggleClass("open");
+        });
+    });
+</script> 

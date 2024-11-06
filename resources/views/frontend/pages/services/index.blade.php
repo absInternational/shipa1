@@ -151,7 +151,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('frontend/images/project/motorcycle-service.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/service/Bike.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -180,7 +180,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('frontend/images/project/atv-urv service.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/service/ATV.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -211,7 +211,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('frontend/images/project/golf-cart-service.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/service/Golf.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -259,7 +259,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('img/construction-banner.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/service/Construction.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -285,7 +285,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('img/COMMERCIAL-TRUCK-BANNER.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/service/Commercial.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -293,7 +293,7 @@
                                 <i class="fa-solid fa-truck-fast fa-3x" style="color: #ffffff;"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Safely Transporting Your Commercial Truck</h4>
+                                <h4 class="overlay-title">Safely Transporting Your Truck</h4>
                             </div>
                             <div class="col-12 text-center"><a class="fs-5" href="{{ route('frontend.pages.services.commercial-service') }}"><button class="tj-submit-btn fs-6"> Equipment Services<i class="fa fa-arrow-left"></i></button></a>
                             </div>
@@ -309,7 +309,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('img/excavator-banner.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/service/Excavator.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -317,7 +317,7 @@
                                 <svg fill="#ffffff" height="80px" width="80px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.985 511.985" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M492.629,103.143l-102.409-25.6c-2.057-0.512-4.139-0.768-6.212-0.768c-6.707,0-13.244,2.637-18.099,7.501l-85.931,85.931 c-0.316-0.845-0.674-1.664-1.075-2.475l-25.6-51.2c-4.335-8.67-13.201-14.157-22.895-14.157H153.6c-14.14,0-25.6,11.46-25.6,25.6 v76.834H25.6c-14.14,0-25.6,11.46-25.6,25.6v51.2c0,14.14,11.46,25.6,25.6,25.6h102.409v25.6h-51.2 c-28.237,0-51.2,22.972-51.2,51.2c0,28.237,22.972,51.2,51.2,51.2h256.017c28.237,0,51.2-22.972,51.2-51.2 c0-28.237-22.972-51.2-51.2-51.2H230.417v-25.6h25.6c7.663,0,14.925-3.43,19.78-9.353l127.036-154.684l76.476,9.719 l-26.377,98.517l-59.409-13.687l6.554-23.654c1.903-6.81-2.099-13.867-8.9-15.753c-6.955-1.826-13.875,2.116-15.753,8.926 c0,0-22.639,67.038-13.978,88.832c4.173,10.547,12.279,18.5,23.373,22.989c16.205,6.554,30.003,9.822,41.626,9.822 c7.825,0,14.703-1.485,20.651-4.454c9.626-4.813,16.375-13.466,19.473-25.011l45.201-168.132 C513.434,118.486,505.301,106.309,492.629,103.143z M332.826,358.418c14.14,0,25.6,11.46,25.6,25.6s-11.46,25.6-25.6,25.6H76.809 c-14.14,0-25.6-11.46-25.6-25.6s11.46-25.6,25.6-25.6H332.826z M153.609,332.818v-25.6h51.2v25.6H153.609z M256.017,281.61H25.6 v-51.2h128.009h102.409V281.61z M256.017,204.801H153.609v-76.809h76.809l25.6,51.208V204.801z M441.839,292.814 c-1.527,5.777-4.104,7.697-6.153,8.73c-4.301,2.15-15.454,4.224-41.25-6.187c-4.651-1.886-7.552-4.642-9.173-8.661 c-2.85-7.117-1.425-16.862,0.623-24.44l60.425,13.918L441.839,292.814z M485.99,127.95l-93.961-11.947L281.626,250.437V204.81 l102.409-102.409l101.973,25.498L485.99,127.95z"></path> </g> </g> </g></svg>                                                                          
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Safely Transporting Your Excavator</h4>
+                                <h4 class="overlay-title">Safely Transporting Your </h4>
                             </div>
                             <div class="col-12 text-center"><a class="fs-5" href="{{ route('frontend.pages.services.construction-service') }}"><button class="tj-submit-btn fs-6"> Equipment Services<i class="fa fa-arrow-left"></i></button></a>
                             </div>
@@ -333,7 +333,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('img/farm-service-1.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/service/Farm.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -349,7 +349,7 @@
                     </div>
                     <div class="service-content-1">
                         <h4> <a class="title" href="{{ route('frontend.pages.services.farm-service') }}">
-                                Farm Transport Services</a></h4>
+                                 Transport Services</a></h4>
                         <p></p>
                     </div>
                 </div>
@@ -359,7 +359,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('img/heavy-equipment-service.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/service/Heavy.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -367,7 +367,7 @@
                                 <svg width="75px" height="75px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M94.071 92.535v85.772c5.493.912 10.978 1.915 16.346 3.062 1.052-16.604 6.311-33.717 19.521-47.064 14.006-14.151 36.123-23.201 68.34-24.377l-1.838-17.393zm290.104 24.387l-17.938 1.496 3.451 41.416 17.961-1.209zm-184 10.963c-29.839.853-47.228 8.759-57.444 19.08-10.324 10.431-14.198 24.227-14.498 39.074 16.892 7.201 32.876 13.728 34.407 32.443l48.607 14.243zm64.564 15.851v50.268h16.135v-50.268zm124.407 32.828l-17.963 1.207 3.11 37.336L353.2 227.47l2.43 19.437 20.322-11.908 6.37 76.422c4.133-8.828 9.474-17.361 15.949-25.34zm-332.26 18.737l-30.067 75.166 15.672 26.12 27.926-49.024 43.803.826 163.758 49.17 27.59 32.978h42.378l-14.875-118.99-106.627-6.272 3.526 33.371 58.347 17.397-5.142 17.248c-46.641-13.699-94.304-28.4-140.537-41.912 3.413-15.453 1.87-18.897-11.332-24.932-24.049-10.298-47.517-9.563-74.42-11.146zm23.88 70.459l-57.8 101.474 32.762 48.635h213.005l43.418-49.41-44.517-53.211-156.225-46.91zm24.366 15.08c14.289 0 26.066 11.777 26.066 26.066 0 14.29-11.777 26.067-26.066 26.067-14.29 0-26.065-11.778-26.065-26.067s11.776-26.066 26.065-26.066zm311.5 11.56c-27.812 30.32-34.254 70.426-16.715 98.655 7.529 12.117 27.669 20.92 51.041 25.056 12.635 2.236 25.873 3.169 38.076 3.354-30.21-21.402-48.91-41.992-59.601-63.692-10.052-20.402-12.867-41.244-12.801-63.373zm-311.5 6.44c-4.562 0-8.067 3.504-8.067 8.066 0 4.562 3.505 8.069 8.067 8.069s8.068-3.507 8.068-8.069c0-4.562-3.506-8.066-8.068-8.066zm130.74 25.63c21.985 0 40 18.016 40 40 0 21.985-18.015 40-40 40s-40-18.015-40-40c0-21.984 18.015-40 40-40zM81.962 335.73c17.843 0 32.5 14.657 32.5 32.5 0 17.842-14.655 32.5-32.498 32.5-17.843 0-32.5-14.658-32.5-32.5 0-17.843 14.655-32.5 32.498-32.5zm153.91 6.74c-12.258 0-22.002 9.744-22.002 22.002s9.744 22 22.002 22 22.002-9.742 22.002-22-9.744-22.002-22.002-22.002zm84.752 6.066l15.236 18.211-13.173 14.992h53.322c-3.336-10.645-4.5-21.877-3.65-33.203zm-238.662 5.192c-8.116 0-14.5 6.386-14.5 14.502 0 8.115 6.386 14.501 14.502 14.501s14.5-6.386 14.5-14.501c0-8.116-6.386-14.502-14.502-14.502z"></path></g></svg>                                                                         
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Safely Transporting Your Heavy Equipment</h4>
+                                <h4 class="overlay-title">Safely Transporting Your  Equipment</h4>
                             </div>
                             <div class="col-12 text-center"><a class="fs-5" href="{{ route('frontend.pages.services.heavy-service') }}"><button class="tj-submit-btn fs-6"> Equipment Services<i class="fa fa-arrow-left"></i></button></a>
                             </div>
@@ -383,7 +383,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('img/rv-banner.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/service/RV.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -391,7 +391,7 @@
                                 <svg fill="#ffffff" width="75px" height="75px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g data-name="Calque 2" id="Calque_2"> <path d="M24.36,44.65H8.22a1.5,1.5,0,0,0-1.5,1.5V57.22a1.5,1.5,0,0,0,1.5,1.5H24.36a1.5,1.5,0,0,0,1.5-1.5V46.15A1.5,1.5,0,0,0,24.36,44.65Zm-1.5,11.07H9.72V47.65H22.86Z"></path> <path d="M46.84,44.65H30.7a1.5,1.5,0,0,0-1.5,1.5V57.22a1.5,1.5,0,0,0,1.5,1.5H46.84a1.5,1.5,0,0,0,1.5-1.5V46.15A1.5,1.5,0,0,0,46.84,44.65Zm-1.5,11.07H32.2V47.65H45.34Z"></path> <path d="M96,59.36H93.85l-5.2-9.21H90a4.92,4.92,0,0,0,4.28-1.81,5.11,5.11,0,0,0,.5-4.31c0-.12-3.51-11.94-11-11.94H1.72a1.5,1.5,0,1,0,0,3H4.59v2H1.72a1.5,1.5,0,0,0-1.5,1.5v36.6a1.5,1.5,0,0,0,1.5,1.5H9.46a7.75,7.75,0,0,0,15.41,0H76.24a7.75,7.75,0,0,0,15.41,0h6.63a1.5,1.5,0,0,0,1.5-1.5V63.12A3.75,3.75,0,0,0,96,59.36Zm-7.34,16.5a4.75,4.75,0,1,1-4.75-4.75A4.76,4.76,0,0,1,88.69,75.86ZM85.21,50.15l5.19,9.21H77.69l-.8-9.21Zm11.57,13V73.67H91.37a7.74,7.74,0,0,0-14.86,0H72.44V50.15h1.44L74.82,61a1.49,1.49,0,0,0,1.49,1.37H96A.76.76,0,0,1,96.78,63.12Zm-77.25-26v-2h8.94v2Zm11.94-2h8.94v2H31.47Zm11.94,0h3.82l-2.73,2H43.41Zm-35.82,0h8.94v2H7.59ZM21.92,75.86a4.75,4.75,0,1,1-4.75-4.75A4.76,4.76,0,0,1,21.92,75.86Zm9.48-2.93V67.54h5.39v5.39Zm23.35.74v-26h9.07v26Zm14.69-25v25H66.82V46.21a1.5,1.5,0,0,0-1.5-1.5H53.25a1.5,1.5,0,0,0-1.5,1.5V73.67h-12V66a1.5,1.5,0,0,0-1.5-1.5H29.9A1.5,1.5,0,0,0,28.4,66v7.63H24.6a7.74,7.74,0,0,0-14.86,0H3.22V40.07H45a1.51,1.51,0,0,0,.88-.28l6.48-4.7H83.8c4,0,7.17,6.58,8.11,9.83a2.25,2.25,0,0,1-.09,1.68c-.34.48-1.3.55-1.83.55h-19A1.5,1.5,0,0,0,69.44,48.65Z"></path> <path d="M85.44,41.45a1.5,1.5,0,0,0-1.5-1.5H70.45a1.5,1.5,0,0,0,0,3H83.94A1.5,1.5,0,0,0,85.44,41.45Z"></path> </g> </g></svg>                                                                          
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Safely Transporting Your RV</h4>
+                                <h4 class="overlay-title">Safely Transporting Your </h4>
                             </div>
                             <div class="col-12 text-center"><a class="fs-5" href="{{ route('frontend.pages.services.rv-service') }}"><button class="tj-submit-btn fs-6">RV Transport Services<i class="fa fa-arrow-left"></i></button></a>
                             </div>
