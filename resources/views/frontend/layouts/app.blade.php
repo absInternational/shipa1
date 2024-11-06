@@ -35,20 +35,20 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/meanmenu.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/sal.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/magnific-popup.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/swiper.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/owl.carousel.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/icons.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/odometer.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/nice-select.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/animate.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/meanmenu.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/sal.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/swiper.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/icons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/odometer.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/nice-select.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
     <link rel="canonical" href="{{ url()->current() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -251,20 +251,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script src="{{ asset('/public/frontend/js/modernizr-2.8.3.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/jquery.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/bootstrap.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/meanmenu.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/imagesloaded.pkgd.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/isotope.pkgd.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/jquery.magnific-popup.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/swiper.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/owl.carousel.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/jquery.appear.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/odometer.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/sal.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/jquery.nice-select.min.js') }}" defer></script>
-    <script src="{{ asset('/public/frontend/js/main.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/modernizr-2.8.3.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/jquery.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/meanmenu.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/imagesloaded.pkgd.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/isotope.pkgd.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/swiper.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/owl.carousel.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/jquery.appear.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/odometer.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/sal.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/jquery.nice-select.min.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/main.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
     <script src="/assets/intl-tel-input/intlTelInput.js" defer></script>
