@@ -550,7 +550,7 @@
         <div class="row">
             <div class="tj-section-heading text-center">
                 {{-- <span class="sub-title active-shape"> test </span> --}}
-                <h5 class="title fs-1">Trailers used for Gold Cart</h5>
+                <h5 class="title fs-1">Trailers used for Golf Cart</h5>
             </div>
         </div> 
         <div class="owl-carousel carousel11">

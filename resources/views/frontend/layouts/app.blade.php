@@ -242,9 +242,9 @@
     </div>
     @include('frontend.includes.header')
     @yield('content')
-    @if (Route::currentRouteName() !== 'order.tracking')
+    {{-- @if (Route::currentRouteName() !== 'order.tracking')
     @include('frontend.includes.sidebtn-track')
-    @endif
+    @endif --}}
     @include('frontend.includes.footer')
     @yield('extraScript')
     <div class="logiland-scroll-top progress-done">
