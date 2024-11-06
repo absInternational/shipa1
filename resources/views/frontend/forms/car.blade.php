@@ -217,7 +217,8 @@
                                     <label class="d-block text-white"> Image:</label>
                                     <input class="form-control image_input" name="image[]" type="file"
                                         accept="image/*" multiple onchange="previewImages(event)">
-                                    <div class="image-preview-container" id="imagePreviewContainer"></div>                                                                                                                                      <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
+                                    <div class="image-preview-container" id="imagePreviewContainer"></div> 
+                                {{-- <--- <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> --> --}}
                                 </div>
                             </div>
                             <div class="row">

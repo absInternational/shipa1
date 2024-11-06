@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <meta charset="utf-8" />
+    {{-- <meta charset="utf-8" />
     <title>@yield('title')</title>
     <meta name="description" content="@yield('meta_description', 'Ship A1')">
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -51,7 +51,126 @@
     <link rel="stylesheet" href="{{ asset('public/frontend/css/responsive.css') }}" />
     <link rel="canonical" href="{{ url()->current() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> --}}
+    <!-- Meta Tag -->
+    <meta charset="utf-8" />
+    {{-- <title>ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA</title> --}}
+    <title>@yield('title')</title>
+    {{-- <meta name="description" content="" /> --}}
+    <meta name="description" content="@yield('meta_description', 'Ship A1')">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ahrefs-site-verification" content="6cd07582328e97b072cfaad2711175d5b3d5f0d349648e8ede9c50ea23dfc68d">
+    <!--==========twitter-card=============-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ShipA1Transport">
+    <meta name="twitter:title" content="ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA">
+    <meta name="twitter:description"
+        content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
+    <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
+    <!--========== twitter-card============-->
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/logo/favicon.png') }}" />
+    <!-- Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <!-- Include jQuery -->
+    <script src="https://unpkg.com/imask"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.2/dist/css/coreui.min.css" rel="stylesheet"
+        integrity="sha384-39e9UaGkm/+yp6spIsVfzcs3j7ac7G2cg0hzmDvtG11pT1d7YMnOC26w4wMPhzsL" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/ctas/cta-1/assets/css/cta-1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+    <!-- Bootstrap  v5.1.3 css -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
+    <!-- Meanmenu  css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/meanmenu.css') }}" />
+    <!-- Sal css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/sal.css') }}" />
+    <!-- Magnific css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}" />
+    <!-- Swiper Slider css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/swiper.min.css') }}" />
+    <!-- Carousel css file -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css') }}" />
+    <!-- Icons css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/icons.css') }}" />
+    <!-- Odometer css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/odometer.min.css') }}" />
+    <!-- Select css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/nice-select.css') }}" />
+    <!-- Animate css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}" />
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend/css/responsive.css') }}" />
+    <link rel="canonical" href="{{ url()->current() }}">
+    {{-- csrf --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- jquery --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- JSON-LD structured data -->
+    <script async type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "ShipA1",
+            "image": "https://shipa1.com/frontend/images/logo/LOGO%20NEW-2.png",
+            "@id": "https://www.shipa1.com",
+            "url": "https://www.shipa1.com/",
+            "telephone": "(844) 474-4721",
+            "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "201 International Cir STE 230",
+            "addressLocality": "Hunt Valley", 
+            "addressRegion": "MD",
+            "postalCode": "21030",
+            "addressCountry": "US"
+            },
+            "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.4960629,
+            "longitude": -76.66032469999999
+            },
+            "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "07:00"
+            },
+            "sameAs": [
+            "https://www.facebook.com/shipa1autotransport",
+            "https://www.instagram.com/shipa1_transport",
+            "https://www.youtube.com/@shipA1autotransport",
+            "https://www.linkedin.com/in/shipa1-transport",
+            "https://www.shipa1.com/"
+            ] 
+        }
+    </script>
 </head>
 <style>
     .error-field {
@@ -188,7 +307,7 @@
             </svg>
         </div>
     </div>
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
         var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -267,7 +386,49 @@
     <script src="{{ asset('frontend/js/main.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
-    <script src="/assets/intl-tel-input/intlTelInput.js" defer></script>
+    <script src="/assets/intl-tel-input/intlTelInput.js" defer></script> --}}
+        <!-- End scrollUp  -->
+    <!-- INDEX-HOME  -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="path/to/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    {{-- sweet alert --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Modernizr.JS -->
+    <script src="{{ asset('frontend/js/modernizr-2.8.3.min.js') }}"></script>
+    <!-- jQuery.min JS -->
+    <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
+    <!-- Bootstrap.min JS -->
+    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
+    <!-- Meanmenu JS -->
+    <script src="{{ asset('frontend/js/meanmenu.js') }}"></script>
+    <!-- Imagesloaded JS -->
+    <script src="{{ asset('frontend/js/imagesloaded.pkgd.min.js') }}"></script>
+    <!-- Isotope JS -->
+    <script src="{{ asset('frontend/js/isotope.pkgd.min.js') }}"></script>
+    <!-- Magnific JS -->
+    <script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}"></script>
+    <!-- Swiper.min JS -->
+    <script src="{{ asset('frontend/js/swiper.min.js') }}"></script>
+    <!-- Owl.min JS -->
+    <script src="{{ asset('frontend/js/owl.carousel.js') }}"></script>
+    <!-- Appear JS -->
+    <script src="{{ asset('frontend/js/jquery.appear.min.js') }}"></script>
+    <!-- Odometer JS -->
+    <script src="{{ asset('frontend/js/odometer.min.js') }}"></script>
+    <!-- Sal JS -->
+    <script src="{{ asset('frontend/js/sal.js') }}"></script>
+    <!-- Nice JS -->
+    <script src="{{ asset('frontend/js/jquery.nice-select.min.js') }}"></script>
+    <!-- Main JS -->
+    <script src="{{ asset('frontend/js/main.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="/assets/intl-tel-input/intlTelInput.js"></script>
     <script>
         $(document).ready(function() {
             $('#owl-caro').owlCarousel({
