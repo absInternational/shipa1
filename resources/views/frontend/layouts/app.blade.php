@@ -70,10 +70,8 @@
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/animate.css') }}" />
     <!-- Style css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}" />
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public/frontend/css/responsive.css') }}" />
 
     {{-- csrf --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -242,9 +240,9 @@
     </div>
     @include('frontend.includes.header')
     @yield('content')
-    {{-- @if (Route::currentRouteName() !== 'order.tracking')
+    @if (Route::currentRouteName() !== 'order.tracking')
     @include('frontend.includes.sidebtn-track')
-    @endif --}}
+    @endif
     @include('frontend.includes.footer')
     @yield('extraScript')
     <div class="logiland-scroll-top progress-done">
