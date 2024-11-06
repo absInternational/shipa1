@@ -46,9 +46,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/nice-select.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
-    <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend/css/responsive.css') }}" />
     <link rel="canonical" href="{{ url()->current() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
