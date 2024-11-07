@@ -4159,7 +4159,7 @@ div .tj-service-icon-box2 ul li:hover .service-item::before {
 }
 .tj-choose-us-section-service-rv {
     background-color: #000000;
-    background-image: url('../../img/rv-banner.webp');
+    background-image: url('/public/img/RV services bgbgb.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10780,10 +10780,11 @@ PAGE LOAD ANIMATION
         color: #fff;
         border: none;
     }
-    .owl-carousel .item {
-        transition: opacity 0.8s ease-in-out;
-        opacity: 0; 
-    }
+    /* .carousel-new-1 {
+        display: block;
+        width: 100%;
+        height: auto;
+    } */
     .owl-carousel .owl-item.active .item {
         opacity: 1; 
     }

@@ -2,6 +2,10 @@
 @section('title', 'Best Car Shipping Services in USA with Fast Delivery')
 @section('meta_description', 'Professional car shipping services in USA guarantee that your vehicle is delivered securely on time at affordable prices and quality services.')
 @section('content')
+{{-- <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+<script src="jquery-1.9.1.min.js"></script>
+<script src="assets/owl-carousel/owl.carousel.js"></script> --}}
 <style>
     .custom-hover-flip {
         position: relative;
@@ -777,6 +781,115 @@
         </div>
     </div>
 </section>
+{{-- <section class="tj-about-section pt-0">
+    <div class="container">
+        <div class="owl-carousel" id="carousel-new-1">
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/Reefer Trailer 2.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Reefer Trailers <small>(Refrigerated Trailers)</small></h5>
+                                    <p class="card-text  text-dark">These types of trailers are specifically designed for cargo that are temperature sensitive, equipped with built-in
+                                        refrigeration units to maintain a controlled environment, and ideal for transporting goods like food and meds.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Multi-Temperature Trailers</h5>
+                                    <p class="card-text text-dark">These types of trailers are featured with many compartments having separate temperature controls.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Multi-Temperature Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <img src="{{ asset('/public/frontend/images/slider/Intermodal Container.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Intermodal Containers</h5>
+                                    <p class="card-text text-dark">This trailer is mainly used for rail transport. These are containers equipped with refrigeration units for long
+                                        hauling journeys.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-2 mb-3">
+                            <div class="row g-0">
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                <div class="card-body tj-section-heading mb-0">
+                                    <h5 class="card-title sub-title active-shape">Tautliner Trailers</h5>
+                                    <p class="card-text text-dark">This trailer is not frequently used however because of their adaption for refrigerated transport these offer
+                                        flexibility in easy loading and unloading while maintaining temperature control.</p>
+                                    <div class="tj-theme-button mt-2">
+                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        Get Quote
+                                        <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Tautliner Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> --}}
 <section class="why-choose-us-slider">
     <div class="container">
         <div class="tj-section-heading text-center">
@@ -1098,5 +1211,34 @@
                 updateCounter();
             });
         </script> 
-    {{-- service counter --}}                   
+    {{-- service counter --}}   
+    {{-- <script>
+        $(document).ready(function(){
+            $("#carousel-new-1").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                smartSpeed: 800,
+                animateOut: 'animate__fadeOut',
+                animateIn: 'animate__fadeIn',
+                fluidSpeed: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+    </script>                 --}}
 @endsection
