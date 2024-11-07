@@ -343,106 +343,108 @@
                 <h5 class="title fs-1">Trailers used for Farm Transport</h5>
             </div>
         </div> 
-        <div class="owl-carousel carousel11">
-            {{-- <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Golf cart on enclosed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+        <div class="swiper-container swiper-new-1">
+            <div class="swiper-wrapper">
+                {{-- <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Golf cart on enclosed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Gooseneck Trailer</h5>
+                                        <p class="card-text  text-dark">Ideally used for transporting large farm vehicles, these trailers offer enhanced
+                                            stability capacity with their hitching system that extends over the truck bed.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Gooseneck Trailer</h5>
-                                    <p class="card-text  text-dark">Ideally used for transporting large farm vehicles, these trailers offer enhanced
-                                        stability capacity with their hitching system that extends over the truck bed.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Lowboy Trailers</h5>
+                                        <p class="card-text text-dark">These trailers are commonly used for heavy or oversized equipment, featuring a low
+                                            deck height that accommodates tall equipment which ensures easier loading and unloading of farm
+                                            vehicles.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Farm Low Boy trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> --}}
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Lowboy Trailers</h5>
-                                    <p class="card-text text-dark">These trailers are commonly used for heavy or oversized equipment, featuring a low
-                                        deck height that accommodates tall equipment which ensures easier loading and unloading of farm
-                                        vehicles.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Farm Low Boy trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Farm tilt deck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Tilt Deck Trailers</h5>
-                                    <p class="card-text text-dark">These are convenient for loading and unloading large or low-clearance farm vehicles
-                                        by tilting the deck to ground level.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Farm tilt deck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Tilt Deck Trailers</h5>
+                                        <p class="card-text text-dark">These are convenient for loading and unloading large or low-clearance farm vehicles
+                                            by tilting the deck to ground level.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Enclosed Trailers</h5>
-                                    <p class="card-text text-dark">This type of trailer offers maximum protection from weather, scratches, and theft.
-                                        Enclosed trailers are most suitable for expensive and sensitive farm vehicles.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Farm enclosed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Enclosed Trailers</h5>
+                                        <p class="card-text text-dark">This type of trailer offers maximum protection from weather, scratches, and theft.
+                                            Enclosed trailers are most suitable for expensive and sensitive farm vehicles.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Farm enclosed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -287,115 +287,117 @@
                 <h5 class="title fs-1">Advanced Trailers for Commercial Trucks</h5>
             </div>
         </div>
-        <div class="owl-carousel carousel11">
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Semi-Truck-with-Lowboy-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Lowboy Trailer</h5>
-                                    <p class="card-text  text-dark">These trailers have a low deck height that allows easier
-                                         transport of tall commercial
-                                        trucks. With detachable goosenecks, it is easier for them to load and unload the cargo.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
+        <div class="swiper-container swiper-new-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Semi-Truck-with-Lowboy-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Lowboy Trailer</h5>
+                                        <p class="card-text  text-dark">These trailers have a low deck height that allows easier
+                                            transport of tall commercial
+                                            trucks. With detachable goosenecks, it is easier for them to load and unload the cargo.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Flatbed Trailers</h5>
+                                        <p class="card-text text-dark">These trailers are equipped with a flatbed without any sides or roof, which allows them
+                                            to load and unload commercial trucks from any convenient angle.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Semi-Truck-with-Flatbed-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Semi-Truck-With-Multi-Axel-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Multi-Axle Trailers</h5>
+                                        <p class="card-text text-dark">These trailers are only required and used for oversized trucks. By maintaining the
+                                            weight and distributing it across multiple axles, these provide stability and reduce the axle load.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
+                                        <p class="card-text text-dark">It involves shipping of backhoes from one place to another with the use of
+                                        specialized trailers and equipment. All State to State Auto Transport offers
+                                        high-quality shipping services for heavy equipment, including backhoes. 
+                                        On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
+                                        charges, though the transportation cost can be high.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('frontend/images/slider/Single-Motorcycle-on-Closed-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
             </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Flatbed Trailers</h5>
-                                    <p class="card-text text-dark">These trailers are equipped with a flatbed without any sides or roof, which allows them
-                                        to load and unload commercial trucks from any convenient angle.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Semi-Truck-with-Flatbed-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Semi-Truck-With-Multi-Axel-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Multi-Axle Trailers</h5>
-                                    <p class="card-text text-dark">These trailers are only required and used for oversized trucks. By maintaining the
-                                        weight and distributing it across multiple axles, these provide stability and reduce the axle load.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape"> Backhoe Transportation </h5>
-                                    <p class="card-text text-dark">It involves shipping of backhoes from one place to another with the use of
-                                    specialized trailers and equipment. All State to State Auto Transport offers
-                                    high-quality shipping services for heavy equipment, including backhoes. 
-                                    On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
-                                    charges, though the transportation cost can be high.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('frontend/images/slider/Single-Motorcycle-on-Closed-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 </section>

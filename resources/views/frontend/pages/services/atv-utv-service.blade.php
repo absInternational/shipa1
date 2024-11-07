@@ -3,11 +3,6 @@
 @section('meta_description', 'Affordable and fast ATV and UTV transport services in USA. We ensure your ATV/UTV are transported safely and efficiently to your destination.')
 @section('content')
 <style>
-    .swiper-new-1 {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s ease;
-    }
     .full-width {
         width: 100%;
     }
@@ -957,30 +952,4 @@
             });
         });
     </script> --}}
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const swiperContainer = document.querySelector('.swiper-container');
-            const swiper = new Swiper('.swiper-new-1', {
-                slidesPerView: 1,
-                loop: true,
-                spaceBetween: 10,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                speed: 800,
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true
-                },
-                breakpoints: {
-                    0: { slidesPerView: 1 },
-                    600: { slidesPerView: 1 },
-                    1000: { slidesPerView: 1 },
-                }
-            });
-            swiperContainer.style.opacity = '1';
-            swiperContainer.style.visibility = 'visible';
-        });
-    </script>
 @endsection

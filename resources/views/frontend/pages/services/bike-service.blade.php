@@ -540,53 +540,55 @@
                 <h5 class="title fs-1">Advanced Trailers used for Motorcycles</h5>
             </div>
         </div>
-        <div class="owl-carousel carousel1">
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Single-Motorcycle-on-Closed-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Single-Motorcycle Trailers</h5>
-                                    <p class="card-text  text-dark">Designed for a single motorcycle, this type
-                                         of trailer is lightweight and easy to transport</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
+        <div class="swiper-container swiper-new-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Single-Motorcycle-on-Closed-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Single-Motorcycle Trailers</h5>
+                                        <p class="card-text  text-dark">Designed for a single motorcycle, this type
+                                            of trailer is lightweight and easy to transport</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Multi-Motorcycle Trailers</h5>
-                                    <p class="card-text text-dark">Capable of carrying more than 1 motorcycle, this type 
-                                        of trailer has a strong body and has more features than the single motorcycle trailer.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Multiple-Motorcycles-on-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Multi-Motorcycle Trailers</h5>
+                                        <p class="card-text text-dark">Capable of carrying more than 1 motorcycle, this type 
+                                            of trailer has a strong body and has more features than the single motorcycle trailer.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Multiple-Motorcycles-on-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>

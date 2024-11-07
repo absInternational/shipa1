@@ -301,105 +301,107 @@
                 <h5 class="title fs-1">Trailers used for Heavy Equipment</h5>
             </div>
         </div>
-        <div class="owl-carousel carousel11">
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Heavy Equipment on Lowboy Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Lowboy Trailers</h5>
-                                    <p class="card-text  text-dark">This type of trailer is ideal for hauling heavy and tall equipment featuring a low deck height that ensures
-                                        stability and prevents the heavy equipment from exceeding height limitations.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Flatbed Trailers</h5>
-                                    <p class="card-text text-dark">These trailers are widely used because they allow easy access due to having no sides or roof making them suitable
-                                        and convenient for hauling heavy equipment.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Heavy Equipment on Flatbed Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+        <div class="swiper-container swiper-new-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Heavy Equipment on Lowboy Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Lowboy Trailers</h5>
+                                        <p class="card-text  text-dark">This type of trailer is ideal for hauling heavy and tall equipment featuring a low deck height that ensures
+                                            stability and prevents the heavy equipment from exceeding height limitations.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Heavy Equipment on dropdeck Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Drop Deck Trailers</h5>
-                                    <p class="card-text text-dark">These trailers feature a lower deck which is convenient for the easy loading and unloading of heavy equipment
-                                        also providing greater stability and safety during the shipping process.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Flatbed Trailers</h5>
+                                        <p class="card-text text-dark">These trailers are widely used because they allow easy access due to having no sides or roof making them suitable
+                                            and convenient for hauling heavy equipment.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Heavy Equipment on Flatbed Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Removable Gooseneck Trailers</h5>
-                                    <p class="card-text text-dark">This type of trailer is mostly popular for its detachable front simplifying the process of loading and unloading 
-                                        large and heavy equipment by allowing it to be easily driven on and off the trailer.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Heavy Equipment on dropdeck Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Drop Deck Trailers</h5>
+                                        <p class="card-text text-dark">These trailers feature a lower deck which is convenient for the easy loading and unloading of heavy equipment
+                                            also providing greater stability and safety during the shipping process.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Heavy Equipment on Gooseneck Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Removable Gooseneck Trailers</h5>
+                                        <p class="card-text text-dark">This type of trailer is mostly popular for its detachable front simplifying the process of loading and unloading 
+                                            large and heavy equipment by allowing it to be easily driven on and off the trailer.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Heavy Equipment on Gooseneck Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,10 +1,4 @@
 <style>
-    .swiper-new-2 {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s ease;
-        overflow: hidden;
-    }
     .fa-star {
     color: #f39c12;
     }

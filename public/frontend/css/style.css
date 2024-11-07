@@ -10805,3 +10805,15 @@ PAGE LOAD ANIMATION
         background-position: center;
         filter: brightness(0.85);
     }
+    .swiper-new-2 {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease;
+        overflow: hidden;
+    }
+    .swiper-new-1 {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease;
+        overflow: hidden;
+    }

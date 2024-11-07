@@ -60,62 +60,92 @@
  </style>
  <!--=========== Testimonial Section Start =========-->
  <section class="tj-testimonial-section pb-0">
-     <div class="carousel-wrapper">
-         <div class="owl-carousel owl-big-reveiw">
-             @foreach ($site_reviews as $site_review)
-                 <div class="item">
-                     <div class="card">
-                         <a href="{{ $site_review->rating_url }}" target="_blank"
-                             style="text-decoration: none; color: inherit;">
-                             <div class="row">
-                                 <div class="col-md-6 col-6">
-                                     <div>
-                                         @if ($site_review->profile_name == 'BBB')
-                                             <img loading="lazy"
-                                                 src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="100%"
-                                                 height="100%" alt="BBB" />
-                                         @elseif ($site_review->profile_name == 'Google')
-                                             <img loading="lazy"
-                                                 src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                 width="100%" height="100%" alt="Google" />
-                                         @elseif($site_review->profile_name == 'Transport Reviews')
-                                             <img loading="lazy"
-                                                 src="{{ asset('frontend/images/testimonial/transport.png') }}"
-                                                 width="100%" height="100%" alt="Transport Reviews" />
-                                         @elseif($site_review->profile_name == 'Trust Pilot')
-                                             <img loading="lazy"
-                                                 src="{{ asset('frontend/images/testimonial/turst.png') }}"
-                                                 width="100%" height="100%" alt="Trust Pilot" />
-                                         @endif
-                                     </div>
-                                     <div class="star">
-                                         @for ($i = 1; $i <= 5; $i++)
-                                             @if ($site_review->rating >= $i)
-                                                 <i class="fa fa-star" aria-hidden="true"></i>
-                                             @elseif ($site_review->rating >= $i - 0.5)
-                                                 <i class="fa a-star-o" aria-hidden="true"></i>
-                                             @else
-                                                 <i class="fa fa-star-o text-light" aria-hidden="true"></i>
-                                             @endif
-                                         @endfor
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6 col-6">
-                                     <div class="rates">
-                                         {{ $site_review->rating }}
-                                     </div>
-                                 </div>
-                             </div>
-                         </a>
-                     </div>
-                 </div>
-             @endforeach
-         </div>
-     </div>
+    <div class="container">
+        <div class="swiper-container swiper-container-8 swiper-new-2">
+            <div class="swiper-wrapper">
+                @foreach ($site_reviews as $site_review)
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <a href="{{ $site_review->rating_url }}" target="_blank"
+                                style="text-decoration: none; color: inherit;">
+                                <div class="row">
+                                    <div class="col-md-6 col-6">
+                                        <div>
+                                            @if ($site_review->profile_name == 'BBB')
+                                                <img loading="lazy"
+                                                    src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="100%"
+                                                    height="100%" alt="BBB" />
+                                            @elseif ($site_review->profile_name == 'Google')
+                                                <img loading="lazy"
+                                                    src="{{ asset('frontend/images/testimonial/google.png') }}"
+                                                    width="100%" height="100%" alt="Google" />
+                                            @elseif($site_review->profile_name == 'Transport Reviews')
+                                                <img loading="lazy"
+                                                    src="{{ asset('frontend/images/testimonial/transport.png') }}"
+                                                    width="100%" height="100%" alt="Transport Reviews" />
+                                            @elseif($site_review->profile_name == 'Trust Pilot')
+                                                <img loading="lazy"
+                                                    src="{{ asset('frontend/images/testimonial/turst.png') }}"
+                                                    width="100%" height="100%" alt="Trust Pilot" />
+                                            @endif
+                                        </div>
+                                        <div class="star">
+                                            @for ($i = 1; $i <= 5; $i++)
+                                                @if ($site_review->rating >= $i)
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                @elseif ($site_review->rating >= $i - 0.5)
+                                                    <i class="fa a-star-o" aria-hidden="true"></i>
+                                                @else
+                                                    <i class="fa fa-star-o text-light" aria-hidden="true"></i>
+                                                @endif
+                                            @endfor
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <div class="rates">
+                                            {{ $site_review->rating }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
  </section>
  <!--=========== Testimonial Section End =========-->
  
- <script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const swiperContainer = document.querySelector('.swiper-container-8');
+        const swiper = new Swiper('.swiper-container-8', {
+            slidesPerView: 3, 
+            loop: true,
+            spaceBetween: 10, 
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 800,
+            breakpoints: {
+                0: { 
+                    slidesPerView: 1 
+                }, 
+                600: { 
+                    slidesPerView: 2 
+                },
+                1000: { 
+                    slidesPerView: 3 
+                }, 
+            }
+        });
+        swiperContainer.style.opacity = '1';
+        swiperContainer.style.visibility = 'visible';
+    });
+</script>
+ {{-- <script>
      $(document).ready(function() {
          $('.owl-big-reveiw').owlCarousel({
              loop: true,
@@ -137,4 +167,4 @@
              }
          });
      });
- </script>
+ </script> --}}

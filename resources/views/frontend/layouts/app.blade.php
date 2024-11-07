@@ -982,5 +982,31 @@
             });
         });
     </script> --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const swiperContainer = document.querySelector('.swiper-new-1');
+            const swiper = new Swiper('.swiper-new-1', {
+                slidesPerView: 1,
+                loop: true,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                speed: 800,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    600: { slidesPerView: 1 },
+                    1000: { slidesPerView: 1 },
+                }
+            });
+            swiperContainer.style.opacity = '1';
+            swiperContainer.style.visibility = 'visible';
+        });
+    </script>
 </body>
 </html>

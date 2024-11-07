@@ -386,104 +386,106 @@
                 <h5 class="title fs-1">Trailers used for Reefer</h5>
             </div>
         </div>
-        <div class="owl-carousel carousel11">
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Reefer Trailer 2.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Reefer Trailers <small>(Refrigerated Trailers)</small></h5>
-                                    <p class="card-text  text-dark">These types of trailers are specifically designed for cargo that are temperature sensitive, equipped with built-in
-                                        refrigeration units to maintain a controlled environment, and ideal for transporting goods like food and meds.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Multi-Temperature Trailers</h5>
-                                    <p class="card-text text-dark">These types of trailers are featured with many compartments having separate temperature controls.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Multi-Temperature Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+        <div class="swiper-container swiper-new-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Reefer Trailer 2.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Reefer Trailers <small>(Refrigerated Trailers)</small></h5>
+                                        <p class="card-text  text-dark">These types of trailers are specifically designed for cargo that are temperature sensitive, equipped with built-in
+                                            refrigeration units to maintain a controlled environment, and ideal for transporting goods like food and meds.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Intermodal Container.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Intermodal Containers</h5>
-                                    <p class="card-text text-dark">This trailer is mainly used for rail transport. These are containers equipped with refrigeration units for long
-                                        hauling journeys.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Multi-Temperature Trailers</h5>
+                                        <p class="card-text text-dark">These types of trailers are featured with many compartments having separate temperature controls.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Multi-Temperature Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Tautliner Trailers</h5>
-                                    <p class="card-text text-dark">This trailer is not frequently used however because of their adaption for refrigerated transport these offer
-                                        flexibility in easy loading and unloading while maintaining temperature control.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Intermodal Container.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Intermodal Containers</h5>
+                                        <p class="card-text text-dark">This trailer is mainly used for rail transport. These are containers equipped with refrigeration units for long
+                                            hauling journeys.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Tautliner Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Tautliner Trailers</h5>
+                                        <p class="card-text text-dark">This trailer is not frequently used however because of their adaption for refrigerated transport these offer
+                                            flexibility in easy loading and unloading while maintaining temperature control.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Tautliner Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>
