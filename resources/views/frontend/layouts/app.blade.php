@@ -7,28 +7,18 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="ahrefs-site-verification" content="6cd07582328e97b072cfaad2711175d5b3d5f0d349648e8ede9c50ea23dfc68d">
-    <!--==========twitter-card=============-->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ShipA1Transport">
     <meta name="twitter:title" content="ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA">
     <meta name="twitter:description"
         content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
-    <!--========== twitter-card============-->
-
-    <!-- Favicon -->
     <link rel="apple-touch-icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" />
-
-    <!-- Select2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include jQuery -->
     <script src="https://unpkg.com/imask"></script>
-
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -43,41 +33,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
-
-    <!-- Bootstrap  v5.1.3 css -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/bootstrap.min.css') }}" />
-    <!-- Meanmenu  css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/meanmenu.css') }}" />
-    <!-- Sal css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/sal.css') }}" />
-    <!-- Magnific css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/magnific-popup.css') }}" />
-    <!-- Swiper Slider css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/swiper.min.css') }}" />
-    <!-- Carousel css file -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/owl.carousel.css') }}" />
-    <!-- Icons css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/icons.css') }}" />
-    <!-- Odometer css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/odometer.min.css') }}" />
-    <!-- Select css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/nice-select.css') }}" />
-    <!-- Animate css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/animate.css') }}" />
-    <!-- Style css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" />
-    <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" />
-
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- JSON-LD structured data -->
     <script async type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -258,7 +229,6 @@
             </svg>
         </div>
     </div>
-    <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
@@ -270,46 +240,26 @@
         s0.parentNode.insertBefore(s1,s0);
         })();
     </script>
-
-    <!-- INDEX-HOME  -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="path/to/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-
-    {{-- sweet alert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- Modernizr.JS -->
     <script src="{{ asset('/public/frontend/js/modernizr-2.8.3.min.js') }}"></script>
-    <!-- jQuery.min JS -->
     <script src="{{ asset('/public/frontend/js/jquery.min.js') }}"></script>
-    <!-- Bootstrap.min JS -->
     <script src="{{ asset('/public/frontend/js/bootstrap.min.js') }}"></script>
-    <!-- Meanmenu JS -->
     <script src="{{ asset('/public/frontend/js/meanmenu.js') }}"></script>
-    <!-- Imagesloaded JS -->
     <script src="{{ asset('/public/frontend/js/imagesloaded.pkgd.min.js') }}"></script>
-    <!-- Isotope JS -->
     <script src="{{ asset('/public/frontend/js/isotope.pkgd.min.js') }}"></script>
-    <!-- Magnific JS -->
     <script src="{{ asset('/public/frontend/js/jquery.magnific-popup.min.js') }}"></script>
-    <!-- Swiper.min JS -->
     <script src="{{ asset('/public/frontend/js/swiper.min.js') }}"></script>
-    <!-- Owl.min JS -->
     <script src="{{ asset('/public/frontend/js/owl.carousel.js') }}"></script>
-    <!-- Appear JS -->
     <script src="{{ asset('/public/frontend/js/jquery.appear.min.js') }}"></script>
-    <!-- Odometer JS -->
     <script src="{{ asset('/public/frontend/js/odometer.min.js') }}"></script>
-    <!-- Sal JS -->
     <script src="{{ asset('/public/frontend/js/sal.js') }}"></script>
-    <!-- Nice JS -->
     <script src="{{ asset('/public/frontend/js/jquery.nice-select.min.js') }}"></script>
-    <!-- Main JS -->
     <script src="{{ asset('/public/frontend/js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
