@@ -3,6 +3,11 @@
 @section('meta_description', 'Affordable and fast ATV and UTV transport services in USA. We ensure your ATV/UTV are transported safely and efficiently to your destination.')
 @section('content')
 <style>
+    .swiper-new-1 {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease;
+    }
     .full-width {
         width: 100%;
     }
@@ -20,21 +25,16 @@
     }
     .services {
         text-align: center;
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
         border-radius: 12px;
         padding: 10px 30px 0px 30px;
-        /* background-color: #9d9e9f14;*/
     }
     .services-h1 {
         text-align:center;
-        /* text-decoration: overline; */
         margin-bottom: 50px;
-        /* color: #ffffff; */
     }
         .title-2 {
         color: #8fc445;
     }
-
     .desc-2 {
         color: white;
     }
@@ -64,10 +64,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
-        z-index: 0; /* Ensures it appears on top of the background */
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
     }
-
     .why-choose-us-slider {
         background: url('/public/img/1-background-image-ATV-Transport.webp');
         padding: 60px 0;
@@ -76,9 +75,8 @@
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1; /* Keeps the background behind the ::before element */
+        z-index: 1;
     }
-
     .section-title {
         text-align: center;
         font-size: 2.5rem;
@@ -89,7 +87,6 @@
         text-transform: uppercase;
         animation: fadeIn 1s ease-in-out;
     }
-
     .section-description {
         text-align: center;
         font-size: 1.1rem;
@@ -101,7 +98,6 @@
         opacity: 0.8;
         animation: fadeIn 1.2s ease-in-out;
     }
-
     .slide {
         min-width: 33.333%;
         box-sizing: border-box;
@@ -115,24 +111,20 @@
         position: relative;
         overflow: hidden;
     }
-
     .slide:hover {
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px);
         background-color: rgba(255, 255, 255, 1);
     }
-
     .slide i {
         margin-bottom: 20px;
         color: #666;
         font-size: 3rem;
         transition: color 0.3s ease;
     }
-
     .slide:hover i {
         color: #8FC445;
     }
-
     .slide-title {
         font-size: 1.5rem;
         color: #333;
@@ -141,11 +133,9 @@
         letter-spacing: 0.3px;
         transition: color 0.3s ease;
     }
-
     .slide:hover .slide-title {
         color: #8FC445;
     }
-
     .slide-text {
         font-size: 1rem;
         color: #666;
@@ -554,106 +544,108 @@
                 <h5 class="title fs-1">Trailers used for ATV/UTV</h5>
             </div>
         </div>
-        <div class="owl-carousel carousel11">
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/ATV on Closed Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Enclosed Trailer</h5>
-                                    <p class="card-text  text-dark">Offer full protection from weather, road debris, potential scratches, and damages due
-                                        to route conditions. Often equipped with ramps for loading and unloading, are a bit pricey because this
-                                        type of trailer is used for classic and luxurious ATVS and UTVS.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Open Trailer</h5>
-                                    <p class="card-text text-dark">Lightweight and easy to transport, one of the most standard and commonly used trailers.
-                                        With the best rates, this offers visibility and accessibility and is used for standard ATVS and UTVS.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/ATV on Open Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+        <div class="swiper-container swiper-new-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/ATV on Closed Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Enclosed Trailer</h5>
+                                        <p class="card-text  text-dark">Offer full protection from weather, road debris, potential scratches, and damages due
+                                            to route conditions. Often equipped with ramps for loading and unloading, are a bit pricey because this
+                                            type of trailer is used for classic and luxurious ATVS and UTVS.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/ATV on Tilt Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Tilt Trailer</h5>
-                                    <p class="card-text text-dark"> Has a tilted deck for easy loading and unloading, is mostly used and preferred for heavier
-                                        ATVS and UTVS.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Open Trailer</h5>
+                                        <p class="card-text text-dark">Lightweight and easy to transport, one of the most standard and commonly used trailers.
+                                            With the best rates, this offers visibility and accessibility and is used for standard ATVS and UTVS.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/ATV on Open Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Multi-Vehicle Trailer</h5>
-                                    <p class="card-text text-dark">Can easily carry more than 1 UTV and ATV, offering a stable and secure
-                                        transportation solution.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/ATV on Tilt Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Tilt Trailer</h5>
+                                        <p class="card-text text-dark"> Has a tilted deck for easy loading and unloading, is mostly used and preferred for heavier
+                                            ATVS and UTVS.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
                                 </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Multiple ATVs on Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Multi-Vehicle Trailer</h5>
+                                        <p class="card-text text-dark">Can easily carry more than 1 UTV and ATV, offering a stable and secure
+                                            transportation solution.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Multiple ATVs on Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -934,6 +926,61 @@
                 $(this).closest('.vehicle-info').remove();
             });
             initializeSearchableDropdown();
+        });
+    </script>
+    {{-- <script>
+        $(document).ready(function(){
+            $(".carousel-new-1").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                smartSpeed: 800,
+                animateOut: 'animate__fadeOut',
+                animateIn: 'animate__fadeIn',
+                fluidSpeed: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+    </script> --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const swiperContainer = document.querySelector('.swiper-container');
+            const swiper = new Swiper('.swiper-new-1', {
+                slidesPerView: 1,
+                loop: true,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                speed: 800,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    600: { slidesPerView: 1 },
+                    1000: { slidesPerView: 1 },
+                }
+            });
+            swiperContainer.style.opacity = '1';
+            swiperContainer.style.visibility = 'visible';
         });
     </script>
 @endsection

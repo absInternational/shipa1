@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <!-- Meta Tag -->
     <meta charset="utf-8" />
-    {{-- <title>ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA</title> --}}
     <title>@yield('title')</title>
-    {{-- <meta name="description" content="" /> --}}
     <meta name="description" content="@yield('meta_description', 'Ship A1')">
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,7 +23,7 @@
     <!-- Select2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Include jQuery -->
     <script src="https://unpkg.com/imask"></script>
 
@@ -73,11 +70,9 @@
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" />
 
-    {{-- csrf --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    {{-- jquery --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> --}}
@@ -320,8 +315,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="/assets/intl-tel-input/intlTelInput.js"></script>
     {{-- <script>
-        $(document).ready(function() {
-            $('#owl-caro').owlCarousel({
+        $(document).ready(function(){
+            $("#owl-caro").owlCarousel({
                 loop: true,
                 margin: 10,
                 nav: true,
@@ -958,9 +953,9 @@
             });
         });
     </script>
-    <script>
+    {{-- <script>
         $(document).ready(function(){
-            $(".carousel11").owlCarousel({
+            $(".carousel-new-1").owlCarousel({
                 items: 1,
                 loop: true,
                 margin: 10,
@@ -986,6 +981,6 @@
                 }
             });
         });
-    </script>
+    </script> --}}
 </body>
 </html>
