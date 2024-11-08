@@ -119,7 +119,6 @@
         opacity: 0.9;
     }
 </Style>
-<!--========== blog details Start ==============-->
 <section class="tj-choose-us-section-service-rv">
     <div class="container mt-4">
         <div class="row mt-4">
@@ -152,7 +151,6 @@
         </div>
     </div>
 </section>
-{{-- @include('partials.reveiw-site') --}}
 @include('partials.reveiw-small-detail') 
 <section class="tj-about-section pt-4">
     <div class="container">
@@ -160,8 +158,6 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape"> RV Transportation</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Discover Top-Notch RV Shipping with Ship A1</h3>
                         <p class="desc">
                             If you are someone who loves traveling then this might be the best option for you! RVs are commonly
@@ -267,7 +263,6 @@
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('/public/frontend/images/project/4d image for RV-Transport.webp') }}" alt="Image">
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -301,11 +296,6 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="tj-theme-button text-start mt-2">
-                            <a class="tj-transparent-btn" href="" target="_blank">
-                                Get Quote<i class="flaticon-right-1"></i>
-                            </a>
-                        </div> --}}
                         </p>
                     </div>
                 </div>
@@ -322,7 +312,6 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Flatbed Trailer</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Why? Because of its professional and stable shipping process, this method is used for RVs
                             especially large-sized motorhomes and travel trailers. In this method, the RV is loaded onto
@@ -338,7 +327,6 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Towing Service</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             For smaller-sized or lightweight RVs, this mode of shipping is best preferred. The process
                             is very
@@ -358,7 +346,6 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Drive Away RV Shipping</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             This method is super convenient especially if you are unable to drive your RV yourself, this
                             method involves hiring a professional driver to take your RV to its designated location!
@@ -558,9 +545,7 @@
         </div>
     </div>
 </section>
-<!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
-<!--=========== Blog Section End =========-->
 <script>
     function playVideo() {
         document.querySelector('.video-thumbnail').style.display = 'none';
