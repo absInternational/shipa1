@@ -376,7 +376,37 @@
         </div>
     </div>
 </section>
-@include('partials.car-cta-section')
+{{-- @include('partials.car-cta-section') --}}
+<section class="tj-cta-section icon-animate">
+    <div class="cta-inner" data-bg-image="{{ asset('/public/frontend/images/cta/Efficient-trans-Heavy.webp') }}"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="cta-content-area">
+                    <div class="cta-content">
+                        <div class="cta-icon">
+                            <i class="fa-light fa-tractor fa-xs"></i>
+                        </div>
+                        <div class="cta-text">
+                            <h3 class="title">SHIP A CAR DIRECT FROM HEAVY AUCTION</h3>
+                            <p class="desc">We deliver quality, with prosperity, because your shipping needs, our
+                                solution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 position-relative">
+                <div class="tj-theme-button">
+                    <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}">
+                        Get Quote<i class="flaticon-right-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="tj-about-section pt-4 mt-4">   
     <div class="container">
         <div class="row">

@@ -647,7 +647,7 @@
                     <div class="faq-image">
                         <img src="{{ asset('frontend/images/slider/FAQ.webp') }}" alt="Image" />
                     </div>
-                    <div class="faq-content">
+                    {{-- <div class="faq-content">
                         <div class="faq-icon">
                             <i class="fa-regular fa-check"></i>
                         </div>
@@ -664,7 +664,7 @@
                             <h6 class="title">High Quality service</h6>
                             <p>Attention to detail and customer satisfaction are incorporated in delivering quality service consistently.</p>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-lg-6" data-sal="slide-right" data-sal-duration="800">
