@@ -317,7 +317,7 @@
                                         <p class="card-text  text-dark">This type of trailer is ideal for hauling heavy and tall equipment featuring a low deck height that ensures
                                             stability and prevents the heavy equipment from exceeding height limitations.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -340,7 +340,7 @@
                                         <p class="card-text text-dark">These trailers are widely used because they allow easy access due to having no sides or roof making them suitable
                                             and convenient for hauling heavy equipment.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -369,7 +369,7 @@
                                         <p class="card-text text-dark">These trailers feature a lower deck which is convenient for the easy loading and unloading of heavy equipment
                                             also providing greater stability and safety during the shipping process.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -392,7 +392,7 @@
                                         <p class="card-text text-dark">This type of trailer is mostly popular for its detachable front simplifying the process of loading and unloading 
                                             large and heavy equipment by allowing it to be easily driven on and off the trailer.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>

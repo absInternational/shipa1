@@ -523,7 +523,7 @@
                 <h4 class=" text-center">Delivering Motorcycles Promptly Nationwide</h4>
                 <p class=" text-center">Many professionals truckers are a part of ShipA1, and that is the main reason behind the on-time delivery of motorcycles. Another way to look into what services look like in a particular company, you can always look at their feedback section, testimonials, and their rating to know about their services. ShipA1 and its motorcycle shipping are famous around the nation, and that is why you will always find satisfied customers when it comes to ShipA1 motorcycle shipping. Since ShipA1 has its own quality standards, it believes that the customers should be given a proper service across the nation.</p>
                 <div class="tj-theme-button  text-center mt-2">
-                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                         Get Quote
                         <i class="flaticon-right-1"></i>
                     </a>
@@ -556,7 +556,7 @@
                                         <p class="card-text  text-dark">Designed for a single motorcycle, this type
                                             of trailer is lightweight and easy to transport</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -579,7 +579,7 @@
                                         <p class="card-text text-dark">Capable of carrying more than 1 motorcycle, this type 
                                             of trailer has a strong body and has more features than the single motorcycle trailer.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>

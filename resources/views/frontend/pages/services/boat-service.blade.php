@@ -258,7 +258,7 @@
                         completely trust us to ensure timely delivery
                         with 100% transparency and 24/7 customer service to tend to your concerns and queries.</p>
                     <div class="tj-theme-button  text-center mt-2">
-                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.boat') }}" target="_blank">
+                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.boat') }}" >
                             Get Quote
                             <i class="flaticon-right-1"></i>
                         </a>

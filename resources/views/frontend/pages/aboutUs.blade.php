@@ -188,7 +188,7 @@
         <div class="row">
             <div class="col-lg-12 position-relative">
                 <div class="tj-theme-button">
-                    <a class="tj-transparent-btn" target="_blank" href="{{ route('quote.form.combine') }}">
+                    <a class="tj-transparent-btn"  href="{{ route('quote.form.combine') }}">
                         GET QUOTE<i class="flaticon-right-1"></i>
                     </a>
                 </div>
@@ -288,7 +288,7 @@
                             <h4 class="title"> Get Anytype Quote From Your Shipping Need</h4>
                         </div>
                         <div class="tj-theme-button">
-                            <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                            <a class="tj-transparent-btn" href="{{ route('quote.form.combine') }}" >
                                 Get Quote<i class="flaticon-right-1"></i>
                             </a>
                         </div>
@@ -301,7 +301,7 @@
                             <h4 class="title">Feel Free To Contact Us For Additional Info</h4>
                         </div>
                         <div class="tj-theme-button">
-                            <a class="tj-transparent-btn" href="{{ route('contactUs') }}" target="_blank">
+                            <a class="tj-transparent-btn" href="{{ route('contactUs') }}" >
                                 Get Support<i class="flaticon-right-1"></i>
                             </a>
                         </div>

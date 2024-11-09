@@ -407,7 +407,7 @@
                         </p>
                     </div>
                     <div class="tj-theme-button">
-                        <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                        <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" >
                         Get Quote<i class="flaticon-right-1"></i>
                         </a>
                     </div>
@@ -564,51 +564,51 @@
         <div class="tj-project-item">
             <img src="{{ asset('/public/frontend/images/project/9.webp') }}" alt="Image" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.car-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                <a href="{{ route('frontend.pages.services.car-service') }}"  > <i class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Car</span>
-                <h4><a href="{{ route('frontend.pages.services.car-service') }}"  target="_blank" class="title-link">Car Transportation Services</a></h4>
+                <h4><a href="{{ route('frontend.pages.services.car-service') }}"   class="title-link">Car Transportation Services</a></h4>
             </div>
         </div>
         <div class="tj-project-item">
             <img src="{{ asset('/public/frontend/images/project/PYT-Bike.webp') }}" alt="Image" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.bike-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                <a href="{{ route('frontend.pages.services.bike-service') }}"  > <i class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Motorcycle</span>
-                <h4><a href="{{ route('frontend.pages.services.bike-service') }}"  target="_blank" class="title-link">Motorcycle Transportation Services</a></h4>
+                <h4><a href="{{ route('frontend.pages.services.bike-service') }}"   class="title-link">Motorcycle Transportation Services</a></h4>
             </div>
         </div>
         <div class="tj-project-item">
             <img src="{{ asset('/public/frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.roro-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                <a href="{{ route('frontend.pages.services.roro-service') }}"  > <i class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">RORO</span>
-                <h4><a href="{{ route('frontend.pages.services.roro-service') }}"  target="_blank" class="title-link">RORO Transportation Services</a></h4>
+                <h4><a href="{{ route('frontend.pages.services.roro-service') }}"   class="title-link">RORO Transportation Services</a></h4>
             </div>
         </div>
         <div class="tj-project-item">
             <img src="{{ asset('/public/frontend/images/project/PYT-ATV.webp') }}" alt="Image" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.atv-utv-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                <a href="{{ route('frontend.pages.services.atv-utv-service') }}"  > <i class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">ATV/UTV</span>
-                <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}"  target="_blank" class="title-link">ATV/UTV Transportation Services</a></h4>
+                <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}"   class="title-link">ATV/UTV Transportation Services</a></h4>
             </div>
         </div>
         <div class="tj-project-item">
             <img src="{{ asset('/public/frontend/images/project/PYT-Golf.webp') }}" alt="Image" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.golf-cart-service') }}"  target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                <a href="{{ route('frontend.pages.services.golf-cart-service') }}"  > <i class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Golf Cart</span>
-                <h4><a href="{{ route('frontend.pages.services.golf-cart-service') }}"  target="_blank" class="title-link">Golf Cart Transportation Services</a>
+                <h4><a href="{{ route('frontend.pages.services.golf-cart-service') }}"   class="title-link">Golf Cart Transportation Services</a>
                 </h4>
             </div>
         </div>

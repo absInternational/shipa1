@@ -288,7 +288,7 @@
                         people and the environment throughout the journey.Choose Ship A1 for safe and reliable Hazmat transport.
                         </p>
                         <div class="tj-theme-button  text-center mt-2">
-                                <a class="tj-transparent-btn" href="{{ route('frontend.forms.hazmattransport') }}" target="_blank">
+                                <a class="tj-transparent-btn" href="{{ route('frontend.forms.hazmattransport') }}" >
                                     Get Quote
                                     <i class="flaticon-right-1"></i>
                                 </a>

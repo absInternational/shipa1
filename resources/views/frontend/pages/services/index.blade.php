@@ -122,7 +122,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('frontend/images/slider/car-transports.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/public/frontend/images/slider/car-transports.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">

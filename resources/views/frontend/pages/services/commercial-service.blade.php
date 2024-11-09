@@ -304,7 +304,7 @@
                                             transport of tall commercial
                                             trucks. With detachable goosenecks, it is easier for them to load and unload the cargo.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -327,7 +327,7 @@
                                         <p class="card-text text-dark">These trailers are equipped with a flatbed without any sides or roof, which allows them
                                             to load and unload commercial trucks from any convenient angle.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -356,7 +356,7 @@
                                         <p class="card-text text-dark">These trailers are only required and used for oversized trucks. By maintaining the
                                             weight and distributing it across multiple axles, these provide stability and reduce the axle load.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -382,7 +382,7 @@
                                         On average, the estimated cost is $3 to $5 per mile, excluding the pick-up 
                                         charges, though the transportation cost can be high.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>

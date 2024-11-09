@@ -2,10 +2,6 @@
 @section('title', 'Best Car Shipping Services in USA with Fast Delivery')
 @section('meta_description', 'Professional car shipping services in USA guarantee that your vehicle is delivered securely on time at affordable prices and quality services.')
 @section('content')
-{{-- <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
-<link rel="stylesheet" href="owl-carousel/owl.theme.css">
-<script src="jquery-1.9.1.min.js"></script>
-<script src="assets/owl-carousel/owl.carousel.js"></script> --}}
 <style>
     .custom-hover-flip {
         position: relative;
@@ -185,7 +181,6 @@
         opacity: 0.9;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -356,7 +351,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="col-md-4">
                                     <div class="input-form tj-select model-div">
                                         <label>Model</label>
@@ -431,8 +425,6 @@
                                 <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
                                     onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image" onchange="previewImage(event)" />
-                                                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100px; max-height: 100px; margin-top: 10px;"> -->
                             </div>
                         </div>
                         <div class="tj-theme-button text-center mt-3">
@@ -453,7 +445,7 @@
                 <div class="mt-4 rounded ">
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/car-transport.webp') }}" alt="Image">
-                        <div class="overlay"> <!-- Added overlay div -->
+                        <div class="overlay">
                             <a href="{{ route('form.vehicle.car') }}">
                                 <button class="tj-submit-btn">
                                     Get Quote <i class="fa fa-arrow-left"></i>
@@ -461,15 +453,11 @@
                             </a>
                         </div>
                     </div>
-                    <!-- <img class="group-1 p-z-idex" src="{{ asset('frontend/images/project/Untitled design (31).png') }}" alt="Image"> -->
-
                 </div>
             </div>
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape">Quality and Affordability</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" 
                         data-sal-duration="800">Quality and Affordability</h3>
                         <p class="desc">
@@ -481,7 +469,6 @@
                              and amazing deals.
                             </p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -489,8 +476,6 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape">Fast and Secure Vehicle Transport with ShipA1</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" 
                         data-sal-duration="800">Fast and Secure Vehicle Transport with ShipA1</h3>
                         <p class="desc">
@@ -535,7 +520,7 @@
                     you do not want to transport it on your doorsteps, then another facility that is provided by the
                     ShipA1 is of the terminals. </p>
                 <div class="tj-theme-button  text-center mt-2">
-                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.car') }}" target="_blank">
+                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.car') }}" >
                         Get Quote
                         <i class="flaticon-right-1"></i>
                     </a>
@@ -551,8 +536,6 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        {{-- <span class="sub-title active-shape">Find the Ideal Shipping Solution for Your Vehicle</span> --}}
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <h3 class="sal-animate" data-sal="slide-left" 
                         data-sal-duration="800">Find the Ideal Shipping Solution for Your Vehicle</h3>
                         <p class="desc">
@@ -572,7 +555,7 @@
                 <div class="mt-4 rounded ">
                     <div class="image-box">
                         <img class="rounded" src="{{ asset('frontend/images/project/open vs enclosed.webp') }}" alt="Image">
-                        <div class="overlay"> <!-- Added overlay div -->
+                        <div class="overlay">
                             <a href="{{ route('form.vehicle.car') }}">
                                 <button class="tj-submit-btn">
                                     Get Quote <i class="fa fa-arrow-left"></i>
@@ -594,7 +577,6 @@
                 <div class="about-content-one border rounded-5 p-4 mb-0">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">open transport</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             This is the usual method we use while shipping cars. The most affordable choice for car transportation
                             is an open transport, which makes it perfect for individuals looking for a low-cost option. Due of its
@@ -608,7 +590,6 @@
                 <div class="about-content-one border rounded-5 p-4 mb-0">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Enclosed transport</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Enclosed transport service is the ideal option for people who want to provide their cars
                             additional security. Although a little more expensive, guarantees that your vehicle
@@ -624,7 +605,6 @@
                 <div class="about-content-one border rounded-5 p-4 mb-0">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Expedited Shipping</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Our expedited shipping service provides the quickest route to delivery for the vehicle when
                             time is of the importance. This service caters to your urgent shipping needs, whether you're
@@ -639,7 +619,6 @@
                 <div class="about-content-one border rounded-5 p-4 mb-0">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Door to Door Transport</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">
                             Under door to door transport delivery, your automobile will be picked right from your door and 
                             will be delivered to your exact location. This is the most popular method of car shipping because 
@@ -781,115 +760,6 @@
         </div>
     </div>
 </section>
-{{-- <section class="tj-about-section pt-0">
-    <div class="container">
-        <div class="owl-carousel" id="carousel-new-1">
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Reefer Trailer 2.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Reefer Trailers <small>(Refrigerated Trailers)</small></h5>
-                                    <p class="card-text  text-dark">These types of trailers are specifically designed for cargo that are temperature sensitive, equipped with built-in
-                                        refrigeration units to maintain a controlled environment, and ideal for transporting goods like food and meds.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Multi-Temperature Trailers</h5>
-                                    <p class="card-text text-dark">These types of trailers are featured with many compartments having separate temperature controls.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Multi-Temperature Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('/public/frontend/images/slider/Intermodal Container.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Intermodal Containers</h5>
-                                    <p class="card-text text-dark">This trailer is mainly used for rail transport. These are containers equipped with refrigeration units for long
-                                        hauling journeys.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-2 mb-3">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                <div class="card-body tj-section-heading mb-0">
-                                    <h5 class="card-title sub-title active-shape">Tautliner Trailers</h5>
-                                    <p class="card-text text-dark">This trailer is not frequently used however because of their adaption for refrigerated transport these offer
-                                        flexibility in easy loading and unloading while maintaining temperature control.</p>
-                                    <div class="tj-theme-button mt-2">
-                                    <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
-                                        Get Quote
-                                        <i class="flaticon-right-1"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Tautliner Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
 <section class="why-choose-us-slider">
     <div class="container">
         <div class="tj-section-heading text-center">
@@ -950,7 +820,6 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-    {{-- addNewVehicle --}}
         <script>
             $(document).ready(function() {
                 function addNewVehicle() {
@@ -1147,36 +1016,6 @@
                 });
             });
         </script>
-    {{-- addNewVehicle --}}
-
-    {{-- owl-carousel --}}
-        {{-- <script>
-            $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: true,
-                items: 3, // Default number of items
-                autoplay: true,
-                autoplayTimeout: 4000,
-                autoplayHoverPause: true,
-                responsive: {
-                0: {
-                    items: 1 // Show 1 item on screens smaller than 600px
-                },
-                600: {
-                    items: 2 // Show 2 items on screens larger than 600px
-                },
-                1000: {
-                    items: 3 // Show 3 items on screens larger than 1000px
-                }
-                }
-            });
-            });
-        </script> --}}
-    {{-- owl-carousel --}}
-
-    {{-- service counter --}}
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const counter = document.getElementById('counter-value');
@@ -1210,35 +1049,5 @@
                 };
                 updateCounter();
             });
-        </script> 
-    {{-- service counter --}}   
-    {{-- <script>
-        $(document).ready(function(){
-            $("#carousel-new-1").owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                smartSpeed: 800,
-                animateOut: 'animate__fadeOut',
-                animateIn: 'animate__fadeIn',
-                fluidSpeed: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 1
-                    }
-                }
-            });
-        });
-    </script>                 --}}
+        </script>
 @endsection

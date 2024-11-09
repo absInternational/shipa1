@@ -315,6 +315,11 @@
                                                                 href="{{ route('heavyAuction') }}">
                                                                 Heavy Auction Transport</a>
                                                         </li>
+                                                        {{-- <li>
+                                                            <a class="title" 
+                                                                href="{{ route('thirdPartyLogistics') }}">
+                                                                Third Party Logistics</a>
+                                                        </li> --}}
                                                     </div>  
                                                 </div>
                                             </ul>

@@ -741,7 +741,7 @@
                         </p>
                     </div>
                     <div class="tj-theme-button">
-                        <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                        <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" >
                             Get Quote<i class="flaticon-right-1"></i>
                         </a>
                     </div>
@@ -890,35 +890,35 @@
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"> <i
+                <a href="{{ route('frontend.pages.services.reefer-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Reefer</span>
-                <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" target="_blank"
+                <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" 
                         class="title-link">Reefer Transportation Service</a></h4>
             </div>
         </div>
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/7.webp') }}" alt="Image" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"> <i
+                <a href="{{ route('frontend.pages.services.hazmat-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Hazmat</span>
-                <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" target="_blank"
+                <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" 
                         class="title-link">Hazmat Transportation Service</a></h4>
             </div>
         </div>
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/5.webp') }}" alt="Image" />
             <div class="arrow-icon">
-                <a href="{{ route('services') }}" target="_blank"> <i class="fa-light fa-arrow-right"></i></a>
+                <a href="{{ route('services') }}" > <i class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Dry van</span>
-                <h4><a href="{{ route('services') }}" target="_blank" class="title-link">Dry van Transportation
+                <h4><a href="{{ route('services') }}"  class="title-link">Dry van Transportation
                         Service</a></h4>
             </div>
         </div>

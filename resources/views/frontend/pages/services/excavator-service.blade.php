@@ -330,7 +330,7 @@
                                         <p class="card-text  text-dark">These trailers are designed to carry heavy loads like excavators featuring a low deck height to support
                                             the stability and easy loading of excavators.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -353,7 +353,7 @@
                                         <p class="card-text text-dark">This trailer has an open deck which is convenient for flexible loading and securing machinery, most commonly
                                             used for small excavators.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -382,7 +382,7 @@
                                         <p class="card-text text-dark">This type of trailer has combined elements of a flatbed and a lowboy. With the help of 
                                             a lower deck height, allows easy accommodation of taller equipment like excavators.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -405,7 +405,7 @@
                                         <p class="card-text text-dark">This trailer is adjustable in length and can handle longer or oversized excavators while also 
                                             offering versatility for multiple sizes and configurations of excavators.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>

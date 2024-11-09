@@ -300,7 +300,7 @@
                             </p>
                         </div>
                         <div class="tj-theme-button">
-                            <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" target="_blank">
+                            <a class="tj-primary-btn" href="{{ route('quote.form.combine') }}" >
                                 Get Quote<i class="flaticon-right-1"></i>
                             </a>
                         </div>
@@ -462,72 +462,72 @@
             <div class="tj-project-item">
                 <img src="{{ asset('/public/frontend/images/project/PYT-Heavy.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.heavy-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">HEAVY EQUIP</span>
-                    <h4><a href="{{ route('frontend.pages.services.heavy-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.heavy-service') }}" 
                             class="title-link">Heavy Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('/public/frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.roro-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.roro-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">RORO</span>
-                    <h4><a href="{{ route('frontend.pages.services.roro-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.roro-service') }}" 
                             class="title-link">RORO Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('/public/frontend/images/project/PYT-Construction.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.construction-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.construction-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">CONSTRUCTION</span>
-                    <h4><a href="{{ route('frontend.pages.services.construction-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.construction-service') }}" 
                             class="title-link">Construction Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('/public/frontend/images/project/PYT-Farm.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.farm-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.farm-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">FARM</span>
-                    <h4><a href="{{ route('frontend.pages.services.farm-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.farm-service') }}" 
                             class="title-link">FARM Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('/public/frontend/images/project/PYT-Excavator.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.excavator-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.excavator-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">EXCAVATOR</span>
-                    <h4><a href="{{ route('frontend.pages.services.excavator-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.excavator-service') }}" 
                             class="title-link">EXCAVATOR Transportation Services</a></h4>
                 </div>
             </div>
             <div class="tj-project-item">
                 <img src="{{ asset('/public/frontend/images/project/PYT-Commercial.webp') }}" alt="Image" />
                 <div class="arrow-icon">
-                    <a href="{{ route('frontend.pages.services.commercial-service') }}" target="_blank"> <i
+                    <a href="{{ route('frontend.pages.services.commercial-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
                 </div>
                 <div class="tj-project-content">
                     <span class="sub-title">TRUCKS</span>
-                    <h4><a href="{{ route('frontend.pages.services.commercial-service') }}" target="_blank"
+                    <h4><a href="{{ route('frontend.pages.services.commercial-service') }}" 
                             class="title-link">Trucks Transportation Services</a></h4>
                 </div>
             </div>

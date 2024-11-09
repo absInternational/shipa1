@@ -130,7 +130,7 @@
                                     <a class="tel-link" href="tel:+18444744721">1 (844) 474-4721</a>
                                     <p>Perfectly simple & easy to distinguish free hour when power.</p>
                                     <div class="tj-theme-button">
-                                        <a href="{{ route('quote.form.combine') }}" target="_blank">
+                                        <a href="{{ route('quote.form.combine') }}" >
                                         <button class="tj-transparent-btn submit-btn2" type="submit" value="submit">
                                             Get a Quote <i class="fa-light fa-arrow-right"></i>
                                         </button>

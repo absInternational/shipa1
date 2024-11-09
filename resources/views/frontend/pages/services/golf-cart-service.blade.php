@@ -142,7 +142,6 @@
         opacity: 0.9;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -536,7 +535,7 @@
                        as your trusted and reliable partner who shares mutual feelings when it comes to professionalism and 
                        transparency.</p>
                     <div class="tj-theme-button  text-center mt-2">
-                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.golf_cart') }}" target="_blank">
+                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.golf_cart') }}" >
                             Get Quote
                             <i class="flaticon-right-1"></i>
                         </a>
@@ -549,7 +548,6 @@
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
-                {{-- <span class="sub-title active-shape"> test </span> --}}
                 <h5 class="title fs-1">Trailers used for Golf Cart</h5>
             </div>
         </div> 
@@ -570,7 +568,7 @@
                                             vehicle from potential scratches, road debris, and weather conditions although it is a bit pricey as
                                             compared to the other trailers it offers peace of mind to the customers.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -594,7 +592,7 @@
                                             provides accessibility and visibility to the golf carts strapped onto the trailer, without compromising the
                                             quality or duration of your shipment.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -623,7 +621,7 @@
                                         <p class="card-text text-dark">This trailer facilitates easy loading and
                                             unloading of a golf cart because of its tilted deck.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -646,7 +644,7 @@
                                         <p class="card-text text-dark">This trailer has a hydraulic feature that allows the bed to be lowered and raised
                                             making unloading and loading a golf cart much more convenient.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -815,7 +813,6 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-    {{-- addNewVehicle --}}
         <script>
             $(document).ready(function() {
                 function addNewVehicle() {
@@ -910,8 +907,6 @@
                 initializeSearchableDropdown();
             });
         </script>
-    {{-- addNewVehicle --}}
-    {{-- service counter --}}
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const counter = document.getElementById('counter-value');
@@ -945,6 +940,5 @@
                 };
                 updateCounter();
             });
-        </script> 
-    {{-- service counter --}}  
+        </script>
 @endsection

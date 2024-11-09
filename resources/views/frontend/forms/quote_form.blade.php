@@ -74,10 +74,10 @@
             color: #000000;
         }
         .custom-card.car-card:hover .card-body {
-            background-image: url('https://blog.shipa1.daydispatch.com/public/frontend/images/slider/home-slider-1.webp');
+            background-image: url('{{ asset('/public/frontend/images/slider/car-transports.webp') }}');
         }
         .custom-card.motorcycle-card:hover .card-body {
-            background-image: url('{{ asset('img/bike.webp') }}');
+            background-image: url('{{ asset('/public/frontend/images/service/Bike.webp') }}');
         }
         .custom-card.heavy-equip-card:hover .card-body {
             background-image: url('{{ asset('frontend/images/slider/home-slider-2.webp') }}');
@@ -86,10 +86,10 @@
             background-image: url('{{ asset('img/atv.webp') }}');
         }
         .custom-card.excavator-card:hover .card-body {
-            background-image: url('{{ asset('img/EXCAVATOR.webp') }}');
+            background-image: url('{{ asset('/public/frontend/images/service/Excavator.webp') }}');
         }
         .custom-card.construction-card:hover .card-body {
-            background-image: url('{{ asset('img/construction_1.webp') }}');
+            background-image: url('{{ asset('/public/frontend/images/service/Construction.webp') }}');
         }
         .custom-card.farm-card:hover .card-body {
             background-image: url('{{ asset('img/farm-equipment.webp') }}');
@@ -107,13 +107,13 @@
             background-image: url('{{ asset('img/roro-banner.webp') }}');
         }
         .custom-card.golf-cart-card:hover .card-body {
-            background-image: url('{{ asset('img/golf-cart.webp') }}');
+            background-image: url('{{ asset('/public/frontend/images/service/Golf.webp') }}');
         }
         .custom-card.rv-card:hover .card-body {
-            background-image: url('{{ asset('img/rv-.webp') }}');
+            background-image: url('{{ asset('/public/frontend/images/service/RV.webp') }}');
         }
         .custom-card.commercial-card:hover .card-body {
-            background-image: url('{{ asset('img/truck-.webp') }}');
+            background-image: url('{{ asset('/public/frontend/images/service/Commercial.webp') }}');
         }
         .custom-card.Reefer-card:hover .card-body {
             background-image: url('{{ asset('img/ReeferTruck3.webp') }}');

@@ -522,7 +522,7 @@
                          now and get a rough estimate of your shipment!
                          </p>
                     <div class="tj-theme-button  text-center mt-2">
-                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.atv_utv') }}" target="_blank">
+                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.atv_utv') }}">
                             Get Quote
                             <i class="flaticon-right-1"></i>
                         </a>
@@ -556,7 +556,7 @@
                                             to route conditions. Often equipped with ramps for loading and unloading, are a bit pricey because this
                                             type of trailer is used for classic and luxurious ATVS and UTVS.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}">
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -579,7 +579,7 @@
                                         <p class="card-text text-dark">Lightweight and easy to transport, one of the most standard and commonly used trailers.
                                             With the best rates, this offers visibility and accessibility and is used for standard ATVS and UTVS.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}">
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -608,7 +608,7 @@
                                         <p class="card-text text-dark"> Has a tilted deck for easy loading and unloading, is mostly used and preferred for heavier
                                             ATVS and UTVS.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}">
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -631,7 +631,7 @@
                                         <p class="card-text text-dark">Can easily carry more than 1 UTV and ATV, offering a stable and secure
                                             transportation solution.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" target="_blank">
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}">
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
