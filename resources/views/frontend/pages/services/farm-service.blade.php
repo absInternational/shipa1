@@ -355,7 +355,7 @@
                                             deck height that accommodates tall equipment which ensures easier loading and unloading of farm
                                             vehicles.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.farm_transport') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -384,7 +384,7 @@
                                         <p class="card-text text-dark">These are convenient for loading and unloading large or low-clearance farm vehicles
                                             by tilting the deck to ground level.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.farm_transport') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -407,7 +407,7 @@
                                         <p class="card-text text-dark">This type of trailer offers maximum protection from weather, scratches, and theft.
                                             Enclosed trailers are most suitable for expensive and sensitive farm vehicles.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.farm_transport') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>

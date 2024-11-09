@@ -345,64 +345,130 @@
                 </div>
             </div>
         </div>
+    </section>
+    {{-- <section class="tj-testimonial-section">
         <div class="container">
-            <div class="row justify-content-center">
-                <h2 class="title sal-animate text-center pt-4" data-sal="slide-left" data-sal-duration="800">
-                    Comprehensive Boat Transportation methods</h2>
-                <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded-5 p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Open Transport:</span>
-                            <p class="desc">
-                                This is the type of transport that is both cost-effective and suitable for
-                                shipping. This shipping mode involves your boat being situated onto an open trailer or a
-                                flatbed truck.
-                            </p>
+            <div class="row">
+                <div class="tj-section-heading text-center">
+                    <h5 class="title fs-1">Trailers used for Boat Transportation</h5>
+                </div>
+            </div> 
+            <div class="swiper-container swiper-new-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card-2 mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Golf cart on enclosed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        </div>
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <div class="card-body tj-section-heading mb-0">
+                                            <h5 class="card-title sub-title active-shape">Open Transport</h5>
+                                            <p class="card-text  text-dark">This is the type of transport that is both cost-effective and suitable for
+                                                shipping. This shipping mode involves your boat being situated onto an open trailer or a
+                                                flatbed truck.</p>
+                                            <div class="tj-theme-button mt-2">
+                                            <a class="tj-transparent-btn" href="{{ route('form.vehicle.boat') }}" >
+                                                Get Quote
+                                                <i class="flaticon-right-1"></i>
+                                            </a>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded-5 p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Enclosed Transport:</span>
-                            <p class="desc">
-                                Enclosed transport may not be the cheapest mode of shipping but it does provide an extra
-                                layer
-                                of protection for your luxury yachts and boats that require extra care.</p>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card-2 mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <div class="card-body tj-section-heading mb-0">
+                                            <h5 class="card-title sub-title active-shape">Enclosed Transport</h5>
+                                            <p class="card-text text-dark">Enclosed transport may not be the cheapest mode of shipping but it does provide an extra
+                                                layer
+                                                of protection for your luxury yachts and boats that require extra care.</p>
+                                            <div class="tj-theme-button mt-2">
+                                            <a class="tj-transparent-btn" href="{{ route('form.vehicle.boat') }}" >
+                                                Get Quote
+                                                <i class="flaticon-right-1"></i>
+                                            </a>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                            <img src="{{ asset('/public/frontend/images/slider/Golf cart on open trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded-5 p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Flat Rack Transport:</span>
-                            <p class="desc">
-                                This mode of shipping includes placing and securing your boat on a flat rack, it is only
-                                suitable
-                                for irregular-shaped boats or oversized boats which cannot be transported on standard
-                                trailers or carriers.
-                            </p>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card-2 mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/1 image for Commercial b00h.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        </div>
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <div class="card-body tj-section-heading mb-0">
+                                            <h5 class="card-title sub-title active-shape">Flat Rack Transport</h5>
+                                            <p class="card-text text-dark">This mode of shipping includes placing and securing your boat on a flat rack, it is only
+                                                suitable
+                                                for irregular-shaped boats or oversized boats which cannot be transported on standard
+                                                trailers or carriers.</p>
+                                            <div class="tj-theme-button mt-2">
+                                            <a class="tj-transparent-btn" href="{{ route('form.vehicle.boat') }}" >
+                                                Get Quote
+                                                <i class="flaticon-right-1"></i>
+                                            </a>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded-5 p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Tow-Away Transport</span>
-                            <p class="desc">This is the method used for smaller boats and most of those that can be
-                                towed.
-                                The boat is attached to a towing vehicle and transported to its destination. This is quite
-                                a simple and efficient solution.
-                            </p>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card-2 mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <div class="card-body tj-section-heading mb-0">
+                                            <h5 class="card-title sub-title active-shape">Tow-Away Transport</h5>
+                                            <p class="card-text text-dark">This is the method used for smaller boats and most of those that can be
+                                                towed.
+                                                The boat is attached to a towing vehicle and transported to its destination. This is quite
+                                                a simple and efficient solution.</p>
+                                            <div class="tj-theme-button mt-2">
+                                            <a class="tj-transparent-btn" href="{{ route('form.vehicle.boat') }}" >
+                                                Get Quote
+                                                <i class="flaticon-right-1"></i>
+                                            </a>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                            <img src="{{ asset('/public/frontend/images/slider/Golf cart on hydraulic lift trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="tj-choose-us-section-service-commercial-4">
         <div class="container why-box">
             <div class="row services">

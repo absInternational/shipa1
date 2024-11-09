@@ -568,7 +568,7 @@
                                             vehicle from potential scratches, road debris, and weather conditions although it is a bit pricey as
                                             compared to the other trailers it offers peace of mind to the customers.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.golf_cart') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -592,7 +592,7 @@
                                             provides accessibility and visibility to the golf carts strapped onto the trailer, without compromising the
                                             quality or duration of your shipment.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.golf_cart') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -621,7 +621,7 @@
                                         <p class="card-text text-dark">This trailer facilitates easy loading and
                                             unloading of a golf cart because of its tilted deck.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.golf_cart') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -644,7 +644,7 @@
                                         <p class="card-text text-dark">This trailer has a hydraulic feature that allows the bed to be lowered and raised
                                             making unloading and loading a golf cart much more convenient.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.golf_cart') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>

@@ -377,7 +377,7 @@
                                         <p class="card-text  text-dark">One of the most prevalent types of trailers which are used for the transportation of dry vans, these are in enclosed
                                             form, protected from weather conditions, road debris, and any other potential scratches.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -401,7 +401,7 @@
                                             especially when temperature control is a secondary concern. These are equipped with a cooling unit that assists in
                                             maintaining a cool temperature making them an ideal choice for dry goods</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -430,7 +430,7 @@
                                         <p class="card-text text-dark">This type of trailer is used for flexible loading and unloading of dry vans, because of its accessible structure 
                                             this trailer is an ideal type for any oversized or oddly shaped vehicle and cargo.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -453,7 +453,7 @@
                                         <p class="card-text text-dark">These types of trailers usually are pretty similar to flatbeds but with a lower deck, which allows easy transportation 
                                             of dry vans that exceeds the height limit.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>

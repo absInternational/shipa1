@@ -402,7 +402,7 @@
                                         <p class="card-text  text-dark">These types of trailers are specifically designed for cargo that are temperature sensitive, equipped with built-in
                                             refrigeration units to maintain a controlled environment, and ideal for transporting goods like food and meds.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.reefertrucking') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -424,7 +424,7 @@
                                         <h5 class="card-title sub-title active-shape">Multi-Temperature Trailers</h5>
                                         <p class="card-text text-dark">These types of trailers are featured with many compartments having separate temperature controls.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.reefertrucking') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -453,7 +453,7 @@
                                         <p class="card-text text-dark">This trailer is mainly used for rail transport. These are containers equipped with refrigeration units for long
                                             hauling journeys.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.reefertrucking') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -476,7 +476,7 @@
                                         <p class="card-text text-dark">This trailer is not frequently used however because of their adaption for refrigerated transport these offer
                                             flexibility in easy loading and unloading while maintaining temperature control.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.reefertrucking') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>

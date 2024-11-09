@@ -355,7 +355,7 @@
                                         <h5 class="card-title sub-title active-shape">Flatbed Trailers</h5>
                                         <p class="card-text  text-dark">This trailer is most ideal for transporting multiple construction vehicles due to its open structure and easy access.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.construction_transport') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -378,7 +378,7 @@
                                         <p class="card-text text-dark">Most commonly used for oversized and heavy construction vehicles offering a low deck which is used to manage
                                             height restrictions as well as stability.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.construction_transport') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -407,7 +407,7 @@
                                         <p class="card-text text-dark">This trailer is widely known and popular for its stability and capacity to easily handle and carry large loads,
                                             equipped with a detachable front that allows easier loading and unloading.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.construction_transport') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
@@ -430,7 +430,7 @@
                                         <p class="card-text text-dark">Mainly used for the shipping of tall construction vehicles, equipped with a lower deck for height
                                             accommodation and a higher deck for additional load.</p>
                                         <div class="tj-theme-button mt-2">
-                                        <a class="tj-transparent-btn" href="{{ route('form.vehicle.form.vehicle.car') }}" >
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.construction_transport') }}" >
                                             Get Quote
                                             <i class="flaticon-right-1"></i>
                                         </a>
