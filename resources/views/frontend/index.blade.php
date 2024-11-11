@@ -562,7 +562,7 @@
         </div>
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.roro-service') }}" class="project-link">
-             <img loading="lazy" src="{{ asset('/public/frontend/images/project/roro-slider-image.webp') }}" alt="Roro Shipping" />
+             <img loading="lazy" src="{{ asset('/public/frontend/images/project/RORO-Slider (1)--.webp') }}" alt="Roro Shipping" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.roro-service') }}" > <i
                         class="fa-light fa-arrow-right"></i></a>

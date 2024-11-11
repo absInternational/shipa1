@@ -346,7 +346,7 @@
             </div>
         </div>
     </section>
-    {{-- <section class="tj-testimonial-section">
+    <section class="tj-testimonial-section">
         <div class="container">
             <div class="row">
                 <div class="tj-section-heading text-center">
@@ -361,7 +361,7 @@
                                 <div class="card-2 mb-3">
                                     <div class="row g-0">
                                         <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('/public/frontend/images/slider/Golf cart on enclosed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        <img src="{{ asset('/public/frontend/images/slider/Boat Transport on Open Trailer 1--.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                         </div>
                                         <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                         <div class="card-body tj-section-heading mb-0">
@@ -402,7 +402,7 @@
                                         </div>
                                         </div>
                                         <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                            <img src="{{ asset('/public/frontend/images/slider/Golf cart on open trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                            <img src="{{ asset('/public/frontend/images/slider/Boat Transport on Enclosed Trailer 1--.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                         </div>
                                     </div>
                                 </div>
@@ -415,7 +415,7 @@
                                 <div class="card-2 mb-3">
                                     <div class="row g-0">
                                         <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('/public/frontend/images/slider/1 image for Commercial b00h.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        <img src="{{ asset('/public/frontend/images/slider/Boat Transport on Flat-Rack Trailer 1--.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                         </div>
                                         <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                         <div class="card-body tj-section-heading mb-0">
@@ -458,7 +458,7 @@
                                         </div>
                                         </div>
                                         <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                            <img src="{{ asset('/public/frontend/images/slider/Golf cart on hydraulic lift trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                            <img src="{{ asset('/public/frontend/images/slider/Boat Transport on Tow-Away Trailer 1--.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                         </div>
                                     </div>
                                 </div>
@@ -468,7 +468,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <section class="tj-choose-us-section-service-commercial-4">
         <div class="container why-box">
             <div class="row services">

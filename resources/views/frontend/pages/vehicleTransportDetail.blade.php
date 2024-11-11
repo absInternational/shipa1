@@ -582,7 +582,7 @@
             </div>
         </div>
         <div class="tj-project-item">
-            <img src="{{ asset('/public/frontend/images/project/roro-slider-image.webp') }}" alt="Image" />
+            <img src="{{ asset('/public/frontend/images/project/RORO-Slider (1)--.webp') }}" alt="Image" />
             <div class="arrow-icon">
                 <a href="{{ route('frontend.pages.services.roro-service') }}"  > <i class="fa-light fa-arrow-right"></i></a>
             </div>
