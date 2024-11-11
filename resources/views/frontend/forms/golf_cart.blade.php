@@ -119,7 +119,6 @@
     margin-bottom: 10px;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -142,7 +141,6 @@
         </div>
     </div>
 </section>
-<!--========== breadcrumb End ==============-->
 <section class="tj-choose-us-section-golfcart">
     <div class="container-flude">
         <div class="row">
@@ -318,8 +316,6 @@
                             <label class="d-block"> Image:</label>
                             <input class="form-control image_input" type="file" name="image[]" accept="image/*" multiple onchange="previewImages(event)">
                             <div class="image-preview-container" id="imagePreviewContainer"></div>
-                            <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                placeholder="Upload File" /> -->
                         </div>
                         <div class="tj-theme-button text-center mt-3">
                             <button class="tj-submit-btn" type="submit" value="submit">
@@ -391,8 +387,6 @@
                 `;
 
             $('#vehicles-container').append(newVehicleHtml);
-
-            // Initialize the searchable dropdown for new elements
             initializeSearchableDropdown();
         }
 
@@ -410,36 +404,27 @@
                     }
                 });
             });
-
             $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
                 var item = $(this);
                 var input = item.closest('.dropdown').find('.dropdown-toggle.year');
                 input.val(item.text());
-                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                item.closest('.dropdown-menu').hide(); 
             });
-
-            // Show dropdown when input is focused
             $('.dropdown-toggle.year').on('focus', function() {
                 $(this).siblings('.dropdown-menu.year-dropdown').show();
             });
-
-            // Hide dropdown when clicking outside
             $(document).on('click', function(e) {
                 if (!$(e.target).closest('.dropdown').length) {
                     $('.dropdown-menu.year-dropdown').hide();
                 }
             });
         }
-
         $('#addVehicleBtn').click(function() {
             addNewVehicle();
         });
-
         $(document).on('click', '.delete-vehicle', function() {
             $(this).closest('.vehicle-info').remove();
         });
-
-        // Initialize Select2 on existing dropdowns (if needed)
         initializeSearchableDropdown();
     });
 </script>

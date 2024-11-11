@@ -9,29 +9,24 @@
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
         .input-container {
             height: 34px;
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
         }
-
         .input-container1 {
             height: 34px;
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
         }
-
         .input-field {
             width: 50px;
             padding: 5px;
@@ -39,7 +34,6 @@
             border: none;
             outline: none;
         }
-
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -47,74 +41,57 @@
             border: none;
             outline: none;
         }
-
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
         }
-
         .separators {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .separators-w {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .input-container input[type="number"] {
             -moz-appearance: textfield;
         }
-
         .input-container input[type="number"]::-webkit-outer-spin-button,
         .input-container input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-
         .form-wrap {
             margin-bottom: 10px;
             position: relative;
         }
-
         .form-label-outside {
             color: white;
             display: block;
             margin-bottom: 5px;
         }
-
         .input-container {
             display: flex;
             align-items: center;
         }
-
         .input-container input {
             border: none;
-            /* border-bottom: 1px solid #ccc; */
             padding: 5px 0px 5px 0px;
             font-size: 14px;
             width: 38px;
             text-align: center;
-            /* margin-right: 5px; */
         }
-
         .input-container .placeholders {
-            /* color:white; */
             position: relative;
             right: 72px;
             color: black;
             display: inline-block;
             width: auto;
-
             padding: 0px 8px;
-            /* background: white; */
         }
-
         .err-style {
             color: red;
         }
-
         .tj-input-form .input-form label {
             font-size: 15px;
             font-weight: 500;
@@ -122,7 +99,6 @@
             margin-bottom: 10px;
         }
     </style>
-    <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -145,7 +121,6 @@
             </div>
         </div>
     </section>
-    <!--========== breadcrumb End ==============-->
     <section class="tj-choose-us-section-farm">
         <div class="container-flude">
             <div class="row">
@@ -321,7 +296,6 @@
                                         <label for="trailer_type" class="text-white">Select Trailer Type</label>
                                         <select class=" " id="trailer_type" name="trailer_type">
                                             <option value="RGN" selected>RGN</option>
-                                            {{-- <option value="VAN (V)">VAN (V)</option> --}}
                                             <option value="FLATBED (F)">FLATBED (F)</option>
                                             <option value="STEP DECK (SD)">STEP DECK (SD)</option>
                                             <option value="REMOVABLE GOOSENECK (RGN)">REMOVABLE GOOSENECK (RGN)</option>
@@ -334,10 +308,6 @@
                                             <option value="ENDUMP (ED)">ENDUMP (ED)</option>
                                             <option value="LANDOLL (LD)">LANDOLL (LD)</option>
                                             <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                                            {{-- <option value="20ft container">20ft container</option>
-                                            <option value="40ft container">40ft container</option>
-                                            <option value="48ft container">48ft container</option>
-                                            <option value="53ft container">53ft container</option> --}}
                                         </select>
                                     </div>
                                 </div>
@@ -352,16 +322,6 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                {{-- <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="load_type" class="text-white">Load Type</label>
-                                        <select class="" id="load_type" name="load_type[]">
-                                            <option value="" disabled selected>Select</option>
-                                            <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
-                                            <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
-                                        </select>
-                                    </div>
-                                </div> --}}
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="load_method" class="text-white">Load Method</label>
@@ -392,49 +352,6 @@
                             <div id="vehicles-container">
                             </div>
                             <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
-                            {{-- <div class="row mb-3 mt-3">
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Length</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Width</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input1" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input1" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Height</label>
-                                    <div class="input-container">
-                                        <input type="number" id="feet-input2" class="input-field" placeholder=""
-                                            min="0" maxlength="3" oninput="limitDigits(this, 3)">
-                                        <span class="separator">(Ft.)</span>
-                                        <input type="number" id="inches-input2" class="input-field" placeholder=""
-                                            min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-                                        <span class="separators">(In.)</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="lab-cos">Weight</label>
-                                    <div class="input-container1">
-                                        <input type="" id="feet-input" class="input-field-1" placeholder=""
-                                            min="0" maxlength="6" oninput="limitDigits(this, 6)">
-                                        <span class="separators-w">(Lbs.)</span>
-                                    </div>
-                                </div>
-                            </div> --}}
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-check">
@@ -466,8 +383,6 @@
                             </div>
                             <div class="input-form mt-3">
                                 <label class="d-block text-white"> Image:</label>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                    placeholder="Upload File" /> -->
                                 <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
                                     onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
@@ -477,7 +392,6 @@
                                     Calculate Price <i class="fa-light fa-arrow-right"></i>
                                 </button>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -613,33 +527,24 @@
                             </div>
                     </div>
                 `;
-
                 $('#vehicles-container').append(newVehicleHtml);
-                // Initialize the searchable dropdown for new elements
             initializeSearchableDropdown();
             }
-
             $('#addVehicleBtn').click(function() {
                 addNewVehicle();
             });
-            // Initialize the searchable dropdown for new elements
             initializeSearchableDropdown();
-
             $(document).on('click', '.delete-vehicle', function() {
                 $(this).closest('.vehicle-info').remove();
             });
         });
     </script>
-<!-- year search work -->
     <script>
-        // Initialize Select2 on existing dropdowns (if needed)
         initializeSearchableDropdown();
         document.addEventListener('DOMContentLoaded', function() {
             const input = document.querySelector('.year');
             const dropdownMenu = document.querySelector('.year-dropdown');
             const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
-            
-            // Function to filter dropdown items
             function filterDropdown() {
                 const searchValue = input.value.toLowerCase();
                 dropdownItems.forEach(function(item) {
@@ -651,47 +556,35 @@
                     }
                 });
             }
-
-            // Filter dropdown items on input
             input.addEventListener('input', function() {
                 filterDropdown();
             });
-
-            // Set input value from dropdown item click
             dropdownMenu.addEventListener('click', function(e) {
                 if (e.target.classList.contains('dropdown-item')) {
                     input.value = e.target.textContent;
-                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                    dropdownMenu.style.display = 'none'; 
                 }
             });
-
-            // Hide dropdown when clicking outside
             document.addEventListener('click', function(e) {
                 if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
                     dropdownMenu.style.display = 'none';
                 }
             });
-
-            // Show dropdown when input is focused
             input.addEventListener('focus', function() {
                 dropdownMenu.style.display = 'block';
             });
-
-            // Handle Enter key press to set the input value
             input.addEventListener('keydown', function(e) {
                 if (e.key === 'Enter') {
                     const searchValue = input.value;
-                    // Check if the entered value exists in the dropdown
                     const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
                     if (item) {
                         input.value = item.textContent;
                     }
-                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-                    e.preventDefault(); // Prevent default form submission behavior if in a form
+                    dropdownMenu.style.display = 'none'; 
+                    e.preventDefault(); 
                 }
             });
         });
-
         function initializeSearchableDropdown() {
                 $('.dropdown-toggle.year').on('input', function() {
                     var input = $(this);
@@ -706,27 +599,20 @@
                         }
                     });
                 });
-
                 $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
                     var item = $(this);
                     var input = item.closest('.dropdown').find('.dropdown-toggle.year');
                     input.val(item.text());
-                    item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                    item.closest('.dropdown-menu').hide();
                 });
-
-                // Show dropdown when input is focused
                 $('.dropdown-toggle.year').on('focus', function() {
                     $(this).siblings('.dropdown-menu.year-dropdown').show();
                 });
-
-                // Hide dropdown when clicking outside
                 $(document).on('click', function(e) {
                     if (!$(e.target).closest('.dropdown').length) {
                         $('.dropdown-menu.year-dropdown').hide();
                     }
                 });
             }
-        
     </script>
-<!-- year search work --> 
 @endsection

@@ -120,7 +120,6 @@
         padding-left: 10px !important;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -143,7 +142,6 @@
         </div>
     </div>
 </section>
-<!--========== breadcrumb End ==============-->
 <section class="tj-choose-us-section-service-heavy">
     <div class="container-flude">
         <div class="row">

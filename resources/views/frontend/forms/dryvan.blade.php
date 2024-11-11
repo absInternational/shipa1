@@ -15,7 +15,6 @@
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
@@ -25,7 +24,6 @@
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
@@ -79,22 +77,18 @@
         }
         .input-container input {
             border: none;
-            /* border-bottom: 1px solid #ccc; */
             padding: 5px 0px 5px 0px;
             font-size: 14px;
             width: 38px;
             text-align: center;
-            /* margin-right: 5px; */
         }
         .input-container .placeholders {
-            /* color:white; */
             position: relative;
             right: 72px;
             color: black;
             display: inline-block;
             width: auto;
             padding: 0px 8px;
-            /* background: white; */
         }
         .suggestionsTwo {
             background: #fff;
@@ -133,7 +127,6 @@
             font-size: 14px;
         }
     </style>
-    <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -156,7 +149,6 @@
             </div>
         </div>
     </section>
-    <!--========== breadcrumb End ==============-->
     <section class="tj-choose-us-section-dryvan">
         <div class="container-flude">
             <div class="row">
@@ -465,14 +457,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            {{-- <div class="form-group">
-                                <label for="condition" class="text-white">Condition</label>
-                                <select class="form-control" id="condition" name="condition[]">
-                                    <option value="1" selected>Running</option>
-                                    <option value="2">Non Running</option>
-                                </select>
-                            </div> --}}
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>
@@ -547,8 +531,6 @@
                             <div class="row">
                                 <div class="input-form mt-3">
                                     <label class="d-block" class="text-white"> Image:</label>
-                                    <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                                    placeholder="Upload File" /> -->
                                     <input class="form-control image_input" type="file" name="image[]" accept="image/*"
                                         multiple onchange="previewImages(event)">
                                     <div class="image-preview-container" id="imagePreviewContainer"></div>
@@ -590,9 +572,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                            style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                            Vehicle</a> -->
                             <div id="vehicles-container" style="display:none;">
                             </div>
                             <div class="tj-theme-button mt-3">
@@ -620,7 +599,6 @@
     <script>
         $(document).ready(function() {
             function checkSpecificFieldsFilled() {
-                // console.log('yesyessss');
                 var allFilled = true;
                 $('.calculate_freight').each(function() {
                     if ($(this).val() === '' || $(this).val() === '0') {
@@ -714,7 +692,6 @@
                 console.log('fright_class', fright_class);
                 $('#frieght_class').val(fright_class);
                 console.log('classclass', $('#frieght_class').val());
-                // $('#frieght_class').val(fright_class).trigger('change');
             }
             $('.calculate_freight').on('keyup', function() {
                 if (checkSpecificFieldsFilled()) {
@@ -722,12 +699,5 @@
                 }
             });
         });
-
-        // function limitDigits(element, maxDigits) {
-        //     if (element.value.length > maxDigits) {
-        //         element.value = element.value.slice(0, maxDigits);
-        //     }
-        // }
     </script>
-    
 @endsection

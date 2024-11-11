@@ -4,330 +4,30 @@
     'Discover reliable reefer trucking services! Get a quick quote today and ensure your perishable goods are transported safely and efficiently.')
 @section('content')
     <style>
-         /* .selectMultiple + .nice-select{
-        display: none;
-    }
-    .selectMultiple {
-	 width: 100%;
-	 position: relative;
-    }
-    .selectMultiple select {
-        display: none;
-    }
-    .selectMultiple > div {
-        position: relative;
-        z-index: 2;
-        border-radius: 6px;
-        background: #ffffff;
-        border: 1px solid #ced4da;
-        min-height: 56px;
-        box-shadow: none;
-        transition: box-shadow 0.3s ease;
-    }
-    .selectMultiple > div:hover {
-        box-shadow: 0 4px 24px -1px rgba(22, 42, 90, .16);
-    }
-    .selectMultiple > div .arrow {
-        right: 1px;
-        top: 0;
-        bottom: 0;
-        cursor: pointer;
-        width: 28px;
-        position: absolute;
-        padding-bottom: 10px;
-    }
-    .selectMultiple > div .arrow:before, .selectMultiple > div .arrow:after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 2px;
-        height: 8px;
-        border-bottom: 8px solid #99a3ba;
-        top: 43%;
-        transition: all 0.3s ease;
-    }
-    .selectMultiple > div .arrow:before {
-        right: 12px;
-        transform: rotate(-130deg);
-    }
-    .selectMultiple > div .arrow:after {
-        left: 9px;
-        transform: rotate(130deg);
-    }
-    .selectMultiple > div span {
-        color: #99a3ba;
-        display: block;
-        position: absolute;
-        left: 19px;
-        cursor: pointer;
-        top: 16px;
-        line-height: 28px;
-        transition: all 0.3s ease;
-    }
-    .selectMultiple > div span.hide {
-        opacity: 0;
-        visibility: hidden;
-        transform: translate(-4px, 0);
-    }
-    .selectMultiple > div a {
-        position: relative;
-        padding: 0 24px 6px 8px;
-        line-height: 28px;
-        color: #8fc445;
-        display: inline-block;
-        vertical-align: top;
-        margin: 0 6px 0 0;
-    }
-    .selectMultiple > div a em {
-        font-style: normal;
-        display: block;
-        white-space: nowrap;
-    }
-    .selectMultiple > div a:before {
-        content: '';
-        left: 0;
-        top: 0;
-        bottom: 6px;
-        width: 100%;
-        position: absolute;
-        display: block;
-        background: rgb(188 16 28 / 7%);
-        z-index: -1;
-        border-radius: 4px;
-    }
-    .selectMultiple > div a i {
-        cursor: pointer;
-        position: absolute;
-        top: 0px;
-        right: 0;
-        width: 24px;
-        height: 28px;
-        display: block;
-    }
-    .selectMultiple > div a i:before, .selectMultiple > div a i:after {
-        content: '';
-        display: block;
-        width: 2px;
-        height: 10px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        background: #8fc445;
-        border-radius: 1px;
-    }
-    .selectMultiple > div a i:before {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-    .selectMultiple > div a i:after {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    .selectMultiple > div a.notShown {
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    .selectMultiple > div a.notShown:before {
-        width: 28px;
-        transition: width 0.45s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0.2s;
-    }
-    .selectMultiple > div a.notShown i {
-        opacity: 0;
-        transition: all 0.3s ease 0.3s;
-    }
-    .selectMultiple > div a.notShown em {
-        opacity: 0;
-        transform: translate(-6px, 0);
-        transition: all 0.4s ease 0.3s;
-    }
-    .selectMultiple > div a.notShown.shown {
-        opacity: 1;
-        margin-top: 7px;
-        margin-left: 9px;
-        margin-bottom: -6px;
-    }
-    .selectMultiple > div a.notShown.shown:before {
-        width: 100%;
-    }
-    .selectMultiple > div a.notShown.shown i {
-        opacity: 1;
-    }
-    .selectMultiple > div a.notShown.shown em {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-    .selectMultiple > div a.remove:before {
-        width: 28px;
-        transition: width 0.4s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0s;
-    }
-    .selectMultiple > div a.remove i {
-        opacity: 0;
-        transition: all 0.3s ease 0s;
-    }
-    .selectMultiple > div a.remove em {
-        opacity: 0;
-        transform: translate(-12px, 0);
-        transition: all 0.4s ease 0s;
-    }
-    .selectMultiple > div a.remove.disappear {
-        opacity: 0;
-        transition: opacity 0.5s ease 0s;
-    }
-    .selectMultiple > ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        font-size: 16px;
-        z-index: 1;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        visibility: hidden;
-        opacity: 0;
-        border-radius: 8px;
-        transform: translate(0, 20px) scale(0.8);
-        transform-origin: 0 0;
-        filter: drop-shadow(0 12px 20px rgba(22, 42, 90, .08));
-        transition: all 0.4s ease, transform 0.4s cubic-bezier(0.87, -0.41, 0.19, 1.44), filter 0.3s ease 0.2s;
-    }
-    .selectMultiple > ul li {
-        color: #1e2330;
-        background: #fff;
-        padding: 12px 16px;
-        cursor: pointer;
-        overflow: hidden;
-        position: relative;
-        transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease 0.3s, opacity 0.5s ease 0.3s, border-radius 0.3s ease 0.3s;
-    }
-    .selectMultiple > ul li:first-child {
-        border-radius: 8px 8px 0 0;
-    }
-    .selectMultiple > ul li:first-child:last-child {
-        border-radius: 8px;
-    }
-    .selectMultiple > ul li:last-child {
-        border-radius: 0 0 8px 8px;
-    }
-    .selectMultiple > ul li:last-child:first-child {
-        border-radius: 8px;
-    }
-    .selectMultiple > ul li:hover {
-        background: #8fc445;
-        color: #fff;
-    }
-    .selectMultiple > ul li:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 6px;
-        height: 6px;
-        background: rgba(0, 0, 0, .4);
-        opacity: 0;
-        border-radius: 100%;
-        transform: scale(1, 1) translate(-50%, -50%);
-        transform-origin: 50% 50%;
-    }
-    .selectMultiple > ul li.beforeRemove {
-        border-radius: 0 0 8px 8px;
-    }
-    .selectMultiple > ul li.beforeRemove:first-child {
-        border-radius: 8px;
-    }
-    .selectMultiple > ul li.afterRemove {
-        border-radius: 8px 8px 0 0;
-    }
-    .selectMultiple > ul li.afterRemove:last-child {
-        border-radius: 8px;
-    }
-    .selectMultiple > ul li.remove {
-        transform: scale(0);
-        opacity: 0;
-    }
-    .selectMultiple > ul li.remove:after {
-        animation: ripple 0.4s ease-out;
-    }
-    .selectMultiple > ul li.notShown {
-        display: none;
-        transform: scale(0);
-        opacity: 0;
-        transition: transform 0.35s ease, opacity 0.4s ease;
-    }
-    .selectMultiple > ul li.notShown.show {
-        transform: scale(1);
-        opacity: 1;
-    }
-    .selectMultiple.open > div {
-        box-shadow: 0 4px 20px -1px rgba(22, 42, 90, .12);
-    }
-    .selectMultiple.open > div .arrow:before {
-        transform: rotate(-50deg);
-    }
-    .selectMultiple.open > div .arrow:after {
-        transform: rotate(50deg);
-    }
-    .selectMultiple.open > ul {
-        transform: translate(0, 12px) scale(1);
-        opacity: 1;
-        visibility: visible;
-        filter: drop-shadow(0 16px 24px rgba(22, 42, 90, .16)); 
-        max-height: 150px;
-        overflow-y: scroll;
-    }
-    .selectMultiple > ul::-webkit-scrollbar {
-    width: 5px;
-    }
-
-    .selectMultiple > ul::-webkit-scrollbar-track {
-    background: transparent; 
-    }
-    
-    .selectMultiple > ul::-webkit-scrollbar-thumb {
-    background: #db1c29; 
-    }
-
-    @keyframes ripple {
-        0% {
-            transform: scale(0, 0);
-            opacity: 1;
-        }
-        25% {
-            transform: scale(30, 30);
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-            transform: scale(50, 50);
-        }
-    } */
         .lab-cos {
             font-size: 15px;
             font-weight: 500;
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
         .input-container {
             height: 34px;
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
         }
-
         .input-container1 {
             height: 34px;
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
         }
-
         .input-field {
             width: 50px;
             padding: 5px;
@@ -335,7 +35,6 @@
             border: none;
             outline: none;
         }
-
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -343,69 +42,54 @@
             border: none;
             outline: none;
         }
-
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
         }
-
         .separators {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .separators-w {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .input-container input[type="number"] {
             -moz-appearance: textfield;
         }
-
         .input-container input[type="number"]::-webkit-outer-spin-button,
         .input-container input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-
         .form-wrap {
             margin-bottom: 10px;
             position: relative;
         }
-
         .form-label-outside {
             color: white;
             display: block;
             margin-bottom: 5px;
         }
-
         .input-container {
             display: flex;
             align-items: center;
         }
-
         .input-container input {
             border: none;
-            /* border-bottom: 1px solid #ccc; */
             padding: 5px 0px 5px 0px;
             font-size: 14px;
             width: 38px;
             text-align: center;
-            /* margin-right: 5px; */
         }
-
         .input-container .placeholders {
-            /* color:white; */
             position: relative;
             right: 72px;
             color: black;
             display: inline-block;
             width: auto;
             padding: 0px 8px;
-            /* background: white; */
         }
-
         .suggestionsTwo {
             background: #fff;
             font-size: 14px;
@@ -416,20 +100,16 @@
             padding-left: 14px;
             display: none;
         }
-
         .suggestionsTwo li {
             cursor: pointer;
         }
-
         .suggestionsTwo li:hover {
             color: #8fc445;
         }
-
         .image_input {
             padding: 0px !important;
             padding-left: 10px !important;
         }
-
         .select2 {
             color: #38413b;
             opacity: 2;
@@ -437,7 +117,6 @@
             border: 1px solid #318eefc9;
             font-family: inherit;
         }
-
         select {
             width: 100%;
             min-height: 100px;
@@ -448,7 +127,6 @@
             font-size: 14px;
         }
     </style>
-    <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -471,7 +149,6 @@
             </div>
         </div>
     </section>
-    <!--========== breadcrumb End ==============-->
     <section class="tj-choose-us-section-reefer">
         <div class="container-flude">
             <div class="row">
@@ -784,23 +461,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="row mt-3">
-                                                <div class="col-md-6">
-                                                    <div class="input-form">
-                                                        <label class="d-block"> Delivery Date:</label>
-                                                        <input type="date" id="ex_delivery_date" name="ex_delivery_date"
-                                                            required="" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="input-form">
-                                                        <label class="d-block"> Delivery Time:</label>
-                                                        <input type="time" id="ex_delivery_time" name="ex_delivery_time"
-                                                            required="" />
-                                                    </div>
-                                                </div>
-                                            </div> -->
-
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <label class="lab-cos">Length</label>
@@ -890,73 +550,9 @@
                                         <input class="form-control image_input" type="file" name="image[]"
                                             accept="image/*" multiple onchange="previewImages(event)">
                                         <div class="image-preview-container" id="imagePreviewContainer"></div>
-                                        <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                                    placeholder="Upload File" /> -->
                                     </div>
                                 </div>
-                                {{-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="condition" class="text-white">Condition</label>
-                                        <select class="form-control" id="condition" name="condition[]">
-                                            <option value="1" selected>Running</option>
-                                            <option value="2">Non Running</option>
-                                        </select>
-                                    </div>
-                                </div> --}}
                             </div>
-                            {{-- <div class="row select-bm" style="display:none;">
-                                <div class="col-md-12 text-center">
-                                    <h4 class="text-white">Vehicle Information</h4>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label> Year</label>
-                                        <!-- <select class="nice-select vehicle-year" name="year[]" id="year">
-                                            <option value="2010" selected>Select Year</option>
-                                            @php
-                                                $currentYear = date('Y');
-                                                for ($year = $currentYear; $year >= 1936; $year--) {
-                                                    echo "<option value='$year'>$year</option>";
-                                                }
-                                            @endphp
-                                        </select> -->
-                                        <div class="dropdown">
-                                            <input class="form-control dropdown-toggle year" type="text"
-                                                name="year[]" id="year" placeholder="Select Year"
-                                                data-bs-toggle="dropdown" aria-expanded="false" maxlength="4" required>
-                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                                <li><a class="dropdown-item">Select Year</a></li>
-                                                @php
-                                                    $currentYear = date('Y');
-                                                    for ($year = $currentYear; $year >= 1936; $year--) {
-                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
-                                                    }
-                                                @endphp
-                                            </ul>
-                                        </div>
-                                        <div class="error-message" style="color: red; display: none;">
-                                            Please select a year.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select">
-                                        <label>Make</label>
-                                        <input type="text" value="null" id="make" name="make[]"
-                                            placeholder="Enter Make" />
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="input-form tj-select vehicle-model-div">
-                                        <label>Model</label>
-                                        <input type="text" id="model" value="null" name="model[]"
-                                            placeholder="Enter Model" />
-                                    </div>
-                                </div>
-                            </div> --}}
-                            <!-- <a class="add-car" style="display:none;" id="addVehicleBtn"
-                                                style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-                                                Vehicle</a> -->
                             <div id="vehicles-container" style="display:none;">
                             </div>
                             <div class="tj-theme-button text-center mt-3">
@@ -982,82 +578,8 @@
         });
     </script>
     <script>
-        // var validPickupSuggestions = [];
-        // var validDeliverySuggestions = [];
-
-        // function updateSuggestions(inputField, suggestionsList, validSuggestions) {
-        //     var inputValue = inputField.val();
-
-        //     $.ajax({
-        //         url: "{{ route('get.zipcodes') }}",
-        //         method: "POST",
-        //         data: {
-        //             "_token": "{{ csrf_token() }}",
-        //             "input": inputValue
-        //         },
-        //         success: function(response) {
-        //             suggestionsList.empty();
-        //             validSuggestions.length = 0;  // Clear previous suggestions
-
-        //             $.each(response, function(index, suggestion) {
-        //                 var listItem = $("<li>").text(suggestion).click(function() {
-        //                     inputField.val(suggestion);
-        //                     suggestionsList.css("display", "none");
-        //                 });
-        //                 validSuggestions.push(suggestion);  // Add to valid suggestions
-        //                 suggestionsList.append(listItem);
-        //             });
-        //         },
-        //         error: function(xhr, status, error) {
-        //             console.error("Error:", error);
-        //         }
-        //     });
-        // }
-
-        // $("#pickup-location").keyup(function() {
-        //     var inputField = $(this);
-        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-        //     suggestionsList.css("display", "block");
-        //     if (inputField.val() === "") {
-        //         suggestionsList.css("display", "none");
-        //     }
-        //     updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
-        // });
-
-        // $("#delivery-location").keyup(function() {
-        //     var inputField = $(this);
-        //     var suggestionsList = inputField.siblings(".suggestionsTwo");
-        //     suggestionsList.css("display", "block");
-        //     if (inputField.val() === "") {
-        //         suggestionsList.css("display", "none");
-        //     }
-        //     updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
-        // });
-
-        // function validateLocationInput(inputField, validSuggestions, errorField) {
-        //     var inputValue = inputField.val();
-        //     if (!validSuggestions.includes(inputValue)) {
-        //         errorField.text("Please select a valid location.");
-        //         return false;
-        //     } else {
-        //         errorField.text("");
-        //         return true;
-        //     }
-        // }
-
-        // $("form").submit(function(event) {
-        //     var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
-        //     var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
-        //     if (!isPickupValid || !isDeliveryValid) {
-        //         event.preventDefault();  // Prevent form submission if validation fails
-        //     }
-        // });
-    </script>
-    <script>
         $(document).ready(function() {
             function checkSpecificFieldsFilled() {
-                // console.log('yesyessss');
                 var allFilled = true;
                 $('.calculate_freight').each(function() {
                     if ($(this).val() === '' || $(this).val() === '0') {
@@ -1067,12 +589,10 @@
                 });
                 return allFilled;
             }
-
             function allSpecificFieldsFilledFunction() {
                 console.log("All specific fields are filled up!");
                 freight_calc();
             }
-
             function freight_calc() {
                 var length_ft = parseFloat($('.length_ft').val());
                 var length_in = parseFloat($('.length_in').val());
@@ -1153,7 +673,6 @@
                 console.log('fright_class', fright_class);
                 $('#frieght_class').val(fright_class);
                 console.log('classclass', $('#frieght_class').val());
-                // $('#frieght_class').val(fright_class).trigger('change');
             }
             $('.calculate_freight').on('keyup', function() {
                 if (checkSpecificFieldsFilled()) {
@@ -1161,7 +680,6 @@
                 }
             });
         });
-
         function limitDigits(element, maxDigits) {
             if (element.value.length > maxDigits) {
                 element.value = element.value.slice(0, maxDigits);

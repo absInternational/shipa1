@@ -100,7 +100,6 @@
             margin-bottom: 10px;
         }
     </style>
-    <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -123,7 +122,6 @@
             </div>
         </div>
     </section>
-    <!--========== breadcrumb End ==============-->
     <section class="tj-choose-us-section-boat">
         <div class="container-flude">
             <div class="row">
@@ -585,16 +583,12 @@
             });
         });
     </script>
-<!-- year search work -->
     <script>
-        // Initialize Select2 on existing dropdowns (if needed)
         initializeSearchableDropdown();
         document.addEventListener('DOMContentLoaded', function() {
             const input = document.querySelector('.year');
             const dropdownMenu = document.querySelector('.year-dropdown');
             const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
-            
-            // Function to filter dropdown items
             function filterDropdown() {
                 const searchValue = input.value.toLowerCase();
                 dropdownItems.forEach(function(item) {
@@ -606,43 +600,32 @@
                     }
                 });
             }
-
-            // Filter dropdown items on input
             input.addEventListener('input', function() {
                 filterDropdown();
             });
-
-            // Set input value from dropdown item click
             dropdownMenu.addEventListener('click', function(e) {
                 if (e.target.classList.contains('dropdown-item')) {
                     input.value = e.target.textContent;
-                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                    dropdownMenu.style.display = 'none'; 
                 }
             });
-
-            // Hide dropdown when clicking outside
             document.addEventListener('click', function(e) {
                 if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
                     dropdownMenu.style.display = 'none';
                 }
             });
-
-            // Show dropdown when input is focused
             input.addEventListener('focus', function() {
                 dropdownMenu.style.display = 'block';
             });
-
-            // Handle Enter key press to set the input value
             input.addEventListener('keydown', function(e) {
                 if (e.key === 'Enter') {
                     const searchValue = input.value;
-                    // Check if the entered value exists in the dropdown
                     const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
                     if (item) {
                         input.value = item.textContent;
                     }
-                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-                    e.preventDefault(); // Prevent default form submission behavior if in a form
+                    dropdownMenu.style.display = 'none'; 
+                    e.preventDefault(); 
                 }
             });
         });
@@ -676,29 +659,28 @@
                 });
             }
     </script>
-<!-- year search work -->
-<script>
-     $(document).ready(function () {
-        $('form').on('submit', function (e) {
-            if ($('#year').val() === null) {
-                e.preventDefault(); 
-                $('#year').closest('.input-form').find('.error-message').show();
-                $('#year').focus(); 
-            } else {
-                $('#year').closest('.input-form').find('.error-message').hide(); 
-            }
+    <script>
+        $(document).ready(function () {
+            $('form').on('submit', function (e) {
+                if ($('#year').val() === null) {
+                    e.preventDefault(); 
+                    $('#year').closest('.input-form').find('.error-message').show();
+                    $('#year').focus(); 
+                } else {
+                    $('#year').closest('.input-form').find('.error-message').hide(); 
+                }
+            });
+            $('#year').on('change', function () {
+                $(this).closest('.input-form').find('.error-message').hide();
+            });
+            $('#category').on('change', function () {
+                $(this).closest('.input-form').find('.error-message').hide(); 
+                if ($(this).val() === 'Others') {
+                    $('#otherCategoryInput').show().prop('disabled', false);
+                } else {
+                    $('#otherCategoryInput').hide().prop('disabled', true);
+                }
+            });
         });
-        $('#year').on('change', function () {
-            $(this).closest('.input-form').find('.error-message').hide();
-        });
-        $('#category').on('change', function () {
-            $(this).closest('.input-form').find('.error-message').hide(); 
-            if ($(this).val() === 'Others') {
-                $('#otherCategoryInput').show().prop('disabled', false);
-            } else {
-                $('#otherCategoryInput').hide().prop('disabled', true);
-            }
-        });
-    });
-</script>
+    </script>
 @endsection

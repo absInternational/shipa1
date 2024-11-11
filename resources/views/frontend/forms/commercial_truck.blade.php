@@ -100,7 +100,6 @@
             margin-bottom: 10px;
         }
     </style>
-    <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -123,7 +122,6 @@
             </div>
         </div>
     </section>
-    <!--========== breadcrumb End ==============-->
     <section class="tj-choose-us-section-commercial">
         <div class="container-flude">
             <div class="row">
@@ -557,7 +555,6 @@
             });
         });
     </script>
-<!-- year search work -->
     <script>
         initializeSearchableDropdown();
         document.addEventListener('DOMContentLoaded', function() {
@@ -634,5 +631,4 @@
                 });
             }
     </script>
-<!-- year search work -->
 @endsection

@@ -112,7 +112,6 @@
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
@@ -122,7 +121,6 @@
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
@@ -235,7 +233,6 @@
             padding-left: 10px !important;
         }
     </style>
-    <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -298,7 +295,6 @@
                                                 <input class="form-control" type="text" id="pickup-location"
                                                     placeholder="Enter City or ZipCode" name="From_ZipCode" required>
                                                 <ul class="suggestions suggestionsTwo"></ul>
-                                                {{-- <label class="error-message" id="pickup-location-error">This field is required.</label> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -310,11 +306,7 @@
                                                 <input class="form-control" type="text" id="delivery-country"
                                                     placeholder="Enter Country" name="To_Country" required>
                                                 <ul class="suggestions suggestionsCountry"></ul>
-                                                {{-- <input type="text" id="delivery-location" name="destination"
-                                                    placeholder="Ex: 90005 Or Los Angeles" required="" /> --}}
                                                 <small id="errDLoc" class="err-loc"></small>
-                                                {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
-                                                {{-- <label class="error-message" id="delivery-location-error">This field is required.</label> --}}
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 mb-4">
@@ -322,8 +314,6 @@
                                             <div class="single-input-field">
                                                 <input class="form-control" type="text" id="delivery-city"
                                                     placeholder="Enter City" name="To_City" required>
-                                                {{-- <ul class="suggestions suggestionsTwo"></ul> --}}
-                                                {{-- <label class="error-message" id="delivery-location-1-error">This field is required.</label> --}}
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-lg-4 mb-4">
@@ -344,7 +334,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Step 2: Vehicle Information -->
                                 <div class="vehicle_quote_info" id="step2" style="display: none;">
                                     <div class="row">
                                         <h4 class="title text-center">VEHICLE INFORMATION</h4>
@@ -358,9 +347,6 @@
                                             <option value="Motorcycle">Motorcycle Transport</option>
                                             <option value="RV-Transport">RV Transport</option>
                                         </select>
-                                        {{-- <label class="error-message" id="tabSelector-error">This field is
-                                            required.</label> --}}
-
                                         <div class="tab-content" id="additionalContent"></div>
                                     </div>
                                     <div class="row mt-2">
@@ -381,8 +367,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Step 3: Customer Information -->
                                 <div class="basic_quote_info" id="step3" style="display: none;">
                                     <div class="row mb-3">
                                         <h4 class="text-center text-white target-top">Customer Information</h4>
@@ -391,8 +375,6 @@
                                                 <label class="d-block text-white"> Your Name:</label>
                                                 <input class="form-control" id="name" name="name" type="text"
                                                     placeholder="Customer Name" required>
-                                                <!-- <input class="form-control" required name="Custo_Name" type="text" placeholder="Customer Name"> -->
-
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-lg-6">
@@ -409,7 +391,6 @@
                                                 <label class="d-block text-white"> Email Address:</label>
                                                 <input class="form-control" id="email" name="email" type="email"
                                                     placeholder="Email address" required>
-
                                             </div>
                                         </div>
                                     </div>

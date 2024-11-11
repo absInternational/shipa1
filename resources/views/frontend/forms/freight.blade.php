@@ -1,14 +1,9 @@
 @extends('frontend.layouts.app')
-
 @section('title', 'Get Quote on Freight | ShipA1')
-
 @section('meta_description',
     'Get an instant Freight shipping quote with ease! Trust our reliable service for nationwide
     coverage, transparent pricing, and secure transportation. Plan your shipment quickly and efficiently.')
-
-
 @section('content')
-
     <style>
         .suggestionsTwo {
             background: #fff;
@@ -20,20 +15,16 @@
             padding-left: 14px;
             display: none;
         }
-
         .suggestionsTwo li {
             cursor: pointer;
         }
-
         .suggestionsTwo li:hover {
             color: #8fc445;
         }
-
         .image_input {
             padding: 0px !important;
             padding-left: 10px !important;
         }
-
         .select2 {
             color: #38413b;
             opacity: 2;
@@ -41,7 +32,6 @@
             border: 1px solid #318eefc9;
             font-family: inherit;
         }
-
         select {
             width: 100%;
             min-height: 100px;
@@ -51,38 +41,30 @@
             color: #444444;
             font-size: 14px;
         }
-
         .lab-cos {
             font-size: 15px;
             font-weight: 500;
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
         .input-container {
             height: 34px;
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-container1 {
             height: 34px;
             background: white;
             display: flex;
             align-items: center;
-            /* border: 1px solid #ccc; */
             border-radius: 4px;
             padding: 8px 0px 8px 0px;
             width: fit-content;
-
         }
-
         .input-field {
             width: 50px;
             padding: 5px;
@@ -90,7 +72,6 @@
             border: none;
             outline: none;
         }
-
         .input-field-1 {
             width: 65px;
             padding: 0px 0px 0px 10px;
@@ -98,91 +79,71 @@
             border: none;
             outline: none;
         }
-
         .separator {
             margin: 0px 0px 0px 0px;
             font-size: 14px;
         }
-
         .separators {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .separators-w {
             margin: 0px 5px 0px 0px;
             font-size: 14px;
         }
-
         .input-container input[type="number"] {
             -moz-appearance: textfield;
         }
-
         .input-container input[type="number"]::-webkit-outer-spin-button,
         .input-container input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-
         .form-wrap {
             margin-bottom: 10px;
             position: relative;
         }
-
         .form-label-outside {
             color: white;
             display: block;
             margin-bottom: 5px;
         }
-
         .input-container {
             display: flex;
             align-items: center;
         }
-
         .input-container input {
             border: none;
-            /* border-bottom: 1px solid #ccc; */
             padding: 5px 0px 5px 0px;
             font-size: 14px;
             width: 38px;
             text-align: center;
-            /* margin-right: 5px; */
         }
-
         .input-container .placeholders {
-            /* color:white; */
             position: relative;
             right: 72px;
             color: black;
             display: inline-block;
             width: auto;
-
             padding: 0px 8px;
-            /* background: white; */
         }
-
         .err-style {
             color: red;
         }
-
         .tj-input-form .input-form label {
             font-size: 15px;
             font-weight: 500;
             color: var(--tj-white-color);
             margin-bottom: 10px;
         }
-
         .error-message {
             display: none;
             color: red;
         }
-
         .error-field {
             border: 2px solid red;
         }
     </style>
-    <!--========== breadcrumb Start ==============-->
     <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
         <div class="container">
             <div class="row">
@@ -205,8 +166,6 @@
             </div>
         </div>
     </section>
-    <!--========== breadcrumb End ==============-->
-
     <section class="tj-choose-us-section">
         <div class="container-flude">
             <div class="row">
@@ -251,20 +210,17 @@
                             </div>
                             <br>
                             <br>
-
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="available_at_auction"
                                     name="available_at_auction" value="1" />
                                 <label class="form-check-label text-white" for="available_at_auction"> Available at
                                     Auction?</label>
                             </div>
-
                             <div class="input-form div-link mt-3" style="display: none;">
                                 <label class="d-block"> Enter Link:</label>
                                 <input class="form-control" type="url" id="link" name="link"
                                     placeholder="Enter Link" />
                             </div>
-
                             <div class="form-check">
                                 <input class="form-check-input" checked type="checkbox" id="boat_on_trailer"
                                     name="boat_on_trailer" value="1" />
@@ -370,7 +326,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-form">
@@ -404,7 +359,6 @@
                                             <option value="Triple (3)">Triple (3)</option>
                                             <option value="Vented (V)">Vented (V)</option>
                                             <option value="Walking Floor (WF)">Walking Floor (WF)</option>
-
                                         </select>
                                     </div>
                                 </div>
@@ -437,7 +391,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="form-check mt-3">
                                 <input class="form-check-input" type="checkbox" id="hazardous" name="hazardous"
                                     value="1" />
@@ -523,13 +476,10 @@
                             </div>
                             <div class="input-form mt-3">
                                 <label class="d-block" class="text-white"> Image:</label>
-                                <!-- <input class="form-control image_input" type="file" id="image" name="image[]"
-                                                placeholder="Upload File" /> -->
                                 <input class="form-control image_input" name="image[]" type="file" accept="image/*"
                                     multiple onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
-                            
                             <div class="row">
                                 <div class="form-group">
                                     <label for="condition" class="text-white">Condition</label>
@@ -541,7 +491,6 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Length</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input" name="length_ft[]" class="input-field" placeholder=""
@@ -552,9 +501,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Width</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input1" name="width_ft[]" class="input-field" placeholder=""
@@ -565,9 +512,7 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Height</label>
                                     <div class="input-container">
                                         <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
@@ -578,27 +523,15 @@
                                         <span class="separators">(In.)</span>
                                     </div>
                                 </div>
-
                                 <div class="col-md-3">
-
                                     <label class="lab-cos">Weight</label>
                                     <div class="input-container1">
                                         <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
                                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
                                         <span class="separators-w">(Lbs.)</span>
-
                                     </div>
                                 </div>
-
-
-
-
-
-
-
                             </div>
-
-
                             <div class="row">
                                 <h4 class="text-white">Additional Services</h4>
                                 <div class="col-md-4">
@@ -641,7 +574,6 @@
         </div>
     </section>
 @endsection
-
 @section('extraScript')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -710,10 +642,8 @@
 <script>
     var validPickupSuggestions = [];
     var validDeliverySuggestions = [];
-
     function updateSuggestions(inputField, suggestionsList, validSuggestions) {
         var inputValue = inputField.val();
-
         $.ajax({
             url: "{{ route('get.zipcodes') }}",
             method: "POST",
@@ -723,14 +653,13 @@
             },
             success: function(response) {
                 suggestionsList.empty();
-                validSuggestions.length = 0;  // Clear previous suggestions
-
+                validSuggestions.length = 0;  
                 $.each(response, function(index, suggestion) {
                     var listItem = $("<li>").text(suggestion).click(function() {
                         inputField.val(suggestion);
                         suggestionsList.css("display", "none");
                     });
-                    validSuggestions.push(suggestion);  // Add to valid suggestions
+                    validSuggestions.push(suggestion);  
                     suggestionsList.append(listItem);
                 });
             },
@@ -739,7 +668,6 @@
             }
         });
     }
-
     $("#pickup-location").keyup(function() {
         var inputField = $(this);
         var suggestionsList = inputField.siblings(".suggestionsTwo");
@@ -749,7 +677,6 @@
         }
         updateSuggestions(inputField, suggestionsList, validPickupSuggestions);
     });
-
     $("#delivery-location").keyup(function() {
         var inputField = $(this);
         var suggestionsList = inputField.siblings(".suggestionsTwo");
@@ -759,7 +686,6 @@
         }
         updateSuggestions(inputField, suggestionsList, validDeliverySuggestions);
     });
-
     function validateLocationInput(inputField, validSuggestions, errorField) {
         var inputValue = inputField.val();
         if (!validSuggestions.includes(inputValue)) {
@@ -770,13 +696,11 @@
             return true;
         }
     }
-
     $("form").submit(function(event) {
         var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $("#errOLoc"));
         var isDeliveryValid = validateLocationInput($("#delivery-location"), validDeliverySuggestions, $("#errDLoc"));
-
         if (!isPickupValid || !isDeliveryValid) {
-            event.preventDefault();  // Prevent form submission if validation fails
+            event.preventDefault();  
         }
     });
 </script>
@@ -792,24 +716,11 @@
             });
             return allFilled;
         }
-
         function allSpecificFieldsFilledFunction() {
             console.log("All specific fields are filled up!");
             freight_calc();
         }
-
         function freight_calc() {
-            // var length_ft = $('#length_ft').val();
-            // var length_in = $('#length_in').val();
-            // var width_ft = $('#width_ft').val();
-            // var width_in = $('#width_in').val();
-            // var height_ft = $('#height_ft').val();
-            // var height_in = $('#height_in').val();
-            // var weight = $('#weight').val();
-
-            // var length = length_ft * 12 + parseFloat(length_in);
-            // var width = width_ft * 12 + parseFloat(width_in);
-            // var height = height_ft * 12 + parseFloat(height_in);
             var length_ft = parseFloat($('#length_ft').val());
             var length_in = parseFloat($('#length_in').val());
             var width_ft = parseFloat($('#width_ft').val());
@@ -817,7 +728,6 @@
             var height_ft = parseFloat($('#height_ft').val());
             var height_in = parseFloat($('#height_in').val());
             var weight = parseFloat($('#weight').val());
-
             console.log(
                 length_ft,
                 length_in,
@@ -827,24 +737,17 @@
                 height_in,
                 weight,
             );
-
             var length = length_ft * 12;
             length = length + length_in;
-
             var width = width_ft * 12;
             width = width + width_in;
-
             var height = height_ft * 12;
             height = height + height_in;
-
             console.log(length, width, height, weight);
-
             length = parseFloat(length);
             width = parseFloat(width);
             height = parseFloat(height);
             weight = parseFloat(weight);
-
-
             var unit = 'inch';
             var answer_1 = (length * height * width).toFixed(4);
             if (unit == 'inch') {
@@ -897,7 +800,6 @@
             console.log('fright_class', fright_class);
             $('#frieght_class').val(fright_class).trigger('change');
         }
-
         $('.calculate_freight').on('keyup', function() {
             if (checkSpecificFieldsFilled()) {
                 allSpecificFieldsFilledFunction();
@@ -911,7 +813,6 @@
             element.value = element.value.slice(0, maxDigits);
         }
     }
-
     $(document).ready(function() {
         $('#inches-input').on('input', function() {
             if (this.value > 11) {
@@ -920,12 +821,10 @@
                 this.value = 0;
             }
         });
-
         $('#feet-input, #inches-input').on('input', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-
     $(document).ready(function() {
         $('#inches-input1').on('input', function() {
             if (this.value > 11) {
@@ -934,12 +833,10 @@
                 this.value = 0;
             }
         });
-
         $('#feet-input1, #inches-input1').on('input', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     });
-
     $(document).ready(function() {
         $('#inches-input2').on('input', function() {
             if (this.value > 11) {
@@ -948,8 +845,6 @@
                 this.value = 0;
             }
         });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
         $('#feet-input, #inches-input2').on('input', function() {
             this.value = this.value.replace(/[^0-9]/g, '');
         });
