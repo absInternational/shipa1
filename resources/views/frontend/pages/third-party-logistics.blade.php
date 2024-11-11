@@ -175,7 +175,6 @@
                             solution for your freight needs, Ship A1 helps streamline operations, reduce costs, and improve
                             overall efficiency.
                         </p>
-                        <br>
                         <p>A focus from our team is on being able to transport freight from door to door through scheduling,
                            routing and tracking up to delivery. Let us grow your business while managing the safe, smooth,
                            and on-time movement of your freight - Ship A1.
@@ -188,6 +187,31 @@
                 <div class="image-box">
                     <img class="rounded" src="{{ asset('/public/frontend/images/project/Freight-auctionnnn.webp') }}" alt="Image">
                 </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                <div class="image-box">
+                    <img class="rounded" src="{{ asset('/public/frontend/images/project/3c-image-for-Reefe.webp') }}" alt="Image">
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Streamlined Freight Logistics Solutions with Ship A1</h3>
+                        <p class="desc">Let Ship A1 be your Freight Transport Service provider. By shipping with ShipA1 transport,
+                            you're not just shipping products, you're choosing a reliable logistics provider that understands
+                            you and works towards success for you. Let us handle your freight transport and give you ample
+                            time to execute your plans in your business ventures. 
+                        </p>
+                        <p>Contact us today and discover how Ship
+                        A1 can continue to advance in delivering solutions for your needs in freight logistics with
+                        guaranteed, timely, and personalized services.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -223,32 +247,152 @@
         </div>
     </div>
 </section>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-            <div class="mt-4 rounded">
-            <div class="image-box">
-                <img class="rounded" src="{{ asset('/public/frontend/images/project/Freight Transportnnnn.webp') }}" alt="Image">
+<section class="tj-blog-standard pt-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="mt-4 rounded">
+                <div class="image-box">
+                    <img class="rounded" src="{{ asset('/public/frontend/images/project/Freight Transportnnnn.webp') }}" alt="Image">
+                </div>
+                </div>
             </div>
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-            <div class="about-content-one">
-                <div class="tj-section-heading">
-                    <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Freight Solutions for Every Industry</h3>
-                    <p class="desc">Whatever industry, Ship A1 offers a freight transportation service to deliver
-                        your goods safely and timely. We have a rich experience in retail and
-                        manufacturing, automotive and construction sectors to be able to deliver their
-                        needs.
-                        Every business is unique in its own way, and most of them will have special
-                        requirements for the shipment. That is why we can craft each shipment to be
-                        exactly what you need. Do you manage routine deliveries or complex logistics?
-                        We're here for you.</p>
+            <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
+                <div class="about-content-one">
+                    <div class="tj-section-heading">
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Freight Solutions for Every Industry</h3>
+                        <p class="desc">Whatever industry, Ship A1 offers a freight transportation service to deliver
+                            your goods safely and timely. We have a rich experience in retail and
+                            manufacturing, automotive and construction sectors to be able to deliver their
+                            needs.
+                            Every business is unique in its own way, and most of them will have special
+                            requirements for the shipment. That is why we can craft each shipment to be
+                            exactly what you need. Do you manage routine deliveries or complex logistics?
+                            We're here for you.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+<section class="tj-testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="tj-section-heading text-center">
+                <h5 class="title fs-1">Trailers used for Freight Transportation</h5>
+            </div>
+        </div>
+        <div class="swiper-container swiper-new-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Intermodal Container.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Intermodal Containers</h5>
+                                        <p class="card-text text-dark">This trailer is mainly used for rail transport. These are containers equipped with refrigeration units for long
+                                            hauling journeys.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.reefertrucking') }}" >
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Tautliner Trailers</h5>
+                                        <p class="card-text text-dark">This trailer is not frequently used however because of their adaption for refrigerated transport these offer
+                                            flexibility in easy loading and unloading while maintaining temperature control.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.reefertrucking') }}" >
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Tautliner Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/public/frontend/images/slider/Standard Dry Van Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Standard Dry Van Trailers</h5>
+                                        <p class="card-text  text-dark">One of the most prevalent types of trailers which are used for the transportation of dry vans, these are in enclosed
+                                            form, protected from weather conditions, road debris, and any other potential scratches.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}" >
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Reefer Trailers</h5>
+                                        <p class="card-text text-dark">Reefers are a transportation required for temperature-sensitive cargo however these can also transport dry vans, 
+                                            especially when temperature control is a secondary concern. These are equipped with a cooling unit that assists in
+                                            maintaining a cool temperature making them an ideal choice for dry goods</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}" >
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/public/frontend/images/slider/Reefer Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class=" mt-4">
     <div class="container why-box">
         <div class="row services">

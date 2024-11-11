@@ -303,7 +303,7 @@
                                             class="{{ Request::routeIs('autoAuction') || Request::routeIs('heavyAuction') ? ' active' : '' }}">{{ $navbar->menu_name }}</a>
                                             <ul class="list-gap sub-menu-list sub-menu-list-2" >
                                                 <div class="row">
-                                                    <div class="col-sm-12 bd-l bd-r">
+                                                    <div class="col-sm-12 col-md-12 col-lg-6 bd-l bd-r">
                                                         <h4 class="mb-3 ul-child-custom-heading">Auction Transport Service</h4>
                                                         <li>
                                                             <a class="title" 
@@ -315,12 +315,15 @@
                                                                 href="{{ route('heavyAuction') }}">
                                                                 Heavy Auction Transport</a>
                                                         </li>
-                                                        {{-- <li>
+                                                    </div>  
+                                                    <div class="col-sm-12 col-md-12 col-lg-6 bd-l bd-r">
+                                                        <h4 class="mb-3 ul-child-custom-heading">Freight Transport Solution</h4>
+                                                        <li>
                                                             <a class="title" 
                                                                 href="{{ route('thirdPartyLogistics') }}">
-                                                                Third Party Logistics</a>
-                                                        </li> --}}
-                                                    </div>  
+                                                                Freight Logistics Solution</a>
+                                                        </li>
+                                                    </div> 
                                                 </div>
                                             </ul>
                                     </li>

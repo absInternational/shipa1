@@ -364,8 +364,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card golf-cart-card">
                         <div class="card-body">
@@ -405,8 +403,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card excavator-card">
                         <div class="card-body">
@@ -420,7 +416,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card boat-card">
                         <div class="card-body">
                             <div class="card-icon">
@@ -433,7 +429,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card rv-card">
                         <div class="card-body">
                             <div class="card-icon">
@@ -446,9 +442,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card commercial-card">
                         <div class="card-body">
                             <div class="card-icon">
@@ -461,7 +455,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card farm-card">
                         <div class="card-body">
                             <div class="card-icon">
@@ -487,9 +481,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card hazmat-card">
                         <div class="card-body">
                             <div class="card-icon">
@@ -502,7 +494,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card dry-van-card">
                         <div class="card-body">
                             <div class="card-icon">
@@ -515,7 +507,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card roro-card">
                         <div class="card-body">
                             <div class="card-icon">
