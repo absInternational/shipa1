@@ -17,7 +17,7 @@
                 <div class="bg-color d-flex flex-wrap">
                     <div class="logo-area">
                         <div class="logo-box">
-                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/LOGO NEW-2.webp') }}"  loading="lazy"
+                            <a href="{{ route('welcome') }}"><img src="{{ asset('/public/frontend/images/logo/LOGO NEW-2.webp') }}"  loading="lazy"
                                     alt="Logo" /></a>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                         <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
                             <div class="mobile-logo-area d-lg-none">
                                 <a href="{{ route('welcome') }}">
-                                    <img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"  loading="lazy"
+                                    <img src="{{ asset('/public/frontend/images/logo/LOGO NEW-2.webp') }}"  loading="lazy"
                                     alt="Logo" />
                                 </a>
                             </div>
