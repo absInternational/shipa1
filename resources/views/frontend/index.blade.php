@@ -99,7 +99,7 @@
     </div>
 </div>
 <section class="tj-slider-section">
-    <div class="slider_shape"> <img loading="lazy" src="{{ asset('frontend/images/banner/home-underline.png') }}" alt="Image"/>
+    <div class="slider_shape"> <img loading="lazy" src="{{ asset('frontend/images/banner/home-underline.webp') }}" alt="Image"/>
     </div>
     <div class="swiper sc-slider-1" data-autoplay="5000">
         <div class="swiper-wrapper">
@@ -517,7 +517,7 @@
     </div>
 </section>
 <section class="tj-project-section">
-    <div class="tj-project-slider owl-carousel">
+    <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
         <div class="tj-project-item">
         <a href="{{ route('frontend.pages.services.car-service') }}" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/9.webp') }}" alt="Car Shipping Service" />

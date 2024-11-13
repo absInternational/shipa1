@@ -1346,7 +1346,7 @@ body [class*=" icon-"]::before {
     height: 155%;
     top: -30%;
     left: 0;
-    background: url('../images/banner/banner-shape.png');
+    background: url('../images/banner/banner-shape.webp');
     background-position: center left;
     background-repeat: no-repeat;
     z-index: 2;

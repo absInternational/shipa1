@@ -17,7 +17,7 @@
                 <div class="bg-color d-flex flex-wrap">
                     <div class="logo-area">
                         <div class="logo-box">
-                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/LOGO NEW-2.png') }}"  loading="lazy"
+                            <a href="{{ route('welcome') }}"><img src="{{ asset('frontend/images/logo/LOGO NEW-2.webp') }}"  loading="lazy"
                                     alt="Logo" /></a>
                         </div>
                     </div>

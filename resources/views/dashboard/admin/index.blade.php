@@ -1,13 +1,111 @@
 @extends('dashboard.admin.layouts.app')
 @section('content')
     <div class="container-fluid">
-        {{-- <!-- Page Heading -->
+
+        <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                     class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
         </div>
-        <!-- Content Row -->
+        {{-- <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Users Management</h5>
+                        <p class="card-text">15 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-secondary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Blogs</h5>
+                        <p class="card-text">8 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Edit Frontend NavBar</h5>
+                        <p class="card-text">2 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Services</h5>
+                        <p class="card-text">10 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-warning text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Service Categories</h5>
+                        <p class="card-text">4 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-info text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Reviews</h5>
+                        <p class="card-text">20 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Add Site Reviews</h5>
+                        <p class="card-text">5 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">FAQs</h5>
+                        <p class="card-text">7 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-secondary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Contact Messages</h5>
+                        <p class="card-text">12 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Newsletter Emails</h5>
+                        <p class="card-text">30 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Port To Ports</h5>
+                        <p class="card-text">6 Records</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card dashboard-card bg-warning text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Nationwide Transports</h5>
+                        <p class="card-text">9 Records</p>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
         <div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
@@ -17,8 +115,8 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Earnings (Monthly)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                    Blogs</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">8 Records</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -35,8 +133,8 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    Earnings (Annual)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                    Services</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">10 Records</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -52,11 +150,11 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Service Categories
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">4 Records</div>
                                     </div>
                                     <div class="col">
                                         <div class="progress progress-sm mr-2">
@@ -81,8 +179,8 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                    Pending Requests</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                    Reviews</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -92,8 +190,83 @@
                 </div>
             </div>
         </div>
-        <!-- Content Row -->
         <div class="row">
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Blogs</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">8 Records</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Services</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">10 Records</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Service Categories
+                                </div>
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">4 Records</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress progress-sm mr-2">
+                                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
+                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    Reviews</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-comments fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- <div class="row">
 
             <!-- Area Chart -->
             <div class="col-xl-8 col-lg-7">
@@ -166,7 +339,6 @@
                 </div>
             </div>
         </div>
-        <!-- Content Row -->
         <div class="row">
 
             <!-- Content Column -->

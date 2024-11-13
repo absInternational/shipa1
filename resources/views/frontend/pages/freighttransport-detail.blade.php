@@ -887,7 +887,7 @@
     </div>
 </section>
 <section class="tj-project-section">
-    <div class="tj-project-slider owl-carousel">
+    <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
         <div class="tj-project-item">
             <img src="{{ asset('frontend/images/project/reefer-truck-1.webp') }}" alt="Image" />
             <div class="arrow-icon">

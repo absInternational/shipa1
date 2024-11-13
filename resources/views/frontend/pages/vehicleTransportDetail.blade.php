@@ -560,7 +560,7 @@
 <!--=========== Team Section End =========-->
 <!--=========== Project Section Start =========-->
 <section class="tj-project-section">
-    <div class="tj-project-slider owl-carousel">
+    <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
         <div class="tj-project-item">
             <img src="{{ asset('/public/frontend/images/project/9.webp') }}" alt="Image" />
             <div class="arrow-icon">
