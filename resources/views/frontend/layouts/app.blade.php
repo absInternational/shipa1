@@ -13,8 +13,8 @@
     <meta name="twitter:description"
         content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
-    {{-- <link rel="apple-touch-icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" />
+    {{-- <link rel="apple-touch-icon" href="{{ asset('/frontend/images/logo/favicon.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/frontend/images/logo/favicon.png') }}" />
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
     <script src="https://unpkg.com/imask"></script> --}}
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
@@ -31,26 +31,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --}}
-    {{-- <link rel="stylesheet" href="{{ asset('/public/frontend/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/meanmenu.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/sal.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/magnific-popup.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/swiper.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/owl.carousel.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/icons.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/odometer.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/nice-select.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/animate.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" /> 
+    {{-- <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/frontend/css/responsive.css') }}" /> 
     <meta name="csrf-token" content="{{ csrf_token() }}">--}}
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> --}}
     <!-- improved load performance -->
-    <link rel="preload" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" as="image" type="image/png" />
-    <link rel="apple-touch-icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}">
-    <link rel="shortcut icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" type="image/x-icon">
+    <link rel="preload" href="{{ asset('/frontend/images/logo/favicon.png') }}" as="image" type="image/png" />
+    <link rel="apple-touch-icon" href="{{ asset('/frontend/images/logo/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('/frontend/images/logo/favicon.png') }}" type="image/x-icon">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script src="https://unpkg.com/imask" async></script>
     <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -61,19 +61,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.2/dist/css/coreui.min.css" integrity="sha384-39e9UaGkm/+yp6spIsVfzcs3j7ac7G2cg0hzmDvtG11pT1d7YMnOC26w4wMPhzsL" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="{{ asset('/public/frontend/css/bootstrap.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/meanmenu.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/sal.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/magnific-popup.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/swiper.min.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/owl.carousel.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/icons.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/odometer.min.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/nice-select.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/animate.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/responsive.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" as="style">
@@ -220,7 +220,7 @@
     <div class="tj-offcanvas-area">
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
             <div class="logo-area text-center">
-                <a href="{{ route('welcome') }}"><img src="{{ asset('/public/frontend/images/logo/LOGO NEW-2.webp') }}"
+                <a href="{{ route('welcome') }}"><img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}"
                         alt="Logo" /></a>
             </div>
             <div class="offcanvas-icon">
@@ -281,38 +281,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <link rel="preload" href="{{ asset('/public/frontend/js/modernizr-2.8.3.min.js') }}" as="script">
-    <link rel="preload" href="{{ asset('/public/frontend/js/jquery.min.js') }}" as="script">
-    <link rel="preload" href="{{ asset('/public/frontend/js/bootstrap.min.js') }}" as="script">
-    <script src="{{ asset('/public/frontend/js/modernizr-2.8.3.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/jquery.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/bootstrap.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/meanmenu.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/imagesloaded.pkgd.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/isotope.pkgd.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/jquery.magnific-popup.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/swiper.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/owl.carousel.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/jquery.appear.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/odometer.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/sal.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/jquery.nice-select.min.js') }}" async></script>
-    <script src="{{ asset('/public/frontend/js/main.js') }}" defer></script>
+    {{-- <link rel="preload" href="{{ asset('/frontend/js/modernizr-2.8.3.min.js') }}" as="script">
+    <link rel="preload" href="{{ asset('/frontend/js/jquery.min.js') }}" as="script">
+    <link rel="preload" href="{{ asset('/frontend/js/bootstrap.min.js') }}" as="script">
+    <script src="{{ asset('/frontend/js/modernizr-2.8.3.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/jquery.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/bootstrap.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/meanmenu.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/imagesloaded.pkgd.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/isotope.pkgd.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/jquery.magnific-popup.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/swiper.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/owl.carousel.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/jquery.appear.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/odometer.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/sal.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}" async></script>
+    <script src="{{ asset('/frontend/js/main.js') }}" defer></script> --}}
 
-    {{-- <script src="{{ asset('/public/frontend/js/modernizr-2.8.3.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/meanmenu.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/owl.carousel.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/jquery.appear.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/odometer.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/sal.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/jquery.nice-select.min.js') }}"></script>
-    <script src="{{ asset('/public/frontend/js/main.js') }}"></script> --}}
+    <script src="{{ asset('/frontend/js/modernizr-2.8.3.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/meanmenu.js') }}"></script>
+    <script src="{{ asset('/frontend/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/swiper.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/owl.carousel.js') }}"></script>
+    <script src="{{ asset('/frontend/js/jquery.appear.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/odometer.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/sal.js') }}"></script>
+    <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('/frontend/js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="/assets/intl-tel-input/intlTelInput.js"></script>
