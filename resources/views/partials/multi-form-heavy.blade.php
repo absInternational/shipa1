@@ -23,7 +23,6 @@
             </div>
         @endif
         <div class="container mt-2">
-            <!-- Step 1: Moving From/To -->
             <div class="route_quote_info" id="step1">
                 <div class="row">
                     <h4 class="title text-center target-top">Quote Request!</h4>
@@ -56,7 +55,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Step 2: Vehicle Information -->
             <div class="vehicle_quote_info target-top" id="step2" style="display: none;">
                 <div class="row">
                     <h4 class="title text-center">HEAVY INFORMATION</h4>
@@ -90,7 +88,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Step 3: Customer Information -->
             <div class="basic_quote_info" id="step3" style="display: none;">
                 <div class="row mb-3">
                     <h4 class="text-center text-white target-top">Customer Information</h4>
@@ -98,7 +95,7 @@
                         <div class="single-input-field">
                             <label class="d-block text-white"> Your Name:</label>
                             <input class="form-control" name="phone" type="text"
-                                placeholder="Customer Name" required>
+                                placeholder="Customer Name" required oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">

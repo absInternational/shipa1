@@ -83,7 +83,7 @@
                         <div class="single-input-field">
                             <label class="d-block text-white"> Your Name:</label>
                             <input class="form-control" id="name" name="name" type="text"
-                                placeholder="Customer Name" required>
+                                placeholder="Customer Name" required oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">

@@ -13,40 +13,6 @@
     <meta name="twitter:description"
         content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
-    {{-- <link rel="apple-touch-icon" href="{{ asset('/frontend/images/logo/favicon.png') }}" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/frontend/images/logo/favicon.png') }}" />
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
-    <script src="https://unpkg.com/imask"></script> --}}
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.2/dist/css/coreui.min.css" integrity="sha384-39e9UaGkm/+yp6spIsVfzcs3j7ac7G2cg0hzmDvtG11pT1d7YMnOC26w4wMPhzsL" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/ctas/cta-1/assets/css/cta-1.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --}}
-    {{-- <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/frontend/css/responsive.css') }}" /> 
-    <meta name="csrf-token" content="{{ csrf_token() }}">--}}
-    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> --}}
     <!-- improved load performance -->
     <link rel="preload" href="{{ asset('/frontend/images/logo/favicon.png') }}" as="image" type="image/png" />
     <link rel="apple-touch-icon" href="{{ asset('/frontend/images/logo/favicon.png') }}">
@@ -280,65 +246,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    {{-- <link rel="preload" href="{{ asset('/frontend/js/modernizr-2.8.3.min.js') }}" as="script">
-    <link rel="preload" href="{{ asset('/frontend/js/jquery.min.js') }}" as="script">
-    <link rel="preload" href="{{ asset('/frontend/js/bootstrap.min.js') }}" as="script">
-    <script src="{{ asset('/frontend/js/modernizr-2.8.3.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/jquery.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/bootstrap.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/meanmenu.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/imagesloaded.pkgd.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/isotope.pkgd.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/jquery.magnific-popup.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/swiper.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/owl.carousel.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/jquery.appear.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/odometer.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/sal.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}" async></script>
-    <script src="{{ asset('/frontend/js/main.js') }}" defer></script> --}}
-
     <script src="{{ asset('/frontend/js/modernizr-2.8.3.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/meanmenu.js') }}"></script>
-    <script src="{{ asset('/frontend/js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/owl.carousel.js') }}"></script>
-    <script src="{{ asset('/frontend/js/jquery.appear.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/odometer.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/sal.js') }}"></script>
-    <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}"></script>
-    <script src="{{ asset('/frontend/js/main.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="{{ asset('/frontend/js/jquery.min.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/bootstrap.min.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/meanmenu.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/imagesloaded.pkgd.min.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/isotope.pkgd.min.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/jquery.magnific-popup.min.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/swiper.min.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/owl.carousel.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/jquery.appear.min.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/odometer.min.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/sal.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}" ></script>
+    <script src="{{ asset('/frontend/js/main.js') }}" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
     <script src="/assets/intl-tel-input/intlTelInput.js"></script>
-    {{-- <script>
-        $(document).ready(function(){
-            $("#owl-caro").owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 4000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 4
-                    }
-                }
-            });
-        });
-    </script> --}}
     <script>
         $(document).ready(function() {
             $('#newsletter-form').submit(function(event) {
@@ -589,7 +513,7 @@
                         "input": inputValue
                     },
                     success: function(response) {
-                    console.log('responseresponse', response);
+                    // console.log('responseresponse', response);
                         suggestionsList.empty();
                         inputField.data('selected', false);
                         $.each(response, function(index, suggestion) {
@@ -953,35 +877,6 @@
             });
         });
     </script>
-    {{-- <script>
-        $(document).ready(function(){
-            $(".carousel-new-1").owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                smartSpeed: 800,
-                animateOut: 'animate__fadeOut',
-                animateIn: 'animate__fadeIn',
-                fluidSpeed: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 1
-                    }
-                }
-            });
-        });
-    </script> --}}
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const swiperContainer = document.querySelector('.swiper-new-1');
