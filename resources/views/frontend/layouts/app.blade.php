@@ -16,7 +16,6 @@
     <link rel="apple-touch-icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
@@ -47,6 +46,7 @@
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script async type="application/ld+json">
@@ -557,35 +557,35 @@
                 });
             }
             $(document).ready(function() {
-            $('#pickup-location').on('input', function() {
-                var inputField = $(this);
-                var suggestionsList = $('.suggestionsPickup');
-                inputField.data('selected', false);
-                fetchSuggestions(inputField, suggestionsList);
+                $('#pickup-location').on('input', function() {
+                    var inputField = $(this);
+                    var suggestionsList = $('.suggestionsPickup');
+                    inputField.data('selected', false);
+                    fetchSuggestions(inputField, suggestionsList);
+                });
+                $('#delivery-location').on('input', function() {
+                    var inputField = $(this);
+                    var suggestionsList = $('.suggestionsDelivery');
+                    inputField.data('selected', false);
+                    fetchSuggestions(inputField, suggestionsList);
+                });
+                $(document).on('click', function(event) {
+                    var pickupInputField = $('#pickup-location');
+                    var pickupSuggestionsList = $('.suggestionsPickup');
+                    var deliveryInputField = $('#delivery-location');
+                    var deliverySuggestionsList = $('.suggestionsDelivery');
+                    if (!pickupInputField.is(event.target) && 
+                        !pickupSuggestionsList.is(event.target) && 
+                        pickupSuggestionsList.has(event.target).length === 0) {
+                        pickupSuggestionsList.hide();
+                    }
+                    if (!deliveryInputField.is(event.target) && 
+                        !deliverySuggestionsList.is(event.target) && 
+                        deliverySuggestionsList.has(event.target).length === 0) {
+                        deliverySuggestionsList.hide();
+                    }
+                });
             });
-            $('#delivery-location').on('input', function() {
-                var inputField = $(this);
-                var suggestionsList = $('.suggestionsDelivery');
-                inputField.data('selected', false);
-                fetchSuggestions(inputField, suggestionsList);
-            });
-            $(document).on('click', function(event) {
-                var pickupInputField = $('#pickup-location');
-                var pickupSuggestionsList = $('.suggestionsPickup');
-                var deliveryInputField = $('#delivery-location');
-                var deliverySuggestionsList = $('.suggestionsDelivery');
-                if (!pickupInputField.is(event.target) && 
-                    !pickupSuggestionsList.is(event.target) && 
-                    pickupSuggestionsList.has(event.target).length === 0) {
-                    pickupSuggestionsList.hide();
-                }
-                if (!deliveryInputField.is(event.target) && 
-                    !deliverySuggestionsList.is(event.target) && 
-                    deliverySuggestionsList.has(event.target).length === 0) {
-                    deliverySuggestionsList.hide();
-                }
-            });
-        });
             $('#step1_next').click(function() {
                 if (validateStep('step1')) {
                     $('#step1').hide();
@@ -752,41 +752,39 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
-            var selectedTab = '';
-            $('#tabSelector').change(function() {
-                $('.vehicles-container').html('');
-                selectedTab = $(this).val();
-                var vehicleType = $(this).val();
-                $('.tab-pane').removeClass('show active');
-                $('#' + selectedTab).addClass('show active');
-                $.ajax({
-                    url: "{{ route('get.partial.form') }}",
-                    method: 'GET',
-                    data: {
-                        vehicleType: vehicleType,
-                    },
-                    success: function(response) {
-                        $('#additionalContent').html('');
-                        $('#additionalContent').html(response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            });
-            $(document).on('click', '.addVehicleBtn', function() {
-                if ($('#tabSelector').val() == 'Car') {
-                    console.log('yesss');
-                    addNewVehicle();
-                } else {
-                    console.log('nooo');
-                    addOtherVehicle();
+        var selectedTab = '';
+        $(document).on('change', '#tabSelector', function() {
+            $('.vehicles-container').html('');
+            selectedTab = $(this).val();
+            var vehicleType = $(this).val();
+            $('.tab-pane').removeClass('show active');
+            $('#' + selectedTab).addClass('show active');
+            $.ajax({
+                url: "{{ route('get.partial.form') }}",
+                method: 'GET',
+                data: {
+                    vehicleType: vehicleType,
+                },
+                success: function(response) {
+                    $('#additionalContent').html('');
+                    $('#additionalContent').html(response);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
                 }
             });
-            $(document).on('click', '.delete-vehicle', function() {
-                $(this).closest('.vehicle-info').remove();
-            });
+        });
+        $(document).on('click', '.addVehicleBtn', function() {
+            if ($('#tabSelector').val() == 'Car') {
+                console.log('yesss');
+                addNewVehicle();
+            } else {
+                console.log('nooo');
+                addOtherVehicle();
+            }
+        });
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
         });
     </script>
     <script>
