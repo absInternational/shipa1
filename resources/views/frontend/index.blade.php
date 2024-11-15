@@ -164,7 +164,7 @@
         <ul class="list-gap">
             <li>
                 <div class="service-item">
-                <a href="{{ route('vehicleTransportDetail') }}" class="service-link">
+                {{-- <a href="{{ route('vehicleTransportDetail') }}" class="service-link"> --}}
                     <div class="tj-service-icon">
                         <div class="service-icon">
                             <i class="fa-light fa-car-side fa-2xs"></i>
@@ -178,12 +178,12 @@
                             <i class="fa-light fa-arrow-right"></i>
                         </a>
                     </div>
-                    </a>
+                    {{-- </a> --}}
                 </div>
             </li>
             <li>
                 <div class="service-item">
-                <a href="{{ route('heavy-transport-detail') }}" class="service-link">
+                {{-- <a href="{{ route('heavy-transport-detail') }}" class="service-link"> --}}
                     <div class="tj-service-icon">
                         <div class="service-icon">
                             <i class="fa-light fa-tractor fa-xs"></i>
@@ -196,12 +196,12 @@
                         <a href="{{ route('heavy-transport-detail') }}" > <i
                                 class="fa-light fa-arrow-right"></i></a>
                     </div>
-                    </a>
+                    {{-- </a> --}}
                 </div>
             </li>
             <li>
                 <div class="service-item">
-                <a href="{{ route('freighttransport-detail') }}" class="service-link">
+                {{-- <a href="{{ route('freighttransport-detail') }}" class="service-link"> --}}
                     <div class="tj-service-icon">
                         <div class="service-icon">
                             <i class="fa-light fa-truck fa-xs"></i>
@@ -214,7 +214,7 @@
                         <a href="{{ route('freighttransport-detail') }}" > <i
                                 class="fa-light fa-arrow-right"></i></a>
                     </div>
-                    </a>
+                    {{-- </a> --}}
                 </div>
             </li>
         </ul>

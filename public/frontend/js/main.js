@@ -92,14 +92,6 @@
         $(".lang_lists").slideToggle();
         $(this).toggleClass("open");
     });
-    
-   
-    // const swiper = new Swiper('.swiper', {
-    //     autoplay: {
-    //     delay: 5000,
-    //    },
-    //    });
- 
     // Hero Slider One
     var slider1 = new Swiper(".sc-slider-1", {
         speed: 800,
@@ -110,8 +102,11 @@
         },
         loop: true,
         autoplay: {
-          delay: 5000,  // Set delay to 5000 milliseconds (5 seconds)
-          disableOnInteraction: false,  // Autoplay won't stop after user interactions
+          delay: 5000,
+          disableOnInteraction: false, 
+        },
+        lazy: {
+            loadPrevNext: true,
         },
       });
 
@@ -128,6 +123,9 @@
         thumbs: {
             swiper: slider2,
         },
+        lazy: {
+            loadPrevNext: true,
+        },
         loop: true,
     });
 
@@ -136,9 +134,12 @@ var testimonial1 = new Swiper(".tj-testimonial-slider", {
     slidesPerView: 3, // Default number of slides shown
     spaceBetween: 30,
     autoplay: {
-        delay: 8500,
+        delay: 5000,
     },
     loop: true,
+    lazy: {
+        loadPrevNext: true,
+    },
     breakpoints: {
         320: {
             slidesPerView: 1,
@@ -170,7 +171,10 @@ var testimonial1 = new Swiper(".tj-testimonial-slider", {
         slidesPerView: 3,
         spaceBetween: 30,
         autoplay: {
-            delay: 8500,
+            delay: 5000,
+        },
+        lazy: {
+            loadPrevNext: true,
         },
         pagination: {
             el: ".swiper-pagination",
@@ -206,6 +210,9 @@ var testimonial1 = new Swiper(".tj-testimonial-slider", {
         autoplayTimeout: 5000,
         autoplay: true,
         dots: true,
+        lazy: {
+            loadPrevNext: true,
+        },
         responsive: {
             0: {
                 items: 1,
