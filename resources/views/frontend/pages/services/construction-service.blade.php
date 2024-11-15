@@ -116,7 +116,6 @@
         opacity: 0.9;
     }
 </Style>
-<!--========== blog details Start ==============-->
 <section class="tj-choose-us-section-service-construction">
     <div class="container mt-4">
         <div class="row mt-4">
@@ -145,9 +144,7 @@
             @endif
             <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
             @include('partials.multi-form-heavy')
-
             </div>
-
         </div>
     </div>
 </section>
@@ -316,7 +313,6 @@
                              each piece of equipment during transport.
                         </p>
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -488,7 +484,6 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
@@ -591,7 +586,6 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section End ==============-->
 <section class="why-choose-us-slider">
     <div class="container">
         <div class="tj-section-heading text-center">
@@ -643,16 +637,14 @@
         </div>
     </div>
 </section>
-<!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
-<!--=========== Blog Section End =========-->
 <script>
     function playVideo() {
         document.querySelector('.video-thumbnail').style.display = 'none';
         document.querySelector('.video-iframe').style.display = 'block';
         var iframe = document.getElementById('videoFrame');
         var videoSrc = iframe.src;
-        iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
+        iframe.src = videoSrc + "&autoplay=1"; 
     }
 </script>
 @endsection

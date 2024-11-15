@@ -1,24 +1,3 @@
-<!-- <div class="input-form">
-    <label for="category">Select Freight Type</label>
-    <select class="form-control" id="category" name="category">
-        <option value="" disabled selected>Select</option>
-        <option value="LTL USED COMMERCIAL GOODS">LTL USED COMMERCIAL GOODS</option>
-        <option value="LTL NEW COMMERCIAL GOODS">LTL NEW COMMERCIAL GOODS</option>
-        <option value="LTL USED GOODS">LTL USED GOODS</option>
-        <option value="LTL NEW GOODS">LTL NEW GOODS</option>
-        <option value="FTL FULL TRUCK LOAD">FTL FULL TRUCK LOAD</option>
-    </select>
-</div>
-<div class="form-group" style="display:none;">
-    <label for="trailer_type" class="text-white">Select Trailer Type</label>
-    <select class="form-control" id="trailer_type" name="trailer_type">
-        <option value="RGN" selected>RGN</option>
-        <option value="Stepdeck">Stepdeck</option>
-        <option value="Flatbed">Flatbed</option>
-        <option value="Hotshot">Hotshot</option>
-        <option value="Landoll">Landoll</option>
-    </select>
-</div> -->
 <input type="hidden" name="vehicle_opt" value="freight" hidden>
 <input type="hidden" name="car_type" value="3" hidden>
 <div class="row">
@@ -100,7 +79,6 @@
         </div>
     </div>
 </div>
-
 <div class="row">
     <div class="col-md-4">
         <div class="input-form">
@@ -143,73 +121,6 @@
         </div>
     </div>
 </div>
-{{-- <div class="row">
-    <div class="col-md-6">
-        <div class="form-group">
-            <label for="trailer_specification" class="text-white">Trailer
-                Specification</label>
-            <select class="form-control" id="trailer_specification">
-                <option value="" selected disabled>Select</option>
-                <option value="Air Ride(A)">Air Ride(A)</option>
-                <option value="Blanket Wrap (B)">Blanket Wrap (B)</option>
-                <option value="B-Train (BT)">B-Train (BT)</option>
-                <option value="Chain(CH)">Chain(CH)</option>
-                <option value="Chassis (CS)">Chassis (CS)</option>
-                <option value="Conestoga(CO)">Conestoga(CO)</option>
-                <option value="Curtain(C)">Curtain(C)</option>
-                <option value="Double(2)">Double(2)</option>
-                <option value="Extendable (E)">Extendable (E)</option>
-                <option value="E-Track (ET)">E-Track (ET)</option>
-                <option value="Hazmat (Z)">Hazmat (Z)</option>
-                <option value="Hot Shot (HS)">Hot Shot (HS)</option>
-                <option value="Insulated (N)">Insulated (N)</option>
-                <option value="Lift Gate (LG)">Lift Gate (LG)</option>
-                <option value="Load Out (LO)">Load Out (LO)</option>
-                <option value="Load Ramp (LR)">Load Ramp (LR)</option>
-                <option value="Moving (MV)">Moving (MV)</option>
-                <option value="Open Top (OT)">Open Top (OT)</option>
-                <option value="Oversized (O)">Oversized (O)</option>
-                <option value="Pallet Exchange (X)">Pallet Exchange (X)</option>
-                <option value="Side Kit (S)">Side Kit (S)</option>
-                <option value="Tarp(T)">Tarp(T)</option>
-                <option value="Team Driver(M)\">Team Driver(M)\</option>
-                <option value="Temp Control
-                    (TC)">Temp Control (TC)</option>
-                <option value="Triple (3)">Triple (3)</option>
-                <option value="Vented (V)">Vented (V)</option>
-                <option value="Walking Floor (WF)">Walking Floor (WF)</option>
-            </select>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group">
-            <label for="equipment_type" class="text-white">Equipment Type</label>
-            <select class="form-control" id="equipment_type" name="equipment_type">
-                <option value="" disabled selected>Select</option>
-                <option value="VAN (V)">VAN (V)</option>
-                <option value="REEFER (RE)">REEFER (RE)</option>
-                <option value="FLATBED (F)">FLATBED (F)</option>
-                <option value="STEP DECK (SD)">STEP DECK (SD)</option>
-                <option value="REMOVABLE GOOSENECK (RGN) ">REMOVABLE GOOSENECK (RGN) </option>
-                <option value="CONESTOGA (CS)">CONESTOGA (CS)</option>
-                <option value="CONTAINER / DRAYAGE (C)">CONTAINER / DRAYAGE (C)</option>
-                <option value="TRUCK (T)">TRUCK (T)</option>
-                <option value="HAZMAT (hazardous materials)">HAZMAT (hazardous materials)
-                </option>
-                <option value="POWER ONLY (PO)">POWER ONLY (PO)</option>
-                <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
-                <option value="LOWBOY (LB)">LOWBOY (LB)</option>
-                <option value="ENDUMP (ED)">ENDUMP (ED)</option>
-                <option value="LANDOLL (LD)">LANDOLL (LD)</option>
-                <option value="PARTIAL (PT)">PARTIAL (PT)</option>
-                <option value="20ft container">20ft container</option>
-                <option value="40ft container">40ft container</option>
-                <option value="48ft container">48ft container</option>
-                <option value="53ft container">53ft container</option>
-            </select>
-        </div>
-    </div>
-</div> --}}
 <div class="row mt-3">
     <div class="col-md-6">
         <div class="form-group">
@@ -314,39 +225,6 @@
             <span class="separators">(In.)</span>
         </div>
     </div>
-    {{-- <div class="col-md-4">
-        <label class="lab-cos">Length</label>
-        <div class="input-container">
-            <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <label class="lab-cos">Width</label>
-        <div class="input-container">
-            <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <label class="lab-cos">Height</label>
-        <div class="input-container">
-            <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div> --}}
 </div>
 <div class="row mb-3">
     <div class="col-md-4">
@@ -358,15 +236,6 @@
 
         </div>
     </div>
-
-    {{-- <div class="col-md-6">
-        <label class="lab-cos">Weight</label>
-        <div class="input-container1">
-            <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
-                min="0" maxlength="6" oninput="limitDigits(this, 6)">
-            <span class="separators-w">(Lbs.)</span>
-        </div>
-    </div> --}}
 </div>
 <div class="row">
     <div class="col-md-6">
@@ -403,22 +272,12 @@
     </div>
 </div>
 <div class="row mt-3">
-    {{-- <div class="col-md-6">
-        <div class="form-group">
-            <label for="condition" class="text-white">Condition</label>
-            <select class="form-control" id="condition" name="condition[]">
-                <option value="1" selected>Running</option>
-                <option value="2">Non Running</option>
-            </select>
-        </div>
-    </div> --}}
     <div class="col-md-12">
         <div class="input-form">
             <label class="d-block" class="text-white"> Image:</label>
             <input class="form-control image_input"  name="image[]" type="file" accept="image/*" multiple
                 onchange="previewImages(event)">
             <div class="image-preview-container" id="imagePreviewContainer"></div>
-            <!-- <input class="form-control image_input" type="file" id="image" name="image[]" placeholder="Upload File" /> -->
         </div>
     </div>
 </div>
@@ -452,42 +311,6 @@
 <input type="hidden" value="2010" name="year[]">
 <input type="hidden" value="freight" name="model[]">
 <input type="hidden" value="freight" name="make[]">
-
-{{-- <div class="row select-bm" style="display:none;">
-    <div class="col-md-4">
-        <div class="input-form tj-select">
-            <label> Year</label>
-            <select class="nice-select vehicle-year" name="year[]" id="year">
-                <option value="2010" selected>Select Year</option>
-                @php
-                    $currentYear = date('Y');
-                    for ($year = $currentYear; $year >= 1936; $year--) {
-                        echo "<option value='$year'>$year</option>";
-                    }
-                @endphp
-            </select>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="input-form tj-select">
-            <label>Make</label>
-            <input type="text" value="null" id="make" name="make[]" placeholder="Enter Make" />
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="input-form tj-select vehicle-model-div">
-            <label>Model</label>
-            <input type="text" id="model" value="null" name="model[]" placeholder="Enter Model" />
-        </div>
-    </div>
-</div>
-<a class="text-primary" style="display:none;" id="addVehicleBtn"
-    style="cursor: pointer; text-decoration: underline;"><i class="fa fa-plus"></i> Add
-    Vehicle</a>
-
-<div id="vehicles-container" style="display:none;">
-</div> --}}
-
 <script>
     $(document).ready(function() {
         $('#example-multiple').select2();
@@ -495,112 +318,4 @@
     $(document).ready(function() {
         $('#example-multiple-2').select2();
     });
-
-    // function addOtherVehicle() {
-    //     var newVehicleHtml =
-    //         `
-    //         <div class="vehicle-info">
-    //             <div class="row select-bm">
-    //                 <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 10px; color: red; cursor: pointer;"></i></span>
-    //                 <div class="col-md-4">
-    //                     <div class="input-form tj-select">
-    //                         <label> Year</label>
-    //                         <select class="nice-select year" name="year[]" id="year"> <option value="" disabled selected>Select Year</option>`;
-    //                             var currentYear = {{ date('Y') }};
-    //                             for (var year = currentYear; year >= 1936; year--) {
-    //                                 newVehicleHtml += `<option value="${year}">${year}</option>`;
-    //                             }
-
-    //                             newVehicleHtml +=
-    //                         `</select>
-    //                     </div>
-    //                 </div>
-    //                     <div class="col-md-4">
-    //                     <div class="input-form tj-select">
-    //                     <label>Make</label>
-    //                     <input type="text" id="make" name="make[]"
-    //                     placeholder="Enter Make" required="" />
-    //                     </div>
-    //                     </div>
-    //                     <div class="col-md-4">
-    //                     <div class="input-form tj-select model-div">
-    //                     <label>Model</label>
-    //                     <input type="text" id="model" name="model[]" placeholder="Enter Model"
-    //                     required="" />`
-
-    //                 newVehicleHtml += `</div>
-    //                                 </div>
-    //             </div>
-    //             <div class="row">
-    //                 <div class="col-md-6">
-    //                     <div class="form-group">
-    //                         <label for="trailer_type" class="text-white">Select Trailer
-    //                             Type</label>
-    //                         <select class="form-control" id="trailer_type" name="trailer_type">
-    //                             <option value="Open" selected>Open</option>
-    //                             <option value="Enclosed">Enclosed</option>
-    //                         </select>
-    //                     </div>
-    //                 </div>
-    //                 <div class="col-md-6">
-    //                     <div class="form-group">
-    //                         <label for="condition" class="text-white">Condition</label>
-    //                         <select class="form-control" id="condition" name="condition[]">
-    //                             <option value="1" selected>Running</option>
-    //                             <option value="2">Non Running</option>
-    //                         </select>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //             <div class="row mb-3">
-    //                 <div class="col-md-4">
-    //                     <label class="lab-cos">Length</label>
-    //                     <div class="input-container">
-    //                         <input type="number" id="feet-input" name="length_ft[]" class="feet-input1 input-field" placeholder=""
-    //                             min="0" maxlength="3" oninput="limitDigits(this, 3)" required="">
-    //                         <span class="separator">(Ft.)</span>
-    //                         <input type="number" id="inches-input" class="inches-input1 input-field" name="length_in[]" placeholder=""
-    //                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required="">
-    //                         <span class="separators">(In.)</span>
-    //                     </div>
-    //                 </div>
-    //                 <div class="col-md-4">
-    //                     <label class="lab-cos">Width</label>
-    //                     <div class="input-container">
-    //                         <input type="number" id="feet-input1" name="width_ft[]" class="feet-input1 input-field" placeholder=""
-    //                             min="0" maxlength="3" oninput="limitDigits(this, 3)" required="">
-    //                         <span class="separator">(Ft.)</span>
-    //                         <input type="number" id="inches-input1" name="width_in[]" class="inches-input1 input-field" placeholder=""
-    //                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)" required="">
-    //                         <span class="separators">(In.)</span>
-    //                     </div>
-    //                 </div>
-    //                 <div class="col-md-4">
-    //                     <label class="lab-cos">Height</label>
-    //                     <div class="input-container">
-    //                         <input type="number" id="feet-input2" name="height_ft[]" class="input-field" placeholder=""
-    //                             min="0" maxlength="3" oninput="limitDigits(this, 3)">
-    //                         <span class="separator">(Ft.)</span>
-    //                         <input type="number" id="inches-input2" name="height_in[]" class="inches-input2 input-field" placeholder=""
-    //                             min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-    //                         <span class="separators">(In.)</span>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //             <div class="row">
-    //                 <div class="col-md-4">
-    //                     <label class="lab-cos">Weight</label>
-    //                     <div class="input-container1">
-    //                         <input type="" id="feet-input" class="feet-input1 input-field-1" name="weight[]" placeholder=""
-    //                             min="0" maxlength="6" oninput="limitDigits(this, 6)">
-    //                         <span class="separators-w">(Lbs.)</span>
-
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //                     `;
-
-    //     $('.vehicles-container').append(newVehicleHtml);
-    // }
 </script>

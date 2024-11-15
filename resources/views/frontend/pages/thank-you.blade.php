@@ -161,7 +161,6 @@
         animation-duration: 1000ms;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -183,8 +182,6 @@
         </div>
     </div>
 </section>
-<!--========== breadcrumb End ==============-->
-<!--========== Thank You Section Start ==============-->
 <section class="thank-you-section pt-5 pb-0 px-2 position-relative">
     <div class="confetti">
         <div class="confetti-piece"></div>
@@ -236,8 +233,6 @@
         </div> 
     </div>
 </section>
-<!--========== Thank You Section End ==============-->
-<!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page pt-5">
     <div class="container ">
         <div class="row shadow-lg p-3 mb-1 bg-body rounded-pill">
@@ -862,5 +857,4 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section End ==============-->
 @endsection

@@ -29,10 +29,9 @@
         border: none; 
     }
     .swal2-styled {
-        border-radius: 5px; /* Rounded corners for buttons */
+        border-radius: 5px;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -55,8 +54,6 @@
         </div>
     </div>
 </section>
-<!--========== breadcrumb End ==============-->
-<!--========== Contact Page Start ==============-->
 <section class="tj-contact-page">
     <div class="container">
         <div class="row tj-contact-box">
@@ -169,10 +166,7 @@
         </div>
     </div>
 </section>
-<!--========== Contact Page End ==============-->
-<!--=========== Newsletter Section Start =========-->
 @include('partials.newsletter')
-<!--=========== Newsletter Section End =========-->
 @endsection
 @section('extraScript')
 <script>

@@ -416,7 +416,6 @@
         </div>
     </div>
 </section>
-<!--=========== About Section Start =========-->
 <section class="tj-about-section pt-4">
     <div class="container">
         <div class="row">
@@ -510,8 +509,6 @@
         </div>
     </div>
 </section>
-<!--=========== About Section End =========-->
-<!--=========== Cta Section Start =========-->
 @include('partials.car-cta-section')
 {{-- <section class="tj-cta-section icon-animate">
     <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/abcabc.webp') }}"></div>
@@ -543,8 +540,6 @@
         </div>
     </div>
 </section> --}}
-<!--=========== Cta Section End =========-->
-<!--=========== Team Section Start =========-->
 <section class="tj-team-section">
     <div class="container">
         <div class="row">
@@ -557,8 +552,6 @@
         </div>
     </div>
 </section>
-<!--=========== Team Section End =========-->
-<!--=========== Project Section Start =========-->
 <section class="tj-project-section">
     <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
         <div class="tj-project-item">
@@ -614,7 +607,6 @@
         </div>
     </div>
 </section>
-<!--=========== Project Section End =========-->
 <section class="tj-video-section">
     <div class="container">
         <div class="row justify-content-center">
@@ -630,7 +622,6 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page">
     <div class="container">
         <div class="row">
@@ -733,7 +724,5 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section End ==============-->
-<!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
 @endsection

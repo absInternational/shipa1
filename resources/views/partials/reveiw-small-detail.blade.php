@@ -39,11 +39,6 @@
                                             <i class="fa fa-star-o text-light" aria-hidden="true"></i>
                                         @endif
                                     @endfor
-                                        <!-- <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i> -->
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +50,6 @@
                                         </span>
                                         <span style="display:none;" class="text-dark">
                                         {!! $site_review->description !!}
-                                        <!-- <span class="text-muted readless">Read Less</span> -->
                                         </span>
                                     </a>
                                 </p>
@@ -81,8 +75,6 @@
                                                 src="{{ asset('frontend/images/testimonial/turst.png') }}"
                                                 width="70%" height="100%" alt="Trust Pilot" />
                                         @endif
-                                        <!-- <div class="title">BBB Reviews</div> -->
-                                        <!-- <img class="float-end" loading="lazy" src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="40%" height="50%" alt="BBB"> -->
                                     </div>
                                 </div>
                             </div>
@@ -121,27 +113,3 @@
         swiperContainer.style.visibility = 'visible';
     });
 </script>
-{{-- <script>
-    $(document).ready(function(){
-      $(".owl-small-reveiw").owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: true,
-        items: 3, 
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        responsive: {
-          0: {
-            items: 1 
-          },
-          600: {
-            items: 2 
-          },
-          1000: {
-            items: 3 
-          }
-        }
-      });
-    });
-</script> --}}

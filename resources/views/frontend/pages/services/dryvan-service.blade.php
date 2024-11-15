@@ -6,7 +6,6 @@
     .full-width {
         width: 100%;
     }
-    
     .title-2 {
         color: #8fc445;
     }
@@ -27,16 +26,12 @@
         }
     .services {
     text-align: center;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     border-radius: 12px;
     padding: 10px 30px 0px 30px;
-    /* background-color: #9d9e9f14;*/
     }
     .services-h1 {
     text-align:center;
-    /* text-decoration: overline; */
     margin-bottom: 50px;
-    /* color: #ffffff; */
     }
     .custom-style {
         padding: 20px;
@@ -58,7 +53,6 @@
         height: 100px; 
     }
 </style>
-    <!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -530,7 +524,6 @@
         </div>
     </div>
 </section>
- <!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
@@ -616,8 +609,6 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section End ==============-->
-<!--========== Chhose Section Start ==============-->
 <section class="tj-choose-us-section-dryvan mb-4">
     <div class="container">
         <div class="row">
@@ -708,7 +699,6 @@
         </div>
     </div>
 </section>
-<!--========== Chhose Section End ==============-->
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')

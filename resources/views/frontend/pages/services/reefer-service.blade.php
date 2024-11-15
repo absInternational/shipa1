@@ -12,7 +12,6 @@
     .desc-2 {
         color: white;
     }
-
     .custom-style {
         padding: 20px;
         background-color: #f9f9f9;
@@ -38,7 +37,6 @@
         background: #f8f9fa;
     }
     .card- {
-        /* background: #29494e; */
         border: 1px solid #ddd;
         border-radius: 12px;
         padding: 15px;
@@ -46,16 +44,12 @@
     }
     .services {
         text-align: center;
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
         border-radius: 12px;
         padding: 10px 30px 0px 30px;
-        /* background-color: #9d9e9f14;*/
     }
     .services-h1 {
         text-align:center;
-        /* text-decoration: overline; */
         margin-bottom: 50px;
-        /* color: #ffffff; */
     }
     .why-choose-us-slider::before {
         content: "";
@@ -64,10 +58,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
-        z-index: 0; /* Ensures it appears on top of the background */
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
     }
-
     .why-choose-us-slider {
         background: url('/public/img/1-background-image-Reefer-transport.webp');
         padding: 60px 0;
@@ -76,9 +69,8 @@
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1; /* Keeps the background behind the ::before element */
+        z-index: 1;
     }
-
     .section-title {
         text-align: center;
         font-size: 2.5rem;
@@ -89,7 +81,6 @@
         text-transform: uppercase;
         animation: fadeIn 1s ease-in-out;
     }
-
     .section-description {
         text-align: center;
         font-size: 1.1rem;
@@ -101,7 +92,6 @@
         opacity: 0.8;
         animation: fadeIn 1.2s ease-in-out;
     }
-
     .slide {
         min-width: 33.333%;
         box-sizing: border-box;
@@ -115,24 +105,20 @@
         position: relative;
         overflow: hidden;
     }
-
     .slide:hover {
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         transform: translateY(-5px);
         background-color: rgba(255, 255, 255, 1);
     }
-
     .slide i {
         margin-bottom: 20px;
         color: #666;
         font-size: 3rem;
         transition: color 0.3s ease;
     }
-
     .slide:hover i {
         color: #8FC445;
     }
-
     .slide-title {
         font-size: 1.5rem;
         color: #333;
@@ -141,11 +127,9 @@
         letter-spacing: 0.3px;
         transition: color 0.3s ease;
     }
-
     .slide:hover .slide-title {
         color: #8FC445;
     }
-
     .slide-text {
         font-size: 1rem;
         color: #666;
@@ -153,7 +137,6 @@
         opacity: 0.9;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -184,7 +167,6 @@
                 <div class="about-content-one">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">The World of Reefer Shipping</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">Reefer refers to refrigerated ships and shipping containers specifically designed to
                              transport goods that are sensitive to temperature fluctuations. From fruits and vegetables to meat,
                               fish, and dairy products, these vessels and containers play a crucial role in maintaining the quality
@@ -256,13 +238,11 @@
 </section>
 <section class="tj-about-section pt-0 ">
     <div class="container pb-4">
-        <div class="row">     
-        <!-- <h2 class="title">Reefer  Rules</h2> -->
+        <div class="row">
              <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Monitoring and Tracking</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">Advanced technology plays a vital role in cold chain logistics. Continuous monitoring and tracking systems are employed to keep a 
                         close eye on the environmental conditions inside the storage or transportation units.
                         </p>
@@ -273,7 +253,6 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Transportation</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">Once properly stored, goods must be transported while maintaining the specified temperature range. This can involve refrigerated trucks, 
                         refrigerated shipping containers, or reefer ships for international transport.</p>
                     </div>     
@@ -288,7 +267,6 @@
                 <div class="about-content-one">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">The World of Reefer Shipping</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">Ship A1 continually enhances services, providing peace of mind to businesses relying on refrigerated transport.
                             We guarantee reefer equipment availability and round-the-clock monitoring, ensuring temperature-sensitive cargo arrives in 
                             impeccable condition.
@@ -310,13 +288,11 @@
         </div>
     </div>
     <div class="container">
-        <div class="row"> 
-        <!-- <h2 class="title">Reefer  Rules</h2> -->
+        <div class="row">
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Temperature-Controlled Storage</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">This is the foundational stage of the cold chain. Perishable goods, such as fruits, vegetables, dairy products, 
                         and pharmaceuticals, are stored in specialized refrigerated facilities or containers.
                         </p>
@@ -327,7 +303,6 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Quality Control</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">Proper handling and packaging are crucial components of cold chain logistics. Goods must be handled with care to minimize damage, 
                         especially during loading and unloading.</p>
                     </div>   
@@ -339,7 +314,6 @@
                 <div class="about-content-one border rounded p-4">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Regulatory Compliance</span>
-                        <!-- <h2 class="title">Why Choose Us?</h2> -->
                         <p class="desc">The cold chain industry operates under strict regulations and standards, particularly in sectors like food and pharmaceuticals. Compliance
                                 with these regulations is essential to ensure the safety and quality of perishable products.
                         </p>
@@ -347,17 +321,6 @@
                 </div>
             </div>
         </div>
-            <!-- <div class="row">
-            <div class="col-lg-12 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                    <div class="about-content-one border rounded p-4">
-                        <div class="tj-section-heading">
-                            <span class="sub-title active-shape">Proper Use</span>
-                            <p class="desc">In handling hazardous materials, employees should only use them for their intended purposes.
-                                Avoid using substances for tasks they weren't designed for, ensuring safety and compliance.</p>
-                        </div>  
-                    </div>
-                </div>  
-            </div> -->
     </div>
 </section>
 <section class="tj-blog-standard pt-0 pb-4">
@@ -382,7 +345,6 @@
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
-                {{-- <span class="sub-title active-shape"> test </span> --}}
                 <h5 class="title fs-1">Trailers used for Reefer</h5>
             </div>
         </div>
@@ -549,8 +511,7 @@
             </div>
         </div>
     </div>
-</section> 
-<!--========== Faq Section Start ==============-->
+</section>
 <section class="tj-faq-section tj-faq-page">
     <div class="container">
         <div class="row">
@@ -616,15 +577,12 @@
                                 </div>
                             </div>
                         </div>
-                            
-                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--========== Faq Section End ==============--> 
 @include('partials.blog-slider')
 @endsection
 @section('extraScript') 

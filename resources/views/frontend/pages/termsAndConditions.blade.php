@@ -3,7 +3,6 @@
 @section('meta_description',
 'Explore our shipping services terms & conditions for essential information on shipping policies, and service commitments. Stay informed and secure.')
 @section('content')
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -26,8 +25,6 @@
         </div>
     </div>
 </section>
-<!--========== breadcrumb End ==============-->
-<!--========== Terms & Conditions Start ==============-->
 <section class="tj-service-details">
     <div class="container">
         <div class="row">
@@ -225,5 +222,4 @@
         </div>
     </div>
 </section>
-<!--========== Terms & Conditions end ==============-->
 @endsection

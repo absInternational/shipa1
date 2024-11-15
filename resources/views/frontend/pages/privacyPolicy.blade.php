@@ -3,7 +3,6 @@
 @section('meta_description',
 'Read our privacy policy to learn about our commitment to protecting your personal information and how we handle your data responsibly and securely.')
 @section('content')
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -25,8 +24,6 @@
         </div>
     </div>
 </section>
-<!--========== breadcrumb End ==============-->
-<!--========== Privacy Policy Start ==============-->
 <section class="tj-service-details">
     <div class="container">
         <div class="row">
@@ -222,5 +219,4 @@
         </div>
     </div>
 </section>
-<!--========== Privacy Policy end ==============-->
 @endsection

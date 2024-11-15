@@ -140,7 +140,6 @@
                         <p class="desc-2 text-white">
                             Ship A1 specializes in providing all types of Equipment for Heavy
                             auction transport services tailored to your needs and specifications!
-
                         </p>
                     </div>
                 </div>
@@ -156,8 +155,7 @@
             </div>
             @endif
             <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
-            @include('partials.multi-form-heavy')
-                
+            @include('partials.multi-form-heavy')  
             </div>
         </div>
     </div>
@@ -376,7 +374,6 @@
         </div>
     </div>
 </section>
-{{-- @include('partials.car-cta-section') --}}
 <section class="tj-cta-section icon-animate">
     <div class="cta-inner" data-bg-image="{{ asset('/public/frontend/images/cta/Efficient-trans-Heavy.webp') }}"></div>
     <div class="container">

@@ -138,7 +138,6 @@
         opacity: 0.9;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -535,7 +534,6 @@
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
-                {{-- <span class="sub-title active-shape"> test </span> --}}
                 <h5 class="title fs-1">Trailers used for ATV/UTV</h5>
             </div>
         </div>
@@ -923,33 +921,4 @@
             initializeSearchableDropdown();
         });
     </script>
-    {{-- <script>
-        $(document).ready(function(){
-            $(".carousel-new-1").owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                smartSpeed: 800,
-                animateOut: 'animate__fadeOut',
-                animateIn: 'animate__fadeIn',
-                fluidSpeed: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 1
-                    }
-                }
-            });
-        });
-    </script> --}}
 @endsection

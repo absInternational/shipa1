@@ -125,7 +125,6 @@
         background-color: black;
         color: white;
     }
-
     #signShw1,
     #signShw2,
     #signShw3,
@@ -396,4 +395,3 @@
     });
 </script>
 @endsection
-

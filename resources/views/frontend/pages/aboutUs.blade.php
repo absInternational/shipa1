@@ -22,7 +22,6 @@
         color: white; 
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -45,8 +44,6 @@
         </div>
     </div>
 </section>
-<!--========== breadcrumb End ==============-->
-<!--=========== About Section Start =========-->
 <section class="tj-service-details pt-4 pb-0">
         <div class="container">
         <div class="row">
@@ -93,7 +90,6 @@
                         <p class="desc">
                             We are a licensed Transportation company with high moral values and have attained customer
                             satisfaction through their remarks on esteemed platforms.
-
                         </p>
                     </div>
                     <div class="tj-icon-box">
@@ -121,8 +117,6 @@
                         <p class="desc">
                             No matter which mode of transportation you use, ShipA1 assures its customers, atmost security
                             to their assets.
-
-
                         </p>
                     </div>
                     <div class="tj-icon-box">
@@ -164,8 +158,6 @@
         </div>
     </div>
 </section>
-<!--=========== About Section End =========-->
-<!--=========== Cta Section Start =========-->
 <section class="tj-cta-section icon-animate">
     <div class="cta-inner" data-bg-image="{{ asset('frontend/images/cta/cta-auto-aucation.webp') }}"></div>
     <div class="container">
@@ -196,8 +188,6 @@
         </div>
     </div>
 </section>
-<!--=========== Cta Section End =========-->
-<!--=========== Service Section Start =========-->
 <section class="tj-service-section pt-4">
     <div class="container">
         <div class="row">
@@ -272,10 +262,7 @@
         </div>
     </div>
 </section>
-<!--=========== Service Section End =========-->
-<!--=========== Testimonial Section Start =========-->
 @include('partials.reveiw-detail')
-<!--=========== Testimonial Section End =========-->
 <section class="tj-cta-section-two">
         <div class="tj_cta_image"></div>
         <div class="tj_cta_image1"></div>
@@ -423,7 +410,6 @@
         </div>
     </div> 
 </section>
-<!--========== Chhose Section Start ==============-->
 <section class="tj-choose-us-section-two">
     <div class="container">
         <div class="row">
@@ -510,11 +496,6 @@
         </div>
     </div>
 </section>
-<!--========== Chhose Section End ==============-->
-<!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
-<!--=========== Blog Section End =========-->
-<!--=========== Newsletter Section Start =========-->
 @include('partials.newsletter')
-<!--=========== Newsletter Section End =========-->
 @endsection

@@ -3,13 +3,6 @@
 @section('meta_description', 'Trust our professional motorcycle shipping services for secure and timely delivery. Get your bike transported with care and precision all over the USA.')
 @section('content')
 <style>
-    /* .owl-carousel .item {
-        transition: opacity 0.8s ease-in-out;
-        opacity: 0; 
-    }
-    .owl-carousel .owl-item.active .item {
-        opacity: 1; 
-    } */
     .card-2 {
         display: flex;
         align-items: center;
@@ -173,7 +166,6 @@
         opacity: 0.9;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -536,7 +528,6 @@
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
-                {{-- <span class="sub-title active-shape"> test </span> --}}
                 <h5 class="title fs-1">Advanced Trailers used for Motorcycles</h5>
             </div>
         </div>
@@ -731,35 +722,6 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-{{-- <script>
-    $(document).ready(function(){
-        $(".carousel1").owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 10,
-            nav: false,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true,
-            smartSpeed: 800,
-            animateOut: 'animate__fadeOut',
-            animateIn: 'animate__fadeIn',
-            fluidSpeed: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
-                }
-            }
-        });
-    });
-</script> --}}
 <script>
     $(document).ready(function() {
         function addNewVehicle() {

@@ -1,21 +1,9 @@
 <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
 <input type="hidden" name="car_type" value="1" hidden>
 <div class="row select-bm">
-
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label> Year</label>
-            {{-- <!-- <select class="nice-select vehicle-year" name="year[]"
-                id="year">
-                <option value="" disabled selected>Select Year
-                </option>
-                @php
-                    $currentYear = date('Y');
-                    for ($year = $currentYear; $year >= 1936; $year--) {
-                        echo "<option value='$year'>$year</option>";
-                    }
-                @endphp
-            </select> --> --}}
             <div class="dropdown">
                 <input class="form-control dropdown-toggle year" type="text"
                     name="year[]" id="year" placeholder="Select Year"
@@ -73,14 +61,9 @@
     ><i
         class="fa fa-plus"></i> Add
     Vehicle</a>
-
 <div class="vehicles-container" id="vehicles-container">
 </div>
-
-
-
 <div class="row ">
-
     <div class="col-md-6">
     <div class="form-check">
             <input class="form-check-input" type="checkbox" id="available_at_auction" name="available_at_auction"
@@ -89,7 +72,6 @@
                 at
                 Auction?</label>
         </div>
-
         <div class="input-form div-link" style="display: none;">
             <label class="d-block"> Enter Link:</label>
             <input class="" type="url" id="link" name="link" placeholder="Enter Link"  />
@@ -109,15 +91,11 @@
                 placeholder="Enter Modification Information" />
         </div>
     </div>
-    
 </div>
-
 <div class="input-form mt-3">
     <label class="d-block"> Image:</label>
     <input class="form-control image_input"  name="image[]" type="file" accept="image/*" multiple onchange="previewImages(event)">
     <div class="image-preview-container" id="imagePreviewContainer"></div>
-    <!-- <input class="form-control image_input" type="file" id="image"
-        name="image[]" placeholder="Upload File" /> -->
 </div>
 <script>
     function addOtherVehicle() {
@@ -175,24 +153,16 @@
 
                 </div>
                         `;
-
         $('.vehicles-container').append(newVehicleHtml);
-        // Initialize the searchable dropdown for new elements
         initializeSearchableDropdown();
     }
 </script>
-
-   <!-- year search work -->
-
-   <script>
-    // Initialize Select2 on existing dropdowns (if needed)
+<script>
     initializeSearchableDropdown();
     document.addEventListener('DOMContentLoaded', function() {
         const input = document.querySelector('.year');
         const dropdownMenu = document.querySelector('.year-dropdown');
         const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
-        
-        // Function to filter dropdown items
         function filterDropdown() {
             const searchValue = input.value.toLowerCase();
             dropdownItems.forEach(function(item) {
@@ -204,47 +174,35 @@
                 }
             });
         }
-
-        // Filter dropdown items on input
         input.addEventListener('input', function() {
             filterDropdown();
         });
-
-        // Set input value from dropdown item click
         dropdownMenu.addEventListener('click', function(e) {
             if (e.target.classList.contains('dropdown-item')) {
                 input.value = e.target.textContent;
-                dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
+                dropdownMenu.style.display = 'none';
             }
         });
-
-        // Hide dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
                 dropdownMenu.style.display = 'none';
             }
         });
-
-        // Show dropdown when input is focused
         input.addEventListener('focus', function() {
             dropdownMenu.style.display = 'block';
         });
-
-        // Handle Enter key press to set the input value
         input.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') {
                 const searchValue = input.value;
-                // Check if the entered value exists in the dropdown
                 const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
                 if (item) {
                     input.value = item.textContent;
                 }
-                dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-                e.preventDefault(); // Prevent default form submission behavior if in a form
+                dropdownMenu.style.display = 'none'; 
+                e.preventDefault();
             }
         });
     });
-
     function initializeSearchableDropdown() {
             $('.dropdown-toggle.year').on('input', function() {
                 var input = $(this);
@@ -259,27 +217,20 @@
                     }
                 });
             });
-
             $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
                 var item = $(this);
                 var input = item.closest('.dropdown').find('.dropdown-toggle.year');
                 input.val(item.text());
-                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
+                item.closest('.dropdown-menu').hide();
             });
-
-            // Show dropdown when input is focused
             $('.dropdown-toggle.year').on('focus', function() {
                 $(this).siblings('.dropdown-menu.year-dropdown').show();
             });
 
-            // Hide dropdown when clicking outside
             $(document).on('click', function(e) {
                 if (!$(e.target).closest('.dropdown').length) {
                     $('.dropdown-menu.year-dropdown').hide();
                 }
             });
         }
-    
 </script>
-
-<!-- year search work -->

@@ -568,70 +568,6 @@
         </div>
     </div>
 </section>
-{{-- <section class="tj-about-section pt-4 mt-4">   
-    <div class="container">
-        <div class="row">
-            <h2 class="title sal-animate text-center" data-sal="slide-left" data-sal-duration="800">
-            Auto Transport Hauling Services</h2>
-            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded-5 p-4 mb-0">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">open transport</span>
-                        <p class="desc">
-                            This is the usual method we use while shipping cars. The most affordable choice for car transportation
-                            is an open transport, which makes it perfect for individuals looking for a low-cost option. Due of its
-                            price and effectiveness, this method is very popular even if your car faces exposure to the environment
-                            while in transit.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 sal-animate pt-4 mt-0" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded-5 p-4 mb-0">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Enclosed transport</span>
-                        <p class="desc">
-                            Enclosed transport service is the ideal option for people who want to provide their cars
-                            additional security. Although a little more expensive, guarantees that your vehicle
-                            is completely protected from outside elements including weather, road debris, and other possible
-                            threats.</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded-5 p-4 mb-0">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Expedited Shipping</span>
-                        <p class="desc">
-                            Our expedited shipping service provides the quickest route to delivery for the vehicle when
-                            time is of the importance. This service caters to your urgent shipping needs, whether you're
-                            moving on short notice or just need your vehicle delivered as soon as possible. We give your
-                            shipment top priority in order to guarantee the quickest arrival possible, giving you piece 
-                            of mind throughout your shipment.
-                        </p>
-                    </div> 
-                </div>
-            </div>
-            <div class="col-lg-6 sal-animate pt-4 mt-2" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one border rounded-5 p-4 mb-0">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">Door to Door Transport</span>
-                        <p class="desc">
-                            Under door to door transport delivery, your automobile will be picked right from your door and 
-                            will be delivered to your exact location. This is the most popular method of car shipping because 
-                            it is more convenient for both the auto shipping company and the customer. With door to door
-                             delivery, you do not need to drive your vehicle to a terminal. You also do not need to pay to
-                              have it spend time in a card terminal.
-                        </p>
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
 <section class="tj-testimonial-section">
     <div class="container">
         <div class="row">
@@ -941,234 +877,234 @@
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
-        <script>
-            $(document).ready(function() {
-                function addNewVehicle() {
-                    var newVehicleHtml =
-                        `
-                    <div class="vehicle-info">
-                    <div class="row select-bm">
-                        <!-- Bin icon for deleting vehicle -->
-                        <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
-                        <div class="col-md-4">
-                            <div class="input-form tj-select">
-                                <label>Year</label>
-                                <div class="dropdown">
-                                    <input class="form-control dropdown-toggle year" type="text"
-                                        name="year[]" id="year" placeholder="Select Year"
-                                        data-bs-toggle="dropdown" aria-expanded="false" required>
-                                    <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
-                                        <li><a class="dropdown-item">Select Year</a></li>`;
-                    var currentYear = {{ date('Y') }};
-                    for (var year = currentYear; year >= 1936; year--) {
-                        newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
-                    }
-                    newVehicleHtml += `
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-form tj-select">
-                                <label>Make</label>
-                                <div class="dropdown">
-                                    <input class="form-control dropdown-toggle make" name="make[]" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <ul class="dropdown-menu make-dropdown" aria-labelledby="make">
-                                        <li><a class="dropdown-item" >Select Make</a></li>`;
-                    @foreach ($makes as $make)
-                        newVehicleHtml +=
-                            `<li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>`;
-                    @endforeach
-                    newVehicleHtml += `
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-form tj-select model-div">
-                                <label>Model</label>
-                                <select class="nice-select model" name="model[]" id="model" required>
-                                    <!-- Options will be filled by JavaScript -->
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="condition" class="text-white">Condition</label>
-                                <select class="nice-select" id="condition" name="condition[]">
-                                    <option value="1" selected>Running</option>
-                                    <option value="2">Non Running</option>
-                                </select>
-                            </div>
+<script>
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+            <div class="vehicle-info">
+            <div class="row select-bm">
+                <!-- Bin icon for deleting vehicle -->
+                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
+                <div class="col-md-4">
+                    <div class="input-form tj-select">
+                        <label>Year</label>
+                        <div class="dropdown">
+                            <input class="form-control dropdown-toggle year" type="text"
+                                name="year[]" id="year" placeholder="Select Year"
+                                data-bs-toggle="dropdown" aria-expanded="false" required>
+                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                <li><a class="dropdown-item">Select Year</a></li>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
+            }
+            newVehicleHtml += `
+                            </ul>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-form tj-select">
+                        <label>Make</label>
+                        <div class="dropdown">
+                            <input class="form-control dropdown-toggle make" name="make[]" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
+                            <ul class="dropdown-menu make-dropdown" aria-labelledby="make">
+                                <li><a class="dropdown-item" >Select Make</a></li>`;
+            @foreach ($makes as $make)
+                newVehicleHtml +=
+                    `<li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>`;
+            @endforeach
+            newVehicleHtml += `
+                            </ul>
+                        </div>
                     </div>
-                `;
-                    $('#vehicles-container').append(newVehicleHtml);
-                }
-                $('#addVehicleBtn').click(function() {
-                    addNewVehicle();
-                });
-                $(document).on('click', '.delete-vehicle', function() {
-                    $(this).closest('.vehicle-info').remove();
-                });
-                $(document).on('click', '.make-dropdown .dropdown-item', function() {
-                    var make = $(this).data('value');
-                    $(this).closest('.dropdown').find('.form-control').val(make).end()
-                        .find('.dropdown-menu').removeClass('show');
-                    var vehicleInfo = $(this).closest('.vehicle-info');
-                    var year = vehicleInfo.find('.year').val();
-                    if (year && make) {
-                        getModel(year, make, vehicleInfo);
-                    }
-                });
-                // $(document).on('change', '.year, .make', function() {
-                //     var year = $(this).closest('.vehicle-info').find('.year').val();
-                //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
-                //     alert(makeId);
-                //     var vehicleInfo = $(this).closest('.vehicle-info');
-                //     if (year && makeId) {
-                //         getModel(year, makeId, vehicleInfo);
-                //     }
-                // });
-                $(document).on('click', '.year-dropdown .dropdown-item', function() {
-                    console.log('okokok');
-                    var selectedYear = $(this).data('value');
-                    var vehicleInfo = $(this).closest(
-                        '.vehicle-info');
-                    vehicleInfo.find('.year').val(
-                        selectedYear);
-                });
-                $(document).on('click', '.year, .make', function() {
-                    var year = $(this).closest('.vehicle-info').find('.year').val();
-                    var makeId = $(this).closest('.vehicle-info').find('.make').val();
-                    // alert(makeId);
-                    var vehicleInfo = $(this).closest('.vehicle-info');
-                    if (year && makeId) {
-                        getModel(year, makeId, vehicleInfo);
-                    }
-                });
-                function getModel(year, makeId, vehicleInfo) {
-                    $.ajax({
-                        url: "{{ route('get.models') }}",
-                        method: 'GET',
-                        data: {
-                            year: year,
-                            make: makeId
-                        },
-                        success: function(response) {
-                            var modelDropdown = vehicleInfo.find('.model-dropdown');
-                            var modelInput = vehicleInfo.find('.model-input');
-                            var modelSelect = vehicleInfo.find('.model');
-                            if (modelDropdown.length && modelInput.length) {
-                                modelDropdown.empty();
-                                modelDropdown.append(
-                                    '<li><a class="dropdown-item" data-value="">Select Model</a></li>');
-                                $.each(response, function(index, model) {
-                                    modelDropdown.append(
-                                        '<li><a class="dropdown-item" data-value="' + model +
-                                        '">' + model + '</a></li>');
-                                });
-                                modelInput.on('focus', function() {
-                                    modelSelect.empty(); 
-                                    modelSelect.append(
-                                        '<option value="">Select Model</option>'
-                                    );
-                                    modelDropdown.show();
-                                });
-                                modelInput.on('input', function() {
-                                    var searchTerm = $(this).val().toLowerCase();
-                                    modelDropdown.find('li').each(function() {
-                                        var itemText = $(this).text().toLowerCase();
-                                        if (itemText.indexOf(searchTerm) !== -1 ||
-                                            searchTerm === '') {
-                                            $(this).show();
-                                        } else {
-                                            $(this).hide();
-                                        }
-                                    });
-                                });
-                                modelDropdown.on('click', 'a.dropdown-item', function(e) {
-                                    e.preventDefault(); 
-                                    var selectedText = $(this).text();
-                                    var selectedValue = $(this).data('value');
-                                    modelInput.val(
-                                        selectedText); 
-                                    modelDropdown.hide();
-                                    modelSelect.empty(); 
-                                    modelSelect.append('<option value="' + selectedValue + '">' +
-                                        selectedText + '</option>');
-                                    modelSelect.val(
-                                        selectedValue
-                                    ); 
-                                });
-                                $(document).on('click', function(e) {
-                                    if (!modelInput.is(e.target) && !modelDropdown.is(e.target) &&
-                                        modelDropdown.has(e.target).length === 0) {
-                                        modelDropdown.hide();
-                                    }
-                                });
+                </div>
+                <div class="col-md-4">
+                    <div class="input-form tj-select model-div">
+                        <label>Model</label>
+                        <select class="nice-select model" name="model[]" id="model" required>
+                            <!-- Options will be filled by JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="condition" class="text-white">Condition</label>
+                        <select class="nice-select" id="condition" name="condition[]">
+                            <option value="1" selected>Running</option>
+                            <option value="2">Non Running</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            </div>
+        `;
+            $('#vehicles-container').append(newVehicleHtml);
+        }
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+        $(document).on('click', '.make-dropdown .dropdown-item', function() {
+            var make = $(this).data('value');
+            $(this).closest('.dropdown').find('.form-control').val(make).end()
+                .find('.dropdown-menu').removeClass('show');
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            var year = vehicleInfo.find('.year').val();
+            if (year && make) {
+                getModel(year, make, vehicleInfo);
+            }
+        });
+        // $(document).on('change', '.year, .make', function() {
+        //     var year = $(this).closest('.vehicle-info').find('.year').val();
+        //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
+        //     alert(makeId);
+        //     var vehicleInfo = $(this).closest('.vehicle-info');
+        //     if (year && makeId) {
+        //         getModel(year, makeId, vehicleInfo);
+        //     }
+        // });
+        $(document).on('click', '.year-dropdown .dropdown-item', function() {
+            console.log('okokok');
+            var selectedYear = $(this).data('value');
+            var vehicleInfo = $(this).closest(
+                '.vehicle-info');
+            vehicleInfo.find('.year').val(
+                selectedYear);
+        });
+        $(document).on('click', '.year, .make', function() {
+            var year = $(this).closest('.vehicle-info').find('.year').val();
+            var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            // alert(makeId);
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            if (year && makeId) {
+                getModel(year, makeId, vehicleInfo);
+            }
+        });
+        function getModel(year, makeId, vehicleInfo) {
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelDropdown = vehicleInfo.find('.model-dropdown');
+                    var modelInput = vehicleInfo.find('.model-input');
+                    var modelSelect = vehicleInfo.find('.model');
+                    if (modelDropdown.length && modelInput.length) {
+                        modelDropdown.empty();
+                        modelDropdown.append(
+                            '<li><a class="dropdown-item" data-value="">Select Model</a></li>');
+                        $.each(response, function(index, model) {
+                            modelDropdown.append(
+                                '<li><a class="dropdown-item" data-value="' + model +
+                                '">' + model + '</a></li>');
+                        });
+                        modelInput.on('focus', function() {
+                            modelSelect.empty(); 
+                            modelSelect.append(
+                                '<option value="">Select Model</option>'
+                            );
+                            modelDropdown.show();
+                        });
+                        modelInput.on('input', function() {
+                            var searchTerm = $(this).val().toLowerCase();
+                            modelDropdown.find('li').each(function() {
+                                var itemText = $(this).text().toLowerCase();
+                                if (itemText.indexOf(searchTerm) !== -1 ||
+                                    searchTerm === '') {
+                                    $(this).show();
+                                } else {
+                                    $(this).hide();
+                                }
+                            });
+                        });
+                        modelDropdown.on('click', 'a.dropdown-item', function(e) {
+                            e.preventDefault(); 
+                            var selectedText = $(this).text();
+                            var selectedValue = $(this).data('value');
+                            modelInput.val(
+                                selectedText); 
+                            modelDropdown.hide();
+                            modelSelect.empty(); 
+                            modelSelect.append('<option value="' + selectedValue + '">' +
+                                selectedText + '</option>');
+                            modelSelect.val(
+                                selectedValue
+                            ); 
+                        });
+                        $(document).on('click', function(e) {
+                            if (!modelInput.is(e.target) && !modelDropdown.is(e.target) &&
+                                modelDropdown.has(e.target).length === 0) {
+                                modelDropdown.hide();
                             }
-                            if (modelSelect.length) {
-                                modelSelect.empty(); 
-                                modelSelect.append(
-                                    '<option value="">Select Model</option>'); 
-                                $.each(response, function(index, model) {
-                                    modelSelect.append('<option value="' + model + '">' + model +
-                                        '</option>');
-                                });
-                                modelSelect.on('change', function() {
-                                    var selectedModel = $(this).val();
-                                    modelInput.val(modelSelect.find('option:selected').text());
-                                });
-                            }
-                        },
-                        error: function(xhr) {
-                            console.log(xhr.responseText);
-                        }
-                    });
+                        });
+                    }
+                    if (modelSelect.length) {
+                        modelSelect.empty(); 
+                        modelSelect.append(
+                            '<option value="">Select Model</option>'); 
+                        $.each(response, function(index, model) {
+                            modelSelect.append('<option value="' + model + '">' + model +
+                                '</option>');
+                        });
+                        modelSelect.on('change', function() {
+                            var selectedModel = $(this).val();
+                            modelInput.val(modelSelect.find('option:selected').text());
+                        });
+                    }
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
                 }
-                $(document).on('input', '.dropdown-toggle', function() {
-                    var input = $(this).val().toLowerCase();
-                    $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
-                        var text = $(this).text().toLowerCase();
-                        $(this).toggle(text.indexOf(input) > -1);
-                    });
-                });
             });
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const counter = document.getElementById('counter-value');
-                const target = +counter.getAttribute('data-target');
-                let count = 0;
-                const increment = target / 50; 
-                const updateCounter = () => {
-                    if (count < target) {
-                        count = Math.ceil(count + increment);
-                        counter.textContent = count;
-                        setTimeout(updateCounter, 50);
-                    } else {
-                        counter.textContent = target;
-                    }
-                };
-                updateCounter();
+        }
+        $(document).on('input', '.dropdown-toggle', function() {
+            var input = $(this).val().toLowerCase();
+            $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
+                var text = $(this).text().toLowerCase();
+                $(this).toggle(text.indexOf(input) > -1);
             });
-            document.addEventListener("DOMContentLoaded", function () {
-                const counter = document.getElementById('counter-value-2');
-                const target = +counter.getAttribute('data-target');
-                let count = 0;
-                const increment = target / 50; 
-                const updateCounter = () => {
-                    if (count < target) {
-                        count = Math.ceil(count + increment);
-                        counter.textContent = count;
-                        setTimeout(updateCounter, 50); 
-                    } else {
-                        counter.textContent = target;
-                    }
-                };
-                updateCounter();
-            });
-        </script>
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const counter = document.getElementById('counter-value');
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 50; 
+        const updateCounter = () => {
+            if (count < target) {
+                count = Math.ceil(count + increment);
+                counter.textContent = count;
+                setTimeout(updateCounter, 50);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        updateCounter();
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const counter = document.getElementById('counter-value-2');
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 50; 
+        const updateCounter = () => {
+            if (count < target) {
+                count = Math.ceil(count + increment);
+                counter.textContent = count;
+                setTimeout(updateCounter, 50); 
+            } else {
+                counter.textContent = target;
+            }
+        };
+        updateCounter();
+    });
+</script>
 @endsection

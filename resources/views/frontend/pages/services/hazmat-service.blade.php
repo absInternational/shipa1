@@ -148,7 +148,6 @@
         opacity: 0.9;
     }
 </style>
-<!--========== breadcrumb Start ==============-->
 <section class="breadcrumb-wrapper" data-bg-image="{{ asset('frontend/images/banner/all-cover-banner.webp') }}">
     <div class="container">
         <div class="row">
@@ -408,7 +407,6 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page">
     <div class="container">
         <div class="row">
@@ -479,7 +477,6 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section End ==============-->
 <section class="why-choose-us-slider">
     <div class="container">
         <div class="tj-section-heading text-center">

@@ -33,7 +33,6 @@
         color: #8FC445;
     }
 </Style>
-<!--========== blog details Start ==============-->
 <section class="tj-choose-us-section-service-roro">
     <div class="container mt-4">
         <div class="row mt-4">
@@ -61,7 +60,6 @@
             @endif
             <div class="col-lg-6 mt-0" data-sal="slide-down" data-sal-duration="800">
                 @include('partials.multi-form')
-
             </div>
         </div>
     </div>
@@ -389,9 +387,7 @@
         </div>
     </div>
 </section>
-<!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
-<!--=========== Blog Section End =========-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

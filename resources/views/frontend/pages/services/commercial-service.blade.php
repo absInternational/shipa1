@@ -116,7 +116,6 @@
         opacity: 0.9;
     }
 </Style>
-<!--========== blog details Start ==============-->
 <section class="tj-choose-us-section-service-commercial">
     <div class="container mt-4">
         <div class="row mt-4">
@@ -283,7 +282,6 @@
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
-                {{-- <span class="sub-title active-shape"> test </span> --}}
                 <h5 class="title fs-1">Advanced Trailers for Commercial Trucks</h5>
             </div>
         </div>

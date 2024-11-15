@@ -1,31 +1,6 @@
 <input type="hidden" name="vehicle_opt" value="heavy" hidden>
 <input type="hidden" name="car_type" value="2" hidden>
 <input type="hidden" name="heavy_type" value="boat" hidden>
-{{-- <div class="input-form">
-    <label for="category">Select Boat Type</label>
-    <select class="" id="category" name="category" style="display: none;" required>
-        <option value="" disabled="" selected="">Select</option>
-        <option value="Power Boat">Power Boat</option>
-        <option value="Sail Boat">Sail Boat</option>
-        <option value="Personal Watercraft">Personal Watercraft</option>
-        <option value="Boat Parts">Boat Parts</option>
-        <option value="Motor Boat">Motor Boat</option>
-        <option value="Others">Others</option>
-    </select>
-    <div class="nice-select" tabindex="0"><span class="current">Select</span>
-        <ul class="list">
-            <li data-value="" class="option selected disabled">Select</li>
-            <li data-value="Power Boat" class="option">Power Boat</li>
-            <li data-value="Sail Boat" class="option">Sail Boat</li>
-            <li data-value="Personal Watercraft" class="option">Personal Watercraft</li>
-            <li data-value="Boat Parts" class="option">Boat Parts</li>
-            <li data-value="Motor Boat" class="option">Motor Boat</li>
-            <li data-value="Others" class="option">Others</li>
-        </ul>
-    </div>
-    <input type="text" class="form-control" id="otherCategoryInput" name="category" disabled=""
-        style="display: none;" placeholder="Specify Category">
-</div> --}}
 <div class="row">
     <div class="col-md-12">
         <div class="input-form">
@@ -39,9 +14,6 @@
                 <option value="Motor Boat">Motor Boat</option>
                 <option value="Others">Others</option>
             </select>
-            {{-- <div class="error-message" id="category-error" style="color: red; display: none;">
-                Please select a category.
-            </div> --}}
             <input type="text" class="form-control" id="otherCategoryInput" name="other_category" disabled
                 style="display: none;" placeholder="Specify Category">
         </div>
@@ -51,16 +23,6 @@
     <div class="col-md-4">
         <div class="input-form tj-select">
             <label> Year</label>
-            {{-- <!-- <select class="nice-select vehicle-year" name="year[]" id="year" required>
-                <option value="" disabled selected>Select Year
-                </option>
-                @php
-                $currentYear = date('Y');
-                for ($year = $currentYear; $year >= 1936; $year--) {
-                echo "<option value='$year'>$year</option>";
-                }
-                @endphp
-            </select> --> --}}
             <div class="dropdown">
                 <input class="form-control dropdown-toggle year" type="text"
                     name="year[]" id="year" placeholder="Select Year"
@@ -87,12 +49,9 @@
         <div class="input-form tj-select vehicle-model-div">
             <label>Model</label>
             <input type="text" id="model" name="model[]" placeholder="Enter Model" required/>
-            {{-- <label class="error-message" >This field is
-                required.</label> --}}
         </div>
     </div>
 </div>
-
 <div class="row mb-3">
     <div class="col-md-4">
         <label class="lab-cos">Length</label>
@@ -127,28 +86,6 @@
             <span class="separators">(In.)</span>
         </div>
     </div>
-    {{-- <div class="col-md-4">
-        <label class="lab-cos">Width</label>
-        <div class="input-container">
-            <input type="number" id="feet-input1" class="input-field" placeholder="" name="width_ft[]"
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input1" class="input-field" placeholder="" name="width_in[]"
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div> --}}
-    {{-- <div class="col-md-4">
-        <label class="lab-cos">Height</label>
-        <div class="input-container">
-            <input type="number" id="feet-input2" class="input-field" placeholder="" name="height_ft[]"
-                min="0" maxlength="3" oninput="limitDigits(this, 3)">
-            <span class="separator">(Ft.)</span>
-            <input type="number" id="inches-input2" class="input-field" placeholder="" name="height_in[]"
-                min="0" max="11" maxlength="2" oninput="limitDigits(this, 2)">
-            <span class="separators">(In.)</span>
-        </div>
-    </div> --}}
 </div>
 <div class="row">
     <div class="col-md-4">
@@ -160,15 +97,6 @@
 
         </div>
     </div>
-    {{-- <div class="col-md-4">
-        <label class="lab-cos">Weight</label>
-        <div class="input-container1">
-            <input type="" id="feet-input" class="input-field-1" name="weight[]" placeholder=""
-                min="0" maxlength="6" oninput="limitDigits(this, 6)">
-            <span class="separators-w">(Lbs.)</span>
-
-        </div>
-    </div> --}}
 </div>
 <div class="row">
     <div class="col-md-6">
@@ -182,10 +110,6 @@
                     <option value="HOT SHOT (HS)">HOT SHOT (HS)</option>
                     <option value="LANDOLL (LD)">LANDOLL (LD)</option>
                 </select>
-            {{-- <select class="form-control" id="trailer_type" name="trailer_type">
-                <option value="Open" selected>Open</option>
-                <option value="Enclosed">Enclosed</option>
-            </select> --}}
         </div>
     </div>
     <div class="col-md-6">
@@ -199,16 +123,6 @@
     </div>
 </div>
 <div class="row mt-3">
-    {{-- <div class="col-md-4">
-        <div class="form-group">
-            <label for="load_type" class="text-white">Load Type</label>
-            <select class="" id="load_type" name="load_type">
-                <option value="" disabled selected>Select</option>
-                <option value="LTL (LESS THEN TRUCK LOAD)">LTL (LESS THEN TRUCK LOAD)</option>
-                <option value="FTL (FULL TRUCK LOAD)">FTL (FULL TRUCK LOAD)</option>
-            </select>
-        </div>
-    </div> --}}
     <div class="col-md-6">
         <div class="form-group">
             <label for="load_method" class="text-white">Load Method</label>
@@ -238,7 +152,6 @@
 Equipment</a>
 <div class="vehicles-container" id="vehicles-container">
 </div>
-
 <div class="row">
     <div class="col-md-6">
         <div class="form-check">
@@ -259,7 +172,6 @@ Equipment</a>
                 value="1" />
             <label class="form-check-label ms-4 text-white" for="modification"> Modified?</label>
         </div>
-
         <div class="input-form div-modify_info" style="display: none;">
             <label class="d-block"> Modification Information:</label>
             <input class="" type="text" id="c" name="modify_info"
@@ -277,66 +189,10 @@ Equipment</a>
     <label class="d-block text-white"> Image:</label>
     <input class="form-control image_input" type="file" accept="image/*"  name="image[]" multiple onchange="previewImages(event)">
         <div class="image-preview-container" id="imagePreviewContainer"></div>
-    <!-- <input class="form-control image_input" type="file" id="image" name="image[]" placeholder="Upload File" /> -->
 </div>
-
-{{--<script>
-    function limitDigits(element, maxDigits) {
-        if (element.value.length > maxDigits) {
-            element.value = element.value.slice(0, maxDigits);
-        }
-    }
-
-    $(document).ready(function() {
-        $('#inches-input').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input1').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input1, #inches-input1').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-
-    $(document).ready(function() {
-        $('#inches-input2').on('input', function() {
-            if (this.value > 11) {
-                this.value = 11;
-            } else if (this.value < 0) {
-                this.value = 0;
-            }
-        });
-
-        // Optionally, you can also prevent the user from typing non-numeric characters.
-        $('#feet-input, #inches-input2').on('input', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    });
-</script>--}}
 <script>
     $('#category').on('change', function () {
-        $(this).closest('.input-form').find('.error-message').hide(); // Hide the error message on change
-
-        // Show input field if "Others" is selected
+        $(this).closest('.input-form').find('.error-message').hide();
         if ($(this).val() === 'Others') {
             $('#otherCategoryInput').show().prop('disabled', false);
         } else {
@@ -475,103 +331,85 @@ Equipment</a>
         initializeSearchableDropdown();
     }
 </script>
-
-<!-- year search work -->
-    <script>
-        // Initialize Select2 on existing dropdowns (if needed)
-        initializeSearchableDropdown();
-        document.addEventListener('DOMContentLoaded', function() {
-            const input = document.querySelector('.year');
-            const dropdownMenu = document.querySelector('.year-dropdown');
-            const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
-            
-            // Function to filter dropdown items
-            function filterDropdown() {
-                const searchValue = input.value.toLowerCase();
-                dropdownItems.forEach(function(item) {
-                    const text = item.textContent.toLowerCase();
-                    if (text.includes(searchValue) || searchValue === '') {
-                        item.style.display = '';
+<script>
+    initializeSearchableDropdown();
+    document.addEventListener('DOMContentLoaded', function() {
+        const input = document.querySelector('.year');
+        const dropdownMenu = document.querySelector('.year-dropdown');
+        const dropdownItems = dropdownMenu.querySelectorAll('.dropdown-item');
+        function filterDropdown() {
+            const searchValue = input.value.toLowerCase();
+            dropdownItems.forEach(function(item) {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchValue) || searchValue === '') {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        input.addEventListener('input', function() {
+            filterDropdown();
+        });
+        dropdownMenu.addEventListener('click', function(e) {
+            if (e.target.classList.contains('dropdown-item')) {
+                input.value = e.target.textContent;
+                dropdownMenu.style.display = 'none';
+            }
+        });
+        document.addEventListener('click', function(e) {
+            if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+        input.addEventListener('focus', function() {
+            dropdownMenu.style.display = 'block';
+        });
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const searchValue = input.value;
+                const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
+                if (item) {
+                    input.value = item.textContent;
+                }
+                dropdownMenu.style.display = 'none';
+                e.preventDefault();
+            }
+        });
+    });
+    function initializeSearchableDropdown() {
+            $('.dropdown-toggle.year').on('input', function() {
+                var input = $(this);
+                var filter = input.val().toLowerCase();
+                var dropdown = input.siblings('.dropdown-menu.year-dropdown');
+                dropdown.find('.dropdown-item').each(function() {
+                    var text = $(this).text().toLowerCase();
+                    if (text.includes(filter) || filter === '') {
+                        $(this).show();
                     } else {
-                        item.style.display = 'none';
+                        $(this).hide();
                     }
                 });
-            }
-
-            // Filter dropdown items on input
-            input.addEventListener('input', function() {
-                filterDropdown();
             });
 
-            // Set input value from dropdown item click
-            dropdownMenu.addEventListener('click', function(e) {
-                if (e.target.classList.contains('dropdown-item')) {
-                    input.value = e.target.textContent;
-                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-                }
-            });
-
-            // Hide dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!input.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                    dropdownMenu.style.display = 'none';
-                }
+            $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
+                var item = $(this);
+                var input = item.closest('.dropdown').find('.dropdown-toggle.year');
+                input.val(item.text());
+                item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
             });
 
             // Show dropdown when input is focused
-            input.addEventListener('focus', function() {
-                dropdownMenu.style.display = 'block';
+            $('.dropdown-toggle.year').on('focus', function() {
+                $(this).siblings('.dropdown-menu.year-dropdown').show();
             });
 
-            // Handle Enter key press to set the input value
-            input.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter') {
-                    const searchValue = input.value;
-                    // Check if the entered value exists in the dropdown
-                    const item = Array.from(dropdownItems).find(item => item.textContent === searchValue);
-                    if (item) {
-                        input.value = item.textContent;
-                    }
-                    dropdownMenu.style.display = 'none'; // Hide the dropdown after selection
-                    e.preventDefault(); // Prevent default form submission behavior if in a form
+            // Hide dropdown when clicking outside
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.dropdown').length) {
+                    $('.dropdown-menu.year-dropdown').hide();
                 }
             });
-        });
-
-        function initializeSearchableDropdown() {
-                $('.dropdown-toggle.year').on('input', function() {
-                    var input = $(this);
-                    var filter = input.val().toLowerCase();
-                    var dropdown = input.siblings('.dropdown-menu.year-dropdown');
-                    dropdown.find('.dropdown-item').each(function() {
-                        var text = $(this).text().toLowerCase();
-                        if (text.includes(filter) || filter === '') {
-                            $(this).show();
-                        } else {
-                            $(this).hide();
-                        }
-                    });
-                });
-
-                $('.dropdown-menu.year-dropdown').on('click', '.dropdown-item', function() {
-                    var item = $(this);
-                    var input = item.closest('.dropdown').find('.dropdown-toggle.year');
-                    input.val(item.text());
-                    item.closest('.dropdown-menu').hide(); // Hide the dropdown after selection
-                });
-
-                // Show dropdown when input is focused
-                $('.dropdown-toggle.year').on('focus', function() {
-                    $(this).siblings('.dropdown-menu.year-dropdown').show();
-                });
-
-                // Hide dropdown when clicking outside
-                $(document).on('click', function(e) {
-                    if (!$(e.target).closest('.dropdown').length) {
-                        $('.dropdown-menu.year-dropdown').hide();
-                    }
-                });
-            }
-        
-    </script>
-<!-- year search work -->
+        }
+    
+</script>

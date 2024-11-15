@@ -116,7 +116,6 @@
         opacity: 0.9;
     }
 </Style>
-<!--========== blog details Start ==============-->
 <section class="tj-choose-us-section-service-heavy">
     <div class="container mt-4">
         <div class="row mt-4">
@@ -297,7 +296,6 @@
     <div class="container">
         <div class="row">
             <div class="tj-section-heading text-center">
-                {{-- <span class="sub-title active-shape"> test </span> --}}
                 <h5 class="title fs-1">Trailers used for Heavy Equipment</h5>
             </div>
         </div>
@@ -450,7 +448,6 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section Start ==============-->
 <section class="tj-faq-section tj-faq-page pt-5">
     <div class="container">
         <div class="row">
@@ -606,8 +603,6 @@
         </div>
     </div>
 </section>
-<!--========== Faq Section End ==============-->
-<!--=========== Blog Section Start =========-->
 @include('partials.blog-slider')
 <script>
     function playVideo() {
@@ -615,7 +610,7 @@
         document.querySelector('.video-iframe').style.display = 'block';
         var iframe = document.getElementById('videoFrame');
         var videoSrc = iframe.src;
-        iframe.src = videoSrc + "&autoplay=1"; // Autoplay the video
+        iframe.src = videoSrc + "&autoplay=1";
     }
 </script>
 @endsection

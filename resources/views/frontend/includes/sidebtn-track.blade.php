@@ -51,7 +51,6 @@
 </style>
 <div class="Rightbutton">
     <div class="clickbutton">
-        {{-- <div class="crossplus" onclick="window.location.href='{{ route('order.tracking') }}';">Track Order</div> --}}
         <div class="crossplus">Track Order</div>
     </div>
     <div class="banner-form">
@@ -81,52 +80,6 @@
         </div>
     </div>
 </div>
-{{-- <script>
-    $(document).ready(function() {
-        $('#submitButton').click(function() {
-            var formData = $('#orderTrackingForm').serialize();
-            $.ajax({
-                type: 'POST',
-                url: '{{ route('track.order') }}',
-                data: formData,
-                success: function(response) {
-                    if (response['status_code'] == 400) {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: response.message
-                        });
-                        $('#orderTrackingHtml').html('');
-                    } else {
-                        $('#orderTrackingHtml').html(response);
-                        $('#trackingResultModal').modal('show'); // Show the modal with the response content
-                    }
-                },
-                error: function(xhr, status, error) {
-                    var response = xhr.responseJSON;
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: response.message
-                    });
-                }
-            });
-        });
-        $(window).keydown(function(event) {
-            if (event.keyCode == 13) {
-                event.preventDefault();
-                return false;
-            }
-        });
-        $(".clickbutton").click(function() {
-            $('.Rightbutton').toggleClass("active");
-        });
-        $('.floating_strip .rotatekaro a').on('click', function(e) {
-            $('.floating_form').toggleClass("open");
-        });
-    });
-</script> --}}
-{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
 <script>
     $(document).ready(function() {
         $('#submitButton').click(function() {
@@ -174,4 +127,4 @@
             $('.floating_form').toggleClass("open");
         });
     });
-</script> 
+</script>

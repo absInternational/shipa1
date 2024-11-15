@@ -266,7 +266,6 @@
             </div>
         </div>
     </section>
-    {{-- @include('partials.reveiw-site') --}}
     @include('partials.reveiw-small-detail')
     <section class="tj-service-details pt-4 pb-0">
         <div class="container">
@@ -309,7 +308,6 @@
             </div>
         </div>
     </section>
-    <!--=========== About Section Start =========-->
     <section class="tj-about-section pt-4">
         <div class="container">
             <div class="row">
@@ -409,8 +407,6 @@
             </div>
         </div>
     </section>
-    <!--=========== About Section End =========-->
-    <!--=========== Cta Section Start =========-->
     <section class="tj-cta-section icon-animate">
         <div class="cta-inner" data-bg-image="{{ asset('/public/frontend/images/cta/Efficient-trans-Heavy.webp') }}"></div>
         <div class="container">
@@ -441,8 +437,6 @@
             </div>
         </div>
     </section>
-    <!--=========== Cta Section End =========-->
-    <!--=========== Team Section Start =========-->
     <section class="tj-team-section">
         <div class="container">
             <div class="row">
@@ -455,8 +449,6 @@
             </div>
         </div>
     </section>
-    <!--=========== Team Section End =========-->
-    <!--=========== Project Section Start =========-->
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
             <div class="tj-project-item">
@@ -533,7 +525,6 @@
             </div>
         </div>
     </section>
-    <!--=========== Project Section End =========-->
     <section class="tj-video-section">
         <div class="container-flude">
             <div class="row justify-content-center">
@@ -558,7 +549,6 @@
         </div>
     </section>
     @include('partials.transport-by-state')
-    <!--========== Faq Section Start ==============-->
     <section class="tj-faq-section tj-faq-page">
         <div class="container">
             <div class="row">
@@ -680,10 +670,7 @@
             </div>
         </div>
     </section>
-    <!--========== Faq Section End ==============-->
-    <!--=========== Blog Section Start =========-->
     @include('partials.blog-slider')
-    <!--=========== Blog Section End =========-->
 @endsection
 @section('extraScript')
     <script>
