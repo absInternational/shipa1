@@ -56,7 +56,7 @@
                         <div class="col-lg-12">
                             <h4 class="text-white text-center mb-3">Follow Us on Social Media</h4>
                             <div class="social-icons">
-                                <a href="https://www.facebook.com/ShipA1/"> <i
+                                <a href="https://www.facebook.com/shipa1autotransport"> <i
                                         class="fa-brands fa-facebook-f text-white fa-2x"></i></a>
     
                                 <a href="https://www.instagram.com/shipa1_transport/"> <i
@@ -64,7 +64,7 @@
     
                                 <a href="https://www.linkedin.com/in/shipa1-transport/"> <i
                                         class="fa-brands fa-linkedin-in text-white fa-2x"></i></a>
-                                <a href="https://www.youtube.com/@shipA1392"> <i
+                                <a href="https://www.youtube.com/@shipA1autotransport/"> <i
                                         class="fa-brands fa-youtube text-white fa-2x"></i></a>
                                 <a href="https://wa.me/+14107184031"> <i
                                         class="fa-brands fa-whatsapp text-white fa-2x"></i></a>
