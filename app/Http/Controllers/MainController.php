@@ -25,7 +25,7 @@ class MainController extends Controller
             // Check if the API request was successful
             if (!$response->successful()) {
                 Log::error('API Request Failed', ['status' => $response->status(), 'body' => $response->body()]);
-                return response()->json(['status_code' => $response->status(), 'message' => 'API request failed'], 500);
+                return response()->json(['status_code' => $response->status(), 'message' => 'Request failed'], 500);
             }
     
             $responseData = $response->json();
