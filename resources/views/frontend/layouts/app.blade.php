@@ -10,8 +10,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ShipA1Transport">
     <meta name="twitter:title" content="ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA">
-    <meta name="twitter:description"
-        content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
+    <meta name="twitter:description" content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
     <!-- improved load performance -->
     <link rel="preload" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" as="image" type="image/png" />
@@ -48,7 +47,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- improved load performance -->
-    <script async type="application/ld+json">
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
@@ -58,129 +57,34 @@
             "url": "https://www.shipa1.com/",
             "telephone": "(844) 474-4721",
             "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "201 International Cir STE 230",
-            "addressLocality": "Hunt Valley", 
-            "addressRegion": "MD",
-            "postalCode": "21030",
-            "addressCountry": "US"
+                "@type": "PostalAddress",
+                "streetAddress": "201 International Cir STE 230",
+                "addressLocality": "Hunt Valley",
+                "addressRegion": "MD",
+                "postalCode": "21030",
+                "addressCountry": "US"
             },
             "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 39.4960629,
-            "longitude": -76.66032469999999
+                "@type": "GeoCoordinates",
+                "latitude": 39.4960629,
+                "longitude": -76.6603247
             },
             "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-            ],
-            "opens": "08:00",
-            "closes": "07:00"
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "08:00",
+                "closes": "19:00"
             },
             "sameAs": [
-            "https://www.facebook.com/shipa1autotransport",
-            "https://www.instagram.com/shipa1_transport",
-            "https://www.youtube.com/@shipA1autotransport",
-            "https://www.linkedin.com/in/shipa1-transport",
-            "https://www.shipa1.com/"
-            ] 
+                "https://www.facebook.com/shipa1autotransport",
+                "https://www.instagram.com/shipa1_transport",
+                "https://www.youtube.com/@shipA1autotransport",
+                "https://www.linkedin.com/in/shipa1-transport",
+                "https://www.shipa1.com/"
+            ]
         }
-    </script>
+    </script>        
 </head>
-<style>
-    .error-field {
-    border: 2px solid red!important;
-    }
-    .dropdown {
-        position: relative;
-        width: 100%;
-    }
-    .dropdown-toggle {
-        width: 100%;
-        padding: 0.375rem 0.75rem;
-        font-size: 1rem; 
-        line-height: 1.5;
-        border: 1px solid #ced4da;
-        border-radius: 0.25rem; 
-    }
-    .dropdown-menu.year-dropdown {
-        width: 100%; 
-        max-height: 200px;
-        overflow-y: auto;
-        padding: 0; 
-        margin: 0;
-        border: 1px solid #ced4da;
-        border-radius: 0.25rem;
-        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
-    }
-    .dropdown-item {
-        padding: 0.375rem 0.75rem; 
-        font-size: 1rem;
-        color: #212529;
-        text-decoration: none;
-    }
-    .dropdown-item:hover {
-        background-color: #f8f9fa; 
-        color: #16181b;
-    }
-    @media (max-width: 576px) {
-        .dropdown-menu.year-dropdown {
-            position: static;
-        }
-        .dropdown-toggle {
-            margin-bottom: 10px; 
-        }
-    }
-    .dropdown-menu {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        max-height: 300px;
-        overflow-y: auto;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-        width: auto;
-    }
-    .dropdown-item {
-        padding: 10px 15px;
-        font-size: 14px;
-        color: #333;
-        text-decoration: none;
-        display: block;
-        border-bottom: 1px solid #eee;
-    }
-    .dropdown-item:hover {
-        background-color: #f1f1f1;
-    }
-    @media (max-width: 768px) {
-        .dropdown-menu {
-            width: 100%;
-            position: relative;
-            max-height: 400px;
-        }
-        .dropdown-item {
-            padding: 12px 20px;
-            font-size: 16px;
-            text-align: center;
-        }
-    }
-    @media (max-width: 480px) {
-        .dropdown-item {
-            font-size: 18px;
-            padding: 15px 20px;
-        }
-    }
-</style>
 <body class="fade-in">
     <div id="tj-overlay-bg2" class="tj-overlay-canvas"></div>
     <div class="tj-offcanvas-area">
