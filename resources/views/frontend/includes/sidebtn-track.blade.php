@@ -63,9 +63,7 @@
                 <input type="text" class="form-control" name="order_num" id="order_num" placeholder="Enter Order Number" />
             </div>
             <div class="tj-theme-button"> 
-                <button class="tj-transparent-btn" id="submitButton" type="button">
-                    Track Order <i class="flaticon-right-1"></i>
-                </button>
+                <button class="tj-transparent-btn" type="button" id="submitButton">Track Order<i class="flaticon-right-1"></i></button>
             </div>
         </form>
     </div>
@@ -83,13 +81,23 @@
 <script>
     $(document).ready(function() {
         $('#submitButton').click(function() {
+            Swal.fire({
+                icon: 'info',
+                title: 'Processing...',
+                text: 'Please wait while we process your Order Tracking Request.',
+                showConfirmButton: false,
+                willOpen: () => {
+                    Swal.showLoading();
+                }
+            });
             var formData = $('#orderTrackingForm').serialize();
             $.ajax({
                 type: 'POST',
                 url: '{{ route('track.order') }}',
                 data: formData,
                 success: function(response) {
-                    if (response['status_code'] == 400) {
+                    Swal.close();
+                    if (response.status_code === 400) {
                         Swal.fire({
                             icon: 'error',
                             title: 'Error',
@@ -101,8 +109,9 @@
                         $('#trackingResultModal').modal('show');
                     }
                 },
-                error: function(xhr, status, error) {
-                    var response = xhr.responseJSON;
+                error: function(xhr) {
+                    Swal.close();
+                    const response = xhr.responseJSON;
                     Swal.fire({
                         icon: 'error',
                         title: 'Error',
@@ -112,18 +121,17 @@
             });
         });
         $(window).keydown(function(event) {
-            if (event.keyCode == 13) {
+            if (event.keyCode === 13) {
                 event.preventDefault();
-                return false;
             }
         });
         $(document).on('click', '.clickbutton', function() {
-            console.log("Click button clicked"); 
+            console.log("Click button clicked");
             $('.Rightbutton').toggleClass("active");
         });
         $(document).on('click', '.floating_strip .rotatekaro a', function(e) {
-            e.preventDefault(); 
-            console.log("Floating strip clicked"); 
+            e.preventDefault();
+            console.log("Floating strip clicked");
             $('.floating_form').toggleClass("open");
         });
     });
