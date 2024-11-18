@@ -12,56 +12,22 @@ use App\Models\ServiceCategory;
 use App\Models\VehicleName;
 use App\Models\ReviewSite;
 use App\Models\NationWideTransport;
-use Illuminate\Support\Facades\Cache;
 
 
 class FrontendController extends Controller
 {
-    // public function index()
-    // {
-    //     $makes = VehicleName::select('make')
-    //         ->where('UserId', 14)
-    //         ->where('status', 0)
-    //         ->groupBy('make')
-    //         ->orderBy('make', 'ASC')
-    //         ->get();
-    //     $blogs = Blog::where('status', 1)->take(3)->get();
-    //     $reviews = Review::get();
-    //     $site_reviews = ReviewSite::get();
-    //     return view('frontend.index', compact('reviews', 'blogs', 'makes', 'site_reviews'));
-    // }
-
     public function index()
     {
-        
-        $makes = Cache::remember('vehicle_makes_user_14', 60, function () {
-            return VehicleName::select('make')
-                ->where('UserId', 14)
-                ->where('status', 0)
-                ->groupBy('make')
-                ->orderBy('make', 'ASC')
-                ->get();
-        });
-
-        $blogs = Cache::remember('recent_blogs', 60, function () {
-            return Blog::where('status', 1)
-                ->orderBy('created_at', 'desc') 
-                ->take(3)
-                ->get(['post_image', 'slug_name', 'post_name', 'type', 'created_at']);
-        });
-
-        // $reviews = Cache::remember('reviews', 60, function () {
-        //     return Review::select('rating', 'description', 'user', 'date', 'created_at', 'profile_name')->get();
-        // });
-
-        $site_reviews = Cache::remember('site_reviews', 60, function () {
-            return ReviewSite::select('rating', 'description', 'user', 'date', 'created_at', 'profile_name')->get();
-        });
-
-        $metaTitle = "Welcome to Our Site - Latest Blogs, Reviews, and Vehicle Makes";
-        $metaDescription = "Explore the latest blogs, user reviews, and vehicle makes on our platform. Stay informed with the best content and reviews.";
-        
-        return view('frontend.index', compact('blogs', 'makes', 'site_reviews', 'metaTitle', 'metaDescription'));
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        $reviews = Review::get();
+        $site_reviews = ReviewSite::get();
+        return view('frontend.index', compact('reviews', 'blogs', 'makes', 'site_reviews'));
     }
 
     // public function blogs()
