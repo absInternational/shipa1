@@ -164,7 +164,6 @@
         <ul class="list-gap">
             <li>
                 <div class="service-item">
-                {{-- <a href="{{ route('vehicleTransportDetail') }}" class="service-link"> --}}
                     <div class="tj-service-icon">
                         <div class="service-icon">
                             <i class="fa-light fa-car-side fa-2xs"></i>
@@ -174,16 +173,13 @@
                         </div>
                     </div>
                     <div class="service-arrow">
-                        <a href="{{ route('vehicleTransportDetail') }}" >
-                            <i class="fa-light fa-arrow-right"></i>
+                        <a href="{{ route('vehicleTransportDetail') }}" aria-label="Learn about our vehicle transportation services" title="Vehicle Transportation Services"><i class="fa-light fa-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
-                    {{-- </a> --}}
                 </div>
             </li>
             <li>
                 <div class="service-item">
-                {{-- <a href="{{ route('heavy-transport-detail') }}" class="service-link"> --}}
                     <div class="tj-service-icon">
                         <div class="service-icon">
                             <i class="fa-light fa-tractor fa-xs"></i>
@@ -193,15 +189,13 @@
                         </div>
                     </div>
                     <div class="service-arrow">
-                        <a href="{{ route('heavy-transport-detail') }}" > <i
-                                class="fa-light fa-arrow-right"></i></a>
+                        <a href="{{ route('heavy-transport-detail') }}" aria-label="Learn more about heavy transportation services" title="Heavy Transportation Services"><i class="fa-light fa-arrow-right" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    {{-- </a> --}}
                 </div>
             </li>
             <li>
                 <div class="service-item">
-                {{-- <a href="{{ route('freighttransport-detail') }}" class="service-link"> --}}
                     <div class="tj-service-icon">
                         <div class="service-icon">
                             <i class="fa-light fa-truck fa-xs"></i>
@@ -211,10 +205,9 @@
                         </div>
                     </div>
                     <div class="service-arrow">
-                        <a href="{{ route('freighttransport-detail') }}" > <i
-                                class="fa-light fa-arrow-right"></i></a>
+                        <a href="{{ route('freighttransport-detail') }}" aria-label="Learn more about freight transportation services" title="Freight Transportation Services"><i class="fa-light fa-arrow-right" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    {{-- </a> --}}
                 </div>
             </li>
         </ul>
