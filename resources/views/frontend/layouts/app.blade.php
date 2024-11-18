@@ -99,13 +99,11 @@
                 </a>
             </div>
         </div>
-        <!-- Canvas Mobile Menu start -->
         <nav class="right_menu_togle mobile-navbar-menu d-lg-none" id="mobile-navbar-menu"></nav>
         <p class="des d-none d-lg-block">
             We take a bottom-line approach to each project. Our clients consistently, enhanced brand loyalty and new
             leads thanks to our work.
         </p>
-        <!-- Canvas Menu end -->
     </div>
     @include('frontend.includes.header')
     @yield('content')
@@ -169,9 +167,27 @@
     <script src="/assets/intl-tel-input/intlTelInput.js"></script>
     <script>
         $(document).ready(function() {
-            $('#newsletter-form').submit(function(event) {
+            var $emailInput = $('#email_newsletter');
+            $('#newsletter-form').on('submit', function(event) {
                 event.preventDefault();
-                var email = $('#email_newsletter').val();
+                var email = $emailInput.val();
+                if (!email || !isValidEmail(email)) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Invalid Email',
+                        text: 'Please enter a valid email address.'
+                    });
+                    return;
+                }
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Processing...',
+                    text: 'Please wait while we process your subscription.',
+                    showConfirmButton: false,
+                    willOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
                 $.ajax({
                     type: 'POST',
                     url: '{{ route('newsletter.subscribe') }}',
@@ -185,21 +201,25 @@
                             title: 'Subscription Successful',
                             text: response.message
                         }).then(function() {
-                            $('#email_newsletter').val('');
+                            $emailInput.val('');
                         });
                     },
-                    error: function(xhr, status, error) {
-                        var response = xhr.responseJSON;
+                    error: function(xhr) {
+                        var response = xhr.responseJSON || { message: 'An error occurred. Please try again later.' };
                         Swal.fire({
                             icon: 'error',
                             title: 'Subscription Failed',
                             text: response.message
                         }).then(function() {
-                            $('#email_newsletter').val('');
+                            $emailInput.val('');
                         });
                     }
                 });
             });
+            function isValidEmail(email) {
+                var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return regex.test(email);
+            }
         });
     </script>
     <script>
@@ -251,45 +271,6 @@
                 this.value = this.value.replace(/[^0-9]/g, '');
             });
         });
-    </script>
-    <script>
-        // const phoneInput = document.querySelector("#phone");
-        // const countryInput = document.querySelector('#country_code');
-        // const iti = window.intlTelInput(phoneInput, {
-        //     separateDialCode: true,
-        //     initialCountry: "auto",
-        //     geoIpLookup: function(callback) {
-        //         var countryCode = "us"; 
-        //         callback(countryCode);
-        //     },
-        //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-        // });
-        //     function updateMask() {
-        //         const countryData = iti.getSelectedCountryData();
-        //         const countryCode = countryData.iso2;
-        //         let maskPattern = '';
-        //         if (countryCode === 'us') {
-        //             maskPattern = '(000) 000-0000';
-        //         } else {
-        //             maskPattern = ''; 
-        //         }
-        //         if (maskPattern) {
-        //             IMask(phoneInput, { mask: maskPattern });
-        //         } else {
-        //             phoneInput.inputmask.remove();
-        //         }
-        //         countryInput.value = countryData.dialCode;
-        //     }
-        //     phoneInput.addEventListener('input', updateMask);
-        //     phoneInput.addEventListener('countrychange', updateMask);
-        //     function validatePhoneNumber() {
-        //         if (!iti.isValidNumber()) {
-        //             return false;
-        //         }
-        //         return true;
-        //     }
-        //     phoneInput.addEventListener('blur', validatePhoneNumber);
-        //     updateMask();
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -372,26 +353,23 @@
     </script>
     <script>
         $(document).ready(function() {
-            $(document).on('change', '#available_at_auction', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-link').show();
-                    $('#link').attr('required', true);
-                } else {
-                    $('.div-link').hide();
-                    $('#link').val('');
-                    $('#link').removeAttr('required');
-                }
-            });
-            $(document).on('change', '#modification', function() {
-                if ($(this).is(':checked')) {
-                    $('.div-modify_info').show();
-                    $('#c').attr('required', true);
-                } else {
-                    $('.div-modify_info').hide();
-                    $('#c').val('');
-                    $('#c').removeAttr('required');
-                }
-            });
+            // Function to toggle visibility and required attribute
+            function toggleVisibilityAndRequired(checkboxSelector, divSelector, inputSelector) {
+                $(document).on('change', checkboxSelector, function() {
+                    if ($(this).is(':checked')) {
+                        $(divSelector).show();
+                        $(inputSelector).attr('required', true);
+                    } else {
+                        $(divSelector).hide();
+                        $(inputSelector).val('');
+                        $(inputSelector).removeAttr('required');
+                    }
+                });
+            }
+
+            // Apply the function to #available_at_auction and #modification
+            toggleVisibilityAndRequired('#available_at_auction', '.div-link', '#link');
+            toggleVisibilityAndRequired('#modification', '.div-modify_info', '#c');
         });
     </script>
     <script>  
@@ -403,159 +381,26 @@
                 $('#otherCategoryInput').hide().prop('disabled', true);
             }
         });
-        // $(document).ready(function() {
-        //     function showError(field, message) {
-        //         $('#' + field).addClass('error-field');
-        //         $('#' + field + '-error').text(message).show();
-        //     }
-        //     function hideError(field) {
-        //         $('#' + field).removeClass('error-field');
-        //         $('#' + field + '-error').hide();
-        //     }
-        //     function isValidFormat(value) {
-        //         var regex = /^[A-Za-z\s]+,[A-Z]{2},\d{5}$/;
-        //         return regex.test(value);
-        //     }
-        //     function validateStep(step) {
-        //         var isValid = true;
-        //         $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]')
-        //             .each(function() {
-        //                 var field = $(this).attr('id');
-        //                 var fieldValue = $(this).val();
-        //                 if ($(this).hasClass('ajax-suggestion-input')) {
-        //                     if (!$(this).data('selected') || $(this).val() === '') {
-        //                         showError(field, 'Please select a valid option from suggestions.');
-        //                         isValid = false;
-        //                     } else {
-        //                         hideError(field);
-        //                     }
-        //                 } else if (field === 'pickup-location' || field === 'delivery-location') {
-        //                     if (!fieldValue) {
-        //                         showError(field, 'This field is required.');
-        //                         isValid = false;
-        //                     } else if (!isValidFormat(fieldValue)) {
-        //                         showError(field, 'Please enter the address in the format: City,State,ZipCode.');
-        //                         isValid = false;
-        //                     } else {
-        //                         hideError(field);
-        //                     }
-        //                 } else {
-        //                     if (!fieldValue) {
-        //                         showError(field, 'This field is required.');
-        //                         isValid = false;
-        //                     } else {
-        //                         hideError(field);
-        //                     }
-        //                 }
-        //             });
-        //         return isValid;
-        //     }
-        //     function fetchSuggestions(inputField, suggestionsList) {
-        //         var inputValue = inputField.val();
-        //         $.ajax({
-        //             url: "{{ route('get.zipcodes') }}",
-        //             method: "POST",
-        //             data: {
-        //                 "_token": "{{ csrf_token() }}",
-        //                 "input": inputValue
-        //             },
-        //             success: function(response) {
-        //             // console.log('responseresponse', response);
-        //                 suggestionsList.empty();
-        //                 inputField.data('selected', false);
-        //                 $.each(response, function(index, suggestion) {
-        //                     var listItem = $("<li>").text(suggestion).click(function() {
-        //                         inputField.val(suggestion);
-        //                         inputField.data('selected', true);
-        //                         suggestionsList.hide();
-        //                         hideError(inputField.attr('id'));
-        //                     });
-        //                     suggestionsList.append(listItem);
-        //                 });
-        //                 suggestionsList.show();
-        //             },
-        //             error: function(xhr, status, error) {
-        //                 console.error("Error:", error);
-        //             }
-        //         });
-        //     }
-        //     $(document).ready(function() {
-        //         $('#pickup-location').on('input', function() {
-        //             var inputField = $(this);
-        //             var suggestionsList = $('.suggestionsPickup');
-        //             inputField.data('selected', false);
-        //             fetchSuggestions(inputField, suggestionsList);
-        //         });
-        //         $('#delivery-location').on('input', function() {
-        //             var inputField = $(this);
-        //             var suggestionsList = $('.suggestionsDelivery');
-        //             inputField.data('selected', false);
-        //             fetchSuggestions(inputField, suggestionsList);
-        //         });
-        //         $(document).on('click', function(event) {
-        //             var pickupInputField = $('#pickup-location');
-        //             var pickupSuggestionsList = $('.suggestionsPickup');
-        //             var deliveryInputField = $('#delivery-location');
-        //             var deliverySuggestionsList = $('.suggestionsDelivery');
-        //             if (!pickupInputField.is(event.target) && 
-        //                 !pickupSuggestionsList.is(event.target) && 
-        //                 pickupSuggestionsList.has(event.target).length === 0) {
-        //                 pickupSuggestionsList.hide();
-        //             }
-        //             if (!deliveryInputField.is(event.target) && 
-        //                 !deliverySuggestionsList.is(event.target) && 
-        //                 deliverySuggestionsList.has(event.target).length === 0) {
-        //                 deliverySuggestionsList.hide();
-        //             }
-        //         });
-        //     });
-        //     $('#step1_next').click(function() {
-        //         if (validateStep('step1')) {
-        //             $('#step1').hide();
-        //             $('#step2').show();
-        //         }
-        //     });
-        //     $('#step2_previous').click(function() {
-        //         $('#step2').hide();
-        //         $('#step1').show();
-        //     });
-        //     $('#step2_next').click(function() {
-        //         if (validateStep('step2')) {
-        //             $('#step2').hide();
-        //             $('#step3').show();
-        //         }
-        //     });
-        //     $('#step3_previous').click(function() {
-        //         $('#step3').hide();
-        //         $('#step2').show();
-        //     });
-        // });
         $(document).ready(function () {
-            let debounceTimer; // For debouncing AJAX requests
-
+            let debounceTimer;
             function showError(field, message) {
                 $('#' + field).addClass('error-field');
                 $('#' + field + '-error').text(message).show();
             }
-
             function hideError(field) {
                 $('#' + field).removeClass('error-field');
                 $('#' + field + '-error').hide();
             }
-
             function isValidFormat(value) {
-                // Improved regex to handle slight format deviations
                 var regex = /^[A-Za-z\s]+,\s*[A-Za-z]{2},\s*\d{5}$/;
                 return regex.test(value);
             }
-
             function validateStep(step) {
                 var isValid = true;
                 $('#' + step + ' input[required], #' + step + ' select[required], #' + step + ' textarea[required]')
                     .each(function () {
                         var field = $(this).attr('id');
                         var fieldValue = $(this).val();
-
                         if ($(this).hasClass('ajax-suggestion-input')) {
                             if (!$(this).data('selected') || $(this).val() === '') {
                                 showError(field, 'Please select a valid option from suggestions.');
@@ -584,16 +429,15 @@
                     });
                 return isValid;
             }
-
             function fetchSuggestions(inputField, suggestionsList) {
-                clearTimeout(debounceTimer); // Clear any previous timer
+                clearTimeout(debounceTimer);
                 debounceTimer = setTimeout(function () {
                     var inputValue = inputField.val();
                     if (inputValue.trim() === "") {
                         suggestionsList.hide();
                         return;
                     }
-                    suggestionsList.empty().append("<li>Loading...</li>"); // Show loading indicator
+                    suggestionsList.empty().append("<li>Loading...</li>");
                     $.ajax({
                         url: "{{ route('get.zipcodes') }}",
                         method: "POST",
@@ -602,9 +446,8 @@
                             "input": inputValue
                         },
                         success: function (response) {
-                            suggestionsList.empty(); // Clear the loading text
+                            suggestionsList.empty();
                             inputField.data('selected', false);
-
                             if (response.length === 0) {
                                 suggestionsList.append(
                                     $("<li>")
@@ -614,8 +457,8 @@
                             } else {
                                 $.each(response, function (index, suggestion) {
                                     $("<li>")
-                                        .attr("role", "option") // Accessibility
-                                        .attr("aria-selected", "false") // Accessibility
+                                        .attr("role", "option")
+                                        .attr("aria-selected", "false")
                                         .text(suggestion)
                                         .click(function () {
                                             inputField.val(suggestion);
@@ -633,49 +476,41 @@
                             console.error("Error:", error);
                         }
                     });
-                }, 300); // Debounce delay of 300ms
+                }, 300);
             }
-
             $('#pickup-location').on('input', function () {
                 var inputField = $(this);
                 var suggestionsList = $('.suggestionsPickup');
                 inputField.data('selected', false);
                 fetchSuggestions(inputField, suggestionsList);
             });
-
             $('#delivery-location').on('input', function () {
                 var inputField = $(this);
                 var suggestionsList = $('.suggestionsDelivery');
                 inputField.data('selected', false);
                 fetchSuggestions(inputField, suggestionsList);
             });
-
             $(document).on('click', function (event) {
-                // Hide suggestions only when clicking outside the input or suggestion list
                 if (!$(event.target).closest(".ajax-suggestion-input, .suggestionsPickup, .suggestionsDelivery").length) {
                     $(".suggestionsPickup, .suggestionsDelivery").hide();
                 }
             });
-
             $('#step1_next').click(function () {
                 if (validateStep('step1')) {
                     $('#step1').hide();
                     $('#step2').show();
                 }
             });
-
             $('#step2_previous').click(function () {
                 $('#step2').hide();
                 $('#step1').show();
             });
-
             $('#step2_next').click(function () {
                 if (validateStep('step2')) {
                     $('#step2').hide();
                     $('#step3').show();
                 }
             });
-
             $('#step3_previous').click(function () {
                 $('#step3').hide();
                 $('#step2').show();
@@ -783,46 +618,22 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const scrollButtons = document.querySelectorAll('.scroll-up-btn');
-            const targetHeading = document.querySelector('.target-top');
-            scrollButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    targetHeading.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+            function setupScrollButtons(buttonClass, targetClass) {
+                const buttons = document.querySelectorAll(buttonClass);
+                const target = document.querySelector(targetClass);
+                buttons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
                     });
                 });
-            });
-            const scrollButtons1 = document.querySelectorAll('.scroll-up-btn-1');
-            const targetHeading1 = document.querySelector('.target-top-1');
-            scrollButtons1.forEach(button => {
-                button.addEventListener('click', function() {
-                    targetHeading1.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                });
-            });
-            const scrollButtons2 = document.querySelectorAll('.scroll-up-btn-2');
-            const targetHeading2 = document.querySelector('.target-top-2');
-            scrollButtons2.forEach(button => {
-                button.addEventListener('click', function() {
-                    targetHeading2.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                });
-            });
-            const scrollButtons3 = document.querySelectorAll('.scroll-up-btn-3');
-            const targetHeading3 = document.querySelector('.target-top-3');
-            scrollButtons3.forEach(button => {
-                button.addEventListener('click', function() {
-                    targetHeading3.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                });
-            });
+            }
+            setupScrollButtons('.scroll-up-btn', '.target-top');
+            setupScrollButtons('.scroll-up-btn-1', '.target-top-1');
+            setupScrollButtons('.scroll-up-btn-2', '.target-top-2');
+            setupScrollButtons('.scroll-up-btn-3', '.target-top-3');
         });
     </script>
     <script>
@@ -962,43 +773,43 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const lazyBackgrounds = document.querySelectorAll(".lazy-background");
-            lazyBackgrounds.forEach(function (lazyBg) {
-            const imageSrc = lazyBg.getAttribute("data-bg-image");     
-            if (imageSrc) {
-                const img = new Image();
-                img.src = imageSrc;
-                img.onload = function () {
-                lazyBg.style.backgroundImage = 'url(' + imageSrc + ')';
-                };
-            }
-            });
+            const loadLazyBackgrounds = () => {
+                document.querySelectorAll(".lazy-background").forEach(lazyBg => {
+                    const imageSrc = lazyBg.dataset.bgImage;
+                    if (imageSrc) {
+                        const img = new Image();
+                        img.src = imageSrc;
+                        img.onload = () => lazyBg.style.backgroundImage = `url(${imageSrc})`;
+                    }
+                });
+            };
+            loadLazyBackgrounds();
         });
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const swiperContainer = document.querySelector('.swiper-new-1');
-            const swiper = new Swiper('.swiper-new-1', {
-                slidesPerView: 1,
-                loop: true,
-                spaceBetween: 10,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                speed: 800,
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true
-                },
-                breakpoints: {
-                    0: { slidesPerView: 1 },
-                    600: { slidesPerView: 1 },
-                    1000: { slidesPerView: 1 },
-                }
-            });
-            swiperContainer.style.opacity = '1';
-            swiperContainer.style.visibility = 'visible';
+            const swiperSelector = '.swiper-new-1';
+            const swiperContainer = document.querySelector(swiperSelector);
+            if (swiperContainer) {
+                const swiper = new Swiper(swiperSelector, {
+                    slidesPerView: 1,
+                    loop: true,
+                    spaceBetween: 10,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    speed: 800,
+                    effect: 'fade',
+                    fadeEffect: { crossFade: true },
+                    breakpoints: {
+                        0: { slidesPerView: 1 },
+                        600: { slidesPerView: 1 },
+                        1000: { slidesPerView: 1 },
+                    }
+                });
+                swiperContainer.style.cssText = 'opacity: 1; visibility: visible;';
+            }
         });
     </script>
 </body>
