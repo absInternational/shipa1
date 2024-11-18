@@ -47,7 +47,7 @@ class FrontendController extends Controller
             return Blog::where('status', 1)
                 ->orderBy('created_at', 'desc') 
                 ->take(3)
-                ->get(['title', 'slug', 'excerpt', 'created_at']);
+                ->get(['post_name', 'slug', 'excerpt', 'created_at']);
         });
 
         $reviews = Cache::remember('reviews', 60, function () {
