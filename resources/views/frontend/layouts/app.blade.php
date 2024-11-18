@@ -13,9 +13,9 @@
     <meta name="twitter:description" content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
     <!-- improved load performance -->
-    <link rel="preload" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" as="image" type="image/png" />
-    <link rel="apple-touch-icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}">
-    <link rel="shortcut icon" href="{{ asset('/public/frontend/images/logo/favicon.png') }}" type="image/x-icon">
+    <link rel="preload" href="{{ asset('/public/frontend/images/logo/favicon.webp') }}" as="image" type="image/png" />
+    <link rel="apple-touch-icon" href="{{ asset('/public/frontend/images/logo/favicon.webp') }}">
+    <link rel="shortcut icon" href="{{ asset('/public/frontend/images/logo/favicon.webp') }}" type="image/x-icon">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script src="https://unpkg.com/imask" async></script>
     <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
