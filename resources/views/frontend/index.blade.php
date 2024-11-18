@@ -226,7 +226,7 @@
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-                <a href="{{ route('vehicleTransportDetail') }}" class="service-link">
+                <a href="{{ route('vehicleTransportDetail') }}" aria-label="Learn more about vehicle transportation services" title="Vehicle Transportation Services" class="service-link">
                     <div class="tj-service-item"
                         data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
                         <div class="icon-box">
@@ -237,7 +237,7 @@
                             <p>Everything you need to know about 100% insured
                                 and secured vehicle transportation.</p>
                             <div class="d-flex justify-content-end">
-                                <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('vehicleTransportDetail') }}" style="background: #8fc445;color: white;">
+                                <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" aria-label="Learn more about vehicle transportation services" title="Vehicle Transportation Services" href="{{ route('vehicleTransportDetail') }}" style="background: #8fc445;color: white;">
                                     Read More<i class="bi bi-chevron-right"></i>
                                 </a>
                             </div>
@@ -246,7 +246,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-                <a href="{{ route('heavy-transport-detail') }}" class="service-link">
+                <a href="{{ route('heavy-transport-detail') }}" aria-label="Learn more about Heavy transportation services" title="Heavy Transportation Services" class="service-link">
                     <div class="tj-service-item"
                         data-bg-image="{{ asset('/public/frontend/images/service/Logistics-Home.webp') }}">
                         <div class="icon-box">
@@ -257,7 +257,7 @@
                             <p>Ship A1 is your trusted partner for safely and
                                 efficiently handling the toughest transportation challenges.</p>
                             <div class="d-flex justify-content-end">
-                                <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('heavy-transport-detail') }}" style="background: #8fc445;color: white;">
+                                <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" aria-label="Learn more about Heavy transportation services" title="Heavy Transportation Services"  href="{{ route('heavy-transport-detail') }}" style="background: #8fc445;color: white;">
                                     Read More<i class="bi bi-chevron-right"></i>
                                 </a>
                             </div>
@@ -266,7 +266,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                <a href="{{ route('freighttransport-detail') }}" class="service-link">
+                <a href="{{ route('freighttransport-detail') }}" aria-label="Learn more about freight transportation services" title="Freight Transportation Services" class="service-link">
                     <div class="tj-service-item"
                         data-bg-image="{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}">
                         <div class="icon-box">
@@ -277,7 +277,7 @@
                             <p>Unlock the door to smooth freight logistic
                                 transportation with Ship A1.</p>
                             <div class="d-flex justify-content-end">
-                                <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" href="{{ route('freighttransport-detail') }}" style="background: #8fc445;color: white;">
+                                <a class="btn btn-outline-secondary btn-sm ms-2 mt-2" aria-label="Learn more about freight transportation services" title="Freight Transportation Services"  href="{{ route('freighttransport-detail') }}" style="background: #8fc445;color: white;">
                                     Read More<i class="bi bi-chevron-right"></i>
                                 </a>
                             </div>
@@ -512,183 +512,181 @@
 <section class="tj-project-section">
     <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.car-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.car-service') }}" aria-label="Learn more about Car Shipping Services" title="Car Shipping Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/9.webp') }}" alt="Car Shipping Service" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.car-service') }}" > <i
-                        class="fa-light fa-arrow-right"></i></a>
+                <a href="{{ route('frontend.pages.services.car-service') }}" aria-label="Learn more about Car Shipping Services" title="Car Shipping Services"><i class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">CAR</span>
-                <h4><a href="{{ route('frontend.pages.services.car-service') }}" 
-                        class="title-link">Car Shipping Service</a></h4>
+                <h4><a href="{{ route('frontend.pages.services.car-service') }}" aria-label="Learn more about Car Shipping Services" title="Car Shipping Services" class="title-link">Car Shipping Service</a></h4>
             </div>
         </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.bike-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.bike-service') }}" aria-label="Learn more about Motorcycle Shipping Services" title="Motorcycle Shipping Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-Bike.webp') }}" alt="Motorcycle Shipping Service" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.bike-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.bike-service') }}" aria-label="Learn more about Motorcycle Shipping Services" title="Motorcycle Shipping Services"> <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Motorcycle</span>
-                <h4><a href="{{ route('frontend.pages.services.bike-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.bike-service') }}"  aria-label="Learn more about Motorcycle Shipping Services" title="Motorcycle Shipping Services"
                         class="title-link">Motorcycle Shipping Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.heavy-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.heavy-service') }}"  aria-label="Learn more about Heavy Transportation Services" title="Heavy Transportation Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-Heavy.webp') }}" alt="Heavy Transportation Services" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.heavy-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.heavy-service') }}"  aria-label="Learn more about Heavy Transportation Services" title="Heavy Transportation Services"> <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">HEAVY EQUIP</span>
-                <h4><a href="{{ route('frontend.pages.services.heavy-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.heavy-service') }}" aria-label="Learn more about Heavy Transportation Services" title="Heavy Transportation Services" 
                         class="title-link">Heavy Transportation Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.roro-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.roro-service') }}" aria-label="Learn more about Roro Shipping Services" title="Roro Shipping Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/RORO-Slider (1)--.webp') }}" alt="Roro Shipping" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.roro-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.roro-service') }}" aria-label="Learn more about Roro Shipping Services" title="Roro Shipping Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">RORO</span>
-                <h4><a href="{{ route('frontend.pages.services.roro-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.roro-service') }}" aria-label="Learn more about Roro Shipping Services" title="Roro Shipping Services" 
                         class="title-link">Roro Shipping International</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.golf-cart-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.golf-cart-service') }}" aria-label="Learn more about Golf Cart Transportation Services" title="Golf Cart Transportation Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-Golf.webp') }}" alt="Golf Cart Transport Service" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.golf-cart-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.golf-cart-service') }}" aria-label="Learn more about Golf Cart Transportation Services" title="Golf Cart Transportation Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Golf Cart</span>
-                <h4><a href="{{ route('frontend.pages.services.golf-cart-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.golf-cart-service') }}" aria-label="Learn more about Golf Cart Transportation Services" title="Golf Cart Transportation Services" 
                         class="title-link">Golf Cart Transportation Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.atv-utv-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.atv-utv-service') }}" aria-label="Learn more about ATV/UTV Transportation Services" title="ATV/UTV Transportation Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-ATV.webp') }}" alt="ATV/UTV Transport Service" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.atv-utv-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.atv-utv-service') }}" aria-label="Learn more about ATV/UTV Transportation Services" title="ATV/UTV Transportation Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">ATV/UTV</span>
-                <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}" aria-label="Learn more about ATV/UTV Transportation Services" title="ATV/UTV Transportation Services" 
                         class="title-link">ATV/UTV Transportation Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.construction-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.construction-service') }}" aria-label="Learn more about Construction Transportation Services" title="Construction Transportation Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-Construction.webp') }}" alt="Construction Transport Service" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.construction-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.construction-service') }}" aria-label="Learn more about Construction Transportation Services" title="Construction Transportation Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">CONSTRUCTION</span>
-                <h4><a href="{{ route('frontend.pages.services.construction-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.construction-service') }}" aria-label="Learn more about Construction Transportation Services" title="Construction Transportation Services" 
                         class="title-link">Construction Transportation Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.farm-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.farm-service') }}" aria-label="Learn more about Farm Transportation Services" title="Farm Transportation Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-Farm.webp') }}" alt="Farm equipment Transport service" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.farm-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.farm-service') }}" aria-label="Learn more about Farm Transportation Services" title="Farm Transportation Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">FARM</span>
-                <h4><a href="{{ route('frontend.pages.services.farm-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.farm-service') }}" aria-label="Learn more about Farm Transportation Services" title="Farm Transportation Services" 
                         class="title-link">Farm Transportation Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.excavator-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.excavator-service') }}" aria-label="Learn more about Excavator Shipping Services" title="Excavator Shipping Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-Excavator.webp') }}" alt="excavator Transport service" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.excavator-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.excavator-service') }}" aria-label="Learn more about Excavator Shipping Services" title="Excavator Shipping Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">EXCAVATOR</span>
-                <h4><a href="{{ route('frontend.pages.services.excavator-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.excavator-service') }}" aria-label="Learn more about Excavator Shipping Services" title="Excavator Shipping Services" 
                         class="title-link">Excavator Shipping Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.commercial-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.commercial-service') }}" aria-label="Learn more about Truck Transportation Services" title="Truck Transportation Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-Commercial.webp') }}" alt="commercial transport service" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.commercial-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.commercial-service') }}" aria-label="Learn more about Truck Transportation Services" title="Truck Transportation Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">TRUCKS</span>
-                <h4><a href="{{ route('frontend.pages.services.commercial-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.commercial-service') }}" aria-label="Learn more about Truck Transportation Services" title="Truck Transportation Services" 
                         class="title-link">Truck Transportation Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.reefer-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.reefer-service') }}" aria-label="Learn more about Reefer Transportation Services" title="Reefer Transportation Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/reefer-truck-1.webp') }}" alt="Reefer Transport Service" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.reefer-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.reefer-service') }}" aria-label="Learn more about Reefer Transportation Services" title="Reefer Transportation Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Reefer</span>
-                <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.reefer-service') }}" aria-label="Learn more about Reefer Transportation Services" title="Reefer Transportation Services" 
                         class="title-link">Reefer Transportation Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.hazmat-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.hazmat-service') }}" aria-label="Learn more about Hazmat Transportation Services" title="Hazmat Transportation Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/7.webp') }}" alt="Hazmat Transportation Services" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.hazmat-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.hazmat-service') }}" aria-label="Learn more about Hazmat Transportation Services" title="Hazmat Transportation Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Hazmat</span>
-                <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" aria-label="Learn more about Hazmat Transportation Services" title="Hazmat Transportation Services" 
                         class="title-link">Hazmat Transportation Service</a></h4>
             </div>
             </a>
         </div>
         <div class="tj-project-item">
-        <a href="{{ route('frontend.pages.services.dryvan-service') }}" class="project-link">
+        <a href="{{ route('frontend.pages.services.dryvan-service') }}" aria-label="Learn more about Dry van Transportation Services" title="Dry van Transportation Services" class="project-link">
              <img loading="lazy" src="{{ asset('/public/frontend/images/project/5.webp') }}" alt="Dry van Transportation Services" />
             <div class="arrow-icon">
-                <a href="{{ route('frontend.pages.services.dryvan-service') }}" > <i
+                <a href="{{ route('frontend.pages.services.dryvan-service') }}" aria-label="Learn more about Dry van Transportation Services" title="Dry van Transportation Services" > <i
                         class="fa-light fa-arrow-right"></i></a>
             </div>
             <div class="tj-project-content">
                 <span class="sub-title">Dry van</span>
-                <h4><a href="{{ route('frontend.pages.services.dryvan-service') }}" 
+                <h4><a href="{{ route('frontend.pages.services.dryvan-service') }}" aria-label="Learn more about Dry van Transportation Services" title="Dry van Transportation Services" 
                         class="title-link">Dry van Transportation Service</a></h4>
             </div>
             </a>
