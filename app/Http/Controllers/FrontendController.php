@@ -47,15 +47,15 @@ class FrontendController extends Controller
             return Blog::where('status', 1)
                 ->orderBy('created_at', 'desc') 
                 ->take(3)
-                ->get(['post_name', 'slug', 'excerpt', 'created_at']);
+                ->get(['post_image', 'slug_name', 'post_name', 'type', 'created_at']);
         });
 
-        $reviews = Cache::remember('reviews', 60, function () {
-            return Review::select('review_text', 'rating', 'created_at')->get();
-        });
+        // $reviews = Cache::remember('reviews', 60, function () {
+        //     return Review::select('rating', 'description', 'user', 'date', 'created_at', 'profile_name')->get();
+        // });
 
         $site_reviews = Cache::remember('site_reviews', 60, function () {
-            return ReviewSite::select('site_name', 'review_count', 'average_rating')->get();
+            return ReviewSite::select('rating', 'description', 'user', 'date', 'created_at', 'profile_name')->get();
         });
 
         $metaTitle = "Welcome to Our Site - Latest Blogs, Reviews, and Vehicle Makes";
