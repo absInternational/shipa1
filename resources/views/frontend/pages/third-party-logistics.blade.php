@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-{{-- @section('title', 'Auctions Car and Auto Transport Services in USA')
-@section('meta_description', 'We are providing the best auctions car and auto transport services in USA, reliable auto and car delivery services to ensure your auctions run smoothly.') --}}
+@section('title', 'Ship A1 Transport - All-in-one Freight Logistics Solution Provider')
+@section('meta_description', 'Select Ship A1 Transport for customized and reliable freight logistics. We offer end-to-end service, real-time tracking, and cost-effective routing to support your business growth.')
 @section('content')
 <style>
     .why-box {
@@ -136,10 +136,9 @@
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">Specialized Service</span>
-                        <h2 class="title">Auctions Auto Transport</h2>
+                        <h2 class="title">Streamline Your Freight Operations</h2>
                         <p class="desc-2 text-white">
-                            Ship A1 specializes in providing all types of vehicles for auto
-                            auction services tailored to your needs and specifications!
+                            Ship A1 Transport provides specialized freight logistics tailored to various industries, emphasizing safety, cost reduction, and real-time tracking to fulfill all business requirements.
                         </p>
                     </div>
                 </div>
