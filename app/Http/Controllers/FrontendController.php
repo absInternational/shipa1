@@ -61,7 +61,7 @@ class FrontendController extends Controller
         $metaTitle = "Welcome to Our Site - Latest Blogs, Reviews, and Vehicle Makes";
         $metaDescription = "Explore the latest blogs, user reviews, and vehicle makes on our platform. Stay informed with the best content and reviews.";
         
-        return view('frontend.index', compact('reviews', 'blogs', 'makes', 'site_reviews', 'metaTitle', 'metaDescription'));
+        return view('frontend.index', compact('blogs', 'makes', 'site_reviews', 'metaTitle', 'metaDescription'));
     }
 
     // public function blogs()
