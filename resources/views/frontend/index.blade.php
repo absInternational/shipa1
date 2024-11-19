@@ -5,7 +5,7 @@
 </div>
 </div>
 <section class=tj-slider-section>
-<div class=slider_shape> <img loading=lazy src="{{ asset('/public/frontend/images/banner/home-underline.webp') }}" fetchpriority=high alt=Image>
+<div class=slider_shape> <img loading=lazy src="{{ asset('/public/frontend/images/banner/home-underline.webp') }}" fetchpriority="high" alt="Image" width="100%">
 </div>
 <div class="swiper sc-slider-1" data-autoplay=5000>
 <div class=swiper-wrapper>
@@ -263,7 +263,7 @@ Our team is loaded with highly experienced professionals of both customer dealin
 <div class=image-box>
 <img class="p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid" src="{{ asset('/public/frontend/images/about/WMUD-Home.webp') }}" fetchpriority=high loading=lazy alt=Image>
 </div>
-<img class="group-1 p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid" src="{{ asset('/public/frontend/images/about/about-3.webp') }}" fetchpriority=high loading=lazy alt=Image>
+<img class="group-1 p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid" src="{{ asset('/public/frontend/images/about/about-3.webp') }}" fetchpriority="high" loading="lazy" alt="Image" width="1200" height="800">
 </div>
 </div>
 </div>
