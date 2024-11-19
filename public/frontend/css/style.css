@@ -1327,7 +1327,7 @@ div .tj-service-icon-box2 ul li .service-item {
   height: 155%;
   top: -30%;
   left: 0;
-  background: url("/public/images/banner/banner-shape.webp") center left
+  background: url("/images/banner/banner-shape.webp") center left
     no-repeat;
   z-index: 2;
 }
@@ -2694,7 +2694,7 @@ div .tj-service-icon-box2 ul li .service-item::before {
   width: 100%;
 }
 .tj-step-section {
-  background-image: url("/public/images/banner/step-1.jpg");
+  background-image: url("/images/banner/step-1.jpg");
   padding-top: 110px;
   padding-bottom: 40px;
   position: relative;
@@ -3147,7 +3147,7 @@ div .tj-service-icon-box2 ul li .service-item::before {
   background-attachment: fixed;
 }
 .tj-choose-us-section-service-atv-utv {
-  background-image: url("/public/img/1-background-image-ATV-Transport.webp");
+  background-image: url("/img/1-background-image-ATV-Transport.webp");
   position: relative;
   background-attachment: fixed;
 }
@@ -3187,19 +3187,19 @@ div .tj-service-icon-box2 ul li .service-item::before {
   background-image: url("../../img/sasacar.webp");
 }
 .tj-choose-us-section-service-commercial-2 {
-  background-image: url("/public/img/1 image for Commercial booh.webp");
+  background-image: url("/img/1 image for Commercial booh.webp");
 }
 .tj-choose-us-section-service-atv-utv-2 {
-  background-image: url("/public/img/ATV-transport-on-semi-truck.webp");
+  background-image: url("/img/ATV-transport-on-semi-truck.webp");
 }
 .tj-choose-us-section-service-commercial-3 {
-  background-image: url("/public/img/1 image for Construction equipment transport.webp");
+  background-image: url("/img/1 image for Construction equipment transport.webp");
 }
 .tj-choose-us-section-service-commercial-4 {
   background-image: url("../../img/BOAT-BANNER.webp");
 }
 .tj-choose-us-section-service-RV-4 {
-  background-image: url("/public/img/1 image for RV Transport.webp");
+  background-image: url("/img/1 image for RV Transport.webp");
 }
 .tj-choose-us-section-service-commercial-5 {
   background-image: url("../../img/1 image for Excavator transport.webp");
@@ -3211,19 +3211,19 @@ div .tj-service-icon-box2 ul li .service-item::before {
   background-image: url("../../img/COMMERCIAL-TRUCK-BANNER.webp");
 }
 .tj-choose-us-section-service-heavy-7 {
-  background-image: url("/public/img/1 image for Heavy Equipment Transport.webp");
+  background-image: url("/img/1 image for Heavy Equipment Transport.webp");
 }
 .tj-choose-us-section-service-roro-8 {
   background-image: url("../../img/roro-banner.webp");
 }
 .tj-choose-us-section-service-farm-8 {
-  background-image: url("/public/img/1B background image dry van.webp");
+  background-image: url("/img/1B background image dry van.webp");
 }
 .tj-choose-us-section-service-farming-8 {
-  background-image: url("/public/img/1 image for Farm transport.webp");
+  background-image: url("/img/1 image for Farm transport.webp");
 }
 .tj-choose-us-section-service-commercial {
-  background-image: url("/public/img/1 banner for commercial-truck-transport.webp");
+  background-image: url("/img/1 banner for commercial-truck-transport.webp");
   position: relative;
   background-attachment: fixed;
 }
@@ -3258,7 +3258,7 @@ div .tj-service-icon-box2 ul li .service-item::before {
   background-attachment: fixed;
 }
 .tj-choose-us-section-service-Auction-3pl-Transport {
-  background-image: url("/public/img/343ortadsfds.webp");
+  background-image: url("/img/343ortadsfds.webp");
   position: relative;
   background-attachment: fixed;
 }
@@ -3268,7 +3268,7 @@ div .tj-service-icon-box2 ul li .service-item::before {
   background-attachment: fixed;
 }
 .tj-choose-us-section-service-rv {
-  background-image: url("/public/img/RV services bgbgb.webp");
+  background-image: url("/img/RV services bgbgb.webp");
   position: relative;
   background-attachment: fixed;
 }
@@ -3313,11 +3313,11 @@ div .tj-service-icon-box2 ul li .service-item::before {
   padding-top: 200px;
 }
 .tj-choose-us-section-rv {
-  background-image: url("/public/img/RV services bgbgb.webp");
+  background-image: url("/img/RV services bgbgb.webp");
   padding-top: 110px;
 }
 .tj-choose-us-section-construction {
-  background-image: url("/public/img/1-background-image-construction-equipment.webp");
+  background-image: url("/img/1-background-image-construction-equipment.webp");
   padding-top: 110px;
 }
 .tj-choose-us-section-farm {
@@ -3329,7 +3329,7 @@ div .tj-service-icon-box2 ul li .service-item::before {
   padding-top: 110px;
 }
 .tj-choose-us-section-commercial {
-  background-image: url("/public/img/1 background bas commercial bas.webp");
+  background-image: url("/img/1 background bas commercial bas.webp");
   padding-top: 110px;
 }
 .tj-choose-us-section-reefer {
@@ -3341,15 +3341,15 @@ div .tj-service-icon-box2 ul li .service-item::before {
   padding-top: 110px;
 }
 .tj-choose-us-section-dryvan {
-  background-image: url("/public/img/1 background image dry van.webp");
+  background-image: url("/img/1 background image dry van.webp");
   padding-top: 110px;
 }
 .tj-choose-us-section-excavator {
-  background-image: url("/public/img/Excavator-transport-on-semi-truck.webp");
+  background-image: url("/img/Excavator-transport-on-semi-truck.webp");
   padding-top: 110px;
 }
 .tj-choose-us-section-golfcart {
-  background-image: url("/public/img/1 background image golf cart transport.webp");
+  background-image: url("/img/1 background image golf cart transport.webp");
   padding-top: 110px;
 }
 .tj-choose-us-section-roro {
