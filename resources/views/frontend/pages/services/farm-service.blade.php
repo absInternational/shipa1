@@ -363,7 +363,7 @@
                                     </div>
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('/public/frontend/images/slider/Farm Low Boy trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        <img src="{{ asset('/frontend/images/slider/Farm Low Boy trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                 </div>
                             </div>
@@ -376,7 +376,7 @@
                             <div class="card-2 mb-3">
                                 <div class="row g-0">
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Farm tilt deck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    <img src="{{ asset('/frontend/images/slider/Farm tilt deck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                     <div class="card-body tj-section-heading mb-0">
@@ -415,7 +415,7 @@
                                     </div>
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('/public/frontend/images/slider/Farm enclosed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        <img src="{{ asset('/frontend/images/slider/Farm enclosed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                 </div>
                             </div>

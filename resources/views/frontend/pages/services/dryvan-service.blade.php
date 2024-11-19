@@ -259,7 +259,7 @@
             <div class="col-lg-4  pt-4 mt-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('/public/frontend/images/project/tuxpi.co0293926.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('/frontend/images/project/tuxpi.co0293926.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -271,7 +271,7 @@
             <div class="col-lg-4  pt-4 mt-4 sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('/public/frontend/images/project/tuxpi.com.1665.webp') }}" alt="Image">
+                        <img class="rounded" src="{{ asset('/frontend/images/project/tuxpi.com.1665.webp') }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -363,7 +363,7 @@
                             <div class="card-2 mb-3">
                                 <div class="row g-0">
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Standard Dry Van Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    <img src="{{ asset('/frontend/images/slider/Standard Dry Van Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                     <div class="card-body tj-section-heading mb-0">
@@ -403,7 +403,7 @@
                                     </div>
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('/public/frontend/images/slider/Reefer Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        <img src="{{ asset('/frontend/images/slider/Reefer Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                 </div>
                             </div>
@@ -416,7 +416,7 @@
                             <div class="card-2 mb-3">
                                 <div class="row g-0">
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Flatbed Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    <img src="{{ asset('/frontend/images/slider/Flatbed Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                     <div class="card-body tj-section-heading mb-0">
@@ -455,7 +455,7 @@
                                     </div>
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('/public/frontend/images/slider/Dropdeck Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        <img src="{{ asset('/frontend/images/slider/Dropdeck Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                 </div>
                             </div>

@@ -272,7 +272,7 @@
             <div class="row">
                 <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
                     <div class="about_image text-center">
-                        <img src="{{ asset('/public/frontend/images/project/Heavy Transportation 1 image.webp') }}" alt="Image">
+                        <img src="{{ asset('/frontend/images/project/Heavy Transportation 1 image.webp') }}" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
@@ -395,11 +395,11 @@
                             </div>
                         </div>
                         <div class="image-box">
-                            <img class="p-z-idex" src="{{ asset('/public/frontend/images/about/what-makes-us-Heavy1.webp') }}"
+                            <img class="p-z-idex" src="{{ asset('/frontend/images/about/what-makes-us-Heavy1.webp') }}"
                                 alt="Image" />
                         </div>
                         <img class="group-1 p-z-idex"
-                            src="{{ asset('/public/frontend/images/about/what-makes-us-Heavy2.webp') }}" alt="Image" />
+                            src="{{ asset('/frontend/images/about/what-makes-us-Heavy2.webp') }}" alt="Image" />
                         <img class="group-shape" src="{{ asset('frontend/images/about/ab-shape.png') }}"
                             alt="Image" />
                     </div>
@@ -408,7 +408,7 @@
         </div>
     </section>
     <section class="tj-cta-section icon-animate">
-        <div class="cta-inner" data-bg-image="{{ asset('/public/frontend/images/cta/Efficient-trans-Heavy.webp') }}"></div>
+        <div class="cta-inner" data-bg-image="{{ asset('/frontend/images/cta/Efficient-trans-Heavy.webp') }}"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -452,7 +452,7 @@
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
             <div class="tj-project-item">
-                <img src="{{ asset('/public/frontend/images/project/PYT-Heavy.webp') }}" alt="Image" />
+                <img src="{{ asset('/frontend/images/project/PYT-Heavy.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.heavy-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -464,7 +464,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('/public/frontend/images/project/RORO-Slider (1)--.webp') }}" alt="Image" />
+                <img src="{{ asset('/frontend/images/project/RORO-Slider (1)--.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.roro-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -476,7 +476,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('/public/frontend/images/project/PYT-Construction.webp') }}" alt="Image" />
+                <img src="{{ asset('/frontend/images/project/PYT-Construction.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.construction-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -488,7 +488,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('/public/frontend/images/project/PYT-Farm.webp') }}" alt="Image" />
+                <img src="{{ asset('/frontend/images/project/PYT-Farm.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.farm-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -500,7 +500,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('/public/frontend/images/project/PYT-Excavator.webp') }}" alt="Image" />
+                <img src="{{ asset('/frontend/images/project/PYT-Excavator.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.excavator-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>
@@ -512,7 +512,7 @@
                 </div>
             </div>
             <div class="tj-project-item">
-                <img src="{{ asset('/public/frontend/images/project/PYT-Commercial.webp') }}" alt="Image" />
+                <img src="{{ asset('/frontend/images/project/PYT-Commercial.webp') }}" alt="Image" />
                 <div class="arrow-icon">
                     <a href="{{ route('frontend.pages.services.commercial-service') }}" > <i
                             class="fa-light fa-arrow-right"></i></a>

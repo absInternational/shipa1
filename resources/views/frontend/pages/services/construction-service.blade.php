@@ -181,7 +181,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('/public/frontend/images/project/4b image for construction-equipment (1).webp') }}"
+                        <img class="rounded" src="{{ asset('/frontend/images/project/4b image for construction-equipment (1).webp') }}"
                             alt="Image">
                     </div>
                 </div>
@@ -193,7 +193,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('/public/frontend/images/project/4c image for construction-equipment (1).webp') }}"
+                        <img class="rounded" src="{{ asset('/frontend/images/project/4c image for construction-equipment (1).webp') }}"
                             alt="Image">
                     </div>
                 </div>
@@ -239,7 +239,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('/public/frontend/images/project/4d image for construction-equipment (1).webp') }}"
+                        <img class="rounded" src="{{ asset('/frontend/images/project/4d image for construction-equipment (1).webp') }}"
                             alt="Image">
                     </div>
                 </div>
@@ -251,7 +251,7 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('/public/frontend/images/project/4a image for construction-equipment (1).webp') }}"
+                        <img class="rounded" src="{{ asset('/frontend/images/project/4a image for construction-equipment (1).webp') }}"
                             alt="Image">
                     </div>
                 </div>
@@ -344,7 +344,7 @@
                             <div class="card-2 mb-3">
                                 <div class="row g-0">
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Construction equipment on flatbed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    <img src="{{ asset('/frontend/images/slider/Construction equipment on flatbed trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                     <div class="card-body tj-section-heading mb-0">
@@ -382,7 +382,7 @@
                                     </div>
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('/public/frontend/images/slider/Construction equipment on lowboy trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        <img src="{{ asset('/frontend/images/slider/Construction equipment on lowboy trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                 </div>
                             </div>
@@ -395,7 +395,7 @@
                             <div class="card-2 mb-3">
                                 <div class="row g-0">
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('/public/frontend/images/slider/Construction equipment on gooseneck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    <img src="{{ asset('/frontend/images/slider/Construction equipment on gooseneck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
                                     <div class="card-body tj-section-heading mb-0">
@@ -434,7 +434,7 @@
                                     </div>
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('/public/frontend/images/slider/Construction equipment on step deck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                        <img src="{{ asset('/frontend/images/slider/Construction equipment on step deck trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
                                     </div>
                                 </div>
                             </div>
