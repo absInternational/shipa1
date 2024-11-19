@@ -261,10 +261,9 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </div>
 </div>
 <div class=image-box>
-<img class=p-z-idex src="{{ asset('/public/frontend/images/about/WMUD-Home.webp') }}" fetchpriority=high loading=lazy alt=Image>
+<img class="p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid" src="{{ asset('/public/frontend/images/about/WMUD-Home.webp') }}" fetchpriority=high loading=lazy alt=Image>
 </div>
-<img class="group-1 p-z-idex" src="{{ asset('/public/frontend/images/about/about-3.webp') }}" fetchpriority=high loading=lazy alt=Image>
-<img class=group-shape src="{{ asset('frontend/images/about/ab-shape.png') }}" fetchpriority=high loading=lazy alt=Image>
+<img class="group-1 p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid" src="{{ asset('/public/frontend/images/about/about-3.webp') }}" fetchpriority=high loading=lazy alt=Image>
 </div>
 </div>
 </div>
