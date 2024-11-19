@@ -164,7 +164,7 @@
     <script src="{{ asset('/public/frontend/js/main.js') }}" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
-    <script src="/assets/intl-tel-input/intlTelInput.js"></script>
+    {{-- <script src="/assets/intl-tel-input/intlTelInput.js"></script> --}}
     <script>
         $(document).ready(function() {
             var $emailInput = $('#email_newsletter');
@@ -283,7 +283,8 @@
                     // Default to US for testing
                     callback("us");
                 },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                flagsImagePath: "https://www.shipa1.com/public/frontend/images/icon/flags.webp"
             });
             let phoneMask;
             function updateMask() {

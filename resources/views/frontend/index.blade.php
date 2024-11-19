@@ -5,7 +5,7 @@
 </div>
 </div>
 <section class=tj-slider-section>
-<div class=slider_shape> <img loading=lazy src="{{ asset('/public/frontend/images/banner/home-underline.webp') }}" alt=Image>
+<div class=slider_shape> <img loading=lazy src="{{ asset('/public/frontend/images/banner/home-underline.webp') }}" fetchpriority=high alt=Image>
 </div>
 <div class="swiper sc-slider-1" data-autoplay=5000>
 <div class=swiper-wrapper>
@@ -198,7 +198,7 @@ Among all the shipping companies out there, factors that make us stand out from 
 <div class=tj-icon-box>
 <div class="ab-text d-flex align-items-center">
 <div class=ab-icon>
-<img loading=lazy src="{{ asset('frontend/images/icon/winner.svg') }}" alt=Icon>
+<img loading=lazy src="{{ asset('frontend/images/icon/winner.svg') }}" fetchpriority=high alt=Icon>
 </div>
 <div class=ab-title>
 <h5 class=title>Our Values</h5>
@@ -261,10 +261,10 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </div>
 </div>
 <div class=image-box>
-<img class=p-z-idex src="{{ asset('/public/frontend/images/about/WMUD-Home.webp') }}" loading=lazy alt=Image>
+<img class=p-z-idex src="{{ asset('/public/frontend/images/about/WMUD-Home.webp') }}" fetchpriority=high loading=lazy alt=Image>
 </div>
-<img class="group-1 p-z-idex" src="{{ asset('/public/frontend/images/about/about-3.webp') }}" loading=lazy alt=Image>
-<img class=group-shape src="{{ asset('frontend/images/about/ab-shape.png') }}" loading=lazy alt=Image>
+<img class="group-1 p-z-idex" src="{{ asset('/public/frontend/images/about/about-3.webp') }}" fetchpriority=high loading=lazy alt=Image>
+<img class=group-shape src="{{ asset('frontend/images/about/ab-shape.png') }}" fetchpriority=high loading=lazy alt=Image>
 </div>
 </div>
 </div>
@@ -399,7 +399,7 @@ Our team is loaded with highly experienced professionals of both customer dealin
 <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.car-service') }}" aria-label="Learn more about Car Shipping Services" title="Car Shipping Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/9.webp') }}" alt="Car Shipping Service">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/9.webp') }}" fetchpriority=high alt="Car Shipping Service">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.car-service') }}" aria-label="Learn more about Car Shipping Services" title="Car Shipping Services"><i class="fa-light fa-arrow-right"></i></a>
 </div>
@@ -411,7 +411,7 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.bike-service') }}" aria-label="Learn more about Motorcycle Shipping Services" title="Motorcycle Shipping Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Bike.webp') }}" alt="Motorcycle Shipping Service">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Bike.webp') }}" fetchpriority=high alt="Motorcycle Shipping Service">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.bike-service') }}" aria-label="Learn more about Motorcycle Shipping Services" title="Motorcycle Shipping Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
@@ -423,19 +423,20 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.heavy-service') }}" aria-label="Learn more about Heavy Transportation Services" title="Heavy Transportation Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Heavy.webp') }}" alt="Heavy Transportation Services">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Heavy.webp') }}" fetchpriority=high alt="Heavy Transportation Services">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.heavy-service') }}" aria-label="Learn more about Heavy Transportation Services" title="Heavy Transportation Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
 <div class=tj-project-content>
 <span class=sub-title>HEAVY EQUIP</span>
-<h4><a href="{{ route('frontend.pages.services.heavy-service') }}" aria-label="Learn more about Heavy Transportation Services" title="Heavy Transportation Services" class=title-link>Heavy Transportation Service</a></h4>
+<h4><a href="{{ route('frontend.pages.services.heavy-service') }}" aria-label="Learn more about Heavy Transportation Services" title="Heavy Transportation Services" class=title-link>Heavy Transportation Service</a>
+</h4>
 </div>
 </a>
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.roro-service') }}" aria-label="Learn more about Roro Shipping Services" title="Roro Shipping Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/RORO-Slider (1)--.webp') }}" alt="Roro Shipping">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/RORO-Slider (1)--.webp') }}" fetchpriority=high alt="Roro Shipping">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.roro-service') }}" aria-label="Learn more about Roro Shipping Services" title="Roro Shipping Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
@@ -447,7 +448,7 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.golf-cart-service') }}" aria-label="Learn more about Golf Cart Transportation Services" title="Golf Cart Transportation Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Golf.webp') }}" alt="Golf Cart Transport Service">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Golf.webp') }}" fetchpriority=high alt="Golf Cart Transport Service">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.golf-cart-service') }}" aria-label="Learn more about Golf Cart Transportation Services" title="Golf Cart Transportation Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
@@ -459,19 +460,20 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.atv-utv-service') }}" aria-label="Learn more about ATV/UTV Transportation Services" title="ATV/UTV Transportation Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-ATV.webp') }}" alt="ATV/UTV Transport Service">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-ATV.webp') }}" fetchpriority=high alt="ATV/UTV Transport Service">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.atv-utv-service') }}" aria-label="Learn more about ATV/UTV Transportation Services" title="ATV/UTV Transportation Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
 <div class=tj-project-content>
 <span class=sub-title>ATV/UTV</span>
-<h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}" aria-label="Learn more about ATV/UTV Transportation Services" title="ATV/UTV Transportation Services" class=title-link>ATV/UTV Transportation Service</a></h4>
+<h4><a href="{{ route('frontend.pages.services.atv-utv-service') }}" aria-label="Learn more about ATV/UTV Transportation Services" title="ATV/UTV Transportation Services" class=title-link>ATV/UTV Transportation Service</a>
+</h4>
 </div>
 </a>
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.construction-service') }}" aria-label="Learn more about Construction Transportation Services" title="Construction Transportation Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Construction.webp') }}" alt="Construction Transport Service">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Construction.webp') }}" fetchpriority=high alt="Construction Transport Service">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.construction-service') }}" aria-label="Learn more about Construction Transportation Services" title="Construction Transportation Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
@@ -483,7 +485,7 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.farm-service') }}" aria-label="Learn more about Farm Transportation Services" title="Farm Transportation Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Farm.webp') }}" alt="Farm equipment Transport service">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Farm.webp') }}" fetchpriority=high alt="Farm equipment Transport service">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.farm-service') }}" aria-label="Learn more about Farm Transportation Services" title="Farm Transportation Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
@@ -495,9 +497,10 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.excavator-service') }}" aria-label="Learn more about Excavator Shipping Services" title="Excavator Shipping Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Excavator.webp') }}" alt="excavator Transport service">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Excavator.webp') }}" fetchpriority=high alt="excavator Transport service">
 <div class=arrow-icon>
-<a href="{{ route('frontend.pages.services.excavator-service') }}" aria-label="Learn more about Excavator Shipping Services" title="Excavator Shipping Services"> <i class="fa-light fa-arrow-right"></i></a>
+<a href="{{ route('frontend.pages.services.excavator-service') }}" aria-label="Learn more about Excavator Shipping Services" title="Excavator Shipping Services">
+<i class="fa-light fa-arrow-right"></i></a>
 </div>
 <div class=tj-project-content>
 <span class=sub-title>EXCAVATOR</span>
@@ -507,49 +510,53 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.commercial-service') }}" aria-label="Learn more about Truck Transportation Services" title="Truck Transportation Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Commercial.webp') }}" alt="commercial transport service">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/PYT-Commercial.webp') }}" fetchpriority=high alt="commercial transport service">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.commercial-service') }}" aria-label="Learn more about Truck Transportation Services" title="Truck Transportation Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
 <div class=tj-project-content>
 <span class=sub-title>TRUCKS</span>
-<h4><a href="{{ route('frontend.pages.services.commercial-service') }}" aria-label="Learn more about Truck Transportation Services" title="Truck Transportation Services" class=title-link>Truck Transportation Service</a></h4>
+<h4><a href="{{ route('frontend.pages.services.commercial-service') }}" aria-label="Learn more about Truck Transportation Services" title="Truck Transportation Services" class=title-link>Truck Transportation Service</a>
+</h4>
 </div>
 </a>
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.reefer-service') }}" aria-label="Learn more about Reefer Transportation Services" title="Reefer Transportation Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/reefer-truck-1.webp') }}" alt="Reefer Transport Service">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/reefer-truck-1.webp') }}" fetchpriority=high alt="Reefer Transport Service">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.reefer-service') }}" aria-label="Learn more about Reefer Transportation Services" title="Reefer Transportation Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
 <div class=tj-project-content>
 <span class=sub-title>Reefer</span>
-<h4><a href="{{ route('frontend.pages.services.reefer-service') }}" aria-label="Learn more about Reefer Transportation Services" title="Reefer Transportation Services" class=title-link>Reefer Transportation Service</a></h4>
+<h4><a href="{{ route('frontend.pages.services.reefer-service') }}" aria-label="Learn more about Reefer Transportation Services" title="Reefer Transportation Services" class=title-link>Reefer Transportation Service</a>
+</h4>
 </div>
 </a>
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.hazmat-service') }}" aria-label="Learn more about Hazmat Transportation Services" title="Hazmat Transportation Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/7.webp') }}" alt="Hazmat Transportation Services">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/7.webp') }}" fetchpriority=high alt="Hazmat Transportation Services">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.hazmat-service') }}" aria-label="Learn more about Hazmat Transportation Services" title="Hazmat Transportation Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
 <div class=tj-project-content>
 <span class=sub-title>Hazmat</span>
-<h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" aria-label="Learn more about Hazmat Transportation Services" title="Hazmat Transportation Services" class=title-link>Hazmat Transportation Service</a></h4>
+<h4><a href="{{ route('frontend.pages.services.hazmat-service') }}" aria-label="Learn more about Hazmat Transportation Services" title="Hazmat Transportation Services" class=title-link>Hazmat Transportation Service</a>
+</h4>
 </div>
 </a>
 </div>
 <div class=tj-project-item>
 <a href="{{ route('frontend.pages.services.dryvan-service') }}" aria-label="Learn more about Dry van Transportation Services" title="Dry van Transportation Services" class=project-link>
-<img loading=lazy src="{{ asset('/public/frontend/images/project/5.webp') }}" alt="Dry van Transportation Services">
+<img loading=lazy src="{{ asset('/public/frontend/images/project/5.webp') }}" fetchpriority=high alt="Dry van Transportation Services">
 <div class=arrow-icon>
 <a href="{{ route('frontend.pages.services.dryvan-service') }}" aria-label="Learn more about Dry van Transportation Services" title="Dry van Transportation Services"> <i class="fa-light fa-arrow-right"></i></a>
 </div>
 <div class=tj-project-content>
 <span class=sub-title>Dry van</span>
-<h4><a href="{{ route('frontend.pages.services.dryvan-service') }}" aria-label="Learn more about Dry van Transportation Services" title="Dry van Transportation Services" class=title-link>Dry van Transportation Service</a></h4>
+<h4><a href="{{ route('frontend.pages.services.dryvan-service') }}" aria-label="Learn more about Dry van Transportation Services" title="Dry van Transportation Services" class=title-link>Dry van Transportation Service</a>
+</h4>
 </div>
 </a>
 </div>
@@ -557,7 +564,7 @@ Our team is loaded with highly experienced professionals of both customer dealin
 </section>
 <section class=tj-map-section>
 <div class=google-map>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s" title="Google Maps location of [your specific location or purpose]" loading=lazy referrerpolicy=no-referrer-when-downgrade>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s" title="Google Maps location of [your specific location or purpose]" fetchpriority=high loading=lazy referrerpolicy=no-referrer-when-downgrade>
 </iframe>
 </div>
 <div class=tj-map-tabs data-bg-image="{{ asset('frontend/images/banner/form-shape2.png') }}">
@@ -571,7 +578,7 @@ Contact us
 <div id=collapseOne class="accordion-collapse collapse show" aria-labelledby=headingOne data-bs-parent=#accordionExample>
 <div class=accordion-body>
 <ul class=list-gap>
-<li><i class=flaticon-placeholder></i><a href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu">201 International Cir STE 230, Hunt Valley, MD 21030-1344</a></li>
+<li><i class=flaticon-placeholder></i><a fetchpriority=high href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+210301344,+USA/@39.4960629,-76.6603247,17z/data=!3m2!4b1!5s0x89c8128abe53a693:0xccf0052e1abf77f2!4m6!3m5!1s0x89c81261c3eae243:0x81e995e93023e64a!8m2!3d39.4960629!4d-76.6603247!16s%2Fg%2F11scxbqcdd?entry=ttu">201 International Cir STE 230, Hunt Valley, MD 21030-1344</a></li>
 <li>
 <i class=flaticon-mail></i><a href=mailto:shawntransport@shipa1.com>
 shawntransport@shipa1.com</a>
