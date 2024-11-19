@@ -41,7 +41,7 @@
         z-index: 0;
     }
     .why-choose-us-slider {
-        background: url('/public/img/1 background bas commercial bas.webp');
+        background: url('/img/1 background bas commercial bas.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;

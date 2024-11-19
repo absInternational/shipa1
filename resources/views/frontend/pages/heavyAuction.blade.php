@@ -42,7 +42,7 @@
         z-index: 0;
     }
     .why-choose-us-slider {
-        background: url('/public/img/heavy-equipment-quote.webp');
+        background: url('/img/heavy-equipment-quote.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;

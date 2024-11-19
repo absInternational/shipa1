@@ -65,7 +65,7 @@ home in USA. Explore our fast and reliable boat transportation services.')
         z-index: 0;
     }
     .why-choose-us-slider {
-        background: url('/public/img/1-background-image-for-boat-transport.webp');
+        background: url('/img/1-background-image-for-boat-transport.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;

@@ -43,7 +43,7 @@ our experts and professionals, Get amazing discounts and offers for RORO transpo
     z-index: 0; 
     }
     .why-choose-us-slider {
-        background: url('/public/img/RoRo-Shipping.webp');
+        background: url('/img/RoRo-Shipping.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;

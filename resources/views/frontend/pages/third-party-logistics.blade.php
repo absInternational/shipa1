@@ -42,7 +42,7 @@
         z-index: 0; 
     }
     .why-choose-us-slider {
-        background: url('/public/img/Freigh5345.webp');
+        background: url('/img/Freigh5345.webp');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
