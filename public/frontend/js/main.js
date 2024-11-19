@@ -94,21 +94,25 @@
     });
     // Hero Slider One
     var slider1 = new Swiper(".sc-slider-1", {
-        speed: 800,
+        speed: 1000,
         effect: "fade",
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
         loop: true,
         autoplay: {
-          delay: 5000,
-          disableOnInteraction: false, 
+            delay: 2000, 
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
         lazy: {
-            loadPrevNext: true,
+            loadPrevNext: true, 
+            loadOnTransitionStart: true,  
         },
-      });
+        preloadImages: false,
+        watchSlidesProgress: true, 
+        grabCursor: true,
+    });
 
     // Hero Thumb Slider 2
     var slider2 = new Swiper(".thumb-slider", {
