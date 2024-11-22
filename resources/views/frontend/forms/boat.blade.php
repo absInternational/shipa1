@@ -156,7 +156,7 @@
                         <div class="col-md-12">
                             <div class="input-form">
                                 <label for="category">Category</label>
-                                <select class="" id="category" name="category">
+                                <select   id="category" name="category">
                                     <option value="" disabled selected>Select</option>
                                     <option value="Power Boat">Power Boat</option>
                                     <option value="Sail Boat">Sail Boat</option>
@@ -315,7 +315,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="trailer_type" class="text-white">Select Trailer Type</label>
-                                    <select class="" id="trailer_type" name="trailer_type">
+                                    <select   id="trailer_type" name="trailer_type">
                                         <option value="REMOVABLE GOOSENECK (RGN)" selected>REMOVABLE GOOSENECK (RGN)</option>
                                         <option value="STEP DECK (SD)">STEP DECK (SD)</option>
                                         <option value="FLATBED (F)">FLATBED (F)</option>
@@ -327,7 +327,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="condition" class="text-white">Condition</label>
-                                    <select class="" id="condition" name="condition[]">
+                                    <select   id="condition" name="condition[]">
                                         <option value="1" selected>Running</option>
                                         <option value="2">Non Running</option>
                                     </select>
@@ -338,7 +338,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="load_method" class="text-white">Load Method</label>
-                                    <select class="" id="load_method" name="load_method[]">
+                                    <select   id="load_method" name="load_method[]">
                                         <option value="" disabled selected>Select</option>
                                         <option value="LOADING DOCK">LOADING DOCK</option>
                                         <option value="CRANE">CRANE</option>
@@ -350,7 +350,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="unload_method" class="text-white">Unload Method</label>
-                                    <select class="" id="unload_method" name="unload_method[]">
+                                    <select   id="unload_method" name="unload_method[]">
                                         <option value="" disabled selected>Select</option>
                                         <option value="LOADING DOCK">LOADING DOCK</option>
                                         <option value="CRANE">CRANE</option>
@@ -394,7 +394,7 @@
                                 </div>
                                 <div class="input-form div-modify_info" style="display: none;">
                                     <label class="d-block"> Modification Information:</label>
-                                    <input class="" type="text" id="c" name="modify_info"
+                                    <input   type="text" id="c" name="modify_info"
                                         placeholder="Enter Modification Information" />
                                 </div>
                             </div>

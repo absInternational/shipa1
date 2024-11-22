@@ -188,7 +188,7 @@
                                 </div>
                                 <div class="input-form div-modify_info" style="display: none;">
                                     <label class="d-block"> Modification Information:</label>
-                                    <input class="" type="text" id="c" name="modify_info"
+                                    <input   type="text" id="c" name="modify_info"
                                         placeholder="Enter Modification Information">
                                 </div>
                             </div>
@@ -202,7 +202,7 @@
                                 </div>
                                 <div class="input-form div-link" style="display: none;">
                                     <label class="d-block"> Enter Link:</label>
-                                    <input class="" type="url" id="link" name="link"
+                                    <input   type="url" id="link" name="link"
                                         placeholder="Enter Link">
                                 </div>
                             </div>

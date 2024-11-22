@@ -155,7 +155,7 @@
                                             <input class="form-control dropdown-toggle make" name="make[]" required
                                                 type="text" id="make" placeholder="Select Make"
                                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                            <ul class="dropdown-menu make-dropdown" style=""
+                                            <ul class="dropdown-menu make-dropdown"
                                                 aria-labelledby="make">
                                                 <li><a class="dropdown-item">Select Make</a></li>
                                                 @foreach ($makes as $make)
@@ -175,7 +175,7 @@
                                             <input class="form-control dropdown-toggle model-input" name="model[]"
                                                 type="text" id="model" required placeholder="Select Model"
                                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                            <ul class="dropdown-menu model-dropdown" style=""
+                                            <ul class="dropdown-menu model-dropdown"
                                                 aria-labelledby="model">
                                                 <li><a class="dropdown-item" href="#">Select Model</a></li>
                                             </ul>
@@ -229,7 +229,7 @@
                                 </div>
                                 <div class="input-form div-modify_info" style="display: none;">
                                     <label class="d-block"> Modification Information:</label>
-                                    <input class="" type="text" id="c" name="modify_info"
+                                    <input   type="text" id="c" name="modify_info"
                                         placeholder="Enter Modification Information" />
                                 </div>
                             </div>

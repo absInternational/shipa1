@@ -58,7 +58,7 @@
             <div class="vehicle_quote_info target-top" id="step2" style="display: none;">
                 <div class="row">
                     <h4 class="title text-center">HEAVY INFORMATION</h4>
-                    <select id="tabSelector" class="" aria-label="Tab selector" required>
+                    <select id="tabSelector"   aria-label="Tab selector" required>
                         <option value="" selected disabled>Select a Vehicle</option>
                         <option value="Boat-Transport">Boat Transport</option>
                         <option value="Commercial-Truck">Commercial Truck Transport</option>

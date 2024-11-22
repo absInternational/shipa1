@@ -308,7 +308,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="load_method" class="text-white">Load Method</label>
-                                    <select class="" id="load_method" name="load_method[]">
+                                    <select   id="load_method" name="load_method[]">
                                         <option value="" disabled selected>Select</option>
                                         <option value="LOADING DOCK">LOADING DOCK</option>
                                         <option value="CRANE">CRANE</option>
@@ -320,7 +320,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="unload_method" class="text-white">Unload Method</label>
-                                    <select class="" id="unload_method" name="unload_method[]">
+                                    <select   id="unload_method" name="unload_method[]">
                                         <option value="" disabled selected>Select</option>
                                         <option value="LOADING DOCK">LOADING DOCK</option>
                                         <option value="CRANE">CRANE</option>
@@ -413,7 +413,7 @@
                                 </div>
                                 <div class="input-form div-modify_info" style="display: none;">
                                     <label class="d-block"> Modification Information:</label>
-                                    <input class="" type="text" id="c" name="modify_info"
+                                    <input   type="text" id="c" name="modify_info"
                                         placeholder="Enter Modification Information" />
                                 </div>
                             </div>

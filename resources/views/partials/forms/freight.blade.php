@@ -267,7 +267,7 @@
         
         <div class="input-form div-link" style="display: none;">
             <label class="d-block">Enter Link:</label>
-            <input class="" type="url" id="link" name="link" placeholder="Enter Link" />
+            <input   type="url" id="link" name="link" placeholder="Enter Link" />
         </div>
     </div>
 </div>

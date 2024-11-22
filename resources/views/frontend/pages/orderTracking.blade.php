@@ -29,7 +29,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12">
-                <div class="">
+                <div  >
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape"> Want To Know Your Order Status?</span>
                         <h2 class="title">Get Status of Your Order</h2>

@@ -227,7 +227,7 @@
                                 </div>
                             </div>
                         </div>
-                        </br>
+                        <br>
                         <div class="row mb-3">
                             <div class="col-lg-12 text-center">
                                 <button type="submit" class="btn btn-primary w-35 submit_btn" id="submit_with_pay_btn"
