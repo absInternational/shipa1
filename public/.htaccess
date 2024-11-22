@@ -1,7 +1,4 @@
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
     RewriteEngine On
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -11,6 +8,11 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?shipa1\.com [NC]
+    RewriteRule \.(jpg|jpeg|png|gif|svg|webp|css|js)$ - [F,NC]
 </IfModule>
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/text
@@ -38,6 +40,14 @@
     <FilesMatch "\.(jpg|jpeg|png|gif|svg|js|css|pdf|txt|html|xml|woff|woff2|ttf|eot|otf|json)$">
         Header set Cache-Control "max-age=31536000, public"
     </FilesMatch>
+    Header always append X-Frame-Options SAMEORIGIN
+    Header set X-Content-Type-Options nosniff
+    Header set Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Content-Security-Policy "script-src 'self'; object-src 'none';"
+    Header set X-Download-Options "noopen"
 </IfModule>
 <IfModule mod_expires.c>
     ExpiresActive On
@@ -53,30 +63,9 @@
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType application/json "access plus 1 year"
 </IfModule>
-<IfModule mod_headers.c>
-    Header always append X-Frame-Options SAMEORIGIN
-    Header set X-Content-Type-Options nosniff
-    Header set Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-    Header set Pragma "no-cache"
-    Header set Expires 0
-    Header set X-XSS-Protection "1; mode=block"
-    Header set Content-Security-Policy "script-src 'self'; object-src 'none';"
-    Header set X-Download-Options "noopen"
-</IfModule>
-<IfModule mod_rewrite.c>
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfModule>
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTP_REFERER} !^$
-    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?shipa1.com\.com [NC]
-    RewriteRule \.(jpg|jpeg|png|gif|svg|webp|css|js)$ - [F,NC]
-</IfModule>
 <FilesMatch "^\.">
     Require all denied
 </FilesMatch>
-
 <FilesMatch "(^\.ht|^\.env|^\.git)">
     Require all denied
 </FilesMatch>
