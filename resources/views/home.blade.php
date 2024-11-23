@@ -18,4 +18,3 @@
     </div>
 </div>
 @endsection
-{{-- https://docs.google.com/document/d/1PfnL8mTT723Iln_52XFYuo7f_7ihj0mLdsjolAzXcDQ/edit?tab=t.0 --}}
