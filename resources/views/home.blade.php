@@ -18,9 +18,3 @@
     </div>
 </div>
 @endsection
-{{-- 
-<a href="
-https://docs.google.com/document/d/1d_D6ShdbMkuyRmyb67CZ2R89fy30jA5kwFBqebAqkd0/edit?tab=t.0 
-https://docs.google.com/document/d/1xPdD7-3LqvHZd9yIINjYS38EbaiHTm_NzQ1z6_2_9lM/edit?tab=t.0
-"></a> 
---}}
