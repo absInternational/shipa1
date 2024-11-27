@@ -3258,7 +3258,7 @@ div .tj-service-icon-box2 ul li .service-item::before {
   background-attachment: fixed;
 }
 .tj-choose-us-section-service-Auction-3pl-Transport {
-  background-image: url("../../img/343ortadsfds.webp");
+  background-image: url("../../img/343ortadsfds.webp") !important;
   position: relative;
   background-attachment: fixed;
 }
