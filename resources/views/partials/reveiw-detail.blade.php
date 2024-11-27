@@ -55,7 +55,7 @@
                                                 @elseif ($review->profile_name == 'Google')
                                                     <img class="float-end" loading="lazy"
                                                         src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                        width="40%" height="60%" alt="Google" />
+                                                        width="100%" height="100%" alt="Google" />
                                                 @elseif($review->profile_name == 'Transport Reviews')
                                                     <img class="float-end" loading="lazy"
                                                         src="{{ asset('frontend/images/testimonial/transport.png') }}"
@@ -63,7 +63,7 @@
                                                 @elseif($review->profile_name == 'Trust Pilot')
                                                     <img class="float-end" loading="lazy"
                                                         src="{{ asset('frontend/images/testimonial/turst.png') }}"
-                                                        width="70%" height="100%" alt="Trust Pilot" />
+                                                        width="100%" height="100%" alt="Trust Pilot" />
                                                 @endif
                                             </div>
                                         </div>

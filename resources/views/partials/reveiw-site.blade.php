@@ -77,7 +77,7 @@
                                         @elseif ($site_review->profile_name == 'Google')
                                             <img loading="lazy"
                                                 src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                width="100%" height="100%" alt="Google" />
+                                                width="75%" height="100%" alt="Google" />
                                         @elseif($site_review->profile_name == 'Transport Reviews')
                                             <img loading="lazy"
                                                 src="{{ asset('frontend/images/testimonial/transport.png') }}"
