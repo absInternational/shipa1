@@ -201,7 +201,9 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </li>
             </ul>
         </div>
-    </section>@include('partials.reveiw-site')<section class="tj-service-section pt-4">
+    </section>
+    {{-- @include('partials.reveiw-site') --}}
+    <section class="tj-service-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -708,7 +710,9 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </div>
             </div>
         </div>
-    </section>@include('partials.blog-slider') @include('partials.reveiw-detail') @include('partials.newsletter')
+    </section>
+    {{-- @include('partials.blog-slider') @include('partials.reveiw-detail')  --}}
+    @include('partials.newsletter')
 <script>
     document.addEventListener("DOMContentLoaded", (function() {
         const t = document.querySelector(".dropdown-toggle"),
