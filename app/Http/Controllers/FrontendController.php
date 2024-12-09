@@ -18,6 +18,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
+        dd('ok');
         $userId = 14;
         $makes = VehicleName::where('UserId', $userId)
             ->where('status', 0)
