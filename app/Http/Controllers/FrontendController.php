@@ -18,17 +18,18 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        $userId = 14;
-        $makes = VehicleName::where('UserId', $userId)
-            ->where('status', 0)
-            ->select('make')
-            ->distinct()
-            ->orderBy('make', 'ASC')
-            ->get();
-        $blogs = Blog::where('status', 1)->take(3)->get(['id', 'post_name', 'slug_name', 'post_image', 'post_description']);
-        $reviews = Review::all();
-        $site_reviews = ReviewSite::all();
-        return view('frontend.index', compact('reviews', 'blogs', 'makes', 'site_reviews'));
+        // $userId = 14;
+        // $makes = VehicleName::where('UserId', $userId)
+        //     ->where('status', 0)
+        //     ->select('make')
+        //     ->distinct()
+        //     ->orderBy('make', 'ASC')
+        //     ->get();
+        // $blogs = Blog::where('status', 1)->take(3)->get(['id', 'post_name', 'slug_name', 'post_image', 'post_description']);
+        // $reviews = Review::all();
+        // $site_reviews = ReviewSite::all();
+        // return view('frontend.index', compact('reviews', 'blogs', 'makes', 'site_reviews'));
+        return view('frontend.index');
     }
     public function blogs()
     {
