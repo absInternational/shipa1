@@ -55,6 +55,7 @@ class FrontendController extends Controller
     }
     public function blogDetailsNoSlug($slug)
     {
+        dd('Hola');
         $blog = Blog::where('slug_name', $slug)->first();
         if (!$blog) {
             abort(404);
