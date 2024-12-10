@@ -55,7 +55,7 @@ class NationWideTransportController extends Controller
                 $imagePath = $image->storeAs('public/nationWide', $imageName);
 
                 // Generate the complete URL for the stored image
-                $imagePath = Storage::url($imagePath);
+                $imagePath = url(Storage::url($imagePath));
             }
 
             $nationWideTransport->details()->create([
@@ -121,7 +121,7 @@ class NationWideTransportController extends Controller
                 $imagePath = $image->storeAs('public/nationWide', $imageName);
 
                 // Generate the complete URL for the stored image
-                $imagePath = Storage::url($imagePath);
+                $imagePath = url(Storage::url($imagePath));
             }
 
             if ($existingDetail) {
