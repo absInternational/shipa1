@@ -109,7 +109,7 @@
                 $(this).closest('.detail-container').remove();
             });
 
-            $('#add-detail').on('click', function() {
+            $(document).on('click', '.add-detail', function() {
                 var detailCount = $('#details .detail').length;
                 var newDetail = `
                     <div class="detail mb-3 p-3 border rounded">
