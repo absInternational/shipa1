@@ -18,7 +18,6 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        dd('okkk');
         $userId = 14;
         $makes = VehicleName::where('UserId', $userId)
             ->where('status', 0)
@@ -33,6 +32,7 @@ class FrontendController extends Controller
     }
     public function blogs()
     {
+        dd('okkk blog');
         $query = Blog::where('category', '!=', 'Trailer & Trucks')->where('status', 1);
         $blogs = $query->paginate(10);
         $recent_blogs = $query->orderByDesc('id')->limit(5)->get();
