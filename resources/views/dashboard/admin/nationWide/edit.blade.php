@@ -110,7 +110,7 @@
             });
 
             $(document).on('click', '#add-detail', function() {
-                var detailCount = $('#details .detail').length;
+                var detailCount = $('#details-container').length;
                 var newDetail = `
                     <div class="detail mb-3 p-3 border rounded">
                         <div class="form-group">
@@ -129,7 +129,7 @@
                         <button type="button" class="btn btn-danger btn-sm remove-detail">Remove Detail</button>
                     </div>
                 `;
-                $('#details').append(newDetail);
+                $('#details-container').append(newDetail);
             });
 
             $(document).on('click', '.remove-detail', function() {
