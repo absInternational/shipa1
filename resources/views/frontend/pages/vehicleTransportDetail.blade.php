@@ -622,6 +622,7 @@
         </div>
     </div>
 </section>
+@include('partials.transport-by-state')
 <section class="tj-faq-section tj-faq-page">
     <div class="container">
         <div class="row">
