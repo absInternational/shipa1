@@ -51,7 +51,9 @@ class NationWideTransportController extends Controller
                 $imageName = time() . '-' . $image->getClientOriginalName();
                 $destinationPath = public_path('nationWide');
                 $image->move($destinationPath, $imageName);
-                $imagePath = 'nationWide/' . $imageName;
+
+                // Generate the complete URL for the image
+                $imagePath = url('nationWide/' . $imageName);
             }
 
             $nationWideTransport->details()->create([
@@ -114,7 +116,9 @@ class NationWideTransportController extends Controller
                 $imageName = time() . '-' . $image->getClientOriginalName();
                 $destinationPath = public_path('nationWide');
                 $image->move($destinationPath, $imageName);
-                $imagePath = 'nationWide/' . $imageName;
+
+                // Generate the complete URL for the image
+                $imagePath = url('nationWide/' . $imageName);
             }
 
             if ($existingDetail) {
