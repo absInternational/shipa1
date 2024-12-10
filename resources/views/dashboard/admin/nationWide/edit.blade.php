@@ -36,13 +36,19 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Category</label>
                         <select name="category" class="form-control" required>
-                            <option value="Vehicle" {{ old('category', $nationWideTransport->category) == 'Vehicle' ? 'selected' : '' }}>Vehicle</option>
-                            <option value="Heavy" {{ old('category', $nationWideTransport->category) == 'Heavy' ? 'selected' : '' }}>Heavy</option>
-                            <option value="Freight" {{ old('category', $nationWideTransport->category) == 'Freight' ? 'selected' : '' }}>Freight</option>
+                            <option value="Vehicle"
+                                {{ old('category', $nationWideTransport->category) == 'Vehicle' ? 'selected' : '' }}>Vehicle
+                            </option>
+                            <option value="Heavy"
+                                {{ old('category', $nationWideTransport->category) == 'Heavy' ? 'selected' : '' }}>Heavy
+                            </option>
+                            <option value="Freight"
+                                {{ old('category', $nationWideTransport->category) == 'Freight' ? 'selected' : '' }}>Freight
+                            </option>
                         </select>
                     </div>
 
@@ -51,51 +57,33 @@
                         <div id="details-container">
                             @foreach ($nationWideTransport->details as $index => $detail)
                                 <div class="detail-container mb-3">
-                                    <!-- Hidden input for ID -->
                                     <input type="hidden" name="details[{{ $index }}][id]"
                                         value="{{ $detail->id }}">
-
+                                    <button type="button" class="btn btn-danger remove-btn">Remove</button>
                                     <div class="form-group">
                                         <label for="details[{{ $index }}][heading]">Heading</label>
-                                        <input type="text"
-                                            class="form-control @error("details.{$index}.heading") is-invalid @enderror"
-                                            id="details[{{ $index }}][heading]"
-                                            name="details[{{ $index }}][heading]"
-                                            value="{{ old("details.{$index}.heading", $detail->heading) }}" required>
-                                        @error("details.{$index}.heading")
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
+                                        <input type="text" class="form-control"
+                                            name="details[{{ $index }}][heading]" value="{{ $detail->heading }}"
+                                            required>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="details[{{ $index }}][description]">Description</label>
-                                        <textarea class="form-control @error("details.{$index}.description") is-invalid @enderror"
-                                            id="details[{{ $index }}][description]" name="details[{{ $index }}][description]" rows="3"
-                                            required>{{ old("details.{$index}.description", $detail->description) }}</textarea>
-                                        @error("details.{$index}.description")
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
+                                        <textarea class="form-control" name="details[{{ $index }}][description]" rows="3" required>{{ $detail->description }}</textarea>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="details[{{ $index }}][image]">Image</label>
-                                        <input type="file"
-                                            class="form-control image-input @error("details.{$index}.image") is-invalid @enderror"
-                                            id="details[{{ $index }}][image]"
+                                        <input type="file" class="form-control"
                                             name="details[{{ $index }}][image]">
                                         @if ($detail->image)
                                             <img src="{{ asset($detail->image) }}" alt="Image" class="img-preview mt-2"
                                                 style="max-height: 100px; max-width: 100%; height: auto; display: block;">
                                         @endif
-                                        @error("details[{{ $index }}][image]")
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
                                     </div>
-
                                     <hr>
                                 </div>
                             @endforeach
                         </div>
+
                     </div>
 
                     <button type="submit" class="btn btn-primary">Update</button>
@@ -113,6 +101,10 @@
                 } else {
                     $(this).hide();
                 }
+            });
+
+            $(document).on('click', '.remove-btn', function() {
+                $(this).closest('.detail-container').remove();
             });
 
             // Image preview functionality for file inputs
