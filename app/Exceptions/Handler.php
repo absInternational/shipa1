@@ -49,14 +49,9 @@ class Handler extends ExceptionHandler
     }
     public function render($request, Throwable $exception)
     {
-        // dd($request->toArray());
-        // if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
-        //     return response()->view('errors.404', [], 404);
-        // }
         if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
             return response()->view('errors.404', [], 404);
         }
-
         // if ($exception instanceof \Symfony\Component\HttpKernel\Exception\HttpException) {
         //     return response()->view('errors.500', [], 500);
         // }
