@@ -132,6 +132,10 @@
                 $('#details').append(newDetail);
             });
 
+            $(document).on('click', '.remove-detail', function() {
+                $(this).closest('.detail').remove();
+            });
+
             // Image preview functionality for file inputs
             $(document).on('change', '.image-input', function() {
                 var file = this.files[0];
