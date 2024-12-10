@@ -40,11 +40,8 @@
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">SERVICES</span>
-                        <h2 class="title">RORO SHIPPING SERVICES</h2>
-                        <p class="desc-2">
-                            ShipA1 has pledged to provide all-in-one auto transport solutions to all its
-                            customers and seeks your trust in return of our services.
-                        </p>
+                        <h2 class="title">California Car Transport</h2>
+                        <p class="desc-2">ShipA1 has pledged to provide all-in-one auto transport solutions to all its customers and seeks your trust in return of our services.</p>
                     </div>
                 </div>
             </div>
