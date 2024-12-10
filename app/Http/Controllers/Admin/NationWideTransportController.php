@@ -51,13 +51,14 @@ class NationWideTransportController extends Controller
                 $image = $detail['image'];
                 $imageName = time() . '-' . $image->getClientOriginalName();
 
-                // Save the image to the storage folder
-                $imagePath = $image->storeAs('public/nationWide', $imageName);
+                // Save the image to the 'nationWide' folder in the storage
+                $imagePath = $image->storeAs('nationWide', $imageName, 'public');  // Use 'public' disk to store in public folder
 
                 // Generate the complete URL for the stored image
-                $imagePath = url($imagePath);
+                $imagePath = asset('storage/nationWide/' . $imageName);  // Use asset() to get the correct URL
             }
 
+            // Create a new detail with the image URL
             $nationWideTransport->details()->create([
                 'heading' => $detail['heading'],
                 'description' => $detail['description'],
@@ -117,11 +118,11 @@ class NationWideTransportController extends Controller
                 $image = $detail['image'];
                 $imageName = time() . '-' . $image->getClientOriginalName();
 
-                // Save the image to the storage folder
-                $imagePath = $image->storeAs('public/nationWide', $imageName);
+                // Save the image to the 'nationWide' folder in the storage
+                $imagePath = $image->storeAs('nationWide', $imageName, 'public');  // Use 'public' disk to store in public folder
 
                 // Generate the complete URL for the stored image
-                $imagePath = url($imagePath);
+                $imagePath = asset('storage/nationWide/' . $imageName);  // Use asset() to get the correct URL
             }
 
             if ($existingDetail) {
