@@ -24,7 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        dd('oko');
         if (Auth::user()->role == 'admin' || Auth::user()->role == 'user') {
             return redirect()->route('admin.index');
         } else {
