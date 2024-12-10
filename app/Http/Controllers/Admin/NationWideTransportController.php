@@ -7,6 +7,7 @@ use App\Models\NationWideTransportDetail;
 use App\Helpers\SlugHelper;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class NationWideTransportController extends Controller
 {
@@ -49,11 +50,12 @@ class NationWideTransportController extends Controller
             if (isset($detail['image']) && $detail['image'] instanceof \Illuminate\Http\UploadedFile) {
                 $image = $detail['image'];
                 $imageName = time() . '-' . $image->getClientOriginalName();
-                $destinationPath = public_path('nationWide');
-                $image->move($destinationPath, $imageName);
 
-                // Generate the complete URL for the image
-                $imagePath = url('nationWide/' . $imageName);
+                // Save the image to the storage folder
+                $imagePath = $image->storeAs('public/nationWide', $imageName);
+
+                // Generate the complete URL for the stored image
+                $imagePath = Storage::url($imagePath);
             }
 
             $nationWideTransport->details()->create([
@@ -114,11 +116,12 @@ class NationWideTransportController extends Controller
             if (isset($detail['image']) && $detail['image'] instanceof \Illuminate\Http\UploadedFile) {
                 $image = $detail['image'];
                 $imageName = time() . '-' . $image->getClientOriginalName();
-                $destinationPath = public_path('nationWide');
-                $image->move($destinationPath, $imageName);
 
-                // Generate the complete URL for the image
-                $imagePath = url('nationWide/' . $imageName);
+                // Save the image to the storage folder
+                $imagePath = $image->storeAs('public/nationWide', $imageName);
+
+                // Generate the complete URL for the stored image
+                $imagePath = Storage::url($imagePath);
             }
 
             if ($existingDetail) {
