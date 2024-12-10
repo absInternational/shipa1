@@ -67,7 +67,129 @@
         @include('partials.transport-by-state-detail')
     </div>
 @endif
-<section class="tj-about-section pt-4">
+@include('partials.car-cta-section')
+<section class="tj-testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="tj-section-heading text-center">
+                <h5 class="title fs-1">Trailers used for Vehicle</h5>
+            </div>
+        </div>
+        <div class="swiper-container swiper-new-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/frontend/images/slider/Car-Transport-on-Enclosed-trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Enclosed transport</h5>
+                                        <p class="card-text  text-dark">Enclosed transport service is the ideal option for people who want to provide their cars
+                                            additional security. Although a little more expensive, guarantees that your vehicle
+                                            is completely protected from outside elements including weather, road debris, and other possible
+                                            threats.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}" >
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('/frontend/images/slider/Car-Transportation-1212.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Open Transport</h5>
+                                        <p class="card-text  text-dark">This is the usual method we use while shipping cars. The most affordable choice for car transportation
+                                            is an open transport, which makes it perfect for individuals looking for a low-cost option. Due of its
+                                            price and effectiveness, this method is very popular even if your car faces exposure to the environment
+                                            while in transit.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}" >
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Drop Deck Trailers</h5>
+                                        <p class="card-text text-dark">These types of trailers usually are pretty similar to flatbeds but with a lower deck, which allows easy transportation 
+                                            of dry vans that exceeds the height limit.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('frontend.forms.dryvan') }}" >
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/frontend/images/slider/Dropdeck Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-2 mb-3">
+                                <div class="row g-0">
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                    <div class="card-body tj-section-heading mb-0">
+                                        <h5 class="card-title sub-title active-shape">Flatbed Trailers</h5>
+                                        <p class="card-text text-dark">These trailers are equipped with a flatbed without any sides or roof, which allows them
+                                            to load and unload commercial trucks from any convenient angle.</p>
+                                        <div class="tj-theme-button mt-2">
+                                        <a class="tj-transparent-btn" href="{{ route('commercial.truck.transport') }}" >
+                                            Get Quote
+                                            <i class="flaticon-right-1"></i>
+                                        </a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('/frontend/images/slider/Semi-Truck-with-Flatbed-Trailer.webp') }}" class="img-fluid rounded-start" style="height: 100%; background-size: cover; background-position: center;" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{-- <section class="tj-about-section pt-4">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
@@ -258,7 +380,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <section class="tj-choose-us-section-service-roro">
     <div class="container why-box">
         <div class="row">
