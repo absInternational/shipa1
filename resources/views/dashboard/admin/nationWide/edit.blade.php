@@ -85,6 +85,8 @@
                         </div>
 
                     </div>
+                    <button type="button" id="add-detail" class="btn btn-outline-secondary btn-sm">Add
+                        Detail</button>
 
                     <button type="submit" class="btn btn-primary">Update</button>
                 </form>
@@ -105,6 +107,29 @@
 
             $(document).on('click', '.remove-btn', function() {
                 $(this).closest('.detail-container').remove();
+            });
+
+            $('#add-detail').on('click', function() {
+                var detailCount = $('#details .detail').length;
+                var newDetail = `
+                    <div class="detail mb-3 p-3 border rounded">
+                        <div class="form-group">
+                            <label>Heading</label>
+                            <input class="form-control" type="text" name="details[${detailCount}][heading]" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" name="details[${detailCount}][description]" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Image</label>
+                            <input class="form-control image-input" type="file" name="details[${detailCount}][image]" />
+                            <img class="img-preview mt-2" src="" alt="Image preview" style="display: none; max-width: 100%; height: auto;" />
+                        </div>
+                        <button type="button" class="btn btn-danger btn-sm remove-detail">Remove Detail</button>
+                    </div>
+                `;
+                $('#details').append(newDetail);
             });
 
             // Image preview functionality for file inputs
