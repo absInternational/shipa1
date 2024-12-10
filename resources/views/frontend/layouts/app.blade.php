@@ -12,11 +12,12 @@
     <meta name="twitter:title" content="ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA">
     <meta name="twitter:description" content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- improved load performance -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="{{ asset('/frontend/images/logo/favicon.webp') }}" as="image" type="image/png" />
     <link rel="apple-touch-icon" href="{{ asset('/frontend/images/logo/favicon.webp') }}">
     <link rel="shortcut icon" href="{{ asset('/frontend/images/logo/favicon.webp') }}" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <script src="https://unpkg.com/imask"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -39,7 +40,6 @@
     <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('/frontend/css/responsive.css') }}">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -148,6 +148,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" ></script>
     <script src="{{ asset('/frontend/js/modernizr-2.8.3.min.js') }}"></script>
     <script src="{{ asset('/frontend/js/jquery.min.js') }}" ></script>
     <script src="{{ asset('/frontend/js/bootstrap.min.js') }}" ></script>
@@ -162,7 +163,6 @@
     <script src="{{ asset('/frontend/js/sal.js') }}" ></script>
     <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}" ></script>
     <script src="{{ asset('/frontend/js/main.js') }}" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" ></script>
     {{-- <script src="/assets/intl-tel-input/intlTelInput.js"></script> --}}
     <script>
