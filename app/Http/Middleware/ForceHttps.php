@@ -18,6 +18,7 @@ class ForceHttps
 
     public function handle(Request $request, Closure $next)
     {
+        dd('oks');
         if (app()->environment('production')) {
             $host = $request->getHost();
 
