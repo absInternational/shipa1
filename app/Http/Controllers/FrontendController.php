@@ -32,7 +32,6 @@ class FrontendController extends Controller
     }
     public function blogs()
     {
-        dd('okkk blog');
         $query = Blog::where('category', '!=', 'Trailer & Trucks')->where('status', 1);
         $blogs = $query->paginate(10);
         $recent_blogs = $query->orderByDesc('id')->limit(5)->get();
@@ -55,7 +54,6 @@ class FrontendController extends Controller
     }
     public function blogDetailsNoSlug($slug)
     {
-        dd('Hola');
         $blog = Blog::where('slug_name', $slug)->first();
         if (!$blog) {
             abort(404);
