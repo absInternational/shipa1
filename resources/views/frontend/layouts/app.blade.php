@@ -17,7 +17,7 @@
     <link rel="apple-touch-icon" href="{{ asset('/frontend/images/logo/favicon.webp') }}">
     <link rel="shortcut icon" href="{{ asset('/frontend/images/logo/favicon.webp') }}" type="image/x-icon">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
-    <script src="https://unpkg.com/imask" async></script>
+    <script src="https://unpkg.com/imask"></script>
     <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
     <link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" async></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- improved load performance -->
