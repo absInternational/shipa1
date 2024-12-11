@@ -33,7 +33,7 @@ class BlogController extends Controller
             'canonical_url' => 'nullable|string|max:255',
             'meta_keyword' => 'nullable|string|max:255',
             'meta_description' => 'nullable|string',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         // $slug = Str::slug($request->post_name);
@@ -82,15 +82,15 @@ class BlogController extends Controller
             'canonical_url' => 'nullable|string|max:255',
             'meta_keyword' => 'nullable|string|max:255',
             'meta_description' => 'nullable|string',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'status' => 'required',
         ]);
 
         // $slug = Str::slug($request->post_name);
         // $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
 
-       // Replace spaces with hyphens in slug_name if provided
-       if ($request->filled('slug_name')) {
+        // Replace spaces with hyphens in slug_name if provided
+        if ($request->filled('slug_name')) {
             $slug = Str::slug($request->slug_name, '-'); // Replace spaces with hyphens
             $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
         } else {
