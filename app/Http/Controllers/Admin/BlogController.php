@@ -52,7 +52,7 @@ class BlogController extends Controller
             $image = $request->file('image');
             $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('blog_images'), $imageName);
-            $validatedData['post_image'] = 'blog_images/' . $imageName;
+            $validatedData['post_image'] = 'public/blog_images/' . $imageName;
         }
 
         $validatedData['user_id'] = auth()->id();
@@ -102,7 +102,7 @@ class BlogController extends Controller
             $image = $request->file('image');
             $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('blog_images'), $imageName);
-            $validatedData['post_image'] = 'blog_images/' . $imageName;
+            $validatedData['post_image'] = 'public/blog_images/' . $imageName;
         }
 
         $blog->update($validatedData);
