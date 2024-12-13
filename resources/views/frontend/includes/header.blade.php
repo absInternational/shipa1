@@ -42,7 +42,9 @@
                                             <li><a href="https://www.linkedin.com/in/shipa1-transport/" aria-label="Visit our LinkedIn" title="Visit our LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
                                             <li><a href="https://wa.me/+14107184031" aria-label="Contact us on WhatsApp" title="Contact us on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
                                             <li><a href="https://www.instagram.com/shipa1_transport/" aria-label="Visit our Instagram" title="Visit our Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                            <li><a href="https://www.pinterest.com/shipa10231/" aria-label="Visit our Pinterest" title="Visit our Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
                                         </ul>
+                                        
                                     </div>
                                 </div>
                             </div>
