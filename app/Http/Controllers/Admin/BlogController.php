@@ -12,7 +12,7 @@ class BlogController extends Controller
     public function index()
     {
         // $blogs = Blog::all();
-        $blogs = Blog::paginate(20);
+        $blogs = Blog::orderBy('id', 'DESC')->paginate(20);
         return view('dashboard.admin.blogs.index', compact('blogs'));
     }
 
@@ -33,7 +33,7 @@ class BlogController extends Controller
             'canonical_url' => 'nullable|string|max:255',
             'meta_keyword' => 'nullable|string|max:255',
             'meta_description' => 'nullable|string',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
         // $slug = Str::slug($request->post_name);
@@ -52,7 +52,7 @@ class BlogController extends Controller
             $image = $request->file('image');
             $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('blog_images'), $imageName);
-            $validatedData['post_image'] = 'blog_images/' . $imageName;
+            $validatedData['post_image'] = 'public/blog_images/' . $imageName;
         }
 
         $validatedData['user_id'] = auth()->id();
@@ -82,15 +82,15 @@ class BlogController extends Controller
             'canonical_url' => 'nullable|string|max:255',
             'meta_keyword' => 'nullable|string|max:255',
             'meta_description' => 'nullable|string',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
             'status' => 'required',
         ]);
 
         // $slug = Str::slug($request->post_name);
         // $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
 
-       // Replace spaces with hyphens in slug_name if provided
-       if ($request->filled('slug_name')) {
+        // Replace spaces with hyphens in slug_name if provided
+        if ($request->filled('slug_name')) {
             $slug = Str::slug($request->slug_name, '-'); // Replace spaces with hyphens
             $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
         } else {
@@ -102,7 +102,7 @@ class BlogController extends Controller
             $image = $request->file('image');
             $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('blog_images'), $imageName);
-            $validatedData['post_image'] = 'blog_images/' . $imageName;
+            $validatedData['post_image'] = 'public/blog_images/' . $imageName;
         }
 
         $blog->update($validatedData);

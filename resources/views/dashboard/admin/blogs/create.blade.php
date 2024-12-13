@@ -16,7 +16,8 @@
                                 @csrf
                                 <div class="form-group">
                                     <label>Blog Title</label>
-                                    <input class="form-control" type="text" name="post_name" placeholder="Blog Title" required />
+                                    <input class="form-control" type="text" name="post_name" placeholder="Blog Title"
+                                        required />
                                     @if ($errors->has('post_name'))
                                         <span class="text-danger">{{ $errors->first('post_name') }}</span>
                                     @endif
@@ -75,16 +76,16 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Canonical Url</label>
-                                    <input class="form-control" type="text" name="canonical_url" placeholder="Canonical Url"
-                                         />
-                                         {{-- @if ($errors->has('canonical_url'))
+                                    <input class="form-control" type="text" name="canonical_url"
+                                        placeholder="Canonical Url" />
+                                    {{-- @if ($errors->has('canonical_url'))
                                         <span class="text-danger">{{ $errors->first('canonical_url') }}</span>
                                     @endif --}}
                                 </div>
                                 <div class="form-group">
                                     <label>Meta Keyword</label>
-                                    <input class="form-control" type="text" name="meta_keyword" placeholder="Meta Keyword"
-                                        required />
+                                    <input class="form-control" type="text" name="meta_keyword"
+                                        placeholder="Meta Keyword" required />
                                     @if ($errors->has('meta_keyword'))
                                         <span class="text-danger">{{ $errors->first('meta_keyword') }}</span>
                                     @endif
@@ -99,7 +100,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Upload Blog Image</label>
-                                    <input type="file" name="image[]" class="form-control-file form-control height-auto"
+                                    <input type="file" name="image" class="form-control-file form-control height-auto"
                                         required />
                                 </div>
                                 <input class="btn btn-outline-primary" type="submit" name="submit">
