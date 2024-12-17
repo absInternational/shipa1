@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\NewsletterSubscribers;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -28,5 +30,32 @@ class AdminController extends Controller
 
         return redirect()->route('newsLetter.index')
             ->with('success', 'Contact message deleted successfully.');
+    }
+
+    public function changePassword(Request $request)
+    {
+        $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'currentPassword' => 'required',
+            'newPassword' => 'required|min:8',
+        ]);
+
+        // Find the user
+        $user = User::find($request->user_id);
+
+        // Check if the current password matches the one in the database
+        if (!Hash::check($request->currentPassword, $user->password)) {
+            return response()->json([
+                'message' => 'The current password is incorrect.',
+            ], 400);
+        }
+
+        // Update the password
+        $user->password = Hash::make($request->newPassword);
+        $user->save();
+
+        return response()->json([
+            'message' => 'Password changed successfully.',
+        ], 200);
     }
 }

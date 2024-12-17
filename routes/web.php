@@ -213,6 +213,9 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::resource('port-to-ports', PortToPortController::class);
     // nation-wide-transport
     Route::resource('nationwide-transports', NationWideTransportController::class);
+    
+    // change pass
+    Route::post('change-password', [AdminController::class, 'changePassword'])->name('change.password');
 });
 Auth::routes();
 // Blog details
