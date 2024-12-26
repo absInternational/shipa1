@@ -32,7 +32,7 @@ class FrontendController extends Controller
     }
     public function blogs()
     {
-        $query = Blog::where('category', '!=', 'Trailer & Trucks')->where('status', 1);
+        $query = Blog::where('category', '!=', 'Trailer & Trucks')->orderBy('id', 'DESC')->where('status', 1);
         $blogs = $query->paginate(10);
         $recent_blogs = $query->orderByDesc('id')->limit(5)->get();
         $blogTitle = Blog::select('id', 'post_name')->where('category', '!=', 'Trailer & Trucks')->get();
