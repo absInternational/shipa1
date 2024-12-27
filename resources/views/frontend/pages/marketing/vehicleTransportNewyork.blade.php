@@ -711,6 +711,24 @@
                 </div>
             </div>
         </div>
+        <div class="row services d-flex justify-content-center">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Affordability</h5>
+                        <p class="card-text text-dark">No need to fret about the overpriced services, at ship A1 your quality is assured and your amount is sustained</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card- h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Convenience</h5>
+                        <p class="card-text text-dark">we ensure that the time and amount you invest in us is returned in the form of convenience, and top-notch quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="tj-faq-section tj-faq-page pt-5">
@@ -804,7 +822,7 @@
         </div>
     </div>
 </section>
-<section class="why-choose-us-slider">
+{{-- <section class="why-choose-us-slider">
     <div class="container">
         <div class="tj-section-heading text-center">
             <h2 class="title text-white">Why Choose Us?</h2>
@@ -860,7 +878,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 @include('partials.blog-slider')
 @endsection
 @section('extraScript')
