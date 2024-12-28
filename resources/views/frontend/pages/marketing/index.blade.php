@@ -151,28 +151,26 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('/frontend/images/service/Bike.webp') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/NEW york.png') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
                             <div class="col-12 text-center mb-3">
-                                <i class="fa fa-motorcycle fa-3x"></i>
+                                <i class="fa fa-car-side fa-3x"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Cost-Effective Way of Motorcycle Shipping</h4>
+                                <h4 class="overlay-title">Vehicle Transportation In New York</h4>
                             </div>
                             <div class="col-12 text-center">
-                                <a class="fs-5" href="{{ route('frontend.pages.services.bike-service') }}">
-                                    <button class="tj-submit-btn fs-6">
-                                        Motorcycle Service <i class="fa fa-arrow-left"></i>
+                                <a class="fs-5" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">
+                                    <button class="tj-submit-btn fs-6">Vehicle Transportation New York<i class="fa fa-arrow-left"></i>
                                     </button>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.services.bike-service') }}">
-                                Motorcycle Shipping Service </a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">Vehicle Transportation New York</a></h4>
                         <p></p>
                     </div>
                 </div>
