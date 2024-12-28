@@ -148,7 +148,7 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
                         <img loading="lazy" src="{{ asset('/frontend/images/service/Bike.webp') }}" alt="Image" />
@@ -177,7 +177,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+           {{-- <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
                         <img loading="lazy" src="{{ asset('/frontend/images/service/ATV.webp') }}" alt="Image" />

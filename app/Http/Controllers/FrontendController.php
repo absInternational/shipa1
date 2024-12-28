@@ -459,4 +459,16 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.marketing.vehicleTransportNewyork', compact('site_reviews', 'blogs', 'makes'));
     }
+    public function vehicleTransportInNewyork()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInNewyork', compact('site_reviews', 'blogs', 'makes'));
+    }
 }

@@ -278,16 +278,40 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="input-form">
                                     <label class="d-block">Email:</label>
                                     <input type="email" id="email" name="email" placeholder="Email " required="" />
                                     <small id="errEmail" class="err-style"></small>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="text-white">Services:</label>
+                                    <select>
+                                        <option value="" selected="" disabled="">Service</option> 
+                                        <option value="Vehicle">Vehicle Transportation</option>
+                                        <option value="Heavy">Heavy Equipment</option>
+                                        <option value="Freight">Freight Transportation</option>
+                                        <option value="RORO">RORO</option>
+                                    </select>
+                                    {{-- <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                    <select class=" " id="trailer_type" name="trailer_type">
+                                        <option value="1" selected>Select Service</option>
+                                        <option value="2">Enclosed Trailer</option>
+                                    </select> --}}
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
+                                <div class="input-form">
+                                    <label class="">Message:</label>
+                                    <br>
+                                    <textarea placeholder="Enter your message" required="" class="bg-white border rounded" style="height: 100px;width: 100%;"></textarea>
+                                </div>
+                            </div>
+                            {{-- <div class="col-md-6">
                                 <div class="input-form">
                                     <label class="d-block mb-0"> Pickup Location:</label>
                                     <input type="text" id="pickup-location" name="origin" placeholder="" required="" />
@@ -303,9 +327,9 @@
                                     <small id="errDLoc" class="err-loc"></small>
                                     <ul class="suggestions suggestionsTwo"></ul>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
-                        <div class="vehicle-info">
+                        {{-- <div class="vehicle-info">
                             <div class="row select-bm">
                                 <div class="col-md-12 text-center">
                                     <h4 class="text-white">Car Information</h4>
@@ -365,8 +389,8 @@
                                 </div>
 
                             </div>
-                        </div>
-                        <div class="row mb-3">
+                        </div> --}}
+                        {{-- <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="trailer_type" class="text-white">Select Trailer Type</label>
@@ -424,10 +448,10 @@
                                     onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="tj-theme-button text-center mt-3">
                             <button class="tj-submit-btn" type="submit" value="submit">
-                                Calculate Price <i class="fa-light fa-arrow-right"></i>
+                                Submit <i class="fa-light fa-arrow-right"></i>
                             </button>
                         </div>
                     </form>
