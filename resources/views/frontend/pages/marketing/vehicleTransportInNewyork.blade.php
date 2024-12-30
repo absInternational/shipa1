@@ -152,7 +152,7 @@
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">SERVICES</span>
-                        <h2 class="title">Speedy New York Car Shipping Services</h2>
+                        <h2 class="title">Vehicle Transportation In New York </h2>
                         <p class="desc-2">
                             ShipA1’s New York car shipping services mean swift vehicle delivery in no time. 
                             Wanna find out how this magic works? Reach out to us now!
@@ -427,9 +427,8 @@
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Experienced</span>
                         <p class="desc">
-                            You should know, not every shipping company has the ability for construction equipment
-                            shipping as it’s quite a daunting task and requires top-notch skilled personnel & the
-                            appropriate trailers that are necessary for doing the job.
+                            Our dominance in car shipping started a decade ago but our grounding area was New York. 
+                            And who can say to a service provider packed with expert shippers, skilled carriers, and high-tech haulers?
                         </p>
                     </div>
                 </div>
@@ -440,9 +439,8 @@
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Availability of Trailers</span>
                         <p class="desc">
-                            For construction equipment transport the hauler must have (RGN) Removable Gooseneck
-                            Trailer, Flatbeds and Expendable trailers etc. And along with having these trailers and the
-                            dexterous employees we make it possible to ship your Equipment.
+                            Our services depend on your personal choices. Do you want to ship your car to New York in an open or enclosed trailer? 
+                            Or is it the transport from or to New York? Your car shipping smart trailers are just one call away.
                         </p>
                     </div>
                 </div>
@@ -455,9 +453,9 @@
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Specialized Handling</span>
                         <p class="desc">
-                            Construction equipment calls for handling with precision and care. Our staff at Ship A1 is
-                            specially trained in the loading and offloading requirements of heavy machinery and securing
-                            each piece of equipment during transport.
+                            Stress about the roll-on/roll-off and car shipping security? Don’t worry about it. 
+                            Your vehicles for shipping in New York are covered. It’s ShipA1, your trusted transport partner.
+                            Your precious car is our priority.
                         </p>
                     </div>
                 </div>
@@ -468,9 +466,9 @@
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Tailor-Made Solutions</span>
                         <p class="desc">
-                            Every construction project differs. Ship A1 offers personalized transport solutions with a
-                            customized combination of trailers and logistical expertise in order to meet the specifications
-                            of the equipment, giving flexibility and reliability.
+                            What? Need smart GPS, active monitoring, fast delivery, and flexible services? Just say it. 
+                            Our customized solutions are open to people in New York. This state is the dominating hub of ShipA1. 
+                            So, talk to us and get tailor-made solutions today!
                         </p>
                     </div>
                 </div>
@@ -489,21 +487,21 @@
                 <div class="slide text-center">
                     <i class="fas fa-users icon-hover-shake" style="font-size: 50px;"></i>
                     <h3 class="slide-title">24/7 Customer Support</h3>
-                    <p class="slide-text">Your concern? Our priority. For ship a1 there is no odd time, we are present 24/7 for our customers</p>
+                    <p class="slide-text">What? Query from New York? We never miss it! Take advantage of our 24/7 active assistance.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-dollar-sign icon-hover-shake" style="font-size: 50px;"></i>
                     <h3 class="slide-title">Affordability</h3>
-                    <p class="slide-text">No need to fret about the overpriced services, at ship A1 your quality is assured and your amount is sustained</p>
+                    <p class="slide-text">No hidden charges, no extra fares. ShipA1’s services mean cost-efficiency for all New Yorkers.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-clock icon-hover-shake" style="font-size: 50px;"></i>
                     <h3 class="slide-title">Convenience</h3>
-                    <p class="slide-text">We ensure that the time and amount you invest in us is returned in the form of convenience, and top-notch quality.</p>
+                    <p class="slide-text">Challenges in car shipping by ShipA1, what’s that? Try out our services and be satisfied. It’s your shipping brand.</p>
                 </div>
             </div>
         </div>
@@ -512,14 +510,14 @@
                 <div class="slide text-center">
                     <i class="fas fa-headset icon-hover-shake" style="font-size: 50px;"></i>
                     <h3 class="slide-title">Door to Door</h3>
-                    <p class="slide-text">We handle every step, picking up the vehicle from your location and delivering it to your destination saving you time and effort</p>
+                    <p class="slide-text">We handle every step, picking up the vehicle from your location and delivering it to your destination, saving you time and effort.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-shield-alt icon-hover-shake" style="font-size: 50px;"></i>
                     <h3 class="slide-title">Insurance</h3>
-                    <p class="slide-text">Our 100% insured vehicles guarantee the comfort of our customers and allow them to sit back and relax when partnering with Ship A1</p>
+                    <p class="slide-text">Your vehicles are 100% covered. You are partnering with ShipA1. Your cars are a luxury to us. So, sit back and relax.</p>
                 </div>
             </div>
         </div>
