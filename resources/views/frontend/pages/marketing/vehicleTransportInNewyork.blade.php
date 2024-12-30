@@ -523,7 +523,6 @@
         </div>
     </div>
 </section>
-@include('partials.newsletter')
 <script>
     function playVideo() {
         document.querySelector('.video-thumbnail').style.display = 'none';
