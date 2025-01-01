@@ -447,7 +447,7 @@ class FrontendController extends Controller
             ->get();
         return view('frontend.pages.marketing.index', compact( 'makes'));
     }
-    public function vehicleTransportNewyork()
+    public function vehicleTransportInConnecticut()
     {
         $makes = VehicleName::select('make')
             ->where('UserId', 14)
@@ -457,7 +457,7 @@ class FrontendController extends Controller
             ->get();
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
-        return view('frontend.pages.marketing.vehicleTransportNewyork', compact('site_reviews', 'blogs', 'makes'));
+        return view('frontend.pages.marketing.vehicleTransportInConnecticut', compact('site_reviews', 'blogs', 'makes'));
     }
     public function vehicleTransportInNewyork()
     {
@@ -470,5 +470,17 @@ class FrontendController extends Controller
         $site_reviews = ReviewSite::get();
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.marketing.vehicleTransportInNewyork', compact('site_reviews', 'blogs', 'makes'));
+    }
+    public function vehicleTransportInHampshire()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInHampshire', compact('site_reviews', 'blogs', 'makes'));
     }
 }

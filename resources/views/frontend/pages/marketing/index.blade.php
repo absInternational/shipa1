@@ -119,7 +119,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+            {{-- <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
                         <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Image" />
@@ -130,28 +130,24 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">The First Stop Platform of Car Shipping Services</h4>
+                                <h4 class="overlay-title">Vehicle Transportation Shipping Services</h4>
                             </div>
                             <div class="col-12 text-center">
-                                <a href="{{ route('frontend.pages.marketing.vehicleTransportNewyork') }}">
-                                    <button class="tj-submit-btn fs-6">
-                                        Vehicle Transportation Newyork <i class="fa fa-arrow-left"></i>
-                                    </button>
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInConnecticut') }}">
+                                    <button class="tj-submit-btn fs-6">Vehicle Transportation In Connecticut<i class="fa fa-arrow-left"></i></button>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportNewyork') }}">
-                            Vehicle Transportation Newyork </a></h4>
-                        <p></p>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInConnecticut') }}">Vehicle Transportation In Connecticut</a></h4><p></p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('/frontend/images/slider/NEW york.png') }}" alt="Image" />
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Image" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -163,18 +159,120 @@
                             </div>
                             <div class="col-12 text-center">
                                 <a class="fs-5" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">
-                                    <button class="tj-submit-btn fs-6">Vehicle Transportation New York<i class="fa fa-arrow-left"></i>
+                                    <button class="tj-submit-btn fs-6">Vehicle Transportation In New York<i class="fa fa-arrow-left"></i>
                                     </button>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">Vehicle Transportation New York</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">Vehicle Transportation In <br> New York</a></h4>
                         <p></p>
                     </div>
                 </div>
+            </div>     
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Image" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa fa-car-side fa-3x"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transportation In Hampshire</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a class="fs-5" href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">
+                                    <button class="tj-submit-btn fs-6">Vehicle Transportation In Hampshire<i class="fa fa-arrow-left"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">Vehicle Transportation In Hampshire</a></h4>
+                        <p></p>
+                    </div>
+                </div>
+            </div> --}}
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Connecticut" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in Connecticut</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInConnecticut') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInConnecticut') }}">Vehicle Transportation in Connecticut</a></h4>
+                    </div>
+                </div>
             </div>
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in New York" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in New York</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">Vehicle Transportation in New York</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Hampshire" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in Hampshire</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">Vehicle Transportation in Hampshire</a></h4>
+                    </div>
+                </div>
+            </div>            
            {{-- <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">

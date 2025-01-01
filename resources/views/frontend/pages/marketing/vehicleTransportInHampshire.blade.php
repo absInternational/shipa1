@@ -160,8 +160,8 @@
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape2">SERVICES</span>
-                        <h2 class="title">Vehicle Transportation In New York</h2>
-                        <p class="desc-2">ShipA1’s New York car shipping services mean swift vehicle delivery in no time.
+                        <h2 class="title">Vehicle Transportation In Hampshire</h2>
+                        <p class="desc-2">ShipA1’s Hampshire car shipping services mean swift vehicle delivery in no time.
                             Wanna find out how this magic works? Reach out to us now!</p>
                     </div>
                     <div class="row">
@@ -290,14 +290,14 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Your Speedy New York Car Shipping Services</h3>
-                        <p class="desc">Shipping cars into and out of New York is difficult, but ShipA1 makes it smooth and hassle-free. 
-                            From heavy lifts to branded cars entering the state, ShipA1 provides affordable packages, ensuring no
-                            increases in hauler, crane, or carrier costs. With our dependable door-to-door delivery, we'll make
-                            shipping a breeze for you. With ShipA1, you can enjoy the ease of navigating national legal 
-                            complexities and unpredictable road conditions in out-of-state transport. We ensure verified 
-                            documentation and a smooth delivery process, making us the ideal choice for vehicle transportation 
-                            in and out of New York.</p>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Your Speedy Hampshire Car Shipping Services</h3>
+                        <p class="desc">ShipA1 has become one of the leading companies for car freight and transport service, with over 300,000
+                            satisfied clients. New Hampshire became a hub for our cost-efficient and fast car shipping services based on
+                            high demand and the advantages of an open market throughout the year. Where other providers don't want to
+                            work during the off-seasons, ShipA1 remains devoted to fair practice, never taking advantage of the brokers 
+                            or the consignees. We have personalized, budget-friendly services tailored to meet the needs of customers 
+                            leaving New Hampshire. We offer lightning-fast delivery and competitive rates for transporting vehicles to
+                            Florida, Alabama, or any other state, making ShipA1 the trusted choice for New Hampshire vehicle transportation.</p>
                     </div>
                 </div>
             </div>
@@ -433,7 +433,7 @@
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Experienced</span>
                         <p class="desc">
-                            Our dominance in car shipping started a decade ago but our grounding area was New York. 
+                            Our dominance in car shipping started a decade ago but our grounding area was Hampshire. 
                             And who can say to a service provider packed with expert shippers, skilled carriers, and high-tech haulers?
                         </p>
                     </div>
@@ -445,8 +445,8 @@
                     <div class="tj-section-heading">
                         <span class="sub-title active-shape">Availability of Trailers</span>
                         <p class="desc">
-                            Our services depend on your personal choices. Do you want to ship your car to New York in an open or enclosed trailer? 
-                            Or is it the transport from or to New York? Your car shipping smart trailers are just one call away.
+                            Our services depend on your personal choices. Do you want to ship your car to Hampshire in an open or enclosed trailer? 
+                            Or is it the transport from or to Hampshire? Your car shipping smart trailers are just one call away.
                         </p>
                     </div>
                 </div>
@@ -460,7 +460,7 @@
                         <span class="sub-title active-shape">Specialized Handling</span>
                         <p class="desc">
                             Stress about the roll-on/roll-off and car shipping security? Don’t worry about it. 
-                            Your vehicles for shipping in New York are covered. It’s ShipA1, your trusted transport partner.
+                            Your vehicles for shipping in Hampshire are covered. It’s ShipA1, your trusted transport partner.
                             Your precious car is our priority.
                         </p>
                     </div>
@@ -473,7 +473,7 @@
                         <span class="sub-title active-shape">Tailor-Made Solutions</span>
                         <p class="desc">
                             What? Need smart GPS, active monitoring, fast delivery, and flexible services? Just say it. 
-                            Our customized solutions are open to people in New York. This state is the dominating hub of ShipA1. 
+                            Our customized solutions are open to people in Hampshire. This state is the dominating hub of ShipA1. 
                             So, talk to us and get tailor-made solutions today!
                         </p>
                     </div>
@@ -493,14 +493,14 @@
                 <div class="slide text-center">
                     <i class="fas fa-users icon-hover-shake" style="font-size: 50px;"></i>
                     <h3 class="slide-title">24/7 Customer Support</h3>
-                    <p class="slide-text">What? Query from New York? We never miss it! Take advantage of our 24/7 active assistance.</p>
+                    <p class="slide-text">What? Query from Hampshire? We never miss it! Take advantage of our 24/7 active assistance.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
                 <div class="slide text-center">
                     <i class="fas fa-dollar-sign icon-hover-shake" style="font-size: 50px;"></i>
                     <h3 class="slide-title">Affordability</h3>
-                    <p class="slide-text">No hidden charges, no extra fares. ShipA1’s services mean cost-efficiency for all New Yorkers.</p>
+                    <p class="slide-text">No hidden charges, no extra fares. ShipA1’s services mean cost-efficiency for all Hampshireers.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 mb-4">
