@@ -151,87 +151,8 @@
                         {{ session('error') }}
                     </div>
                 @endif
+                @include('partials.marketing-form')
                 {{-- @include('partials.multi-form-heavy') --}}
-                <div class="tj-input-form mt-4 w-100" data-bg-image="">
-                    @if (session('success'))
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-                    @if (session('error'))
-                        <div class="alert alert-error">
-                            {{ session('error') }}
-                        </div>
-                    @endif
-                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
-                        id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
-                        enctype="multipart/form-data">
-                        @csrf
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                        <div class="container mt-2">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block">Name:</label>
-                                        <input type="text" id="name" name="name" placeholder="Name" required="" />
-                                        <small id="errName" class="err-style"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block">Phone:</label>
-                                        <input class="ophone" type="tel" id="phone" name="phone" placeholder="Number" required="" />
-                                        <small id="errPhone" class="err-style"></small>
-                                        <input type="hidden" name="country_code" id="country_code" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-form">
-                                        <label class="d-block">Email:</label>
-                                        <input type="email" id="email" name="email" placeholder="Email " required="" />
-                                        <small id="errEmail" class="err-style"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="text-white">Services:</label>
-                                        <select>
-                                            <option value="" selected="" disabled="">Service</option> 
-                                            <option value="Vehicle">Vehicle Transportation</option>
-                                            <option value="Heavy">Heavy Equipment</option>
-                                            <option value="Freight">Freight Transportation</option>
-                                            <option value="RORO">RORO</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="input-form">
-                                        <label class="">Message:</label>
-                                        <br>
-                                        <textarea placeholder="Enter your message" required="" class="bg-white border rounded custom-textarea"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tj-theme-button text-center mt-3">
-                                <button class="tj-submit-btn" type="submit" value="submit">
-                                    Submit <i class="fa-light fa-arrow-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
@@ -430,7 +351,7 @@
 
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        {{-- <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="trailer_type" class="text-white">Select Trailer Type</label>
@@ -449,11 +370,11 @@
                                     </select>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <a class="add-car-1" id="addVehicleBtn"><i class="fa fa-plus"></i> Add Vehicle</a>
                         <div id="vehicles-container">
                         </div>
-                        <div class="row mt-2">
+                        {{-- <div class="row mt-2">
                             <di class="col-md-6">
                                 <div class="form-group">
                                     <input class="form-check-input " type="checkbox" id="modification"
@@ -488,7 +409,7 @@
                                     onchange="previewImages(event)">
                                 <div class="image-preview-container" id="imagePreviewContainer"></div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="tj-theme-button text-center mt-3">
                             <button class="tj-submit-btn" type="submit" value="submit">
                                 Calculate Price <i class="fa-light fa-arrow-right"></i>
