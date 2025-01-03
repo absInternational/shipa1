@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
-@section('title', 'Heavy Construction Equipment Transport & Shipping in USA ')
-@section('meta_description', 'Get your heavy construction equipment transport and shipping safely across the USA. Our expert services ensure timely delivery and peace of mind for your projects.')
+@section('title', 'Affordable Vehicle Transportation Services in New York | Shipa1')
+@section('meta_description', 'Looking for reliable vehicle transportation in New York? Shipa1 offers affordable, secure, and timely car shipping services. Request a free quote today and experience hassle-free transport solutions!')
 @section('content')
 <Style>
     .custom-textarea{
@@ -265,6 +265,241 @@
     </div>
 </section>
 @include('partials.reveiw-detail')
+<section class="tj-blog-standard pb-0 pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="image-container">
+                    <img class="img-fluid" src="{{ asset('/frontend/images/project/CAR-SERVICE-MAIN.webp') }}"
+                        loading="lazy" alt="Motorcyle Transport">
+                </div>
+                <br>
+                <div class="text-container text-left">
+                    <h3>The First Stop Platform of Car Shipping Services</h3>
+                    <p>Ship A1, your go-to partner in transportation services! We prioritize the needs of our customers and
+                         ensure their shipping services are as smooth as possible. With over 16 years of experience, we can
+                          proudly count ourselves as one of the leading transportation companies. <br>
+                        Ready to ship your car to a new destination? Say no more, Ship A1 offers the best car transportation
+                         services, as well as equipped with advanced trailers for your vehicle.
+                        </p>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6 text-center">
+                        <h4><i class="fas fa-ship" style="color: var(--tj-primary-color);"></i> Successful Shipment</h4>
+                        <div class="review-counter fs-2">
+                            <span id="counter-value" class="ms-3" data-target="318" style="color: var(--tj-secondary-color);">0</span>k+
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h4><i class="fas fa-smile" style="color: var(--tj-primary-color);"></i> Satisfied Clients</h4>
+                        <div class="review-counter fs-2">
+                            <span id="counter-value-2" class="ms-3 " data-target="289" style="color: var(--tj-secondary-color);">0</span>k+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="tj-input-form w-100" data-bg-image="">
+                    @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                    @endif
+                    @if (session('error'))
+                    <div class="alert alert-error">
+                        {{ session('error') }}
+                    </div>
+                    @endif
+                    <h4 class="title text-center">Car Quote!</h4>
+                    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form" novalidate id="calculatePriceFrom"
+                        data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
+                        @csrf
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block">Name:</label>
+                                    <input type="text" id="name" name="name" placeholder="Name" required="" />
+                                    <small id="errName" class="err-style"></small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block">Phone:</label>
+                                    <input class="ophone" type="tel" id="phone" name="phone" placeholder="Number" required="" />
+                                    <small id="errPhone" class="err-style"></small>
+                                    <input type="hidden" name="country_code" id="country_code" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-form">
+                                    <label class="d-block">Email:</label>
+                                    <input type="email" id="email" name="email" placeholder="Email " required="" />
+                                    <small id="errEmail" class="err-style"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block mb-0"> Pickup Location:</label>
+                                    <input type="text" id="pickup-location" name="origin" placeholder="" required="" />
+                                    <small id="errOLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-form">
+                                    <label class="d-block  mb-0"> Delivery Location:</label>
+                                    <input type="text" id="delivery-location" name="destination" placeholder=""
+                                        required="" />
+                                    <small id="errDLoc" class="err-loc"></small>
+                                    <ul class="suggestions suggestionsTwo"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vehicle-info">
+                            <div class="row select-bm">
+                                <div class="col-md-12 text-center">
+                                    <h4 class="text-white">Car Information</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Year</label>
+                                        <div class="dropdown">
+                                            <input class="form-control dropdown-toggle year" type="text"
+                                                name="year[]" id="year" placeholder="Select Year"
+                                                data-bs-toggle="dropdown" aria-expanded="false" required>
+                                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                                <li><a class="dropdown-item">Select Year</a></li>
+                                                @php
+                                                    $currentYear = date('Y');
+                                                    for ($year = $currentYear; $year >= 1936; $year--) {
+                                                        echo "<li><a class='dropdown-item' data-value='$year'>$year</a></li>";
+                                                    }
+                                                @endphp
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select">
+                                        <label>Make</label>
+                                        <div class="dropdown">
+                                            <input class="form-control dropdown-toggle make" name="make[]" required
+                                                type="text" id="make" placeholder="Select Make"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <ul class="dropdown-menu make-dropdown"
+                                                aria-labelledby="make">
+                                                <li><a class="dropdown-item">Select Make</a></li>
+                                                @foreach ($makes as $make)
+                                                    <li><a class="dropdown-item"
+                                                            data-value="{{ $make->make }}">{{ $make->make }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-form tj-select model-div">
+                                        <label>Model</label>
+                                        <div class="dropdown">
+                                            <input class="form-control dropdown-toggle model-input" name="model[]"
+                                                type="text" id="model" required placeholder="Select Model"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <ul class="dropdown-menu model-dropdown"
+                                                aria-labelledby="model">
+                                                <li><a class="dropdown-item" href="#">Select Model</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="trailer_type" class="text-white">Select Trailer Type</label>
+                                    <select class=" " id="trailer_type" name="trailer_type">
+                                        <option value="1" selected>Open Trailer</option>
+                                        <option value="2">Enclosed Trailer</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="condition" class="text-white">Condition</label>
+                                    <select class=" " id="condition" name="condition[]">
+                                        <option value="1" selected>Running</option>
+                                        <option value="2">Non Running</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="add-car-1" id="addVehicleBtn"><i class="fa fa-plus"></i> Add Vehicle</a>
+                        <div id="vehicles-container">
+                        </div>
+                        <div class="row mt-2">
+                            <di class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-check-input " type="checkbox" id="modification"
+                                        name="modification" value="1" />
+                                    <label class="form-check-label text-white ms-4" for="modification">
+                                        Modified?</label>
+                                </div>
+
+                                <div class="input-form div-modify_info" style="display: none;">
+                                    <label class="d-block"> Modification Information:</label>
+                                    <input   type="text" id="c" name="modify_info" placeholder="Modification" />
+                                </div>
+                            </di>
+                            <di class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                        name="available_at_auction" value="1" />
+                                    <label class="form-check-label text-white" for="available_at_auction">
+                                        Auction?</label>
+                                </div>
+
+                                <div class="input-form div-link mt-3" style="display: none;">
+                                    <label class="d-block"> Enter Link:</label>
+                                    <input class="form-control" type="url" id="link" name="link" placeholder="Link" />
+                                </div>
+                            </di>
+                        </div>
+                        <div class="row">
+                            <div class="input-form mt-1">
+                                <label class="d-block text-white"> Image:</label>
+                                <input class="form-control image_input" name="image[]" type="file" accept="image/*" multiple
+                                    onchange="previewImages(event)">
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
+                            </div>
+                        </div>
+                        <div class="tj-theme-button text-center mt-3">
+                            <button class="tj-submit-btn" type="submit" value="submit">
+                                Calculate Price <i class="fa-light fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="tj-about-section">
     <div class="container">
         <div class="row">
@@ -449,5 +684,235 @@
         var videoSrc = iframe.src;
         iframe.src = videoSrc + "&autoplay=1"; 
     }
+</script>
+<script>
+    $(document).ready(function() {
+        function addNewVehicle() {
+            var newVehicleHtml =
+                `
+            <div class="vehicle-info">
+            <div class="row select-bm">
+                <!-- Bin icon for deleting vehicle -->
+                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;"></i></span>
+                <div class="col-md-4">
+                    <div class="input-form tj-select">
+                        <label>Year</label>
+                        <div class="dropdown">
+                            <input class="form-control dropdown-toggle year" type="text"
+                                name="year[]" id="year" placeholder="Select Year"
+                                data-bs-toggle="dropdown" aria-expanded="false" required>
+                            <ul class="dropdown-menu year-dropdown" aria-labelledby="year">
+                                <li><a class="dropdown-item">Select Year</a></li>`;
+            var currentYear = {{ date('Y') }};
+            for (var year = currentYear; year >= 1936; year--) {
+                newVehicleHtml += `<li><a class='dropdown-item' data-value='${year}'>${year}</a></li>`;
+            }
+            newVehicleHtml += `
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-form tj-select">
+                        <label>Make</label>
+                        <div class="dropdown">
+                            <input class="form-control dropdown-toggle make" name="make[]" type="text" id="make" placeholder="Select Make" data-bs-toggle="dropdown" aria-expanded="false">
+                            <ul class="dropdown-menu make-dropdown" aria-labelledby="make">
+                                <li><a class="dropdown-item" >Select Make</a></li>`;
+            @foreach ($makes as $make)
+                newVehicleHtml +=
+                    `<li><a class="dropdown-item"  data-value="{{ $make->make }}">{{ $make->make }}</a></li>`;
+            @endforeach
+            newVehicleHtml += `
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-form tj-select model-div">
+                        <label>Model</label>
+                        <select class="nice-select model" name="model[]" id="model" required>
+                            <!-- Options will be filled by JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="condition" class="text-white">Condition</label>
+                        <select class="nice-select" id="condition" name="condition[]">
+                            <option value="1" selected>Running</option>
+                            <option value="2">Non Running</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            </div>
+        `;
+            $('#vehicles-container').append(newVehicleHtml);
+        }
+        $('#addVehicleBtn').click(function() {
+            addNewVehicle();
+        });
+        $(document).on('click', '.delete-vehicle', function() {
+            $(this).closest('.vehicle-info').remove();
+        });
+        $(document).on('click', '.make-dropdown .dropdown-item', function() {
+            var make = $(this).data('value');
+            $(this).closest('.dropdown').find('.form-control').val(make).end()
+                .find('.dropdown-menu').removeClass('show');
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            var year = vehicleInfo.find('.year').val();
+            if (year && make) {
+                getModel(year, make, vehicleInfo);
+            }
+        });
+        // $(document).on('change', '.year, .make', function() {
+        //     var year = $(this).closest('.vehicle-info').find('.year').val();
+        //     var makeId = $(this).closest('.vehicle-info').find('.make').val();
+        //     alert(makeId);
+        //     var vehicleInfo = $(this).closest('.vehicle-info');
+        //     if (year && makeId) {
+        //         getModel(year, makeId, vehicleInfo);
+        //     }
+        // });
+        $(document).on('click', '.year-dropdown .dropdown-item', function() {
+            console.log('okokok');
+            var selectedYear = $(this).data('value');
+            var vehicleInfo = $(this).closest(
+                '.vehicle-info');
+            vehicleInfo.find('.year').val(
+                selectedYear);
+        });
+        $(document).on('click', '.year, .make', function() {
+            var year = $(this).closest('.vehicle-info').find('.year').val();
+            var makeId = $(this).closest('.vehicle-info').find('.make').val();
+            // alert(makeId);
+            var vehicleInfo = $(this).closest('.vehicle-info');
+            if (year && makeId) {
+                getModel(year, makeId, vehicleInfo);
+            }
+        });
+        function getModel(year, makeId, vehicleInfo) {
+            $.ajax({
+                url: "{{ route('get.models') }}",
+                method: 'GET',
+                data: {
+                    year: year,
+                    make: makeId
+                },
+                success: function(response) {
+                    var modelDropdown = vehicleInfo.find('.model-dropdown');
+                    var modelInput = vehicleInfo.find('.model-input');
+                    var modelSelect = vehicleInfo.find('.model');
+                    if (modelDropdown.length && modelInput.length) {
+                        modelDropdown.empty();
+                        modelDropdown.append(
+                            '<li><a class="dropdown-item" data-value="">Select Model</a></li>');
+                        $.each(response, function(index, model) {
+                            modelDropdown.append(
+                                '<li><a class="dropdown-item" data-value="' + model +
+                                '">' + model + '</a></li>');
+                        });
+                        modelInput.on('focus', function() {
+                            modelSelect.empty(); 
+                            modelSelect.append(
+                                '<option value="">Select Model</option>'
+                            );
+                            modelDropdown.show();
+                        });
+                        modelInput.on('input', function() {
+                            var searchTerm = $(this).val().toLowerCase();
+                            modelDropdown.find('li').each(function() {
+                                var itemText = $(this).text().toLowerCase();
+                                if (itemText.indexOf(searchTerm) !== -1 ||
+                                    searchTerm === '') {
+                                    $(this).show();
+                                } else {
+                                    $(this).hide();
+                                }
+                            });
+                        });
+                        modelDropdown.on('click', 'a.dropdown-item', function(e) {
+                            e.preventDefault(); 
+                            var selectedText = $(this).text();
+                            var selectedValue = $(this).data('value');
+                            modelInput.val(
+                                selectedText); 
+                            modelDropdown.hide();
+                            modelSelect.empty(); 
+                            modelSelect.append('<option value="' + selectedValue + '">' +
+                                selectedText + '</option>');
+                            modelSelect.val(
+                                selectedValue
+                            ); 
+                        });
+                        $(document).on('click', function(e) {
+                            if (!modelInput.is(e.target) && !modelDropdown.is(e.target) &&
+                                modelDropdown.has(e.target).length === 0) {
+                                modelDropdown.hide();
+                            }
+                        });
+                    }
+                    if (modelSelect.length) {
+                        modelSelect.empty(); 
+                        modelSelect.append(
+                            '<option value="">Select Model</option>'); 
+                        $.each(response, function(index, model) {
+                            modelSelect.append('<option value="' + model + '">' + model +
+                                '</option>');
+                        });
+                        modelSelect.on('change', function() {
+                            var selectedModel = $(this).val();
+                            modelInput.val(modelSelect.find('option:selected').text());
+                        });
+                    }
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+        $(document).on('input', '.dropdown-toggle', function() {
+            var input = $(this).val().toLowerCase();
+            $(this).siblings('.dropdown-menu').find('.dropdown-item').each(function() {
+                var text = $(this).text().toLowerCase();
+                $(this).toggle(text.indexOf(input) > -1);
+            });
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const counter = document.getElementById('counter-value');
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 50; 
+        const updateCounter = () => {
+            if (count < target) {
+                count = Math.ceil(count + increment);
+                counter.textContent = count;
+                setTimeout(updateCounter, 50);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        updateCounter();
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const counter = document.getElementById('counter-value-2');
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 50; 
+        const updateCounter = () => {
+            if (count < target) {
+                count = Math.ceil(count + increment);
+                counter.textContent = count;
+                setTimeout(updateCounter, 50); 
+            } else {
+                counter.textContent = target;
+            }
+        };
+        updateCounter();
+    });
 </script>
 @endsection

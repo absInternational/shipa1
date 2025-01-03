@@ -273,48 +273,105 @@
         });
     </script>
     <script>
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     const phoneInput = document.querySelector("#phone");
+        //     const countryInput = document.querySelector('#country_code');
+        //     const iti = window.intlTelInput(phoneInput, {
+        //         separateDialCode: true,
+        //         initialCountry: "auto",
+        //         geoIpLookup: function (callback) {
+        //             // Default to US for testing
+        //             callback("us");
+        //         },
+        //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        //         flagsImagePath: "https://www.shipa1.com/public/frontend/images/icon/flags.webp"
+        //     });
+        //     let phoneMask;
+        //     function updateMask() {
+        //         const countryData = iti.getSelectedCountryData();
+        //         const countryCode = countryData.iso2;
+        //         const maskPatterns = {
+        //             us: "(000) 000-0000",
+        //             ca: "(000) 000-0000", // Add more patterns as needed
+        //         };
+        //         const maskPattern = maskPatterns[countryCode] || "";
+        //         if (phoneMask) {
+        //             phoneMask.destroy();
+        //         }
+        //         if (maskPattern) {
+        //             phoneMask = IMask(phoneInput, { mask: maskPattern });
+        //         }
+        //         countryInput.value = countryData.dialCode;
+        //     }
+        //     function validatePhoneNumber() {
+        //         if (!iti.isValidNumber()) {
+        //             console.error("Invalid phone number");
+        //             return false;
+        //         }
+        //         return true;
+        //     }
+        //     phoneInput.addEventListener('input', updateMask);
+        //     phoneInput.addEventListener('countrychange', updateMask);
+        //     phoneInput.addEventListener('blur', validatePhoneNumber);
+        //     updateMask();
+        // });
         document.addEventListener("DOMContentLoaded", function () {
-            const phoneInput = document.querySelector("#phone");
-            const countryInput = document.querySelector('#country_code');
-            const iti = window.intlTelInput(phoneInput, {
-                separateDialCode: true,
-                initialCountry: "auto",
-                geoIpLookup: function (callback) {
-                    // Default to US for testing
-                    callback("us");
-                },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-                flagsImagePath: "https://www.shipa1.com/public/frontend/images/icon/flags.webp"
-            });
-            let phoneMask;
-            function updateMask() {
-                const countryData = iti.getSelectedCountryData();
-                const countryCode = countryData.iso2;
-                const maskPatterns = {
-                    us: "(000) 000-0000",
-                    ca: "(000) 000-0000", // Add more patterns as needed
-                };
-                const maskPattern = maskPatterns[countryCode] || "";
-                if (phoneMask) {
-                    phoneMask.destroy();
+            // Reusable function for initializing phone input
+            function initializePhoneInput(phoneInput, countryInput, iti, phoneMask) {
+                iti = window.intlTelInput(phoneInput, {
+                    separateDialCode: true,
+                    initialCountry: "auto",
+                    geoIpLookup: function (callback) {
+                        callback("us");
+                    },
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                    flagsImagePath: "https://www.shipa1.com/public/frontend/images/icon/flags.webp"
+                });
+
+                function updateMask() {
+                    const countryData = iti.getSelectedCountryData();
+                    const countryCode = countryData.iso2;
+                    const maskPatterns = {
+                        us: "(000) 000-0000",
+                        ca: "(000) 000-0000", // Add more patterns as needed
+                    };
+                    const maskPattern = maskPatterns[countryCode] || "";
+                    if (phoneMask) {
+                        phoneMask.destroy();
+                    }
+                    if (maskPattern) {
+                        phoneMask = IMask(phoneInput, { mask: maskPattern });
+                    }
+                    countryInput.value = countryData.dialCode;
                 }
-                if (maskPattern) {
-                    phoneMask = IMask(phoneInput, { mask: maskPattern });
+
+                function validatePhoneNumber() {
+                    if (!iti.isValidNumber()) {
+                        console.error(`Invalid phone number (${phoneInput.id})`);
+                        return false;
+                    }
+                    return true;
                 }
-                countryInput.value = countryData.dialCode;
+
+                phoneInput.addEventListener('input', updateMask);
+                phoneInput.addEventListener('countrychange', updateMask);
+                phoneInput.addEventListener('blur', validatePhoneNumber);
+                updateMask();
             }
-            function validatePhoneNumber() {
-                if (!iti.isValidNumber()) {
-                    console.error("Invalid phone number");
-                    return false;
-                }
-                return true;
-            }
-            phoneInput.addEventListener('input', updateMask);
-            phoneInput.addEventListener('countrychange', updateMask);
-            phoneInput.addEventListener('blur', validatePhoneNumber);
-            updateMask();
+
+            // Initialize first phone input
+            const phoneInput1 = document.querySelector("#phone");
+            const countryInput1 = document.querySelector('#country_code');
+            let iti1, phoneMask1;
+            initializePhoneInput(phoneInput1, countryInput1, iti1, phoneMask1);
+
+            // Initialize second phone input
+            const phoneInput2 = document.querySelector("#phone2");
+            const countryInput2 = document.querySelector('#country_code2');
+            let iti2, phoneMask2;
+            initializePhoneInput(phoneInput2, countryInput2, iti2, phoneMask2);
         });
+
     </script>
     <script>
         $(document).ready(function() {
