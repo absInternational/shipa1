@@ -11,28 +11,8 @@
         font-weight: 350;
         padding: 5px 10px;
     }
-    .title-2 {
-        color: #8fc445;
-    }
     .desc-2 {
         color: white;
-    }
-    .why-box {
-    border-radius: 12px;
-    padding: 20px 0px;
-    background: #f8f9fa9c;
-    }
-    .card- {
-        background: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
-        }
-    .services {
-        text-align: center;
-        border-radius: 12px;
-        padding: 10px 30px 0px 30px;
     }
     .services-h1 {
         text-align:center;

@@ -11,32 +11,8 @@
         font-weight: 350;
         padding: 5px 10px;
     }
-    .title-2 {
-        color: #8fc445;
-    }
     .desc-2 {
         color: white;
-    }
-    .why-box {
-    border-radius: 12px;
-    padding: 20px 0px;
-    background: #f8f9fa9c;
-    }
-    .card- {
-        background: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 15px;
-        box-shadow:0 5px 30px 0 rgba(35,43,54,.3);
-        }
-    .services {
-        text-align: center;
-        border-radius: 12px;
-        padding: 10px 30px 0px 30px;
-    }
-    .services-h1 {
-        text-align:center;
-        margin-bottom: 50px;
     }
     .why-choose-us-slider::before {
         content: "";
@@ -57,27 +33,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 1;
-    }
-    .section-title {
-        text-align: center;
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 10px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        animation: fadeIn 1s ease-in-out;
-    }
-    .section-description {
-        text-align: center;
-        font-size: 1.1rem;
-        color: #666;
-        margin-bottom: 30px;
-        line-height: 1.6;
-        max-width: 600px;
-        margin: 0 auto 30px;
-        opacity: 0.8;
-        animation: fadeIn 1.2s ease-in-out;
     }
     .slide {
         min-width: 33.333%;
@@ -124,7 +79,7 @@
         opacity: 0.9;
     }
     .about-content-one {
-            overflow: hidden;
+        overflow: hidden;
     }
     .hover-effect:hover .overlay {
         opacity: 1;
@@ -143,7 +98,6 @@
         transition: opacity 0.3s ease;
         z-index: 1;
     }
-
     .tj-section-heading {
         position: relative;
         z-index: 2; 
@@ -223,60 +177,58 @@
                             </div>
                         @endif
                         <div class="container mt-2">
-                            {{-- <div class="route_quote_info" id="step1"> --}}
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block">Name:</label>
-                                            <input type="text" id="name" name="name" placeholder="Name" required="" />
-                                            <small id="errName" class="err-style"></small>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block">Phone:</label>
-                                            <input class="ophone" type="tel" id="phone" name="phone" placeholder="Number" required="" />
-                                            <small id="errPhone" class="err-style"></small>
-                                            <input type="hidden" name="country_code" id="country_code" />
-                                        </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block">Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Name" required="" />
+                                        <small id="errName" class="err-style"></small>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="input-form">
-                                            <label class="d-block">Email:</label>
-                                            <input type="email" id="email" name="email" placeholder="Email " required="" />
-                                            <small id="errEmail" class="err-style"></small>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="text-white">Services:</label>
-                                            <select>
-                                                <option value="" selected="" disabled="">Service</option> 
-                                                <option value="Vehicle">Vehicle Transportation</option>
-                                                <option value="Heavy">Heavy Equipment</option>
-                                                <option value="Freight">Freight Transportation</option>
-                                                <option value="RORO">RORO</option>
-                                            </select>
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block">Phone:</label>
+                                        <input class="ophone" type="tel" id="phone" name="phone" placeholder="Number" required="" />
+                                        <small id="errPhone" class="err-style"></small>
+                                        <input type="hidden" name="country_code" id="country_code" />
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="input-form">
-                                            <label class="">Message:</label>
-                                            <br>
-                                            <textarea placeholder="Enter your message" required="" class="bg-white border rounded custom-textarea"></textarea>
-                                        </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-form">
+                                        <label class="d-block">Email:</label>
+                                        <input type="email" id="email" name="email" placeholder="Email " required="" />
+                                        <small id="errEmail" class="err-style"></small>
                                     </div>
                                 </div>
-                                <div class="tj-theme-button text-center mt-3">
-                                    <button class="tj-submit-btn" type="submit" value="submit">
-                                        Submit <i class="fa-light fa-arrow-right"></i>
-                                    </button>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="text-white">Services:</label>
+                                        <select>
+                                            <option value="" selected="" disabled="">Service</option> 
+                                            <option value="Vehicle">Vehicle Transportation</option>
+                                            <option value="Heavy">Heavy Equipment</option>
+                                            <option value="Freight">Freight Transportation</option>
+                                            <option value="RORO">RORO</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            {{-- </div> --}}
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-form">
+                                        <label class="">Message:</label>
+                                        <br>
+                                        <textarea placeholder="Enter your message" required="" class="bg-white border rounded custom-textarea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tj-theme-button text-center mt-3">
+                                <button class="tj-submit-btn" type="submit" value="submit">
+                                    Submit <i class="fa-light fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -311,35 +263,6 @@
             </div>
         </div>
     </div>
-    {{-- <div class="container pb-4">
-        <div class="row">
-            <div class="col-lg-4 col-md-12 order-sm-1 order-md-1 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
-                <div class="mt-4 rounded">
-                    <div class="image-box">
-                        <img class="rounded" src="{{ asset('/frontend/images/project/4c image for construction-equipment (1).webp') }}"
-                            alt="Image">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12 order-sm-2 order-md-2 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
-                <div class="about-content-one">
-                    <div class="tj-section-heading">
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Expert Heavy Hauling</h3>
-                        <p class="desc">
-                            The <a class="pp-link-2" href="{{ route('frontend.pages.services.heavy-service') }}">heavy machinery </a> transport business has used technology in the best way possible. Many types of
-                             haulers are identified with ShipA1. Some are constructed to haul a single car, while some are
-                              developed to haul things that are incredibly long and heavy. For the mechanical edition, the 
-                              truck needs a huge winch. <br>
-                            For anything you need to ship, ShipA1 has advanced trucks that are designed to move it. 
-                            With such a wide variety of construction equipment out there, knowing precisely what you’re
-                             shipping will let ShipA1 secure you a better and more accurate Construction Equipment transport
-                              quote, which, in return, will help us get your construction equipment moved a lot more quickly.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 </section>
 @include('partials.reveiw-detail')
 <section class="tj-about-section">
@@ -387,17 +310,6 @@
                         <p class="desc">No matter which mode of transportation you use, ShipA1 assures its customers,
                             atmost security to their assets.</p>
                     </div>
-                    {{-- <div class="tj-icon-box">
-                        <div class="ab-text d-flex align-items-center">
-                            <div class="ab-icon"><i class="fa-light fa-handshake fa-2xl" style="color:#8fc445"></i>
-                            </div>
-                            <div class="ab-title">
-                                <h5 class="title">Skilful & Devoted Staff</h5>
-                            </div>
-                        </div>
-                        <p class="desc">Our team is loaded with highly experienced professionals of both customer
-                            dealing and vehicle handling.</p>
-                    </div> --}}
                 </div>
             </div>
             <div class="col-lg-6 align-items-center justify-content-center sal-animate pt-4 mt-4"

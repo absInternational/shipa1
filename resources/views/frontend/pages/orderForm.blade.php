@@ -212,7 +212,7 @@
     }
 </style>
 <section class="breadcrumb-wrapper" id="breadcrumb-wrapper-hide">
-    <div class="container-flude">
+    <div class="container-fluid">
         <div class="row">
             @if (session('success'))
                 <div class="alert alert-success">

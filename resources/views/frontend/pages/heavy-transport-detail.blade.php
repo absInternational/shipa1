@@ -526,7 +526,7 @@
         </div>
     </section>
     <section class="tj-video-section">
-        <div class="container-flude">
+        <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="video-wrapper text-center">

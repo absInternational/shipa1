@@ -143,7 +143,7 @@
     </div>
 </section>
 <section class="tj-choose-us-section-service-heavy">
-    <div class="container-flude">
+    <div class="container-fluid">
         <div class="row">
             @if (session('success'))
                 <div class="alert alert-success">
