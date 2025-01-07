@@ -52,12 +52,34 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="text-white">Services:</label>
-                            <select>
+                            {{-- <select>
                                 <option value="" selected="" disabled="">Service</option> 
                                 <option value="Vehicle">Vehicle Transportation</option>
                                 <option value="Heavy">Heavy Equipment</option>
                                 <option value="Freight">Freight Transportation</option>
                                 <option value="RORO">RORO</option>
+                            </select> --}}
+                            <select>
+                                <option value="" selected="" disabled="">Service</option>
+                                <option value="Car Transport Service">Car Transport Service</option>
+                                <option value="Motorcycle Transport Service">Motorcycle Transport Service</option>
+                                <option value="ATV/UTV Transport Service">ATV/UTV Transport Service</option>
+                                <option value="Golf Cart Transport Service">Golf Cart Transport Service</option>
+                                <option value="Boat Transport Services">Boat Transport Services</option>
+                                <option value="Construction Equipment Services">Construction Equipment Services</option>
+                                <option value="Commercial Truck Transport">Commercial Truck Transport</option>
+                                <option value="Excavator Transport Services">Excavator Transport Services</option>
+                                <option value="Farm Transport Services">Farm Transport Services</option>
+                                <option value="Heavy Equipment Services">Heavy Equipment Services</option>
+                                <option value="RV Transport Services">RV Transport Services</option>
+                                <option value="Dry Van Transport">Dry Van Transport</option>
+                                <option value="Hazmat Transport">Hazmat Transport</option>
+                                <option value="Reefer Transport">Reefer Transport</option>
+                                @foreach ($services as $service)
+                                    @if ($service->category->name == 'RORO')
+                                        <option value="{{ $service->name }}">{{ $service->name }}</option>
+                                    @endif
+                                @endforeach
                             </select>
                         </div>
                     </div>
