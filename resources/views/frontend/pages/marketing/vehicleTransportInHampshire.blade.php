@@ -49,7 +49,7 @@
         z-index: 0;
     }
     .why-choose-us-slider {
-        background: url('/img/1-background-image-construction-equipment.webp');
+        background: url('/img/NH2.jpg');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
