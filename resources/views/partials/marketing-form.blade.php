@@ -9,7 +9,7 @@
             {{ session('error') }}
         </div>
     @endif
-    <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form"
+    <form action="{{ route('lead.generation') }}" method="post" class="rd-mailform validate-form"
         id="" novalidate data-parsley-validate data-parsley-errors-messages-disabled
         enctype="multipart/form-data">
         @csrf
@@ -59,7 +59,7 @@
                                 <option value="Freight">Freight Transportation</option>
                                 <option value="RORO">RORO</option>
                             </select> --}}
-                            <select>
+                            <select name="service" id="service" class="" required="">
                                 <option value="" selected="" disabled="">Service</option>
                                 <option value="Car Transport Service">Car Transport Service</option>
                                 <option value="Motorcycle Transport Service">Motorcycle Transport Service</option>
@@ -89,7 +89,7 @@
                         <div class="input-form">
                             <label class="">Message:</label>
                             <br>
-                            <textarea placeholder="Enter your message" required="" class="bg-white border rounded custom-textarea"></textarea>
+                            <textarea placeholder="Enter your message" name="message" required="" class="bg-white border rounded custom-textarea"></textarea>
                         </div>
                     </div>
                 </div>

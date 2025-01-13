@@ -228,3 +228,5 @@ Auth::routes();
 Route::get('/{slug}', [FrontendController::class, 'blogDetailsNoSlug'])
     ->name('blog.details.noSlug')
     ->where('slug', '[^/]+');
+
+Route::post('/lead-generation', [FrontendController::class, 'leadGeneration'])->name('lead.generation');

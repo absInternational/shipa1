@@ -522,4 +522,8 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.marketing.vehicleTransportInHampshire', compact('services', 'site_reviews', 'blogs', 'makes'));
     }
+    public function leadGeneration(Request $request)
+    {
+        dd($request->toArray());
+    }
 }
