@@ -3247,17 +3247,17 @@ div .tj-service-icon-box2 ul li .service-item::before {
   background-attachment: fixed;
 }
 .tj-choose-us-section-service-construction {
-  background-image: url("../../img/NY1.jpg");
+  background-image: url("/img/NY1.jpg");
   position: relative;
   background-attachment: fixed;
 }
 .tj-choose-us-section-service-construction-1 {
-  background-image: url("../../img/CT1.jpg");
+  background-image: url("/img/CT1.jpg");
   position: relative;
   background-attachment: fixed;
 }
 .tj-choose-us-section-service-construction-2 {
-  background-image: url("../../img/NH1.jpg");
+  background-image: url("/img/NH1.jpg");
   position: relative;
   background-attachment: fixed;
 }
