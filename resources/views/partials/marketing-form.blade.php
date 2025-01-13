@@ -9,7 +9,7 @@
             {{ session('error') }}
         </div>
     @endif
-    <form action="{{ route('lead.generation') }}" method="post" class="rd-mailform validate-form"
+    <form action="{{ route('lead.generation') }}" method="post" class=""
         id="" novalidate data-parsley-validate data-parsley-errors-messages-disabled>
         @csrf
         @if ($errors->any())
@@ -58,7 +58,7 @@
                                 <option value="Freight">Freight Transportation</option>
                                 <option value="RORO">RORO</option>
                             </select> --}}
-                            <select name="service" id="service" class="" required="">
+                            <select name="service_name" id="" class="" required="">
                                 <option value="" selected="" disabled="">Service</option>
                                 <option value="Car Transport Service">Car Transport Service</option>
                                 <option value="Motorcycle Transport Service">Motorcycle Transport Service</option>
@@ -105,3 +105,9 @@
         </div>
     </form>
 </div>
+
+<script>
+    $('#marketing-form').on('submit', function(e) {
+        console.log('abx');
+    });
+</script>

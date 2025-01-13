@@ -345,12 +345,14 @@
                     countryInput.value = countryData.dialCode;
                 }
 
-                function validatePhoneNumber() {
-                    if (!iti.isValidNumber()) {
-                        console.error(`Invalid phone number (${phoneInput.id})`);
-                        return false;
+                if (window.location.pathname == 'frontend.pages.marketing.vehicleTransportInNewyork') {
+                    function validatePhoneNumber() {
+                        if (!iti.isValidNumber()) {
+                            console.error(`Invalid phone number (${phoneInput.id})`);
+                            return false;
+                        }
+                        return true;
                     }
-                    return true;
                 }
 
                 phoneInput.addEventListener('input', updateMask);
