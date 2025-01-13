@@ -522,6 +522,33 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.marketing.vehicleTransportInHampshire', compact('services', 'site_reviews', 'blogs', 'makes'));
     }
+    public function vehicleTransportInWashington()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInWashington', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
+    public function vehicleTransportInFlorida()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInFlorida', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
+    
     public function leadGeneration(Request $request)
     {
         dd($request->toArray());

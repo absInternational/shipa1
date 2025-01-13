@@ -59,6 +59,8 @@ Route::get('/marketing', [FrontendController::class, 'marketing'])->name('market
 Route::prefix('marketing')->group(function () {
     Route::get('/Vehicle-Transportation-In-Connecticut', [FrontendController::class, 'vehicleTransportInConnecticut'])->name('frontend.pages.marketing.vehicleTransportInConnecticut');
     Route::get('/Vehicle-Transportation-In-Newyork', [FrontendController::class, 'vehicleTransportInNewyork'])->name('frontend.pages.marketing.vehicleTransportInNewyork');
+    Route::get('/Vehicle-Transportation-Florida', [FrontendController::class, 'vehicleTransportInFlorida'])->name('frontend.pages.marketing.vehicleTransportInFlorida');
+    Route::get('/Vehicle-Transportation-Washington', [FrontendController::class, 'vehicleTransportInWashington'])->name('frontend.pages.marketing.vehicleTransportInWashington');
     Route::get('/Vehicle-Transportation-In-New-Hampshire', [FrontendController::class, 'vehicleTransportInHampshire'])->name('frontend.pages.marketing.vehicleTransportInHampshire');
 });
 Route::get('/roro-shipping-international', [FrontendController::class, 'roroService'])->name('frontend.pages.services.roro-service');
