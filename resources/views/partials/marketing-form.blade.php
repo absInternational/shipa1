@@ -10,8 +10,7 @@
         </div>
     @endif
     <form action="{{ route('lead.generation') }}" method="post" class="rd-mailform validate-form"
-        id="" novalidate data-parsley-validate data-parsley-errors-messages-disabled
-        enctype="multipart/form-data">
+        id="" novalidate data-parsley-validate data-parsley-errors-messages-disabled>
         @csrf
         @if ($errors->any())
             <div class="alert alert-danger">
