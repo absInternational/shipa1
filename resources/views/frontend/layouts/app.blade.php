@@ -658,19 +658,22 @@
                 }
             }
             $("form").submit(function(event) {
-                var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $(
-                    "#errOLoc"));
-                var currentRoute = "{{ Route::currentRouteName() }}";
-                if (currentRoute !== 'form.vehicle.roro' && currentRoute !==
-                    'frontend.pages.services.roro-service') {
-                    var isDeliveryValid = validateLocationInput($("#delivery-location"),
-                        validDeliverySuggestions, $("#errDLoc"));
-                    if (!isPickupValid || !isDeliveryValid) {
-                        event.preventDefault();
-                    }
-                } else {
-                    if (!isPickupValid) {
-                        event.preventDefault();
+                console.log($(this).attr('id'), 'asdasd');
+                if ($(this).attr('id') != 'marketing-form') {
+                    var isPickupValid = validateLocationInput($("#pickup-location"), validPickupSuggestions, $(
+                        "#errOLoc"));
+                    var currentRoute = "{{ Route::currentRouteName() }}";
+                    if (currentRoute !== 'form.vehicle.roro' && currentRoute !==
+                        'frontend.pages.services.roro-service') {
+                        var isDeliveryValid = validateLocationInput($("#delivery-location"),
+                            validDeliverySuggestions, $("#errDLoc"));
+                        if (!isPickupValid || !isDeliveryValid) {
+                            event.preventDefault();
+                        }
+                    } else {
+                        if (!isPickupValid) {
+                            event.preventDefault();
+                        }
                     }
                 }
             });
