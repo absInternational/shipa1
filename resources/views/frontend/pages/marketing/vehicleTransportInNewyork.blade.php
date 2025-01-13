@@ -107,7 +107,7 @@
         transition: color 0.3s ease;
     }
 </Style>
-<section class="tj-choose-us-section-service-construction">
+<section class="tj-choose-us-section-service-construction-1">
     <div class="container mt-4">
         <div class="row mt-4">
             <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
