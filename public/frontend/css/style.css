@@ -3075,8 +3075,6 @@ div .tj-service-icon-box2 ul li .service-item::before {
 .tj-choose-us-section-service-car-2,
 .tj-choose-us-section-service-commercial,
 .tj-choose-us-section-service-construction,
-.tj-choose-us-section-service-construction-1,
-.tj-choose-us-section-service-construction-2,
 .tj-choose-us-section-service-excavator,
 .tj-choose-us-section-service-farm,
 .tj-choose-us-section-service-golfcart,
@@ -3126,8 +3124,6 @@ div .tj-service-icon-box2 ul li .service-item::before {
 .tj-choose-us-section-service-car::before,
 .tj-choose-us-section-service-commercial::before,
 .tj-choose-us-section-service-construction::before,
-.tj-choose-us-section-service-construction-1::before,
-.tj-choose-us-section-service-construction-2::before,
 .tj-choose-us-section-service-excavator::before,
 .tj-choose-us-section-service-farm::before,
 .tj-choose-us-section-service-golfcart::before,
@@ -3247,17 +3243,7 @@ div .tj-service-icon-box2 ul li .service-item::before {
   background-attachment: fixed;
 }
 .tj-choose-us-section-service-construction {
-  background-image: url("../../img/NY1.jpg");
-  position: relative;
-  background-attachment: fixed;
-}
-.tj-choose-us-section-service-construction-1 {
-  background-image: url("../../img/CT1.jpg");
-  position: relative;
-  background-attachment: fixed;
-}
-.tj-choose-us-section-service-construction-2 {
-  background-image: url("../../img/NH1.jpg");
+  background-image: url("../../img/1-banner-for-construction-equipment-_2_.webp");
   position: relative;
   background-attachment: fixed;
 }
