@@ -63,6 +63,7 @@
     Vehicle</a>
 <div class="vehicles-container" id="vehicles-container">
 </div>
+@if ($hideInputs != 1)
 <div class="row ">
     <div class="col-md-6">
     <div class="form-check">
@@ -97,6 +98,7 @@
     <input class="form-control image_input"  name="image[]" type="file" accept="image/*" multiple onchange="previewImages(event)">
     <div class="image-preview-container" id="imagePreviewContainer"></div>
 </div>
+@endif
 <script>
     function addOtherVehicle() {
         var newVehicleHtml =

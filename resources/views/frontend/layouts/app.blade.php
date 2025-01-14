@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/frontend/css/responsive.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script">
@@ -86,6 +86,9 @@
     </script>        
 </head>
 <body class="fade-in">
+    @php
+    $currentRouteName = Route::currentRouteName();
+    @endphp
     <div id="tj-overlay-bg2" class="tj-overlay-canvas"></div>
     <div class="tj-offcanvas-area">
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
@@ -705,6 +708,7 @@
             $('.vehicles-container').html('');
             selectedTab = $(this).val();
             var vehicleType = $(this).val();
+            var currentRouteName = '{{ $currentRouteName }}';
             $('.tab-pane').removeClass('show active');
             $('#' + selectedTab).addClass('show active');
             $.ajax({
@@ -712,6 +716,7 @@
                 method: 'GET',
                 data: {
                     vehicleType: vehicleType,
+                    currentRouteName: currentRouteName,
                 },
                 success: function(response) {
                     $('#additionalContent').html('');

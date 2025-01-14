@@ -79,6 +79,7 @@
 </a>
 <div class="vehicles-container" id="vehicles-container">
 </div>
+@if ($hideInputs != 1)
 <div class="row ms-3">
     <di class="col-md-6">
         <div class="form-group">
@@ -111,6 +112,7 @@
     <input class="form-control image_input" type="file"  name="image[]" accept="image/*" multiple onchange="previewImages(event)">
     <div class="image-preview-container" id="imagePreviewContainer"></div>
 </div>
+@endif
 <script>
     $(document).ready(function() {
         function addNewVehicle() {

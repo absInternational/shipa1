@@ -10,6 +10,7 @@ use App\Models\ZipCode;
 use App\Models\Subcategory;
 use App\Models\Category;
 use App\Models\Country;
+use Illuminate\Support\Facades\Route;
 
 class MainController extends Controller
 {
@@ -146,46 +147,106 @@ class MainController extends Controller
         $subcategories = Subcategory::where('category_id', $categoryId)->get();
         return response()->json($subcategories);
     }
-
     public function partialForm(Request $request)
     {
+        $routeName = $request->currentRouteName ?? '';
         $makes = VehicleName::select('make')
             ->where('UserId', 14)
             ->where('status', 0)
             ->groupBy('make')
             ->orderBy('make', 'ASC')
             ->get();
-
+    
         $categories = Category::all();
-
         $vehicleType = $request->vehicleType;
-
-        if ($request->vehicleType == 'Car') {
-            return view('partials.forms.car2', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'Golf-Cart') {
-            return view('partials.forms.golf-cart', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'Atv') {
-            return view('partials.forms.atv', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'Boat-Transport') {
-            return view('partials.forms.boat', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'Freight-Transportation') {
-            return view('partials.forms.freight', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'Heavy-Equipment') {
-            return view('partials.forms.heavy', compact('makes', 'vehicleType', 'categories'));
-        } elseif ($request->vehicleType == 'Motorcycle') {
-            return view('partials.forms.motorcycle', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'RV-Transport') {
-            return view('partials.forms.rv', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'Excavator-Tr') {
-            return view('partials.forms.excavator', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'Commercial-Truck') {
-            return view('partials.forms.commercial-truck', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'Construction-Transport') {
-            return view('partials.forms.construction-transport', compact('makes', 'vehicleType'));
-        } elseif ($request->vehicleType == 'Farm-Transport') {
-            return view('partials.forms.farm-transport', compact('makes', 'vehicleType'));
+    
+        // Define routes where inputs should be hidden
+        $hideInputsRoutes = [
+            'frontend.pages.marketing.vehicleTransportInConnecticut',
+            'frontend.pages.marketing.vehicleTransportInNewyork',
+            'frontend.pages.marketing.vehicleTransportInFlorida',
+            'frontend.pages.marketing.vehicleTransportInWashington',
+            'frontend.pages.marketing.vehicleTransportInHampshire',
+        ];
+    
+        // Determine if the current route requires hiding inputs
+        $currentRouteName = $routeName;
+        $hideInputs = in_array($currentRouteName, $hideInputsRoutes);
+        if($hideInputs)
+        {
+            $hideInputs = 1;
+        }
+        // dd($currentRouteName, $hideInputs);
+    
+        $viewData = compact('makes', 'vehicleType', 'hideInputs');
+        // dd($hideInputs);
+    
+        if ($vehicleType == 'Car') {
+            return view('partials.forms.car2', $viewData);
+        } elseif ($vehicleType == 'Golf-Cart') {
+            return view('partials.forms.golf-cart', $viewData);
+        } elseif ($vehicleType == 'Atv') {
+            return view('partials.forms.atv', $viewData);
+        } elseif ($vehicleType == 'Boat-Transport') {
+            return view('partials.forms.boat', $viewData);
+        } elseif ($vehicleType == 'Freight-Transportation') {
+            return view('partials.forms.freight', $viewData);
+        } elseif ($vehicleType == 'Heavy-Equipment') {
+            return view('partials.forms.heavy', array_merge($viewData, compact('categories')));
+        } elseif ($vehicleType == 'Motorcycle') {
+            return view('partials.forms.motorcycle', $viewData);
+        } elseif ($vehicleType == 'RV-Transport') {
+            return view('partials.forms.rv', $viewData);
+        } elseif ($vehicleType == 'Excavator-Tr') {
+            return view('partials.forms.excavator', $viewData);
+        } elseif ($vehicleType == 'Commercial-Truck') {
+            return view('partials.forms.commercial-truck', $viewData);
+        } elseif ($vehicleType == 'Construction-Transport') {
+            return view('partials.forms.construction-transport', $viewData);
+        } elseif ($vehicleType == 'Farm-Transport') {
+            return view('partials.forms.farm-transport', $viewData);
         }
     }
+    
+    // public function partialForm(Request $request)
+    // {
+    //     $makes = VehicleName::select('make')
+    //         ->where('UserId', 14)
+    //         ->where('status', 0)
+    //         ->groupBy('make')
+    //         ->orderBy('make', 'ASC')
+    //         ->get();
+
+    //     $categories = Category::all();
+
+    //     $vehicleType = $request->vehicleType;
+
+    //     if ($request->vehicleType == 'Car') {
+    //         return view('partials.forms.car2', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'Golf-Cart') {
+    //         return view('partials.forms.golf-cart', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'Atv') {
+    //         return view('partials.forms.atv', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'Boat-Transport') {
+    //         return view('partials.forms.boat', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'Freight-Transportation') {
+    //         return view('partials.forms.freight', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'Heavy-Equipment') {
+    //         return view('partials.forms.heavy', compact('makes', 'vehicleType', 'categories'));
+    //     } elseif ($request->vehicleType == 'Motorcycle') {
+    //         return view('partials.forms.motorcycle', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'RV-Transport') {
+    //         return view('partials.forms.rv', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'Excavator-Tr') {
+    //         return view('partials.forms.excavator', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'Commercial-Truck') {
+    //         return view('partials.forms.commercial-truck', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'Construction-Transport') {
+    //         return view('partials.forms.construction-transport', compact('makes', 'vehicleType'));
+    //     } elseif ($request->vehicleType == 'Farm-Transport') {
+    //         return view('partials.forms.farm-transport', compact('makes', 'vehicleType'));
+    //     }
+    // }
 
     public function getCountry(Request $request)
     {

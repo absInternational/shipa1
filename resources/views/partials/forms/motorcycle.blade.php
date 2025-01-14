@@ -58,6 +58,7 @@
 
 <div class="vehicles-container" id="vehicles-container">
 </div>
+@if ($hideInputs != 1)
 <div class="row ms-3">
     <di class="col-md-6">
         <div class="form-group">
@@ -95,6 +96,7 @@
         <div class="image-preview-container" id="imagePreviewContainer"></div>
     </div>
 </div>
+@endif
 <script>
     function addOtherVehicle() {
         var newVehicleHtml =

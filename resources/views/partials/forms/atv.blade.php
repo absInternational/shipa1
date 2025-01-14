@@ -61,8 +61,9 @@
     Vehicle</a>
 <div class="vehicles-container" id="vehicles-container">
 </div>
+@if ($hideInputs != 1)
 <div class="row ms-3">
-    <di class="col-md-6">
+    <div class="col-md-6">
         <div class="form-group">
             <input class="form-check-input " type="checkbox" id="modification" name="modification" value="1" />
             <label class="form-check-label text-white ms-4" for="modification">
@@ -72,8 +73,8 @@
             <label class="d-block"> Modification Information:</label>
             <input   type="text" id="c" name="modify_info" placeholder="Enter Modification Information"  />
         </div>
-    </di>
-    <di class="col-md-6">
+    </div>
+    <div class="col-md-6">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" id="available_at_auction" name="available_at_auction"
                 value="1"  />
@@ -85,13 +86,14 @@
             <label class="d-block"> Enter Link:</label>
             <input   type="url" id="link" name="link" placeholder="Enter Link"  />
         </div>
-    </di>
+    </div>
 </div>
 <div class="input-form mt-3">
     <label class="d-block" class="text-white"> Image:</label>
     <input class="form-control image_input" type="file" name="image[]" accept="image/*" multiple onchange="previewImages(event)">
     <div class="image-preview-container" id="imagePreviewContainer"></div>
 </div>
+@endif
 <script>
         function addOtherVehicle() {
             var newVehicleHtml =
