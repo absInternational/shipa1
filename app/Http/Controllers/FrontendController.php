@@ -882,7 +882,6 @@ class FrontendController extends Controller
       
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/submit_query', $post_array)->json();
-            dd($response);
             if (isset($response['status_code']) && $response['status_code'] == 201) {
                 return view('frontend.pages.thank-you');
             } else {
