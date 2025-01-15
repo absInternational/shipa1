@@ -796,7 +796,6 @@ class FrontendController extends Controller
             'oname' => $name,
             'oemail' => $email,
             'ophone' => $phone,
-            'ymk' => $heading,
             'vehicles' => $vehicles,
             'condition' => $condition,
             'originzsc' => $originData,
@@ -882,7 +881,7 @@ class FrontendController extends Controller
         }
       
         try {
-            $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
+            $response = Http::post('https://washington.shawntransport.com/api/v2/submit_query', $post_array)->json();
             dd($response);
             if (isset($response['status_code']) && $response['status_code'] == 201) {
                 return view('frontend.pages.thank-you');
