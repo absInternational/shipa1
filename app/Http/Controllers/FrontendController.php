@@ -606,7 +606,7 @@ class FrontendController extends Controller
     public function leadGeneration(Request $request)
     {
         $data = $request->all();
-        dd($request->all());
+        // dd($request->all());
         $name = $request->input('name', null);
         $email = $request->input('email', null);
         $phone = $request->input('phone', null);
@@ -880,22 +880,6 @@ class FrontendController extends Controller
 
             $post_array['image'] = implode('*^', $imageUrls);
         }
-
-        // dd($post_array, $request->toArray());
-
-        // $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
-        //     $q->where('delivery_latitude', $delivery_latitude)
-        //       ->where('delivery_longitude', $delivery_longitude);
-        // }])
-        // ->where('country', 'United States')
-        // ->where('delivery_address', 'Grimaldi Group Shipping Line')
-        // ->where('latitude', '28.9541')
-        // ->where('longitude', '-95.3597')
-        // ->first();
-
-        // $price = isset($data->portToPort[0]->price) ? $data->portToPort[0]->price : 0;
-
-        // dd($data->toArray(), $price);
       
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
