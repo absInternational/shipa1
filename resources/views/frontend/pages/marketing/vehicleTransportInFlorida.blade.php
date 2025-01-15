@@ -151,8 +151,8 @@
                         {{ session('error') }}
                     </div>
                 @endif
-                @include('partials.multi-form-Vehicle-detail')
-                {{-- @include('partials.marketing-form') --}}
+                {{-- @include('partials.multi-form-Vehicle-detail') --}}
+                @include('partials.marketing-form')
                 {{-- @include('partials.multi-form-heavy') --}}
             </div>
         </div>

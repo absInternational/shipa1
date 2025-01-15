@@ -13,6 +13,9 @@ use App\Models\VehicleName;
 use App\Models\ReviewSite;
 use App\Models\NationWideTransport;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
+use Hamcrest\Core\IsNot;
 
 class FrontendController extends Controller
 {
@@ -603,21 +606,6 @@ class FrontendController extends Controller
     public function leadGeneration(Request $request)
     {
         $data = $request->all();
-        if (isset($data['year']) && is_array($data['year'])) {
-            $heading = $this->generateHeading($data);
-
-            foreach ($data['year'] as $index => $count) {
-                $vehicle_opt = implode('*^', array_fill(0, count($data['year']), $data['vehicle_opt']));
-                $vehicles[] = [
-                    'year' => $data['year'][$index],
-                    'make' => $data['make'][$index],
-                    'model' => $data['model'][$index],
-                    'vehicle_opt' => $vehicle_opt
-                ];
-            }
-        } else {
-            $heading = '';
-        }
         dd($request->all());
         $name = $request->input('name', null);
         $email = $request->input('email', null);
@@ -911,7 +899,7 @@ class FrontendController extends Controller
       
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/website-quote', $post_array)->json();
-            // dd($response);
+            dd($response);
             if (isset($response['status_code']) && $response['status_code'] == 201) {
                 return view('frontend.pages.thank-you');
             } else {
@@ -923,5 +911,9 @@ class FrontendController extends Controller
 
             return back()->with('error', 'An error occurred while creating the quote. Please try again later.');
         }
+    }
+    private function generateStringFromArray($array)
+    {
+        return count($array) > 1 ? implode('*^', $array) : $array[0];
     }
 }
