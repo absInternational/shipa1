@@ -113,8 +113,8 @@
                             <input class="form-control" type="text" id="pickup-location"
                                 placeholder="Enter City or ZipCode" name="From_ZipCode" required>
                             <ul class="suggestions suggestionsTwo"></ul>
-                            <label class="error-message" id="pickup-location-error">This field is
-                                required.</label>
+                            {{-- <label class="error-message" id="pickup-location-error">This field is
+                                required.</label> --}}
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 mb-4">
@@ -124,8 +124,8 @@
                             <input class="form-control" type="text" id="delivery-location"
                                 placeholder="Enter City or ZipCode" name="To_ZipCode" required>
                             <ul class="suggestions suggestionsTwo"></ul>
-                            <label class="error-message" id="delivery-location-error">This field is
-                                required.</label>
+                            {{-- <label class="error-message" id="delivery-location-error">This field is
+                                required.</label> --}}
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                         <option value="Golf-Cart">Golf Cart Transport</option>
                         <option value="Motorcycle">Motorcycle Transport</option>
                     </select>
-                    <label class="error-message" id="tabSelector-error">This field is required.</label>
+                    {{-- <label class="error-message" id="tabSelector-error">This field is required.</label> --}}
                     <div class="tab-content mt-3" id="additionalContent"></div>
                 </div>
                 <div class="row mt-2">
@@ -177,8 +177,8 @@
                             <label class="d-block text-white"> Your Name:</label>
                                 <input class="form-control" type="text" id="name" name="name" placeholder="Full Name"
                                 required />
-                            <label class="error-message" id="Custo_Name-error">This field is
-                                required.</label>
+                            {{-- <label class="error-message" id="Custo_Name-error">This field is
+                                required.</label> --}}
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">
@@ -186,8 +186,8 @@
                             <label class="d-block text-white">Phone:</label>
                             <input id="phone" class="form-control ophone" required name="phone"
                                 type="tel" placeholder="Customer Phone">
-                            <label class="error-message" id="Custo_Phone-error">This field is
-                                required.</label>
+                            {{-- <label class="error-message" id="Custo_Phone-error">This field is
+                                required.</label> --}}
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12">
@@ -195,8 +195,8 @@
                             <label class="d-block text-white"> Email Address:</label>
                                 <input class="form-control" type="email" id="email" name="email" placeholder="Your Email Address"
                             required />
-                            <label class="error-message" id="Custo_Email-error">This field is
-                                required.</label>
+                            {{-- <label class="error-message" id="Custo_Email-error">This field is
+                                required.</label> --}}
                         </div>
                     </div>
                 </div>
