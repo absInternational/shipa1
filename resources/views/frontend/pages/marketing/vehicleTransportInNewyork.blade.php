@@ -190,6 +190,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
+                <div class="image-container">
+                    <img class="img-fluid" src="{{ asset('/frontend/images/project/CAR-SERVICE-MAIN.webp') }}"
+                        loading="lazy" alt="Motorcyle Transport">
+                </div>
+            </div>
+            <div class="col-lg-12">
                 <div class="text-container text-left">
                     <h3>The First Stop Platform of Car Shipping Services</h3>
                     <p>Ship A1, your go-to partner in transportation services! We prioritize the needs of our customers and
