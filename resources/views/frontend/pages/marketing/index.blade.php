@@ -246,7 +246,109 @@
                     </div>
                 </div>
             </div>
-        </div>     
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Maryland" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in Maryland</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInMaryland') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInMaryland') }}">Vehicle Transportation in Maryland</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="row">
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Illinois" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in Illinois</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInIllinois') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInIllinois') }}">Vehicle Transportation in Illinois</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Michigan" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in Michigan</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInMichigan') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInMichigan') }}">Vehicle Transportation in Michigan</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Virginia" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in Virginia</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInVirginia') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInVirginia') }}">Vehicle Transportation in Virginia</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
 </section>
 <section class="tj-choose-us-section">

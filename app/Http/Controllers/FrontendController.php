@@ -548,7 +548,58 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.marketing.vehicleTransportInFlorida', compact('services', 'site_reviews', 'blogs', 'makes'));
     }
-    
+    public function vehicleTransportInMaryland()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInMaryland', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
+    public function vehicleTransportInVirginia()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInVirginia', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
+    public function vehicleTransportInMichigan()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInMichigan', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
+    public function vehicleTransportInIllinois()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInIllinois', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
     public function leadGeneration(Request $request)
     {
         $data = $request->all();
