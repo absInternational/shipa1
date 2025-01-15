@@ -4,6 +4,7 @@
         enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="service" value="kch bhi">
+        <input type="hidden" name="message" value="kch bhi chal">
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
