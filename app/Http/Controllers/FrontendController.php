@@ -602,7 +602,6 @@ class FrontendController extends Controller
     }
     public function leadGeneration(Request $request)
     {
-        dd($request->all());
         $data = $request->all();
         if (isset($data['year']) && is_array($data['year'])) {
             $heading = $this->generateHeading($data);
@@ -619,6 +618,7 @@ class FrontendController extends Controller
         } else {
             $heading = '';
         }
+        dd($request->all());
         $name = $request->input('name', null);
         $email = $request->input('email', null);
         $phone = $request->input('phone', null);
