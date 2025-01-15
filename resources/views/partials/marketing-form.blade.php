@@ -88,7 +88,7 @@
         </div>
     </form> --}}
     <form action="{{ route('lead.generation') }}" method="post" class="rd-mailform validate-form"
-        id="marketing-form" novalidate data-parsley-validate data-parsley-errors-messages-disabled
+        id="calculatePriceFrom" novalidate data-parsley-validate data-parsley-errors-messages-disabled
         enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="service" value="kch bhi">

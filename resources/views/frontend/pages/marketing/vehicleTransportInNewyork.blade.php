@@ -151,7 +151,8 @@
                         {{ session('error') }}
                     </div>
                 @endif
-                @include('partials.multi-form-Vehicle-detail')
+                {{-- @include('partials.multi-form-Vehicle-detail') --}}
+                @include('partials.marketing-form')
                 {{-- @include('partials.multi-form-heavy') --}}
             </div>
         </div>
@@ -191,7 +192,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="image-container">
-                    <img class="img-fluid" src="{{ asset('/frontend/images/project/CAR-SERVICE-MAIN.webp') }}"
+                    <img class="img-fluid" src="{{ asset('/frontend/images/project/azxsazxs.png') }}"
                         loading="lazy" alt="Motorcyle Transport">
                 </div>
             </div>
