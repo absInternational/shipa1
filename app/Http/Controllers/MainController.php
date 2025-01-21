@@ -171,6 +171,9 @@ class MainController extends Controller
             'frontend.pages.marketing.vehicleTransportInIllinois',
             'frontend.pages.marketing.vehicleTransportInMichigan',
             'frontend.pages.marketing.vehicleTransportInVirginia',
+            'frontend.pages.marketing.vehicleTransportInNorthCarolina',
+            'frontend.pages.marketing.vehicleTransportInTexas',
+            'frontend.pages.marketing.vehicleTransportInIndiana',
         ];
     
         // Determine if the current route requires hiding inputs

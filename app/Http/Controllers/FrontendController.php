@@ -603,6 +603,46 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.marketing.vehicleTransportInIllinois', compact('services', 'site_reviews', 'blogs', 'makes'));
     }
+
+    public function vehicleTransportInTexas()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInTexas', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
+    public function vehicleTransportInNorthCarolina	()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInNorthCarolina	', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
+    public function vehicleTransportInIndiana()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInIndiana', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
     public function leadGeneration(Request $request)
     {
         $data = $request->all();
