@@ -109,7 +109,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="tj-appointment-box fa-fade" data-bg-image="/assets/images/service/service-15.jpg"   data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
+                        <div class="tj-appointment-box" data-bg-image="/assets/images/service/service-15.jpg"   data-sal="slide-left" data-sal-duration="800" data-sal-delay="100">
                             <div class="tj-appointment-bg" data-bg-image="/assets/images/banner/service_shape.png"></div>
                             <div class="tj-appointment-body">
                                 <div class="appointment-percent text-center">

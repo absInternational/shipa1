@@ -43,8 +43,7 @@
                     <div class="page-details-wrapper">
                         <div class="tj-blog-item-three">
                             <div class="tj-blog-image">
-                                <a href="blog-details.html">
-                                    <img loading="lazy" src="{{ asset($blog->post_image) }}" alt="Blog" /></a>
+                                <img loading="lazy" src="{{ asset($blog->post_image) }}" alt="Blog" />
                             </div>
                             <div class="active-text">
                                 <span class="p-2">
@@ -56,9 +55,9 @@
                             <div class="blog-content-area">
                                 <div class="blog-header">
                                     <h3>
-                                        <a class="title-link" href="blog-details.html">
+                                        {{-- <a class="title-link" href="blog-details.html"> --}}
                                             {{ $blog->post_name }}
-                                        </a>
+                                        {{-- </a> --}}
                                     </h3>
                                 </div>
                                 <div class="blog-meta">
