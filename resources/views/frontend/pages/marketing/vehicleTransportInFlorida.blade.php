@@ -164,14 +164,14 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Your Speedy Florida Car Shipping Services</h3>
-                        <p class="desc">Shipping cars into and out of Florida is difficult, but ShipA1 makes it smooth and hassle-free. 
-                            From heavy lifts to branded cars entering the state, ShipA1 provides affordable packages, ensuring no
-                            increases in hauler, crane, or carrier costs. With our dependable door-to-door delivery, we'll make
-                            shipping a breeze for you. With ShipA1, you can enjoy the ease of navigating national legal 
-                            complexities and unpredictable road conditions in out-of-state transport. We ensure verified 
-                            documentation and a smooth delivery process, making us the ideal choice for vehicle transportation 
-                            in and out of Florida.</p>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Traffic Paperwork of Florida. Never Easy!</h3>
+                        <p class="desc">If you live around Florida then keep counting the daily challenges in the shipping business. Traffic jams,
+                            roadblocks, heavy remote routes, and hours of paperwork waiting. What’s more? Don’t forget tropical
+                            weather conditions.
+    
+                            Brokers and carriers don’t have the magic wand but they can reach out to someone who has it integrated
+                            with digital tech. Yes! A shipping agency, not just a mediocre but a certified freight platform such as
+                            ShipA1. Truly, this site is the hub of Florida’s renowned brokers and carriers.</p>
                     </div>
                 </div>
             </div>

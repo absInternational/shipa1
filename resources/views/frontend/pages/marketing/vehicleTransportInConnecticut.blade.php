@@ -189,14 +189,14 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Your Speedy Connecticut Car Shipping Services</h3>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Finding Top Car Shipping Partner in Connecticut?</h3>
                         <p class="desc">Shippers need an open space to talk freely about the hassles and daily challenges faced while shipping the
                             trailers. But customers and brokers also have their own issues to discuss. Each problem is not an issue but
                             an actual downside in this business. So, who has the perfect answer to it?</p>
                             
                             <p class="desc">Where to find the right partner offerings cost-efficiency and fast services; plus, understand the common
-                            customized needs. Regular Shippers and consignees want timely delivery, modern GPS tracking, enclosed
-                            haulers, and 100% insurance covered.</p>
+                                customized needs. Regular Shippers and consignees want timely delivery, modern GPS tracking, enclosed
+                                haulers, and 100% insurance covered.</p>
                     </div>
                 </div>
             </div>

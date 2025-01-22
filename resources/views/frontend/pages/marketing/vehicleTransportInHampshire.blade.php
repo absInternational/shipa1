@@ -210,14 +210,16 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Your Speedy New Hampshire Car Shipping Services</h3>
-                        <p class="desc">ShipA1 has become one of the leading companies for car freight and transport service, with over 300,000
-                            satisfied clients. New Hampshire became a hub for our cost-efficient and fast car shipping services based on
-                            high demand and the advantages of an open market throughout the year. Where other providers don't want to
-                            work during the off-seasons, ShipA1 remains devoted to fair practice, never taking advantage of the brokers 
-                            or the consignees. We have personalized, budget-friendly services tailored to meet the needs of customers 
-                            leaving New Hampshire. We offer lightning-fast delivery and competitive rates for transporting vehicles to
-                            Florida, Alabama, or any other state, making ShipA1 the trusted choice for New Hampshire vehicle transportation.</p>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Waiting for the Right Partner to Show up?</h3>
+                        <p class="desc">Shippers wait, brokers wait, and carriers wait, that’s what becomes the reason for their continuous
+                            consignment challenges. The unpredictability of the roadblocks, traffic cognition, and season peak
+                            shouldn’t become the reason for your mediocre shipping journey.
+                        <br>
+                            Locating and hiring an expert service provider for vehicle transportation in New Hampshire isn’t that
+                        hard. You got to pick the best agency after learning about its services, packages, insurance, and currently
+                        active carriers. For a trustful freight journey is any other better than ShipA1? Guess what? The way it
+                        offers benefits; there aren’t.
+                        </p>
                     </div>
                 </div>
             </div>
