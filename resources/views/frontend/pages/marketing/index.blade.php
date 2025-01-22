@@ -130,7 +130,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in Connecticut</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Connecticut</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInConnecticut') }}">
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInConnecticut') }}">Vehicle Transportation in Connecticut</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInConnecticut') }}">Vehicle Transportation in <br> Connecticut</a></h4>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in New York</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> New York</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">
@@ -165,7 +165,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">Vehicle Transportation in New York</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">Vehicle Transportation in <br> New York</a></h4>
                     </div>
                 </div>
             </div>
@@ -180,7 +180,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                            <h4 class="overlay-title">Vehicle Transport in New Hampshire</h4>
+                            <h4 class="overlay-title">Vehicle Transport in <br> New Hampshire</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">
@@ -190,7 +190,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                    <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">Vehicle Transportation in New Hampshire</a></h4>
+                    <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">Vehicle Transportation in <br> New Hampshire</a></h4>
                     </div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in Florida</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Florida</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInFlorida') }}">
@@ -217,7 +217,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInFlorida') }}">Vehicle Transportation in Florida</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInFlorida') }}">Vehicle Transportation in <br> Florida</a></h4>
                     </div>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in Washington</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Washington</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInWashington') }}">
@@ -242,7 +242,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInWashington') }}">Vehicle Transportation in Washington</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInWashington') }}">Vehicle Transportation in <br> Washington</a></h4>
                     </div>
                 </div>
             </div>
@@ -257,7 +257,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in Maryland</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Maryland</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInMaryland') }}">
@@ -267,7 +267,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInMaryland') }}">Vehicle Transportation in Maryland</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInMaryland') }}">Vehicle Transportation in <br> Maryland</a></h4>
                     </div>
                 </div>
             </div>
@@ -284,7 +284,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in Illinois</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Illinois</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInIllinois') }}">
@@ -294,7 +294,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInIllinois') }}">Vehicle Transportation in Illinois</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInIllinois') }}">Vehicle Transportation in <br> Illinois</a></h4>
                     </div>
                 </div>
             </div>
@@ -309,7 +309,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in Michigan</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Michigan</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInMichigan') }}">
@@ -319,7 +319,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInMichigan') }}">Vehicle Transportation in Michigan</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInMichigan') }}">Vehicle Transportation in <br> Michigan</a></h4>
                     </div>
                 </div>
             </div>
@@ -334,7 +334,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in Virginia</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Virginia</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInVirginia') }}">
@@ -344,7 +344,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInVirginia') }}">Vehicle Transportation in Virginia</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInVirginia') }}">Vehicle Transportation in <br> Virginia</a></h4>
                     </div>
                 </div>
             </div>
@@ -353,7 +353,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in NorthCarolina" />
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in North Carolina" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -361,7 +361,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in NorthCarolina</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> North Carolina</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInNorthCarolina') }}">
@@ -371,7 +371,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNorthCarolina') }}">Vehicle Transportation in NorthCarolina</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNorthCarolina') }}">Vehicle Transportation in <br> North Carolina</a></h4>
                     </div>
                 </div>
             </div>
@@ -386,7 +386,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in Texas</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Texas</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInTexas') }}">
@@ -396,7 +396,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInTexas') }}">Vehicle Transportation in Texas</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInTexas') }}">Vehicle Transportation in <br> Texas</a></h4>
                     </div>
                 </div>
             </div>
@@ -411,7 +411,7 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in Indiana</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Indiana</h4>
                             </div>
                             <div class="col-12 text-center">
                                 <a href="{{ route('frontend.pages.marketing.vehicleTransportInIndiana') }}">
@@ -421,7 +421,7 @@
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInIndiana') }}">Vehicle Transportation in Indiana</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInIndiana') }}">Vehicle Transportation in <br> Indiana</a></h4>
                     </div>
                 </div>
             </div>
