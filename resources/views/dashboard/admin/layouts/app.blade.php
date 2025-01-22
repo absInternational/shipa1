@@ -310,7 +310,44 @@
         $(document).ready(function() {
             $('.summernote').summernote({
                 height: 250,
+                fontNames: ['Poppins', 'Arial', 'Comic Sans MS', 'Courier New', 'Georgia', 'Impact', 'Lucida Sans', 'Tahoma', 'Times New Roman', 'Verdana'],
+                fontNamesIgnoreCheck: ['Poppins'],
+                fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '26', '28', '30', '32', '36', '40'],
+                placeholder: 'Type your content here...',
+                disableDragAndDrop: true,  // Disable image drag and drop
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['forecolor', 'backcolor']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video', 'emoji']],
+                    ['view', ['fullscreen', 'codeview', 'help']],
+                    ['alignment', ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull']],
+                    ['height', ['height']]  // Add height control to the toolbar
+                ],
+                popover: {
+                    image: [
+                        ['imagesize', ['imageSizeFull', 'imageSizeHalf', 'imageSizeQuarter']],
+                        ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                        ['remove', ['removeMedia']],
+                    ],
+                    link: [
+                        ['link', ['linkDialogShow', 'unlink']],
+                    ],
+                },
+                emoji: true,  // Enable emoji support
+                media: {      // Enable media embedding
+                    youtube: true,
+                    vimeo: true
+                },
+                inline: false, // Allow inline editing (set to true for inline editing mode)
+                tabSize: 4,    // Define tab size for code view
+                focus: true    // Focus on the editor when it loads
             });
+
 
             // Smooth scroll for sidebar links
             const sidebarLinks = document.querySelectorAll('.sidebar .nav-link');
