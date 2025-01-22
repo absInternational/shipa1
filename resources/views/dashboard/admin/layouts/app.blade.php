@@ -310,7 +310,41 @@
         $(document).ready(function() {
             $('.summernote').summernote({
                 height: 250,
+                fontNames: ['Poppins', 'Arial', 'Comic Sans MS', 'Courier New', 'Georgia', 'Impact', 'Lucida Sans', 'Tahoma', 'Times New Roman', 'Verdana'],
+                fontNamesIgnoreCheck: ['Poppins'],
+                fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '26', '28', '30', '32', '36', '40'],
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontname', ['fontname']], 
+                    ['fontsize', ['fontsize']],
+                    ['color', ['forecolor', 'backcolor']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']],
+                    ['alignment', ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull']],
+                ],
+                popover: {
+                    image: [
+                        ['imagesize', ['imageSizeFull', 'imageSizeHalf', 'imageSizeQuarter']],
+                        ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                        ['remove', ['removeMedia']],
+                    ],
+                    link: [
+                        ['link', ['linkDialogShow', 'unlink']],
+                    ],
+                },
+                callbacks: {
+                    onInit: function() {
+                        console.log('Summernote initialized!');
+                    },
+                    onChange: function(contents, $editable) {
+                        console.log('Editor content changed:', contents);
+                    }
+                }
             });
+
 
             // Smooth scroll for sidebar links
             const sidebarLinks = document.querySelectorAll('.sidebar .nav-link');
