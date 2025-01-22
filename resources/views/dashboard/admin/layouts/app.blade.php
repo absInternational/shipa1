@@ -313,17 +313,20 @@
                 fontNames: ['Poppins', 'Arial', 'Comic Sans MS', 'Courier New', 'Georgia', 'Impact', 'Lucida Sans', 'Tahoma', 'Times New Roman', 'Verdana'],
                 fontNamesIgnoreCheck: ['Poppins'],
                 fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '26', '28', '30', '32', '36', '40'],
+                placeholder: 'Type your content here...',
+                disableDragAndDrop: true,  // Disable image drag and drop
                 toolbar: [
                     ['style', ['bold', 'italic', 'underline', 'clear']],
                     ['font', ['strikethrough', 'superscript', 'subscript']],
-                    ['fontname', ['fontname']], 
+                    ['fontname', ['fontname']],
                     ['fontsize', ['fontsize']],
                     ['color', ['forecolor', 'backcolor']],
                     ['para', ['ul', 'ol', 'paragraph']],
                     ['table', ['table']],
-                    ['insert', ['link', 'picture', 'video']],
+                    ['insert', ['link', 'picture', 'video', 'emoji']],
                     ['view', ['fullscreen', 'codeview', 'help']],
                     ['alignment', ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull']],
+                    ['height', ['height']]  // Add height control to the toolbar
                 ],
                 popover: {
                     image: [
@@ -337,12 +340,40 @@
                 },
                 callbacks: {
                     onInit: function() {
-                        console.log('Summernote initialized!');
+                        console.log('Summernote initialized with advanced features!');
                     },
                     onChange: function(contents, $editable) {
                         console.log('Editor content changed:', contents);
+                    },
+                    onImageUpload: function(files) {
+                        // Example of handling image uploads
+                        var data = new FormData();
+                        data.append('file', files[0]);
+
+                        $.ajax({
+                            url: '/upload-image',  // Your custom image upload handler
+                            method: 'POST',
+                            data: data,
+                            contentType: false,
+                            processData: false,
+                            success: function(response) {
+                                // Insert image URL into editor
+                                $('.summernote').summernote('insertImage', response.imageUrl);
+                            },
+                            error: function(xhr, status, error) {
+                                alert('Error uploading image: ' + error);
+                            }
+                        });
                     }
-                }
+                },
+                emoji: true,  // Enable emoji support
+                media: {      // Enable media embedding
+                    youtube: true,
+                    vimeo: true
+                },
+                inline: false, // Allow inline editing (set to true for inline editing mode)
+                tabSize: 4,    // Define tab size for code view
+                focus: true    // Focus on the editor when it loads
             });
 
 
