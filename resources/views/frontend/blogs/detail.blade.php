@@ -56,7 +56,7 @@
                                 <div class="blog-header">
                                     <h3>
                                         {{-- <a class="title-link" href="blog-details.html"> --}}
-                                            {{ $blog->post_name }}
+                                            {{-- {{ $blog->post_name }} --}}
                                         {{-- </a> --}}
                                     </h3>
                                 </div>
