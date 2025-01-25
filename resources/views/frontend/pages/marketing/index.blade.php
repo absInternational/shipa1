@@ -430,7 +430,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in North Colorado" />
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Colorado" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">
@@ -438,17 +438,17 @@
                                 <i class="fa-solid fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in <br> North Colorado</h4>
+                                <h4 class="overlay-title">Vehicle Transport in <br> Colorado</h4>
                             </div>
                             <div class="col-12 text-center">
-                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInNorthColorado') }}">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInColorado') }}">
                                     <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNorthColorado') }}">Vehicle Transportation in <br> North Colorado</a></h4>
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInColorado') }}">Vehicle Transportation in <br> Colorado</a></h4>
                     </div>
                 </div>
             </div>
