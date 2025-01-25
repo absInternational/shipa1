@@ -426,6 +426,83 @@
                 </div>
             </div>
         </div> 
+        <div class="row">
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in North Colorado" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in <br> North Colorado</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInNorthColorado') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNorthColorado') }}">Vehicle Transportation in <br> North Colorado</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in California" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in <br> California</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInCalifornia') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInCalifornia') }}">Vehicle Transportation in <br> California</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Arizona" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in <br> Arizona</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInArizona') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInArizona') }}">Vehicle Transportation in <br> Arizona</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="tj-choose-us-section">

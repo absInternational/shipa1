@@ -643,6 +643,45 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.marketing.vehicleTransportInIndiana', compact('services', 'site_reviews', 'blogs', 'makes'));
     }
+    public function vehicleTransportInColorado()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInColorado', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
+    public function vehicleTransportIn()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportIn', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
+    public function vehicleTransportInArizona()
+    {
+        $makes = VehicleName::select('make')
+            ->where('UserId', 14)
+            ->where('status', 0)
+            ->groupBy('make')
+            ->orderBy('make', 'ASC')
+            ->get();
+        $site_reviews = ReviewSite::get();
+        $services = Service::where('status', '=', 1)->get();
+        $blogs = Blog::where('status', 1)->take(3)->get();
+        return view('frontend.pages.marketing.vehicleTransportInArizona', compact('services', 'site_reviews', 'blogs', 'makes'));
+    }
     public function leadGeneration(Request $request)
     {
         $data = $request->all();

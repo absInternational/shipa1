@@ -69,6 +69,9 @@ Route::prefix('marketing')->group(function () {
     Route::get('/Vehicle-Transportation-In-NorthCarolina', [FrontendController::class, 'vehicleTransportInNorthCarolina'])->name('frontend.pages.marketing.vehicleTransportInNorthCarolina');
     Route::get('/Vehicle-Transportation-In-Texas', [FrontendController::class, 'vehicleTransportInTexas'])->name('frontend.pages.marketing.vehicleTransportInTexas');
     Route::get('/Vehicle-Transportation-In-Indiana', [FrontendController::class, 'vehicleTransportInIndiana'])->name('frontend.pages.marketing.vehicleTransportInIndiana');
+    Route::get('/Vehicle-Transportation-In-Colorado', [FrontendController::class, 'vehicleTransportInColorado'])->name('frontend.pages.marketing.vehicleTransportInColorado');
+    Route::get('/Vehicle-Transportation-In-California', [FrontendController::class, 'vehicleTransportInCalifornia'])->name('frontend.pages.marketing.vehicleTransportInCalifornia');
+    Route::get('/Vehicle-Transportation-In-Arizona', [FrontendController::class, 'vehicleTransportInArizona'])->name('frontend.pages.marketing.vehicleTransportInArizona');
 });
 Route::get('/roro-shipping-international', [FrontendController::class, 'roroService'])->name('frontend.pages.services.roro-service');
 Route::get('/nationwide-autotransport', [FrontendController::class, 'nationwideAutotransport'])->name('frontend.pages.nationwide-autotransport');
