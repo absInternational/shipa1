@@ -153,7 +153,7 @@
                 </div>
             </div>
             @endforeach
-            {{-- <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
                         <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in New York" />
@@ -202,13 +202,9 @@
                     <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">Vehicle Transportation in <br> New Hampshire</a></h4>
                     </div>
                 </div>
-            </div> --}}
-        </div>
-            <!-- Pagination -->
-            <div class="pagination">
-                {{ $marketings->links() }}
             </div>
-        {{-- <div class="row">
+        </div>
+        <div class="row">
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
@@ -515,7 +511,11 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
+        <!-- Pagination -->
+        <div class="pagination">
+            {{ $marketings->links() }}
+        </div>
     </div>
 </section>
 <section class="tj-choose-us-section">
