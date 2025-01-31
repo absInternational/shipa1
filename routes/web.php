@@ -20,6 +20,9 @@ use App\Http\Controllers\Admin\UserManagementController;
 use App\Http\Controllers\Admin\PortToPortController;
 use App\Http\Controllers\Admin\PortDetailController;
 use App\Http\Controllers\Admin\NationWideTransportController;
+use App\Http\Controllers\MarketingController;
+
+
 
 // home
 Route::get('/', [FrontendController::class, 'index'])->name('welcome');
@@ -150,6 +153,10 @@ Route::get('/zipcode-suggestions', [PortToPortController::class, 'zipcode']);
 // get order details
 // Route::post('/order-form/{id}/{userid}', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');
 Route::post('/order-form', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');
+
+    // Preview route for marketing post based on slug
+    Route::get('/marketing/{slug}', [MarketingController::class, 'preview'])->name('marketing.preview');
+
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {
     // Admin dashboard
@@ -163,6 +170,10 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::put('/update/{id}', [BlogController::class, 'update'])->name('blogs.update');
         Route::delete('/destroy/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
     });
+    // Marketing
+    Route::resource('marketing', MarketingController::class);
+
+
     // Edit Frontend NavBar
     Route::prefix('navbar')->group(function () {
         Route::get('/', [MenuController::class, 'index'])->name('navbar.index');

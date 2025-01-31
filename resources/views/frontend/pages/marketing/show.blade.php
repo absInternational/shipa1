@@ -25,7 +25,7 @@
         z-index: 0;
     }
     .why-choose-us-slider {
-        background: url('/img/1-background-image-construction-equipment.webp');
+        background: url('{{ asset($marketing->img_three) }}');
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
@@ -113,10 +113,10 @@
             <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
+                        {{-- <img src="{{ asset('storage/' . $marketing->img_one) }}" alt="Marketing Image"> --}}
                         <span class="sub-title active-shape2">SERVICES</span>
-                        <h2 class="title">Vehicle Transportation In Arizona</h2>
-                        <p class="desc-2">ShipA1’s Arizona car shipping services mean swift vehicle delivery in no time.
-                            Wanna find out how this magic works? Reach out to us now!</p>
+                        <h2 class="title">{{ $marketing->heading_one }}</h2>
+                        <p class="desc-2">{{ $marketing->desc_one }}</p>
                     </div>
                     <div class="row">
                         <div class="col-md-4 col-sm-4 col-6">
@@ -158,16 +158,7 @@
         </div>
     </div>
 </section>
-@foreach ($marketings as $marketing)
-    <div class="card">
-        <img src="{{ asset('storage/' . $marketing->img_one) }}" alt="{{ $marketing->heading_one }}">
-        <div class="card-body">
-            <h5 class="card-title">{{ $marketing->heading_one }}</h5>
-            <p class="card-text">{{ \Illuminate\Support\Str::limit($marketing->desc_one, 100) }}</p>
-            <a href="{{ route( $marketing->slug) }}" class="btn btn-primary">Learn More</a>
-        </div>
-    </div>
-@endforeach
+
 
 
 <section class="tj-about-section pt-2 pb-0">
@@ -176,21 +167,15 @@
             <div class="col-lg-8 col-md-12 order-sm-2 order-md-1 order-1 d-flex align-items-center justify-content-center sal-animate pt-4 mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content-one">
                     <div class="tj-section-heading">
-                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">Your Speedy Arizona Car Shipping Services</h3>
-                        <p class="desc">Shipping cars into and out of Arizona is difficult, but ShipA1 makes it smooth and hassle-free. 
-                            From heavy lifts to branded cars entering the state, ShipA1 provides affordable packages, ensuring no
-                            increases in hauler, crane, or carrier costs. With our dependable door-to-door delivery, we'll make
-                            shipping a breeze for you. With ShipA1, you can enjoy the ease of navigating national legal 
-                            complexities and unpredictable road conditions in out-of-state transport. We ensure verified 
-                            documentation and a smooth delivery process, making us the ideal choice for vehicle transportation 
-                            in and out of Arizona.</p>
+                        <h3 class="sal-animate" data-sal="slide-left" data-sal-duration="800">{{ $marketing->heading_two }}</h3>
+                        <p class="desc">{{ $marketing->desc_two }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset('/frontend/images/slider/1-content.webp') }}"
+                        <img class="rounded" src="{{ asset($marketing->img_two) }}"
                             alt="Image">
                     </div>
                 </div>
@@ -204,13 +189,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-container text-left">
-                    <h3>The First Stop Platform of Car Shipping Services</h3>
-                    <p>Ship A1, your go-to partner in transportation services! We prioritize the needs of our customers and
-                         ensure their shipping services are as smooth as possible. With over 16 years of experience, we can
-                          proudly count ourselves as one of the leading transportation companies. <br>
-                        Ready to ship your car to a new destination? Say no more, Ship A1 offers the best car transportation
-                         services, as well as equipped with advanced trailers for your vehicle.
-                        </p>
+                    <h3>{{ $marketing->heading_three }}</h3>
+                    <p>{{ $marketing->desc_three }}</p>
                 </div>
                 <div class="row mt-4">
                     <div class="col-6 text-center">

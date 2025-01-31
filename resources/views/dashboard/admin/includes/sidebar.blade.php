@@ -85,6 +85,16 @@
         </li>
     @endif
 
+    <!-- Nav Item - Marketing -->
+    @if (in_array('3', $sidebar_access) || Auth::user()->role == 'admin')
+        <li class="nav-item {{ request()->routeIs('marketing.index') ? 'active' : '' }}">
+            <a class="nav-link py-2 mb-2" href="{{ route('marketing.index') }}">
+                <i class="fas fa-bullhorn"></i>
+                <span>Marketing</span>
+            </a>
+        </li>
+    @endif
+    
     <!-- Nav Item - Reviews -->
     @if (in_array('6', $sidebar_access) || Auth::user()->role == 'admin')
         <li class="nav-item {{ request()->routeIs('reviews.index') ? 'active' : '' }}">

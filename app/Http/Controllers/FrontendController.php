@@ -6,16 +6,18 @@ use App\Models\FAQs;
 use Illuminate\Http\Request;
 use App\Models\Review;
 use App\Models\Blog;
+use App\Models\VehicleName;
 use App\Models\Service;
 use App\Models\NewsletterSubscribers;
 use App\Models\ServiceCategory;
-use App\Models\VehicleName;
 use App\Models\ReviewSite;
 use App\Models\NationWideTransport;
-use Illuminate\Support\Facades\Cache;
+use App\Models\Marketing;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Cache;
 use Hamcrest\Core\IsNot;
+
 
 class FrontendController extends Controller
 {
@@ -448,7 +450,8 @@ class FrontendController extends Controller
             ->groupBy('make')
             ->orderBy('make', 'ASC')
             ->get();
-        return view('frontend.pages.marketing.index', compact( 'makes'));
+            $marketings = Marketing::paginate(10);
+        return view('frontend.pages.marketing.index', compact( 'makes', 'marketings'));
     }
     // public function vehicleTransportInConnecticut()
     // {
@@ -682,6 +685,18 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.marketing.vehicleTransportInArizona', compact('services', 'site_reviews', 'blogs', 'makes'));
     }
+    public function showAllMarketingPosts()
+    {
+        // $marketings = Marketing::latest()->paginate(10);
+        $marketings = Marketing::get();
+        return view('frontend.marketing.index', compact('marketings'));
+    }
+    // public function showMarketingPostDetail($slug)
+    // {
+    //     $site_reviews = ReviewSite::get();
+    //     $marketing = Marketing::where('slug', $slug)->firstOrFail();
+    //     return view('frontend.marketing.show', compact('marketing', 'site_reviews'));
+    // }
     public function leadGeneration(Request $request)
     {
         $data = $request->all();
