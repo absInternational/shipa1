@@ -46,7 +46,7 @@
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-responsive table-striped">
-                    <thead class="table-dark">
+                    <thead class="text-nowrap">
                         <tr>
                             <th>ID</th>
                             <th>Slug</th>
