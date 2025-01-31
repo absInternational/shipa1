@@ -119,92 +119,6 @@
             </div>
         </div>
         <div class="row">
-            {{-- @foreach ($marketings as $marketing)
-                <div class="marketing-item">
-                    <h3><a href="{{ route('marketing.preview', $marketing->slug) }}">{{ $marketing->heading_one }}</a></h3>
-                    <p>{{ Illuminate\Support\Str::limit($marketing->desc_one, 150, '...') }}</p>
-                    <a href="{{ route('marketing.preview', $marketing->slug) }}">Read more</a>
-                </div>
-            @endforeach --}}
-            @foreach ($marketings as $marketing)
-            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                <div class="service-item-three">
-                    <div class="service-image">
-                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Connecticut" />
-                    </div>
-                    <div class="overlay">
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-12 text-center mb-3">
-                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
-                            </div>
-                            <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">{{ $marketing->heading_one }}</h4>
-                            </div>
-                            <div class="col-12 text-center">
-                                <a href="{{ route('marketing.preview', $marketing->slug) }}">
-                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('marketing.preview', $marketing->slug) }}">{{ $marketing->heading_one }}</a></h4>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                <div class="service-item-three">
-                    <div class="service-image">
-                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in New York" />
-                    </div>
-                    <div class="overlay">
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-12 text-center mb-3">
-                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
-                            </div>
-                            <div class="col-12 text-center text-white mb-3">
-                                <h4 class="overlay-title">Vehicle Transport in <br> New York</h4>
-                            </div>
-                            <div class="col-12 text-center">
-                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">
-                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content-1">
-                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">Vehicle Transportation in <br> New York</a></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                <div class="service-item-three">
-                    <div class="service-image">
-                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Hampshire" />
-                    </div>
-                    <div class="overlay">
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-12 text-center mb-3">
-                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
-                            </div>
-                            <div class="col-12 text-center text-white mb-3">
-                            <h4 class="overlay-title">Vehicle Transport in <br> New Hampshire</h4>
-                            </div>
-                            <div class="col-12 text-center">
-                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">
-                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content-1">
-                    <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">Vehicle Transportation in <br> New Hampshire</a></h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
@@ -511,6 +425,85 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in New York" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">Vehicle Transport in <br> New York</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInNewyork') }}">Vehicle Transportation in <br> New York</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Hampshire" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                            <h4 class="overlay-title">Vehicle Transport in <br> New Hampshire</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                    <h4><a class="title" href="{{ route('frontend.pages.marketing.vehicleTransportInHampshire') }}">Vehicle Transportation in <br> New Hampshire</a></h4>
+                    </div>
+                </div>
+            </div>
+            @foreach ($marketings as $marketing)
+            <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+                <div class="service-item-three">
+                    <div class="service-image">
+                        <img loading="lazy" src="{{ asset('/frontend/images/slider/car-transports.webp') }}" alt="Vehicle Transportation in Connecticut" />
+                    </div>
+                    <div class="overlay">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center mb-3">
+                                <i class="fa-solid fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="col-12 text-center text-white mb-3">
+                                <h4 class="overlay-title">{{ $marketing->heading_one }}</h4>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="{{ route('marketing.preview', $marketing->slug) }}">
+                                    <button class="tj-submit-btn fs-6">Learn More<i class="fa fa-arrow-right ms-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content-1">
+                        <h4><a class="title" href="{{ route('marketing.preview', $marketing->slug) }}">{{ $marketing->heading_one }}</a></h4>
+                    </div>
+                </div>
+            </div>
+            @endforeach
         </div>
         <!-- Pagination -->
         <div class="pagination">
