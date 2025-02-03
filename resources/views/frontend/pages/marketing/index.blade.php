@@ -192,8 +192,7 @@
                                                         </div>
                                                         <div class="service-content-1">
                                                             <h4><a class="title"
-                                                                    href="{{ route('marketing.preview', $item->slug) }}">Vehicle
-                                                                    Transportation in <br> Florida</a></h4>
+                                                                    href="{{ route('marketing.preview', $item->slug) }}">{{ $item->heading_one }}</a></h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -235,8 +234,7 @@
                                                         </div>
                                                         <div class="service-content-1">
                                                             <h4><a class="title"
-                                                                    href="{{ route('marketing.preview', $item->slug) }}">Vehicle
-                                                                    Transportation in <br> North Carolina</a></h4>
+                                                                    href="{{ route('marketing.preview', $item->slug) }}">{{ $item->heading_one }}</a></h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -278,8 +276,7 @@
                                                         </div>
                                                         <div class="service-content-1">
                                                             <h4><a class="title"
-                                                                    href="{{ route('marketing.preview', $item->slug) }}">Vehicle
-                                                                    Transportation in <br> Colorado</a></h4>
+                                                                    href="{{ route('marketing.preview', $item->slug) }}">{{ $item->heading_one }}</a></h4>
                                                         </div>
                                                     </div>
                                                 </div>
