@@ -169,7 +169,7 @@
                                                     <div class="service-item-three">
                                                         <div class="service-image">
                                                             <img loading="lazy"
-                                                                src="{{ asset('/frontend/images/slider/car-transports.webp') }}"
+                                                                src="{{ asset($item->img_one) }}"
                                                                 alt="Vehicle Transportation in Florida" />
                                                         </div>
                                                         <div class="overlay">
@@ -178,12 +178,12 @@
                                                                     <i class="fa-solid fa-car-side fa-3x text-white"></i>
                                                                 </div>
                                                                 <div class="col-12 text-center text-white mb-3">
-                                                                    <h4 class="overlay-title">{{ $marketing->heading_one }}
+                                                                    <h4 class="overlay-title">{{ $item->heading_one }}
                                                                     </h4>
                                                                 </div>
                                                                 <div class="col-12 text-center">
                                                                     <a
-                                                                        href="{{ route('frontend.pages.marketing.vehicleTransportInFlorida') }}">
+                                                                        href="{{ route('marketing.preview', $item->slug) }}">
                                                                         <button class="tj-submit-btn fs-6">Learn More<i
                                                                                 class="fa fa-arrow-right ms-2"></i></button>
                                                                     </a>
@@ -192,7 +192,7 @@
                                                         </div>
                                                         <div class="service-content-1">
                                                             <h4><a class="title"
-                                                                    href="{{ route('frontend.pages.marketing.vehicleTransportInFlorida') }}">Vehicle
+                                                                    href="{{ route('marketing.preview', $item->slug) }}">Vehicle
                                                                     Transportation in <br> Florida</a></h4>
                                                         </div>
                                                     </div>
@@ -213,7 +213,7 @@
                                                     <div class="service-item-three">
                                                         <div class="service-image">
                                                             <img loading="lazy"
-                                                                src="{{ asset('/frontend/images/slider/car-transports.webp') }}"
+                                                                src="{{ asset($item->img_one) }}"
                                                                 alt="Vehicle Transportation in North Carolina" />
                                                         </div>
                                                         <div class="overlay">
@@ -222,11 +222,11 @@
                                                                     <i class="fa-solid fa-car-side fa-3x text-white"></i>
                                                                 </div>
                                                                 <div class="col-12 text-center text-white mb-3">
-                                                                    <h4 class="overlay-title">{{ $marketing->heading_one }}</h4>
+                                                                    <h4 class="overlay-title">{{ $item->heading_one }}</h4>
                                                                 </div>
                                                                 <div class="col-12 text-center">
                                                                     <a
-                                                                        href="{{ route('frontend.pages.marketing.vehicleTransportInNorthCarolina') }}">
+                                                                        href="{{ route('marketing.preview', $item->slug) }}">
                                                                         <button class="tj-submit-btn fs-6">Learn More<i
                                                                                 class="fa fa-arrow-right ms-2"></i></button>
                                                                     </a>
@@ -235,7 +235,7 @@
                                                         </div>
                                                         <div class="service-content-1">
                                                             <h4><a class="title"
-                                                                    href="{{ route('frontend.pages.marketing.vehicleTransportInNorthCarolina') }}">Vehicle
+                                                                    href="{{ route('marketing.preview', $item->slug) }}">Vehicle
                                                                     Transportation in <br> North Carolina</a></h4>
                                                         </div>
                                                     </div>
@@ -256,7 +256,7 @@
                                                     <div class="service-item-three">
                                                         <div class="service-image">
                                                             <img loading="lazy"
-                                                                src="{{ asset('/frontend/images/slider/car-transports.webp') }}"
+                                                                src="{{ asset($item->img_one) }}"
                                                                 alt="Vehicle Transportation in Colorado" />
                                                         </div>
                                                         <div class="overlay">
@@ -265,11 +265,11 @@
                                                                     <i class="fa-solid fa-car-side fa-3x text-white"></i>
                                                                 </div>
                                                                 <div class="col-12 text-center text-white mb-3">
-                                                                    <h4 class="overlay-title">{{ $marketing->heading_one }}</h4>
+                                                                    <h4 class="overlay-title">{{ $item->heading_one }}</h4>
                                                                 </div>
                                                                 <div class="col-12 text-center">
                                                                     <a
-                                                                        href="{{ route('frontend.pages.marketing.vehicleTransportInColorado') }}">
+                                                                        href="{{ route('marketing.preview', $item->slug) }}">
                                                                         <button class="tj-submit-btn fs-6">Learn More<i
                                                                                 class="fa fa-arrow-right ms-2"></i></button>
                                                                     </a>
@@ -278,7 +278,7 @@
                                                         </div>
                                                         <div class="service-content-1">
                                                             <h4><a class="title"
-                                                                    href="{{ route('frontend.pages.marketing.vehicleTransportInColorado') }}">Vehicle
+                                                                    href="{{ route('marketing.preview', $item->slug) }}">Vehicle
                                                                     Transportation in <br> Colorado</a></h4>
                                                         </div>
                                                     </div>

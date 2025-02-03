@@ -154,8 +154,8 @@ Route::get('/zipcode-suggestions', [PortToPortController::class, 'zipcode']);
 // Route::post('/order-form/{id}/{userid}', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');
 Route::post('/order-form', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');
 
-    // Preview route for marketing post based on slug
-    Route::get('/marketing/{slug}', [MarketingController::class, 'preview'])->name('marketing.preview');
+// Preview route for marketing post based on slug
+Route::get('/marketing/{slug}', [MarketingController::class, 'preview'])->name('marketing.preview');
 
 // Admin routes
 Route::middleware('admin')->prefix('admin')->group(function () {
@@ -242,7 +242,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::resource('port-to-ports', PortToPortController::class);
     // nation-wide-transport
     Route::resource('nationwide-transports', NationWideTransportController::class);
-    
+
     // change pass
     Route::post('change-password', [AdminController::class, 'changePassword'])->name('change.password');
 });
