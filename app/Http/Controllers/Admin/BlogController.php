@@ -98,7 +98,7 @@ class BlogController extends Controller
             $validatedData['slug_name'] = $this->generateUniqueSlug($slug, $blog->id);
         }
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile(key: 'image')) {
             $image = $request->file('image');
             $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('blog_images'), $imageName);

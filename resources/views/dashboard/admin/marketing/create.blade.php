@@ -30,7 +30,7 @@
             <textarea name="desc_two" class="form-control"></textarea>
         </div>
         <div class="mb-3">
-            <label for="img_two" class="form-label">Image Two</label>
+            <label for="img_two" class="form-label">Image One</label>
             <input type="file" name="img_two" class="form-control">
         </div>
         <div class="mb-3">
@@ -42,12 +42,17 @@
             <textarea name="desc_three" class="form-control"></textarea>
         </div>
         <div class="mb-3">
-            <label for="img_three" class="form-label">Image Three</label>
+            <label for="img_three" class="form-label">Image Two</label>
             <input type="file" name="img_three" class="form-control">
         </div>
         <div class="mb-3">
             <label for="category" class="form-label">Category</label>
-            <input type="text" name="category" class="form-control" required>
+            <select class="form-control" id="category" name="category" required>
+                <option value="">Select Category</option>
+                <option value="Vehicle Transport">Vehicle Transport</option>
+                <option value="Heavy Transport">Heavy Transport</option>
+                <option value="Freight Transport">Freight Transport</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="status" class="form-label">Status</label>

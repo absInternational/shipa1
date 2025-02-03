@@ -34,7 +34,7 @@
             <textarea name="desc_two" class="form-control">{{ $marketing->desc_two }}</textarea>
         </div>
         <div class="mb-3">
-            <label for="img_two" class="form-label">Image Two</label>
+            <label for="img_two" class="form-label">Image One</label>
             <input type="file" name="img_two" class="form-control">
             @if($marketing->img_two)
                 <img src="{{ asset('storage/' . $marketing->img_two) }}" width="50">
@@ -49,7 +49,7 @@
             <textarea name="desc_three" class="form-control">{{ $marketing->desc_three }}</textarea>
         </div>
         <div class="mb-3">
-            <label for="img_three" class="form-label">Image Three</label>
+            <label for="img_three" class="form-label">Image Two</label>
             <input type="file" name="img_three" class="form-control">
             @if($marketing->img_three)
                 <img src="{{ asset('storage/' . $marketing->img_three) }}" width="50">
@@ -57,7 +57,12 @@
         </div>
         <div class="mb-3">
             <label for="category" class="form-label">Category</label>
-            <input type="text" name="category" class="form-control" value="{{ $marketing->category }}" required>
+            <select class="form-control" id="category" name="category" required>
+                <option value="">Select Category</option>
+                <option value="Vehicle Transport" {{ $marketing->category == 'Vehicle Transport' ? 'selected' : '' }}>Vehicle Transport</option>
+                <option value="Heavy Transport" {{ $marketing->category == 'Heavy Transport' ? 'selected' : '' }}>Heavy Transport</option>
+                <option value="Freight Transport" {{ $marketing->category == 'Freight Transport' ? 'selected' : '' }}>Freight Transport</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="status" class="form-label">Status</label>

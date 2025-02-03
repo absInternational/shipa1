@@ -25,7 +25,7 @@
         z-index: 0;
     }
     .why-choose-us-slider {
-        background: url('{{ asset($marketing->img_three) }}');
+        background: url('{{ asset('storage/' . $marketing->img_three) }}'); 
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
@@ -175,8 +175,8 @@
             <div class="col-lg-4 col-md-12 order-sm-1 order-md-2 order-2 d-flex align-items-center justify-content-center sal-animate" data-sal="slide-left" data-sal-duration="800">
                 <div class="mt-4 rounded">
                     <div class="image-box">
-                        <img class="rounded" src="{{ asset($marketing->img_two) }}"
-                            alt="Image">
+                        <img class="rounded" src="{{ asset('storage/' . $marketing->img_two) }}" alt="Marketing Image">
+                        {{-- <img class="rounded" src="{{ asset($marketing->img_two) }}" alt="Image"> --}}
                     </div>
                 </div>
             </div>

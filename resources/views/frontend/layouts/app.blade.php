@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/frontend/css/responsive.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script">
