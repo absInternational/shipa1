@@ -450,8 +450,12 @@ class FrontendController extends Controller
             ->groupBy('make')
             ->orderBy('make', 'ASC')
             ->get();
-            $marketings = Marketing::paginate(10);
-        return view('frontend.pages.marketing.index', compact( 'makes', 'marketings'));
+        $marketings = Marketing::paginate(10);
+        $marketing = Marketing::where('status', 1);
+        $vehicle = $marketing->where('category', 'Vehicle Transport')->get();
+        $heavy = $marketing->where('category', 'Heavy Transport')->get();
+        $freight = $marketing->where('category', 'Freight Transport')->get();
+        return view('frontend.pages.marketing.index', compact('makes', 'marketings', 'vehicle', 'heavy', 'freight'));
     }
     // public function vehicleTransportInConnecticut()
     // {
@@ -620,7 +624,7 @@ class FrontendController extends Controller
         $blogs = Blog::where('status', 1)->take(3)->get();
         return view('frontend.pages.marketing.vehicleTransportInTexas', compact('services', 'site_reviews', 'blogs', 'makes'));
     }
-    public function vehicleTransportInNorthCarolina	()
+    public function vehicleTransportInNorthCarolina()
     {
         $makes = VehicleName::select('make')
             ->where('UserId', 14)
@@ -876,7 +880,7 @@ class FrontendController extends Controller
         if (is_null($roro)) {
             $delivery_latitude = $originData;
             $delivery_longitude = $destinationData;
-            if($origin_zip || $destination_zip) {
+            if ($origin_zip || $destination_zip) {
                 $distance = QuoteController::getDistance($origin_zip, $destination_zip);
             }
         } else {
@@ -973,7 +977,7 @@ class FrontendController extends Controller
 
             $post_array['image'] = implode('*^', $imageUrls);
         }
-      
+
         try {
             $response = Http::post('https://washington.shawntransport.com/api/v2/submit_query', $post_array)->json();
             if (isset($response['status_code']) && $response['status_code'] == 201) {
