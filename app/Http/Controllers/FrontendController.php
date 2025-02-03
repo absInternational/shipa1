@@ -451,11 +451,11 @@ class FrontendController extends Controller
             ->orderBy('make', 'ASC')
             ->get();
         $marketings = Marketing::paginate(10);
-        $marketing = Marketing::query();
-        $vehicle = $marketing->where('status', 1)->where('category', 'Vehicle Transport')->get();
-        $heavy = $marketing->where('status', 1)->where('category', 'Heavy Transport')->get();
-        $freight = $marketing->where('status', 1)->where('category', 'Freight Transport')->get();
-        dd($vehicle->toArray(), $freight->toArray(), $heavy->toArray(), $marketing->get()->toArray());
+        $marketing = Marketing::where('status', 1);
+
+        $vehicle = (clone $marketing)->where('category', 'Vehicle Transport')->get();
+        $heavy = (clone $marketing)->where('category', 'Heavy Transport')->get();
+        $freight = (clone $marketing)->where('category', 'Freight Transport')->get();
         return view('frontend.pages.marketing.index', compact('makes', 'marketings', 'vehicle', 'heavy', 'freight'));
     }
     // public function vehicleTransportInConnecticut()
