@@ -14,14 +14,14 @@
             <label for="img_thumbnail" class="form-label">Thumbnail Image</label>
             <input type="file" name="img_thumbnail" class="form-control">
             @if($marketing->img_thumbnail)
-                <img src="{{ asset('storage/' . $marketing->img_thumbnail) }}" width="50">
+                <img src="{{ asset($marketing->img_thumbnail) }}" width="50">
             @endif
         </div>
         <div class="mb-3">
             <label for="img_one" class="form-label">Image One</label>
             <input type="file" name="img_one" class="form-control">
             @if($marketing->img_one)
-                <img src="{{ asset('storage/' . $marketing->img_one) }}" width="50">
+                <img src="{{ asset($marketing->img_one) }}" width="50">
             @endif
         </div>
         <div class="mb-3">
@@ -44,7 +44,7 @@
             <label for="img_two" class="form-label">Image One</label>
             <input type="file" name="img_two" class="form-control">
             @if($marketing->img_two)
-                <img src="{{ asset('storage/' . $marketing->img_two) }}" width="50">
+                <img src="{{ asset($marketing->img_two) }}" width="50">
             @endif
         </div>
         <div class="mb-3">
@@ -59,7 +59,7 @@
             <label for="img_three" class="form-label">Image Two</label>
             <input type="file" name="img_three" class="form-control">
             @if($marketing->img_three)
-                <img src="{{ asset('storage/' . $marketing->img_three) }}" width="50">
+                <img src="{{ asset($marketing->img_three) }}" width="50">
             @endif
         </div>
         <div class="mb-3">
