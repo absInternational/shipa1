@@ -169,7 +169,7 @@
                                                     <div class="service-item-three">
                                                         <div class="service-image">
                                                             <img loading="lazy"
-                                                                src="{{ asset($item->img_one) }}"
+                                                                src="{{ asset($item->img_thumbnail) }}"
                                                                 alt="Vehicle Transportation in Florida" />
                                                         </div>
                                                         <div class="overlay">
@@ -212,7 +212,7 @@
                                                     <div class="service-item-three">
                                                         <div class="service-image">
                                                             <img loading="lazy"
-                                                                src="{{ asset($item->img_one) }}"
+                                                                src="{{ asset($item->img_thumbnail) }}"
                                                                 alt="Vehicle Transportation in North Carolina" />
                                                         </div>
                                                         <div class="overlay">
@@ -254,7 +254,7 @@
                                                     <div class="service-item-three">
                                                         <div class="service-image">
                                                             <img loading="lazy"
-                                                                src="{{ asset($item->img_one) }}"
+                                                                src="{{ asset($item->img_thumbnail) }}"
                                                                 alt="Vehicle Transportation in Colorado" />
                                                         </div>
                                                         <div class="overlay">
@@ -721,7 +721,7 @@
                         <div class="service-item-three">
                             <div class="service-image">
                                 <img style="height: fit-content; width: fit-content;" loading="lazy"
-                                    src="{{ asset($marketing->img_one) }}" alt="Vehicle Transportation in Connecticut" />
+                                    src="{{ asset($marketing->img_thumbnail) }}" alt="Vehicle Transportation in Connecticut" />
                             </div>
                             <div class="overlay">
                                 <div class="row justify-content-center align-items-center">
