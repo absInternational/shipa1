@@ -455,7 +455,7 @@ class FrontendController extends Controller
         $vehicle = $marketing->where('category', 'Vehicle Transport')->get();
         $heavy = $marketing->where('category', 'Heavy Transport')->get();
         $freight = $marketing->where('category', 'Freight Transport')->get();
-        dd($vehicle,$freight,$heavy);
+        dd($vehicle,$freight,$heavy, Marketing::get()->toArray());
         return view('frontend.pages.marketing.index', compact('makes', 'marketings', 'vehicle', 'heavy', 'freight'));
     }
     // public function vehicleTransportInConnecticut()
