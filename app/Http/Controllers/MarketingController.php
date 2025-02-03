@@ -41,14 +41,35 @@ class MarketingController extends Controller
 
         $data = $request->all();
 
-        if ($request->hasFile('img_one')) {
-            $data['img_one'] = $request->file('img_one')->store('uploads/marketing', 'public');
+        // if ($request->hasFile('img_one')) {
+        //     $data['img_one'] = $request->file('img_one')->store('uploads/marketing', 'public');
+        // }
+        // if ($request->hasFile('img_two')) {
+        //     $data['img_two'] = $request->file('img_two')->store('uploads/marketing', 'public');
+        // }
+        // if ($request->hasFile('img_three')) {
+        //     $data['img_three'] = $request->file('img_three')->store('uploads/marketing', 'public');
+        // }
+
+        if ($request->hasFile(key: 'img_one')) {
+            $image = $request->file('img_one');
+            $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('marketing'), name: $imageName);
+            $validatedData['img_one'] = 'public/marketing/' . $imageName;
         }
-        if ($request->hasFile('img_two')) {
-            $data['img_two'] = $request->file('img_two')->store('uploads/marketing', 'public');
+
+        if ($request->hasFile(key: 'img_two')) {
+            $image = $request->file('img_two');
+            $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('marketing'), $imageName);
+            $validatedData['img_two'] = 'public/marketing/' . $imageName;
         }
-        if ($request->hasFile('img_three')) {
-            $data['img_three'] = $request->file('img_three')->store('uploads/marketing', 'public');
+
+        if ($request->hasFile(key: 'img_three')) {
+            $image = $request->file('img_three');
+            $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('marketing'), $imageName);
+            $validatedData['img_three'] = 'public/marketing/' . $imageName;
         }
 
         Marketing::create($data);
