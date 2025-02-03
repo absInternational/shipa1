@@ -769,7 +769,7 @@
             <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                 <div class="service-item-three">
                     <div class="service-image">
-                        <img style="height: fit-content; width: fit-content;" loading="lazy" src="{{ asset('storage/' . $marketing->img_one) }}" alt="Vehicle Transportation in Connecticut" />
+                        <img style="height: fit-content; width: fit-content;" loading="lazy" src="{{ asset($marketing->img_two) }}" alt="Vehicle Transportation in Connecticut" />
                     </div>
                     <div class="overlay">
                         <div class="row justify-content-center align-items-center">

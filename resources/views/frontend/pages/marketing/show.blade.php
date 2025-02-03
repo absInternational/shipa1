@@ -25,7 +25,7 @@
         z-index: 0;
     }
     .why-choose-us-slider {
-        background: url('{{ asset('storage/' . $marketing->img_three) }}'); 
+        background: url('{{ asset($marketing->img_three) }}'); 
         padding: 60px 0;
         background-color: #f9f9f9;
         position: relative;
@@ -113,6 +113,7 @@
             <div class="col-lg-6 sal-animate mt-4" data-sal="slide-left" data-sal-duration="800">
                 <div class="choose-us-content-1">
                     <div class="tj-section-heading">
+                        <img src="{{ asset($marketing->img_one) }}" alt="Marketing Image">
                         {{-- <img src="{{ asset('storage/' . $marketing->img_one) }}" alt="Marketing Image"> --}}
                         <span class="sub-title active-shape2">SERVICES</span>
                         <h2 class="title">{{ $marketing->heading_one }}</h2>
