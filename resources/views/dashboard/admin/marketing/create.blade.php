@@ -10,6 +10,10 @@
             <input type="text" name="slug" class="form-control" required>
         </div>
         <div class="mb-3">
+            <label for="img_thumbnail" class="form-label">Thumbnail Image</label>
+            <input type="file" name="img_thumbnail" class="form-control">
+        </div>
+        <div class="mb-3">
             <label for="img_one" class="form-label">Image One</label>
             <input type="file" name="img_one" class="form-control">
         </div>

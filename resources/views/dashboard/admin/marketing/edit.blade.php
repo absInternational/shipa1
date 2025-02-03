@@ -11,6 +11,13 @@
             <input type="text" name="slug" class="form-control" value="{{ $marketing->slug }}" required>
         </div>
         <div class="mb-3">
+            <label for="img_thumbnail" class="form-label">Image One</label>
+            <input type="file" name="img_thumbnail" class="form-control">
+            @if($marketing->img_thumbnail)
+                <img src="{{ asset('storage/' . $marketing->img_thumbnail) }}" width="50">
+            @endif
+        </div>
+        <div class="mb-3">
             <label for="img_one" class="form-label">Image One</label>
             <input type="file" name="img_one" class="form-control">
             @if($marketing->img_one)

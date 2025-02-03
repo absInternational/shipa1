@@ -16,6 +16,7 @@ class Marketing extends Model
         'slug',
         'img_one',
         'heading_one',
+        'img_thumbnail',
         'desc_one',
         'heading_two',
         'desc_two',

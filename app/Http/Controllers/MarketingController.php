@@ -26,6 +26,7 @@ class MarketingController extends Controller
     {
         $request->validate([
             'slug' => 'required|unique:marketing',
+            'img_thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'img_one' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'img_two' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'img_three' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -50,6 +51,13 @@ class MarketingController extends Controller
         // if ($request->hasFile('img_three')) {
         //     $data['img_three'] = $request->file('img_three')->store('uploads/marketing', 'public');
         // }
+
+        if ($request->hasFile(key: 'img_thumbnail')) {
+            $image = $request->file('img_thumbnail');
+            $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('marketing'), name: $imageName);
+            $data['img_thumbnail'] = 'public/marketing/' . $imageName;
+        }
 
         if ($request->hasFile(key: 'img_one')) {
             $image = $request->file('img_one');
@@ -103,6 +111,7 @@ class MarketingController extends Controller
     {
         $request->validate([
             'slug' => 'required|unique:marketing,slug,' . $marketing->id,
+            'img_thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'img_one' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'img_two' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'img_three' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -127,7 +136,12 @@ class MarketingController extends Controller
         // if ($request->hasFile('img_three')) {
         //     $data['img_three'] = $request->file('img_three')->store('uploads/marketing', 'public');
         // }
-
+        if ($request->hasFile(key: 'img_thumbnail')) {
+            $image = $request->file('img_thumbnail');
+            $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('marketing'), name: $imageName);
+            $data['img_thumbnail'] = 'public/marketing/' . $imageName;
+        }
         if ($request->hasFile(key: 'img_one')) {
             $image = $request->file('img_one');
             $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
