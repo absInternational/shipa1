@@ -201,7 +201,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade active show" id="pills-profile" role="tabpanel"
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                                 aria-labelledby="pills-profile-tab">
                                 <div class="row">
                                     <div class="col-lg-12" data-sal="slide-right" data-sal-duration="800">
@@ -748,7 +748,6 @@
                     </div>
                 @endforeach
             </div>
-            <!-- Pagination -->
             <div class="pagination">
                 {{ $marketings->links() }}
             </div>
