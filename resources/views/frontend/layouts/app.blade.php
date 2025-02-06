@@ -12,22 +12,28 @@
     <meta name="twitter:title" content="ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA">
     <meta name="twitter:description" content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
     <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
-    <!-- improved load performance -->
-    <link rel="preload" href="{{ asset('/frontend/images/logo/favicon.webp') }}" as="image" type="image/png" />
+
+    <!-- Improved load performance -->
+    <link rel="preload" href="{{ asset('/frontend/images/logo/favicon.webp') }}" as="image" type="image/webp">
     <link rel="apple-touch-icon" href="{{ asset('/frontend/images/logo/favicon.webp') }}">
     <link rel="shortcut icon" href="{{ asset('/frontend/images/logo/favicon.webp') }}" type="image/x-icon">
+
+    <!-- Preloading critical CSS and JS -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <script src="https://unpkg.com/imask" async></script>
     <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" as="style">
+    
+    <!-- Non-blocking external CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.2/dist/css/coreui.min.css" integrity="sha384-39e9UaGkm/+yp6spIsVfzcs3j7ac7G2cg0hzmDvtG11pT1d7YMnOC26w4wMPhzsL" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
+
+    <!-- Local CSS with non-blocking load -->
+    <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" onload="this.onload=null;this.rel='stylesheet'">
@@ -39,14 +45,10 @@
     <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" as="style">
-    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" as="style">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" async></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- improved load performance -->
+
+    <!-- JSON-LD structured data for better SEO -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -83,8 +85,8 @@
                 "https://www.shipa1.com/"
             ]
         }
-    </script>        
-</head>
+    </script>  
+</head>    
 <body class="fade-in">
     @php
     $currentRouteName = Route::currentRouteName();
