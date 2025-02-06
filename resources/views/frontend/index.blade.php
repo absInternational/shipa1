@@ -114,8 +114,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
         <div class="animation-preloader"></div>
     </div>
     <section class="tj-slider-section">
-        <div class="slider_shape"><img loading="lazy" src="{{ asset('/frontend/images/banner/home-underline.webp') }}"
-                fetchpriority="high" alt="Image" width="100%"></div>
+        
         <div class="swiper sc-slider-1" data-autoplay="5000">
             {{-- <div class="swiper-wrapper">
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/DSF.webp') }}">
