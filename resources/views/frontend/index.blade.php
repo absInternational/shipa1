@@ -160,7 +160,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </div>
             </div> --}}
             <div class="swiper-wrapper">
-                <div class="swiper-slide d-flex align-items-center justify-content-center position-relative text-white" style="height: 500px; background-size: cover; background-position: center;" data-bg-image="{{ asset('frontend/images/slider/DSF.webp') }}">
+                <div class="swiper-slide d-flex align-items-center justify-content-center position-relative text-white" style="height: 750px; background-size: cover; background-position: center;" data-bg-image="{{ asset('frontend/images/slider/DSF.webp') }}">
                     <div class="container text-center">
                         <div class="slider-content p-z-idex">
                             <h1 class="slider-title fw-bold">Trustworthy, Efficient, And Cost-effective Auto Transport Solutions</h1>
@@ -173,7 +173,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     <div class="banner-shape"></div>
                 </div>
             
-                <div class="swiper-slide d-flex align-items-center justify-content-center position-relative text-white" style="height: 500px; background-size: cover; background-position: center;" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
+                <div class="swiper-slide d-flex align-items-center justify-content-center position-relative text-white" style="height: 750px; background-size: cover; background-position: center;" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
                     <div class="container text-center">
                         <div class="slider-content p-z-idex">
                             <h4 class="slider-title fw-bold">Trustworthy, Efficient and Cost-Effective Transportation Services</h4>
@@ -186,7 +186,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     <div class="banner-shape"></div>
                 </div>
             
-                <div class="swiper-slide d-flex align-items-center justify-content-center position-relative text-white" style="height: 500px; background-size: cover; background-position: center;" data-bg-image="{{ asset('frontend/images/slider/freight-banner-home.webp') }}">
+                <div class="swiper-slide d-flex align-items-center justify-content-center position-relative text-white" style="height: 750px; background-size: cover; background-position: center;" data-bg-image="{{ asset('frontend/images/slider/freight-banner-home.webp') }}">
                     <div class="container text-center">
                         <div class="slider-content p-z-idex">
                             <h4 class="slider-title fw-bold">Trustworthy, Efficient and Cost-Effective Logistic Services</h4>
