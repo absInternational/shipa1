@@ -117,7 +117,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
         <div class="slider_shape"><img loading="lazy" src="{{ asset('/frontend/images/banner/home-underline.webp') }}"
                 fetchpriority="high" alt="Image" width="100%"></div>
         <div class="swiper sc-slider-1" data-autoplay="5000">
-            <div class="swiper-wrapper">
+            {{-- <div class="swiper-wrapper">
                 <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/DSF.webp') }}">
                     <div class="container">
                         <div class="slider-content p-z-idex">
@@ -158,7 +158,47 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-            </div>
+            </div> --}}
+            <div class="swiper-wrapper">
+                <div class="swiper-slide d-flex align-items-center justify-content-center position-relative text-white" style="height: 500px; background-size: cover; background-position: center;" data-bg-image="{{ asset('frontend/images/slider/DSF.webp') }}">
+                    <div class="container text-center">
+                        <div class="slider-content p-z-idex">
+                            <h1 class="slider-title fw-bold">Trustworthy, Efficient, And Cost-effective Auto Transport Solutions</h1>
+                            <div class="slider-desc mt-3">ShipA1 has pledged to provide all-in-one auto transport solutions to all its customers and seeks your trust in return for our services.</div>
+                            <div class="tj-theme-button mt-4">
+                                <a class="btn btn-outline-light ms-4" href="{{ route('quote.form.combine') }}">Get Quote <i class="flaticon-right-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-shape"></div>
+                </div>
+            
+                <div class="swiper-slide d-flex align-items-center justify-content-center position-relative text-white" style="height: 500px; background-size: cover; background-position: center;" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
+                    <div class="container text-center">
+                        <div class="slider-content p-z-idex">
+                            <h4 class="slider-title fw-bold">Trustworthy, Efficient and Cost-Effective Transportation Services</h4>
+                            <div class="slider-desc mt-3">ShipA1 has pledged to provide all-in-one Heavy Equipment transportation solutions to all its customers and seeks your trust in return for our services.</div>
+                            <div class="tj-theme-button mt-4">
+                                <a class="btn btn-outline-light ms-4" href="{{ route('quote.form.combine') }}">Get Quote <i class="flaticon-right-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-shape"></div>
+                </div>
+            
+                <div class="swiper-slide d-flex align-items-center justify-content-center position-relative text-white" style="height: 500px; background-size: cover; background-position: center;" data-bg-image="{{ asset('frontend/images/slider/freight-banner-home.webp') }}">
+                    <div class="container text-center">
+                        <div class="slider-content p-z-idex">
+                            <h4 class="slider-title fw-bold">Trustworthy, Efficient and Cost-Effective Logistic Services</h4>
+                            <div class="slider-desc mt-3">ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its customers and seeks your trust in return for our services.</div>
+                            <div class="tj-theme-button mt-4">
+                                <a class="btn btn-outline-light ms-4" href="{{ route('quote.form.combine') }}">Get Quote <i class="flaticon-right-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-shape"></div>
+                </div>
+            </div>            
             <div></div>
         </div>
         <div class="tj-service-icon-box">
