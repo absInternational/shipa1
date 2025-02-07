@@ -289,7 +289,7 @@
             }))
         }))
     </script>
-    {{-- <script>
+    <script>
         document.addEventListener("DOMContentLoaded", (function() {
             function e(e, n, t, o) {
                 function i() {
@@ -320,64 +320,7 @@
             e(document.querySelector("#phone"), document.querySelector("#country_code"), undefined, undefined);
             e(document.querySelector("#phone2"), document.querySelector("#country_code2"), undefined, undefined)
         }))
-    </script> --}}
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            function initializePhoneInput(inputElement, countryCodeElement) {
-                let phoneInstance;
-    
-                function updateMask() {
-                    const selectedCountry = phoneInstance.getSelectedCountryData();
-                    const masks = {
-                        us: "(000) 000-0000",
-                        ca: "(000) 000-0000",
-                        gb: "00000 000000",
-                        au: "0000 000 000",
-                        in: "00000 00000"
-                    };
-                    const maskPattern = masks[selectedCountry.iso2] || "";
-    
-                    if (window.IMaskInstance) {
-                        window.IMaskInstance.destroy();
-                    }
-                    if (maskPattern) {
-                        window.IMaskInstance = IMask(inputElement, { mask: maskPattern });
-                    }
-    
-                    countryCodeElement.value = selectedCountry.dialCode;
-                }
-    
-                // Initialize plugin only when the user focuses on the input
-                inputElement.addEventListener("focus", function () {
-                    if (!phoneInstance) {
-                        phoneInstance = window.intlTelInput(inputElement, {
-                            separateDialCode: true,
-                            preferredCountries: ["us", "ca", "gb"],
-                            onlyCountries: ["us", "ca", "gb", "au", "in"], // Reduce the number of countries
-                            initialCountry: "auto",
-                            geoIpLookup: function (callback) {
-                                callback("us");
-                            },
-                            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-                            flagsImagePath: "https://www.shipa1.com/public/frontend/images/icon/flags.webp"
-                        });
-    
-                        inputElement.addEventListener("countrychange", updateMask);
-                    }
-                });
-    
-                inputElement.addEventListener("blur", function () {
-                    if (!phoneInstance.isValidNumber()) {
-                        console.error(`Invalid phone number (${inputElement.id})`);
-                    }
-                });
-            }
-    
-            initializePhoneInput(document.querySelector("#phone"), document.querySelector("#country_code"));
-            initializePhoneInput(document.querySelector("#phone2"), document.querySelector("#country_code2"));
-        });
     </script>
-    
     <script>
         $(document).ready((function() {
             $(document).on("change", "#category", (function() {
