@@ -165,57 +165,42 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             </div>
             <div></div>
         </div>
-        <div class="tj-service-icon-box container-fluid min-vh-50">
-            <ul class="list-unstyled d-flex justify-content-around flex-wrap">
-                <li class="p-3">
-                    <div class="service-item d-flex flex-column align-items-center">
-                        <div class="tj-service-icon d-flex flex-column align-items-center">
-                            <div class="service-icon d-inline-block w-25 h-auto text-center">
-                                <i class="fa-light fa-car-side fa-2x"></i>
-                            </div>
-                            <div class="sub-title min-vh-10 d-flex align-items-center justify-content-center">
-                                <span>VEHICLE<br>TRANSPORTATION</span>
-                            </div>
+        <div class="tj-service-icon-box">
+            <ul class="list-gap">
+                <li>
+                    <div class="service-item">
+                        <div class="tj-service-icon">
+                            <div class="service-icon"><i class="fa-light fa-car-side fa-2xs"></i></div>
+                            <div class="sub-title"><span>VEHICLE<br>TRANSPORTATION</span></div>
                         </div>
-                        <div class="service-arrow mt-2">
-                            <a href="https://www.shipa1.com/vehicle-transportation-detail" aria-label="Learn about our vehicle transportation services" title="Vehicle Transportation Services">
-                                <i class="fa-light fa-arrow-right fa-lg"></i>
-                            </a>
-                        </div>
+                        <div class="service-arrow"><a href="{{ route('vehicleTransportDetail') }}"
+                                aria-label="Learn about our vehicle transportation services"
+                                title="Vehicle Transportation Services"><i class="fa-light fa-arrow-right"
+                                    aria-hidden="true"></i></a></div>
                     </div>
                 </li>
-                <li class="p-3">
-                    <div class="service-item d-flex flex-column align-items-center">
-                        <div class="tj-service-icon d-flex flex-column align-items-center">
-                            <div class="service-icon d-inline-block w-25 h-auto text-center">
-                                <i class="fa-light fa-tractor fa-2x"></i>
-                            </div>
-                            <div class="sub-title min-vh-10 d-flex align-items-center justify-content-center">
-                                <span>HEAVY<br>TRANSPORTATION</span>
-                            </div>
+                <li>
+                    <div class="service-item">
+                        <div class="tj-service-icon">
+                            <div class="service-icon"><i class="fa-light fa-tractor fa-xs"></i></div>
+                            <div class="sub-title"><span>HEAVY<br>TRANSPORTATION</span></div>
                         </div>
-                        <div class="service-arrow mt-2">
-                            <a href="https://www.shipa1.com/heavy-transport-detail" aria-label="Learn more about heavy transportation services" title="Heavy Transportation Services">
-                                <i class="fa-light fa-arrow-right fa-lg"></i>
-                            </a>
-                        </div>
+                        <div class="service-arrow"><a href="{{ route('heavy-transport-detail') }}"
+                                aria-label="Learn more about heavy transportation services"
+                                title="Heavy Transportation Services"><i class="fa-light fa-arrow-right"
+                                    aria-hidden="true"></i></a></div>
                     </div>
                 </li>
-                <li class="p-3">
-                    <div class="service-item d-flex flex-column align-items-center">
-                        <div class="tj-service-icon d-flex flex-column align-items-center">
-                            <div class="service-icon d-inline-block w-25 h-auto text-center">
-                                <i class="fa-light fa-truck fa-2x"></i>
-                            </div>
-                            <div class="sub-title min-vh-10 d-flex align-items-center justify-content-center">
-                                <span>FREIGHT<br>TRANSPORTATION</span>
-                            </div>
+                <li>
+                    <div class="service-item">
+                        <div class="tj-service-icon">
+                            <div class="service-icon"><i class="fa-light fa-truck fa-xs"></i></div>
+                            <div class="sub-title"><span>FREIGHT<br>TRANSPORTATION</span></div>
                         </div>
-                        <div class="service-arrow mt-2">
-                            <a href="https://www.shipa1.com/Freight-Transportation-Detail" aria-label="Learn more about freight transportation services" title="Freight Transportation Services">
-                                <i class="fa-light fa-arrow-right fa-lg"></i>
-                            </a>
-                        </div>
+                        <div class="service-arrow"><a href="{{ route('freighttransport-detail') }}"
+                                aria-label="Learn more about freight transportation services"
+                                title="Freight Transportation Services"><i class="fa-light fa-arrow-right"
+                                    aria-hidden="true"></i></a></div>
                     </div>
                 </li>
             </ul>
