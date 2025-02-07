@@ -17,7 +17,7 @@
     <div class="bg-color d-flex flex-wrap">
     <div class=logo-area>
     <div class=logo-box>
-    <a href="{{ route('welcome') }}" aria-label=Home title=Home><img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}" loading=lazy alt=Logo></a>
+    <a href="{{ route('welcome') }}" aria-label=Home title=Home><img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}" width="200" height="100" alt="Logo"></a>
     </div>
     </div>
     <div class=header-content-area>
