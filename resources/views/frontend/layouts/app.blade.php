@@ -54,9 +54,9 @@
         onload='this.onload=null,this.rel="stylesheet"'>
     <link rel=stylesheet href="{{ asset('/frontend/css/animate.css') }}"
         onload='this.onload=null,this.rel="stylesheet"'>
-    <link rel=stylesheet href="{{ asset('/public/frontend/css/style.css') }}"
+    <link rel=stylesheet href="{{ asset('/frontend/css/style.css') }}"
         onload='this.onload=null,this.rel="stylesheet"'>
-    <link rel=stylesheet href="{{ asset('/public/frontend/css/responsive.css') }}"
+    <link rel=stylesheet href="{{ asset('/frontend/css/responsive.css') }}"
         onload='this.onload=null,this.rel="stylesheet"'>
     {{-- <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style">
 <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
