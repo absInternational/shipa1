@@ -11,7 +11,7 @@
                 <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
                     <div class="tj-blog-item">
                         <div class="tj-blog-image">
-                            <a
+                            <a aria-label="Learn more about vehicle transportation Blog" title="Vehicle Transportation Blog"
                                 @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else
                             href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                 <img loading="lazy" src="{{ !is_null($blog->post_image) ? asset($blog->post_image) : '' }}"
@@ -23,7 +23,8 @@
                             <div class="blog-text-box">
                                 <div class="blog-header">
                                     <h4>
-                                        <a class="title-link"
+                                        <a class="title-link" aria-label="Learn more about vehicle transportation Blog"
+                                        title="Vehicle Transportation Blog"
                                             @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else
                                         href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                             {{ !is_null($blog->post_name) ? Illuminate\Support\Str::limit($blog->post_name, 45, '...') : '' }}
@@ -36,7 +37,8 @@
                                             <i class="fa-regular fa-calendar"></i> 
                                             {{ \Carbon\Carbon::parse($blog->created_at)->format('d M') }}
                                         </span>
-                                        <a class="ms-3" 
+                                        <a class="ms-3"  aria-label="Learn more about vehicle transportation Blog"
+                                        title="Vehicle Transportation Blog"
                                             @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" 
                                             @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                             Read More <i class="fa-regular fa-arrow-right"></i>
