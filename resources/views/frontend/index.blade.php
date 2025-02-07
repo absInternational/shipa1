@@ -3,7 +3,6 @@
 delivery. We focus on your satisfaction with reliable, affordable services.') @section('content')
 <head>
     <link rel="preload" as="image" href="{{ asset('/frontend/images/banner/home-underline.webp') }}" type="image/webp">
-    <link rel="preload" as="image" href="{{ asset('/frontend/images/service/Logistics-Home.webp') }}" type="image/webp">
 </head>
 <style>
         .card {
@@ -240,7 +239,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('heavy-transport-detail') }}"
                         aria-label="Learn more about Heavy transportation services" title="Heavy Transportation Services"
                         class="service-link">
-                        <div class="tj-service-item lazy-bg" >
+                        <div class="tj-service-item lazy-bg" data-bg-image="{{ asset('/frontend/images/service/Logistics-Home.webp') }}">
                             <div class="icon-box"><i class="fa-light fa-tractor fa-2xs"></i></div>
                             <div class="service-content">
                                 <h4>HEAVY TRANSPORTATION</h4>
