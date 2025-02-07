@@ -25,7 +25,7 @@
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css onload='this.onload=null,this.rel="stylesheet"'>
 <link rel=stylesheet href=https://unpkg.com/swiper/swiper-bundle.min.css onload='this.onload=null,this.rel="stylesheet"'>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.2/dist/css/coreui.min.css integrity=sha384-39e9UaGkm/+yp6spIsVfzcs3j7ac7G2cg0hzmDvtG11pT1d7YMnOC26w4wMPhzsL crossorigin=anonymous onload='this.onload=null,this.rel="stylesheet"'>
-<link rel=preload href="{{ asset('/frontend/css/bootstrap.min.css') }}" as=style onload='this.onload=null,this.rel="stylesheet"'>
+{{-- <link rel=preload href="{{ asset('/frontend/css/bootstrap.min.css') }}" as=style onload='this.onload=null,this.rel="stylesheet"'>
 <link rel=stylesheet href="{{ asset('/frontend/css/bootstrap.min.css') }}">
 <link rel=stylesheet href="{{ asset('/frontend/css/meanmenu.css') }}" onload='this.onload=null,this.rel="stylesheet"'>
 <link rel=stylesheet href="{{ asset('/frontend/css/sal.css') }}" onload='this.onload=null,this.rel="stylesheet"'>
@@ -37,7 +37,20 @@
 <link rel=stylesheet href="{{ asset('/frontend/css/nice-select.css') }}" onload='this.onload=null,this.rel="stylesheet"'>
 <link rel=stylesheet href="{{ asset('/frontend/css/animate.css') }}" onload='this.onload=null,this.rel="stylesheet"'>
 <link rel=stylesheet href="{{ asset('/public/frontend/css/style.css') }}" onload='this.onload=null,this.rel="stylesheet"'>
-<link rel=stylesheet href="{{ asset('/public/frontend/css/responsive.css') }}" onload='this.onload=null,this.rel="stylesheet"'>
+<link rel=stylesheet href="{{ asset('/public/frontend/css/responsive.css') }}" onload='this.onload=null,this.rel="stylesheet"'> --}}
+<link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style">
+<link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" media="print" onload="this.media='all'">
 <meta name=csrf-token content="{{ csrf_token() }}">
 <link rel=preload href=https://code.jquery.com/jquery-3.6.0.min.js as=script>
 <link rel=preload href=https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css as=style>
