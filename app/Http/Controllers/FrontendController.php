@@ -23,16 +23,30 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        $userId = 14;
+        // $userId = 14;
+        // $makes = VehicleName::where('UserId', $userId)
+        //     ->where('status', 0)
+        //     ->select('make')
+        //     ->distinct()
+        //     ->orderBy('make', 'ASC')
+        //     ->get();
+        // $blogs = Blog::where('status', 1)->take(3)->get(['id', 'post_name', 'slug_name', 'post_image', 'post_description']);
+        // $reviews = Review::all();
+        // $site_reviews = ReviewSite::all();
+        $userId = 14; // Default to 14 if no user is logged in
+
         $makes = VehicleName::where('UserId', $userId)
             ->where('status', 0)
-            ->select('make')
             ->distinct()
             ->orderBy('make', 'ASC')
-            ->get();
-        $blogs = Blog::where('status', 1)->take(3)->get(['id', 'post_name', 'slug_name', 'post_image', 'post_description']);
-        $reviews = Review::all();
-        $site_reviews = ReviewSite::all();
+            ->pluck('make'); // Use `pluck()` for better performance
+    
+        $blogs = Blog::where('status', 1)
+            ->take(3)
+            ->get(['id', 'post_name', 'slug_name', 'post_image', 'post_description']);
+    
+        $reviews = Review::latest()->limit(10)->get(); // Fetch latest 10 reviews instead of all
+        $site_reviews = ReviewSite::latest()->limit(10)->get(); // Fetch latest 10 site reviews
         return view('frontend.index', compact('reviews', 'blogs', 'makes', 'site_reviews'));
     }
     public function blogs()
