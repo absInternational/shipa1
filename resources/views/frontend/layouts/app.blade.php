@@ -38,8 +38,7 @@
 <link rel=stylesheet href="{{ asset('/frontend/css/animate.css') }}" onload='this.onload=null,this.rel="stylesheet"'>
 <link rel=stylesheet href="{{ asset('/public/frontend/css/style.css') }}" onload='this.onload=null,this.rel="stylesheet"'>
 <link rel=stylesheet href="{{ asset('/public/frontend/css/responsive.css') }}" onload='this.onload=null,this.rel="stylesheet"'> --}}
-<link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
-{{-- <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style">
+<link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style">
 <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" media="print" onload="this.media='all'">
@@ -51,7 +50,7 @@
 <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" media="print" onload="this.media='all'"> --}}
+<link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" media="print" onload="this.media='all'">
 <meta name=csrf-token content="{{ csrf_token() }}">
 <link rel=preload href=https://code.jquery.com/jquery-3.6.0.min.js as=script>
 <link rel=preload href=https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css as=style>
