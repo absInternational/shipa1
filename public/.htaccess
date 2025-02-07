@@ -21,13 +21,23 @@
 </IfModule>
 
 <IfModule mod_deflate.c>
-    # Enable compression for various file types
-    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/x-javascript application/json application/xml application/rss+xml
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml
+    AddOutputFilterByType DEFLATE text/css text/javascript application/javascript
+    AddOutputFilterByType DEFLATE application/json application/xml
+    AddOutputFilterByType DEFLATE application/rss+xml application/atom+xml
+    AddOutputFilterByType DEFLATE application/x-javascript application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject image/svg+xml
+    AddOutputFilterByType DEFLATE application/x-font-woff application/x-font-woff2
 </IfModule>
 
 <IfModule mod_brotli.c>
-    # Enable Brotli compression if available
-    AddOutputFilterByType BROTLI text/html text/plain text/css application/javascript application/x-javascript application/json application/xml application/rss+xml
+    AddOutputFilterByType BROTLI text/html text/plain text/xml
+    AddOutputFilterByType BROTLI text/css text/javascript application/javascript
+    AddOutputFilterByType BROTLI application/json application/xml
+    AddOutputFilterByType BROTLI application/rss+xml application/atom+xml
+    AddOutputFilterByType BROTLI application/x-javascript application/x-font-ttf
+    AddOutputFilterByType BROTLI application/vnd.ms-fontobject image/svg+xml
+    AddOutputFilterByType BROTLI application/x-font-woff application/x-font-woff2
 </IfModule>
 
 <IfModule mod_headers.c>
