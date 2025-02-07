@@ -3,6 +3,7 @@
 delivery. We focus on your satisfaction with reliable, affordable services.') @section('content')
 <head>
     <link rel="preload" as="image" href="{{ asset('/frontend/images/banner/home-underline.webp') }}" type="image/webp">
+    <link rel="preload" as="image" href="{{ asset('/frontend/images/service/Logistics-Home.webp') }}" type="image/webp">
 </head>
 <style>
         .card {
@@ -117,7 +118,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
     <div id="preloader" class="preloader">
         <div class="animation-preloader"></div>
     </div>
-    {{-- <section class="tj-slider-section">
+    <section class="tj-slider-section">
         <div class="slider_shape"><img src="{{ asset('/frontend/images/banner/home-underline.webp') }}"
                 fetchpriority="high" alt="Image" width="100%"></div>
         <div class="swiper sc-slider-1" data-autoplay="5000">
@@ -205,7 +206,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </li>
             </ul>
         </div>
-    </section> --}}
+    </section>
     @include('partials.reveiw-site')<section class="tj-service-section pt-4">
         <div class="container">
             <div class="row">
@@ -239,8 +240,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('heavy-transport-detail') }}"
                         aria-label="Learn more about Heavy transportation services" title="Heavy Transportation Services"
                         class="service-link">
-                        <div class="tj-service-item lazy-bg"
-                            data-bg-image="{{ asset('/frontend/images/service/Logistics-Home.webp') }}">
+                        <div class="tj-service-item lazy-bg" >
                             <div class="icon-box"><i class="fa-light fa-tractor fa-2xs"></i></div>
                             <div class="service-content">
                                 <h4>HEAVY TRANSPORTATION</h4>
