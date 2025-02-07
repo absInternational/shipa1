@@ -367,6 +367,17 @@
         });
     </script>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let lazyBackgrounds = document.querySelectorAll(".lazy-bg");
+            lazyBackgrounds.forEach((element) => {
+                let bgImage = element.getAttribute("data-bg-image");
+                if (bgImage) {
+                    element.style.backgroundImage = `url('${bgImage}')`;
+                }
+            });
+    });
+    </script>
+    <script>
         $(document).ready((function() {
             $(document).on("change", "#category", (function() {
                 var e = $(this).find("option:selected").data("id");

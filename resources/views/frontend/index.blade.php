@@ -220,7 +220,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('vehicleTransportDetail') }}"
                         aria-label="Learn more about vehicle transportation services"
                         title="Vehicle Transportation Services" class="service-link">
-                        <div class="tj-service-item" data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
+                        <div class="tj-service-item lazy-bg" data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
                             <div class="icon-box"><i class="fa-light fa-car-side fa-2xs"></i></div>
                             <div class="service-content">
                                 <h4>VEHICLE TRANSPORTATION</h4>
@@ -239,7 +239,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('heavy-transport-detail') }}"
                         aria-label="Learn more about Heavy transportation services" title="Heavy Transportation Services"
                         class="service-link">
-                        <div class="tj-service-item"
+                        <div class="tj-service-item lazy-bg"
                             data-bg-image="{{ asset('/frontend/images/service/Logistics-Home.webp') }}">
                             <div class="icon-box"><i class="fa-light fa-tractor fa-2xs"></i></div>
                             <div class="service-content">
@@ -260,7 +260,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('freighttransport-detail') }}"
                         aria-label="Learn more about freight transportation services"
                         title="Freight Transportation Services" class="service-link">
-                        <div class="tj-service-item"
+                        <div class="tj-service-item lazy-bg"
                             data-bg-image="{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}">
                             <div class="icon-box"><i class="fa-light fa-truck fa-2xs"></i></div>
                             <div class="service-content">
