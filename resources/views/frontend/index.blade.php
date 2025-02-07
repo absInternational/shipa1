@@ -1,6 +1,10 @@
 @extends('frontend.layouts.app') @section('title', 'Trusted State to State Auto Transport Services in USA - SHIPA1')
 @section('meta_description', 'Best state to state auto transport services in USA for quick, safe & secure auto vehicle
-delivery. We focus on your satisfaction with reliable, affordable services.') @section('content')<style>
+delivery. We focus on your satisfaction with reliable, affordable services.') @section('content')
+<head>
+    <link rel="preload" as="image" href="{{ asset('/frontend/images/banner/home-underline.webp') }}" type="image/webp">
+</head>
+<style>
         .card {
             background: #fff;
             border: 1px solid #ddd;
@@ -114,7 +118,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
         <div class="animation-preloader"></div>
     </div>
     <section class="tj-slider-section">
-        <div class="slider_shape"><img loading="lazy" src="{{ asset('/frontend/images/banner/home-underline.webp') }}"
+        <div class="slider_shape"><img src="{{ asset('/frontend/images/banner/home-underline.webp') }}"
                 fetchpriority="high" alt="Image" width="100%"></div>
         <div class="swiper sc-slider-1" data-autoplay="5000">
             <div class="swiper-wrapper">
