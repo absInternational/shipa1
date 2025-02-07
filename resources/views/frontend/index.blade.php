@@ -117,7 +117,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
     <div id="preloader" class="preloader">
         <div class="animation-preloader"></div>
     </div>
-    <section class="tj-slider-section">
+    {{-- <section class="tj-slider-section">
         <div class="slider_shape"><img src="{{ asset('/frontend/images/banner/home-underline.webp') }}"
                 fetchpriority="high" alt="Image" width="100%"></div>
         <div class="swiper sc-slider-1" data-autoplay="5000">
@@ -205,7 +205,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </li>
             </ul>
         </div>
-    </section>@include('partials.reveiw-site')<section class="tj-service-section pt-4">
+    </section> --}}
+    @include('partials.reveiw-site')<section class="tj-service-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
