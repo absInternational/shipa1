@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang=zxx>
-<head>
+{{-- <head>
 <meta charset=utf-8>
 <title>@yield('title')</title>
 <meta name=description content="@yield('meta_description', 'Ship A1')">
@@ -82,6 +82,81 @@
             ]
         }
 </script>
+</head> --}}
+<head>
+    <meta charset="utf-8">
+    <title>@yield('title')</title>
+    <meta name="description" content="@yield('meta_description', 'Ship A1')">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ahrefs-site-verification" content="6cd07582328e97b072cfaad2711175d5b3d5f0d349648e8ede9c50ea23dfc68d">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ShipA1Transport">
+    <meta name="twitter:title" content="ShipA1 Auto Transport Quotes | Best Vehicle Shipping Service in USA">
+    <meta name="twitter:description" content="Get car shipping services in USA, scratchless vehicle transport service along with huge discount offers and FREE auto shipping quotes nationwide.">
+    <meta name="twitter:image" content="https://www.shipa1.com/img/car-tranportation.png">
+    <link rel="preload" href="{{ asset('/frontend/images/logo/favicon.webp') }}" as="image" type="image/webp">
+    <link rel="apple-touch-icon" href="{{ asset('/frontend/images/logo/favicon.webp') }}">
+    <link rel="shortcut icon" href="{{ asset('/frontend/images/logo/favicon.webp') }}" type="image/x-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <script src="https://unpkg.com/imask" async></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ShipA1",
+        "image": "https://shipa1.com/frontend/images/logo/LOGO%20NEW-2.png",
+        "@id": "https://www.shipa1.com",
+        "url": "https://www.shipa1.com/",
+        "telephone": "(844) 474-4721",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "201 International Cir STE 230",
+            "addressLocality": "Hunt Valley",
+            "addressRegion": "MD",
+            "postalCode": "21030",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.4960629,
+            "longitude": -76.6603247
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "19:00"
+        },
+        "sameAs": [
+            "https://www.facebook.com/shipa1autotransport",
+            "https://www.instagram.com/shipa1_transport",
+            "https://www.youtube.com/@shipA1autotransport",
+            "https://www.linkedin.com/in/shipa1-transport",
+            "https://www.shipa1.com/"
+        ]
+    }
+    </script>
 </head>
 <body class=fade-in>
 @php $currentRouteName = Route::currentRouteName(); @endphp
