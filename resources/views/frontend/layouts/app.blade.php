@@ -289,7 +289,7 @@
             }))
         }))
     </script>
-    <script>
+    {{-- <script>
         document.addEventListener("DOMContentLoaded", (function() {
             function e(e, n, t, o) {
                 function i() {
@@ -320,6 +320,51 @@
             e(document.querySelector("#phone"), document.querySelector("#country_code"), undefined, undefined);
             e(document.querySelector("#phone2"), document.querySelector("#country_code2"), undefined, undefined)
         }))
+    </script> --}}
+    <script>
+        $(document).ready(function () {
+            function setupIntlTelInput(e, n, t, o) {
+                function updateMask() {
+                    const selectedCountry = t.getSelectedCountryData(),
+                        maskPattern = {
+                            us: "(000) 000-0000",
+                            ca: "(000) 000-0000"
+                        }[selectedCountry.iso2] || "";
+                    if (o) o.destroy();
+                    if (maskPattern) {
+                        o = IMask(e, { mask: maskPattern });
+                    }
+                    n.value = selectedCountry.dialCode;
+                }
+
+                if (t = window.intlTelInput(e, {
+                    separateDialCode: true,
+                    initialCountry: "auto",
+                    geoIpLookup: function (callback) {
+                        callback("us");
+                    },
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                    flagsImagePath: "https://www.shipa1.com/public/frontend/images/icon/flags.webp"
+                })) {
+                    e.addEventListener("input", updateMask);
+                    e.addEventListener("countrychange", updateMask);
+                    e.addEventListener("blur", function () {
+                        if (!t.isValidNumber()) {
+                            console.error(`Invalid phone number (${e.id})`);
+                            return false;
+                        }
+                    });
+                    updateMask();
+                }
+            }
+            // Check if the phone input fields exist before initializing
+            if ($("#phone").length) {
+                setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"), undefined, undefined);
+            }
+            if ($("#phone2").length) {
+                setupIntlTelInput(document.querySelector("#phone2"), document.querySelector("#country_code2"), undefined, undefined);
+            }
+        });
     </script>
     <script>
         $(document).ready((function() {
