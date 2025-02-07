@@ -2,8 +2,8 @@
 @section('meta_description', 'Best state to state auto transport services in USA for quick, safe & secure auto vehicle
 delivery. We focus on your satisfaction with reliable, affordable services.') @section('content')
 <head>
-    <link rel="preload" as="image" href="{{ asset('/frontend/images/banner/home-underline.webp') }}" type="image/webp">
-    <link rel="preload" as="image" href="{{ asset('/frontend/images/service/Logistics-Home.webp') }}" type="image/webp">
+    <link rel="preload" as="image" href="{{ asset('/public/frontend/images/banner/home-underline.webp') }}" type="image/webp">
+    <link rel="preload" as="image" href="{{ asset('/public/frontend/images/service/Logistics-Home.webp') }}" type="image/webp">
 </head>
 <style>
         .card {
@@ -119,7 +119,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
         <div class="animation-preloader"></div>
     </div>
     <section class="tj-slider-section">
-        <div class="slider_shape"><img src="{{ asset('/frontend/images/banner/home-underline.webp') }}"
+        <div class="slider_shape"><img src="{{ asset('/public/frontend/images/banner/home-underline.webp') }}"
                 fetchpriority="high" alt="Image" width="100%"></div>
         <div class="swiper sc-slider-1" data-autoplay="5000">
             <div class="swiper-wrapper">
@@ -347,10 +347,10 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                             </div>
                         </div>
                         <div class="image-box"><img class="p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid"
-                                src="{{ asset('/frontend/images/about/WMUD-Home.webp') }}" fetchpriority="high"
+                                src="{{ asset('/public/frontend/images/about/WMUD-Home.webp') }}" fetchpriority="high"
                                 loading="lazy" alt="Image"></div><img
                             class="group-1 p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid"
-                            src="{{ asset('/frontend/images/about/about-3.webp') }}" fetchpriority="high" loading="lazy"
+                            src="{{ asset('/public/frontend/images/about/about-3.webp') }}" fetchpriority="high" loading="lazy"
                             alt="Image" width="1200" height="800">
                     </div>
                 </div>
@@ -466,7 +466,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
         <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.car-service') }}"
                     aria-label="Learn more about Car Shipping Services" title="Car Shipping Services"
-                    class="project-link"><img loading="lazy" src="{{ asset('/frontend/images/project/9.webp') }}"
+                    class="project-link"><img loading="lazy" src="{{ asset('/public/frontend/images/project/9.webp') }}"
                         fetchpriority="high" alt="Car Shipping Service">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.car-service') }}"
                             aria-label="Learn more about Car Shipping Services" title="Car Shipping Services"><i
@@ -479,7 +479,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </a></div>
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.bike-service') }}"
                     aria-label="Learn more about Motorcycle Shipping Services" title="Motorcycle Shipping Services"
-                    class="project-link"><img loading="lazy" src="{{ asset('/frontend/images/project/PYT-Bike.webp') }}"
+                    class="project-link"><img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-Bike.webp') }}"
                         fetchpriority="high" alt="Motorcycle Shipping Service">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.bike-service') }}"
                             aria-label="Learn more about Motorcycle Shipping Services"
@@ -494,7 +494,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.heavy-service') }}"
                     aria-label="Learn more about Heavy Transportation Services" title="Heavy Transportation Services"
                     class="project-link"><img loading="lazy"
-                        src="{{ asset('/frontend/images/project/PYT-Heavy.webp') }}" fetchpriority="high"
+                        src="{{ asset('/public/frontend/images/project/PYT-Heavy.webp') }}" fetchpriority="high"
                         alt="Heavy Transportation Services">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.heavy-service') }}"
                             aria-label="Learn more about Heavy Transportation Services"
@@ -509,7 +509,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.roro-service') }}"
                     aria-label="Learn more about Roro Shipping Services" title="Roro Shipping Services"
                     class="project-link"><img loading="lazy"
-                        src="{{ asset('/frontend/images/project/RORO-Slider (1)--.webp') }}" fetchpriority="high"
+                        src="{{ asset('/public/frontend/images/project/RORO-Slider (1)--.webp') }}" fetchpriority="high"
                         alt="Roro Shipping">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.roro-service') }}"
                             aria-label="Learn more about Roro Shipping Services" title="Roro Shipping Services"><i
@@ -523,7 +523,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.golf-cart-service') }}"
                     aria-label="Learn more about Golf Cart Transportation Services"
                     title="Golf Cart Transportation Services" class="project-link"><img loading="lazy"
-                        src="{{ asset('/frontend/images/project/PYT-Golf.webp') }}" fetchpriority="high"
+                        src="{{ asset('/public/frontend/images/project/PYT-Golf.webp') }}" fetchpriority="high"
                         alt="Golf Cart Transport Service">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.golf-cart-service') }}"
                             aria-label="Learn more about Golf Cart Transportation Services"
@@ -537,7 +537,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </a></div>
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.atv-utv-service') }}"
                     aria-label="Learn more about ATV/UTV Transportation Services" title="ATV/UTV Transportation Services"
-                    class="project-link"><img loading="lazy" src="{{ asset('/frontend/images/project/PYT-ATV.webp') }}"
+                    class="project-link"><img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-ATV.webp') }}"
                         fetchpriority="high" alt="ATV/UTV Transport Service">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.atv-utv-service') }}"
                             aria-label="Learn more about ATV/UTV Transportation Services"
@@ -552,7 +552,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.construction-service') }}"
                     aria-label="Learn more about Construction Transportation Services"
                     title="Construction Transportation Services" class="project-link"><img loading="lazy"
-                        src="{{ asset('/frontend/images/project/PYT-Construction.webp') }}" fetchpriority="high"
+                        src="{{ asset('/public/frontend/images/project/PYT-Construction.webp') }}" fetchpriority="high"
                         alt="Construction Transport Service">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.construction-service') }}"
                             aria-label="Learn more about Construction Transportation Services"
@@ -566,7 +566,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </a></div>
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.farm-service') }}"
                     aria-label="Learn more about Farm Transportation Services" title="Farm Transportation Services"
-                    class="project-link"><img loading="lazy" src="{{ asset('/frontend/images/project/PYT-Farm.webp') }}"
+                    class="project-link"><img loading="lazy" src="{{ asset('/public/frontend/images/project/PYT-Farm.webp') }}"
                         fetchpriority="high" alt="Farm equipment Transport service">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.farm-service') }}"
                             aria-label="Learn more about Farm Transportation Services"
@@ -581,7 +581,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.excavator-service') }}"
                     aria-label="Learn more about Excavator Shipping Services" title="Excavator Shipping Services"
                     class="project-link"><img loading="lazy"
-                        src="{{ asset('/frontend/images/project/PYT-Excavator.webp') }}" fetchpriority="high"
+                        src="{{ asset('/public/frontend/images/project/PYT-Excavator.webp') }}" fetchpriority="high"
                         alt="excavator Transport service">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.excavator-service') }}"
                             aria-label="Learn more about Excavator Shipping Services"
@@ -595,7 +595,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.commercial-service') }}"
                     aria-label="Learn more about Truck Transportation Services" title="Truck Transportation Services"
                     class="project-link"><img loading="lazy"
-                        src="{{ asset('/frontend/images/project/PYT-Commercial.webp') }}" fetchpriority="high"
+                        src="{{ asset('/public/frontend/images/project/PYT-Commercial.webp') }}" fetchpriority="high"
                         alt="commercial transport service">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.commercial-service') }}"
                             aria-label="Learn more about Truck Transportation Services"
@@ -610,7 +610,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.reefer-service') }}"
                     aria-label="Learn more about Reefer Transportation Services" title="Reefer Transportation Services"
                     class="project-link"><img loading="lazy"
-                        src="{{ asset('/frontend/images/project/reefer-truck-1.webp') }}" fetchpriority="high"
+                        src="{{ asset('/public/frontend/images/project/reefer-truck-1.webp') }}" fetchpriority="high"
                         alt="Reefer Transport Service">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.reefer-service') }}"
                             aria-label="Learn more about Reefer Transportation Services"
@@ -624,7 +624,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </a></div>
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.hazmat-service') }}"
                     aria-label="Learn more about Hazmat Transportation Services" title="Hazmat Transportation Services"
-                    class="project-link"><img loading="lazy" src="{{ asset('/frontend/images/project/7.webp') }}"
+                    class="project-link"><img loading="lazy" src="{{ asset('/public/frontend/images/project/7.webp') }}"
                         fetchpriority="high" alt="Hazmat Transportation Services">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.hazmat-service') }}"
                             aria-label="Learn more about Hazmat Transportation Services"
@@ -638,7 +638,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </a></div>
             <div class="tj-project-item"><a href="{{ route('frontend.pages.services.dryvan-service') }}"
                     aria-label="Learn more about Dry van Transportation Services" title="Dry van Transportation Services"
-                    class="project-link"><img loading="lazy" src="{{ asset('/frontend/images/project/5.webp') }}"
+                    class="project-link"><img loading="lazy" src="{{ asset('/public/frontend/images/project/5.webp') }}"
                         fetchpriority="high" alt="Dry van Transportation Services">
                     <div class="arrow-icon"><a href="{{ route('frontend.pages.services.dryvan-service') }}"
                             aria-label="Learn more about Dry van Transportation Services"
