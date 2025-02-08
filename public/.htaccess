@@ -20,6 +20,7 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
+# Gzip Compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml
     AddOutputFilterByType DEFLATE text/css text/javascript application/javascript
@@ -30,6 +31,7 @@
     AddOutputFilterByType DEFLATE application/x-font-woff application/x-font-woff2
 </IfModule>
 
+# Brotli Compression
 <IfModule mod_brotli.c>
     AddOutputFilterByType BROTLI text/html text/plain text/xml
     AddOutputFilterByType BROTLI text/css text/javascript application/javascript
@@ -40,6 +42,7 @@
     AddOutputFilterByType BROTLI application/x-font-woff application/x-font-woff2
 </IfModule>
 
+# Caching & Performance
 <IfModule mod_headers.c>
     # Prevent hotlinking of images and static files from other websites
     RewriteCond %{HTTP_REFERER} !^$
@@ -64,12 +67,11 @@
     Header set Expires 0
 </IfModule>
 
+# Expiration Headers
 <IfModule mod_expires.c>
     ExpiresActive On
-    # General rule for setting expiration dates
     ExpiresDefault "access plus 1 year"
     
-    # Specific expiration rules for various file types
     ExpiresByType text/html "access plus 1 day"
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
@@ -82,6 +84,14 @@
     ExpiresByType application/json "access plus 1 year"
 </IfModule>
 
+# Laravel Optimization
+<IfModule mod_php.c>
+    php_value max_execution_time 60
+    php_value memory_limit 512M
+    php_value post_max_size 32M
+    php_value upload_max_filesize 32M
+</IfModule>
+
 # Deny access to sensitive files
 <FilesMatch "^\.">
     Require all denied
@@ -90,6 +100,14 @@
 <FilesMatch "(^\.ht|^\.env|^\.git)">
     Require all denied
 </FilesMatch>
+
+# Enable OPcache
+<IfModule mod_php.c>
+    php_flag opcache.enable 1
+    php_value opcache.memory_consumption 128
+    php_value opcache.max_accelerated_files 4000
+    php_value opcache.validate_timestamps 1
+</IfModule>
 
 <IfModule mime_module>
     # Specify PHP version for compatibility
