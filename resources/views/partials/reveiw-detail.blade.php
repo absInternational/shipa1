@@ -49,21 +49,21 @@
                                                         alt="Image" style="width: 70px; height: 30px;" />
                                                 @endif --}}
                                                 @if ($review->profile_name == 'BBB')
-                                                    <img class="float-end" loading="lazy"
+                                                    <img class="float-end"
                                                         src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="60%"
-                                                        height="100%" alt="BBB" />
+                                                        height="100%" alt="BBB" loading="lazy"/>
                                                 @elseif ($review->profile_name == 'Google')
-                                                    <img class="float-end" loading="lazy"
+                                                    <img class="float-end"
                                                         src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                        width="100%" height="100%" alt="Google" />
+                                                        width="100%" height="100%" alt="Google" loading="lazy"/>
                                                 @elseif($review->profile_name == 'Transport Reviews')
-                                                    <img class="float-end" loading="lazy"
+                                                    <img class="float-end"
                                                         src="{{ asset('frontend/images/testimonial/transport.png') }}"
-                                                        width="90%" height="100%" alt="Transport Reviews" />
+                                                        width="90%" height="100%" alt="Transport Reviews" loading="lazy"/>
                                                 @elseif($review->profile_name == 'Trust Pilot')
-                                                    <img class="float-end" loading="lazy"
+                                                    <img class="float-end"
                                                         src="{{ asset('frontend/images/testimonial/turst.png') }}"
-                                                        width="100%" height="100%" alt="Trust Pilot" />
+                                                        width="100%" height="100%" alt="Trust Pilot" loading="lazy"/>
                                                 @endif
                                             </div>
                                         </div>

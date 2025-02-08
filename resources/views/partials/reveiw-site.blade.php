@@ -71,21 +71,21 @@
                                 <div class="col-md-6 col-6">
                                     <div>
                                         @if ($site_review->profile_name == 'BBB')
-                                            <img loading="lazy"
+                                            <img
                                                 src="{{ asset('frontend/images/testimonial/bbb.png') }}" width="100%"
-                                                height="100%" alt="BBB" />
+                                                height="100%" alt="BBB" loading="lazy"/>
                                         @elseif ($site_review->profile_name == 'Google')
-                                            <img loading="lazy"
+                                            <img
                                                 src="{{ asset('frontend/images/testimonial/google.png') }}"
-                                                width="75%" height="100%" alt="Google" />
+                                                width="75%" height="100%" alt="Google" loading="lazy"/>
                                         @elseif($site_review->profile_name == 'Transport Reviews')
-                                            <img loading="lazy"
+                                            <img
                                                 src="{{ asset('frontend/images/testimonial/transport.png') }}"
-                                                width="100%" height="100%" alt="Transport Reviews" />
+                                                width="100%" height="100%" alt="Transport Reviews" loading="lazy"/>
                                         @elseif($site_review->profile_name == 'Trust Pilot')
-                                            <img loading="lazy"
+                                            <img
                                                 src="{{ asset('frontend/images/testimonial/turst.png') }}"
-                                                width="100%" height="100%" alt="Trust Pilot" />
+                                                width="100%" height="100%" alt="Trust Pilot" loading="lazy"/>
                                         @endif
                                     </div>
                                     <div class="star">

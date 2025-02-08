@@ -294,7 +294,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                         src="{{ asset('frontend/images/icon/winner.svg') }}" fetchpriority="high"
                                         alt="Icon"></div>
                                 <div class="ab-title">
-                                    <h5 class="title">Our Values</h5>
+                                    <h6 class="title fs-5">Our Values</h6>
                                 </div>
                             </div>
                             <p class="desc">We are a licensed Transportation company with high moral values and have
@@ -305,7 +305,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                 <div class="ab-icon"><i class="fa-light fa-bell-concierge fa-2xl"
                                         style="color:#8fc445"></i></div>
                                 <div class="ab-title">
-                                    <h5 class="title">Scope of Services</h5>
+                                    <h6 class="title fs-5">Scope of Services</h6>
                                 </div>
                             </div>
                             <p class="desc">Range of vehicles, we ship, is not limited to just conventional cars and
@@ -316,7 +316,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                 <div class="ab-icon"><i class="fa-light fa-shield-heart fa-2xl"
                                         style="color:#8fc445"></i></div>
                                 <div class="ab-title">
-                                    <h5 class="title">Safety Is Our Priority</h5>
+                                    <h6 class="title fs-5">Safety Is Our Priority</h6>
                                 </div>
                             </div>
                             <p class="desc">No matter which mode of transportation you use, ShipA1 assures its customers,
@@ -327,7 +327,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                 <div class="ab-icon"><i class="fa-light fa-handshake fa-2xl" style="color:#8fc445"></i>
                                 </div>
                                 <div class="ab-title">
-                                    <h5 class="title">Skilful & Devoted Staff</h5>
+                                    <h6 class="title fs-5">Skilful & Devoted Staff</h6>
                                 </div>
                             </div>
                             <p class="desc">Our team is loaded with highly experienced professionals of both customer
@@ -370,7 +370,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                         class="number">01.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h4 class="title">Online Quote</h4><span>Get an instant online quote from our website
+                                    <h6 class="title fs-4">Online Quote</h6><span>Get an instant online quote from our website
                                         or call our agent.</span>
                                 </div>
                             </div>
@@ -380,7 +380,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                         class="number">02.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h4 class="title">Confirm Order</h4><span>Confirm your order over the phone and fill
+                                    <h6 class="title fs-4">Confirm Order</h6><span>Confirm your order over the phone and fill
                                         out the booking form.</span>
                                 </div>
                             </div>
@@ -390,7 +390,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                         class="number">03.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h4 class="title">Track Shipment</h4><span>Track your shipment by your unique order id
+                                    <h6 class="title fs-4">Track Shipment</h6><span>Track your shipment by your unique order id
                                         number.</span>
                                 </div>
                             </div>
@@ -400,7 +400,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                         class="number">04.</span>
                                 </div>
                                 <div class="step-content">
-                                    <h4 class="title">Shipment Delivery</h4><span>Your shipment reached to their drop-off
+                                    <h6 class="title fs-4">Shipment Delivery</h6><span>Your shipment reached to their drop-off
                                         location.</span>
                                 </div>
                                 <div class="stp-arrow"><i class="fa-regular fa-arrow-right"></i></div>

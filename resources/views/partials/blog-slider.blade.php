@@ -22,14 +22,14 @@
                             </div>
                             <div class="blog-text-box">
                                 <div class="blog-header">
-                                    <h4>
-                                        <a class="title-link" aria-label="Learn more about vehicle transportation Blog"
+                                    <h6>
+                                        <a class="title-link fs-5" aria-label="Learn more about vehicle transportation Blog"
                                         title="Vehicle Transportation Blog"
                                             @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}" @else
                                         href="{{ route('blog.details', $blog->slug_name) }}" @endif>
                                             {{ !is_null($blog->post_name) ? Illuminate\Support\Str::limit($blog->post_name, 45, '...') : '' }}
                                         </a>
-                                    </h4>
+                                    </h6>
                                 </div>
                                 <div class="blog-button">
                                     <div class="blog-info d-flex justify-content-between">
