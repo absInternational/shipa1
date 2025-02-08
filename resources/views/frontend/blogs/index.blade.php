@@ -76,7 +76,7 @@
                                         <a
                                             @if ($blog->type == 'old') href="{{ route('blog.details.noSlug', $blog->slug_name) }}"
                                             @else href="{{ route('blog.details', $blog->slug_name) }}" @endif>
-                                            Read More <i class="fa-light fa-arrow-right"></i>
+                                            Read More {{ $blog->slug_name }} <i class="fa-light fa-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>

@@ -225,13 +225,13 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                             <div class="service-content">
                                 <h4>VEHICLE TRANSPORTATION</h4>
                                 <p>Everything you need to know about 100% insured and secured vehicle transportation.</p>
-                                <div class="d-flex justify-content-end"><a
+                                {{-- <div class="d-flex justify-content-end"><a
                                         class="btn btn-outline-secondary btn-sm ms-2 mt-2"
                                         aria-label="Learn more about vehicle transportation services"
                                         title="Vehicle Transportation Services"
                                         href="{{ route('vehicleTransportDetail') }}"
                                         style="background:#8fc445;color:#fff">Read More<i
-                                            class="bi bi-chevron-right"></i></a></div>
+                                            class="bi bi-chevron-right"></i></a></div> --}}
                             </div>
                         </div>
                     </a></div>
@@ -245,13 +245,13 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                 <h4>HEAVY TRANSPORTATION</h4>
                                 <p>Ship A1 is your trusted partner for safely and efficiently handling the toughest
                                     transportation challenges.</p>
-                                <div class="d-flex justify-content-end"><a
+                                {{-- <div class="d-flex justify-content-end"><a
                                         class="btn btn-outline-secondary btn-sm ms-2 mt-2"
                                         aria-label="Learn more about Heavy transportation services"
                                         title="Heavy Transportation Services"
                                         href="{{ route('heavy-transport-detail') }}"
                                         style="background:#8fc445;color:#fff">Read More<i
-                                            class="bi bi-chevron-right"></i></a></div>
+                                            class="bi bi-chevron-right"></i></a></div> --}}
                             </div>
                         </div>
                     </a></div>
@@ -265,13 +265,13 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                             <div class="service-content">
                                 <h4>FREIGHT TRANSPORTATION</h4>
                                 <p>Unlock the door to smooth freight logistic transportation with Ship A1.</p>
-                                <div class="d-flex justify-content-end"><a
+                                {{-- <div class="d-flex justify-content-end"><a
                                         class="btn btn-outline-secondary btn-sm ms-2 mt-2"
                                         aria-label="Learn more about freight transportation services"
                                         title="Freight Transportation Services"
                                         href="{{ route('freighttransport-detail') }}"
                                         style="background:#8fc445;color:#fff">Read More<i
-                                            class="bi bi-chevron-right"></i></a></div>
+                                            class="bi bi-chevron-right"></i></a></div> --}}
                             </div>
                         </div>
                     </a></div>
