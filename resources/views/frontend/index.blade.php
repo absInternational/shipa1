@@ -649,6 +649,12 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                 Service</a></h4>
                     </div>
                 </a></div>
+                <div class="owl-dots">
+                    <button class="owl-dot active" aria-label="Go to slide 1"></button>
+                    <button class="owl-dot" aria-label="Go to slide 2"></button>
+                    <button class="owl-dot" aria-label="Go to slide 3"></button>
+                    <button class="owl-dot" aria-label="Go to slide 4"></button>
+                </div>                
         </div>
     </section>
     <section class="tj-map-section">
