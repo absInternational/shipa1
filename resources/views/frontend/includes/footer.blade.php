@@ -53,13 +53,23 @@
     <div class="row mt-3">
     <div class=col-lg-12>
     <h4 class="text-white text-center mb-3">Follow Us on Social Media</h4>
-    <div class=social-icons>
-    <a href=https://www.facebook.com/shipa1autotransport> <i class="fa-brands fa-facebook-f text-white fa-2x"></i></a>
-    <a href=https://www.instagram.com/shipa1_transport/ > <i class="fa-brands fa-instagram text-white fa-2x"></i></a>
-    <a href=https://www.linkedin.com/in/shipa1-transport/ > <i class="fa-brands fa-linkedin-in text-white fa-2x"></i></a>
-    <a href=https://www.youtube.com/@shipA1autotransport/ > <i class="fa-brands fa-youtube text-white fa-2x"></i></a>
-    <a href=https://wa.me/+14107184031> <i class="fa-brands fa-whatsapp text-white fa-2x"></i></a>
-    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/shipa1autotransport" aria-label="Follow us on Facebook">
+            <i class="fa-brands fa-facebook-f text-white fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/shipa1_transport/" aria-label="Follow us on Instagram">
+            <i class="fa-brands fa-instagram text-white fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/shipa1-transport/" aria-label="Connect with us on LinkedIn">
+            <i class="fa-brands fa-linkedin-in text-white fa-2x"></i>
+        </a>
+        <a href="https://www.youtube.com/@shipA1autotransport/" aria-label="Subscribe to our YouTube channel">
+            <i class="fa-brands fa-youtube text-white fa-2x"></i>
+        </a>
+        <a href="https://wa.me/+14107184031" aria-label="Chat with us on WhatsApp">
+            <i class="fa-brands fa-whatsapp text-white fa-2x"></i>
+        </a>
+    </div>    
     </div>
     </div>
     </div>

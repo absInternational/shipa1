@@ -127,7 +127,10 @@
                         alt=Logo></a>
             </div>
             <div class=offcanvas-icon>
-                <a id=canva_close href=#>
+                {{-- <a id=canva_close href=#>
+                    <i class="fa-light fa-xmark"></i>
+                </a> --}}
+                <a id="canva_close" href="#" aria-label="Close Menu">
                     <i class="fa-light fa-xmark"></i>
                 </a>
             </div>
