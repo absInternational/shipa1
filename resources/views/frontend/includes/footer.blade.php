@@ -203,7 +203,7 @@
     <div class=footer-copyright-area>
     <div class=copyright-target>
     <p>
-    Copyright © 2024 ShipA1. All Rights Reserved.
+    Copyright © 2025 ShipA1. All Rights Reserved.
     </p>
     </div>
     </div>
