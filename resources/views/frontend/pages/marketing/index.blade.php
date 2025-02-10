@@ -291,7 +291,7 @@
             </div>
         </div>
     </section>
-    <section class="tj-service-section-four tj-service-page">
+    {{-- <section class="tj-service-section-four tj-service-page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -752,7 +752,7 @@
                 {{ $marketings->links() }}
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="tj-choose-us-section">
         <div class="container">
             <div class="row">
