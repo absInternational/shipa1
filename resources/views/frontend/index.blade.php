@@ -478,19 +478,15 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
     </section>
     @include('partials.cta-section')
     <section class="tj-team-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tj-section-heading text-center">
-                        <span class="sub-title active-shape">Our Services</span>
-                        <h2 class="title">Pick Your Transport Type</h2>
-                    </div>
-                </div>
+        <div class="container text-center">
+            <div class="tj-section-heading">
+                <span class="sub-title active-shape">Our Services</span>
+                <h2 class="title">Pick Your Transport Type</h2>
             </div>
         </div>
     </section>
     <section class="tj-project-section">
-        <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
+        <div class="tj-project-slider owl-carousel">
             @php
                 $services = [
                     ['route' => 'frontend.pages.services.car-service', 'img' => 'project/9.webp', 'title' => 'Car Shipping Service', 'label' => 'CAR'],
@@ -505,22 +501,31 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     ['route' => 'frontend.pages.services.commercial-service', 'img' => 'project/PYT-Commercial.webp', 'title' => 'Truck Transportation Service', 'label' => 'COMMERCIAL'],
                 ];
             @endphp
-            @foreach ($services as $service)
+    
+            @foreach ($services as $index => $service)
+                @php
+                    $serviceRoute = route($service['route']);
+                    $imgSrc = asset('/frontend/images/' . $service['img']);
+                    $fetchPriority = $index === 0 ? 'high' : 'low';
+                @endphp
+    
                 <div class="tj-project-item">
-                    <a href="{{ route($service['route']) }}" class="project-link" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
-                        <img loading="lazy" src="{{ asset('/frontend/images/' . $service['img']) }}" fetchpriority="high" alt="{{ $service['title'] }}">
-                        <div class="arrow-icon">
-                            <i class="fa-light fa-arrow-right"></i>
-                        </div>
+                    <a href="{{ $serviceRoute }}" class="project-link" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
+                        <img src="{{ $imgSrc }}" loading="lazy" fetchpriority="{{ $fetchPriority }}" alt="{{ $service['title'] }}">
+                        
                         <div class="tj-project-content">
                             <span class="sub-title">{{ $service['label'] }}</span>
-                            <h6><a href="{{ route($service['route']) }}" class="title-link">{{ $service['title'] }}</a></h6>
+                            <h6>{{ $service['title'] }}</h6>
+                        </div>
+    
+                        <div class="arrow-icon">
+                            <i class="fa-light fa-arrow-right"></i>
                         </div>
                     </a>
                 </div>
             @endforeach
         </div>
-    </section>    
+    </section>        
     {{-- <section class="tj-team-section">
         <div class="container">
             <div class="row">
