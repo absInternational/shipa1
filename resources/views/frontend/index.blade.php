@@ -477,45 +477,50 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
         </div>
     </section>
     @include('partials.cta-section')
-    <section class="tj-choose-us-section-home">
+    <section class="tj-team-section">
         <div class="container">
             <div class="row">
-                @if (session('success'))
-                    <div class="alert alert-success">{{ session('success') }}</div>
-                    @endif @if (session('error'))
-                        <div class="alert alert-error">{{ session('error') }}</div>
-                    @endif
-                    <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
-                        <div class="choose-us-content-1">
-                            <div class="tj-section-heading"><span class="sub-title active-shape2">Get Instant quote</span>
-                                <h2 class="title">Get an instant quote in few simple steps</h2>
-                                <p class="desc">ShipA1 has pledged to provide all-in-one auto transport solutions to all
-                                    its customers and seeks your trust in return of our services.</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-sm-4 col-6">
-                                    <div class="tj-icon-box3 text-center"><i class="flaticon flaticon-courier"></i>
-                                        <h6 class="title">Optimized Cost</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-6">
-                                    <div class="tj-icon-box3 text-center"><i class="flaticon flaticon-cargo"></i>
-                                        <h6 class="title">Delivery on Time</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-6">
-                                    <div class="tj-icon-box3 text-center"><i class="flaticon flaticon-agreement"></i>
-                                        <h6 class="title">Safety &amp; Reliability</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-12">
+                    <div class="tj-section-heading text-center">
+                        <span class="sub-title active-shape">Our Services</span>
+                        <h2 class="title">Pick Your Transport Type</h2>
                     </div>
-                    <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">@include('partials.multi-form')
-                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <section class="tj-project-section">
+        <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
+            @php
+                $services = [
+                    ['route' => 'frontend.pages.services.car-service', 'img' => 'project/9.webp', 'title' => 'Car Shipping Service', 'label' => 'CAR'],
+                    ['route' => 'frontend.pages.services.bike-service', 'img' => 'project/PYT-Bike.webp', 'title' => 'Motorcycle Shipping Service', 'label' => 'Motorcycle'],
+                    ['route' => 'frontend.pages.services.heavy-service', 'img' => 'project/PYT-Heavy.webp', 'title' => 'Heavy Transportation Service', 'label' => 'HEAVY EQUIP'],
+                    ['route' => 'frontend.pages.services.roro-service', 'img' => 'project/RORO-Slider (1)--.webp', 'title' => 'Roro Shipping International', 'label' => 'RORO'],
+                    ['route' => 'frontend.pages.services.golf-cart-service', 'img' => 'project/PYT-Golf.webp', 'title' => 'Golf Cart Transportation Service', 'label' => 'Golf Cart'],
+                    ['route' => 'frontend.pages.services.atv-utv-service', 'img' => 'project/PYT-ATV.webp', 'title' => 'ATV/UTV Transportation Service', 'label' => 'ATV/UTV'],
+                    ['route' => 'frontend.pages.services.construction-service', 'img' => 'project/PYT-Construction.webp', 'title' => 'Construction Transportation Service', 'label' => 'CONSTRUCTION'],
+                    ['route' => 'frontend.pages.services.farm-service', 'img' => 'project/PYT-Farm.webp', 'title' => 'Farm Transportation Service', 'label' => 'FARM'],
+                    ['route' => 'frontend.pages.services.excavator-service', 'img' => 'project/PYT-Excavator.webp', 'title' => 'Excavator Shipping Service', 'label' => 'EXCAVATOR'],
+                    ['route' => 'frontend.pages.services.commercial-service', 'img' => 'project/PYT-Commercial.webp', 'title' => 'Truck Transportation Service', 'label' => 'COMMERCIAL'],
+                ];
+            @endphp
+            @foreach ($services as $service)
+                <div class="tj-project-item">
+                    <a href="{{ route($service['route']) }}" class="project-link" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
+                        <img loading="lazy" src="{{ asset('/frontend/images/' . $service['img']) }}" fetchpriority="high" alt="{{ $service['title'] }}">
+                        <div class="arrow-icon">
+                            <i class="fa-light fa-arrow-right"></i>
+                        </div>
+                        <div class="tj-project-content">
+                            <span class="sub-title">{{ $service['label'] }}</span>
+                            <h6><a href="{{ route($service['route']) }}" class="title-link">{{ $service['title'] }}</a></h6>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </section>    
     {{-- <section class="tj-team-section">
         <div class="container">
             <div class="row">
@@ -723,6 +728,45 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </div>                
         </div>
     </section> --}}
+    <section class="tj-choose-us-section-home">
+        <div class="container">
+            <div class="row">
+                @if (session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                    @endif @if (session('error'))
+                        <div class="alert alert-error">{{ session('error') }}</div>
+                    @endif
+                    <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                        <div class="choose-us-content-1">
+                            <div class="tj-section-heading"><span class="sub-title active-shape2">Get Instant quote</span>
+                                <h2 class="title">Get an instant quote in few simple steps</h2>
+                                <p class="desc">ShipA1 has pledged to provide all-in-one auto transport solutions to all
+                                    its customers and seeks your trust in return of our services.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="tj-icon-box3 text-center"><i class="flaticon flaticon-courier"></i>
+                                        <h6 class="title">Optimized Cost</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="tj-icon-box3 text-center"><i class="flaticon flaticon-cargo"></i>
+                                        <h6 class="title">Delivery on Time</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="tj-icon-box3 text-center"><i class="flaticon flaticon-agreement"></i>
+                                        <h6 class="title">Safety &amp; Reliability</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">@include('partials.multi-form')
+                    </div>
+            </div>
+        </div>
+    </section>
     <section class="tj-map-section">
         <div class="google-map"><iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s"
