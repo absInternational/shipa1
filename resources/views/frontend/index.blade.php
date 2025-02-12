@@ -206,7 +206,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             </ul>
         </div>
     </section>
-    {{-- @include('partials.reveiw-site') --}}
+    @include('partials.reveiw-site')
     <section class="tj-service-section pt-4">
         <div class="container">
             <div class="row">
@@ -278,7 +278,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     </a></div>
             </div>
         </div>
-    </section>@include('partials.car-cta-section')
+    </section>
+    @include('partials.car-cta-section')
     <section class="tj-about-section">
         <div class="container">
             <div class="row">
@@ -358,7 +359,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             </div>
         </div>
     </section>
-    @include('partials.cta-section')<section class="tj-step-section">
+    @include('partials.cta-section')
+    <section class="tj-step-section">
         <div class="container">
             <div class="row">
                 <div class="tj-section-heading text-center"><span class="sub-title active-shape">Working Process</span>
@@ -722,7 +724,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             </div>
         </div>
     </section>
-    {{-- @include('partials.blog-slider') @include('partials.reveiw-detail')  --}}
+    @include('partials.blog-slider')
+     {{-- @include('partials.reveiw-detail')  --}}
     @include('partials.newsletter')
 <script>
     document.addEventListener("DOMContentLoaded", (function() {
