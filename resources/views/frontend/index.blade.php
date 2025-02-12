@@ -221,7 +221,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('vehicleTransportDetail') }}"
                         aria-label="Learn more about vehicle transportation services"
                         title="Vehicle Transportation Services" class="service-link">
-                        <div class="tj-service-item lazy-bg" data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
+                        <div class="tj-service-item lazy-bg" style="background-image: url('{{ asset('frontend/images/service/CAR-CARD.webp') }}');">
                             <div class="icon-box"><i class="fa-light fa-car-side fa-2xs"></i></div>
                             <div class="service-content">
                                 <h4>VEHICLE TRANSPORTATION</h4>
@@ -240,7 +240,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('heavy-transport-detail') }}"
                         aria-label="Learn more about Heavy transportation services" title="Heavy Transportation Services"
                         class="service-link">
-                        <div class="tj-service-item lazy-bg" data-bg-image="{{ asset('/frontend/images/service/Logistics-Home.webp') }}">
+                        <div class="tj-service-item lazy-bg"  style="background-image: url('{{ asset('/frontend/images/service/Logistics-Home.webp') }}');">
                             <div class="icon-box"><i class="fa-light fa-tractor fa-2xs"></i></div>
                             <div class="service-content">
                                 <h4>HEAVY TRANSPORTATION</h4>
@@ -260,8 +260,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('freighttransport-detail') }}"
                         aria-label="Learn more about freight transportation services"
                         title="Freight Transportation Services" class="service-link">
-                        <div class="tj-service-item lazy-bg"
-                            data-bg-image="{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}">
+                        <div class="tj-service-item lazy-bg" style="background-image: url('{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}');">
                             <div class="icon-box"><i class="fa-light fa-truck fa-2xs"></i></div>
                             <div class="service-content">
                                 <h4>FREIGHT TRANSPORTATION</h4>
@@ -667,7 +666,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s"
                 title="Google Maps location of [your specific location or purpose]" fetchpriority="high" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        <div class="tj-map-tabs" data-bg-image="{{ asset('frontend/images/banner/form-shape2.png') }}">
+        <div class="tj-map-tabs" style="background-image: url('{{ asset('frontend/images/banner/form-shape2.png') }}');">
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button"
