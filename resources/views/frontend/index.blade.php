@@ -478,8 +478,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
     </section>
     @include('partials.cta-section')
     <section class="tj-team-section">
-        <div class="container text-center">
-            <div class="tj-section-heading">
+        <div class="container">
+            <div class="tj-section-heading text-center">
                 <span class="sub-title active-shape">Our Services</span>
                 <h2 class="title">Pick Your Transport Type</h2>
             </div>
@@ -501,7 +501,6 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     ['route' => 'frontend.pages.services.commercial-service', 'img' => 'project/PYT-Commercial.webp', 'title' => 'Truck Transportation Service', 'label' => 'COMMERCIAL'],
                 ];
             @endphp
-    
             @foreach ($services as $index => $service)
                 @php
                     $serviceRoute = route($service['route']);
@@ -512,15 +511,16 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 <div class="tj-project-item">
                     <a href="{{ $serviceRoute }}" class="project-link" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
                         <img src="{{ $imgSrc }}" loading="lazy" fetchpriority="{{ $fetchPriority }}" alt="{{ $service['title'] }}">
+                        <div class="arrow-icon">
+                            <a href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
+                            <i class="fa-light fa-arrow-right"></i></a>
+                        </div>
                         
                         <div class="tj-project-content">
                             <span class="sub-title">{{ $service['label'] }}</span>
-                            <h6>{{ $service['title'] }}</h6>
+                            <h6><a href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">{{ $service['title'] }}</a></h6>
                         </div>
     
-                        <div class="arrow-icon">
-                            <i class="fa-light fa-arrow-right"></i>
-                        </div>
                     </a>
                 </div>
             @endforeach
@@ -539,7 +539,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
     </section>
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel" aria-label="Loading indicator for carousel content">
-            <div class="tj-project-item"><a href="{{ route('frontend.pages.services.car-service') }}"
+            <div class="tj-project-item">
+                <a href="{{ route('frontend.pages.services.car-service') }}"
                     aria-label="Learn more about Car Shipping Services" title="Car Shipping Services"
                     class="project-link"><img loading="lazy" src="{{ asset('/frontend/images/project/9.webp') }}"
                         fetchpriority="high" alt="Car Shipping Service">
