@@ -518,7 +518,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         
                         <div class="tj-project-content">
                             <span class="sub-title">{{ $service['label'] }}</span>
-                            <h6><a href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">{{ $service['title'] }}</a></h6>
+                            <h6><a class="title-link" href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">{{ $service['title'] }}</a></h6>
                         </div>
     
                     </a>
