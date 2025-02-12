@@ -207,7 +207,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
         </div>
     </section>
     @include('partials.reveiw-site')
-    <section class="tj-service-section pt-4">
+    {{-- <section class="tj-service-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -221,18 +221,12 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('vehicleTransportDetail') }}"
                         aria-label="Learn more about vehicle transportation services"
                         title="Vehicle Transportation Services" class="service-link">
-                        <div class="tj-service-item lazy-bg" style="background-image: url('{{ asset('frontend/images/service/CAR-CARD.webp') }}');">
+                        <div class="tj-service-item lazy-bg" data-bg-image="{{ asset('frontend/images/service/CAR-CARD.webp') }}">
                             <div class="icon-box"><i class="fa-light fa-car-side fa-2xs"></i></div>
                             <div class="service-content">
                                 <h4>VEHICLE TRANSPORTATION</h4>
                                 <p>Everything you need to know about 100% insured and secured vehicle transportation.</p>
-                                {{-- <div class="d-flex justify-content-end"><a
-                                        class="btn btn-outline-secondary btn-sm ms-2 mt-2"
-                                        aria-label="Learn more about vehicle transportation services"
-                                        title="Vehicle Transportation Services"
-                                        href="{{ route('vehicleTransportDetail') }}"
-                                        style="background:#8fc445;color:#fff">Read More<i
-                                            class="bi bi-chevron-right"></i></a></div> --}}
+                                
                             </div>
                         </div>
                     </a></div>
@@ -240,19 +234,12 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('heavy-transport-detail') }}"
                         aria-label="Learn more about Heavy transportation services" title="Heavy Transportation Services"
                         class="service-link">
-                        <div class="tj-service-item lazy-bg"  style="background-image: url('{{ asset('/frontend/images/service/Logistics-Home.webp') }}');">
+                        <div class="tj-service-item lazy-bg" data-bg-image="{{ asset('/frontend/images/service/Logistics-Home.webp') }}">
                             <div class="icon-box"><i class="fa-light fa-tractor fa-2xs"></i></div>
                             <div class="service-content">
                                 <h4>HEAVY TRANSPORTATION</h4>
                                 <p>Ship A1 is your trusted partner for safely and efficiently handling the toughest
                                     transportation challenges.</p>
-                                {{-- <div class="d-flex justify-content-end"><a
-                                        class="btn btn-outline-secondary btn-sm ms-2 mt-2"
-                                        aria-label="Learn more about Heavy transportation services"
-                                        title="Heavy Transportation Services"
-                                        href="{{ route('heavy-transport-detail') }}"
-                                        style="background:#8fc445;color:#fff">Read More<i
-                                            class="bi bi-chevron-right"></i></a></div> --}}
                             </div>
                         </div>
                     </a></div>
@@ -260,21 +247,71 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         href="{{ route('freighttransport-detail') }}"
                         aria-label="Learn more about freight transportation services"
                         title="Freight Transportation Services" class="service-link">
-                        <div class="tj-service-item lazy-bg" style="background-image: url('{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}');">
+                        <div class="tj-service-item lazy-bg"
+                            data-bg-image="{{ asset('frontend/images/service/FREIGHT-CARD.webp') }}">
                             <div class="icon-box"><i class="fa-light fa-truck fa-2xs"></i></div>
                             <div class="service-content">
                                 <h4>FREIGHT TRANSPORTATION</h4>
                                 <p>Unlock the door to smooth freight logistic transportation with Ship A1.</p>
-                                {{-- <div class="d-flex justify-content-end"><a
-                                        class="btn btn-outline-secondary btn-sm ms-2 mt-2"
-                                        aria-label="Learn more about freight transportation services"
-                                        title="Freight Transportation Services"
-                                        href="{{ route('freighttransport-detail') }}"
-                                        style="background:#8fc445;color:#fff">Read More<i
-                                            class="bi bi-chevron-right"></i></a></div> --}}
+                                
                             </div>
                         </div>
                     </a></div>
+            </div>
+        </div>
+    </section> --}}
+    @php
+        $services = [
+            [
+                'route' => route('vehicleTransportDetail'),
+                'image' => asset('frontend/images/service/CAR-CARD.webp'),
+                'icon'  => 'fa-car-side',
+                'title' => 'VEHICLE TRANSPORTATION',
+                'description' => 'Everything you need to know about 100% insured and secured vehicle transportation.'
+            ],
+            [
+                'route' => route('heavy-transport-detail'),
+                'image' => asset('frontend/images/service/Logistics-Home.webp'),
+                'icon'  => 'fa-tractor',
+                'title' => 'HEAVY TRANSPORTATION',
+                'description' => 'Ship A1 is your trusted partner for safely and efficiently handling the toughest transportation challenges.'
+            ],
+            [
+                'route' => route('freighttransport-detail'),
+                'image' => asset('frontend/images/service/FREIGHT-CARD.webp'),
+                'icon'  => 'fa-truck',
+                'title' => 'FREIGHT TRANSPORTATION',
+                'description' => 'Unlock the door to smooth freight logistic transportation with Ship A1.'
+            ],
+        ];
+    @endphp
+    <section class="tj-service-section pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="tj-section-heading">
+                        <span class="sub-title active-shape">What We Do</span>
+                        <h2 class="title">Logistic & Transport</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ($services as $index => $service)
+                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="{{ 100 * ($index + 1) }}">
+                        <a href="{{ $service['route'] }}" aria-label="Learn more about {{ strtolower($service['title']) }} services"
+                        title="{{ $service['title'] }}" class="service-link">
+                            <div class="tj-service-item lazy-bg" data-bg-image="{{ $service['image'] }}">
+                                <div class="icon-box">
+                                    <i class="fa-light {{ $service['icon'] }} fa-2xs"></i>
+                                </div>
+                                <div class="service-content">
+                                    <h4>{{ $service['title'] }}</h4>
+                                    <p>{{ $service['description'] }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -666,7 +703,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s"
                 title="Google Maps location of [your specific location or purpose]" fetchpriority="high" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        <div class="tj-map-tabs" style="background-image: url('{{ asset('frontend/images/banner/form-shape2.png') }}');">
+        <div class="tj-map-tabs" data-bg-image="{{ asset('frontend/images/banner/form-shape2.png') }}">
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button"
