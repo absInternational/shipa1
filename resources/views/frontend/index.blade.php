@@ -122,7 +122,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 fetchpriority="high" alt="Image" width="100%"></div>
         <div class="swiper sc-slider-1" data-autoplay="5000">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/DSF.webp') }}">
+                <div class="swiper-slide" style="background-image: url('{{ asset('frontend/images/slider/DSF.webp') }}');">
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h1 class="slider-title">Trustworthy, Efficient, And Cost-effective Auto Transport Solutions
@@ -136,7 +136,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/home-slider-2.webp') }}">
+                <div class="swiper-slide"  style="background-image: url('{{ asset('frontend/images/slider/home-slider-2.webp') }}');">
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h4 class="slider-title">Trustworthy, Efficient and Cost-Effective Transportation Services</h4>
@@ -149,7 +149,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-                <div class="swiper-slide" data-bg-image="{{ asset('frontend/images/slider/freight-banner-home.webp') }}">
+                <div class="swiper-slide"  style="background-image: url('{{ asset('frontend/images/slider/freight-banner-home.webp') }}');">
                     <div class="container">
                         <div class="slider-content p-z-idex">
                             <h4 class="slider-title">Trustworthy, Efficient and Cost-Effective Logistic Services</h4>
