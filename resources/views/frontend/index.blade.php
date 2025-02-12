@@ -122,6 +122,31 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 fetchpriority="high" alt="Image" width="100%"></div>
         <div class="swiper sc-slider-1" data-autoplay="5000">
             <div class="swiper-wrapper">
+                @php
+                    $slides = [
+                        ['image' => 'frontend/images/slider/DSF.webp', 'title' => 'Trustworthy, Efficient, And Cost-effective Auto Transport Solutions', 'desc' => 'ShipA1 has pledged to provide all-in-one auto transport solutions to all its customers and seeks your trust in return of our services.'],
+                        ['image' => 'frontend/images/slider/home-slider-2.webp', 'title' => 'Trustworthy, Efficient and Cost-Effective Transportation Services', 'desc' => 'ShipA1 has pledged to provide all-in-one Heavy Equipment transportation solutions to all its customers and seeks your trust in return of our services.'],
+                        ['image' => 'frontend/images/slider/freight-banner-home.webp', 'title' => 'Trustworthy, Efficient and Cost-Effective Logistic Services', 'desc' => 'ShipA1 has pledged to provide all-in-one Freight Shipping solutions to all its customers and seeks your trust in return of our services.']
+                    ];
+                @endphp
+                @foreach ($slides as $slide)
+                    <div class="swiper-slide slide-bg" style="background-image: url('{{ asset($slide['image']) }}');">
+                        <div class="container">
+                            <div class="slider-content p-z-idex">
+                                <h4 class="slider-title">{{ $slide['title'] }}</h4>
+                                <div class="slider-desc">{{ $slide['desc'] }}</div>
+                                <div class="tj-theme-button">
+                                    <a class="tj-transparent-btn ms-4 mt-4" href="{{ route('quote.form.combine') }}">
+                                        Get Quote <i class="flaticon-right-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-shape"></div>
+                    </div>
+                @endforeach
+            </div>            
+            {{-- <div class="swiper-wrapper">
                 <div class="swiper-slide" style="background-image: url('{{ asset('frontend/images/slider/DSF.webp') }}');">
                     <div class="container">
                         <div class="slider-content p-z-idex">
@@ -162,7 +187,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     </div>
                     <div class="banner-shape"></div>
                 </div>
-            </div>
+            </div> --}}
             <div></div>
         </div>
         <div class="tj-service-icon-box">
@@ -207,7 +232,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
         </div>
     </section>
     @include('partials.reveiw-site')
-    {{-- <section class="tj-service-section pt-4">
+    <section class="tj-service-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -257,61 +282,6 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                             </div>
                         </div>
                     </a></div>
-            </div>
-        </div>
-    </section> --}}
-    @php
-        $services = [
-            [
-                'route' => route('vehicleTransportDetail'),
-                'image' => asset('frontend/images/service/CAR-CARD.webp'),
-                'icon'  => 'fa-car-side',
-                'title' => 'VEHICLE TRANSPORTATION',
-                'description' => 'Everything you need to know about 100% insured and secured vehicle transportation.'
-            ],
-            [
-                'route' => route('heavy-transport-detail'),
-                'image' => asset('frontend/images/service/Logistics-Home.webp'),
-                'icon'  => 'fa-tractor',
-                'title' => 'HEAVY TRANSPORTATION',
-                'description' => 'Ship A1 is your trusted partner for safely and efficiently handling the toughest transportation challenges.'
-            ],
-            [
-                'route' => route('freighttransport-detail'),
-                'image' => asset('frontend/images/service/FREIGHT-CARD.webp'),
-                'icon'  => 'fa-truck',
-                'title' => 'FREIGHT TRANSPORTATION',
-                'description' => 'Unlock the door to smooth freight logistic transportation with Ship A1.'
-            ],
-        ];
-    @endphp
-    <section class="tj-service-section pt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="tj-section-heading">
-                        <span class="sub-title active-shape">What We Do</span>
-                        <h2 class="title">Logistic & Transport</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                @foreach ($services as $index => $service)
-                    <div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="800" data-sal-delay="{{ 100 * ($index + 1) }}">
-                        <a href="{{ $service['route'] }}" aria-label="Learn more about {{ strtolower($service['title']) }} services"
-                        title="{{ $service['title'] }}" class="service-link">
-                            <div class="tj-service-item lazy-bg" data-bg-image="{{ $service['image'] }}">
-                                <div class="icon-box">
-                                    <i class="fa-light {{ $service['icon'] }} fa-2xs"></i>
-                                </div>
-                                <div class="service-content">
-                                    <h4>{{ $service['title'] }}</h4>
-                                    <p>{{ $service['description'] }}</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
             </div>
         </div>
     </section>
