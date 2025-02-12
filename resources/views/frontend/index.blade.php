@@ -421,7 +421,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
         </div>
     </section>
     @include('partials.cta-section')
-    {{-- <section class="tj-step-section">
+    <section class="tj-step-section">
         <div class="container">
             <div class="row">
                 <div class="tj-section-heading text-center"><span class="sub-title active-shape">Working Process</span>
@@ -476,53 +476,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </div>
             </div>
         </div>
-    </section> --}}
-    <section class="tj-step-section">
-        <div class="container">
-            <div class="text-center tj-section-heading">
-                <span class="sub-title active-shape">Working Process</span>
-                <h2 class="title">We Follow Great Process</h2>
-            </div>
-            <div class="tj-step-area d-flex justify-content-center flex-wrap">
-                <div class="tj-step-item text-center">
-                    <div class="step-icon-box">
-                        <div class="step-box"></div>
-                        <i class="flaticon-economics"></i>
-                        <span class="number">01.</span>
-                    </div>
-                    <h6 class="title fs-4">Online Quote</h6>
-                    <span>Get an instant online quote from our website or call our agent.</span>
-                </div>
-                <div class="tj-step-item text-center">
-                    <div class="step-icon-box">
-                        <div class="step-box"></div>
-                        <i class="flaticon-pick"></i>
-                        <span class="number">02.</span>
-                    </div>
-                    <h6 class="title fs-4">Confirm Order</h6>
-                    <span>Confirm your order over the phone and fill out the booking form.</span>
-                </div>
-                <div class="tj-step-item text-center">
-                    <div class="step-icon-box">
-                        <div class="step-box"></div>
-                        <i class="flaticon-tracking"></i>
-                        <span class="number">03.</span>
-                    </div>
-                    <h6 class="title fs-4">Track Shipment</h6>
-                    <span>Track your shipment by your unique order ID number.</span>
-                </div>
-                <div class="tj-step-item text-center">
-                    <div class="step-icon-box">
-                        <div class="step-box"></div>
-                        <i class="flaticon-delivery-van"></i>
-                        <span class="number">04.</span>
-                    </div>
-                    <h6 class="title fs-4">Shipment Delivery</h6>
-                    <span>Your shipment reached its drop-off location.</span>
-                </div>
-            </div>
-        </div>
-    </section>    
+    </section>
     <section class="tj-choose-us-section-home">
         <div class="container">
             <div class="row">
