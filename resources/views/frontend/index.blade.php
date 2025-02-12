@@ -190,7 +190,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             </div> --}}
             <div></div>
         </div>
-        <div class="tj-service-icon-box">
+        {{-- <div class="tj-service-icon-box">
             <ul class="list-gap">
                 <li>
                     <div class="service-item">
@@ -228,6 +228,32 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                     aria-hidden="true"></i></a></div>
                     </div>
                 </li>
+            </ul>
+        </div> --}}
+        @php
+            $services = [
+                ['icon' => 'fa-car-side', 'title' => 'VEHICLE TRANSPORTATION', 'route' => 'vehicleTransportDetail'],
+                ['icon' => 'fa-tractor', 'title' => 'HEAVY TRANSPORTATION', 'route' => 'heavy-transport-detail'],
+                ['icon' => 'fa-truck', 'title' => 'FREIGHT TRANSPORTATION', 'route' => 'freighttransport-detail'],
+            ];
+        @endphp
+        <div class="tj-service-icon-box">
+            <ul class="list-gap">
+                @foreach($services as $service)
+                    <li>
+                        <div class="service-item">
+                            <div class="tj-service-icon">
+                                <div class="service-icon"><i class="fa-light {{ $service['icon'] }} fa-xs"></i></div>
+                                <div class="sub-title"><span>{!! nl2br(e($service['title'])) !!}</span></div>
+                            </div>
+                            <div class="service-arrow">
+                                <a href="{{ route($service['route']) }}" title="{{ $service['title'] }}">
+                                    <i class="fa-light fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                @endforeach
             </ul>
         </div>
     </section>
