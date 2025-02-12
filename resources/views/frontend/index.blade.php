@@ -206,7 +206,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             </ul>
         </div>
     </section>
-    @include('partials.reveiw-site')<section class="tj-service-section pt-4">
+    {{-- @include('partials.reveiw-site') --}}
+    <section class="tj-service-section pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -277,7 +278,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     </a></div>
             </div>
         </div>
-    </section>@include('partials.car-cta-section')<section class="tj-about-section">
+    </section>@include('partials.car-cta-section')
+    <section class="tj-about-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6" data-sal="slide-left" data-sal-duration="800">
@@ -355,7 +357,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </div>
             </div>
         </div>
-    </section>@include('partials.cta-section')<section class="tj-step-section">
+    </section>
+    @include('partials.cta-section')<section class="tj-step-section">
         <div class="container">
             <div class="row">
                 <div class="tj-section-heading text-center"><span class="sub-title active-shape">Working Process</span>
@@ -450,7 +453,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             </div>
         </div>
     </section>
-    <section class="tj-team-section">
+    {{-- <section class="tj-team-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -656,7 +659,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     <button class="owl-dot" aria-label="Go to slide 4"></button>
                 </div>                
         </div>
-    </section>
+    </section> --}}
     <section class="tj-map-section">
         <div class="google-map"><iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s"
@@ -718,7 +721,9 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </div>
             </div>
         </div>
-    </section>@include('partials.blog-slider') @include('partials.reveiw-detail') @include('partials.newsletter')
+    </section>
+    {{-- @include('partials.blog-slider') @include('partials.reveiw-detail')  --}}
+    @include('partials.newsletter')
 <script>
     document.addEventListener("DOMContentLoaded", (function() {
         const t = document.querySelector(".dropdown-toggle"),
