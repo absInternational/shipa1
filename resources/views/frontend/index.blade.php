@@ -231,13 +231,17 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         </div>
                         <div class="tj-icon-box">
                             <div class="ab-text d-flex align-items-center">
-                                <div class="ab-icon"><img loading="lazy"
-                                        src="{{ asset('frontend/images/icon/winner.svg') }}" fetchpriority="high"
-                                        alt="Icon"></div>
+                                <div class="ab-icon">
+                                    <img loading="lazy"
+                                        src="{{ asset('frontend/images/icon/winner.svg') }}"
+                                        fetchpriority="high"
+                                        alt="Icon"
+                                        width="50" height="50">
+                                </div>
                                 <div class="ab-title">
                                     <h6 class="title fs-5">Our Values</h6>
                                 </div>
-                            </div>
+                            </div>                            
                             <p class="desc">We are a licensed Transportation company with high moral values and have
                                 attained customer satisfaction through their remarks on esteemed platforms.</p>
                         </div>
