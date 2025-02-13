@@ -139,7 +139,7 @@
 </head>
 
 <body>
-    @php $currentRouteName = Route::currentRouteName(); @endphp
+    {{-- @php $currentRouteName = Route::currentRouteName(); @endphp
     <div id=tj-overlay-bg2 class=tj-overlay-canvas></div>
     <div class=tj-offcanvas-area>
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
@@ -148,9 +148,6 @@
                         alt=Logo></a>
             </div>
             <div class=offcanvas-icon>
-                {{-- <a id=canva_close href=#>
-                    <i class="fa-light fa-xmark"></i>
-                </a> --}}
                 <a id="canva_close" href="#" aria-label="Close Menu">
                     <i class="fa-light fa-xmark"></i>
                 </a>
@@ -176,6 +173,47 @@
                 data-icon=mdi:arrow-up class="iconify iconify--mdi">
                 <path fill=currentColor d="M13 20h-2V8l-5.5 5.5l-1.42-1.42L12 4.16l7.92 7.92l-1.42 1.42L13 8v12Z">
                 </path>
+            </svg>
+        </div>
+    </div> --}}
+    @php $isOrderTracking = Route::currentRouteName() === 'order.tracking'; @endphp
+    <div id="tj-overlay-bg2" class="tj-overlay-canvas"></div>
+    <div class="tj-offcanvas-area">
+        <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
+            <div class="logo-area text-center">
+                <a href="{{ route('welcome') }}">
+                    <img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}" 
+                         alt="Website Logo" loading="lazy">
+                </a>
+            </div>
+            <div class="offcanvas-icon">
+                <a id="canva_close" href="#" aria-label="Close Menu">
+                    <i class="fa-light fa-xmark"></i>
+                </a>
+            </div>
+        </div>
+        <nav class="right_menu_togle mobile-navbar-menu d-lg-none" id="mobile-navbar-menu"></nav>
+        <p class="des d-none d-lg-block">
+            We take a bottom-line approach to each project. Our clients consistently experience enhanced brand loyalty and new leads thanks to our work.
+        </p>
+    </div>
+    @include('frontend.includes.header')
+    @yield('content')
+    @includeWhen(!$isOrderTracking, 'frontend.includes.sidebtn-track')
+    @include('frontend.includes.footer')
+    @stack('extraScripts')
+    <div class="logiland-scroll-top progress-done">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                style="transition:stroke-dashoffset 10ms linear 0s;
+                       stroke-dasharray:307.919px,307.919px;
+                       stroke-dashoffset:71.1186px;">
+            </path>
+        </svg>
+        <div class="logiland-scroll-top-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
+                class="iconify iconify--mdi">
+                <path fill="currentColor" d="M13 20h-2V8l-5.5 5.5l-1.42-1.42L12 4.16l7.92 7.92l-1.42 1.42L13 8v12Z"></path>
             </svg>
         </div>
     </div>
