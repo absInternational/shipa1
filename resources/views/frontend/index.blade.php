@@ -290,12 +290,26 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                 <p class="desc">Satisfied Client</p>
                             </div>
                         </div>
-                        <div class="image-box"><img class="p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid"
+                        {{-- <div class="image-box"><img class="p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid"
                                 src="{{ asset('/frontend/images/about/WMUD-Home.webp') }}" fetchpriority="high"
                                 loading="lazy" alt="Image"></div><img
                             class="group-1 p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid"
                             src="{{ asset('/frontend/images/about/about-3.webp') }}" fetchpriority="high" loading="lazy"
-                            alt="Image" width="1200" height="800">
+                            alt="Image" width="1200" height="800"> --}}
+                            <div class="image-box">
+                                <img class="p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid"
+                                    src="{{ asset('/frontend/images/about/WMUD-Home.webp') }}"
+                                    fetchpriority="high"
+                                    loading="lazy"
+                                    alt="Image"
+                                    width="1200" height="800"> 
+                            </div>
+                            <img class="group-1 p-z-idex aspect-ratio aspect-ratio-3x2 img-fluid"
+                                src="{{ asset('/frontend/images/about/about-3.webp') }}"
+                                fetchpriority="high"
+                                loading="lazy"
+                                alt="Image"
+                                width="1200" height="800">                            
                     </div>
                 </div>
             </div>
