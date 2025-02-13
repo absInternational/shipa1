@@ -119,7 +119,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
     </div> --}}
     <section class="tj-slider-section">
         <div class="slider_shape"><img src="{{ asset('/frontend/images/banner/home-underline.webp') }}"
-                fetchpriority="high" alt="Image" width="100%"></div>
+                fetchpriority="high" alt="Image" width="1200" height="150" 
+                style="max-width: 100%; height: auto;"></div>
         <div class="swiper sc-slider-1" data-autoplay="5000">
             <div class="swiper-wrapper">
                 @php

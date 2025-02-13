@@ -52,7 +52,7 @@
     <div class="header-content d-flex flex-wrap align-items-center justify-content-between">
     <div class="mobile-logo-area d-lg-none">
     <a href="{{ route('welcome') }}" aria-label=Home title=Home>
-    <img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}" loading=lazy alt=Logo>
+    <img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}" width="200" height="70" loading=lazy alt=Logo>
     </a>
     </div>
     <div class="tj-main-menu d-lg-block d-none text-end" id=main-menu>
