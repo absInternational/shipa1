@@ -420,10 +420,47 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                     </a>
                 </div>
             @endforeach --}}
+            @php
+                $services = [
+                    ['route' => 'frontend.pages.services.car-service', 'img' => 'project/9.webp', 'title' => 'Car Shipping Service', 'label' => 'CAR', 'width' => 300, 'height' => 200],
+                    ['route' => 'frontend.pages.services.bike-service', 'img' => 'project/PYT-Bike.webp', 'title' => 'Motorcycle Shipping Service', 'label' => 'Motorcycle', 'width' => 300, 'height' => 200],
+                    ['route' => 'frontend.pages.services.heavy-service', 'img' => 'project/PYT-Heavy.webp', 'title' => 'Heavy Transportation Service', 'label' => 'HEAVY EQUIP', 'width' => 300, 'height' => 200],
+                    ['route' => 'frontend.pages.services.roro-service', 'img' => 'project/RORO-Slider (1)--.webp', 'title' => 'Roro Shipping International', 'label' => 'RORO', 'width' => 300, 'height' => 200],
+                    ['route' => 'frontend.pages.services.golf-cart-service', 'img' => 'project/PYT-Golf.webp', 'title' => 'Golf Cart Transportation Service', 'label' => 'Golf Cart', 'width' => 300, 'height' => 200],
+                    ['route' => 'frontend.pages.services.atv-utv-service', 'img' => 'project/PYT-ATV.webp', 'title' => 'ATV/UTV Transportation Service', 'label' => 'ATV/UTV', 'width' => 300, 'height' => 200],
+                    ['route' => 'frontend.pages.services.construction-service', 'img' => 'project/PYT-Construction.webp', 'title' => 'Construction Transportation Service', 'label' => 'CONSTRUCTION', 'width' => 300, 'height' => 200],
+                    ['route' => 'frontend.pages.services.farm-service', 'img' => 'project/PYT-Farm.webp', 'title' => 'Farm Transportation Service', 'label' => 'FARM', 'width' => 300, 'height' => 200],
+                    ['route' => 'frontend.pages.services.excavator-service', 'img' => 'project/PYT-Excavator.webp', 'title' => 'Excavator Shipping Service', 'label' => 'EXCAVATOR', 'width' => 300, 'height' => 200],
+                    ['route' => 'frontend.pages.services.commercial-service', 'img' => 'project/PYT-Commercial.webp', 'title' => 'Truck Transportation Service', 'label' => 'COMMERCIAL', 'width' => 300, 'height' => 200],
+                ];
+            @endphp
             @foreach ($services as $index => $service)
                 @php
+                    $serviceRoute = route($service['route']);
+                    $imgSrc = asset('/frontend/images/' . $service['img']);
+                    $fetchPriority = $index === 0 ? 'high' : 'low';
+                @endphp
+
+                <div class="tj-project-item">
+                    <a href="{{ $serviceRoute }}" class="project-link" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
+                        <img src="{{ $imgSrc }}" loading="lazy" fetchpriority="{{ $fetchPriority }}" alt="{{ $service['title'] }}" width="{{ $service['width'] }}" height="{{ $service['height'] }}">
+                        <div class="arrow-icon">
+                            <a href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
+                                <i class="fa-light fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="tj-project-content">
+                            <span class="sub-title">{{ $service['label'] }}</span>
+                            <h6><a class="title-link" href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">{{ $service['title'] }}</a></h6>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+            {{-- @foreach ($services as $index => $service)
+                @php
                     $serviceRoute = route($service['route'] ?? '');
-                    // $imgSrc = isset($service['img']) ? asset('/frontend/images/' . $service['img']) : asset('/frontend/images/default.webp');
+                    $imgSrc = isset($service['img']) ? asset('/frontend/images/' . $service['img']) : asset('/frontend/images/default.webp');
                     $fetchPriority = $index === 0 ? 'high' : 'low';
 
                     // Define default dimensions
@@ -440,13 +477,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         'project/PYT-Commercial.webp' => ['width' => 600, 'height' => 400],
                     ];
 
-                    $defaultImage = 'default.webp';
-                    $imgPath = 'project/' . ($service['img'] ?? $defaultImage); // Ensure project prefix is included correctly
-
-                    // Check if the actual image exists, otherwise use default.webp
-                    $imgSrc = file_exists(public_path('frontend/images/' . $imgPath)) 
-                        ? asset('frontend/images/' . $imgPath) 
-                        : asset('frontend/images/' . $defaultImage);
+                    // Assign width and height, use default if key is missing
                     $width = isset($service['img']) && isset($imgDimensions[$service['img']]) ? $imgDimensions[$service['img']]['width'] : 600;
                     $height = isset($service['img']) && isset($imgDimensions[$service['img']]) ? $imgDimensions[$service['img']]['height'] : 400;
                 @endphp
@@ -467,7 +498,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         </div>
                     </a>
                 </div>
-            @endforeach
+            @endforeach --}}
         </div>
     </section>
     <section class="tj-choose-us-section-home">
