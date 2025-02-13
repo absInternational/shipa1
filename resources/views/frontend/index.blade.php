@@ -541,7 +541,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             </div>
         </div>
     </section>
-    <section class="tj-map-section">
+    {{-- <section class="tj-map-section">
         <div class="google-map"><iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s"
                 title="Google Maps location of [your specific location or purpose]" fetchpriority="high" loading="lazy"
@@ -568,8 +568,99 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </div>
             </div>
         </div>
+    </section> --}}
+    <section class="tj-map-section">
+        <div class="google-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.167331138309!2d-76.66251388426676!3d39.496062943506464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81261c3eae243%3A0x81e995e93023e64a!2s201%20International%20Cir%20STE%20230%2C%20Hunt%20Valley%2C%20MD%2021030%2C%20USA!5e0!3m2!1sen!2s!4v1649863458559!5m2!1sen!2s" 
+                title="Location: Hunt Valley, MD" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                width="100%" 
+                height="400" 
+                style="border:0;"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="tj-map-tabs" style="background-image: url('{{ asset('frontend/images/banner/form-shape2.png') }}');">
+            <div class="accordion" id="contactAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingContact">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#contactCollapse" aria-expanded="true" aria-controls="contactCollapse">
+                            Contact Us
+                        </button>
+                    </h2>
+                    <div id="contactCollapse" class="accordion-collapse collapse show" aria-labelledby="headingContact" data-bs-parent="#contactAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-gap">
+                                <li>
+                                    <i class="flaticon-placeholder"></i>
+                                    <a href="https://www.google.com/maps/place/201+International+Cir+STE+230,+Hunt+Valley,+MD+21030" target="_blank">
+                                        201 International Cir STE 230, Hunt Valley, MD 21030
+                                    </a>
+                                </li>
+                                <li>
+                                    <i class="flaticon-mail"></i>
+                                    <a href="mailto:shawntransport@shipa1.com">shawntransport@shipa1.com</a>
+                                </li>
+                                <li>
+                                    <i class="flaticon-call"></i>
+                                    <a href="tel:+18444744721">1 (844) 474-4721</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="tj-counter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tj-counter-area d-flex justify-content-between flex-wrap">
+                        <!-- Shipment Counter -->
+                        <div class="counter-item d-flex align-items-center" data-sal="slide-up">
+                            <div class="counter-icon">
+                                <i class="fa fa-car-side fa-2x mt-2"></i>
+                            </div>
+                            <div class="counter-number">
+                                <div class="tj-count">
+                                    <span class="odometer" data-count="318">0</span>k+
+                                </div>
+                                <span class="sub-title">Successful Shipments</span>
+                            </div>
+                        </div>
+                        <!-- Clients Counter -->
+                        <div class="counter-item d-flex align-items-center" data-sal="slide-up">
+                            <div class="counter-icon">
+                                <i class="flaticon-courier"></i>
+                            </div>
+                            <div class="counter-number">
+                                <div class="tj-count">
+                                    <span class="odometer" data-count="289">0</span>k+
+                                </div>
+                                <span class="sub-title">Satisfied Clients</span>
+                            </div>
+                        </div>
+                        <!-- Miles Covered Counter -->
+                        <div class="counter-item d-flex align-items-center" data-sal="slide-up">
+                            <div class="counter-icon">
+                                <i class="flaticon-worldwide"></i>
+                            </div>
+                            <div class="counter-number">
+                                <div class="tj-count">
+                                    <span class="odometer" data-count="270092">0</span>k
+                                </div>
+                                <span class="sub-title">Miles Covered</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    {{-- <section class="tj-counter-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -602,7 +693,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     @include('partials.blog-slider')
     @include('partials.newsletter')
 @endsection
