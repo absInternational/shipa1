@@ -176,13 +176,13 @@
             </svg>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script>
         setTimeout(function() {
             var Tawk_API = Tawk_API || {},
@@ -196,19 +196,19 @@
             e.parentNode.insertBefore(t, e);
         }, 5000);
     </script>
-    <script defer src="{{ asset('/frontend/js/modernizr-2.8.3.min.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/bootstrap.min.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/meanmenu.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/imagesloaded.pkgd.min.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/isotope.pkgd.min.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/jquery.magnific-popup.min.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/swiper.min.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/owl.carousel.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/jquery.appear.min.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/odometer.min.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/sal.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}"></script>
-    <script defer src="{{ asset('/frontend/js/main.js') }}"></script>
+    <script src="{{ asset('/frontend/js/modernizr-2.8.3.min.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/meanmenu.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/imagesloaded.pkgd.min.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/isotope.pkgd.min.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/jquery.magnific-popup.min.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/swiper.min.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/owl.carousel.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/jquery.appear.min.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/odometer.min.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/sal.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}" defer></script>
+    <script src="{{ asset('/frontend/js/main.js') }}" defer></script>
     {{-- <script>
         var Tawk_API = Tawk_API || {},
             Tawk_LoadStart = new Date;
