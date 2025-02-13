@@ -365,7 +365,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
     </section>
     <section class="tj-project-section">
         <div class="tj-project-slider owl-carousel">
-            @php
+            {{-- @php
                 $services = [
                     ['route' => 'frontend.pages.services.car-service', 'img' => 'project/9.webp', 'title' => 'Car Shipping Service', 'label' => 'CAR'],
                     ['route' => 'frontend.pages.services.bike-service', 'img' => 'project/PYT-Bike.webp', 'title' => 'Motorcycle Shipping Service', 'label' => 'Motorcycle'],
@@ -399,6 +399,44 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                             <h6><a class="title-link" href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">{{ $service['title'] }}</a></h6>
                         </div>
     
+                    </a>
+                </div>
+            @endforeach --}}
+            @foreach ($services as $index => $service)
+                @php
+                    $serviceRoute = route($service['route']);
+                    $imgSrc = asset('/frontend/images/' . $service['img']);
+                    $fetchPriority = $index === 0 ? 'high' : 'low';
+                    $imgDimensions = [
+                        'project/9.webp' => ['width' => 600, 'height' => 400],
+                        'project/PYT-Bike.webp' => ['width' => 600, 'height' => 400],
+                        'project/PYT-Heavy.webp' => ['width' => 600, 'height' => 400],
+                        'project/RORO-Slider (1)--.webp' => ['width' => 800, 'height' => 400],
+                        'project/PYT-Golf.webp' => ['width' => 600, 'height' => 400],
+                        'project/PYT-ATV.webp' => ['width' => 600, 'height' => 400],
+                        'project/PYT-Construction.webp' => ['width' => 600, 'height' => 400],
+                        'project/PYT-Farm.webp' => ['width' => 600, 'height' => 400],
+                        'project/PYT-Excavator.webp' => ['width' => 600, 'height' => 400],
+                        'project/PYT-Commercial.webp' => ['width' => 600, 'height' => 400],
+                    ];
+                    $width = $imgDimensions[$service['img']]['width'] ?? 600;
+                    $height = $imgDimensions[$service['img']]['height'] ?? 400;
+                @endphp
+
+                <div class="tj-project-item">
+                    <a href="{{ $serviceRoute }}" class="project-link" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
+                        <img src="{{ $imgSrc }}" loading="lazy" fetchpriority="{{ $fetchPriority }}" 
+                            alt="{{ $service['title'] }}" width="{{ $width }}" height="{{ $height }}">
+                        <div class="arrow-icon">
+                            <a href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
+                                <i class="fa-light fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="tj-project-content">
+                            <span class="sub-title">{{ $service['label'] }}</span>
+                            <h6><a class="title-link" href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">{{ $service['title'] }}</a></h6>
+                        </div>
                     </a>
                 </div>
             @endforeach
