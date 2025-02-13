@@ -404,9 +404,11 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             @endforeach --}}
             @foreach ($services as $index => $service)
                 @php
-                    $serviceRoute = route($service['route']);
-                    $imgSrc = asset('/frontend/images/' . $service['img']);
+                    $serviceRoute = route($service['route'] ?? '');
+                    $imgSrc = isset($service['img']) ? asset('/frontend/images/' . $service['img']) : asset('/frontend/images/default.webp');
                     $fetchPriority = $index === 0 ? 'high' : 'low';
+
+                    // Define default dimensions
                     $imgDimensions = [
                         'project/9.webp' => ['width' => 600, 'height' => 400],
                         'project/PYT-Bike.webp' => ['width' => 600, 'height' => 400],
@@ -419,23 +421,25 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                         'project/PYT-Excavator.webp' => ['width' => 600, 'height' => 400],
                         'project/PYT-Commercial.webp' => ['width' => 600, 'height' => 400],
                     ];
-                    $width = $imgDimensions[$service['img']]['width'] ?? 600;
-                    $height = $imgDimensions[$service['img']]['height'] ?? 400;
+
+                    // Assign width and height, use default if key is missing
+                    $width = isset($service['img']) && isset($imgDimensions[$service['img']]) ? $imgDimensions[$service['img']]['width'] : 600;
+                    $height = isset($service['img']) && isset($imgDimensions[$service['img']]) ? $imgDimensions[$service['img']]['height'] : 400;
                 @endphp
 
                 <div class="tj-project-item">
-                    <a href="{{ $serviceRoute }}" class="project-link" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
+                    <a href="{{ $serviceRoute }}" class="project-link" aria-label="Learn more about {{ $service['title'] ?? 'Service' }}" title="{{ $service['title'] ?? 'Service' }}">
                         <img src="{{ $imgSrc }}" loading="lazy" fetchpriority="{{ $fetchPriority }}" 
-                            alt="{{ $service['title'] }}" width="{{ $width }}" height="{{ $height }}">
+                            alt="{{ $service['title'] ?? 'Service' }}" width="{{ $width }}" height="{{ $height }}">
                         <div class="arrow-icon">
-                            <a href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">
+                            <a href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] ?? 'Service' }}" title="{{ $service['title'] ?? 'Service' }}">
                                 <i class="fa-light fa-arrow-right"></i>
                             </a>
                         </div>
                         
                         <div class="tj-project-content">
-                            <span class="sub-title">{{ $service['label'] }}</span>
-                            <h6><a class="title-link" href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] }}" title="{{ $service['title'] }}">{{ $service['title'] }}</a></h6>
+                            <span class="sub-title">{{ $service['label'] ?? '' }}</span>
+                            <h6><a class="title-link" href="{{ $serviceRoute }}" aria-label="Learn more about {{ $service['title'] ?? 'Service' }}" title="{{ $service['title'] ?? 'Service' }}">{{ $service['title'] ?? 'Service' }}</a></h6>
                         </div>
                     </a>
                 </div>
