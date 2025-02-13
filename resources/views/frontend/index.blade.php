@@ -114,9 +114,9 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             display: block
         }
     </style>
-    <div id="preloader" class="preloader">
+    {{-- <div id="preloader" class="preloader">
         <div class="animation-preloader"></div>
-    </div>
+    </div> --}}
     <section class="tj-slider-section">
         <div class="slider_shape"><img src="{{ asset('/frontend/images/banner/home-underline.webp') }}"
                 fetchpriority="high" alt="Image" width="100%"></div>
