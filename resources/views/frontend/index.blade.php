@@ -236,7 +236,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                                         src="{{ asset('frontend/images/icon/winner.svg') }}"
                                         fetchpriority="high"
                                         alt="Icon"
-                                        width="50" height="50">
+                                        width="40" height="40">
                                 </div>
                                 <div class="ab-title">
                                     <h6 class="title fs-5">Our Values</h6>
