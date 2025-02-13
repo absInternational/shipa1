@@ -138,7 +138,7 @@
     </script>
 </head>
 
-<body class=fade-in>
+<body>
     @php $currentRouteName = Route::currentRouteName(); @endphp
     <div id=tj-overlay-bg2 class=tj-overlay-canvas></div>
     <div class=tj-offcanvas-area>
