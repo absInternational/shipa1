@@ -1,19 +1,19 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
+
     # Force HTTPS only if it's not on already
     RewriteCond %{HTTPS} !=on
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-    
+
     # Ensure the Authorization header is passed correctly
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-    
+
     # Remove trailing slashes from URLs
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
-    
+
     # Redirect non-existent files to index.php
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -44,23 +44,26 @@
 
 # Caching & Performance
 <IfModule mod_headers.c>
-    # Prevent hotlinking of images and static files from other websites
+    # Prevent hotlinking of images and static files
     RewriteCond %{HTTP_REFERER} !^$
     RewriteCond %{HTTP_REFERER} !^https?://(www\.)?shipa1\.com [NC]
     RewriteRule \.(jpg|jpeg|png|gif|svg|webp|css|js)$ - [F,NC]
-    
+
     # Set caching headers for static files
     <FilesMatch "\.(jpg|jpeg|png|gif|svg|js|css|pdf|txt|html|xml|woff|woff2|ttf|eot|otf|json)$">
         Header set Cache-Control "max-age=31536000, public"
     </FilesMatch>
-    
+
     # Add security headers
     Header always append X-Frame-Options SAMEORIGIN
     Header set X-Content-Type-Options nosniff
     Header set X-XSS-Protection "1; mode=block"
     Header set Content-Security-Policy "script-src 'self'; object-src 'none';"
     Header set X-Download-Options "noopen"
-    
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
     # Set no-cache for certain headers
     Header set Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
     Header set Pragma "no-cache"
@@ -71,7 +74,7 @@
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresDefault "access plus 1 year"
-    
+
     ExpiresByType text/html "access plus 1 day"
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
@@ -86,10 +89,10 @@
 
 # Laravel Optimization
 <IfModule mod_php.c>
-    php_value max_execution_time 60
+    php_value max_execution_time 120
     php_value memory_limit 512M
-    php_value post_max_size 32M
-    php_value upload_max_filesize 32M
+    php_value post_max_size 64M
+    php_value upload_max_filesize 64M
 </IfModule>
 
 # Deny access to sensitive files
@@ -97,7 +100,7 @@
     Require all denied
 </FilesMatch>
 
-<FilesMatch "(^\.ht|^\.env|^\.git)">
+<FilesMatch "(^\.ht|^\.env|^\.git|\.log)">
     Require all denied
 </FilesMatch>
 
@@ -105,7 +108,7 @@
 <IfModule mod_php.c>
     php_flag opcache.enable 1
     php_value opcache.memory_consumption 128
-    php_value opcache.max_accelerated_files 4000
+    php_value opcache.max_accelerated_files 10000
     php_value opcache.validate_timestamps 1
 </IfModule>
 
