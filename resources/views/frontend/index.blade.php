@@ -405,7 +405,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
             @foreach ($services as $index => $service)
                 @php
                     $serviceRoute = route($service['route'] ?? '');
-                    $imgSrc = isset($service['img']) ? asset('/frontend/images/' . $service['img']) : asset('/frontend/images/default.webp');
+                    $imgSrc = isset($service['img']) ? asset('/public/frontend/images/' . $service['img']) : asset('/public/frontend/images/default.webp');
                     $fetchPriority = $index === 0 ? 'high' : 'low';
 
                     // Define default dimensions
