@@ -35,7 +35,7 @@
     <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.2/dist/css/coreui.min.css
         integrity=sha384-39e9UaGkm/+yp6spIsVfzcs3j7ac7G2cg0hzmDvtG11pT1d7YMnOC26w4wMPhzsL crossorigin=anonymous
         onload='this.onload=null,this.rel="stylesheet"'>
-    <link rel=preload href="{{ asset('/frontend/css/bootstrap.min.css') }}" as=style
+    {{-- <link rel=preload href="{{ asset('/frontend/css/bootstrap.min.css') }}" as=style
         onload='this.onload=null,this.rel="stylesheet"'>
     <link rel=stylesheet href="{{ asset('/frontend/css/bootstrap.min.css') }}">
     <link rel=stylesheet href="{{ asset('/frontend/css/meanmenu.css') }}"
@@ -57,7 +57,28 @@
     <link rel=stylesheet href="{{ asset('/public/frontend/css/style.css') }}"
         onload='this.onload=null,this.rel="stylesheet"'>
     <link rel=stylesheet href="{{ asset('/public/frontend/css/responsive.css') }}"
-        onload='this.onload=null,this.rel="stylesheet"'>
+        onload='this.onload=null,this.rel="stylesheet"'> --}}
+        <!-- Preload Critical CSS -->
+        <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="{{ asset('/frontend/css/style.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}"></noscript>
+        <noscript><link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}"></noscript>
+
+        <!-- Load Non-Critical CSS Asynchronously -->
+        <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+
+        <!-- Minified & Combined CSS (Optional for performance) -->
+        <link rel="stylesheet" href="{{ asset('/frontend/css/all.min.css') }}">
+
     {{-- <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style">
 <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" media="print" onload="this.media='all'">
@@ -357,50 +378,7 @@
         }))
     </script> --}}
     <script>
-        // $(document).ready(function () {
-        //     function setupIntlTelInput(e, n, t, o) {
-        //         function updateMask() {
-        //             const selectedCountry = t.getSelectedCountryData(),
-        //                 maskPattern = {
-        //                     us: "(000) 000-0000",
-        //                     ca: "(000) 000-0000"
-        //                 }[selectedCountry.iso2] || "";
-        //             if (o) o.destroy();
-        //             if (maskPattern) {
-        //                 o = IMask(e, { mask: maskPattern });
-        //             }
-        //             n.value = selectedCountry.dialCode;
-        //         }
-
-        //         if (t = window.intlTelInput(e, {
-        //             separateDialCode: true,
-        //             initialCountry: "auto",
-        //             geoIpLookup: function (callback) {
-        //                 callback("us");
-        //             },
-        //             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-        //             flagsImagePath: "https://www.shipa1.com/public/frontend/images/icon/flags.webp"
-        //         })) {
-        //             e.addEventListener("input", updateMask);
-        //             e.addEventListener("countrychange", updateMask);
-        //             e.addEventListener("blur", function () {
-        //                 if (!t.isValidNumber()) {
-        //                     console.error(`Invalid phone number (${e.id})`);
-        //                     return false;
-        //                 }
-        //             });
-        //             updateMask();
-        //         }
-        //     }
-        //     // Check if the phone input fields exist before initializing
-        //     if ($("#phone").length) {
-        //         setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"), undefined, undefined);
-        //     }
-        //     if ($("#phone2").length) {
-        //         setupIntlTelInput(document.querySelector("#phone2"), document.querySelector("#country_code2"), undefined, undefined);
-        //     }
-        // });
-        setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"), undefined, undefined);
+        $(document).ready(function () {
             function setupIntlTelInput(e, n, t, o) {
                 function updateMask() {
                     const selectedCountry = t.getSelectedCountryData(),
@@ -414,26 +392,35 @@
                     }
                     n.value = selectedCountry.dialCode;
                 }
-                t = window.intlTelInput(e, {
+
+                if (t = window.intlTelInput(e, {
                     separateDialCode: true,
                     initialCountry: "auto",
-                    dropdownContainer: document.body, // Moves dropdown outside main DOM
                     geoIpLookup: function (callback) {
                         callback("us");
                     },
                     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
                     flagsImagePath: "https://www.shipa1.com/public/frontend/images/icon/flags.webp"
-                });
-                e.addEventListener("input", updateMask);
-                e.addEventListener("countrychange", updateMask);
-                e.addEventListener("blur", function () {
-                    if (!t.isValidNumber()) {
-                        console.error(`Invalid phone number (${e.id})`);
-                        return false;
-                    }
-                });
-                updateMask();
+                })) {
+                    e.addEventListener("input", updateMask);
+                    e.addEventListener("countrychange", updateMask);
+                    e.addEventListener("blur", function () {
+                        if (!t.isValidNumber()) {
+                            console.error(`Invalid phone number (${e.id})`);
+                            return false;
+                        }
+                    });
+                    updateMask();
+                }
             }
+            // Check if the phone input fields exist before initializing
+            if ($("#phone").length) {
+                setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"), undefined, undefined);
+            }
+            if ($("#phone2").length) {
+                setupIntlTelInput(document.querySelector("#phone2"), document.querySelector("#country_code2"), undefined, undefined);
+            }
+        });
     </script>
     <script>
         window.onload = function() {
