@@ -582,7 +582,7 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                 allowfullscreen>
             </iframe>
         </div>
-        <div class="tj-map-tabs" style="background-image: url('{{ asset('frontend/images/banner/form-shape2.webp') }}');">
+        <div class="tj-map-tabs" style="background-image: url('{{ asset('public/frontend/images/banner/form-shape2.webp') }}');">
             <div class="accordion" id="contactAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingContact">
