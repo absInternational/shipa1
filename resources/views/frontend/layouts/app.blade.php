@@ -490,19 +490,19 @@
             function validatePhone(inputField, errorField) {
                 let phone = inputField.value.replace(/\D/g, ''); // Remove non-numeric characters
 
-                if (phone.length === 10) {
-                    let first3Digits = phone.substring(0, 3);
-                    if (!allowedPrefixes.includes(first3Digits)) {
-                        $(errorField).text("Invalid phone prefix.");
-                        return false;
-                    } else {
-                        $(errorField).text(""); // Clear error if valid
-                        return true;
-                    }
-                } else {
-                    $(errorField).text("Please enter a 10-digit phone number.");
+                if (phone.length < 10) {
+                    $(errorField).text("Phone number must be 10 digits.");
+                    return false;
                 }
-                return false;
+
+                let first3Digits = phone.substring(0, 3);
+                if (!allowedPrefixes.includes(first3Digits)) {
+                    $(errorField).text("Invalid phone prefix.");
+                    return false;
+                } else {
+                    $(errorField).text(""); // Clear error if valid
+                    return true;
+                }
             }
 
             function setupIntlTelInput(phoneInput, countryCodeInput, errorField) {
@@ -522,10 +522,12 @@
                     mask: "(000) 000-0000"
                 });
 
+                // Trigger validation immediately while typing
                 phoneInput.addEventListener("input", function () {
                     validatePhone(phoneInput, errorField);
                 });
 
+                // Validate again on blur for final check
                 phoneInput.addEventListener("blur", function () {
                     if (!iti.isValidNumber()) {
                         $(errorField).text("Invalid phone number.");
