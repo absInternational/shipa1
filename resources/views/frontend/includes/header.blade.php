@@ -1,5 +1,5 @@
 <head>
-  <link rel="preload" as="image" href="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}" type="image/webp">
+  <link rel="preload" as="image" href="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}" width="200" height="70" alt="Logo" type="image/webp">
 </head>
 <style>
     .active {
