@@ -58,26 +58,42 @@
         onload='this.onload=null,this.rel="stylesheet"'>
     <link rel=stylesheet href="{{ asset('/public/frontend/css/responsive.css') }}"
         onload='this.onload=null,this.rel="stylesheet"'> --}}
-        <!-- Preload Critical CSS -->
-        <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="{{ asset('/frontend/css/style.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}"></noscript>
-        <noscript><link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}"></noscript>
+    <!-- Preload Critical CSS -->
+    <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ asset('/frontend/css/style.css') }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
+    </noscript>
+    <noscript>
+        <link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}">
+    </noscript>
 
-        <!-- Load Non-Critical CSS Asynchronously -->
-        <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-        <link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-        <link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-        <link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-        <link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-        <link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-        <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-        <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-        <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
-        <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    <!-- Load Non-Critical CSS Asynchronously -->
+    <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
 
-        <!-- Minified & Combined CSS (Optional for performance) -->
-        <link rel="stylesheet" href="{{ asset('/frontend/css/all.min.css') }}">
+    <!-- Minified & Combined CSS (Optional for performance) -->
+    <link rel="stylesheet" href="{{ asset('/frontend/css/all.min.css') }}">
 
     {{-- <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style">
     <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
@@ -144,8 +160,8 @@
     <div class=tj-offcanvas-area>
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
             <div class="logo-area text-center">
-                <a href="{{ route('welcome') }}"><img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}" width="200" height="70" alt="Logo"
-                        ></a>
+                <a href="{{ route('welcome') }}"><img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}"
+                        width="200" height="70" alt="Logo"></a>
             </div>
             <div class=offcanvas-icon>
                 <a id="canva_close" href="#" aria-label="Close Menu">
@@ -183,7 +199,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script>
+    {{-- <script>
         setTimeout(function() {
             var Tawk_API = Tawk_API || {},
                 Tawk_LoadStart = new Date;
@@ -208,8 +224,8 @@
     <script src="{{ asset('/frontend/js/odometer.min.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/sal.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}" defer></script>
-    <script src="{{ asset('/frontend/js/main.js') }}" defer></script>
-    {{-- <script>
+    <script src="{{ asset('/frontend/js/main.js') }}" defer></script> --}}
+    <script>
         var Tawk_API = Tawk_API || {},
             Tawk_LoadStart = new Date;
         ! function() {
@@ -240,7 +256,7 @@
     <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}"></script>
     <script src="{{ asset('/frontend/js/main.js') }}"></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js></script>
-    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js></script> --}}
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js></script>
     <script>
         $(document).ready(function() {
             var $emailInput = $('#email_newsletter');
@@ -420,14 +436,16 @@
         });
     </script> --}}
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             function setupIntlTelInput(e, n, t, o) {
                 if (e.classList.contains("iti-initialized")) return; // ✅ Prevent re-init
                 e.classList.add("iti-initialized");
 
                 function updateMask() {
                     if (o) o.destroy();
-                    o = IMask(e, { mask: "(000) 000-0000" });
+                    o = IMask(e, {
+                        mask: "(000) 000-0000"
+                    });
                     n.value = "+1";
                 }
 
@@ -435,13 +453,13 @@
                     separateDialCode: true,
                     initialCountry: "us",
                     onlyCountries: ["us"],
-                    allowDropdown: false, 
-                    showFlags: false, 
-                    utilsScript: false 
+                    allowDropdown: false,
+                    showFlags: false,
+                    utilsScript: false
                 });
 
                 e.addEventListener("input", updateMask);
-                e.addEventListener("blur", function () {
+                e.addEventListener("blur", function() {
                     if (!t.isValidNumber()) {
                         console.error(`Invalid phone number (${e.id})`);
                         return false;
@@ -451,13 +469,15 @@
             }
 
             if ($("#phone").length) {
-                setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"), undefined, undefined);
+                setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"),
+                    undefined, undefined);
             }
             if ($("#phone2").length) {
-                setupIntlTelInput(document.querySelector("#phone2"), document.querySelector("#country_code2"), undefined, undefined);
+                setupIntlTelInput(document.querySelector("#phone2"), document.querySelector("#country_code2"),
+                    undefined, undefined);
             }
         });
-    </script>    
+    </script>
     <script>
         window.onload = function() {
             document.querySelectorAll(".lazy-bg").forEach((element) => {
@@ -499,7 +519,7 @@
             function i(i, n, e) {
                 $(document).on("change", i, (function() {
                     $(this).is(":checked") ? ($(n).show(), $(e).attr("required", !0)) : ($(n)
-                    .hide(), $(e).val(""), $(e).removeAttr("required"))
+                        .hide(), $(e).val(""), $(e).removeAttr("required"))
                 }))
             }
             i("#available_at_auction", ".div-link", "#link"), i("#modification", ".div-modify_info", "#c")
