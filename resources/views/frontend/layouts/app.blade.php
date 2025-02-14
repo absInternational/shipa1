@@ -477,31 +477,38 @@
         //             undefined, undefined);
         //     }
         // });
-        document.getElementById("phone").addEventListener("input", function () {
-        let allowedPrefixes = [
-            '205', '251', '256', '334', '938', '907', '480', '520', '602', '623', '928', '327', '479',
-            '501', '870', '209', '213', '279', '310', '323', '341', '408', '415', '424', '442', '510',
-            '530', '559', '562', '619', '626', '628', '650', '657', '661', '707', '714', '747', '752',
-            '760', '805', '818', '820', '831', '858', '909', '916', '925', '949', '951', '303', '719',
-            '720', '970', '203', '475', '860', '959', '302', '239', '305', '321', '352', '386', '407',
-            '448', '561', '656', '727', '754', '772', '786', '813', '850', '863', '904', '941', '954'
-        ];
+        document.addEventListener("DOMContentLoaded", function () {
+            let phoneInput = document.getElementById("phone");
 
-        let phoneInput = document.getElementById("phone");
-        let errorMessage = document.querySelector(".error-message"); // Using class instead of ID
-        let inputValue = phoneInput.value.trim();
-        
-        // Extract first 3 digits
-        let prefix = inputValue.substring(0, 3);
+            // Create and append the error message span dynamically
+            let errorMessage = document.createElement("span");
+            errorMessage.classList.add("error-message");
+            phoneInput.parentNode.appendChild(errorMessage);
 
-        if (inputValue.length >= 3 && !allowedPrefixes.includes(prefix)) {
-            phoneInput.classList.add("error-border");
-            errorMessage.innerText = "Invalid country code prefix.";
-        } else {
-            phoneInput.classList.remove("error-border");
-            errorMessage.innerText = "";
-        }
-    });
+            phoneInput.addEventListener("input", function () {
+                let allowedPrefixes = [
+                    '205', '251', '256', '334', '938', '907', '480', '520', '602', '623', '928', '327', '479',
+                    '501', '870', '209', '213', '279', '310', '323', '341', '408', '415', '424', '442', '510',
+                    '530', '559', '562', '619', '626', '628', '650', '657', '661', '707', '714', '747', '752',
+                    '760', '805', '818', '820', '831', '858', '909', '916', '925', '949', '951', '303', '719',
+                    '720', '970', '203', '475', '860', '959', '302', '239', '305', '321', '352', '386', '407',
+                    '448', '561', '656', '727', '754', '772', '786', '813', '850', '863', '904', '941', '954'
+                ];
+
+                let inputValue = phoneInput.value.trim();
+                
+                // Extract first 3 digits
+                let prefix = inputValue.substring(0, 3);
+
+                if (inputValue.length >= 3 && !allowedPrefixes.includes(prefix)) {
+                    phoneInput.classList.add("error-border");
+                    errorMessage.innerText = "Invalid country code prefix.";
+                } else {
+                    phoneInput.classList.remove("error-border");
+                    errorMessage.innerText = "";
+                }
+            });
+        });
     </script>
     <script>
         window.onload = function() {
