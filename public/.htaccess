@@ -55,14 +55,14 @@
     </FilesMatch>
 
     # Add security headers
-    Header always append X-Frame-Options SAMEORIGIN
-    Header set X-Content-Type-Options nosniff
-    Header set X-XSS-Protection "1; mode=block"
-    Header set Content-Security-Policy "script-src 'self'; object-src 'none';"
-    Header set X-Download-Options "noopen"
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
-    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    # Header always append X-Frame-Options SAMEORIGIN
+    # Header set X-Content-Type-Options nosniff
+    # Header set X-XSS-Protection "1; mode=block"
+    # Header set Content-Security-Policy "script-src 'self'; object-src 'none';"
+    # Header set X-Download-Options "noopen"
+    # Header set Referrer-Policy "strict-origin-when-cross-origin"
+    # Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
     # Set no-cache for certain headers
     Header set Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
