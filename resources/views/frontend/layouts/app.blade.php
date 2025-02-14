@@ -80,18 +80,18 @@
         <link rel="stylesheet" href="{{ asset('/frontend/css/all.min.css') }}">
 
     {{-- <link rel="preload" href="{{ asset('/frontend/css/bootstrap.min.css') }}" as="style">
-<link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" media="print" onload="this.media='all'"> --}}
+    <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/meanmenu.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/sal.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/magnific-popup.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/swiper.min.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/owl.carousel.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/icons.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/odometer.min.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/nice-select.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/public/frontend/css/style.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/public/frontend/css/responsive.css') }}" media="print" onload="this.media='all'"> --}}
     <meta name=csrf-token content="{{ csrf_token() }}">
     <link rel=preload href=https://code.jquery.com/jquery-3.6.0.min.js as=script>
     <link rel=preload href=https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css as=style>
@@ -435,8 +435,9 @@
                     separateDialCode: true,
                     initialCountry: "us",
                     onlyCountries: ["us"],
-                    showFlags: false, // ✅ No flags
-                    utilsScript: false // ✅ No extra scripts
+                    allowDropdown: false, 
+                    showFlags: false, 
+                    utilsScript: false 
                 });
 
                 e.addEventListener("input", updateMask);
