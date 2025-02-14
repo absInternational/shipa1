@@ -419,7 +419,8 @@
             }
         });
     </script> --}}
-    <script>
+    
+    {{-- <script>
         $(document).ready(function () {
             function setupIntlTelInput(e, n, t, o) {
                 if (e.classList.contains("iti-initialized")) return; // ✅ Prevent re-init
@@ -802,6 +803,6 @@
                 i.style.cssText = "opacity: 1; visibility: visible;"
             }
         }))
-    </script>
+    </script> --}}
 </body>
 </html>

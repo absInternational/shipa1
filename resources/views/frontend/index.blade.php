@@ -536,7 +536,8 @@ delivery. We focus on your satisfaction with reliable, affordable services.') @s
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">@include('partials.multi-form')
+                    <div class="col-lg-6" data-sal="slide-down" data-sal-duration="800">
+                        {{-- @include('partials.multi-form') --}}
                     </div>
             </div>
         </div>
