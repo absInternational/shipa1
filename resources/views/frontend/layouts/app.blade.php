@@ -200,7 +200,7 @@
     <script src="{{ asset('/frontend/js/bootstrap.min.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/meanmenu.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/imagesloaded.pkgd.min.js') }}" defer></script>
-    <script src="{{ asset('/frontend/js/isotope.pkgd.min.js') }}" defer></script>
+    {{-- <script src="{{ asset('/frontend/js/isotope.pkgd.min.js') }}" defer></script> --}}
     <script src="{{ asset('/frontend/js/jquery.magnific-popup.min.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/swiper.min.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/owl.carousel.js') }}" defer></script>
