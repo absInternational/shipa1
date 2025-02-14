@@ -422,37 +422,33 @@
     <script>
         $(document).ready(function () {
             function setupIntlTelInput(e, n, t, o) {
+                if (e.classList.contains("iti-initialized")) return; // ✅ Prevent re-init
+                e.classList.add("iti-initialized");
+
                 function updateMask() {
-                    const selectedCountry = t.getSelectedCountryData(),
-                        maskPattern = {
-                            us: "(000) 000-0000"
-                        }[selectedCountry.iso2] || "";
                     if (o) o.destroy();
-                    if (maskPattern) {
-                        o = IMask(e, { mask: maskPattern });
-                    }
-                    n.value = selectedCountry.dialCode;
+                    o = IMask(e, { mask: "(000) 000-0000" });
+                    n.value = "+1";
                 }
-    
-                if (t = window.intlTelInput(e, {
+
+                t = window.intlTelInput(e, {
                     separateDialCode: true,
                     initialCountry: "us",
                     onlyCountries: ["us"],
-                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-                    flagsImagePath: "https://www.shipa1.com/public/frontend/images/icon/flags.webp"
-                })) {
-                    e.addEventListener("input", updateMask);
-                    e.addEventListener("countrychange", updateMask);
-                    e.addEventListener("blur", function () {
-                        if (!t.isValidNumber()) {
-                            console.error(`Invalid phone number (${e.id})`);
-                            return false;
-                        }
-                    });
-                    updateMask();
-                }
+                    showFlags: false, // ✅ No flags
+                    utilsScript: false // ✅ No extra scripts
+                });
+
+                e.addEventListener("input", updateMask);
+                e.addEventListener("blur", function () {
+                    if (!t.isValidNumber()) {
+                        console.error(`Invalid phone number (${e.id})`);
+                        return false;
+                    }
+                });
+                updateMask();
             }
-    
+
             if ($("#phone").length) {
                 setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"), undefined, undefined);
             }
