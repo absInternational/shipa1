@@ -742,167 +742,41 @@
         }))
     </script>
     <script>
-        // document.addEventListener("DOMContentLoaded", (function() {
-        //     document.querySelectorAll(".validate-form").forEach((function(e) {
-        //         e.addEventListener("submit", (function(t) {
-        //             var r = !0;
-        //             e.querySelectorAll("[required]").forEach((function(e) {
-        //                 var t = "err" + e.name.replace("[]", ""),
-        //                     n = function(e, t) {
-        //                         let r = e.parentNode.querySelector("." + t);
-        //                         return r || (r = document.createElement(
-        //                                     "span"), r.className = t +
-        //                                 " error-message", r.style.color =
-        //                                 "red", e.parentNode.appendChild(r)),
-        //                             r
-        //                     }(e, t);
-        //                 if (!e.value || "SELECT" === e.tagName && "" === e
-        //                     .value) n.textContent = "SELECT" === e.tagName ?
-        //                     "Please select an option." : e.name +
-        //                     " is required.", e.style.border =
-        //                     "2px solid red", r = !1;
-        //                 else if ("tel" === e.type && "undefined" !=
-        //                     typeof iti) {
-        //                     iti.getNumber();
-        //                     iti.isValidNumber() ? (n.textContent = "", e
-        //                         .style.border = "") : (n.textContent =
-        //                         "Valid phone number is required.", e
-        //                         .style.border = "2px solid red", r = !1)
-        //                 } else "email" !== e.type || /\S+@\S+\.\S+/.test(e
-        //                     .value) ? (n.textContent = "", e.style
-        //                     .border = "") : (n.textContent =
-        //                     "Valid email is required.", e.style.border =
-        //                     "2px solid red", r = !1)
-        //             })), r || t.preventDefault()
-        //         }))
-        //     }))
-        // }))
-        $(document).ready(function () {
-            function setupIntlTelInput(phoneInput, countryCodeInput) {
-                if (phoneInput.classList.contains("iti-initialized")) return;
-                phoneInput.classList.add("iti-initialized");
-
-                // Initialize intlTelInput
-                let iti = window.intlTelInput(phoneInput, {
-                    separateDialCode: true,
-                    initialCountry: "us",
-                    onlyCountries: ["us"],
-                    allowDropdown: false,
-                    showFlags: false,
-                    utilsScript: false
-                });
-
-                // Masking function
-                function updateMask() {
-                    IMask(phoneInput, {
-                        mask: "(000) 000-0000"
-                    });
-                    countryCodeInput.value = "+1"; // Set country code
-                }
-
-                updateMask(); // Apply mask on load
-
-                // Validate phone number on input and blur
-                function validatePhoneNumber() {
-                    let errorClass = "err" + phoneInput.id;
-                    let errorMessage = getOrCreateErrorElement(phoneInput, errorClass);
-
-                    if (!iti.isValidNumber()) {
-                        errorMessage.textContent = "Valid phone number is required.";
-                        phoneInput.style.border = "2px solid red";
-                        return false;
-                    } else {
-                        errorMessage.textContent = "";
-                        phoneInput.style.border = "";
-                        return true;
-                    }
-                }
-
-                phoneInput.addEventListener("input", validatePhoneNumber);
-                phoneInput.addEventListener("blur", validatePhoneNumber);
-            }
-
-            // Apply setup to phone fields
-            if ($("#phone").length) {
-                setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"));
-            }
-            if ($("#phone2").length) {
-                setupIntlTelInput(document.querySelector("#phone2"), document.querySelector("#country_code2"));
-            }
-
-            // Form Validation including phone validation
-            $(".validate-form").on("submit", function (event) {
-                let isValid = true;
-
-                $(this).find("[required]").each(function () {
-                    if (!validateField(this)) {
-                        isValid = false;
-                    }
-                });
-
-                if ($("#phone").length && !validatePhoneNumber(document.querySelector("#phone"))) {
-                    isValid = false;
-                }
-                if ($("#phone2").length && !validatePhoneNumber(document.querySelector("#phone2"))) {
-                    isValid = false;
-                }
-
-                if (!isValid) {
-                    event.preventDefault(); // Stop form submission if any validation fails
-                }
-            });
-
-            // Function to validate a single input field
-            function validateField(input) {
-                let errorClass = "err" + input.name.replace("[]", "");
-                let errorMessage = getOrCreateErrorElement(input, errorClass);
-                let isValid = true;
-
-                if (!input.value || (input.tagName === "SELECT" && input.value === "")) {
-                    errorMessage.textContent = input.tagName === "SELECT" ? "Please select an option." : input.name + " is required.";
-                    input.style.border = "2px solid red";
-                    isValid = false;
-                } else if (input.type === "email" && !/\S+@\S+\.\S+/.test(input.value)) {
-                    errorMessage.textContent = "Valid email is required.";
-                    input.style.border = "2px solid red";
-                    isValid = false;
-                } else {
-                    errorMessage.textContent = "";
-                    input.style.border = "";
-                }
-
-                return isValid;
-            }
-
-            // Function to create or get an error message element
-            function getOrCreateErrorElement(input, className) {
-                let errorElement = input.parentNode.querySelector("." + className);
-                if (!errorElement) {
-                    errorElement = document.createElement("span");
-                    errorElement.className = className + " error-message";
-                    errorElement.style.color = "red";
-                    input.parentNode.appendChild(errorElement);
-                }
-                return errorElement;
-            }
-
-            // Validate phone number separately
-            function validatePhoneNumber(phoneInput) {
-                let iti = window.intlTelInputGlobals.getInstance(phoneInput);
-                let errorClass = "err" + phoneInput.id;
-                let errorMessage = getOrCreateErrorElement(phoneInput, errorClass);
-
-                if (!iti || !iti.isValidNumber()) {
-                    errorMessage.textContent = "Valid phone number is required.";
-                    phoneInput.style.border = "2px solid red";
-                    return false;
-                } else {
-                    errorMessage.textContent = "";
-                    phoneInput.style.border = "";
-                    return true;
-                }
-            }
-        });
+        document.addEventListener("DOMContentLoaded", (function() {
+            document.querySelectorAll(".validate-form").forEach((function(e) {
+                e.addEventListener("submit", (function(t) {
+                    var r = !0;
+                    e.querySelectorAll("[required]").forEach((function(e) {
+                        var t = "err" + e.name.replace("[]", ""),
+                            n = function(e, t) {
+                                let r = e.parentNode.querySelector("." + t);
+                                return r || (r = document.createElement(
+                                            "span"), r.className = t +
+                                        " error-message", r.style.color =
+                                        "red", e.parentNode.appendChild(r)),
+                                    r
+                            }(e, t);
+                        if (!e.value || "SELECT" === e.tagName && "" === e
+                            .value) n.textContent = "SELECT" === e.tagName ?
+                            "Please select an option." : e.name +
+                            " is required.", e.style.border =
+                            "2px solid red", r = !1;
+                        else if ("tel" === e.type && "undefined" !=
+                            typeof iti) {
+                            iti.getNumber();
+                            iti.isValidNumber() ? (n.textContent = "", e
+                                .style.border = "") : (n.textContent =
+                                "Valid phone number is required.", e
+                                .style.border = "2px solid red", r = !1)
+                        } else "email" !== e.type || /\S+@\S+\.\S+/.test(e
+                            .value) ? (n.textContent = "", e.style
+                            .border = "") : (n.textContent =
+                            "Valid email is required.", e.style.border =
+                            "2px solid red", r = !1)
+                    })), r || t.preventDefault()
+                }))
+            }))
+        }))
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", (function() {
