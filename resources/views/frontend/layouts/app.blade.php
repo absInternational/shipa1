@@ -742,41 +742,117 @@
         }))
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", (function() {
-            document.querySelectorAll(".validate-form").forEach((function(e) {
-                e.addEventListener("submit", (function(t) {
-                    var r = !0;
-                    e.querySelectorAll("[required]").forEach((function(e) {
-                        var t = "err" + e.name.replace("[]", ""),
-                            n = function(e, t) {
-                                let r = e.parentNode.querySelector("." + t);
-                                return r || (r = document.createElement(
-                                            "span"), r.className = t +
-                                        " error-message", r.style.color =
-                                        "red", e.parentNode.appendChild(r)),
-                                    r
-                            }(e, t);
-                        if (!e.value || "SELECT" === e.tagName && "" === e
-                            .value) n.textContent = "SELECT" === e.tagName ?
-                            "Please select an option." : e.name +
-                            " is required.", e.style.border =
-                            "2px solid red", r = !1;
-                        else if ("tel" === e.type && "undefined" !=
-                            typeof iti) {
-                            iti.getNumber();
-                            iti.isValidNumber() ? (n.textContent = "", e
-                                .style.border = "") : (n.textContent =
-                                "Valid phone number is required.", e
-                                .style.border = "2px solid red", r = !1)
-                        } else "email" !== e.type || /\S+@\S+\.\S+/.test(e
-                            .value) ? (n.textContent = "", e.style
-                            .border = "") : (n.textContent =
-                            "Valid email is required.", e.style.border =
-                            "2px solid red", r = !1)
-                    })), r || t.preventDefault()
-                }))
-            }))
-        }))
+        // document.addEventListener("DOMContentLoaded", (function() {
+        //     document.querySelectorAll(".validate-form").forEach((function(e) {
+        //         e.addEventListener("submit", (function(t) {
+        //             var r = !0;
+        //             e.querySelectorAll("[required]").forEach((function(e) {
+        //                 var t = "err" + e.name.replace("[]", ""),
+        //                     n = function(e, t) {
+        //                         let r = e.parentNode.querySelector("." + t);
+        //                         return r || (r = document.createElement(
+        //                                     "span"), r.className = t +
+        //                                 " error-message", r.style.color =
+        //                                 "red", e.parentNode.appendChild(r)),
+        //                             r
+        //                     }(e, t);
+        //                 if (!e.value || "SELECT" === e.tagName && "" === e
+        //                     .value) n.textContent = "SELECT" === e.tagName ?
+        //                     "Please select an option." : e.name +
+        //                     " is required.", e.style.border =
+        //                     "2px solid red", r = !1;
+        //                 else if ("tel" === e.type && "undefined" !=
+        //                     typeof iti) {
+        //                     iti.getNumber();
+        //                     iti.isValidNumber() ? (n.textContent = "", e
+        //                         .style.border = "") : (n.textContent =
+        //                         "Valid phone number is required.", e
+        //                         .style.border = "2px solid red", r = !1)
+        //                 } else "email" !== e.type || /\S+@\S+\.\S+/.test(e
+        //                     .value) ? (n.textContent = "", e.style
+        //                     .border = "") : (n.textContent =
+        //                     "Valid email is required.", e.style.border =
+        //                     "2px solid red", r = !1)
+        //             })), r || t.preventDefault()
+        //         }))
+        //     }))
+        // }))
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".validate-form").forEach(function (form) {
+                form.addEventListener("submit", function (event) {
+                    if (!validateForm(form)) {
+                        event.preventDefault(); // Prevent form submission if validation fails
+                    }
+                });
+
+                // Add real-time validation on input and change
+                form.querySelectorAll("[required]").forEach(function (input) {
+                    input.addEventListener("input", function () {
+                        validateField(input);
+                    });
+
+                    input.addEventListener("change", function () {
+                        validateField(input);
+                    });
+                });
+            });
+        });
+
+        // Function to validate the entire form
+        function validateForm(form) {
+            let isValid = true;
+            form.querySelectorAll("[required]").forEach(function (input) {
+                if (!validateField(input)) {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+
+        // Function to validate a single input field
+        function validateField(input) {
+            let errorClass = "err" + input.name.replace("[]", "");
+            let errorMessage = getOrCreateErrorElement(input, errorClass);
+            let isValid = true;
+
+            if (!input.value || (input.tagName === "SELECT" && input.value === "")) {
+                errorMessage.textContent = input.tagName === "SELECT" ? "Please select an option." : input.name + " is required.";
+                input.style.border = "2px solid red";
+                isValid = false;
+            } else if (input.type === "tel" && typeof iti !== "undefined") {
+                iti.getNumber();
+                if (!iti.isValidNumber()) {
+                    errorMessage.textContent = "Valid phone number is required.";
+                    input.style.border = "2px solid red";
+                    isValid = false;
+                } else {
+                    errorMessage.textContent = "";
+                    input.style.border = "";
+                }
+            } else if (input.type === "email" && !/\S+@\S+\.\S+/.test(input.value)) {
+                errorMessage.textContent = "Valid email is required.";
+                input.style.border = "2px solid red";
+                isValid = false;
+            } else {
+                errorMessage.textContent = "";
+                input.style.border = "";
+            }
+
+            return isValid;
+        }
+
+        // Function to create or get an error message element
+        function getOrCreateErrorElement(input, className) {
+            let errorElement = input.parentNode.querySelector("." + className);
+            if (!errorElement) {
+                errorElement = document.createElement("span");
+                errorElement.className = className + " error-message";
+                errorElement.style.color = "red";
+                input.parentNode.appendChild(errorElement);
+            }
+            return errorElement;
+        }
+
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", (function() {
