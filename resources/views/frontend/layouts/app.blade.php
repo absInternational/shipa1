@@ -436,78 +436,46 @@
         });
     </script> --}}
     <script>
-        // $(document).ready(function() {
-        //     function setupIntlTelInput(e, n, t, o) {
-        //         if (e.classList.contains("iti-initialized")) return; // ✅ Prevent re-init
-        //         e.classList.add("iti-initialized");
+        $(document).ready(function() {
+            function setupIntlTelInput(e, n, t, o) {
+                if (e.classList.contains("iti-initialized")) return; 
+                e.classList.add("iti-initialized");
 
-        //         function updateMask() {
-        //             if (o) o.destroy();
-        //             o = IMask(e, {
-        //                 mask: "(000) 000-0000"
-        //             });
-        //             n.value = "+1";
-        //         }
-
-        //         t = window.intlTelInput(e, {
-        //             separateDialCode: true,
-        //             initialCountry: "us",
-        //             onlyCountries: ["us"],
-        //             allowDropdown: false,
-        //             showFlags: false,
-        //             utilsScript: false
-        //         });
-
-        //         e.addEventListener("input", updateMask);
-        //         e.addEventListener("blur", function() {
-        //             if (!t.isValidNumber()) {
-        //                 console.error(`Invalid phone number (${e.id})`);
-        //                 return false;
-        //             }
-        //         });
-        //         updateMask();
-        //     }
-
-        //     if ($("#phone").length) {
-        //         setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"),
-        //             undefined, undefined);
-        //     }
-        //     if ($("#phone2").length) {
-        //         setupIntlTelInput(document.querySelector("#phone2"), document.querySelector("#country_code2"),
-        //             undefined, undefined);
-        //     }
-        // });
-        document.addEventListener("DOMContentLoaded", function () {
-            let phoneInput = document.getElementById("phone");
-
-            // Create and append the error message span dynamically
-            let errorMessage = document.createElement("span");
-            errorMessage.classList.add("error-message");
-            phoneInput.parentNode.appendChild(errorMessage);
-
-            phoneInput.addEventListener("input", function () {
-                let allowedPrefixes = [
-                    '205', '251', '256', '334', '938', '907', '480', '520', '602', '623', '928', '327', '479',
-                    '501', '870', '209', '213', '279', '310', '323', '341', '408', '415', '424', '442', '510',
-                    '530', '559', '562', '619', '626', '628', '650', '657', '661', '707', '714', '747', '752',
-                    '760', '805', '818', '820', '831', '858', '909', '916', '925', '949', '951', '303', '719',
-                    '720', '970', '203', '475', '860', '959', '302', '239', '305', '321', '352', '386', '407',
-                    '448', '561', '656', '727', '754', '772', '786', '813', '850', '863', '904', '941', '954'
-                ];
-
-                let inputValue = phoneInput.value.trim();
-                
-                // Extract first 3 digits
-                let prefix = inputValue.substring(0, 3);
-
-                if (inputValue.length >= 3 && !allowedPrefixes.includes(prefix)) {
-                    phoneInput.classList.add("error-border");
-                    errorMessage.innerText = "Invalid country code prefix.";
-                } else {
-                    phoneInput.classList.remove("error-border");
-                    errorMessage.innerText = "";
+                function updateMask() {
+                    if (o) o.destroy();
+                    o = IMask(e, {
+                        mask: "(000) 000-0000"
+                    });
+                    n.value = "+1";
                 }
-            });
+
+                t = window.intlTelInput(e, {
+                    separateDialCode: true,
+                    initialCountry: "us",
+                    onlyCountries: ["us"],
+                    allowDropdown: false,
+                    showFlags: false,
+                    utilsScript: false
+                });
+
+                e.addEventListener("input", updateMask);
+                e.addEventListener("blur", function() {
+                    if (!t.isValidNumber()) {
+                        console.error(`Invalid phone number (${e.id})`);
+                        return false;
+                    }
+                });
+                updateMask();
+            }
+
+            if ($("#phone").length) {
+                setupIntlTelInput(document.querySelector("#phone"), document.querySelector("#country_code"),
+                    undefined, undefined);
+            }
+            if ($("#phone2").length) {
+                setupIntlTelInput(document.querySelector("#phone2"), document.querySelector("#country_code2"),
+                    undefined, undefined);
+            }
         });
     </script>
     <script>
