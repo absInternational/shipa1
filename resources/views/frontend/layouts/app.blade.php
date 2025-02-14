@@ -144,8 +144,8 @@
     <div class=tj-offcanvas-area>
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
             <div class="logo-area text-center">
-                <a href="{{ route('welcome') }}"><img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}"
-                        alt=Logo></a>
+                <a href="{{ route('welcome') }}"><img src="{{ asset('/frontend/images/logo/LOGO NEW-2.webp') }}" width="200" height="70" alt="Logo"
+                        ></a>
             </div>
             <div class=offcanvas-icon>
                 <a id="canva_close" href="#" aria-label="Close Menu">
