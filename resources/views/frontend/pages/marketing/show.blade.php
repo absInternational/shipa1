@@ -109,14 +109,12 @@
     .tj-choose-us-section-service-construction-dynamic {
         background-image: url('{{ asset($marketing->img_one) }}');
         position: relative;
-        background-attachment: fixed;
         background-color: #000;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         padding-bottom: 50px;
         padding-top: 50px;
-        position: relative;
         background-attachment: fixed;
         }
 </Style>
