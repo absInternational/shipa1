@@ -50,7 +50,7 @@ Route::prefix('services')->group(function () {
     Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');
 });
 Route::get('/marketing', [FrontendController::class, 'marketing'])->name('marketing');
-Route::prefix('marketing')->group(function () {
+Route::prefix('')->group(function () {
     Route::get('/Vehicle-Transportation-In-Connecticut', [FrontendController::class, 'vehicleTransportInConnecticut'])->name('frontend.pages.marketing.vehicleTransportInConnecticut');
     Route::get('/Vehicle-Transportation-In-Newyork', [FrontendController::class, 'vehicleTransportInNewyork'])->name('frontend.pages.marketing.vehicleTransportInNewyork');
     Route::get('/Vehicle-Transportation-Florida', [FrontendController::class, 'vehicleTransportInFlorida'])->name('frontend.pages.marketing.vehicleTransportInFlorida');
@@ -114,7 +114,7 @@ Route::post('/order-form/store', [OrderFormController::class, 'store'])->name('o
 Route::post('/order-form/storeCard', [OrderFormController::class, 'storeCard'])->name('order.form.storeCard');
 Route::get('/zipcode-suggestions', [PortToPortController::class, 'zipcode']);
 Route::post('/order-form', [OrderFormController::class, 'getOrderDetails'])->name('get.order.details');
-Route::get('/{slug}', [MarketingController::class, 'preview'])->name('marketing.preview');
+Route::get('/marketing/{slug}', [MarketingController::class, 'preview'])->name('marketing.preview');
 Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
     Route::prefix('blogs')->group(function () {
