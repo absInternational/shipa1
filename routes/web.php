@@ -188,3 +188,10 @@ Route::get('/{slug}', [FrontendController::class, 'blogDetailsNoSlug'])
     ->name('blog.details.noSlug')
     ->where('slug', '[^/]+');
 Route::post('/lead-generation', [FrontendController::class, 'leadGeneration'])->name('lead.generation');
+
+Route::get('chat_dashboard', [\App\Http\Controllers\ChatController::class, 'index'])->name('chat.dashboard');
+Route::get('iframe', [\App\Http\Controllers\ChatController::class, 'iframe'])->name('chat.iframe');
+
+Route::post('chat', [\App\Http\Controllers\ChatController::class, 'chat'])->name('chat.post');
+Route::get('chat_history', [\App\Http\Controllers\ChatController::class, 'chat_history'])->name('chat.chat_history');
+Route::get('show_history', [\App\Http\Controllers\ChatController::class, 'show_history'])->name('chat.show_history');

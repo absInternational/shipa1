@@ -2,7 +2,7 @@
     <form action="{{ route('submit.quote') }}" method="post" class="rd-mailform validate-form target-top-1" novalidate id="calculatePriceFrom"
         data-parsley-validate data-parsley-errors-messages-disabled enctype="multipart/form-data">
         @csrf
-        @if ($errors->any())
+        @if (isset($errors) &&  count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
