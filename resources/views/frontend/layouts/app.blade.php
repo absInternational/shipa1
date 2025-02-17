@@ -225,7 +225,7 @@
     <script src="{{ asset('/frontend/js/sal.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/main.js') }}" defer></script> --}}
-    {{-- <script>
+    <script>
         var Tawk_API = Tawk_API || {},
             Tawk_LoadStart = new Date;
         ! function() {
@@ -234,9 +234,9 @@
             t.async = !0, t.src = "https://embed.tawk.to/6728df992480f5b4f5986b9c/1ibrqis6f", t.charset = "UTF-8", t
                 .setAttribute("crossorigin", "*"), e.parentNode.insertBefore(t, e)
         }()
-    </script> --}}
+    </script>
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -246,7 +246,7 @@
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
-    </script>
+    </script> --}}
     <!--End of Tawk.to Script-->
     <script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js></script>
     <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js></script>
