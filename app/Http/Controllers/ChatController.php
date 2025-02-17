@@ -11,6 +11,7 @@ use DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Str;
+use GuzzleHttp\Client;
 
 class ChatController extends Controller
 {
@@ -125,6 +126,21 @@ class ChatController extends Controller
             $thread->replied = ($request->user_id == 0) ? 0 : 1;
             $thread->save();
 
+            $ipAddress = $request->ip();
+            $client = new Client();
+            try {
+                $response = $client->get("http://ipinfo.io/{$ipAddress}/json");
+                $locationData = json_decode($response->getBody(), true);
+
+                $country = isset($locationData['country']) ? $locationData['country'] : '-';
+                $city = isset($locationData['city']) ? $locationData['city'] : '-';
+                $region = isset($locationData['region']) ? $locationData['region'] : '-';
+            } catch (\Exception $e) {
+                // Handle any errors gracefully
+                $country = '-';
+                $city = '-';
+                $region = '-';
+            }
 
             $chat = new Chat();
             $chat->thread_id = $thread->id;
@@ -132,6 +148,7 @@ class ChatController extends Controller
             $chat->receive_message = ($request->admin == 1) ? $request->input('content') : null ;
             $chat->date_created = date('Y-m-d');
             $chat->ip_address = $deviceId;
+            $chat->info_data = "{$country},{$city},{$region},{$ipAddress}";
             $chat->save();
             return response()->json(['data' => $chat, 'status' => 0]);;
 

@@ -110,6 +110,16 @@
         }
 
     </style>
+
+    <style>
+        .info-data {
+            font-size: 10px;
+            color: #777; /* Optional: You can use a light gray color for better readability */
+            display: block; /* Ensures it appears on a new line */
+            margin-top: 5px; /* Adds a little space between the message and the info */
+        }
+
+    </style>
     <audio id="audio_success" autostart="false">
         <source src="{{asset('public/success_sound.mp3')}}" type="audio/ogg">
         <source src="{{asset('public/success_sound.mp3')}}" type="audio/mpeg">
@@ -303,9 +313,9 @@
                     if(res.data.length > 0) {
                         $.each(res.data, function (index, value) {
                             if (value.receive_message) {
-                                make_response(null, value.receive_message);
+                                make_response(value,1);
                             } else {
-                                make_response(value.send_message, null);
+                                make_response(value,0);
                             }
                         })
                     }
@@ -313,27 +323,41 @@
             });
         }
 
-        function make_response(send_value,res){
+        function make_response(send_value, res) {
+            var info = '';
             $("#typingIndicator").hide();
-            //Populate sending message
-            if(send_value) {
-                $(".messages > .message").last().after('<div class="right message">' +
-                    '<p>' + send_value + '</p>' +
-                    '<img src="{{ asset('public/user.png') }}" alt="Avatar" style="width: 50px;height: 50px">' +
-                    '</div>');
-            }
-            if(res) {
-                //Populate receiving message
-                $(".messages > .message").last().after('<div class="left message">' +
-                    '<img src="{{ asset('public/favicon.webp') }}" alt="Avatar" style="width: 40px;height: 40px">' +
-                    '<p>' + res + '</p>' +
-                    '</div>');
+
+            if (res == 0) {
+                var final = send_value.send_message;
+                if (admin == 1 && send_value.info_data) {
+                    info = '<span class="info-data">' + send_value.info_data + '</span>';
+                }
+                $(".messages > .message").last().after(
+                    '<div class="right message">' +
+                    '<img src="{{ asset("public/user.png") }}" alt="Avatar" style="width: 50px;height: 50px">' +
+                    '<p>' + final + '</p>' +
+                    info + // Display info below the message
+                    '</div>'
+                );
+            } else {
+                var final = send_value.receive_message;
+                if (admin == 1 && send_value.info_data) {
+                    info = '<span class="info-data">' + send_value.info_data + '</span>';
+                }
+                $(".messages > .message").last().after(
+                    '<div class="left message">' +
+                    '<img src="{{ asset("public/favicon.webp") }}" alt="Avatar" style="width: 40px;height: 40px">' +
+                    '<p>' + final + '</p>' +
+                    info + // Display info below the message
+                    '</div>'
+                );
             }
 
             var messagesContainer = $(".messages");
             messagesContainer.scrollTop(messagesContainer.prop("scrollHeight"));
             $(document).scrollTop($(document).height());
         }
+
         //Broadcast messages
 
         $("form").submit(function (event) {
