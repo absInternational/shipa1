@@ -14,6 +14,7 @@ use App\Models\ReviewSite;
 use App\Models\NationWideTransport;
 use App\Models\Marketing;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Artisan;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Cache;
 use Hamcrest\Core\IsNot;
@@ -23,6 +24,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
+//        $output = Artisan::call('optimize');
         // $userId = 14;
         // $makes = VehicleName::where('UserId', $userId)
         //     ->where('status', 0)
