@@ -21,6 +21,15 @@ use App\Http\Controllers\Admin\PortToPortController;
 use App\Http\Controllers\Admin\PortDetailController;
 use App\Http\Controllers\Admin\NationWideTransportController;
 use App\Http\Controllers\MarketingController;
+use App\Http\Controllers\ChatController;
+
+
+Route::get('chat_dashboard', [ChatController::class, 'index'])->name('chat.dashboard');
+Route::get('iframe', [ChatController::class, 'iframe'])->name('chat.iframe');
+
+Route::post('chat', [ChatController::class, 'chat'])->name('chat.post');
+Route::get('chat_history', [ChatController::class, 'chat_history'])->name('chat.chat_history');
+Route::get('show_history', [ChatController::class, 'show_history'])->name('chat.show_history');
 
 Route::get('/', [FrontendController::class, 'index'])->name('welcome');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -189,9 +198,3 @@ Route::get('/{slug}', [FrontendController::class, 'blogDetailsNoSlug'])
     ->where('slug', '[^/]+');
 Route::post('/lead-generation', [FrontendController::class, 'leadGeneration'])->name('lead.generation');
 
-Route::get('chat_dashboard', [\App\Http\Controllers\ChatController::class, 'index'])->name('chat.dashboard');
-Route::get('iframe', [\App\Http\Controllers\ChatController::class, 'iframe'])->name('chat.iframe');
-
-Route::post('chat', [\App\Http\Controllers\ChatController::class, 'chat'])->name('chat.post');
-Route::get('chat_history', [\App\Http\Controllers\ChatController::class, 'chat_history'])->name('chat.chat_history');
-Route::get('show_history', [\App\Http\Controllers\ChatController::class, 'show_history'])->name('chat.show_history');

@@ -152,6 +152,196 @@
             ]
         }
     </script>
+
+
+    <style>
+        .css-1h1ne2e {
+            cursor: pointer;
+            max-width: 100%;
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-items: flex-end;
+            -webkit-box-align: flex-end;
+            -ms-flex-align: flex-end;
+            align-items: flex-end;
+            will-change: width, height, transform, opacity;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            padding: 0.8em 0.8em 0 0.8em;
+            /*right: 0; remove by mohsin*/
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+            --primary-color: #2000F0;
+            --secondary-color: #FFFFFF;
+            --tertiary-color: #E3E3E3;
+        }
+        .css-1aasxu6 {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex
+        ;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            --primary-color: #2000F0;
+            --secondary-color: #FFFFFF;
+            --tertiary-color: #E3E3E3;
+        }
+        .css-1g9ek8d {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex
+        ;
+            min-width: 0;
+            --primary-color: #2000F0;
+            --secondary-color: #FFFFFF;
+            --tertiary-color: #E3E3E3;
+        }
+        .css-bubhx7 {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex
+        ;
+            min-width: 0;
+            --primary-color: #2000F0;
+            --secondary-color: #FFFFFF;
+            --tertiary-color: #E3E3E3;
+            -webkit-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+        }
+        .css-138p0k2 {
+            position: relative;
+            width: 255px;
+            height: 50px;
+            box-shadow: rgba(0, 0, 0, 0.125) 0px 0.362176px 0.941657px -1px, rgba(0, 0, 0, 0.18) 0px 3px 7.8px -2px;
+            background: #FFFFFF;
+            border-radius: 8px 8px 0px 0px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex
+        ;
+            padding: 0 0.9em;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            --primary-color: #2000F0;
+            --secondary-color: #FFFFFF;
+            --tertiary-color: #E3E3E3;
+            position: relative;
+            color: #FFFFFF;
+            background-color: #00A1EF;
+        }
+        .css-e4pgre {
+            margin: 1em 0;
+            --primary-color: #2000F0;
+            --secondary-color: #FFFFFF;
+            --tertiary-color: #E3E3E3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-right: 4px;
+            --primary-color: #2000F0;
+            --secondary-color: #FFFFFF;
+            --tertiary-color: #E3E3E3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .css-1iovl8i {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            background: transparent;
+            border: 0;
+            display: inline-block;
+            margin: 0;
+            padding: 0.5em;
+            color: inherit;
+            cursor: pointer;
+            --primary-color: #2000F0;
+            --secondary-color: #FFFFFF;
+            --tertiary-color: #E3E3E3;
+            padding: 0 .5em;
+            padding: 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex
+        ;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border: 0;
+            border-radius: 6px;
+            --primary-color: #2000F0;
+            --secondary-color: #FFFFFF;
+            --tertiary-color: #E3E3E3;
+        }
+    </style>
+    <style>
+        #chat-widget {
+            display: none;
+            transform-origin: top center;
+        }
+
+        /* Flip and bounce animation */
+        @keyframes flipInAirBounce {
+            0% {
+                transform: perspective(600px) rotateX(90deg);
+                opacity: 0;
+            }
+            60% {
+                transform: perspective(600px) rotateX(0deg);
+                opacity: 1;
+            }
+            80% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .flip-bounce {
+            animation: flipInAirBounce 0.8s ease-out;
+        }
+    </style>
+    <style>
+        .inactivee {
+            pointer-events: none; /* Disable clicks only when the iframe is hidden */
+        }
+        .activee {
+            pointer-events: auto; /* Disable clicks only when the iframe is hidden */
+        }
+
+
+    </style>
 </head>
 
 <body>
@@ -175,7 +365,44 @@
             leads thanks to our work.
         </p>
     </div>
-    @include('frontend.includes.header') @yield('content') @if (Route::currentRouteName() !== 'order.tracking')
+    @include('frontend.includes.header')
+    @yield('content')
+    <div class="chat">
+        <div id="chat-widget-container" style="opacity: 1; visibility: visible; z-index: 1000; position: fixed; bottom: 0px; width: 450px; height: 625px; max-width: 100%; max-height: calc(100% + 0px); min-height: 0px; min-width: 0px; background-color: transparent; border: 0px; overflow: hidden; transition: none !important;right:0">
+            <iframe allow="clipboard-read; clipboard-write; autoplay; microphone *; camera *; display-capture *; picture-in-picture *; fullscreen *;"
+                    id="chat-widget"
+                    name="chat-widget"
+                    title="LiveChat chat widget"
+                    scrolling="no"
+                    style="width: 100%; height: 100%; min-height: 0px; min-width: 0px; margin: 0px; padding: 0px; background-image: none; background-position: 0% 0%; background-size: initial; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-width: 0px; float: none; color-scheme: normal; position: absolute; inset: 0px; transition: none !important; display: none; visibility: visible;">
+            </iframe>                            <div dir="ltr" role="main" data-lc-id="0" class="css-1h1ne2e e1558m8u1" >
+                <div class="css-1aasxu6 e131382t0">
+                    <div class="css-1g9ek8d e1kv8om20"></div>
+                    <div class="css-bubhx7 e1kv8om20">
+                        <div data-lc-id="1" class="css-138p0k2 e16i86ec1" id="chat_with_us">
+                            <p class="css-e4pgre e16i86ec0">Chat Us Now</p>
+                            <button type="button" aria-label="Open LiveChat chat widget"
+                                    class="e1mwfyk10 css-1iovl8i ejbfa1m0">
+                                <div class="css-1potzn5 e1dmt1bi3">
+                                    <svg color="inherit" viewBox="0 0 32 32" class="css-1usdo54">
+                                        <path fill="#FFFFFF"
+                                              d="M12.63,26.46H8.83a6.61,6.61,0,0,1-6.65-6.07,89.05,89.05,0,0,1,0-11.2A6.5,6.5,0,0,1,8.23,3.25a121.62,121.62,0,0,1,15.51,0A6.51,6.51,0,0,1,29.8,9.19a77.53,77.53,0,0,1,0,11.2,6.61,6.61,0,0,1-6.66,6.07H19.48L12.63,31V26.46"></path>
+                                        <path fill="#00A1EF"
+                                              d="M19.57,21.68h3.67a2.08,2.08,0,0,0,2.11-1.81,89.86,89.86,0,0,0,0-10.38,1.9,1.9,0,0,0-1.84-1.74,113.15,113.15,0,0,0-15,0A1.9,1.9,0,0,0,6.71,9.49a74.92,74.92,0,0,0-.06,10.38,2,2,0,0,0,2.1,1.81h3.81V26.5Z"
+                                              class="css-1adcsh3 eam5rsy0"></path>
+                                    </svg>
+                                    <div class="css-anyrkw e1dmt1bi2"></div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @if (Route::currentRouteName() !== 'order.tracking')
         @include('frontend.includes.sidebtn-track')
     @endif @include('frontend.includes.footer') @yield('extraScript')
     <div class="logiland-scroll-top progress-done">
@@ -225,16 +452,45 @@
     <script src="{{ asset('/frontend/js/sal.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/jquery.nice-select.min.js') }}" defer></script>
     <script src="{{ asset('/frontend/js/main.js') }}" defer></script> --}}
+
+
+{{--    remove by mohsin--}}
+{{--    <script>--}}
+{{--        var Tawk_API = Tawk_API || {},--}}
+{{--            Tawk_LoadStart = new Date;--}}
+{{--        ! function() {--}}
+{{--            var t = document.createElement("script"),--}}
+{{--                e = document.getElementsByTagName("script")[0];--}}
+{{--            t.async = !0, t.src = "https://embed.tawk.to/6728df992480f5b4f5986b9c/1ibrqis6f", t.charset = "UTF-8", t--}}
+{{--                .setAttribute("crossorigin", "*"), e.parentNode.insertBefore(t, e)--}}
+{{--        }()--}}
+{{--    </script>--}}
+
     <script>
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date;
-        ! function() {
-            var t = document.createElement("script"),
-                e = document.getElementsByTagName("script")[0];
-            t.async = !0, t.src = "https://embed.tawk.to/6728df992480f5b4f5986b9c/1ibrqis6f", t.charset = "UTF-8", t
-                .setAttribute("crossorigin", "*"), e.parentNode.insertBefore(t, e)
-        }()
+        $('#chat_with_us').on('click', function () {
+            if ($('#chat-widget').is(':visible')) {
+                $('#chat-widget').removeClass('flip-bounce');
+                $('#chat-widget').slideUp(300, function () {
+                    $('#chat-widget-container').addClass('inactivee');
+                    $('#chat_with_us').addClass('activee');
+                });
+            } else {
+                $('#chat-widget-container').removeClass('inactivee');
+
+                $('#chat-widget').css('display', 'block').addClass('flip-bounce'); // Show and animate the chat widget
+            }
+        });
+
+        $(window).on('load', function () {
+            // Set the src of the iframe after the page is fully loaded
+            $('#chat-widget').attr('src', "https://www.shipa1.com/chat_dashboard?user_id=0");
+
+            // $('#chat-widget').fadeIn(300);
+        });
+
+
     </script>
+
     <!--Start of Tawk.to Script-->
     {{-- <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
