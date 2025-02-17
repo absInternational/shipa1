@@ -110,6 +110,14 @@
         background-image: url('{{ asset($marketing->img_one) }}');
         position: relative;
         background-attachment: fixed;
+        background-color: #000;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        position: relative;
+        background-attachment: fixed;
         }
 </Style>
 <section class="tj-choose-us-section-service-construction-dynamic">
@@ -164,9 +172,6 @@
         </div>
     </div>
 </section>
-
-
-
 <section class="tj-about-section pt-2 pb-0">
     <div class="container">
         <div class="row">
