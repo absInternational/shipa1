@@ -3040,7 +3040,6 @@ div .tj-service-icon-box2 ul li .service-item::before {
 .tj-choose-us-section-service-roro-8::before,
 .tj-choose-us-section-two-1::before,
 .tj-choose-us-section-two::before,
-.tj-choose-us-section-service-construction-dynamic::before,
 .tj-choose-us-section::before {
   width: 100%;
   position: absolute;
@@ -3150,6 +3149,7 @@ div .tj-service-icon-box2 ul li .service-item::before {
 .tj-choose-us-section-service-reefer::before,
 .tj-choose-us-section-service-roro::before,
 .tj-choose-us-section-service-rv::before,
+.tj-choose-us-section-service-construction-dynamic,
 .tj-testimonial-section-two::before {
   background: rgba(6, 46, 57, 0.7);
   width: 100%;
