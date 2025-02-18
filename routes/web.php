@@ -58,7 +58,7 @@ Route::prefix('services')->group(function () {
     // Service detail
     Route::get('/services/{slug}', [FrontendController::class, 'serviceDetails'])->name('service.details');
 });
-Route::get('/', [FrontendController::class, 'marketing'])->name('marketing');
+Route::get('marketing/', [FrontendController::class, 'marketing'])->name('marketing');
 Route::prefix('marketing')->group(function () {
     Route::get('/Vehicle-Transportation-In-Connecticut', [FrontendController::class, 'vehicleTransportInConnecticut'])->name('frontend.pages.marketing.vehicleTransportInConnecticut');
     Route::get('/Vehicle-Transportation-In-Newyork', [FrontendController::class, 'vehicleTransportInNewyork'])->name('frontend.pages.marketing.vehicleTransportInNewyork');
