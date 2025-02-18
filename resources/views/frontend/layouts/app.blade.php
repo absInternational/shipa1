@@ -182,12 +182,12 @@
             --secondary-color: #FFFFFF;
             --tertiary-color: #E3E3E3;
         }
+
         .css-1aasxu6 {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
-            display: flex
-        ;
+            display: flex;
             -webkit-flex-direction: column;
             -ms-flex-direction: column;
             flex-direction: column;
@@ -196,23 +196,23 @@
             --secondary-color: #FFFFFF;
             --tertiary-color: #E3E3E3;
         }
+
         .css-1g9ek8d {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
-            display: flex
-        ;
+            display: flex;
             min-width: 0;
             --primary-color: #2000F0;
             --secondary-color: #FFFFFF;
             --tertiary-color: #E3E3E3;
         }
+
         .css-bubhx7 {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
-            display: flex
-        ;
+            display: flex;
             min-width: 0;
             --primary-color: #2000F0;
             --secondary-color: #FFFFFF;
@@ -221,6 +221,7 @@
             -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
         }
+
         .css-138p0k2 {
             position: relative;
             width: 255px;
@@ -231,8 +232,7 @@
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
-            display: flex
-        ;
+            display: flex;
             padding: 0 0.9em;
             -webkit-align-items: center;
             -webkit-box-align: center;
@@ -245,6 +245,7 @@
             color: #FFFFFF;
             background-color: #00A1EF;
         }
+
         .css-e4pgre {
             margin: 1em 0;
             --primary-color: #2000F0;
@@ -267,6 +268,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
         .css-1iovl8i {
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -287,8 +289,7 @@
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
-            display: flex
-        ;
+            display: flex;
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             -webkit-justify-content: center;
@@ -316,13 +317,16 @@
                 transform: perspective(600px) rotateX(90deg);
                 opacity: 0;
             }
+
             60% {
                 transform: perspective(600px) rotateX(0deg);
                 opacity: 1;
             }
+
             80% {
                 transform: translateY(-10px);
             }
+
             100% {
                 transform: translateY(0);
             }
@@ -334,13 +338,14 @@
     </style>
     <style>
         .inactivee {
-            pointer-events: none; /* Disable clicks only when the iframe is hidden */
+            pointer-events: none;
+            /* Disable clicks only when the iframe is hidden */
         }
+
         .activee {
-            pointer-events: auto; /* Disable clicks only when the iframe is hidden */
+            pointer-events: auto;
+            /* Disable clicks only when the iframe is hidden */
         }
-
-
     </style>
 </head>
 
@@ -368,28 +373,29 @@
     @include('frontend.includes.header')
     @yield('content')
     <div class="chat">
-        <div id="chat-widget-container" style="opacity: 1; visibility: visible; z-index: 1000; position: fixed; bottom: 0px; width: 450px; height: 625px; max-width: 100%; max-height: calc(100% + 0px); min-height: 0px; min-width: 0px; background-color: transparent; border: 0px; overflow: hidden; transition: none !important;right:0">
-            <iframe allow="clipboard-read; clipboard-write; autoplay; microphone *; camera *; display-capture *; picture-in-picture *; fullscreen *;"
-                    id="chat-widget"
-                    name="chat-widget"
-                    title="LiveChat chat widget"
-                    scrolling="no"
-                    style="width: 100%; height: 100%; min-height: 0px; min-width: 0px; margin: 0px; padding: 0px; background-image: none; background-position: 0% 0%; background-size: initial; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-width: 0px; float: none; color-scheme: normal; position: absolute; inset: 0px; transition: none !important; display: none; visibility: visible;">
-            </iframe>                            <div dir="ltr" role="main" data-lc-id="0" class="css-1h1ne2e e1558m8u1" >
+        <div id="chat-widget-container"
+            style="opacity: 1; visibility: visible; z-index: 1000; position: fixed; bottom: 0px; width: 450px; height: 625px; max-width: 100%; max-height: calc(100% + 0px); min-height: 0px; min-width: 0px; background-color: transparent; border: 0px; overflow: hidden; transition: none !important;right:0">
+            <iframe
+                allow="clipboard-read; clipboard-write; autoplay; microphone *; camera *; display-capture *; picture-in-picture *; fullscreen *;"
+                id="chat-widget" name="chat-widget" title="LiveChat chat widget" scrolling="no"
+                style="width: 100%; height: 100%; min-height: 0px; min-width: 0px; margin: 0px; padding: 0px; background-image: none; background-position: 0% 0%; background-size: initial; background-attachment: scroll; background-origin: initial; background-clip: initial; background-color: transparent; border-width: 0px; float: none; color-scheme: normal; position: absolute; inset: 0px; transition: none !important; display: none; visibility: visible;">
+            </iframe>
+            <div dir="ltr" role="main" data-lc-id="0" class="css-1h1ne2e e1558m8u1">
                 <div class="css-1aasxu6 e131382t0">
                     <div class="css-1g9ek8d e1kv8om20"></div>
                     <div class="css-bubhx7 e1kv8om20">
                         <div data-lc-id="1" class="css-138p0k2 e16i86ec1" id="chat_with_us">
                             <p class="css-e4pgre e16i86ec0">Chat Us Now</p>
                             <button type="button" aria-label="Open LiveChat chat widget"
-                                    class="e1mwfyk10 css-1iovl8i ejbfa1m0">
+                                class="e1mwfyk10 css-1iovl8i ejbfa1m0">
                                 <div class="css-1potzn5 e1dmt1bi3">
                                     <svg color="inherit" viewBox="0 0 32 32" class="css-1usdo54">
                                         <path fill="#FFFFFF"
-                                              d="M12.63,26.46H8.83a6.61,6.61,0,0,1-6.65-6.07,89.05,89.05,0,0,1,0-11.2A6.5,6.5,0,0,1,8.23,3.25a121.62,121.62,0,0,1,15.51,0A6.51,6.51,0,0,1,29.8,9.19a77.53,77.53,0,0,1,0,11.2,6.61,6.61,0,0,1-6.66,6.07H19.48L12.63,31V26.46"></path>
+                                            d="M12.63,26.46H8.83a6.61,6.61,0,0,1-6.65-6.07,89.05,89.05,0,0,1,0-11.2A6.5,6.5,0,0,1,8.23,3.25a121.62,121.62,0,0,1,15.51,0A6.51,6.51,0,0,1,29.8,9.19a77.53,77.53,0,0,1,0,11.2,6.61,6.61,0,0,1-6.66,6.07H19.48L12.63,31V26.46">
+                                        </path>
                                         <path fill="#00A1EF"
-                                              d="M19.57,21.68h3.67a2.08,2.08,0,0,0,2.11-1.81,89.86,89.86,0,0,0,0-10.38,1.9,1.9,0,0,0-1.84-1.74,113.15,113.15,0,0,0-15,0A1.9,1.9,0,0,0,6.71,9.49a74.92,74.92,0,0,0-.06,10.38,2,2,0,0,0,2.1,1.81h3.81V26.5Z"
-                                              class="css-1adcsh3 eam5rsy0"></path>
+                                            d="M19.57,21.68h3.67a2.08,2.08,0,0,0,2.11-1.81,89.86,89.86,0,0,0,0-10.38,1.9,1.9,0,0,0-1.84-1.74,113.15,113.15,0,0,0-15,0A1.9,1.9,0,0,0,6.71,9.49a74.92,74.92,0,0,0-.06,10.38,2,2,0,0,0,2.1,1.81h3.81V26.5Z"
+                                            class="css-1adcsh3 eam5rsy0"></path>
                                     </svg>
                                     <div class="css-anyrkw e1dmt1bi2"></div>
                                 </div>
@@ -454,41 +460,40 @@
     <script src="{{ asset('/frontend/js/main.js') }}" defer></script> --}}
 
 
-{{--    remove by mohsin--}}
-{{--    <script>--}}
-{{--        var Tawk_API = Tawk_API || {},--}}
-{{--            Tawk_LoadStart = new Date;--}}
-{{--        ! function() {--}}
-{{--            var t = document.createElement("script"),--}}
-{{--                e = document.getElementsByTagName("script")[0];--}}
-{{--            t.async = !0, t.src = "https://embed.tawk.to/6728df992480f5b4f5986b9c/1ibrqis6f", t.charset = "UTF-8", t--}}
-{{--                .setAttribute("crossorigin", "*"), e.parentNode.insertBefore(t, e)--}}
-{{--        }()--}}
-{{--    </script>--}}
+    {{--    remove by mohsin --}}
+    {{--    <script> --}}
+    {{--        var Tawk_API = Tawk_API || {}, --}}
+    {{--            Tawk_LoadStart = new Date; --}}
+    {{--        ! function() { --}}
+    {{--            var t = document.createElement("script"), --}}
+    {{--                e = document.getElementsByTagName("script")[0]; --}}
+    {{--            t.async = !0, t.src = "https://embed.tawk.to/6728df992480f5b4f5986b9c/1ibrqis6f", t.charset = "UTF-8", t --}}
+    {{--                .setAttribute("crossorigin", "*"), e.parentNode.insertBefore(t, e) --}}
+    {{--        }() --}}
+    {{--    </script> --}}
 
     <script>
-        $('#chat_with_us').on('click', function () {
+        $('#chat_with_us').on('click', function() {
             if ($('#chat-widget').is(':visible')) {
                 $('#chat-widget').removeClass('flip-bounce');
-                $('#chat-widget').slideUp(300, function () {
+                $('#chat-widget').slideUp(300, function() {
                     $('#chat-widget-container').addClass('inactivee');
                     $('#chat_with_us').addClass('activee');
                 });
             } else {
                 $('#chat-widget-container').removeClass('inactivee');
 
-                $('#chat-widget').css('display', 'block').addClass('flip-bounce'); // Show and animate the chat widget
+                $('#chat-widget').css('display', 'block').addClass(
+                    'flip-bounce'); // Show and animate the chat widget
             }
         });
 
-        $(window).on('load', function () {
+        $(window).on('load', function() {
             // Set the src of the iframe after the page is fully loaded
             $('#chat-widget').attr('src', "https://www.shipa1.com/chat_dashboard?user_id=0");
 
             // $('#chat-widget').fadeIn(300);
         });
-
-
     </script>
 
     <!--Start of Tawk.to Script-->
@@ -706,8 +711,102 @@
     </script> --}}
     <script>
         $(document).ready(function() {
+            const allowedPrefixes = [
+                '205', '251', '256', '334', '938', '907', '480', '520', '602', '623', '928', '327', '479',
+                '501', '870', '209', '213', '279', '310', '323', '341', '408', '415', '424', '442', '510',
+                '530', '559', '562', '619', '626', '628', '650', '657', '661', '707', '714', '747', '752',
+                '760', '805', '818', '820', '831', '858', '909', '916', '925', '949', '951', '303', '719',
+                '720', '970', '203', '475', '860', '959', '302', '239', '305', '321', '352', '386', '407',
+                '448', '561', '656', '727', '754', '772', '786', '813', '850', '863', '904', '941', '954',
+                '229', '404', '470', '478', '678', '706', '762', '770', '912', '808', '208', '986', '217',
+                '224', '309', '312', '331', '447', '464', '618', '630', '708', '773', '779', '815', '847',
+                '872', '219', '260', '317', '463', '574', '765', '812', '930', '319', '515', '563', '641',
+                '712', '316', '620', '785', '913', '270', '364', '502', '606', '859', '225', '318', '337',
+                '504', '985', '207', '240', '301', '410', '443', '667', '339', '351', '413', '508', '617',
+                '774', '781', '857', '978', '231', '248', '278', '313', '517', '586', '616', '679', '734',
+                '810', '906', '947', '989', '218', '320', '507', '612', '651', '763', '952', '228', '601',
+                '662', '769', '314', '417', '557', '573', '636', '660', '816', '406', '308', '402', '531',
+                '702', '725', '775', '603', '201', '551', '609', '640', '732', '848', '856', '862', '908',
+                '973', '505', '575', '212', '315', '332', '347', '516', '518', '585', '607', '631', '646',
+                '680', '716', '718', '838', '845', '914', '917', '929', '934', '252', '336', '472', '704',
+                '743', '828', '910', '919', '980', '984', '701', '216', '220', '234', '283', '326', '330',
+                '380', '419', '440', '513', '567', '614', '740', '937', '405', '539', '572', '580', '918',
+                '458', '503', '541', '971', '215', '223', '267', '272', '412', '445', '484', '570', '610',
+                '717', '724', '814', '878', '401', '803', '839', '843', '854', '864', '605', '423', '615',
+                '629', '731', '865', '901', '931', '210', '214', '254', '281', '325', '346', '361', '409',
+                '430', '432', '469', '512', '682', '713', '726', '737', '806', '817', '830', '832', '903',
+                '915', '936', '940', '956', '972', '979', '385', '435', '801', '802', '276', '434', '540',
+                '571', '703', '757', '804', '206', '253', '360', '425', '509', '564', '304', '681', '262',
+                '414', '534', '608', '715', '920', '307'
+            ];
+
+            function validatePhone() {
+                let phone = $("#phone").val().replace(/\D/g, ''); // Remove non-numeric characters
+                if (phone.length === 10) {
+                    let first3Digits = phone.substring(0, 3);
+                    if (!allowedPrefixes.includes(first3Digits)) {
+                        $(".errPhone").text("Invalid phone prefix.");
+                        return false;
+                    } else {
+                        $(".errPhone").text(""); // Clear error if valid
+                        return true;
+                    }
+                } else {
+                    $(".errPhone").text(""); // Don't show error for incomplete input
+                }
+                return false;
+            }
+
+            function validateEmail() {
+                const emailInput = $("#email").val();
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailPattern.test(emailInput)) {
+                    $(".errEmail").text("Please enter a valid email address.");
+                    return false;
+                } else {
+                    $(".errEmail").text(""); // Clear error if valid
+                    return true;
+                }
+            }
+
+            function checkValidations() {
+                if (validatePhone() && validateEmail()) {
+                    $("#calculatePriceBttn").attr('disabled', false);
+                } else {
+                    $("#calculatePriceBttn").attr('disabled', true);
+                }
+            }
+
+            // Validate phone only when typing
+            $("#phone").on('keyup', function() {
+                validatePhone();
+                checkValidations();
+            });
+
+            // Validate email when typing and on field exit
+            $("#email").on('change', function() {
+                if ($("#email").val().length > 0) {
+                    validateEmail();
+                }
+            });
+
+            $("#email").on('blur', function() {
+                if ($("#email").val().length > 0) {
+                    validateEmail();
+                    checkValidations();
+                }
+            });
+
+            $("#phone").hover(function() {
+                $.each($("#phone[type='tel']"), function() {
+                    $(this).inputmask({
+                        "mask": $(this).attr("mask")
+                    });
+                });
+            });
+
             function setupIntlTelInput(e, n, t, o) {
-                if (e.classList.contains("iti-initialized")) return; 
+                if (e.classList.contains("iti-initialized")) return;
                 e.classList.add("iti-initialized");
 
                 function updateMask() {
@@ -1093,4 +1192,5 @@
         }))
     </script>
 </body>
+
 </html>
