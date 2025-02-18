@@ -484,7 +484,7 @@
                 $('#chat-widget-container').removeClass('inactivee');
 
                 $('#chat-widget').css('display', 'block').addClass(
-                    'flip-bounce'); // Show and animate the chat widget
+                'flip-bounce'); // Show and animate the chat widget
             }
         });
 
@@ -711,7 +711,6 @@
     </script> --}}
     <script>
         $(document).ready(function() {
-            
             const allowedPrefixes = [
                 '205', '251', '256', '334', '938', '907', '480', '520', '602', '623', '928', '327', '479',
                 '501', '870', '209', '213', '279', '310', '323', '341', '408', '415', '424', '442', '510',
@@ -741,69 +740,25 @@
                 '414', '534', '608', '715', '920', '307'
             ];
 
-            function validatePhone() {
-                let phone = $("#phone").val().replace(/\D/g, ''); // Remove non-numeric characters
-                if (phone.length === 10) {
-                    let first3Digits = phone.substring(0, 3);
-                    if (!allowedPrefixes.includes(first3Digits)) {
-                        $(".errPhone").text("Invalid phone prefix.");
-                        return false;
-                    } else {
-                        $(".errPhone").text(""); // Clear error if valid
-                        return true;
+            function validatePhoneNumber(phoneInput) {
+                let phoneNumber = phoneInput.val().replace(/\D/g, ''); // Remove all non-numeric characters
+
+                if (phoneNumber.length === 10) { // Check if it has exactly 10 digits
+                    let prefix = phoneNumber.substring(0, 3); // Extract the first three digits (prefix)
+
+                    if (!allowedPrefixes.includes(prefix)) {
+                        alert("Invalid phone prefix! Allowed prefixes are US-based only.");
+                        phoneInput.val(''); // Clear input if prefix is invalid
                     }
-                } else {
-                    $(".errPhone").text(""); // Don't show error for incomplete input
-                }
-                return false;
-            }
-
-            function validateEmail() {
-                const emailInput = $("#email").val();
-                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                if (!emailPattern.test(emailInput)) {
-                    $(".errEmail").text("Please enter a valid email address.");
-                    return false;
-                } else {
-                    $(".errEmail").text(""); // Clear error if valid
-                    return true;
                 }
             }
 
-            function checkValidations() {
-                if (validatePhone() && validateEmail()) {
-                    $("#calculatePriceBttn").attr('disabled', false);
-                } else {
-                    $("#calculatePriceBttn").attr('disabled', true);
-                }
-            }
-
-            // Validate phone only when typing
-            $("#phone").on('keyup', function() {
-                validatePhone();
-                checkValidations();
+            $("#phone").on("input", function() {
+                validatePhoneNumber($(this));
             });
 
-            // Validate email when typing and on field exit
-            $("#email").on('change', function() {
-                if ($("#email").val().length > 0) {
-                    validateEmail();
-                }
-            });
-
-            $("#email").on('blur', function() {
-                if ($("#email").val().length > 0) {
-                    validateEmail();
-                    checkValidations();
-                }
-            });
-
-            $("#phone").hover(function() {
-                $.each($("#phone[type='tel']"), function() {
-                    $(this).inputmask({
-                        "mask": $(this).attr("mask")
-                    });
-                });
+            $("#phone2").on("input", function() {
+                validatePhoneNumber($(this));
             });
 
             function setupIntlTelInput(e, n, t, o) {
