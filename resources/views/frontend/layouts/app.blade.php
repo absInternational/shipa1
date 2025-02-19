@@ -752,7 +752,6 @@
                     }
                 }
             }
-
             
             $("#phone").on("input", function() {
                 validatePhoneNumber($(this));
