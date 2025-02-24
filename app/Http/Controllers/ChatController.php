@@ -116,10 +116,16 @@ class ChatController extends Controller
             $deviceId = request()->cookie('device_id_chat_' . str_replace('.', '_', $domain));
             $today = date('Y-m-d');
             if($request->admin == 1){
-                 $thread = ThreadTable::find($request->thread_id);
+                $thread = ThreadTable::find($request->thread_id);
             }else{
                 $thread = ThreadTable::where('ip_address', $deviceId)->whereDate('created_at', $today);
-                $thread = ($thread->exists()) ? $thread->first() : new ThreadTable();
+                if($thread->exists()){
+                    $thread = $thread->first();
+                }else{
+                    $thread = new ThreadTable();
+                    $thread->name  = $request->name;
+                    $thread->email  = $request->email;
+                }
             }
             $thread->user_id = $request->user_id;
             $thread->ip_address = ($request->admin == 1) ? $thread->ip_address : $deviceId;
@@ -164,12 +170,18 @@ class ChatController extends Controller
             if(!empty($request->thread_id)){
                 $query->where('id',$request->thread_id);
             }else {
-
                 $query->where('ip_address', $request->ip_address)->whereDate('created_at', $request->date_created);
             }
-        })->latest()->first();
+        })
+            ->latest()->first();
         if(!empty($threads)) {
             $chats = Chat::where('thread_id', $threads->id)
+                ->where(function ($qeury) use($request){
+                    if(!empty($request->keyword)){
+                        $qeury->where('send_message',$request->keyword);
+                        $qeury->orwhere('receive_message',$request->keyword);
+                    }
+                })
                 ->orderBy('id', 'asc')
                 ->get();
             if (count($chats) > 0) {

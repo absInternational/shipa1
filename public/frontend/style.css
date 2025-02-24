@@ -13938,6 +13938,22 @@ textarea.form-control-lg {
     background-color: rgba(var(--bs-light-rgb), 1) !important;
     border-radius: var(--bs-border-radius) !important;
 }
+.chat .messages .message .div {
+    display: inline-table;
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    text-align: var(--bs-body-text-align);
+    font-family: "Nunito", sans-serif;
+    word-wrap: break-word;
+    list-style: none;
+    box-sizing: border-box;
+    font-size: 0.875em;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem !important;
+    color: #6c757d !important;
+    background-color: rgba(var(--bs-light-rgb), 1) !important;
+    border-radius: var(--bs-border-radius) !important;
+}
 .chat .messages .message img {
     display: inline-flex;
     margin: 0.25rem;
@@ -13990,14 +14006,17 @@ textarea.form-control-lg {
 .chat .bottom button {
     float: right;
     display: inline-flex;
-    text-align: center;
+    justify-content: center; /* Center the content */
+    align-items: center;
     cursor: pointer;
     border: 1px solid #484848;
     border-radius: 5px;
     margin: 3px;
     width: 2.35rem;
     height: 2.35rem;
-    background: url("https://assets.edlin.app/icons/font-awesome/paper-plane/paper-plane-regular.svg") center no-repeat;
+    color: black;
+    background-size: 60%; /* Scale the icon to fit */
 }
+
 
 /*# sourceMappingURL=style.css.map */
