@@ -30,6 +30,7 @@ Route::get('iframe', [ChatController::class, 'iframe'])->name('chat.iframe');
 Route::post('chat', [ChatController::class, 'chat'])->name('chat.post');
 Route::get('chat_history', [ChatController::class, 'chat_history'])->name('chat.chat_history');
 Route::get('show_history', [ChatController::class, 'show_history'])->name('chat.show_history');
+Route::get('ChatUpdateRead', [ChatController::class, 'ChatUpdateRead'])->name('chat.ChatUpdateRead');
 
 Route::get('/', [FrontendController::class, 'index'])->name('welcome');
 Route::get('/home', [HomeController::class, 'index'])->name('home');

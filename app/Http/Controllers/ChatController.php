@@ -154,6 +154,7 @@ class ChatController extends Controller
             $chat->receive_message = ($request->admin == 1) ? $request->input('content') : null ;
             $chat->date_created = date('Y-m-d');
             $chat->ip_address = $deviceId;
+            $chat->read_it = ($request->admin == 1) ? 1 : 0;
             $chat->info_data = "{$country},{$city},{$region},{$ipAddress}";
             $chat->save();
             return response()->json(['data' => $chat, 'status' => 0]);;
@@ -196,13 +197,29 @@ class ChatController extends Controller
     }
 
     public function show_history(Request $request){
-        $chats = Chat::select('chats.date_created', 'chats.thread_id', 'chats.ip_address', 'chats.id','thread_tables.replied')
-            ->leftjoin('thread_tables','thread_tables.id','chats.thread_id')
-            ->where('date_created', $request->date_created)
-            ->groupby('thread_id') // Ensures distinct thread_id
-            ->orderBy('id', 'desc') // Ensures latest records are selected
+        $chats = Chat::select(
+            'chats.date_created',
+            'chats.thread_id',
+            'chats.ip_address',
+            'chats.id',
+            'thread_tables.replied',
+            'thread_tables.name',
+            DB::raw('(SELECT COUNT(chats_count.read_it)
+                  FROM chats AS chats_count
+                  WHERE chats_count.thread_id = chats.thread_id and chats_count.read_it = 0) AS tc') // Fixed Subquery
+        )
+            ->leftJoin('thread_tables', 'thread_tables.id', '=', 'chats.thread_id')
+            ->where('chats.date_created', $request->date_created)
+            ->groupBy('chats.thread_id') // Ensures distinct thread_id
+            ->orderBy('chats.id', 'desc') // Ensures latest records are selected
             ->get();
+
         return response()->json($chats);
+
+    }
+
+    public function ChatUpdateRead(Request $request){
+        $chats = Chat::where('thread_id',$request->thread_id)->update(['read_it'=>1]);
     }
 
 }

@@ -325,18 +325,19 @@
         }).done(function (res) {
             if (res) {
                 var lis = "";
-                var ring = 0; // Initialize ring flag
+                var ring = 0;
 
                 $.each(res, function (index, value) {
+                    var text = (value.name && value.name.trim() !== '') ? `${value.name}` : `Thread: ${value.thread_id}`;
                     lis += `<li>
                     <button type="button" onclick="get_history('${value.date_created}', '${value.ip_address}', 'admin', '${value.thread_id}')"
-                    class="btn btn-outline-info btn-sm">
-                        Thread: ${value.thread_id}
-                        ${(value.replied == 0) ? '<span class="badge badge-danger badge-sm">(New)</span>' : ''}
+                    class="btn btn-outline-info btn-sm">${text}
+
+                        ${(value.replied == 0 && value.tc > 0) ? `<span class="badge badge-danger badge-sm">(${value.tc})</span>` : ''}
                     </button>
                 </li>`;
 
-                    if (value.replied == 0 && admin == 1 && !$('#chat_box').is(':visible')) {
+                    if (value.replied == 0 && admin == 1 && !$('#chat_box').is(':visible') && value.tc > 0) {
                         ring = 1;
                     }
                     if (value.replied == 1 && admin == 0 && !$('#chat_box').is(':visible')) {
@@ -353,7 +354,7 @@
                 }
                 set_interval2 = setInterval(function() {
                     show_his();
-                }, 20000);
+                }, 10000);
 
                 $('#show_history ul').append(lis);
             }
@@ -374,9 +375,18 @@
             clearInterval(set_interval);
         }
 
+        if(admin == 'admin'){
+            $.ajax({
+                url: "{{ url('ChatUpdateRead') }}",
+                method: 'GET',
+                data: {thread_id :c_thread_id}
+            }).done(function (res) {
+
+            });
+        }
         set_interval = setInterval(function() {
             get_history(date_created, ip_address, admin, thread_id);
-        }, 10000);
+        }, 5000);
         $.ajax({
             url: "{{ url('chat_history') }}",
             method: 'GET',
@@ -447,6 +457,16 @@
     $("#form_submit_chat").submit(function (event) {
         event.preventDefault();
 
+        var message = $("#message").val().trim();
+
+        // Regular expression to detect URLs
+        var urlRegex = /(https?:\/\/[^\s]+)/g;
+
+        if (urlRegex.test(message)) {
+            alert("Links are not allowed in the message!");
+            event.preventDefault(); // Prevent form submission
+            return false;
+        }
         //Stop empty messages
         if ($("#form_submit_chat #message").val().trim() === '') {
             return;
