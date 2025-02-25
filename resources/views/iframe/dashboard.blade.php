@@ -1,4 +1,9 @@
-<!-- JavaScript -->
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST");
+?>
+    <!-- JavaScript -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -129,7 +134,7 @@
 <div class="chat">
     <div class="row">
         <div class="col-md-2" style="border: groove;display: {{ ($user_id != 0) ? 'block' : 'none' }}" id="show_history">
-            <strong><u>History</u></strong>
+            <strong><u>History </u></strong>
             <ul>
 
             </ul>
@@ -326,6 +331,8 @@
             if (res) {
                 var lis = "";
                 var ring = 0;
+                var total_unread = parseInt(0);
+                var total_unread_c = parseInt(0);
 
                 $.each(res, function (index, value) {
                     var text = (value.name && value.name.trim() !== '') ? `${value.name}` : `Thread: ${value.thread_id}`;
@@ -336,11 +343,12 @@
                         ${(value.replied == 0 && value.tc > 0) ? `<span class="badge badge-danger badge-sm">(${value.tc})</span>` : ''}
                     </button>
                 </li>`;
-
+                    total_unread+= parseInt(value.tc);
+                    total_unread_c+= parseInt(value.tc_c);
                     if (value.replied == 0 && admin == 1 && !$('#chat_box').is(':visible') && value.tc > 0) {
                         ring = 1;
                     }
-                    if (value.replied == 1 && admin == 0 && !$('#chat_box').is(':visible')) {
+                    if (value.replied == 1 && admin == 0 && !$('#chat_box').is(':visible') && value.tc_c > 0 && value.thread_id == c_thread_id) {
                         ring = 1;
                     }
                 });
@@ -348,6 +356,13 @@
                 if (ring == 1) {
                     playNotificationSound();
                 }
+
+                var message = {
+                    type: 'iframeMessage',
+                    payload: total_unread
+                };
+
+                window.parent.postMessage(message, '*');
 
                 if (set_interval2) {
                     clearInterval(set_interval2);
@@ -375,15 +390,21 @@
             clearInterval(set_interval);
         }
 
-        if(admin == 'admin'){
+        var typeValue = (admin == 'admin') ? 1 : 0;
+
+        if ($('#chat_box').is(':visible')) {
             $.ajax({
                 url: "{{ url('ChatUpdateRead') }}",
                 method: 'GET',
-                data: {thread_id :c_thread_id}
+                data: {
+                    thread_id: c_thread_id,
+                    type: typeValue
+                }
             }).done(function (res) {
-
+                // Handle response if needed
             });
         }
+
         set_interval = setInterval(function() {
             get_history(date_created, ip_address, admin, thread_id);
         }, 5000);

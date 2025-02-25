@@ -155,6 +155,7 @@ class ChatController extends Controller
             $chat->date_created = date('Y-m-d');
             $chat->ip_address = $deviceId;
             $chat->read_it = ($request->admin == 1) ? 1 : 0;
+            $chat->read_it_c = ($request->admin == 0) ? 1 : 0;
             $chat->info_data = "{$country},{$city},{$region},{$ipAddress}";
             $chat->save();
             return response()->json(['data' => $chat, 'status' => 0]);;
@@ -206,7 +207,10 @@ class ChatController extends Controller
             'thread_tables.name',
             DB::raw('(SELECT COUNT(chats_count.read_it)
                   FROM chats AS chats_count
-                  WHERE chats_count.thread_id = chats.thread_id and chats_count.read_it = 0) AS tc') // Fixed Subquery
+                  WHERE chats_count.thread_id = chats.thread_id and chats_count.read_it = 0) AS tc') ,
+            DB::raw('(SELECT COUNT(chats_count.read_it_c)
+                  FROM chats AS chats_count
+                  WHERE chats_count.thread_id = chats.thread_id and chats_count.read_it_c = 0) AS tc_c')
         )
             ->leftJoin('thread_tables', 'thread_tables.id', '=', 'chats.thread_id')
             ->where('chats.date_created', $request->date_created)
@@ -219,7 +223,12 @@ class ChatController extends Controller
     }
 
     public function ChatUpdateRead(Request $request){
-        $chats = Chat::where('thread_id',$request->thread_id)->update(['read_it'=>1]);
+        if($request->type == 1){
+            $chats = Chat::where('thread_id',$request->thread_id)->update(['read_it'=>1]);
+        }else{
+            $chats = Chat::where('thread_id',$request->thread_id)->update(['read_it_c'=>1]);
+        }
+
     }
 
 }
